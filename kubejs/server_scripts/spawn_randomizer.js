@@ -23,9 +23,18 @@
 //   /kubejs custom_command rrhubs_cancel
 //   /kubejs custom_command rrhubs_disable
 //   /kubejs custom_command rrhubs_reset
+//
+// UPGRADES IMPLEMENTED:
+// - Respawn pad is 1x1 crying obsidian exactly under the spawn block.
+// - Spawn FX are executed AFTER the teleport, at the hub destination.
+// - FX are anchored with `execute positioned x y z`, so @a[distance=..] is reliable.
+// - Particles tuned to look calm (no "blown strongly"): smaller spread + speed 0.
+//
+// NOTE:
+// - Delete/disable any old spawnfx.js that also triggers on respawn, or you'll get double/offset FX.
 
 var DIM = 'minecraft:overworld'
-var SCRIPT_VERSION = 'v8_randomized_strict_open_sky_fast'
+var SCRIPT_VERSION = 'v9_randomized_strict_open_sky_fast_1x1pad_fx_post_tp'
 
 // Annulus
 var MIN_DISTANCE = 0
@@ -188,15 +197,10 @@ function shuffledIndices(n) {
 
 // ---------- deterministic per-slot RNG (LCG) ----------
 function lcgNext(s) { return (Math.imul(1664525, s) + 1013904223) | 0 }
-function lcgFloat01(s) { // returns {s, f}
-s = lcgNext(s)
-var u = (s >>> 0) / 4294967296.0
-return { s: s, f: u }
-}
+function lcgFloat01(s) { s = lcgNext(s); return { s: s, f: (s >>> 0) / 4294967296.0 } }
 function lcgInt(s, min, maxInclusive) {
     var t = lcgFloat01(s)
-    var v = min + Math.floor(t.f * (maxInclusive - min + 1))
-    return { s: t.s, v: v }
+    return { s: t.s, v: min + Math.floor(t.f * (maxInclusive - min + 1)) }
 }
 
 // ---------- spawn center ----------
@@ -206,9 +210,7 @@ function readWorldSpawnXZ(level) {
         else if (level && typeof level.getSpawnPos === 'function') pos = level.getSpawnPos()
             else if (level && level.sharedSpawnPos) pos = level.sharedSpawnPos
                 else if (level && level.spawnPos) pos = level.spawnPos
-
                     if (!pos) return { x: 0, z: 0 }
-
                     var x = (typeof pos.getX === 'function') ? pos.getX() : pos.x
                     var z = (typeof pos.getZ === 'function') ? pos.getZ() : pos.z
                     return { x: Math.floor(Number(x)), z: Math.floor(Number(z)) }
@@ -314,7 +316,6 @@ function minDist2ToSet(p, set) {
 }
 
 function randomAnnulusPointFromSeed(seed) {
-    // returns {seed, p:{dx,dz}}
     var min2 = MIN_DISTANCE * MIN_DISTANCE
     var max2 = MAX_DISTANCE * MAX_DISTANCE
 
@@ -333,7 +334,6 @@ function randomAnnulusPointFromSeed(seed) {
         if (d2 >= min2 && d2 <= max2) return { seed: seed, p: { dx: dx, dz: dz } }
     }
 
-    // fallback integer pick
     while (true) {
         var rx = lcgInt(seed, -MAX_DISTANCE, MAX_DISTANCE); seed = rx.s
         var rz = lcgInt(seed, -MAX_DISTANCE, MAX_DISTANCE); seed = rz.s
@@ -379,10 +379,7 @@ function farthestPointPlan(candidates, k) {
         return chosen
 }
 
-function relToAbs(center, p) {
-    return { x: Math.floor(center.x + p.dx), z: Math.floor(center.z + p.dz) }
-}
-
+function relToAbs(center, p) { return { x: Math.floor(center.x + p.dx), z: Math.floor(center.z + p.dz) } }
 function chunkCoord(blockCoord) { return Math.floor(blockCoord / 16) }
 
 // ---------- strict safety ----------
@@ -397,7 +394,6 @@ function isSafeGround(level, x, y, z) {
     if (!id) return false
         if (isBadFluidId(id)) return false
             if (has(SAFE_GROUND, id)) return true
-                // fallback: any colliding block
                 try { return !!level.getBlock(x, y, z).hasCollision() } catch (e) { return false }
 }
 
@@ -441,7 +437,6 @@ function findSpawnAt(level, x, z) {
     var y0 = surfaceSeedY(level, x, z)
     if (y0 == null) return null
 
-        // reject if the block above the "surface" is fluid
         var above = blockIdAt(level, x, y0 + 1, z)
         if (isBadFluidId(above)) return null
 
@@ -473,10 +468,155 @@ function findSpawnNear(level, x, z, radius) {
         return null
 }
 
+// ---------- 1x1 pad placement (exactly where you spawn) ----------
+function placeCryingPad1x1(server, hub) {
+    // hub.x/z are centered (.5), but the spawn block is integer coord under that.
+    var x = Math.floor(Number(hub.x))
+    var y = Math.floor(Number(hub.y))
+    var z = Math.floor(Number(hub.z))
+    var y0 = y - 1
+
+    // clear exactly the 1x1 feet+head column (just in case)
+    server.runCommandSilent(
+        'execute in ' + hub.dim + ' run fill ' +
+        x + ' ' + y + ' ' + z + ' ' +
+        x + ' ' + (y + 1) + ' ' + z + ' minecraft:air replace'
+    )
+
+    // place 1x1 crying obsidian directly under spawn
+    server.runCommandSilent(
+        'execute in ' + hub.dim + ' run setblock ' +
+        x + ' ' + y0 + ' ' + z + ' minecraft:crying_obsidian replace'
+    )
+}
+
+// ---------- FX (post-TP, positioned at hub for reliable distance selectors) ----------
+var FX_LIGHT_SECONDS = 30
+var FX_LIGHT_RADIUS = 13
+var FX_LIGHT_MAX = 11
+var FX_LIGHT_MIN = 5
+var FX_LIGHT_SPARSITY = 2
+var FX_TRY_Y = [1, 0, 2, 3]
+
+var FX_SOUND_RADIUS = 128
+var FX_SOUND_VOL = 6.0
+var FX_SOUND_MINVOL = 1.0
+
+var FX_SECONDS = 6
+var FX_TICK_INTERVAL = 2
+var FX_HEIGHT = 52
+var FX_RADIUS = 128
+
+function fxLightLevelAt(dist, radius) {
+    var t = 1 - (dist / radius)
+    var lv = Math.floor(FX_LIGHT_MIN + (FX_LIGHT_MAX - FX_LIGHT_MIN) * t)
+    if (lv < FX_LIGHT_MIN) lv = FX_LIGHT_MIN
+        if (lv > FX_LIGHT_MAX) lv = FX_LIGHT_MAX
+            return lv
+}
+
+function fxTryPlaceLight(server, dim, x, y, z, lv) {
+    server.runCommandSilent('execute in ' + dim + ' if block ' + x + ' ' + y + ' ' + z + ' minecraft:air run setblock ' + x + ' ' + y + ' ' + z + ' minecraft:light[level=' + lv + ']')
+    server.runCommandSilent('execute in ' + dim + ' if block ' + x + ' ' + y + ' ' + z + ' minecraft:cave_air run setblock ' + x + ' ' + y + ' ' + z + ' minecraft:light[level=' + lv + ']')
+    server.runCommandSilent('execute in ' + dim + ' if block ' + x + ' ' + y + ' ' + z + ' minecraft:void_air run setblock ' + x + ' ' + y + ' ' + z + ' minecraft:light[level=' + lv + ']')
+}
+
+function fxClearIfLight(server, dim, x, y, z) {
+    server.runCommandSilent('execute in ' + dim + ' if block ' + x + ' ' + y + ' ' + z + ' minecraft:light run setblock ' + x + ' ' + y + ' ' + z + ' minecraft:air')
+}
+
+function fxPlaceDiffuseLights(server, dim, cx, cy, cz) {
+    var placed = []
+    var R = FX_LIGHT_RADIUS
+
+    for (var x = cx - R; x <= cx + R; x++) {
+        for (var z = cz - R; z <= cz + R; z++) {
+            if ((x + z) % FX_LIGHT_SPARSITY !== 0) continue
+
+                var dx = x - cx
+                var dz = z - cz
+                var dist = Math.sqrt(dx * dx + dz * dz)
+                if (dist > R) continue
+
+                    var lv = fxLightLevelAt(dist, R)
+
+                    for (var i = 0; i < FX_TRY_Y.length; i++) {
+                        var yy = cy + FX_TRY_Y[i]
+                        fxTryPlaceLight(server, dim, x, yy, z, lv)
+                        placed.push([x, yy, z])
+                    }
+        }
+    }
+
+    server.scheduleInTicks(FX_LIGHT_SECONDS * 20, function () {
+        for (var i = 0; i < placed.length; i++) {
+            var p = placed[i]
+            fxClearIfLight(server, dim, p[0], p[1], p[2])
+        }
+    })
+}
+
+function fxPlaySpookySound(server, dim, x, y, z) {
+    // Anchor the distance selector at the hub location
+    var pre = 'execute in ' + dim + ' positioned ' + x + ' ' + y + ' ' + z + ' run '
+    var tgt = '@a[distance=..' + FX_SOUND_RADIUS + ']'
+
+    server.runCommandSilent(pre + 'playsound minecraft:block.bell.use master ' + tgt + ' ~ ~ ~ ' + (FX_SOUND_VOL * 0.75) + ' 0.75 ' + FX_SOUND_MINVOL)
+    server.runCommandSilent(pre + 'playsound minecraft:block.end_portal.spawn master ' + tgt + ' ~ ~ ~ ' + (FX_SOUND_VOL * 0.85) + ' 0.9 ' + FX_SOUND_MINVOL)
+    server.runCommandSilent(pre + 'playsound minecraft:entity.warden.ambient master ' + tgt + ' ~ ~ ~ ' + (FX_SOUND_VOL * 0.45) + ' 0.8 ' + FX_SOUND_MINVOL)
+    server.runCommandSilent(pre + 'playsound minecraft:entity.evoker.prepare_summon master ' + tgt + ' ~ ~ ~ ' + (FX_SOUND_VOL * 0.55) + ' 0.9 ' + FX_SOUND_MINVOL)
+}
+
+function fxSpookyParticles(server, dim, x, y, z) {
+    // Anchor the distance selector at the hub location
+    var pre = 'execute in ' + dim + ' positioned ' + x + ' ' + y + ' ' + z + ' run '
+    var tgt = '@a[distance=..' + FX_RADIUS + ']'
+
+    var totalTicks = FX_SECONDS * 20
+    var t = 0
+
+    for (var dx = -1; dx <= 1; dx++) {
+        for (var dz = -1; dz <= 1; dz++) {
+            server.runCommandSilent(
+                'execute in ' + dim +
+                ' positioned ' + (x + dx) + ' ' + (y + 1) + ' ' + (z + dz) +
+                ' run particle minecraft:sculk_charge_pop ~ ~ ~ 0 0 0 0 1 force ' + tgt
+            )
+        }
+    }
+
+
+    function tick() {
+        // calmer, not "blown": small spread + speed 0
+        server.runCommandSilent(pre + 'particle minecraft:end_rod ~ ~0.2 ~ 0.03 ' + (FX_HEIGHT / 2) + ' 0.03 0 6 force ' + tgt)
+        server.runCommandSilent(pre + 'particle minecraft:sculk_soul ~ ~1 ~ 0.12 0.25 0.12 0 10 force ' + tgt)
+        server.runCommandSilent(pre + 'particle minecraft:reverse_portal ~ ~1 ~ 0.18 0.30 0.18 0 10 force ' + tgt)
+
+        t += FX_TICK_INTERVAL
+        if (t <= totalTicks) server.scheduleInTicks(FX_TICK_INTERVAL, tick)
+    }
+
+    tick()
+}
+
+function rrRunFxAtHub(server, hub) {
+    try {
+        var dim = String(hub.dim || DIM)
+        var bx = Math.floor(Number(hub.x))
+        var by = Math.floor(Number(hub.y))
+        var bz = Math.floor(Number(hub.z))
+        var x = bx + 0.5
+        var y = by
+        var z = bz + 0.5
+
+        fxPlaySpookySound(server, dim, x, y, z)
+        fxPlaceDiffuseLights(server, dim, bx, by, bz)
+        fxSpookyParticles(server, dim, x, y, z)
+    } catch (e) {}
+}
+
 // ---------- randomized per-slot search (ring walk) ----------
 function initSlotSearchParams(slotIdx, baseRel, seedBase) {
-    // Each slot gets its own RNG stream and walk parameters.
-    // walkAngle drifts, walkRadius jitters. This prevents "same coords" across hubs.
     var s = (seedBase ^ (slotIdx * 0x9E3779B9)) | 0
     var a = lcgFloat01(s); s = a.s
     var r = lcgFloat01(s); s = r.s
@@ -484,9 +624,8 @@ function initSlotSearchParams(slotIdx, baseRel, seedBase) {
 
     var angle = a.f * Math.PI * 2
     var radius = MIN_DISTANCE + r.f * (MAX_DISTANCE - MIN_DISTANCE)
-    var angleStep = (0.35 + j.f * 1.25) * (slotIdx % 2 === 0 ? 1 : -1) // radians per fail
+    var angleStep = (0.35 + j.f * 1.25) * (slotIdx % 2 === 0 ? 1 : -1)
 
-    // Keep dx/dz near baseRel but let walk override quickly on fails.
     return {
         seed: s,
         angle: angle,
@@ -497,14 +636,12 @@ function initSlotSearchParams(slotIdx, baseRel, seedBase) {
 }
 
 function nextRelForSlot(slot) {
-    // Advance slot walk and produce a new rel point in annulus.
     var t = lcgFloat01(slot.search.seed); slot.search.seed = t.s
     var jitter = (t.f - 0.5) * 2.0 * slot.search.radJitter
 
     slot.search.angle = slot.search.angle + slot.search.angleStep
     var rad = slot.search.radius * (1.0 + jitter)
 
-    // Clamp radius into annulus
     if (rad < MIN_DISTANCE) rad = MIN_DISTANCE + (MIN_DISTANCE - rad)
         if (rad > MAX_DISTANCE) rad = MAX_DISTANCE - (rad - MAX_DISTANCE)
             if (rad < MIN_DISTANCE) rad = MIN_DISTANCE
@@ -513,7 +650,6 @@ function nextRelForSlot(slot) {
                     var dx = Math.floor(Math.round(rad * Math.cos(slot.search.angle)))
                     var dz = Math.floor(Math.round(rad * Math.sin(slot.search.angle)))
 
-                    // Ensure inside annulus after rounding, otherwise fallback to seeded annulus pick
                     var d2 = dx * dx + dz * dz
                     var min2 = MIN_DISTANCE * MIN_DISTANCE
                     var max2 = MAX_DISTANCE * MAX_DISTANCE
@@ -527,14 +663,12 @@ function nextRelForSlot(slot) {
 }
 
 function rerollSlot(slot) {
-    // When a slot is "stuck", reset its search params.
     var s = slot.search.seed | 0
     var rp = randomAnnulusPointFromSeed(s)
     s = rp.seed
     slot.rel = rp.p
     slot.search.seed = s
 
-    // also change steps
     var t = lcgFloat01(s); s = t.s
     slot.search.angleStep = (0.45 + t.f * 1.55) * (t.f > 0.5 ? 1 : -1)
     slot.search.radJitter = 0.10 + (t.f * 0.35)
@@ -570,7 +704,7 @@ function initBuild(server) {
     rrBuild.order = shuffledIndices(HUB_COUNT)
     rrBuild.orderPos = 0
 
-    rrHubs = [] // sparse by slot while building
+    rrHubs = []
     rrCounts = []
     for (var j = 0; j < HUB_COUNT; j++) rrCounts.push(0)
         rrCountsDirty = true
@@ -638,6 +772,7 @@ function scheduleValidate(server, slotIdx) {
                     if (found) {
                         spot = { dim: DIM, x: found.x + 0.5, y: found.y, z: found.z + 0.5 }
                         reason = 'ok'
+                        try { placeCryingPad1x1(server, spot) } catch (ePad) {}
                     }
                 } catch (e1) {
                     spot = null
@@ -669,7 +804,6 @@ function scheduleValidate(server, slotIdx) {
                         return
                     }
 
-                    // failure path: advance this slot's search so it does not keep probing same coords
                     slot.fails = slot.fails + 1
 
                     if (LOG_EACH_FAIL || (slot.fails % LOG_FAIL_EVERY === 0) || (slot.attempts >= MAX_VALIDATE_RETRIES_PER_HUB)) {
@@ -679,10 +813,8 @@ function scheduleValidate(server, slotIdx) {
                         )
                     }
 
-                    // move to a new rel point (ring walk)
                     slot.rel = nextRelForSlot(slot)
 
-                    // if we have been failing too long, reroll the walk parameters
                     if (slot.attempts >= MAX_VALIDATE_RETRIES_PER_HUB) {
                         slot.stuckTrips = slot.stuckTrips + 1
                         rrBroadcast(server, 'Hub ' + (slotIdx + 1) + ' STUCK x' + slot.attempts + '. Rerolling search (trip ' + slot.stuckTrips + ').')
@@ -701,7 +833,6 @@ function stepBuild(server) {
 
                 var done = countDone()
                 if (done >= HUB_COUNT) {
-                    // pack only successful hubs, keep order stable (by slot index)
                     var finalHubs = []
                     var finalCounts = []
                     for (var i = 0; i < HUB_COUNT; i++) {
@@ -717,13 +848,11 @@ function stepBuild(server) {
                     return
                 }
 
-                // Ensure scheduling order exists
                 if (!rrBuild.order || rrBuild.order.length !== HUB_COUNT) {
                     rrBuild.order = shuffledIndices(HUB_COUNT)
                     rrBuild.orderPos = 0
                 }
 
-                // Schedule in shuffled order; reshuffle continuously.
                 var guard = 0
                 while (rrBuild.inflightCount < MAX_INFLIGHT && guard < HUB_COUNT) {
                     var idx = rrBuild.order[rrBuild.orderPos]
@@ -759,11 +888,35 @@ function chooseLeastUsedHubIndex() {
             return idx
 }
 
-function teleportPlayerToHub(server, player, hub) {
+function teleportPlayerToHubAndFx(server, player, hub) {
     var name = escSelector(player.username)
+    var x = Number(hub.x)
     var y = Number(hub.y) + 0.1
-    server.runCommandSilent('execute as @a[name="' + name + '"] in ' + hub.dim + ' run tp @s ' + hub.x + ' ' + y + ' ' + hub.z)
+    var z = Number(hub.z)
+
+    // TP as the player (sets their actual position)
+    server.runCommandSilent(
+        'execute as @a[name="' + name + '"] in ' + hub.dim + ' run tp @s ' + x + ' ' + y + ' ' + z
+    )
+
+    // Let chunk + client settle, then "lock" them again and zero motion, then run FX.
+    server.scheduleInTicks(6, function () {
+        // second TP to same spot (kills most correction jitter)
+        server.runCommandSilent(
+            'execute as @a[name="' + name + '"] in ' + hub.dim + ' run tp @s ' + x + ' ' + y + ' ' + z
+        )
+
+        // hard stop residual motion (prevents immediate drift away from the FX origin)
+        // (Motion is valid for players; if a server blocks it, this just fails silently.)
+        server.runCommandSilent(
+            'execute as @a[name="' + name + '"] in ' + hub.dim + ' run data merge entity @s {Motion:[0.0d,0.0d,0.0d],FallDistance:0.0f}'
+        )
+
+        // FX at the destination
+        rrRunFxAtHub(server, hub)
+    })
 }
+
 
 function playerHasPersonalSpawn(player) {
     var nbt = (player.fullNBT != null) ? player.fullNBT : player.nbt
@@ -893,12 +1046,16 @@ PlayerEvents.respawned(function (event) {
     var server = event.server
 
     if (!isEnabled(server)) return
+
+        // If they have a bed/respawn anchor set, let vanilla handle it (you said: beds still for sleeping)
         if (playerHasPersonalSpawn(player)) return
+
             if (!isFinal(server)) return
 
                 if (!rrHubs || rrHubs.length === 0) loadState(server)
                     if (!rrHubs || rrHubs.length === 0) return
 
+                        // Redirect after respawn
                         server.scheduleInTicks(1, function () {
                             if (!isEnabled(server)) return
                                 if (!isFinal(server)) return
@@ -906,7 +1063,7 @@ PlayerEvents.respawned(function (event) {
 
                                         var idx = chooseLeastUsedHubIndex()
                                         if (idx < 0) return
-                                            teleportPlayerToHub(server, player, rrHubs[idx])
+                                            teleportPlayerToHubAndFx(server, player, rrHubs[idx])
                         })
 })
 

@@ -1,0 +1,13 @@
+name = "Realistic Torches From Campfires"
+filename = "realistic_torches_from_campfires-1.0.0-forge-1.20.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "df61b713c70b1b2a622c8d4a724036b599ffaa48"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6503386
+project-id = 1260197

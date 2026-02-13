@@ -1,0 +1,13 @@
+name = "Stoneworks"
+filename = "Stoneworks-v8.0.0-1.20.1-Forge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d8f9226296177749e2b07159dfab6165dd6f88af"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4611947
+project-id = 852663

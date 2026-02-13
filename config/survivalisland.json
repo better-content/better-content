@@ -1,6 +1,6 @@
 {
-  "islandSize": 300.0,
-  "islandSeperation": 2000,
+  "islandSize": 900.0,
+  "islandSeperation": 2600,
   "continentalTargetRangeA": {
     "min": -0.25,
     "max": 0.7

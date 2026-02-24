@@ -20,7 +20,7 @@
 	#
 	#Percent of durability lost on death for kept items
 	#Range: 0.0 ~ 1.0
-	durabilityLossOnKeptItems = 0.1
+	durabilityLossOnKeptItems = 0.0
 	#Percent of durability lost on death for drops
 	#Range: 0.0 ~ 1.0
 	durabilityLossOnDrops = 0.0
@@ -35,7 +35,7 @@
 	droppedXPPercent = 1
 	#Percent of dropped experience that can be recovered
 	#Range: 0.0 ~ 1.0
-	recoverableXPPercent = 1
+	recoverableXPPercent = 0
 
 [hunger]
 	#Hunger settings

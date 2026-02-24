@@ -46,26 +46,39 @@ function titleCaseWords(s) {
 }
 function pow9String(tier) { return BigInteger.valueOf(9).pow(tier).toString(); }
 
+function hasAnyInTag(tagId) {
+    try {
+        var arr = Ingredient.of(tagId).itemIds.toArray()
+        return arr && arr.length > 0
+    } catch (e) {
+        return false
+    }
+}
+
 function detectNuggetIngotBlockBases() {
-    var out = [];
-    var ingots = Ingredient.of('#forge:ingots').itemIds.toArray();
+    var out = []
+    var ingots = Ingredient.of('#forge:ingots').itemIds.toArray()
 
     for (var i = 0; i < ingots.length; i++) {
-        var ingot = String(ingots[i]);
-        var path = idPath(ingot);
-        if (path.indexOf('_ingot') < 0) continue;
+        var ingot = String(ingots[i])
+        var path = idPath(ingot)
+        if (!path.endsWith('_ingot')) continue
 
-        var key = path.substring(0, path.length - '_ingot'.length);
-        var ns = namespace(ingot);
+            var key = path.substring(0, path.length - '_ingot'.length)
 
-        var nugget = ns + ':' + key + '_nugget';
-        var block  = ns + ':' + key + '_block';
+            // Validate by tags, not by item ID naming
+            // (These are the canonical Forge conventions)
+            var nugTag = '#forge:nuggets/' + key
+            var blkTag = '#forge:storage_blocks/' + key
 
-        if (itemExists(nugget) && itemExists(block)) out.push(ingot);
+            if (hasAnyInTag(nugTag) && hasAnyInTag(blkTag)) {
+                out.push(ingot)
+            }
     }
 
-    return out;
+    return out
 }
+
 
 function dedupe(arr) {
     var seen = {}, out = [];

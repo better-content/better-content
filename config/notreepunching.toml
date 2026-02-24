@@ -3,7 +3,7 @@
 
     # Enables dynamic replacement of log -> plank recipes with variants that use a axe or saw.
     # These recipes are added dynamically and are not editable via datapacks. If this is disabled, no log -> plank recipes will be replaced!
-    enableDynamicRecipeReplacement = true
+    enableDynamicRecipeReplacement = false
 
 
 [worldgen]

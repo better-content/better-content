@@ -40,7 +40,7 @@
 	defaultReplacementMaterials = ["minecraft:stone", "minecraft:andesite", "minecraft:diorite", "minecraft:granite", "minecraft:netherrack", "minecraft:sandstone", "minecraft:deepslate", "minecraft:tuff", "minecraft:calcite", "minecraft:dripstone_block"]
 	#Setting this to true will flat out replace all Vein blocks (Copper + Granite Veins and Iron + Tuff Veins)
 	# Otherwise, setting to false will allow you to replace vanilla ores associated with ore veins with geolosys equivalents.
-	removeVeinOres = true
+	removeVeinOres = false
 
 #Mod-Compat Settings
 [compat]

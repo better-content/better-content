@@ -1,11 +1,11 @@
-name = "Obelisktest"
-version = "1.0.0"
+name = "Applied Trouble"
+version = "Playtest 3 - v1"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "deaf073ef2645772e374374e1db4ad3e0a9df20b7403413c1d943017fd82d7a2"
+hash = "1278ade871505b26a0ba08cba21cc4141e0214f65f50e000fba4c5c369d87383"
 
 [versions]
 forge = "47.4.13"

@@ -1,9 +1,0 @@
-{
-  "type": "forge:remove_features",
-  "biomes": "#minecraft:is_overworld",
-  "features": [
-    "create_new_age:thorium_ore",
-    "create_new_age:magnetite_block"
-  ],
-  "step": "underground_ores"
-}

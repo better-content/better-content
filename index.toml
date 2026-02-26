@@ -1166,7 +1166,7 @@ hash = "e42ff5102a0c2e65a440853ccec769eb73ef858d8b18b54404733ddbb700465c"
 
 [[files]]
 file = "config/adlods/Deposits/magnetite.cfg"
-hash = "c18aebdd3ea8541479eac6bea0bbbc6eb35f652eefb5cfb1b10b4d0d3edfed95"
+hash = "18f58dc30055ec3f00f925f273f4023997ad7e98f78e30a63d03facc0ba8c151"
 
 [[files]]
 file = "config/adlods/Deposits/nether_gold.cfg"
@@ -1218,7 +1218,7 @@ hash = "0e5d1e0944b0a033a318afba6ae48803f78efcb3f2d1fef8bc30425b54d25169"
 
 [[files]]
 file = "config/adlods/Deposits/thorium.cfg"
-hash = "de19a19c75e94e1fa37670dd96d85c0a671299f0b4204b10bb36a6b52a37331b"
+hash = "143095efa3273b46b22a5b6802a5e66e74080ee2259e546be4514311e062dcd6"
 
 [[files]]
 file = "config/adlods/Deposits/tin.cfg"
@@ -5977,14 +5977,6 @@ file = "config/zombieawareness/PlayerRulesAndLists.toml"
 hash = "0c9cb7ce493414f2a4b846417db297b8c24ec9950e5e2630d1cfff387568f5ae"
 
 [[files]]
-file = "datapacks/Disable_CNA_Thorium_Magnetite_Overworld/data/forge/biome_modifier/remove_create_new_age_thorium_magnetite.json"
-hash = "464d9e45b16673369068742d28b961edce59e656b12a829443c697c4df0e3294"
-
-[[files]]
-file = "datapacks/Disable_CNA_Thorium_Magnetite_Overworld/pack.mcmeta"
-hash = "79169eeec718818f30cfc9bb039c4896922c9a1356b1adcb060b6ff4b9f7b873"
-
-[[files]]
 file = "datapacks/Ore_Y_Bands_Knobs_1.20.1_5x/CHANGELOG_5x.txt"
 hash = "9175f904854b8183febd4aaa81367394d563f9f4a4369c459e1e167529d8f423"
 
@@ -6399,6 +6391,18 @@ hash = "ab97e85a2e57fa5f5d0b8c4d2e4ad40d773960a21c2c2028337e5a50ddf6ae2e"
 [[files]]
 file = "datapacks/datapack_foraging_everywhere/pack.mcmeta"
 hash = "33af6e1c019635b9f56028167066eb02a6f3cb13cf1c85bc9d79f74e185bad68"
+
+[[files]]
+file = "datapacks/no_thorium_or_magnetite_veins/data/create_new_age/forge/biome_modifier/magnetite_block.json"
+hash = "403f4d28c4133ee7204a49b1703f10ab7ec3184db16cb51f8e50a179d3e73333"
+
+[[files]]
+file = "datapacks/no_thorium_or_magnetite_veins/data/create_new_age/forge/biome_modifier/thorium_ore.json"
+hash = "f0532820563c1c897b5d09212899f562c1ce523728ff74b289961fc4886094fa"
+
+[[files]]
+file = "datapacks/no_thorium_or_magnetite_veins/pack.mcmeta"
+hash = "eac48f5922295fa8e0c6b88de4187abe63dd205e2a0d5e9f36b618378ca68e40"
 
 [[files]]
 file = "defaultconfigs/Diminishing_Health.toml"
@@ -6877,20 +6881,40 @@ file = "kubejs/config/common.properties"
 hash = "46a66b6e003ba7953c9a13428fd9c1967e862a673d7fd849831defab59eb08f1"
 
 [[files]]
+file = "kubejs/config/input_rewrites.json"
+hash = "d02f9f4829189681d9419f0e7e40ce55ad8fe331c79e526c79bfba24fbb9ab92"
+
+[[files]]
+file = "kubejs/dump_copper_ingot_recipes.js"
+hash = "8948dcf343e53226e2a802ed4095940e45f6620104a1fe44a041b4e1de7e8f61"
+
+[[files]]
+file = "kubejs/dump_iron_recip.js"
+hash = "d58c0ef29fc194715f4c2018b0da90625508e098045de796443825f4b985d999"
+
+[[files]]
 file = "kubejs/server_scripts/badfurnace.js"
 hash = "bb9d6744e0676c5a762256e254ea1e1f46b6e898c1ba37894d8ee13b33154488"
 
 [[files]]
-file = "kubejs/server_scripts/craftion_station_gestation.js"
-hash = "290ef91d3241c1931ee180b9fea6af48f96ff0c34064b0f330c2f2e5b9ff071e"
+file = "kubejs/server_scripts/ingot_rewrites.js"
+hash = "5de5ee10af9ccb6dc5306b772ab7913f590c5a2b77b425a85d81493b7f524639"
 
 [[files]]
 file = "kubejs/server_scripts/overworld_block_drops.js"
 hash = "45fbdf632e9926578409beb1a162db0be1fb53fb40fd0f26f826e1b35d0fb2b6"
 
 [[files]]
+file = "kubejs/server_scripts/remove_items.js"
+hash = "21b7d5a74ee21db95e789780980b0743b40efb96e5fad6d9cb31bb97152f3d0f"
+
+[[files]]
 file = "kubejs/server_scripts/spawn_randomizer.js"
 hash = "71cf48039941d735dee02d05c6d8380a5464c28a14e73e3675e9e54cbd68dadf"
+
+[[files]]
+file = "kubejs/server_scripts/tcon_steel_block_casting.js"
+hash = "23ad8debb3f91ae3715482e90b86c58cc9ce88afa02b1526797d129ef44fbd01"
 
 [[files]]
 file = "kubejs/server_scripts/thats_crate_recipes.js"
@@ -7001,6 +7025,16 @@ hash = "420f60e542e731334fc62fc16a9945a60dfa8f6c5a647c71b2cf9217d50ea7f5"
 metafile = true
 
 [[files]]
+file = "mods/apotheosis.pw.toml"
+hash = "c281ef574be46e4df3f7ed04b0a4b5f6d1b2a836b7d1d94c4a30be9c85d3adcb"
+metafile = true
+
+[[files]]
+file = "mods/apotheotic-additions.pw.toml"
+hash = "0fad8186fbeb910463e8b34629543c8d15c68baaa558b1501ccdc3caf15abeed"
+metafile = true
+
+[[files]]
 file = "mods/apothic-attributes.pw.toml"
 hash = "5f3996f32795f87086cd2e34ac1d7cc281411fe0c8799cb589706680107171ee"
 metafile = true
@@ -7023,6 +7057,11 @@ metafile = true
 [[files]]
 file = "mods/applied-flux.pw.toml"
 hash = "485a3f0f75deedfeedd9dde912b05c8bdf003053e938b7bb1495ea458b4ea5f3"
+metafile = true
+
+[[files]]
+file = "mods/applied-pneumatics.pw.toml"
+hash = "68ba46d844294bf3de753d201c2d2b903976950954e821f034671dab0c7e077d"
 metafile = true
 
 [[files]]
@@ -7220,6 +7259,11 @@ hash = "895e57dd837c42a78cb7973f8e01b047a47e08dc2517819ad74707e1e63708e4"
 metafile = true
 
 [[files]]
+file = "mods/compressedcreativity.pw.toml"
+hash = "17be84f385e68f623982229b7044f8c1e9fa9c8e55a464d1ac4d8d03ea9e060a"
+metafile = true
+
+[[files]]
 file = "mods/configurable-death.pw.toml"
 hash = "6b24ff6d6aa5614c2eb061f324758036dbde2db1fc72edc2312669a9621aa26d"
 metafile = true
@@ -7285,11 +7329,6 @@ hash = "8d3f40c638fa0085a62a3ac477a3f2ed23e63af62da2cdf502183fa0bddbca7c"
 metafile = true
 
 [[files]]
-file = "mods/create-contraption-terminals.pw.toml"
-hash = "45181af6516b3adc99f7d564763ee0db8eb70cd133a09d3266a903a9f755c5a8"
-metafile = true
-
-[[files]]
 file = "mods/create-deco.pw.toml"
 hash = "fee58a333eaf51d4862fee34fe8ba7cb70140500023e06aca3c9fcf0e0f34719"
 metafile = true
@@ -7300,23 +7339,8 @@ hash = "200b30b8eeaaf2fa9e8345fcabdd80f6195b5af67926fb1e277931100e7e1eff"
 metafile = true
 
 [[files]]
-file = "mods/create-industry.pw.toml"
-hash = "04f84cbd5fd5408dd66d8bf48b6dffaee55baecfb84220e5dda82f43a36c3d85"
-metafile = true
-
-[[files]]
-file = "mods/create-ironworks.pw.toml"
-hash = "bd3025c05acd5ec26137bfbee0ba7c3a230dfaec9f9d800f7cd7045caa79198d"
-metafile = true
-
-[[files]]
 file = "mods/create-liquid-fuel.pw.toml"
 hash = "ca274f1a31ba6fdf3ce7fc4a14e5d6ffcaa19c711595d98d87deb1d9fe365727"
-metafile = true
-
-[[files]]
-file = "mods/create-molten-metals.pw.toml"
-hash = "a9d9ddfa367c3f91cf863e2764dfa257b4159701fd95e4a9025e9f80a6949759"
 metafile = true
 
 [[files]]
@@ -7335,6 +7359,11 @@ hash = "af254a9e26ed280c6078e2d02aa9f511d5b3f0ae43767e6a35a87583014e5e6e"
 metafile = true
 
 [[files]]
+file = "mods/create-ore-excavation.pw.toml"
+hash = "51c14b5b61109fee1c9d3c04b6bd91b45a641d32435811d88dccffae0fd03d60"
+metafile = true
+
+[[files]]
 file = "mods/create-power-loader.pw.toml"
 hash = "39cb52a90d4f3c40ad7d845e597b91c49526b8307fd52ac56b3fda2ae46160a1"
 metafile = true
@@ -7350,13 +7379,8 @@ hash = "6d260acf3e0895127de36eac4799df39beb299ca7d13a059138aeba118a54667"
 metafile = true
 
 [[files]]
-file = "mods/create-stuff-additions.pw.toml"
-hash = "baaedf357e45d8998dd5c81bbd06fc86764728c20d1f61a14f33d9908c393e5a"
-metafile = true
-
-[[files]]
 file = "mods/create.pw.toml"
-hash = "fb5c251cf4997fa65ca043bab7c9ecbd02e108031584a3e26276b77d212de23c"
+hash = "9d7971a7af2ff4a96a0e5aede76f9cf8dc978da601e2754f79d6ec8631125bb9"
 metafile = true
 
 [[files]]
@@ -7940,11 +7964,6 @@ hash = "6164ce697ea02e49911afd5666dcb1d5f83ed0fff9b290def0a7a7c440c1c39b"
 metafile = true
 
 [[files]]
-file = "mods/meds-and-herbs.pw.toml"
-hash = "35b916581694737f73e744f4d40a8fbc26dd2c316d6c0400ada33de9f29ce3b9"
-metafile = true
-
-[[files]]
 file = "mods/mega-cells.pw.toml"
 hash = "10f1b6b632db719ee2da37deb6899ed42e78251a3aba52e75446c74096779e65"
 metafile = true
@@ -8075,6 +8094,11 @@ hash = "ee8986f0f4e5c7609da5f0f48d741bb059fefee80bda7e0a33e51dab6468cd67"
 metafile = true
 
 [[files]]
+file = "mods/nuclearcraft-neoteric.pw.toml"
+hash = "9916abac775b8f8738c8a0de442c0a0497f3ccc6c25bbcc204e45fdcbdd4ebe6"
+metafile = true
+
+[[files]]
 file = "mods/nullscape.pw.toml"
 hash = "215cb5123319ccd019db178b94ab2ab70db66a11c1b0ae722afefea885396e7a"
 metafile = true
@@ -8168,6 +8192,16 @@ hash = "2d1c125fb176f51c53d6f5099ffce2e37769db195f97f66421e941765e853586"
 metafile = true
 
 [[files]]
+file = "mods/pnc-extra-pcbs.pw.toml"
+hash = "afbceac46d3ec01b2b7365c09f6301928c926263a84069b45ac79fe7fd00f088"
+metafile = true
+
+[[files]]
+file = "mods/pneumaticcraft-repressurized.pw.toml"
+hash = "62f429f37e8e20637dd5ca5479045fd6831d5b65bcfe3c49cc5a4c6eaf9eb540"
+metafile = true
+
+[[files]]
 file = "mods/pollution-of-the-realms.pw.toml"
 hash = "5bf096c115cdacd38b588fd0580a7908b605ae1b33dfb319820cee3a1da38f54"
 metafile = true
@@ -8210,6 +8244,11 @@ metafile = true
 [[files]]
 file = "mods/qliphoth-awakening.pw.toml"
 hash = "aee743aafac44a977a355ef9f5e7f81d2635981b21623de641ec28e202379f69"
+metafile = true
+
+[[files]]
+file = "mods/quark.pw.toml"
+hash = "4eb683644ee4e38e00b06df946b71ad8fedaa860fcabbd91ec6ceb71c65b8d81"
 metafile = true
 
 [[files]]
@@ -8280,6 +8319,11 @@ metafile = true
 [[files]]
 file = "mods/rhino.pw.toml"
 hash = "ca4411ac6d8a9a892948bb63cd0ba52ae5523ca5e257632d6ae8c933b660c5ee"
+metafile = true
+
+[[files]]
+file = "mods/ribbits.pw.toml"
+hash = "70acbe76903121faa88da57c77a8a1eada9c0e4b58143abb8ccd57b766b14148"
 metafile = true
 
 [[files]]
@@ -8522,6 +8566,11 @@ hash = "66fd483f4311166307c184c29f3e81f56179ed5ab094328b2c1413e91ba4c68a"
 metafile = true
 
 [[files]]
+file = "mods/tinkers-ponder.pw.toml"
+hash = "f55c37b24c69aa3a0cefc76ae296929d5eed8045a24649ea58a0d2ba980a95f0"
+metafile = true
+
+[[files]]
 file = "mods/tinkers-things-json.pw.toml"
 hash = "1082239757f2e02aa88b740e01dd289db31a30bbe16d84fae45f97cf0db14e6f"
 metafile = true
@@ -8559,11 +8608,6 @@ metafile = true
 [[files]]
 file = "mods/tntutils.pw.toml"
 hash = "c744226381103e3bce04dfcb55ba0306cb6de1206ab4c647f890adba88ced477"
-metafile = true
-
-[[files]]
-file = "mods/toms-storage.pw.toml"
-hash = "edfafd11282b46cca84cce70807e85f8b11e918ead6a1ef7aa7d9e216d98ece3"
 metafile = true
 
 [[files]]
@@ -8697,6 +8741,56 @@ hash = "c6d1c3ab24396c5efd9c0bfa4eeedd9c8c42fe9be329de55d25b299f1e9ea0a2"
 metafile = true
 
 [[files]]
+file = "mods/yungs-better-desert-temples.pw.toml"
+hash = "58148fa22c72e0b0eac5e35fed0be9194ad59fe848298c1b61b565fa3158b2f4"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-dungeons.pw.toml"
+hash = "31fca121c5b55c624ed203937c8f9b4d13cfe32f80bb85405aa4c65238378b15"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-end-island.pw.toml"
+hash = "24876f77eefbda53cbeb1b3261dadd63e37f46389d184380e1e3f1f04d1f93f3"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-jungle-temples.pw.toml"
+hash = "a5af976bf45b8e0aaaa22bebb11504ef0687e90d2cff9d3fa3b648c0757c1446"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-mineshafts-forge.pw.toml"
+hash = "e0d77569aa19c6b72d30cb895cef575837a5740bee489d3ae537edf40a900ab1"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-nether-fortresses.pw.toml"
+hash = "18e0db08323413e9ad0c0959ca71d700f72a53dcd9fa5eb368cacc62c65168db"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-witch-huts.pw.toml"
+hash = "2eb3e909cc46e39d8b9e762f39c36b0579744118d619beb6a174d264951d6248"
+metafile = true
+
+[[files]]
+file = "mods/yungs-bridges.pw.toml"
+hash = "f664d8e9753262b287d5cf1be3d17a59d01b7f8293b91db335adcc2cae5e2f55"
+metafile = true
+
+[[files]]
+file = "mods/yungs-extras.pw.toml"
+hash = "aedb648ee15bdb7bb3af23cfa4ad565c0fe531f62e89406566bec90659be9a42"
+metafile = true
+
+[[files]]
+file = "mods/zeta.pw.toml"
+hash = "a9421a7a29ac8ee6e0598ea20025ad2c30e6198b796324184600621743437c91"
+metafile = true
+
+[[files]]
 file = "mods/zombie-awareness.pw.toml"
 hash = "081b32c88849a82d01a3a98871b9860f395822179747d65812e86e9098e9cc61"
 metafile = true
@@ -8719,4 +8813,4 @@ hash = "6055b3a417ec25b9e6e7d97484109a277c0f2d64a5eff94db1afbff5873550c7"
 
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.7.1.zip.txt"
-hash = "50c6568faa642d27c373b1c35c7cff05506909dbeeadfbc73de45468a3071d7c"
+hash = "afa6ec26bbd8bade53e5dff5aaadb1093888070f1936aca31ea7fdafc4b8fdb4"

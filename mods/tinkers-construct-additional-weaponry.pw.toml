@@ -1,0 +1,13 @@
+name = "Tinkers' Construct: Additional Weaponry"
+filename = "Additional-Weaponry-1.20.1-1.1.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "478584c0b561f718973c46c7d85a7870453514de"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7419142
+project-id = 1379381

@@ -8,10 +8,10 @@
 	#Range: > -2147483648
 	Misc_simBoxRadiusSpawn = 1024
 	#If true, lets server side do vanilla weather rules, weather2 will only make storms when server side says 'rain' is on
-	overcastMode = false
+	overcastMode = true
 	#Used if overcastMode is off, 1 = lock weather on, 0 = lock weather off, -1 = dont lock anything, let server do whatever
 	#Range: > -2147483648
-	lockServerWeatherMode = 0
+	lockServerWeatherMode = -1
 	#How many ticks between cloud particle spawning
 	#Range: > -2147483648
 	Cloud_ParticleSpawnDelay = 2
@@ -22,13 +22,13 @@
 	Cloud_Layer1_Enable = false
 	#-
 	#Range: > -2147483648
-	Cloud_Layer0_Height = 264
+	Cloud_Layer0_Height = 400
 	#-
 	#Range: > -2147483648
-	Cloud_Layer1_Height = 414
+	Cloud_Layer1_Height = 600
 	#Not used at the moment
 	#Range: > -2147483648
-	Cloud_Layer2_Height = 564
+	Cloud_Layer2_Height = 800
 	#How much to randomly change cloud coverage % amount, performed every 10 seconds
 	#Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
 	Cloud_Coverage_Random_Change_Amount = 0.05

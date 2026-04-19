@@ -1,0 +1,13 @@
+name = "Aether PBR"
+filename = "Aether PBR.zip"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "a76d282864da3601c61318f1a5f9e779c8d445c7"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6046009
+project-id = 974895

@@ -1,13 +1,13 @@
 name = "Enhanced AI"
-filename = "enhancedai-3.3.6.1.jar"
+filename = "enhancedai-3.3.6.3.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/TDdoftI1/versions/pEqeY4lr/enhancedai-3.3.6.1.jar"
-hash-format = "sha512"
-hash = "e66b2b1870b70da849a004fda8531fa86b773bf2a6d8cb222530be7eb7e16c39583eb812917345eb9ab1a0f1c9d75099d511d3ae996d6dccc9d07a421ec12ed9"
+hash-format = "sha1"
+hash = "0210c7c5bd0a3b667cd353a611383d627996a219"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "TDdoftI1"
-version = "pEqeY4lr"
+[update.curseforge]
+file-id = 7706349
+project-id = 515276

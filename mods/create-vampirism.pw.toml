@@ -1,0 +1,13 @@
+name = "Create Vampirism"
+filename = "create_vampirism-1.20.1_0.5.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "624851fa39d7c4a40cd553dab58007f7c3d399c6"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6775688
+project-id = 1238539

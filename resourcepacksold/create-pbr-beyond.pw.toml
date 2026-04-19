@@ -1,0 +1,13 @@
+name = "Create-PBR-Beyond"
+filename = "Create-PBR-Beyond-1.2.zip"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "5e2e6d5a989cd96b65c4af979b9476f07a6eea36"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5504725
+project-id = 1039960

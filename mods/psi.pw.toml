@@ -1,0 +1,13 @@
+name = "Psi"
+filename = "Psi-1.20.1-102.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "fb45df310579991d8fab2db1b3c6fb5326940bef"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6472034
+project-id = 241665

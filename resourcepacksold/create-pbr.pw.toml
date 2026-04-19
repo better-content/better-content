@@ -1,0 +1,13 @@
+name = "Create-PBR"
+filename = "Create-LabPBR-v12.zip"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "241abeb79a06b405a514e8ecee3e0fde123f9be8"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5759474
+project-id = 682954

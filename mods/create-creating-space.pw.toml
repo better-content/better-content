@@ -1,0 +1,13 @@
+name = "Create : Creating Space"
+filename = "creatingspace-1.20.1-1.7.12.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "59551e42d8076e37aa9004fcf7f4fd451db42f03"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7743611
+project-id = 858897

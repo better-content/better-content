@@ -1,0 +1,13 @@
+name = "Tropicraft"
+filename = "Tropicraft-9.6.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "f0fb2074976f0e201f1119fdde7e20914cd06712"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 4811116
+project-id = 254794

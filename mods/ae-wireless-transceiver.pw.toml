@@ -1,13 +1,13 @@
 name = "AE Wireless Transceiver"
-filename = "aewireless-1.2.5.jar"
+filename = "aewireless-1.3.3-2.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "190ab998fdc20225e32131da3eca53ef2a451b86"
+hash = "925a8ffd08ef67a22e7f757b0079a0e8c85a7db9"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7478596
+file-id = 7760105
 project-id = 1337607

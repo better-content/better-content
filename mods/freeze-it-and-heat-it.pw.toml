@@ -3,11 +3,11 @@ filename = "fiahi-3.1.5.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/6jlFKPwR/versions/zdjKK2LW/fiahi-3.1.5.jar"
-hash-format = "sha512"
-hash = "485926d4917a59bdb3ecbf28e9fe837670c7af81bff53ad2a95d944b1011b612d40cf59c13c6ae8d14674893620eaf70bb5242a4299a5c042902d2ffb2a6526e"
+hash-format = "sha1"
+hash = "9a68e328d4bde56528888c97bc5ff6b87a3c45b5"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "6jlFKPwR"
-version = "zdjKK2LW"
+[update.curseforge]
+file-id = 7349421
+project-id = 911258

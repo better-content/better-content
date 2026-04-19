@@ -1,13 +1,13 @@
 name = "Tinker and Better Combat"
-filename = "TinkerBetterCombat 0.8.jar"
+filename = "TinkerBetterCombat 0.11.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "2043f8eaa32a4c4c29809268831146ac0c10008c"
+hash = "108a73bbb9a2c07d69bb49e6f3bac86c653fc86d"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7567841
+file-id = 7734597
 project-id = 1061728

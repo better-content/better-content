@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ore_overlays_all">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/resourcepacksold/ore_overlays_all.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

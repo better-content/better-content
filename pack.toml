@@ -1,11 +1,11 @@
-name = "Applied Trouble"
+name = "Applied Stress"
 version = "Playtest 3 - v1"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "7a7da56941269e6c361dd6a388619eb7a9e12a43794f44e4e0e8af8bf9645eef"
+hash = "e7d8fda5ac7c746a9cb3bff0e6acb3fda26f8b94a8b22ca136d4948c8a8ad3c1"
 
 [versions]
 forge = "47.4.13"

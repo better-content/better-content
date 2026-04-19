@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="mods">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mods/Additional-Weaponry-1.20.1-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mods/obelisks-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mods/packetfixer-3.3.1-1.18-1.20.4-merged.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mods/c2me-fabric-mc1.20.1-0.2.0+alpha.11.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mods/rpgstats-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

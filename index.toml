@@ -6953,72 +6953,92 @@ file = "kubejs/dump_iron_recip.js"
 hash = "d58c0ef29fc194715f4c2018b0da90625508e098045de796443825f4b985d999"
 
 [[files]]
-file = "kubejs/server_scripts/ae2_skystone_tier.js"
-hash = "9a4f067097463dbd8258b3669c766b02bc6980374bfdb65d9677d74bd8fedebc"
+file = "kubejs/server_scripts/10_tags/10_ae2_skystone_tier.js"
+hash = "a338374625eff8380151e56f580dfef28a308f71ef0b7787d55db3e56e3480fb"
 
 [[files]]
-file = "kubejs/server_scripts/badfurnace.js"
-hash = "bb9d6744e0676c5a762256e254ea1e1f46b6e898c1ba37894d8ee13b33154488"
-
-[[files]]
-file = "kubejs/server_scripts/expensive_grout.js"
-hash = "e6c8d7264f4564aa029554693e293cc3184550dddf826e07111bf37f9ff459fb"
-
-[[files]]
-file = "kubejs/server_scripts/ingot_rewrites.js"
-hash = "5de5ee10af9ccb6dc5306b772ab7913f590c5a2b77b425a85d81493b7f524639"
-
-[[files]]
-file = "kubejs/server_scripts/no_boats.js"
-hash = "90ea269de7e3d41bc4e858e9b964380288fbf4a1a7d99518c670e738060a246c"
-
-[[files]]
-file = "kubejs/server_scripts/no_easy_compression.js"
-hash = "5bf63d7fbd3c8a80b39fa472cce8f8f13d6742076446f6f274e380992bb2133a"
-
-[[files]]
-file = "kubejs/server_scripts/overworld_block_drops.js"
-hash = "45fbdf632e9926578409beb1a162db0be1fb53fb40fd0f26f826e1b35d0fb2b6"
-
-[[files]]
-file = "kubejs/server_scripts/r_ores_melted.js"
-hash = "2d67f291ebba8b2ae6ef21306e1a731de65e238564d0e1ee07d4e7ff1e9065e5"
-
-[[files]]
-file = "kubejs/server_scripts/remove_items.js"
-hash = "21b7d5a74ee21db95e789780980b0743b40efb96e5fad6d9cb31bb97152f3d0f"
-
-[[files]]
-file = "kubejs/server_scripts/replaceable_deepslate.js"
+file = "kubejs/server_scripts/10_tags/20_replaceable_deepslate.js"
 hash = "9d2ee4a3ca35db0e1078f5fbe9926c997de9c9281b002e67ef96948772073c3f"
 
 [[files]]
-file = "kubejs/server_scripts/spawn_randomizer.js"
-hash = "71cf48039941d735dee02d05c6d8380a5464c28a14e73e3675e9e54cbd68dadf"
+file = "kubejs/server_scripts/20_recipe_remove/10_no_boats.js"
+hash = "90ea269de7e3d41bc4e858e9b964380288fbf4a1a7d99518c670e738060a246c"
 
 [[files]]
-file = "kubejs/server_scripts/tcon_steel_block_casting.js"
+file = "kubejs/server_scripts/20_recipe_remove/20_no_andesite_alloy_nugget_crafting.js"
+hash = "008d71b59660256f2668e0ce2166d28f9a0b905beb827e9bd9dde8e6fb2402c2"
+
+[[files]]
+file = "kubejs/server_scripts/20_recipe_remove/30_remove_items.js"
+hash = "21b7d5a74ee21db95e789780980b0743b40efb96e5fad6d9cb31bb97152f3d0f"
+
+[[files]]
+file = "kubejs/server_scripts/30_recipe_replace/10_no_easy_compression.js"
+hash = "24c62acdb6c0d3d64166b27deb0fe2b6e74eb59a8540bfe960cc27cefc6a8056"
+
+[[files]]
+file = "kubejs/server_scripts/30_recipe_replace/20_expensive_grout.js"
+hash = "e6c8d7264f4564aa029554693e293cc3184550dddf826e07111bf37f9ff459fb"
+
+[[files]]
+file = "kubejs/server_scripts/30_recipe_replace/30_expensive_water_wheels_and_windmills.js"
+hash = "8238d86770a5b95b21f73b298c31e08c336d2e814053e39abcc3f8263a391ff6"
+
+[[files]]
+file = "kubejs/server_scripts/30_recipe_replace/40_ingot_rewrites.js"
+hash = "5de5ee10af9ccb6dc5306b772ab7913f590c5a2b77b425a85d81493b7f524639"
+
+[[files]]
+file = "kubejs/server_scripts/30_recipe_replace/50_badfurnace.js"
+hash = "bb9d6744e0676c5a762256e254ea1e1f46b6e898c1ba37894d8ee13b33154488"
+
+[[files]]
+file = "kubejs/server_scripts/30_recipe_replace/60_vanilla_tools_to_tcon_heads.js"
+hash = "0ac6a6e66bee9b179db62afc628e8065762b04dc3c2bd7309007a9cd3975faa8"
+
+[[files]]
+file = "kubejs/server_scripts/40_recipe_add/10_campfire_recipe.js"
+hash = "1731f5e09668041ce540f68f3468668ece5e5ba1a7c1298786f0e0bf092f2070"
+
+[[files]]
+file = "kubejs/server_scripts/40_recipe_add/20_tcon_steel_block_casting.js"
 hash = "b97a109cbbee310d06281996078507d60a5540c5cb86e9fbbfcac4743037db6e"
 
 [[files]]
-file = "kubejs/server_scripts/thats_crate_recipes.js"
+file = "kubejs/server_scripts/40_recipe_add/30_thats_crate_recipes.js"
 hash = "7c8bff0a167e5ca668f70047727a398e3965656b7160ebd344d7d31449fa6ad2"
 
 [[files]]
-file = "kubejs/server_scripts/zzz_torch_overhaul.js"
-hash = "82fcb3634a3569b4abb09f24cfe64ca9eb7fcc736377eed80357f76f09a82d09"
+file = "kubejs/server_scripts/50_loot/10_overworld_block_drops.js"
+hash = "45fbdf632e9926578409beb1a162db0be1fb53fb40fd0f26f826e1b35d0fb2b6"
 
 [[files]]
-file = "kubejs/startup_scripts/immobile_spawn.js"
-hash = "222e35db563a535007bd5913a2129fce5abd2b41d1d54d7399d36d1e5e631aa3"
+file = "kubejs/server_scripts/60_worldgen/10_r_ores_melted.js"
+hash = "2d67f291ebba8b2ae6ef21306e1a731de65e238564d0e1ee07d4e7ff1e9065e5"
 
 [[files]]
-file = "kubejs/startup_scripts/thats_crate.js"
+file = "kubejs/server_scripts/70_spawn/10_spawn_randomizer.js"
+hash = "71cf48039941d735dee02d05c6d8380a5464c28a14e73e3675e9e54cbd68dadf"
+
+[[files]]
+file = "kubejs/server_scripts/README.md"
+hash = "a2e82364f012f7f124ab2b0ee24cedb969d97e68cdf581fcc650bc31c0315b2b"
+
+[[files]]
+file = "kubejs/startup_scripts/10_items_blocks/10_thats_crate_registry.js"
 hash = "967a736c0355743c7a6acbecf2772bb1a5be27db9620debc1cc1775ea9aada9b"
 
 [[files]]
-file = "kubejs/startup_scripts/triple_flint_durability.js"
+file = "kubejs/startup_scripts/10_items_blocks/20_triple_flint_durability.js"
 hash = "3552e208796fb8a0af1a41781b58039f5fc0f8c32dd8a3124af67e3268f1729f"
+
+[[files]]
+file = "kubejs/startup_scripts/20_globals/10_immobile_spawn.js"
+hash = "222e35db563a535007bd5913a2129fce5abd2b41d1d54d7399d36d1e5e631aa3"
+
+[[files]]
+file = "kubejs/startup_scripts/README.md"
+hash = "3903307df08d606c37af90ecb8d1e13c2b0694bf1a989abec250268f562e8cc4"
 
 [[files]]
 file = "mods/.codex"
@@ -7553,13 +7573,13 @@ hash = "170c1a0b6fd950fb590ad3dd351feb2931d9eaa27b53d2c1fe6a765beeeef2e1"
 metafile = true
 
 [[files]]
-file = "mods/dynamic-trees-quark.pw.toml"
-hash = "0dcda06d4bddbd8c19e894f92d9c90529a35979a4c19062dc9fa02166c223177"
+file = "mods/dynamic-trees-for-natures-spirit.pw.toml"
+hash = "9c74ac86374e5f8769d846cdd4a2937652edc98b12f3508641ede0b4fbad18c4"
 metafile = true
 
 [[files]]
-file = "mods/dynamic-trees-regions-unexplored.pw.toml"
-hash = "8c256e8c4e71a02a7a8162556f9077d4970f43fc20b867b462774afe939e587a"
+file = "mods/dynamic-trees-quark.pw.toml"
+hash = "0dcda06d4bddbd8c19e894f92d9c90529a35979a4c19062dc9fa02166c223177"
 metafile = true
 
 [[files]]
@@ -8141,6 +8161,11 @@ hash = "937c7ae4c8274ee0717546a2ca736099b1640a178b8f06027f62ca310517e413"
 metafile = true
 
 [[files]]
+file = "mods/natures-spirit.pw.toml"
+hash = "346f0e076332a93b689094d4afa81bd4476346f01190281106faf5c65eb7ceb0"
+metafile = true
+
+[[files]]
 file = "mods/no-mob-farms.pw.toml"
 hash = "142ec267337a87c22dd4e9a87de20ae069f92f076d5f67009e1a150f867e271a"
 metafile = true
@@ -8301,12 +8326,7 @@ metafile = true
 
 [[files]]
 file = "mods/realisticores-0.1.0.jar"
-hash = "c963b182be4acfb3d94d5b393e805bdf833deee56a6939a7d85befc9683bac9e"
-
-[[files]]
-file = "mods/regions-unexplored.pw.toml"
-hash = "90b121a91bd521fbe23b396f7211da0ffe0aecaa003394604fe8e69dab29ed9c"
-metafile = true
+hash = "91eca410eb33592fed5a6938d1178913ff63ce665af786d5eeece08aed01dff2"
 
 [[files]]
 file = "mods/registry-dumper-3000.pw.toml"
@@ -8698,11 +8718,6 @@ hash = "8f24f728e1e69034beb9fe44cf2b2e0b40147a4ed5559f38cc851edcb43ceaab"
 metafile = true
 
 [[files]]
-file = "mods/wfs-cave-overhaul.pw.toml"
-hash = "490c9e97fafc5b17dc961c76b447b4cc47bec8cbb21bcb3edf89ec5e48e6d95e"
-metafile = true
-
-[[files]]
 file = "mods/xl-packets.pw.toml"
 hash = "69a85643d125b0454ed6408cfa4a7cea1b3566c78ed3fd5f3107f93fa852f1c9"
 metafile = true
@@ -8710,16 +8725,6 @@ metafile = true
 [[files]]
 file = "mods/yungs-api.pw.toml"
 hash = "9fb6a1a06b18f2ce7b0811200339d997925cb39bde220fbaea4d5c8067376c12"
-metafile = true
-
-[[files]]
-file = "mods/yungs-better-caves.pw.toml"
-hash = "c6d1c3ab24396c5efd9c0bfa4eeedd9c8c42fe9be329de55d25b299f1e9ea0a2"
-metafile = true
-
-[[files]]
-file = "mods/yungs-cave-biomes.pw.toml"
-hash = "2c300c8f7129aabbfd0a5d913edd31baf1ee2641907d220ccc6981a6be204432"
 metafile = true
 
 [[files]]
@@ -8750,11 +8755,11 @@ hash = "24040cc3b55b5c15f79ffa4c3b7a731852f8d466b91bed7d5a88f5517fec4288"
 
 [[files]]
 file = "options.txt"
-hash = "7ded69ac28eddd49b2f533846edd6d8b55da4b370cc5099f486dc572e14d18dc"
+hash = "3a716883e14f3561b0f9f58d426b345044f4c609981e2fd32a9db3918a7f27e1"
 
 [[files]]
 file = "options.txtold"
-hash = "e8287db8391e36beda4dc3a18dfc2be5dbb20f9b3fb68868f8ad414886a7c5b7"
+hash = "0efcb2023e02cd4dbd168a45bf6f632c53f98d2fc08bf6720a613b092b90d500"
 
 [[files]]
 file = "pca.sh"
@@ -8775,7 +8780,7 @@ hash = "27be7834ad80ced9f109b7472b16b54a066c2f12a22677bc5ea8ab801c35802c"
 
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.7.1.zip.txt"
-hash = "afa6ec26bbd8bade53e5dff5aaadb1093888070f1936aca31ea7fdafc4b8fdb4"
+hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
 
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.7.1/shaders/block.properties"

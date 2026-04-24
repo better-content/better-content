@@ -38,7 +38,7 @@
     "max_y": 512,
     "min_y": -64,
     "ultrasmooth": true,
-    "vertical_scale": 2.5
+    "vertical_scale": 2.0
   },
   "islands": {
     "enabled": true,

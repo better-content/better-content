@@ -1,13 +1,13 @@
 name = "TConJEI"
-filename = "tconjei-1.20.1-1.5.3.jar"
+filename = "tconjei-1.20.1-1.5.4.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "24263bdc880f4a2b089f5a17d52d0224787debd3"
+hash = "df2c0939340a23d9f9f0f80d2c0df7822674cdb4"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7689197
+file-id = 7863731
 project-id = 974154

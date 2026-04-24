@@ -1,13 +1,13 @@
 name = "Bosses'Rise (Forge/NeoForge)"
-filename = "block_factorys_bosses-2.0.11-forge-1.20.1.jar"
+filename = "block_factorys_bosses-2.0.12-forge-1.20.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "560802ec7cae8e94947cee73558d6ce499408ff6"
+hash = "59156b210818ddaf01060d977797efbb41f0a7d1"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7775725
+file-id = 7822332
 project-id = 1314084

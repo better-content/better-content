@@ -1,6 +1,46 @@
 hash-format = "sha256"
 
 [[files]]
+file = ".codex"
+hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+
+[[files]]
+file = ".idea/libraries/Applied_Stress_Playtest_3___v1.xml"
+hash = "4c244fa155ba52a7124a1304c239a53524d155ab0c0098c237262f9a20a1ed59"
+
+[[files]]
+file = ".idea/libraries/ComplementaryReimagined_r5_7_1.xml"
+hash = "aeb2d4d88f2a552ff19a5e6e1850376171129e6c81143b2e150fbc571c4cbf72"
+
+[[files]]
+file = ".idea/libraries/mods.xml"
+hash = "28f02747eacfd3e2fed2a28d046b00fcff8113d48e9219de5e50cb90968eeb0e"
+
+[[files]]
+file = ".idea/libraries/ore_overlays_all.xml"
+hash = "4bbf91f0b88ceb8c1db9ca4a47ace74860f439c46ef3177f33f4590daa07296b"
+
+[[files]]
+file = ".idea/misc.xml"
+hash = "bcc460c48a792a7af85864eabd5f2819018c56b081831f702550bb59cbb956dc"
+
+[[files]]
+file = ".idea/modules.xml"
+hash = "153ebed012476176cb3336605689dbde35f095ec2a749125253210a7092915cf"
+
+[[files]]
+file = ".idea/obelisks.iml"
+hash = "0ff94b49c61885dd797e3da61dc3444c7ab48f317373ca42681910f1f8413752"
+
+[[files]]
+file = ".idea/vcs.xml"
+hash = "6323e12648862a0a96fc0d7877672817d6cd91e2c2a3c3d78f1090db23c6e88e"
+
+[[files]]
+file = ".idea/workspace.xml"
+hash = "8180feeb23f378dfc85ea769838848f7e8622b7d9d370e0d13826eeb08570ef1"
+
+[[files]]
 file = "3af52454-4227-44b1-9a75-f9210097e15f.png"
 hash = "6113278bf659bf29e065503ec59dd6df2fe9bc5ce613152fb3932d05750aeb67"
 
@@ -6322,7 +6362,7 @@ hash = "dd7415a83aef00c385628fe1756a0a97738b8dffd00f30effd08dd5e1da27431"
 
 [[files]]
 file = "config/structurify.json"
-hash = "d7acf48f3d96d146609750678be7e44b7c224c3aa7a041a18fa60a47986e16c6"
+hash = "d02ec9599df1eb6945caba6be3791456e37699d72f3956197d402bd73b6f24ef"
 
 [[files]]
 file = "config/survivalisland.json"
@@ -7009,6 +7049,10 @@ file = "kubejs/client_scripts/20_hide_vanilla_tools.js"
 hash = "ee6dd1eb04cd5a290900b42775e14c765793e06dc4a838a0423fed2ca7569c7f"
 
 [[files]]
+file = "kubejs/client_scripts/30_hide_create_new_age_electric.js"
+hash = "d0ca8623aade77f21526556b9c3dd473d04be542ea85d0a27e20c3a4b9cb4698"
+
+[[files]]
 file = "kubejs/config/client.properties"
 hash = "ca1bcfdcb5e2feb66eea14271ba8ceb5aaa1cc81fba3b5294a2cc0a14eb26b6e"
 
@@ -7030,11 +7074,23 @@ hash = "d58c0ef29fc194715f4c2018b0da90625508e098045de796443825f4b985d999"
 
 [[files]]
 file = "kubejs/server_scripts/10_tags/10_ae2_skystone_tier.js"
-hash = "4d9f6561e401e31a1d2d230c49c5dfb5fc09d400fb41132898134c5f52a097a6"
+hash = "60f99c284d19c384ffd0fa6ba987544fb9dcc07de11d3f68883e0835a1cbc7a3"
 
 [[files]]
 file = "kubejs/server_scripts/10_tags/20_replaceable_deepslate.js"
 hash = "9d2ee4a3ca35db0e1078f5fbe9926c997de9c9281b002e67ef96948772073c3f"
+
+[[files]]
+file = "kubejs/server_scripts/10_tags/30_stone_cobble_compat.js"
+hash = "6cedc87b3afbec0118a339de1984b4beeae12a135cb67ac5c31c5ba0df61d144"
+
+[[files]]
+file = "kubejs/server_scripts/10_tags/40_dirt_grass_compat.js"
+hash = "35f471e57d4ca652d582c9918ff2544e2f9562f70d88c7d9876e83e7985f5cb9"
+
+[[files]]
+file = "kubejs/server_scripts/10_tags/50_sand_compat.js"
+hash = "56f2fd6078c57f42b66aed52d5e1a4a587d626668edeb5bcac4f38c01ba6a2b1"
 
 [[files]]
 file = "kubejs/server_scripts/20_recipe_remove/10_no_boats.js"
@@ -7046,7 +7102,11 @@ hash = "c2a82b99259f6281874089a5f4a9e16932d5d71993d299fadcb454c806148b65"
 
 [[files]]
 file = "kubejs/server_scripts/20_recipe_remove/30_remove_items.js"
-hash = "ffa3ad2644535493a62de321e226005d342215f9a5df6a989cedbe85d55c9ff1"
+hash = "29ae303123b2e292fa329560e66663e60d07cf60788552f7eae4f86cd0ec5647"
+
+[[files]]
+file = "kubejs/server_scripts/20_recipe_remove/40_remove_create_new_age_electric_crafting.js"
+hash = "2de1e08e1f0a44ab5a51741769c2d83e26ad06248c352274aec793ce272cc4b1"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/10_no_easy_compression.js"
@@ -7077,8 +7137,20 @@ file = "kubejs/server_scripts/30_recipe_replace/70_kettle_rune_swap.js"
 hash = "79767d9ddefcb5ce0c54d6da348d9c134f09e25a5b6733a778778ffaa201448e"
 
 [[files]]
+file = "kubejs/server_scripts/30_recipe_replace/75_stone_cobble_tag_compat.js"
+hash = "9245affdcbb452cd2d749540114ee5541df86f8a4d503f3164770d3e1613d656"
+
+[[files]]
 file = "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js"
 hash = "7973da3585c2baccc42f83cf924daece0a291c1e89be752850b31f86eb068909"
+
+[[files]]
+file = "kubejs/server_scripts/30_recipe_replace/85_dirt_grass_tag_compat.js"
+hash = "a76dfcfd2a449c3bb97932e2bf04c53442c6649be9bce49859b8f17dbcc1f14c"
+
+[[files]]
+file = "kubejs/server_scripts/30_recipe_replace/90_sand_tag_compat.js"
+hash = "209e2449cd5d9e7febf3002f00468255813b0b332595d881ce845588f903f48e"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/10_campfire_recipe.js"
@@ -7422,7 +7494,7 @@ metafile = true
 
 [[files]]
 file = "mods/classselector-1.0.0.jar"
-hash = "8f24fada48397daf1cd82025c2cb504928e3592b17b8ecd0e5d86cf0a1c65e6f"
+hash = "7a2fc12b82123ae6eef5db2e95da40508bf8e2e4866818f75092619c35c71665"
 
 [[files]]
 file = "mods/cloth-config.pw.toml"
@@ -8168,11 +8240,6 @@ hash = "8ee3776430187fb4d69278e645e10fefb7fe7342caee0a5861479ce25956713a"
 metafile = true
 
 [[files]]
-file = "mods/mahou-tsukai.pw.toml"
-hash = "1df5a0ffa78547a50ddf373ed2768271be6eb79c58063e28f761517d554df610"
-metafile = true
-
-[[files]]
 file = "mods/malum.pw.toml"
 hash = "19821414a26c40c40f4584102cbc73df7282ef1aadf8f948b37f97c6f44a91a3"
 metafile = true
@@ -8303,7 +8370,7 @@ metafile = true
 
 [[files]]
 file = "mods/obelisks-1.0.0.jar"
-hash = "593aaefa122be8da0cb8c2b2a681d72f2793d780213626fcf6488da2ac6c6cbe"
+hash = "266c8348937ea497948d653583c243ddfb5d9f27ff45f7092e1ece487df6d6aa"
 
 [[files]]
 file = "mods/oc2r.pw.toml"
@@ -8432,7 +8499,7 @@ metafile = true
 
 [[files]]
 file = "mods/realisticores-0.1.0.jar"
-hash = "a01809a6d14320894f68d0b157d7daf4cc08c561103629ab3549ce2c96f923a8"
+hash = "19988e7200a2c1b555098090c69d4f876b8fc9fe9ff6ca4a268d102c7a5f6f86"
 
 [[files]]
 file = "mods/registry-dumper-3000.pw.toml"
@@ -8481,7 +8548,7 @@ metafile = true
 
 [[files]]
 file = "mods/rpgstats-1.0.0.jar"
-hash = "14825453e831a99d7d2422a38a4809e4c02e65ff56e52f336a01e71ba4d7cc5e"
+hash = "8e3cc7a66c92623bb3fc52e5e26d974bb79a9f19cb80529df1f7e0dd82bc6de4"
 
 [[files]]
 file = "mods/rustic-delight.pw.toml"
@@ -8546,11 +8613,6 @@ metafile = true
 [[files]]
 file = "mods/sound-physics-remastered.pw.toml"
 hash = "ee2d9154be68ef20293596a3f65810111fd35a802f1e8292e9ba8872de463a14"
-metafile = true
-
-[[files]]
-file = "mods/spark.pw.toml"
-hash = "d0e1a79dbcda8499e0f12f4adaa5503f9bbc84a6274ce07b3a3839476622e8e5"
 metafile = true
 
 [[files]]

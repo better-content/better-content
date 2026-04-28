@@ -24,6 +24,7 @@
     { "name": "minecraft:ruined_portal_nether", "is_disabled": true },
     { "name": "minecraft:ruined_portal_ocean", "is_disabled": true },
     { "name": "minecraft:ruined_portal_swamp", "is_disabled": true },
+    { "name": "ars_additions:ruined_portal", "is_disabled": true },
 
     { "name": "tconstruct:earth_slime_island", "is_disabled": true },
     { "name": "tconstruct:sky_slime_island", "is_disabled": true },

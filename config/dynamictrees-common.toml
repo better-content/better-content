@@ -11,7 +11,7 @@
 #Miscellaneous Settings
 [misc]
 	#If enabled, dirt bucket recipes will be automatically generated.
-	generateDirtBucketRecipes = true
+	generateDirtBucketRecipes = false
 	#If enabled, seeds for mega species can be crafted with four regular seeds.
 	generateMegaSeedRecipe = false
 	#The base potion the Biochar Base is brewed from. Minecraft potions use 'awkward'. If you change this, don't forget to update the patchouli manual page too.

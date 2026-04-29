@@ -9,7 +9,15 @@ var BTM_DEPOSIT_SOURCE_BLOCKS = {
     zinc: ['realisticores:zinc_ore', 'realisticores:deepslate_zinc_ore'],
     lead_zinc_vein: ['realisticores:lead_zinc_vein', 'realisticores:deepslate_lead_zinc_vein'],
     quartz_vein: ['realisticores:quartz_vein', 'realisticores:deepslate_quartz_vein'],
-    bauxite_laterite: ['realisticores:bauxite_laterite', 'realisticores:deepslate_bauxite_laterite']
+    bauxite_laterite: ['realisticores:bauxite_laterite', 'realisticores:deepslate_bauxite_laterite'],
+    nickel_sulfide: ['realisticores:nickel_sulfide_ore', 'realisticores:deepslate_nickel_sulfide_ore'],
+    tin_tungsten_greisen: ['realisticores:tin_tungsten_greisen', 'realisticores:deepslate_tin_tungsten_greisen'],
+    titanium_iron_oxide: ['realisticores:titanium_iron_oxide_ore', 'realisticores:deepslate_titanium_iron_oxide_ore'],
+    kimberlite_pipe: ['realisticores:kimberlite_pipe', 'realisticores:deepslate_kimberlite_pipe'],
+    emerald_schist_beryl: ['realisticores:emerald_schist_beryl_vein', 'realisticores:deepslate_emerald_schist_beryl_vein'],
+    corundum_beryl_vein: ['realisticores:corundum_beryl_gem_vein', 'realisticores:deepslate_corundum_beryl_gem_vein'],
+    uranium_ore: ['realisticores:uranium_ore', 'realisticores:deepslate_uranium_ore'],
+    thorium_ore: ['realisticores:thorium_ore', 'realisticores:deepslate_thorium_ore']
 }
 
 function btmAddDepositTags(event) {

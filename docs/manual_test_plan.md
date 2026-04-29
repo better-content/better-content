@@ -33,3 +33,14 @@
 29. Spawn each vanilla villager profession and verify all trades use Dot Coin costs, not emeralds.
 30. Spawn a wandering trader and verify both trade pools use Dot Coin costs.
 31. Check representative high-tier trades and verify they are convenience/adventure sinks, not required progression shortcuts.
+
+## Extreme Y-Band Reward Checks
+
+30. In a fresh generated world, confirm ADLODS mountain deposits for emerald/ruby/sapphire/topaz only appear in high terrain (`Y=112..256`).
+31. Confirm platinum/palladium/rhodium/ruthenium and diamond deposits only appear in deepslate-depth bands (`Y=-64..-16`) and are not air-exposed.
+32. Confirm uranium/thorium/osmium/iridium deposits only appear in lava-depth bands (`Y=-64..-48`) and are not air-exposed.
+33. Confirm ancient debris ADLODS deposits only appear in the Nether low band (`Y=8..22`) and are not air-exposed.
+34. Confirm vanilla ADLODS singleton generation is disabled for `diamond_ore`, `emerald_ore`, and `ancient_debris`.
+35. Confirm Ice and Fire sapphire generation is disabled and sapphire comes from the mountain-height ADLODS deposit path.
+36. Inspect JEI/EMI recipes under `kubejs:extreme_y_rewards/*` and verify mountain, deepslate, and lava-depth materials are visible in the intended reward recipes.
+37. Verify `advanced_ae:flight_card` and `advanced_ae:flight_drift_card` still have no recipe.

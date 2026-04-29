@@ -56,3 +56,11 @@
 - Expanded villager and wandering trader script passed `node --check`.
 - Trade result item IDs were validated against the live item registry dump; no missing result item IDs remain.
 - Runtime villager UI checks are still required in-client.
+
+## Extreme Y-Band Reward Pass
+
+- Added hard altitude bands for mountain-height, deepslate-depth, and lava-depth ADLODS reward materials.
+- Added deterministic KubeJS recipes under `kubejs:extreme_y_rewards/*` for selected Artifacts, Sophisticated Backpacks/Storage, Building Gadgets, AE2, and Advanced AE rewards.
+- Did not add or restore creative flight recipes.
+- Did not add global AE quantum bridge recipes as rewards because that conflicts with local-site AE2 design.
+- Closed default-generation bypasses for vanilla diamond, vanilla emerald, vanilla ancient debris, and Ice and Fire sapphire.

@@ -6657,6 +6657,10 @@ file = "docs/acid_vat_pass_report.md"
 hash = "dabca28efdaa09a850599ff4fc7fa15ee977c15361e72379c554254e3039fd81"
 
 [[files]]
+file = "docs/autonomous_completion_report.md"
+hash = "3863bf7f20c4ed2dee926bdc65f78649d1956ae3e9b4182febc596a3e941e2f7"
+
+[[files]]
 file = "docs/bypass_and_deadlock_report.md"
 hash = "a9034f2fdfb8908f690fc164512e0a73ddf2ad633b59322f2c638cebd9d9b607"
 
@@ -6678,7 +6682,7 @@ hash = "29ba72d4a2da9805acc8db928f2611713c60cc021e8dc2836525e84e6677dd19"
 
 [[files]]
 file = "docs/cross_system_source_report.md"
-hash = "bfc311dc0a11960e6a14904a20ba9817dbfec82b5502e28ab94b2a0fd006b05f"
+hash = "9aebeca757746cecb250d85f2b369e52009c547ad129ce1519a26244311dce0d"
 
 [[files]]
 file = "docs/design_handoff.md"
@@ -6694,11 +6698,11 @@ hash = "ef3d1be077efa7177f9c174f80cfb10f8731c343a11e46b750c799a36875d85c"
 
 [[files]]
 file = "docs/expert_item_graph.md"
-hash = "2be23757fd67d4d5daa4883fae64f8bc53fd9154daf5ffcc9994266664b3e6ea"
+hash = "197f3a7006f9c1e1484837bbd980876285fe5a4b3e7df7d11909e4879eba7aa2"
 
 [[files]]
 file = "docs/expert_item_graph_summary.json"
-hash = "aa42f4e9b535845e19783affb71cd72dc932e92d9efb69984e28ce214cc7a6d4"
+hash = "e7e0809844aade674dd96cdf7a1c805c5270169645824e521b292e8eafb0de1b"
 
 [[files]]
 file = "docs/extreme_y_band_reward_pass.md"
@@ -6710,7 +6714,7 @@ hash = "d440d34d2efbc787fd05168ee06d3fdb47be0f96b8e3406a899cfb89bed90f9a"
 
 [[files]]
 file = "docs/full_item_graph_audit.md"
-hash = "924dea6654dae9df6000f7f1d4263a86d57201a51248c1d36d1dfc28958882e5"
+hash = "fd0475c2f725d5b858a72434d06520fdfdd31cf52ece0c9241f948378ff0232b"
 
 [[files]]
 file = "docs/global_loot_scrub_expansion.md"
@@ -6770,7 +6774,7 @@ hash = "d5a6e6d5333d2e79cafafb99dc12c89315e92fb3b2c35dac3d98386e93973a82"
 
 [[files]]
 file = "docs/no_bypass_report.md"
-hash = "d8e726305386a0aa22fe43b5592d414fa6e753797b8356f1b0f15d0cedcca79b"
+hash = "6d79104a273202885b2a915dcb5ddc22416766930fa18b31a008ba2a30b47162"
 
 [[files]]
 file = "docs/ore_deposit_catalog.md"

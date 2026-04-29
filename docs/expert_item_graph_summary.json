@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-29T08:29:18.674Z",
+  "generatedAt": "2026-04-29T08:36:39.194Z",
   "instance": "/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1/minecraft",
   "recipes": 50077,
   "recipeOutputs": 45030,
@@ -7,8 +7,8 @@
   "lootTables": 22436,
   "emeraldLootTables": 237,
   "coinLootSources": 15,
-  "questFiles": 15,
-  "questCoinRewards": 592,
+  "questFiles": 19,
+  "questCoinRewards": 785,
   "villagerTradeRows": 140,
   "multiSourceItems": 17152
 }

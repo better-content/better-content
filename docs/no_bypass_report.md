@@ -1,6 +1,6 @@
 # No-Bypass Report
 
-Generated: 2026-04-29T08:29:18.673Z
+Generated: 2026-04-29T08:36:39.193Z
 
 This is an audit report, not a proof. The current KubeJS recipe dump is pre-addition for KubeJS-added recipes, so this report is best used to identify likely misses and non-recipe bypass surfaces.
 

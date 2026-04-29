@@ -6682,7 +6682,7 @@ hash = "29ba72d4a2da9805acc8db928f2611713c60cc021e8dc2836525e84e6677dd19"
 
 [[files]]
 file = "docs/cross_system_source_report.md"
-hash = "9aebeca757746cecb250d85f2b369e52009c547ad129ce1519a26244311dce0d"
+hash = "798fea643b507790d35b2cea51f9ebc2eedcf8f3a7a65065707285feae37544b"
 
 [[files]]
 file = "docs/design_handoff.md"
@@ -6698,11 +6698,11 @@ hash = "ef3d1be077efa7177f9c174f80cfb10f8731c343a11e46b750c799a36875d85c"
 
 [[files]]
 file = "docs/expert_item_graph.md"
-hash = "197f3a7006f9c1e1484837bbd980876285fe5a4b3e7df7d11909e4879eba7aa2"
+hash = "871a61d7a55128a1eccb08d9f739510152e874cfac8e5c379380ec3489cb82c8"
 
 [[files]]
 file = "docs/expert_item_graph_summary.json"
-hash = "e7e0809844aade674dd96cdf7a1c805c5270169645824e521b292e8eafb0de1b"
+hash = "bb2d4a2a9afb2ed90308cc1c277a75a8ba108cdff08f3eb2e0464415764c90c2"
 
 [[files]]
 file = "docs/extreme_y_band_reward_pass.md"
@@ -6714,7 +6714,7 @@ hash = "d440d34d2efbc787fd05168ee06d3fdb47be0f96b8e3406a899cfb89bed90f9a"
 
 [[files]]
 file = "docs/full_item_graph_audit.md"
-hash = "fd0475c2f725d5b858a72434d06520fdfdd31cf52ece0c9241f948378ff0232b"
+hash = "ca5a8f825859a462bd41c2a9258873630d7d6c05463d4238e49d812123049955"
 
 [[files]]
 file = "docs/global_loot_scrub_expansion.md"
@@ -6734,7 +6734,7 @@ hash = "c2752171709760aea5d28a6d33a625d7b2c37b281eeb8ad7d72801657c0e96ec"
 
 [[files]]
 file = "docs/known_issues.md"
-hash = "a7b70c5c34ad0e403fbd6a97071a1e3e761285654745f3f5ae098c80c309ef72"
+hash = "403a95aa4f877d9afe410c699d0e405ec27382294b591856a54f1eb117b9542d"
 
 [[files]]
 file = "docs/kubejs_recipe_audit_dumps.md"
@@ -6758,7 +6758,7 @@ hash = "246d69e37f77e599df28b5ad4225b31674bde664a889b9fc2aba41b88d70cea4"
 
 [[files]]
 file = "docs/manual_test_plan.md"
-hash = "7f1934bb36147a8269db91d327fe487b812c0801018f2261976823f1baeace2a"
+hash = "e1a3e161fd813d19db99de44c46145fb23cd3b4cca31a04ae1facfd0b2c4aae1"
 
 [[files]]
 file = "docs/manufactured_plate_recipe_pass.md"
@@ -6774,7 +6774,7 @@ hash = "d5a6e6d5333d2e79cafafb99dc12c89315e92fb3b2c35dac3d98386e93973a82"
 
 [[files]]
 file = "docs/no_bypass_report.md"
-hash = "6d79104a273202885b2a915dcb5ddc22416766930fa18b31a008ba2a30b47162"
+hash = "2da25de1acb751027da514c335998193231947e81ed5e9123467e50219a10543"
 
 [[files]]
 file = "docs/ore_deposit_catalog.md"
@@ -6798,7 +6798,7 @@ hash = "75d605ed38cd37083b25c3969edf162ba8f0e904a01e004f9ea99f0c63b20fc8"
 
 [[files]]
 file = "docs/quest_book_completeness_audit.md"
-hash = "dd8309984f3936fc801c5588768607d2d6fd8f328c8b8314e222e7f7e8b8b808"
+hash = "82f221f633e10b18c2191c3a4e161e3b2605bc4461ebd1ebfb0c8aa49ad07bab"
 
 [[files]]
 file = "docs/quest_book_fleshout_pass.md"
@@ -6818,7 +6818,7 @@ hash = "7c62aa1a88aa778ebedd64f875fe67b4241990c9c619dd6ba9342e68e8906412"
 
 [[files]]
 file = "docs/validation_report.md"
-hash = "456a216a33044635eed83bacfd9ab1c0ddb845a5186cc8d896986ead3052e35a"
+hash = "16e3d53f02cadbe1a99a979a8565101bdb0853601f04bdb78f803e5c8abf682f"
 
 [[files]]
 file = "docs/wares_contract_pass_report.md"

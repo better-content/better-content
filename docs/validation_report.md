@@ -1,66 +1,45 @@
 # Validation Report
 
-## Static Checks
+Date: 2026-04-29
 
-- KubeJS files were syntax-checked with `node --check`.
-- Registry IDs used in new recipes were checked against the live instance item/fluid dumps where practical.
-- MoreJS event names and method signatures were checked with `javap` against `morejs-forge-1.20.1-0.10.1.jar`.
-- RPGStats heart type DSL was checked against `/home/gerald/mcmods/rpgstats` source.
-- Acid Vat recipe JSON shapes were checked against `/home/gerald/mcmods/acid_vat` docs/source and generated recipe dumps.
-- `packwiz refresh` was run after adding/modifying pack files.
-- `git diff --check` was run before commit.
+## Static Validation Passed
 
-## Runtime-Adjacent Checks
+Commands run successfully after the latest autonomous passes:
 
-- `/home/gerald/mcmods/acid_vat` Forge game tests passed: 24 required game tests complete.
-- `/home/gerald/mcmods/acid_vat` currently has one unrelated failing standalone unit test: `AcidVatSlurryMixingTest > different slurry products and acid variants cannot merge()`.
+```sh
+node tools/generate_expert_quest_book.mjs
+node tools/validate_quest_dependencies.mjs
+find kubejs/server_scripts -name '*.js' -print0 | xargs -0 -n1 node --check
+node tools/expert_graph_audit.mjs
+packwiz refresh
+git diff --check
+```
 
-## Bypass Check
+## Current Generated State
 
-- Andesite alloy vanilla/Create crafting and mixing bypasses are removed by explicit recipe IDs.
-- Direct TCon molten iron/zinc basin casting into `create:andesite_alloy` is removed.
-- Andesite alloy now uses TCon alloying into `tinkersinnovation:molten_andesite_alloy`, then existing Tinkers Innovation casting.
-- Andesite casing item application is removed; `create:deploying` is the intended route.
-- Water wheel/windmill already require `create:andesite_casing` via existing script.
-- Nether grout is Create mixing only via existing script; normal grout remains netherrack-based via existing script.
-- Starter deposits now have explicit poor furnace/blasting fallback recipes and stronger TCon/Create/Acid routes.
-- Acid Vat block machines are gated behind `kubejs:brass_machine_casing` where recipe inputs allow it.
-- Blood Orbs are no longer made from generic Still-Beating Heart NBT recipes; they consume specific typed heart items.
+- Quest chapters: 19
+- Quest count: 177
+- Quest dependency refs: 207
+- Quest/reward/task IDs checked: 1187
+- Villager trade rows parsed by audit: 140
+- Recipe dump records scanned by audit: 50077
 
-## Not Headlessly Proven
+## Confirmed Static Fixes
 
-- Full modpack Minecraft/KubeJS startup was not run in this pass.
-- FTB Quest chapter load needs an in-client reload check.
-- Villager trade runtime behavior needs a throwaway-world verification.
+- Andesite alloy non-alloying recipes are explicitly removed by KubeJS.
+- Andesite casing is deployer-only in the pack script.
+- Later custom machine casings use Create mechanical crafting.
+- Sky Steel ingots use heated Create mixing and Sky Steel sheets use Create pressing.
+- Emerald currency loot in non-block loot tables is explicitly replaced with Dot Coin tiers by LootJS.
+- Quest rewards use copper-only Starting Out rewards and cumulative coin-tier rewards elsewhere.
+- Acid Vat source remains read-only; pack scripts only reference exposed Acid Vat items.
 
-## High-Value Mod Gate Pass
+## In-Game Validation Still Required
 
-- Added `kubejs/server_scripts/30_recipe_replace/100_high_value_mod_progression_gates.js`.
-- Static KubeJS syntax check passed after adding high-value gates.
-- `git diff --check` passed after adding high-value gates.
-- `packwiz refresh` was run after adding high-value gates and audit docs.
-- Runtime EMI verification is still required for output-based replacement breadth and multi-input hard-gate costs.
-
-## Loot Table Pass
-
-- Generated loot table overrides were JSON-validated with `python3 -m json.tool`.
-- Artifacts injection and entity equipment tables preserve their original loot table type while clearing pools.
-- Sophisticated Backpacks injection tables preserve their original loot table type while clearing pools.
-- Apotheosis and Apotheotic Additions high-value tables were replaced with bounded coin/supply loot.
-- Generated overrides were searched for `apotheosis:gem`, `random_gem`, `random_affix`, `create:andesite_alloy`, and `minecraft:netherite_scrap`; none remain in the replacement tables.
-- Full Minecraft loot reload still needs an in-client `/reload` check.
-
-## Coin Villager Trade Pass
-
-- Dot Coin config now enables every coin item while keeping conversion disabled.
-- Expanded villager and wandering trader script passed `node --check`.
-- Trade result item IDs were validated against the live item registry dump; no missing result item IDs remain.
-- Runtime villager UI checks are still required in-client.
-
-## Extreme Y-Band Reward Pass
-
-- Added hard altitude bands for mountain-height, deepslate-depth, and lava-depth ADLODS reward materials.
-- Added deterministic KubeJS recipes under `kubejs:extreme_y_rewards/*` for selected Artifacts, Sophisticated Backpacks/Storage, Building Gadgets, AE2, and Advanced AE rewards.
-- Did not add or restore creative flight recipes.
-- Did not add global AE quantum bridge recipes as rewards because that conflicts with local-site AE2 design.
-- Closed default-generation bypasses for vanilla diamond, vanilla emerald, vanilla ancient debris, and Ice and Fire sapphire.
+- Launch a disposable instance and run `/reload`.
+- Confirm no KubeJS, LootJS, MoreJS, FTB Quests, or recipe loading errors in logs.
+- Open FTB Quests and verify description rendering, dependencies, chapter order, and rewards.
+- Spawn each villager profession and wandering trader; confirm Dot Coin trades replace emerald trades.
+- Open representative loot chests and confirm emerald currency has become Dot Coins while ore/block drops remain intact.
+- Check EMI/JEI visibility for later machine casing mechanical crafting and Sky Steel mixing/pressing.
+- Re-run after the Acid Vat mod agent lands changes.

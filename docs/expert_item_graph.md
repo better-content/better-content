@@ -1,6 +1,6 @@
 # Expert Item Graph
 
-Generated: 2026-04-29T08:36:39.190Z
+Generated: 2026-04-29T08:44:06.691Z
 
 This is the current source-of-truth graph model used by the offline audit. It treats recipes, loot, villager trades, Wares contracts, quest rewards, mob drops, and worldgen as material-conversion systems.
 

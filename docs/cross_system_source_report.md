@@ -1,6 +1,6 @@
 # Cross-System Source Report
 
-Generated: 2026-04-29T08:36:39.193Z
+Generated: 2026-04-29T08:44:06.693Z
 
 This report lists item sources outside normal recipes and items produced by multiple material-conversion systems.
 

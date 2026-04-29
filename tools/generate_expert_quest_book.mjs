@@ -7,6 +7,16 @@ const chapterDir = path.join(root, 'config/ftbquests/quests/chapters')
 const registryFile = "/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1/minecraft/dump/registry_builtin/minecraft/item/_entries.txt"
 const registry = fs.existsSync(registryFile) ? fs.readFileSync(registryFile, 'utf8') : ''
 const knownItems = new Set([...registry.matchAll(/^([^\s]+)\s+raw_id=/gm)].map(m => m[1]))
+for (const id of [
+  'fission_reactor:fission_fuel_acceptor',
+  'fission_reactor:fission_reactor_rod',
+  'gases_and_plasmas:gas_pipe',
+  'gases_and_plasmas:gas_compressor',
+  'gases_and_plasmas:gas_fan',
+  'gases_and_plasmas:electrolyzer',
+  'gases_and_plasmas:electromagnet',
+  'gases_and_plasmas:ionizer'
+]) knownItems.add(id)
 
 const coinOrder = ['copper', 'iron', 'tin', 'bronze', 'brass', 'silver', 'gold', 'diamond', 'platinum', 'emerald', 'ruby', 'sapphire', 'topaz']
 const tierCoins = {
@@ -36,7 +46,7 @@ function defaultQuestDescription(chapterPrefix, quest) {
     FB: 'Food and water are infrastructure. This checkpoint should improve route endurance, recovery, and settlement readiness instead of becoming a decorative side quest.',
     C1: 'Create begins only after early metallurgy. This checkpoint should prove andesite alloy, deployers, casings, and local power without bypassing Tinkers.',
     C2: 'This is the manufacturing layer where plates, mixers, press work, and brass turn Create into real infrastructure.',
-    PG: 'Power Grid adds electrical complexity to the casing ladder. Treat circuits and relays as manufactured systems, not redstone shortcuts.',
+    PG: 'SU heat and electricity are power infrastructure. This checkpoint compares water, wind, blaze burners, diesel, solar heat, fission heat, and Power Grid conversion from SU into electricity.',
     OC: 'OC2R is preferred for intersite communication. This checkpoint is about authored logic and wired site intelligence, not teleporting items.',
     SP: 'Space is a logistics and synthesis commitment. Rockets, suits, and chemical machines should consume the previous workshop rather than replace it.',
     AE: 'AE2 is local site intelligence. This checkpoint may make a factory smarter, but it must not become global logistics or infinite storage.',
@@ -44,7 +54,8 @@ function defaultQuestDescription(chapterPrefix, quest) {
     AD: 'Adventure progression is a real crafting economy. Routes, coins, Wares, and villages are part of how the pack pays for risk.',
     VE: 'Village economy is a sideload path. It can supply comfort, recovery, and decor without bypassing machine or material progression.',
     S1: 'Acid chemistry interprets deposits as chemical packages. The pack side treats Acid Vat as a recipe surface; the mod source remains read-only.',
-    PA: 'Post-AE2 branches improve local manufacturing, bounded storage, source integration, and body-scale rewards without breaking distance.'
+    PA: 'Post-AE2 branches improve local manufacturing, bounded storage, source integration, and body-scale rewards without breaking distance.',
+    FU: 'Fusion is not just another generator. It requires gas handling, high electricity, fission-adjacent materials, AE2 control, and magnetic containment before it becomes a power source.'
   }[chapterPrefix] || 'This checkpoint exists to make the item graph explicit.'
   return [
     guidance,
@@ -175,14 +186,26 @@ const chapters = [
     ]
   },
   {
-    filename: 'electricity', prefix: 'PG', id: 'BTM_ELECTRICITY', order: 6, title: 'Brass Tier - Power Grid', tier: 'brass', description: ['Power Grid adds the electrical casing tier. Circuits, relays, batteries, and heat components should consume Create-brass infrastructure.'], quests: [
-      q('PG_CONDUCTIVE', 'Conductive Casing', 0, 0, [item('powergrid:conductive_casing')], ['C2_BRASS']),
+    filename: 'electricity', prefix: 'PG', id: 'BTM_SU_HEAT_ELECTRICITY', order: 6, title: 'Brass Tier - SU Heat and Electricity', tier: 'brass', description: ['This chapter is the power atlas. Water wheels, windmills, blaze burners, diesel engines, solar heat, and fission all make or support SU/heat.', 'Power Grid is the electrical step: build generator hardware, circuits, relays, storage, and learn how rotational work becomes electricity.'], quests: [
+      q('PG_WATER_GRAPH', 'SU Source: Water Wheel', -2, -2, [item('create:water_wheel')], ['C1_POWER_WATER'], ['Water wheels are the first stable SU source. They are local, terrain-aware, and good enough for early workshops.']),
+      q('PG_WIND_GRAPH', 'SU Source: Windmill', -2, 0, [item('create:windmill_bearing')], ['C1_POWER_WIND'], ['Windmills are the scalable early alternative. They reward structure, sails, and exposed space.']),
+      q('PG_BLAZE_GRAPH', 'Heat Source: Blaze Burner', -2, 2, [item('create:blaze_burner')], ['C2_MIXER'], ['Blaze burners turn fuel and logistics into process heat. Treat them as heat infrastructure, not just mixer upgrades.']),
+      q('PG_DIESEL_GRAPH', 'SU Source: Diesel Engine', 0, -3, [item('createdieselgenerators:diesel_engine')], ['C2_BRASS'], ['Diesel is a fluid logistics branch: oil discovery, distillation, fuel routing, and stronger rotational output.']),
+      q('PG_DIESEL_REFINING', 'Diesel Refining', 2, -3, [item('createdieselgenerators:distillation_controller')], ['PG_DIESEL_GRAPH'], ['Refining makes diesel a real infrastructure chain instead of one engine recipe.']),
+      q('PG_SOLAR_HEAT', 'Heat Source: CNA Solar', 0, 3, [item('create_new_age:basic_solar_heating_plate')], ['C2_BRASS'], ['Solar heat is passive but material-bound. It is useful when terrain and site planning support it.']),
+      q('PG_CONDUCTIVE', 'Conductive Casing', 0, 0, [item('powergrid:conductive_casing')], ['C2_BRASS'], ['Conductive casing starts the electrical build. This is not redstone; it is manufactured electrical infrastructure.']),
       q('PG_CASE', 'Power Grid Machine Casing', 2, 0, [item('kubejs:power_grid_machine_casing')], ['PG_CONDUCTIVE']),
-      q('PG_CIRCUIT', 'Integrated Circuit', 4, -1, [item('powergrid:integrated_circuit')], ['PG_CASE']),
-      q('PG_RELAY', 'Redstone Relay', 4, 1, [item('powergrid:redstone_relay')], ['PG_CASE']),
-      q('PG_BATTERY', 'Stored Electricity', 6, 0, [item('powergrid:battery')], ['PG_CIRCUIT', 'PG_RELAY']),
-      q('PG_HEAT_PIPE', 'Heat Pipe', 8, -1, [item('create_new_age:heat_pipe')], ['PG_BATTERY']),
-      q('PG_HEAT_PUMP', 'Heat Pump', 8, 1, [item('create_new_age:heat_pump')], ['PG_HEAT_PIPE'])
+      q('PG_GENERATOR_HOUSING', 'Step 1: Generator Housing', 4, -2, [item('powergrid:generator_housing')], ['PG_CASE'], ['The generator housing is the physical bridge from rotation to electricity. Build it before pretending you have a grid.']),
+      q('PG_GENERATOR_ROTOR', 'Step 2: Rotor and Commutator', 6, -2, [item('powergrid:generator_induction_rotor'), item('powergrid:generator_commutator')], ['PG_GENERATOR_HOUSING'], ['Rotors and commutators make the generator legible: moving magnetic hardware creates usable current.']),
+      q('PG_CONNECTORS', 'Step 3: Wires and Connectors', 4, 0, [item('powergrid:wire_connector'), item('powergrid:wire')], ['PG_CASE'], ['Electricity needs visible conductors. Keep the grid inspectable and local.']),
+      q('PG_CIRCUIT', 'Step 4: Integrated Circuit', 6, 0, [item('powergrid:integrated_circuit')], ['PG_CONNECTORS']),
+      q('PG_RELAY', 'Step 5: Relay Control', 6, 2, [item('powergrid:redstone_relay')], ['PG_CONNECTORS']),
+      q('PG_BATTERY', 'Step 6: Stored Electricity', 8, 0, [item('powergrid:battery')], ['PG_CIRCUIT', 'PG_RELAY', 'PG_GENERATOR_ROTOR'], ['Storage makes electrical work forgiving enough to use, but still bounded by the site grid.']),
+      q('PG_HEAT_PIPE', 'Heat Transport', 10, -1, [item('create_new_age:heat_pipe')], ['PG_BATTERY', 'PG_SOLAR_HEAT']),
+      q('PG_HEAT_PUMP', 'Heat Pump', 10, 1, [item('create_new_age:heat_pump')], ['PG_HEAT_PIPE']),
+      q('PG_STIRLING', 'Heat to SU: Stirling Engine', 12, 0, [item('create_new_age:stirling_engine')], ['PG_HEAT_PUMP'], ['Stirling engines make the heat loop explicit: heat sources become rotational work.']),
+      q('PG_FISSION_ACCEPTOR', 'Fission Fuel Acceptor', 14, -1, [item('fission_reactor:fission_fuel_acceptor')], ['PG_STIRLING', 'S1_SYNTHESIS_EXIT'], ['Fission is a nucleus-transformation and heat branch. It belongs after electrical control and chemical material routing.']),
+      q('PG_FISSION_ROD', 'Fission Reactor Rod', 14, 1, [item('fission_reactor:fission_reactor_rod')], ['PG_FISSION_ACCEPTOR'], ['The rod is the active heat/nucleus-transformer surface. It should feel like dangerous infrastructure, not a furnace upgrade.'])
     ]
   },
   {
@@ -282,6 +305,18 @@ const chapters = [
       q('PA_REGEN_CARD', 'Regeneration Body Reward', 10, 3, [item('advanced_ae:regeneration_card')], ['PA_BODY_BASE']),
       q('PA_MAGNET_CARD', 'Magnetic Field Reward', 12, 2, [item('advanced_ae:magnet_card')], ['PA_BODY_BASE']),
       q('PA_QUANTUM_ARMOR', 'Quantum Armor Set', 14, 2, [item('advanced_ae:quantum_helmet'), item('advanced_ae:quantum_chestplate'), item('advanced_ae:quantum_leggings'), item('advanced_ae:quantum_boots')], ['PA_LAVA_CARD', 'PA_REGEN_CARD', 'PA_MAGNET_CARD'])
+    ]
+  },
+  {
+    filename: 'fusion_power', prefix: 'FU', id: 'BTM_FUSION_POWER', order: 19, title: 'Platinum Tier - Fusion Power and Plasma', tier: 'platinum', description: ['Fusion is the high-requirement power/synthesis branch. Gas handling starts with space-era materials, but magnetic confinement and ionization require AE2 control and fission hardware.', 'The goal is a complete late branch, not a cheap generator: compressor, pipes, electrolysis, fans, electromagnets, ionization, and only then plasma/fusion work.'], quests: [
+      q('FU_PIPE', 'Gas Pipe Network', 0, 0, [item('gases_and_plasmas:gas_pipe')], ['SP_CHEM'], ['Gas handling is physical infrastructure. Pipes make the branch visible before it becomes powerful.']),
+      q('FU_COMPRESSOR', 'Gas Compressor', 2, -1, [item('gases_and_plasmas:gas_compressor')], ['FU_PIPE', 'SP_CASE'], ['Compression belongs to the space/synthesis workshop, not early Create.']),
+      q('FU_FAN', 'Gas Fan', 2, 1, [item('gases_and_plasmas:gas_fan')], ['FU_COMPRESSOR', 'PG_BATTERY'], ['Fans move gas with electrical commitment. This is the first practical gas routing step.']),
+      q('FU_ELECTROLYZER', 'Electrolyzer', 4, -1, [item('gases_and_plasmas:electrolyzer')], ['FU_PIPE', 'PG_BATTERY'], ['Electrolysis turns water and electricity into fusion-relevant feedstocks. It should require a working grid.']),
+      q('FU_AE_CONTROL', 'AE2 Control Permission', 4, 1, [item('kubejs:ae2_machine_casing')], ['AE_CONTROLLER'], ['Fusion as power is too strong before AE2-level control and local intelligence.']),
+      q('FU_ELECTROMAGNET', 'Magnetic Confinement', 6, 0, [item('gases_and_plasmas:electromagnet')], ['FU_AE_CONTROL', 'FU_FAN'], ['Electromagnets are the line between gas handling and plasma engineering.']),
+      q('FU_IONIZER', 'Ionizer', 8, 0, [item('gases_and_plasmas:ionizer')], ['FU_ELECTROMAGNET', 'PG_FISSION_ROD'], ['Ionization requires fission-era hardware and AE2-era control. This is where fusion becomes serious.']),
+      q('FU_PLASMA_READY', 'Reactive Matter Cell Work', 10, 0, [item('gases_and_plasmas:electromagnet'), item('gases_and_plasmas:ionizer'), item('fission_reactor:fission_reactor_rod')], ['FU_IONIZER'], ['At this point the player has gas feedstocks, magnetic control, and nuclear hardware. Fusion power can be tuned from here in playtest.'])
     ]
   },
   {

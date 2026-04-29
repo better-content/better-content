@@ -119,3 +119,14 @@ Run these checks in a disposable Prism instance built from this branch. Static v
 3. Re-run `/reload` after entering the world and verify the reload completes.
 4. Re-open EMI/JEI and verify recipe categories still index after reload.
 5. Confirm packwiz metadata matches changed files after `packwiz refresh`.
+
+## Nuclear Synthesis And Power
+
+1. Verify the pack loads with `fission_reactor-0.1.0.jar` and `gases_and_plasmas-0.1.0.jar` present.
+2. Verify `fission_reactor:fission_fuel_acceptor` uses Create mechanical crafting and requires Power Grid / heat / nuclear plate materials.
+3. Verify `fission_reactor:fission_reactor_rod` uses Create mechanical crafting and requires nuclear/extreme-band plate materials.
+4. Verify `gases_and_plasmas:gas_pipe`, `gas_compressor`, `gas_fan`, and `electrolyzer` are visible as space/electric gas-handling infrastructure.
+5. Verify `gases_and_plasmas:electromagnet` requires AE2-tier control materials.
+6. Verify `gases_and_plasmas:ionizer` requires both AE2-tier control and fission reactor hardware.
+7. Verify the FTB Quests electricity chapter is titled `Brass Tier - SU Heat and Electricity` and documents water, wind, blaze burners, diesel, solar heat, Power Grid, Stirling, and fission.
+8. Verify the new `Platinum Tier - Fusion Power and Plasma` chapter appears and stays hidden behind AE2/fission prerequisites where expected.

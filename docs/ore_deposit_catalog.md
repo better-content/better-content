@@ -1,6 +1,8 @@
 # Ore Deposit Catalogue
 
-This pass keeps `kubejs/server_scripts/60_worldgen/10_r_ores_melted.js` as the active recipe generator and adds `global.BTM_STARTER_DEPOSITS` in `kubejs/startup_scripts/00_globals/20_progression_catalogues.js` as the pack-facing starter catalogue.
+This pass keeps `kubejs/server_scripts/60_worldgen/10_r_ores_melted.js` as the active TCon recipe generator and uses `global.BTM_STARTER_DEPOSITS` in `kubejs/startup_scripts/00_globals/20_progression_catalogues.js` as the pack-facing starter catalogue.
+
+Confirmed source block tags are registered in `kubejs/server_scripts/10_tags/60_realistic_ores_deposit_tags.js`.
 
 ## Six Y Bands
 
@@ -15,18 +17,20 @@ This pass keeps `kubejs/server_scripts/60_worldgen/10_r_ores_melted.js` as the a
 
 | Deposit | Tag | Band | Primary | Secondary | Tertiary | First useful tier | Notes |
 |---|---|---|---|---|---|---|---|
-| Coal Measures | `kubejs:deposit_blocks/coal_measures` | surface/shallow | coal | iron | none | furnace/Create preprocess | Active TCon fallback maps to molten iron where needed. |
+| Coal Measures | `kubejs:deposit_blocks/coal_measures` | surface/shallow | coal | iron | none | furnace/Create preprocess | TCon fallback maps to molten iron where needed; Acid Vat extracts carbon/iron. |
 | Ironstone | `kubejs:deposit_blocks/ironstone` | shallow | iron | nickel | chromium | melter | Chromium is the confirmed molten trace substitute. |
-| Copper Sulfide | `kubejs:deposit_blocks/copper_sulfide` | shallow/hills | copper | iron | gold | melter | Starter copper sulfide route. |
+| Copper Sulfide | `kubejs:deposit_blocks/copper_sulfide` | shallow/hills | copper | iron | gold | melter | Starter copper sulfide route with sulfur in Acid Vat. |
 | Tin Vein | `kubejs:deposit_blocks/tin` | hills/shallow | tin | quartz | tungsten | melter | Bronze support without steel-axis progression. |
 | Zinc Vein | `kubejs:deposit_blocks/zinc` | hills | zinc | lead | cadmium | melter | Create brass support. |
 | Lead-Zinc Vein | `kubejs:deposit_blocks/lead_zinc_vein` | underground | lead | zinc | silver | melter | Power/OC2R trace route. |
-| Quartz Vein | `kubejs:deposit_blocks/quartz_vein` | hills/mountains | quartz | none | none | Create preprocess | Supports silicon/AE2 routing when confirmed by tags. |
+| Quartz Vein | `kubejs:deposit_blocks/quartz_vein` | hills/mountains | quartz | gold | copper | Create preprocess | Supports silicon/AE2 routing through Create washing and Acid Vat. |
 | Bauxite Laterite | `kubejs:deposit_blocks/bauxite_laterite` | surface/hills | aluminum | iron | nickel | melter | Space alloy support. |
 
 ## Active Recipe Surface
 
-- Furnace fallback remains intentionally poor through `kubejs/server_scripts/30_recipe_replace/50_badfurnace.js`.
-- TCon melter and ore_melting recipes are generated in `kubejs/server_scripts/60_worldgen/10_r_ores_melted.js`.
+- Poor furnace fallback recipes are generated in `kubejs/server_scripts/40_recipe_add/45_deposit_furnace_fallbacks.js`.
+- TCon melter and ore_melting recipes for deposit blocks are generated in `kubejs/server_scripts/60_worldgen/10_r_ores_melted.js`.
 - Foundry-style byproducts use TCon `ore_melting` byproducts where molten outputs exist.
-- Acid Vat remains the planned dissolver-parity layer; Alchemistry is retained only as reference/compat data.
+- Create preprocessing is generated in `kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js`.
+- Acid Vat dissolver parity is generated in `kubejs/server_scripts/40_recipe_add/60_acid_vat_deposit_slurries.js`.
+- Alchemistry is retained for reference/compat data, not as the authored chemistry progression route.

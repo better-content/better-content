@@ -149,6 +149,15 @@ ServerEvents.recipes(function (event) {
     ], ['create:brass_casing', 'create:brass_ingot', '#forge:ingots/brass'], 'kubejs:brass_machine_casing')
 
     btmGateAny(event, [
+        'acid_vat:acid_vat',
+        'acid_vat:acid_vat_faucet',
+        'acid_vat:centrifuge_bearing',
+        'acid_vat:centrifuge_anchor',
+        'acid_vat:centrifuge_chamber',
+        'acid_vat:smart_slurry_pipe'
+    ], ['create:brass_casing', 'create:andesite_casing', 'create:brass_sheet', '#forge:plates/brass'], 'kubejs:brass_machine_casing')
+
+    btmGateAny(event, [
         'powergrid:battery',
         'powergrid:electric_motor',
         'powergrid:generator_housing'

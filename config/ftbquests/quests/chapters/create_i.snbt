@@ -8,5 +8,6 @@
 		{id:"C1_CASING" title:"Andesite Casing" x:8.0d y:0.0d rewards:[{id:"C1_R13" type:"item" item:"dotcoinmod:copper_coin" count:4},{id:"C1_R14" type:"item" item:"dotcoinmod:iron_coin" count:4},{id:"C1_R15" type:"item" item:"dotcoinmod:tin_coin" count:4}] tasks:[{id:"C1_T5" type:"item" item:"create:andesite_casing"}]}
 		{id:"C1_POWER" title:"Sustainable SU" x:10.0d y:0.0d rewards:[{id:"C1_R16" type:"item" item:"dotcoinmod:copper_coin" count:4},{id:"C1_R17" type:"item" item:"dotcoinmod:iron_coin" count:4},{id:"C1_R18" type:"item" item:"dotcoinmod:tin_coin" count:4}] tasks:[{id:"C1_T6" type:"item" item:"create:water_wheel"}]}
 		{id:"C1_WATER" title:"Clean Water Infrastructure" x:12.0d y:0.0d rewards:[{id:"C1_R19" type:"item" item:"dotcoinmod:copper_coin" count:4},{id:"C1_R20" type:"item" item:"dotcoinmod:iron_coin" count:4},{id:"C1_R21" type:"item" item:"dotcoinmod:tin_coin" count:4}] tasks:[{id:"C1_T7" type:"item" item:"thirst:sand_filter"}]}
+		{id:"C1_CRUSHED" title:"Deposit Preprocessing" x:14.0d y:0.0d rewards:[{id:"C1_R22" type:"item" item:"dotcoinmod:copper_coin" count:4},{id:"C1_R23" type:"item" item:"dotcoinmod:iron_coin" count:4},{id:"C1_R24" type:"item" item:"dotcoinmod:tin_coin" count:4}] tasks:[{id:"C1_T8" type:"item" item:"realisticores:crushed_copper_sulfide_ore"}]}
 	]
 }

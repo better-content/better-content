@@ -5734,7 +5734,7 @@ hash = "d03ca614a4ef05cba0d05a6ffa08079fac0f400b6388f5b22febe2691c77bef9"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/create_i.snbt"
-hash = "2faa4e53910409fefe0ad559b54793b718373231c42f05d9fbcf594025296c99"
+hash = "50ab98e5fb807dd86313c5b5f452c6fea7991ddb6e9defe19a54f07532e64ee7"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/create_ii.snbt"
@@ -5763,6 +5763,10 @@ hash = "94698585cc9ca6622326d51a58994165097b38d7c72d85a392166ee6a2dd28b5"
 [[files]]
 file = "config/ftbquests/quests/chapters/starting_out.snbt"
 hash = "fef427f9d6436306e409371cd2d7367697f27a7bbcad938521dbc0e9c1b6e6b9"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/synthesis_i.snbt"
+hash = "471e5f74fe656c8aa07431201c9a8444798c77639568114779d811b7187919b3"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/tinkers_construct.snbt"
@@ -6621,8 +6625,16 @@ file = "defaultconfigs/starcatcher-server.toml"
 hash = "f13459ed12f9f5cc5018b4480ccd1641d5a094c20c15e6056e5545d89fd4289a"
 
 [[files]]
+file = "docs/acid_vat_pass_report.md"
+hash = "dabca28efdaa09a850599ff4fc7fa15ee977c15361e72379c554254e3039fd81"
+
+[[files]]
 file = "docs/bypass_and_deadlock_report.md"
 hash = "a9034f2fdfb8908f690fc164512e0a73ddf2ad633b59322f2c638cebd9d9b607"
+
+[[files]]
+file = "docs/create_preprocessing_pass_report.md"
+hash = "29ba72d4a2da9805acc8db928f2611713c60cc021e8dc2836525e84e6677dd19"
 
 [[files]]
 file = "docs/design_handoff.md"
@@ -6642,15 +6654,15 @@ hash = "87921191377dc3399703a8b2347a562ceb4cabe6bc890945dc69626eaee18788"
 
 [[files]]
 file = "docs/implementation_pass_report.md"
-hash = "cdffbf1a724243376b9b38079446a94ce52d97a65924c5b47702260bf6429396"
+hash = "c2752171709760aea5d28a6d33a625d7b2c37b281eeb8ad7d72801657c0e96ec"
 
 [[files]]
 file = "docs/known_issues.md"
-hash = "7f6e3d89758ee5d11b1aee134f51c5ac3b2235dd77427c76255f241dbbd0a639"
+hash = "4e5acef2fc5c173e75d60fb1f4fc9f37b8658d86141c2cfb360b57a34a66bce1"
 
 [[files]]
 file = "docs/manual_test_plan.md"
-hash = "dfe4d0caff3032d2c91d95e03b69f6311fb8c2528cdd356196daaeefd33c0019"
+hash = "781090b5f636b131a3ac3df5b9097b68bf38e198065950449e22d5785ab9a607"
 
 [[files]]
 file = "docs/material_registry_map.md"
@@ -6658,7 +6670,7 @@ hash = "d5a6e6d5333d2e79cafafb99dc12c89315e92fb3b2c35dac3d98386e93973a82"
 
 [[files]]
 file = "docs/ore_deposit_catalog.md"
-hash = "d91dd2ef0bcf9741feb5743ecc219722eccbd27064e3420b7ca140c4c8f2a8df"
+hash = "1b31055d2756bc2205a948f0d10e949c61fff5611688436c48f2d9df286414d4"
 
 [[files]]
 file = "docs/progression_audit.md"
@@ -6678,7 +6690,7 @@ hash = "7c62aa1a88aa778ebedd64f875fe67b4241990c9c619dd6ba9342e68e8906412"
 
 [[files]]
 file = "docs/validation_report.md"
-hash = "a0edda68bf1ec54223dd6b825aa630adc9002c15e94782621ba4cb12a81e7ce0"
+hash = "14793c6370723cc483a6ac757afedca6bceb1fbed6e077b03f5f7dbddf8f90e4"
 
 [[files]]
 file = "globalresources/obelisks/globaldata/obelisks/excavated_variants/modifier/disable_malum_brilliant_stone.json"
@@ -7189,6 +7201,10 @@ file = "kubejs/server_scripts/10_tags/50_sand_compat.js"
 hash = "56f2fd6078c57f42b66aed52d5e1a4a587d626668edeb5bcac4f38c01ba6a2b1"
 
 [[files]]
+file = "kubejs/server_scripts/10_tags/60_realistic_ores_deposit_tags.js"
+hash = "bc38ed990013e6401e965ff62d616be103cbb8291d9594d1d2626fce6e3cddaf"
+
+[[files]]
 file = "kubejs/server_scripts/20_recipe_remove/10_no_boats.js"
 hash = "90ea269de7e3d41bc4e858e9b964380288fbf4a1a7d99518c670e738060a246c"
 
@@ -7258,7 +7274,7 @@ hash = "9ed66183a502110ab66744258b88efeb7ae6daaddd2f39c6e7879f6acde6fd4e"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js"
-hash = "bf6d1b9b6fda6852c402ecc73ad73cbc7ff229cc950f9a6db51dbe3ad8a8d024"
+hash = "3cfcf335d73c8b74562d1a93834f48f09cd9f1aee1755b6aefb5be486aed7076"
 
 [[files]]
 file = "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js"
@@ -7279,6 +7295,18 @@ hash = "7c8bff0a167e5ca668f70047727a398e3965656b7160ebd344d7d31449fa6ad2"
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/40_blood_orbs_from_still_beating_hearts.js"
 hash = "b7841bc002e33ab0ec22a7280ca8fa67749ce74594cb83b9943142463ad0ee73"
+
+[[files]]
+file = "kubejs/server_scripts/40_recipe_add/45_deposit_furnace_fallbacks.js"
+hash = "4a20b38aec0f9d59d932d78fe17259716ef7d6ecfe74b8668b758dfcf93ba534"
+
+[[files]]
+file = "kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js"
+hash = "944eb1471d5286d5a4d0a759adf08bf95d32ed1b8b056e31af7241b1ae415e06"
+
+[[files]]
+file = "kubejs/server_scripts/40_recipe_add/60_acid_vat_deposit_slurries.js"
+hash = "2e6c80fb04fac10ec6da396eb3b77e59dba142b5b94803c5af457dd123ca13d5"
 
 [[files]]
 file = "kubejs/server_scripts/50_loot/10_overworld_block_drops.js"

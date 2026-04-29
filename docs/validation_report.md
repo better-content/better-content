@@ -2,10 +2,18 @@
 
 ## Static Checks
 
-- KubeJS files were syntax-checked with `node --check` where possible.
+- KubeJS files were syntax-checked with `node --check`.
 - Registry IDs used in new recipes were checked against the live instance item/fluid dumps where practical.
 - MoreJS event names and method signatures were checked with `javap` against `morejs-forge-1.20.1-0.10.1.jar`.
 - RPGStats heart type DSL was checked against `/home/gerald/mcmods/rpgstats` source.
+- Acid Vat recipe JSON shapes were checked against `/home/gerald/mcmods/acid_vat` docs/source and generated recipe dumps.
+- `packwiz refresh` was run after adding/modifying pack files.
+- `git diff --check` was run before commit.
+
+## Runtime-Adjacent Checks
+
+- `/home/gerald/mcmods/acid_vat` Forge game tests passed: 24 required game tests complete.
+- `/home/gerald/mcmods/acid_vat` currently has one unrelated failing standalone unit test: `AcidVatSlurryMixingTest > different slurry products and acid variants cannot merge()`.
 
 ## Bypass Check
 
@@ -15,10 +23,12 @@
 - Andesite casing item application is removed; `create:deploying` is the intended route.
 - Water wheel/windmill already require `create:andesite_casing` via existing script.
 - Nether grout is Create mixing only via existing script; normal grout remains netherrack-based via existing script.
+- Starter deposits now have explicit poor furnace/blasting fallback recipes and stronger TCon/Create/Acid routes.
+- Acid Vat block machines are gated behind `kubejs:brass_machine_casing` where recipe inputs allow it.
 - Blood Orbs are no longer made from generic Still-Beating Heart NBT recipes; they consume specific typed heart items.
 
 ## Not Headlessly Proven
 
-- Full Minecraft/KubeJS startup was not run in this pass.
+- Full modpack Minecraft/KubeJS startup was not run in this pass.
 - FTB Quest chapter load needs an in-client reload check.
 - Villager trade runtime behavior needs a throwaway-world verification.

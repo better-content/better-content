@@ -7450,7 +7450,7 @@ hash = "d0ca8623aade77f21526556b9c3dd473d04be542ea85d0a27e20c3a4b9cb4698"
 
 [[files]]
 file = "kubejs/config/audit_dumps.json"
-hash = "e2acd1b92d843043fdcb6dc13aa0a49be36c1d2a42bf254f0d5fc5d516b1211d"
+hash = "e10000da3556b939c7efbb753f18517b59d62cbc961d662ffed5922232b45a8d"
 
 [[files]]
 file = "kubejs/config/client.properties"

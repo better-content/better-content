@@ -5726,51 +5726,55 @@ hash = "caa0cc67910381bf95bcc0056d27d534430807ae7e40721de5cc7264ec77e9b0"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/adventuring.snbt"
-hash = "5045a85a6538ec3dcf9ec9bffbb76bc3f3bcc6dd748bb6637a773daede70733d"
+hash = "76a2b44de777593acb5782b6a29887dc5359e70b7d46ab2a5604f15df1746859"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/ae2.snbt"
-hash = "1afdd15e2f1deba65d774f433dabbfc187550de5765a568a27c231af8adedc22"
+hash = "6c65d36367605566777d0721cd01d0778fc14a9920cb7ac2c670dc81bd09937f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/create_i.snbt"
-hash = "c1a82f906b9224cbd9b641efc45ccd04e6f47b95c584d034dc2751bf278fedb1"
+hash = "28042963d6b40f89d185222943ae3298d43f7f1e4a5ae26546c20322ea707f9c"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/create_ii.snbt"
-hash = "e31fc549abaa996c524412c49bb30bbc5cf417819288885c5585d85a8c15072f"
+hash = "1c4cd12bc2342f308a320ad0a91370457919b73f0dc8a838511568d882912846"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/death.snbt"
-hash = "e9db51b8a62be211581103364a8d30d7bb171cde9e5c68be4fced1ac7ad7f92a"
+hash = "b0ee514e31b31fa5b46d3ea0a328abb3e3f93df7f30dac3a1d7da43f828b082c"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/electricity.snbt"
-hash = "d90d0251d263694295ca22bf3a5edcb9986d529bb58920fd37d820a4b20226b9"
+hash = "dd02db5cc49ad1b87fc7bb1ec05a5a23009cff0c37f0e4f0272f948483098694"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/magic_i.snbt"
-hash = "5fe9bdb031b32d4602d7f3375d23ffa1c1d93e4060d3fe9b97bce0d0916cd26d"
+hash = "d0f4b3ecfd530c3a87e1918206ab60e9b05482b4686f5b301fa4a02649252b37"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/oc2r.snbt"
-hash = "a8beb7e676a61460b554bd79f3ef9d4b0f27e8581dfb830a6ea160c00b9a74b5"
+hash = "6ac826ef1898217e3c2d2cd02d6c9513a34fb36aacbf73abe736332d9a224cdc"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/post_ae2.snbt"
+hash = "65a86c10ed820f4a5737f3473f0bbbac83cab3dbc8f0ffce24e1397267f86386"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/space.snbt"
-hash = "d1831fae1b149e8fbf37be52c3220e0792547f3d801dbbd38a159d4259f66711"
+hash = "c7dfeeca748cd21d220c6e6b2fbb0eaa7a4ca7fdeac0a1cb5a89aed90390f59c"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/starting_out.snbt"
-hash = "8e04f5e23556d9211602dc3e5a7c6b1d7e55fa708cea2b23564c27adacdde898"
+hash = "c91db276cf6d05f5a509707d236560e32caf676c47eb55022acaf49e4ade27eb"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/synthesis_i.snbt"
-hash = "0ecd7ae8de8e2510bec7fc52cc184e3459ac2f0bf892a963bf899b496036d87b"
+hash = "d622421ef5456a4d1b96c05bd26dfe2b6dd16d4d2e17819c52960b4ace672c56"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/tinkers_construct.snbt"
-hash = "7e85ba5760acad1e63baa32d742c6f4f0c669eb896c8b5ca00d445d29242fba4"
+hash = "2b8372777fac4babf75d626e0a248d3751b418c0c4edfb97683aade46f90c26d"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -6633,6 +6637,10 @@ file = "docs/bypass_and_deadlock_report.md"
 hash = "a9034f2fdfb8908f690fc164512e0a73ddf2ad633b59322f2c638cebd9d9b607"
 
 [[files]]
+file = "docs/chemlib_plate_route_coverage.md"
+hash = "cc87e96d4f58febc3f6b7fe9413fd5cc9629e1f942bebd3e1cd896447ae6f552"
+
+[[files]]
 file = "docs/coin_villager_trade_pass_report.md"
 hash = "55a2b9848e5f33e561639a6a1466c2952b7e3c087d2e41d0430f51a3b03696f8"
 
@@ -6642,7 +6650,7 @@ hash = "29ba72d4a2da9805acc8db928f2611713c60cc021e8dc2836525e84e6677dd19"
 
 [[files]]
 file = "docs/cross_system_source_report.md"
-hash = "18d23b1d8cbc56d022da1480d8ac873a1a7b63c9ef226e23f22d915f7372f5b2"
+hash = "1192063282d701cff1e6d8192714c9a01e2371038ffc8616ccf8d10199d96c7d"
 
 [[files]]
 file = "docs/design_handoff.md"
@@ -6654,11 +6662,11 @@ hash = "a17d19f159406571981b353bad30e22c465734f7a5bd158ccd2bbb51531517e4"
 
 [[files]]
 file = "docs/expert_item_graph.md"
-hash = "2339c12256668b1c31e951bfc7eec7d0be5f5307e057fde246fd282522f4571c"
+hash = "86f02d03d87106175f65ae374924339ce994b6ea975f1c2e867c81ed7772a9fd"
 
 [[files]]
 file = "docs/expert_item_graph_summary.json"
-hash = "e8c400f6940474c7d02a286958697403f79d02ea67293dddc909dcaa838886f7"
+hash = "c481528831bd2a3cd90675905214fb331412675ed7656ffd1b4a31173a79d63e"
 
 [[files]]
 file = "docs/extreme_y_band_reward_pass.md"
@@ -6670,7 +6678,11 @@ hash = "d440d34d2efbc787fd05168ee06d3fdb47be0f96b8e3406a899cfb89bed90f9a"
 
 [[files]]
 file = "docs/full_item_graph_audit.md"
-hash = "e34f4187139e51a19454e04a8ffe105f01c286cdd3fb5f885b3a3c0ae958b290"
+hash = "add9536bbd067f7c7298d2290b991e025c5f1061c9116136a3fd9d49e005e2bd"
+
+[[files]]
+file = "docs/global_loot_scrub_expansion.md"
+hash = "5e86f898902e5cf0c0d76c00f5abd97880541d7bcd39fc6c2abfeff76f00b786"
 
 [[files]]
 file = "docs/high_value_mod_progression_audit.md"
@@ -6705,8 +6717,16 @@ file = "docs/machine_casing_texture_sheet.png"
 hash = "c8de909c00aaea705c760b33f132299c156b53d1445ab9cda8336bfbfb88e9dc"
 
 [[files]]
+file = "docs/magic_power_spike_gate_pass.md"
+hash = "246d69e37f77e599df28b5ad4225b31674bde664a889b9fc2aba41b88d70cea4"
+
+[[files]]
 file = "docs/manual_test_plan.md"
 hash = "7f1934bb36147a8269db91d327fe487b812c0801018f2261976823f1baeace2a"
+
+[[files]]
+file = "docs/manufactured_plate_recipe_pass.md"
+hash = "b07f43eee6da6bec42d04cafaf2c8f462caea14fbba7b48c413e9396b298821f"
 
 [[files]]
 file = "docs/material_economy_recipe_pass.md"
@@ -6718,11 +6738,15 @@ hash = "d5a6e6d5333d2e79cafafb99dc12c89315e92fb3b2c35dac3d98386e93973a82"
 
 [[files]]
 file = "docs/no_bypass_report.md"
-hash = "1cb6ca0a16f09d7c9ce262279160fe08528d37428e04a773ce31d33a496d6d83"
+hash = "48974e0e29dfd2c14dec70a58a087b602656021b0c426116452a94f7b255dad4"
 
 [[files]]
 file = "docs/ore_deposit_catalog.md"
 hash = "1b31055d2756bc2205a948f0d10e949c61fff5611688436c48f2d9df286414d4"
+
+[[files]]
+file = "docs/post_ae2_branch_plan.md"
+hash = "9e1d9762b82a9d527df991b2703d5eb117ae47361c849be566e9e7706d326293"
 
 [[files]]
 file = "docs/progression_audit.md"
@@ -7925,6 +7949,14 @@ file = "kubejs/server_scripts/30_recipe_replace/120_graph_audit_recipe_gates.js"
 hash = "d81233a25532909e8e8b2d93e50aa343e9df99aa7a258f25ab8efe746b41840b"
 
 [[files]]
+file = "kubejs/server_scripts/30_recipe_replace/125_magic_power_spike_gates.js"
+hash = "dcdbc804f05d1420f9d32630d443dd9a32e7342a53b58bc8aadd272acea75153"
+
+[[files]]
+file = "kubejs/server_scripts/30_recipe_replace/130_manufactured_plate_recipe_pass.js"
+hash = "7629b2a0ecf216c7d905635e667af7737b79c9da128a0421a1880f15bd522e91"
+
+[[files]]
 file = "kubejs/server_scripts/30_recipe_replace/20_expensive_grout.js"
 hash = "e6c8d7264f4564aa029554693e293cc3184550dddf826e07111bf37f9ff459fb"
 
@@ -8009,6 +8041,10 @@ file = "kubejs/server_scripts/40_recipe_add/60_acid_vat_deposit_slurries.js"
 hash = "2e6c80fb04fac10ec6da396eb3b77e59dba142b5b94803c5af457dd123ca13d5"
 
 [[files]]
+file = "kubejs/server_scripts/40_recipe_add/65_chemlib_plate_manufacturing_routes.js"
+hash = "2632711ce6d3abb90dc3ca87da08cabdee3a4a510fe19ccd4f0f046e3c5bfb92"
+
+[[files]]
 file = "kubejs/server_scripts/50_loot/10_overworld_block_drops.js"
 hash = "45fbdf632e9926578409beb1a162db0be1fb53fb40fd0f26f826e1b35d0fb2b6"
 
@@ -8018,7 +8054,7 @@ hash = "97429f20c010d6127cd58aceaba69f3c9ec7c9fadfa050c43572f5409afb804a"
 
 [[files]]
 file = "kubejs/server_scripts/50_loot/30_global_loot_progression_scrub.js"
-hash = "c837dc5bdab43afa947dc5fbb0832fb8b18c44e2b87f62d3d26f7d2da944bc57"
+hash = "204616b6a6b9f6f433e5e8472b40a5e29767744eb8ffbb92cb27cb6db8043d17"
 
 [[files]]
 file = "kubejs/server_scripts/60_worldgen/10_r_ores_melted.js"
@@ -9853,6 +9889,10 @@ hash = "8148eba10d7e03b07b422d48dfd63ccc29793881e97f0112ff0b838ae24810d3"
 [[files]]
 file = "tools/expert_graph_audit.mjs"
 hash = "48aab172366174312dbfb87853b8e158696855d12398fca998549d049020016c"
+
+[[files]]
+file = "tools/generate_expert_quest_book.mjs"
+hash = "6696fb8501fcdfe2877812f1232acacb7865485cac11033d8da42a1ebc6e2b17"
 
 [[files]]
 file = "tools/validate_quest_dependencies.mjs"

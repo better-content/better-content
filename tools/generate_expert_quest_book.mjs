@@ -170,6 +170,26 @@ const chapters = [
     ]
   },
   {
+    filename: 'post_ae2', prefix: 'PA', id: 'BTM_POST_AE2', order: 12, title: 'Platinum Tier - Post-AE2 Branches', tier: 'platinum', quests: [
+      q('PA_QUANTUM_STRUCTURE', 'Quantum Structure', 0, 0, [item('advanced_ae:quantum_structure')], ['AE_SPATIAL']),
+      q('PA_REACTION', 'Reaction Chamber', 2, -1, [item('advanced_ae:reaction_chamber')], ['PA_QUANTUM_STRUCTURE']),
+      q('PA_QUANTUM_CORE', 'Quantum Core', 2, 1, [item('advanced_ae:quantum_core')], ['PA_QUANTUM_STRUCTURE']),
+      q('PA_QUANTUM_CRAFTING', 'Quantum Crafting Branch', 4, -2, [item('advanced_ae:quantum_crafter'), item('advanced_ae:quantum_accelerator')], ['PA_REACTION', 'PA_QUANTUM_CORE']),
+      q('PA_MULTI_THREAD', 'Parallel Pattern Work', 6, -2, [item('advanced_ae:quantum_multi_threader')], ['PA_QUANTUM_CRAFTING']),
+      q('PA_EXTENDED_AE', 'Extended Local Intelligence', 4, 0, [item('expatternprovider:ex_drive'), item('expatternprovider:ex_interface'), item('expatternprovider:ex_pattern_provider')], ['PA_QUANTUM_CORE']),
+      q('PA_MATRIX', 'Assembler Matrix', 6, 0, [item('expatternprovider:assembler_matrix_frame'), item('expatternprovider:assembler_matrix_crafter')], ['PA_EXTENDED_AE']),
+      q('PA_DEEP_STORAGE', 'Bounded Deep Storage', 4, 2, [item('ae2additions:super_cell_housing'), item('ae2additions:super_cell_1024k')], ['PA_QUANTUM_CORE']),
+      q('PA_DISK_STORAGE', 'Disk Storage Branch', 6, 2, [item('ae2additions:disk_item_1024k')], ['PA_DEEP_STORAGE']),
+      q('PA_SOURCE_BRIDGE', 'Source-AE Bridge', 8, 0, [item('arseng:me_source_jar'), item('arseng:source_acceptor'), item('arseng:source_cell_housing')], ['PA_MATRIX', 'M1_ETHEREAL']),
+      q('PA_PORTABLE_SOURCE', 'Portable Source Cell', 10, 0, [item('arseng:portable_source_cell_64k')], ['PA_SOURCE_BRIDGE']),
+      q('PA_BODY_BASE', 'Quantum Body Base', 8, 2, [item('advanced_ae:quantum_upgrade_base')], ['PA_QUANTUM_CORE', 'S1_SYNTHESIS_EXIT']),
+      q('PA_LAVA_CARD', 'Lava-Depth Body Reward', 10, 1, [item('advanced_ae:lava_immunity_card')], ['PA_BODY_BASE']),
+      q('PA_REGEN_CARD', 'Regeneration Body Reward', 10, 3, [item('advanced_ae:regeneration_card')], ['PA_BODY_BASE']),
+      q('PA_MAGNET_CARD', 'Magnetic Field Reward', 12, 2, [item('advanced_ae:magnet_card')], ['PA_BODY_BASE']),
+      q('PA_QUANTUM_ARMOR', 'Quantum Armor Set', 14, 2, [item('advanced_ae:quantum_helmet'), item('advanced_ae:quantum_chestplate'), item('advanced_ae:quantum_leggings'), item('advanced_ae:quantum_boots')], ['PA_LAVA_CARD', 'PA_REGEN_CARD', 'PA_MAGNET_CARD'])
+    ]
+  },
+  {
     filename: 'magic_i', prefix: 'M1', id: 'BTM_MAGIC_I', order: 9, title: 'Tin Tier - Magic I', tier: 'tin', quests: [
       q('M1_BLANK', 'Blank Slate Permission', 0, 0, [item('bloodmagic:blankslate')], ['DE_WEAK_ORB']),
       q('M1_HEXEREI', 'Hexerei Gate', 2, -1, [item('hexerei:mixing_cauldron')], ['M1_BLANK']),

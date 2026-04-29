@@ -45,80 +45,115 @@ ServerEvents.recipes(function (event) {
         C: 'kubejs:scorched_machine_casing'
     }).id('kubejs:machine_casing/andesite')
 
-    event.shaped('kubejs:brass_machine_casing', [
-        'BPB',
-        'PCP',
-        'BDB'
-    ], {
-        B: 'create:brass_ingot',
-        P: 'create:precision_mechanism',
-        D: 'create:brass_casing',
-        C: 'kubejs:andesite_machine_casing'
-    }).id('kubejs:machine_casing/brass')
-
-    event.shaped('kubejs:power_grid_machine_casing', [
-        'ZCZ',
-        'IBI',
-        'ZKZ'
-    ], {
-        Z: 'powergrid:zinc_sheet',
-        C: 'powergrid:capacitor',
-        I: 'powergrid:integrated_circuit',
-        K: 'powergrid:conductive_casing',
-        B: 'kubejs:brass_machine_casing'
-    }).id('kubejs:machine_casing/power_grid')
-
-    event.shaped('kubejs:oc2r_machine_casing', [
-        'TWT',
-        'CBC',
-        'TNT'
-    ], {
-        T: 'oc2r:transistor',
-        W: 'oc2r:silicon_wafer',
-        C: 'oc2r:circuit_board',
-        N: 'oc2r:network_connector',
-        B: 'kubejs:power_grid_machine_casing'
-    }).id('kubejs:machine_casing/oc2r')
-
-    event.shaped('kubejs:space_machine_casing', [
-        'RCR',
-        'SBS',
-        'RHR'
-    ], {
-        R: 'creatingspace:rocket_casing',
-        C: 'creatingspace:copronickel_sheet',
-        S: 'creatingspace:inconel_sheet',
-        H: 'creatingspace:hastelloy_ingot',
-        B: 'kubejs:oc2r_machine_casing'
-    }).id('kubejs:machine_casing/space')
-
-    event.shaped('kubejs:sky_steel_ingot', [
-        'FSF',
-        'SES',
-        'FSF'
-    ], {
-        F: 'ae2:fluix_crystal',
-        S: 'ae2:sky_dust',
-        E: 'ae2:engineering_processor'
-    }).id('kubejs:alloy/sky_steel_ingot')
+    // Brass and later casing tiers require Create manufacturing. Remove the simple shaped
+    // definitions before adding mechanical crafting/mixing routes below.
+    event.remove({ id: 'kubejs:machine_casing/brass' })
+    event.remove({ id: 'kubejs:machine_casing/power_grid' })
+    event.remove({ id: 'kubejs:machine_casing/oc2r' })
+    event.remove({ id: 'kubejs:machine_casing/space' })
+    event.remove({ id: 'kubejs:machine_casing/ae2' })
+    event.remove({ id: 'kubejs:alloy/sky_steel_ingot' })
 
     event.custom({
-        type: 'create:pressing',
-        ingredients: [{ item: 'kubejs:sky_steel_ingot' }],
-        results: [{ item: 'kubejs:sky_steel_sheet' }]
-    }).id('kubejs:create/pressing/sky_steel_sheet')
+        type: 'create:mechanical_crafting',
+        acceptMirrored: false,
+        pattern: [
+            'BPB',
+            'PCP',
+            'BDB'
+        ],
+        key: {
+            B: { item: 'create:brass_sheet' },
+            P: { item: 'create:precision_mechanism' },
+            D: { item: 'create:brass_casing' },
+            C: { item: 'kubejs:andesite_machine_casing' }
+        },
+        result: { item: 'kubejs:brass_machine_casing' }
+    }).id('kubejs:create/mechanical_crafting/machine_casing/brass')
 
-    event.shaped('kubejs:ae2_machine_casing', [
-        'SFS',
-        'CBC',
-        'SPS'
-    ], {
-        S: 'kubejs:sky_steel_sheet',
-        F: 'ae2:fluix_crystal',
-        C: 'ae2:engineering_processor',
-        P: 'ae2:sky_stone_block',
-        B: 'kubejs:space_machine_casing'
-    }).id('kubejs:machine_casing/ae2')
+    event.custom({
+        type: 'create:mechanical_crafting',
+        acceptMirrored: false,
+        pattern: [
+            'ZCZ',
+            'IBI',
+            'ZKZ'
+        ],
+        key: {
+            Z: { item: 'powergrid:zinc_sheet' },
+            C: { item: 'powergrid:capacitor' },
+            I: { item: 'powergrid:integrated_circuit' },
+            K: { item: 'powergrid:conductive_casing' },
+            B: { item: 'kubejs:brass_machine_casing' }
+        },
+        result: { item: 'kubejs:power_grid_machine_casing' }
+    }).id('kubejs:create/mechanical_crafting/machine_casing/power_grid')
+
+    event.custom({
+        type: 'create:mechanical_crafting',
+        acceptMirrored: false,
+        pattern: [
+            'TWT',
+            'CBC',
+            'TNT'
+        ],
+        key: {
+            T: { item: 'oc2r:transistor' },
+            W: { item: 'oc2r:silicon_wafer' },
+            C: { item: 'oc2r:circuit_board' },
+            N: { item: 'oc2r:network_connector' },
+            B: { item: 'kubejs:power_grid_machine_casing' }
+        },
+        result: { item: 'kubejs:oc2r_machine_casing' }
+    }).id('kubejs:create/mechanical_crafting/machine_casing/oc2r')
+
+    event.custom({
+        type: 'create:mechanical_crafting',
+        acceptMirrored: false,
+        pattern: [
+            'RCR',
+            'SBS',
+            'RHR'
+        ],
+        key: {
+            R: { item: 'creatingspace:rocket_casing' },
+            C: { item: 'creatingspace:copronickel_sheet' },
+            S: { item: 'creatingspace:inconel_sheet' },
+            H: { item: 'creatingspace:hastelloy_ingot' },
+            B: { item: 'kubejs:oc2r_machine_casing' }
+        },
+        result: { item: 'kubejs:space_machine_casing' }
+    }).id('kubejs:create/mechanical_crafting/machine_casing/space')
+
+    event.custom({
+        type: 'create:mixing',
+        heatRequirement: 'heated',
+        ingredients: [
+            { item: 'ae2:fluix_crystal' },
+            { item: 'ae2:sky_dust' },
+            { item: 'ae2:sky_dust' },
+            { item: 'ae2:engineering_processor' }
+        ],
+        results: [{ item: 'kubejs:sky_steel_ingot' }]
+    }).id('kubejs:create/mixing/sky_steel_ingot')
+
+    event.custom({
+        type: 'create:mechanical_crafting',
+        acceptMirrored: false,
+        pattern: [
+            'SFS',
+            'CBC',
+            'SPS'
+        ],
+        key: {
+            S: { item: 'kubejs:sky_steel_sheet' },
+            F: { item: 'ae2:fluix_crystal' },
+            C: { item: 'ae2:engineering_processor' },
+            P: { item: 'ae2:sky_stone_block' },
+            B: { item: 'kubejs:space_machine_casing' }
+        },
+        result: { item: 'kubejs:ae2_machine_casing' }
+    }).id('kubejs:create/mechanical_crafting/machine_casing/ae2')
 
     // First block-like machines per tier. Avoid deadlocking Deployer; it remains pre-casing.
     btmGateAny(event, [

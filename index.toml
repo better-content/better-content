@@ -6653,6 +6653,10 @@ file = "docs/coin_villager_trade_pass_report.md"
 hash = "55a2b9848e5f33e561639a6a1466c2952b7e3c087d2e41d0430f51a3b03696f8"
 
 [[files]]
+file = "docs/create_machine_manufacturing_pass.md"
+hash = "98c8d27687e8ad30f4fa673663238728b764e9cdaa5618be5ee0ca74df48ed11"
+
+[[files]]
 file = "docs/create_preprocessing_pass_report.md"
 hash = "29ba72d4a2da9805acc8db928f2611713c60cc021e8dc2836525e84e6677dd19"
 
@@ -8022,7 +8026,7 @@ hash = "9ed66183a502110ab66744258b88efeb7ae6daaddd2f39c6e7879f6acde6fd4e"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js"
-hash = "3cfcf335d73c8b74562d1a93834f48f09cd9f1aee1755b6aefb5be486aed7076"
+hash = "5f1464952cb71fe4b821ba8043ceedfa9c3c63d79e734d5a5989b98060192b29"
 
 [[files]]
 file = "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js"

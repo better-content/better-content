@@ -5754,11 +5754,15 @@ hash = "abe4ae37a00caa62aae4180a9dc80506e2f07387c839ec6ad3d243d76efc6849"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/electricity.snbt"
-hash = "90190d2277a3c14d93d07a5ac21e0a8f7cbf0883a7090fd5f25d3baec578ec8d"
+hash = "b375033e3c228e0339e28f6468a787d1ac570a1bf2908a6ab6f1ceb4379ea140"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/food_body.snbt"
 hash = "32f612fe0384d1a4411b3eede3574fef8f2e52e0799f222f40f9c5f6bcbdc47a"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/fusion_power.snbt"
+hash = "86e8e3026121eef5ce1a6fe887702f07ff087e657259979d682695a7acd87e99"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/magic_i.snbt"
@@ -6682,7 +6686,7 @@ hash = "29ba72d4a2da9805acc8db928f2611713c60cc021e8dc2836525e84e6677dd19"
 
 [[files]]
 file = "docs/cross_system_source_report.md"
-hash = "798fea643b507790d35b2cea51f9ebc2eedcf8f3a7a65065707285feae37544b"
+hash = "0168288b0b853cfb2cccb095cd6ad2357904e718f0f0ae7f0e3c0098b237d1d2"
 
 [[files]]
 file = "docs/design_handoff.md"
@@ -6698,11 +6702,11 @@ hash = "ef3d1be077efa7177f9c174f80cfb10f8731c343a11e46b750c799a36875d85c"
 
 [[files]]
 file = "docs/expert_item_graph.md"
-hash = "871a61d7a55128a1eccb08d9f739510152e874cfac8e5c379380ec3489cb82c8"
+hash = "a1e518b8b8bd9dcea3b580cc0f176252fb284c639ac5ab23c4ef83dd5dbb84d1"
 
 [[files]]
 file = "docs/expert_item_graph_summary.json"
-hash = "bb2d4a2a9afb2ed90308cc1c277a75a8ba108cdff08f3eb2e0464415764c90c2"
+hash = "9c77110adb68778a472ee96202226fa85920b21bf764886dffd9ef5cec304cc4"
 
 [[files]]
 file = "docs/extreme_y_band_reward_pass.md"
@@ -6714,7 +6718,7 @@ hash = "d440d34d2efbc787fd05168ee06d3fdb47be0f96b8e3406a899cfb89bed90f9a"
 
 [[files]]
 file = "docs/full_item_graph_audit.md"
-hash = "ca5a8f825859a462bd41c2a9258873630d7d6c05463d4238e49d812123049955"
+hash = "7ec478419ace4836628c41efb97ddf2cc5e9633a891d28f359861690f8d85cfe"
 
 [[files]]
 file = "docs/global_loot_scrub_expansion.md"
@@ -6758,7 +6762,7 @@ hash = "246d69e37f77e599df28b5ad4225b31674bde664a889b9fc2aba41b88d70cea4"
 
 [[files]]
 file = "docs/manual_test_plan.md"
-hash = "e1a3e161fd813d19db99de44c46145fb23cd3b4cca31a04ae1facfd0b2c4aae1"
+hash = "78e461d4fc12d36dbe299f00188084e9f22bf56e88cf22aec6b36b0e9be685e8"
 
 [[files]]
 file = "docs/manufactured_plate_recipe_pass.md"
@@ -6774,7 +6778,11 @@ hash = "d5a6e6d5333d2e79cafafb99dc12c89315e92fb3b2c35dac3d98386e93973a82"
 
 [[files]]
 file = "docs/no_bypass_report.md"
-hash = "2da25de1acb751027da514c335998193231947e81ed5e9123467e50219a10543"
+hash = "c5485edce033281291c367576d167a5a45967a9053c1f0597219eed1f9a74d01"
+
+[[files]]
+file = "docs/nuclear_synthesis_integration_plan.md"
+hash = "4875b248833a6152bb73396cbe828990e68495d34dc494595a3b50ba599855cd"
 
 [[files]]
 file = "docs/ore_deposit_catalog.md"
@@ -6798,7 +6806,7 @@ hash = "75d605ed38cd37083b25c3969edf162ba8f0e904a01e004f9ea99f0c63b20fc8"
 
 [[files]]
 file = "docs/quest_book_completeness_audit.md"
-hash = "82f221f633e10b18c2191c3a4e161e3b2605bc4461ebd1ebfb0c8aa49ad07bab"
+hash = "b5fc3886475d44bfd1989e96ef7f13132c68b40317572ad38ca29af43e0c7aeb"
 
 [[files]]
 file = "docs/quest_book_fleshout_pass.md"
@@ -6818,7 +6826,7 @@ hash = "7c62aa1a88aa778ebedd64f875fe67b4241990c9c619dd6ba9342e68e8906412"
 
 [[files]]
 file = "docs/validation_report.md"
-hash = "16e3d53f02cadbe1a99a979a8565101bdb0853601f04bdb78f803e5c8abf682f"
+hash = "8219e15c7c4a162bf338cdc3cae5178cda710b3d244c2850cd41d5795a109a51"
 
 [[files]]
 file = "docs/wares_contract_pass_report.md"
@@ -8001,6 +8009,10 @@ file = "kubejs/server_scripts/30_recipe_replace/130_manufactured_plate_recipe_pa
 hash = "7629b2a0ecf216c7d905635e667af7737b79c9da128a0421a1880f15bd522e91"
 
 [[files]]
+file = "kubejs/server_scripts/30_recipe_replace/140_nuclear_synthesis_power_gates.js"
+hash = "1ca9dd16b64f47fc22c311b839fc25b3407ffdf781393101e945a5e8d5d433be"
+
+[[files]]
 file = "kubejs/server_scripts/30_recipe_replace/20_expensive_grout.js"
 hash = "e6c8d7264f4564aa029554693e293cc3184550dddf826e07111bf37f9ff459fb"
 
@@ -8858,6 +8870,10 @@ hash = "edfbf18a50f7163550ce0da139144d57d549c3e9f45c89c7077a3afafdaf194c"
 metafile = true
 
 [[files]]
+file = "mods/fission_reactor-0.1.0.jar"
+hash = "50096901c72fd351f9b08245a2ed06744fef3a9e8d2764d1661b17a6c3499fd3"
+
+[[files]]
 file = "mods/flib.pw.toml"
 hash = "3e8ccc74f161b632cf8eadda6548860bfa58e4970cec1630135b83900e31b98d"
 metafile = true
@@ -8916,6 +8932,10 @@ metafile = true
 file = "mods/fzzy-config.pw.toml"
 hash = "82c1bd758e0562f94f461b297930876b64c2e99feea47b3815efb3da02e0a059"
 metafile = true
+
+[[files]]
+file = "mods/gases_and_plasmas-0.1.0.jar"
+hash = "ed9ace06f139e3c377e3590f3105e200887653eb0b73ad864f8378661c7a40b0"
 
 [[files]]
 file = "mods/geckolib.pw.toml"
@@ -9940,7 +9960,7 @@ hash = "48aab172366174312dbfb87853b8e158696855d12398fca998549d049020016c"
 
 [[files]]
 file = "tools/generate_expert_quest_book.mjs"
-hash = "4f13c35de4fc98b4bafb65c64f022636f7665fc917c1f06553fcdc66c51a1618"
+hash = "34a57dc8efff16bb6583cd77daae7d6a0a316981f2c5d89658e85a6e223b9645"
 
 [[files]]
 file = "tools/validate_quest_dependencies.mjs"

@@ -11,7 +11,7 @@ The quest book is no longer just a skeleton. It now has an explicit dependency g
 Current generated state:
 
 - Chapters: 19
-- Quests: 177
+- Quests: 197
 - Dependency refs: 207
 - Generated quest/task/reward IDs: 1187
 - Starting Out rewards: copper coins only

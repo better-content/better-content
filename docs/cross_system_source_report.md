@@ -1,6 +1,6 @@
 # Cross-System Source Report
 
-Generated: 2026-04-29T08:44:06.693Z
+Generated: 2026-04-29T10:43:49.720Z
 
 This report lists item sources outside normal recipes and items produced by multiple material-conversion systems.
 
@@ -23,6 +23,23 @@ This report lists item sources outside normal recipes and items produced by mult
 | apotheotic_additions/chests/ender_spawner         | dotcoinmod:silver_coin | silver |
 | apotheotic_additions/chests/ie_spawner            | dotcoinmod:iron_coin   | iron   |
 | apotheotic_additions/chests/witherstorm_spawner   | dotcoinmod:gold_coin   | gold   |
+| wares/agreement/village/desert_payment_sell       | dotcoinmod:iron_coin   | iron   |
+| wares/agreement/village/desert_requested_buy      | dotcoinmod:iron_coin   | iron   |
+| wares/agreement/village/plains_payment_sell       | dotcoinmod:copper_coin | copper |
+| wares/agreement/village/plains_requested_buy      | dotcoinmod:copper_coin | copper |
+| wares/agreement/village/savanna_payment_sell      | dotcoinmod:bronze_coin | bronze |
+| wares/agreement/village/savanna_requested_buy     | dotcoinmod:bronze_coin | bronze |
+| wares/agreement/village/snowy_payment_sell        | dotcoinmod:silver_coin | silver |
+| wares/agreement/village/snowy_requested_buy       | dotcoinmod:silver_coin | silver |
+| wares/agreement/village/taiga_payment_sell        | dotcoinmod:tin_coin    | tin    |
+| wares/agreement/village/taiga_requested_buy       | dotcoinmod:tin_coin    | tin    |
+| wares/agreement/wandering_trader/rare_price       | dotcoinmod:gold_coin   | gold   |
+| wares/agreement/wandering_trader/regular_price    | dotcoinmod:bronze_coin | bronze |
+| wares/package/village/desert                      | dotcoinmod:iron_coin   | iron   |
+| wares/package/village/plains                      | dotcoinmod:copper_coin | copper |
+| wares/package/village/savanna                     | dotcoinmod:bronze_coin | bronze |
+| wares/package/village/snowy                       | dotcoinmod:silver_coin | silver |
+| wares/package/village/taiga                       | dotcoinmod:tin_coin    | tin    |
 
 ## Quest Coin Rewards
 
@@ -248,17 +265,20 @@ This report lists item sources outside normal recipes and items produced by mult
 | ----------------------------------- | ---------------------------- | ------------ |
 | minecraft:stick                     | recipe, loot                 | 583          |
 | minecraft:flower_pot                | recipe, loot                 | 425          |
-| minecraft:emerald                   | recipe, loot                 | 261          |
 | minecraft:book                      | recipe, loot, villager_trade | 259          |
+| minecraft:emerald                   | recipe, loot                 | 244          |
 | minecraft:potion                    | recipe, loot                 | 201          |
+| dotcoinmod:copper_coin              | loot, quest_reward           | 200          |
 | minecraft:diamond                   | recipe, loot                 | 190          |
 | minecraft:glass_bottle              | recipe, loot                 | 183          |
+| dotcoinmod:iron_coin                | loot, quest_reward           | 175          |
 | minecraft:iron_ingot                | recipe, loot                 | 153          |
-| dotcoinmod:iron_coin                | loot, quest_reward           | 152          |
 | minecraft:bone                      | recipe, loot                 | 150          |
 | minecraft:string                    | recipe, loot                 | 146          |
+| dotcoinmod:tin_coin                 | loot, quest_reward           | 143          |
 | minecraft:gold_ingot                | recipe, loot                 | 121          |
 | minecraft:gold_nugget               | recipe, loot                 | 120          |
+| dotcoinmod:bronze_coin              | loot, quest_reward           | 115          |
 | minecraft:iron_nugget               | recipe, loot                 | 103          |
 | minecraft:air                       | recipe, loot                 | 103          |
 | minecraft:bread                     | recipe, loot, villager_trade | 102          |
@@ -267,18 +287,18 @@ This report lists item sources outside normal recipes and items produced by mult
 | minecraft:gunpowder                 | recipe, loot, villager_trade | 98           |
 | minecraft:redstone                  | recipe, loot, villager_trade | 97           |
 | minecraft:paper                     | recipe, loot                 | 93           |
-| dotcoinmod:bronze_coin              | loot, quest_reward           | 91           |
 | minecraft:leather                   | recipe, loot, villager_trade | 87           |
 | minecraft:snowball                  | recipe, loot                 | 84           |
+| dotcoinmod:silver_coin              | loot, quest_reward           | 80           |
 | minecraft:ladder                    | recipe, loot                 | 77           |
 | twilightforest:moss_patch           | recipe, loot                 | 74           |
 | minecraft:wheat_seeds               | recipe, loot                 | 72           |
 | minecraft:experience_bottle         | recipe, loot, villager_trade | 72           |
-| dotcoinmod:silver_coin              | loot, quest_reward           | 69           |
 | minecraft:bone_meal                 | recipe, loot                 | 67           |
 | minecraft:raw_gold                  | recipe, loot                 | 66           |
 | minecraft:golden_apple              | recipe, loot, villager_trade | 65           |
 | minecraft:arrow                     | recipe, loot, villager_trade | 63           |
+| dotcoinmod:gold_coin                | loot, quest_reward           | 63           |
 | minecraft:wheat                     | recipe, loot                 | 62           |
 | minecraft:lapis_lazuli              | recipe, loot, villager_trade | 61           |
 | minecraft:cobweb                    | recipe, loot                 | 61           |
@@ -292,7 +312,6 @@ This report lists item sources outside normal recipes and items produced by mult
 | minecraft:vine                      | recipe, loot                 | 55           |
 | minecraft:charcoal                  | recipe, loot                 | 55           |
 | minecraft:ender_pearl               | recipe, loot, villager_trade | 54           |
-| dotcoinmod:gold_coin                | loot, quest_reward           | 54           |
 | the_bumblezone:honey_compass        | recipe, loot                 | 53           |
 | minecraft:slime_ball                | recipe, loot                 | 53           |
 | minecraft:leather_boots             | recipe, loot, villager_trade | 52           |
@@ -404,8 +423,6 @@ This report lists item sources outside normal recipes and items produced by mult
 | buildersaddition:pillow_cyan        | recipe, loot                 | 25           |
 | buildersaddition:pillow_light_blue  | recipe, loot                 | 25           |
 | buildersaddition:pillow_red         | recipe, loot                 | 25           |
-| buildersaddition:pillow_lime        | recipe, loot                 | 25           |
-| buildersaddition:pillow_white       | recipe, loot                 | 25           |
 
 ## Emerald Loot Sources
 

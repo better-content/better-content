@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-04-29T08:44:06.694Z",
+  "generatedAt": "2026-04-29T10:43:49.721Z",
   "instance": "/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1/minecraft",
-  "recipes": 50077,
-  "recipeOutputs": 45030,
-  "riskyRecipeOutputs": 218,
+  "recipes": 50056,
+  "recipeOutputs": 45009,
+  "riskyRecipeOutputs": 198,
   "lootTables": 22436,
-  "emeraldLootTables": 237,
-  "coinLootSources": 15,
-  "questFiles": 19,
-  "questCoinRewards": 785,
+  "emeraldLootTables": 220,
+  "coinLootSources": 32,
+  "questFiles": 20,
+  "questCoinRewards": 917,
   "villagerTradeRows": 140,
-  "multiSourceItems": 17152
+  "multiSourceItems": 17139
 }

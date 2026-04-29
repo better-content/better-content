@@ -1,15 +1,15 @@
 # Full Item Graph Audit
 
-Generated: 2026-04-29T08:44:06.692Z
+Generated: 2026-04-29T10:43:49.717Z
 
 Instance: `/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1/minecraft`
 
 ## Recipe Graph
 
-- Recipes scanned: 50077
-- Recipe outputs extracted: 45030
+- Recipes scanned: 50056
+- Recipe outputs extracted: 45009
 - Loot tables scanned: 22436
-- Quest chapter files scanned: 19
+- Quest chapter files scanned: 20
 - Villager trade rows parsed: 140
 
 ## Top Recipe Namespaces
@@ -18,7 +18,7 @@ Instance: `/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Pla
 | -------------------- | ----- |
 | alchemistry          | 5410  |
 | railways             | 2670  |
-| create               | 2599  |
+| create               | 2594  |
 | tconstruct           | 2336  |
 | mna                  | 1796  |
 | createdeco           | 1730  |
@@ -45,9 +45,9 @@ Instance: `/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Pla
 
 | Type                         | Count |
 | ---------------------------- | ----- |
-| minecraft:crafting_shaped    | 15703 |
+| minecraft:crafting_shaped    | 15690 |
 | minecraft:stonecutting       | 7538  |
-| minecraft:crafting_shapeless | 4530  |
+| minecraft:crafting_shapeless | 4524  |
 | alchemistry:fusion           | 3481  |
 | create:cutting               | 1283  |
 | create:mixing                | 1158  |
@@ -72,128 +72,128 @@ Instance: `/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Pla
 
 ## Highest-Risk Ungated Or Undertiered Outputs
 
-| Output                                            | Recipe                                                                | Type                                     | Intended Tier   | Actual Tier  | Blood Need/Actual |
-| ------------------------------------------------- | --------------------------------------------------------------------- | ---------------------------------------- | --------------- | ------------ | ----------------- |
-| create:fluid_pipe                                 | create:crafting/kinetics/fluid_pipe_vertical                          | minecraft:crafting_shaped                | create_andesite | survival     | 0/0               |
-| ars_elemental:ritual_detection                    | ars_elemental:tablet_ritual_detection                                 | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| goety:prisma_beam_focus                           | goety:focus/prisma_beam_focus                                         | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| ars_instrumentum:runic_storage_stone              | ars_instrumentum:runic_storage_stone_alternate                        | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| expatternprovider:oversize_interface              | expatternprovider:oversize_interface_alt                              | minecraft:crafting_shapeless             | ae2             | survival     | 0/0               |
-| goety:dark_altar_ominous_stone                    | goety:dark_altar_ominous_stone                                        | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| goety:wind_blast_focus                            | goety:focus/wind_blast_focus                                          | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| goety:swarm_focus                                 | goety:focus/swarm_focus                                               | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| create_connected:sequenced_pulse_generator        | create_connected:crafting/kinetics/sequenced_pulse_generator          | minecraft:crafting_shaped                | create_brass    | survival     | 0/0               |
-| goety:ignite_focus                                | goety:focus/ignite_focus                                              | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| ars_caelum:ritual_conjure_island_vexing           | ars_caelum:ritual_conjure_island_vexing                               | minecraft:crafting_shapeless             | survival        | survival     | 4/0               |
-| ars_nouveau:ritual_scrying                        | ars_nouveau:ritual_scrying                                            | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| vampirism:crossbow_arrow_teleport                 | vampirism:weapontable/crossbow_arrow_teleport                         | vampirism:shapeless_crafting_weapontable | oc2r            | survival     | 0/0               |
-| create_new_age:heat_pump                          | create_new_age:shaped/heat_pump                                       | minecraft:crafting_shaped                | power_grid      | survival     | 0/0               |
-| goety:empty_focus                                 | goety:empty_focus_craft                                               | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| arseng:portable_source_cell_64k                   | arseng:portable_source_cell_64k                                       | minecraft:crafting_shapeless             | survival        | ae2          | 5/0               |
-| ars_nouveau:ritual_overgrowth                     | ars_nouveau:ritual_overgrowth                                         | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| goety:frost_breath_focus                          | goety:focus/frost_breath_focus                                        | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| ars_elemental:ritual_tesla_coil                   | ars_elemental:tablet_ritual_tesla_coil                                | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| botania:pump                                      | botania:pump                                                          | minecraft:crafting_shaped                | survival        | survival     | 4/0               |
-| goety:fireball_focus                              | goety:focus/fireball_focus                                            | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| goety:chilling_focus                              | goety:focus/chilling_focus                                            | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| create_new_age:heat_pipe                          | create_new_age:shaped/heat_pipe                                       | minecraft:crafting_shaped                | power_grid      | survival     | 0/0               |
-| mna:lesser_eldrin_conduit_air                     | mna:lesser_conduit_air                                                | minecraft:crafting_shaped                | survival        | survival     | 5/0               |
-| reliquary:alkahestry_altar                        | reliquary:alkahestry_altar                                            | minecraft:crafting_shapeless             | survival        | survival     | 1/0               |
-| acid_vat:portable_slurry_interface                | acid_vat:portable_slurry_interface                                    | minecraft:crafting_shapeless             | create_brass    | survival     | 0/0               |
-| goety:dark_altar_end_stone                        | goety:dark_altar_end_stone                                            | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| ars_additions:ritual_locate_structure             | ars_additions:ritual/ritual_locate_structure                          | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| goety:poison_dart_focus                           | goety:focus/poison_dart_focus                                         | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| goety:earth_punch_focus                           | goety:focus/earth_punch_focus                                         | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| create_power_loader:empty_brass_chunk_loader      | create_power_loader:crafting/empty_brass_chunk_loader                 | create:mechanical_crafting               | oc2r            | create_brass | 0/0               |
-| botania:cell_block                                | botania:cell_block                                                    | minecraft:crafting_shapeless             | survival        | survival     | 4/0               |
-| goety:sensing_focus                               | goety:focus/sensing_focus                                             | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| goety:focus_pack                                  | goety:focus_pack                                                      | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| goety:biting_focus                                | goety:focus/biting_focus                                              | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| create_power_loader:empty_andesite_chunk_loader   | create_power_loader:crafting/empty_andesite_chunk_loader              | minecraft:crafting_shaped                | oc2r            | survival     | 0/0               |
-| naturesaura:slime_split_generator                 | naturesaura:slime_split_generator                                     | minecraft:crafting_shaped                | survival        | survival     | 2/0               |
-| goety:dark_altar_stone                            | goety:dark_altar_stone                                                | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| psi:cad_assembler                                 | psi:assembler                                                         | minecraft:crafting_shaped                | survival        | survival     | 5/0               |
-| psi:programmer                                    | psi:programmer                                                        | minecraft:crafting_shaped                | survival        | survival     | 5/0               |
-| botania:avatar                                    | botania:avatar                                                        | minecraft:crafting_shaped                | survival        | survival     | 4/0               |
-| botania:fel_pumpkin                               | botania:fel_pumpkin                                                   | minecraft:crafting_shaped                | survival        | survival     | 4/0               |
-| goety:water_whip_focus                            | goety:focus/water_whip_focus                                          | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| goety:dark_altar                                  | goety:dark_altar                                                      | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| ars_nouveau:ritual_disintegration                 | ars_nouveau:ritual_disintegration                                     | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| goety:thunderbolt_focus                           | goety:focus/thunderbolt_focus                                         | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| createdieselgenerators:distillation_controller    | createdieselgenerators:crafting/distillation_controller               | minecraft:crafting_shaped                | create_brass    | survival     | 0/0               |
-| malum:spirit_altar                                | malum:spirit_altar                                                    | minecraft:crafting_shaped                | survival        | survival     | 1/0               |
-| create_connected:linked_transmitter               | create_connected:crafting/kinetics/linked_transmitter_from_conversion | minecraft:crafting_shapeless             | create_brass    | survival     | 0/0               |
-| botania:runic_altar                               | botania:runic_altar_alt                                               | minecraft:crafting_shaped                | survival        | survival     | 4/0               |
-| ars_caelum:ritual_conjure_island_village          | ars_caelum:ritual_conjure_island_village                              | minecraft:crafting_shapeless             | survival        | survival     | 4/0               |
-| ars_nouveau:ritual_sunrise                        | ars_nouveau:ritual_sunrise                                            | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| goety:updraft_focus                               | goety:focus/updraft_focus                                             | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| goety:dark_altar_deepslate                        | goety:dark_altar_deepslate                                            | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| naturesaura:chunk_loader                          | naturesaura:chunk_loader                                              | minecraft:crafting_shaped                | oc2r            | survival     | 2/0               |
-| hexalia:hex_focus                                 | hexalia:hex_focus                                                     | minecraft:crafting_shaped                | survival        | survival     | 5/0               |
-| create:track_observer                             | create:crafting/kinetics/track_observer_from_other_plates             | minecraft:crafting_shapeless             | create_andesite | survival     | 0/0               |
-| goety:dark_altar_highrock                         | goety:dark_altar_highrock                                             | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| acid_vat:smart_slurry_pipe                        | acid_vat:smart_slurry_pipe                                            | minecraft:crafting_shaped                | create_brass    | survival     | 0/0               |
-| createdieselgenerators:pumpjack_hole              | createdieselgenerators:crafting/pumpjack_hole                         | minecraft:crafting_shaped                | create_brass    | survival     | 0/0               |
-| ars_nouveau:imbuement_chamber                     | ars_nouveau:imbuement_chamber                                         | minecraft:crafting_shaped                | survival        | survival     | 2/0               |
-| mna:lesser_eldrin_conduit_ender                   | mna:lesser_conduit_ender                                              | minecraft:crafting_shaped                | survival        | survival     | 5/0               |
-| goety:pulverize_focus                             | goety:focus/pulverize_focus                                           | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| tconstruct:tinkers_gadgetry                       | tconstruct:common/tinkers_gadgetry                                    | minecraft:crafting_shapeless             | tcon_seared     | survival     | 0/0               |
-| theurgy:incubator_sulfur_vessel                   | theurgy:crafting/shaped/incubator_sulfur_vessel                       | minecraft:crafting_shaped                | power_grid      | survival     | 4/0               |
-| goety:cushion_focus                               | goety:focus/cushion_focus                                             | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| goety:dark_altar_blackstone                       | goety:dark_altar_blackstone                                           | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| goety:command_focus                               | goety:focus/command_focus                                             | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| goety:steaming_focus                              | goety:focus/steaming_focus                                            | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| goety:glow_light_focus                            | goety:focus/glow_light_focus                                          | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| ars_nouveau:ritual_harvest                        | ars_nouveau:ritual_harvest                                            | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| ars_caelum:ritual_conjure_island_flourishing      | ars_caelum:ritual_conjure_island_flourishing                          | minecraft:crafting_shapeless             | survival        | survival     | 4/0               |
-| goety:water_jet_focus                             | goety:focus/water_jet_focus                                           | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| create:mechanical_pump                            | create:crafting/kinetics/mechanical_pump                              | minecraft:crafting_shapeless             | create_andesite | survival     | 0/0               |
-| irons_spellbooks:pumpkin_helmet                   | irons_spellbooks:pumpkin_helmet                                       | minecraft:crafting_shaped                | survival        | survival     | 2/0               |
-| createdieselgenerators:pumpjack_head              | createdieselgenerators:crafting/pumpjack_head                         | minecraft:crafting_shaped                | create_brass    | survival     | 0/0               |
-| mna:lesser_eldrin_conduit_water                   | mna:lesser_conduit_water                                              | minecraft:crafting_shaped                | survival        | survival     | 5/0               |
-| goety:mauling_focus                               | goety:focus/mauling_focus                                             | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| ars_nouveau:ritual_restoration                    | ars_nouveau:ritual_restoration                                        | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| ars_nouveau:ritual_conjure_island_desert          | ars_nouveau:ritual_conjure_island_desert                              | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| theurgy:incubator_mercury_vessel                  | theurgy:crafting/shaped/incubator_mercury_vessel                      | minecraft:crafting_shaped                | power_grid      | survival     | 4/0               |
-| naturesaura:animal_generator                      | naturesaura:animal_generator                                          | minecraft:crafting_shaped                | survival        | survival     | 2/0               |
-| psi:cad_battery_extended                          | psi:cad_battery_extended                                              | minecraft:crafting_shaped                | survival        | survival     | 5/0               |
-| ars_nouveau:ritual_conjure_island_plains          | ars_nouveau:ritual_conjure_island_plains                              | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| goety:focus_bag                                   | goety:focus_bag                                                       | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| goety:hunting_focus                               | goety:focus/hunting_focus                                             | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| create:fluid_pipe                                 | create:crafting/kinetics/fluid_pipe                                   | minecraft:crafting_shaped                | create_andesite | survival     | 0/0               |
-| expatternprovider:oversize_interface_part         | expatternprovider:oversize_interface_part                             | minecraft:crafting_shapeless             | ae2             | survival     | 0/0               |
-| create_new_age:heat_pipe                          | create_new_age:shaped/heat_pipe_mirrored                              | minecraft:crafting_shaped                | power_grid      | survival     | 0/0               |
-| mna:ritual_focus_minor                            | mna:ritual_focus_minor                                                | minecraft:crafting_shaped                | survival        | survival     | 5/0               |
-| naturesaura:auto_crafter                          | naturesaura:auto_crafter                                              | minecraft:crafting_shaped                | survival        | survival     | 2/0               |
-| mna:constructs/construct_storage_torso_wickerwood | mna:wickerwood_constructs/wickerwood_torso_storage                    | minecraft:crafting_shapeless             | survival        | survival     | 5/0               |
-| naturesaura:flower_generator                      | naturesaura:flower_generator                                          | minecraft:crafting_shaped                | survival        | survival     | 2/0               |
-| hexerei:book_of_shadows_altar                     | hexerei:book_of_shadows_altar                                         | minecraft:crafting_shaped                | survival        | survival     | 1/0               |
-| theurgy:incubator                                 | theurgy:crafting/shaped/incubator                                     | minecraft:crafting_shaped                | power_grid      | survival     | 4/0               |
-| ars_caelum:ritual_conjure_island_end_portal       | ars_caelum:ritual_conjure_island_end_portal                           | minecraft:crafting_shapeless             | survival        | survival     | 4/0               |
-| goety:fire_breath_focus                           | goety:focus/fire_breath_focus                                         | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| mna:lesser_eldrin_conduit_earth                   | mna:lesser_conduit_earth                                              | minecraft:crafting_shaped                | survival        | survival     | 5/0               |
-| create:cart_assembler                             | create:crafting/kinetics/cart_assembler                               | minecraft:crafting_shaped                | create_andesite | survival     | 0/0               |
-| createdieselgenerators:pumpjack_crank             | createdieselgenerators:mechanical_crafting/pumpjack_crank             | create:mechanical_crafting               | create_brass    | survival     | 0/0               |
-| arseng:portable_source_cell_256k                  | arseng:portable_source_cell_256k                                      | minecraft:crafting_shapeless             | survival        | ae2          | 5/0               |
-| ars_instrumentum:runic_storage_stone              | ars_instrumentum:runic_storage_stone                                  | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| ars_nouveau:ritual_brazier                        | ars_nouveau:ritual_brazier                                            | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| ars_nouveau:ritual_challenge                      | ars_nouveau:ritual_challenge                                          | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| goety:teeth_focus                                 | goety:focus/teeth_focus                                               | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| goety:shredding_focus                             | goety:focus/shredding_focus                                           | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| ars_nouveau:ritual_burrowing                      | ars_nouveau:ritual_burrowing                                          | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| goety:electrocute_focus                           | goety:focus/electrocute_focus                                         | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| naturesaura:chorus_generator                      | naturesaura:chorus_generator                                          | minecraft:crafting_shaped                | survival        | survival     | 2/0               |
-| botania:runic_altar                               | botania:runic_altar                                                   | minecraft:crafting_shaped                | survival        | survival     | 4/0               |
-| ars_caelum:ritual_conjure_island_blazing          | ars_caelum:ritual_conjure_island_blazing                              | minecraft:crafting_shapeless             | survival        | survival     | 4/0               |
-| eidolon:wooden_altar                              | eidolon:wooden_altar                                                  | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| eidolon:necrotic_focus                            | eidolon:necrotic_focus                                                | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| goety:dark_altar_prismarine                       | goety:dark_altar_prismarine                                           | minecraft:crafting_shaped                | survival        | survival     | 3/0               |
-| ars_nouveau:ritual_forestation                    | ars_nouveau:ritual_forestation                                        | minecraft:crafting_shapeless             | survival        | survival     | 2/0               |
-| createdieselgenerators:pumpjack_bearing           | createdieselgenerators:crafting/pumpjack_bearing                      | minecraft:crafting_shaped                | create_brass    | survival     | 0/0               |
-| acid_vat:centrifuge_bearing                       | acid_vat:centrifuge_bearing                                           | minecraft:crafting_shaped                | create_brass    | survival     | 0/0               |
-| expatternprovider:ex_interface_part               | expatternprovider:ei_part                                             | minecraft:crafting_shapeless             | ae2             | survival     | 0/0               |
-| psi:spell_drive                                   | psi:spell_drive                                                       | minecraft:crafting_shaped                | survival        | survival     | 5/0               |
-| psi:cad_battery_basic                             | psi:cad_battery_basic                                                 | minecraft:crafting_shaped                | survival        | survival     | 5/0               |
+| Output                                            | Recipe                                                    | Type                         | Intended Tier   | Actual Tier  | Blood Need/Actual |
+| ------------------------------------------------- | --------------------------------------------------------- | ---------------------------- | --------------- | ------------ | ----------------- |
+| ars_elemental:ritual_detection                    | ars_elemental:tablet_ritual_detection                     | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| goety:prisma_beam_focus                           | goety:focus/prisma_beam_focus                             | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| ars_instrumentum:runic_storage_stone              | ars_instrumentum:runic_storage_stone_alternate            | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| goety:dark_altar_ominous_stone                    | goety:dark_altar_ominous_stone                            | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:wind_blast_focus                            | goety:focus/wind_blast_focus                              | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:swarm_focus                                 | goety:focus/swarm_focus                                   | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:ignite_focus                                | goety:focus/ignite_focus                                  | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| ars_caelum:ritual_conjure_island_vexing           | ars_caelum:ritual_conjure_island_vexing                   | minecraft:crafting_shapeless | survival        | survival     | 4/0               |
+| ars_nouveau:ritual_scrying                        | ars_nouveau:ritual_scrying                                | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| goety:empty_focus                                 | goety:empty_focus_craft                                   | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| arseng:portable_source_cell_64k                   | arseng:portable_source_cell_64k                           | minecraft:crafting_shapeless | survival        | ae2          | 5/0               |
+| ars_nouveau:ritual_overgrowth                     | ars_nouveau:ritual_overgrowth                             | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| goety:frost_breath_focus                          | goety:focus/frost_breath_focus                            | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| ars_elemental:ritual_tesla_coil                   | ars_elemental:tablet_ritual_tesla_coil                    | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| botania:pump                                      | botania:pump                                              | minecraft:crafting_shaped    | survival        | survival     | 4/0               |
+| goety:fireball_focus                              | goety:focus/fireball_focus                                | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:chilling_focus                              | goety:focus/chilling_focus                                | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| mna:lesser_eldrin_conduit_air                     | mna:lesser_conduit_air                                    | minecraft:crafting_shaped    | survival        | survival     | 5/0               |
+| reliquary:alkahestry_altar                        | reliquary:alkahestry_altar                                | minecraft:crafting_shapeless | survival        | survival     | 1/0               |
+| goety:dark_altar_end_stone                        | goety:dark_altar_end_stone                                | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| ars_additions:ritual_locate_structure             | ars_additions:ritual/ritual_locate_structure              | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| goety:poison_dart_focus                           | goety:focus/poison_dart_focus                             | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:earth_punch_focus                           | goety:focus/earth_punch_focus                             | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| botania:cell_block                                | botania:cell_block                                        | minecraft:crafting_shapeless | survival        | survival     | 4/0               |
+| goety:sensing_focus                               | goety:focus/sensing_focus                                 | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:focus_pack                                  | goety:focus_pack                                          | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:biting_focus                                | goety:focus/biting_focus                                  | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| naturesaura:slime_split_generator                 | naturesaura:slime_split_generator                         | minecraft:crafting_shaped    | survival        | survival     | 2/0               |
+| goety:dark_altar_stone                            | goety:dark_altar_stone                                    | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| psi:cad_assembler                                 | psi:assembler                                             | minecraft:crafting_shaped    | survival        | survival     | 5/0               |
+| psi:programmer                                    | psi:programmer                                            | minecraft:crafting_shaped    | survival        | survival     | 5/0               |
+| botania:avatar                                    | botania:avatar                                            | minecraft:crafting_shaped    | survival        | survival     | 4/0               |
+| botania:fel_pumpkin                               | botania:fel_pumpkin                                       | minecraft:crafting_shaped    | survival        | survival     | 4/0               |
+| goety:water_whip_focus                            | goety:focus/water_whip_focus                              | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:dark_altar                                  | goety:dark_altar                                          | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| ars_nouveau:ritual_disintegration                 | ars_nouveau:ritual_disintegration                         | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| goety:thunderbolt_focus                           | goety:focus/thunderbolt_focus                             | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| malum:spirit_altar                                | malum:spirit_altar                                        | minecraft:crafting_shaped    | survival        | survival     | 1/0               |
+| botania:runic_altar                               | botania:runic_altar_alt                                   | minecraft:crafting_shaped    | survival        | survival     | 4/0               |
+| ars_caelum:ritual_conjure_island_village          | ars_caelum:ritual_conjure_island_village                  | minecraft:crafting_shapeless | survival        | survival     | 4/0               |
+| ars_nouveau:ritual_sunrise                        | ars_nouveau:ritual_sunrise                                | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| goety:updraft_focus                               | goety:focus/updraft_focus                                 | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:dark_altar_deepslate                        | goety:dark_altar_deepslate                                | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| hexalia:hex_focus                                 | hexalia:hex_focus                                         | minecraft:crafting_shaped    | survival        | survival     | 5/0               |
+| goety:dark_altar_highrock                         | goety:dark_altar_highrock                                 | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| ars_nouveau:imbuement_chamber                     | ars_nouveau:imbuement_chamber                             | minecraft:crafting_shaped    | survival        | survival     | 2/0               |
+| mna:lesser_eldrin_conduit_ender                   | mna:lesser_conduit_ender                                  | minecraft:crafting_shaped    | survival        | survival     | 5/0               |
+| goety:pulverize_focus                             | goety:focus/pulverize_focus                               | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| tconstruct:tinkers_gadgetry                       | tconstruct:common/tinkers_gadgetry                        | minecraft:crafting_shapeless | tcon_seared     | survival     | 0/0               |
+| theurgy:incubator_sulfur_vessel                   | theurgy:crafting/shaped/incubator_sulfur_vessel           | minecraft:crafting_shaped    | power_grid      | survival     | 4/0               |
+| goety:cushion_focus                               | goety:focus/cushion_focus                                 | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:dark_altar_blackstone                       | goety:dark_altar_blackstone                               | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:command_focus                               | goety:focus/command_focus                                 | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:steaming_focus                              | goety:focus/steaming_focus                                | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:glow_light_focus                            | goety:focus/glow_light_focus                              | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| ars_nouveau:ritual_harvest                        | ars_nouveau:ritual_harvest                                | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| ars_caelum:ritual_conjure_island_flourishing      | ars_caelum:ritual_conjure_island_flourishing              | minecraft:crafting_shapeless | survival        | survival     | 4/0               |
+| goety:water_jet_focus                             | goety:focus/water_jet_focus                               | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| irons_spellbooks:pumpkin_helmet                   | irons_spellbooks:pumpkin_helmet                           | minecraft:crafting_shaped    | survival        | survival     | 2/0               |
+| mna:lesser_eldrin_conduit_water                   | mna:lesser_conduit_water                                  | minecraft:crafting_shaped    | survival        | survival     | 5/0               |
+| goety:mauling_focus                               | goety:focus/mauling_focus                                 | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| ars_nouveau:ritual_restoration                    | ars_nouveau:ritual_restoration                            | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| ars_nouveau:ritual_conjure_island_desert          | ars_nouveau:ritual_conjure_island_desert                  | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| theurgy:incubator_mercury_vessel                  | theurgy:crafting/shaped/incubator_mercury_vessel          | minecraft:crafting_shaped    | power_grid      | survival     | 4/0               |
+| naturesaura:animal_generator                      | naturesaura:animal_generator                              | minecraft:crafting_shaped    | survival        | survival     | 2/0               |
+| psi:cad_battery_extended                          | psi:cad_battery_extended                                  | minecraft:crafting_shaped    | survival        | survival     | 5/0               |
+| ars_nouveau:ritual_conjure_island_plains          | ars_nouveau:ritual_conjure_island_plains                  | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| goety:focus_bag                                   | goety:focus_bag                                           | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:hunting_focus                               | goety:focus/hunting_focus                                 | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| expatternprovider:oversize_interface_part         | expatternprovider:oversize_interface_part                 | minecraft:crafting_shapeless | ae2             | survival     | 0/0               |
+| mna:ritual_focus_minor                            | mna:ritual_focus_minor                                    | minecraft:crafting_shaped    | survival        | survival     | 5/0               |
+| naturesaura:auto_crafter                          | naturesaura:auto_crafter                                  | minecraft:crafting_shaped    | survival        | survival     | 2/0               |
+| mna:constructs/construct_storage_torso_wickerwood | mna:wickerwood_constructs/wickerwood_torso_storage        | minecraft:crafting_shapeless | survival        | survival     | 5/0               |
+| naturesaura:flower_generator                      | naturesaura:flower_generator                              | minecraft:crafting_shaped    | survival        | survival     | 2/0               |
+| hexerei:book_of_shadows_altar                     | hexerei:book_of_shadows_altar                             | minecraft:crafting_shaped    | survival        | survival     | 1/0               |
+| theurgy:incubator                                 | theurgy:crafting/shaped/incubator                         | minecraft:crafting_shaped    | power_grid      | survival     | 4/0               |
+| ars_caelum:ritual_conjure_island_end_portal       | ars_caelum:ritual_conjure_island_end_portal               | minecraft:crafting_shapeless | survival        | survival     | 4/0               |
+| goety:fire_breath_focus                           | goety:focus/fire_breath_focus                             | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| mna:lesser_eldrin_conduit_earth                   | mna:lesser_conduit_earth                                  | minecraft:crafting_shaped    | survival        | survival     | 5/0               |
+| create:cart_assembler                             | create:crafting/kinetics/cart_assembler                   | minecraft:crafting_shaped    | create_andesite | survival     | 0/0               |
+| createdieselgenerators:pumpjack_crank             | createdieselgenerators:mechanical_crafting/pumpjack_crank | create:mechanical_crafting   | create_brass    | survival     | 0/0               |
+| arseng:portable_source_cell_256k                  | arseng:portable_source_cell_256k                          | minecraft:crafting_shapeless | survival        | ae2          | 5/0               |
+| ars_instrumentum:runic_storage_stone              | ars_instrumentum:runic_storage_stone                      | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| ars_nouveau:ritual_brazier                        | ars_nouveau:ritual_brazier                                | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| ars_nouveau:ritual_challenge                      | ars_nouveau:ritual_challenge                              | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| goety:teeth_focus                                 | goety:focus/teeth_focus                                   | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:shredding_focus                             | goety:focus/shredding_focus                               | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| ars_nouveau:ritual_burrowing                      | ars_nouveau:ritual_burrowing                              | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| goety:electrocute_focus                           | goety:focus/electrocute_focus                             | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| naturesaura:chorus_generator                      | naturesaura:chorus_generator                              | minecraft:crafting_shaped    | survival        | survival     | 2/0               |
+| botania:runic_altar                               | botania:runic_altar                                       | minecraft:crafting_shaped    | survival        | survival     | 4/0               |
+| ars_caelum:ritual_conjure_island_blazing          | ars_caelum:ritual_conjure_island_blazing                  | minecraft:crafting_shapeless | survival        | survival     | 4/0               |
+| eidolon:wooden_altar                              | eidolon:wooden_altar                                      | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| eidolon:necrotic_focus                            | eidolon:necrotic_focus                                    | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:dark_altar_prismarine                       | goety:dark_altar_prismarine                               | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| ars_nouveau:ritual_forestation                    | ars_nouveau:ritual_forestation                            | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| createdieselgenerators:pumpjack_bearing           | createdieselgenerators:crafting/pumpjack_bearing          | minecraft:crafting_shaped    | create_brass    | survival     | 0/0               |
+| acid_vat:centrifuge_bearing                       | acid_vat:centrifuge_bearing                               | minecraft:crafting_shaped    | create_brass    | survival     | 0/0               |
+| expatternprovider:ex_interface_part               | expatternprovider:ei_part                                 | minecraft:crafting_shapeless | ae2             | survival     | 0/0               |
+| psi:spell_drive                                   | psi:spell_drive                                           | minecraft:crafting_shaped    | survival        | survival     | 5/0               |
+| psi:cad_battery_basic                             | psi:cad_battery_basic                                     | minecraft:crafting_shaped    | survival        | survival     | 5/0               |
+| psi:exosuit_controller                            | psi:exosuit_controller                                    | minecraft:crafting_shaped    | survival        | survival     | 5/0               |
+| goety:rotation_focus                              | goety:focus/rotation_focus                                | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:illuminate_focus                            | goety:focus/illuminate_focus                              | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| hexerei:witch_hazel_altar                         | hexerei:witch_hazel_altar                                 | minecraft:crafting_shaped    | survival        | survival     | 1/0               |
+| goety:dark_altar_crypt_stone                      | goety:dark_altar_crypt_stone                              | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| psi:cad_battery_ultradense                        | psi:cad_battery_ultradense                                | minecraft:crafting_shaped    | survival        | survival     | 5/0               |
+| create_new_age:reinforced_motor                   | create_new_age:mechanical_crafting/reinforced_motor       | create:mechanical_crafting   | power_grid      | create_brass | 0/0               |
+| ars_nouveau:sourceberry_bush                      | ars_nouveau:sourceberry_sack_to_bush                      | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| ars_caelum:ritual_elder_summon                    | ars_caelum:ritual_elder_summon                            | minecraft:crafting_shapeless | survival        | survival     | 4/0               |
+| goety:shocking_focus                              | goety:focus/shocking_focus                                | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| ars_nouveau:ritual_challenge                      | ars_nouveau:challenge_2                                   | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| ars_elemental:ritual_repulsion                    | ars_elemental:tablet_ritual_repulsion                     | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| rootsclassic:altar                                | rootsclassic:altar                                        | minecraft:crafting_shaped    | survival        | survival     | 1/0               |
+| goety:bombardment_focus                           | goety:focus/bombardment_focus                             | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| goety:dark_altar_marble                           | goety:dark_altar_marble                                   | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
+| ars_nouveau:ritual_gravity                        | ars_nouveau:ritual_gravity                                | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| create:portable_storage_interface                 | create:crafting/kinetics/portable_storage_interface       | minecraft:crafting_shapeless | create_andesite | survival     | 0/0               |
+| ars_elemental:ritual_attraction                   | ars_elemental:tablet_ritual_attraction                    | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
+| ars_caelum:ritual_mana_regeneration               | ars_caelum:ritual_mana_regeneration                       | minecraft:crafting_shapeless | survival        | survival     | 4/0               |
 
 ## Valuable Vanilla Material Recipe Hits
 
@@ -281,7 +281,6 @@ These are not automatically wrong. They are review targets where plain vanilla v
 | botania:unholy_cloak                                | botania:unholy_cloak                                                    | minecraft:redstone                           |
 | minecraft:redstone_lamp                             | minecraft:redstone_lamp                                                 | minecraft:redstone                           |
 | minecraft:iron_ingot                                | minecraft:iron_ingot_from_blasting_iron_ore                             | minecraft:iron_ingot                         |
-| create_connected:sequenced_pulse_generator          | create_connected:crafting/kinetics/sequenced_pulse_generator            | minecraft:redstone                           |
 | rehooked:red_hook                                   | rehooked:red_hook                                                       | minecraft:redstone                           |
 | enigmaticlegacy:twisted_heart                       | enigmaticlegacy:twisted_heart                                           | minecraft:redstone                           |
 | littlelogistics:vessel_detector                     | littlelogistics:vessel_detector                                         | minecraft:redstone                           |
@@ -321,4 +320,5 @@ These are not automatically wrong. They are review targets where plain vanilla v
 | supplementaries:crystal_display                     | supplementaries:crystal_display                                         | minecraft:amethyst_shard                     |
 | hexalia:earth_node                                  | hexalia:earth_node_from_ritual_table                                    | minecraft:amethyst_shard                     |
 | minecraft:iron_ingot                                | immersive_weathering:iron_ingot_from_clean_block                        | minecraft:iron_ingot                         |
+| mna:pylon/haste                                     | mna:manaweaving/pylon/haste                                             | minecraft:redstone                           |
 

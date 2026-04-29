@@ -17,8 +17,8 @@ git diff --check
 
 ## Current Generated State
 
-- Quest chapters: 19
-- Quest count: 177
+- Quest chapters: 20
+- Quest count: 197
 - Quest dependency refs: 207
 - Quest/reward/task IDs checked: 1187
 - Villager trade rows parsed by audit: 140
@@ -43,3 +43,11 @@ git diff --check
 - Open representative loot chests and confirm emerald currency has become Dot Coins while ore/block drops remain intact.
 - Check EMI/JEI visibility for later machine casing mechanical crafting and Sky Steel mixing/pressing.
 - Re-run after the Acid Vat mod agent lands changes.
+
+## Nuclear synthesis integration
+
+- Added `mods/fission_reactor-0.1.0.jar`.
+- Added `mods/gases_and_plasmas-0.1.0.jar`.
+- Added pack-side fission/fusion gate recipes in `140_nuclear_synthesis_power_gates.js`.
+- Reworked the electricity chapter into SU Heat and Electricity.
+- Added the Fusion Power and Plasma quest chapter.

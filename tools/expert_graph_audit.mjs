@@ -20,7 +20,6 @@ const machineNamespaceTier = {
   tconstruct: 'tcon_seared',
   create: 'create_andesite',
   railways: 'create_brass',
-  createdeco: 'create_brass',
   create_connected: 'create_brass',
   createadditionallogistics: 'create_brass',
   createadvlogistics: 'create_brass',

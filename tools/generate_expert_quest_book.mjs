@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 import fs from 'node:fs'
 import path from 'node:path'
+import crypto from 'node:crypto'
 
 const root = process.cwd()
 const chapterDir = path.join(root, 'config/ftbquests/quests/chapters')
 const registryFile = "/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1/minecraft/dump/registry_builtin/minecraft/item/_entries.txt"
 const registry = fs.existsSync(registryFile) ? fs.readFileSync(registryFile, 'utf8') : ''
 const knownItems = new Set([...registry.matchAll(/^([^\s]+)\s+raw_id=/gm)].map(m => m[1]))
+const shouldValidateItems = knownItems.size > 0
 for (const id of [
   'fission_reactor:fission_fuel_acceptor',
   'fission_reactor:fission_reactor_rod',
@@ -18,43 +20,164 @@ for (const id of [
   'gases_and_plasmas:ionizer',
   'liquid_coolant:coolant_exchanger',
   'procedural_bouquets:bouquet_grid',
-  'procedural_bouquets:potted_bouquet'
+  'procedural_bouquets:potted_bouquet',
+  'creatingspace:basic_spacesuit_fabric',
+  'creatingspace:advanced_spacesuit_fabric',
+  'creatingspace:copper_oxygen_backtank',
+  'creatingspace:netherite_oxygen_backtank',
+  'creatingspace:mechanical_electrolyzer',
+  'creatingspace:air_liquefier',
+  'creatingspace:cryogenic_tank',
+  'creatingspace:oxygen_sealer',
+  'creatingspace:room_pressuriser',
+  'creatingspace:engine_blueprint',
+  'creatingspace:design_blueprint',
+  'creatingspace:reinforced_copper_sheet',
+  'creatingspace:monel_sheet',
+  'creatingspace:inconel_sheet',
+  'creatingspace:hastelloy_sheet',
+  'creatingspace:combustion_chamber',
+  'creatingspace:power_pack',
+  'creatingspace:exhaust_pack',
+  'fallout_wastelands_:portal_frame',
+  'fallout_wastelands_:wastelands',
+  'protection_pixel:armorloadplatform',
+  'protection_pixel:smallnetheritesheet',
+  'protection_pixel:reinforcedfiber',
+  'protection_pixel:heatresistantceramicsheet',
+  'protection_pixel:alloyarmorplate',
+  'protection_pixel:powerengine',
+  'protection_pixel:heatoverlockingmechanism',
+  'protection_pixel:equipmentkit',
+  'protection_pixel:armorplatekit',
+  'protection_pixel:linkplate_helmet',
+  'protection_pixel:linkplate_chestplate',
+  'protection_pixel:linkplate_leggings',
+  'protection_pixel:linkplate_boots',
+  'protection_pixel:steamectoskeleton',
+  'protection_pixel:suspjetpack',
+  'protection_pixel:maneuveringwing',
+  'protection_pixel:workerhornet_chestplate',
+  'protection_pixel:breaker_chestplate',
+  'protection_pixel:typhoon_chestplate',
+  'protection_pixel:closed_helmet',
+  'protection_pixel:plague_helmet',
+  'protection_pixel:nightdemon_helmet',
+  'protection_pixel:bloodprisoner_helmet',
+  'protection_pixel:anchorpoint_leggings',
+  'protection_pixel:buoyancy_leggings',
+  'protection_pixel:slingshot_leggings',
+  'protection_pixel:wingsofprismas_chestplate',
+  'tomeofblood:novice_tome_of_blood',
+  'tomeofblood:apprentice_tome_of_blood',
+  'tomeofblood:archmage_tome_of_blood',
+  'tomeofblood:glyph_sentient_harm',
+  'tomeofblood:glyph_sentient_wrath',
+  'tomeofblood:living_mage_hood',
+  'tomeofblood:living_mage_robes',
+  'tomeofblood:living_mage_leggings',
+  'tomeofblood:living_mage_boots',
+  'starcatcher:starcatcher_rod',
+  'starcatcher:starcatcher_guide',
+  'starcatcher:starcatcher_twine',
+  'starcatcher:hook',
+  'starcatcher:bobber',
+  'starcatcher:steady_bobber',
+  'starcatcher:stone_hook',
+  'starcatcher:murkwater_bait',
+  'starcatcher:fish_radar',
+  'starcatcher:waterlogged_satchel',
+  'starcatcher:tournament_stand',
+  'starcatcher:trophy_gold',
+  'starcatcher:pinfish',
+  'starcatcher:deepslatefish',
+  'starcatcher:sculkfish',
+  'starcatcher:magma_fish',
+  'littlelogistics:energy_locomotive',
+  'littlelogistics:energy_tug',
+  'littlelogistics:vessel_charger',
+  'littlelogistics:receiver_component',
+  'littlelogistics:transmitter_component',
+  'littlelogistics:fluid_barge',
+  'littlelogistics:chest_barge',
+  'apotheosis:gem_cutting_table',
+  'apotheosis:salvaging_table',
+  'apotheosis:simple_reforging_table',
+  'apotheosis:reforging_table',
+  'apotheosis:augmenting_table',
+  'apotheosis:library',
+  'apotheosis:ender_library',
+  'apotheosis:deepshelf',
+  'apotheosis:endshelf',
+  'framedblocks:framed_cube',
+  'framedblocks:framed_slab',
+  'framedblocks:framed_stairs',
+  'framedblocks:framed_slope',
+  'framedblocks:framed_door',
+  'framedblocks:framed_trapdoor',
+  'framedblocks:framed_fence',
+  'framedblocks:framed_wall',
+  'wands:diamond_wand',
+  'wands:netherite_wand',
+  'buildinggadgets2:gadget_building',
+  'buildinggadgets2:gadget_exchanging',
+  'buildinggadgets2:gadget_copy_paste',
+  'buildinggadgets2:gadget_cut_paste',
+  'buildinggadgets2:gadget_destruction',
+  'buildinggadgets2:template_manager',
+  'create_sa:brass_drone',
+  'sophisticatedbackpacks:feeding_upgrade',
+  'sophisticatedbackpacks:alchemy_upgrade',
+  'sophisticatedbackpacks:tool_swapper_upgrade'
 ]) knownItems.add(id)
 
-const coinOrder = ['copper', 'iron', 'tin', 'bronze', 'brass', 'silver', 'gold', 'diamond', 'platinum', 'emerald', 'ruby', 'sapphire', 'topaz']
+const coinTierAliases = {
+  starting: 'starting',
+  copper: 'copper',
+  iron: 'iron',
+  tin: 'iron',
+  bronze: 'brass',
+  nickel: 'brass',
+  silver: 'brass',
+  steel: 'brass',
+  brass: 'brass',
+  gold: 'gold',
+  osmium: 'gold',
+  diamond: 'platinum',
+  platinum: 'platinum',
+  emerald: 'platinum',
+  ruby: 'platinum',
+  sapphire: 'platinum',
+  topaz: 'platinum'
+}
+function activeTier(tier) { return coinTierAliases[tier] || 'copper' }
 const tierCoins = {
   copper: ['copper'],
   iron: ['copper', 'iron'],
-  tin: ['copper', 'iron', 'tin'],
-  bronze: ['copper', 'iron', 'tin', 'bronze'],
-  brass: ['copper', 'iron', 'tin', 'bronze', 'brass'],
-  silver: ['copper', 'iron', 'tin', 'bronze', 'brass', 'silver'],
-  gold: ['copper', 'iron', 'tin', 'bronze', 'brass', 'silver', 'gold'],
-  diamond: ['copper', 'iron', 'tin', 'bronze', 'brass', 'silver', 'gold', 'diamond'],
-  platinum: ['copper', 'iron', 'tin', 'bronze', 'brass', 'silver', 'gold', 'diamond', 'platinum']
+  brass: ['copper', 'iron', 'brass'],
+  gold: ['copper', 'iron', 'brass', 'gold'],
+  platinum: ['copper', 'iron', 'brass', 'gold', 'platinum']
 }
 
-const tierGroups = {
-  starting: { id: 'BTM_GROUP_STARTING', title: 'Starting Out', order: 0 },
-  copper: { id: 'BTM_GROUP_COPPER', title: 'Copper Tier', order: 1 },
-  iron: { id: 'BTM_GROUP_IRON', title: 'Iron Tier', order: 2 },
-  tin: { id: 'BTM_GROUP_TIN', title: 'Tin Tier', order: 3 },
-  bronze: { id: 'BTM_GROUP_BRONZE', title: 'Bronze Tier', order: 4 },
-  brass: { id: 'BTM_GROUP_BRASS', title: 'Brass Tier', order: 5 },
-  silver: { id: 'BTM_GROUP_SILVER', title: 'Silver Tier', order: 6 },
-  gold: { id: 'BTM_GROUP_GOLD', title: 'Gold Tier', order: 7 },
-  diamond: { id: 'BTM_GROUP_DIAMOND', title: 'Diamond Tier', order: 8 },
-  platinum: { id: 'BTM_GROUP_PLATINUM', title: 'Platinum Tier', order: 9 },
-  emerald: { id: 'BTM_GROUP_EMERALD', title: 'Emerald Tier', order: 10 },
-  ruby: { id: 'BTM_GROUP_RUBY', title: 'Ruby Tier', order: 11 },
-  sapphire: { id: 'BTM_GROUP_SAPPHIRE', title: 'Sapphire Tier', order: 12 },
-  topaz: { id: 'BTM_GROUP_TOPAZ', title: 'Topaz Tier', order: 13 }
+const chapterGroups = {
+  orientation: { id: '52D8800CDEBBF5D6', title: 'Orientation', order: 0 },
+  routes: { id: '3570F9CE90E09BD1', title: 'Routes and Settlements', order: 1 },
+  body: { id: '1535A2E7C7CA772B', title: 'Body and Blood', order: 2 },
+  relics: { id: '6E0A7267C9728B31', title: 'Relics and Rewards', order: 3 },
+  workshop: { id: '17D1B259E2B76A4F', title: 'Workshop Spine', order: 4 },
+  create: { id: '4B746D4352454154', title: 'Create Systems', order: 5 },
+  power: { id: '666B73C638A92906', title: 'Power and Control', order: 6 },
+  worlds: { id: '3BF99559A31D6EB4', title: 'Worlds and Threats', order: 7 },
+  matter: { id: '77AFAA45BDFC5D88', title: 'Magic and Matter', order: 8 },
+  intelligence: { id: '410B481B7D8A23F1', title: 'Space and Intelligence', order: 9 },
+  endgame: { id: '7D79E4B0E21B410D', title: 'Late Matter Branches', order: 10 },
+  building: { id: '42544D4255494C44', title: 'Building Blocks', order: 11 }
 }
-function groupForTier(tier) { return (tierGroups[tier] || tierGroups.copper).id }
+function groupForChapter(chapter) { return (chapterGroups[chapter.group] || chapterGroups.workshop).id }
 function chapterGroupsSnbt() {
-  const used = new Set(chapters.map(ch => ch.tier || 'copper'))
-  const groups = Object.entries(tierGroups)
-    .filter(([tier]) => used.has(tier))
+  const used = new Set(chapters.map(ch => ch.group || 'workshop'))
+  const groups = Object.entries(chapterGroups)
+    .filter(([group]) => used.has(group))
     .map(([, g]) => `		{id:"${g.id}" order_index:${g.order} title:"${esc(g.title)}"}`)
   return `{
 	chapter_groups: [
@@ -66,59 +189,318 @@ ${groups.join(',\n')}
 
 function q(id, title, x, y, tasks, deps = [], description = []) { return { id, title, x, y, tasks, deps, description } }
 function item(item, count = 1) { return { item, count } }
+function itemAny(item, count = 1) { return { item, count, matchNbt: false } }
+function uniqueIds(ids) { return [...new Set(ids)] }
+function itemList(ids) { return uniqueIds(ids).map(id => item(id)) }
+function itemAnyList(ids) { return uniqueIds(ids).map(id => itemAny(id)) }
 function esc(s) { return String(s).replace(/\\/g, '\\\\').replace(/"/g, '\\"') }
+function ftbId(seed) {
+  return crypto.createHash('sha1').update(String(seed)).digest('hex').slice(0, 16).toUpperCase()
+}
 function desc(lines) {
   const list = Array.isArray(lines) ? lines : [lines]
   return list.length ? ` description:[${list.map(line => `"${esc(line)}"`).join(',')}]` : ''
 }
-function defaultQuestDescription(chapterPrefix, quest) {
-  const taskList = quest.tasks.map(t => t.item).join(', ')
-  const guidance = {
-    TC: 'Tinkers is the metallurgy authority here. This checkpoint should teach deposits, molten material, repair, and foundry interpretation before Create machines dominate infrastructure.',
-    DE: 'Death trophies are milestone evidence, not bulk fuel. Use this checkpoint to connect body maintenance, Still-Beating Hearts, and Blood Magic permission.',
-    FB: 'Food and water are infrastructure. This checkpoint should improve route endurance, recovery, and settlement readiness instead of becoming a decorative side quest.',
-    C1: 'Create begins only after early metallurgy. This checkpoint should prove andesite alloy, deployers, casings, and local power without bypassing Tinkers.',
-    C2: 'This is the manufacturing layer where plates, mixers, press work, and brass turn Create into real infrastructure.',
-    PG: 'SU heat and electricity are power infrastructure. This checkpoint compares water, wind, blaze burners, diesel, solar heat, fission heat, and Power Grid conversion from SU into electricity.',
-    OC: 'OC2R is preferred for intersite communication. This checkpoint is about authored logic and wired site intelligence, not teleporting items.',
-    SP: 'Space is a logistics and synthesis commitment. Rockets, suits, and chemical machines should consume the previous workshop rather than replace it.',
-    AE: 'AE2 is local site intelligence. This checkpoint may make a factory smarter, but it must not become global logistics or infinite storage.',
-    M1: 'Blood Magic sets permission. Side magic can become powerful only after the appropriate slate tier is proven.',
-    AD: 'Adventure progression is a real crafting economy. Routes, coins, Wares, and villages are part of how the pack pays for risk.',
-    VE: 'Village economy is a sideload path. It can supply comfort, recovery, and decor without bypassing machine or material progression.',
-    S1: 'Acid chemistry interprets deposits as chemical packages. The pack side treats Acid Vat as a recipe surface; the mod source remains read-only.',
-    PA: 'Post-AE2 branches improve local manufacturing, bounded storage, source integration, and body-scale rewards without breaking distance.',
-    FU: 'Fusion is not just another generator. It requires gas handling, high electricity, fission-adjacent materials, AE2 control, and magnetic containment before it becomes a power source.'
-  }[chapterPrefix] || 'This checkpoint exists to make the item graph explicit.'
+function itemLabel(id) {
+  const explicit = {
+    'minecraft:tnt': 'TNT',
+    'ae2:spatial_io_port': 'Spatial IO Port',
+    'kubejs:ae2_machine_casing': 'AE2 Machine Casing',
+    'bloodmagic:blankslate': 'Blank Slate',
+    'bloodmagic:reinforcedslate': 'Reinforced Slate',
+    'bloodmagic:infusedslate': 'Imbued Slate',
+	  'bloodmagic:demonslate': 'Demonic Slate',
+	  'bloodmagic:etherealslate': 'Ethereal Slate',
+	  'ticex:reconstruction_core': 'Reconstruction Core',
+	  'ticex:flickering_reconstruction_core': 'Flickering Reconstruction Core',
+	  'ticex:seared_rf_furnace': 'Seared RF Furnace',
+	  'ticex:scorched_rf_furnace': 'Scorched RF Furnace',
+    'creatingspace:basic_spacesuit_fabric': 'Basic Spacesuit Fabric',
+    'creatingspace:advanced_spacesuit_fabric': 'Advanced Spacesuit Fabric',
+    'creatingspace:copper_oxygen_backtank': 'Copper Oxygen Backtank',
+    'creatingspace:netherite_oxygen_backtank': 'Netherite Oxygen Backtank',
+    'creatingspace:mechanical_electrolyzer': 'Mechanical Electrolyzer',
+    'creatingspace:air_liquefier': 'Air Liquefier',
+    'creatingspace:cryogenic_tank': 'Cryogenic Tank',
+    'creatingspace:oxygen_sealer': 'Oxygen Sealer',
+    'creatingspace:room_pressuriser': 'Room Pressuriser',
+    'creatingspace:engine_blueprint': 'Engine Blueprint',
+    'creatingspace:design_blueprint': 'Design Blueprint',
+    'creatingspace:reinforced_copper_sheet': 'Reinforced Copper Sheet',
+    'creatingspace:monel_sheet': 'Monel Sheet',
+    'creatingspace:inconel_sheet': 'Inconel Sheet',
+    'creatingspace:hastelloy_sheet': 'Hastelloy Sheet',
+    'creatingspace:combustion_chamber': 'Combustion Chamber',
+    'creatingspace:power_pack': 'Power Pack',
+    'creatingspace:exhaust_pack': 'Exhaust Pack',
+    'fallout_wastelands_:portal_frame': 'Wasteland Portal Frame',
+    'fallout_wastelands_:wastelands': 'Wasteland Portal Igniter',
+    'protection_pixel:armorloadplatform': 'Armor Load Platform',
+    'protection_pixel:smallnetheritesheet': 'Small Netherite Sheet',
+    'protection_pixel:reinforcedfiber': 'Reinforced Fiber',
+    'protection_pixel:heatresistantceramicsheet': 'Heat-Resistant Ceramic Sheet',
+    'protection_pixel:alloyarmorplate': 'Alloy Armor Plate',
+    'protection_pixel:powerengine': 'Power Engine',
+    'protection_pixel:heatoverlockingmechanism': 'Heat Overlocking Mechanism',
+    'protection_pixel:steamectoskeleton': 'Steam Ectoskeleton',
+    'protection_pixel:wingsofprismas_chestplate': 'Wings of Prism AS',
+    'tomeofblood:novice_tome_of_blood': 'Novice Tome of Blood',
+    'tomeofblood:apprentice_tome_of_blood': 'Apprentice Tome of Blood',
+    'tomeofblood:archmage_tome_of_blood': 'Archmage Tome of Blood',
+    'tomeofblood:glyph_sentient_harm': 'Sentient Harm Glyph',
+    'tomeofblood:glyph_sentient_wrath': 'Sentient Wrath Glyph',
+    'tomeofblood:living_mage_hood': 'Living Mage Hood',
+    'tomeofblood:living_mage_robes': 'Living Mage Robes',
+    'tomeofblood:living_mage_leggings': 'Living Mage Leggings',
+    'tomeofblood:living_mage_boots': 'Living Mage Boots',
+    'starcatcher:starcatcher_rod': 'Starcatcher Rod',
+    'starcatcher:starcatcher_guide': 'Starcatcher Guide',
+    'starcatcher:starcatcher_twine': 'Starcatcher Twine',
+    'starcatcher:hook': 'Iron Hook',
+    'starcatcher:bobber': 'Bobber',
+    'starcatcher:fish_radar': 'Fish Radar',
+    'starcatcher:waterlogged_satchel': 'Waterlogged Satchel',
+    'littlelogistics:energy_locomotive': 'Energy Locomotive',
+    'littlelogistics:energy_tug': 'Energy Tug',
+    'littlelogistics:vessel_charger': 'Vessel Charger',
+    'apotheosis:gem_cutting_table': 'Gem Cutting Table',
+    'apotheosis:reforging_table': 'Reforging Table',
+    'apotheosis:library': 'Library',
+    'framedblocks:framed_cube': 'Framed Cube',
+    'buildinggadgets2:gadget_building': 'Building Gadget',
+    'create_sa:brass_drone': 'Brass Drone'
+  }
+  if (explicit[id]) return explicit[id]
+  const name = String(id).split(':').pop().replace(/[/.]/g, '_')
+  return name.split('_').filter(Boolean).map(part => part.charAt(0).toUpperCase() + part.slice(1)).join(' ')
+}
+function taskLabels(tasks) {
+  const labels = tasks.map(t => itemLabel(t.item))
+  if (labels.length <= 3) return labels.join(', ')
+  return `${labels.slice(0, 3).join(', ')}, and related items`
+}
+function playerQuestDescription(chapterPrefix, quest) {
+  const goals = taskLabels(quest.tasks)
+  const reason = {
+    SO: 'This helps establish a reliable foothold before longer routes and early obelisk runs.',
+    MG: 'This marks one of the major progress paths that leads toward later automation and site intelligence.',
+    TC: 'This expands your metallurgy setup and improves how you turn deposits into useful materials.',
+    DE: 'This connects death trophies, blood, and slate crafting into the magic progression path.',
+    FB: 'This improves food, water, and recovery for longer trips away from base.',
+    C1: 'This starts Create infrastructure after early metallurgy is in place.',
+    C2: 'This adds press work, plates, mixers, and manufactured components for larger machines.',
+    CB: 'This turns brass into the main Create automation material and unlocks precision manufacturing.',
+    CL: 'This expands Create into fluids, packages, signals, and controlled logistics devices.',
+    PG: 'This develops rotational power, heat handling, electricity, or stored energy for your workshop.',
+    CAK: 'This connects Create automation to AE2 after local site intelligence exists.',
+    OC: 'This adds computer control and communication for machines, routes, and remote sites.',
+    SP: 'This prepares rockets, suits, and chemistry for space-era progression.',
+    AE: 'This improves local storage, crafting, and information handling for a committed base site.',
+    C3: 'This improves physical logistics so materials can move between sites by rail.',
+    M1: 'This advances Blood Magic and opens the next set of magic systems.',
+    M2: 'This expands late magic branches after the required Blood Magic materials are available.',
+    S1: 'This begins chemical processing so deposits can provide more than a single metal output.',
+    S2: 'This extends slurry handling and late chemical materials for advanced recipes.',
+    AET: 'This advances the Aether route through sky materials, machines, and dungeon rewards.',
+    BS: 'This advances Blue Skies exploration through local materials, keys, and boss rewards.',
+    TW: 'This advances the Twilight Forest route through maps, bosses, and trophy materials.',
+    LC: 'This advances Lost Cities as a space-era ruin route for scavenging, rail corridors, and urban recovery work.',
+    UG: 'This advances Undergarden exploration through local metals, food, and deep materials.',
+    DD: 'This advances deep sculk exploration and unlocks late materials from dangerous depths.',
+    IAF: 'This advances monster hunting through dragon materials and apex creature rewards.',
+    FW: 'This supports hazardous wasteland scavenging with protection, supplies, and recovered technology.',
+    AN: 'This builds Ars Nouveau source infrastructure, spell work, rituals, and late spellcasting.',
+    MAL: 'This builds Malum spirit work, runewood crafting, and soul-material processing.',
+    OCC: 'This builds Occultism ritual work, spirit items, storage, and mining helpers.',
+    BOT: 'This builds Botania mana infrastructure, runes, terrasteel, and boss rewards.',
+    THG: 'This builds Theurgy transmutation machines and alchemical material processing.',
+    RELQ: 'This builds Reliquary utility tools, apothecary work, and stronger relic items.',
+    ART: 'This identifies useful artifact rewards that can improve travel, survival, and combat.',
+    RLC: 'This develops Relics research and high-impact adventure rewards.',
+    BK: 'This points you toward the in-game documentation for the systems you are using.',
+	    PA: 'This advances post-AE2 branches for stronger local manufacturing and body-scale upgrades.',
+	    FU: 'This builds gas handling, magnetic containment, and plasma preparation for fusion work.',
+	    TEX: 'This turns Tinkers into a post-AE2 body/tool branch using quantum control, fission hardware, and late magic.',
+    PP: 'This turns post-AE2 manufacturing, fission heat, and extreme-depth chemistry into powered armor and body equipment.',
+    TOB: 'This turns AE2-era control, Ethereal Slate, Ars spell work, and Demon Will into a late hybrid combat-magic branch.',
+    SC: 'This treats fishing as a small economy: tackle, skill catches, satchels, trophies, and fisherman trades all become useful material routes.',
+    LL: 'This adds small physical logistics for barges, tugs, rail cars, and local route automation without replacing Create trains.',
+    AP: 'This adds affix, gem, salvage, and enchantment systems after Blood Magic permissions are strong enough to absorb the power spike.',
+    BU: 'This covers construction acceleration tools that are intentionally delayed until AE2-era material control exists.',
+    FBK: 'This expands decorative block choices through framed shapes, regional palettes, and settlement materials without making decor a deep machine gate.'
+  }[chapterPrefix] || 'This advances the next part of the progression path.'
   return [
-    guidance,
-    `Inspect or craft: ${taskList}.`
+    `Goal: obtain ${goals}.`,
+    `Why it matters: ${reason}`,
+    ...(quest.description || [])
   ]
+}
+function chapterDescription(ch) {
+  const text = {
+    SO: ['Build a stable foothold, prepare your body, and reach the first molten-material tools.', 'Follow the line from shelter and supplies into Tinkers, Nether netherrack, and the first branch exits.'],
+    MG: ['Use this overview to see how the main paths connect.', 'Each major node points toward a larger progression stream.'],
+    TC: ['Use Tinkers to build early metallurgy and handle molten materials.', 'The path moves from seared work into scorched tools and foundry processing.'],
+    DE: ['Use Still-Beating Hearts and Blood Magic to begin the magic path.', 'Death trophies lead into early blood tools and slate crafting.'],
+    FB: ['Improve food, water, and body preparation for longer travel.', 'Kitchen and water infrastructure make expeditions safer and more repeatable.'],
+    C1: ['Begin Create after early metallurgy.', 'This chapter covers andesite alloy, hand power, deployers, casings, and first sustainable power.'],
+    C2: ['Build the manufactured component layer.', 'Presses, plates, mixers, saws, drills, and mechanical crafting make Create into a workshop system.'],
+    CB: ['Turn brass into Create automation authority.', 'Brass sheets, precision mechanisms, funnels, arms, speed control, and links become the main automation handoff.'],
+    CL: ['Build Create logistics beyond belts.', 'Fluid handling, portable interfaces, packages, stock links, and addon logistics become authored local infrastructure.'],
+    PG: ['Build Create power, heat systems, electricity, and storage.', 'Water, wind, blaze heat, diesel, solar heat, New Age heat, and Power Grid each have a specific role.'],
+    CAK: ['Bridge Create automation into AE2.', 'Use this chapter after AE2 control to automate processors and expose local AE2 work to Create infrastructure.'],
+    OC: ['Add OC2R computers and networking to your sites.', 'Use these tools to observe, coordinate, and control machines and routes.'],
+    SP: ['Prepare for space work with suits, oxygen systems, rocket engine manufacturing, and chemical machines.', 'The flow is left to right: table, casing, survival equipment, oxygen handling, engine manufacturing, rocket body/control, chemical synthesis, then advanced suit work.'],
+    AE: ['Build AE2 as local site intelligence.', 'Storage, processors, controllers, and pattern work make a base easier to operate.'],
+    C3: ['Build train logistics for moving materials between sites.', 'Stations, signals, schedules, and yards make routes reliable.'],
+    M1: ['Advance Blood Magic and open the first magic branches.', 'Slates mark which workstations and systems are ready to use.'],
+    M2: ['Expand into stronger magic systems after the earlier slate path.', 'These branches add storage, transmutation, dimensional magic, and late Ars tools.'],
+    S1: ['Start chemical processing for deposits and materials.', 'Acid Vat work turns geology into multiple useful outputs.'],
+    S2: ['Extend chemical processing into slurry movement and late plates.', 'Use these materials for advanced synthesis and machinery.'],
+    AET: ['Explore the Aether and collect sky materials and dungeon rewards.', 'Prepare for travel, keys, and gravitite progression.'],
+    BS: ['Explore Blue Skies through materials, alchemy, keys, and trophies.', 'Each key path supports a different part of the dimension route.'],
+    TW: ['Progress through Twilight Forest bosses and reward materials.', 'Maps, trophies, and boss drops mark your route through the dimension.'],
+    LC: ['Explore Lost Cities as a space-era ruin route.', 'Use suit, oxygen, and rocket logistics before treating city scavenging as available.'],
+    UG: ['Explore the Undergarden and collect its local metals and materials.', 'Food, ores, and catalysts support deeper route planning.'],
+    DD: ['Enter deeper sculk content and collect late depth materials.', 'Prepare carefully before pursuing resonarium and soul materials.'],
+    IAF: ['Hunt major creatures and collect dragon materials.', 'Dragon blood, dragonsteel, skulls, and dread materials mark major combat progress.'],
+    FW: ['Scavenge hazardous wasteland materials and technology.', 'Protection, scrap, electronics, and power armor parts support late route work.'],
+    AN: ['Build Ars Nouveau source and spell infrastructure.', 'Move from imbuement and apparatus work into rituals and late spell books.'],
+    MAL: ['Develop Malum spirit work and soul materials.', 'Runewood, spirit jars, and crucibles support the later Malum branch.'],
+    OCC: ['Develop Occultism rituals, storage, and spirit helpers.', 'Chalk, bowls, gems, miners, and Iesnium form the core path.'],
+    BOT: ['Build Botania mana engineering.', 'Mana pools, spreaders, runes, terrasteel, Alfheim, and Gaia rewards form the branch.'],
+    THG: ['Develop Theurgy as magical material processing.', 'Accumulators, salts, distillation, calcination, and digestion form the chain.'],
+    RELQ: ['Build Reliquary utility and relic crafting.', 'Apothecary tools, Alkahestry, weapons, and chalices support specialized utility.'],
+    ART: ['Track useful artifact rewards from exploration.', 'These items support mobility, survival, combat, and recovery.'],
+    RLC: ['Track Relics research and high-value relic rewards.', 'Use the research table and relic finds to expand adventure tools.'],
+    BK: ['Find reference books for major systems.', 'These quests point to documentation without making books the main gate.'],
+	    PA: ['Advance post-AE2 branches.', 'Quantum structures, extended AE tools, source storage, and body-branch infrastructure extend late progression.'],
+	    FU: ['Build fusion and plasma infrastructure.', 'Gas handling, electricity, containment, and ionization prepare the branch for fusion work.'],
+	    TEX: ['Advance TiCEX as a post-AE2 Tinkers branch.', 'Reconstruction cores, RF furnaces, transmutation, Od, and Etheric materials turn late infrastructure back into tools.'],
+    PP: ['Build Protection Pixel as the post-AE2 armor branch.', 'Armor platforms, quantum components, fission heat, and late plates become body-scale equipment and mobility rewards.'],
+    TOB: ['Build Tome of Blood as a post-AE2 combat-magic branch.', 'AE2-era control, Ethereal Slate, Ars spell books, Demon Will weapons, and Living Armor combine into late spellcasting and hybrid armor.'],
+    SC: ['Use Starcatcher as a fishing economy route.', 'Tackle, bait, fish, satchels, trophies, and Fisherman trades make water routes useful without becoming the main material faucet.'],
+    LL: ['Use Little Logistics for small physical route automation.', 'Barges, tugs, energy vehicles, and transmitter components support local routes before long-distance trains dominate.'],
+    AP: ['Use Apotheosis as an authored combat and enchantment power branch.', 'Gem cutting, salvaging, reforging, libraries, and high shelves are strong enough to need Blood Magic tier gates.'],
+    BU: ['Use building tools after AE2-era control.', 'Wands and gadgets accelerate construction once the pack can support large material edits.'],
+    FBK: ['Survey building block systems in the pack.', 'Framed shapes, settlement materials, weathered blocks, regional palettes, and construction tools are shown as practical building options.']
+  }[ch.prefix]
+  return text || ['Follow this chapter to advance the next part of progression.']
+}
+const questIdMap = new Map()
+const chapterIdMap = new Map()
+function questFtbId(id) {
+  const mapped = questIdMap.get(id)
+  if (!mapped) throw new Error(`Missing generated FTB quest id for ${id}`)
+  return mapped
 }
 function taskSnbt(chapter, quest, t, idx) {
   const count = t.count && t.count !== 1 ? ` count:${t.count}L` : ''
   const nbt = t.matchNbt === false ? ' match_nbt:false' : ''
-  return `{id:"${chapter}_${quest}_T${idx}" type:"item" item:"${t.item}"${count}${nbt}}`
+  return `{id:"${ftbId(`task:${chapter}:${quest}:${idx}`)}" type:"item" item:"${t.item}"${count}${nbt}}`
+}
+const defaultFlowVisual = { shape: 'rsquare', subtitle: 'Process', size: 1.0, iconScale: 1.0 }
+const visualByPrefix = {
+  BK: { shape: 'none', subtitle: 'Reference', size: 0.9, iconScale: 1.0 }
+}
+const majorQuestSize = 1.75
+const majorQuestIconScale = 1.18
+const importantQuestIds = {
+  SO: ['SO_MELTERY', 'SO_EXIT_TECH', 'SO_EXIT_MAGIC'],
+  MG: ['MG_START', 'MG_AE2', 'MG_POST_AE2'],
+  TC: ['TC_SEARED_CASE', 'TC_SCORCHED', 'TC_FOUNDRY'],
+  DE: ['DE_HEART', 'DE_WEAK_ORB', 'DE_BLANK'],
+  FB: ['FB_STOVE', 'FB_FILTER', 'FB_POTION_ENGINEERING'],
+  C1: ['C1_ALLOY', 'C1_CASING', 'C1_CRUSHED'],
+  C2: ['C2_ANDESITE_CASE', 'C2_PRESS', 'C2_CRAFTER'],
+  CB: ['C2_BRASS_INGOT', 'C2_PRECISION', 'C2_BRASS'],
+  CL: ['CL_FLUID_HANDLING', 'CL_PACKAGE_NETWORK', 'CL_ADDON_LOGISTICS'],
+  C3: ['C3_TRACK_COUPLER', 'C3_STATION', 'C3_YARD'],
+  PG: ['PG_CASE', 'PG_BATTERY', 'PG_FISSION_ROD'],
+  CAK: ['CAK_ENERGY_PROVIDER', 'CAK_ME_PROXY', 'CAK_PROCESSORS'],
+  OC: ['OC_CASE', 'OC_COMPUTER', 'OC_NETWORK'],
+  SP: ['SP_CASE', 'SP_CHEM', 'SP_SUIT_ADV'],
+  AE: ['AE_CASE', 'AE_CONTROLLER', 'AE_SPATIAL'],
+  M1: ['M1_BLANK', 'M1_DEMONIC', 'M1_ETHEREAL'],
+  M2: ['M2_BOTANIA_TERRA', 'M2_THEURGY', 'M2_ARS_POWER'],
+  AD: ['AD_COIN', 'AD_COMPLETED', 'AD_IRON_FLOAT'],
+  VE: ['VE_TRADING_POST', 'VE_COMPLETED', 'VE_PLATINUM_COIN_TIER'],
+  S1: ['S1_ACID_VAT', 'S1_SLURRY', 'S1_SYNTHESIS_EXIT'],
+  S2: ['S2_PUMP', 'S2_RUTHENIUM', 'S2_IRIDIUM'],
+  BK: ['BK_QUEST_BOOK', 'BK_TCON', 'BK_MNA'],
+  PA: ['PA_QUANTUM_STRUCTURE', 'PA_SOURCE_BRIDGE', 'PA_POWERED_ARMOR_BRANCH'],
+	  FU: ['FU_PIPE', 'FU_AE_CONTROL', 'FU_PLASMA_READY'],
+	  TEX: ['TEX_RECONSTRUCTION', 'TEX_TRANSMUTER', 'TEX_ETHERIC'],
+  PP: ['PP_PLATFORM', 'PP_POWER_ENGINE', 'PP_AS_UPGRADES'],
+  TOB: ['TOB_NOVICE', 'TOB_HERETIC_ARMOR', 'TOB_ARCHMAGE'],
+  SC: ['SC_ROD', 'SC_ECONOMY', 'SC_TROPHY'],
+  LL: ['LL_TUG', 'LL_CHARGER', 'LL_SIGNAL'],
+  AP: ['AP_GEM_CUTTING', 'AP_REFORGING', 'AP_LIBRARY'],
+  BU: ['BU_WAND', 'BU_GADGET', 'BU_DESTRUCTION'],
+  FBK: ['FBK_FRAMED_CORE', 'FBK_SETTLEMENT', 'FBK_REGIONAL'],
+  AET: ['AET_ALTAR', 'AET_SILVER_KEY', 'AET_GOLD_KEY'],
+  BS: ['BS_ALCHEMY', 'BS_BLINDING_KEY', 'BS_BOSS_TROPHY'],
+  TW: ['TW_MAGIC_MAP', 'TW_LICH', 'TW_UR_GHAST'],
+  LC: ['LC_SPACE_ROUTE', 'LC_RAIL_DUNGEON', 'LC_CITY_RECOVERY'],
+  UG: ['UG_CLOGGRUM', 'UG_FORGOTTEN', 'UG_CATALYST'],
+  DD: ['DD_HEART', 'DD_RESONARIUM', 'DD_SOUL'],
+  IAF: ['IAF_BESTIARY', 'IAF_DRAGONSTEEL', 'IAF_DREAD'],
+  FW: ['FW_RAD_SUIT', 'FW_POWER_CORE', 'FW_POWER_ARMOR'],
+  AN: ['AN_IMBUEMENT', 'AN_APPARATUS', 'AN_ARCHMAGE'],
+  MAL: ['MAL_ALTAR', 'MAL_SPIRIT_CRUCIBLE', 'MAL_SOUL_STEEL'],
+  OCC: ['OCC_RITUAL_BOWLS', 'OCC_STORAGE', 'OCC_DIMENSIONAL_MATRIX'],
+  BOT: ['BOT_MANA_POOL', 'BOT_TERRA_PLATE', 'BOT_GAIA'],
+  THG: ['THG_ACCUMULATOR', 'THG_DISTILLER', 'THG_DIGESTION'],
+  RELQ: ['RELQ_APOTHECARY', 'RELQ_ALKAHESTRY', 'RELQ_CHALICE'],
+  ART: ['ART_HEART', 'ART_ATTRACTOR', 'ART_FIRE'],
+  RLC: ['RLC_TABLE', 'RLC_MAGIC_MIRROR', 'RLC_SPACE']
+}
+function visualForQuest(prefix, quest) {
+  const base = visualByPrefix[prefix] || defaultFlowVisual
+  const title = quest.title || ''
+  const isImportant = (importantQuestIds[prefix] || []).indexOf(quest.id) !== -1
+  const importantSize = isImportant ? majorQuestSize : null
+  const importantIconScale = isImportant ? majorQuestIconScale : null
+  if (title.startsWith('Exit:')) return { ...base, shape: 'diamond', subtitle: 'Exit', size: importantSize || 1.12, iconScale: importantIconScale || base.iconScale, minWidth: 2 }
+  if (/Machine Casing|Casing/.test(title)) return { ...base, shape: 'square', subtitle: 'Milestone', size: importantSize || 1.12, minWidth: 2, iconScale: importantIconScale || 0.95 }
+  if (/Step \d+:/.test(title)) return { ...base, shape: 'rsquare', subtitle: title.match(/Step \d+/)?.[0] || 'Step', size: importantSize || base.size, iconScale: importantIconScale || base.iconScale, minWidth: 2 }
+  if (/Permission|Gate/.test(title)) return { ...base, shape: 'diamond', subtitle: 'Milestone', size: importantSize || 1.12, iconScale: importantIconScale || base.iconScale, minWidth: 2 }
+  if (/Source:|Heat Source:/.test(title)) return { ...base, shape: 'rsquare', subtitle: 'Source option', size: 1.0, minWidth: 2 }
+  if (/Showcase:|Catalogue:/.test(title)) return { ...base, shape: 'octagon', subtitle: 'Showcase', size: importantSize || 1.05, iconScale: importantIconScale || base.iconScale, minWidth: 2 }
+  if (/Coin|Float|Trade|Market|Contract|Delivery/.test(title)) return { ...base, shape: 'rsquare', subtitle: 'Economy', size: importantSize || base.size, iconScale: importantIconScale || base.iconScale, minWidth: 2 }
+  if (/Reference|Book|Guide|Manual|Encyclopedia|Codex/.test(title)) return { ...base, shape: 'none', subtitle: 'Reference', size: importantSize || 0.9, iconScale: importantIconScale || base.iconScale }
+  return { ...base, size: importantSize || base.size, iconScale: importantIconScale || base.iconScale }
+}
+function displayQuestTitle(title) {
+  return title
+    .replace(/\bPermission\b/g, 'Access')
+    .replace(/\bGate\b/g, 'Milestone')
+    .replace(/\bAuthority\b/g, 'Setup')
+    .replace(/^No Free SU Transport$/, 'SU Transport Losses')
+    .replace(/^Site Storage, Not Global Logistics$/, 'Site Storage')
+    .replace(/^AE2 Control Permission$/, 'AE2 Control Access')
 }
 function rewards(chapter, quest, tier) {
-  if (tier === 'starting') return `[{id:"${chapter}_${quest}_R0" type:"item" item:"dotcoinmod:copper_coin" count:16}]`
-  const list = tierCoins[tier] || ['copper']
-  return '[' + list.map((coin, i) => `{id:"${chapter}_${quest}_R${i}" type:"item" item:"dotcoinmod:${coin}_coin" count:4}`).join(',') + ']'
+  if (tier === 'starting') return `[{id:"${ftbId(`reward:${chapter}:${quest}:0`)}" type:"item" item:"dotcoinmod:copper_coin" count:4}]`
+  const list = tierCoins[activeTier(tier)] || ['copper']
+  return '[' + list.map((coin, i) => `{id:"${ftbId(`reward:${chapter}:${quest}:${i}`)}" type:"item" item:"dotcoinmod:${coin}_coin" count:4}`).join(',') + ']'
 }
 function questSnbt(chapterPrefix, tier, quest) {
-  const deps = quest.deps?.length ? ` dependencies:[${quest.deps.map(d => `"${d}"`).join(',')}] hide_until_deps_complete:true` : ''
-  const text = quest.description?.length ? quest.description : defaultQuestDescription(chapterPrefix, quest)
-  return `\t\t{id:"${quest.id}"${deps} title:"${esc(quest.title)}"${desc(text)} x:${quest.x.toFixed(1)}d y:${quest.y.toFixed(1)}d rewards:${rewards(chapterPrefix, quest.id, tier)} tasks:[${quest.tasks.map((t, i) => taskSnbt(chapterPrefix, quest.id, t, i + 1)).join(',')}]}`
+  const deps = quest.deps?.length ? ` dependencies:[${quest.deps.map(d => `"${questFtbId(d)}"`).join(',')}]` : ''
+  const text = playerQuestDescription(chapterPrefix, quest)
+  const v = visualForQuest(chapterPrefix, quest)
+  const minWidth = v.minWidth ? ` min_width:${v.minWidth}` : ''
+  return `\t\t{id:"${questFtbId(quest.id)}"${deps} hide_dependency_lines:false hide_dependent_lines:false disable_jei:false title:"${esc(displayQuestTitle(quest.title))}" subtitle:"${esc(v.subtitle)}" icon:"${quest.tasks[0].item}" shape:"${v.shape}" size:${v.size.toFixed(2)}d icon_scale:${v.iconScale.toFixed(2)}d${minWidth}${desc(text)} x:${quest.x.toFixed(1)}d y:${quest.y.toFixed(1)}d rewards:${rewards(chapterPrefix, quest.id, tier)} tasks:[${quest.tasks.map((t, i) => taskSnbt(chapterPrefix, quest.id, t, i + 1)).join(',')}]}`
 }
 function chapterSnbt(ch) {
   return `{
 \tdefault_hide_dependency_lines: false
+\tdefault_quest_shape: "${visualByPrefix[ch.prefix]?.shape || defaultFlowVisual.shape}"
 \tfilename: "${ch.filename}"
-\tgroup: "${groupForTier(ch.tier)}"
-\tid: "${ch.id}"
+\tgroup: "${groupForChapter(ch)}"
+\tid: "${chapterIdMap.get(ch.filename)}"
 \torder_index: ${ch.order}
 \ttitle: "${esc(ch.title)}"
-\tdescription: [${(ch.description || []).map(line => `"${esc(line)}"`).join(',')}]
+\tdescription: [${chapterDescription(ch).map(line => `"${esc(line)}"`).join(',')}]
 \tquests: [
 ${ch.quests.map(qt => questSnbt(ch.prefix, ch.tier, qt)).join('\n')}
 \t]
@@ -126,10 +508,174 @@ ${ch.quests.map(qt => questSnbt(ch.prefix, ch.tier, qt)).join('\n')}
 `
 }
 
+const foodShowcase = {
+  vanilla: [
+    'minecraft:apple', 'minecraft:baked_potato', 'minecraft:beetroot', 'minecraft:beetroot_soup', 'minecraft:bread',
+    'minecraft:carrot', 'minecraft:chorus_fruit', 'minecraft:cod', 'minecraft:cooked_beef', 'minecraft:cooked_chicken',
+    'minecraft:cooked_cod', 'minecraft:cooked_mutton', 'minecraft:cooked_porkchop', 'minecraft:cooked_rabbit',
+    'minecraft:cooked_salmon', 'minecraft:cookie', 'minecraft:dried_kelp', 'minecraft:glow_berries',
+    'minecraft:golden_apple', 'minecraft:golden_carrot', 'minecraft:honey_bottle', 'minecraft:melon_slice',
+    'minecraft:mushroom_stew', 'minecraft:poisonous_potato', 'minecraft:porkchop', 'minecraft:potato',
+    'minecraft:pufferfish', 'minecraft:pumpkin_pie', 'minecraft:rabbit', 'minecraft:rabbit_stew',
+    'minecraft:rotten_flesh', 'minecraft:salmon', 'minecraft:spider_eye', 'minecraft:suspicious_stew',
+    'minecraft:sweet_berries'
+  ],
+  farmersDelight: [
+    'farmersdelight:apple_cider', 'farmersdelight:apple_pie', 'farmersdelight:apple_pie_slice',
+    'farmersdelight:bacon', 'farmersdelight:bacon_and_eggs', 'farmersdelight:bacon_sandwich',
+    'farmersdelight:baked_cod_stew', 'farmersdelight:barbecue_stick', 'farmersdelight:beef_patty',
+    'farmersdelight:beef_stew', 'farmersdelight:bone_broth', 'farmersdelight:cake_slice',
+    'farmersdelight:chicken_cuts', 'farmersdelight:chicken_sandwich', 'farmersdelight:chicken_soup',
+    'farmersdelight:chocolate_pie', 'farmersdelight:chocolate_pie_slice', 'farmersdelight:cod_roll',
+    'farmersdelight:cod_slice', 'farmersdelight:cooked_bacon', 'farmersdelight:cooked_chicken_cuts',
+    'farmersdelight:cooked_cod_slice', 'farmersdelight:cooked_mutton_chops', 'farmersdelight:cooked_rice',
+    'farmersdelight:cooked_salmon_slice', 'farmersdelight:dumplings', 'farmersdelight:egg_sandwich',
+    'farmersdelight:fish_stew', 'farmersdelight:fried_egg', 'farmersdelight:fried_rice',
+    'farmersdelight:fruit_salad', 'farmersdelight:glow_berry_custard', 'farmersdelight:grilled_salmon',
+    'farmersdelight:ham', 'farmersdelight:hamburger', 'farmersdelight:honey_cookie',
+    'farmersdelight:honey_glazed_ham', 'farmersdelight:hot_cocoa', 'farmersdelight:kelp_roll',
+    'farmersdelight:kelp_roll_slice', 'farmersdelight:melon_juice', 'farmersdelight:melon_popsicle',
+    'farmersdelight:minced_beef', 'farmersdelight:mixed_salad', 'farmersdelight:mushroom_rice',
+    'farmersdelight:mutton_chops', 'farmersdelight:mutton_wrap', 'farmersdelight:nether_salad',
+    'farmersdelight:noodle_soup', 'farmersdelight:pasta_with_meatballs', 'farmersdelight:pasta_with_mutton_chop',
+    'farmersdelight:pumpkin_slice', 'farmersdelight:pumpkin_soup', 'farmersdelight:rice',
+    'farmersdelight:roast_chicken', 'farmersdelight:roasted_mutton_chops', 'farmersdelight:salmon_roll',
+    'farmersdelight:salmon_slice', 'farmersdelight:shepherds_pie', 'farmersdelight:smoked_ham',
+    'farmersdelight:squid_ink_pasta', 'farmersdelight:steak_and_potatoes', 'farmersdelight:stuffed_potato',
+    'farmersdelight:sweet_berry_cheesecake', 'farmersdelight:sweet_berry_cheesecake_slice',
+    'farmersdelight:sweet_berry_cookie', 'farmersdelight:tomato_sauce', 'farmersdelight:vegetable_noodles',
+    'farmersdelight:vegetable_soup'
+  ],
+  drinksAndFerments: [
+    'farmersrespite:black_tea', 'farmersrespite:coffee', 'farmersrespite:dandelion_tea',
+    'farmersrespite:gamblers_tea', 'farmersrespite:green_tea', 'farmersrespite:green_tea_cookie',
+    'farmersrespite:long_apple_cider', 'farmersrespite:long_black_tea', 'farmersrespite:long_coffee',
+    'farmersrespite:long_dandelion_tea', 'farmersrespite:long_gamblers_tea', 'farmersrespite:long_green_tea',
+    'farmersrespite:long_purulent_tea', 'farmersrespite:long_rose_hip_tea', 'farmersrespite:long_yellow_tea',
+    'farmersrespite:purulent_tea', 'farmersrespite:rose_hip_pie', 'farmersrespite:rose_hip_pie_slice',
+    'farmersrespite:rose_hip_tea', 'farmersrespite:strong_apple_cider', 'farmersrespite:strong_black_tea',
+    'farmersrespite:strong_coffee', 'farmersrespite:strong_gamblers_tea', 'farmersrespite:strong_green_tea',
+    'farmersrespite:strong_hot_cocoa', 'farmersrespite:strong_melon_juice', 'farmersrespite:strong_purulent_tea',
+    'farmersrespite:strong_rose_hip_tea', 'farmersrespite:strong_yellow_tea', 'farmersrespite:tea_curry',
+    'farmersrespite:yellow_tea', 'brewinandchewin:apple_jelly', 'brewinandchewin:beer',
+    'brewinandchewin:bloody_mary', 'brewinandchewin:cheesy_pasta', 'brewinandchewin:cocoa_fudge',
+    'brewinandchewin:creamy_onion_soup', 'brewinandchewin:dread_nog', 'brewinandchewin:egg_grog',
+    'brewinandchewin:fiery_fondue', 'brewinandchewin:flaxen_cheese_wedge',
+    'brewinandchewin:glittering_grenadine', 'brewinandchewin:glow_berry_marmalade',
+    'brewinandchewin:ham_and_cheese_sandwich', 'brewinandchewin:horror_lasagna',
+    'brewinandchewin:jerky', 'brewinandchewin:kimchi', 'brewinandchewin:kippers',
+    'brewinandchewin:mead', 'brewinandchewin:pale_jane', 'brewinandchewin:pizza',
+    'brewinandchewin:pizza_slice', 'brewinandchewin:quiche', 'brewinandchewin:quiche_slice',
+    'brewinandchewin:red_rum', 'brewinandchewin:rice_wine', 'brewinandchewin:saccharine_rum',
+    'brewinandchewin:salty_folly', 'brewinandchewin:scarlet_cheese_wedge',
+    'brewinandchewin:scarlet_pierogi', 'brewinandchewin:strongroot_ale',
+    'brewinandchewin:sweet_berry_jam', 'brewinandchewin:vegetable_omelet',
+    'brewinandchewin:vodka', 'brewinandchewin:withering_dross'
+  ],
+  fieldCrops: [
+    'veggiesdelight:rice_and_vegetables', 'veggiesdelight:cauliflower_soup', 'veggiesdelight:stuffed_bellpepper',
+    'veggiesdelight:garlic_bread', 'veggiesdelight:stuffed_zucchini_boat', 'veggiesdelight:pasta_with_broccoli',
+    'veggiesdelight:bellpepper', 'veggiesdelight:cauliflower', 'veggiesdelight:garlic', 'veggiesdelight:sweet_potato',
+    'veggiesdelight:zucchini', 'corn_delight:boiled_corn', 'corn_delight:creamy_corn_drink', 'corn_delight:caramel_popcorn',
+    'corn_delight:cornbread', 'corn_delight:corn_dog', 'corn_delight:corn_soup', 'corn_delight:grilled_corn',
+    'corn_delight:tortilla', 'corn_delight:creamed_corn', 'corn_delight:grilled_corn', 'corn_delight:nachos_bowl',
+    'corn_delight:popcorn', 'rusticdelight:bell_pepper_soup', 'rusticdelight:coffee', 'rusticdelight:cooked_calamari',
+    'rusticdelight:cooked_calamari_slice', 'rusticdelight:calamari', 'rusticdelight:fried_mushrooms',
+    'delightful:marshmallow_stick', 'rusticdelight:batter', 'rusticdelight:roasted_coffee_beans',
+    'rusticdelight:bell_pepper_pasta', 'rusticdelight:calamari_slice', 'rusticdelight:stuffed_bell_pepper_red',
+    'rusticdelight:calamari_roll'
+  ],
+  delightful: [
+    'delightful:acorn', 'delightful:azalea_tea', 'delightful:baklava', 'delightful:berry_matcha_latte',
+    'delightful:cactus_chili', 'delightful:cantaloupe', 'delightful:cantaloupe_bread',
+    'delightful:cheeseburger', 'delightful:chorus_muffin', 'delightful:coconut_curry',
+    'delightful:cooked_goat', 'delightful:ender_nectar', 'delightful:glow_jam_cookie',
+    'delightful:glow_jam_jar', 'delightful:marshmallow_stick',
+    'delightful:matcha_gummy', 'delightful:matcha_ice_cream', 'delightful:matcha_latte',
+    'delightful:mini_melon', 'delightful:mulberry_pie_slice', 'delightful:mutton_pie_slice',
+    'delightful:nut_butter_and_jam_sandwich', 'delightful:passion_fruit_tart_slice',
+    'delightful:rock_candy', 'delightful:salmon_and_roe_blini', 'delightful:salmonberry_milkshake',
+    'delightful:salmonberry_pie', 'delightful:sinigang', 'delightful:smore',
+    'delightful:source_berry_cookie', 'delightful:source_berry_gummy',
+    'delightful:source_berry_ice_cream', 'delightful:source_berry_milkshake',
+    'delightful:source_berry_pie_slice', 'delightful:wrapped_cantaloupe'
+  ],
+  netherEndOcean: [
+    'mynethersdelight:egg_soup', 'mynethersdelight:bleeding_tartar', 'mynethersdelight:breakfast_sampler',
+    'mynethersdelight:burnt_roll', 'mynethersdelight:crimson_stroganoff', 'mynethersdelight:deviled_egg',
+    'mynethersdelight:ghasta', 'mynethersdelight:hot_cream', 'mynethersdelight:hot_wings',
+    'mynethersdelight:plate_of_stuffed_hoglin_ham', 'mynethersdelight:plate_of_stuffed_hoglin_snout',
+    'mynethersdelight:plate_of_stuffed_hoglin', 'mynethersdelight:sausage_and_potatoes',
+    'mynethersdelight:strider_slice', 'mynethersdelight:red_loin_on_a_stick', 'mynethersdelight:hotdog_with_nether_salad',
+    'mynethersdelight:hotdog_with_mixed_salad', 'mynethersdelight:spicy_noodle_soup', 'ends_delight:chorus_fruit_grain',
+    'ends_delight:chorus_fruit_milk_tea', 'ends_delight:chorus_fruit_pie_slice', 'ends_delight:dragon_breath_and_chorus_soup',
+    'ends_delight:dragon_breath_soda', 'ends_delight:dragon_leg_with_sauce', 'ends_delight:dragon_meat_stew',
+    'ends_delight:dried_endermite_meat', 'ends_delight:end_barbecue_stick', 'ends_delight:end_mixed_salad',
+    'ends_delight:enderman_gristle_stew', 'ends_delight:grilled_shulker', 'ends_delight:liquid_dragon_egg',
+    'ends_delight:roasted_dragon_meat_cuts', 'ends_delight:roasted_shulker_meat', 'ends_delight:shulker_meat',
+    'oceansdelight:seagrass_salad', 'oceansdelight:baked_tentacle_on_a_stick', 'oceansdelight:bowl_of_guardian_soup',
+    'oceansdelight:braised_sea_pickle', 'oceansdelight:cabbage_wrapped_elder_guardian', 'oceansdelight:cut_tentacles',
+    'oceansdelight:elder_guardian_roll', 'oceansdelight:elder_guardian_slice', 'oceansdelight:fugu_roll',
+    'oceansdelight:guardian', 'oceansdelight:guardian_soup', 'oceansdelight:guardian_tail', 'oceansdelight:honey_fried_kelp',
+    'oceansdelight:stuffed_cod', 'oceansdelight:tentacle_on_a_stick'
+  ],
+  regionalDelights: [
+    'ubesdelight:lumpia', 'ubesdelight:ensaymada', 'ubesdelight:chicken_inasal',
+    'ubesdelight:condensed_milk_bottle', 'ubesdelight:garlic_chop', 'ubesdelight:sinangag',
+    'ubesdelight:halo_halo', 'ubesdelight:milk_tea_ube', 'ubesdelight:pandesal', 'ubesdelight:pandesal_ube',
+    'ubesdelight:polvorone', 'ubesdelight:ube', 'ubesdelight:ube_cake_slice', 'ubesdelight:cookie_ube',
+    'ubesdelight:polvorone_ube', 'ubesdelight:ube_cake_slice', 'ubesdelight:halo_halo', 'ubesdelight:milk_tea_ube',
+    'ubesdelight:ensaymada_ube', 'ubesdelight:cookie_ube', 'ubesdelight:lumpia',
+    'undergardendelight:blood_tomato_soup', 'undergardendelight:depth_shroom_cream_soup',
+    'undergardendelight:gloomgourd_pie_slice', 'undergardendelight:scintling_stew',
+    'undergardendelight:mogsteak', 'undergardendelight:gronglunch', 'undergardendelight:glitterdish',
+    'undergardendelight:cooked_gloomper_cuts', 'undergardendelight:cooked_gwibling_fillet', 'undergardendelight:gronglet_roll',
+    'undergardendelight:cooked_gwibling_fillet', 'undergardendelight:cooked_gwibling_fillet', 'undergardendelight:cooked_gwibling_fillet',
+    'undergardendelight:droopstew', 'undergardendelight:stuffed_gloomgourd_bowl', 'undergardendelight:underbean_salad',
+    'undergardendelight:dweller_meat_slice', 'undergardendelight:raw_gloomper_cuts', 'undergardendelight:raw_gwibling_fillet',
+    'undergardendelight:cooked_dweller_meat_slice', 'undergardendelight:shimmerpearl', 'undergardendelight:gronglet_with_roasted_veggies',
+    'undergardendelight:baked_gwibling_and_vegetables', 'undergardendelight:glitterwrap', 'undergardendelight:droopstew',
+    'undergardendelight:depth_shroom_cream_soup', 'undergardendelight:stuffed_gloomgourd'
+  ]
+}
+
+const tconShowcase = {
+  coreTools: [
+    'tconstruct:pickaxe', 'tconstruct:hand_axe', 'tconstruct:mattock', 'tconstruct:kama',
+    'tconstruct:sledge_hammer', 'tconstruct:excavator', 'tconstruct:vein_hammer',
+    'tconstruct:broad_axe', 'tconstruct:pickadze', 'tconstruct:war_pick'
+  ],
+  meleeWeapons: [
+    'tconstruct:sword', 'tconstruct:dagger', 'tconstruct:cleaver', 'tconstruct:battlesign',
+    'tconstruct:melting_pan', 'tconstruct:swasher', 'tconstruct:flint_and_brick', 'tconstruct:minotaur_axe',
+    'tinkersweaponry:greatsword', 'tinkersweaponry:lance', 'tinkersweaponry:pike',
+    'tinkers_battle_spades:battle_spade', 'additionalweaponry:butcher_knife',
+    'additionalweaponry:cutlass', 'additionalweaponry:pitchfork', 'additionalweaponry:scepter',
+    'additionalweaponry:sniffer_claws', 'additionalweaponry:wrench'
+  ],
+  rangedWeapons: [
+    'tconstruct:longbow', 'tconstruct:crossbow', 'tconstruct:arrow', 'tconstruct:javelin',
+    'tconstruct:shuriken', 'tconstruct:throwing_axe', 'tconstruct:crystalshot',
+    'additionalweaponry:arrow_sling', 'tinkers_advanced:ionized_cannon'
+  ],
+  armorAndTravel: [
+    'tconstruct:travelers_helmet', 'tconstruct:travelers_chestplate', 'tconstruct:travelers_leggings',
+    'tconstruct:travelers_boots', 'tconstruct:travelers_shield', 'tconstruct:plate_helmet',
+    'tconstruct:plate_chestplate', 'tconstruct:plate_leggings', 'tconstruct:plate_boots',
+    'tconstruct:plate_shield', 'tconstruct:slime_helmet', 'tconstruct:slime_chestplate',
+    'tconstruct:slime_leggings', 'tconstruct:slime_boots', 'additionalweaponry:propeller_cap'
+  ],
+  lateTools: [
+    'tconstruct:sky_staff', 'tconstruct:earth_staff', 'tconstruct:ichor_staff', 'tconstruct:ender_staff',
+    'tconstruct:fishing_rod', 'tinkers_advanced:electron_tuner',
+    'tinkers_advanced:matter_manipulator'
+  ]
+}
+
 const chapters = [
   {
-    filename: 'starting_out', prefix: 'SO', id: 'BTM_STARTING_OUT', order: 0, title: 'Starting Out', tier: 'starting',
-    description: ['This chapter is the playable tutorial spine: foothold, body, Tinkers, Nether netherrack, meltery, then exits.', 'Every quest pays 16 copper coins so the village economy unlocks immediately after a few real survival commitments.'],
+    filename: 'starting_out', prefix: 'SO', id: 'BTM_STARTING_OUT', order: 0, title: 'Starting Out', tier: 'starting', group: 'orientation',
+    description: ['This chapter is the playable tutorial spine: foothold, body, Tinkers, Nether netherrack, meltery, then exits.', 'Every quest pays 4 copper coins. Copper is useful, but village trading now asks for repeated route and quest work.'],
     quests: [
       q('SO_BACKPACK', 'Carry More', -8, 0, [item('sophisticatedbackpacks:backpack')], [], ['Distance matters here. A backpack is not luxury storage; it is what lets a scouting run become a supply line.']),
       q('SO_LIGHT', 'Make Light', -6, 0, [item('minecraft:torch', 16)], ['SO_BACKPACK'], ['Commit to a safe pocket of terrain. Darkness should be a local problem you solve with carried supplies.']),
@@ -154,7 +700,24 @@ const chapters = [
     ]
   },
   {
-    filename: 'tinkers_construct', prefix: 'TC', id: 'BTM_TINKERS', order: 1, title: 'Iron Tier - Tinkers Construct', tier: 'iron', description: ['Tinkers owns early metallurgy: repair, molten primaries, smeltery scale, scorched progression, and foundry byproducts.'], quests: [
+    filename: 'major_gates', prefix: 'MG', id: 'BTM_MAJOR_GATES', order: 1, title: 'Major Gates', tier: 'starting', group: 'orientation',
+    description: ['A compact progress map for the pack-wide gates. This chapter is intentionally not a checklist; it shows how the parallel streams converge into AE2 local intelligence.'],
+    quests: [
+      q('MG_START', 'Starting Out Complete', 0, 0, [item('tconstruct:seared_melter')], ['SO_MELTERY'], ['The tutorial spine has reached molten material. From here the pack opens into parallel streams.']),
+      q('MG_TCON', 'Tinkers Metallurgy Gate', 2, -2, [item('tconstruct:foundry_controller')], ['MG_START', 'TC_FOUNDRY'], ['Tinkers proves deposit interpretation and alloy authority before Create becomes the infrastructure layer.']),
+      q('MG_CREATE', 'Create Manufacturing Gate', 4, -2, [item('kubejs:brass_machine_casing')], ['MG_TCON', 'C2_BRASS'], ['Create proves sequenced manufacturing, brass, presses, and manufactured casings.']),
+      q('MG_POWER', 'Heat and Electricity Gate', 6, -1, [item('powergrid:generator_housing')], ['MG_CREATE', 'PG_BATTERY'], ['SU, heat, and grid conversion become a real power system instead of loose generators.']),
+      q('MG_OC2R', 'OC2R Control Gate', 8, -1, [item('oc2r:computer')], ['MG_POWER', 'OC_NETWORK'], ['OC2R is the intersite communication/control track before AE2 local intelligence.']),
+      q('MG_SPACE', 'Space Logistics Gate', 10, 0, [item('creatingspace:chemical_synthesizer')], ['MG_OC2R', 'SP_CHEM'], ['Space is a logistics and chemistry commitment that consumes the earlier factory rather than replacing it.']),
+      q('MG_MAGIC', 'Blood Magic Gate', 4, 2, [item('bloodmagic:etherealslate')], ['MG_START', 'M1_ETHEREAL'], ['Magic progresses through Blood Magic slate permissions. Ethereal Slate proves the late magic stream is ready to contribute.']),
+      q('MG_ECONOMY', 'Village Economy Gate', 6, 3, [item('wares:completed_delivery_agreement')], ['MG_MAGIC', 'VE_COMPLETED'], ['Coins, Wares, villages, and routes are a parallel crafting economy.']),
+      q('MG_SYNTHESIS', 'Synthesis Gate', 8, 2, [item('acid_vat:acid_vat')], ['MG_MAGIC', 'MG_ECONOMY', 'S1_SYNTHESIS_EXIT'], ['Acid Vat and synthesis turn deposits into chemical packages, feeding late materials.']),
+      q('MG_AE2', 'AE2 Local Intelligence', 12, 0, [item('ae2:controller')], ['MG_SPACE', 'MG_SYNTHESIS', 'AE_CONTROLLER'], ['AE2 is the convergence point for local site intelligence, not global logistics.']),
+      q('MG_POST_AE2', 'Post-AE2 Branches', 14, 0, [item('advanced_ae:quantum_structure')], ['MG_AE2', 'PA_QUANTUM_STRUCTURE'], ['After AE2, progression fans into fewer stronger branches instead of one universal machine chain.'])
+    ]
+  },
+  {
+    filename: 'tinkers_construct', prefix: 'TC', id: 'BTM_TINKERS', order: 0, title: 'Tinkers Construct', tier: 'iron', group: 'workshop', description: ['Tinkers owns early metallurgy: repair, molten primaries, smeltery scale, scorched progression, and foundry byproducts.'], quests: [
       q('TC_SEARED_CASE', 'Seared Machine Casing', 0, 0, [item('kubejs:seared_machine_casing')], ['SO_MELTERY']),
       q('TC_SMELTERY', 'Smeltery Authority', 2, 0, [item('tconstruct:smeltery_controller'), item('tconstruct:seared_fuel_tank')], ['TC_SEARED_CASE']),
       q('TC_FIRST_COPPER', 'Primary Molten Output', 4, -1, [item('minecraft:copper_ingot')], ['TC_SMELTERY']),
@@ -162,11 +725,16 @@ const chapters = [
       q('TC_SCORCHED', 'Scorched Machine Casing', 6, 0, [item('kubejs:scorched_machine_casing')], ['TC_FIRST_COPPER', 'TC_FIRST_IRON']),
       q('TC_FOUNDRY', 'Foundry Reads Geology', 8, 0, [item('tconstruct:foundry_controller')], ['TC_SCORCHED']),
       q('TC_ALLOYER', 'Scorched Alloying', 10, -1, [item('tconstruct:scorched_alloyer')], ['TC_SCORCHED']),
-      q('TC_FUEL', 'Scorched Fuel Handling', 10, 1, [item('tconstruct:scorched_fuel_tank')], ['TC_SCORCHED'])
+      q('TC_FUEL', 'Scorched Fuel Handling', 10, 1, [item('tconstruct:scorched_fuel_tank')], ['TC_SCORCHED']),
+      q('TC_SHOWCASE_CORE_TOOLS', 'Showcase: Core Tools', 12, -3, itemAnyList(tconShowcase.coreTools), ['TC_SMELTERY'], ['Tinkers tools are material platforms. This node shows the core mining, digging, chopping, and hybrid tool forms you can build without caring which material or modifier NBT they carry.']),
+      q('TC_SHOWCASE_MELEE', 'Showcase: Melee Weapons', 12, -1, itemAnyList(tconShowcase.meleeWeapons), ['TC_SMELTERY'], ['The combat catalogue is broad. Build the weapon form that matches the route, mob pressure, and reach pattern you actually need.']),
+      q('TC_SHOWCASE_RANGED', 'Showcase: Ranged Weapons', 12, 1, itemAnyList(tconShowcase.rangedWeapons), ['TC_SMELTERY'], ['Ranged Tinkers tools and addon weapons give options for hostile routes before the pack becomes a gun or spell problem.']),
+      q('TC_SHOWCASE_ARMOR', 'Showcase: Armor and Travel', 12, 3, itemAnyList(tconShowcase.armorAndTravel), ['TC_SCORCHED'], ['Armor, shields, slime gear, and traveller gear are part of the same toolcraft economy. Treat them as route preparation.']),
+      q('TC_SHOWCASE_LATE_TOOLS', 'Showcase: Late Tool Forms', 14, 0, itemAnyList(tconShowcase.lateTools), ['TC_FOUNDRY'], ['These forms point toward later Tinkers branches and post-AE2 tool escalation. They are displayed here so the tool catalogue is visible early.'])
     ]
   },
   {
-    filename: 'death', prefix: 'DE', id: 'BTM_DEATH', order: 2, title: 'Iron Tier - Death and Blood', tier: 'iron', description: ['Still-Beating Hearts are death trophies and Blood Magic keys. They should feel like ordeal evidence, not farmable reagent dust.'], quests: [
+    filename: 'death', prefix: 'DE', id: 'BTM_DEATH', order: 1, title: 'Death and Blood', tier: 'iron', group: 'body', description: ['Still-Beating Hearts are death trophies and Blood Magic keys. They should feel like ordeal evidence, not farmable reagent dust.'], quests: [
       q('DE_HEART', 'Still-Beating Heart', 0, 0, [item('rpgstats:still_beating_heart')], ['SO_EXIT_MAGIC']),
       q('DE_ALTAR', 'First Blood Altar', 2, 0, [item('bloodmagic:altar')], ['DE_HEART']),
       q('DE_WEAK_HEART', 'Blood-Touched Heart', 4, 0, [item('kubejs:weak_blood_heart')], ['DE_ALTAR']),
@@ -176,25 +744,40 @@ const chapters = [
     ]
   },
   {
-    filename: 'food_body', prefix: 'FB', id: 'BTM_FOOD_BODY', order: 3, title: 'Iron Tier - Food, Water, and Body', tier: 'iron',
+    filename: 'food_body', prefix: 'FB', id: 'BTM_FOOD_BODY', order: 0, title: 'Food, Water, and Body', tier: 'iron', group: 'body',
     description: ['Food is not decorative in this pack. This chapter turns early cooking into expedition readiness, thirst management, and the bodily logic that makes Blood Magic feel earned.'],
     quests: [
-      q('FB_CUTTING', 'Knife Work and Prep', 0, 0, [item('farmersdelight:cutting_board')], ['SO_COOKING'], ['Cutting boards turn food from found calories into prepared stock. This is also where many side ingredients start being worth collecting.']),
+      q('FB_CUTTING', 'Knife Work and Prep', 0, 0, [item('farmersdelight:cutting_board')], ['SO_COOKING'], ['Cutting boards turn food from found calories into prepared stock. Green tea, salmonberries, and blazing chili start becoming potion reagents here.']),
       q('FB_DOUGH', 'Staple Dough', 2, -1, [item('farmersdelight:wheat_dough')], ['FB_CUTTING'], ['Dough is the first reliable staple. It gives farming a practical purpose before automation.']),
       q('FB_CANVAS', 'Canvas and Packing', 2, 1, [item('farmersdelight:canvas')], ['FB_CUTTING'], ['Canvas ties food infrastructure to carrying, drying, and expedition packing.']),
+      q('FB_CAMPFIRE_REAGENTS', 'Campfire Reagents', 2, -3, [item('minecraft:campfire'), item('kubejs:roasted_coffee_reagent'), item('kubejs:charred_blazing_chili')], ['FB_CUTTING'], ['Campfires are the crude heat step. Coffee beans and blazing chili become prepared reagent material before they become potion logic.']),
       q('FB_STOVE', 'Permanent Kitchen', 4, 0, [item('farmersdelight:stove')], ['FB_DOUGH', 'FB_CANVAS'], ['The stove marks the kitchen as infrastructure. A base that cannot cook cannot support long routes.']),
       q('FB_SOUP', 'Hydrating Meals', 6, -1, [item('farmersdelight:vegetable_soup')], ['FB_STOVE'], ['Soups are survival logistics: food and water pressure handled together.']),
       q('FB_FEAST', 'Group Expedition Stock', 6, 1, [item('farmersdelight:roast_chicken_block')], ['FB_STOVE'], ['Feasts are for team travel, recovery, and staging around dangerous deposits or obelisks.']),
+      q('FB_COOKED_EXTRACTS', 'Cooking Pot Extracts', 6, -3, [item('kubejs:brine_extract'), item('kubejs:vision_extract'), item('kubejs:heatproof_extract')], ['FB_STOVE', 'FB_CAMPFIRE_REAGENTS'], ['The cooking pot bottles mixed biological identity. Salmonberry routes become brine, glow and carrot become vision, and chili plus magma becomes heatproofing.']),
       q('FB_FILTER', 'Clean Water Site', 8, -1, [item('thirst:sand_filter')], ['FB_SOUP', 'C1_CASING'], ['The sand filter is post-Create survival infrastructure. Clean water should be built, not assumed.']),
-      q('FB_KETTLE', 'Kettle Drinks', 8, 1, [item('farmersrespite:kettle')], ['FB_FEAST'], ['Tea and hot drinks make body management more interesting than eating one best food forever.']),
+      q('FB_KETTLE', 'Kettle Drinks', 8, 1, [item('farmersrespite:kettle')], ['FB_FEAST'], ['Tea and hot drinks make body management more interesting than eating one best food forever. Kettle pouring later isolates these drinks into clean extracts.']),
       q('FB_TEA', 'Route Tea', 10, 1, [item('farmersrespite:green_tea')], ['FB_KETTLE'], ['Pack drinks alongside food. A route with prepared drinks is a different route.']),
-      q('FB_KEG', 'Fermentation', 12, 0, [item('brewinandchewin:keg')], ['FB_KETTLE', 'C2_ANDESITE_CASE'], ['Fermentation is slow value: stronger travel food, tavern economy, and material for village contracts.']),
-      q('FB_PRESERVED', 'Preserved Food', 14, -1, [item('brewinandchewin:jerky'), item('brewinandchewin:kimchi')], ['FB_KEG'], ['Preserved food is for distance. It belongs in backpacks, trains, ships, and outpost crates.']),
-      q('FB_BREW', 'Brewed Recovery', 14, 1, [item('brewinandchewin:beer')], ['FB_KEG'], ['Brews are powerful enough to matter, but they should come from a kitchen and a route economy, not loot spam.'])
+      q('FB_EFFECT_SOURCES', 'Effect Sources', 10, -3, [item('kubejs:mashed_salmonberries'), item('kubejs:roasted_coffee_reagent'), item('kubejs:charred_blazing_chili')], ['FB_COOKED_EXTRACTS', 'FB_KETTLE'], ['Potion effects now come from prepared food identity, not vanilla shortcut reagents. Coffee means speed, rose hips mean recovery, salmonberries mean water routes, and blazing chili means fire routes.']),
+      q('FB_KEG', 'Fermentation', 12, 0, [item('brewinandchewin:keg')], ['FB_TEA', 'C2_ANDESITE_CASE'], ['Fermentation is slow value: stronger travel food, tavern economy, village contracts, and keg-poured potion concentrates.']),
+      q('FB_KETTLE_INFUSIONS', 'Kettle Infusions', 14, -2, [item('kubejs:green_tea_extract'), item('kubejs:caffeine_extract'), item('kubejs:rose_hip_extract'), item('kubejs:toxic_extract')], ['FB_EFFECT_SOURCES', 'FB_KETTLE'], ['Kettle pouring isolates plant-forward effects from drinks. Tea, coffee, rose hip, yellow tea, and purulent tea become bottled extracts.']),
+      q('FB_FERMENTED_CONCENTRATES', 'Fermented Concentrates', 14, 2, [item('kubejs:fermented_pomegranate_extract'), item('kubejs:brine_extract')], ['FB_EFFECT_SOURCES', 'FB_KEG'], ['Keg pouring handles slower, stronger concentrates. Red rum carries strength identity; salty folly carries brine into water-breathing routes.']),
+      q('FB_ADVANCED_EXTRACTS', 'Advanced Extracts', 16, -2, [item('kubejs:leaping_extract'), item('kubejs:featherlight_extract'), item('kubejs:melon_life_extract'), item('kubejs:turtle_guard_extract')], ['FB_KETTLE_INFUSIONS'], ['Leaping, slow falling, healing, and turtle-master routes need prepared biological sources before the brewing stand can finish them.']),
+      q('FB_CORRUPT_EXTRACTS', 'Corrupt Extracts', 16, 2, [item('kubejs:weakening_extract'), item('kubejs:shadow_extract'), item('kubejs:harm_extract'), item('kubejs:slowness_extract')], ['FB_KETTLE_INFUSIONS', 'FB_FERMENTED_CONCENTRATES'], ['Fermented spider eye is no longer a universal shortcut. Corrupted potion outcomes use processed weakening, shadow, harm, and slowness extracts.']),
+      q('FB_POTION_ENGINEERING', 'Potion Engineering', 18, 0, [item('minecraft:brewing_stand'), item('kubejs:stabilized_reagent'), item('kubejs:caffeine_extract'), item('kubejs:vision_extract')], ['FB_ADVANCED_EXTRACTS', 'FB_CORRUPT_EXTRACTS'], ['The brewing stand is the finishing station. Water becomes awkward through stabilized reagent, then food-derived extracts finish potion effects.']),
+      q('FB_PRESERVED', 'Preserved Food', 20, -1, [item('brewinandchewin:jerky'), item('brewinandchewin:kimchi')], ['FB_KEG'], ['Preserved food is for distance. It belongs in backpacks, trains, ships, and outpost crates.']),
+      q('FB_BREW', 'Brewed Supplies', 20, 1, [item('brewinandchewin:beer')], ['FB_KEG'], ['Brews are powerful enough to matter, but they should come from a kitchen and a route economy, not loot spam.']),
+      q('FB_SHOWCASE_VANILLA', 'Showcase: Vanilla Food', 22, -4, itemList(foodShowcase.vanilla), ['FB_STOVE'], ['This catalogue keeps the vanilla foods visible. They are simple, portable, and often the base ingredients for better route food.']),
+      q('FB_SHOWCASE_FARMERS', 'Showcase: Farmers Delight Meals', 22, -2, itemList(foodShowcase.farmersDelight), ['FB_STOVE'], ['Farmer\'s Delight is the main early kitchen. Use this node as a menu of meals, slices, sandwiches, stews, rolls, and prepared ingredients.']),
+      q('FB_SHOWCASE_DRINKS', 'Showcase: Drinks and Ferments', 22, 0, itemList(foodShowcase.drinksAndFerments), ['FB_KEG'], ['Drinks and fermented foods are route supplies. They support recovery, tavern contracts, and food variety beyond raw hunger value.']),
+      q('FB_SHOWCASE_FIELD_CROPS', 'Showcase: Field Crop Foods', 22, 2, itemList(foodShowcase.fieldCrops), ['FB_CUTTING'], ['Vegetables, corn, peppers, coffee, and rustic foods make farming a broader material graph than wheat into bread.']),
+      q('FB_SHOWCASE_DELIGHTFUL', 'Showcase: Delightful Foods', 24, -3, itemList(foodShowcase.delightful), ['FB_STOVE'], ['Delightful adds fruit, tea, sweets, and mixed foods that make route food more varied than one optimal meal.']),
+      q('FB_SHOWCASE_NETHER_END_OCEAN', 'Showcase: Nether, End, and Ocean Food', 24, -1, itemList(foodShowcase.netherEndOcean), ['FB_STOVE', 'SO_NETHER'], ['Dimension and biome foods turn expeditions into new food infrastructure. Bring back ingredients, not just trophies.']),
+      q('FB_SHOWCASE_REGIONAL', 'Showcase: Regional Delight Foods', 24, 1, itemList(foodShowcase.regionalDelights), ['FB_STOVE'], ['Regional foods are a reason to care about where ingredients come from. They make different bases and routes feel materially different.'])
     ]
   },
   {
-    filename: 'create_i', prefix: 'C1', id: 'BTM_CREATE_I', order: 4, title: 'Tin Tier - Create I', tier: 'tin', description: ['Create starts after alloying. This chapter teaches hand power, millstones, deployer assembly, and sustainable local power.'], quests: [
+    filename: 'create_foundations', prefix: 'C1', id: 'BTM_CREATE_FOUNDATIONS', order: 0, title: 'Create Foundations', tier: 'tin', group: 'create', description: ['Create starts after alloying. This chapter teaches hand power, millstones, deployer assembly, first casings, and local sustainable power.'], quests: [
       q('C1_ALLOY', 'Alloyed Andesite', 0, 0, [item('create:andesite_alloy')], ['TC_FOUNDRY']),
       q('C1_CRANK', 'Hand Crank', 2, 0, [item('create:hand_crank')], ['C1_ALLOY']),
       q('C1_MILL', 'Millstone', 4, 0, [item('create:millstone')], ['C1_CRANK']),
@@ -202,33 +785,55 @@ const chapters = [
       q('C1_CASING', 'Deployed Andesite Casing', 8, 0, [item('create:andesite_casing')], ['C1_DEPLOYER']),
       q('C1_POWER_WATER', 'Water Wheel', 10, -1, [item('create:water_wheel')], ['C1_CASING']),
       q('C1_POWER_WIND', 'Windmill Bearing', 10, 1, [item('create:windmill_bearing')], ['C1_CASING']),
-      q('C1_WATER', 'Clean Water Infrastructure', 12, 0, [item('thirst:sand_filter')], ['C1_POWER_WATER']),
+      q('C1_WATER', 'Clean Water Infrastructure', 12, 0, [item('thirst:sand_filter')], ['C1_POWER_WATER', 'C1_POWER_WIND']),
       q('C1_CRUSHED', 'Deposit Preprocessing', 14, 0, [item('realisticores:crushed_copper_sulfide_ore')], ['C1_WATER'])
     ]
   },
   {
-    filename: 'create_ii', prefix: 'C2', id: 'BTM_CREATE_II', order: 5, title: 'Bronze Tier - Create II', tier: 'bronze', description: ['Create II is the first real manufactured-component layer: machine casings, press work, plates, mixers, brass, and larger mechanisms.'], quests: [
+    filename: 'create_components', prefix: 'C2', id: 'BTM_CREATE_COMPONENTS', order: 1, title: 'Create Components', tier: 'bronze', group: 'create', description: ['Create becomes a manufactured-component system here: andesite machine casings, presses, plates, mixers, saws, drills, and mechanical crafters.'], quests: [
       q('C2_ANDESITE_CASE', 'Andesite Machine Casing', 0, 0, [item('kubejs:andesite_machine_casing')], ['C1_CRUSHED']),
       q('C2_PRESS', 'Mechanical Press', 2, 0, [item('create:mechanical_press')], ['C2_ANDESITE_CASE']),
       q('C2_PLATES', 'Pressed or Cast Plates', 4, -1, [item('chemlib:iron_plate'), item('chemlib:copper_plate')], ['C2_PRESS']),
       q('C2_MIXER', 'Mechanical Mixer', 4, 1, [item('create:mechanical_mixer')], ['C2_PRESS']),
       q('C2_SAW_DRILL', 'Industrial Contact Tools', 6, -1, [item('create:mechanical_saw'), item('create:mechanical_drill')], ['C2_ANDESITE_CASE']),
       q('C2_CRAFTER', 'Mechanical Crafting', 6, 1, [item('create:mechanical_crafter')], ['C2_ANDESITE_CASE']),
-      q('C2_BRASS_INGOT', 'Brass Is Create Steel', 8, -1, [item('create:brass_ingot')], ['C2_MIXER']),
-      q('C2_BRASS_SHEET', 'Brass Sheet', 8, 1, [item('create:brass_sheet')], ['C2_BRASS_INGOT', 'C2_PLATES']),
-      q('C2_BRASS', 'Brass Machine Casing', 10, 0, [item('kubejs:brass_machine_casing')], ['C2_BRASS_SHEET'])
+      q('C2_BASIN_WORK', 'Basin Processing', 8, 0, [item('create:basin'), item('create:depot')], ['C2_MIXER', 'C2_PRESS'], ['Basins and depots make Create recipes visible as physical manufacturing steps.'])
     ]
   },
   {
-    filename: 'electricity', prefix: 'PG', id: 'BTM_SU_HEAT_ELECTRICITY', order: 6, title: 'Brass Tier - SU Heat and Electricity', tier: 'brass', description: ['This chapter is the power atlas. Water wheels, windmills, blaze burners, diesel engines, solar heat, and fission all make or support SU/heat.', 'Power Grid is the electrical step: build generator hardware, circuits, relays, storage, and learn how rotational work becomes electricity.'], quests: [
+    filename: 'create_brass_automation', prefix: 'CB', id: 'BTM_CREATE_BRASS_AUTOMATION', order: 2, title: 'Create Brass Automation', tier: 'bronze', group: 'create', description: ['Brass is Create\'s automation alloy. This chapter separates brass manufacturing from the earlier andesite component layer.'], quests: [
+      q('C2_BRASS_INGOT', 'Brass Is Create Steel', 0, 0, [item('create:brass_ingot')], ['C2_MIXER']),
+      q('C2_BRASS_SHEET', 'Brass Sheet', 2, 0, [item('create:brass_sheet')], ['C2_BRASS_INGOT', 'C2_PLATES']),
+      q('C2_PRECISION', 'Precision Mechanism', 4, -1, [item('create:precision_mechanism')], ['C2_BRASS_SHEET']),
+      q('CB_FUNNEL_TUNNEL', 'Brass Routing Faces', 4, 1, [item('create:brass_funnel'), item('create:brass_tunnel')], ['C2_BRASS_SHEET']),
+      q('C2_BRASS', 'Brass Machine Casing', 6, 0, [item('kubejs:brass_machine_casing')], ['C2_PRECISION', 'CB_FUNNEL_TUNNEL']),
+      q('CB_ARM', 'Mechanical Arm', 8, -1, [item('create:mechanical_arm')], ['C2_BRASS']),
+      q('CB_SPEED_CONTROL', 'Speed Control', 8, 1, [item('create:rotation_speed_controller')], ['C2_BRASS']),
+      q('CB_LINKS', 'Observed Automation', 10, 0, [item('create:stockpile_switch'), item('create:content_observer'), item('create:redstone_link')], ['CB_ARM', 'CB_SPEED_CONTROL'])
+    ]
+  },
+  {
+    filename: 'create_fluids_and_packages', prefix: 'CL', id: 'BTM_CREATE_FLUIDS_PACKAGES', order: 3, title: 'Create Fluids and Packages', tier: 'silver', group: 'create', description: ['This chapter collects Create logistics that are not trains: fluids, portable interfaces, packaging, stock links, and logistics addon devices.'], quests: [
+      q('CL_FLUID_HANDLING', 'Fluid Handling', 0, 0, [item('create:fluid_pipe'), item('create:mechanical_pump')], ['C2_ANDESITE_CASE']),
+      q('CL_TANK_AND_SPOUT', 'Tanks, Drains, and Spouts', 2, -1, [item('create:fluid_tank'), item('create:item_drain'), item('create:spout')], ['CL_FLUID_HANDLING']),
+      q('CL_PORTABLE_INTERFACES', 'Portable Interfaces', 2, 1, [item('create:portable_storage_interface'), item('create:portable_fluid_interface')], ['CL_FLUID_HANDLING', 'C2_BRASS']),
+      q('CL_PACKAGE_NETWORK', 'Package Network', 4, 0, [item('create:packager'), item('create:repackager'), item('create:stock_link')], ['CL_PORTABLE_INTERFACES', 'C2_BRASS']),
+      q('CL_STOCK_CONTROL', 'Stock Control', 6, -1, [item('create:stock_ticker'), item('create:redstone_requester')], ['CL_PACKAGE_NETWORK']),
+      q('CL_CONNECTED_CONTROL', 'Connected Kinetics', 6, 1, [item('create_connected:kinetic_battery'), item('create_connected:brake'), item('create_connected:linked_transmitter')], ['C2_BRASS']),
+      q('CL_ADDON_LOGISTICS', 'Addon Logistics Devices', 8, 0, [item('createadditionallogistics:package_editor'), item('createadditionallogistics:package_accelerator'), item('createadditionallogistics:network_monitor')], ['CL_STOCK_CONTROL', 'CL_CONNECTED_CONTROL']),
+      q('CL_CONTENT_FILTERS', 'Package Content Filters', 10, 0, [item('createadvlogistics:package_content_filter')], ['CL_ADDON_LOGISTICS'])
+    ]
+  },
+  {
+    filename: 'create_power_heat_electricity', prefix: 'PG', id: 'BTM_SU_HEAT_ELECTRICITY', order: 4, title: 'Create Power: Heat and Electricity', tier: 'brass', group: 'create', description: ['This chapter is the power atlas. Water wheels, windmills, blaze burners, diesel engines, solar heat, and fission all make or support SU/heat.', 'Power Grid is the electrical step: build generator hardware, circuits, relays, storage, and learn how rotational work becomes electricity.'], quests: [
       q('PG_WATER_GRAPH', 'SU Source: Water Wheel', -2, -2, [item('create:water_wheel')], ['C1_POWER_WATER'], ['Water wheels are the first stable SU source. They are local, terrain-aware, and good enough for early workshops.']),
-      q('PG_WIND_GRAPH', 'SU Source: Windmill', -2, 0, [item('create:windmill_bearing')], ['C1_POWER_WIND'], ['Windmills are the scalable early alternative. They reward structure, sails, and exposed space.']),
-      q('PG_BLAZE_GRAPH', 'Heat Source: Blaze Burner', -2, 2, [item('create:blaze_burner')], ['C2_MIXER'], ['Blaze burners turn fuel and logistics into process heat. Treat them as heat infrastructure, not just mixer upgrades.']),
-      q('PG_DIESEL_GRAPH', 'SU Source: Diesel Engine', 0, -3, [item('createdieselgenerators:diesel_engine')], ['C2_BRASS'], ['Diesel is a fluid logistics branch: oil discovery, distillation, fuel routing, and stronger rotational output.']),
+      q('PG_WIND_GRAPH', 'SU Source: Windmill', -2, 0, [item('create:windmill_bearing')], ['PG_WATER_GRAPH', 'C1_POWER_WIND'], ['Windmills are the scalable early alternative. They reward structure, sails, and exposed space.']),
+      q('PG_BLAZE_GRAPH', 'Heat Source: Blaze Burner', -2, 2, [item('create:blaze_burner')], ['PG_WIND_GRAPH', 'C2_MIXER'], ['Blaze burners turn fuel and logistics into process heat. Treat them as heat infrastructure, not just mixer upgrades.']),
+      q('PG_DIESEL_GRAPH', 'SU Source: Diesel Engine', 0, -3, [item('createdieselgenerators:diesel_engine')], ['PG_BLAZE_GRAPH', 'C2_BRASS'], ['Diesel is a fluid logistics branch: oil discovery, distillation, fuel routing, and stronger rotational output.']),
       q('PG_DIESEL_REFINING', 'Diesel Refining', 2, -3, [item('createdieselgenerators:distillation_controller')], ['PG_DIESEL_GRAPH'], ['Refining makes diesel a real infrastructure chain instead of one engine recipe.']),
-      q('PG_SOLAR_HEAT', 'Heat Source: CNA Solar', 0, 3, [item('create_new_age:basic_solar_heating_plate')], ['C2_BRASS'], ['Solar heat is passive but material-bound. It is useful when terrain and site planning support it.']),
-      q('PG_CONDUCTIVE', 'Conductive Casing', 0, 0, [item('powergrid:conductive_casing')], ['C2_BRASS'], ['Conductive casing starts the electrical build. This is not redstone; it is manufactured electrical infrastructure.']),
-      q('PG_CASE', 'Power Grid Machine Casing', 2, 0, [item('kubejs:power_grid_machine_casing')], ['PG_CONDUCTIVE']),
+      q('PG_SOLAR_HEAT', 'Heat Source: CNA Solar', 0, 3, [item('create_new_age:basic_solar_heating_plate')], ['PG_BLAZE_GRAPH', 'C2_BRASS'], ['Solar heat is passive but material-bound. It is useful when terrain and site planning support it.']),
+      q('PG_CONDUCTIVE', 'Conductive Casing', 0, 0, [item('powergrid:conductive_casing')], ['PG_DIESEL_REFINING', 'PG_SOLAR_HEAT', 'C2_BRASS'], ['Conductive casing starts the electrical build. This is not redstone; it is manufactured electrical infrastructure.']),
+      q('PG_CASE', 'Power Grid Machine Casing', 2, 0, [item('kubejs:power_grid_machine_casing')], ['PG_CONDUCTIVE', 'PG_TRANSMISSION_LOSS']),
       q('PG_GENERATOR_HOUSING', 'Step 1: Generator Housing', 4, -2, [item('powergrid:generator_housing')], ['PG_CASE'], ['The generator housing is the physical bridge from rotation to electricity. Build it before pretending you have a grid.']),
       q('PG_GENERATOR_ROTOR', 'Step 2: Rotor and Commutator', 6, -2, [item('powergrid:generator_induction_rotor'), item('powergrid:generator_commutator')], ['PG_GENERATOR_HOUSING'], ['Rotors and commutators make the generator legible: moving magnetic hardware creates usable current.']),
       q('PG_CONNECTORS', 'Step 3: Wires and Connectors', 4, 0, [item('powergrid:wire_connector'), item('powergrid:wire')], ['PG_CASE'], ['Electricity needs visible conductors. Keep the grid inspectable and local.']),
@@ -238,7 +843,7 @@ const chapters = [
       q('PG_HEAT_PIPE', 'Heat Transport', 10, -1, [item('create_new_age:heat_pipe')], ['PG_BATTERY', 'PG_SOLAR_HEAT']),
       q('PG_HEAT_PUMP', 'Heat Pump', 10, 1, [item('create_new_age:heat_pump')], ['PG_HEAT_PIPE']),
       q('PG_HEATSYNC', 'Heat Affects the Body', 12, 2, [item('create_new_age:heat_pipe'), item('cold_sweat:sewing_table')], ['PG_HEAT_PUMP'], ['HeatSync makes heat pipes part of body survival. A hot or cold workshop is now an engineering condition, not just a machine stat.']),
-      q('PG_TRANSMISSION_LOSS', 'No Free SU Transport', 12, -2, [item('create:shaft'), item('create:gearbox'), item('create:belt_connector')], ['PG_WATER_GRAPH', 'PG_WIND_GRAPH'], ['Transmission Loss makes shafts, cogs, gearboxes, and belts part of the operating cost of distance. Keep power generation local or pay for long runs.']),
+      q('PG_TRANSMISSION_LOSS', 'No Free SU Transport', 2, -2, [item('create:shaft'), item('create:gearbox'), item('create:belt_connector')], ['PG_WATER_GRAPH', 'PG_WIND_GRAPH'], ['Transmission Loss makes shafts, cogs, gearboxes, and belts part of the operating cost of distance. Keep power generation local or pay for long runs.']),
       q('PG_STIRLING', 'Heat to SU: Stirling Engine', 14, 0, [item('create_new_age:stirling_engine')], ['PG_HEAT_PUMP'], ['Stirling engines make the heat loop explicit: heat sources become rotational work.']),
       q('PG_COOLANT', 'Liquid Coolant Exchanger', 16, 0, [item('liquid_coolant:coolant_exchanger')], ['PG_STIRLING', 'PG_BATTERY'], ['Coolant loops are the bridge from ordinary heat transport into serious fission and fusion thermal engineering.']),
       q('PG_FISSION_ACCEPTOR', 'Fission Fuel Acceptor', 18, -1, [item('fission_reactor:fission_fuel_acceptor')], ['PG_COOLANT', 'S1_SYNTHESIS_EXIT'], ['Fission is a nucleus-transformation and heat branch. It belongs after electrical control and chemical material routing.']),
@@ -246,7 +851,7 @@ const chapters = [
     ]
   },
   {
-    filename: 'oc2r', prefix: 'OC', id: 'BTM_OC2R', order: 7, title: 'Silver Tier - OC2R', tier: 'silver', description: ['OC2R is the preferred intersite communication layer. It should coordinate routes and machines without becoming item teleportation.'], quests: [
+    filename: 'oc2r', prefix: 'OC', id: 'BTM_OC2R', order: 1, title: 'OC2R', tier: 'silver', group: 'power', description: ['OC2R is the preferred intersite communication layer. It should coordinate routes and machines without becoming item teleportation.'], quests: [
       q('OC_TRANSISTOR', 'Transistor', 0, -1, [item('oc2r:transistor')], ['PG_BATTERY']),
       q('OC_CASE', 'OC2R Machine Casing', 0, 1, [item('kubejs:oc2r_machine_casing')], ['PG_BATTERY']),
       q('OC_COMPUTER', 'Local Computer', 2, 0, [item('oc2r:computer')], ['OC_TRANSISTOR', 'OC_CASE']),
@@ -257,19 +862,83 @@ const chapters = [
     ]
   },
   {
-    filename: 'space', prefix: 'SP', id: 'BTM_SPACE', order: 8, title: 'Gold Tier - Creating Space', tier: 'gold', description: ['Creating Space is a major logistics commitment: suit up, build rockets, route materials, and unlock chemical synthesis.'], quests: [
-      q('SP_TABLE', 'Rocket Engineer Table', 0, 0, [item('creatingspace:rocket_engineer_table')], ['OC_NETWORK']),
-      q('SP_CASE', 'Space Machine Casing', 2, 0, [item('kubejs:space_machine_casing')], ['SP_TABLE']),
-      q('SP_SUIT_BASIC', 'Basic Spacesuit', 4, -1, [item('creatingspace:basic_spacesuit_helmet'), item('creatingspace:basic_spacesuit_leggings'), item('creatingspace:basic_spacesuit_boots')], ['SP_CASE']),
-      q('SP_ENGINE', 'Rocket Engine', 4, 1, [item('creatingspace:rocket_engine')], ['SP_CASE']),
-      q('SP_CASING', 'Rocket Casing', 6, -1, [item('creatingspace:rocket_casing')], ['SP_ENGINE']),
-      q('SP_CONTROLS', 'Rocket Controls', 6, 1, [item('creatingspace:rocket_controls')], ['SP_ENGINE']),
-      q('SP_CHEM', 'Chemical Synthesizer', 8, 0, [item('creatingspace:chemical_synthesizer')], ['SP_CASING', 'SP_CONTROLS']),
-      q('SP_SUIT_ADV', 'Advanced Spacesuit', 10, 0, [item('creatingspace:advanced_spacesuit_helmet'), item('creatingspace:advanced_spacesuit_leggings'), item('creatingspace:advanced_spacesuit_boots')], ['SP_CHEM'])
+    filename: 'space', prefix: 'SP', id: 'BTM_SPACE', order: 0, title: 'Creating Space', tier: 'gold', group: 'intelligence', description: ['Creating Space is a major logistics commitment: suit up, build rockets, route materials, and unlock chemical synthesis.'], quests: [
+      q('SP_TABLE', 'Rocket Engineer Table', 0, 0, [item('creatingspace:rocket_engineer_table')], ['OC_NETWORK'], [
+        'Use this as the dedicated space workbench. Place it near your OC2R and Create manufacturing area because the following steps need mechanical crafting, sequenced assembly, pressing, cutting, fluids, and reusable staging space.',
+        'Before moving on, reserve room for a rocket parts line instead of treating this as a single crafting table.'
+      ]),
+      q('SP_CASE', 'Space Machine Casing', 2, 0, [item('kubejs:space_machine_casing')], ['SP_TABLE'], [
+        'This is the pack gate for space-era machines. If a recipe asks for this casing, it belongs after Create brass, Power Grid, and OC2R control.',
+        'Craft extra casings before starting rocket work; later machines and synthesis blocks should consume them repeatedly.'
+      ]),
+      q('SP_BASIC_FABRIC', 'Basic Suit Fabric', 4, -2, [item('creatingspace:basic_spacesuit_fabric')], ['SP_CASE'], [
+        'Make this with Create sequenced assembly. The fabric is not just armor cloth; it proves you can run a repeatable deploy-and-press line for survival equipment.',
+        'Inspect the recipe before batch crafting because suit pieces and oxygen equipment both pull from this material family.'
+      ]),
+      q('SP_SUIT_BASIC', 'Basic Spacesuit', 6, -2, [item('creatingspace:basic_spacesuit_helmet'), item('creatingspace:basic_spacesuit_leggings'), item('creatingspace:basic_spacesuit_boots')], ['SP_BASIC_FABRIC'], [
+        'Build the helmet, leggings, and boots as a minimum away-from-Earth suit kit. The quest intentionally omits a chestplate because oxygen backtanks fill that body role.',
+        'Do not launch with only the suit pieces; the next oxygen node is part of the same survival checklist.'
+      ]),
+      q('SP_OXYGEN_TANK', 'Oxygen Backtank', 6, 0, [item('creatingspace:copper_oxygen_backtank')], ['SP_BASIC_FABRIC'], [
+        'Craft a copper oxygen backtank with mechanical crafting. This is your first portable oxygen source and should be kept filled before any no-oxygen route.',
+        'Treat oxygen as expedition stock like food and water: make a refill plan, not just one tank.'
+      ]),
+      q('SP_ELECTROLYZER', 'Mechanical Electrolyzer', 4, 2, [item('creatingspace:mechanical_electrolyzer')], ['SP_CASE'], [
+        'Build this before relying on oxygen infrastructure. It turns the space branch into a fluid-processing branch rather than a simple armor checklist.',
+        'Place it where water, rotation, and fluid pipes can be maintained without crossing your main workshop paths.'
+      ]),
+      q('SP_AIR_LIQUEFIER', 'Air Liquefier', 6, 2, [item('creatingspace:air_liquefier')], ['SP_ELECTROLYZER'], [
+        'The air liquefier starts cryogenic fluid handling. It is a preparation step for oxygen, hydrogen, methane, and CO2 logistics later.',
+        'Leave access for tanks and pipes; cramped placement makes space fuel work painful.'
+      ]),
+      q('SP_CRYO_TANK', 'Cryogenic Storage', 8, 2, [item('creatingspace:cryogenic_tank')], ['SP_AIR_LIQUEFIER'], [
+        'Use cryogenic tanks as physical buffers for cold fluids. This keeps the space branch bounded: fluids live in tanks and pipes, not invisible global storage.',
+        'Make at least one spare tank before scaling chemical synthesis or fuel handling.'
+      ]),
+      q('SP_ENGINE_BLUEPRINT', 'Engine Blueprint', 8, -2, [item('creatingspace:engine_blueprint'), item('creatingspace:design_blueprint')], ['SP_SUIT_BASIC', 'SP_OXYGEN_TANK'], [
+        'Engine recipes use blueprint-style sequenced assembly. Keep the blueprint route readable because it carries NBT through several stages.',
+        'If EMI shows partial-NBT ingredients, follow the shown recipe path exactly instead of substituting a fresh blank blueprint.'
+      ]),
+      q('SP_ALLOY_SET', 'Rocket Alloy Sheets', 10, -3, [item('creatingspace:reinforced_copper_sheet'), item('creatingspace:monel_sheet'), item('creatingspace:inconel_sheet'), item('creatingspace:hastelloy_sheet')], ['SP_ENGINE_BLUEPRINT'], [
+        'These alloys define rocket part quality. Reinforced copper is the simple entry; Monel, Inconel, and Hastelloy represent higher heat and corrosion resistance.',
+        'Make sheets through pressing and keep the alloy chain documented in your workshop. Space should feel like metallurgy plus Create, not a one-off recipe.'
+      ]),
+      q('SP_ENGINE_PACKS', 'Engine Subassemblies', 10, -1, [item('creatingspace:combustion_chamber'), item('creatingspace:power_pack'), item('creatingspace:exhaust_pack')], ['SP_ALLOY_SET'], [
+        'Assemble combustion, power, and exhaust packs before the engine itself. These are the real rocket manufacturing steps.',
+        'Expect multiple sequenced assembly passes. A failed or mismatched blueprint usually means the wrong material level or exhaust path was selected.'
+      ]),
+      q('SP_ENGINE', 'Rocket Engine', 12, -1, [item('creatingspace:rocket_engine')], ['SP_ENGINE_PACKS'], [
+        'The final engine combines the power and exhaust assemblies through the blueprint path. This is the point where the space line becomes a serious manufactured product.',
+        'Make only one first, verify it works, then scale after the recipe path is stable.'
+      ]),
+      q('SP_CASING', 'Rocket Casing', 12, 1, [item('creatingspace:rocket_casing')], ['SP_ALLOY_SET'], [
+        'Rocket casing turns alloy sheet production into a vehicle body. Keep casing production separate from engine production so shortages are visible.',
+        'This is also the checkpoint that moon aluminum and cobalt routes are becoming relevant.'
+      ]),
+      q('SP_CONTROLS', 'Rocket Controls', 14, 1, [item('creatingspace:rocket_controls')], ['SP_ENGINE'], [
+        'Rocket controls connect Create control hardware to the vehicle. You should already have redstone links, electron tubes, and sturdy sheet production automated or at least repeatable.',
+        'Controls are not power by themselves; they are the navigation and operation layer.'
+      ]),
+      q('SP_PRESSURE', 'Sealed Room Support', 14, 3, [item('creatingspace:oxygen_sealer'), item('creatingspace:room_pressuriser')], ['SP_CRYO_TANK'], [
+        'Build sealing and pressurising blocks before depending on off-world bases. The goal is a survivable room, not just a suit.',
+        'Test the room locally with tanks and pipes before moving materials through a dimension route.'
+      ]),
+      q('SP_CHEM', 'Chemical Synthesizer', 16, 0, [item('creatingspace:chemical_synthesizer')], ['SP_CASING', 'SP_CONTROLS', 'SP_PRESSURE'], [
+        'The Chemical Synthesizer is the exit into space-era synthesis. It connects rocket progress back into the matter graph and unlocks later AE2 and fusion preparation.',
+        'Place it near cryogenic storage and the Acid Vat/chemistry area, because future recipes should bridge those systems.'
+      ]),
+      q('SP_ADV_FABRIC', 'Advanced Suit Fabric', 18, -1, [item('creatingspace:advanced_spacesuit_fabric')], ['SP_CHEM'], [
+        'Advanced suit fabric upgrades the survival kit using late space materials. It should be produced as a controlled batch, not hand-crafted one piece at a time.',
+        'This is the material checkpoint before advanced armor and higher-risk routes.'
+      ]),
+      q('SP_SUIT_ADV', 'Advanced Spacesuit', 20, 0, [item('creatingspace:advanced_spacesuit_helmet'), item('creatingspace:advanced_spacesuit_leggings'), item('creatingspace:advanced_spacesuit_boots'), item('creatingspace:netherite_oxygen_backtank')], ['SP_ADV_FABRIC'], [
+        'Upgrade to the advanced suit and netherite oxygen backtank before treating space as routine travel.',
+        'This is the chapter capstone: you now have suit protection, portable oxygen, room support, rocket manufacturing, and chemical synthesis online.'
+      ])
     ]
   },
   {
-    filename: 'ae2', prefix: 'AE', id: 'BTM_AE2', order: 9, title: 'Diamond Tier - AE2 Local Intelligence', tier: 'diamond', description: ['AE2 is local intelligence for a committed site. Storage and autocrafting improve a base, but trains and routes still move matter.'], quests: [
+    filename: 'ae2', prefix: 'AE', id: 'BTM_AE2', order: 1, title: 'AE2 Local Intelligence', tier: 'diamond', group: 'intelligence', description: ['AE2 is local intelligence for a committed site. Storage and autocrafting improve a base, but trains and routes still move matter.'], quests: [
       q('AE_CHARGER', 'Certus Preparation', 0, -1, [item('ae2:charger')], ['SP_CHEM']),
       q('AE_INSCRIBER', 'Processor Fabrication', 0, 1, [item('ae2:inscriber')], ['SP_CHEM']),
       q('AE_CASE', 'AE2 Machine Casing', 2, 0, [item('kubejs:ae2_machine_casing')], ['AE_CHARGER', 'AE_INSCRIBER']),
@@ -280,34 +949,43 @@ const chapters = [
     ]
   },
 
+
   {
-    filename: 'create_iii', prefix: 'C3', id: 'BTM_CREATE_III', order: 14, title: 'Silver Tier - Create III Logistics', tier: 'silver', description: ['Create III is physical logistics: trains, conductors, route displays, Little Logistics vessels, and authored intersite movement.'], quests: [
-      q('C3_TRACK_COUPLER', 'Track Coupler', 0, 0, [item('railways:track_coupler')], ['C2_BRASS'], ['Couplers make trains into planned logistics instead of minecart clutter.']),
+    filename: 'create_applied_kinetics', prefix: 'CAK', id: 'BTM_CREATE_APPLIED_KINETICS', order: 6, title: 'Create Applied Kinetics', tier: 'diamond', group: 'create', description: ['Create Applied Kinetics is a post-AE2 bridge. It lets Create machinery participate in local AE2 intelligence without replacing physical logistics.'], quests: [
+      q('CAK_ENERGY_PROVIDER', 'Create Energy Provider', 0, 0, [item('createappliedkinetics:energy_provider')], ['AE_CONTROLLER', 'C2_BRASS']),
+      q('CAK_ME_PROXY', 'ME Proxy', 2, 0, [item('createappliedkinetics:me_proxy')], ['CAK_ENERGY_PROVIDER']),
+      q('CAK_PRINTED_CIRCUITS', 'Sequenced Printed Circuits', 4, -1, [item('ae2:printed_logic_processor'), item('ae2:printed_calculation_processor'), item('ae2:printed_engineering_processor')], ['CAK_ME_PROXY']),
+      q('CAK_PROCESSORS', 'Sequenced Processors', 6, -1, [item('ae2:logic_processor'), item('ae2:calculation_processor'), item('ae2:engineering_processor')], ['CAK_PRINTED_CIRCUITS']),
+      q('CAK_CREATE_LINE', 'Create Processor Line', 4, 1, [item('create:deployer'), item('create:mechanical_press'), item('create:depot')], ['CAK_ME_PROXY']),
+      q('CAK_LOCAL_INTELLIGENCE', 'Local Intelligence Factory', 8, 0, [item('createappliedkinetics:me_proxy'), item('ae2:pattern_provider'), item('create:stock_link')], ['CAK_PROCESSORS', 'CAK_CREATE_LINE'], ['This is local site automation. It should make one base smarter without becoming intersite teleport logistics.'])
+    ]
+  },
+  {
+    filename: 'create_rail_logistics', prefix: 'C3', id: 'BTM_CREATE_RAIL_LOGISTICS', order: 5, title: 'Create Rail Logistics', tier: 'silver', group: 'create', description: ['Create III is physical logistics: Steam n Rails, stations, signals, conductors, rail yards, and authored intersite movement.'], quests: [
+      q('C3_TRACK_COUPLER', 'Track Coupler', 0, 0, [item('railways:track_coupler')], ['C2_BRASS', 'CL_PORTABLE_INTERFACES'], ['Couplers make trains into planned logistics instead of minecart clutter.']),
       q('C3_CONDUCTOR', 'Conductor Tools', 2, -1, [item('railways:conductor_whistle'), item('railways:black_conductor_cap')], ['C3_TRACK_COUPLER'], ['The conductor layer is for authored train work and route maintenance.']),
       q('C3_BUFFER', 'Rail Yard Hardware', 2, 1, [item('railways:big_buffer')], ['C3_TRACK_COUPLER'], ['Buffers and yards make train stations physical places.']),
-      q('C3_NAVIGATOR', 'Railway Navigation', 4, -1, [item('createrailwaysnavigator:navigator'), item('createrailwaysnavigator:advanced_display')], ['C3_CONDUCTOR', 'OC_NETWORK'], ['Navigation displays are local infrastructure for distance, not teleportation.']),
-      q('C3_STEAM_LOCO', 'Little Steam Locomotive', 4, 1, [item('littlelogistics:steam_locomotive')], ['C3_BUFFER'], ['Small trains are early intersite logistics and outpost supply.']),
-      q('C3_LAND_ROUTE', 'Land Route Card', 6, 1, [item('littlelogistics:locomotive_route')], ['C3_STEAM_LOCO', 'OC_ROUTE_LOGIC'], ['Route cards turn transport into authored logistics.']),
-      q('C3_TUG', 'Tug and Barge', 6, -1, [item('littlelogistics:tug'), item('littlelogistics:barge')], ['C3_BUFFER'], ['Water logistics should matter where terrain makes rails awkward.']),
-      q('C3_WATER_ROUTE', 'Water Route Card', 8, -1, [item('littlelogistics:tug_route')], ['C3_TUG', 'OC_ROUTE_LOGIC'], ['Water route planning is still physical logistics.']),
-      q('C3_CHARGER', 'Vehicle Charging', 8, 1, [item('littlelogistics:vessel_charger')], ['PG_BATTERY', 'C3_STEAM_LOCO'], ['Chargers connect the logistics layer back to the power grid.'])
+      q('C3_STATION', 'Train Station', 4, 0, [item('create:track_station')], ['C3_CONDUCTOR', 'C3_BUFFER'], ['Stations turn distance into named infrastructure. A station is a site commitment.']),
+      q('C3_SIGNAL', 'Signals and Observers', 6, -1, [item('create:track_signal'), item('create:track_observer')], ['C3_STATION'], ['Signals make routes authored and safe instead of improvised rail lines.']),
+      q('C3_SCHEDULE', 'Schedules and Controls', 6, 1, [item('create:schedule'), item('create:controls')], ['C3_STATION'], ['Schedules are physical logistics logic. This is not teleportation; trains must still move matter.']),
+      q('C3_YARD', 'Rail Yard', 8, 0, [item('railways:big_buffer'), item('create:track_signal'), item('create:track_station')], ['C3_SIGNAL', 'C3_SCHEDULE'], ['A rail yard is the first serious intersite logistics build. It should look like infrastructure.']),
+      q('C3_OC_DISPATCH', 'OC2R Dispatch Layer', 10, 0, [item('oc2r:redstone_interface'), item('create:track_signal')], ['C3_YARD', 'OC_ROUTE_LOGIC'], ['OC2R observes and coordinates train routes. It does not replace the train.'])
     ]
   },
   {
-    filename: 'magic_ii', prefix: 'M2', id: 'BTM_MAGIC_II', order: 15, title: 'Diamond Tier - Magic II Power Branches', tier: 'diamond', description: ['Magic II surfaces the stronger side-magic branches after Blood Magic permissions are already proven.'], quests: [
+    filename: 'magic_ii', prefix: 'M2', id: 'BTM_MAGIC_II', order: 2, title: 'Magic II Power Branches', tier: 'diamond', group: 'matter', description: ['Magic II surfaces the stronger side-magic branches after Blood Magic permissions are already proven.'], quests: [
       q('M2_OCCULT_STORAGE', 'Occult Storage Permission', 0, -2, [item('occultism:storage_controller')], ['M1_DEMONIC'], ['Occult storage is useful, but it must not become an early infinite-storage substitute.']),
-      q('M2_OCCULT_MINER', 'Bounded Spirit Mining', 2, -2, [item('occultism:miner_foliot_unspecialized')], ['M2_OCCULT_STORAGE'], ['Spirit miners are late enough to be convenience, not the first mining plan.']),
-      q('M2_BOTANIA_TERRA', 'Terrestrial Plate', 0, 0, [item('botania:terra_plate')], ['M1_BOTANIA'], ['Botania engineering starts after the Demonic Slate tier.']),
+      q('M2_BOTANIA_TERRA', 'Terrestrial Plate', 0, 0, [item('botania:terra_plate')], ['M2_OCCULT_STORAGE', 'M1_BOTANIA'], ['Botania engineering starts after Demonic Slate permission.']),
       q('M2_ALFHEIM', 'Alfheim Portal', 2, 0, [item('botania:alfheim_portal')], ['M2_BOTANIA_TERRA'], ['Dimensional magic has to be a constructed commitment.']),
-      q('M2_FORGE', 'Forbidden Forge', 0, 2, [item('forbidden_arcanus:hephaestus_forge')], ['M1_DEMONIC'], ['Forbidden and Arcanus belongs at Demonic tier, not early utility tier.']),
+      q('M2_FORGE', 'Forbidden Forge', 0, 2, [item('forbidden_arcanus:hephaestus_forge')], ['M2_BOTANIA_TERRA', 'M1_DEMONIC'], ['Forbidden and Arcanus belongs after Demonic Slate permission, not early utility work.']),
       q('M2_THEURGY', 'Theurgy Accumulator', 2, 2, [item('theurgy:sal_ammoniac_accumulator')], ['M2_FORGE'], ['Theurgy is matter transmutation, so it belongs near late magic and synthesis rather than early ore solving.']),
-      q('M2_HEXCAST', 'Hex Focus and Staff', 4, -1, [item('hexcasting:focus'), item('hexcasting:staff/oak')], ['M1_ETHEREAL'], ['Programmable magic waits for Ethereal Slate permission.']),
-      q('M2_MNA', 'Mana and Artifice Runeforge', 4, 1, [item('mna:runeforge'), item('mna:manaweaver_wand')], ['M1_ETHEREAL'], ['Mana and Artifice is late magical infrastructure, not a side-door around Blood Magic.']),
-      q('M2_ARS_POWER', 'Ars Addon Power', 6, 0, [item('ars_elemental:advanced_prism'), item('ars_creo:starbuncle_wheel'), item('ars_caelum:ritual_conjure_island_starter')], ['M1_ETHEREAL'], ['Late Ars branches are allowed to be powerful after the Blood tier says yes.'])
+      q('M2_HEXCAST', 'Hex Focus and Staff', 4, -1, [item('hexcasting:focus'), item('hexcasting:staff/oak')], ['M2_THEURGY', 'M1_ETHEREAL'], ['Programmable magic waits for Ethereal Slate permission.']),
+      q('M2_MNA', 'Mana and Artifice Runeforge', 4, 1, [item('mna:runeforge'), item('mna:manaweaver_wand')], ['M2_THEURGY', 'M1_ETHEREAL'], ['Mana and Artifice is late magical infrastructure, not a side-door around Blood Magic.']),
+      q('M2_ARS_POWER', 'Ars Addon Power', 6, 0, [item('ars_elemental:advanced_prism'), item('ars_creo:starbuncle_wheel'), item('ars_caelum:ritual_conjure_island_starter')], ['M2_HEXCAST', 'M2_MNA', 'M1_ETHEREAL'], ['Late Ars branches are allowed to be powerful after Blood Magic says yes.'])
     ]
   },
   {
-    filename: 'synthesis_ii', prefix: 'S2', id: 'BTM_SYNTHESIS_II', order: 16, title: 'Platinum Tier - Synthesis II', tier: 'platinum', description: ['Synthesis II extends Acid Vat and Chemlib into late plates and slurry logistics. The Acid Vat mod source remains read-only; this chapter only references exposed pack items.'], quests: [
+    filename: 'synthesis_ii', prefix: 'S2', id: 'BTM_SYNTHESIS_II', order: 3, title: 'Synthesis II', tier: 'platinum', group: 'matter', description: ['Synthesis II extends Acid Vat and Chemlib into late plates and slurry logistics. The Acid Vat mod source remains read-only; this chapter only references exposed pack items.'], quests: [
       q('S2_PUMP', 'Mechanical Slurry Pump', 0, 0, [item('acid_vat:mechanical_slurry_pump')], ['S1_SYNTHESIS_EXIT'], ['Slurry movement is physical infrastructure, not a magic pipe.']),
       q('S2_INTERFACE', 'Portable Slurry Interface', 2, -1, [item('acid_vat:portable_slurry_interface')], ['S2_PUMP'], ['Portable interfaces make chemistry fieldwork practical.']),
       q('S2_VALVE', 'Slurry Valve Control', 2, 1, [item('acid_vat:slurry_valve')], ['S2_PUMP'], ['Valves make chemical routing authored and inspectable.']),
@@ -317,16 +995,269 @@ const chapters = [
       q('S2_RUTHENIUM', 'Ruthenium Plate', 6, 0, [item('chemlib:ruthenium_plate')], ['S2_URANIUM', 'S2_THORIUM', 'S2_IRIDIUM'], ['Ruthenium is a capstone signal for advanced chemical interpretation.'])
     ]
   },
+
   {
-    filename: 'books', prefix: 'BK', id: 'BTM_BOOKS', order: 17, title: 'Reference Books', tier: 'copper', description: ['Books are references, not gates. This chapter gives players obvious places to find documentation without making guidebooks the progression key.'], quests: [
-      q('BK_QUEST_BOOK', 'Quest Book', 0, 0, [item('ftbquests:book')], ['SO_BACKPACK'], ['Use the quest book as the authored graph. It is allowed to explain; it should not be the mechanical gate.']),
-      q('BK_TCON', 'Tinkers Encyclopedia', 2, -1, [item('tconstruct:encyclopedia')], ['SO_TINKER'], ['Tinkers documentation belongs near the repair and metallurgy spine.']),
-      q('BK_PATCHOULI', 'Patchouli Guides', 2, 1, [item('patchouli:guide_book')], ['SO_BACKPACK'], ['Patchouli guide books vary by mod/NBT, so this is a loose reference checkpoint rather than a hard mod gate.']),
-      q('BK_MNA', 'Codex Arcana', 4, 1, [item('mna:guide_book')], ['M2_MNA'], ['Mana and Artifice documentation is late because the mod itself is late.'])
+    filename: 'aether', prefix: 'AET', id: 'BTM_AETHER', order: 0, title: 'The Aether', tier: 'gold', group: 'worlds', description: ['Sky routes, dungeon keys, and gravitite rewards. The Aether is an expedition branch, not a replacement overworld.'], quests: [
+      q('AET_ENTRY', 'Sky Route Kit', 0, 0, [item('aether:book_of_lore')], ['AD_IRON_FLOAT'], ['Treat Aether entry as a packed route: food, water, fall safety, and retreat plan.']),
+      q('AET_ALTAR', 'Altar Work', 2, -1, [item('aether:altar')], ['AET_ENTRY']),
+      q('AET_FREEZER', 'Freezer Work', 2, 1, [item('aether:freezer')], ['AET_ENTRY']),
+      q('AET_AMBROSIUM', 'Ambrosium Stock', 4, -1, [item('aether:ambrosium_shard')], ['AET_ALTAR']),
+      q('AET_ZANITE', 'Zanite Route', 4, 1, [item('aether:zanite_gemstone')], ['AET_FREEZER']),
+      q('AET_BRONZE_KEY', 'Bronze Dungeon Key', 6, -1, [item('aether:bronze_dungeon_key')], ['AET_AMBROSIUM', 'AET_ZANITE']),
+      q('AET_SILVER_KEY', 'Silver Dungeon Key', 8, 0, [item('aether:silver_dungeon_key')], ['AET_BRONZE_KEY']),
+      q('AET_GRAVITITE', 'Enchanted Gravitite', 10, -1, [item('aether:enchanted_gravitite')], ['AET_SILVER_KEY']),
+      q('AET_GOLD_KEY', 'Gold Dungeon Key', 12, 0, [item('aether:gold_dungeon_key')], ['AET_GRAVITITE'])
     ]
   },
   {
-    filename: 'post_ae2', prefix: 'PA', id: 'BTM_POST_AE2', order: 18, title: 'Platinum Tier - Post-AE2 Branches', tier: 'platinum', description: ['Post-AE2 fans into a few strong branches: quantum manufacturing, extended local intelligence, bounded storage, source-AE hybrid, and quantum body rewards.'], quests: [
+    filename: 'blue_skies', prefix: 'BS', id: 'BTM_BLUE_SKIES', order: 1, title: 'Blue Skies', tier: 'gold', group: 'worlds', description: ['A separate adventure world with keys, materials, alchemy, and boss trophies.'], quests: [
+      q('BS_JOURNAL', 'Blue Journal', 0, 0, [item('blue_skies:blue_journal')], ['AD_IRON_FLOAT']),
+      q('BS_MATERIALS', 'Sky Materials', 2, -1, [item('blue_skies:aquite'), item('blue_skies:charoite')], ['BS_JOURNAL']),
+      q('BS_ALCHEMY', 'Alchemy Table', 2, 1, [item('blue_skies:alchemy_table')], ['BS_JOURNAL']),
+      q('BS_TURQUOISE', 'Turquoise Stonework', 4, -1, [item('blue_skies:turquoise_stone')], ['BS_MATERIALS']),
+      q('BS_BLINDING_KEY', 'Blinding Key', 6, -2, [item('blue_skies:blinding_key')], ['BS_TURQUOISE']),
+      q('BS_NATURE_KEY', 'Nature Key', 6, 0, [item('blue_skies:nature_key')], ['BS_ALCHEMY']),
+      q('BS_POISON_KEY', 'Poison Key', 6, 2, [item('blue_skies:poison_key')], ['BS_ALCHEMY']),
+      q('BS_BOSS_TROPHY', 'Boss Trophies', 8, 0, [item('blue_skies:summoner_trophy'), item('blue_skies:arachnarch_trophy')], ['BS_BLINDING_KEY', 'BS_NATURE_KEY', 'BS_POISON_KEY'])
+    ]
+  },
+  {
+    filename: 'twilight_forest', prefix: 'TW', id: 'BTM_TWILIGHT_FOREST', order: 2, title: 'Twilight Forest', tier: 'gold', group: 'worlds', description: ['A readable boss-ladder chapter for Twilight Forest progression.', 'Portal creation is locked behind Creating Space access; treat this as a space-era expedition world, not an early flower-and-diamond shortcut.'], quests: [
+      q('TW_MAGIC_MAP', 'Magic Map', 0, 0, [item('twilightforest:magic_map')], ['SP_SUIT_ADV'], [
+        'Twilight Forest access is unlocked by the Creating Space access advancement, granted when you have a netherite oxygen backtank.',
+        'Build the portal only after the space survival chain is complete; this keeps Twilight as a later route branch instead of an early alternate overworld.'
+      ]),
+      q('TW_NAGA', 'Naga Scale', 2, -1, [item('twilightforest:naga_scale')], ['TW_MAGIC_MAP']),
+      q('TW_LICH', 'Lich Trophy', 4, -1, [item('twilightforest:lich_trophy')], ['TW_NAGA']),
+      q('TW_MAZE', 'Maze Map', 4, 1, [item('twilightforest:maze_map')], ['TW_NAGA']),
+      q('TW_CARMINITE', 'Carminite', 6, -1, [item('twilightforest:carminite')], ['TW_LICH']),
+      q('TW_FIERY_BLOOD', 'Fiery Blood', 6, 1, [item('twilightforest:fiery_blood')], ['TW_MAZE']),
+      q('TW_YETI', 'Alpha Yeti Fur', 8, 1, [item('twilightforest:alpha_yeti_fur')], ['TW_FIERY_BLOOD']),
+      q('TW_UR_GHAST', 'Ur-Ghast Trophy', 10, 0, [item('twilightforest:ur_ghast_trophy')], ['TW_CARMINITE', 'TW_YETI'])
+    ]
+  },
+  {
+    filename: 'undergarden', prefix: 'UG', id: 'BTM_UNDERGARDEN', order: 3, title: 'The Undergarden', tier: 'gold', group: 'worlds', description: ['A deep hostile ecology branch with its own metals, food pressure, and late catalyst.'], quests: [
+      q('UG_DEPTHROCK', 'Depthrock Route', 0, 0, [item('undergarden:depthrock')], ['AD_IRON_FLOAT']),
+      q('UG_GLOOMGOURD', 'Gloomgourd Food', 2, 1, [item('undergarden:gloomgourd')], ['UG_DEPTHROCK']),
+      q('UG_CLOGGRUM', 'Cloggrum Ingot', 2, -1, [item('undergarden:cloggrum_ingot')], ['UG_DEPTHROCK']),
+      q('UG_FROSTSTEEL', 'Froststeel Ingot', 4, -1, [item('undergarden:froststeel_ingot')], ['UG_CLOGGRUM']),
+      q('UG_UTHERIUM', 'Utherium Crystal', 6, -2, [item('undergarden:utherium_crystal')], ['UG_FROSTSTEEL']),
+      q('UG_REGALIUM', 'Regalium Crystal', 6, 0, [item('undergarden:regalium_crystal')], ['UG_FROSTSTEEL']),
+      q('UG_FORGOTTEN', 'Forgotten Ingot', 8, -1, [item('undergarden:forgotten_ingot')], ['UG_UTHERIUM', 'UG_REGALIUM']),
+      q('UG_CATALYST', 'Undergarden Catalyst', 10, 0, [item('undergarden:catalyst')], ['UG_FORGOTTEN'])
+    ]
+  },
+  {
+    filename: 'deeper_darker', prefix: 'DD', id: 'BTM_DEEPER_DARKER', order: 4, title: 'Deeper and Darker', tier: 'platinum', group: 'worlds', description: ['Late deep-threat work: gloomslate, sculk materials, reinforced shards, and resonarium.'], quests: [
+      q('DD_GLOOMSLATE', 'Gloomslate', 0, 0, [item('deeperdarker:gloomslate')], ['PG_FISSION_ROD']),
+      q('DD_SCULK_STONE', 'Sculk Stone', 2, -1, [item('deeperdarker:sculk_stone')], ['DD_GLOOMSLATE']),
+      q('DD_HEART', 'Heart of the Deep', 4, 0, [item('deeperdarker:heart_of_the_deep')], ['DD_SCULK_STONE']),
+      q('DD_ECHO_SHARD', 'Reinforced Echo Shard', 6, -1, [item('deeperdarker:reinforced_echo_shard')], ['DD_HEART']),
+      q('DD_RESONARIUM', 'Resonarium', 8, -1, [item('deeperdarker:resonarium')], ['DD_ECHO_SHARD']),
+      q('DD_RESONARIUM_PLATE', 'Resonarium Plate', 8, 1, [item('deeperdarker:resonarium_plate')], ['DD_ECHO_SHARD']),
+      q('DD_SOUL', 'Soul Crystal', 10, 0, [item('deeperdarker:soul_crystal')], ['DD_RESONARIUM', 'DD_RESONARIUM_PLATE'])
+    ]
+  },
+  {
+    filename: 'ice_and_fire', prefix: 'IAF', id: 'BTM_ICE_AND_FIRE', order: 5, title: 'Ice and Fire', tier: 'platinum', group: 'worlds', description: ['Apex monster trophies and dragon materials. This branch is intentionally late and dangerous.'], quests: [
+      q('IAF_BESTIARY', 'Bestiary', 0, 0, [item('iceandfire:bestiary')], ['AD_IRON_FLOAT']),
+      q('IAF_DRAGONBONE', 'Dragonbone', 2, 0, [item('iceandfire:dragonbone')], ['IAF_BESTIARY']),
+      q('IAF_FIRE_BLOOD', 'Fire Dragon Blood', 4, -2, [item('iceandfire:fire_dragon_blood')], ['IAF_DRAGONBONE']),
+      q('IAF_ICE_BLOOD', 'Ice Dragon Blood', 4, 0, [item('iceandfire:ice_dragon_blood')], ['IAF_DRAGONBONE']),
+      q('IAF_LIGHTNING_BLOOD', 'Lightning Dragon Blood', 4, 2, [item('iceandfire:lightning_dragon_blood')], ['IAF_DRAGONBONE']),
+      q('IAF_DRAGONSTEEL', 'Dragonsteel Set', 6, 0, [item('iceandfire:dragonsteel_fire_ingot'), item('iceandfire:dragonsteel_ice_ingot'), item('iceandfire:dragonsteel_lightning_ingot')], ['IAF_FIRE_BLOOD', 'IAF_ICE_BLOOD', 'IAF_LIGHTNING_BLOOD']),
+      q('IAF_SKULL', 'Dragon Skull Trophy', 8, -1, [item('iceandfire:dragon_skull_fire')], ['IAF_DRAGONSTEEL']),
+      q('IAF_DREAD', 'Dread Shard', 10, 0, [item('iceandfire:dread_shard')], ['IAF_SKULL'])
+    ]
+  },
+  {
+    filename: 'lost_cities', prefix: 'LC', id: 'BTM_LOST_CITIES', order: 6, title: 'Lost Cities', tier: 'platinum', group: 'worlds', description: ['Lost Cities is a space-era ruin and scavenging route.', 'It has no ordinary crafting entry item, so the chapter is gated by the Creating Space capstone and uses route-prep checkpoints.'], quests: [
+      q('LC_SPACE_ROUTE', 'Space-Era City Route', 0, 0, [item('creatingspace:netherite_oxygen_backtank')], ['SP_SUIT_ADV'], [
+        'Do not treat Lost Cities as an early world preset. Enter it only after advanced space survival is online.',
+        'Pack oxygen, food, water, blocks, lights, and return logistics before committing to a city route.'
+      ]),
+      q('LC_MAP_STOCK', 'Urban Mapping Stock', 2, -1, [item('minecraft:map'), item('minecraft:compass')], ['LC_SPACE_ROUTE'], [
+        'Cities are navigation problems. Bring maps and a compass so routes through buildings, subways, and streets stay readable.'
+      ]),
+      q('LC_RAIL_DUNGEON', 'Rail Dungeon Scouting', 4, -1, [item('minecraft:rail'), item('minecraft:minecart')], ['LC_MAP_STOCK'], [
+        'Lost Cities rail corridors are physical logistics opportunities. Scout them as route infrastructure, not just loot tunnels.'
+      ]),
+      q('LC_MEDICAL_CACHE', 'Recovery Cache', 4, 1, [item('minecraft:golden_apple'), item('farmersdelight:roast_chicken_block')], ['LC_SPACE_ROUTE'], [
+        'Urban scavenging has long sightlines, vertical danger, and recovery risk. Stage food and healing before deep building clears.'
+      ]),
+      q('LC_CITY_LOOT', 'City Chest Recovery', 6, 0, [item('dotcoinmod:gold_coin'), item('minecraft:chest')], ['LC_RAIL_DUNGEON', 'LC_MEDICAL_CACHE'], [
+        'World loot and coins are part of the crafting economy. Treat recovered city loot as a resource stream that still has to be hauled home.'
+      ]),
+      q('LC_CITY_RECOVERY', 'Recovered City Infrastructure', 8, 0, [item('minecraft:iron_bars'), item('minecraft:chain'), item('minecraft:lantern')], ['LC_CITY_LOOT'], [
+        'Bring back durable city materials for outposts, rail stops, and defensive routes. The value is not only the chest contents.'
+      ])
+    ]
+  },
+  {
+    filename: 'fallout_wastelands', prefix: 'FW', id: 'BTM_FALLOUT_WASTELANDS', order: 7, title: 'Fallout Wastelands', tier: 'platinum', group: 'worlds', description: ['Hazard-route scavenging: anti-rad protection, scrap electronics, weapons, and power armor.', 'The Wasteland portal frame and igniter are rewritten as Creating Space recipes.'], quests: [
+      q('FW_PORTAL', 'Wasteland Portal', 0, 0, [item('fallout_wastelands_:portal_frame'), item('fallout_wastelands_:wastelands')], ['SP_SUIT_ADV'], [
+        'Craft the portal frame and igniter through the space-gated recipes. They consume space casing, rocket controls, rocket engine work, netherite oxygen, and Hastelloy.',
+        'This makes Fallout access a manufactured route, not an early decorative portal.'
+      ]),
+      q('FW_RAD_SUIT', 'Anti-Rad Suit', 2, 0, [item('fallout_wastelands_:antiradsuit_helmet'), item('fallout_wastelands_:antiradsuit_chestplate')], ['FW_PORTAL']),
+      q('FW_SCRAP', 'Wasteland Scrap', 4, -1, [item('fallout_wastelands_:dented_can'), item('fallout_wastelands_:copperwires')], ['FW_RAD_SUIT']),
+      q('FW_FOOD', 'Packaged Food', 4, 1, [item('fallout_wastelands_:cram'), item('fallout_wastelands_:canned_beef')], ['FW_RAD_SUIT']),
+      q('FW_ELECTRONICS', 'Advanced Electronics', 6, -1, [item('fallout_wastelands_:advanced_motherboard'), item('fallout_wastelands_:advanced_motor')], ['FW_SCRAP']),
+      q('FW_WEAPON', 'Wasteland Weapon', 6, 1, [item('fallout_wastelands_:chinesepistol')], ['FW_SCRAP']),
+      q('FW_POWER_CORE', 'Power Core', 8, 0, [item('fallout_wastelands_:bas_ecore')], ['FW_ELECTRONICS', 'FW_WEAPON']),
+      q('FW_POWER_ARMOR', 'Power Armor Frame', 10, 0, [item('fallout_wastelands_:apa_1_chestplate'), item('fallout_wastelands_:apa_1_helmet')], ['FW_POWER_CORE'])
+    ]
+  },
+  {
+    filename: 'ars_nouveau', prefix: 'AN', id: 'BTM_ARS_NOUVEAU', order: 4, title: 'Ars Nouveau', tier: 'diamond', group: 'matter', description: ['The practical magic powerhouse, separated from the Blood Magic permission skeleton.'], quests: [
+      q('AN_IMBUEMENT', 'Imbuement Chamber', 0, 0, [item('ars_nouveau:imbuement_chamber')], ['M1_ARS']),
+      q('AN_SOURCE_JAR', 'Source Jar', 2, -1, [item('ars_nouveau:source_jar')], ['AN_IMBUEMENT']),
+      q('AN_APPARATUS', 'Enchanting Apparatus', 2, 1, [item('ars_nouveau:enchanting_apparatus')], ['AN_IMBUEMENT']),
+      q('AN_ARCANE_CORE', 'Arcane Core', 4, 0, [item('ars_nouveau:arcane_core')], ['AN_APPARATUS']),
+      q('AN_RITUALS', 'Ritual Brazier', 6, -1, [item('ars_nouveau:ritual_brazier')], ['AN_ARCANE_CORE']),
+      q('AN_APPRENTICE', 'Apprentice Spell Book', 6, 1, [item('ars_nouveau:apprentice_spell_book')], ['AN_ARCANE_CORE']),
+      q('AN_WILDEN', 'Wilden Tribute', 8, -1, [item('ars_nouveau:wilden_tribute')], ['AN_RITUALS']),
+      q('AN_ARCHMAGE', 'Archmage Spell Book', 10, 0, [item('ars_nouveau:archmage_spell_book')], ['AN_APPRENTICE', 'AN_WILDEN', 'M1_ETHEREAL'])
+    ]
+  },
+  {
+    filename: 'malum', prefix: 'MAL', id: 'BTM_MALUM', order: 5, title: 'Malum', tier: 'diamond', group: 'matter', description: ['Spirit capture, runewood, and soul-stained steel as a dedicated magic-material branch.'], quests: [
+      q('MAL_ALTAR', 'Spirit Altar', 0, 0, [item('malum:spirit_altar')], ['M1_MALUM']),
+      q('MAL_RUNEWOOD', 'Runewood Growth', 2, 1, [item('malum:runewood_sapling')], ['MAL_ALTAR']),
+      q('MAL_SPIRIT_JAR', 'Spirit Jar', 2, -1, [item('malum:spirit_jar')], ['MAL_ALTAR']),
+      q('MAL_WORKBENCH', 'Runic Workbench', 4, 0, [item('malum:runic_workbench')], ['MAL_RUNEWOOD', 'MAL_SPIRIT_JAR']),
+      q('MAL_SPIRIT_CRUCIBLE', 'Spirit Crucible', 6, -1, [item('malum:spirit_crucible')], ['MAL_WORKBENCH']),
+      q('MAL_SPIRIT_FABRIC', 'Spirit Fabric', 6, 1, [item('malum:spirit_fabric')], ['MAL_WORKBENCH']),
+      q('MAL_SOUL_STEEL', 'Soul-Stained Steel', 8, 0, [item('malum:soul_stained_steel_ingot')], ['MAL_SPIRIT_CRUCIBLE', 'MAL_SPIRIT_FABRIC'])
+    ]
+  },
+  {
+    filename: 'occultism', prefix: 'OCC', id: 'BTM_OCCULTISM', order: 6, title: 'Occultism', tier: 'diamond', group: 'matter', description: ['Ritual apparatus, storage, iesnium, and dimensional matrix work.', 'Spirit miners are hidden in this pack so Occultism supports rituals and storage without becoming a passive mining bypass.'], quests: [
+      q('OCC_CHALK', 'Impure White Chalk', 0, 0, [item('occultism:chalk_white_impure')], ['M1_OCCULT']),
+      q('OCC_RITUAL_BOWLS', 'Ritual Bowls', 2, -1, [item('occultism:sacrificial_bowl'), item('occultism:golden_sacrificial_bowl')], ['OCC_CHALK']),
+      q('OCC_ATTUNED_GEM', 'Spirit-Attuned Gem', 4, -1, [item('occultism:spirit_attuned_gem')], ['OCC_RITUAL_BOWLS']),
+      q('OCC_STORAGE', 'Storage Controller', 6, -2, [item('occultism:storage_controller')], ['OCC_ATTUNED_GEM', 'M2_OCCULT_STORAGE']),
+      q('OCC_IESNIUM', 'Iesnium Ingot', 8, -1, [item('occultism:iesnium_ingot')], ['OCC_STORAGE']),
+      q('OCC_DIMENSIONAL_MATRIX', 'Dimensional Matrix', 10, 0, [item('occultism:dimensional_matrix')], ['OCC_IESNIUM'])
+    ]
+  },
+  {
+    filename: 'botania', prefix: 'BOT', id: 'BTM_BOTANIA', order: 7, title: 'Botania', tier: 'diamond', group: 'matter', description: ['Mana engineering, runes, terrasteel, Alfheim, and Gaia in one readable branch.'], quests: [
+      q('BOT_LEXICON', 'Lexica Botania', 0, 0, [item('botania:lexicon')], ['M1_BOTANIA']),
+      q('BOT_MANA_POOL', 'Mana Pool', 2, -1, [item('botania:mana_pool')], ['BOT_LEXICON']),
+      q('BOT_SPREADER', 'Mana Spreader', 2, 1, [item('botania:mana_spreader')], ['BOT_LEXICON']),
+      q('BOT_RUNIC_ALTAR', 'Runic Altar', 4, 0, [item('botania:runic_altar')], ['BOT_MANA_POOL', 'BOT_SPREADER']),
+      q('BOT_TERRA_PLATE', 'Terrestrial Plate', 6, -1, [item('botania:terra_plate')], ['BOT_RUNIC_ALTAR', 'M2_BOTANIA_TERRA']),
+      q('BOT_TERRASTEEL', 'Terrasteel Ingot', 6, 1, [item('botania:terrasteel_ingot')], ['BOT_TERRA_PLATE']),
+      q('BOT_ALFHEIM', 'Alfheim Portal', 8, -1, [item('botania:alfheim_portal')], ['BOT_TERRASTEEL', 'M2_ALFHEIM']),
+      q('BOT_GAIA', 'Gaia Reward', 10, 0, [item('botania:gaia_ingot'), item('botania:gaia_head')], ['BOT_ALFHEIM'])
+    ]
+  },
+  {
+    filename: 'theurgy', prefix: 'THG', id: 'BTM_THEURGY', order: 8, title: 'Theurgy', tier: 'platinum', group: 'matter', description: ['A magical matter-transmutation chain alongside Acid Vat and synthesis.'], quests: [
+      q('THG_ACCUMULATOR', 'Sal Ammoniac Accumulator', 0, 0, [item('theurgy:sal_ammoniac_accumulator')], ['M2_THEURGY']),
+      q('THG_SALT', 'Alchemical Salt', 2, -1, [item('theurgy:alchemical_salt_mineral')], ['THG_ACCUMULATOR']),
+      q('THG_DISTILLER', 'Distiller', 4, -1, [item('theurgy:distiller')], ['THG_SALT']),
+      q('THG_CALCINATION', 'Calcination Oven', 4, 1, [item('theurgy:calcination_oven')], ['THG_SALT']),
+      q('THG_LIQUEFACTION', 'Liquefaction Cauldron', 6, -1, [item('theurgy:liquefaction_cauldron')], ['THG_DISTILLER']),
+      q('THG_INCUBATOR', 'Incubator', 6, 1, [item('theurgy:incubator')], ['THG_CALCINATION']),
+      q('THG_DIGESTION', 'Digestion Vat', 8, 0, [item('theurgy:digestion_vat')], ['THG_LIQUEFACTION', 'THG_INCUBATOR'])
+    ]
+  },
+  {
+    filename: 'reliquary', prefix: 'RELQ', id: 'BTM_RELIQUARY', order: 0, title: 'Reliquary', tier: 'diamond', group: 'relics', description: ['Strong utility relics and alchemical tools get a visible branch instead of accidental loot creep.'], quests: [
+      q('RELQ_MORTAR', 'Apothecary Mortar', 0, 0, [item('reliquary:apothecary_mortar')], ['M1_BLANK']),
+      q('RELQ_APOTHECARY', 'Apothecary Cauldron', 2, -1, [item('reliquary:apothecary_cauldron')], ['RELQ_MORTAR']),
+      q('RELQ_TORCH', 'Interdiction Torch', 2, 1, [item('reliquary:interdiction_torch')], ['RELQ_MORTAR']),
+      q('RELQ_HANDGUN', 'Handgun Line', 4, -1, [item('reliquary:handgun')], ['RELQ_APOTHECARY']),
+      q('RELQ_ALKAHESTRY', 'Alkahestry', 4, 1, [item('reliquary:alkahestry_altar'), item('reliquary:alkahestry_tome')], ['RELQ_APOTHECARY', 'M1_DEMONIC']),
+      q('RELQ_GRENADE', 'Holy Hand Grenade', 6, -1, [item('reliquary:holy_hand_grenade')], ['RELQ_HANDGUN']),
+      q('RELQ_CHALICE', 'Emperor Chalice', 8, 0, [item('reliquary:emperor_chalice')], ['RELQ_ALKAHESTRY', 'RELQ_GRENADE'])
+    ]
+  },
+  {
+    filename: 'artifacts', prefix: 'ART', id: 'BTM_ARTIFACTS', order: 1, title: 'Artifacts', tier: 'gold', group: 'relics', description: ['Exploration artifact categories that affect routes, bodies, and extraction.'], quests: [
+      q('ART_VISION', 'Night Vision Goggles', 0, -1, [item('artifacts:night_vision_goggles')], ['AD_COMPLETED']),
+      q('ART_MOBILITY', 'Cloud in a Bottle', 0, 1, [item('artifacts:cloud_in_a_bottle')], ['AD_COMPLETED']),
+      q('ART_HEART', 'Crystal Heart', 2, 0, [item('artifacts:crystal_heart')], ['ART_VISION', 'ART_MOBILITY']),
+      q('ART_DEFENSE', 'Obsidian Skull', 4, -1, [item('artifacts:obsidian_skull')], ['ART_HEART']),
+      q('ART_UTILITY', 'Universal Attractor', 4, 1, [item('artifacts:universal_attractor')], ['ART_HEART']),
+      q('ART_FIRE', 'Fire Gauntlet', 6, 0, [item('artifacts:fire_gauntlet')], ['ART_DEFENSE', 'ART_UTILITY']),
+      q('ART_UMBRELLA', 'Route Umbrella', 8, 0, [item('artifacts:umbrella')], ['ART_FIRE'])
+    ]
+  },
+  {
+    filename: 'relics', prefix: 'RLC', id: 'BTM_RELICS', order: 2, title: 'Relics', tier: 'platinum', group: 'relics', description: ['High-impact adventure relics, separated from ordinary loot.'], quests: [
+      q('RLC_TABLE', 'Researching Table', 0, 0, [item('relics:researching_table')], ['AD_COMPLETED']),
+      q('RLC_QUIVER', 'Arrow Quiver', 2, -1, [item('relics:arrow_quiver')], ['RLC_TABLE']),
+      q('RLC_MIRROR', 'Magic Mirror', 2, 1, [item('relics:magic_mirror')], ['RLC_TABLE']),
+      q('RLC_ENDER_HAND', 'Ender\'s Hand', 4, -1, [item('relics:enders_hand')], ['RLC_QUIVER']),
+      q('RLC_ELYTRA', 'Elytra Booster', 4, 1, [item('relics:elytra_booster')], ['RLC_MIRROR']),
+      q('RLC_SHADOW', 'Shadow Glaive', 6, -1, [item('relics:shadow_glaive')], ['RLC_ENDER_HAND']),
+      q('RLC_SPACE', 'Space Dissector', 8, 0, [item('relics:space_dissector')], ['RLC_ELYTRA', 'RLC_SHADOW'])
+    ]
+  },
+  {
+    filename: 'starcatcher', prefix: 'SC', id: 'BTM_STARCATCHER', order: 3, title: 'Starcatcher Fishing', tier: 'brass', group: 'routes', description: ['Starcatcher is a fishing minigame and reward economy.', 'Use it for water-route rewards, fish sale loops, satchels, and trophies rather than bulk ore replacement.'], quests: [
+      q('SC_ROD', 'Starcatcher Rod', 0, 0, [item('starcatcher:starcatcher_rod')], ['FB_STOVE'], ['The rod starts the system. Fishing is a route activity: bring food, water, and time, then convert catches into trade value.']),
+      q('SC_TWINE', 'Tackle Materials', 2, -1, [item('starcatcher:starcatcher_twine'), item('starcatcher:hook'), item('starcatcher:bobber')], ['SC_ROD'], ['Tackle upgrades control the fishing loop. Keep spare hooks, bobbers, bait, and twine with your route supplies.']),
+      q('SC_BAIT', 'Bait Choices', 4, -1, [item('starcatcher:murkwater_bait'), item('starcatcher:dripstone_bait'), item('starcatcher:sculk_bait')], ['SC_TWINE'], ['Bait makes the minigame a material system. Different environments and ingredients should point toward different catches.']),
+      q('SC_CATCHES', 'Route Catches', 4, 1, [item('starcatcher:pinfish'), item('starcatcher:deepslatefish'), item('starcatcher:magma_fish')], ['SC_ROD'], ['Fish are proof of water routes. Sell selected fish to Fishermen for copper coins or keep them as food and collection targets.']),
+      q('SC_ECONOMY', 'Fisherman Economy', 6, 0, [item('starcatcher:fish_radar'), item('starcatcher:waterlogged_satchel')], ['SC_BAIT', 'SC_CATCHES'], ['Fishermen now sell tackle and buy selected catches for coins. This makes fishing a side economy like Wares or village contracts.']),
+      q('SC_TROPHY', 'Tournament Display', 8, 0, [item('starcatcher:tournament_stand'), item('starcatcher:trophy_gold')], ['SC_ECONOMY'], ['Trophies make the system visible at a base or settlement. Use them to mark fishing routes and completed collections.'])
+    ]
+  },
+  {
+    filename: 'little_logistics', prefix: 'LL', id: 'BTM_LITTLE_LOGISTICS', order: 4, title: 'Little Logistics', tier: 'gold', group: 'power', description: ['Little Logistics is small physical route automation.', 'It sits after Create rail basics and electricity so barges and tugs support routes without replacing trains.'], quests: [
+      q('LL_TUG', 'Energy Tug', 0, 0, [item('littlelogistics:energy_tug')], ['C3_STATION', 'PG_BATTERY']),
+      q('LL_BARGES', 'Cargo Barges', 2, -1, [item('littlelogistics:chest_barge'), item('littlelogistics:fluid_barge')], ['LL_TUG']),
+      q('LL_CHARGER', 'Vessel Charger', 2, 1, [item('littlelogistics:vessel_charger')], ['LL_TUG', 'PG_BATTERY']),
+      q('LL_LOCOMOTIVE', 'Small Rail Power', 4, -1, [item('littlelogistics:energy_locomotive')], ['LL_CHARGER']),
+      q('LL_SIGNAL', 'Route Signals', 4, 1, [item('littlelogistics:receiver_component'), item('littlelogistics:transmitter_component')], ['LL_CHARGER', 'OC_NETWORK']),
+      q('LL_ROUTE', 'Local Route Network', 6, 0, [item('littlelogistics:energy_tug'), item('littlelogistics:receiver_component'), item('littlelogistics:transmitter_component')], ['LL_BARGES', 'LL_SIGNAL'], ['Use this for river, coast, and short-haul outpost service. Create trains remain the heavy intersite logistics answer.'])
+    ]
+  },
+  {
+    filename: 'apotheosis', prefix: 'AP', id: 'BTM_APOTHEOSIS', order: 3, title: 'Apotheosis', tier: 'diamond', group: 'relics', description: ['Apotheosis is a combat, affix, salvage, and enchantment branch.', 'It is parented to Blood Magic tiers so its power spike supports adventure without becoming early gear inflation.'], quests: [
+      q('AP_GEM_CUTTING', 'Gem Cutting', 0, 0, [item('apotheosis:gem_cutting_table')], ['M1_IMBUED']),
+      q('AP_SALVAGE', 'Salvage Table', 2, -1, [item('apotheosis:salvaging_table')], ['AP_GEM_CUTTING']),
+      q('AP_SIMPLE_REFORGE', 'Simple Reforging', 2, 1, [item('apotheosis:simple_reforging_table')], ['AP_GEM_CUTTING']),
+      q('AP_REFORGING', 'Full Reforging', 4, 0, [item('apotheosis:reforging_table'), item('apotheosis:augmenting_table')], ['AP_SALVAGE', 'AP_SIMPLE_REFORGE', 'M1_DEMONIC']),
+      q('AP_LIBRARY', 'Enchantment Library', 6, -1, [item('apotheosis:library'), item('apotheosis:ender_library')], ['AP_REFORGING']),
+      q('AP_SHELVES', 'Late Shelves', 8, 0, [item('apotheosis:deepshelf'), item('apotheosis:endshelf')], ['AP_LIBRARY', 'M1_ETHEREAL'])
+    ]
+  },
+  {
+    filename: 'building_block_systems', prefix: 'FBK', id: 'BTM_BUILDING_BLOCK_SYSTEMS', order: 0, title: 'Building Block Systems', tier: 'copper', group: 'building', description: ['A map of building-block sources and palette systems.', 'Decorative blocks are allowed shallow graph depth, with trades as a side-load rather than a full machine spine.'], quests: [
+      q('FBK_FRAMED_CORE', 'Framed Block Core', 0, 0, [item('framedblocks:framed_cube'), item('framedblocks:framed_slab'), item('framedblocks:framed_stairs')], ['SO_CRAFTING'], ['Framed Blocks let one material take many shapes. Treat them as a palette multiplier, not a progression shortcut.']),
+      q('FBK_FRAMED_SHAPES', 'Framed Shapes', 2, -1, [item('framedblocks:framed_slope'), item('framedblocks:framed_door'), item('framedblocks:framed_trapdoor')], ['FBK_FRAMED_CORE']),
+      q('FBK_SETTLEMENT', 'Settlement Materials', 2, 1, [item('supplementaries:crystal_display'), item('minecraft:lantern'), item('minecraft:chain')], ['FBK_FRAMED_CORE', 'VE_TRADING_POST']),
+      q('FBK_WEATHERED', 'Weathered Materials', 4, -1, [item('immersive_weathering:charred_planks'), item('minecraft:mossy_stone_bricks')], ['FBK_SETTLEMENT']),
+      q('FBK_REGIONAL', 'Regional Palettes', 4, 1, [item('natures_spirit:travertine'), item('natures_spirit:chert'), item('natures_spirit:pink_sand')], ['FBK_SETTLEMENT'], ['Regional blocks make terrain and travel matter for architecture. Different outposts should have different local palettes.']),
+      q('FBK_ROUTE_BUILDING', 'Route-Readable Builds', 6, 0, [item('framedblocks:framed_fence'), item('framedblocks:framed_wall')], ['FBK_WEATHERED', 'FBK_REGIONAL'])
+    ]
+  },
+  {
+    filename: 'building_tools', prefix: 'BU', id: 'BTM_BUILDING_TOOLS', order: 1, title: 'Building Tools', tier: 'platinum', group: 'building', description: ['Mass-construction tools are post-AE2 utilities.', 'They accelerate committed builds after storage, local intelligence, and material production can support large edits.'], quests: [
+      q('BU_WAND', 'Late Building Wand', 0, 0, [item('wands:diamond_wand'), item('wands:netherite_wand')], ['PA_QUANTUM_CORE']),
+      q('BU_GADGET', 'Building Gadget', 2, -1, [item('buildinggadgets2:gadget_building'), item('buildinggadgets2:gadget_exchanging')], ['BU_WAND', 'PA_QUANTUM_CORE']),
+      q('BU_TEMPLATE', 'Template Manager', 4, -1, [item('buildinggadgets2:template_manager')], ['BU_GADGET']),
+      q('BU_COPY', 'Copy and Cut Gadgets', 4, 1, [item('buildinggadgets2:gadget_copy_paste'), item('buildinggadgets2:gadget_cut_paste')], ['BU_GADGET', 'OC_NETWORK']),
+      q('BU_DRONE', 'Create Drone Helper', 6, 0, [item('create_sa:brass_drone')], ['BU_COPY', 'PA_QUANTUM_CORE']),
+      q('BU_DESTRUCTION', 'Destruction Gadget', 8, 0, [item('buildinggadgets2:gadget_destruction')], ['BU_DRONE', 'SP_CHEM'], ['Destructive mass edits are last because they can erase local block economy if they arrive too early.'])
+    ]
+  },
+  {
+    filename: 'books', prefix: 'BK', id: 'BTM_BOOKS', order: 2, title: 'Reference Books', tier: 'copper', group: 'orientation', description: ['Books are references, not gates. This chapter gives players obvious places to find documentation without making guidebooks the progression key.'], quests: [
+      q('BK_QUEST_BOOK', 'Quest Book', 0, 0, [item('ftbquests:book')], ['SO_BACKPACK'], ['Use the quest book as the authored graph. It is allowed to explain; it should not be the mechanical gate.']),
+      q('BK_TCON', 'Tinkers Encyclopedia', 2, -1, [item('tconstruct:encyclopedia')], ['BK_QUEST_BOOK', 'SO_TINKER'], ['Tinkers documentation belongs near the repair and metallurgy spine.']),
+      q('BK_PATCHOULI', 'Patchouli Guides', 2, 1, [item('patchouli:guide_book')], ['BK_QUEST_BOOK'], ['Patchouli guide books vary by mod/NBT, so this is a loose reference checkpoint rather than a hard mod gate.']),
+      q('BK_MNA', 'Codex Arcana', 4, 1, [item('mna:guide_book')], ['BK_PATCHOULI', 'M2_MNA'], ['Mana and Artifice documentation is late because the mod itself is late.'])
+    ]
+  },
+  {
+    filename: 'post_ae2', prefix: 'PA', id: 'BTM_POST_AE2', order: 0, title: 'Post-AE2 Branches', tier: 'platinum', group: 'endgame', description: ['Post-AE2 fans into a few strong branches: quantum manufacturing, extended local intelligence, bounded storage, source-AE hybrid, and powered body infrastructure.'], quests: [
       q('PA_QUANTUM_STRUCTURE', 'Quantum Structure', 0, 0, [item('advanced_ae:quantum_structure')], ['AE_SPATIAL']),
       q('PA_REACTION', 'Reaction Chamber', 2, -1, [item('advanced_ae:reaction_chamber')], ['PA_QUANTUM_STRUCTURE']),
       q('PA_QUANTUM_CORE', 'Quantum Core', 2, 1, [item('advanced_ae:quantum_core')], ['PA_QUANTUM_STRUCTURE']),
@@ -338,27 +1269,70 @@ const chapters = [
       q('PA_DISK_STORAGE', 'Disk Storage Branch', 6, 2, [item('ae2additions:disk_item_1024k')], ['PA_DEEP_STORAGE']),
       q('PA_SOURCE_BRIDGE', 'Source-AE Bridge', 8, 0, [item('arseng:me_source_jar'), item('arseng:source_acceptor'), item('arseng:source_cell_housing')], ['PA_MATRIX', 'M1_ETHEREAL']),
       q('PA_PORTABLE_SOURCE', 'Portable Source Cell', 10, 0, [item('arseng:portable_source_cell_64k')], ['PA_SOURCE_BRIDGE']),
-      q('PA_BODY_BASE', 'Quantum Body Base', 8, 2, [item('advanced_ae:quantum_upgrade_base')], ['PA_QUANTUM_CORE', 'S1_SYNTHESIS_EXIT']),
+      q('PA_BODY_BASE', 'Quantum Body Base', 8, 2, [item('advanced_ae:quantum_upgrade_base')], ['PA_DEEP_STORAGE', 'S1_SYNTHESIS_EXIT']),
       q('PA_LAVA_CARD', 'Lava-Depth Body Reward', 10, 1, [item('advanced_ae:lava_immunity_card')], ['PA_BODY_BASE']),
       q('PA_REGEN_CARD', 'Regeneration Body Reward', 10, 3, [item('advanced_ae:regeneration_card')], ['PA_BODY_BASE']),
       q('PA_MAGNET_CARD', 'Magnetic Field Reward', 12, 2, [item('advanced_ae:magnet_card')], ['PA_BODY_BASE']),
-      q('PA_QUANTUM_ARMOR', 'Quantum Armor Set', 14, 2, [item('advanced_ae:quantum_helmet'), item('advanced_ae:quantum_chestplate'), item('advanced_ae:quantum_leggings'), item('advanced_ae:quantum_boots')], ['PA_LAVA_CARD', 'PA_REGEN_CARD', 'PA_MAGNET_CARD'])
+      q('PA_POWERED_ARMOR_BRANCH', 'Powered Armor Branch', 14, 2, [item('protection_pixel:armorloadplatform')], ['PA_LAVA_CARD', 'PA_REGEN_CARD', 'PA_MAGNET_CARD']),
+      q('PA_BLOOD_SOURCE_BRANCH', 'Blood-Source Branch', 14, -1, [item('tomeofblood:novice_tome_of_blood')], ['PA_SOURCE_BRIDGE', 'PA_QUANTUM_CORE', 'M1_ETHEREAL'], ['Tome of Blood is the late combat-magic branch: source, LP, Demon Will, and AE2-era control feed the same spell body.']),
+      q('PA_BODY_LOGISTICS', 'Body Logistics Upgrades', 14, 4, [item('sophisticatedbackpacks:feeding_upgrade'), item('sophisticatedbackpacks:alchemy_upgrade'), item('sophisticatedbackpacks:tool_swapper_upgrade')], ['PA_BODY_BASE', 'PA_QUANTUM_CORE'], ['Feeding, alchemy, and tool swapping are strong body automation. They stay post-AE2 so travel preparation remains a real decision earlier.'])
     ]
   },
-  {
-    filename: 'fusion_power', prefix: 'FU', id: 'BTM_FUSION_POWER', order: 19, title: 'Platinum Tier - Fusion Power and Plasma', tier: 'platinum', description: ['Fusion is the high-requirement power/synthesis branch. Gas handling starts with space-era materials, but magnetic confinement and ionization require AE2 control and fission hardware.', 'The goal is a complete late branch, not a cheap generator: compressor, pipes, electrolysis, fans, electromagnets, ionization, and only then plasma/fusion work.'], quests: [
-      q('FU_PIPE', 'Gas Pipe Network', 0, 0, [item('gases_and_plasmas:gas_pipe')], ['SP_CHEM'], ['Gas handling is physical infrastructure. Pipes make the branch visible before it becomes powerful.']),
+	  {
+	    filename: 'fusion_power', prefix: 'FU', id: 'BTM_FUSION_POWER', order: 1, title: 'Fusion Power and Plasma', tier: 'platinum', group: 'endgame', description: ['Fusion is the high-requirement power/synthesis branch. Gas handling starts with space-era materials, but magnetic confinement and ionization require AE2 control and fission hardware.', 'The goal is a complete late branch, not a cheap generator: compressor, pipes, electrolysis, fans, electromagnets, ionization, and only then plasma/fusion work.'], quests: [
+	      q('FU_PIPE', 'Gas Pipe Network', 0, 0, [item('gases_and_plasmas:gas_pipe')], ['SP_CHEM'], ['Gas handling is physical infrastructure. Pipes make the branch visible before it becomes powerful.']),
       q('FU_COMPRESSOR', 'Gas Compressor', 2, -1, [item('gases_and_plasmas:gas_compressor')], ['FU_PIPE', 'SP_CASE'], ['Compression belongs to the space/synthesis workshop, not early Create.']),
       q('FU_FAN', 'Gas Fan', 2, 1, [item('gases_and_plasmas:gas_fan')], ['FU_COMPRESSOR', 'PG_BATTERY'], ['Fans move gas with electrical commitment. This is the first practical gas routing step.']),
-      q('FU_ELECTROLYZER', 'Electrolyzer', 4, -1, [item('gases_and_plasmas:electrolyzer')], ['FU_PIPE', 'PG_BATTERY'], ['Electrolysis turns water and electricity into fusion-relevant feedstocks. It should require a working grid.']),
+      q('FU_ELECTROLYZER', 'Electrolyzer', 4, -1, [item('gases_and_plasmas:electrolyzer')], ['FU_COMPRESSOR', 'PG_BATTERY'], ['Electrolysis turns water and electricity into fusion-relevant feedstocks. It should require a working grid.']),
       q('FU_AE_CONTROL', 'AE2 Control Permission', 4, 1, [item('kubejs:ae2_machine_casing')], ['AE_CONTROLLER'], ['Fusion as power is too strong before AE2-level control and local intelligence.']),
-      q('FU_ELECTROMAGNET', 'Magnetic Confinement', 6, 0, [item('gases_and_plasmas:electromagnet')], ['FU_AE_CONTROL', 'FU_FAN'], ['Electromagnets are the line between gas handling and plasma engineering.']),
+      q('FU_ELECTROMAGNET', 'Magnetic Confinement', 6, 0, [item('gases_and_plasmas:electromagnet')], ['FU_AE_CONTROL', 'FU_FAN', 'FU_ELECTROLYZER'], ['Electromagnets are the line between gas handling and plasma engineering.']),
       q('FU_IONIZER', 'Ionizer', 8, 0, [item('gases_and_plasmas:ionizer')], ['FU_ELECTROMAGNET', 'PG_FISSION_ROD'], ['Ionization requires fission-era hardware and AE2-era control. This is where fusion becomes serious.']),
-      q('FU_PLASMA_READY', 'Reactive Matter Cell Work', 10, 0, [item('gases_and_plasmas:electromagnet'), item('gases_and_plasmas:ionizer'), item('fission_reactor:fission_reactor_rod')], ['FU_IONIZER'], ['At this point the player has gas feedstocks, magnetic control, and nuclear hardware. Fusion power can be tuned from here in playtest.'])
+	      q('FU_PLASMA_READY', 'Reactive Matter Cell Work', 10, 0, [item('gases_and_plasmas:electromagnet'), item('gases_and_plasmas:ionizer'), item('fission_reactor:fission_reactor_rod')], ['FU_IONIZER'], ['At this point the player has gas feedstocks, magnetic control, and nuclear hardware. Fusion power can be tuned from here in playtest.'])
+	    ]
+	  },
+	  {
+	    filename: 'ticex', prefix: 'TEX', id: 'BTM_TICEX', order: 2, title: 'Tinkers Construct EX', tier: 'platinum', group: 'endgame', description: ['TiCEX is late Tinkers work, not early tool progression.', 'Start after AE2, quantum manufacturing, fission hardware, and late Blood Magic are already online.'], quests: [
+	      q('TEX_RECONSTRUCTION', 'Reconstruction Core', 0, 0, [item('ticex:reconstruction_core')], ['AE_CONTROLLER', 'PA_QUANTUM_CORE', 'PG_FISSION_ROD', 'M1_ETHEREAL']),
+	      q('TEX_FLICKERING', 'Flickering Reconstruction Core', 2, 0, [item('ticex:flickering_reconstruction_core')], ['TEX_RECONSTRUCTION']),
+	      q('TEX_SEARED_RF', 'Seared RF Furnace', 4, -1, [item('ticex:seared_rf_furnace')], ['TEX_FLICKERING']),
+	      q('TEX_SCORCHED_RF', 'Scorched RF Furnace', 4, 1, [item('ticex:scorched_rf_furnace')], ['TEX_FLICKERING']),
+	      q('TEX_TRANSMUTER', 'Fluid Transmuter', 6, 0, [item('ticex:fluid_transmuter')], ['TEX_SEARED_RF', 'TEX_SCORCHED_RF']),
+	      q('TEX_OD', 'Od Material', 8, -1, [item('ticex:od_ingot')], ['TEX_TRANSMUTER']),
+	      q('TEX_ETHERIC', 'Etheric Material', 8, 1, [item('ticex:etheric_ingot')], ['TEX_TRANSMUTER']),
+	      q('TEX_CARDBOARD', 'Cardboard Core', 10, 0, [item('ticex:cardboard_core')], ['TEX_OD', 'TEX_ETHERIC'])
+	    ]
+	  },
+  {
+    filename: 'protection_pixel', prefix: 'PP', id: 'BTM_PROTECTION_PIXEL', order: 3, title: 'Protection Pixel', tier: 'platinum', group: 'endgame', description: ['Protection Pixel is the post-AE2 armor and body-equipment branch.', 'It starts from quantum manufacturing, fission heat, late Blood Magic, and extreme-depth plates, then fans into mobility, environmental, and combat equipment.'], quests: [
+      q('PP_PLATFORM', 'Armor Load Platform', 0, 0, [item('protection_pixel:armorloadplatform')], ['PA_QUANTUM_CORE', 'PG_FISSION_ROD', 'M1_ETHEREAL']),
+      q('PP_SMALL_NETHERITE', 'Small Netherite Sheet', 2, -2, [item('protection_pixel:smallnetheritesheet')], ['PP_PLATFORM']),
+      q('PP_REINFORCED_FIBER', 'Reinforced Fiber', 2, 0, [item('protection_pixel:reinforcedfiber')], ['PP_PLATFORM']),
+      q('PP_CERAMIC', 'Heat Ceramic Sheet', 2, 2, [item('protection_pixel:heatresistantceramicsheet')], ['PP_PLATFORM']),
+      q('PP_ALLOY_PLATE', 'Alloy Armor Plate', 4, -1, [item('protection_pixel:alloyarmorplate')], ['PP_SMALL_NETHERITE', 'PP_REINFORCED_FIBER']),
+      q('PP_POWER_ENGINE', 'Power Engine', 4, 1, [item('protection_pixel:powerengine')], ['PP_CERAMIC', 'PG_FISSION_ROD']),
+      q('PP_HEAT_OVERLOCK', 'Heat Overlock Mechanism', 6, 1, [item('protection_pixel:heatoverlockingmechanism')], ['PP_POWER_ENGINE']),
+      q('PP_KITS', 'Armor and Equipment Kits', 6, -1, [item('protection_pixel:equipmentkit'), item('protection_pixel:armorplatekit')], ['PP_ALLOY_PLATE', 'PP_POWER_ENGINE']),
+      q('PP_LINKPLATE', 'Link-Plate Armor', 8, -2, [item('protection_pixel:linkplate_helmet'), item('protection_pixel:linkplate_chestplate'), item('protection_pixel:linkplate_leggings'), item('protection_pixel:linkplate_boots')], ['PP_KITS']),
+      q('PP_EXOSKELETON', 'Steam Ectoskeleton', 8, 0, [item('protection_pixel:steamectoskeleton')], ['PP_KITS', 'PP_POWER_ENGINE']),
+      q('PP_MOBILITY', 'Powered Mobility', 10, -1, [item('protection_pixel:suspjetpack'), item('protection_pixel:maneuveringwing')], ['PP_EXOSKELETON']),
+      q('PP_COMBAT_CHEST', 'Combat Chestplates', 10, 1, [item('protection_pixel:workerhornet_chestplate'), item('protection_pixel:breaker_chestplate'), item('protection_pixel:typhoon_chestplate')], ['PP_KITS']),
+      q('PP_ENV_HELMETS', 'Environmental Helmets', 12, -2, [item('protection_pixel:closed_helmet'), item('protection_pixel:plague_helmet'), item('protection_pixel:nightdemon_helmet'), item('protection_pixel:bloodprisoner_helmet')], ['PP_LINKPLATE']),
+      q('PP_ROUTE_LEGS', 'Route Leggings', 12, 0, [item('protection_pixel:anchorpoint_leggings'), item('protection_pixel:buoyancy_leggings'), item('protection_pixel:slingshot_leggings')], ['PP_LINKPLATE']),
+      q('PP_AS_UPGRADES', 'AS Upgrade Line', 14, 0, [item('protection_pixel:wingsofprismas_chestplate')], ['PP_HEAT_OVERLOCK', 'PP_COMBAT_CHEST'])
     ]
   },
   {
-    filename: 'magic_i', prefix: 'M1', id: 'BTM_MAGIC_I', order: 10, title: 'Tin Tier - Magic I', tier: 'tin', description: ['Blood Magic is the permission spine. Slates unlock side magic tiers; guidebooks are not the gate unless a mod gives no better surface.'], quests: [
+    filename: 'tome_of_blood', prefix: 'TOB', id: 'BTM_TOME_OF_BLOOD', order: 4, title: 'Tome of Blood', tier: 'platinum', group: 'endgame', description: ['Tome of Blood is the post-AE2 Blood Magic and Ars Nouveau combat branch.', 'It starts after source-AE work, Ethereal Slate, and quantum manufacturing, then turns Demon Will weapons and Living Armor into late spellcasting tools.'], quests: [
+      q('TOB_NOVICE', 'Novice Tome of Blood', 0, 0, [item('tomeofblood:novice_tome_of_blood')], ['PA_SOURCE_BRIDGE', 'PA_QUANTUM_CORE', 'AN_ARCHMAGE', 'M1_ETHEREAL'], ['This is the entry conversion. The book proves that Ars source work, Blood Magic LP, and AE2-era manufacturing are now part of one combat-magic branch.']),
+      q('TOB_APPRENTICE', 'Apprentice Tome of Blood', 2, -1, [item('tomeofblood:apprentice_tome_of_blood')], ['TOB_NOVICE'], ['Upgrade the tome after the novice bridge is stable. The recipe keeps the Ars spell-book ladder visible instead of replacing it.']),
+      q('TOB_HERETIC_ARMOR', 'Living Mage Armor', 2, 1, [item('tomeofblood:living_mage_hood'), item('tomeofblood:living_mage_robes'), item('tomeofblood:living_mage_leggings'), item('tomeofblood:living_mage_boots')], ['TOB_NOVICE'], ['Convert Living Armor into mage armor when the body branch has quantum manufacturing and late source work behind it.']),
+      q('TOB_SENTIENT_HARM', 'Sentient Harm Glyph', 4, -1, [item('tomeofblood:glyph_sentient_harm')], ['TOB_APPRENTICE'], ['This glyph makes Demon Will part of spell combat. It belongs after the tome entry, not as an early Blood Magic side reward.']),
+      q('TOB_SENTIENT_WRATH', 'Sentient Wrath Glyph', 4, 1, [item('tomeofblood:glyph_sentient_wrath')], ['TOB_HERETIC_ARMOR', 'TOB_SENTIENT_HARM'], ['Wrath is the branch escalation: Will weapons, source spell work, and nuclear-era components become a high-impact area combat option.']),
+      q('TOB_ARCHMAGE', 'Archmage Tome of Blood', 6, 0, [item('tomeofblood:archmage_tome_of_blood')], ['TOB_SENTIENT_WRATH'], ['The archmage tome is the capstone. It should feel like a late hybrid instrument, not a cheap spell-book conversion.'])
+    ]
+  },
+	  {
+	    filename: 'magic_i', prefix: 'M1', id: 'BTM_MAGIC_I', order: 0, title: 'Magic I', tier: 'tin', group: 'matter', description: ['Blood Magic is the permission spine. Slates unlock side magic branches; guidebooks are not the gate unless a mod gives no better surface.'], quests: [
       q('M1_BLANK', 'Blank Slate Permission', 0, 0, [item('bloodmagic:blankslate')], ['DE_WEAK_ORB']),
       q('M1_HEXEREI', 'Hexerei Gate', 2, -1, [item('hexerei:mixing_cauldron')], ['M1_BLANK']),
       q('M1_MALUM', 'Malum Gate', 2, 1, [item('malum:spirit_altar')], ['M1_BLANK']),
@@ -378,41 +1352,35 @@ const chapters = [
     ]
   },
   {
-    filename: 'adventuring', prefix: 'AD', id: 'BTM_ADVENTURING', order: 11, title: 'Copper Tier - Adventuring, Coins, and Wares', tier: 'copper', description: ['Adventure is a grindable progression lane. Coins, contracts, villages, and routes give useful work when the next factory is unclear.'], quests: [
+    filename: 'adventuring', prefix: 'AD', id: 'BTM_ADVENTURING', order: 0, title: 'Adventuring, Coins, and Wares', tier: 'copper', group: 'routes', description: ['Adventure is a grindable progression lane. Coins, contracts, villages, and routes give useful work when the next factory is unclear.'], quests: [
       q('AD_ROUTE', 'Route Supplies', 0, 0, [item('minecraft:compass'), item('minecraft:map')], ['SO_EXIT_ADVENTURE']),
       q('AD_COIN', 'First Market Float', 2, 0, [item('dotcoinmod:copper_coin', 16)], ['AD_ROUTE']),
       q('AD_TRADING_POST', 'Village Trading Post', 4, -1, [item('tradingpost:trading_post')], ['AD_COIN']),
       q('AD_WARES_TABLE', 'Wares Delivery Table', 4, 1, [item('wares:delivery_table')], ['AD_COIN']),
-      q('AD_CONTRACT', 'Contract As Crafting', 6, 0, [item('wares:delivery_agreement')], ['AD_WARES_TABLE']),
+      q('AD_CONTRACT', 'Contract As Crafting', 6, 0, [item('wares:delivery_agreement')], ['AD_TRADING_POST', 'AD_WARES_TABLE']),
       q('AD_PACKAGE', 'Physical Package', 8, -1, [item('wares:package')], ['AD_CONTRACT']),
       q('AD_COMPLETED', 'Completed Delivery', 8, 1, [item('wares:completed_delivery_agreement')], ['AD_PACKAGE']),
       q('AD_CURSED_REGIONS', 'Cursed Regions', 10, -1, [item('minecraft:compass'), item('minecraft:shield')], ['AD_COMPLETED'], ['Cursed Biomes adds dangerous regional laws. Treat cursed territory as an extraction/adventure route, not background ambience.']),
-      q('AD_IRON_FLOAT', 'Iron Tier Float', 12, 0, [item('dotcoinmod:iron_coin', 4)], ['AD_CURSED_REGIONS'])
+      q('AD_IRON_FLOAT', 'Iron Coin Float', 12, 0, [item('dotcoinmod:iron_coin', 4)], ['AD_CURSED_REGIONS'])
     ]
   },
   {
-    filename: 'village_economy', prefix: 'VE', id: 'BTM_VILLAGE_ECONOMY', order: 12, title: 'Tin Tier - Villages, Wares, and Settlement Rewards', tier: 'tin',
+    filename: 'village_economy', prefix: 'VE', id: 'BTM_VILLAGE_ECONOMY', order: 1, title: 'Villages, Wares, and Settlement Rewards', tier: 'tin', group: 'routes',
     description: ['Villager trading and Wares contracts are part of the expert item graph. This chapter teaches coins as a crafting surface and keeps decorative depth shallow through trade sideloads.'],
     quests: [
       q('VE_TRADING_POST', 'Centralized Trades', 0, 0, [item('tradingpost:trading_post')], ['AD_TRADING_POST'], ['Villages matter because people and routes matter. A trading post is a local market, not a magic converter.']),
-      q('VE_WARES_BOX', 'Cardboard Logistics', 2, -1, [item('wares:cardboard_box')], ['AD_WARES_TABLE'], ['Wares packages are physical goods. Treat them like small logistics contracts.']),
-      q('VE_AGREEMENT', 'Delivery Agreement', 2, 1, [item('wares:delivery_agreement')], ['AD_CONTRACT'], ['Contracts should consume and produce coin-tier value without falling back to emeralds.']),
-      q('VE_COMPLETED', 'Completed Contract', 4, 0, [item('wares:completed_delivery_agreement')], ['VE_WARES_BOX', 'VE_AGREEMENT'], ['A completed delivery is proof of route work. It belongs in the same mental category as crafting components.']),
-      q('VE_FURNITURE_TOOL', 'Furniture Toolkit', 6, -2, [item('another_furniture:furniture_hammer'), item('handcrafted:hammer')], ['VE_COMPLETED'], ['Decorative blocks can have graph depth, but only shallow depth: village economy plus early workshop tools.']),
-      q('VE_SETTLEMENT_ROOM', 'Furnished Room', 8, -2, [item('another_furniture:oak_chair'), item('another_furniture:oak_table'), item('handcrafted:oak_table')], ['VE_FURNITURE_TOOL'], ['A settlement should look inhabited. These are sideload rewards, not required machine gates.']),
-      q('VE_GARDEN_MARKET', 'Garden Market', 6, 0, [item('beautify:botanist_workbench'), item('beautify:oak_trellis'), item('beautify:hanging_pot')], ['VE_COMPLETED'], ['Garden and decor trades make villages useful without trivializing ore, magic, or machines.']),
-      q('VE_BOUQUETS', 'Procedural Bouquets', 8, -1, [item('procedural_bouquets:bouquet_grid'), item('procedural_bouquets:potted_bouquet')], ['VE_GARDEN_MARKET'], ['Decorative systems can have shallow graph depth. Bouquets belong in the village/decor economy, not the machine spine.']),
+      q('VE_WARES_BOX', 'Cardboard Logistics', 2, -1, [item('wares:cardboard_box')], ['AD_TRADING_POST', 'AD_WARES_TABLE'], ['Wares packages are physical goods. Treat them like small logistics contracts.']),
+      q('VE_AGREEMENT', 'Delivery Agreement', 2, 1, [item('wares:delivery_agreement')], ['AD_CONTRACT'], ['Contracts should consume and produce coin value without falling back to emeralds.']),
+      q('VE_COMPLETED', 'Completed Contract', 4, 0, [item('wares:completed_delivery_agreement')], ['VE_TRADING_POST', 'VE_WARES_BOX', 'VE_AGREEMENT'], ['A completed delivery is proof of route work. It belongs in the same mental category as crafting components.']),
+      q('VE_BOUQUETS', 'Procedural Bouquets', 6, -1, [item('procedural_bouquets:bouquet_grid'), item('procedural_bouquets:potted_bouquet')], ['VE_COMPLETED'], ['Decorative systems can have shallow graph depth. Bouquets stay because they are a small custom settlement reward, not a massive block-variant library.']),
       q('VE_VILLAGE_WALLS', 'Fortified Village', 8, 1, [item('minecraft:stone_bricks'), item('minecraft:spruce_log')], ['VE_COMPLETED'], ['Village Walls turns settlement defense into local infrastructure. The wall itself is commanded/world work, but the materials should still be physical.']),
       q('VE_SETTLEMENT_ROADS', 'Settlement Roads', 10, 1, [item('minecraft:dirt_path'), item('minecraft:gravel'), item('minecraft:stone_bricks')], ['VE_VILLAGE_WALLS'], ['Settlement Roads makes routes visible in the world. Roads and bridges support distance; they do not erase it.']),
-      q('VE_BUILDERS_STOCK', 'Builder Stock', 10, 0, [item('buildersaddition:shelf_oak'), item('buildersaddition:bench_oak'), item('twigs:bamboo_thatch')], ['VE_GARDEN_MARKET'], ['Bulk building support is allowed here because it improves bases and routes instead of skipping progression.']),
-      q('VE_LIGHTING_STOCK', 'Settlement Lighting', 10, 0, [item('beautify:lamp_light_bulb'), item('excessive_building:copper_bulb')], ['VE_BUILDERS_STOCK'], ['Lighting trades reward villages and coins while staying below Create andesite depth.']),
-      q('VE_SERVICE_BELL', 'Market Signal', 10, -2, [item('another_furniture:service_bell')], ['VE_SETTLEMENT_ROOM'], ['A village route should have signals, meeting points, and trade counters.']),
-      q('VE_IRON_COIN_TIER', 'Iron Coin Trade Float', 12, -1, [item('dotcoinmod:iron_coin', 8)], ['VE_COMPLETED'], ['Higher coin tiers come from harder chapters, loot, and combat loops. They should not be convertible downward or upward in bulk.']),
-      q('VE_TIN_COIN_TIER', 'Tin Coin Trade Float', 14, -1, [item('dotcoinmod:tin_coin', 8)], ['VE_IRON_COIN_TIER'], ['Tin tier trades are where villages begin supporting workshop recovery and settlement upgrades.'])
+      q('VE_IRON_COIN_TIER', 'Iron Coin Float', 12, -1, [item('dotcoinmod:iron_coin', 8)], ['VE_COMPLETED'], ['Higher coins come from harder chapters, loot, and combat loops. They should not be convertible downward or upward in bulk.']),
+      q('VE_BRASS_COIN_TIER', 'Brass Coin Float', 14, -1, [item('dotcoinmod:brass_coin', 8)], ['VE_IRON_COIN_TIER'], ['Brass coin trades are where villages begin supporting workshop recovery, logistics, and settlement upgrades.'])
     ]
   },
   {
-    filename: 'synthesis_i', prefix: 'S1', id: 'BTM_SYNTHESIS_I', order: 13, title: 'Gold Tier - Acid Chemistry', tier: 'gold', description: ['Acid chemistry is where deposits stop being ore and become chemical packages. This pack wires recipes against Acid Vat without editing its mod source.'], quests: [
+    filename: 'synthesis_i', prefix: 'S1', id: 'BTM_SYNTHESIS_I', order: 1, title: 'Acid Chemistry', tier: 'gold', group: 'matter', description: ['Acid chemistry is where deposits stop being ore and become chemical packages. This pack wires recipes against Acid Vat without editing its mod source.'], quests: [
       q('S1_VAT', 'Acid Vat', 0, 0, [item('acid_vat:acid_vat')], ['C2_BRASS', 'TC_FOUNDRY']),
       q('S1_TUBE', 'Slurry Transport', 2, 0, [item('acid_vat:slurry_tank'), item('acid_vat:smart_slurry_pipe')], ['S1_VAT']),
       q('S1_CENTRIFUGE', 'Centrifuge Fractions', 4, 0, [item('acid_vat:centrifuge_bearing'), item('acid_vat:centrifuge_chamber')], ['S1_TUBE']),
@@ -426,17 +1394,60 @@ const chapters = [
 const allQuestIds = new Set()
 const allDeps = []
 const missingItems = []
+const graphWarnings = []
 for (const ch of chapters) {
+  chapterIdMap.set(ch.filename, ftbId(`chapter:${ch.filename}`))
+  let importantCount = 0
   for (const quest of ch.quests) {
     if (allQuestIds.has(quest.id)) throw new Error(`Duplicate quest id ${quest.id}`)
     allQuestIds.add(quest.id)
+    questIdMap.set(quest.id, ftbId(`quest:${ch.filename}:${quest.id}`))
+    if ((importantQuestIds[ch.prefix] || []).indexOf(quest.id) !== -1) importantCount++
     for (const dep of quest.deps || []) allDeps.push({ quest: quest.id, dep })
-    for (const t of quest.tasks) if (knownItems.size && !knownItems.has(t.item)) missingItems.push(`${quest.id}: ${t.item}`)
+    for (const t of quest.tasks) if (shouldValidateItems && !knownItems.has(t.item)) missingItems.push(`${quest.id}: ${t.item}`)
   }
+  if (importantCount < 1) graphWarnings.push(`${ch.filename}: no large target node configured`)
+  if (importantCount > 3) graphWarnings.push(`${ch.filename}: ${importantCount} large nodes configured; cap is 3`)
 }
 const missingDeps = allDeps.filter(d => !allQuestIds.has(d.dep))
 if (missingDeps.length) throw new Error(`Missing dependency refs:\n${missingDeps.map(d => `${d.quest} -> ${d.dep}`).join('\n')}`)
 if (missingItems.length) throw new Error(`Missing item ids:\n${missingItems.join('\n')}`)
+
+for (const ch of chapters) {
+  const localIds = new Set(ch.quests.map(quest => quest.id))
+  const edges = new Map(ch.quests.map(quest => [quest.id, new Set()]))
+  for (const quest of ch.quests) {
+    for (const dep of quest.deps || []) {
+      if (!localIds.has(dep)) continue
+      edges.get(quest.id).add(dep)
+      edges.get(dep).add(quest.id)
+    }
+  }
+
+  const seen = new Set()
+  const components = []
+  for (const quest of ch.quests) {
+    if (seen.has(quest.id)) continue
+    const stack = [quest.id]
+    const component = []
+    seen.add(quest.id)
+    while (stack.length) {
+      const id = stack.pop()
+      component.push(id)
+      for (const next of edges.get(id) || []) {
+        if (seen.has(next)) continue
+        seen.add(next)
+        stack.push(next)
+      }
+    }
+    components.push(component)
+  }
+  if (components.length > 1) {
+    const summary = components.map(component => component.join(',')).join(' | ')
+    throw new Error(`${ch.filename} has disconnected local quest graph components: ${summary}`)
+  }
+}
+if (graphWarnings.length) console.warn(`Quest graph warnings:\n${graphWarnings.join('\n')}`)
 
 for (const ch of chapters) fs.writeFileSync(path.join(chapterDir, `${ch.filename}.snbt`), chapterSnbt(ch))
 fs.writeFileSync(path.join(root, 'config/ftbquests/quests/chapter_groups.snbt'), chapterGroupsSnbt())

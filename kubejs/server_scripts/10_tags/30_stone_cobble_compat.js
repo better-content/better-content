@@ -15,12 +15,6 @@ var stoneLikeEntries = [
     '#natures_spirit:kaolin_bricks',
     'natures_spirit:travertine',
     'natures_spirit:chert',
-    'immersive_weathering:mossy_stone',
-    'immersive_weathering:sandy_stone',
-    'immersive_weathering:sandy_stone_bricks',
-    'immersive_weathering:cracked_bricks',
-    'immersive_weathering:cracked_end_stone_bricks',
-    'immersive_weathering:cracked_prismarine_bricks'
 ]
 
 var cobbleLikeEntries = [
@@ -33,8 +27,6 @@ var cobbleLikeEntries = [
     'unearthed:mossy_cobbled_slate',
     'natures_spirit:cobbled_travertine',
     'natures_spirit:mossy_cobbled_travertine',
-    'immersive_weathering:sandy_cobblestone',
-    'immersive_weathering:snowy_cobblestone'
 ]
 
 var sharedStoneCobbleEntries = stoneLikeEntries.concat(cobbleLikeEntries)

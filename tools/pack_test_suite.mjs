@@ -1,0 +1,969 @@
+#!/usr/bin/env node
+import fs from 'node:fs'
+import path from 'node:path'
+import { spawnSync } from 'node:child_process'
+
+const repo = process.cwd()
+const defaultInstance = '/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1/minecraft'
+const instance = process.env.BTM_INSTANCE || defaultInstance
+const generatedConfigDir = path.join(instance, 'kubejs/config')
+const generatedDumpDir = path.join(instance, 'dump/data_raw')
+const docsDir = path.join(repo, 'docs')
+fs.mkdirSync(docsDir, { recursive: true })
+
+const hardFailures = []
+const softFindings = []
+const passes = []
+const skips = []
+const metrics = {}
+const performanceResults = []
+const performanceBudgetsMs = {
+  'JSON and JS syntax validation': { budget: 8000, hard: 24000 },
+  'critical progression surfaces': { budget: 750, hard: 3000 },
+  'quest book validation': { budget: 250, hard: 1500 },
+  'Wares and villager trade validation': { budget: 250, hard: 1500 },
+  'repo loot data validation': { budget: 500, hard: 3000 },
+  'generated recipe graph validation': { budget: 5000, hard: 20000 },
+  'generated loot dump validation': { budget: 2500, hard: 10000 },
+  'engine and world performance log analysis': { budget: 250, hard: 1500 },
+  'dev dump health validation': { budget: 50, hard: 500 }
+}
+
+function ok(name, detail = '') {
+  passes.push({ name, detail })
+  console.log(`ok - ${name}${detail ? ` (${detail})` : ''}`)
+}
+
+function fail(name, detail) {
+  hardFailures.push({ name, detail })
+  console.error(`FAIL - ${name}: ${detail}`)
+}
+
+function finding(name, detail, severity = 'SHOULD') {
+  softFindings.push({ name, detail, severity })
+  console.warn(`${severity} - ${name}: ${detail}`)
+}
+
+function skip(name, detail) {
+  skips.push({ name, detail })
+  console.log(`skip - ${name}${detail ? ` (${detail})` : ''}`)
+}
+
+function nowMs() { return Number(process.hrtime.bigint()) / 1e6 }
+function roundMs(ms) { return Math.round(ms * 100) / 100 }
+function runMeasured(name, fn) {
+  const start = nowMs()
+  try {
+    return fn()
+  } finally {
+    const durationMs = roundMs(nowMs() - start)
+    const budget = performanceBudgetsMs[name]
+    const result = {
+      name,
+      durationMs,
+      budgetMs: budget?.budget ?? null,
+      hardLimitMs: budget?.hard ?? null
+    }
+    performanceResults.push(result)
+    if (!budget) {
+      ok(`performance measured: ${name}`, `${durationMs} ms`)
+    } else if (durationMs > budget.hard) {
+      fail(`performance hard limit: ${name}`, `${durationMs} ms > ${budget.hard} ms`)
+    } else if (durationMs > budget.budget) {
+      finding(`performance budget exceeded: ${name}`, `${durationMs} ms > ${budget.budget} ms`, 'SHOULD')
+    } else {
+      ok(`performance budget: ${name}`, `${durationMs} ms <= ${budget.budget} ms`)
+    }
+  }
+}
+
+function exists(p) { return fs.existsSync(p) }
+function read(p) { return fs.readFileSync(p, 'utf8') }
+function readJson(p) { return JSON.parse(read(p)) }
+function rel(p) { return path.relative(repo, p) || '.' }
+function walk(root, pred = () => true, out = []) {
+  if (!exists(root)) return out
+  for (const ent of fs.readdirSync(root, { withFileTypes: true })) {
+    const p = path.join(root, ent.name)
+    if (ent.isDirectory()) walk(p, pred, out)
+    else if (pred(p)) out.push(p)
+  }
+  return out
+}
+function unique(xs) { return [...new Set(xs)] }
+function namespace(id) { return String(id).includes(':') ? String(id).split(':')[0] : 'minecraft' }
+function localName(id) { return String(id).includes(':') ? String(id).split(':').slice(1).join(':') : String(id) }
+function table(rows) {
+  if (!rows.length) return '_None._\n'
+  const widths = []
+  for (const row of rows) row.forEach((cell, i) => { widths[i] = Math.max(widths[i] || 0, String(cell).length) })
+  const line = row => '| ' + row.map((cell, i) => String(cell).padEnd(widths[i])).join(' | ') + ' |'
+  return [line(rows[0]), line(rows[0].map((_, i) => '-'.repeat(Math.max(3, widths[i])))), ...rows.slice(1).map(line)].join('\n') + '\n'
+}
+
+function extractItems(value, out = []) {
+  if (!value) return out
+  if (Array.isArray(value)) {
+    for (const v of value) extractItems(v, out)
+    return out
+  }
+  if (typeof value === 'object') {
+    if (typeof value.item === 'string') out.push(value.item)
+    if (typeof value.id === 'string' && value.id.includes(':')) out.push(value.id)
+    if (typeof value.name === 'string' && value.name.includes(':')) out.push(value.name)
+    if (typeof value.tag === 'string') out.push(`#${value.tag}`)
+    for (const v of Object.values(value)) extractItems(v, out)
+  }
+  return out
+}
+
+function extractRecipeOutputs(json) {
+  const outputs = []
+  const add = id => { if (typeof id === 'string' && id.includes(':')) outputs.push(id) }
+  const scan = v => {
+    if (!v) return
+    if (typeof v === 'string') add(v)
+    else if (Array.isArray(v)) v.forEach(scan)
+    else if (typeof v === 'object') {
+      if (v.item) add(v.item)
+      if (v.id) add(v.id)
+    }
+  }
+  scan(json.result)
+  scan(json.results)
+  scan(json.output)
+  scan(json.outputs)
+  return unique(outputs)
+}
+
+function countOccurrences(text, needle) {
+  return (text.match(new RegExp(needle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g')) || []).length
+}
+
+const logMonth = { Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11 }
+function parseLogTime(line) {
+  const m = line.match(/^\[(\d{2})([A-Za-z]{3})(\d{4}) (\d{2}):(\d{2}):(\d{2})\.(\d{3})\]/)
+  if (!m) return null
+  return Date.UTC(Number(m[3]), logMonth[m[2]], Number(m[1]), Number(m[4]), Number(m[5]), Number(m[6]), Number(m[7]))
+}
+
+function newestFile(files) {
+  let best = null
+  for (const file of files) {
+    try {
+      const stat = fs.statSync(file)
+      if (!best || stat.mtimeMs > best.mtimeMs) best = { file, mtimeMs: stat.mtimeMs }
+    } catch {}
+  }
+  return best
+}
+
+function parseQuestFile(file) {
+  const text = read(file)
+  const quests = []
+  const questRe = /\{id:"([^"]+)"[\s\S]*?(?=\n\t\t\{id:"|\n\t\]\n\})/g
+  const parseItemList = segment => [...segment.matchAll(/type:"item"\s+item:"([^"]+)"(?:\s+count:([0-9]+)L?)?/g)]
+    .map(m => ({ item: m[1], count: Number(m[2] || 1) }))
+  for (const m of text.matchAll(questRe)) {
+    const block = m[0]
+    const icon = block.match(/\sicon:"([^"]+)"/)?.[1] || ''
+    const disableJei = block.match(/\sdisable_jei:(true|false)/)?.[1] || ''
+    const rewards = parseItemList(block.match(/rewards:\[([\s\S]*?)\]\s+tasks:/)?.[1] || '')
+    const tasks = parseItemList(block.match(/tasks:\[([\s\S]*?)\]\}?$/)?.[1] || '')
+    quests.push({ id: m[1], block, icon, disableJei, rewards, tasks })
+  }
+  return quests
+}
+
+const catalogPath = path.join(repo, 'kubejs/config/btm_expert_graph_catalog.json')
+let catalog = null
+try {
+  catalog = readJson(catalogPath)
+  ok('progression catalog parses', `${catalog.tierOrder.length} tiers`)
+} catch (e) {
+  fail('progression catalog parses', e.message)
+  catalog = { coinTiers: [], machineTiers: [], bloodMagicTiers: [], tierOrder: [] }
+}
+const coinItems = new Set(catalog.coinTiers.map(t => t.item))
+const coinByItem = Object.fromEntries(catalog.coinTiers.map(t => [t.item, t]))
+const tierIndex = Object.fromEntries(catalog.tierOrder.map((t, i) => [t, i]))
+const casingToTier = Object.fromEntries(catalog.machineTiers.map(t => [t.casing, t.id]))
+
+function tierAtLeast(actual, needed) {
+  return (tierIndex[actual] ?? -1) >= (tierIndex[needed] ?? 999)
+}
+
+function inferTierFromItems(items) {
+  let tier = 'survival'
+  const hits = []
+  for (const item of items) {
+    if (casingToTier[item] && tierAtLeast(casingToTier[item], tier)) {
+      tier = casingToTier[item]
+      hits.push(item)
+    }
+    if (item === 'create:brass_casing' || item === 'create:precision_mechanism') tier = 'create_brass'
+    if (item.startsWith('powergrid:')) tier = tierAtLeast(tier, 'power_grid') ? tier : 'power_grid'
+    if (item.startsWith('oc2r:')) tier = tierAtLeast(tier, 'oc2r') ? tier : 'oc2r'
+    if (item.startsWith('creatingspace:')) tier = tierAtLeast(tier, 'space') ? tier : 'space'
+    if (item.startsWith('ae2:') || item.startsWith('advanced_ae:') || item.startsWith('ae2additions:')) tier = tierAtLeast(tier, 'ae2') ? tier : 'ae2'
+  }
+  return { tier, hits }
+}
+
+function intendedMachineTier(output) {
+  if (casingToTier[output]) return casingToTier[output]
+  const ns = namespace(output)
+  const name = localName(output)
+  if (ns === 'tconstruct') return 'tcon_seared'
+  if (ns === 'create') return name.includes('brass') || name.includes('precision') ? 'create_brass' : 'create_andesite'
+  if (['railways', 'createdieselgenerators', 'create_connected'].includes(ns)) return 'create_brass'
+  if (ns === 'powergrid' || ns === 'create_new_age') return 'power_grid'
+  if (ns === 'oc2r') return 'oc2r'
+  if (ns === 'creatingspace') return 'space'
+  if (['ae2', 'advanced_ae', 'ae2additions', 'expatternprovider', 'merequester', 'createappliedkinetics'].includes(ns)) return 'ae2'
+  if (ns === 'acid_vat') return 'create_brass'
+  return null
+}
+
+function isMachineLike(output) {
+  const name = localName(output)
+  return /(machine|controller|generator|motor|battery|drive|interface|assembler|crafter|processor|terminal|bus|cell|storage|chamber|vat|centrifuge|router|network|computer|monitor|transmitter|receiver|wireless|loader|quarry|miner|pump|pipe|conduit|reactor|turbine|fission|fusion|engine|gearbox|alternator|housing)/.test(name)
+}
+
+function loadGeneratedRecipes() {
+  const manifestPath = path.join(generatedConfigDir, 'full_recipe_index_manifest.json')
+  if (!exists(manifestPath)) return null
+  const manifest = readJson(manifestPath)
+  const recipes = []
+  for (let i = 0; i < manifest.chunkCount; i++) {
+    const chunkPath = path.join(generatedConfigDir, `full_recipe_index_${String(i).padStart(4, '0')}.json`)
+    if (!exists(chunkPath)) {
+      fail('generated recipe chunk exists', chunkPath)
+      continue
+    }
+    const chunk = readJson(chunkPath)
+    recipes.push(...chunk.recipes)
+  }
+  return { manifest, recipes }
+}
+
+function testJsonAndSyntax() {
+  const jsonFiles = [
+    ...walk(path.join(repo, 'kubejs/data'), p => p.endsWith('.json')),
+    ...walk(path.join(repo, 'config/classselector'), p => p.endsWith('.json')),
+    catalogPath
+  ].filter(Boolean)
+  const badJson = []
+  for (const file of jsonFiles) {
+    try { readJson(file) } catch (e) { badJson.push(`${rel(file)}: ${e.message}`) }
+  }
+  badJson.length ? fail('all repo JSON parses', badJson.slice(0, 20).join('\n')) : ok('all repo JSON parses', `${jsonFiles.length} files`)
+
+  const jsFiles = [...walk(path.join(repo, 'kubejs'), p => p.endsWith('.js')), ...walk(path.join(repo, 'tools'), p => p.endsWith('.mjs') || p.endsWith('.js'))]
+  const badJs = []
+  for (const file of jsFiles) {
+    const result = spawnSync(process.execPath, ['--check', file], { encoding: 'utf8' })
+    if (result.status !== 0) badJs.push(`${rel(file)}\n${result.stderr || result.stdout}`)
+  }
+  badJs.length ? fail('all KubeJS/tool JS parses with node --check', badJs.slice(0, 10).join('\n')) : ok('all KubeJS/tool JS parses with node --check', `${jsFiles.length} files`)
+}
+
+function testCriticalSurfaces() {
+  const required = [
+    'kubejs/server_scripts/30_recipe_replace/20_expensive_grout.js',
+    'kubejs/server_scripts/30_recipe_replace/98_starting_progression_bypasses.js',
+	    'kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js',
+	    'kubejs/server_scripts/30_recipe_replace/160_ticex_post_ae2_gates.js',
+	    'kubejs/server_scripts/30_recipe_replace/165_protection_pixel_post_ae2_gates.js',
+	    'kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js',
+	    'kubejs/server_scripts/30_recipe_replace/168_hooks_drones_utility_gates.js',
+	    'kubejs/server_scripts/30_recipe_replace/169_backpack_post_ae2_utility_gates.js',
+	    'kubejs/server_scripts/30_recipe_replace/170_space_dimension_access_gates.js',
+	    'kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js',
+    'kubejs/client_scripts/40_hide_quarantined_systems.js',
+    'kubejs/server_scripts/30_recipe_replace/130_manufactured_plate_recipe_pass.js',
+    'kubejs/server_scripts/40_recipe_add/60_acid_vat_deposit_slurries.js',
+    'kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js',
+    'kubejs/server_scripts/50_loot/20_world_chest_coin_tiers.js',
+    'kubejs/server_scripts/50_loot/40_emerald_loot_coin_replacement.js',
+    'kubejs/data/btm/advancements/creating_space_access.json',
+    'config/twilightforest-common.toml',
+    'kubejs/data/wares/loot_tables/agreement/village/plains_payment_sell.json'
+  ]
+  const missing = required.filter(f => !exists(path.join(repo, f)))
+  missing.length ? fail('critical expert-pack surfaces exist', missing.join(', ')) : ok('critical expert-pack surfaces exist', `${required.length} files`)
+
+  const kubejsText = walk(path.join(repo, 'kubejs'), p => p.endsWith('.js') || p.endsWith('.json')).map(read).join('\n')
+  for (const tier of catalog.machineTiers) {
+    const text = kubejsText
+    if (!text.includes(tier.casing)) fail('machine casing appears in scripts/data', tier.casing)
+  }
+  ok('machine casing IDs are referenced', `${catalog.machineTiers.length} casings`)
+
+	  const casingScript = read(path.join(repo, 'kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js'))
+	  const ae2CasingRecipe = casingScript.match(/event\.custom\(\{[\s\S]*?id\('kubejs:create\/mechanical_crafting\/machine_casing\/ae2'\)/)?.[0] || ''
+	  ae2CasingRecipe.includes("'ae2:controller'") || ae2CasingRecipe.includes('"ae2:controller"')
+	    ? fail('AE2 machine casing does not consume AE2 controller', 'controller belongs after the casing unlock')
+	    : ok('AE2 machine casing does not consume AE2 controller')
+
+  const ticexScript = read(path.join(repo, 'kubejs/server_scripts/30_recipe_replace/160_ticex_post_ae2_gates.js'))
+  const ticexHardGates = [
+    'ticex:reconstruction_core',
+    'kubejs:ae2_machine_casing',
+    'kubejs:sky_steel_sheet',
+    'advanced_ae:quantum_alloy_plate',
+    'bloodmagic:etherealslate',
+    'fission_reactor:fission_reactor_rod',
+    'advanced_ae:quantum_core'
+  ].filter(id => !ticexScript.includes(id))
+  ticexHardGates.length
+    ? fail('TiCEX Reconstruction Core is hard-gated post-AE2', ticexHardGates.join(', '))
+    : ok('TiCEX Reconstruction Core is hard-gated post-AE2')
+
+  const protectionPixelScript = read(path.join(repo, 'kubejs/server_scripts/30_recipe_replace/165_protection_pixel_post_ae2_gates.js'))
+  const protectionPixelGates = [
+    'protection_pixel:armorloadplatform',
+    'protection_pixel:alloyarmorplate',
+    'kubejs:ae2_machine_casing',
+    'kubejs:sky_steel_sheet',
+    'advanced_ae:quantum_alloy_plate',
+    'advanced_ae:quantum_core',
+    'bloodmagic:etherealslate',
+    'fission_reactor:fission_reactor_rod',
+    'chemlib:iridium_plate'
+  ].filter(id => !protectionPixelScript.includes(id))
+  protectionPixelGates.length
+    ? fail('Protection Pixel is hard-gated as post-AE2 armor', protectionPixelGates.join(', '))
+    : ok('Protection Pixel is hard-gated as post-AE2 armor')
+  const quantumArmorRemoved = ['advanced_ae:quantum_helmet', 'advanced_ae:quantum_chestplate', 'advanced_ae:quantum_leggings', 'advanced_ae:quantum_boots']
+    .every(id => protectionPixelScript.includes(id))
+  quantumArmorRemoved
+    ? ok('Advanced AE quantum armor is displaced by Protection Pixel')
+    : fail('Advanced AE quantum armor is displaced by Protection Pixel', 'missing removal coverage')
+
+  const tomeOfBloodScript = read(path.join(repo, 'kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js'))
+  const tomeOfBloodGates = [
+    'tomeofblood:novice_tome_of_blood',
+    'tomeofblood:archmage_tome_of_blood',
+    'tomeofblood:glyph_sentient_wrath',
+    'tomeofblood:living_mage_robes',
+    'kubejs:ae2_machine_casing',
+    'advanced_ae:quantum_core',
+    'advanced_ae:quantum_alloy_plate',
+    'bloodmagic:etherealslate',
+    'ars_nouveau:archmage_spell_book',
+    'fission_reactor:fission_reactor_rod'
+  ].filter(id => !tomeOfBloodScript.includes(id))
+  tomeOfBloodGates.length
+    ? fail('Tome of Blood is hard-gated as post-AE2 hybrid magic', tomeOfBloodGates.join(', '))
+    : ok('Tome of Blood is hard-gated as post-AE2 hybrid magic')
+  const magicGateScript = read(path.join(repo, 'kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js'))
+  magicGateScript.includes("tomeofblood:alchemytable/apprentice_tome")
+    ? fail('Tome of Blood is no longer gated as an Altar III side mod', 'old apprentice_tome gate remains')
+    : ok('Tome of Blood is no longer gated as an Altar III side mod')
+
+  const hookDroneScript = read(path.join(repo, 'kubejs/server_scripts/30_recipe_replace/168_hooks_drones_utility_gates.js'))
+  const hookDroneNeedles = [
+    'rehooked:blaze_hook',
+    'rehooked:ender_hook',
+    'rehooked:red_hook',
+    'create_sa:brass_drone',
+    'kubejs:power_grid_machine_casing',
+    'kubejs:space_machine_casing',
+    'kubejs:ae2_machine_casing'
+  ].filter(id => !hookDroneScript.includes(id))
+  hookDroneNeedles.length
+    ? fail('Hooks and Create SA drones are tier-gated', hookDroneNeedles.join(', '))
+    : ok('Hooks and Create SA drones are tier-gated')
+
+  const backpackScript = read(path.join(repo, 'kubejs/server_scripts/30_recipe_replace/169_backpack_post_ae2_utility_gates.js'))
+  const backpackNeedles = [
+    'sophisticatedbackpacks:feeding_upgrade',
+    'sophisticatedbackpacks:alchemy_upgrade',
+    'sophisticatedbackpacks:tool_swapper_upgrade',
+    'sophisticatedstorage:alchemy_upgrade',
+    'kubejs:ae2_machine_casing',
+    'advanced_ae:quantum_core'
+  ].filter(id => !backpackScript.includes(id))
+  backpackNeedles.length
+    ? fail('High-impact backpack upgrades are post-AE2', backpackNeedles.join(', '))
+    : ok('High-impact backpack upgrades are post-AE2')
+
+  const hiddenScript = read(path.join(repo, 'kubejs/client_scripts/40_hide_quarantined_systems.js'))
+  const removeScript = read(path.join(repo, 'kubejs/server_scripts/20_recipe_remove/30_remove_items.js'))
+  const quarantinedNeedles = [
+    'alchemistry:dissolver',
+    'alchemistry:combiner',
+    'alchemistry:fusion_chamber_controller',
+    'occultism:miner_foliot_unspecialized',
+    'sophisticatedbackpacks:stack_upgrade_omega_tier'
+  ].filter(id => !hiddenScript.includes(id) || !removeScript.includes(id))
+  quarantinedNeedles.length
+    ? fail('Quarantined machines/upgrades are removed and hidden', quarantinedNeedles.join(', '))
+    : ok('Quarantined machines/upgrades are removed and hidden')
+
+  const dimensionAccessScript = read(path.join(repo, 'kubejs/server_scripts/30_recipe_replace/170_space_dimension_access_gates.js'))
+  const dimensionGateNeedles = [
+    'fallout_wastelands_:portal_frame',
+    'fallout_wastelands_:wastelands',
+    'kubejs:space_machine_casing',
+    'creatingspace:chemical_synthesizer',
+    'creatingspace:netherite_oxygen_backtank',
+    'creatingspace:rocket_engine',
+    'creatingspace:rocket_controls'
+  ].filter(id => !dimensionAccessScript.includes(id))
+  dimensionGateNeedles.length
+    ? fail('Fallout Wastelands portal is gated by Creating Space', dimensionGateNeedles.join(', '))
+    : ok('Fallout Wastelands portal is gated by Creating Space')
+
+  const twilightConfig = read(path.join(repo, 'config/twilightforest-common.toml'))
+  twilightConfig.includes('portalUnlockedByAdvancement = "btm:creating_space_access"')
+    ? ok('Twilight Forest portal is advancement-locked by Creating Space')
+    : fail('Twilight Forest portal is advancement-locked by Creating Space', 'missing btm:creating_space_access config')
+
+  const spaceAccessAdvancement = readJson(path.join(repo, 'kubejs/data/btm/advancements/creating_space_access.json'))
+  const advancementText = JSON.stringify(spaceAccessAdvancement)
+  advancementText.includes('creatingspace:netherite_oxygen_backtank')
+    ? ok('Creating Space access advancement has a concrete space item trigger')
+    : fail('Creating Space access advancement has a concrete space item trigger', 'missing netherite oxygen backtank')
+}
+
+function testQuestBook() {
+  const chapterDir = path.join(repo, 'config/ftbquests/quests/chapters')
+  const questFiles = walk(chapterDir, p => p.endsWith('.snbt'))
+  metrics.questChapters = questFiles.length
+
+  const groupFile = path.join(repo, 'config/ftbquests/quests/chapter_groups.snbt')
+  const groupText = read(groupFile)
+  const groupIds = new Set([...groupText.matchAll(/\{id:"?([0-9A-Fa-f]{16})"?/g)].map(m => m[1].toUpperCase()))
+  const badGroupRefs = []
+  const tierTitleLabels = []
+  for (const file of questFiles) {
+    const text = read(file)
+    const group = text.match(/^\s*group:\s*"([^"]*)"/m)?.[1] || ''
+    const title = text.match(/^\s*title:\s*"([^"]*)"/m)?.[1] || ''
+    if (!group || !groupIds.has(group.toUpperCase())) badGroupRefs.push(`${path.basename(file)} -> ${group || '<empty>'}`)
+    if (/^(Copper|Iron|Brass|Gold|Platinum) Tier\b/.test(title)) {
+      tierTitleLabels.push(`${path.basename(file)} -> ${title}`)
+    }
+  }
+  badGroupRefs.length ? fail('all chapters are assigned to existing chapter groups', badGroupRefs.join('\n')) : ok('all chapters are assigned to existing chapter groups', `${questFiles.length} chapters`)
+  tierTitleLabels.length ? fail('chapter titles do not duplicate chapter group labels', tierTitleLabels.join('\n')) : ok('chapter titles do not duplicate chapter group labels')
+
+  const ids = new Set()
+  const deps = []
+  for (const file of questFiles) {
+    const text = read(file)
+    for (const m of text.matchAll(/\{id:"([^"]+)"/g)) ids.add(m[1])
+    for (const m of text.matchAll(/dependencies:\[([^\]]*)\]/g)) {
+      for (const r of m[1].matchAll(/"([^"]+)"/g)) deps.push({ file: rel(file), id: r[1] })
+    }
+  }
+  const missing = deps.filter(d => !ids.has(d.id))
+  missing.length ? fail('quest dependencies resolve', missing.slice(0, 40).map(d => `${d.file}: ${d.id}`).join('\n')) : ok('quest dependencies resolve', `${deps.length} refs`)
+
+  const badRecipeHooks = []
+  for (const file of questFiles) {
+    for (const q of parseQuestFile(file)) {
+      const firstTask = q.tasks[0]?.item || ''
+      if (!q.icon || q.icon !== firstTask || q.disableJei !== 'false') {
+        badRecipeHooks.push(`${path.basename(file)} ${q.id}: icon=${q.icon || '<missing>'} first_task=${firstTask || '<missing>'} disable_jei=${q.disableJei || '<missing>'}`)
+      }
+    }
+  }
+  badRecipeHooks.length ? fail('quest nodes expose stable recipe hooks', badRecipeHooks.slice(0, 80).join('\n')) : ok('quest nodes expose stable recipe hooks')
+
+  const starting = parseQuestFile(path.join(chapterDir, 'starting_out.snbt'))
+  const badStarting = starting.filter(q => q.rewards.length !== 1 || q.rewards[0].item !== 'dotcoinmod:copper_coin' || q.rewards[0].count !== 4)
+  badStarting.length ? fail('Starting Out rewards exactly 4 copper per quest', badStarting.map(q => q.id).join(', ')) : ok('Starting Out rewards exactly 4 copper per quest', `${starting.length} quests`)
+
+  const nonStartingBad = []
+  for (const file of questFiles.filter(f => !f.endsWith('starting_out.snbt'))) {
+    for (const q of parseQuestFile(file)) {
+      if (!q.rewards.length) continue
+      for (const r of q.rewards.filter(r => coinItems.has(r.item))) {
+        if (r.count !== 4) nonStartingBad.push(`${path.basename(file)} ${q.id} ${r.item} x${r.count}`)
+      }
+    }
+  }
+  nonStartingBad.length ? fail('non-Starting quest coin rewards use 4-count tier packets', nonStartingBad.slice(0, 60).join('\n')) : ok('non-Starting quest coin rewards use 4-count tier packets')
+
+  const chapterText = questFiles.map(f => `${path.basename(f)}\n${read(f)}`).join('\n')
+  const requiredNodes = [
+    'kubejs:seared_machine_casing',
+    'kubejs:scorched_machine_casing',
+    'kubejs:andesite_machine_casing',
+    'kubejs:brass_machine_casing',
+    'kubejs:power_grid_machine_casing',
+    'kubejs:oc2r_machine_casing',
+    'kubejs:space_machine_casing',
+    'kubejs:ae2_machine_casing',
+    'acid_vat:acid_vat',
+    'fission_reactor:fission_fuel_acceptor',
+    'fission_reactor:fission_reactor_rod',
+	    'liquid_coolant:coolant_exchanger',
+	    'rpgstats:still_beating_heart',
+	    'ticex:reconstruction_core',
+	    'ticex:fluid_transmuter',
+      'protection_pixel:armorloadplatform',
+      'protection_pixel:wingsofprismas_chestplate',
+      'tomeofblood:novice_tome_of_blood',
+      'tomeofblood:glyph_sentient_wrath',
+      'starcatcher:starcatcher_rod',
+      'starcatcher:waterlogged_satchel',
+      'littlelogistics:energy_tug',
+      'apotheosis:gem_cutting_table',
+      'framedblocks:framed_cube',
+      'buildinggadgets2:gadget_building',
+      'create_sa:brass_drone',
+      'sophisticatedbackpacks:feeding_upgrade',
+      'fallout_wastelands_:portal_frame',
+      'fallout_wastelands_:wastelands',
+      'creatingspace:netherite_oxygen_backtank'
+	  ]
+  const absent = requiredNodes.filter(n => !chapterText.includes(n))
+  absent.length ? finding('quest book is missing important progression nodes', absent.join(', '), 'MUST') : ok('quest book covers major progression nodes', `${requiredNodes.length} anchors`)
+
+  const foodText = read(path.join(chapterDir, 'food_body.snbt'))
+  const expectedFoodShowcase = [
+    'minecraft:apple',
+    'farmersdelight:hamburger',
+    'farmersrespite:green_tea',
+    'brewinandchewin:beer',
+    'corn_delight:cornbread',
+    'delightful:source_berry_milkshake',
+    'ends_delight:dragon_meat_stew',
+    'oceansdelight:guardian_soup',
+    'undergardendelight:blood_tomato_soup'
+  ]
+  const missingFood = expectedFoodShowcase.filter(id => !foodText.includes(`item:"${id}"`))
+  missingFood.length ? fail('Food chapter exposes food showcase coverage', missingFood.join(', ')) : ok('Food chapter exposes food showcase coverage', `${expectedFoodShowcase.length} representative foods`)
+
+  const tconText = read(path.join(chapterDir, 'tinkers_construct.snbt'))
+  const expectedTconShowcase = [
+    'tconstruct:cleaver',
+    'tconstruct:longbow',
+    'tconstruct:plate_chestplate',
+    'tinkersweaponry:greatsword',
+    'tinkers_battle_spades:battle_spade',
+    'tinkers_advanced:matter_manipulator'
+  ]
+  const missingTcon = expectedTconShowcase.filter(id => !tconText.includes(`item:"${id}"`))
+  const nbtStrictTcon = expectedTconShowcase.filter(id => !new RegExp(`item:"${id.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&')}" match_nbt:false`).test(tconText))
+  missingTcon.length ? fail('TCon chapter exposes weapon and tool showcase coverage', missingTcon.join(', ')) : ok('TCon chapter exposes weapon and tool showcase coverage', `${expectedTconShowcase.length} representative tools`)
+  nbtStrictTcon.length ? fail('TCon showcase tasks ignore NBT', nbtStrictTcon.join(', ')) : ok('TCon showcase tasks ignore NBT')
+}
+
+function testWaresAndTrades() {
+  const waresFiles = walk(path.join(repo, 'kubejs/data/wares/loot_tables'), p => p.endsWith('.json'))
+  if (!waresFiles.length) fail('Wares contract loot tables exist', 'no kubejs/data/wares loot tables found')
+  const emeraldWares = []
+  const coinWares = []
+  for (const file of waresFiles) {
+    const text = read(file)
+    if (text.includes('minecraft:emerald')) emeraldWares.push(rel(file))
+    for (const coin of coinItems) if (text.includes(coin)) coinWares.push(`${rel(file)} -> ${coin}`)
+  }
+  emeraldWares.length ? fail('Wares contracts do not use emerald currency', emeraldWares.join('\n')) : ok('Wares contracts do not use emerald currency', `${waresFiles.length} tables`)
+  coinWares.length ? ok('Wares contracts contain dotcoin currency', `${unique(coinWares.map(x => x.split(' -> ')[0])).length} tables`) : fail('Wares contracts contain dotcoin currency', 'no coin entries found')
+
+  const tradePath = path.join(repo, 'kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js')
+  const text = exists(tradePath) ? read(tradePath) : ''
+  if (!text) return fail('villager trade script exists', rel(tradePath))
+  const professions = unique([...text.matchAll(/btmAdd(?:Sell)?Trades\(event,\s*'([^']+)'/g)].map(m => m[1]))
+  metrics.villagerProfessionsCovered = professions.length
+  professions.length >= 13 ? ok('villager trade script covers broad profession set', `${professions.length} professions`) : fail('villager trade script covers broad profession set', `${professions.length} professions`)
+  const emeraldMentions = countOccurrences(text, 'minecraft:emerald')
+  emeraldMentions ? fail('villager trade script has no emerald currency', `${emeraldMentions} mentions`) : ok('villager trade script has no emerald currency')
+  const sellHelper = text.match(/function btmSellTrade[\s\S]*?\n\}/)?.[0] || ''
+  const sellUsesOnlyCopper = sellHelper.includes('var coin = BTM_COIN.copper') && sellHelper.includes('Item.of(coin, copperCount)')
+  sellUsesOnlyCopper ? ok('sell-trade helper pays copper coins instead of emeralds') : fail('sell-trade helper pays copper coins instead of emeralds', 'unexpected sell output expression')
+  for (const tier of catalog.coinTiers.slice(0, 11)) {
+    if (!text.includes(`'${tier.id}'`)) finding('villager trades do not mention coin tier', tier.id, tier.index <= 2 ? 'MUST' : 'SHOULD')
+  }
+}
+
+function testLootData() {
+  const repoLoot = walk(path.join(repo, 'kubejs/data'), p => p.includes(`${path.sep}loot_tables${path.sep}`) && p.endsWith('.json'))
+  const lootJsonBad = []
+  for (const f of repoLoot) {
+    try { readJson(f) } catch (e) { lootJsonBad.push(`${rel(f)}: ${e.message}`) }
+  }
+  lootJsonBad.length ? fail('repo loot table JSON parses', lootJsonBad.slice(0, 40).join('\n')) : ok('repo loot table JSON parses', `${repoLoot.length} tables`)
+
+  const coinTables = []
+  const emeraldTables = []
+  const riskyTables = []
+  for (const f of repoLoot) {
+    const text = read(f)
+    if ([...coinItems].some(c => text.includes(c))) coinTables.push(rel(f))
+    if (text.includes('minecraft:emerald')) emeraldTables.push(rel(f))
+    if (/(creative_|elytra|nether_star|netherite_block|teleport|chunk_loader|builder|quarry)/.test(text)) riskyTables.push(rel(f))
+  }
+  coinTables.length >= 20 ? ok('repo loot tables inject many coin sources', `${coinTables.length} tables`) : fail('repo loot tables inject many coin sources', `${coinTables.length} tables`)
+  emeraldTables.length ? finding('repo loot tables still contain emeralds', emeraldTables.slice(0, 40).join('\n'), 'SHOULD') : ok('repo loot tables contain no direct emerald loot')
+  riskyTables.length ? finding('repo loot tables contain high-power outputs', unique(riskyTables).slice(0, 40).join('\n'), 'MAYBE') : ok('repo loot tables contain no obvious high-power outputs')
+}
+
+function testGeneratedRecipeGraph() {
+  let loaded = null
+  try { loaded = loadGeneratedRecipes() } catch (e) { return fail('generated recipe index loads', e.message) }
+  if (!loaded) return skip('generated recipe graph tests', `missing ${path.join(generatedConfigDir, 'full_recipe_index_manifest.json')}`)
+  const { manifest, recipes } = loaded
+  metrics.generatedRecipes = recipes.length
+  recipes.length === manifest.recipeCount ? ok('generated recipe chunks match manifest', `${recipes.length} recipes`) : fail('generated recipe chunks match manifest', `${recipes.length}/${manifest.recipeCount}`)
+
+  const ids = new Set()
+  const dupes = []
+  const parseFailures = []
+  const outputs = new Map()
+  const forbiddenOutputs = []
+  const undertiered = []
+  const materialRisks = []
+  const alchemistryPlayerFacing = []
+
+  for (const r of recipes) {
+    if (ids.has(r.id)) dupes.push(r.id)
+    ids.add(r.id)
+    let json
+    try { json = JSON.parse(r.json) } catch (e) {
+      parseFailures.push(`${r.id}: ${e.message}`)
+      continue
+    }
+    const ingredients = extractItems(json)
+    const outs = extractRecipeOutputs(json)
+    const inferred = inferTierFromItems(ingredients)
+    for (const out of outs) {
+      if (!outputs.has(out)) outputs.set(out, [])
+      outputs.get(out).push(r.id)
+      const forbiddenHard = /(creative|debug|command_block|structure_block)/.test(out)
+      const internalRecipe = /(bloodmagic:array|occultism:ritual|reliquary:uncrafting|the_bumblezone:.*spawn_egg|tinkersinnovation:casting\/.*bedrock|mna:components)/.test(r.id)
+      if (forbiddenHard && !internalRecipe) forbiddenOutputs.push(`${r.id} -> ${out}`)
+      if (!forbiddenHard && /(barrier|bedrock|spawn_egg)/.test(out) && !internalRecipe) {
+        finding('recipe outputs internal/special block or spawn egg', `${r.id} -> ${out}`, 'MAYBE')
+      }
+      if (r.namespace === 'alchemistry' && ['minecraft:crafting_shaped', 'minecraft:crafting_shapeless'].includes(r.type)) alchemistryPlayerFacing.push(`${r.id} -> ${out}`)
+      const needed = intendedMachineTier(out)
+      if (needed && isMachineLike(out) && !tierAtLeast(inferred.tier, needed)) {
+        undertiered.push(`${r.id} -> ${out} needs ${needed}, inferred ${inferred.tier}`)
+      }
+      const text = r.json
+      const rawValuable = ['minecraft:iron_ingot', 'minecraft:copper_ingot', 'minecraft:gold_ingot', 'minecraft:redstone', 'minecraft:lapis_lazuli', 'minecraft:diamond', 'minecraft:emerald', 'minecraft:amethyst_shard']
+        .filter(v => text.includes(v))
+      if (rawValuable.length && isMachineLike(out)) materialRisks.push(`${r.id} -> ${out}: ${rawValuable.join(', ')}`)
+    }
+  }
+
+  dupes.length ? fail('generated recipes have unique IDs', dupes.slice(0, 80).join('\n')) : ok('generated recipes have unique IDs')
+  parseFailures.length ? fail('generated recipe JSON parses', parseFailures.slice(0, 80).join('\n')) : ok('generated recipe JSON parses')
+  forbiddenOutputs.length ? fail('no forbidden creative/debug outputs are craftable', forbiddenOutputs.slice(0, 80).join('\n')) : ok('no forbidden creative/debug outputs are craftable')
+  alchemistryPlayerFacing.length ? finding('Alchemistry has player-facing crafting recipes', alchemistryPlayerFacing.slice(0, 80).join('\n'), 'SHOULD') : ok('Alchemistry has no obvious grid-crafting player-facing recipes')
+  undertiered.length ? finding('generated recipe graph has undertiered machine-like outputs', undertiered.slice(0, 120).join('\n'), 'MUST') : ok('generated machine-like outputs appear tier-gated')
+  materialRisks.length ? finding('machine recipes still use raw vanilla valuables directly', materialRisks.slice(0, 120).join('\n'), 'SHOULD') : ok('machine recipes avoid direct vanilla valuable shortcuts')
+
+  const criticalOutputs = [
+    'create:andesite_alloy',
+    'create:andesite_casing',
+    'create:water_wheel',
+    'create:windmill_bearing',
+    'tconstruct:grout',
+    'kubejs:ae2_machine_casing',
+    'acid_vat:acid_vat',
+    'bloodmagic:weakbloodorb'
+  ]
+  const missing = criticalOutputs.filter(o => !outputs.has(o))
+  missing.length ? finding('critical outputs absent from generated recipe dump', missing.join(', '), 'MUST') : ok('critical outputs appear in generated recipe dump', `${criticalOutputs.length} outputs`)
+}
+
+function testGeneratedDumpLoot() {
+  const lootRoot = path.join(generatedDumpDir, 'loot_tables')
+  if (!exists(lootRoot)) return skip('generated loot dump tests', `missing ${lootRoot}`)
+  const files = walk(lootRoot, p => p.endsWith('.json'))
+  metrics.generatedLootTables = files.length
+  const coinHits = []
+  const emeraldHits = []
+  const lowWorldLootMissingCoins = []
+  const alwaysCoinTargets = [
+    'minecraft/chests/abandoned_mineshaft',
+    'minecraft/chests/desert_pyramid',
+    'minecraft/chests/jungle_temple',
+    'minecraft/chests/simple_dungeon',
+    'minecraft/chests/shipwreck_treasure',
+    'minecraft/chests/village/village_plains_house'
+  ]
+  for (const file of files) {
+    const relTable = path.relative(lootRoot, file).replace(/\.json$/, '').replaceAll(path.sep, '/')
+    const text = read(file)
+    if ([...coinItems].some(c => text.includes(c))) coinHits.push(relTable)
+    if (text.includes('minecraft:emerald')) emeraldHits.push(relTable)
+  }
+  for (const target of alwaysCoinTargets) {
+    const hit = coinHits.some(t => t.endsWith(target) || t.includes(target))
+    if (!hit) lowWorldLootMissingCoins.push(target)
+  }
+  coinHits.length >= 30 ? ok('generated loot contains broad coin coverage', `${coinHits.length} tables`) : finding('generated loot coin coverage is thin', `${coinHits.length} tables`, 'MUST')
+  lowWorldLootMissingCoins.length ? finding('common world loot tables missing coin coverage', lowWorldLootMissingCoins.join(', '), 'MUST') : ok('common world loot tables include coin coverage')
+  emeraldHits.length ? finding('generated loot still contains emeralds', emeraldHits.slice(0, 80).join('\n'), 'SHOULD') : ok('generated loot contains no emeralds')
+}
+
+function testEngineWorldPerformanceLogs() {
+  const logPath = path.join(instance, 'logs/latest.log')
+  if (!exists(logPath)) return skip('engine/world performance log analysis', `missing ${logPath}`)
+
+  const text = read(logPath)
+  const lines = text.split(/\r?\n/)
+  const logStat = fs.statSync(logPath)
+  const logAgeMinutes = Math.round(((Date.now() - logStat.mtimeMs) / 60000) * 100) / 100
+  const logMetrics = {
+    latestLog: logPath,
+    latestLogAgeMinutes: logAgeMinutes,
+    latestLogLines: lines.length,
+    reachedIntegratedServer: text.includes('Starting integrated minecraft server'),
+    startedServingLan: text.includes('Started serving on'),
+    reachedInGame: text.includes('Started serving on') || text.includes('Time from main menu to in-game was'),
+    mainMenuToInGameMs: null,
+    totalLoadToWorldMs: null,
+    spawnPrepTimeMs: null,
+    serverTickBehindWarnings: 0,
+    maxTickBehindMs: 0,
+    totalTickBehindMs: 0,
+    maxTickBehindTicks: 0,
+    worldSaveDurationMs: null,
+    worldSaveFromSavingWorldsMs: null,
+    dimensionSaveCount: 0,
+    distantHorizonsIncompleteTasks: 0,
+    settlementRoadsRebuilds: 0,
+    settlementRoadsMaxDiscoveredStructures: 0,
+    settlementRoadsMaxConnections: 0,
+    emiTotalReloadMs: null,
+    emiSlowestPluginMs: 0,
+    emiSlowestPlugin: null,
+    newestCrashReport: null,
+    newestCrashReportAfterLatestLog: false
+  }
+
+  let lastStoppingServerAt = null
+  let lastSavingWorldsAt = null
+  let saveDimensionCounter = 0
+  let countingSaveDimensions = false
+
+  for (const line of lines) {
+    const at = parseLogTime(line)
+    const spawn = line.match(/Time elapsed: (\d+) ms/)
+    if (spawn) logMetrics.spawnPrepTimeMs = Number(spawn[1])
+    const inGame = line.match(/Time from main menu to in-game was ([\d.]+) seconds/)
+    if (inGame) logMetrics.mainMenuToInGameMs = Math.round(Number(inGame[1]) * 1000)
+    const totalLoad = line.match(/Total time to load game and open world was ([\d.]+) seconds/)
+    if (totalLoad) logMetrics.totalLoadToWorldMs = Math.round(Number(totalLoad[1]) * 1000)
+
+    const behind = line.match(/Can't keep up!.*Running (\d+)ms or (\d+) ticks behind/)
+    if (behind) {
+      const ms = Number(behind[1])
+      const ticks = Number(behind[2])
+      logMetrics.serverTickBehindWarnings++
+      logMetrics.maxTickBehindMs = Math.max(logMetrics.maxTickBehindMs, ms)
+      logMetrics.totalTickBehindMs += ms
+      logMetrics.maxTickBehindTicks = Math.max(logMetrics.maxTickBehindTicks, ticks)
+    }
+
+    const dh = line.match(/World generator thread pool shutdown with \[(\d+)\] incomplete tasks/)
+    if (dh) logMetrics.distantHorizonsIncompleteTasks = Math.max(logMetrics.distantHorizonsIncompleteTasks, Number(dh[1]))
+
+    const roads = line.match(/Rebuilt world network: (\d+) discovered structures, (\d+) active structures, (\d+) connections/)
+    if (roads) {
+      logMetrics.settlementRoadsRebuilds++
+      logMetrics.settlementRoadsMaxDiscoveredStructures = Math.max(logMetrics.settlementRoadsMaxDiscoveredStructures, Number(roads[1]))
+      logMetrics.settlementRoadsMaxConnections = Math.max(logMetrics.settlementRoadsMaxConnections, Number(roads[3]))
+    }
+
+    const emiPlugin = line.match(/\[EMI\] Reloaded plugin from ([^ ]+) in (\d+)ms/)
+    if (emiPlugin && Number(emiPlugin[2]) > logMetrics.emiSlowestPluginMs) {
+      logMetrics.emiSlowestPlugin = emiPlugin[1]
+      logMetrics.emiSlowestPluginMs = Number(emiPlugin[2])
+    }
+    const emiTotal = line.match(/\[EMI\] Reloaded EMI in (\d+)ms/)
+    if (emiTotal) logMetrics.emiTotalReloadMs = Number(emiTotal[1])
+
+    if (line.includes('Stopping server') && at != null) {
+      lastStoppingServerAt = at
+      lastSavingWorldsAt = null
+      saveDimensionCounter = 0
+      countingSaveDimensions = true
+    }
+    if (line.includes('Saving worlds') && at != null) lastSavingWorldsAt = at
+    if (countingSaveDimensions && line.includes("Saving chunks for level 'ServerLevel")) saveDimensionCounter++
+    if (countingSaveDimensions && line.includes('ThreadedAnvilChunkStorage: All dimensions are saved') && at != null) {
+      logMetrics.worldSaveDurationMs = lastStoppingServerAt == null ? null : at - lastStoppingServerAt
+      logMetrics.worldSaveFromSavingWorldsMs = lastSavingWorldsAt == null ? null : at - lastSavingWorldsAt
+      logMetrics.dimensionSaveCount = saveDimensionCounter
+      countingSaveDimensions = false
+    }
+  }
+
+  const crashFiles = walk(path.join(instance, 'crash-reports'), p => /crash-.*\.txt$/.test(path.basename(p)))
+  const newestCrash = newestFile(crashFiles)
+  if (newestCrash) {
+    logMetrics.newestCrashReport = path.basename(newestCrash.file)
+    logMetrics.newestCrashReportAfterLatestLog = newestCrash.mtimeMs > logStat.mtimeMs
+  }
+
+  metrics.engineWorld = logMetrics
+
+  logAgeMinutes <= 1440 ? ok('latest engine log is recent', `${logAgeMinutes} minutes old`) : finding('latest engine log is stale', `${logAgeMinutes} minutes old`, 'SHOULD')
+  logMetrics.reachedIntegratedServer ? ok('engine reached integrated server startup') : fail('engine reached integrated server startup', 'missing log marker')
+  logMetrics.reachedInGame ? ok('world became playable/servable', logMetrics.startedServingLan ? 'LAN serving marker' : 'ModernFix in-game marker') : finding('world became playable/servable', 'missing "Started serving on" or ModernFix in-game marker', 'MUST')
+
+  if (logMetrics.spawnPrepTimeMs == null) {
+    finding('spawn preparation time is measurable', 'missing "Time elapsed" marker', 'MUST')
+  } else if (logMetrics.spawnPrepTimeMs > 120000) {
+    fail('spawn preparation hard limit', `${logMetrics.spawnPrepTimeMs} ms > 120000 ms`)
+  } else if (logMetrics.spawnPrepTimeMs > 60000) {
+    finding('spawn preparation budget exceeded', `${logMetrics.spawnPrepTimeMs} ms > 60000 ms`, 'SHOULD')
+  } else {
+    ok('spawn preparation budget', `${logMetrics.spawnPrepTimeMs} ms <= 60000 ms`)
+  }
+
+  if (logMetrics.serverTickBehindWarnings > 20 || logMetrics.maxTickBehindMs > 30000) {
+    fail('server tick-behind hard limit', `${logMetrics.serverTickBehindWarnings} warnings, max ${logMetrics.maxTickBehindMs} ms`)
+  } else if (logMetrics.serverTickBehindWarnings > 5 || logMetrics.maxTickBehindMs > 10000) {
+    finding('server tick-behind budget exceeded', `${logMetrics.serverTickBehindWarnings} warnings, max ${logMetrics.maxTickBehindMs} ms`, 'SHOULD')
+  } else {
+    ok('server tick-behind budget', `${logMetrics.serverTickBehindWarnings} warnings, max ${logMetrics.maxTickBehindMs} ms`)
+  }
+
+  if (logMetrics.worldSaveDurationMs == null) {
+    finding('world save duration is measurable', 'missing shutdown save markers', 'SHOULD')
+  } else if (logMetrics.worldSaveDurationMs > 30000) {
+    fail('world save hard limit', `${logMetrics.worldSaveDurationMs} ms > 30000 ms`)
+  } else if (logMetrics.worldSaveDurationMs > 10000) {
+    finding('world save budget exceeded', `${logMetrics.worldSaveDurationMs} ms > 10000 ms`, 'SHOULD')
+  } else {
+    ok('world save budget', `${logMetrics.worldSaveDurationMs} ms <= 10000 ms`)
+  }
+
+  if (logMetrics.dimensionSaveCount > 40) {
+    finding('high dimension save fanout', `${logMetrics.dimensionSaveCount} dimensions`, 'SHOULD')
+  } else {
+    ok('dimension save fanout', `${logMetrics.dimensionSaveCount} dimensions`)
+  }
+
+  if (logMetrics.distantHorizonsIncompleteTasks > 25) {
+    fail('Distant Horizons shutdown backlog hard limit', `${logMetrics.distantHorizonsIncompleteTasks} incomplete tasks`)
+  } else if (logMetrics.distantHorizonsIncompleteTasks > 5) {
+    finding('Distant Horizons shutdown backlog', `${logMetrics.distantHorizonsIncompleteTasks} incomplete tasks`, 'SHOULD')
+  } else {
+    ok('Distant Horizons shutdown backlog', `${logMetrics.distantHorizonsIncompleteTasks} incomplete tasks`)
+  }
+
+  if (logMetrics.emiTotalReloadMs != null) {
+    logMetrics.emiTotalReloadMs > 90000
+      ? finding('EMI reload is very slow', `${logMetrics.emiTotalReloadMs} ms`, 'SHOULD')
+      : ok('EMI reload budget', `${logMetrics.emiTotalReloadMs} ms <= 90000 ms`)
+  }
+
+  if (logMetrics.newestCrashReportAfterLatestLog) {
+    fail('no crash report newer than latest engine log', logMetrics.newestCrashReport)
+  } else if (newestCrash && (Date.now() - newestCrash.mtimeMs) < 24 * 60 * 60 * 1000) {
+    finding('recent crash report exists', logMetrics.newestCrashReport, 'SHOULD')
+  } else {
+    ok('no newer crash report than latest engine log')
+  }
+}
+
+function testDevDumpHealth() {
+  const auditPath = path.join(repo, 'kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js')
+  const text = exists(auditPath) ? read(auditPath) : ''
+  if (!text) return fail('dev recipe dump script exists', rel(auditPath))
+  for (const needle of ['full_recipe_index_manifest.json', 'known_bypass_candidate_recipes.json', 'valuable_material_usage_recipes.json', 'progression_recipe_mentions.json']) {
+    if (!text.includes(needle)) fail('dev dump script emits expected artifact', needle)
+  }
+  ok('dev dump script emits expected artifacts')
+
+  const foodAuditPath = path.join(repo, 'kubejs/server_scripts/90_dev_debug/20_food_effect_audit_dumps.js')
+  const foodText = exists(foodAuditPath) ? read(foodAuditPath) : ''
+  if (!foodText) return fail('dev food effect dump script exists', rel(foodAuditPath))
+  for (const needle of ['food_effect_index.json', 'food_effect_summary.json', 'FoodProperties']) {
+    if (!foodText.includes(needle)) fail('dev food effect dump script emits expected artifact', needle)
+  }
+  ok('dev food effect dump script emits expected artifacts')
+
+  const foodGraphTool = path.join(repo, 'tools/analyze_food_effect_graph.mjs')
+  const foodGraphText = exists(foodGraphTool) ? read(foodGraphTool) : ''
+  if (!foodGraphText) return fail('food effect graph analyzer exists', rel(foodGraphTool))
+  for (const needle of ['food_effect_progression_candidates.json', 'Food Effect Graph Audit', 'combat_supply', 'route_survival']) {
+    if (!foodGraphText.includes(needle)) fail('food effect graph analyzer emits expected artifact', needle)
+  }
+  ok('food effect graph analyzer emits expected artifacts')
+}
+
+runMeasured('JSON and JS syntax validation', testJsonAndSyntax)
+runMeasured('critical progression surfaces', testCriticalSurfaces)
+runMeasured('quest book validation', testQuestBook)
+runMeasured('Wares and villager trade validation', testWaresAndTrades)
+runMeasured('repo loot data validation', testLootData)
+runMeasured('generated recipe graph validation', testGeneratedRecipeGraph)
+runMeasured('generated loot dump validation', testGeneratedDumpLoot)
+runMeasured('engine and world performance log analysis', testEngineWorldPerformanceLogs)
+runMeasured('dev dump health validation', testDevDumpHealth)
+
+metrics.performance = {
+  budgetsMs: Object.fromEntries(Object.entries(performanceBudgetsMs).map(([name, budget]) => [name, budget.budget])),
+  hardLimitsMs: Object.fromEntries(Object.entries(performanceBudgetsMs).map(([name, budget]) => [name, budget.hard])),
+  results: performanceResults
+}
+
+const summary = {
+  generatedAt: new Date().toISOString(),
+  repo,
+  instance,
+  passes: passes.length,
+  hardFailures: hardFailures.length,
+  softFindings: softFindings.length,
+  skips: skips.length,
+  metrics
+}
+
+const report = `# Automated Pack Test Report
+
+Generated: ${summary.generatedAt}
+
+Repo: \`${repo}\`
+
+Instance: \`${instance}\`
+
+## Result
+
+${table([
+  ['Class', 'Count'],
+  ['Passes', passes.length],
+  ['Hard failures', hardFailures.length],
+  ['Soft findings', softFindings.length],
+  ['Skipped', skips.length]
+])}
+## Hard Failures
+
+${table([['Test', 'Detail'], ...hardFailures.map(f => [f.name, f.detail])])}
+## Soft Findings
+
+${table([['Rank', 'Test', 'Detail'], ...softFindings.map(f => [f.severity, f.name, f.detail])])}
+## Passes
+
+${table([['Test', 'Detail'], ...passes.map(p => [p.name, p.detail])])}
+## Skipped
+
+${table([['Test', 'Detail'], ...skips.map(s => [s.name, s.detail])])}
+## Metrics
+
+\`\`\`json
+${JSON.stringify(metrics, null, 2)}
+\`\`\`
+`
+
+fs.writeFileSync(path.join(docsDir, 'automated_test_report.md'), report)
+fs.writeFileSync(path.join(docsDir, 'automated_test_summary.json'), JSON.stringify(summary, null, 2) + '\n')
+
+if (hardFailures.length) {
+  console.error(`\n${hardFailures.length} hard failure(s). See docs/automated_test_report.md`)
+  process.exit(1)
+}
+console.log(`\npack test suite passed with ${softFindings.length} soft finding(s). See docs/automated_test_report.md`)

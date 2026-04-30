@@ -89,7 +89,7 @@
         "slot": "inventory"
       },
       {
-        "item": "chipped:carpenters_table",
+        "item": "tconstruct:tinker_station",
         "count": 1,
         "slot": "inventory"
       },

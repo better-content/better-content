@@ -46,20 +46,9 @@ This is the current source-of-truth graph model used by the offline audit. It tr
 | ----- | -------- | ------------------------ | ------------------------------------------------------- |
 | 0     | copper   | dotcoinmod:copper_coin   | starting_out, low_world_loot, early_mobs, villages      |
 | 1     | iron     | dotcoinmod:iron_coin     | tcon_seared, early_adventure, village_contracts         |
-| 2     | tin      | dotcoinmod:tin_coin      | create_andesite, route_loot, village_contracts          |
-| 3     | bronze   | dotcoinmod:bronze_coin   | create_brass_prep, danger_structures, village_contracts |
-| 4     | nickel   | dotcoinmod:nickel_coin   | danger_structures, mid_adventure                        |
-| 5     | silver   | dotcoinmod:silver_coin   | oc2r, danger_structures, village_contracts              |
-| 6     | steel    | dotcoinmod:steel_coin    | combat, logistics                                       |
-| 7     | brass    | dotcoinmod:brass_coin    | hard_world_loot, create_brass                           |
-| 8     | gold     | dotcoinmod:gold_coin     | space, synthesis, wandering_contracts                   |
-| 9     | osmium   | dotcoinmod:osmium_coin   | lava_depths, advanced_power                             |
-| 10    | platinum | dotcoinmod:platinum_coin | deepslate_depths, space                                 |
-| 11    | diamond  | dotcoinmod:diamond_coin  | ae2, bosses                                             |
-| 12    | emerald  | dotcoinmod:emerald_coin  | mountain_extreme, late_magic                            |
-| 13    | ruby     | dotcoinmod:ruby_coin     | late_dimensions                                         |
-| 14    | sapphire | dotcoinmod:sapphire_coin | late_dimensions                                         |
-| 15    | topaz    | dotcoinmod:topaz_coin    | endgame_dimensions                                      |
+| 2     | brass    | dotcoinmod:brass_coin    | create_brass, logistics, danger_structures              |
+| 3     | gold     | dotcoinmod:gold_coin     | space, synthesis, wandering_contracts                   |
+| 4     | platinum | dotcoinmod:platinum_coin | deepslate_depths, lava_depths, ae2, bosses              |
 
 ## Critical Rules
 

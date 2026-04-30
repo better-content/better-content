@@ -144,7 +144,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "dotcoinmod:silver_coin",
+          "name": "dotcoinmod:brass_coin",
           "weight": 2
         },
         {

@@ -16,12 +16,6 @@ var dirtLikeEntries = [
     '#unearthed:regolith',
     'natures_spirit:red_moss_block',
     'natures_spirit:sandy_soil',
-    'immersive_weathering:earthen_clay',
-    'immersive_weathering:loam',
-    'immersive_weathering:mulch_block',
-    'immersive_weathering:permafrost',
-    'immersive_weathering:sandy_dirt',
-    'immersive_weathering:silt'
 ]
 
 var grassLikeEntries = [
@@ -40,11 +34,6 @@ var grassLikeEntries = [
     'unearthed:slate_grassy_regolith',
     'unearthed:stone_grassy_regolith',
     'unearthed:white_granite_grassy_regolith',
-    'immersive_weathering:grassy_earthen_clay',
-    'immersive_weathering:grassy_permafrost',
-    'immersive_weathering:grassy_sandy_dirt',
-    'immersive_weathering:grassy_silt',
-    'immersive_weathering:rooted_grass_block'
 ]
 
 ServerEvents.tags('item', function (event) {

@@ -23,15 +23,15 @@ Village contract coin mapping:
 |---|---|
 | plains | `dotcoinmod:copper_coin` |
 | desert | `dotcoinmod:iron_coin` |
-| taiga | `dotcoinmod:tin_coin` |
-| savanna | `dotcoinmod:bronze_coin` |
-| snowy | `dotcoinmod:silver_coin` |
+| taiga | `dotcoinmod:brass_coin` |
+| savanna | `dotcoinmod:brass_coin` |
+| snowy | `dotcoinmod:brass_coin` |
 
 Wandering trader contract coin mapping:
 
 | Agreement tier | Coin tier |
 |---|---|
-| regular | `dotcoinmod:bronze_coin` |
+| regular | `dotcoinmod:brass_coin` |
 | rare | `dotcoinmod:gold_coin` |
 
 ## Evidence

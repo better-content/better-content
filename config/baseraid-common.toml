@@ -1,0 +1,86 @@
+
+#Requires world reload (quit to main menu and rejoin world to apply)
+["base raids"]
+	#Add Raids to happen at your base.
+	#*If enabled at first and you want to turn it off after a base raid has happened, you will also have to destroy the bed that the fake villager was claiming.*
+	enable_base_raids = true
+
+#Requires FULL Minecraft restart to apply
+["ominous bottle"]
+	#The ID of the mob that should drop the ominous bottle.
+	#**WARNING: This will replace the entire loot table for the configured mob**
+	#Recommend to use another method like the mod: "Configurable Extra Mob Drops" if you would like another mob to drop the bottle. Noneless it is here if you would like to use it
+	#EX: ("minecraft:ravager" = The bottle will drop from killing a ravager)
+	drop_mob = "minecraft:ravager"
+	#Chance that the configured mob, or captain, will drop the Ominous Bottle.
+	#Set this to 0.0 if you would not like the item to drop at all
+	#EX: (0.75 = 75% chance the bottle will drop)
+	#Range: 0.0 ~ 1.0
+	drop_chance = 1.0
+	#Sets the drop mob to be a pillager with the 'PatrolLeader:1b' tag, aka the pillager with the banner on its head.
+	#*If set to true, this setting overrides the drop mob completely*
+	drop_from_captain = true
+
+["pillager patrols"]
+	#Add custom patrol behavior.
+	#If this value is false, special patrols will not spawn either.
+	enable_custom_patrols = true
+	#The amount of time that has to pass when attempting to spawn a patrol.
+	#Vanilla patrols happen on average every 3 days.
+	#EX: (24,000 ticks = 1 minecraft day)
+	#EX: (240,000 ticks = 10 minecraft days)
+	#Range: 20 ~ 240000
+	patrol_spawn_attempt = 1200
+	#The chance that a patrol spawn attempt will succeed.
+	#Vanilla patrols happen on average every 3 days.
+	#EX: (0.8 = 80% chance to spawn)
+	#Range: 0.0 ~ 1.0
+	patrol_spawn_chance = 0.95
+	#Spawn Patrol Leader in patrols.
+	#If you set this to false, you will only be able to get bad omen from outposts or the ominous bottle added with this mod.
+	patrol_leader_spawn = true
+	#Minimum pillagers to spawn in every patrol.
+	#Does not include Patrol Leader.
+	#(Vanilla patrols have 2 - 5 pillagers.)
+	#Range: 0 ~ 40
+	min_pillagers = 4
+	#Maximum pillagers to spawn in every patrol.
+	#Does not include Patrol Leader.
+	#(Vanilla patrols have 2 - 5 pillagers.)
+	#Range: 0 ~ 40
+	max_pillagers = 7
+	#Number of ravengers that spawn in every patrol.
+	#Range: 0 ~ 40
+	patrol_ravengers = 0
+
+["special patrols"]
+	#Enable patrols to have "special mobs" that are typically stronger than normal pillagers.
+	add_special_patrols = true
+	#A list of entity IDs that count as "special" illagers. Modded mobs are allowed. Neutral mobs will attack player. Passive mobs are unaffected and will be useless
+	special_illagers = ["minecraft:vindicator", "minecraft:evoker", "minecraft:witch", "takesapillage:archer", "takesapillage:skirmisher", "takesapillage:legioner", "savage_and_ravage:griefer", "savage_and_ravage:executioner", "savage_and_ravage:iceologer", "savage_and_ravage:trickster"]
+	#Number of special illagers that will be randomly selected and added to the patrols.
+	#Range: 1 ~ 40
+	special_illager_amount = 2
+	#The chance special illagers will join a patrol.
+	#(0.25 = 25% chance for 2 random special illagers to join a patrol)
+	#(25% is roughly every 4 patrols)
+	#Range: 0.0 ~ 1.0
+	special_patrol_chance = 0.75
+
+[compatibility]
+	#Quickly add Hunter Illager to 'special mobs' list
+	hunters_return = true
+	#Quickly add Enchanter to 'special mobs' list
+	enchant_with_mob = true
+	#Quickly add Archers, Skirmishers, and Legioners to 'special mobs' list
+	it_takes_a_pillage = true
+	#Quickly add Griefer, Executioner, Trickster, Iceologer to 'special mobs' list
+	savage_and_ravage = true
+	#Quickly add Igniter, Twittollager, Preserver, Absorber, Crocofang, and Engineer to 'special mobs' list
+	illage_and_spillage_respillaged = true
+	#Quickly add Magispeller, Spiritcaller, and Freakager to 'special mobs' list
+	illage_and_spillage_boss_mobs = false
+	#Quickly add The Warrior, Tank, Dart, Assassin, Illusioner, Conductor, Necromancer, Shaman, and Frostmage to 'special mobs' list
+	difficult_raids = true
+	#Quickly add Nuaos, Xydrax, Modur, and Voldon to 'special mobs' list
+	difficult_raids_boss_mobs = false

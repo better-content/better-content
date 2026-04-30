@@ -595,7 +595,6 @@
 588, unusualend:warped_flying_end_ship, MONSTER, unusualend:spunkler, 10, 1, 2
 589, unusualend:warped_flying_end_ship, MONSTER, unusualend:bolok, 10, 1, 1
 590, unusualend:warped_station, HEADING, header:ignore, 0, 0, 0
-591, supplementaries:way_sign, HEADING, header:ignore, 0, 0, 0
 592, valhelsia_structures:witch_hut, HEADING, header:ignore, 0, 0, 0
 593, valhelsia_structures:witch_hut, MONSTER, minecraft:witch, 10, 1, 1
 594, valhelsia_structures:witch_hut, CREATURE, minecraft:cat, 10, 1, 1

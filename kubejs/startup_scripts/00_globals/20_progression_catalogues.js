@@ -4,20 +4,9 @@
 global.BTM_COIN_TIERS = [
     { id: 'copper', item: 'dotcoinmod:copper_coin' },
     { id: 'iron', item: 'dotcoinmod:iron_coin' },
-    { id: 'tin', item: 'dotcoinmod:tin_coin' },
-    { id: 'bronze', item: 'dotcoinmod:bronze_coin' },
-    { id: 'nickel', item: 'dotcoinmod:nickel_coin' },
-    { id: 'silver', item: 'dotcoinmod:silver_coin' },
-    { id: 'steel', item: 'dotcoinmod:steel_coin' },
     { id: 'brass', item: 'dotcoinmod:brass_coin' },
     { id: 'gold', item: 'dotcoinmod:gold_coin' },
-    { id: 'osmium', item: 'dotcoinmod:osmium_coin' },
-    { id: 'platinum', item: 'dotcoinmod:platinum_coin' },
-    { id: 'diamond', item: 'dotcoinmod:diamond_coin' },
-    { id: 'emerald', item: 'dotcoinmod:emerald_coin' },
-    { id: 'ruby', item: 'dotcoinmod:ruby_coin' },
-    { id: 'sapphire', item: 'dotcoinmod:sapphire_coin' },
-    { id: 'topaz', item: 'dotcoinmod:topaz_coin' }
+    { id: 'platinum', item: 'dotcoinmod:platinum_coin' }
 ]
 
 global.BTM_MACHINE_CASING_TIERS = [

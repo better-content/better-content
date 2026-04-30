@@ -24,7 +24,7 @@ var BTM_WORLD_CHEST_COIN_TABLES = [
             'minecraft:chests/underwater_ruin_big',
             'minecraft:chests/ruined_portal'
         ],
-        coin: 'dotcoinmod:tin_coin',
+        coin: 'dotcoinmod:brass_coin',
         count: 3,
         chance: 0.45
     },
@@ -47,7 +47,7 @@ var BTM_WORLD_CHEST_COIN_TABLES = [
             'minecraft:chests/stronghold_corridor',
             'minecraft:chests/stronghold_crossing'
         ],
-        coin: 'dotcoinmod:bronze_coin',
+        coin: 'dotcoinmod:brass_coin',
         count: 3,
         chance: 0.40
     },
@@ -59,7 +59,7 @@ var BTM_WORLD_CHEST_COIN_TABLES = [
             'minecraft:chests/bastion_bridge',
             'minecraft:chests/bastion_hoglin_stable'
         ],
-        coin: 'dotcoinmod:nickel_coin',
+        coin: 'dotcoinmod:brass_coin',
         count: 2,
         chance: 0.40
     },
@@ -69,7 +69,7 @@ var BTM_WORLD_CHEST_COIN_TABLES = [
             'minecraft:chests/ancient_city',
             'minecraft:chests/bastion_other'
         ],
-        coin: 'dotcoinmod:silver_coin',
+        coin: 'dotcoinmod:brass_coin',
         count: 2,
         chance: 0.35
     },

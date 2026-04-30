@@ -49,7 +49,7 @@ Run these checks in a disposable Prism instance built from this branch. Static v
 8. Verify `kubejs:space_machine_casing` uses Create mechanical crafting and includes Creating Space complexity.
 9. Verify `kubejs:sky_steel_ingot` is made by heated Create mixing.
 10. Verify `kubejs:sky_steel_sheet` is made by Create pressing.
-11. Verify `kubejs:ae2_machine_casing` uses Create mechanical crafting and Sky Steel sheets.
+11. Verify `kubejs:ae2_machine_casing` uses Create mechanical crafting, Sky Steel sheets, AE2 cable/processor infrastructure, and does not require `ae2:controller`.
 
 ## Magic And Hearts
 

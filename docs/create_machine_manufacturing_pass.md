@@ -13,6 +13,7 @@ In `kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js`:
 - `kubejs:ae2_machine_casing` now uses `create:mechanical_crafting`.
 - `kubejs:sky_steel_ingot` now uses heated `create:mixing` instead of shaped crafting.
 - `kubejs:sky_steel_sheet` remains a Create pressing recipe.
+- `kubejs:ae2_machine_casing` uses AE2 cable/processor/sky-stone infrastructure, not `ae2:controller`; the controller is unlocked by the casing rather than consumed by it.
 
 ## Why Andesite Stays Different
 
@@ -28,3 +29,4 @@ In `kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js`:
 ## Validation
 
 - `node --check kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js`
+- `node tools/pack_test_suite.mjs`

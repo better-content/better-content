@@ -60,7 +60,6 @@ ServerEvents.recipes(function (event) {
     // Vanilla automation: pistons/hoppers/rails are useful enough to spend processed parts,
     // but not so strong that they should require full machine casings.
     btmMatRemoveIds(event, [
-        'quark:tweaks/crafting/utility/misc/easy_hopper',
         'aether:skyroot_piston'
     ])
 

@@ -37,14 +37,17 @@ ServerEvents.recipes(function (event) {
     gate(event, { id: 'occultism:crafting/chalk_white_impure' }, 'occultism:burnt_otherstone', BM_SLATE_T3)
 
     // Altar III: dangerous magic, spirits, and servants.
-    gate(event, { id: 'tomeofblood:alchemytable/apprentice_tome' }, 'minecraft:obsidian', BM_SLATE_T3)
+    // Tome of Blood moved to the post-AE2 hybrid branch in
+    // 166_tome_of_blood_post_ae2_gates.js.
 
-    event.remove({ id: 'mahoutsukai:attuned_diamond' })
-    event.shapeless('mahoutsukai:attuned_diamond', [
-        'mahoutsukai:attuner',
-        'minecraft:diamond',
-        BM_SLATE_T3
-    ]).id('kubejs:mahoutsukai/attuned_diamond_blood_gate')
+    if (Item.exists('mahoutsukai:attuned_diamond') && Item.exists('mahoutsukai:attuner')) {
+        event.remove({ id: 'mahoutsukai:attuned_diamond' })
+        event.shapeless('mahoutsukai:attuned_diamond', [
+            'mahoutsukai:attuner',
+            'minecraft:diamond',
+            BM_SLATE_T3
+        ]).id('kubejs:mahoutsukai/attuned_diamond_blood_gate')
+    }
 
     gate(event, { id: 'eidolon:crucible' }, 'eidolon:pewter_ingot', BM_SLATE_T3)
     gate(event, { id: 'eidolon:soul_enchanter' }, '#forge:gems/diamond', BM_SLATE_T3)

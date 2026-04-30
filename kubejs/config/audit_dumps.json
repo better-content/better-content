@@ -1,7 +1,8 @@
 {
   "enabled": true,
   "writeFullRecipeIndex": true,
-  "writeMatchedRecipeJson": true,
+  "writeMatchedRecipeJson": false,
+  "writeFoodEffectIndex": true,
   "maxJsonCharsPerRecipe": 12000,
   "fullRecipeChunkSize": 1000
 }

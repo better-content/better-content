@@ -21,11 +21,11 @@ The script uses `LootJS.modifiers` and `event.addLootTableModifier(...)` so it a
 | Loot source class | Coin tier | Count | Chance |
 |---|---|---:|---:|
 | spawn/village/igloo/small underwater ruins | `dotcoinmod:copper_coin` | 4 | 55% |
-| shipwreck supply/map, big underwater ruins, ruined portals | `dotcoinmod:tin_coin` | 3 | 45% |
+| shipwreck supply/map, big underwater ruins, ruined portals | `dotcoinmod:brass_coin` | 3 | 45% |
 | dungeons, mineshafts, outposts, desert/jungle temples | `dotcoinmod:iron_coin` | 3 | 50% |
-| buried treasure, shipwreck treasure, stronghold corridors/crossings | `dotcoinmod:bronze_coin` | 3 | 40% |
-| woodland mansions, ancient city ice boxes, nether bridge, lower bastions | `dotcoinmod:nickel_coin` | 2 | 40% |
-| stronghold libraries, ancient cities, bastion other | `dotcoinmod:silver_coin` | 2 | 35% |
+| buried treasure, shipwreck treasure, stronghold corridors/crossings | `dotcoinmod:brass_coin` | 3 | 40% |
+| woodland mansions, ancient city ice boxes, nether bridge, lower bastions | `dotcoinmod:brass_coin` | 2 | 40% |
+| stronghold libraries, ancient cities, bastion other | `dotcoinmod:brass_coin` | 2 | 35% |
 | bastion treasure, end city treasure | `dotcoinmod:brass_coin` | 2 | 30% |
 
 This intentionally stops at `brass_coin`, keeping gold and higher coin tiers for harder dimension/obelisk/boss/adventure systems.

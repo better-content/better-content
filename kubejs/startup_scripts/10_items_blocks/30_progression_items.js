@@ -39,4 +39,33 @@ StartupEvents.registry('item', function (event) {
 
     event.create('sky_steel_ingot').displayName('Sky Steel Ingot')
     event.create('sky_steel_sheet').displayName('Sky Steel Sheet')
+
+    var reagents = [
+        ['cut_green_tea_leaves', 'Cut Green Tea Leaves'],
+        ['roasted_coffee_reagent', 'Roasted Coffee Reagent'],
+        ['mashed_salmonberries', 'Mashed Salmonberries'],
+        ['charred_blazing_chili', 'Charred Blazing Chili'],
+        ['green_tea_extract', 'Green Tea Extract'],
+        ['caffeine_extract', 'Caffeine Extract'],
+        ['vision_extract', 'Vision Extract'],
+        ['brine_extract', 'Brine Extract'],
+        ['rose_hip_extract', 'Rose Hip Extract'],
+        ['heatproof_extract', 'Heatproof Extract'],
+        ['fortifying_extract', 'Fortifying Extract'],
+        ['fermented_pomegranate_extract', 'Fermented Pomegranate Extract'],
+        ['toxic_extract', 'Toxic Extract'],
+        ['leaping_extract', 'Leaping Extract'],
+        ['featherlight_extract', 'Featherlight Extract'],
+        ['melon_life_extract', 'Melon Life Extract'],
+        ['turtle_guard_extract', 'Turtle Guard Extract'],
+        ['weakening_extract', 'Weakening Extract'],
+        ['shadow_extract', 'Shadow Extract'],
+        ['harm_extract', 'Harm Extract'],
+        ['slowness_extract', 'Slowness Extract'],
+        ['stabilized_reagent', 'Stabilized Reagent']
+    ]
+
+    for (var r = 0; r < reagents.length; r++) {
+        event.create(reagents[r][0]).displayName(reagents[r][1])
+    }
 })

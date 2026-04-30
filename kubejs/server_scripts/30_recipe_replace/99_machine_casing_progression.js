@@ -185,7 +185,7 @@ ServerEvents.recipes(function (event) {
             F: { item: 'ae2:fluix_crystal' },
             C: { item: 'ae2:engineering_processor' },
             P: { item: 'ae2:sky_stone_block' },
-            A: { item: 'ae2:controller' },
+            A: { item: 'ae2:fluix_glass_cable' },
             B: { item: 'kubejs:space_machine_casing' }
         },
         result: { item: 'kubejs:ae2_machine_casing' }
@@ -216,7 +216,8 @@ ServerEvents.recipes(function (event) {
         'create:rotation_speed_controller',
         'create:mechanical_arm',
         'create:stockpile_switch',
-        'create:content_observer'
+        'create:content_observer',
+        'create:cart_assembler'
     ], ['create:brass_casing', 'create:brass_ingot', '#forge:ingots/brass'], 'kubejs:brass_machine_casing')
 
     btmGateAny(event, [
@@ -240,7 +241,8 @@ ServerEvents.recipes(function (event) {
         'oc2r:network_connector',
         'oc2r:disk_drive',
         'oc2r:monitor',
-        'oc2r:pci_card_cage'
+        'oc2r:pci_card_cage',
+        'oc2r:charger'
     ], ['minecraft:iron_ingot', '#forge:ingots/iron', 'powergrid:integrated_circuit'], 'kubejs:oc2r_machine_casing')
 
     btmGateAny(event, [
@@ -255,6 +257,10 @@ ServerEvents.recipes(function (event) {
         'ae2:interface',
         'ae2:io_port',
         'ae2:spatial_io_port',
+        'ae2:charger',
+        'ae2:inscriber',
+        'ae2:vibration_chamber',
+        'ae2:condenser',
         'ae2:molecular_assembler',
         'ae2:pattern_provider'
     ], ['minecraft:iron_ingot', '#forge:ingots/iron', 'ae2:fluix_crystal', 'ae2:engineering_processor'], 'kubejs:ae2_machine_casing')

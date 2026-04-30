@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "dotcoinmod:bronze_coin",
+          "name": "dotcoinmod:brass_coin",
           "weight": 1,
           "functions": [
             {

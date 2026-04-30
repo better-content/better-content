@@ -58,9 +58,19 @@ ServerEvents.recipes(function (event) {
         'sophisticatedbackpacks:stack_upgrade_tier_2',
         'sophisticatedbackpacks:stack_upgrade_tier_3',
         'sophisticatedbackpacks:stack_upgrade_tier_4',
-        'sophisticatedbackpacks:stack_upgrade_omega_tier',
         'sophisticatedbackpacks:inception_upgrade'
     ], ['minecraft:redstone', '#forge:dusts/redstone', 'minecraft:ender_pearl', '#forge:ender_pearls', 'minecraft:gold_ingot', '#forge:ingots/gold', 'minecraft:diamond', '#forge:gems/diamond'], BTM_GATE.brass)
+
+    btmGateOutputs(event, [
+        'sophisticatedbackpacks:feeding_upgrade',
+        'sophisticatedbackpacks:advanced_feeding_upgrade',
+        'sophisticatedbackpacks:alchemy_upgrade',
+        'sophisticatedbackpacks:advanced_alchemy_upgrade',
+        'sophisticatedbackpacks:tool_swapper_upgrade',
+        'sophisticatedbackpacks:advanced_tool_swapper_upgrade',
+        'sophisticatedstorage:alchemy_upgrade',
+        'sophisticatedstorage:advanced_alchemy_upgrade'
+    ], ['minecraft:redstone', '#forge:dusts/redstone', 'minecraft:gold_ingot', '#forge:ingots/gold', 'minecraft:diamond', '#forge:gems/diamond', 'minecraft:ender_pearl', '#forge:ender_pearls'], BTM_GATE.ae2)
 
     // Sophisticated Storage: local bulk storage is allowed; controllers and high upgrades wait for AE2-local-intelligence tier.
     btmGateOutputs(event, [
@@ -86,24 +96,25 @@ ServerEvents.recipes(function (event) {
         'sophisticatedstorage:diamond_to_netherite_tier_upgrade'
     ], ['minecraft:diamond', '#forge:gems/diamond', 'minecraft:netherite_ingot', '#forge:ingots/netherite'], BTM_GATE.space)
 
-    // Building Wands and Building Gadgets: mass construction is useful, but not pre-infrastructure.
+    // Building Wands and Building Gadgets: mass construction edits are post-AE2.
     btmGateOutputs(event, [
+        'wands:netherite_wand',
         'wands:diamond_wand',
         'wands:magic_bag_2',
         'wands:magic_bag_3',
         'buildinggadgets2:gadget_building',
         'buildinggadgets2:gadget_exchanging',
         'buildinggadgets2:template_manager'
-    ], ['minecraft:diamond', '#forge:gems/diamond', 'minecraft:emerald', '#forge:gems/emerald', 'minecraft:redstone', '#forge:dusts/redstone'], BTM_GATE.power)
+    ], ['minecraft:diamond', '#forge:gems/diamond', 'minecraft:emerald', '#forge:gems/emerald', 'minecraft:redstone', '#forge:dusts/redstone', 'minecraft:netherite_ingot', '#forge:ingots/netherite'], BTM_GATE.ae2)
 
     btmGateOutputs(event, [
         'buildinggadgets2:gadget_copy_paste',
         'buildinggadgets2:gadget_cut_paste'
-    ], ['minecraft:emerald', '#forge:gems/emerald', 'minecraft:redstone', '#forge:dusts/redstone'], BTM_GATE.oc2r)
+    ], ['minecraft:emerald', '#forge:gems/emerald', 'minecraft:redstone', '#forge:dusts/redstone'], BTM_GATE.ae2)
 
     btmGateOutputs(event, [
         'buildinggadgets2:gadget_destruction'
-    ], ['minecraft:ender_pearl', '#forge:ender_pearls', 'minecraft:redstone', '#forge:dusts/redstone'], BTM_GATE.space)
+    ], ['minecraft:ender_pearl', '#forge:ender_pearls', 'minecraft:redstone', '#forge:dusts/redstone'], BTM_GATE.ae2)
 
     // Chunk loading is remote-site infrastructure. It must not appear before power/computing logistics.
     btmGateOutputs(event, [

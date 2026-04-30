@@ -18,10 +18,10 @@ GitHub Repository: [NEED TO MAKE ONE]
 	// Here you can find all pillager outposts.
 	"towers": {
 		// DEFAULT 48
-		"spacing": 48,
+		"spacing": 32,
 		// DEFAULT 24
-		"separation": 24,
-		"frequency": 0.2,
+		"separation": 12,
+		"frequency": 0.5,
 		"salt": 205745294
 	},
 	// Here you can find all structures that aren't villages or outposts.

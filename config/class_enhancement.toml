@@ -46,7 +46,7 @@
 		#Items to equip in Armor slots. Format: modid:item{nbt}=count
 		armor = []
 		#Items to place in Inventory. Format: modid:item{nbt}=count
-		items = ["tconstruct:pickaxe{Damage:0,tic_broken:0b,tic_materials:[\"tconstruct:copper\",\"tconstruct:wood\",\"tconstruct:leather\"],tic_modifiers:[{level:1,name:\"tconstruct:tanned\"},{level:1,name:\"tconstruct:cultivated\"},{level:1,name:\"tconstruct:pierce\"},{level:1,name:\"tconstruct:dwarven\"}],tic_persistent:{},tic_stats:{\"tconstruct:attack_damage\":1.5f,\"tconstruct:attack_speed\":1.2f,\"tconstruct:durability\":210.0f,\"tconstruct:harvest_tier\":\"minecraft:iron\",\"tconstruct:mining_speed\":5.0f},tic_volatile_data:{abilities:1,upgrades:3}}=1", "minecraft:dark_oak_log=64", "chipped:carpenters_table=1", "dynamictrees:dark_oak_seed=16", "dynamictrees:mangrove_seed=16", "dynamictrees:acacia_seed=16","rehooked:wood_hook=1","sophisticatedbackpacks:backpack=1"]
+		items = ["tconstruct:pickaxe{Damage:0,tic_broken:0b,tic_materials:[\"tconstruct:copper\",\"tconstruct:wood\",\"tconstruct:leather\"],tic_modifiers:[{level:1,name:\"tconstruct:tanned\"},{level:1,name:\"tconstruct:cultivated\"},{level:1,name:\"tconstruct:pierce\"},{level:1,name:\"tconstruct:dwarven\"}],tic_persistent:{},tic_stats:{\"tconstruct:attack_damage\":1.5f,\"tconstruct:attack_speed\":1.2f,\"tconstruct:durability\":210.0f,\"tconstruct:harvest_tier\":\"minecraft:iron\",\"tconstruct:mining_speed\":5.0f},tic_volatile_data:{abilities:1,upgrades:3}}=1", "minecraft:dark_oak_log=64", "tconstruct:tinker_station=1", "dynamictrees:dark_oak_seed=16", "dynamictrees:mangrove_seed=16", "dynamictrees:acacia_seed=16","rehooked:wood_hook=1","sophisticatedbackpacks:backpack=1"]
 
 	[classes.tank]
 		#Display name shown in GUI.

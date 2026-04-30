@@ -98,16 +98,6 @@ ServerEvents.recipes(function (event) {
         B: BTM_EXTREME.gate.oc2r
     }, 'kubejs:extreme_y_rewards/deepslate/advanced_tool_swapper_upgrade')
 
-    btmExtremeRecipe(event, 'sophisticatedbackpacks:stack_upgrade_omega_tier', [
-        'RPR',
-        'PBP',
-        'RPR'
-    ], {
-        R: BTM_EXTREME.deepslate.rhodium,
-        P: BTM_EXTREME.deepslate.platinum,
-        B: BTM_EXTREME.gate.ae2
-    }, 'kubejs:extreme_y_rewards/deepslate/stack_upgrade_omega_tier')
-
     btmExtremeRecipe(event, 'buildinggadgets2:gadget_destruction', [
         'RPR',
         'SBS',

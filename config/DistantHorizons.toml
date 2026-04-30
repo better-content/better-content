@@ -3,7 +3,7 @@ _version = 3
 [server]
 	#
 	# Defines the distance the player will receive updates around.
-	realTimeUpdateDistanceRadiusInChunks = 256
+	realTimeUpdateDistanceRadiusInChunks = 64
 	#
 	# Prefix of the level keys sent to the clients.
 	# If the mod is running behind a proxy, each backend should use a unique value.
@@ -12,7 +12,7 @@ _version = 3
 	#
 	# Defines the distance allowed to be synchronized around the player. 
 	# Should be the same or larger than maxGenerationRequestDistance in most cases.
-	maxSyncOnLoadRequestDistance = 4096
+	maxSyncOnLoadRequestDistance = 512
 	#
 	# If true, clients will receive updated LODs when joining or loading new LODs.
 	synchronizeOnLoad = true
@@ -24,7 +24,7 @@ _version = 3
 	serverKey = ""
 	#
 	# Defines the distance allowed to generate around the player.
-	maxGenerationRequestDistance = 4096
+	maxGenerationRequestDistance = 512
 	#
 	# Makes the server send level keys for each world.
 	# Disable this if you use alternative ways to send level keys.
@@ -223,7 +223,7 @@ _version = 3
 		# but may cause server/simulation lag. 
 		# Note: unlike other modes this option DOES save generated chunks to 
 		# Minecraft's region files.
-		distantGeneratorMode = "FEATURES"
+		distantGeneratorMode = "PRE_EXISTING_ONLY"
 		#
 		# How should distant generator progress be displayed? 
 		# 
@@ -260,7 +260,7 @@ _version = 3
 		#  outside the vanilla render distance? 
 		# Depending on the generator mode, this will import existing chunks 
 		# and/or generating missing chunks.
-		enableDistantGeneration = true
+		enableDistantGeneration = false
 		#
 		# The center X chunk position that the world gen max radius is centered around.
 		generationCenterChunkX = 0
@@ -524,7 +524,7 @@ _version = 3
 				minLight = "0.25"
 				#
 				# Enable Screen Space Ambient Occlusion
-				enableSsao = true
+				enableSsao = false
 				#
 				# Determines the radius Screen Space Ambient Occlusion is applied, measured in blocks.
 				radius = "4.0"
@@ -534,7 +534,7 @@ _version = 3
 				# Should a noise texture be applied to LODs? 
 				# 
 				# This is done to simulate textures and make the LODs appear more detailed.
-				enableNoiseTexture = true
+				enableNoiseTexture = false
 				#
 				# Defines how far should the noise texture render before it fades away. (in blocks) 
 				# Set to 0 to disable noise from fading away
@@ -579,11 +579,11 @@ _version = 3
 				beaconRenderHeight = 6000
 				#
 				# If true LOD beacon beams will be rendered.
-				enableBeaconRendering = true
+				enableBeaconRendering = false
 				#
 				# If true non terrain objects will be rendered in DH's terrain. 
 				# This includes beacon beams and clouds.
-				enableGenericRendering = true
+				enableGenericRendering = false
 				#
 				# Can be disabled to use much slower but more compatible direct rendering. 
 				# Disabling this can be used to fix some crashes on Mac.
@@ -602,7 +602,7 @@ _version = 3
 				# 
 				# Lowest Quality: CHUNK
 				# Highest Quality: BLOCK
-				maxHorizontalResolution = "BLOCK"
+				maxHorizontalResolution = "FOUR_BLOCKS"
 				#
 				# If true LODs will fade away as you get closer to them. 
 				# If false LODs will cut off abruptly at a set distance from the camera. 
@@ -641,7 +641,7 @@ _version = 3
 				# 
 				# Lowest Quality: HEIGHT_MAP
 				# Highest Quality: EXTREME
-				verticalQuality = "MEDIUM"
+				verticalQuality = "LOW"
 				#
 				# What blocks shouldn't be rendered as LODs? 
 				# 
@@ -650,7 +650,7 @@ _version = 3
 				blocksToIgnore = "NON_COLLIDING"
 				#
 				# The radius of the mod's render distance. (measured in chunks)
-				lodChunkRenderDistanceRadius = 256
+				lodChunkRenderDistanceRadius = 128
 				#
 				# What value should vanilla Minecraft's texture LodBias be? 
 				# If set to 0 the mod wont overwrite vanilla's default (which so happens to also be 0)
@@ -672,7 +672,7 @@ _version = 3
 				# This indicates how quickly LODs decrease in quality the further away they are. 
 				# Higher settings will render higher quality fake chunks farther away, 
 				# but will increase memory and GPU usage.
-				horizontalQuality = "MEDIUM"
+				horizontalQuality = "LOW"
 				#
 				# How should LOD transparency be handled. 
 				# 

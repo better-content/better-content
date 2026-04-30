@@ -7,8 +7,8 @@
   "triggers": {
     "reloadConfigOnClientStart": true,
     "reloadConfigOnServerStart": true,
-    "dumpBuiltInRegistriesOnClientStart": true,
-    "dumpAssetsOnClientStart": true
+    "dumpBuiltInRegistriesOnClientStart": false,
+    "dumpAssetsOnClientStart": false
   },
   "paths": {
     "registryBuiltInRoot": "registry_builtin",
@@ -24,24 +24,24 @@
     "errorsFolderName": "_errors"
   },
   "registry": {
-    "builtInRegistriesEnabled": true,
-    "runtimeRegistriesEnabled": true,
+    "builtInRegistriesEnabled": false,
+    "runtimeRegistriesEnabled": false,
     "builtInRegistryDumpFormat": "txt",
     "runtimeRegistryDumpFormat": "txt",
     "includeEntryClassNames": true
   },
   "tags": {
     "rawTagJsonsEnabled": true,
-    "expandedRuntimeTagsEnabled": true,
+    "expandedRuntimeTagsEnabled": false,
     "prettyPrintRawTagJsons": false,
     "expandedRuntimeTagsFormat": "txt"
   },
   "recipes": {
-    "rawRecipeJsonsEnabled": true,
+    "rawRecipeJsonsEnabled": false,
     "prettyPrintRawRecipeJsons": false
   },
   "resources": {
-    "enabled": true,
+    "enabled": false,
     "dumpUnknownTopLevelDataFolders": true,
     "prettyPrintJsonInGenericRawDumps": false,
     "prettyPrintUnknownJson": false,

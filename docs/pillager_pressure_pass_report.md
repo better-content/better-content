@@ -2,11 +2,11 @@
 
 ## Finding
 
-Base Raid was configured for frequent custom patrols, but live behavior did not produce patrol pressure. KubeJS fallback commands were also unreliable after reload. Pillager pressure is core gameplay, so it should not depend on reload-sensitive KubeJS command registration.
+Base Raid did not provide reliable custom patrol pressure, and KubeJS fallback commands were unreliable after reload. Pillager pressure is core gameplay, so it now lives in a dedicated Forge mod.
 
 ## Implemented Fix
 
-Added a dedicated Forge mod jar: `mods/pillagerpressure-0.1.0.jar`.
+Active jar: `mods/pillagerpressure-0.1.1.jar`.
 
 Current behavior:
 
@@ -17,14 +17,17 @@ Current behavior:
 - 75% chance to add 2 special illagers from vanilla, It Takes a Pillage, and Savage & Ravage.
 - Tags spawned mobs with `BoundToMatterPillagerPressure` persistent data.
 - Marks leaders as patrol captains.
-- Drops Base Raid's ominous bottle from tagged patrol leaders if Base Raid is loaded and no other bottle drop already exists.
 - Targets the player immediately.
 - Applies persistence to pressure mobs, with an active cap to prevent runaway accumulation.
 - Skips spectators and includes creative players for playtest tuning.
 
 ## Removed
 
-Removed `kubejs/server_scripts/70_spawn/20_pillager_patrol_pressure.js`.
+- Removed Base Raid from the active pack.
+- Removed `config/baseraid-common.toml`.
+- Removed `mods/base-raid.pw.toml`.
+- Removed `kubejs/server_scripts/70_spawn/20_pillager_patrol_pressure.js` in the earlier pass.
+- Removed the Base Raid ominous bottle drop bridge from Pillager Pressure.
 
 ## Tuning Surface
 
@@ -51,4 +54,4 @@ Edit `config/pillagerpressure-common.toml`:
 
 ## Operational Note
 
-The live Prism instance has been patched with the new jar and config, but it requires a full Minecraft restart. `/reload` is insufficient for adding Forge mods.
+The live Prism instance has been patched with the updated jar/config and Base Raid has been removed there too. This requires a full Minecraft restart.

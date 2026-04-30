@@ -5333,10 +5333,6 @@ file = "config/apotheosis/village.cfg"
 hash = "9c06164bad9a22d779a4986dc231071e7a9d3bc8f1d7d67fa277999e510d2a78"
 
 [[files]]
-file = "config/baseraid-common.toml"
-hash = "fa7e0b16f70fd6e2bde306824e9bc3d97df8c67d99f626b1eb4d3d118674a7ea"
-
-[[files]]
 file = "config/bettercombat/client.json5"
 hash = "744d7a62f2b493bc45feb87a6a09a5ca1663d4439999dc07b05278e353b35fcb"
 
@@ -6058,7 +6054,7 @@ hash = "7699b1da74a628bf541f530e721f842347519110f0c889dab2ec06fd12fdde06"
 
 [[files]]
 file = "config/pillagerpressure-common.toml"
-hash = "17ca44327c1e75e159fb8a0786c55b143e31ce3931c1f306d7e6e53a7382ba77"
+hash = "d66641112c27a768712090f4feb3231378eff8dabc746ff9bd3abaaf54389630"
 
 [[files]]
 file = "config/rbp/block_definitions/bamboo.toml"
@@ -6834,11 +6830,11 @@ hash = "1b31055d2756bc2205a948f0d10e949c61fff5611688436c48f2d9df286414d4"
 
 [[files]]
 file = "docs/pillager_pressure_pass_report.md"
-hash = "401feb8ddb5248e18e709bc317041acdcfb312f2a7608bb66e0ec4e8299d54f7"
+hash = "22fafcbfa132d381d14091dcacdb8e1de322bf49ad85a77eab91781880c8d733"
 
 [[files]]
 file = "docs/pillager_pressure_stack_audit.md"
-hash = "c57a42240ac7b390c253b81c5c89acd5155ec8124ceef6d389b70b9f883d593d"
+hash = "5c4dd43dde375c0ea1e4602af61fff7aca4208f3a0292ae967ee07c887cb0bbc"
 
 [[files]]
 file = "docs/post_ae2_branch_plan.md"
@@ -8558,11 +8554,6 @@ hash = "9638d8a308563842fd989970919a51f37ed1bcc82372bff47fc5a5c2e6de738e"
 metafile = true
 
 [[files]]
-file = "mods/base-raid.pw.toml"
-hash = "14bd3464ad596a27fb1f764474e74d671500f89c8ae6b46b1a82f249b154470a"
-metafile = true
-
-[[files]]
 file = "mods/better-combat-by-daedelus.pw.toml"
 hash = "95e1e53b02444a363aef8e309fd75422bae1d8844ddf681ba8750f8e6d3e1942"
 metafile = true
@@ -9406,8 +9397,8 @@ hash = "b2cb681aaf3e6085148392a06d40899239dc299aaf5ce0adf168fc225d922c97"
 metafile = true
 
 [[files]]
-file = "mods/pillagerpressure-0.1.0.jar"
-hash = "6129b3b90b0640f3c83b17f75e660a7f40a4d03b92bb68d216cb8670f42c60d5"
+file = "mods/pillagerpressure-0.1.1.jar"
+hash = "b35dede22f7a6c9a6c5c353971b593e87328e999655d159d69b1049fcc7f6d8c"
 
 [[files]]
 file = "mods/placebo.pw.toml"

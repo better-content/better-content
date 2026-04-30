@@ -2,18 +2,13 @@
 
 ## Current Finding
 
-The pack has multiple systems affecting pillager pressure. Base Raid provides the Bad Omen bottle and base-raid trigger, but `base_raid-0.5.jar` does not reliably schedule custom patrols: inspection found `HomeRaidSpawnLogic` and `VanillaPatrolHandler` registered, while `CustomPatrolSpawner` had no clear event registration path. Live testing also reported `btmpatrol status = Unknown` after reload, so KubeJS command registration was not reliable enough for a core threat system.
+The pack previously used Base Raid for ominous bottles/base raids, but its custom patrol scheduler was not reliable enough for a core surface-pressure system. Base Raid has now been removed from the active pack.
 
-## Implemented Direction
-
-`pillagerpressure-0.1.0.jar` is now the authoritative patrol scheduler. The old KubeJS `btmpatrol` script was removed.
-
-Base Raid custom patrols are disabled in `config/baseraid-common.toml`; Base Raid remains responsible for ominous bottles and fake-villager base raid triggering. Pillager Pressure disables vanilla patrol spawning on server start and owns pack-authored overworld patrol pressure.
+`pillagerpressure-0.1.1.jar` is the authoritative patrol scheduler. It disables vanilla patrol spawning on server start and owns pack-authored overworld patrol pressure.
 
 ## Active Pillager/Raid/Spawn Stack
 
-- Pillager Pressure: pack-owned patrol scheduling, surface placement, immediate player targeting, patrol captain marking, Base Raid bottle drop bridge.
-- Base Raid: Bad Omen bottle item and fake-villager base raid trigger. Its custom patrols are disabled.
+- Pillager Pressure: pack-owned patrol scheduling, surface placement, immediate player targeting, patrol captain marking, and active mob caps.
 - In Control: broad surface spawn denial, with first-rule allow for intended patrol illagers retained for compatibility.
 - It Takes a Pillage: extra patrol candidates.
 - Savage & Ravage: extra patrol candidates.
@@ -25,6 +20,12 @@ Base Raid custom patrols are disabled in `config/baseraid-common.toml`; Base Rai
 - No Mob Farms: anti-farming behavior; watch if patrol drops behave oddly.
 - Raider Detector: raid detection/tooling.
 - Village Walls / Village Spawn Point: village/base context but not patrol source.
+
+## Removed From Active Stack
+
+- Base Raid.
+- KubeJS `btmpatrol` scheduler.
+- Base Raid ominous bottle drop bridge in Pillager Pressure.
 
 ## Debug Surface
 
@@ -53,4 +54,4 @@ Configured in `config/pillagerpressure-common.toml`:
 
 ## Validation Notes
 
-This is a full-restart change because it adds a Forge mod jar. `/reload` will not load the new mod. After restart, use `/pillagerpressure now` first; if that spawns a group, scheduled pressure should follow on the interval.
+This is a full-restart change because it removes a Forge mod jar and updates another. `/reload` is insufficient. After restart, use `/pillagerpressure now` first; if that spawns a group, scheduled pressure should follow on the interval.

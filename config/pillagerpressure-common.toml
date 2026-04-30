@@ -23,4 +23,3 @@
 	special_illagers = ["minecraft:vindicator", "minecraft:evoker", "minecraft:witch", "takesapillage:archer", "takesapillage:skirmisher", "takesapillage:legioner", "savage_and_ravage:griefer", "savage_and_ravage:executioner", "savage_and_ravage:iceologer", "savage_and_ravage:trickster"]
 	target_player_immediately = true
 	persistent_patrol_mobs = true
-	drop_ominous_bottle_from_leaders = true

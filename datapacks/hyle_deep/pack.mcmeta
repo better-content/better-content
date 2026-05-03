@@ -1,6 +1,6 @@
 {
-    "pack": {
-        "description": "${mod_name}",
-        "pack_format": 15
-    }
+  "pack": {
+    "description": "Hyle deepslate band patch",
+    "pack_format": 15
+  }
 }

@@ -4,9 +4,12 @@
     {
       "type": "height_range",
       "height": {
-        "type": "constant",
-        "value": {
-          "absolute" : -128
+        "type": "uniform",
+        "min_inclusive": {
+          "absolute": -64
+        },
+        "max_inclusive": {
+          "absolute": 0
         }
       }
     }

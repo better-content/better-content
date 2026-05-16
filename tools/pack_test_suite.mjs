@@ -26,6 +26,7 @@ const performanceBudgetsMs = {
   'generated recipe graph validation': { budget: 5000, hard: 20000 },
   'generated loot dump validation': { budget: 2500, hard: 10000 },
   'engine and world performance log analysis': { budget: 250, hard: 1500 },
+  'KubeJS asset validation': { budget: 500, hard: 2000 },
   'chemistry identity validation': { budget: 500, hard: 2000 },
   'dev dump health validation': { budget: 50, hard: 500 }
 }
@@ -938,6 +939,15 @@ function testChemistryIdentity() {
   else fail('chemistry identity matrix validates', (result.stdout + result.stderr).trim())
 }
 
+function testKubejsAssets() {
+  const result = spawnSync('node', ['tools/validate_kubejs_assets.mjs'], {
+    cwd: repo,
+    encoding: 'utf8'
+  })
+  if (result.status === 0) ok('KubeJS custom assets validate', result.stdout.trim())
+  else fail('KubeJS custom assets validate', (result.stdout + result.stderr).trim())
+}
+
 runMeasured('JSON and JS syntax validation', testJsonAndSyntax)
 runMeasured('critical progression surfaces', testCriticalSurfaces)
 runMeasured('quest book validation', testQuestBook)
@@ -946,6 +956,7 @@ runMeasured('repo loot data validation', testLootData)
 runMeasured('generated recipe graph validation', testGeneratedRecipeGraph)
 runMeasured('generated loot dump validation', testGeneratedDumpLoot)
 runMeasured('engine and world performance log analysis', testEngineWorldPerformanceLogs)
+runMeasured('KubeJS asset validation', testKubejsAssets)
 runMeasured('chemistry identity validation', testChemistryIdentity)
 runMeasured('dev dump health validation', testDevDumpHealth)
 

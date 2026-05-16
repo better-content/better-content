@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-05-16T02:54:50.892Z",
+  "generatedAt": "2026-05-16T02:58:10.152Z",
   "repo": "/home/gerald/obelisks",
   "instance": "/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1/minecraft",
-  "passes": 50,
+  "passes": 52,
   "hardFailures": 0,
   "softFindings": 3,
   "skips": 5,
@@ -11,7 +11,7 @@
     "villagerProfessionsCovered": 13,
     "engineWorld": {
       "latestLog": "/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1/minecraft/logs/latest.log",
-      "latestLogAgeMinutes": 111.09,
+      "latestLogAgeMinutes": 114.41,
       "latestLogLines": 23415,
       "reachedIntegratedServer": true,
       "startedServingLan": false,
@@ -46,6 +46,7 @@
         "generated recipe graph validation": 5000,
         "generated loot dump validation": 2500,
         "engine and world performance log analysis": 250,
+        "KubeJS asset validation": 500,
         "chemistry identity validation": 500,
         "dev dump health validation": 50
       },
@@ -58,67 +59,74 @@
         "generated recipe graph validation": 20000,
         "generated loot dump validation": 10000,
         "engine and world performance log analysis": 1500,
+        "KubeJS asset validation": 2000,
         "chemistry identity validation": 2000,
         "dev dump health validation": 500
       },
       "results": [
         {
           "name": "JSON and JS syntax validation",
-          "durationMs": 4316.14,
+          "durationMs": 4289.97,
           "budgetMs": 8000,
           "hardLimitMs": 24000
         },
         {
           "name": "critical progression surfaces",
-          "durationMs": 4.21,
+          "durationMs": 4.57,
           "budgetMs": 750,
           "hardLimitMs": 3000
         },
         {
           "name": "quest book validation",
-          "durationMs": 0.34,
+          "durationMs": 0.42,
           "budgetMs": 250,
           "hardLimitMs": 1500
         },
         {
           "name": "Wares and villager trade validation",
-          "durationMs": 0.64,
+          "durationMs": 0.78,
           "budgetMs": 250,
           "hardLimitMs": 1500
         },
         {
           "name": "repo loot data validation",
-          "durationMs": 1.63,
+          "durationMs": 2.13,
           "budgetMs": 500,
           "hardLimitMs": 3000
         },
         {
           "name": "generated recipe graph validation",
-          "durationMs": 20.14,
+          "durationMs": 19.47,
           "budgetMs": 5000,
           "hardLimitMs": 20000
         },
         {
           "name": "generated loot dump validation",
-          "durationMs": 0.1,
+          "durationMs": 0.16,
           "budgetMs": 2500,
           "hardLimitMs": 10000
         },
         {
           "name": "engine and world performance log analysis",
-          "durationMs": 27.81,
+          "durationMs": 26.97,
           "budgetMs": 250,
           "hardLimitMs": 1500
         },
         {
+          "name": "KubeJS asset validation",
+          "durationMs": 64.96,
+          "budgetMs": 500,
+          "hardLimitMs": 2000
+        },
+        {
           "name": "chemistry identity validation",
-          "durationMs": 63.21,
+          "durationMs": 64.71,
           "budgetMs": 500,
           "hardLimitMs": 2000
         },
         {
           "name": "dev dump health validation",
-          "durationMs": 0.18,
+          "durationMs": 0.31,
           "budgetMs": 50,
           "hardLimitMs": 500
         }

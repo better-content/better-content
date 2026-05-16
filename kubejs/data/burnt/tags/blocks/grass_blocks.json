@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "aether:aether_grass_block",
+    "aether:enchanted_aether_grass_block",
+    "blue_skies:lunar_comet_grass_block",
+    "blue_skies:lunar_grass_block",
+    "blue_skies:turquoise_comet_grass_block",
+    "blue_skies:turquoise_grass_block",
+    "dynamictrees:rooty_grass_block",
+    "iceandfire:chared_grass",
+    "iceandfire:crackled_grass",
+    "iceandfire:frozen_grass",
+    "immersive_weathering:rooted_grass_block",
+    "the_finley_dimension_remastered:finley_grass_block",
+    "the_finley_dimension_remastered:living_grass_block"
+  ]
+}

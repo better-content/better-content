@@ -6006,7 +6006,7 @@ hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
 
 [[files]]
 file = "config/incontrol/spawn.json"
-hash = "b15e0b770343ea48a0a76d962b6954194ec26514396cc67c30c89b395649c099"
+hash = "c5724214802c5afd6a93dead8a544ae69ff48ea5cf1aa5522ddcd792ef9d3c7d"
 
 [[files]]
 file = "config/incontrol/spawner.json"
@@ -6818,7 +6818,7 @@ hash = "464e4972aa109117fb5a9d3fe3ad18c3922bca44313474d39ff4398518706aaf"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/block/airtight_machine_casing.json"
-hash = "5d136deff48e6759155f02822037587879cf8210913a66db1712a8361b4f610d"
+hash = "5158f4853d123f9fdb710c4a3ef6d3746af7e68349f1b9f43c8af0c292065752"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/block/andesite_machine_casing.json"
@@ -6945,6 +6945,14 @@ file = "kubejs/assets/kubejs/models/item/andesite_machine_casing.json"
 hash = "1db299e82af3236afee72f54599e48d213c105fb961518761aee390d962eadbf"
 
 [[files]]
+file = "kubejs/assets/kubejs/models/item/apprentice_blood_heart.json"
+hash = "18a45d81d504e2c9fc699baf3a7a5aaee37209ec2ff008f23b9261a1e4236059"
+
+[[files]]
+file = "kubejs/assets/kubejs/models/item/archmage_blood_heart.json"
+hash = "a751fdecdd85914b902eb46be1ac55e7ac11e4b2ff183d7a49a11e25a74b3f9b"
+
+[[files]]
 file = "kubejs/assets/kubejs/models/item/blood_infused_grinding_ball.json"
 hash = "0392aaea7640360c393837546e93a21523634ff00fac0f2b3e86a2a579b84e50"
 
@@ -7026,11 +7034,11 @@ hash = "99f95d81c813cee4c406611e248ff50fe97e30d18f3b9832ba16e29f2d7f9c1a"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/caffeine_extract.json"
-hash = "a83508eb65dd436c8d82bff266b141988d7f83afc83768cdb606864f72740b07"
+hash = "e4c256b755d59edefde565f2136aaed903bed75a58465b66b36fc93023dcb6ab"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/charred_blazing_chili.json"
-hash = "062ce708145f94f682f4ae6f32f0c376964f2eb5ef4b6d42996b735bb23d95a3"
+hash = "4c3220643ce67b689ab88eff392d263047c23b335b674e655656cfb447d7e2a8"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/circuited_machine_casing.json"
@@ -7042,7 +7050,7 @@ hash = "365c095affdd837d612644b729458eb1c9acaef1b9b44412ceab4bc33e96c64d"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/cut_green_tea_leaves.json"
-hash = "c79e81e2ced7f63c66f90631c200a7c4e1cb65466d2bb2b6588c12f791bc4110"
+hash = "784484df4c2b237850fdb9ee0d0411e20212e41f6db0b62bb70c883ecf31c2be"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/electrical_machine_casing.json"
@@ -7066,11 +7074,11 @@ hash = "07c17ff458a184fbcae33e82b0b530ba50a20fb20a73931d6d28ac72122b28d2"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/fortifying_extract.json"
-hash = "c7febebca303095050e74dcad196445c58253505f56ab0d4cf9f5bb3ec2c8587"
+hash = "8f095e009cf1ffebac1ffb509e8ae17e657794f144e1b9a3432db38e9fbbafed"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/green_tea_extract.json"
-hash = "f0c94db1af75ac288d9b3373eb6446bdb1e2d1a969d36c289b47504895c299f0"
+hash = "572313e69210c12a3b33830a5e7fc0e1fe201e10373c7f41a5e78b3b8170c1dc"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/harm_extract.json"
@@ -7078,7 +7086,7 @@ hash = "a0e9db76b785610ff1d01fc42e5f440a29f618b789a1a886fc560d9bd3d20a7d"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/heatproof_extract.json"
-hash = "062ce708145f94f682f4ae6f32f0c376964f2eb5ef4b6d42996b735bb23d95a3"
+hash = "4c3220643ce67b689ab88eff392d263047c23b335b674e655656cfb447d7e2a8"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/impossible_circuit.json"
@@ -7109,8 +7117,16 @@ file = "kubejs/assets/kubejs/models/item/living_binding.json"
 hash = "2c236110b0874711779d4b80bd7d61a4807df360877b06db985ca0f930fddc6a"
 
 [[files]]
+file = "kubejs/assets/kubejs/models/item/magician_blood_heart.json"
+hash = "721f9604ceaa676676422e4fed0a1b59da771f474566b26ed1124ae9b0c67e27"
+
+[[files]]
 file = "kubejs/assets/kubejs/models/item/mashed_salmonberries.json"
-hash = "05a388c4f970bed29a1c5e526aeb68332729aae5e2f3922408a768c9251f7a89"
+hash = "0635e39e36b43994700740294df8229325bb9af85f9f4c005b1f7b1d7d0c410c"
+
+[[files]]
+file = "kubejs/assets/kubejs/models/item/master_blood_heart.json"
+hash = "a959f3352fb696317f1a1776c9ff7f151ea9f80e5880bae7a0f5d835648473e4"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/melon_life_extract.json"
@@ -7162,11 +7178,11 @@ hash = "0392aaea7640360c393837546e93a21523634ff00fac0f2b3e86a2a579b84e50"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/roasted_coffee_reagent.json"
-hash = "19cd026c5698a70c855ea4a2782c5f6895fb00707d408dd4320287be4b4929ed"
+hash = "e4c256b755d59edefde565f2136aaed903bed75a58465b66b36fc93023dcb6ab"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/rose_hip_extract.json"
-hash = "c4bfc294553f809320311e003a9dd9e84d3a76c751cddd9141af4efd2f78ddba"
+hash = "0635e39e36b43994700740294df8229325bb9af85f9f4c005b1f7b1d7d0c410c"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/rotational_compressor_core.json"
@@ -7222,7 +7238,7 @@ hash = "dcfb3f5ce230f5338c44a6c919b31365cf56c9c2939e0664068bde0c2bd20b6a"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/toxic_extract.json"
-hash = "138c49225b5608158a52e0a2a1e613f226692b3081fb226b55baf3fb4f311c98"
+hash = "a0e9db76b785610ff1d01fc42e5f440a29f618b789a1a886fc560d9bd3d20a7d"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/tungsten_carbide_insert.json"
@@ -7235,6 +7251,10 @@ hash = "b776631b2f3649f66b1464784880bd02fa76661815fef1d8179d95231cf7540f"
 [[files]]
 file = "kubejs/assets/kubejs/models/item/vision_extract.json"
 hash = "1bbfcbd2c8b0bcdc94e28152264d6a27b1be04619d9a88c531179b8a091fc5d2"
+
+[[files]]
+file = "kubejs/assets/kubejs/models/item/weak_blood_heart.json"
+hash = "e8aa1da78249e4fd737b864bc25f1fc8971609fd493bfd713927a371d99b73c5"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/weakening_extract.json"
@@ -7259,6 +7279,26 @@ hash = "209dc69559de7a1148baea074ebddbbfc998b4f2e080462bf213e5fc5d7de3fc"
 [[files]]
 file = "kubejs/assets/kubejs/textures/block/ae2_machine_casing_top.png"
 hash = "680725b00e035f191d1083ee71530902a3eca25cc238c1b6c459382a31ad52ba"
+
+[[files]]
+file = "kubejs/assets/kubejs/textures/block/airtight_machine_casing_back.png"
+hash = "0cebaa7a5ba3842abedf1d5c55ecaf4589f7fbdd80d05ed57a2cb8308f4824dd"
+
+[[files]]
+file = "kubejs/assets/kubejs/textures/block/airtight_machine_casing_bottom.png"
+hash = "14e9c9828abee59a27e0032c74c89d5ca68ac3815a31b517708395732dadce16"
+
+[[files]]
+file = "kubejs/assets/kubejs/textures/block/airtight_machine_casing_front.png"
+hash = "1087cea4668b786ad8520d39d781d65038c9f4bedef70841893a24bb69124740"
+
+[[files]]
+file = "kubejs/assets/kubejs/textures/block/airtight_machine_casing_side.png"
+hash = "eba90aba5ed6f58c7c089a0f83dcbaf4da5b90778d8026965d5f5992f6e31905"
+
+[[files]]
+file = "kubejs/assets/kubejs/textures/block/airtight_machine_casing_top.png"
+hash = "039721014d0fe8bb3749fa0c4b33b20c517ff60c68aa8b2e491d1d7b5821c265"
 
 [[files]]
 file = "kubejs/assets/kubejs/textures/block/andesite_machine_casing_back.png"
@@ -8041,6 +8081,26 @@ file = "kubejs/data/btm/advancements/creating_space_access.json"
 hash = "2768427d9f5d6a715203824283cf01a9386fa01c4570ae56b5ae3b074931f962"
 
 [[files]]
+file = "kubejs/data/burnt/tags/blocks/fire_resistant.json"
+hash = "78228ed784d87138ec9a63c59c96f71351a00bec30f5423fc35a4c1278351c05"
+
+[[files]]
+file = "kubejs/data/burnt/tags/blocks/grass_blocks.json"
+hash = "7b0e2ba33c3da131297b9d6ff500945647f33b43ce9dceca43c1b06098fe4266"
+
+[[files]]
+file = "kubejs/data/burnt/tags/blocks/plants_will_burn.json"
+hash = "893646a7a339b1503975e50aae0616c41820d936847276042d9ed504156a7d75"
+
+[[files]]
+file = "kubejs/data/burnt/tags/blocks/wooden_buttons.json"
+hash = "93374ca13478b962b624e49107de6bc1ddd179724688d27d8c11d9c020c98de2"
+
+[[files]]
+file = "kubejs/data/burnt/tags/blocks/wooden_pressure_plates.json"
+hash = "71b0f9f5660d24b697dcd4ba5524233697d07a925d5045672385f25d70423c58"
+
+[[files]]
 file = "kubejs/data/create_more_additions/tags/items/repair_electrum.json"
 hash = "cee09dec79eaf898a5ecbf50767dd2b9b1f258be79f2a44406b694f555022cd2"
 
@@ -8089,6 +8149,10 @@ file = "kubejs/data/farmersrespite/loot_tables/blocks/kettle.json"
 hash = "85604dca2708c20037e8b26cff74145177f7ef10fe132f33e99968329161c7a8"
 
 [[files]]
+file = "kubejs/data/forge/tags/blocks/mushroom_blocks.json"
+hash = "9fb01480c59417d423d8ca437c25a9e2b410952c556e81471703575555cfdd9d"
+
+[[files]]
 file = "kubejs/data/forge/tags/items/nuggets/reinforced_copper.json"
 hash = "cee09dec79eaf898a5ecbf50767dd2b9b1f258be79f2a44406b694f555022cd2"
 
@@ -8097,12 +8161,64 @@ file = "kubejs/data/heatsync/tags/blocks/pipe_radiators.json"
 hash = "018762efbfad250f491f5cff25c4595ffa1b3108cd889ff7d9e5fcd7a7d4db3f"
 
 [[files]]
+file = "kubejs/data/kubejs/tags/blocks/grass_like.json"
+hash = "4a2d82e2ceae35b893eae11b63e59d96842cf99155e2eb32d36459f43e5b5a88"
+
+[[files]]
 file = "kubejs/data/lostcities/creatingspace/rocket_accessible_dimension/lostcity.json"
 hash = "d49cee943f9455c295d5f0b9ee877ae572f736298170314c85ae23e00d7659ab"
 
 [[files]]
 file = "kubejs/data/mae2/tags/items/p2p_attunements/eu_p2p_tunnel.json"
 hash = "cee09dec79eaf898a5ecbf50767dd2b9b1f258be79f2a44406b694f555022cd2"
+
+[[files]]
+file = "kubejs/data/minecraft/tags/blocks/crops.json"
+hash = "0c09c3073ca185a7bd237386deee8684dd8b7a770a5ec6289eceba3f3f3ffaee"
+
+[[files]]
+file = "kubejs/data/minecraft/tags/blocks/fence_gates.json"
+hash = "7b2e73c0608ed89ccb0b634f9458396d396e7080e78c7e6aa572af9f9c5d01e7"
+
+[[files]]
+file = "kubejs/data/minecraft/tags/blocks/leaves.json"
+hash = "f2b95edb54406e3d4ab28275c063b5123615bb823373532b753845016a7e44cd"
+
+[[files]]
+file = "kubejs/data/minecraft/tags/blocks/logs.json"
+hash = "e2edd08d85b1e313dcf59158eaaf302ce7fc28da8772351eebb2067e396318b5"
+
+[[files]]
+file = "kubejs/data/minecraft/tags/blocks/logs_that_burn.json"
+hash = "e2edd08d85b1e313dcf59158eaaf302ce7fc28da8772351eebb2067e396318b5"
+
+[[files]]
+file = "kubejs/data/minecraft/tags/blocks/planks.json"
+hash = "205e296fa53692342483a673ec5e813287ee3846a72808d5df5192d8f13387b9"
+
+[[files]]
+file = "kubejs/data/minecraft/tags/blocks/wooden_doors.json"
+hash = "94e7c922a09a9acf6f1d6aa37c305db60d7d0cfc855e6c7e998241697c1588f6"
+
+[[files]]
+file = "kubejs/data/minecraft/tags/blocks/wooden_fences.json"
+hash = "2887278cea399f4ab2060ecc189f8e55cff42f23028f2526a44b5f378e333742"
+
+[[files]]
+file = "kubejs/data/minecraft/tags/blocks/wooden_slabs.json"
+hash = "97b81f6347cc651b775e3f77360793cc1cc48bc183c4b05e1a2f094affdd9cd0"
+
+[[files]]
+file = "kubejs/data/minecraft/tags/blocks/wooden_stairs.json"
+hash = "08e2f75304c896b7f38e89e546dc536ba6f35c8baad811138fe45ace5c2fbccf"
+
+[[files]]
+file = "kubejs/data/minecraft/tags/blocks/wooden_trapdoors.json"
+hash = "8a52397338587aac23b1435e7f86707db134874d37ba21e7ab00c2d9eb0bac7d"
+
+[[files]]
+file = "kubejs/data/minecraft/tags/blocks/wool_carpets.json"
+hash = "4b7dfb1a7511116867e5ce29711978c7523ef377698a08e8cfae560695fe43c7"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/entity_types/arthropod.json"
@@ -8378,7 +8494,7 @@ hash = "c2a82b99259f6281874089a5f4a9e16932d5d71993d299fadcb454c806148b65"
 
 [[files]]
 file = "kubejs/server_scripts/20_recipe_remove/30_remove_items.js"
-hash = "b7cc9d476c17ba1698eefcf0311ff02afd4bec465bbfa4c258342039c9252435"
+hash = "6b8f6f410cacfe2cab7b7aafb3efbcf5adce4aada92fecbe20df09984d25fcb2"
 
 [[files]]
 file = "kubejs/server_scripts/20_recipe_remove/40_remove_create_new_age_electric_crafting.js"
@@ -8518,7 +8634,7 @@ hash = "94627731f170ac55d28f8da311ee0a28175a7b81b6406aece8bac22c16ccf4f4"
 
 [[files]]
 file = "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js"
-hash = "98ef74337b55d4479859595ece7d269e76596ff79a11e751176b6521f8d7d3f6"
+hash = "803b96a38767679283d4759a00efeb7a0d9d6977b20ddd510e364608f199e733"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/10_campfire_recipe.js"
@@ -8737,7 +8853,7 @@ metafile = true
 
 [[files]]
 file = "mods/btmfixes-0.1.0.jar"
-hash = "4157b96cf09dd568d29c64ec0a36cbd5283613cba175649dec7565f252e16d60"
+hash = "0a9c720584cb8751db647aa96f334c6627c7c83ab85923c1bb7f8b684d776b99"
 
 [[files]]
 file = "mods/building-gadgets.pw.toml"
@@ -8760,6 +8876,11 @@ hash = "0716ac808c014492df8a38e01452f3518b94553fcadb52e0e08ff939a983e331"
 metafile = true
 
 [[files]]
+file = "mods/chefs-delight-forge.pw.toml"
+hash = "c280846e9a6599055814a024ad5b5212344a8c02a955d0e779cca7aa2244fd4f"
+metafile = true
+
+[[files]]
 file = "mods/chemlib.pw.toml"
 hash = "882da059a6d7439b9cdf746813c61ce1e8e73c00a88e4e0cbe4412d4c312702a"
 metafile = true
@@ -8771,7 +8892,7 @@ metafile = true
 
 [[files]]
 file = "mods/classselector-1.0.0.jar"
-hash = "e2f4d66fa8519aa49b5bc5f62b7670b36dfc93f78d1e7f90a95b1b5bad313c40"
+hash = "69cb3cbef9347d8504c302bb9b51afa9a667e3b46c208a01b1edc5c32bcd195e"
 
 [[files]]
 file = "mods/cloth-config.pw.toml"
@@ -8800,7 +8921,7 @@ metafile = true
 
 [[files]]
 file = "mods/computerbridge-0.1.0.jar"
-hash = "93409efe3fe9b9c89d4dc53e33b855a3ebf5d714d3afdb61a64424d0b798c7fc"
+hash = "b194c0061436282189e6a06c87c8877686fd21ea086be51827cbc957b3c7a8e0"
 
 [[files]]
 file = "mods/concurrent-chunk-management-engine-for-forge-the.pw.toml"
@@ -8821,6 +8942,15 @@ metafile = true
 file = "mods/controlling.pw.toml"
 hash = "1e56f528d8e21b0cf9c52c3d6deea2a4eafa408170b39a070195dbf66617f373"
 metafile = true
+
+[[files]]
+file = "mods/corn-delight.pw.toml"
+hash = "c819d16483e4d029feee1b799a75cbea606ef759c6dfd67e91b5b2ed45907d29"
+metafile = true
+
+[[files]]
+file = "mods/corn_delight-1.1.9-1.20.1.mods.toml"
+hash = "ab6371046471038cbabccd13dfddadbf5911a250c71fdd84254b2c954bc3bf5d"
 
 [[files]]
 file = "mods/coroutil.pw.toml"
@@ -8854,7 +8984,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-transmission-loss-0.1.0.jar"
-hash = "897a2398f4b2882b7291c3587f88a3259b4d4a98edf3d9eb0ba2e3eed2ac4154"
+hash = "d2eb5a5af5ec8374429dae06e33c6920b1fb23b384ed7c3da79b09f3df9c9b60"
 
 [[files]]
 file = "mods/create.pw.toml"
@@ -8883,6 +9013,11 @@ hash = "c5e059f4165b104135df39beec6ce3990d0714b6571d7de29f6313db20794a6b"
 [[files]]
 file = "mods/deeperdarker.pw.toml"
 hash = "e50740a50bdeef70e78fc991fbc8eee9dbb4bacd11f5e7cbf10f4c46cb5fd0aa"
+metafile = true
+
+[[files]]
+file = "mods/delightful.pw.toml"
+hash = "f6f19441deb7a82aba8afe2421758930854518ed7e9e3de56583217227f39bff"
 metafile = true
 
 [[files]]
@@ -8943,6 +9078,11 @@ metafile = true
 [[files]]
 file = "mods/emi.pw.toml"
 hash = "d48a1ea93de8cd5febb95ba52989d8d9ab4e998cfbdf9c1076a9f2e571d2fcbe"
+metafile = true
+
+[[files]]
+file = "mods/ends-delight.pw.toml"
+hash = "63a9fdacf232df08a520fb1f25d2d1e878551fef4d18722c075e04d6291f5ed1"
 metafile = true
 
 [[files]]
@@ -9012,7 +9152,7 @@ metafile = true
 
 [[files]]
 file = "mods/fission_reactor-0.1.0.jar"
-hash = "a25e433ca5e2e648052ca59bc3b718f8256fb6cf6d94a59ebc6c961c20c8fa7a"
+hash = "9918124e1823e5e7f434862cdcdc118e7e6b837c30ea3d6708b1451126ab7c7f"
 
 [[files]]
 file = "mods/forgeendertech.pw.toml"
@@ -9061,7 +9201,7 @@ metafile = true
 
 [[files]]
 file = "mods/gases_and_plasmas-0.1.0.jar"
-hash = "5ea42d4459924289adbbb0df14576ba013a6f82e6223e8c65dae1aad5528bf21"
+hash = "1fe45fadcd83b510833b9c76de7fbdc27f4c9c438e3eda821b5fef692f13d83a"
 
 [[files]]
 file = "mods/gauges-and-switches-ported.pw.toml"
@@ -9105,7 +9245,7 @@ metafile = true
 
 [[files]]
 file = "mods/heatsync-0.1.0.jar"
-hash = "1fe7408df30a2daba18ec531d3b5bf8d70e26574c5620492a07c8421fc428b88"
+hash = "50be54cb3d644a5111be7b96d3d697629082803a4b1d6c7c6b5de4b1a37452af"
 
 [[files]]
 file = "mods/hold-my-items-reforged.pw.toml"
@@ -9199,7 +9339,7 @@ metafile = true
 
 [[files]]
 file = "mods/liquid_coolant-0.1.0.jar"
-hash = "e26222ddfe412fb4b4043e103d5edc25c117fec516ed241218f5122ca32017b3"
+hash = "5442a1575405ec18da17a239e1581311539ee1a78088e74074e62c038b236cd2"
 
 [[files]]
 file = "mods/lithostitched.pw.toml"
@@ -9262,6 +9402,11 @@ hash = "e72f73611904e14d915418f0e3c6cb483cdc600e211375c2eceb393fec5b80f1"
 metafile = true
 
 [[files]]
+file = "mods/my-nethers-delight.pw.toml"
+hash = "a27715adab9f478c1bdf1789c1e51343bb2300e36f6ead52c4f62aeae595c791"
+metafile = true
+
+[[files]]
 file = "mods/natures-compass.pw.toml"
 hash = "937c7ae4c8274ee0717546a2ca736099b1640a178b8f06027f62ca310517e413"
 metafile = true
@@ -9293,11 +9438,16 @@ metafile = true
 
 [[files]]
 file = "mods/obelisks-1.0.0.jar"
-hash = "97e21ddbde977c4b5d74b044b76bed6bf8b88e04b851225bec54161f7d683339"
+hash = "bcc452774d2708dac7f0e0f11fcd50f663992372c633421e4a5a268c8007aa76"
 
 [[files]]
 file = "mods/oc2r.pw.toml"
 hash = "8e3834e431956cc612e45943355764e970f237d6222dbfa6632c1273d05726b9"
+metafile = true
+
+[[files]]
+file = "mods/oceans-delight.pw.toml"
+hash = "57f6793fdca748db18eb33a34344f68804e881af07c5e032073d8b33ee683a54"
 metafile = true
 
 [[files]]
@@ -9317,7 +9467,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillagercampaigns-0.2.0.jar"
-hash = "37dd57fd75955edca55c659743aaaaf4178299c9c71a799d822d268d370b9b56"
+hash = "1712b84a22855bda645f4c7a0a5ddc32049d7024a0c94962fbaee7d5a5f05011"
 
 [[files]]
 file = "mods/placebo.pw.toml"
@@ -9361,7 +9511,7 @@ metafile = true
 
 [[files]]
 file = "mods/procedural_bouquets-0.1.0.jar"
-hash = "c1889302fdf243ec6fd40dc49ae390ea963817a28a58cd0f544b7250d292b02f"
+hash = "ed27935e0f0d7bdb0627d29806095c974b21d1f25378b831db1c75d3e93391ff"
 
 [[files]]
 file = "mods/protect-mobs-from-daylight.pw.toml"
@@ -9395,7 +9545,7 @@ metafile = true
 
 [[files]]
 file = "mods/realisticores-0.1.0.jar"
-hash = "af6ae9d6e2dee157f8af7a5dc89278d9630b2c752608b00dfcafcd0abfebc7ac"
+hash = "319ddf2f8a34307e2f3e6d43548c7ca6707863e9317ba67b238c19404e0a9c55"
 
 [[files]]
 file = "mods/rehooked.pw.toml"
@@ -9424,7 +9574,12 @@ metafile = true
 
 [[files]]
 file = "mods/rpgstats-1.0.0.jar"
-hash = "9d325550d69589d3588a0c92f9cad91609a3e4c3bd3677fa81caef7364c33476"
+hash = "b955c314a5213a68029c906b05320405bcefb156c62b6bb1808d41167c8040ca"
+
+[[files]]
+file = "mods/rustic-delight.pw.toml"
+hash = "41136ead1f0d629e497dbf5e452ff4aa5cf70ff6d71913300ec3e2bf9ae78266"
+metafile = true
 
 [[files]]
 file = "mods/satako-library.pw.toml"
@@ -9453,11 +9608,16 @@ metafile = true
 
 [[files]]
 file = "mods/settlementroads-0.1.0.jar"
-hash = "9ceb272360316f78e66348eceab9454441cef0f5fd20a92b73b03be320019b0a"
+hash = "730b8ffc8efbaf996bd1b05477b7f376f6ee376a1d620e8db73fdc52e881f170"
 
 [[files]]
 file = "mods/shoulder-surfing-reloaded.pw.toml"
 hash = "b5a8c0ab8711ca38c413746c1b536664c3c725833a202177e8ef560f1ba1ab4f"
+metafile = true
+
+[[files]]
+file = "mods/simpledaylengthextender.pw.toml"
+hash = "d1bd9e6dc2e7e72a77c5a7a71709d2224069b9a976a648de96da1f1b8c2fbc7d"
 metafile = true
 
 [[files]]
@@ -9621,6 +9781,16 @@ hash = "97e78254f2db3f32811b04cafd138df7e64a0da0a9b2812f7573ace98e6f837f"
 metafile = true
 
 [[files]]
+file = "mods/ubes-delight.pw.toml"
+hash = "5e480331ef0c5b30daaebfb73500f6f31be7f95579442b8834fc3a70c31bc439"
+metafile = true
+
+[[files]]
+file = "mods/undergarden-delight.pw.toml"
+hash = "bccccaa6040d00825537b3a7185917b7bc9e41060a82c9993546f12cce3d7f82"
+metafile = true
+
+[[files]]
 file = "mods/unearthed.pw.toml"
 hash = "d8b057ed2e22c8bd7b38d1f837aef98b065957001374f06a5d997280b2c599e8"
 metafile = true
@@ -9631,8 +9801,13 @@ hash = "672716713e45546f6c192f4e3d424bb08da872bf4353d3b3a563a0587ae9ee16"
 metafile = true
 
 [[files]]
+file = "mods/veggies-delight.pw.toml"
+hash = "f1bf09da4d2760fe3e17a4e79e2b25b0cbef5486b946bd4a1bb6bdaf28e83f96"
+metafile = true
+
+[[files]]
 file = "mods/villagewalls-1.0.0.jar"
-hash = "6e8a5754994f6e02d719cbbb2c9f0e6968f96646255ce3db9816d955799439e3"
+hash = "9c3aef8ea9276957984443c0fbfa7b6080103f94e19e300db827aa2ee253cfae"
 
 [[files]]
 file = "mods/wares.pw.toml"
@@ -9703,7 +9878,7 @@ metafile = true
 
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.7.1.zip"
-hash = "27be7834ad80ced9f109b7472b16b54a066c2f12a22677bc5ea8ab801c35802c"
+hash = "f2f273b3953433e2ec4855d197ec3be5def7aebb8b2fe8a2fa45792c46c211e1"
 
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.7.1.zip.txt"
@@ -9711,4 +9886,4 @@ hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
 
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.7.1/shaders/block.properties"
-hash = "7dd5b169772f8dcff8a2ee4f18427c6407a191bc3d9d6d36b0ba5b1347f98171"
+hash = "bab1dba85fdef3ca3842955eae5d4fd70bee58b520444764fe3b7bc6b7ad338c"

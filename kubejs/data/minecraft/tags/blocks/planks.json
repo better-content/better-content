@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "aether:skyroot_planks",
+    "blue_skies:crystallized_planks",
+    "fallout_wastelands_:dried_planks",
+    "fallout_wastelands_:molder_wood_planks",
+    "fallout_wastelands_:red_painted_planks",
+    "fallout_wastelands_:reinforced_planks",
+    "the_finley_dimension_remastered:ashen_planks",
+    "the_finley_dimension_remastered:finley_wood_planks",
+    "the_finley_dimension_remastered:living_wood_planks"
+  ]
+}

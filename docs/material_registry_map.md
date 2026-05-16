@@ -97,7 +97,11 @@ Current chemistry route:
 
 - Realistic Ores use Create mixer recipes: crushed deposit + solvent + grinding ball.
 - PNCR owns sealed pressure/gas chemistry and board/processor assembly.
-- Confirmed Chemlib fluid registry IDs use bare names: `chemlib:ethanol`, `chemlib:acetic_acid`, `chemlib:hydrochloric_acid`, `chemlib:nitric_acid`, `chemlib:sulfuric_acid`, and `chemlib:oxygen`.
+- Confirmed Chemlib fluid source registry IDs use `*_fluid` names, while buckets
+  and liquid blocks use bare molecule names. Recipe fluid stacks should use IDs
+  such as `chemlib:ethanol_fluid`, `chemlib:acetic_acid_fluid`,
+  `chemlib:hydrochloric_acid_fluid`, `chemlib:nitric_acid_fluid`,
+  `chemlib:sulfuric_acid_fluid`, and `chemlib:oxygen_fluid`.
 - `kubejs:phosphoric_acid_fluid` supplies the pack-authored phosphoric solvent route.
 
 ## Unknowns For Later Passes

@@ -299,6 +299,21 @@ function testCriticalSurfaces() {
     ? fail('retired Acid Vat deposit slurry script is absent', 'kubejs/server_scripts/40_recipe_add/60_acid_vat_deposit_slurries.js still exists')
     : ok('retired Acid Vat deposit slurry script is absent')
 
+  const pruneTool = path.join(repo, 'tools/prune_runtime_mods.mjs')
+  const bootstrapServer = path.join(repo, 'tools/bootstrap_server.sh')
+  if (!exists(pruneTool)) {
+    fail('server bootstrap stale mod prune tool exists', rel(pruneTool))
+  } else {
+    const pruneText = read(pruneTool)
+    const bootstrapText = exists(bootstrapServer) ? read(bootstrapServer) : ''
+    pruneText.includes('btm_client_only_mod_globs') && pruneText.includes('--dry-run') && pruneText.includes('--apply')
+      ? ok('server runtime mod pruner uses shared side-exclusion policy')
+      : fail('server runtime mod pruner uses shared side-exclusion policy', 'missing client-only glob parsing or dry-run/apply modes')
+    bootstrapText.includes('tools/prune_runtime_mods.mjs') && bootstrapText.includes('--side server')
+      ? ok('server bootstrap prunes stale cached mods')
+      : fail('server bootstrap prunes stale cached mods', 'bootstrap_server.sh does not invoke tools/prune_runtime_mods.mjs for server side')
+  }
+
   const kubejsText = walk(path.join(repo, 'kubejs'), p => p.endsWith('.js') || p.endsWith('.json')).map(read).join('\n')
   for (const tier of catalog.machineTiers) {
     const text = kubejsText
@@ -688,7 +703,11 @@ function testGeneratedRecipeGraph() {
   dupes.length ? fail('generated recipes have unique IDs', dupes.slice(0, 80).join('\n')) : ok('generated recipes have unique IDs')
   parseFailures.length ? fail('generated recipe JSON parses', parseFailures.slice(0, 80).join('\n')) : ok('generated recipe JSON parses')
   forbiddenOutputs.length ? fail('no forbidden creative/debug outputs are craftable', forbiddenOutputs.slice(0, 80).join('\n')) : ok('no forbidden creative/debug outputs are craftable')
-  alchemistryPlayerFacing.length ? finding('Alchemistry has player-facing crafting recipes', alchemistryPlayerFacing.slice(0, 80).join('\n'), 'SHOULD') : ok('Alchemistry has no obvious grid-crafting player-facing recipes')
+  if (finalEffectiveGraph) {
+    alchemistryPlayerFacing.length ? finding('Alchemistry has player-facing crafting recipes', alchemistryPlayerFacing.slice(0, 80).join('\n'), 'SHOULD') : ok('Alchemistry has no obvious grid-crafting player-facing recipes')
+  } else {
+    skip('Alchemistry player-facing recipe check', 'current KubeJS dump is a pre-mutation audit; disabled Alchemistry removals run after this dump')
+  }
 
   const criticalOutputs = [
     'create:andesite_alloy',
@@ -753,8 +772,9 @@ function testEngineWorldPerformanceLogs() {
     latestLogAgeMinutes: logAgeMinutes,
     latestLogLines: lines.length,
     reachedIntegratedServer: text.includes('Starting integrated minecraft server'),
+    reachedDedicatedServer: /Done \([\d.]+s\)! For help, type "help"/.test(text),
     startedServingLan: text.includes('Started serving on'),
-    reachedInGame: text.includes('Started serving on') || text.includes('Time from main menu to in-game was'),
+    reachedInGame: text.includes('Started serving on') || text.includes('Time from main menu to in-game was') || /Done \([\d.]+s\)! For help, type "help"/.test(text),
     mainMenuToInGameMs: null,
     totalLoadToWorldMs: null,
     spawnPrepTimeMs: null,
@@ -844,8 +864,10 @@ function testEngineWorldPerformanceLogs() {
   metrics.engineWorld = logMetrics
 
   logAgeMinutes <= 1440 ? ok('latest engine log is recent', `${logAgeMinutes} minutes old`) : finding('latest engine log is stale', `${logAgeMinutes} minutes old`, 'SHOULD')
-  logMetrics.reachedIntegratedServer ? ok('engine reached integrated server startup') : fail('engine reached integrated server startup', 'missing log marker')
-  logMetrics.reachedInGame ? ok('world became playable/servable', logMetrics.startedServingLan ? 'LAN serving marker' : 'ModernFix in-game marker') : finding('world became playable/servable', 'missing "Started serving on" or ModernFix in-game marker', 'MUST')
+  if (logMetrics.reachedIntegratedServer) ok('engine reached integrated server startup')
+  else if (logMetrics.reachedDedicatedServer) ok('engine reached dedicated server startup')
+  else fail('engine reached server startup', 'missing integrated or dedicated startup marker')
+  logMetrics.reachedInGame ? ok('world became playable/servable', logMetrics.reachedDedicatedServer ? 'dedicated server Done marker' : (logMetrics.startedServingLan ? 'LAN serving marker' : 'ModernFix in-game marker')) : finding('world became playable/servable', 'missing "Started serving on", ModernFix in-game, or dedicated server Done marker', 'MUST')
 
   if (logMetrics.spawnPrepTimeMs == null) {
     finding('spawn preparation time is measurable', 'missing "Time elapsed" marker', 'MUST')

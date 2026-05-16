@@ -68,6 +68,8 @@ for library_cache in \
   rsync -a --ignore-existing --include='*/' --include='*.jar' --include='*.pom' --exclude='*' "$library_cache/" "$server_dir/libraries/"
 done
 
+"$ROOT/tools/prune_runtime_mods.mjs" --apply --pack-root "$ROOT" --target-dir "$server_dir" --side server
+
 if [[ ! -f "$server_dir/run.sh" || ! -d "$server_dir/libraries/net/minecraftforge/forge/${BTM_FORGE_COORD}" ]]; then
   (cd "$server_dir" && "$java_bin" -jar "forge-${BTM_FORGE_COORD}-installer.jar" --installServer)
 fi

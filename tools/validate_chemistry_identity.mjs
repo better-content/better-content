@@ -93,7 +93,12 @@ else {
   }
 
   if (/kubejs:[^']+/.test(depositSection)) fail('deposit matrix contains kubejs direct output')
-  if (/chemlib:[a-z0-9_]+_fluid/.test(text)) fail('Chemlib fluid IDs should use registry IDs like chemlib:ethanol, not *_fluid aliases')
+  const bareChemlibFluidRefs = [...text.matchAll(/fluid:\s*'chemlib:([a-z0-9_]+)'/g)]
+    .map(m => m[1])
+    .filter(id => !id.endsWith('_fluid'))
+  if (bareChemlibFluidRefs.length) {
+    fail(`Chemlib fluid recipe references must use source fluid IDs ending in _fluid: ${[...new Set(bareChemlibFluidRefs)].join(', ')}`)
+  }
   if (!text.includes('for (var d = 0; d < BTM_RO_DEPOSITS.length; d++)')) fail('missing deposit loop for matrix recipe generation')
   if (!text.includes('for (var s = 0; s < BTM_RO_SOLVENTS.length; s++)')) fail('missing solvent loop for matrix recipe generation')
   if (!text.includes('for (var b = 0; b < BTM_RO_BALLS.length; b++)')) fail('missing ball loop for matrix recipe generation')
@@ -104,7 +109,18 @@ const acidVatScript = path.join(repo, 'kubejs/server_scripts/40_recipe_add/60_ac
 if (fs.existsSync(acidVatScript)) fail('retired Acid Vat deposit slurry script still exists')
 const kubejsFiles = walk(path.join(repo, 'kubejs'), file => file.endsWith('.js'))
 for (const fullPath of kubejsFiles) {
-  if (read(fullPath).includes('acid_vat:')) fail(`retired acid_vat reference in ${path.relative(repo, fullPath)}`)
+  const scriptText = read(fullPath)
+  if (scriptText.includes('acid_vat:')) fail(`retired acid_vat reference in ${path.relative(repo, fullPath)}`)
+  const bareFluidOfRefs = [...scriptText.matchAll(/Fluid\.of\(\s*['"]chemlib:([a-z0-9_]+)['"]/g)]
+    .map(m => m[1])
+    .filter(id => !id.endsWith('_fluid'))
+  const bareJsonFluidRefs = [...scriptText.matchAll(/fluid:\s*['"]chemlib:([a-z0-9_]+)['"]/g)]
+    .map(m => m[1])
+    .filter(id => !id.endsWith('_fluid'))
+  const bareFluidRefs = [...new Set([...bareFluidOfRefs, ...bareJsonFluidRefs])]
+  if (bareFluidRefs.length) {
+    fail(`Chemlib source fluid references in ${path.relative(repo, fullPath)} must end in _fluid: ${bareFluidRefs.join(', ')}`)
+  }
 }
 if (fs.existsSync(questGeneratorPath)) {
   const questGeneratorText = read(questGeneratorPath)

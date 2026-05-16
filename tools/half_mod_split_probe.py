@@ -41,7 +41,6 @@ IGNORED_DEPS = {"minecraft", "forge", "java", "neoforge"}
 DISABLED_SUFFIX = ".half-test-disabled"
 
 CUSTOM_MOD_IDS = {
-    "acid_vat",
     "btmfixes",
     "classselector",
     "computerbridge",

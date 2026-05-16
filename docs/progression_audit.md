@@ -8,26 +8,26 @@ Repo is authoritative. Live dumps are evidence and drift detection.
 - Recipes/scripts: `kubejs/server_scripts`, especially `40_recipe_add`, `50_loot`, `60_worldgen`, and the local untracked `30_recipe_replace/95_acid_and_nether_grout_unification.js`.
 - Quests: `config/ftbquests/quests`.
 - Realistic Ores source: `/home/gerald/mcmods/oreoverhaul/src/main/resources/data/realisticores`.
-- Acid Vat source: `/home/gerald/mcmods/acid_vat/src/main/resources`.
+- PNCR source: upstream mod; Create/PNCR pack integration lives in KubeJS recipe scripts.
 - RPG Stats source: `/home/gerald/mcmods/rpgstats`.
 - Live dump: `/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1-33781602/minecraft/dump`.
 
 ## Current State
 
-The pack has the right major ingredients installed: TCon, Create and Create-family add-ons, Realistic Ores, Acid Vat, Blood Magic, Ars, major side magic mods, AE2, OC2R, FTB Quests, classselector, rpgstats, and obelisks.
+The pack has the right major ingredients installed: TCon, Create and Create-family add-ons, Realistic Ores, PNCR, Blood Magic, Ars, major side magic mods, AE2, OC2R, FTB Quests, classselector, rpgstats, and obelisks.
 
 User direction after initial audit:
 
 - Prefer many distinct tricky alloys over steel-centric progression.
 - Use E2E-style machine casings where each tier adds a mod's manufacturing complexity.
 - Initial casing tier order: TCon seared -> TCon scorched -> Create andesite -> Create brass -> Power Grid -> OC2R -> Space -> AE2.
-- Alchemistry remains a compatibility/reference surface; Acid Vat/Create-family routes should provide dissolver-style parity.
+- Alchemistry remains a compatibility/reference surface; Create/PNCR routes should provide dissolver-style parity.
 
 The implementation is not yet aligned with the cleaned progression:
 
 - Starting Out quests still include press and mixer nodes, while the design says press is not core and mixer is not a grout gate.
 - Create's native `create:item_application` andesite casing recipe exists and bypasses deployer-only casing.
-- Acid Vat is present in repo/live but absent from `index.toml`, so repo packwiz state may not reproduce the live instance.
+- Acid Vat is retired from the active pack; chemistry routes should not depend on it.
 - Realistic Ores contains deposit blocks and crushed items, but there is no reviewed source-of-truth deposit catalogue for progression generation.
 
 ## Major Mod Audit
@@ -37,8 +37,8 @@ The implementation is not yet aligned with the cleaned progression:
 | TCon | `tconstruct:encyclopedia` likely | `tconstruct:tinker_station` | `tconstruct:seared_melter`, `tconstruct:smeltery_controller` | Starting tech | If grout does not require netherrack, Nether obelisk is optional | FTB quests and registry | High |
 | Create | Ponder in-game | `create:hand_crank`, `create:millstone`, `create:deployer` | sustainable SU with `create:water_wheel`/`create:windmill_bearing` | After alloying | casing item-application bypass; early kit includes Create parts | FTB quests, recipe dump, class kits | High |
 | Realistic Ores | none confirmed | deposit blocks | crushed deposit items and later processing | World-gen root | Without recipe rewrite, vanilla/other ore recipes may bypass deposit-first economy | custom resources and registry | High |
-| Acid Vat | none confirmed | `acid_vat:acid_vat` | slurry/centrifuge chemistry | Late ore tier | Present jar not indexed; current recipes target vanilla ore tags, not Realistic Ores deposits | custom resources and recipe dump | High |
-| Alchemistry | n/a | recipe compatibility/reference surface | dissolver-style semantics | Do not target as player-facing machine progression | Runtime recipe types exist; user direction is to keep it for mods to reference while providing Acid Vat/Create parity | user direction, recipe dump | High |
+| Create/PNCR chemistry | in-game mechanics | `create:mechanical_mixer`, `pneumaticcraft:pressure_chamber_interface` | acid+ball ore identity, pressure/gas chemistry, board assembly | Brass/Airtight ore tier | must avoid becoming generic ore doubling | KubeJS scripts and Chemlib jar audit | High |
+| Alchemistry | n/a | recipe compatibility/reference surface | dissolver-style semantics | Do not target as player-facing machine progression | Runtime recipe types exist; user direction is to keep it for mods to reference while providing Create/PNCR parity | user direction, recipe dump | High |
 | Blood Magic | `patchouli` book likely UNKNOWN exact | `bloodmagic:altar` | slate tiers and blood orbs | Magic backbone | Current tooltip script mentions heart requirements, but side magic recipes may be ungated | registry and KubeJS tooltip script | High |
 | RPG Stats hearts | none | `rpgstats:still_beating_heart` | typed hearts and ritual-death trophies | Magic 1 bridge | Existing blood-orb recipes consume hearts; must stay milestone-grade, not bulk fuel | source, quests, KubeJS recipes | High |
 | Ars Nouveau | book item UNKNOWN | `ars_nouveau:imbuement_chamber`, `ars_nouveau:novice_spell_book` | `ars_nouveau:enchanting_apparatus`, later spell books | Reinforced; late Ethereal | Can become magic powerhouse before Blood Magic if ungated | registry and recipe types | High |

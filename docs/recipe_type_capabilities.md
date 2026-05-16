@@ -133,39 +133,38 @@ Use for:
 - Gate `ars_nouveau:imbuement_chamber` or `ars_nouveau:novice_spell_book` at Reinforced Slate tier.
 - Gate `ars_nouveau:enchanting_apparatus` as a separate escalation if needed.
 
-## Acid Vat, ChemLib, And Create-Family Chemistry
+## ChemLib, Create, And PNCR Chemistry
 
-Confirmed Acid Vat recipe types:
-
-- `acid_vat:acid`
-- `acid_vat:acid_vat`
-- `acid_vat:centrifuge`
-
-Example Acid Vat grammar:
+Example Create mixer acid+ball grammar:
 
 ```json
 {
-  "type": "acid_vat:acid_vat",
-  "input": { "tag": "forge:ores/copper", "count": 1 },
-  "acid": { "fluid": "chemlib:hydrochloric_acid_fluid" },
-  "acid_amount": 250,
-  "processing_time": 90,
-  "slurry_amount": 250,
-  "slurry_id": "acid_vat:copper_ore_slurry"
+  "type": "create:mixing",
+  "ingredients": [
+    { "item": "realisticores:crushed_copper_sulfide_ore" },
+    { "item": "kubejs:brass_grinding_ball" },
+    { "fluid": "chemlib:hydrochloric_acid", "amount": 250 }
+  ],
+  "results": [
+    { "item": "chemlib:copper", "count": 2 },
+    { "item": "chemlib:copper_chloride", "chance": 0.52 }
+  ],
+  "heatRequirement": "heated",
+  "processingTime": 230
 }
 ```
 
 Use for:
 
 - Pass 4+ chemical interpretation, after deposit catalogue and early ore processing are stable.
-- Acid Vat slurry routes where they support the fixed deposit-processing ladder.
-- Create-family replacement mods for chemistry/synthesis instead of Alchemistry.
+- Create mixer acid+ball routes where they support the fixed deposit-processing ladder.
+- PNCR pressure chamber, thermo plant, and assembly routes for sealed/gas/circuit chemistry.
 - Alchemistry recipe semantics as a reference surface for parity, especially dissolver-style decomposition.
 
 Compatibility/reference surface:
 
 - Alchemistry recipe types may appear in the runtime dump (`alchemistry:atomizer`, `alchemistry:combiner`, `alchemistry:compactor`, `alchemistry:dissolver`, `alchemistry:fission`, `alchemistry:fusion`, `alchemistry:liquifier`).
-- Do not design player progression around Alchemistry machines. The pack direction is to expose equivalent decomposition/synthesis through Acid Vat and Create-family mods.
+- Do not design player progression around Alchemistry machines. The pack direction is to expose equivalent decomposition/synthesis through Create and PNCR routes.
 - Where mods reference Alchemistry recipes or materials, preserve compatibility or implement parity rather than deleting the semantic route.
 
 ## FTB Quests

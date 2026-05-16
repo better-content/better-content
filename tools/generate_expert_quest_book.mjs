@@ -205,7 +205,9 @@ function itemLabel(id) {
   const explicit = {
     'minecraft:tnt': 'TNT',
     'ae2:spatial_io_port': 'Spatial IO Port',
-    'kubejs:ae2_machine_casing': 'AE2 Machine Casing',
+    'kubejs:electrical_machine_casing': 'Electrical Machine Casing',
+    'kubejs:circuited_machine_casing': 'Circuited Machine Casing',
+    'kubejs:impossible_machine_casing': 'Impossible Machine Casing',
     'bloodmagic:blankslate': 'Blank Slate',
     'bloodmagic:reinforcedslate': 'Reinforced Slate',
     'bloodmagic:infusedslate': 'Imbued Slate',
@@ -310,7 +312,7 @@ function playerQuestDescription(chapterPrefix, quest) {
     M1: 'This advances Blood Magic and opens the next set of magic systems.',
     M2: 'This expands late magic branches after the required Blood Magic materials are available.',
     S1: 'This begins chemical processing so deposits can provide more than a single metal output.',
-    S2: 'This extends slurry handling and late chemical materials for advanced recipes.',
+    S2: 'This extends pressure, gas, and late chemical materials for advanced recipes.',
     AET: 'This advances the Aether route through sky materials, machines, and dungeon rewards.',
     BS: 'This advances Blue Skies exploration through local materials, keys, and boss rewards.',
     TW: 'This advances the Twilight Forest route through maps, bosses, and trophy materials.',
@@ -375,8 +377,8 @@ function chapterDescription(ch) {
     C3: ['Build train logistics for moving materials between sites.', 'Stations, signals, schedules, and yards make routes reliable.'],
     M1: ['Advance Blood Magic and open the first magic branches.', 'Slates mark which workstations and systems are ready to use.'],
     M2: ['Expand into stronger magic systems after the earlier slate path.', 'These branches add storage, transmutation, dimensional magic, and late Ars tools.'],
-    S1: ['Start chemical processing for deposits and materials.', 'Acid Vat work turns geology into multiple useful outputs.'],
-    S2: ['Extend chemical processing into slurry movement and late plates.', 'Use these materials for advanced synthesis and machinery.'],
+    S1: ['Start chemical processing for deposits and materials.', 'Create mixer acid and grinding-ball work turns geology into multiple useful outputs.'],
+    S2: ['Extend chemical processing into pressure, gas, and late plates.', 'Use these materials for advanced synthesis and machinery.'],
     AET: ['Explore the Aether and collect sky materials and dungeon rewards.', 'Prepare for travel, keys, and gravitite progression.'],
     BS: ['Explore Blue Skies through materials, alchemy, keys, and trophies.', 'Each key path supports a different part of the dimension route.'],
     TW: ['Progress through Twilight Forest bosses and reward materials.', 'Maps, trophies, and boss drops mark your route through the dimension.'],
@@ -457,8 +459,8 @@ const importantQuestIds = {
   AD: ['AD_COIN', 'AD_COMPLETED', 'AD_IRON_FLOAT'],
   VE: ['VE_TRADING_POST', 'VE_COMPLETED', 'VE_BRASS_COIN_TIER'],
   PC: ['PC_SCOUT', 'PC_COMMAND_POST', 'PC_BATTLE_STANDARD'],
-  S1: ['S1_ACID_VAT', 'S1_SLURRY', 'S1_SYNTHESIS_EXIT'],
-  S2: ['S2_PUMP', 'S2_RUTHENIUM', 'S2_IRIDIUM'],
+  S1: ['S1_MIXER', 'S1_BALLS', 'S1_SYNTHESIS_EXIT'],
+  S2: ['S2_PRESSURE', 'S2_THERMO', 'S2_IRIDIUM'],
   BK: ['BK_QUEST_BOOK', 'BK_TCON', 'BK_MNA'],
   PA: ['PA_QUANTUM_STRUCTURE', 'PA_SOURCE_BRIDGE', 'PA_POWERED_ARMOR_BRANCH'],
 		  TEX: ['TEX_RECONSTRUCTION', 'TEX_TRANSMUTER', 'TEX_ETHERIC'],
@@ -738,13 +740,13 @@ const chapters = [
       q('MG_START', 'Starting Out Complete', 0, 0, [item('tconstruct:seared_melter')], ['SO_MELTERY'], ['The tutorial spine has reached molten material. From here the pack opens into parallel streams.']),
       q('MG_TCON', 'Tinkers Metallurgy Gate', 2, -2, [item('tconstruct:foundry_controller')], ['MG_START', 'TC_FOUNDRY'], ['Tinkers proves deposit interpretation and alloy authority before Create becomes the infrastructure layer.']),
       q('MG_CREATE', 'Create Manufacturing Gate', 4, -2, [item('kubejs:brass_machine_casing')], ['MG_TCON', 'C2_BRASS'], ['Create proves sequenced manufacturing, brass, presses, and manufactured casings.']),
-      q('MG_POWER', 'Grid Power Gate', 6, -1, [item('kubejs:power_grid_machine_casing')], ['MG_CREATE', 'GP_CASE'], ['SU and heat feed Power Grid, where rotational infrastructure becomes stored electricity. The casing is the manufacturing proof for this tier.']),
-      q('MG_OC2R', 'OC2R Control Gate', 8, -1, [item('kubejs:oc2r_machine_casing')], ['MG_POWER', 'OC_CASE'], ['OC2R is the intersite communication/control track before AE2 local intelligence. The casing proves the electronics line is online.']),
+      q('MG_POWER', 'Grid Power Gate', 6, -1, [item('kubejs:electrical_machine_casing')], ['MG_CREATE', 'GP_CASE'], ['SU and heat feed Power Grid, where rotational infrastructure becomes stored electricity. The casing is the manufacturing proof for this tier.']),
+      q('MG_OC2R', 'OC2R Control Gate', 8, -1, [item('kubejs:circuited_machine_casing')], ['MG_POWER', 'OC_CASE'], ['OC2R is the intersite communication/control track before AE2 local intelligence. The casing proves the electronics line is online.']),
       q('MG_SPACE', 'Space Logistics Gate', 10, 0, [item('kubejs:space_machine_casing')], ['MG_OC2R', 'SP_CASE'], ['Space is a logistics and chemistry commitment that consumes the earlier factory rather than replacing it. The casing is the launch-era authority item.']),
       q('MG_MAGIC', 'Blood Magic Gate', 4, 2, [item('bloodmagic:etherealslate')], ['MG_START', 'M1_ETHEREAL'], ['Magic progresses through Blood Magic slate permissions. Ethereal Slate proves the late magic stream is ready to contribute.']),
       q('MG_ECONOMY', 'Village Economy Gate', 6, 3, [item('wares:completed_delivery_agreement')], ['MG_MAGIC', 'VE_COMPLETED'], ['Coins, Wares, villages, and routes are a parallel crafting economy.']),
-      q('MG_SYNTHESIS', 'Synthesis Gate', 8, 2, [item('acid_vat:acid_vat')], ['MG_MAGIC', 'MG_ECONOMY', 'S1_SYNTHESIS_EXIT'], ['Acid Vat and synthesis turn deposits into chemical packages, feeding late materials.']),
-      q('MG_AE2', 'AE2 Local Intelligence', 12, 0, [item('kubejs:ae2_machine_casing')], ['MG_SPACE', 'MG_SYNTHESIS', 'AE_CASE'], ['AE2 is the convergence point for local site intelligence, not global logistics. The casing is the final shared machine authority before hybrid branches.']),
+      q('MG_SYNTHESIS', 'Synthesis Gate', 8, 2, [item('kubejs:phosphate_flux')], ['MG_MAGIC', 'MG_ECONOMY', 'S1_SYNTHESIS_EXIT'], ['Create and PNCR synthesis turn deposits into chemical packages, feeding late materials.']),
+      q('MG_AE2', 'AE2 Local Intelligence', 12, 0, [item('kubejs:impossible_machine_casing')], ['MG_SPACE', 'MG_SYNTHESIS', 'AE_CASE'], ['AE2 is the convergence point for local site intelligence, not global logistics. The casing is the final shared machine authority before hybrid branches.']),
       q('MG_POST_AE2', 'Post-AE2 Branches', 14, 0, [item('advanced_ae:quantum_structure'), item('protection_pixel:armorloadplatform'), item('tomeofblood:novice_tome_of_blood')], ['MG_AE2', 'PA_QUANTUM_STRUCTURE', 'PP_PLATFORM', 'TOB_NOVICE'], ['After AE2, progression fans into fewer stronger branches: quantum infrastructure, serious armor, and late Blood-Ars synthesis.'])
     ]
   },
@@ -938,7 +940,7 @@ const chapters = [
   {
     filename: 'grid_power', prefix: 'GP', id: 'BTM_GRID_POWER', order: 0, title: 'Grid Power', tier: 'gold', group: 'power', description: ['Turn rotational infrastructure into electricity and stored power.'], quests: [
       q('GP_CONDUCTIVE', 'Conductive Casing', 0, 0, [item('powergrid:conductive_casing')], ['SH_EXIT_GRID']),
-      q('GP_CASE', 'Power Grid Machine Casing', 2, 0, [item('kubejs:power_grid_machine_casing')], ['GP_CONDUCTIVE']),
+      q('GP_CASE', 'Electrical Machine Casing', 2, 0, [item('kubejs:electrical_machine_casing')], ['GP_CONDUCTIVE']),
       q('GP_HOUSING', 'Generator Housing', 4, -2, [item('powergrid:generator_housing')], ['GP_CASE']),
       q('GP_ROTOR', 'Induction Rotor', 4, 0, [item('powergrid:generator_induction_rotor')], ['GP_CASE']),
       q('GP_COMMUTATOR', 'Commutator', 4, 2, [item('powergrid:generator_commutator')], ['GP_CASE']),
@@ -958,7 +960,7 @@ const chapters = [
       q('FI_COMPRESSOR', 'Gas Compressor', 4, 1, [item('gases_and_plasmas:gas_compressor')], ['FI_GAS_PIPE']),
       q('FI_FAN', 'Gas Fan', 6, 2, [item('gases_and_plasmas:gas_fan')], ['FI_COMPRESSOR']),
       q('FI_ELECTROLYZER', 'Electrolyzer', 6, 0, [item('gases_and_plasmas:electrolyzer')], ['FI_COMPRESSOR', 'GP_BATTERY']),
-      q('FI_AE_CONTROL', 'AE2 Control Access', 8, 0, [item('kubejs:ae2_machine_casing')], ['AE_CONTROLLER'], ['Fusion as power needs local intelligence and controlled automation.']),
+      q('FI_AE_CONTROL', 'AE2 Control Access', 8, 0, [item('kubejs:impossible_machine_casing')], ['AE_CONTROLLER'], ['Fusion as power needs local intelligence and controlled automation.']),
       q('FI_ELECTROMAGNET', 'Magnetic Confinement', 10, 0, [item('gases_and_plasmas:electromagnet')], ['FI_AE_CONTROL', 'FI_FAN', 'FI_ELECTROLYZER']),
       q('FI_IONIZER', 'Ionizer', 12, 0, [item('gases_and_plasmas:ionizer')], ['FI_ELECTROMAGNET', 'FI_FISSION_ROD']),
       q('FI_REACTIVE_CELL', 'Reactive Matter Cell Work', 14, -1, [item('gases_and_plasmas:electromagnet'), item('gases_and_plasmas:ionizer'), item('fission_reactor:fission_reactor_rod')], ['FI_IONIZER']),
@@ -968,7 +970,7 @@ const chapters = [
   {
     filename: 'oc2r', prefix: 'OC', id: 'BTM_OC2R', order: 1, title: 'OC2R', tier: 'silver', group: 'power', description: ['OC2R is the preferred intersite communication layer. It should coordinate routes and machines without becoming item teleportation.'], quests: [
       q('OC_TRANSISTOR', 'Transistor', 0, -1, [item('oc2r:transistor')], ['GP_BATTERY']),
-      q('OC_CASE', 'OC2R Machine Casing', 0, 1, [item('kubejs:oc2r_machine_casing')], ['GP_BATTERY']),
+      q('OC_CASE', 'Circuited Machine Casing', 0, 1, [item('kubejs:circuited_machine_casing')], ['GP_BATTERY']),
       q('OC_COMPUTER', 'Local Computer', 2, 0, [item('oc2r:computer')], ['OC_TRANSISTOR', 'OC_CASE']),
       q('OC_NETWORK', 'Wired Site Communication', 4, 0, [item('oc2r:network_hub'), item('oc2r:network_connector')], ['OC_COMPUTER']),
       q('OC_CREATE_BRIDGE', 'Create Device Bridge', 6, -2, [item('create:speedometer'), item('create:stressometer'), item('oc2r:network_connector')], ['OC_NETWORK'], ['ComputerBridge exposes Create machines to OC2R. It is intersite communication and observability, not item teleportation.']),
@@ -1040,7 +1042,7 @@ const chapters = [
       ]),
       q('SP_CHEM', 'Chemical Synthesizer', 16, 0, [item('creatingspace:chemical_synthesizer')], ['SP_CASING', 'SP_CONTROLS', 'SP_PRESSURE'], [
         'The Chemical Synthesizer is the exit into space-era synthesis. It connects rocket progress back into the matter graph and unlocks later AE2 and fusion preparation.',
-        'Place it near cryogenic storage and the Acid Vat/chemistry area, because future recipes should bridge those systems.'
+        'Place it near cryogenic storage and the Create/PNCR chemistry area, because future recipes should bridge those systems.'
       ]),
       q('SP_ADV_FABRIC', 'Advanced Suit Fabric', 18, -1, [item('creatingspace:advanced_spacesuit_fabric')], ['SP_CHEM'], [
         'Advanced suit fabric upgrades the survival kit using late space materials. It should be produced as a controlled batch, not hand-crafted one piece at a time.',
@@ -1056,7 +1058,7 @@ const chapters = [
     filename: 'ae2', prefix: 'AE', id: 'BTM_AE2', order: 1, title: 'AE2 Local Intelligence', tier: 'diamond', group: 'intelligence', description: ['AE2 is local intelligence for a committed site. Storage and autocrafting improve a base, but trains and routes still move matter.'], quests: [
       q('AE_CHARGER', 'Certus Preparation', 0, -1, [item('ae2:charger')], ['SP_CHEM']),
       q('AE_INSCRIBER', 'Processor Fabrication', 0, 1, [item('ae2:inscriber')], ['SP_CHEM']),
-      q('AE_CASE', 'AE2 Machine Casing', 2, 0, [item('kubejs:ae2_machine_casing')], ['AE_CHARGER', 'AE_INSCRIBER']),
+      q('AE_CASE', 'Impossible Machine Casing', 2, 0, [item('kubejs:impossible_machine_casing')], ['AE_CHARGER', 'AE_INSCRIBER']),
       q('AE_CONTROLLER', 'Local Controller', 4, 0, [item('ae2:controller')], ['AE_CASE']),
       q('AE_DRIVE', 'Site Storage, Not Global Logistics', 6, -1, [item('ae2:drive')], ['AE_CONTROLLER']),
       q('AE_CRAFTING', 'Local Pattern Work', 6, 1, [item('ae2:crafting_unit'), item('ae2:molecular_assembler')], ['AE_CONTROLLER']),
@@ -1104,13 +1106,13 @@ const chapters = [
     ]
   },
   {
-    filename: 'synthesis_ii', prefix: 'S2', id: 'BTM_SYNTHESIS_II', order: 3, title: 'Synthesis II', tier: 'platinum', group: 'matter', description: ['Synthesis II extends Acid Vat and Chemlib into late plates and slurry logistics. The Acid Vat mod source remains read-only; this chapter only references exposed pack items.'], quests: [
-      q('S2_PUMP', 'Mechanical Slurry Pump', 0, 0, [item('acid_vat:mechanical_slurry_pump')], ['S1_SYNTHESIS_EXIT'], ['Slurry movement is physical infrastructure, not a magic pipe.']),
-      q('S2_INTERFACE', 'Portable Slurry Interface', 2, -1, [item('acid_vat:portable_slurry_interface')], ['S2_PUMP'], ['Portable interfaces make chemistry fieldwork practical.']),
-      q('S2_VALVE', 'Slurry Valve Control', 2, 1, [item('acid_vat:slurry_valve')], ['S2_PUMP'], ['Valves make chemical routing authored and inspectable.']),
-      q('S2_URANIUM', 'Uranium Plate', 4, -2, [item('chemlib:uranium_plate')], ['S2_INTERFACE'], ['Lava-depth and deep synthesis materials become engineered plates.']),
-      q('S2_THORIUM', 'Thorium Plate', 4, 0, [item('chemlib:thorium_plate')], ['S2_INTERFACE'], ['Thorium is a late matter-routing material, not furnace ore.']),
-      q('S2_IRIDIUM', 'Iridium Plate', 4, 2, [item('chemlib:iridium_plate')], ['S2_VALVE'], ['Iridium should represent serious chemistry and extreme-resource commitment.']),
+    filename: 'synthesis_ii', prefix: 'S2', id: 'BTM_SYNTHESIS_II', order: 3, title: 'Synthesis II', tier: 'platinum', group: 'matter', description: ['Synthesis II extends Chemlib through PNCR pressure, gas handling, and late plates. Create remains the visible bulk chemistry surface.'], quests: [
+      q('S2_PRESSURE', 'Pressure Chemistry', 0, 0, [item('pneumaticcraft:pressure_chamber_interface'), item('kubejs:pressure_seal')], ['S1_SYNTHESIS_EXIT'], ['Sealed chemistry starts when pressure, seals, and chamber infrastructure are online.']),
+      q('S2_THERMO', 'Thermo Plant Gases', 2, -1, [item('pneumaticcraft:thermopneumatic_processing_plant'), item('chemlib:sulfur_dioxide')], ['S2_PRESSURE'], ['Gas chemistry is a pressure-and-temperature commitment, not a crafting grid shortcut.']),
+      q('S2_ASSEMBLY', 'Chemical Assembly', 2, 1, [item('pneumaticcraft:assembly_controller'), item('pneumaticcraft:assembly_platform')], ['S2_PRESSURE'], ['PNCR assembly makes boards and sealed parts authored factory products.']),
+      q('S2_URANIUM', 'Uranium Plate', 4, -2, [item('chemlib:uranium_plate')], ['S2_THERMO'], ['Lava-depth and deep synthesis materials become engineered plates.']),
+      q('S2_THORIUM', 'Thorium Plate', 4, 0, [item('chemlib:thorium_plate')], ['S2_THERMO'], ['Thorium is a late matter-routing material, not furnace ore.']),
+      q('S2_IRIDIUM', 'Iridium Plate', 4, 2, [item('chemlib:iridium_plate')], ['S2_ASSEMBLY'], ['Iridium should represent serious chemistry and extreme-resource commitment.']),
       q('S2_RUTHENIUM', 'Ruthenium Plate', 6, 0, [item('chemlib:ruthenium_plate')], ['S2_URANIUM', 'S2_THORIUM', 'S2_IRIDIUM'], ['Ruthenium is a capstone signal for advanced chemical interpretation.'])
     ]
   },
@@ -1274,7 +1276,7 @@ const chapters = [
     ]
   },
   {
-    filename: 'theurgy', prefix: 'THG', id: 'BTM_THEURGY', order: 8, title: 'Theurgy', tier: 'platinum', group: 'matter', description: ['A magical matter-transmutation chain alongside Acid Vat and synthesis.'], quests: [
+    filename: 'theurgy', prefix: 'THG', id: 'BTM_THEURGY', order: 8, title: 'Theurgy', tier: 'platinum', group: 'matter', description: ['A magical matter-transmutation chain alongside Create/PNCR synthesis.'], quests: [
       q('THG_ACCUMULATOR', 'Sal Ammoniac Accumulator', 0, 0, [item('theurgy:sal_ammoniac_accumulator')], ['M2_THEURGY']),
       q('THG_SALT', 'Alchemical Salt', 2, -1, [item('theurgy:alchemical_salt_mineral')], ['THG_ACCUMULATOR']),
       q('THG_DISTILLER', 'Distiller', 4, -1, [item('theurgy:distiller')], ['THG_SALT']),
@@ -1501,12 +1503,12 @@ const chapters = [
     ]
   },
   {
-    filename: 'synthesis_i', prefix: 'S1', id: 'BTM_SYNTHESIS_I', order: 1, title: 'Acid Chemistry', tier: 'gold', group: 'matter', description: ['Acid chemistry is where deposits stop being ore and become chemical packages. This pack wires recipes against Acid Vat without editing its mod source.'], quests: [
-      q('S1_VAT', 'Acid Vat', 0, 0, [item('acid_vat:acid_vat')], ['C2_BRASS', 'TC_FOUNDRY']),
-      q('S1_TUBE', 'Slurry Transport', 2, 0, [item('acid_vat:slurry_tank'), item('acid_vat:smart_slurry_pipe')], ['S1_VAT']),
-      q('S1_CENTRIFUGE', 'Centrifuge Fractions', 4, 0, [item('acid_vat:centrifuge_bearing'), item('acid_vat:centrifuge_chamber')], ['S1_TUBE']),
-      q('S1_SAMPLE', 'Chemical Interpretation', 6, -1, [item('chemlib:copper'), item('chemlib:sulfur')], ['S1_CENTRIFUGE']),
-      q('S1_PLATINUM', 'Mountain-Depth Plate Reward', 6, 1, [item('chemlib:platinum_plate')], ['S1_CENTRIFUGE']),
+    filename: 'synthesis_i', prefix: 'S1', id: 'BTM_SYNTHESIS_I', order: 1, title: 'Acid Chemistry', tier: 'gold', group: 'matter', description: ['Acid chemistry is where deposits stop being ore and become chemical packages. Create mixers combine crushed deposits, solvent choice, and grinding-ball media.'], quests: [
+      q('S1_MIXER', 'Acid Mixer', 0, 0, [item('create:mechanical_mixer'), item('create:basin')], ['C2_BRASS', 'TC_FOUNDRY']),
+      q('S1_BALLS', 'Grinding Media', 2, 0, [item('kubejs:brass_grinding_ball'), item('kubejs:steel_grinding_ball')], ['S1_MIXER']),
+      q('S1_SOLVENTS', 'Solvent Set', 4, 0, [item('chemlib:ethanol_bucket'), item('chemlib:acetic_acid_bucket'), item('chemlib:sulfuric_acid_bucket')], ['S1_BALLS']),
+      q('S1_SAMPLE', 'Chemical Interpretation', 6, -1, [item('chemlib:copper'), item('chemlib:copper_ii_sulfate'), item('chemlib:sulfur')], ['S1_SOLVENTS']),
+      q('S1_PLATINUM', 'Mountain-Depth Plate Reward', 6, 1, [item('chemlib:platinum_plate')], ['S1_SOLVENTS']),
       q('S1_SYNTHESIS_EXIT', 'Exit: Matter Routing', 8, 0, [item('chemlib:osmium_plate')], ['S1_SAMPLE', 'S1_PLATINUM'])
     ]
   }

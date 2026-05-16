@@ -20,7 +20,7 @@ Updated `/home/gerald/mcmods/build.sh` so normal pack builds include:
 - `fission_reactor`
 - `fusion_reactor`
 
-Updated `/home/gerald/mcmods/testbuild.sh` similarly, while retaining `acid_vat` for test-output builds.
+Updated `/home/gerald/mcmods/testbuild.sh` similarly; Acid Vat is no longer retained for active pack chemistry.
 
 ## Built Jars Added To Pack
 

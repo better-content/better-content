@@ -112,9 +112,6 @@ PHASES = [
     phase("reduced_no_cravings", "Reduced baseline plus Cravings disabled", [
         r"^cravings-.*\.jar$",
     ]),
-    phase("reduced_no_acid_vat", "Reduced baseline plus custom acid_vat disabled", [
-        r"^acid_vat-.*\.jar$",
-    ]),
     phase("reduced_no_btmfixes", "Reduced baseline plus custom btmfixes disabled", [
         r"^btmfixes-.*\.jar$",
     ]),

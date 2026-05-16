@@ -222,7 +222,7 @@
     "Magic workstations must be parented to Blood Magic tiers.",
     "Loot, Wares, trades, mob drops, and quests are recipe-equivalent material sources.",
     "Emerald currency must not drive villager or Wares economy.",
-    "Alchemistry is compatibility/reference; Acid Vat and Create synthesis are player-facing chemistry.",
+    "Alchemistry is compatibility/reference; Create and PneumaticCraft synthesis are player-facing chemistry.",
     "AE2 is local site intelligence, not global logistics.",
     "Teleportation, creative flight, infinite storage, and infinite non-grown resources must be removed or endgame-contained."
   ],

@@ -17,13 +17,13 @@ Confirmed source block tags are registered in `kubejs/server_scripts/10_tags/60_
 
 | Deposit | Tag | Band | Primary | Secondary | Tertiary | First useful tier | Notes |
 |---|---|---|---|---|---|---|---|
-| Coal Measures | `kubejs:deposit_blocks/coal_measures` | surface/shallow | coal | iron | none | furnace/Create preprocess | TCon fallback maps to molten iron where needed; Acid Vat extracts carbon/iron. |
+| Coal Measures | `kubejs:deposit_blocks/coal_measures` | surface/shallow | coal | iron | none | furnace/Create preprocess | TCon fallback maps to molten iron where needed; Create solvent routes extract carbon/iron identity. |
 | Ironstone | `kubejs:deposit_blocks/ironstone` | shallow | iron | nickel | chromium | melter | Chromium is the confirmed molten trace substitute. |
-| Copper Sulfide | `kubejs:deposit_blocks/copper_sulfide` | shallow/hills | copper | iron | gold | melter | Starter copper sulfide route with sulfur in Acid Vat. |
+| Copper Sulfide | `kubejs:deposit_blocks/copper_sulfide` | shallow/hills | copper | iron | gold | melter | Starter copper sulfide route with sulfuric/chloride/nitric chemistry identity. |
 | Tin Vein | `kubejs:deposit_blocks/tin` | hills/shallow | tin | quartz | tungsten | melter | Bronze support without steel-axis progression. |
 | Zinc Vein | `kubejs:deposit_blocks/zinc` | hills | zinc | lead | cadmium | melter | Create brass support. |
 | Lead-Zinc Vein | `kubejs:deposit_blocks/lead_zinc_vein` | underground | lead | zinc | silver | melter | Power/OC2R trace route. |
-| Quartz Vein | `kubejs:deposit_blocks/quartz_vein` | hills/mountains | quartz | gold | copper | Create preprocess | Supports silicon/AE2 routing through Create washing and Acid Vat. |
+| Quartz Vein | `kubejs:deposit_blocks/quartz_vein` | hills/mountains | quartz | gold | copper | Create preprocess | Supports silicon/AE2 routing through Create washing and acid+ball chemistry. |
 | Bauxite Laterite | `kubejs:deposit_blocks/bauxite_laterite` | surface/hills | aluminum | iron | nickel | melter | Space alloy support. |
 
 ## Active Recipe Surface
@@ -32,5 +32,5 @@ Confirmed source block tags are registered in `kubejs/server_scripts/10_tags/60_
 - TCon melter and ore_melting recipes for deposit blocks are generated in `kubejs/server_scripts/60_worldgen/10_r_ores_melted.js`.
 - Foundry-style byproducts use TCon `ore_melting` byproducts where molten outputs exist.
 - Create preprocessing is generated in `kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js`.
-- Acid Vat dissolver parity is generated in `kubejs/server_scripts/40_recipe_add/60_acid_vat_deposit_slurries.js`.
+- Acid+ball chemistry is generated in `kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js`.
 - Alchemistry is retained for reference/compat data, not as the authored chemistry progression route.

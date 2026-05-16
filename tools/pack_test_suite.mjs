@@ -222,7 +222,6 @@ function intendedMachineTier(output) {
   if (ns === 'oc2r') return 'oc2r'
   if (ns === 'creatingspace') return 'space'
   if (['ae2', 'advanced_ae', 'ae2additions', 'expatternprovider', 'merequester', 'createappliedkinetics'].includes(ns)) return 'ae2'
-  if (ns === 'acid_vat') return 'create_brass'
   return null
 }
 

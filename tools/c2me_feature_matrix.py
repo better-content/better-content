@@ -66,7 +66,6 @@ VARIANTS = {
 }
 
 CUSTOM_MOD_JARS = {
-    "acid_vat": ["acid_vat*.jar"],
     "btmfixes": ["btmfixes*.jar"],
     "classselector": ["classselector*.jar"],
     "computerbridge": ["computerbridge*.jar"],

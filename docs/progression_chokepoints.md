@@ -28,8 +28,8 @@ MUST DO chokepoints:
 - Melter/smeltery gives primary molten output only.
 - Foundry is first byproduct interpretation.
 - Create crushing/washing improves preparation but still feeds metallurgy.
-- Acid Vat plus Create-family chemistry routes are chemical interpretation, not early ore doubling.
-- Alchemistry is not a player-facing progression target; Acid Vat/Create-family routes provide parity for relevant decomposition/synthesis semantics.
+- Create and PNCR chemistry routes are chemical interpretation, not early ore doubling.
+- Alchemistry is not a player-facing progression target; Create/PNCR routes provide parity for relevant decomposition/synthesis semantics.
 - Prefer many distinct alloy identities and awkward alloy routes over a steel-dominant progression.
 - Steel may be useful, but should not be the universal machine-frame answer.
 

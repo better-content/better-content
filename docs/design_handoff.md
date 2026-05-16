@@ -93,10 +93,10 @@ Ore processing ladder:
 - Tier 1: TCon Melter/Smeltery, primary molten output.
 - Tier 2: TCon Foundry, primary plus byproducts.
 - Tier 3: Create crushing/washing, better preprocessing.
-- Tier 4: Acid Vat and Create-family chemistry routes, slurry and many-output chemical interpretation.
+- Tier 4: Create/PNCR chemistry routes, acid+ball processing, pressure/gas handling, and many-output chemical interpretation.
 - Tier 5: later Create-family chemistry/fission/fusion/synthesis replacements.
 
-Alchemistry remains present as a compatibility/reference surface for other mods and recipe semantics. Do not make Alchemistry the player-facing progression target; future chemistry/synthesis planning should provide dissolver-style parity through Acid Vat and Create-family replacement mods where those recipes matter.
+Alchemistry remains present as a compatibility/reference surface for other mods and recipe semantics. Do not make Alchemistry the player-facing progression target; future chemistry/synthesis planning should provide decomposition/synthesis parity through Create and PNCR routes where those recipes matter.
 
 Create a source-of-truth deposit catalogue before generating recipes. Initial starter subset: coal measures, ironstone, copper sulfide, tin, zinc, lead-zinc vein, quartz vein if confirmed, and bauxite laterite if confirmed.
 

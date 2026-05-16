@@ -7,4 +7,4 @@ Date: 2026-04-29
 - Onboarding gating is not yet wired to a confirmed `onboarding_complete` FTB stage/event mirror.
 - Villager and Wares coin pricing needs playtest tuning against actual obelisk/dimension coin income.
 - Relics did not appear in the current generated loot table dump; if it injects rewards at runtime, it still needs in-client source verification.
-- Acid Vat mod source is read-only because another agent is working there; pack-side integration should be revalidated after that work lands.
+- Acid Vat is retired from the active pack; chemistry validation now targets Create and PNCR routes.

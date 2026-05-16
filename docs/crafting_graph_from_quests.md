@@ -18,7 +18,7 @@ Notes:
 6. `MG_SPACE` (Space Logistics Milestone) -> `creatingspace:chemical_synthesizer`
 7. `MG_MAGIC` (Blood Magic Milestone) -> `bloodmagic:etherealslate`
 8. `MG_ECONOMY` (Village Economy Milestone) -> `wares:completed_delivery_agreement`
-9. `MG_SYNTHESIS` (Synthesis Milestone) -> `acid_vat:acid_vat`
+9. `MG_SYNTHESIS` (Synthesis Milestone) -> `kubejs:phosphate_flux`
 10. `MG_AE2` -> `ae2:controller`
 11. `MG_POST_AE2` -> `advanced_ae:quantum_structure`
 
@@ -85,7 +85,7 @@ Tier 0: progression-critical gate blockers
 4. `creatingspace:chemical_synthesizer`
 5. `bloodmagic:etherealslate`
 6. `wares:completed_delivery_agreement`
-7. `acid_vat:acid_vat`
+7. `kubejs:phosphate_flux`
 8. `ae2:controller`
 9. `advanced_ae:quantum_structure`
 
@@ -93,9 +93,9 @@ Tier 1: repeated casing and chapter-entry infrastructure
 1. `kubejs:seared_machine_casing`
 2. `kubejs:scorched_machine_casing`
 3. `kubejs:andesite_machine_casing`
-4. `kubejs:power_grid_machine_casing`
-5. `kubejs:oc2r_machine_casing`
-6. `kubejs:ae2_machine_casing`
+4. `kubejs:electrical_machine_casing`
+5. `kubejs:circuited_machine_casing`
+6. `kubejs:impossible_machine_casing`
 7. `kubejs:space_machine_casing`
 8. `create:andesite_casing`
 9. `creatingspace:rocket_casing`

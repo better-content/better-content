@@ -29,20 +29,20 @@ Three GPT-5.3 medium-reasoning subagents audited recipe graph, quest/economy, an
 
 ### MUST DO: AE2Things Storage Cleanup
 
-- Proposal: gate AE2Things disk housings/drives behind `kubejs:ae2_machine_casing`; put larger cells behind post-AE2/hybrid materials.
+- Proposal: gate AE2Things disk housings/drives behind `kubejs:impossible_machine_casing`; put larger cells behind post-AE2/hybrid materials.
 - Evidence: recipe audit flagged cheap amethyst/raw routes for disk housing and disk drives.
 - Why it fits: AE2 is local intelligence, not cheap infinite storage.
 - Risk: cheap storage trivializes bounded matter and logistics.
 - Implementation surface: `kubejs/server_scripts/30_recipe_replace/100_high_value_mod_progression_gates.js`.
 - Confidence: high.
 
-### MUST DO: Alchemistry Quarantine / Acid Vat Parity
+### MUST DO: Alchemistry Quarantine / Create/PNCR Parity
 
-- Proposal: keep Alchemistry as compatibility/reference only; remove direct dissolver/fusion gameplay routes unless mirrored through Acid Vat/Create synthesis.
+- Proposal: keep Alchemistry as compatibility/reference only; remove direct dissolver/fusion gameplay routes unless mirrored through Create/PNCR synthesis.
 - Evidence: audit found thousands of Alchemistry recipes, including dissolver/fusion breadth.
-- Why it fits: user stated Alchemistry is present for recipe reference; Acid Vat is the player-facing dissolver parity.
+- Why it fits: user stated Alchemistry is present for recipe reference; Create/PNCR is the player-facing dissolver parity.
 - Risk: default Alchemistry routes bypass deposit interpretation and authored chemistry.
-- Implementation surface: material economy pass and Acid Vat recipe scripts.
+- Implementation surface: material economy pass and Create/PNCR recipe scripts.
 - Confidence: high.
 
 ### SHOULD DO: Little Logistics Later, Not Now

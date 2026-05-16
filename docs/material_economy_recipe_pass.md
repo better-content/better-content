@@ -56,7 +56,7 @@ KubeJS script:
 - Spatial storage cells use deepslate-depth plates.
 - AE2 tools use sky steel and power circuits.
 
-Deadlock avoidance: AE2 processor recipes are not globally rewritten, because `kubejs:ae2_machine_casing` already depends on `ae2:engineering_processor`.
+Deadlock avoidance: AE2 processor recipes are not globally rewritten, because `kubejs:impossible_machine_casing` already depends on `ae2:engineering_processor`.
 
 ### AE2 Addons and Advanced AE
 

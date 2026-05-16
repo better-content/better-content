@@ -21,4 +21,4 @@ Implemented `kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing
 
 ## Design Fit
 
-Create improves preparation and concentrate handling, but does not replace TCon metallurgy. The washed outputs are concentrates and trace materials; high-value interpretation still runs through TCon/Foundry or Acid Vat.
+Create improves preparation and concentrate handling, but does not replace TCon metallurgy. The washed outputs are concentrates and trace materials; high-value interpretation still runs through TCon/Foundry or Create/PNCR.

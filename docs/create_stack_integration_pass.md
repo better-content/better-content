@@ -27,9 +27,9 @@ Implemented gates:
 - Re-authors Connected and package-addon logistics around brass components and precision mechanisms.
 - Gates `createadvlogistics:redstone_radio` behind OC2R infrastructure.
 - Re-authors station/signal/coupler train control recipes behind brass automation.
-- Reinforces diesel infrastructure as brass logistics, with larger diesel engines needing `kubejs:power_grid_machine_casing`.
+- Reinforces diesel infrastructure as brass logistics, with larger diesel engines needing `kubejs:electrical_machine_casing`.
 - Reintroduces selected Create New Age electric parts after Power Grid so the removed vanilla crafting path does not become a dead end.
-- Reinforces Create Applied Kinetics as post-AE2 by replacing bridge inputs with `kubejs:ae2_machine_casing`.
+- Reinforces Create Applied Kinetics as post-AE2 by replacing bridge inputs with `kubejs:impossible_machine_casing`.
 
 ## Notes
 

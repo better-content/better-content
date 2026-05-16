@@ -58,7 +58,6 @@ SEED_PATTERNS = [
     r"^TravelersTitles-.*\.jar$",
     r"^UnEarthed-.*\.jar$",
     r"^\[forge\]ctov-.*\.jar$",
-    r"^acid_vat-.*\.jar$",
     r"^aether-.*\.jar$",
     r"^alchemistry-.*\.jar$",
     r"^alekiNiftyShips-.*\.jar$",

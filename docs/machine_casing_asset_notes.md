@@ -10,10 +10,10 @@ The casing textures are pack-owned assets for the expert progression casing ladd
 - `kubejs:scorched_machine_casing`: dark foundry brick, triangular furnace throat, hotter red-orange seams.
 - `kubejs:andesite_machine_casing`: grey Create-style casing, bevels, rivets, gear-like center.
 - `kubejs:brass_machine_casing`: polished brass precision housing, gold panels, small teal control spark.
-- `kubejs:power_grid_machine_casing`: dark conductive shell, copper traces, green circuit pads.
-- `kubejs:oc2r_machine_casing`: black terminal/computer shell, neon status screen and IO traces.
+- `kubejs:electrical_machine_casing`: dark conductive shell, copper traces, green circuit pads.
+- `kubejs:circuited_machine_casing`: black terminal/computer shell, neon status screen and IO traces.
 - `kubejs:space_machine_casing`: pale rocket shell, dark structural frame, blue porthole/propulsion accent, red hazard stripe.
-- `kubejs:ae2_machine_casing`: dark sky-stone/controller casing, fluix/cyan grid lights and purple controller accent.
+- `kubejs:impossible_machine_casing`: dark sky-stone/controller casing, fluix/cyan grid lights and purple controller accent.
 
 ## Asset Inspiration
 

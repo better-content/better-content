@@ -18,7 +18,7 @@ Added:
 
 ### Post-AE2 Construction Tools
 
-Building Gadgets and high-tier Building Wands are now treated as post-AE2 construction accelerators. The trade shortcuts were removed, and recipes are gated through `kubejs:ae2_machine_casing` via `100_high_value_mod_progression_gates.js`.
+Building Gadgets and high-tier Building Wands are now treated as post-AE2 construction accelerators. The trade shortcuts were removed, and recipes are gated through `kubejs:impossible_machine_casing` via `100_high_value_mod_progression_gates.js`.
 
 ### Hooks and Drones
 
@@ -49,7 +49,7 @@ Removed and hidden:
 
 ### Alchemistry and Occultism Quarantine
 
-Alchemistry machines are removed and hidden. Alchemistry remains a compatibility/reference recipe surface only; Acid Vat/Create carry player-facing chemistry.
+Alchemistry machines are removed and hidden. Alchemistry remains a compatibility/reference recipe surface only; Create/PNCR carry player-facing chemistry.
 
 Occultism miners remain removed and are now also hidden from JEI/EMI.
 

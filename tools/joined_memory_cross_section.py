@@ -126,7 +126,6 @@ DEFAULT_PHASES: list[Phase] = [
             r"^compressedcreativity-.*\.jar$",
             r"^create-new-age-.*\.jar$",
             r"^create-stuff-additions.*\.jar$",
-            r"^acid_vat-.*\.jar$",
             r"^create_bb-.*\.jar$",
             r"^create_central_kitchen-.*\.jar$",
             r"^create_cold_sweat-.*\.jar$",
@@ -236,7 +235,6 @@ DEFAULT_PHASES: list[Phase] = [
         "no_custom_mods",
         "all custom pack-critical jars",
         [
-            r"^acid_vat-.*\.jar$",
             r"^btmfixes-.*\.jar$",
             r"^classselector-.*\.jar$",
             r"^computerbridge-.*\.jar$",
@@ -297,7 +295,6 @@ DEFAULT_PHASES: list[Phase] = [
         [
             r"^create-new-age-.*\.jar$",
             r"^create_cold_sweat-.*\.jar$",
-            r"^acid_vat-.*\.jar$",
             r"^fission_reactor-.*\.jar$",
             r"^gases_and_plasmas-.*\.jar$",
             r"^heatsync-.*\.jar$",

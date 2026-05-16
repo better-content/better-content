@@ -61,10 +61,10 @@ Top recipe types by count:
 | `minecraft:crafting_shaped` | 15703 | Far too many for manual one-off gating; needs generated/catalogue audit. |
 | `minecraft:stonecutting` | 7538 | Mostly decorative, but can hide material bypasses. |
 | `minecraft:crafting_shapeless` | 4530 | High bypass risk for utility conversions. |
-| `alchemistry:fusion` | 3481 | Compatibility/reference surface must be quarantined or mirrored into Create/Acid Vat progression. |
+| `alchemistry:fusion` | 3481 | Compatibility/reference surface must be quarantined or mirrored into Create/PNCR progression. |
 | `create:cutting` | 1283 | Mostly block processing; broad review pending. |
 | `create:mixing` | 1158 | High progression risk because mixing can bypass TCon/alloying intent. |
-| `alchemistry:dissolver` | 1075 | Needs Acid Vat parity decisions. |
+| `alchemistry:dissolver` | 1075 | Needs Create/PNCR parity decisions. |
 | `tconstruct:melting` | 493 | Core metallurgy surface. |
 | `create:sequenced_assembly` | 310 | Strong candidate for tiered casing complexity. |
 | `create:mechanical_crafting` | 202 | Strong candidate for mid/late machine tiers. |
@@ -121,7 +121,7 @@ Confirmed by repo scripts:
 - `kubejs/server_scripts/30_recipe_replace/115_material_economy_recipe_pass.js`
 - `kubejs/server_scripts/40_recipe_add/45_deposit_furnace_fallbacks.js`
 - `kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js`
-- `kubejs/server_scripts/40_recipe_add/60_acid_vat_deposit_slurries.js`
+- `kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js`
 - `kubejs/server_scripts/60_worldgen/10_r_ores_melted.js`
 
 These support the intended design direction, but they are not sufficient for full pack completeness.
@@ -154,12 +154,12 @@ These support the intended design direction, but they are not sufficient for ful
 - Implementation surface: `kubejs/data/**/loot_tables`, `kubejs/server_scripts/35_villager_trades`, FTB Quest rewards, obelisk/dimension mob loot, Wares agreement tables.
 - Confidence: High.
 
-#### Proposal: Complete Acid Vat / Create replacement for Alchemistry player-facing progression
+#### Proposal: Complete Create / PNCR replacement for Alchemistry player-facing progression
 
-- Evidence: `alchemistry` contributes 5410 recipes, including 1075 dissolver recipes and 3481 fusion recipes. Current Acid Vat pass only covers starter deposits.
+- Evidence: `alchemistry` contributes 5410 recipes, including 1075 dissolver recipes and 3481 fusion recipes. Current Create acid+ball pass covers Realistic Ores deposits but broader synthesis parity still needs design.
 - Why it fits the design: user explicitly wants Alchemistry present for reference/compat, not as the progression authority.
 - Risk: Alchemistry can remain the real chemistry game if not quarantined or mirrored.
-- Implementation surface: Acid Vat recipe generation, Create-family synthesis mods, recipe removals/visibility, docs.
+- Implementation surface: Create mixer recipes, PNCR pressure/thermo/assembly recipes, recipe removals/visibility, docs.
 - Confidence: High.
 
 #### Proposal: Expand ore/deposit processing beyond starter subset
@@ -167,7 +167,7 @@ These support the intended design direction, but they are not sufficient for ful
 - Evidence: starter subset covers 8 deposits. The pack design requires deposit-first material identity across Y bands and terrain.
 - Why it fits the design: bounded matter and terrain value need deposits to remain meaningful past early game.
 - Risk: later materials fall back to vanilla/mod default ore processing.
-- Implementation surface: `global.BTM_STARTER_DEPOSITS` expanded to full deposit catalogue; generator scripts for furnace, TCon, Create, Acid Vat, later synthesis.
+- Implementation surface: full deposit catalogue; generator scripts for furnace, TCon, Create, PNCR, later synthesis.
 - Confidence: High.
 
 #### Proposal: Replace output-based gates with explicit recipes for critical machines
@@ -250,7 +250,7 @@ These support the intended design direction, but they are not sufficient for ful
 
 #### Proposal: Do not make Alchemistry the player-facing chemistry route
 
-- Evidence: design says Create-family replacements and Acid Vat parity should carry synthesis.
+- Evidence: design says Create and PNCR replacements should carry synthesis.
 - Why it conflicts: one universal machine chain undermines material transformation and authored infrastructure.
 - Risk: Alchemistry becomes the actual pack spine.
 - Implementation surface: restrict/remove/gate Alchemistry recipes as needed while preserving compat references.

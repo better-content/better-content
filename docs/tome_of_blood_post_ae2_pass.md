@@ -25,7 +25,7 @@ Removed native bypass recipes:
 
 Added post-AE2 replacements using:
 
-- `kubejs:ae2_machine_casing`
+- `kubejs:impossible_machine_casing`
 - `advanced_ae:quantum_core`
 - `advanced_ae:quantum_alloy_plate`
 - `bloodmagic:etherealslate`

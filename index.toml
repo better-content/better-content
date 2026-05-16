@@ -6513,10 +6513,6 @@ file = "kubejs/README.txt"
 hash = "989f3737ae4621b8ff6730bce4cbeeee756921e7e510e0c281c8a350501d98af"
 
 [[files]]
-file = "kubejs/assets/kubejs/blockstates/ae2_machine_casing.json"
-hash = "0675a0906562bc4ea7a8f3c8d07871c5692d975b0177276a500a6d3702b91b7b"
-
-[[files]]
 file = "kubejs/assets/kubejs/blockstates/airtight_machine_casing.json"
 hash = "c0cb5b3bb3d7086570fb3cde65a10494fcc6a0c351da626b29cceb366924a7e7"
 
@@ -6541,14 +6537,6 @@ file = "kubejs/assets/kubejs/blockstates/impossible_machine_casing.json"
 hash = "5fb33377ce7d628a65bc3d56777ab6c40329ffc960e2223cac958ace2ab18b54"
 
 [[files]]
-file = "kubejs/assets/kubejs/blockstates/oc2r_machine_casing.json"
-hash = "066038064eae26dd235ae410f02a43401613aa64c1899a349853f295f764a59f"
-
-[[files]]
-file = "kubejs/assets/kubejs/blockstates/power_grid_machine_casing.json"
-hash = "f9e3402e238ac0df1255c6af637ba91cf3cf937bfef2255fa4e5e7c6ff8b60d8"
-
-[[files]]
 file = "kubejs/assets/kubejs/blockstates/raw_impossible_casing.json"
 hash = "8708fd0059f7b7b518367797bbb7b1411de48c8b32210ac964673516c28b02d9"
 
@@ -6563,10 +6551,6 @@ hash = "fb3fa66b3f0fd8ca50960d9d333354d60fc10f1d1ef58c33534b9fbcdfeb4b76"
 [[files]]
 file = "kubejs/assets/kubejs/blockstates/space_machine_casing.json"
 hash = "710425159bed73d45b566c5be3a3c3e3b6861b3898e6a797ddfa410670f1e9ba"
-
-[[files]]
-file = "kubejs/assets/kubejs/models/block/ae2_machine_casing.json"
-hash = "464e4972aa109117fb5a9d3fe3ad18c3922bca44313474d39ff4398518706aaf"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/block/airtight_machine_casing.json"
@@ -6657,14 +6641,6 @@ file = "kubejs/assets/kubejs/models/block/impossible_machine_casing.json"
 hash = "464e4972aa109117fb5a9d3fe3ad18c3922bca44313474d39ff4398518706aaf"
 
 [[files]]
-file = "kubejs/assets/kubejs/models/block/oc2r_machine_casing.json"
-hash = "5cc7b6e6869de5ab1a1c3c26b508533f8627d7f5ce65abcefdf8f79fd9f8d783"
-
-[[files]]
-file = "kubejs/assets/kubejs/models/block/power_grid_machine_casing.json"
-hash = "312a5d511c763ce75ff7c2d555112d4c8303efc7210651f84da19e280b35e58d"
-
-[[files]]
 file = "kubejs/assets/kubejs/models/block/raw_impossible_casing.json"
 hash = "464e4972aa109117fb5a9d3fe3ad18c3922bca44313474d39ff4398518706aaf"
 
@@ -6679,10 +6655,6 @@ hash = "9cbe5492ed6f0a40a9368b73400dde02de0d29aca20e7cf08f7758debb0ce934"
 [[files]]
 file = "kubejs/assets/kubejs/models/block/space_machine_casing.json"
 hash = "60363769a04f5737b7ec9e9e4bd3e65fac3c093be7eb8f93fdc8ef076326b140"
-
-[[files]]
-file = "kubejs/assets/kubejs/models/item/ae2_machine_casing.json"
-hash = "9f4b900667f0fd5bf7ab8cda3c813e6b1998b54416d404db3d098d1bcbb36fd2"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/airtight_machine_casing.json"
@@ -6893,20 +6865,12 @@ file = "kubejs/assets/kubejs/models/item/nickel_grinding_ball.json"
 hash = "ed8526ca58dbf46d642200de65425cfcf0111e66c1cc91bb3a0a96348ca8c71b"
 
 [[files]]
-file = "kubejs/assets/kubejs/models/item/oc2r_machine_casing.json"
-hash = "33dc0cdad0a4bc7c0b23b3b52b586e7748caaef762cf270f6affd9a57ed41be5"
-
-[[files]]
 file = "kubejs/assets/kubejs/models/item/phosphate_flux.json"
 hash = "3b6c506bdaa4b692d5e6b6f1d81aa01df0e3e3af5501c4994efc26f6680c21c4"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/platinum_group_residue.json"
 hash = "d3001d02a2ce6b96ab6c96ea3f50545ee7b8f52c548d7456f0a861fb670f660b"
-
-[[files]]
-file = "kubejs/assets/kubejs/models/item/power_grid_machine_casing.json"
-hash = "242eab5043320e2d1d4377374b8c26479bb22267f7a920d3b8a25d462fec13c2"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/pressure_seal.json"
@@ -7582,7 +7546,7 @@ hash = "b35a8c826862ef7c41189316d335e76d9528b42a220e2fc06e7aba3cf6e88252"
 
 [[files]]
 file = "kubejs/config/btm_expert_graph_catalog.json"
-hash = "35e8a8842b6161c616fee14382e3d25e7cf2381e1094dc0fade168a533c17cda"
+hash = "7cfbc32f59e532e684a733ebc1a05c23976b694780463c4b35ddfc4bcc9a907e"
 
 [[files]]
 file = "kubejs/config/client.properties"
@@ -8326,7 +8290,7 @@ hash = "7629b2a0ecf216c7d905635e667af7737b79c9da128a0421a1880f15bd522e91"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/135_recipe_graph_closure.js"
-hash = "8909bb30ac954577f9283de7d331f58f44afe138ee42862ecd708d6dcbe7c732"
+hash = "d106d7de9791007328dcfb1cdafe936b55c0b832bd1a647d25e64d3c04315d09"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js"

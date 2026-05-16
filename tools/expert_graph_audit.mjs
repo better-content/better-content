@@ -34,7 +34,6 @@ const machineNamespaceTier = {
   expatternprovider: 'ae2',
   merequester: 'ae2',
   createappliedkinetics: 'ae2',
-  acid_vat: 'create_brass',
   theurgy: 'power_grid',
   occultengineering: 'create_brass'
 }

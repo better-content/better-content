@@ -52,7 +52,7 @@ function btmClosureReplace(event, outputs, oldInputs, newInput) {
 }
 
 ServerEvents.recipes(function (event) {
-    // Alchemistry and ChemLib own chemistry identity; Acid Vat is retired from the active pack.
+    // Alchemistry and ChemLib own chemistry identity; Create/PNCR own player-facing synthesis.
     event.remove({ id: 'alchemistry:patchouli_book' })
 
     // Remove controller casting shortcuts so the controller recipes visibly consume machine casings.
@@ -174,7 +174,7 @@ ServerEvents.recipes(function (event) {
         'CLC'
     ], { L: 'create:large_cogwheel', C: 'create_connected:vertical_parallel_gearbox', B: BTM_CLOSURE.brass }, 'kubejs:closure/create_connected/vertical_six_way_gearbox')
 
-    // Diesel and Acid Vat machinery: every block-like component consumes the brass casing tier.
+    // Diesel machinery: every block-like component consumes the brass casing tier.
     btmClosureShaped(event, 'createdieselgenerators:engine_piston', [
         'AIA',
         ' S ',

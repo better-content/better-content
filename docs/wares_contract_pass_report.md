@@ -60,7 +60,7 @@ The pack has several non-grid conversion systems:
 - normal recipes
 - TCon melting/casting/alloying
 - Create processing
-- Acid Vat chemistry
+- Create/PNCR chemistry
 - villager trades
 - Wares contracts
 - quest rewards

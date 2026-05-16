@@ -32,7 +32,7 @@ git diff --check
 - Sky Steel ingots use heated Create mixing and Sky Steel sheets use Create pressing.
 - Emerald currency loot in non-block loot tables is explicitly replaced with Dot Coin tiers by LootJS.
 - Quest rewards use copper-only Starting Out rewards and cumulative coin-tier rewards elsewhere.
-- Acid Vat source remains read-only; pack scripts only reference exposed Acid Vat items.
+- Acid Vat is retired; active pack scripts use Create and PNCR chemistry.
 
 ## In-Game Validation Still Required
 
@@ -42,7 +42,7 @@ git diff --check
 - Spawn each villager profession and wandering trader; confirm Dot Coin trades replace emerald trades.
 - Open representative loot chests and confirm emerald currency has become Dot Coins while ore/block drops remain intact.
 - Check EMI/JEI visibility for later machine casing mechanical crafting and Sky Steel mixing/pressing.
-- Re-run after the Acid Vat mod agent lands changes.
+- Re-run after any chemistry route or recipe dump changes.
 
 ## Nuclear synthesis integration
 

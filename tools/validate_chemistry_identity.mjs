@@ -6,6 +6,7 @@ const repo = process.cwd()
 const matrixPath = path.join(repo, 'kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js')
 const tagPath = path.join(repo, 'kubejs/server_scripts/10_tags/60_realistic_ores_deposit_tags.js')
 const startupPath = path.join(repo, 'kubejs/startup_scripts/10_items_blocks/30_progression_items.js')
+const questGeneratorPath = path.join(repo, 'tools/generate_expert_quest_book.mjs')
 const modelDir = path.join(repo, 'kubejs/assets/kubejs/models/item')
 const textureDir = path.join(repo, 'kubejs/assets/kubejs/textures/item')
 
@@ -101,6 +102,27 @@ if (fs.existsSync(acidVatScript)) fail('retired Acid Vat deposit slurry script s
 const kubejsFiles = walk(path.join(repo, 'kubejs'), file => file.endsWith('.js'))
 for (const fullPath of kubejsFiles) {
   if (read(fullPath).includes('acid_vat:')) fail(`retired acid_vat reference in ${path.relative(repo, fullPath)}`)
+}
+if (fs.existsSync(questGeneratorPath)) {
+  const questGeneratorText = read(questGeneratorPath)
+  if (questGeneratorText.includes('acid_vat:')) fail('quest generator still references retired acid_vat IDs')
+  for (const stale of ['kubejs:power_grid_machine_casing', 'kubejs:oc2r_machine_casing', 'kubejs:ae2_machine_casing']) {
+    if (questGeneratorText.includes(stale)) fail(`quest generator still references stale casing ID ${stale}`)
+  }
+}
+
+for (const staleAsset of [
+  'kubejs/assets/kubejs/blockstates/ae2_machine_casing.json',
+  'kubejs/assets/kubejs/blockstates/oc2r_machine_casing.json',
+  'kubejs/assets/kubejs/blockstates/power_grid_machine_casing.json',
+  'kubejs/assets/kubejs/models/block/ae2_machine_casing.json',
+  'kubejs/assets/kubejs/models/block/oc2r_machine_casing.json',
+  'kubejs/assets/kubejs/models/block/power_grid_machine_casing.json',
+  'kubejs/assets/kubejs/models/item/ae2_machine_casing.json',
+  'kubejs/assets/kubejs/models/item/oc2r_machine_casing.json',
+  'kubejs/assets/kubejs/models/item/power_grid_machine_casing.json'
+]) {
+  if (fs.existsSync(path.join(repo, staleAsset))) fail(`stale renamed casing asset remains: ${staleAsset}`)
 }
 
 if (!fs.existsSync(startupPath) || !read(startupPath).includes("event.create('phosphoric_acid_fluid')")) {

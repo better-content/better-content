@@ -2,13 +2,11 @@
 
 ## MUST DO
 
-### Proposal: Index `acid_vat-0.1.0.jar` or remove it from repo/live parity claims
+### Resolved: Retire Acid Vat from active pack chemistry
 
-- Evidence: `mods/acid_vat-0.1.0.jar` exists in repo and live instance, runtime registers Acid Vat items/fluids/recipe types, but `index.toml` does not include it.
-- Why it fits the design: Acid Vat is a named ore-processing tier and must be reproducible.
-- Risk: Fresh pack installs may omit Acid Vat while later recipes depend on it.
-- Implementation surface: packwiz index update for `mods/acid_vat-0.1.0.jar`.
-- Confidence: High.
+- Evidence: the active `mods/` directory no longer contains Acid Vat, and KubeJS no longer emits `acid_vat:*` recipes.
+- Why it fits the design: Create owns visible bulk chemistry and PNCR owns pressure/gas/circuit chemistry.
+- Guardrail: `tools/validate_chemistry_identity.mjs` fails if the retired deposit slurry script or active `acid_vat:` references return.
 
 ### Proposal: Remove non-alloying andesite alloy recipes
 
@@ -140,16 +138,16 @@
 
 - Evidence: Create ore recipes exist broadly in dumps.
 - Why it conflicts: Create preprocessing should improve rates, not become the ore interpretation authority.
-- Risk: TCon/foundry/Acid Vat/Create-family chemistry ladder becomes irrelevant.
+- Risk: TCon/foundry/Create/PNCR chemistry ladder becomes irrelevant.
 - Implementation surface: keep Create outputs as concentrates/preprocessed forms, not final ingots.
 - Confidence: High.
 
 ### Proposal: Build player-facing chemistry progression around Alchemistry machines
 
 - Evidence: Alchemistry recipe types appear in the runtime dump.
-- Why it conflicts: user direction is to keep Alchemistry as a reference/compatibility surface while replacing player-facing use with Acid Vat/Create-family parity.
+- Why it conflicts: user direction is to keep Alchemistry as a reference/compatibility surface while replacing player-facing use with Create/PNCR parity.
 - Risk: later passes spend effort on a system being removed and create dead content.
-- Implementation surface: do not add Alchemistry machine gates as progression; audit Alchemistry recipe semantics and implement needed parity in Acid Vat/Create-family systems.
+- Implementation surface: do not add Alchemistry machine gates as progression; audit Alchemistry recipe semantics and implement needed parity in Create/PNCR systems.
 - Confidence: High.
 
 ### Proposal: Use AE2 or teleportation as normal intersite logistics

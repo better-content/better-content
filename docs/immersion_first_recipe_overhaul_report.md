@@ -73,17 +73,17 @@ Date: 2026-05-13
   - impossible circuit
   - final-tier Blood Magic alchemy table finishing.
 
-## Acid Vat
+## Create/PNCR
 
-- Acid Vat remains guarded behind `Platform.isLoaded('acid_vat')` in its old deposit slurry script, but active graph/closure recipes no longer reintroduce Acid Vat machine recipes.
-- The current worktree already removed `mods/acid_vat-0.1.0.jar` in the pre-overhaul checkpoint.
+- Acid Vat deposit slurry recipes have been removed.
+- The active chemistry route is Create mixer acid+ball processing plus PNCR pressure/gas/assembly chemistry.
 
 ## Validation
 
 - `node --check` passed for all KubeJS client, server, and startup scripts.
 - JSON parsing passed for all `kubejs/assets/kubejs/**/*.json` model and blockstate files.
 - Grep checks found no active KubeJS references to the retired casing item IDs.
-- Grep checks found no later recipe-pass redefinitions for disabled CDG pumpjack/distillation or Acid Vat graph/closure recipes.
+- Grep checks found no later recipe-pass redefinitions for disabled CDG pumpjack/distillation or retired Create/PNCR graph/closure recipes.
 
 ## Not Completed In This Pass
 

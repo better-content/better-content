@@ -25,10 +25,10 @@ This is the current source-of-truth graph model used by the offline audit. It tr
 | tcon_scorched   | kubejs:scorched_machine_casing   | TCon scorched          | tcon_seared       |
 | create_andesite | kubejs:andesite_machine_casing   | Create andesite        | tcon_scorched     |
 | create_brass    | kubejs:brass_machine_casing      | Create brass           | create_andesite   |
-| power_grid      | kubejs:power_grid_machine_casing | Create: Power Grid     | create_brass      |
-| oc2r            | kubejs:oc2r_machine_casing       | OC2R                   | power_grid        |
+| power_grid      | kubejs:electrical_machine_casing | Create: Power Grid     | create_brass      |
+| oc2r            | kubejs:circuited_machine_casing       | OC2R                   | power_grid        |
 | space           | kubejs:space_machine_casing      | Creating Space         | oc2r              |
-| ae2             | kubejs:ae2_machine_casing        | AE2 local intelligence | space             |
+| ae2             | kubejs:impossible_machine_casing        | AE2 local intelligence | space             |
 
 ## Blood Magic Authority
 
@@ -56,6 +56,6 @@ This is the current source-of-truth graph model used by the offline audit. It tr
 - Magic workstations must be parented to Blood Magic tiers.
 - Loot, Wares, trades, mob drops, and quests are recipe-equivalent material sources.
 - Emerald currency must not drive villager or Wares economy.
-- Alchemistry is compatibility/reference; Acid Vat and Create synthesis are player-facing chemistry.
+- Alchemistry is compatibility/reference; Create and PneumaticCraft synthesis are player-facing chemistry.
 - AE2 is local site intelligence, not global logistics.
 - Teleportation, creative flight, infinite storage, and infinite non-grown resources must be removed or endgame-contained.

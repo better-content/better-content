@@ -30,7 +30,7 @@ Implementation surface: `kubejs/server_scripts/30_recipe_replace/100_high_value_
 - Evidence: recipes use `create:andesite_casing`, `create:brass_casing`, `create:precision_mechanism`, and `minecraft:respawn_anchor`.
 - Why it fits the design: remote-site infrastructure should require power/computing logistics rather than appear at basic Create.
 - Risk: may be too strict for early outposts; playtest should decide whether Power Grid tier is enough.
-- Implementation surface: replace chunk-loader recipe inputs with `kubejs:power_grid_machine_casing` and `kubejs:oc2r_machine_casing`.
+- Implementation surface: replace chunk-loader recipe inputs with `kubejs:electrical_machine_casing` and `kubejs:circuited_machine_casing`.
 - Confidence level: High.
 
 ### Remove Package Wormhole

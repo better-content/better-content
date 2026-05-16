@@ -14,7 +14,7 @@ Primary KubeJS surfaces:
 - `kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js`
 - `kubejs/server_scripts/40_recipe_add/65_chemlib_plate_manufacturing_routes.js`
 - `kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js`
-- `kubejs/server_scripts/40_recipe_add/60_acid_vat_deposit_slurries.js`
+- `kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js`
 - `kubejs/server_scripts/40_recipe_add/70_food_potion_reagents.js`
 - `kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js`
 

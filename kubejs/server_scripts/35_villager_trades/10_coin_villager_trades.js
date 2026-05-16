@@ -104,6 +104,179 @@ var BTM_PLATINUM_MARKET = [
     ['minecraft:cartographer',5,10,'minecraft:beacon',1,1,32]
 ]
 
+// Wandering trader: broad recovery, exploration, ecology, decor, and route supplies.
+// Keep mandatory progression machinery out; this is a roaming convenience/sideload market.
+// Row shape: [level, coin tier, cost, output item, output count, max uses, xp].
+var BTM_WANDERER_MARKET = [
+    [1, 'copper', 2, 'minecraft:oak_sapling', 4, 8, 2],
+    [1, 'copper', 2, 'minecraft:spruce_sapling', 4, 8, 2],
+    [1, 'copper', 2, 'minecraft:birch_sapling', 4, 8, 2],
+    [1, 'copper', 3, 'minecraft:jungle_sapling', 4, 8, 2],
+    [1, 'copper', 3, 'minecraft:acacia_sapling', 4, 8, 2],
+    [1, 'copper', 3, 'minecraft:dark_oak_sapling', 4, 8, 2],
+    [1, 'copper', 4, 'minecraft:mangrove_propagule', 2, 6, 3],
+    [1, 'copper', 4, 'minecraft:cherry_sapling', 2, 6, 3],
+    [1, 'copper', 2, 'minecraft:cactus', 4, 8, 2],
+    [1, 'copper', 2, 'minecraft:sugar_cane', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:bamboo', 16, 8, 2],
+    [1, 'copper', 2, 'minecraft:kelp', 16, 8, 2],
+    [1, 'copper', 4, 'minecraft:vine', 8, 6, 3],
+    [1, 'copper', 3, 'minecraft:lily_pad', 4, 8, 2],
+    [1, 'copper', 3, 'minecraft:moss_block', 8, 8, 2],
+    [1, 'copper', 4, 'minecraft:big_dripleaf', 2, 6, 3],
+    [1, 'copper', 3, 'minecraft:small_dripleaf', 4, 6, 3],
+    [1, 'copper', 4, 'minecraft:glow_berries', 8, 6, 3],
+    [1, 'copper', 2, 'minecraft:sweet_berries', 12, 8, 2],
+    [1, 'copper', 2, 'minecraft:cocoa_beans', 12, 8, 2],
+    [1, 'copper', 2, 'minecraft:brown_mushroom', 8, 8, 2],
+    [1, 'copper', 2, 'minecraft:red_mushroom', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:sea_pickle', 4, 8, 2],
+    [1, 'copper', 3, 'minecraft:grass_block', 4, 6, 3],
+    [1, 'copper', 3, 'minecraft:rooted_dirt', 8, 8, 2],
+    [1, 'copper', 2, 'minecraft:dandelion', 4, 8, 2],
+    [1, 'copper', 2, 'minecraft:poppy', 4, 8, 2],
+    [1, 'copper', 3, 'minecraft:blue_orchid', 4, 8, 2],
+    [1, 'copper', 3, 'minecraft:allium', 4, 8, 2],
+    [1, 'copper', 3, 'minecraft:azure_bluet', 4, 8, 2],
+    [1, 'copper', 2, 'minecraft:red_tulip', 4, 8, 2],
+    [1, 'copper', 2, 'minecraft:orange_tulip', 4, 8, 2],
+    [1, 'copper', 2, 'minecraft:white_tulip', 4, 8, 2],
+    [1, 'copper', 2, 'minecraft:pink_tulip', 4, 8, 2],
+    [1, 'copper', 2, 'minecraft:oxeye_daisy', 4, 8, 2],
+    [1, 'copper', 3, 'minecraft:cornflower', 4, 8, 2],
+    [1, 'copper', 3, 'minecraft:lily_of_the_valley', 4, 8, 2],
+    [1, 'copper', 4, 'minecraft:sunflower', 4, 6, 3],
+    [1, 'copper', 4, 'minecraft:lilac', 4, 6, 3],
+    [1, 'copper', 4, 'minecraft:rose_bush', 4, 6, 3],
+    [1, 'copper', 4, 'minecraft:peony', 4, 6, 3],
+    [1, 'zinc', 2, 'minecraft:pink_petals', 8, 6, 4],
+    [1, 'zinc', 4, 'minecraft:spore_blossom', 2, 4, 6],
+    [1, 'zinc', 5, 'minecraft:torchflower', 2, 4, 6],
+    [1, 'zinc', 5, 'minecraft:pitcher_plant', 2, 4, 6],
+    [1, 'copper', 3, 'minecraft:white_dye', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:orange_dye', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:magenta_dye', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:light_blue_dye', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:yellow_dye', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:lime_dye', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:pink_dye', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:gray_dye', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:light_gray_dye', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:cyan_dye', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:purple_dye', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:blue_dye', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:brown_dye', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:green_dye', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:red_dye', 8, 8, 2],
+    [1, 'copper', 3, 'minecraft:black_dye', 8, 8, 2],
+    [1, 'zinc', 3, 'minecraft:calcite', 16, 8, 4],
+    [1, 'zinc', 3, 'minecraft:tuff', 24, 8, 4],
+    [1, 'zinc', 3, 'minecraft:dripstone_block', 16, 8, 4],
+    [1, 'zinc', 3, 'minecraft:pointed_dripstone', 8, 8, 4],
+    [1, 'zinc', 3, 'minecraft:mud', 16, 8, 4],
+    [1, 'zinc', 4, 'minecraft:packed_mud', 16, 8, 4],
+    [1, 'zinc', 2, 'minecraft:clay', 8, 8, 4],
+    [1, 'zinc', 3, 'minecraft:terracotta', 16, 8, 4],
+    [1, 'zinc', 4, 'minecraft:podzol', 8, 6, 4],
+    [1, 'zinc', 4, 'minecraft:mycelium', 8, 6, 4],
+    [1, 'zinc', 2, 'minecraft:sand', 32, 8, 4],
+    [1, 'zinc', 3, 'minecraft:red_sand', 24, 8, 4],
+    [1, 'zinc', 2, 'minecraft:gravel', 32, 8, 4],
+    [1, 'zinc', 4, 'minecraft:ice', 16, 8, 4],
+    [1, 'zinc', 5, 'minecraft:packed_ice', 16, 6, 6],
+    [1, 'iron', 5, 'minecraft:blue_ice', 8, 4, 8],
+    [1, 'zinc', 3, 'minecraft:lantern', 4, 8, 4],
+    [1, 'zinc', 4, 'minecraft:soul_lantern', 4, 8, 4],
+    [1, 'zinc', 4, 'minecraft:campfire', 2, 8, 4],
+    [1, 'zinc', 5, 'minecraft:soul_campfire', 2, 6, 6],
+    [1, 'iron', 6, 'minecraft:saddle', 1, 4, 8],
+    [1, 'iron', 6, 'minecraft:lead', 4, 6, 8],
+    [1, 'iron', 5, 'minecraft:name_tag', 1, 4, 8],
+    [1, 'iron', 5, 'minecraft:bell', 1, 4, 8],
+    [1, 'iron', 5, 'minecraft:scaffolding', 32, 8, 8],
+    [1, 'iron', 4, 'minecraft:chain', 16, 8, 8],
+    [1, 'iron', 5, 'minecraft:slime_ball', 8, 8, 8],
+    [1, 'iron', 4, 'minecraft:honeycomb', 8, 8, 8],
+    [1, 'iron', 4, 'minecraft:honey_bottle', 4, 8, 8],
+    [1, 'iron', 5, 'minecraft:rabbit_foot', 2, 6, 8],
+    [2, 'brass', 6, 'minecraft:cod_bucket', 1, 3, 12],
+    [2, 'brass', 6, 'minecraft:salmon_bucket', 1, 3, 12],
+    [2, 'brass', 7, 'minecraft:tropical_fish_bucket', 1, 3, 12],
+    [2, 'brass', 7, 'minecraft:pufferfish_bucket', 1, 3, 12],
+    [2, 'gold', 6, 'minecraft:axolotl_bucket', 1, 2, 16],
+    [2, 'gold', 6, 'minecraft:tadpole_bucket', 1, 2, 16],
+    [2, 'brass', 5, 'minecraft:nautilus_shell', 2, 4, 12],
+    [2, 'gold', 6, 'minecraft:heart_of_the_sea', 1, 2, 18],
+    [2, 'brass', 5, 'minecraft:ender_pearl', 2, 6, 12],
+    [2, 'gold', 5, 'minecraft:blaze_rod', 4, 4, 16],
+    [2, 'gold', 5, 'minecraft:ghast_tear', 2, 4, 16],
+    [2, 'brass', 5, 'minecraft:magma_cream', 4, 6, 12],
+    [2, 'brass', 4, 'minecraft:glowstone_dust', 12, 8, 12],
+    [2, 'brass', 4, 'minecraft:quartz', 16, 8, 12],
+    [2, 'brass', 5, 'minecraft:amethyst_shard', 12, 8, 12],
+    [2, 'gold', 6, 'minecraft:phantom_membrane', 2, 4, 18],
+    [2, 'gold', 6, 'minecraft:echo_shard', 1, 3, 18],
+    [2, 'gold', 5, 'minecraft:spyglass', 1, 3, 16],
+    [2, 'brass', 5, 'minecraft:clock', 1, 4, 12],
+    [2, 'brass', 5, 'minecraft:compass', 1, 4, 12],
+    [2, 'gold', 6, 'minecraft:recovery_compass', 1, 2, 18],
+    [2, 'brass', 5, 'minecraft:music_disc_13', 1, 2, 12],
+    [2, 'brass', 5, 'minecraft:music_disc_cat', 1, 2, 12],
+    [2, 'gold', 5, 'minecraft:music_disc_otherside', 1, 2, 16],
+    [2, 'gold', 5, 'minecraft:music_disc_5', 1, 2, 16],
+    [2, 'gold', 7, 'minecraft:sniffer_egg', 1, 1, 22],
+    [2, 'gold', 6, 'minecraft:torchflower_seeds', 2, 3, 18],
+    [2, 'gold', 6, 'minecraft:pitcher_pod', 2, 3, 18],
+    [2, 'gold', 6, 'minecraft:angler_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:archer_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:arms_up_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:blade_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:brewer_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:burn_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:danger_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:explorer_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:friend_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:heart_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:heartbreak_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:howl_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:miner_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:mourner_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:plenty_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:prize_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:sheaf_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:shelter_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:skull_pottery_sherd', 1, 2, 18],
+    [2, 'gold', 6, 'minecraft:snort_pottery_sherd', 1, 2, 18],
+    [2, 'platinum', 7, 'minecraft:coast_armor_trim_smithing_template', 1, 1, 22],
+    [2, 'platinum', 7, 'minecraft:dune_armor_trim_smithing_template', 1, 1, 22],
+    [2, 'platinum', 7, 'minecraft:eye_armor_trim_smithing_template', 1, 1, 22],
+    [2, 'platinum', 7, 'minecraft:host_armor_trim_smithing_template', 1, 1, 22],
+    [2, 'platinum', 7, 'minecraft:raiser_armor_trim_smithing_template', 1, 1, 22],
+    [2, 'platinum', 7, 'minecraft:rib_armor_trim_smithing_template', 1, 1, 22],
+    [2, 'platinum', 7, 'minecraft:sentry_armor_trim_smithing_template', 1, 1, 22],
+    [2, 'platinum', 7, 'minecraft:shaper_armor_trim_smithing_template', 1, 1, 22],
+    [2, 'platinum', 7, 'minecraft:silence_armor_trim_smithing_template', 1, 1, 24],
+    [2, 'platinum', 7, 'minecraft:snout_armor_trim_smithing_template', 1, 1, 22],
+    [2, 'platinum', 7, 'minecraft:spire_armor_trim_smithing_template', 1, 1, 22],
+    [2, 'platinum', 7, 'minecraft:tide_armor_trim_smithing_template', 1, 1, 22],
+    [2, 'platinum', 7, 'minecraft:vex_armor_trim_smithing_template', 1, 1, 22],
+    [2, 'platinum', 7, 'minecraft:ward_armor_trim_smithing_template', 1, 1, 22],
+    [2, 'platinum', 7, 'minecraft:wayfinder_armor_trim_smithing_template', 1, 1, 22],
+    [2, 'platinum', 7, 'minecraft:wild_armor_trim_smithing_template', 1, 1, 22],
+    [2, 'iron', 5, 'create:track', 32, 5, 12],
+    [2, 'brass', 6, 'create:super_glue', 1, 4, 14],
+    [2, 'gold', 6, 'create:wrench', 1, 3, 16],
+    [2, 'gold', 7, 'create:linked_controller', 1, 2, 18],
+    [2, 'gold', 6, 'create:copper_diving_helmet', 1, 2, 16],
+    [2, 'gold', 6, 'create:copper_diving_boots', 1, 2, 16],
+    [2, 'platinum', 8, 'pneumaticcraft:night_vision_upgrade', 1, 1, 24],
+    [2, 'platinum', 8, 'minecraft:shulker_shell', 1, 2, 22],
+    [2, 'platinum', 7, 'minecraft:totem_of_undying', 1, 1, 24],
+    [2, 'platinum', 8, 'minecraft:dragon_breath', 2, 1, 26],
+    [2, 'platinum', 8, 'minecraft:dragon_head', 1, 1, 28],
+    [2, 'platinum', 10, 'minecraft:nether_star', 1, 1, 32]
+]
+
 function btmAddThirtyBuys(event, tier, baseCost) {
     for (var i = 0; i < BTM_30_ITEMS.length; i++) {
         var p = BTM_LOW_TIER_PROFESSIONS[i % BTM_LOW_TIER_PROFESSIONS.length]
@@ -147,12 +320,24 @@ function btmTrade(event, profession, level, coinTier, costCount, resultItem, res
 function btmWandererTrade(event, level, coinTier, costCount, resultItem, resultCount, uses, xp) {
     if (!BTM_VILLAGER_COIN_WHITELIST[coinTier]) return
     var coin = BTM_COIN[coinTier]
-    if (!coin || !btmItemExists(coin) || !btmItemExists(resultItem)) return
+    if (!coin || !btmItemExists(coin) || !btmItemExists(resultItem)) return false
 
     var trade = event.addTrade(level, [Item.of(coin, costCount)], Item.of(resultItem, resultCount))
     if (trade && trade.maxUses) trade.maxUses(uses || 4)
     if (trade && trade.villagerExperience) trade.villagerExperience(xp || level * 2)
     if (trade && trade.priceMultiplier) trade.priceMultiplier(0.0)
+    return true
+}
+
+function btmAddWandererMarket(event, rows) {
+    var attempted = 0
+    var registered = 0
+    for (var i = 0; i < rows.length; i++) {
+        var r = rows[i]
+        attempted++
+        if (btmWandererTrade(event, r[0], r[1], r[2], r[3], r[4], r[5], r[6])) registered++
+    }
+    console.info('[coin-villager-trades] Authored wandering trader options attempted=' + attempted + ' registered=' + registered)
 }
 
 function btmAddTrades(event, profession, rows) {
@@ -509,22 +694,7 @@ if (typeof MoreJSEvents !== 'undefined') {
         event.removeVanillaTrades(2)
         event.removeModdedTrades(1)
         event.removeModdedTrades(2)
-        btmWandererTrade(event, 1, 'copper', 6, 'minecraft:saddle', 1, 3, 4)
-        btmWandererTrade(event, 1, 'iron', 6, 'minecraft:lead', 4, 6, 4)
-        btmWandererTrade(event, 1, 'brass', 5, 'minecraft:slime_ball', 8, 6, 6)
-        btmWandererTrade(event, 1, 'brass', 5, 'minecraft:scaffolding', 32, 6, 6)
-        btmWandererTrade(event, 1, 'brass', 5, 'minecraft:bundle', 1, 4, 8)
-        btmWandererTrade(event, 1, 'brass', 4, 'create:track', 32, 4, 10)
-        btmWandererTrade(event, 2, 'brass', 5, 'minecraft:ender_pearl', 2, 4, 10)
-        btmWandererTrade(event, 2, 'brass', 5, 'create:linked_controller', 1, 2, 14)
-        btmWandererTrade(event, 2, 'gold', 5, 'minecraft:golden_apple', 1, 3, 14)
-        btmWandererTrade(event, 2, 'platinum', 6, 'minecraft:phantom_membrane', 2, 3, 16)
-        btmWandererTrade(event, 2, 'platinum', 7, 'minecraft:shulker_shell', 1, 2, 18)
-        btmWandererTrade(event, 2, 'platinum', 7, 'minecraft:totem_of_undying', 1, 1, 22)
-        btmWandererTrade(event, 2, 'platinum', 8, 'pneumaticcraft:night_vision_upgrade', 1, 1, 24)
-        btmWandererTrade(event, 2, 'platinum', 8, 'minecraft:dragon_breath', 2, 1, 26)
-        btmWandererTrade(event, 2, 'platinum', 8, 'minecraft:dragon_head', 1, 1, 28)
-        btmWandererTrade(event, 2, 'platinum', 10, 'minecraft:nether_star', 1, 1, 32)
+        btmAddWandererMarket(event, BTM_WANDERER_MARKET)
     })
 
     MoreJSEvents.playerStartTrading(function (event) {

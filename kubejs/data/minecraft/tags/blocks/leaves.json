@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "fallout_wastelands_:joshua_leaves",
+    "tconstruct:blood_slime_leaves",
+    "tconstruct:ichor_slime_leaves",
+    "the_flesh_that_hates:flesh_foliage",
+    "twilightforest:fallen_leaves",
+    "twilightforest:giant_leaves",
+    "twilightforest:hardened_dark_leaves",
+    "undergarden:hanging_grongle_leaves"
+  ]
+}

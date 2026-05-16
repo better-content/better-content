@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "farmersrespite:item/purulent_tea"
+    "layer0": "minecraft:item/spider_eye"
   }
 }

@@ -26,7 +26,7 @@ Run these checks in a disposable Prism instance built from this branch. Static v
 1. Verify starter deposit blocks smelt or blast only into poor fallback outputs.
 2. Verify starter deposit blocks can be crushed into Realistic Ores crushed deposit items.
 3. Verify crushed starter deposits can be washed into Create/ChemLib concentrates where supported.
-4. Verify supported deposit concentrates can enter the Acid Vat parity path once the Acid Vat mod branch lands.
+4. Verify supported deposit concentrates can enter the Create acid-ball identity path once the chemistry route lands.
 5. Verify unsupported outputs are missing cleanly rather than producing invented items or fluids.
 6. Verify vanilla-style ore blocks do not become the best early source of iron, copper, gold, redstone, lapis, diamond, emerald, or amethyst.
 
@@ -44,12 +44,12 @@ Run these checks in a disposable Prism instance built from this branch. Static v
 3. Verify `kubejs:scorched_machine_casing` requires the seared casing tier.
 4. Verify `kubejs:andesite_machine_casing` requires Create andesite infrastructure.
 5. Verify `kubejs:brass_machine_casing` uses Create mechanical crafting.
-6. Verify `kubejs:power_grid_machine_casing` uses Create mechanical crafting and includes Create Power Grid complexity.
-7. Verify `kubejs:oc2r_machine_casing` uses Create mechanical crafting and includes OC2R complexity.
+6. Verify `kubejs:electrical_machine_casing` uses Create mechanical crafting and includes Create Power Grid complexity.
+7. Verify `kubejs:circuited_machine_casing` uses Create mechanical crafting and includes OC2R complexity.
 8. Verify `kubejs:space_machine_casing` uses Create mechanical crafting and includes Creating Space complexity.
 9. Verify `kubejs:sky_steel_ingot` is made by heated Create mixing.
 10. Verify `kubejs:sky_steel_sheet` is made by Create pressing.
-11. Verify `kubejs:ae2_machine_casing` uses Create mechanical crafting, Sky Steel sheets, AE2 cable/processor infrastructure, and does not require `ae2:controller`.
+11. Verify `kubejs:impossible_machine_casing` uses Create mechanical crafting, Sky Steel sheets, AE2 cable/processor infrastructure, and does not require `ae2:controller`.
 
 ## Magic And Hearts
 

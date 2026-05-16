@@ -7,13 +7,13 @@ This pass applies the active rule that Create machines should be used liberally 
 In `kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js`:
 
 - `kubejs:brass_machine_casing` now uses `create:mechanical_crafting`.
-- `kubejs:power_grid_machine_casing` now uses `create:mechanical_crafting`.
-- `kubejs:oc2r_machine_casing` now uses `create:mechanical_crafting`.
+- `kubejs:electrical_machine_casing` now uses `create:mechanical_crafting`.
+- `kubejs:circuited_machine_casing` now uses `create:mechanical_crafting`.
 - `kubejs:space_machine_casing` now uses `create:mechanical_crafting`.
-- `kubejs:ae2_machine_casing` now uses `create:mechanical_crafting`.
+- `kubejs:impossible_machine_casing` now uses `create:mechanical_crafting`.
 - `kubejs:sky_steel_ingot` now uses heated `create:mixing` instead of shaped crafting.
 - `kubejs:sky_steel_sheet` remains a Create pressing recipe.
-- `kubejs:ae2_machine_casing` uses AE2 cable/processor/sky-stone infrastructure, not `ae2:controller`; the controller is unlocked by the casing rather than consumed by it.
+- `kubejs:impossible_machine_casing` uses AE2 cable/processor/sky-stone infrastructure, not `ae2:controller`; the controller is unlocked by the casing rather than consumed by it.
 
 ## Why Andesite Stays Different
 

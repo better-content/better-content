@@ -21,7 +21,7 @@ The pack keeps `writeFullRecipeIndex` enabled for dev. Full graph output is chun
 ## Generated Dumps
 
 - `recipe_audit_summary.json`: recipe count, type counts, namespace counts, and match counts.
-- `progression_recipe_mentions.json`: recipes mentioning core progression items such as grout, andesite alloy, machine casings, blood orbs, AE2 controller, and Acid Vat.
+- `progression_recipe_mentions.json`: recipes mentioning core progression items such as grout, andesite alloy, machine casings, blood orbs, AE2 controller, and Create/PNCR.
 - `valuable_material_usage_recipes.json`: recipes that still reference vanilla valuable materials or common tags for iron, copper, gold, redstone, lapis, diamond, emerald, or amethyst.
 - `known_bypass_candidate_recipes.json`: suspicious recipes for known bypass classes such as non-alloying andesite alloy, item-application andesite casing, crafted nether grout, or Blood Magic teleposer.
 - `full_recipe_index_manifest.json`: manifest for the full graph chunks.

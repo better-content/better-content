@@ -171,7 +171,6 @@ Instance: `/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Pla
 | goety:dark_altar_prismarine                       | goety:dark_altar_prismarine                               | minecraft:crafting_shaped    | survival        | survival     | 3/0               |
 | ars_nouveau:ritual_forestation                    | ars_nouveau:ritual_forestation                            | minecraft:crafting_shapeless | survival        | survival     | 2/0               |
 | createdieselgenerators:pumpjack_bearing           | createdieselgenerators:crafting/pumpjack_bearing          | minecraft:crafting_shaped    | create_brass    | survival     | 0/0               |
-| acid_vat:centrifuge_bearing                       | acid_vat:centrifuge_bearing                               | minecraft:crafting_shaped    | create_brass    | survival     | 0/0               |
 | expatternprovider:ex_interface_part               | expatternprovider:ei_part                                 | minecraft:crafting_shapeless | ae2             | survival     | 0/0               |
 | psi:spell_drive                                   | psi:spell_drive                                           | minecraft:crafting_shaped    | survival        | survival     | 5/0               |
 | psi:cad_battery_basic                             | psi:cad_battery_basic                                     | minecraft:crafting_shaped    | survival        | survival     | 5/0               |
@@ -321,4 +320,3 @@ These are not automatically wrong. They are review targets where plain vanilla v
 | hexalia:earth_node                                  | hexalia:earth_node_from_ritual_table                                    | minecraft:amethyst_shard                     |
 | minecraft:iron_ingot                                | immersive_weathering:iron_ingot_from_clean_block                        | minecraft:iron_ingot                         |
 | mna:pylon/haste                                     | mna:manaweaving/pylon/haste                                             | minecraft:redstone                           |
-

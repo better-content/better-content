@@ -3,19 +3,19 @@
 ## Implemented
 
 - Added pack-owned progression catalogues for coin tiers, machine casing tiers, and starter deposits.
-- Registered casing blocks from `kubejs:seared_machine_casing` through `kubejs:ae2_machine_casing`.
+- Registered casing blocks from `kubejs:seared_machine_casing` through `kubejs:impossible_machine_casing`.
 - Registered blood-heart key items and AE2-facing `kubejs:sky_steel_ingot` / `kubejs:sky_steel_sheet`.
 - Added confirmed Realistic Ores starter deposit item/block tags.
 - Added poor furnace/blasting fallback recipes for starter deposits.
 - Added TCon melter and ore_melting recipes for deposit metallurgy.
 - Added Create crushing, washing, and improved crushed-deposit TCon inputs.
-- Added Acid Vat dissolver-parity routes from crushed deposits to named slurries and Chemlib fractions.
+- Added Create acid-ball identity routes from crushed deposits to solvent-selected products and Chemlib fractions.
 - Replaced Blood Orb recipes with specific typed-heart altar recipes.
 - Added RPGStats typed-heart definitions using non-consumed Blood Orb catalysts after the weak tier.
 - Removed non-alloying andesite alloy recipe bypasses and added TCon alloying for molten andesite alloy.
 - Removed direct andesite casing item-application bypasses and added Create Deployer assembly.
 - Added gravel -> gunpowder routes and an early TNT recipe.
-- Added tiered machine casing recipes and used them to gate major block-machine recipes, including Acid Vat block machines.
+- Added tiered machine casing recipes and used them to gate major block-machine recipes, including PNCR chemistry machines.
 - Recreated FTB Quest chapters with dotcoin rewards, including `Gold Tier - Acid Chemistry`.
 - Replaced vanilla villager trades with coin-spending MoreJS trades.
 
@@ -35,17 +35,17 @@
 2. TCon scorched: `kubejs:scorched_machine_casing`
 3. Create andesite: `kubejs:andesite_machine_casing`
 4. Create brass: `kubejs:brass_machine_casing`
-5. Power Grid: `kubejs:power_grid_machine_casing`
-6. OC2R: `kubejs:oc2r_machine_casing`
+5. Power Grid: `kubejs:electrical_machine_casing`
+6. OC2R: `kubejs:circuited_machine_casing`
 7. Creating Space: `kubejs:space_machine_casing`
-8. AE2: `kubejs:ae2_machine_casing`
+8. AE2: `kubejs:impossible_machine_casing`
 
 ## Intentional Deadlock Avoidance
 
 - `create:deployer` is not gated by `kubejs:andesite_machine_casing` because the Deployer is required to make `create:andesite_casing`.
-- `powergrid:conductive_casing` and `powergrid:circuit_design_table` are not gated by `kubejs:power_grid_machine_casing` because they are inputs to that casing tier.
+- `powergrid:conductive_casing` and `powergrid:circuit_design_table` are not gated by `kubejs:electrical_machine_casing` because they are inputs to that casing tier.
 - `creatingspace:rocket_engineer_table` and `creatingspace:rocket_casing` are not gated by `kubejs:space_machine_casing` because they are inputs to that casing tier.
-- `ae2:inscriber` and `ae2:charger` are not gated by `kubejs:ae2_machine_casing` because processor/sky-steel production must precede that casing tier.
+- `ae2:inscriber` and `ae2:charger` are not gated by `kubejs:impossible_machine_casing` because processor/sky-steel production must precede that casing tier.
 
 ## Known Risks
 

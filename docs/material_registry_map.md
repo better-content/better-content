@@ -7,7 +7,6 @@ Repo is authoritative. Live dump evidence comes from `/home/gerald/.local/share/
 | Mod | Repo/source evidence | Runtime evidence | Notes |
 |---|---|---|---|
 | `realisticores` | `/home/gerald/mcmods/oreoverhaul` | 63 item entries in runtime item registry | Deposit system source of truth lives in custom mod resources. |
-| `acid_vat` | `/home/gerald/mcmods/acid_vat` and `mods/acid_vat-0.1.0.jar` | 12 item entries; recipe types `acid_vat:acid`, `acid_vat:acid_vat`, `acid_vat:centrifuge` | Jar is present in repo and live, but absent from `index.toml`; sync debt. |
 | `obelisks` | `/home/gerald/mcmods/meteordimensions` | 2 item entries | Main adventure/dimension custom mod. |
 | `instanceddimensions` | `/home/gerald/mcmods/meteordimensions/obsolete/instanced-dimensions` | jar present in live | Built from obsolete source path; keep until replacement is confirmed. |
 | `classselector` | `/home/gerald/mcmods/classselector` | config `config/classselector/kits.json` | Kits are synchronized between repo and live. |
@@ -92,14 +91,14 @@ Confirmed TCon molten source fluids relevant to starter deposits:
 
 Also confirmed as Forge fluid types in runtime. Recipe examples use fluid tags such as `forge:molten_iron`.
 
-## Acid Vat And Chemistry
+## Create, PNCR, ChemLib Chemistry
 
-Confirmed Acid Vat fluids and recipes:
+Current chemistry route:
 
-- Fluid types: `acid_vat:slurry`, `acid_vat:exposed_slurry`.
-- Recipe types: `acid_vat:acid`, `acid_vat:acid_vat`, `acid_vat:centrifuge`.
-- Existing acids: `chemlib:acetic_acid_fluid`, `chemlib:hydrochloric_acid_fluid`, `chemlib:nitric_acid_fluid`, `chemlib:sulfuric_acid_fluid`.
-- Current Acid Vat slurry examples target vanilla ore tags, e.g. `forge:ores/copper` to `acid_vat:copper_ore_slurry`.
+- Realistic Ores use Create mixer recipes: crushed deposit + solvent + grinding ball.
+- PNCR owns sealed pressure/gas chemistry and board/processor assembly.
+- Confirmed Chemlib fluid registry IDs use bare names: `chemlib:ethanol`, `chemlib:acetic_acid`, `chemlib:hydrochloric_acid`, `chemlib:nitric_acid`, `chemlib:sulfuric_acid`, and `chemlib:oxygen`.
+- `kubejs:phosphoric_acid_fluid` supplies the pack-authored phosphoric solvent route.
 
 ## Unknowns For Later Passes
 

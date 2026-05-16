@@ -83,4 +83,4 @@ These still require an in-game `/reload` and world check:
 - MoreJS villager/wandering-trader trade replacement in a throwaway world.
 - Create mechanical crafting visibility for the later machine casings.
 - Whether FTB Quests accepts the generated `description` arrays exactly as intended in the UI.
-- Full recipe reload behavior after the Acid Vat mod changes land from the other agent.
+- Full recipe reload behavior after chemistry route changes.

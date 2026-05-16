@@ -53,11 +53,11 @@
 - Recipe id: `kubejs:create/sequenced_assembly/machine_casing/brass`
 
 5. Power Grid
-- Item: `kubejs:power_grid_machine_casing`
+- Item: `kubejs:electrical_machine_casing`
 - Recipe id: `kubejs:create/mechanical_crafting/machine_casing/power_grid`
 
 6. OC2R
-- Item: `kubejs:oc2r_machine_casing`
+- Item: `kubejs:circuited_machine_casing`
 - Recipe id: `kubejs:create/mechanical_crafting/machine_casing/oc2r`
 
 7. Space
@@ -65,7 +65,7 @@
 - Recipe id: `kubejs:create/mechanical_crafting/machine_casing/space`
 
 8. AE2
-- Item: `kubejs:ae2_machine_casing`
+- Item: `kubejs:impossible_machine_casing`
 - Supporting ids:
   - `kubejs:create/mixing/sky_steel_ingot`
   - `kubejs:create/pressing/sky_steel_sheet`
@@ -107,20 +107,12 @@
   - `create:stockpile_switch`
   - `create:content_observer`
   - `create:cart_assembler`
-  - `acid_vat:acid_vat`
-  - `acid_vat:acid_vat_faucet`
-  - `acid_vat:centrifuge_bearing`
-  - `acid_vat:centrifuge_anchor`
-  - `acid_vat:centrifuge_chamber`
-  - `acid_vat:smart_slurry_pipe`
 - Explicit graph-gate authored recipe ids:
   - `kubejs:graph_gate/create_connected/sequenced_pulse_generator`
   - `kubejs:graph_gate/create_connected/linked_transmitter`
   - `kubejs:graph_gate/createdieselgenerators/distillation_controller`
   - `kubejs:graph_gate/createdieselgenerators/pumpjack_hole`
   - `kubejs:graph_gate/createdieselgenerators/pumpjack_head`
-  - `kubejs:graph_gate/acid_vat/smart_slurry_pipe`
-  - `kubejs:graph_gate/acid_vat/portable_slurry_interface`
 - Quest milestone node: `D2133DDEB59BA2D1` (`Brass Machine Casing`)
 
 ### power grid
@@ -134,7 +126,7 @@
   - `kubejs:graph_gate/create_new_age/heat_pipe`
   - `kubejs:graph_gate/create_new_age/heat_pump`
   - `kubejs:graph_gate/create_power_loader/empty_andesite_chunk_loader`
-- Quest milestone node: `56F1197DFE6AEAC3` (`Power Grid Machine Casing`)
+- Quest milestone node: `56F1197DFE6AEAC3` (`Electrical Machine Casing`)
 
 ### oc2r
 - Scripted machine-like outputs (replaceInput-gated):
@@ -149,7 +141,7 @@
   - `create_power_loader:brass_chunk_loader`
 - Explicit graph-gate authored recipe id:
   - `kubejs:graph_gate/create_power_loader/empty_brass_chunk_loader`
-- Quest milestone node: `90641BA11E475D58` (`OC2R Machine Casing`)
+- Quest milestone node: `90641BA11E475D58` (`Circuited Machine Casing`)
 
 ### space
 - Scripted machine-like outputs (replaceInput-gated):
@@ -173,11 +165,11 @@
   - `ae2:pattern_provider`
 - Explicit graph-gate authored recipe id:
   - `kubejs:graph_gate/expatternprovider/oversize_interface`
-- Quest milestone node: `8C645968D65FE74D` (`AE2 Machine Casing`)
+- Quest milestone node: `8C645968D65FE74D` (`Impossible Machine Casing`)
 
 ### post-ae2
 - No `kubejs:post_ae2_machine_casing` item exists.
-- Operationally, post-AE2 outputs are gated mostly via `kubejs:ae2_machine_casing` plus additional materials/systems in post-AE2 scripts and chapter `post_ae2.snbt`.
+- Operationally, post-AE2 outputs are gated mostly via `kubejs:impossible_machine_casing` plus additional materials/systems in post-AE2 scripts and chapter `post_ae2.snbt`.
 
 ## Bypasses and exceptions
 

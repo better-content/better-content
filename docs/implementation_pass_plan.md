@@ -25,7 +25,7 @@ Repo is authoritative. Use live dumps to confirm IDs and report drift.
 - Implement selected `create:crushing` and `create:splashing` chains for starter deposits.
 - Keep Create preprocessing upstream of TCon metallurgy; do not output final ingots as the main route.
 - Report skipped deposits and missing intermediates before adding custom items.
-- Audit installed Create-family mods as the replacement route for player-facing Alchemistry-style chemistry/synthesis; preserve or recreate needed Alchemistry recipe parity through Acid Vat/Create-family routes.
+- Audit Create and PNCR as the replacement route for player-facing Alchemistry-style chemistry/synthesis; preserve or recreate needed Alchemistry recipe parity through Create/PNCR routes.
 
 ## Pass 3.5: Machine Casing Catalogue
 
@@ -84,4 +84,4 @@ Repo is authoritative. Use live dumps to confirm IDs and report drift.
 - Prefix generated recipe IDs with `kubejs:` and group by pass/system.
 - Use exact item IDs from registry dumps and repo resources.
 - Use `UNKNOWN` in docs and skip recipe generation for unknown IDs.
-- Treat Alchemistry as a compatibility/reference surface, not as the player-facing machine path. Prefer Acid Vat plus Create-family mods for chemical and synthesis progression, including dissolver-style parity.
+- Treat Alchemistry as a compatibility/reference surface, not as the player-facing machine path. Prefer Create plus PNCR for chemical and synthesis progression, including decomposition parity.

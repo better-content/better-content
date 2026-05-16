@@ -41,10 +41,10 @@ node tools/validate_quest_dependencies.mjs
 | `magic_i.snbt` | slate ladder and first side-magic gates | Implemented |
 | `adventuring.snbt` | routes, copper float, Trading Post, Wares, contracts, completed delivery | Implemented |
 | `village_economy.snbt` | Wares/economy/decor sideload, settlement rewards, coin-tier floats | Implemented |
-| `synthesis_i.snbt` | Acid Vat, slurry transport, centrifuge, Chemlib interpretation | Implemented |
+| `synthesis_i.snbt` | Create mixer, solvents, grinding balls, Chemlib interpretation | Implemented |
 | `create_iii.snbt` | trains, conductors, navigation, Little Logistics routes | Implemented |
 | `magic_ii.snbt` | Occultism, Botania, Forbidden & Arcanus, Theurgy, Hex Casting, MNA, Ars addon power | Implemented |
-| `synthesis_ii.snbt` | Acid Vat slurry controls, late Chemlib plates | Implemented |
+| `synthesis_ii.snbt` | PNCR pressure and thermo controls, late Chemlib plates | Implemented |
 | `books.snbt` | reference books, explicitly not gates | Implemented |
 | `post_ae2.snbt` | quantum manufacturing, ExtendedAE, bounded deep storage, Ars Energistique, quantum body rewards | Implemented |
 
@@ -58,7 +58,7 @@ node tools/validate_quest_dependencies.mjs
 - Create III logistics and OC2R route logic are represented.
 - AE2 is described as local site intelligence.
 - Post-AE2 has explicit branches.
-- Synthesis has Acid Vat and Chemlib plate milestones.
+- Synthesis has Create/PNCR and Chemlib plate milestones.
 
 ## Remaining Manual Checks
 

@@ -10,12 +10,12 @@ Date: 2026-05-01
   - Create gearbox/control/fluid utilities use andesite machine casing or manufactured controls.
   - Create Connected gearboxes use brass machine casing.
   - Create Diesel Generators engines and pumpjack parts use brass/power casing authority.
-  - Acid Vat pump/centrifuge parts use brass machine casing.
+  - Create/PNCR pump/centrifuge parts use brass machine casing.
   - Create New Age reactor/heat machinery uses power-grid machine casing.
   - ExtendedAE/Ex Pattern Provider part conversions use AE2 machine casing.
   - Railways portable fuel interface uses brass machine casing.
 - Closed residual raw valuable machine-input paths for redstone and amethyst outliers by replacing them with power relays or sky steel sheets.
-- Removed the remaining player-facing Alchemistry guide recipe so Acid Vat stays the chemistry surface.
+- Removed the remaining player-facing Alchemistry guide recipe so Create/PNCR stays the chemistry surface.
 - Updated `tools/pack_test_suite.mjs` so stale live recipe dumps are not treated as proof after repo recipe scripts change.
 - Aligned Major Gates in the quest generator to casing authority instead of endpoint machines.
 - Reframed the post-AE2 Major Gate as a multi-branch gate: Advanced AE, Protection Pixel, and Tome of Blood.

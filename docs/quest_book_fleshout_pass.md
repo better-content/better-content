@@ -16,7 +16,7 @@ This pass moves the quest book from a bare progression skeleton toward a playabl
 - Food/water/body progression now bridges survival, route preparation, and Still-Beating Heart/Blood Magic theming.
 - Villager trades and Wares are represented as crafting/economy systems.
 - Decorative blocks have shallow graph depth through villages and coins, not deeper than the Create andesite tier.
-- Acid Vat source remains read-only; pack-side quests and recipes only reference exposed Acid Vat items.
+- Create/PNCR source remains read-only; pack-side quests and recipes only reference exposed Create/PNCR items.
 
 ## Validation
 

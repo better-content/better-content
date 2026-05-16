@@ -6,9 +6,11 @@
     "tcon_scorched",
     "create_andesite",
     "create_brass",
+    "airtight",
     "power_grid",
     "oc2r",
     "space",
+    "raw_impossible",
     "ae2",
     "hybrid_matter"
   ],
@@ -112,15 +114,21 @@
       "requiresPrevious": "create_andesite"
     },
     {
-      "id": "power_grid",
-      "casing": "kubejs:power_grid_machine_casing",
-      "authority": "Create: Power Grid",
+      "id": "airtight",
+      "casing": "kubejs:airtight_machine_casing",
+      "authority": "PneumaticCraft pressure",
       "requiresPrevious": "create_brass"
     },
     {
+      "id": "power_grid",
+      "casing": "kubejs:electrical_machine_casing",
+      "authority": "Create: Power Grid",
+      "requiresPrevious": "airtight"
+    },
+    {
       "id": "oc2r",
-      "casing": "kubejs:oc2r_machine_casing",
-      "authority": "OC2R",
+      "casing": "kubejs:circuited_machine_casing",
+      "authority": "PNCR assembly and OC2R",
       "requiresPrevious": "power_grid"
     },
     {
@@ -130,10 +138,16 @@
       "requiresPrevious": "oc2r"
     },
     {
-      "id": "ae2",
-      "casing": "kubejs:ae2_machine_casing",
-      "authority": "AE2 local intelligence",
+      "id": "raw_impossible",
+      "casing": "kubejs:raw_impossible_casing",
+      "authority": "Unfinished AE2 body",
       "requiresPrevious": "space"
+    },
+    {
+      "id": "ae2",
+      "casing": "kubejs:impossible_machine_casing",
+      "authority": "AE2 and final Blood Magic",
+      "requiresPrevious": "raw_impossible"
     }
   ],
   "bloodMagicTiers": [

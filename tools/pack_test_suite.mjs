@@ -275,6 +275,7 @@ function testCriticalSurfaces() {
     'kubejs/server_scripts/30_recipe_replace/20_expensive_grout.js',
     'kubejs/server_scripts/30_recipe_replace/98_starting_progression_bypasses.js',
 	    'kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js',
+	    'kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js',
 	    'kubejs/server_scripts/30_recipe_replace/160_ticex_post_ae2_gates.js',
 	    'kubejs/server_scripts/30_recipe_replace/165_protection_pixel_post_ae2_gates.js',
 	    'kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js',
@@ -303,20 +304,19 @@ function testCriticalSurfaces() {
   ok('machine casing IDs are referenced', `${catalog.machineTiers.length} casings`)
 
 	  const casingScript = read(path.join(repo, 'kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js'))
-	  const ae2CasingRecipe = casingScript.match(/event\.custom\(\{[\s\S]*?id\('kubejs:create\/mechanical_crafting\/machine_casing\/ae2'\)/)?.[0] || ''
-	  ae2CasingRecipe.includes("'ae2:controller'") || ae2CasingRecipe.includes('"ae2:controller"')
-	    ? fail('AE2 machine casing does not consume AE2 controller', 'controller belongs after the casing unlock')
-	    : ok('AE2 machine casing does not consume AE2 controller')
+	  const rawImpossibleRecipe = casingScript.match(/event\.custom\(\{[\s\S]*?id\('kubejs:create\/mechanical_crafting\/machine_casing\/raw_impossible'\)/)?.[0] || ''
+	  rawImpossibleRecipe.includes("'ae2:controller'") || rawImpossibleRecipe.includes('"ae2:controller"')
+	    ? fail('Raw Impossible casing does not consume AE2 controller', 'controller belongs after the Impossible casing unlock')
+	    : ok('Raw Impossible casing does not consume AE2 controller')
 
   const ticexScript = read(path.join(repo, 'kubejs/server_scripts/30_recipe_replace/160_ticex_post_ae2_gates.js'))
   const ticexHardGates = [
     'ticex:reconstruction_core',
-    'kubejs:ae2_machine_casing',
+    'kubejs:impossible_machine_casing',
+    'kubejs:impossible_circuit',
     'kubejs:sky_steel_sheet',
-    'advanced_ae:quantum_alloy_plate',
     'bloodmagic:etherealslate',
-    'fission_reactor:fission_reactor_rod',
-    'advanced_ae:quantum_core'
+    'fission_reactor:fission_reactor_rod'
   ].filter(id => !ticexScript.includes(id))
   ticexHardGates.length
     ? fail('TiCEX Reconstruction Core is hard-gated post-AE2', ticexHardGates.join(', '))
@@ -326,10 +326,9 @@ function testCriticalSurfaces() {
   const protectionPixelGates = [
     'protection_pixel:armorloadplatform',
     'protection_pixel:alloyarmorplate',
-    'kubejs:ae2_machine_casing',
+    'kubejs:impossible_machine_casing',
+    'kubejs:impossible_circuit',
     'kubejs:sky_steel_sheet',
-    'advanced_ae:quantum_alloy_plate',
-    'advanced_ae:quantum_core',
     'bloodmagic:etherealslate',
     'fission_reactor:fission_reactor_rod',
     'chemlib:iridium_plate'
@@ -337,11 +336,9 @@ function testCriticalSurfaces() {
   protectionPixelGates.length
     ? fail('Protection Pixel is hard-gated as post-AE2 armor', protectionPixelGates.join(', '))
     : ok('Protection Pixel is hard-gated as post-AE2 armor')
-  const quantumArmorRemoved = ['advanced_ae:quantum_helmet', 'advanced_ae:quantum_chestplate', 'advanced_ae:quantum_leggings', 'advanced_ae:quantum_boots']
-    .every(id => protectionPixelScript.includes(id))
-  quantumArmorRemoved
-    ? ok('Advanced AE quantum armor is displaced by Protection Pixel')
-    : fail('Advanced AE quantum armor is displaced by Protection Pixel', 'missing removal coverage')
+  protectionPixelScript.includes('protection_pixel:wingsofprismas_chestplate') && protectionPixelScript.includes('protection_pixel:maneuveringwing')
+    ? ok('Protection Pixel late armor is displaced into explicit post-AE2 recipes')
+    : fail('Protection Pixel late armor is displaced into explicit post-AE2 recipes', 'missing late armor recipe coverage')
 
   const tomeOfBloodScript = read(path.join(repo, 'kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js'))
   const tomeOfBloodGates = [
@@ -349,9 +346,9 @@ function testCriticalSurfaces() {
     'tomeofblood:archmage_tome_of_blood',
     'tomeofblood:glyph_sentient_wrath',
     'tomeofblood:living_mage_robes',
-    'kubejs:ae2_machine_casing',
-    'advanced_ae:quantum_core',
-    'advanced_ae:quantum_alloy_plate',
+    'kubejs:impossible_machine_casing',
+    'kubejs:impossible_circuit',
+    'ae2:controller',
     'bloodmagic:etherealslate',
     'ars_nouveau:archmage_spell_book',
     'fission_reactor:fission_reactor_rod'
@@ -370,9 +367,9 @@ function testCriticalSurfaces() {
     'rehooked:ender_hook',
     'rehooked:red_hook',
     'create_sa:brass_drone',
-    'kubejs:power_grid_machine_casing',
+    'kubejs:electrical_machine_casing',
     'kubejs:space_machine_casing',
-    'kubejs:ae2_machine_casing'
+    'kubejs:impossible_machine_casing'
   ].filter(id => !hookDroneScript.includes(id))
   hookDroneNeedles.length
     ? fail('Hooks and Create SA drones are tier-gated', hookDroneNeedles.join(', '))
@@ -384,8 +381,8 @@ function testCriticalSurfaces() {
     'sophisticatedbackpacks:alchemy_upgrade',
     'sophisticatedbackpacks:tool_swapper_upgrade',
     'sophisticatedstorage:alchemy_upgrade',
-    'kubejs:ae2_machine_casing',
-    'advanced_ae:quantum_core'
+    'kubejs:impossible_machine_casing',
+    'kubejs:impossible_circuit'
   ].filter(id => !backpackScript.includes(id))
   backpackNeedles.length
     ? fail('High-impact backpack upgrades are post-AE2', backpackNeedles.join(', '))
@@ -436,6 +433,15 @@ function testQuestBook() {
   metrics.questChapters = questFiles.length
 
   const groupFile = path.join(repo, 'config/ftbquests/quests/chapter_groups.snbt')
+  if (!questFiles.length && !exists(groupFile)) {
+    ok('quest book is intentionally empty', '0 chapters and no chapter groups')
+    skip('quest dependency validation', 'quest book removed')
+    skip('quest reward validation', 'quest book removed')
+    skip('quest progression anchor validation', 'quest book removed')
+    skip('food and TCon quest showcase validation', 'quest book removed')
+    return
+  }
+
   const groupText = read(groupFile)
   const groupIds = new Set([...groupText.matchAll(/\{id:"?([0-9A-Fa-f]{16})"?/g)].map(m => m[1].toUpperCase()))
   const badGroupRefs = []
@@ -497,10 +503,12 @@ function testQuestBook() {
     'kubejs:scorched_machine_casing',
     'kubejs:andesite_machine_casing',
     'kubejs:brass_machine_casing',
-    'kubejs:power_grid_machine_casing',
-    'kubejs:oc2r_machine_casing',
+    'kubejs:airtight_machine_casing',
+    'kubejs:electrical_machine_casing',
+    'kubejs:circuited_machine_casing',
     'kubejs:space_machine_casing',
-    'kubejs:ae2_machine_casing',
+    'kubejs:raw_impossible_casing',
+    'kubejs:impossible_machine_casing',
     'acid_vat:acid_vat',
     'fission_reactor:fission_fuel_acceptor',
     'fission_reactor:fission_reactor_rod',
@@ -686,7 +694,7 @@ function testGeneratedRecipeGraph() {
     'create:water_wheel',
     'create:windmill_bearing',
     'tconstruct:grout',
-    'kubejs:ae2_machine_casing',
+    'kubejs:impossible_machine_casing',
     'acid_vat:acid_vat',
     'bloodmagic:weakbloodorb'
   ]

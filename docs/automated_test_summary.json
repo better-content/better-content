@@ -1,39 +1,39 @@
 {
-  "generatedAt": "2026-05-10T04:31:37.568Z",
+  "generatedAt": "2026-05-16T01:13:14.562Z",
   "repo": "/home/gerald/obelisks",
   "instance": "/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1/minecraft",
-  "passes": 57,
+  "passes": 47,
   "hardFailures": 0,
-  "softFindings": 2,
-  "skips": 1,
+  "softFindings": 3,
+  "skips": 5,
   "metrics": {
-    "questChapters": 56,
+    "questChapters": 0,
     "villagerProfessionsCovered": 13,
     "engineWorld": {
       "latestLog": "/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1/minecraft/logs/latest.log",
-      "latestLogAgeMinutes": 6.95,
-      "latestLogLines": 18024,
+      "latestLogAgeMinutes": 9.49,
+      "latestLogLines": 23415,
       "reachedIntegratedServer": true,
       "startedServingLan": false,
-      "reachedInGame": false,
-      "mainMenuToInGameMs": null,
-      "totalLoadToWorldMs": null,
-      "spawnPrepTimeMs": 31230,
-      "serverTickBehindWarnings": 0,
-      "maxTickBehindMs": 0,
-      "totalTickBehindMs": 0,
-      "maxTickBehindTicks": 0,
-      "worldSaveDurationMs": 423,
-      "worldSaveFromSavingWorldsMs": 423,
+      "reachedInGame": true,
+      "mainMenuToInGameMs": 60325,
+      "totalLoadToWorldMs": 102726,
+      "spawnPrepTimeMs": 38495,
+      "serverTickBehindWarnings": 2,
+      "maxTickBehindMs": 11285,
+      "totalTickBehindMs": 17366,
+      "maxTickBehindTicks": 225,
+      "worldSaveDurationMs": 684,
+      "worldSaveFromSavingWorldsMs": 683,
       "dimensionSaveCount": 21,
-      "distantHorizonsIncompleteTasks": 1,
+      "distantHorizonsIncompleteTasks": 4,
       "settlementRoadsRebuilds": 0,
       "settlementRoadsMaxDiscoveredStructures": 0,
       "settlementRoadsMaxConnections": 0,
-      "emiTotalReloadMs": 11773,
-      "emiSlowestPluginMs": 1296,
+      "emiTotalReloadMs": 14164,
+      "emiSlowestPluginMs": 1854,
       "emiSlowestPlugin": "jemi",
-      "newestCrashReport": null,
+      "newestCrashReport": "crash-2026-05-16_10.57.51-fml.txt",
       "newestCrashReportAfterLatestLog": false
     },
     "performance": {
@@ -62,55 +62,55 @@
       "results": [
         {
           "name": "JSON and JS syntax validation",
-          "durationMs": 3712.4,
+          "durationMs": 4321.84,
           "budgetMs": 8000,
           "hardLimitMs": 24000
         },
         {
           "name": "critical progression surfaces",
-          "durationMs": 3.83,
+          "durationMs": 4.39,
           "budgetMs": 750,
           "hardLimitMs": 3000
         },
         {
           "name": "quest book validation",
-          "durationMs": 9.88,
+          "durationMs": 0.36,
           "budgetMs": 250,
           "hardLimitMs": 1500
         },
         {
           "name": "Wares and villager trade validation",
-          "durationMs": 0.6,
+          "durationMs": 0.67,
           "budgetMs": 250,
           "hardLimitMs": 1500
         },
         {
           "name": "repo loot data validation",
-          "durationMs": 1.57,
+          "durationMs": 1.65,
           "budgetMs": 500,
           "hardLimitMs": 3000
         },
         {
           "name": "generated recipe graph validation",
-          "durationMs": 16.31,
+          "durationMs": 20.45,
           "budgetMs": 5000,
           "hardLimitMs": 20000
         },
         {
           "name": "generated loot dump validation",
-          "durationMs": 0.12,
+          "durationMs": 0.15,
           "budgetMs": 2500,
           "hardLimitMs": 10000
         },
         {
           "name": "engine and world performance log analysis",
-          "durationMs": 20.64,
+          "durationMs": 27,
           "budgetMs": 250,
           "hardLimitMs": 1500
         },
         {
           "name": "dev dump health validation",
-          "durationMs": 0.22,
+          "durationMs": 0.19,
           "budgetMs": 50,
           "hardLimitMs": 500
         }

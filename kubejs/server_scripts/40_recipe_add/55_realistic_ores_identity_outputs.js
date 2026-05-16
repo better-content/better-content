@@ -5,11 +5,11 @@
 // family, ball selects recovery bias and operating cost through retention chance.
 
 var BTM_RO_SOLVENTS = [
-    { id: 'ethanol', fluid: 'chemlib:ethanol', amount: 250, time: 180, primary: 0, secondary: 0.24, trace: 0.06, heat: null },
-    { id: 'acetic', fluid: 'chemlib:acetic_acid', amount: 250, time: 200, primary: 1, secondary: 0.32, trace: 0.10, heat: null },
-    { id: 'sulfuric', fluid: 'chemlib:sulfuric_acid', amount: 250, time: 220, primary: 2, secondary: 0.48, trace: 0.14, heat: 'heated' },
-    { id: 'hydrochloric', fluid: 'chemlib:hydrochloric_acid', amount: 250, time: 230, primary: 2, secondary: 0.44, trace: 0.18, heat: 'heated' },
-    { id: 'nitric', fluid: 'chemlib:nitric_acid', amount: 300, time: 260, primary: 1, secondary: 0.38, trace: 0.28, heat: 'heated' },
+    { id: 'ethanol', fluid: 'chemlib:ethanol_fluid', amount: 250, time: 180, primary: 0, secondary: 0.24, trace: 0.06, heat: null },
+    { id: 'acetic', fluid: 'chemlib:acetic_acid_fluid', amount: 250, time: 200, primary: 1, secondary: 0.32, trace: 0.10, heat: null },
+    { id: 'sulfuric', fluid: 'chemlib:sulfuric_acid_fluid', amount: 250, time: 220, primary: 2, secondary: 0.48, trace: 0.14, heat: 'heated' },
+    { id: 'hydrochloric', fluid: 'chemlib:hydrochloric_acid_fluid', amount: 250, time: 230, primary: 2, secondary: 0.44, trace: 0.18, heat: 'heated' },
+    { id: 'nitric', fluid: 'chemlib:nitric_acid_fluid', amount: 300, time: 260, primary: 1, secondary: 0.38, trace: 0.28, heat: 'heated' },
     { id: 'phosphoric', fluid: 'kubejs:phosphoric_acid_fluid', amount: 250, time: 230, primary: 1, secondary: 0.42, trace: 0.16, heat: 'heated' }
 ]
 

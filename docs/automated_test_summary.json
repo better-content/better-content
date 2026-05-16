@@ -1,39 +1,41 @@
 {
-  "generatedAt": "2026-05-16T02:58:10.152Z",
+  "generatedAt": "2026-05-16T03:30:35.059Z",
   "repo": "/home/gerald/obelisks",
-  "instance": "/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1/minecraft",
-  "passes": 52,
+  "instance": "/tmp/btm-final-validation",
+  "passes": 59,
   "hardFailures": 0,
-  "softFindings": 3,
-  "skips": 5,
+  "softFindings": 0,
+  "skips": 7,
   "metrics": {
     "questChapters": 0,
     "villagerProfessionsCovered": 13,
+    "generatedRecipes": 26376,
     "engineWorld": {
-      "latestLog": "/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1/minecraft/logs/latest.log",
-      "latestLogAgeMinutes": 114.41,
-      "latestLogLines": 23415,
-      "reachedIntegratedServer": true,
+      "latestLog": "/tmp/btm-final-validation/logs/latest.log",
+      "latestLogAgeMinutes": 0.79,
+      "latestLogLines": 17025,
+      "reachedIntegratedServer": false,
+      "reachedDedicatedServer": true,
       "startedServingLan": false,
       "reachedInGame": true,
-      "mainMenuToInGameMs": 60325,
-      "totalLoadToWorldMs": 102726,
-      "spawnPrepTimeMs": 38495,
-      "serverTickBehindWarnings": 2,
-      "maxTickBehindMs": 11285,
-      "totalTickBehindMs": 17366,
-      "maxTickBehindTicks": 225,
-      "worldSaveDurationMs": 684,
-      "worldSaveFromSavingWorldsMs": 683,
+      "mainMenuToInGameMs": null,
+      "totalLoadToWorldMs": null,
+      "spawnPrepTimeMs": 16236,
+      "serverTickBehindWarnings": 0,
+      "maxTickBehindMs": 0,
+      "totalTickBehindMs": 0,
+      "maxTickBehindTicks": 0,
+      "worldSaveDurationMs": 506,
+      "worldSaveFromSavingWorldsMs": 504,
       "dimensionSaveCount": 21,
-      "distantHorizonsIncompleteTasks": 4,
+      "distantHorizonsIncompleteTasks": 0,
       "settlementRoadsRebuilds": 0,
       "settlementRoadsMaxDiscoveredStructures": 0,
       "settlementRoadsMaxConnections": 0,
-      "emiTotalReloadMs": 14164,
-      "emiSlowestPluginMs": 1854,
-      "emiSlowestPlugin": "jemi",
-      "newestCrashReport": "crash-2026-05-16_10.57.51-fml.txt",
+      "emiTotalReloadMs": null,
+      "emiSlowestPluginMs": 0,
+      "emiSlowestPlugin": null,
+      "newestCrashReport": null,
       "newestCrashReportAfterLatestLog": false
     },
     "performance": {
@@ -66,67 +68,67 @@
       "results": [
         {
           "name": "JSON and JS syntax validation",
-          "durationMs": 4289.97,
+          "durationMs": 4470.22,
           "budgetMs": 8000,
           "hardLimitMs": 24000
         },
         {
           "name": "critical progression surfaces",
-          "durationMs": 4.57,
+          "durationMs": 5.02,
           "budgetMs": 750,
           "hardLimitMs": 3000
         },
         {
           "name": "quest book validation",
-          "durationMs": 0.42,
+          "durationMs": 0.33,
           "budgetMs": 250,
           "hardLimitMs": 1500
         },
         {
           "name": "Wares and villager trade validation",
-          "durationMs": 0.78,
+          "durationMs": 0.74,
           "budgetMs": 250,
           "hardLimitMs": 1500
         },
         {
           "name": "repo loot data validation",
-          "durationMs": 2.13,
+          "durationMs": 2.08,
           "budgetMs": 500,
           "hardLimitMs": 3000
         },
         {
           "name": "generated recipe graph validation",
-          "durationMs": 19.47,
+          "durationMs": 158.47,
           "budgetMs": 5000,
           "hardLimitMs": 20000
         },
         {
           "name": "generated loot dump validation",
-          "durationMs": 0.16,
+          "durationMs": 0.24,
           "budgetMs": 2500,
           "hardLimitMs": 10000
         },
         {
           "name": "engine and world performance log analysis",
-          "durationMs": 26.97,
+          "durationMs": 20.22,
           "budgetMs": 250,
           "hardLimitMs": 1500
         },
         {
           "name": "KubeJS asset validation",
-          "durationMs": 64.96,
+          "durationMs": 65.33,
           "budgetMs": 500,
           "hardLimitMs": 2000
         },
         {
           "name": "chemistry identity validation",
-          "durationMs": 64.71,
+          "durationMs": 62,
           "budgetMs": 500,
           "hardLimitMs": 2000
         },
         {
           "name": "dev dump health validation",
-          "durationMs": 0.31,
+          "durationMs": 0.25,
           "budgetMs": 50,
           "hardLimitMs": 500
         }

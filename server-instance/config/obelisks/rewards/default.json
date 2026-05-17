@@ -4,6 +4,11 @@
   "baseRolls": 0,
   "rollsPerKill": 1,
   "damagePerBonusRoll": 20.0,
+  "killCurrency": {
+    "item": "kubejs:copper_coin",
+    "perKill": 1,
+    "burstSize": 4
+  },
   "pools": [
     {
       "id": "materials",

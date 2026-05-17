@@ -20,14 +20,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "0E06064B1FE8A40D"
-					item: "dotcoinmod:copper_coin"
+					id: "02C80959BA7770B4"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "118B541009F4D443"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -36,7 +36,7 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "5DC49DBCA4267546"
+					id: "38EF8DBC4352EEB8"
 					item: "minecraft:spyglass"
 					type: "item"
 				}
@@ -65,18 +65,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "minecraft:bell"
-			id: "42B5E154951278C5"
+			id: "0DF8B0F67407FBB5"
 			rewards: [
 				{
 					count: 4
 					id: "5C2B5745121D1318"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "61D7A51EF0023557"
-					item: "dotcoinmod:iron_coin"
+					id: "2288F17C154B6C76"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -90,7 +90,7 @@
 					type: "item"
 				}
 				{
-					id: "3E8506A6A007B1C3"
+					id: "17F6292C6574F8A2"
 					item: "minecraft:goat_horn"
 					type: "item"
 				}
@@ -108,18 +108,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "minecraft:white_banner"
-			id: "07985098F82BABB4"
+			id: "609E0D12D768C1DA"
 			rewards: [
 				{
 					count: 4
 					id: "6E300435B4A66482"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "3EA516B5622EAFC6"
-					item: "dotcoinmod:iron_coin"
+					id: "49DBF938B1496CFC"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -133,7 +133,7 @@
 					type: "item"
 				}
 				{
-					id: "1774A1CF0B8219D7"
+					id: "31E86BB9D9AB242F"
 					item: "minecraft:ominous_banner"
 					type: "item"
 				}
@@ -156,13 +156,13 @@
 				{
 					count: 4
 					id: "1C4949DF732B605F"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "4EBF2604E10153FC"
-					item: "dotcoinmod:iron_coin"
+					id: "2A9AF772C04641D1"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -171,17 +171,17 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "4BAB6D88E69BFF5B"
+					id: "3697C7479E500FC2"
 					item: "minecraft:cartography_table"
 					type: "item"
 				}
 				{
-					id: "194B38F0F779E876"
+					id: "08A5DFF57A40ED82"
 					item: "minecraft:lectern"
 					type: "item"
 				}
 				{
-					id: "416096B3A261F526"
+					id: "37929C23F0373302"
 					item: "minecraft:barrel"
 					type: "item"
 				}
@@ -199,19 +199,19 @@
 			]
 			hide_dependency_lines: false
 			icon: "wares:delivery_agreement"
-			id: "3BD3790A3A99E45D"
+			id: "5957E734B851D787"
 			min_width: 2
 			rewards: [
 				{
 					count: 4
-					id: "54B169276E0A5359"
-					item: "dotcoinmod:copper_coin"
+					id: "05772D4B91614EC1"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "05FE434F38CF3B3F"
-					item: "dotcoinmod:iron_coin"
+					id: "53DDA43C11CFF23E"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -242,20 +242,20 @@
 				"Capstone: pillager pressure now feeds your broader route economy. You can scout, defend, recover, and reinvest without breaking the pack's physical logistics rules."
 			]
 			hide_dependency_lines: false
-			icon: "dotcoinmod:iron_coin"
+			icon: "createdeco:iron_coin"
 			icon_scale: 1.18d
 			id: "579C617D6F26B361"
 			rewards: [
 				{
 					count: 4
 					id: "068DE1FEB7DA378F"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "332EC3DD383D2027"
-					item: "dotcoinmod:iron_coin"
+					id: "33D9F2A3250C2AB9"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -266,17 +266,17 @@
 				{
 					count: 16L
 					id: "09F40C8D93361425"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4L
 					id: "5E41120B59879EE2"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
-					id: "7A577366745EDE1A"
+					id: "5DDE10EE4D396EDF"
 					item: "wares:completed_delivery_agreement"
 					type: "item"
 				}

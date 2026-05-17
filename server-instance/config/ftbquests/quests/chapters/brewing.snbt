@@ -21,13 +21,13 @@
 				{
 					count: 4
 					id: "2857D146F50D777D"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "18755CEB902D5D51"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -46,7 +46,7 @@
 					type: "item"
 				}
 				{
-					id: "39933535439A5DD2"
+					id: "237A203593ACAEE6"
 					item: "kubejs:heatproof_extract"
 					type: "item"
 				}
@@ -67,18 +67,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "kubejs:mashed_salmonberries"
-			id: "1F7355311CEB34FE"
+			id: "59C7DE67BA3AC4EE"
 			rewards: [
 				{
 					count: 4
 					id: "622AD955C2C09760"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "10BBB5EF103AFAF9"
-					item: "dotcoinmod:iron_coin"
+					id: "7823860EB496461E"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -87,7 +87,7 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "49E00B939ACCBD1C"
+					id: "3F16A979F2D6457C"
 					item: "kubejs:mashed_salmonberries"
 					type: "item"
 				}
@@ -116,18 +116,18 @@
 			hide_dependency_lines: false
 			icon: "kubejs:green_tea_extract"
 			icon_scale: 1.18d
-			id: "226A22A489155D00"
+			id: "02DFAAB1DE9CC601"
 			rewards: [
 				{
 					count: 4
 					id: "28A2B75C0DDF261D"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "42CB3C230A548FA7"
-					item: "dotcoinmod:iron_coin"
+					id: "7D20153CD140DD7B"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -146,12 +146,12 @@
 					type: "item"
 				}
 				{
-					id: "07B41CA5B250D588"
+					id: "33A74BD1BE16E129"
 					item: "kubejs:rose_hip_extract"
 					type: "item"
 				}
 				{
-					id: "1A209B6156A08F2B"
+					id: "2382DC35A245BED1"
 					item: "kubejs:toxic_extract"
 					type: "item"
 				}
@@ -173,13 +173,13 @@
 				{
 					count: 4
 					id: "3B27F552D26F227B"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "456DF42A0BE02DF0"
-					item: "dotcoinmod:iron_coin"
+					id: "235CDB939CCA8D21"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -193,7 +193,7 @@
 					type: "item"
 				}
 				{
-					id: "783ED891CC24AF6F"
+					id: "382229A18B5AC057"
 					item: "kubejs:brine_extract"
 					type: "item"
 				}
@@ -212,18 +212,18 @@
 			hide_dependency_lines: false
 			icon: "kubejs:caffeine_extract"
 			icon_scale: 1.18d
-			id: "280149DE73A1C971"
+			id: "3ACC39E687EC40B4"
 			rewards: [
 				{
 					count: 4
-					id: "29E4FAF9A14ABB92"
-					item: "dotcoinmod:copper_coin"
+					id: "7BFF06A204A0E8B5"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "4238F708E8925AF6"
-					item: "dotcoinmod:iron_coin"
+					id: "438EAD977FD7CE45"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -237,7 +237,7 @@
 					type: "item"
 				}
 				{
-					id: "6DDF4503165257E1"
+					id: "76B3C66E32755D0F"
 					item: "kubejs:fermented_pomegranate_extract"
 					type: "item"
 				}

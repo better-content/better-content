@@ -15,36 +15,36 @@
 			hide_dependency_lines: false
 			icon: "ars_nouveau:imbuement_chamber"
 			icon_scale: 1.18d
-			id: "2D93036661BBADB2"
+			id: "3BF8DCAD999C9265"
 			rewards: [
 				{
 					count: 4
 					id: "47A5C2B8E6E5071F"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "63901F50FECFAE0F"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "7E7F28E06D9A7689"
-					item: "dotcoinmod:brass_coin"
+					id: "064FEF04AEFC2C24"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "4BBAEB0D19B6FFCC"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "56918F1400564C7E"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -52,7 +52,7 @@
 			size: 1.75d
 			subtitle: "Process"
 			tasks: [{
-				id: "199AD9C2BF747B6F"
+				id: "1B26308DD5D883D1"
 				item: "ars_nouveau:imbuement_chamber"
 				type: "item"
 			}]
@@ -71,32 +71,32 @@
 			rewards: [
 				{
 					count: 4
-					id: "539B8BAB7AF602A9"
-					item: "dotcoinmod:copper_coin"
+					id: "3DD6817D3CB9DE8E"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "17E44CE9E738E95D"
-					item: "dotcoinmod:iron_coin"
+					id: "3EA20DAF23EB5673"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "78C381FBFDBFE5A3"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "356F03861E8DCFDF"
-					item: "dotcoinmod:gold_coin"
+					id: "0358520D075CE1E7"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "3FC1AC25CB9449C5"
-					item: "dotcoinmod:platinum_coin"
+					id: "1AB42D90073EF8E1"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -120,36 +120,36 @@
 			hide_dependency_lines: false
 			icon: "ars_nouveau:enchanting_apparatus"
 			icon_scale: 1.18d
-			id: "60F285EE4A77746B"
+			id: "21E9E375E1BA79C2"
 			rewards: [
 				{
 					count: 4
 					id: "4B93BB30AE2A6F6B"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "201ABB0518502ABD"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "11BF7989CCBEB6F6"
-					item: "dotcoinmod:brass_coin"
+					id: "443A1DFD466A0168"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "0D3F8089F286464C"
-					item: "dotcoinmod:gold_coin"
+					id: "333C33688CEC9CF8"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "0D44EB200224CE7C"
-					item: "dotcoinmod:platinum_coin"
+					id: "1CFD4844B9594B55"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -172,36 +172,36 @@
 			]
 			hide_dependency_lines: false
 			icon: "ars_nouveau:arcane_core"
-			id: "0897BAE974F62A1D"
+			id: "200A5B110436B74C"
 			rewards: [
 				{
 					count: 4
-					id: "36B4D578F729DAC7"
-					item: "dotcoinmod:copper_coin"
+					id: "3F7BD25D231FC2B8"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "71952B52A5C5496A"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "1939DA18B24AE905"
-					item: "dotcoinmod:brass_coin"
+					id: "3CA049352D718766"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "1317290815848651"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "55F3556D9D62D2CB"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -209,7 +209,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "2FC83366687B0E06"
+				id: "1849E782C5ED01AD"
 				item: "ars_nouveau:arcane_core"
 				type: "item"
 			}]
@@ -224,36 +224,36 @@
 			]
 			hide_dependency_lines: false
 			icon: "ars_nouveau:ritual_brazier"
-			id: "749958C3C221A5E9"
+			id: "6A5D6573AD55837F"
 			rewards: [
 				{
 					count: 4
-					id: "4899FF7FFA6485FE"
-					item: "dotcoinmod:copper_coin"
+					id: "1FEC7D1D35185662"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "5FB3FA5F52988C26"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "7856609A6B880AB3"
-					item: "dotcoinmod:brass_coin"
+					id: "6C91EC558FF2C36B"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "50112DD43AA4D9F0"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "6E868FF715FABB7C"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -276,36 +276,36 @@
 			]
 			hide_dependency_lines: false
 			icon: "ars_nouveau:apprentice_spell_book"
-			id: "57EE6CFFEF6099E0"
+			id: "77F64A7B80FC2AE3"
 			rewards: [
 				{
 					count: 4
-					id: "32E7AE743ECC511A"
-					item: "dotcoinmod:copper_coin"
+					id: "0A47558DB833A16E"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2686DA91F07278AD"
-					item: "dotcoinmod:iron_coin"
+					id: "22325658DB16D85C"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "60C413C6B07921D0"
-					item: "dotcoinmod:brass_coin"
+					id: "73F7FC2769B3C666"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "4EA147E7EC20C604"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "027306E511D68F7C"
-					item: "dotcoinmod:platinum_coin"
+					id: "259CF7785CFE0534"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -328,36 +328,36 @@
 			]
 			hide_dependency_lines: false
 			icon: "ars_nouveau:wilden_tribute"
-			id: "3F1236A79A25DCB8"
+			id: "380F82DD92EC0609"
 			rewards: [
 				{
 					count: 4
-					id: "48571225E1FC1801"
-					item: "dotcoinmod:copper_coin"
+					id: "3B8A814851494FDC"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "0DDA0A844531D6CE"
-					item: "dotcoinmod:iron_coin"
+					id: "2A521689D8BDE472"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "3F31BDE12C10B526"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "7FAB84935C0B727B"
-					item: "dotcoinmod:gold_coin"
+					id: "2B224EAFF51F11EF"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "255A1804B85A2DD3"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -385,32 +385,32 @@
 			rewards: [
 				{
 					count: 4
-					id: "05DB31009D5797FE"
-					item: "dotcoinmod:copper_coin"
+					id: "00B5E9B3250891C5"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2B30A1F3A9B3A27B"
-					item: "dotcoinmod:iron_coin"
+					id: "2ADA51CD2525DA5C"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "1EBBAB0E6AF8BEE9"
-					item: "dotcoinmod:brass_coin"
+					id: "48B472EB1FE67815"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2526CE6C0D96A868"
-					item: "dotcoinmod:gold_coin"
+					id: "61C7837A39472214"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "0D46158EDC034171"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -418,7 +418,7 @@
 			size: 1.75d
 			subtitle: "Reference"
 			tasks: [{
-				id: "7382CBCA6C203FDF"
+				id: "37D82AAEA0CDE916"
 				item: "ars_nouveau:archmage_spell_book"
 				type: "item"
 			}]

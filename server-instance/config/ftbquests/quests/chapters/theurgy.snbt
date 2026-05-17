@@ -20,32 +20,32 @@
 			rewards: [
 				{
 					count: 4
-					id: "16106B8F962615FC"
-					item: "dotcoinmod:copper_coin"
+					id: "1E91D8928A846EA2"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "7E7747A14A7AA194"
-					item: "dotcoinmod:iron_coin"
+					id: "1148DC8DD913C945"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "07D144B3BF5E0475"
-					item: "dotcoinmod:brass_coin"
+					id: "2DA49A2951AFC70E"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "3BE0F3056A86F7C6"
-					item: "dotcoinmod:gold_coin"
+					id: "082CFBD2EC5950C0"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "5F2802515CB1A075"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -53,7 +53,7 @@
 			size: 1.75d
 			subtitle: "Process"
 			tasks: [{
-				id: "284E91198DC1ECF7"
+				id: "07757688C4B61198"
 				item: "theurgy:sal_ammoniac_accumulator"
 				type: "item"
 			}]
@@ -73,32 +73,32 @@
 			rewards: [
 				{
 					count: 4
-					id: "0382F92C6CF1E7F9"
-					item: "dotcoinmod:copper_coin"
+					id: "4984A544157B5CDB"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2CC28C667F84CAD4"
-					item: "dotcoinmod:iron_coin"
+					id: "1E3FB3ADB2016231"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "66C9F098C4783C23"
-					item: "dotcoinmod:brass_coin"
+					id: "4943A46649872A7F"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "31D18D90C26CE872"
-					item: "dotcoinmod:gold_coin"
+					id: "4ABB4546FA13A445"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "302F96A6D1C846FF"
-					item: "dotcoinmod:platinum_coin"
+					id: "561B0266164D4BF5"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -128,31 +128,31 @@
 				{
 					count: 4
 					id: "409BBDDEF717907A"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "20F35E7A43271F89"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "22BAE5D34BC4C58C"
-					item: "dotcoinmod:brass_coin"
+					id: "7D180F515B5A58CE"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6B9E96BAE1A2678E"
-					item: "dotcoinmod:gold_coin"
+					id: "05CD439A750ECBD6"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6B290F67C8344AEB"
-					item: "dotcoinmod:platinum_coin"
+					id: "589A661062926B89"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -180,32 +180,32 @@
 			rewards: [
 				{
 					count: 4
-					id: "6D39E5C84D30CC78"
-					item: "dotcoinmod:copper_coin"
+					id: "46073980C9BED5E8"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "02A3626F62DC67D1"
-					item: "dotcoinmod:iron_coin"
+					id: "3B6708942714E743"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "3E9F0E18E8208128"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "14D333E97F6DC368"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "79A9AFF9EBDDAC6D"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -213,7 +213,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "111F91EC5AD5369A"
+				id: "5DA2171F59D3E88A"
 				item: "theurgy:calcination_oven"
 				type: "item"
 			}]
@@ -234,31 +234,31 @@
 				{
 					count: 4
 					id: "3B3F2415CDA9D8B4"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "419BAED976F17E61"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "4832F13D87948D68"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "3856B2AEAB011E75"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "55ECB3BCEA59F522"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -266,7 +266,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "5BB255078BF184AD"
+				id: "6F91CE6CE7391D97"
 				item: "theurgy:liquefaction_cauldron"
 				type: "item"
 			}]
@@ -282,36 +282,36 @@
 			]
 			hide_dependency_lines: false
 			icon: "theurgy:incubator"
-			id: "25FFFFB2183338A6"
+			id: "0D87B150890791C7"
 			rewards: [
 				{
 					count: 4
 					id: "3DB74ADEE78D83E0"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "7F823A219F32D205"
-					item: "dotcoinmod:iron_coin"
+					id: "6C43353275E7E9C5"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "78F63EA9F347ABBA"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "67611E70158BA69E"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "1EF502463731A999"
-					item: "dotcoinmod:platinum_coin"
+					id: "6FA6DE900B24BC0E"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -319,7 +319,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "40C7F4AC8DC19D0A"
+				id: "177524AB754392F9"
 				item: "theurgy:incubator"
 				type: "item"
 			}]
@@ -341,31 +341,31 @@
 				{
 					count: 4
 					id: "3AD36D6A0BF2BA99"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "70DFCA6B64F02777"
-					item: "dotcoinmod:iron_coin"
+					id: "15C4D7A31E644194"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "734D647813316F51"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "375179D114497950"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "33A47B10A17E3A9F"
-					item: "dotcoinmod:platinum_coin"
+					id: "482937C604FF468E"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]

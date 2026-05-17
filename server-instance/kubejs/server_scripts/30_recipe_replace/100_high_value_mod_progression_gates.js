@@ -6,10 +6,10 @@ var BTM_GATE = {
     seared: 'kubejs:seared_machine_casing',
     andesite: 'kubejs:andesite_machine_casing',
     brass: 'kubejs:brass_machine_casing',
-    power: 'kubejs:power_grid_machine_casing',
-    oc2r: 'kubejs:oc2r_machine_casing',
+    power: 'kubejs:electrical_machine_casing',
+    oc2r: 'kubejs:circuited_machine_casing',
     space: 'kubejs:space_machine_casing',
-    ae2: 'kubejs:ae2_machine_casing',
+    ae2: 'kubejs:impossible_machine_casing',
     blankSlate: 'bloodmagic:blankslate',
     imbuedSlate: 'bloodmagic:infusedslate',
     demonicSlate: 'bloodmagic:demonslate',
@@ -157,7 +157,7 @@ ServerEvents.recipes(function (event) {
         'PAP',
         'WWW'
     ], {
-        G: 'dotcoinmod:gold_coin',
+        G: 'createdeco:gold_coin',
         E: 'ae2:engineering_processor',
         P: 'pneumaticcraft:printed_circuit_board',
         A: BTM_GATE.ae2,
@@ -165,7 +165,7 @@ ServerEvents.recipes(function (event) {
     }).id('kubejs:late_game/tradingpost/trading_post')
 
     // Economy tools use coins instead of emeralds where there is a clear recipe hook.
-    btmReplaceInputs(event, 'wares:delivery_table', ['minecraft:ink_sac'], 'dotcoinmod:iron_coin')
+    btmReplaceInputs(event, 'wares:delivery_table', ['minecraft:ink_sac'], 'createdeco:iron_coin')
 
     // Create Enchantment Industry and Apotheosis are combat/adventure power spikes; parent them to Blood Magic tiers.
     btmGateOutputs(event, [
@@ -229,26 +229,8 @@ ServerEvents.recipes(function (event) {
         'ae2additions:fluid_storage_cell_16384',
         'ae2additions:chemical_storage_cell_1024',
         'ae2additions:chemical_storage_cell_4096',
-        'ae2additions:chemical_storage_cell_16384',
-        'advanced_ae:quantum_storage_128',
-        'advanced_ae:quantum_storage_256',
-        'advanced_ae:quantum_storage_component'
-    ], ['ae2:cell_component_256k', 'ae2:cell_component_64k', 'ae2:cell_component_16k', 'ae2:engineering_processor', 'advanced_ae:quantum_alloy_plate'], BTM_GATE.space)
-
-    btmGateOutputs(event, [
-        'advanced_ae:reaction_chamber',
-        'advanced_ae:quantum_crafter',
-        'advanced_ae:quantum_accelerator',
-        'advanced_ae:quantum_core',
-        'advanced_ae:data_entangler',
-        'advanced_ae:quantum_multi_threader'
-    ], ['ae2:engineering_processor', 'advanced_ae:quantum_alloy_plate', 'advanced_ae:quantum_processor', 'minecraft:nether_star'], BTM_GATE.space)
-
-    // No creative-flight-style AE upgrade path.
-    btmRemoveOutputs(event, [
-        'advanced_ae:flight_card',
-        'advanced_ae:flight_drift_card'
-    ])
+        'ae2additions:chemical_storage_cell_16384'
+    ], ['ae2:cell_component_256k', 'ae2:cell_component_64k', 'ae2:cell_component_16k', 'ae2:engineering_processor', 'kubejs:impossible_circuit'], BTM_GATE.space)
 
     // Create Applied Kinetics is an AE/Create bridge, not a pre-AE power shortcut.
     btmGateOutputs(event, [

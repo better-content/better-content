@@ -1,8 +1,0 @@
-#Render a hovered bouquet grid cell outline
-renderHoverIndicator = true
-#Renderer mode
-renderMode = "ITEM_SPRITES"
-#Client cap for rendered flowers
-#Range: 1 ~ 256
-maxRenderedFlowers = 64
-

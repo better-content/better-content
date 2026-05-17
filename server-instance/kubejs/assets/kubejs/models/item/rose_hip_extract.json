@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "farmersrespite:item/rose_hip_tea"
+    "layer0": "minecraft:item/sweet_berries"
   }
 }

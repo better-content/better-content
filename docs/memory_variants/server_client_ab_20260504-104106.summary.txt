@@ -1,2 +1,0 @@
-=== phase=baseline fake_player_enabled=0 port=27220 ===
-Server failed in baseline

@@ -21,13 +21,13 @@
 				{
 					count: 4
 					id: "6F760E87F93FC66C"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "14198A413A32C1FC"
-					item: "dotcoinmod:iron_coin"
+					id: "7856A57CB45E4F43"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -51,18 +51,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "tconstruct:scorched_alloyer"
-			id: "7F86BB2191769D8B"
+			id: "6F39CBDD7B2D7182"
 			rewards: [
 				{
 					count: 4
-					id: "03C83712CB138C8B"
-					item: "dotcoinmod:copper_coin"
+					id: "15440C6F8C6D4E11"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "38BDAFF6C510D13F"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -70,7 +70,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "40FD5482CA368BB5"
+				id: "7BB2EECE1AACFF80"
 				item: "tconstruct:scorched_alloyer"
 				type: "item"
 			}]
@@ -86,18 +86,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "tconstruct:scorched_fuel_tank"
-			id: "0437C0C1A358A1C0"
+			id: "1939C3208A11A062"
 			rewards: [
 				{
 					count: 4
 					id: "3D58F72A37FBE4F3"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "194F1869A2F660C1"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -122,18 +122,18 @@
 			hide_dependency_lines: false
 			icon: "tconstruct:foundry_controller"
 			icon_scale: 1.18d
-			id: "161287AD001F331C"
+			id: "55784760511854CB"
 			rewards: [
 				{
 					count: 4
-					id: "40BBA3ABB12A08D0"
-					item: "dotcoinmod:copper_coin"
+					id: "3C688A93FF1B9CB0"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "3747A5C20701C2D3"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -158,18 +158,18 @@
 			hide_dependency_lines: false
 			icon: "tconstruct:scorched_drain"
 			icon_scale: 1.18d
-			id: "77B736915F6BB66D"
+			id: "3CFF20C1D114537F"
 			rewards: [
 				{
 					count: 4
-					id: "318BDCCADA6DE5A7"
-					item: "dotcoinmod:copper_coin"
+					id: "3A3D3E7137C73160"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "54D989666B40C28B"
-					item: "dotcoinmod:iron_coin"
+					id: "589C215659CDC817"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -178,12 +178,12 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "0DC9F8541FCDDDD7"
+					id: "2C746B8194A1FDEF"
 					item: "tconstruct:scorched_drain"
 					type: "item"
 				}
 				{
-					id: "1C44891A44811554"
+					id: "4CBDC9B808EE25FF"
 					item: "tconstruct:scorched_chute"
 					type: "item"
 				}

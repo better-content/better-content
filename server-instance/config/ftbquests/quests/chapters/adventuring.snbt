@@ -3,7 +3,7 @@
 	default_quest_shape: "rsquare"
 	filename: "adventuring"
 	group: "3570F9CE90E09BD1"
-	id: "20AA1B8669BC31E2"
+	id: "11EF9237C34C2259"
 	order_index: 0
 	quest_links: [ ]
 	quests: [
@@ -18,7 +18,7 @@
 			rewards: [{
 				count: 4
 				id: "79C2E358099FD4FD"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -47,14 +47,14 @@
 				"Why it matters: This advances the next part of the progression path."
 			]
 			hide_dependency_lines: false
-			icon: "dotcoinmod:copper_coin"
+			icon: "createdeco:copper_coin"
 			icon_scale: 1.18d
-			id: "2B255C08B9B63B6E"
+			id: "668A75ED3B853F1F"
 			min_width: 2
 			rewards: [{
 				count: 4
-				id: "054E5810FDDC14CE"
-				item: "dotcoinmod:copper_coin"
+				id: "55C6A378C052E7D4"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -62,8 +62,8 @@
 			subtitle: "Economy"
 			tasks: [{
 				count: 16L
-				id: "6FCE683C0FEFFD11"
-				item: "dotcoinmod:copper_coin"
+				id: "1E5170BA3E37B179"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			title: "First Market Float"
@@ -80,15 +80,15 @@
 			id: "7076D14173C92EFD"
 			rewards: [{
 				count: 4
-				id: "082F8E2DEAB1F3C8"
-				item: "dotcoinmod:copper_coin"
+				id: "4F34E7BAD7416909"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "2E120562F57F98AF"
+				id: "6B44DF9551D9FF2D"
 				item: "tradingpost:trading_post"
 				type: "item"
 			}]
@@ -103,19 +103,19 @@
 			]
 			hide_dependency_lines: false
 			icon: "wares:delivery_table"
-			id: "7AA68243E955B277"
+			id: "1E3DAED020B2814A"
 			min_width: 2
 			rewards: [{
 				count: 4
-				id: "0A33473919722441"
-				item: "dotcoinmod:copper_coin"
+				id: "2269BF0C4D4B8661"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
 			size: 1.0d
 			subtitle: "Economy"
 			tasks: [{
-				id: "7213E85FA5F32D33"
+				id: "77FADECD1DB1A620"
 				item: "wares:delivery_table"
 				type: "item"
 			}]
@@ -136,7 +136,7 @@
 			rewards: [{
 				count: 4
 				id: "3A70EC0AE434FCD0"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -159,11 +159,11 @@
 			]
 			hide_dependency_lines: false
 			icon: "wares:package"
-			id: "2F3028BDAB347362"
+			id: "5E5C17BA86FBB829"
 			rewards: [{
 				count: 4
 				id: "7AEE6CF47C2547A9"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -186,12 +186,12 @@
 			hide_dependency_lines: false
 			icon: "wares:completed_delivery_agreement"
 			icon_scale: 1.18d
-			id: "506EAF7FE72E6F51"
+			id: "5EF8B0E36991C14E"
 			min_width: 2
 			rewards: [{
 				count: 4
-				id: "0F8F7C5EDEAC1C48"
-				item: "dotcoinmod:copper_coin"
+				id: "55CC33E495B1D967"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -214,11 +214,11 @@
 			]
 			hide_dependency_lines: false
 			icon: "minecraft:compass"
-			id: "6D5D7BE85459EA54"
+			id: "65266E5852BCB7FC"
 			rewards: [{
 				count: 4
 				id: "6A99E014A57AFD64"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -231,7 +231,7 @@
 					type: "item"
 				}
 				{
-					id: "4B1B26E6B1ABB846"
+					id: "14BF0486F7387559"
 					item: {
 						Count: 1
 						id: "minecraft:shield"
@@ -252,14 +252,14 @@
 				"Why it matters: This advances the next part of the progression path."
 			]
 			hide_dependency_lines: false
-			icon: "dotcoinmod:iron_coin"
+			icon: "createdeco:iron_coin"
 			icon_scale: 1.18d
-			id: "43446D27D7BE85A7"
+			id: "0EC0880090CD3DC3"
 			min_width: 2
 			rewards: [{
 				count: 4
-				id: "40BE01B55C71AA20"
-				item: "dotcoinmod:copper_coin"
+				id: "2F7B7C5FCB98A407"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -268,7 +268,7 @@
 			tasks: [{
 				count: 4L
 				id: "562F323715E2869B"
-				item: "dotcoinmod:iron_coin"
+				item: "createdeco:iron_coin"
 				type: "item"
 			}]
 			title: "Iron Coin Float"

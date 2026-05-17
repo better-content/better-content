@@ -19,15 +19,15 @@
 			id: "3171F66F034812A0"
 			rewards: [{
 				count: 4
-				id: "05E47DB90227F695"
-				item: "dotcoinmod:copper_coin"
+				id: "0D1A0C5DB2F95806"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
 			size: 1.75d
 			subtitle: "Process"
 			tasks: [{
-				id: "1B51AFB70CFDD0FF"
+				id: "65C56A90729962B4"
 				item: "tconstruct:seared_melter"
 				type: "item"
 			}]
@@ -44,19 +44,19 @@
 			]
 			hide_dependency_lines: false
 			icon: "tconstruct:foundry_controller"
-			id: "7680EDF42E77688F"
+			id: "11B6B1B13CF54C6D"
 			min_width: 2
 			rewards: [{
 				count: 4
-				id: "4E00EC0AFBCD27C8"
-				item: "dotcoinmod:copper_coin"
+				id: "3EF84954D33F6930"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "diamond"
 			size: 1.12d
 			subtitle: "Milestone"
 			tasks: [{
-				id: "1F3BD39DAA4CE6D0"
+				id: "48E8D38843A59CDE"
 				item: "tconstruct:foundry_controller"
 				type: "item"
 			}]
@@ -72,12 +72,12 @@
 			]
 			hide_dependency_lines: false
 			icon: "kubejs:brass_machine_casing"
-			id: "0D66C8E5F6B268BA"
+			id: "199B846209058C82"
 			min_width: 2
 			rewards: [{
 				count: 4
-				id: "17F1BB94E347F367"
-				item: "dotcoinmod:copper_coin"
+				id: "65C8C036697752E4"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "diamond"
@@ -106,7 +106,7 @@
 			rewards: [{
 				count: 4
 				id: "7888576265950286"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "diamond"
@@ -130,12 +130,12 @@
 			]
 			hide_dependency_lines: false
 			icon: "kubejs:oc2r_machine_casing"
-			id: "6F2B1454EE46BEFE"
+			id: "228F8A2DC2751F47"
 			min_width: 2
 			rewards: [{
 				count: 4
 				id: "2333F5CD8B0A060C"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "diamond"
@@ -164,7 +164,7 @@
 			rewards: [{
 				count: 4
 				id: "229EC9E86559C91E"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "diamond"
@@ -188,19 +188,19 @@
 			]
 			hide_dependency_lines: false
 			icon: "bloodmagic:etherealslate"
-			id: "751866729304AF6B"
+			id: "182F3017A2A6EBBB"
 			min_width: 2
 			rewards: [{
 				count: 4
 				id: "41A80BA954640CFA"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "diamond"
 			size: 1.12d
 			subtitle: "Milestone"
 			tasks: [{
-				id: "0C838E597BC98BFF"
+				id: "7A1F0A2B3E5026D9"
 				item: "bloodmagic:etherealslate"
 				type: "item"
 			}]
@@ -221,7 +221,7 @@
 			rewards: [{
 				count: 4
 				id: "7F5FA059221EDFCD"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "diamond"
@@ -252,8 +252,8 @@
 			min_width: 2
 			rewards: [{
 				count: 4
-				id: "70B0B4A1C03E78A3"
-				item: "dotcoinmod:copper_coin"
+				id: "52670A89CBA7EE99"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "diamond"
@@ -284,8 +284,8 @@
 			id: "33440AE31BAA6BED"
 			rewards: [{
 				count: 4
-				id: "6B4C9D07DE3FA5ED"
-				item: "dotcoinmod:copper_coin"
+				id: "22A204922DA6F9A3"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -316,8 +316,8 @@
 			id: "072FE917516D5A28"
 			rewards: [{
 				count: 4
-				id: "2FD525CF9A9C7670"
-				item: "dotcoinmod:copper_coin"
+				id: "24CC97F768BE8D4D"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -325,7 +325,7 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "1965E53D8A3079AF"
+					id: "26620469D57362D5"
 					item: "advanced_ae:quantum_structure"
 					type: "item"
 				}
@@ -335,7 +335,7 @@
 					type: "item"
 				}
 				{
-					id: "17519F0D66358135"
+					id: "39A6C36FE8AA5A3D"
 					item: "tomeofblood:novice_tome_of_blood"
 					type: "item"
 				}

@@ -3,7 +3,7 @@
 	default_quest_shape: "rsquare"
 	filename: "apotheosis"
 	group: "6E0A7267C9728B31"
-	id: "01CDE79A5942F636"
+	id: "1E6CE0D1E5789083"
 	order_index: 3
 	quest_links: [ ]
 	quests: [
@@ -19,32 +19,32 @@
 			rewards: [
 				{
 					count: 4
-					id: "5A4DD264F6E458D3"
-					item: "dotcoinmod:copper_coin"
+					id: "4E72B834A7DF8F5A"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "1381007B2AF82D50"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "04C04FA813A8AEBD"
-					item: "dotcoinmod:brass_coin"
+					id: "2B70144AE6706A59"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "6A02052F758ADFED"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "1B95F67789F79040"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -52,7 +52,7 @@
 			size: 1.75d
 			subtitle: "Process"
 			tasks: [{
-				id: "4D8937C8C763C378"
+				id: "4128CFDFE2CF62F8"
 				item: "apotheosis:gem_cutting_table"
 				type: "item"
 			}]
@@ -72,32 +72,32 @@
 			rewards: [
 				{
 					count: 4
-					id: "4E3CF7BCACB37141"
-					item: "dotcoinmod:copper_coin"
+					id: "3325F55BFA2171FC"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "701E62C481F19C73"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "320045587A34EE7F"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "1FE9E5A42CB66E75"
-					item: "dotcoinmod:gold_coin"
+					id: "169641C24B168387"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "0DC2EE934B7D77E2"
-					item: "dotcoinmod:platinum_coin"
+					id: "51544C6A7CC64D2A"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -125,32 +125,32 @@
 			rewards: [
 				{
 					count: 4
-					id: "1FE28FF57E788F67"
-					item: "dotcoinmod:copper_coin"
+					id: "5CBC3531804C0DE5"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "5DBF1797533F238D"
-					item: "dotcoinmod:iron_coin"
+					id: "225D324B6D761717"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6728A6552911158A"
-					item: "dotcoinmod:brass_coin"
+					id: "46A0D309AD46F44B"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6BE9C88F1918CEC5"
-					item: "dotcoinmod:gold_coin"
+					id: "627E049575B2E3CE"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6C65111C9969A407"
-					item: "dotcoinmod:platinum_coin"
+					id: "541233BDABD177F8"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -179,36 +179,36 @@
 			hide_dependency_lines: false
 			icon: "apotheosis:reforging_table"
 			icon_scale: 1.18d
-			id: "385C1A457D65392E"
+			id: "07A796EAEE2722E7"
 			rewards: [
 				{
 					count: 4
 					id: "79346016AA7B9E85"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2A47A93D703FE3C4"
-					item: "dotcoinmod:iron_coin"
+					id: "163070D12A17C72D"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "6795B13B7E934932"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "014A85C386F69811"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "7E6C87BE189EF5B1"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -217,7 +217,7 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "2230BF2B80BD62F0"
+					id: "292ACA984F490768"
 					item: "apotheosis:reforging_table"
 					type: "item"
 				}
@@ -244,31 +244,31 @@
 				{
 					count: 4
 					id: "619F8857DA00769B"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "17285E6311447F06"
-					item: "dotcoinmod:iron_coin"
+					id: "172E8D099B771007"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "76D36BA2B629D671"
-					item: "dotcoinmod:brass_coin"
+					id: "7B440B27911D957B"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "4929BF2BA09DDD55"
-					item: "dotcoinmod:gold_coin"
+					id: "76D40544FA564C4C"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "3E6E49C97DAA53BF"
-					item: "dotcoinmod:platinum_coin"
+					id: "154711B7DEFFCFF9"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -277,7 +277,7 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "5DBC0416B4E89806"
+					id: "491AF98786FB8E63"
 					item: "apotheosis:library"
 					type: "item"
 				}
@@ -299,36 +299,36 @@
 			]
 			hide_dependency_lines: false
 			icon: "apotheosis:deepshelf"
-			id: "142C64F9475865D9"
+			id: "61B66655A096EC51"
 			rewards: [
 				{
 					count: 4
-					id: "639B5E1CE336597F"
-					item: "dotcoinmod:copper_coin"
+					id: "5D3331AAB76D5790"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "2A94CD6ED318B8E8"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "19EBD6FD419B3547"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "427FFD91761B0639"
-					item: "dotcoinmod:gold_coin"
+					id: "75F4BB70A7AB0639"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2251EF01825C8FA8"
-					item: "dotcoinmod:platinum_coin"
+					id: "021D7C2B8F3D05CF"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -337,12 +337,12 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "37C1CC57D7FFF719"
+					id: "4ADA61591CDF4998"
 					item: "apotheosis:deepshelf"
 					type: "item"
 				}
 				{
-					id: "2515DC4E01EBB9F0"
+					id: "05AAF05B8788CF35"
 					item: "apotheosis:endshelf"
 					type: "item"
 				}

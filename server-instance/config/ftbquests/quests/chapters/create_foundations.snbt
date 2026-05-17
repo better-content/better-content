@@ -15,18 +15,18 @@
 			hide_dependency_lines: false
 			icon: "create:andesite_alloy"
 			icon_scale: 1.18d
-			id: "1DAF266F6F71F049"
+			id: "3B82D41B4DA93F85"
 			rewards: [
 				{
 					count: 4
 					id: "6AD779ACCE24592D"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "7B38E8915D07ED60"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -53,14 +53,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "77A2518B249DBAB7"
-					item: "dotcoinmod:copper_coin"
+					id: "41D85300B4E5BF29"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "58C3B7098CB47CCE"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -85,18 +85,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "create:shaft"
-			id: "27522DE5A1F9F570"
+			id: "39EDF022892D07E7"
 			rewards: [
 				{
 					count: 4
-					id: "6049364CA650FBEB"
-					item: "dotcoinmod:copper_coin"
+					id: "0A320CEDDB32AD30"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "35BDADBD6C2A362B"
-					item: "dotcoinmod:iron_coin"
+					id: "7A0356C8A4D666F4"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -105,7 +105,7 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "616AC1BAC5B644AD"
+					id: "62118FDC0E385743"
 					item: "create:shaft"
 					type: "item"
 				}
@@ -127,18 +127,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "create:millstone"
-			id: "18BBDC5144977A95"
+			id: "71569C361EEE88BF"
 			rewards: [
 				{
 					count: 4
-					id: "488B74D1AF607099"
-					item: "dotcoinmod:copper_coin"
+					id: "16CE471E30B308A0"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "34F1DAE68E9B33E0"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -165,14 +165,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "1FBD2903FD5A894D"
-					item: "dotcoinmod:copper_coin"
+					id: "713C93F69C1AC17C"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2A81FDEE80D50856"
-					item: "dotcoinmod:iron_coin"
+					id: "6FDD974BC6DB5C2C"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -180,7 +180,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "7D6D1DEE05910AEE"
+				id: "4B557298C0DD60B5"
 				item: "create:depot"
 				type: "item"
 			}]
@@ -200,14 +200,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "506978F03470B192"
-					item: "dotcoinmod:copper_coin"
+					id: "2C1C1D82436380C9"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "546E06A8694D86EC"
-					item: "dotcoinmod:iron_coin"
+					id: "51CDEDA71750ADCB"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -215,7 +215,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "4A9AB15F5EAD20E8"
+				id: "3F1FA8F512CC91E2"
 				item: "create:deployer"
 				type: "item"
 			}]
@@ -232,19 +232,19 @@
 			hide_dependency_lines: false
 			icon: "create:andesite_casing"
 			icon_scale: 1.18d
-			id: "12E89CE68D95DEFE"
+			id: "226869736F009562"
 			min_width: 2
 			rewards: [
 				{
 					count: 4
-					id: "2B50C6C609E2E28A"
-					item: "dotcoinmod:copper_coin"
+					id: "7BF82014A9FD24AA"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "72BFBD3594C56FA6"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -252,7 +252,7 @@
 			size: 1.75d
 			subtitle: "Milestone"
 			tasks: [{
-				id: "30E3D94BE8118A20"
+				id: "4E11DE55AFEEC8B2"
 				item: "create:andesite_casing"
 				type: "item"
 			}]
@@ -267,18 +267,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "create:water_wheel"
-			id: "107417CE0EB1040A"
+			id: "30520F43496DE320"
 			rewards: [
 				{
 					count: 4
 					id: "2FE89029AEB79167"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "10FE17094134869B"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -286,7 +286,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "11C4B60B26B1B13D"
+				id: "7BD61832584DDA3E"
 				item: "create:water_wheel"
 				type: "item"
 			}]
@@ -301,18 +301,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "create:windmill_bearing"
-			id: "765ADE442584DC3C"
+			id: "1167A5208242B7B4"
 			rewards: [
 				{
 					count: 4
 					id: "065A224F0BB309E8"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "435644F10B254D37"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -336,18 +336,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "create:gearbox"
-			id: "7E53885213DF66EE"
+			id: "50BDE59B55E4A8AC"
 			rewards: [
 				{
 					count: 4
-					id: "4F39B8611D4DBE09"
-					item: "dotcoinmod:copper_coin"
+					id: "615A28E5A6F7AB83"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6D34CBF42D67C31E"
-					item: "dotcoinmod:iron_coin"
+					id: "348C5B0F9CEFF401"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -370,18 +370,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "create:encased_chain_drive"
-			id: "3D82B54E667DDEA6"
+			id: "6379578582D52161"
 			rewards: [
 				{
 					count: 4
-					id: "6D68100971F5F898"
-					item: "dotcoinmod:copper_coin"
+					id: "2FBF4E3F82A29180"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2D0184ACD561998B"
-					item: "dotcoinmod:iron_coin"
+					id: "148EDBFDF6258C00"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -389,7 +389,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "7FD485916E663946"
+				id: "1D5B6733122C1F50"
 				item: "create:encased_chain_drive"
 				type: "item"
 			}]
@@ -404,18 +404,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "thirst:sand_filter"
-			id: "046BF3420DC05FFF"
+			id: "0EA690124D98AB58"
 			rewards: [
 				{
 					count: 4
-					id: "11329A1E26E85F86"
-					item: "dotcoinmod:copper_coin"
+					id: "1DBD7366D08A566A"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "539EB2F1B68C7AC5"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -423,7 +423,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "71C3A067E97CC14E"
+				id: "576482C7674F0F54"
 				item: "thirst:sand_filter"
 				type: "item"
 			}]
@@ -439,18 +439,18 @@
 			hide_dependency_lines: false
 			icon: "realisticores:crushed_copper_sulfide_ore"
 			icon_scale: 1.18d
-			id: "75C7CF638C8EA87A"
+			id: "46E8BB7138BB4021"
 			rewards: [
 				{
 					count: 4
 					id: "20E447202A779645"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "4618E1830713AA11"
-					item: "dotcoinmod:iron_coin"
+					id: "12299DAB476C9BB7"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -458,7 +458,7 @@
 			size: 1.75d
 			subtitle: "Process"
 			tasks: [{
-				id: "759812AD6ED526EF"
+				id: "37F2B24515B7C31E"
 				item: "realisticores:crushed_copper_sulfide_ore"
 				type: "item"
 			}]
@@ -474,18 +474,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "create:andesite_casing"
-			id: "4261B560A86E2D0E"
+			id: "02BDF2F91499D9E3"
 			rewards: [
 				{
 					count: 4
 					id: "2941DB56182FDC09"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2500E4649A105C45"
-					item: "dotcoinmod:iron_coin"
+					id: "0433B2B9F7EF6747"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -494,7 +494,7 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "377508244DECDAEA"
+					id: "3357A8ED756E39FF"
 					item: "create:andesite_casing"
 					type: "item"
 				}
@@ -504,7 +504,7 @@
 					type: "item"
 				}
 				{
-					id: "6D7B442002D766B3"
+					id: "04919512B1A8369A"
 					item: "create:windmill_bearing"
 					type: "item"
 				}

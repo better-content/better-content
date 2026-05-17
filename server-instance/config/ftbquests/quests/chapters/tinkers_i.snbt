@@ -3,7 +3,7 @@
 	default_quest_shape: "rsquare"
 	filename: "tinkers_i"
 	group: "17D1B259E2B76A4F"
-	id: "03D3348B1AFB2527"
+	id: "171161741226E415"
 	order_index: 0
 	quest_links: [ ]
 	quests: [
@@ -20,14 +20,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "4EA9611FAB5B8BAF"
-					item: "dotcoinmod:copper_coin"
+					id: "7E93EE038D033B9E"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "0E724BAF014E2BCE"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -35,7 +35,7 @@
 			size: 1.75d
 			subtitle: "Milestone"
 			tasks: [{
-				id: "5DBDF6B451F39E11"
+				id: "36AFB0B669AC4285"
 				item: "kubejs:seared_machine_casing"
 				type: "item"
 			}]
@@ -52,18 +52,18 @@
 			hide_dependency_lines: false
 			icon: "tconstruct:smeltery_controller"
 			icon_scale: 1.18d
-			id: "79A8C0B62454E219"
+			id: "64BD513C5F42A24D"
 			rewards: [
 				{
 					count: 4
-					id: "6625CDD7FC8653B4"
-					item: "dotcoinmod:copper_coin"
+					id: "7BFAF13A0C48EEEF"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6703A97B7C461E0B"
-					item: "dotcoinmod:iron_coin"
+					id: "6E11C8571122D004"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -97,14 +97,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "1CF2438674A0207A"
-					item: "dotcoinmod:copper_coin"
+					id: "5B0997D5B39D7A78"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "04C907EE9DC43E05"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -112,7 +112,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "3D1E9E235EB81098"
+				id: "00D2DFDA3B03F052"
 				item: "minecraft:copper_ingot"
 				type: "item"
 			}]
@@ -132,13 +132,13 @@
 				{
 					count: 4
 					id: "5876479C1E5D6CB0"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "1901286C56BE210A"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -146,7 +146,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "61E99F9FA5E7F492"
+				id: "6E29DEC9A42F68EA"
 				item: "minecraft:iron_ingot"
 				type: "item"
 			}]
@@ -167,18 +167,18 @@
 			hide_dependency_lines: false
 			icon: "tconstruct:tinkers_anvil"
 			icon_scale: 1.18d
-			id: "25C1007F55FBF11F"
+			id: "71E8646E75EC77CB"
 			rewards: [
 				{
 					count: 4
 					id: "375FE3956CB3959F"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "70F29CF2EED9A0D2"
-					item: "dotcoinmod:iron_coin"
+					id: "24D95CAE4E5B500E"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -186,7 +186,7 @@
 			size: 1.75d
 			subtitle: "Process"
 			tasks: [{
-				id: "69E738537F59F8AE"
+				id: "4F8B33625902C052"
 				item: "tconstruct:tinkers_anvil"
 				type: "item"
 			}]

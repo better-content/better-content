@@ -16,24 +16,24 @@
 			hide_dependency_lines: false
 			icon: "starcatcher:starcatcher_rod"
 			icon_scale: 1.18d
-			id: "1565BC06E5DA4B02"
+			id: "0B479C4209B81B77"
 			rewards: [
 				{
 					count: 4
-					id: "2708137FC34081C8"
-					item: "dotcoinmod:copper_coin"
+					id: "1FC0E2923A4E8BCB"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "53C2C49975CD1E0D"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "7D9168B9DB81E5E2"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]
@@ -41,7 +41,7 @@
 			size: 1.75d
 			subtitle: "Process"
 			tasks: [{
-				id: "3721DAF946A35515"
+				id: "6D2B377C594B0180"
 				item: "starcatcher:starcatcher_rod"
 				type: "item"
 			}]
@@ -61,20 +61,20 @@
 			rewards: [
 				{
 					count: 4
-					id: "135B22DCCB820176"
-					item: "dotcoinmod:copper_coin"
+					id: "699927318305E669"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "5CF77F13207A8F23"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "1618AE38D18F839E"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]
@@ -83,17 +83,17 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "5C260FF70F52DBD8"
+					id: "5B4627DC999C57EA"
 					item: "starcatcher:starcatcher_twine"
 					type: "item"
 				}
 				{
-					id: "27D7CAD36829BA24"
+					id: "5FAFFB4BFB59D6F4"
 					item: "starcatcher:hook"
 					type: "item"
 				}
 				{
-					id: "650B5B809B607254"
+					id: "3418C8EEFECC9854"
 					item: "starcatcher:bobber"
 					type: "item"
 				}
@@ -111,24 +111,24 @@
 			]
 			hide_dependency_lines: false
 			icon: "starcatcher:murkwater_bait"
-			id: "7841DDA26AD1F474"
+			id: "023FF5B1C9C0EBE0"
 			rewards: [
 				{
 					count: 4
-					id: "07A5A68A6D6E689C"
-					item: "dotcoinmod:copper_coin"
+					id: "285DA841F73030F4"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "7ECFAD7139BE3C9C"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "48CE134531782278"
-					item: "dotcoinmod:brass_coin"
+					id: "13B6D5973D5A1A02"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]
@@ -147,7 +147,7 @@
 					type: "item"
 				}
 				{
-					id: "542899C7BB8C8346"
+					id: "5645C3B4D6E93C07"
 					item: "starcatcher:sculk_bait"
 					type: "item"
 				}
@@ -168,20 +168,20 @@
 			rewards: [
 				{
 					count: 4
-					id: "58C41B72FEF3A247"
-					item: "dotcoinmod:copper_coin"
+					id: "36E51C755BD98CD2"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "6A17258A2328D038"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "6422F595964CB221"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]
@@ -190,17 +190,17 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "7F212B79098CFA5F"
+					id: "5880069B65BF557F"
 					item: "starcatcher:pinfish"
 					type: "item"
 				}
 				{
-					id: "182D00FAFC62450D"
+					id: "2A2B44499537784F"
 					item: "starcatcher:deepslatefish"
 					type: "item"
 				}
 				{
-					id: "1EFE1866B9E1E2D5"
+					id: "5C83E00D6C4A8AEC"
 					item: "starcatcher:magma_fish"
 					type: "item"
 				}
@@ -224,19 +224,19 @@
 				{
 					count: 4
 					id: "1756A757C662C969"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "6D6472C313C415C9"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "546BCCCC46D5C76F"
-					item: "dotcoinmod:brass_coin"
+					id: "53CA5A098B4D0F3B"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]
@@ -245,12 +245,12 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "683E310962AF9464"
+					id: "3B6B452EACC4B4FF"
 					item: "starcatcher:fish_radar"
 					type: "item"
 				}
 				{
-					id: "691EDD2EF28050C3"
+					id: "52B56E863D8D8AEC"
 					item: "starcatcher:waterlogged_satchel"
 					type: "item"
 				}
@@ -273,20 +273,20 @@
 			rewards: [
 				{
 					count: 4
-					id: "39A4055BAE926ABB"
-					item: "dotcoinmod:copper_coin"
+					id: "46586E05D014A5E7"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "1DE729AFA602F85F"
-					item: "dotcoinmod:iron_coin"
+					id: "415ADD67EF63E880"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "707CAED87C00647B"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]
@@ -300,7 +300,7 @@
 					type: "item"
 				}
 				{
-					id: "5AF76ED2A05A58F9"
+					id: "11EEA59550BB7376"
 					item: "starcatcher:trophy_gold"
 					type: "item"
 				}

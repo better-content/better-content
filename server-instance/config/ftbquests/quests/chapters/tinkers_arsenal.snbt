@@ -28,14 +28,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "67A72C0B446E41B0"
-					item: "dotcoinmod:copper_coin"
+					id: "186E475EA0BD60BF"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "60D0373697DAA49A"
-					item: "dotcoinmod:iron_coin"
+					id: "1EC825B254EE2ACC"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -57,7 +57,7 @@
 					type: "item"
 				}
 				{
-					id: "69B56EBF8C7EB95F"
+					id: "0E0C3293D8BDCA8E"
 					item: {
 						Count: 1
 						id: "tconstruct:hand_axe"
@@ -83,7 +83,7 @@
 					type: "item"
 				}
 				{
-					id: "21B71ACA236FE180"
+					id: "3311777665AD6EAD"
 					item: {
 						Count: 1
 						id: "tconstruct:kama"
@@ -96,7 +96,7 @@
 					type: "item"
 				}
 				{
-					id: "545F1E9194360BA1"
+					id: "59E5E44FE5589B29"
 					item: {
 						Count: 1
 						id: "tconstruct:sledge_hammer"
@@ -109,7 +109,7 @@
 					type: "item"
 				}
 				{
-					id: "622549450AF6D676"
+					id: "01590B11480882A4"
 					item: {
 						Count: 1
 						id: "tconstruct:excavator"
@@ -122,7 +122,7 @@
 					type: "item"
 				}
 				{
-					id: "2855DC105DD68DA9"
+					id: "75C4E26F32D1B012"
 					item: {
 						Count: 1
 						id: "tconstruct:vein_hammer"
@@ -198,14 +198,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "6242B85EF0E7556F"
-					item: "dotcoinmod:copper_coin"
+					id: "4FB51AD1356C88D4"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "5D121FFAA19C7E3C"
-					item: "dotcoinmod:iron_coin"
+					id: "0822FAA5078E498E"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -240,7 +240,7 @@
 					type: "item"
 				}
 				{
-					id: "0FA3E67B2EB4ACCB"
+					id: "0D5E469CA99361C2"
 					item: {
 						Count: 1
 						id: "tconstruct:cleaver"
@@ -266,7 +266,7 @@
 					type: "item"
 				}
 				{
-					id: "32CE6638373D9D3D"
+					id: "2DA0B6C8CEDA96EA"
 					item: {
 						Count: 1
 						id: "tconstruct:melting_pan"
@@ -279,7 +279,7 @@
 					type: "item"
 				}
 				{
-					id: "35162F84404C419F"
+					id: "3AF0B52E55B4296F"
 					item: {
 						Count: 1
 						id: "tconstruct:swasher"
@@ -292,7 +292,7 @@
 					type: "item"
 				}
 				{
-					id: "47F9A6723EFBA586"
+					id: "3064CDB877982DC5"
 					item: {
 						Count: 1
 						id: "tconstruct:flint_and_brick"
@@ -319,131 +319,61 @@
 				}
 				{
 					id: "109A9652B44918D4"
-					item: {
-						Count: 1
-						id: "tinkersweaponry:greatsword"
-						tag: {
-							Damage: 0
-							tic_broken: 0b
-						}
-					}
+					item: "tinkersweaponry:greatsword"
 					match_nbt: false
 					type: "item"
 				}
 				{
-					id: "25ED421CEFCDEF7A"
-					item: {
-						Count: 1
-						id: "tinkersweaponry:lance"
-						tag: {
-							Damage: 0
-							tic_broken: 0b
-						}
-					}
+					id: "06B90C0630FB036E"
+					item: "tinkersweaponry:lance"
 					match_nbt: false
 					type: "item"
 				}
 				{
-					id: "7E390CCFF0FD8C3C"
-					item: {
-						Count: 1
-						id: "tinkersweaponry:pike"
-						tag: {
-							Damage: 0
-							tic_broken: 0b
-						}
-					}
+					id: "4F8B5CBCD47FC281"
+					item: "tinkersweaponry:pike"
 					match_nbt: false
 					type: "item"
 				}
 				{
 					id: "685664E3223CCF30"
-					item: {
-						Count: 1
-						id: "tinkers_battle_spades:battle_spade"
-						tag: {
-							Damage: 0
-							tic_broken: 0b
-						}
-					}
+					item: "tinkers_battle_spades:battle_spade"
 					match_nbt: false
 					type: "item"
 				}
 				{
 					id: "14D5AE8CA1A92D3D"
-					item: {
-						Count: 1
-						id: "additionalweaponry:butcher_knife"
-						tag: {
-							Damage: 0
-							tic_broken: 0b
-						}
-					}
+					item: "additionalweaponry:butcher_knife"
 					match_nbt: false
 					type: "item"
 				}
 				{
-					id: "3B41D20C147592D3"
-					item: {
-						Count: 1
-						id: "additionalweaponry:cutlass"
-						tag: {
-							Damage: 0
-							tic_broken: 0b
-						}
-					}
+					id: "6AC642BD8E507260"
+					item: "additionalweaponry:cutlass"
 					match_nbt: false
 					type: "item"
 				}
 				{
 					id: "4ED70A4E418B83A3"
-					item: {
-						Count: 1
-						id: "additionalweaponry:pitchfork"
-						tag: {
-							Damage: 0
-							tic_broken: 0b
-						}
-					}
+					item: "additionalweaponry:pitchfork"
 					match_nbt: false
 					type: "item"
 				}
 				{
 					id: "773AB754BA66795B"
-					item: {
-						Count: 1
-						id: "additionalweaponry:scepter"
-						tag: {
-							Damage: 0
-							tic_broken: 0b
-						}
-					}
+					item: "additionalweaponry:scepter"
 					match_nbt: false
 					type: "item"
 				}
 				{
-					id: "62EB2894FB69F955"
-					item: {
-						Count: 1
-						id: "additionalweaponry:sniffer_claws"
-						tag: {
-							Damage: 0
-							tic_broken: 0b
-						}
-					}
+					id: "1BE36D7F599C06BD"
+					item: "additionalweaponry:sniffer_claws"
 					match_nbt: false
 					type: "item"
 				}
 				{
 					id: "671C1C57615D0E3F"
-					item: {
-						Count: 1
-						id: "additionalweaponry:wrench"
-						tag: {
-							Damage: 0
-							tic_broken: 0b
-						}
-					}
+					item: "additionalweaponry:wrench"
 					match_nbt: false
 					type: "item"
 				}
@@ -467,19 +397,19 @@
 					tic_broken: 0b
 				}
 			}
-			id: "3DED9F1C4352C331"
+			id: "0FDEF48ED857C166"
 			min_width: 2
 			rewards: [
 				{
 					count: 4
-					id: "14600EAD9000F6E8"
-					item: "dotcoinmod:copper_coin"
+					id: "5C8EEC1AC8421B77"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "04E9A8EE55148DE5"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -488,7 +418,7 @@
 			subtitle: "Showcase"
 			tasks: [
 				{
-					id: "7BF475A615486E99"
+					id: "7C87AB9710D80570"
 					item: {
 						Count: 1
 						id: "tconstruct:longbow"
@@ -520,7 +450,7 @@
 					type: "item"
 				}
 				{
-					id: "1D8240AD530CEA1B"
+					id: "5155746017A2EFCF"
 					item: {
 						Count: 1
 						id: "tconstruct:javelin"
@@ -533,7 +463,7 @@
 					type: "item"
 				}
 				{
-					id: "2A96BEC96C164B11"
+					id: "1CB9533FF1AA9DC9"
 					item: "tconstruct:shuriken"
 					match_nbt: false
 					type: "item"
@@ -551,28 +481,14 @@
 					type: "item"
 				}
 				{
-					id: "455214C4D2341F6D"
-					item: {
-						Count: 1
-						id: "additionalweaponry:arrow_sling"
-						tag: {
-							Damage: 0
-							tic_broken: 0b
-						}
-					}
+					id: "0847F582EB15828B"
+					item: "additionalweaponry:arrow_sling"
 					match_nbt: false
 					type: "item"
 				}
 				{
-					id: "1F027C1EEBA0F7F9"
-					item: {
-						Count: 1
-						id: "tinkers_advanced:ionized_cannon"
-						tag: {
-							Damage: 0
-							tic_broken: 0b
-						}
-					}
+					id: "126413715B3ED0F4"
+					item: "tinkers_advanced:ionized_cannon"
 					match_nbt: false
 					type: "item"
 				}
@@ -602,14 +518,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "48F16E4367DD4228"
-					item: "dotcoinmod:copper_coin"
+					id: "79C82AC8043C588F"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "17E72051D8C13226"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -683,7 +599,7 @@
 					type: "item"
 				}
 				{
-					id: "371A3453B0F8964B"
+					id: "387E828B6D95E2B1"
 					item: {
 						Count: 1
 						id: "tconstruct:plate_helmet"
@@ -722,7 +638,7 @@
 					type: "item"
 				}
 				{
-					id: "2241EC53EA4D13E7"
+					id: "642145B63F2D6D01"
 					item: {
 						Count: 1
 						id: "tconstruct:plate_boots"
@@ -735,7 +651,7 @@
 					type: "item"
 				}
 				{
-					id: "514B65CBCAA82306"
+					id: "7285871014E54B8F"
 					item: {
 						Count: 1
 						id: "tconstruct:plate_shield"
@@ -748,7 +664,7 @@
 					type: "item"
 				}
 				{
-					id: "03AD3C50F317DF41"
+					id: "4F265658A7650CE8"
 					item: {
 						Count: 1
 						id: "tconstruct:slime_helmet"
@@ -800,15 +716,8 @@
 					type: "item"
 				}
 				{
-					id: "0EAC429AFE101EF2"
-					item: {
-						Count: 1
-						id: "additionalweaponry:propeller_cap"
-						tag: {
-							Damage: 0
-							tic_broken: 0b
-						}
-					}
+					id: "4E8C9AABD3FA9EEC"
+					item: "additionalweaponry:propeller_cap"
 					match_nbt: false
 					type: "item"
 				}
@@ -839,13 +748,13 @@
 				{
 					count: 4
 					id: "3B07F12BEBFFE659"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "7945554A91D32B21"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -906,7 +815,7 @@
 					type: "item"
 				}
 				{
-					id: "4B7C32C1488789F0"
+					id: "539FE0E2C3F0A607"
 					item: {
 						Count: 1
 						id: "tconstruct:fishing_rod"
@@ -920,27 +829,13 @@
 				}
 				{
 					id: "4714CE698AABF911"
-					item: {
-						Count: 1
-						id: "tinkers_advanced:electron_tuner"
-						tag: {
-							Damage: 0
-							tic_broken: 0b
-						}
-					}
+					item: "tinkers_advanced:electron_tuner"
 					match_nbt: false
 					type: "item"
 				}
 				{
-					id: "4C402A3948654E0B"
-					item: {
-						Count: 1
-						id: "tinkers_advanced:matter_manipulator"
-						tag: {
-							Damage: 0
-							tic_broken: 0b
-						}
-					}
+					id: "53E844210AD29055"
+					item: "tinkers_advanced:matter_manipulator"
 					match_nbt: false
 					type: "item"
 				}
@@ -971,18 +866,18 @@
 				}
 			}
 			icon_scale: 1.18d
-			id: "0B12E44E3CBD7919"
+			id: "2888A385E3E41BEB"
 			rewards: [
 				{
 					count: 4
-					id: "3C42AD5FAA23310B"
-					item: "dotcoinmod:copper_coin"
+					id: "4D46087B51A81330"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "761829C92D1D19C5"
-					item: "dotcoinmod:iron_coin"
+					id: "3F08C8ED206DA596"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -1015,7 +910,7 @@
 					type: "item"
 				}
 				{
-					id: "31159C9EB81E47BD"
+					id: "16BDF6B00708C9B4"
 					item: {
 						Count: 1
 						id: "tconstruct:travelers_leggings"

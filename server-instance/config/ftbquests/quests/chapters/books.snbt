@@ -17,11 +17,11 @@
 			hide_dependency_lines: false
 			icon: "ftbquests:book"
 			icon_scale: 1.18d
-			id: "3C43803D7D62CE6F"
+			id: "137AB77D3AD1916E"
 			rewards: [{
 				count: 4
 				id: "1C13334CCEEB49F9"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "none"
@@ -49,15 +49,15 @@
 			id: "5725B9D046D6B9BA"
 			rewards: [{
 				count: 4
-				id: "0DA16DB048E69F94"
-				item: "dotcoinmod:copper_coin"
+				id: "6F6B4AF4B280EA53"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "none"
 			size: 1.75d
 			subtitle: "Reference"
 			tasks: [{
-				id: "0F10F7BCA7E1A956"
+				id: "7D3EC414101B29A8"
 				item: "tconstruct:encyclopedia"
 				type: "item"
 			}]
@@ -77,7 +77,7 @@
 			rewards: [{
 				count: 4
 				id: "5A1EF3903D9B8FC7"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "none"
@@ -105,8 +105,8 @@
 			id: "526C7A950B8472B0"
 			rewards: [{
 				count: 4
-				id: "55617BF48F103946"
-				item: "dotcoinmod:copper_coin"
+				id: "04149DDE134B962F"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "none"

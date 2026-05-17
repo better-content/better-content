@@ -3,7 +3,7 @@
 	default_quest_shape: "rsquare"
 	filename: "food_i"
 	group: "1535A2E7C7CA772B"
-	id: "04A2F2ADD1DF7DD3"
+	id: "6D0546C655173CAD"
 	order_index: 0
 	quest_links: [ ]
 	quests: [
@@ -20,14 +20,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "435AE72CDDAF0C83"
-					item: "dotcoinmod:copper_coin"
+					id: "3C1D6C14F9AAA2CD"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "01C649867169CA3E"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -56,14 +56,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "605EAF080E9FC75F"
-					item: "dotcoinmod:copper_coin"
+					id: "2BD5118250EB8415"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "5DFA5E26610DF10E"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -71,7 +71,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "7D1E150661764135"
+				id: "6AFA365BBE3DA8F9"
 				item: "farmersdelight:wheat_dough"
 				type: "item"
 			}]
@@ -88,18 +88,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "farmersdelight:canvas"
-			id: "14D60DBE0B9408CF"
+			id: "12AA7F39B809E9CF"
 			rewards: [
 				{
 					count: 4
 					id: "644D24B14C13CE05"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "31D45CED6DF59243"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -107,7 +107,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "37576EBBD483DDF8"
+				id: "579FD5F1B15BAAA0"
 				item: "farmersdelight:canvas"
 				type: "item"
 			}]
@@ -124,18 +124,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "minecraft:campfire"
-			id: "37D125FAC6A97D1E"
+			id: "70CB2865068EFF43"
 			rewards: [
 				{
 					count: 4
 					id: "45AFB1421395231E"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "40D30B694AF0CFFA"
-					item: "dotcoinmod:iron_coin"
+					id: "7B9FC8D5D6B48706"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -154,7 +154,7 @@
 					type: "item"
 				}
 				{
-					id: "3E437B0290E6DFE5"
+					id: "2181D1EECFABC58B"
 					item: "kubejs:charred_blazing_chili"
 					type: "item"
 				}
@@ -173,18 +173,18 @@
 			hide_dependency_lines: false
 			icon: "farmersdelight:stove"
 			icon_scale: 1.18d
-			id: "71027C73DBD8395E"
+			id: "2B46C872518BE45A"
 			rewards: [
 				{
 					count: 4
-					id: "1A58BACB63125068"
-					item: "dotcoinmod:copper_coin"
+					id: "42D49E570CBC2678"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "769E43388A0F5617"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -213,13 +213,13 @@
 				{
 					count: 4
 					id: "6682CAAF8FF18FDA"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "69AFE2A8664FF5DB"
-					item: "dotcoinmod:iron_coin"
+					id: "3D911F4930CA4E42"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -227,7 +227,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "2102740A48FC00C0"
+				id: "71F621DBD6CD6BFC"
 				item: "farmersdelight:vegetable_soup"
 				type: "item"
 			}]
@@ -243,18 +243,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "farmersdelight:roast_chicken_block"
-			id: "46EF65F805DCFD8E"
+			id: "5F3FE6366A8CA5E4"
 			rewards: [
 				{
 					count: 4
-					id: "02B244B25064E32D"
-					item: "dotcoinmod:copper_coin"
+					id: "5C30D3B963ACBE17"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "435E0B426256E508"
-					item: "dotcoinmod:iron_coin"
+					id: "7E5350DBB81A4167"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -279,18 +279,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "thirst:sand_filter"
-			id: "12EE41FAF0489D5C"
+			id: "420AE2A150D0992F"
 			rewards: [
 				{
 					count: 4
-					id: "69138229BF3A8DFC"
-					item: "dotcoinmod:copper_coin"
+					id: "3D4F43D367896967"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "52AA8243D0AE2F6A"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -298,7 +298,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "047894E37663C044"
+				id: "62FDFCC3331D781A"
 				item: "thirst:sand_filter"
 				type: "item"
 			}]
@@ -315,18 +315,18 @@
 			hide_dependency_lines: false
 			icon: "farmersdelight:table"
 			icon_scale: 1.18d
-			id: "75AA296427C312D3"
+			id: "7AC1F6728ED96417"
 			rewards: [
 				{
 					count: 4
 					id: "6DAC33AA63F796EB"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "00FBAC5F5126356E"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -340,7 +340,7 @@
 					type: "item"
 				}
 				{
-					id: "502ABC71A432B660"
+					id: "2EAC72065F44977E"
 					item: "farmersdelight:oak_cabinet"
 					type: "item"
 				}

@@ -19,8 +19,8 @@
 			id: "58A4D7761CB1874B"
 			rewards: [{
 				count: 4
-				id: "217C04DF5B8F3D45"
-				item: "dotcoinmod:copper_coin"
+				id: "06249B4B0F217E42"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -38,7 +38,7 @@
 					type: "item"
 				}
 				{
-					id: "4786D9CD26AD7CC0"
+					id: "2350033EF7061B6E"
 					item: "framedblocks:framed_stairs"
 					type: "item"
 				}
@@ -55,11 +55,11 @@
 			]
 			hide_dependency_lines: false
 			icon: "framedblocks:framed_slope"
-			id: "1CC7C8108B6F6449"
+			id: "4142814E0E2BFDF8"
 			rewards: [{
 				count: 4
-				id: "7CC003AE4F104026"
-				item: "dotcoinmod:copper_coin"
+				id: "7DADB46A39589C7F"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -77,7 +77,7 @@
 					type: "item"
 				}
 				{
-					id: "29BC99A24351B2E6"
+					id: "03B68B5CEE38FE32"
 					item: "framedblocks:framed_trapdoor"
 					type: "item"
 				}
@@ -95,11 +95,11 @@
 			hide_dependency_lines: false
 			icon: "supplementaries:crystal_display"
 			icon_scale: 1.18d
-			id: "328B0872911D0062"
+			id: "5A0B7653DD62E4C5"
 			rewards: [{
 				count: 4
 				id: "4F4BF60EACFB66EC"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -107,7 +107,7 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "1D4B34E17EC0E3DF"
+					id: "390A2FDD2E34503F"
 					item: "supplementaries:crystal_display"
 					type: "item"
 				}
@@ -133,11 +133,11 @@
 			]
 			hide_dependency_lines: false
 			icon: "immersive_weathering:charred_planks"
-			id: "33DDD6FF8844A933"
+			id: "6A3F75442494D7A1"
 			rewards: [{
 				count: 4
 				id: "25A98544D6AF0128"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -150,7 +150,7 @@
 					type: "item"
 				}
 				{
-					id: "620C3B55C2662BB4"
+					id: "007E675463A841BB"
 					item: "minecraft:mossy_stone_bricks"
 					type: "item"
 				}
@@ -168,11 +168,11 @@
 			hide_dependency_lines: false
 			icon: "natures_spirit:travertine"
 			icon_scale: 1.18d
-			id: "46831758E1FAEB45"
+			id: "7C73861574AFD6FC"
 			rewards: [{
 				count: 4
 				id: "69950243931AB4D9"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -180,12 +180,12 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "22C34E8BD1BBD618"
+					id: "0B372DB6ADCD6AA5"
 					item: "natures_spirit:travertine"
 					type: "item"
 				}
 				{
-					id: "6724329CAAB9CD01"
+					id: "514A403E99F8B87D"
 					item: "natures_spirit:chert"
 					type: "item"
 				}
@@ -206,11 +206,11 @@
 			]
 			hide_dependency_lines: false
 			icon: "framedblocks:framed_fence"
-			id: "139268D0E01F6C6E"
+			id: "7D32BB760302D5D6"
 			rewards: [{
 				count: 4
 				id: "329BBDF8775F794C"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"

@@ -5,14 +5,16 @@
 		"Custom item effects applied only inside finishUsingItem may not appear here.",
 		"Suspicious stew dynamic NBT effects are not expanded because they are not a fixed item-level food property."
 	],
-	"foodCount": 391,
-	"foodsWithEffectCount": 108,
-	"foodsWithoutEffectCount": 283,
+	"foodCount": 399,
+	"foodsWithEffectCount": 110,
+	"foodsWithoutEffectCount": 289,
 	"byNamespace": {
 		"aether": 8,
 		"ars_nouveau": 7,
 		"blue_skies": 25,
 		"brewinandchewin": 35,
+		"burnt": 2,
+		"callfromthedepth_": 4,
 		"cold_sweat": 1,
 		"create": 5,
 		"creatingspace": 1,
@@ -29,8 +31,10 @@
 		"pneumaticcraft": 4,
 		"quark": 3,
 		"starcatcher": 84,
+		"swem": 1,
 		"tconstruct": 10,
 		"the_finley_dimension_remastered": 2,
+		"the_flesh_that_hates": 1,
 		"twilightforest": 9,
 		"undergarden": 19
 	},
@@ -230,6 +234,14 @@
 				"saturationModifier": 0,
 				"durationTicks": 2400,
 				"amplifier": 1,
+				"probability": 1
+			},
+			{
+				"item": "the_flesh_that_hates:piece_of_flesh_cooked",
+				"nutrition": -4,
+				"saturationModifier": -0.5,
+				"durationTicks": 1200,
+				"amplifier": 0,
 				"probability": 1
 			},
 			{
@@ -1079,6 +1091,14 @@
 				"probability": 1
 			},
 			{
+				"item": "swem:yellow_snow_cone",
+				"nutrition": 0,
+				"saturationModifier": 0,
+				"durationTicks": 60,
+				"amplifier": 0,
+				"probability": 1
+			},
+			{
 				"item": "undergarden:inky_stew",
 				"nutrition": 4,
 				"saturationModifier": 0.4000000059604645,
@@ -1225,6 +1245,22 @@
 				"probability": 1
 			},
 			{
+				"item": "swem:yellow_snow_cone",
+				"nutrition": 0,
+				"saturationModifier": 0,
+				"durationTicks": 100,
+				"amplifier": 0,
+				"probability": 1
+			},
+			{
+				"item": "the_flesh_that_hates:piece_of_flesh_cooked",
+				"nutrition": -4,
+				"saturationModifier": -0.5,
+				"durationTicks": 1200,
+				"amplifier": 4,
+				"probability": 1
+			},
+			{
 				"item": "undergarden:slop_bowl",
 				"nutrition": 6,
 				"saturationModifier": 0.6000000238418579,
@@ -1289,6 +1325,14 @@
 				"nutrition": 0,
 				"saturationModifier": 0,
 				"durationTicks": 250,
+				"amplifier": 0,
+				"probability": 1
+			},
+			{
+				"item": "the_flesh_that_hates:piece_of_flesh_cooked",
+				"nutrition": -4,
+				"saturationModifier": -0.5,
+				"durationTicks": 300,
 				"amplifier": 0,
 				"probability": 1
 			}
@@ -1610,7 +1654,7 @@
 		]
 	},
 	"byDietGroupCount": {
-		"0": 221,
+		"0": 229,
 		"1": 160,
 		"2": 6,
 		"3": 3,
@@ -1706,12 +1750,14 @@
 		"minecraft:pufferfish",
 		"minecraft:rotten_flesh",
 		"minecraft:spider_eye",
+		"swem:yellow_snow_cone",
 		"tconstruct:earth_slime_bottle",
 		"tconstruct:ender_slime_bottle",
 		"tconstruct:ichor_slime_bottle",
 		"tconstruct:jeweled_apple",
 		"tconstruct:sky_slime_bottle",
 		"tconstruct:venom_bottle",
+		"the_flesh_that_hates:piece_of_flesh_cooked",
 		"twilightforest:hydra_chop",
 		"twilightforest:torchberries",
 		"undergarden:blood_globule",
@@ -1769,6 +1815,12 @@
 		"brewinandchewin:quiche_slice",
 		"brewinandchewin:scarlet_cheese_wedge",
 		"brewinandchewin:sweet_berry_jam",
+		"burnt:baked_apple",
+		"burnt:ember_berries",
+		"callfromthedepth_:jawsappleeat",
+		"callfromthedepth_:jawsapplepie",
+		"callfromthedepth_:magmamushroomstew",
+		"callfromthedepth_:soulrosetincture",
 		"cold_sweat:soul_sprout",
 		"create:bar_of_chocolate",
 		"create:chocolate_glazed_berries",

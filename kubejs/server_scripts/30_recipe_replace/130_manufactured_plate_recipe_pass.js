@@ -8,7 +8,7 @@ var BTM_PLATE = {
     copper: '#forge:plates/copper',
     gold: '#forge:plates/gold',
     brass: '#forge:plates/brass',
-    redstoneRelay: 'powergrid:redstone_relay',
+    redstoneRelay: 'morered:red_alloy_wire',
     powerCircuit: 'powergrid:integrated_circuit',
     transistor: 'oc2r:transistor',
     skySteelSheet: 'kubejs:sky_steel_sheet',
@@ -90,7 +90,8 @@ ServerEvents.recipes(function (event) {
         'railways:track_coupler'
     ], ['minecraft:redstone', '#forge:dusts/redstone'], BTM_PLATE.redstoneRelay)
 
-    // Power Grid: keep its own circuits, but remove raw ingots from power blocks.
+    // Power Grid: keep its own integrated circuit as the later electronic part,
+    // but make More Red wire/gates the primitive circuitry predecessor.
     btmPlateReplace(event, [
         'powergrid:alarm_bell',
         'powergrid:contactor',
@@ -105,7 +106,7 @@ ServerEvents.recipes(function (event) {
     btmPlateReplace(event, [
         'powergrid:redstone_relay',
         'powergrid:varistor'
-    ], ['minecraft:redstone', '#forge:dusts/redstone'], BTM_PLATE.powerCircuit)
+    ], ['minecraft:redstone', '#forge:dusts/redstone'], BTM_PLATE.redstoneRelay)
 
     // Do not rewrite the Power Grid circuit's own redstone into itself. The
     // circuit should close the printed/etched board chain, then become the
@@ -116,14 +117,15 @@ ServerEvents.recipes(function (event) {
         acceptMirrored: true,
         pattern: [
             '  L  ',
-            'GGQGG',
-            'RCFCR'
+            'GDQDG',
+            'WCFCW'
         ],
         key: {
             L: { tag: 'forge:gems/lapis' },
             G: { tag: 'forge:nuggets/gold' },
             Q: { item: 'create:rose_quartz' },
-            R: { item: 'minecraft:redstone' },
+            D: { item: 'morered:diode' },
+            W: { item: 'morered:red_alloy_wire' },
             C: { item: 'powergrid:incomplete_circuit' },
             F: { tag: 'forge:plates/copper' }
         },

@@ -1,14 +1,6 @@
 {
 	"tconstruct_grout": [
 		{
-			"id": "tconstruct:smeltery/seared/seared_brick_kiln",
-			"type": "minecraft:blasting"
-		},
-		{
-			"id": "tconstruct:smeltery/seared/grout",
-			"type": "minecraft:crafting_shapeless"
-		},
-		{
 			"id": "tconstruct:smeltery/melting/seared/grout",
 			"type": "tconstruct:melting"
 		},
@@ -21,21 +13,33 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
+			"id": "tconstruct:smeltery/seared/seared_brick_kiln",
+			"type": "minecraft:blasting"
+		},
+		{
+			"id": "tconstruct:smeltery/seared/grout",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
 			"id": "tconstruct:smeltery/seared/seared_brick",
 			"type": "minecraft:smelting"
 		}
 	],
 	"tconstruct_nether_grout": [
 		{
-			"id": "tconstruct:smeltery/melting/scorched/grout",
-			"type": "tconstruct:melting"
-		},
-		{
 			"id": "tconstruct:common/fantastic_foundry",
 			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "tconstruct:smeltery/melting/scorched/grout",
+			"type": "tconstruct:melting"
 		}
 	],
 	"create_andesite_alloy": [
+		{
+			"id": "createdeco:andesite_catwalk_from_stonecutting",
+			"type": "minecraft:stonecutting"
+		},
 		{
 			"id": "creatingspace:rocket_ingredients_recipes/andesite_turbine_shaft",
 			"type": "minecraft:crafting_shaped"
@@ -45,15 +49,7 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "create:crafting/logistics/red_table_cloth",
-			"type": "minecraft:crafting_shapeless"
-		},
-		{
 			"id": "create:crafting/logistics/purple_postbox",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "create:crafting/curiosities/minecart_coupling",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -61,32 +57,16 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "createdieselgenerators:crafting/kelp_handle",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
 			"id": "create:crafting/logistics/orange_table_cloth",
 			"type": "minecraft:crafting_shapeless"
-		},
-		{
-			"id": "create:crafting/kinetics/mechanical_arm",
-			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "create:crafting/kinetics/gantry_shaft",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "protection_pixel:grende",
-			"type": "create:mechanical_crafting"
-		},
-		{
-			"id": "create:mechanical_crafting/crushing_wheel",
-			"type": "create:mechanical_crafting"
-		},
-		{
-			"id": "createdieselgenerators:compression_molding/minecart_coupling",
-			"type": "createdieselgenerators:compression_molding"
+			"id": "createdeco:andesite_mesh_fence_from_stonecutting",
+			"type": "minecraft:stonecutting"
 		},
 		{
 			"id": "create:crafting/logistics/blue_postbox",
@@ -102,10 +82,6 @@
 		},
 		{
 			"id": "create:crafting/kinetics/piston_extension_pole",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "create:crafting/logistics/light_gray_postbox",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -129,19 +105,15 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "createdeco:red_andesite_lamp",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "create:crafting/kinetics/mechanical_plough",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "create:crafting/logistics/andesite_tunnel",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "bloodmagic:meteor/create",
-			"type": "bloodmagic:meteor"
-		},
-		{
-			"id": "create:crafting/kinetics/propeller",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -169,16 +141,8 @@
 			"type": "create:mechanical_crafting"
 		},
 		{
-			"id": "protection_pixel:prismloot",
-			"type": "create:mechanical_crafting"
-		},
-		{
 			"id": "protection_pixel:floatshieldloot",
 			"type": "create:mechanical_crafting"
-		},
-		{
-			"id": "create:crafting/kinetics/copper_valve_handle",
-			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "createdieselgenerators:crafting/andesite_girder",
@@ -193,10 +157,6 @@
 			"type": "create:mechanical_crafting"
 		},
 		{
-			"id": "powergrid:mechanical_crafting/electrozapper",
-			"type": "create:mechanical_crafting"
-		},
-		{
 			"id": "create:crafting/appliances/copper_diving_boots",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -205,7 +165,7 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "create:crafting/logistics/orange_postbox",
+			"id": "createdeco:green_andesite_lamp",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -213,15 +173,7 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
-			"id": "create:crafting/logistics/gray_table_cloth",
-			"type": "minecraft:crafting_shapeless"
-		},
-		{
-			"id": "creatingspace:rocket_ingredients_recipes/andesite_blisk",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "powergrid:crafting/wire_connector",
+			"id": "createdeco:andesite_support",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -237,24 +189,12 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "protection_pixel:breakerloot",
-			"type": "create:mechanical_crafting"
-		},
-		{
-			"id": "protection_pixel:pioneerloot",
-			"type": "create:mechanical_crafting"
-		},
-		{
 			"id": "create:crafting/kinetics/white_sail",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "powergrid:crafting/relay",
 			"type": "minecraft:crafting_shapeless"
-		},
-		{
-			"id": "create:mechanical_crafting/potato_cannon",
-			"type": "create:mechanical_crafting"
 		},
 		{
 			"id": "create:crafting/logistics/purple_table_cloth",
@@ -265,19 +205,7 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "create:crafting/logistics/light_blue_postbox",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
 			"id": "create:crafting/kinetics/mechanical_harvester",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "protection_pixel:evasionwingloot",
-			"type": "create:mechanical_crafting"
-		},
-		{
-			"id": "create:crafting/kinetics/display_board",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -285,28 +213,8 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "createdieselgenerators:crafting/basin_lid",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "creatingspace:rocket_ingredients_recipes/andesite_injector",
-			"type": "create:sequenced_assembly"
-		},
-		{
-			"id": "compressedcreativity:crafting/light_blue_plastic_bracket",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
 			"id": "creatingspace:rocket_ingredients_recipes/andesite_engine_wall",
 			"type": "create:cutting"
-		},
-		{
-			"id": "create:crafting/logistics/black_postbox",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "create:crafting/appliances/clipboard",
-			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "compressedcreativity:crafting/brown_plastic_bracket",
@@ -317,28 +225,12 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "compressedcreativity:crafting/red_plastic_bracket",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
 			"id": "createdieselgenerators:crafting/lighter",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "create:crafting/logistics/brown_table_cloth",
 			"type": "minecraft:crafting_shapeless"
-		},
-		{
-			"id": "createdieselgenerators:crafting/burner",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "create:crafting/logistics/lime_table_cloth",
-			"type": "minecraft:crafting_shapeless"
-		},
-		{
-			"id": "powergrid:mechanical_crafting/generator_commutator",
-			"type": "create:mechanical_crafting"
 		},
 		{
 			"id": "create:crafting/logistics/light_blue_table_cloth",
@@ -361,10 +253,6 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
-			"id": "create:crafting/kinetics/basin",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
 			"id": "create:crafting/kinetics/hand_crank",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -377,27 +265,15 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "create:crafting/logistics/yellow_postbox",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "create:crafting/kinetics/radial_chassis",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "compressedcreativity:crafting/lime_plastic_bracket",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "createdieselgenerators:crafting/track_layers_bag",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
 			"id": "create:crafting/logistics/yellow_table_cloth",
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
 			"id": "createdieselgenerators:crafting/wire_cutters",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdeco:andesite_door",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -413,27 +289,15 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "protection_pixel:boosterloot",
-			"type": "create:mechanical_crafting"
-		},
-		{
-			"id": "create:crafting/logistics/blue_table_cloth",
-			"type": "minecraft:crafting_shapeless"
-		},
-		{
 			"id": "create:crafting/logistics/light_gray_table_cloth",
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
-			"id": "powergrid:crafting/relay_dpdt",
-			"type": "minecraft:crafting_shapeless"
+			"id": "createdeco:pressing/andesite_sheet",
+			"type": "create:pressing"
 		},
 		{
 			"id": "createbigcannons:basin_foundry_lid",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "compressedcreativity:crafting/purple_plastic_bracket",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -453,19 +317,7 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "create:crafting/logistics/cyan_postbox",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "create:crafting/logistics/cyan_table_cloth",
-			"type": "minecraft:crafting_shapeless"
-		},
-		{
 			"id": "create:crafting/logistics/white_table_cloth",
-			"type": "minecraft:crafting_shapeless"
-		},
-		{
-			"id": "create:crafting/kinetics/depot",
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
@@ -477,10 +329,6 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
-			"id": "create:crafting/kinetics/whisk",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
 			"id": "create:crafting/kinetics/mechanical_drill",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -489,23 +337,7 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "create:andesite_ladder_from_andesite_alloy_stonecutting",
-			"type": "minecraft:stonecutting"
-		},
-		{
-			"id": "createdieselgenerators:crafting/hammer",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "tconstruct:compat/create/andesite_alloy_iron",
-			"type": "tconstruct:casting_basin"
-		},
-		{
 			"id": "create:crafting/kinetics/metal_bracket",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "compressedcreativity:crafting/black_plastic_bracket",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -521,16 +353,256 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "create:crafting/logistics/green_postbox",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
 			"id": "create:crafting/logistics/red_postbox",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "tconstruct:compat/create/andesite_alloy_zinc",
-			"type": "tconstruct:casting_basin"
+			"id": "create:crafting/logistics/pink_postbox",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "powergrid:crafting/potentiometer",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/logistics/magenta_postbox",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdeco:andesite_bars",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/logistics/red_table_cloth",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "create:crafting/curiosities/minecart_coupling",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdeco:andesite_bars_overlay_from_stonecutting",
+			"type": "minecraft:stonecutting"
+		},
+		{
+			"id": "createdieselgenerators:crafting/kelp_handle",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/kinetics/mechanical_arm",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdeco:andesite_trapdoor",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "protection_pixel:grende",
+			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "create:mechanical_crafting/crushing_wheel",
+			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "createdieselgenerators:compression_molding/minecart_coupling",
+			"type": "createdieselgenerators:compression_molding"
+		},
+		{
+			"id": "createdeco:andesite_catwalk_stairs_from_stonecutting",
+			"type": "minecraft:stonecutting"
+		},
+		{
+			"id": "create:crafting/logistics/light_gray_postbox",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdeco:andesite_facade_from_stonecutting",
+			"type": "minecraft:stonecutting"
+		},
+		{
+			"id": "bloodmagic:meteor/create",
+			"type": "bloodmagic:meteor"
+		},
+		{
+			"id": "create:crafting/kinetics/propeller",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdeco:yellow_andesite_lamp",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "protection_pixel:prismloot",
+			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "create:crafting/kinetics/copper_valve_handle",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "powergrid:mechanical_crafting/electrozapper",
+			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "create:crafting/logistics/orange_postbox",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/logistics/gray_table_cloth",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "creatingspace:rocket_ingredients_recipes/andesite_blisk",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "powergrid:crafting/wire_connector",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "protection_pixel:breakerloot",
+			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "protection_pixel:pioneerloot",
+			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "create:mechanical_crafting/potato_cannon",
+			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "create:crafting/logistics/light_blue_postbox",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "protection_pixel:evasionwingloot",
+			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "create:crafting/kinetics/display_board",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdieselgenerators:crafting/basin_lid",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "creatingspace:rocket_ingredients_recipes/andesite_injector",
+			"type": "create:sequenced_assembly"
+		},
+		{
+			"id": "compressedcreativity:crafting/light_blue_plastic_bracket",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/logistics/black_postbox",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/appliances/clipboard",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdeco:andesite_catwalk_railing_from_stonecutting",
+			"type": "minecraft:stonecutting"
+		},
+		{
+			"id": "compressedcreativity:crafting/red_plastic_bracket",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdieselgenerators:crafting/burner",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/logistics/lime_table_cloth",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "powergrid:mechanical_crafting/generator_commutator",
+			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "create:crafting/kinetics/basin",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/logistics/yellow_postbox",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdeco:andesite_bars_from_stonecutting",
+			"type": "minecraft:stonecutting"
+		},
+		{
+			"id": "create:crafting/kinetics/radial_chassis",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "compressedcreativity:crafting/lime_plastic_bracket",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdieselgenerators:crafting/track_layers_bag",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "protection_pixel:boosterloot",
+			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "create:crafting/logistics/blue_table_cloth",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "createdeco:andesite_support_wedge_from_stonecutting",
+			"type": "minecraft:stonecutting"
+		},
+		{
+			"id": "powergrid:crafting/relay_dpdt",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "compressedcreativity:crafting/purple_plastic_bracket",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/logistics/cyan_postbox",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/logistics/cyan_table_cloth",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "create:crafting/kinetics/depot",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "create:crafting/kinetics/whisk",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:andesite_ladder_from_andesite_alloy_stonecutting",
+			"type": "minecraft:stonecutting"
+		},
+		{
+			"id": "createdieselgenerators:crafting/hammer",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "compressedcreativity:crafting/black_plastic_bracket",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdeco:blue_andesite_lamp",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/logistics/green_postbox",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "compressedcreativity:crafting/green_plastic_bracket",
@@ -539,10 +611,6 @@
 		{
 			"id": "powergrid:mechanical_crafting/generator_induction_rotor",
 			"type": "create:mechanical_crafting"
-		},
-		{
-			"id": "create:crafting/logistics/pink_postbox",
-			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "powergrid:crafting/alarm_bell",
@@ -555,52 +623,16 @@
 		{
 			"id": "create:crafting/logistics/gray_postbox",
 			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "powergrid:crafting/potentiometer",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "create:crafting/logistics/magenta_postbox",
-			"type": "minecraft:crafting_shaped"
 		}
 	],
 	"create_andesite_casing": [
-		{
-			"id": "create:crafting/kinetics/mechanical_roller",
-			"type": "minecraft:crafting_shaped"
-		},
 		{
 			"id": "create:crafting/kinetics/deployer",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "powergrid:crafting/lv_switch",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
 			"id": "create:crafting/kinetics/andesite_door",
 			"type": "minecraft:crafting_shapeless"
-		},
-		{
-			"id": "powergrid:crafting/fuse_holder",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "create:crafting/kinetics/contraption_controls",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "create:crafting/kinetics/gearshift",
-			"type": "minecraft:crafting_shapeless"
-		},
-		{
-			"id": "create:crafting/kinetics/mechanical_piston",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "create:crafting/kinetics/millstone",
-			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "powergrid:crafting/lv_button",
@@ -619,16 +651,8 @@
 			"type": "create:item_application"
 		},
 		{
-			"id": "powergrid:crafting/mv_switch",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
 			"id": "powergrid:crafting/hv_switch",
 			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "create:crafting/logistics/desk_bell",
-			"type": "minecraft:crafting_shapeless"
 		},
 		{
 			"id": "create:crafting/kinetics/cuckoo_clock",
@@ -636,14 +660,6 @@
 		},
 		{
 			"id": "create:crafting/kinetics/mechanical_harvester",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "createbigcannons:cannon_builder",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "createbigcannons:cannon_drill",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -655,23 +671,11 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "powergrid:crafting/spark_gap",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
 			"id": "create:crafting/kinetics/mechanical_saw",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "powergrid:mechanical_crafting/generator_commutator",
-			"type": "create:mechanical_crafting"
-		},
-		{
 			"id": "create:crafting/kinetics/mechanical_bearing",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "create:crafting/kinetics/chain_conveyor",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -695,12 +699,76 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "create:crafting/kinetics/depot",
+			"id": "create:crafting/kinetics/mechanical_drill",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/kinetics/rope_pulley",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/kinetics/mechanical_press",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/kinetics/mechanical_roller",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "powergrid:crafting/lv_switch",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "powergrid:crafting/fuse_holder",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/kinetics/contraption_controls",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/kinetics/gearshift",
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
-			"id": "create:crafting/kinetics/mechanical_drill",
+			"id": "create:crafting/kinetics/mechanical_piston",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/kinetics/millstone",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "powergrid:crafting/mv_switch",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/logistics/desk_bell",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "createbigcannons:cannon_builder",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createbigcannons:cannon_drill",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "powergrid:crafting/spark_gap",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "powergrid:mechanical_crafting/generator_commutator",
+			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "create:crafting/kinetics/chain_conveyor",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/kinetics/depot",
+			"type": "minecraft:crafting_shapeless"
 		},
 		{
 			"id": "createbigcannons:cannon_loader",
@@ -711,19 +779,11 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "create:crafting/kinetics/rope_pulley",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
 			"id": "createbigcannons:fixed_cannon_mount",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "createbigcannons:cannon_mount_extension",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "create:crafting/kinetics/mechanical_press",
 			"type": "minecraft:crafting_shaped"
 		}
 	],
@@ -751,12 +811,12 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "createdieselgenerators:crushing/wood_chip_waterwheel",
-			"type": "create:crushing"
-		},
-		{
 			"id": "create:crafting/kinetics/water_wheel",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdieselgenerators:crushing/wood_chip_waterwheel",
+			"type": "create:crushing"
 		}
 	],
 	"create_windmill_bearing": [
@@ -775,24 +835,8 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "fallout_wastelands_:thirtytwoammocraft",
+			"id": "the_flesh_that_hates:clay_bomb_recipe",
 			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "fallout_wastelands_:ninemmammocraft",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "fallout_wastelands_:gunpowdercraft",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "ae2:misc/tiny_tnt",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "minecraft:fire_charge",
-			"type": "minecraft:crafting_shapeless"
 		},
 		{
 			"id": "alekiships:crafting/cannonball",
@@ -815,20 +859,8 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "fallout_wastelands_:thirtytwocaliberammo",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
 			"id": "starcatcher:gunpowder_bait",
 			"type": "starcatcher:modifier_shapeless_recipe"
-		},
-		{
-			"id": "createbigcannons:gunpowder_from_pinches",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "create:filling/gunpowder",
-			"type": "create:filling"
 		},
 		{
 			"id": "fallout_wastelands_:tenmmammocraft",
@@ -851,14 +883,6 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
-			"id": "bloodmagic:alchemytable/gunpowder",
-			"type": "bloodmagic:alchemytable"
-		},
-		{
-			"id": "minecraft:tnt",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
 			"id": "quark:building/crafting/compressed/gunpowder_sack_uncompress",
 			"type": "minecraft:crafting_shapeless"
 		},
@@ -869,6 +893,46 @@
 		{
 			"id": "minecraft:firework_rocket_simple",
 			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "fallout_wastelands_:thirtytwoammocraft",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "fallout_wastelands_:ninemmammocraft",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "fallout_wastelands_:gunpowdercraft",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "ae2:misc/tiny_tnt",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "minecraft:fire_charge",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "fallout_wastelands_:thirtytwocaliberammo",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createbigcannons:gunpowder_from_pinches",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:filling/gunpowder",
+			"type": "create:filling"
+		},
+		{
+			"id": "bloodmagic:alchemytable/gunpowder",
+			"type": "bloodmagic:alchemytable"
+		},
+		{
+			"id": "minecraft:tnt",
+			"type": "minecraft:crafting_shaped"
 		}
 	],
 	"minecraft_tnt": [
@@ -877,8 +941,8 @@
 			"type": "ars_nouveau:glyph"
 		},
 		{
-			"id": "tconstruct:tools/modifiers/upgrade/severing",
-			"type": "tconstruct:modifier"
+			"id": "immersive_aircraft:bomb_bay",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "quark:tweaks/crafting/utility/misc/tnt_minecart",
@@ -890,10 +954,6 @@
 		},
 		{
 			"id": "everythingcopper:tnt_copper_minecart",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "fallout_wastelands_:landminecraft",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -909,6 +969,18 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "pneumaticcraft:stomp_upgrade",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "tconstruct:tools/modifiers/upgrade/severing",
+			"type": "tconstruct:modifier"
+		},
+		{
+			"id": "fallout_wastelands_:landminecraft",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "tconstruct:tools/severing/creeper_tnt",
 			"type": "tconstruct:severing"
 		},
@@ -919,20 +991,18 @@
 		{
 			"id": "minecraft:tnt",
 			"type": "minecraft:crafting_shaped"
-		},
-		{
-			"id": "pneumaticcraft:stomp_upgrade",
-			"type": "minecraft:crafting_shaped"
 		}
 	],
 	"kubejs_seared_machine_casing": [],
 	"kubejs_scorched_machine_casing": [],
 	"kubejs_andesite_machine_casing": [],
 	"kubejs_brass_machine_casing": [],
-	"kubejs_power_grid_machine_casing": [],
-	"kubejs_oc2r_machine_casing": [],
+	"kubejs_airtight_machine_casing": [],
+	"kubejs_electrical_machine_casing": [],
+	"kubejs_circuited_machine_casing": [],
 	"kubejs_space_machine_casing": [],
-	"kubejs_ae2_machine_casing": [],
+	"kubejs_raw_impossible_casing": [],
+	"kubejs_impossible_machine_casing": [],
 	"bloodmagic_weakbloodorb": [
 		{
 			"id": "bloodmagic:arc/reversion/weak_blood_orb",
@@ -965,10 +1035,5 @@
 			"type": "minecraft:crafting_shaped"
 		}
 	],
-	"acid_vat": [
-		{
-			"id": "acid_vat:acid_vat",
-			"type": "minecraft:crafting_shaped"
-		}
-	]
+	"acid_vat": []
 }

@@ -4,6 +4,11 @@
   "baseRolls": 0,
   "rollsPerKill": 1,
   "damagePerBonusRoll": 22.0,
+  "killCurrency": {
+    "item": "kubejs:gold_coin",
+    "perKill": 1,
+    "burstSize": 4
+  },
   "pools": [
     {
       "id": "end_salvage",

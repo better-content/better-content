@@ -21,32 +21,32 @@
 			rewards: [
 				{
 					count: 4
-					id: "24A1711519B1505C"
-					item: "dotcoinmod:copper_coin"
+					id: "10028B8953B36717"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "1DF13084681AD62B"
-					item: "dotcoinmod:iron_coin"
+					id: "08FD23854F200DFC"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "23BB6B55DAAF5FCE"
-					item: "dotcoinmod:brass_coin"
+					id: "62265A0D3B09856F"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "19F1AC43565C2996"
-					item: "dotcoinmod:gold_coin"
+					id: "07BC8DCF9AC656A9"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "7EE9EBD4AC4885DA"
-					item: "dotcoinmod:platinum_coin"
+					id: "18CC44E6E02377FD"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -76,31 +76,31 @@
 				{
 					count: 4
 					id: "106DE5F10124268A"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "7B29C47395D97293"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6EF017C6AF92A633"
-					item: "dotcoinmod:brass_coin"
+					id: "1D97951C6CECD185"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "0B12DA312D034A0E"
-					item: "dotcoinmod:gold_coin"
+					id: "44FEFF4C2C6AF40B"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "1839AE39611299EB"
-					item: "dotcoinmod:platinum_coin"
+					id: "04DA311328C6AEEB"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -109,12 +109,12 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "4990702338409E84"
+					id: "3C65558B7590D5E3"
 					item: "minecraft:map"
 					type: "item"
 				}
 				{
-					id: "6ABA00FDD760B854"
+					id: "173A65534D8B3CB3"
 					item: "minecraft:compass"
 					type: "item"
 				}
@@ -133,36 +133,36 @@
 			hide_dependency_lines: false
 			icon: "minecraft:rail"
 			icon_scale: 1.18d
-			id: "29A3A909EE4E7BF4"
+			id: "3A7E950B1B50265C"
 			rewards: [
 				{
 					count: 4
-					id: "220D80332D3587AA"
-					item: "dotcoinmod:copper_coin"
+					id: "49D7D45115D7EECA"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "27E3F87A0D970992"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "4FF5EAAD7A20D107"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6019786AC3DEEA24"
-					item: "dotcoinmod:gold_coin"
+					id: "190ACE4CD16CC01B"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "5EF7E239F364114B"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -176,7 +176,7 @@
 					type: "item"
 				}
 				{
-					id: "396AA9AE3626A97F"
+					id: "52728D2886790B3F"
 					item: "minecraft:minecart"
 					type: "item"
 				}
@@ -194,36 +194,36 @@
 			]
 			hide_dependency_lines: false
 			icon: "minecraft:golden_apple"
-			id: "0302E7E63BB2CBD1"
+			id: "541F776C07F88B5F"
 			rewards: [
 				{
 					count: 4
 					id: "5CC8A1DF44186A7D"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "4DA0CC9306DE7C99"
-					item: "dotcoinmod:iron_coin"
+					id: "039C53482FB55495"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2244FBBCB43960A6"
-					item: "dotcoinmod:brass_coin"
+					id: "3920AE7528177702"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "5913E7159E9D9516"
-					item: "dotcoinmod:gold_coin"
+					id: "671BE1F677E3D7BB"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "49FEC7FFEE5EAA41"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -253,37 +253,37 @@
 				"World loot and coins are part of the crafting economy. Treat recovered city loot as a resource stream that still has to be hauled home."
 			]
 			hide_dependency_lines: false
-			icon: "dotcoinmod:gold_coin"
-			id: "1C6633D016BCAD8A"
+			icon: "createdeco:gold_coin"
+			id: "54B7CE5BCDC0839D"
 			rewards: [
 				{
 					count: 4
 					id: "23BC720E268234A7"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "30EA2E7D938A042D"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "45F939160CF9DCD8"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "3D4ED3A88F551E72"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "551BF592FF328845"
-					item: "dotcoinmod:platinum_coin"
+					id: "1B2C7EDE60387ECE"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -293,7 +293,7 @@
 			tasks: [
 				{
 					id: "0EFC0B72BF6A289E"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
@@ -320,31 +320,31 @@
 				{
 					count: 4
 					id: "1C006014917C210F"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "25E7668860F01C78"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "18D17CBEF85D7841"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "0712765C3A6285EA"
-					item: "dotcoinmod:gold_coin"
+					id: "76A24E9D8AB7738C"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "5A4AB569EB1BAD09"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -363,7 +363,7 @@
 					type: "item"
 				}
 				{
-					id: "0B37D4FEEAA2AD43"
+					id: "1E7F23F0323B5EF7"
 					item: "minecraft:lantern"
 					type: "item"
 				}

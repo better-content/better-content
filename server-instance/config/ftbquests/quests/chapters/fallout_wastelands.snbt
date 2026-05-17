@@ -3,7 +3,7 @@
 	default_quest_shape: "rsquare"
 	filename: "fallout_wastelands"
 	group: "3BF99559A31D6EB4"
-	id: "1DA395A6DB19ED8B"
+	id: "5F3F6D6328964D4C"
 	order_index: 7
 	quest_links: [ ]
 	quests: [
@@ -20,32 +20,32 @@
 			rewards: [
 				{
 					count: 4
-					id: "27FBE2E305FE2D3A"
-					item: "dotcoinmod:copper_coin"
+					id: "07478AB428620C6A"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "5650E2094D14639D"
-					item: "dotcoinmod:iron_coin"
+					id: "3CB682684C4F4B8C"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "137197C09AA34E9E"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "5EBA9383DBDA8985"
-					item: "dotcoinmod:gold_coin"
+					id: "5C5BDFE5D5519BBD"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "330138BFB4EF2B00"
-					item: "dotcoinmod:platinum_coin"
+					id: "32EB1EF16403F447"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -54,12 +54,12 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "1B2B6317AF62C019"
+					id: "7D1D1593EF760AAA"
 					item: "fallout_wastelands_:portal_frame"
 					type: "item"
 				}
 				{
-					id: "14735D6053DE946E"
+					id: "7C9921224E8E0914"
 					item: {
 						Count: 1
 						id: "fallout_wastelands_:wastelands"
@@ -89,36 +89,36 @@
 				}
 			}
 			icon_scale: 1.18d
-			id: "34469CBCD0942FD5"
+			id: "045F19637FDD1A41"
 			rewards: [
 				{
 					count: 4
 					id: "19B02CF5B595A240"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "625B928B37D388A0"
-					item: "dotcoinmod:iron_coin"
+					id: "535118E58BC7BB8B"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "14448ACD03E8BEF1"
-					item: "dotcoinmod:brass_coin"
+					id: "678EB1E7FA09AEEC"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "7F1ADC6850682222"
-					item: "dotcoinmod:gold_coin"
+					id: "1D06061C1891387E"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "4C419ACAFB93E99B"
-					item: "dotcoinmod:platinum_coin"
+					id: "06A0E52DEEAA25E0"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -160,36 +160,36 @@
 			]
 			hide_dependency_lines: false
 			icon: "fallout_wastelands_:dented_can"
-			id: "1648015D57B60570"
+			id: "48387E9DFE57F477"
 			rewards: [
 				{
 					count: 4
 					id: "3B0606BB454EF72C"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "06071F6FA88F3FD6"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "375519AF3777E439"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "39D2C77999EDFD61"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "5A4B2C1A745555A1"
-					item: "dotcoinmod:platinum_coin"
+					id: "017188B04DA5F23B"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -203,7 +203,7 @@
 					type: "item"
 				}
 				{
-					id: "4AB519B972CD3AE2"
+					id: "7CCDC5AF7ECCA324"
 					item: "fallout_wastelands_:copperwires"
 					type: "item"
 				}
@@ -219,36 +219,36 @@
 			]
 			hide_dependency_lines: false
 			icon: "fallout_wastelands_:cram"
-			id: "42AAE08D1C00BA38"
+			id: "15B433189AFEA744"
 			rewards: [
 				{
 					count: 4
-					id: "0E1969AEF886DB18"
-					item: "dotcoinmod:copper_coin"
+					id: "57DC93531A99AF46"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "0A9ECAF766B89ADD"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "073C451723D42701"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2615A3246A6C4B37"
-					item: "dotcoinmod:gold_coin"
+					id: "4F3B713F28023E8E"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "09EAA66CC8CAECB8"
-					item: "dotcoinmod:platinum_coin"
+					id: "0AAFC9A50FFBB6DD"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -262,7 +262,7 @@
 					type: "item"
 				}
 				{
-					id: "36B3A36A37F75053"
+					id: "2DE042DD436753FB"
 					item: "fallout_wastelands_:canned_beef"
 					type: "item"
 				}
@@ -278,36 +278,36 @@
 			]
 			hide_dependency_lines: false
 			icon: "fallout_wastelands_:advanced_motherboard"
-			id: "34C9B7FF384FC508"
+			id: "2F189C0D10E43133"
 			rewards: [
 				{
 					count: 4
-					id: "7C90859AD10B1CB5"
-					item: "dotcoinmod:copper_coin"
+					id: "1801E8934299221C"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "793567AD2869DF46"
-					item: "dotcoinmod:iron_coin"
+					id: "725EE0630814B51B"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "160C85CE65BDA64C"
-					item: "dotcoinmod:brass_coin"
+					id: "105BF89AC0F0FE4C"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "1F46854947368CF4"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "3F882B176557CDE1"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -316,12 +316,12 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "0AFD4C2A188A8D3B"
+					id: "4AFCB207D4A03FD6"
 					item: "fallout_wastelands_:advanced_motherboard"
 					type: "item"
 				}
 				{
-					id: "7A910CFE57C4AD76"
+					id: "5F31D478830BD60A"
 					item: "fallout_wastelands_:advanced_motor"
 					type: "item"
 				}
@@ -343,36 +343,36 @@
 					Damage: 0
 				}
 			}
-			id: "2532E0E90FE4BE02"
+			id: "3A9C51AABDE03D4B"
 			rewards: [
 				{
 					count: 4
 					id: "733A343AA8E4CDF2"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "18BFFC2DC67A30AE"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2A6061979623058E"
-					item: "dotcoinmod:brass_coin"
+					id: "1DA89B6E5330A52A"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "58B678B064EFC502"
-					item: "dotcoinmod:gold_coin"
+					id: "62BD3360A4B4BA07"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "5F8EB6BB92EAE1AA"
-					item: "dotcoinmod:platinum_coin"
+					id: "2AA90A957CFA7E4E"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -406,32 +406,32 @@
 			rewards: [
 				{
 					count: 4
-					id: "56D45A30D7474484"
-					item: "dotcoinmod:copper_coin"
+					id: "612E30ABFC8482AF"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "027ED87120E7D1EE"
-					item: "dotcoinmod:iron_coin"
+					id: "6B1D9CAC94DFE4D6"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "4D678606479D6A4F"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "6D834951DBDB126B"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "1DF40AF3522C9395"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -439,7 +439,7 @@
 			size: 1.75d
 			subtitle: "Process"
 			tasks: [{
-				id: "13AE7E7BE7017201"
+				id: "064E281F89191963"
 				item: "fallout_wastelands_:bas_ecore"
 				type: "item"
 			}]
@@ -462,36 +462,36 @@
 				}
 			}
 			icon_scale: 1.18d
-			id: "751245D0A3FE56D4"
+			id: "6FAEA0EB4D2C7027"
 			rewards: [
 				{
 					count: 4
-					id: "36E5F1BF78179792"
-					item: "dotcoinmod:copper_coin"
+					id: "6321D4CFBFBCA8B3"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "13D5930542987B46"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "4DD82AFD0138ED0A"
-					item: "dotcoinmod:brass_coin"
+					id: "5AB8092BDF588BEF"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "798EF6A703CF23C9"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "1FE47DEA128B4068"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -511,7 +511,7 @@
 					type: "item"
 				}
 				{
-					id: "6CDCCB48878AA867"
+					id: "77306E148892D9E0"
 					item: {
 						Count: 1
 						id: "fallout_wastelands_:apa_1_helmet"

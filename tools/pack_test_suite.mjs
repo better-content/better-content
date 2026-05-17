@@ -9,8 +9,8 @@ const defaultInstance = '/home/gerald/.local/share/PrismLauncher/instances/Bound
 const instance = process.env.BTM_INSTANCE || defaultInstance
 const generatedConfigDir = path.join(instance, 'kubejs/config')
 const generatedDumpDir = path.join(instance, 'dump/data_raw')
-const docsDir = path.join(repo, 'docs')
-fs.mkdirSync(docsDir, { recursive: true })
+const reportDir = process.env.BTM_REPORT_DIR || path.join(repo, 'generated', 'validation')
+fs.mkdirSync(reportDir, { recursive: true })
 
 const hardFailures = []
 const softFindings = []
@@ -1057,11 +1057,13 @@ ${JSON.stringify(metrics, null, 2)}
 \`\`\`
 `
 
-fs.writeFileSync(path.join(docsDir, 'automated_test_report.md'), report)
-fs.writeFileSync(path.join(docsDir, 'automated_test_summary.json'), JSON.stringify(summary, null, 2) + '\n')
+const reportPath = path.join(reportDir, 'automated_test_report.md')
+const summaryPath = path.join(reportDir, 'automated_test_summary.json')
+fs.writeFileSync(reportPath, report)
+fs.writeFileSync(summaryPath, JSON.stringify(summary, null, 2) + '\n')
 
 if (hardFailures.length) {
-  console.error(`\n${hardFailures.length} hard failure(s). See docs/automated_test_report.md`)
+  console.error(`\n${hardFailures.length} hard failure(s). See ${path.relative(repo, reportPath)}`)
   process.exit(1)
 }
-console.log(`\npack test suite passed with ${softFindings.length} soft finding(s). See docs/automated_test_report.md`)
+console.log(`\npack test suite passed with ${softFindings.length} soft finding(s). See ${path.relative(repo, reportPath)}`)

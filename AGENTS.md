@@ -24,7 +24,7 @@ The repo is the authoritative content layer, not a live Minecraft instance. Trea
 - `shaderpacks/`
 - `mods/*.pw.toml`
 - custom bundled jars in `mods/`
-- `docs/` summaries, audits, plans, and current validation reports
+- `docs/` five living Markdown summaries only
 - `tools/`
 
 Treat these as generated or runtime state:
@@ -46,7 +46,7 @@ Do not sync or delete player/runtime state by default. Use explicit reset flags 
 - `kubejs/server_scripts/`: progression and recipe overrides (authoritative)
 - `kubejs/startup_scripts/`: startup hooks only
 - `config/`, `defaultconfigs/`: mod behavior + server/world defaults
-- `docs/`: audits, plans, validation evidence
+- `docs/`: five living Markdown docs; concise current conclusions only
 - `tools/`: test/profiling/worldgen harness scripts
 - `server-instance/`: generated dedicated server runtime; sync from source before launching
 
@@ -76,8 +76,8 @@ Use the portable harness layer for repeatable runtime tests instead of hand-buil
   - fatal log classifiers,
   - activity signatures,
   - scenario phases and console commands.
-- Keep scenario scripts deterministic and disposable. They should create fresh server/client runtimes under `/tmp`, use direct launchers only, and write compact summaries under `docs/<scenario>/<stamp>/summary.{json,md}`.
-- Keep bulky raw logs, crash reports, thread dumps, heap info, and generated worlds under the `/tmp` run root. Commit summaries when they are useful evidence; do not commit raw runtime directories.
+- Keep scenario scripts deterministic and disposable. They should create fresh server/client runtimes under `/tmp`, use direct launchers only, and write machine summaries under the disposable run root.
+- Keep raw logs, crash reports, thread dumps, heap info, generated worlds, and per-run summaries under the `/tmp` run root. Commit only concise conclusions in `docs/runtime_validation.md` or `docs/performance_and_mods.md` when useful.
 - Harness scripts are repo tooling, not pack content. `tools/` must stay excluded from packwiz via `.packwizignore`; verify with `rg '^file = "tools/' index.toml` after `packwiz refresh`.
 - Do not make a stability harness pass by disabling the feature being tested. Required mods and features must stay enabled unless the user explicitly asks for an exclusion experiment.
 - Prefer adding a new scenario wrapper over copying launcher/process code. If a new test needs generic behavior, add it to `portable_minecraft_harness.py` and keep scenario-specific behavior in the scenario file.
@@ -101,7 +101,7 @@ Current LC/DH scenario:
 2. Run relevant `tools/` harness/tests.
 3. Confirm recipe visibility (EMI/JEI-facing paths).
 4. Recheck known chokepoints (alloy, casing, grout, gates, coins/trades).
-5. Record findings in `docs/`.
+5. Record concise findings in the relevant living doc under `docs/`.
 
 Recommended validation ladder:
 1. Static checks: `node --check` for touched JS, JSON parsing for touched data, and targeted validators such as `node tools/validate_kubejs_assets.mjs`.

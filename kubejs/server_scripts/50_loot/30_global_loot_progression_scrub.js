@@ -52,6 +52,25 @@ var BTM_LOOT_REMOVE_ITEMS = [
     'irons_spellbooks:netherite_mage_helmet',
     'irons_spellbooks:netherite_mage_leggings',
     'irons_spellbooks:netherite_spell_book',
+    'irons_spellbooks:blood_upgrade_orb',
+    'irons_spellbooks:cooldown_upgrade_orb',
+    'irons_spellbooks:diamond_spell_book',
+    'irons_spellbooks:dragonskin_spell_book',
+    'irons_spellbooks:eldritch_manuscript',
+    'irons_spellbooks:ender_upgrade_orb',
+    'irons_spellbooks:epic_ink',
+    'irons_spellbooks:evocation_upgrade_orb',
+    'irons_spellbooks:fire_upgrade_orb',
+    'irons_spellbooks:holy_upgrade_orb',
+    'irons_spellbooks:ice_upgrade_orb',
+    'irons_spellbooks:legendary_ink',
+    'irons_spellbooks:lesser_spell_slot_upgrade',
+    'irons_spellbooks:lightning_upgrade_orb',
+    'irons_spellbooks:mana_upgrade_orb',
+    'irons_spellbooks:nature_upgrade_orb',
+    'irons_spellbooks:protection_upgrade_orb',
+    'irons_spellbooks:rare_ink',
+    'irons_spellbooks:upgrade_orb',
     'littlelogistics:creative_capacitor',
     'malum:creative_scythe',
     'minecraft:elytra',
@@ -125,6 +144,26 @@ var BTM_LOOT_EMERALD_TABLES_TO_COIN = [
     'minecraft:chests/village/village_weaponsmith'
 ]
 
+var BTM_LOOT_HIGH_TIER_IRONS_SCROLL_TABLES = [
+    'irons_spellbooks:chests/additional_ancient_city_loot',
+    'irons_spellbooks:chests/additional_end_city_loot',
+    'irons_spellbooks:chests/additional_good_loot',
+    'irons_spellbooks:chests/additional_treasure_loot',
+    'irons_spellbooks:chests/catacombs/hidden_trough_treasure',
+    'irons_spellbooks:chests/citadel/citadel_vault',
+    'irons_spellbooks:chests/citadel/spawner_reward',
+    'irons_spellbooks:chests/generic_magic_treasure',
+    'irons_spellbooks:chests/trial_chambers/additional_ominous_vault_loot',
+    'irons_spellbooks:entities/additional_dragon_loot',
+    'irons_spellbooks:entities/citadel_keeper',
+    'irons_spellbooks:entities/dead_king',
+    'irons_spellbooks:entities/fire_boss',
+    'irons_spellbooks:entities/fire_boss_per_player',
+    'irons_spellbooks:magic_items/good_ink',
+    'irons_spellbooks:magic_items/great_ink',
+    'irons_spellbooks:magic_items/reward_ink'
+]
+
 LootJS.modifiers(function (event) {
     var allLoot = event.addLootTableModifier(/.*/)
     for (var i = 0; i < BTM_LOOT_REMOVE_ITEMS.length; i++) {
@@ -134,5 +173,10 @@ LootJS.modifiers(function (event) {
     for (var j = 0; j < BTM_LOOT_EMERALD_TABLES_TO_COIN.length; j++) {
         event.addLootTableModifier(BTM_LOOT_EMERALD_TABLES_TO_COIN[j])
             .replaceLoot('minecraft:emerald', Item.of('createdeco:copper_coin', 4), true)
+    }
+
+    for (var k = 0; k < BTM_LOOT_HIGH_TIER_IRONS_SCROLL_TABLES.length; k++) {
+        event.addLootTableModifier(BTM_LOOT_HIGH_TIER_IRONS_SCROLL_TABLES[k])
+            .removeLoot('irons_spellbooks:scroll')
     }
 })

@@ -3,7 +3,7 @@
 	default_quest_shape: "rsquare"
 	filename: "little_logistics"
 	group: "666B73C638A92906"
-	id: "0B3E06E1FC0F6D29"
+	id: "0C0CE8F408558D6A"
 	order_index: 3
 	quest_links: [ ]
 	quests: [
@@ -23,26 +23,26 @@
 			rewards: [
 				{
 					count: 4
-					id: "6C605E1B4CDB844B"
-					item: "dotcoinmod:copper_coin"
+					id: "7E8CC3F551805493"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "3C678EAB6B78BE8D"
-					item: "dotcoinmod:iron_coin"
+					id: "6E7969508832A3C1"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6BCE9909E3FBD383"
-					item: "dotcoinmod:brass_coin"
+					id: "3BE85F37F1A5679B"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "7A3E14CE93839817"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -50,7 +50,7 @@
 			size: 1.75d
 			subtitle: "Process"
 			tasks: [{
-				id: "60FA923304EE7382"
+				id: "193F0E24A318E3F0"
 				item: "littlelogistics:energy_tug"
 				type: "item"
 			}]
@@ -66,30 +66,30 @@
 			]
 			hide_dependency_lines: false
 			icon: "littlelogistics:chest_barge"
-			id: "2ACA36CC305236DD"
+			id: "12425423EECABA68"
 			rewards: [
 				{
 					count: 4
 					id: "52E9035E78E2DA9F"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "3620D1872E189ADD"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "3D16F76E8619C670"
-					item: "dotcoinmod:brass_coin"
+					id: "68182EF3B2A9FB2D"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "5F88A91EFD40FA00"
-					item: "dotcoinmod:gold_coin"
+					id: "22B273011F1C4A63"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -129,25 +129,25 @@
 				{
 					count: 4
 					id: "71C73505FBDC8624"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "365A9F81AE3D2511"
-					item: "dotcoinmod:iron_coin"
+					id: "68DCD267EB14DD97"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "3B15B8DC28FB2861"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "0F62237EEAAB5272"
-					item: "dotcoinmod:gold_coin"
+					id: "48CF2AF21063C2B5"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -155,7 +155,7 @@
 			size: 1.75d
 			subtitle: "Process"
 			tasks: [{
-				id: "038210A1D6EB2908"
+				id: "57470FBE08D825DC"
 				item: "littlelogistics:vessel_charger"
 				type: "item"
 			}]
@@ -171,30 +171,30 @@
 			]
 			hide_dependency_lines: false
 			icon: "littlelogistics:energy_locomotive"
-			id: "163428FBFE575CEB"
+			id: "0D8406052ED0CD0B"
 			rewards: [
 				{
 					count: 4
-					id: "03AF21107B686013"
-					item: "dotcoinmod:copper_coin"
+					id: "7E93B361559B378C"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "1CFED1CCCC0C925A"
-					item: "dotcoinmod:iron_coin"
+					id: "5A0CFD629966191F"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "0E206734284BB15C"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "02607A8B6BB64C2A"
-					item: "dotcoinmod:gold_coin"
+					id: "19AFBF94D4D159E8"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -223,26 +223,26 @@
 			rewards: [
 				{
 					count: 4
-					id: "0AF88C5623E35966"
-					item: "dotcoinmod:copper_coin"
+					id: "629170898AD97021"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "51F22EBBD79FD3F2"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "7AA735167312F66B"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "1AEA4DA50177CBBF"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -256,7 +256,7 @@
 					type: "item"
 				}
 				{
-					id: "4B05AC3E7FFE7FD5"
+					id: "57F56A0860C44E8E"
 					item: "littlelogistics:transmitter_component"
 					type: "item"
 				}
@@ -274,30 +274,30 @@
 			]
 			hide_dependency_lines: false
 			icon: "littlelogistics:energy_tug"
-			id: "12EA1A0DDE6364B4"
+			id: "1A6D52DE64C755AE"
 			rewards: [
 				{
 					count: 4
 					id: "022E80114A7D7EFE"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "499F2DABB9EE7FE0"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "59FE0D754959D9F2"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "3D128EF6A9E77AC3"
-					item: "dotcoinmod:gold_coin"
+					id: "2DAF1D9A6EB3D872"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -306,12 +306,12 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "7D552B56E2300C6A"
+					id: "470BCF987542AE6D"
 					item: "littlelogistics:energy_tug"
 					type: "item"
 				}
 				{
-					id: "014B8BD54C5B104D"
+					id: "44E24C9F5A2287A0"
 					item: "littlelogistics:receiver_component"
 					type: "item"
 				}

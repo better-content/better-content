@@ -6,7 +6,7 @@ import vm from 'node:vm'
 const repo = process.cwd()
 const scriptRoot = path.join(repo, 'kubejs/server_scripts')
 const dumpDir = path.join(repo, 'generated/runtime-dumps/kubejs-config')
-const outDir = path.join(repo, 'docs/generated')
+const outDir = process.env.OUT_DIR || path.join(repo, 'generated', 'validation')
 const outJson = path.join(outDir, 'indirect_casing_economy_audit.json')
 
 const CRAFTING_TYPES = new Set([

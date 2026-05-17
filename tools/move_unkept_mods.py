@@ -256,7 +256,7 @@ def main() -> int:
         else:
             root_move.append(path)
 
-    report = ROOT / "docs" / "ram_profile" / "oldmods_move_plan_20260506.txt"
+    report = Path(os.environ.get("REPORT_PATH", str(ROOT / "generated" / "validation" / "oldmods_move_plan_20260506.txt")))
     report.parent.mkdir(parents=True, exist_ok=True)
     report.write_text(
         "\n".join(

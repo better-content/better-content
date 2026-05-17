@@ -3,7 +3,7 @@
 	default_quest_shape: "rsquare"
 	filename: "occultism"
 	group: "77AFAA45BDFC5D88"
-	id: "0E2BE4E17A39DF32"
+	id: "246EE9B1ADC6078F"
 	order_index: 6
 	quest_links: [ ]
 	quests: [
@@ -20,31 +20,31 @@
 				{
 					count: 4
 					id: "23FD4D04C0AC4840"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "1606FDA660183A46"
-					item: "dotcoinmod:iron_coin"
+					id: "2468DC0249C6494B"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "4EDA218A5B559ED6"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "765EF941D3333063"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "26FB3B87BB3C163F"
-					item: "dotcoinmod:platinum_coin"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -52,7 +52,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "6555C3FB48CAA442"
+				id: "4B9C2FA8B91F5D70"
 				item: "occultism:chalk_white_impure"
 				type: "item"
 			}]
@@ -69,36 +69,36 @@
 			hide_dependency_lines: false
 			icon: "occultism:sacrificial_bowl"
 			icon_scale: 1.18d
-			id: "1E5CF25E1F8BEF2B"
+			id: "7033ACC2C3B7234B"
 			rewards: [
 				{
 					count: 4
 					id: "60804732F152B433"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "746CE95A00D4E771"
-					item: "dotcoinmod:iron_coin"
+					id: "2383ED973AB2E2BD"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "75C8F6441FC01E42"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "4C8394F1BD763147"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "0976F58145106B36"
-					item: "dotcoinmod:platinum_coin"
+					id: "32D249A542B9D1C1"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -107,7 +107,7 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "737D4D8A9FD7B94C"
+					id: "221743D658A2C831"
 					item: "occultism:sacrificial_bowl"
 					type: "item"
 				}
@@ -133,31 +133,31 @@
 				{
 					count: 4
 					id: "0D49DB377C06D0EE"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "6210E7455A2F5494"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "1C502E1F0D36B595"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "103B41C6461567B5"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "568E62C59F9E8818"
-					item: "dotcoinmod:platinum_coin"
+					id: "7D9824EDD415E4D3"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -187,31 +187,31 @@
 				{
 					count: 4
 					id: "75C07A355E76E1AE"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "370E7EE73A99C047"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "5FD78AB725755648"
-					item: "dotcoinmod:brass_coin"
+					id: "151929DE7CFDDC93"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "439EFF2FE08CCC5D"
-					item: "dotcoinmod:gold_coin"
+					id: "5D35287FB3AD5FF5"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "4CC3ED6970E77D2E"
-					item: "dotcoinmod:platinum_coin"
+					id: "497B184B23808063"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -239,32 +239,32 @@
 			rewards: [
 				{
 					count: 4
-					id: "606D730F96B712F5"
-					item: "dotcoinmod:copper_coin"
+					id: "1CE70ECDC55D0F29"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "57EEAB69AB19CD70"
-					item: "dotcoinmod:iron_coin"
+					id: "5C80775215C0E40F"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "32A1499ECE96060E"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "02264F8AF127D59C"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "18C7E2B562EB4981"
-					item: "dotcoinmod:platinum_coin"
+					id: "13FC133BD8380EFA"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]
@@ -289,36 +289,36 @@
 			hide_dependency_lines: false
 			icon: "occultism:dimensional_matrix"
 			icon_scale: 1.18d
-			id: "524039D6AD4EC6EB"
+			id: "1D1A21705F432D65"
 			rewards: [
 				{
 					count: 4
 					id: "0EEC89858A4B42C8"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "09E69401DC3FEADF"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "59E36F106E692C31"
-					item: "dotcoinmod:brass_coin"
+					id: "7AACA8465A694250"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "23B6B5E3086BB82E"
-					item: "dotcoinmod:gold_coin"
+					id: "348CECB0083C9BFF"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6578B37D18A2D52A"
-					item: "dotcoinmod:platinum_coin"
+					id: "651F2DC9CC09EC63"
+					item: "createdeco:netherite_coin"
 					type: "item"
 				}
 			]

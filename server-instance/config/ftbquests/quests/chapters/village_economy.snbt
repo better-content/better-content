@@ -3,7 +3,7 @@
 	default_quest_shape: "rsquare"
 	filename: "village_economy"
 	group: "3570F9CE90E09BD1"
-	id: "48EADD859C7E5455"
+	id: "298A35211A6D9E0E"
 	order_index: 1
 	quest_links: [ ]
 	quests: [
@@ -17,19 +17,19 @@
 			hide_dependency_lines: false
 			icon: "tradingpost:trading_post"
 			icon_scale: 1.18d
-			id: "2C0E2EDCF3BAC91B"
+			id: "0596574AB1E0540B"
 			min_width: 2
 			rewards: [
 				{
 					count: 4
 					id: "67FB72153DC065A5"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2CBD18A4EE0E07FE"
-					item: "dotcoinmod:iron_coin"
+					id: "45E72BE99F30A005"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -54,18 +54,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "wares:cardboard_box"
-			id: "21BA309D9514B497"
+			id: "366359923DEE7C30"
 			rewards: [
 				{
 					count: 4
 					id: "5651F8E7486A6684"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "7E63F2ED8113E664"
-					item: "dotcoinmod:iron_coin"
+					id: "684BFBBE882AFED0"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -73,7 +73,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "194F81E9C09EAB36"
+				id: "3D4C30E553535410"
 				item: "wares:cardboard_box"
 				type: "item"
 			}]
@@ -90,19 +90,19 @@
 			]
 			hide_dependency_lines: false
 			icon: "wares:delivery_agreement"
-			id: "2D5BC3D32D54287A"
+			id: "425EDE7B07F887F3"
 			min_width: 2
 			rewards: [
 				{
 					count: 4
 					id: "6815FD6BE1514F6F"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "1949A8CAF92FFF0A"
-					item: "dotcoinmod:iron_coin"
+					id: "06031B7B2CF64B8C"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -110,7 +110,7 @@
 			size: 1.0d
 			subtitle: "Economy"
 			tasks: [{
-				id: "76E22F6EAA6CA794"
+				id: "110C9D86C8CE0DBC"
 				item: "wares:delivery_agreement"
 				type: "item"
 			}]
@@ -127,19 +127,19 @@
 			hide_dependency_lines: false
 			icon: "wares:completed_delivery_agreement"
 			icon_scale: 1.18d
-			id: "57B83CD67B7004E6"
+			id: "6156F884EB695C76"
 			min_width: 2
 			rewards: [
 				{
 					count: 4
-					id: "6911878BB2CC03B7"
-					item: "dotcoinmod:copper_coin"
+					id: "58F9FD00DE1A3C94"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "3C13A2CABE995A43"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -167,14 +167,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "7CAA4DE6AD0FE3F9"
-					item: "dotcoinmod:copper_coin"
+					id: "059C7032A867B1B8"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "5BEE730D59686C0E"
-					item: "dotcoinmod:iron_coin"
+					id: "14A4D7EC44FBB71A"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -209,14 +209,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "7EAD050CE7060846"
-					item: "dotcoinmod:copper_coin"
+					id: "5AB3B58A6EED93B9"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "269DB7FB302FE14D"
-					item: "dotcoinmod:iron_coin"
+					id: "095576EC7B1DB5A2"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -225,7 +225,7 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "02D2155C2D5E8DB2"
+					id: "5D05B121B1087587"
 					item: "minecraft:stone_bricks"
 					type: "item"
 				}
@@ -253,13 +253,13 @@
 				{
 					count: 4
 					id: "000CB72292BA7B20"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "10148D6E5DFE271B"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -268,12 +268,12 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "077B00B95E5933DA"
+					id: "267037D9FA0E7C12"
 					item: "minecraft:dirt_path"
 					type: "item"
 				}
 				{
-					id: "374304ABE36DE701"
+					id: "1E2061F121F32D76"
 					item: "minecraft:gravel"
 					type: "item"
 				}
@@ -294,20 +294,20 @@
 				"Higher coins come from harder chapters, loot, and combat loops. They should not be convertible downward or upward in bulk."
 			]
 			hide_dependency_lines: false
-			icon: "dotcoinmod:iron_coin"
+			icon: "createdeco:iron_coin"
 			id: "0E23D408551CB9E5"
 			min_width: 2
 			rewards: [
 				{
 					count: 4
 					id: "3C6F655B39A52F7A"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "73897497B73D199A"
-					item: "dotcoinmod:iron_coin"
+					id: "6B5A40AE44F10D33"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -317,7 +317,7 @@
 			tasks: [{
 				count: 8L
 				id: "719C476C5342C212"
-				item: "dotcoinmod:iron_coin"
+				item: "createdeco:iron_coin"
 				type: "item"
 			}]
 			title: "Iron Coin Float"
@@ -332,21 +332,21 @@
 				"Brass coin trades are where villages begin supporting workshop recovery, logistics, and settlement upgrades."
 			]
 			hide_dependency_lines: false
-			icon: "dotcoinmod:brass_coin"
+			icon: "createdeco:brass_coin"
 			icon_scale: 1.18d
-			id: "09B835365EF2F043"
+			id: "52B9D39F72EDD3BA"
 			min_width: 2
 			rewards: [
 				{
 					count: 4
-					id: "63631621C086B895"
-					item: "dotcoinmod:copper_coin"
+					id: "1A47EC520ACDBC5C"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "1C3A3BB7686C7E93"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -355,8 +355,8 @@
 			subtitle: "Economy"
 			tasks: [{
 				count: 8L
-				id: "145CEC4277074757"
-				item: "dotcoinmod:brass_coin"
+				id: "1042EB6BFD9D69F9"
+				item: "createdeco:brass_coin"
 				type: "item"
 			}]
 			title: "Brass Coin Float"

@@ -3,7 +3,7 @@
 	default_quest_shape: "rsquare"
 	filename: "starting_out"
 	group: "52D8800CDEBBF5D6"
-	id: "03E92D264C1B3E20"
+	id: "39B0D572AEC8A037"
 	order_index: 0
 	quest_links: [ ]
 	quests: [
@@ -18,8 +18,8 @@
 			id: "6F243CE80DBB8E2A"
 			rewards: [{
 				count: 4
-				id: "57C2779B73E5D642"
-				item: "dotcoinmod:copper_coin"
+				id: "2B20B5A8685E8B38"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -43,11 +43,11 @@
 			]
 			hide_dependency_lines: false
 			icon: "minecraft:torch"
-			id: "556A58337338542D"
+			id: "3930620D3107F764"
 			rewards: [{
 				count: 4
 				id: "26588A1210F9C379"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -74,8 +74,8 @@
 			id: "090EB63A0287C66E"
 			rewards: [{
 				count: 4
-				id: "04C499D6BE6C3A6D"
-				item: "dotcoinmod:copper_coin"
+				id: "0B894BFD44EAB108"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -107,11 +107,11 @@
 			]
 			hide_dependency_lines: false
 			icon: "minecraft:white_bed"
-			id: "0D4B3E86350014A0"
+			id: "08B49CEC08CEFEE1"
 			rewards: [{
 				count: 4
-				id: "041536B24B1BA636"
-				item: "dotcoinmod:copper_coin"
+				id: "2A169148AC1C6B5D"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -138,15 +138,15 @@
 			id: "3B1D9FD547D211F5"
 			rewards: [{
 				count: 4
-				id: "1926F42E3981267A"
-				item: "dotcoinmod:copper_coin"
+				id: "75DC006755594703"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "3C64A5E04E158E59"
+				id: "10161547E98D3506"
 				item: "thirst:terracotta_water_bowl"
 				match_nbt: false
 				type: "item"
@@ -164,11 +164,11 @@
 			]
 			hide_dependency_lines: false
 			icon: "cold_sweat:sewing_table"
-			id: "3B8FA2DAC3E01B05"
+			id: "16A6F03BA6233611"
 			rewards: [{
 				count: 4
 				id: "69913050D1A203F1"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -192,11 +192,11 @@
 			]
 			hide_dependency_lines: false
 			icon: "farmersdelight:cooking_pot"
-			id: "2FAB36BAC5BE9B21"
+			id: "727457983E01A35E"
 			rewards: [{
 				count: 4
-				id: "234E31E2C26CFA0C"
-				item: "dotcoinmod:copper_coin"
+				id: "68F7AEEAC20C468B"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -204,7 +204,7 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "0C0AD7A2C3EFF425"
+					id: "6B8AB5BB9F0706F3"
 					item: "farmersdelight:cooking_pot"
 					type: "item"
 				}
@@ -236,8 +236,8 @@
 			id: "6512781196AA96D4"
 			rewards: [{
 				count: 4
-				id: "7D4B5B1B32D0CABC"
-				item: "dotcoinmod:copper_coin"
+				id: "14242ED0CEABCA07"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -261,18 +261,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "tconstruct:part_builder"
-			id: "66095B7A5C7E4596"
+			id: "1C7923B16D762EB4"
 			rewards: [{
 				count: 4
-				id: "6982D28CB1B08A6A"
-				item: "dotcoinmod:copper_coin"
+				id: "24B7F96F4D453901"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "57885A048BEA5C0D"
+				id: "796E0938D963905A"
 				item: "tconstruct:part_builder"
 				type: "item"
 			}]
@@ -289,18 +289,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "tconstruct:crafting_station"
-			id: "28D7763BA9316CEE"
+			id: "2F8ECB8507F6EF54"
 			rewards: [{
 				count: 4
-				id: "1B790E6313185ABA"
-				item: "dotcoinmod:copper_coin"
+				id: "12D70C12AEA93A85"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "53D67D67B2604298"
+				id: "0B46C819E4EE323B"
 				item: "tconstruct:crafting_station"
 				type: "item"
 			}]
@@ -316,11 +316,11 @@
 			]
 			hide_dependency_lines: false
 			icon: "tconstruct:repair_kit"
-			id: "7785B8CD85CA1CC3"
+			id: "6F2A44D05A977779"
 			rewards: [{
 				count: 4
 				id: "3A1FFE9E588BDA76"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -344,18 +344,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "rehooked:wood_hook"
-			id: "0CB71BE8D8A74441"
+			id: "7B819F89370A7A7A"
 			rewards: [{
 				count: 4
 				id: "5B1CA3EF8D5D5186"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "4DBFD26400CF6A7C"
+				id: "588D145C94C8CF08"
 				item: "rehooked:wood_hook"
 				type: "item"
 			}]
@@ -371,11 +371,11 @@
 			]
 			hide_dependency_lines: false
 			icon: "minecraft:tnt"
-			id: "3E57845B0EBCB3BE"
+			id: "42744800F8065266"
 			rewards: [{
 				count: 4
 				id: "3D193C08BFD3DC71"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -398,13 +398,13 @@
 				"Holding copper coins unlocks village trading. Coins are a crafting system, not just money."
 			]
 			hide_dependency_lines: false
-			icon: "dotcoinmod:copper_coin"
-			id: "4D6EB2119BEB0E6D"
+			icon: "createdeco:copper_coin"
+			id: "144D5F3DCB475484"
 			min_width: 2
 			rewards: [{
 				count: 4
-				id: "38E94C684DD14021"
-				item: "dotcoinmod:copper_coin"
+				id: "5482218038BF0D38"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -412,8 +412,8 @@
 			subtitle: "Economy"
 			tasks: [{
 				count: 16L
-				id: "090058FB54D8AF14"
-				item: "dotcoinmod:copper_coin"
+				id: "6C5E386C0B9D1120"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			title: "Sixteen Copper Coins"
@@ -433,7 +433,7 @@
 			rewards: [{
 				count: 4
 				id: "3B97D6F90B811CDE"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -441,7 +441,7 @@
 			subtitle: "Process"
 			tasks: [{
 				count: 16L
-				id: "6AEE6C3D8590CFE6"
+				id: "612011E39A4645EC"
 				item: "minecraft:netherrack"
 				type: "item"
 			}]
@@ -461,8 +461,8 @@
 			id: "0D9764524D21E957"
 			rewards: [{
 				count: 4
-				id: "0E94E709B6099CFB"
-				item: "dotcoinmod:copper_coin"
+				id: "2BC92D8746C7AA94"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -470,7 +470,7 @@
 			subtitle: "Process"
 			tasks: [{
 				count: 8L
-				id: "38CC97034AB3E736"
+				id: "16367904ACE0A9DC"
 				item: "tconstruct:grout"
 				type: "item"
 			}]
@@ -488,11 +488,11 @@
 			hide_dependency_lines: false
 			icon: "tconstruct:seared_melter"
 			icon_scale: 1.18d
-			id: "27934A4F5BF42390"
+			id: "0C508F4C060E5512"
 			rewards: [{
 				count: 4
 				id: "70BBAAAACEDBDA14"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -500,17 +500,17 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "08B19A227453CCCC"
+					id: "1D24BA4DD316433C"
 					item: "tconstruct:seared_melter"
 					type: "item"
 				}
 				{
-					id: "2C1E626E995CD960"
+					id: "30B3FF5FC4FD2B2A"
 					item: "tconstruct:seared_heater"
 					type: "item"
 				}
 				{
-					id: "724A3074A61F6794"
+					id: "2E2FEFADAA3CF63C"
 					item: "tconstruct:seared_faucet"
 					type: "item"
 				}
@@ -520,7 +520,7 @@
 					type: "item"
 				}
 				{
-					id: "106F9AAB36822B64"
+					id: "0972CC2D0C96DE2A"
 					item: "tconstruct:seared_table"
 					type: "item"
 				}
@@ -542,8 +542,8 @@
 			min_width: 2
 			rewards: [{
 				count: 4
-				id: "0C0D311D73245B60"
-				item: "dotcoinmod:copper_coin"
+				id: "57FDC3C47785315F"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "diamond"
@@ -574,14 +574,14 @@
 			rewards: [{
 				count: 4
 				id: "65A1A9D8D463F2B7"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "diamond"
 			size: 1.75d
 			subtitle: "Exit"
 			tasks: [{
-				id: "6BD75AA0AE9F8F5D"
+				id: "4370F2470A655534"
 				item: "rpgstats:still_beating_heart"
 				type: "item"
 			}]
@@ -598,12 +598,12 @@
 			]
 			hide_dependency_lines: false
 			icon: "minecraft:compass"
-			id: "2B65D216FD7625E0"
+			id: "1D19E68E441E71CA"
 			min_width: 2
 			rewards: [{
 				count: 4
 				id: "498255B39112C6B7"
-				item: "dotcoinmod:copper_coin"
+				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "diamond"
@@ -616,7 +616,7 @@
 					type: "item"
 				}
 				{
-					id: "757DF9F82B42FC75"
+					id: "4FB7464614579636"
 					item: "minecraft:map"
 					type: "item"
 				}

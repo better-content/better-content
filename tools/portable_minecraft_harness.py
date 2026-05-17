@@ -66,13 +66,13 @@ class PortableMinecraftHarness:
         self.args = args
         self.stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
         self.run_root = Path(args.run_root or config.default_run_parent / self.stamp).resolve()
-        self.docs_dir = self.repo_root / "docs" / config.docs_subdir / self.stamp
+        self.summary_dir = self.run_root / "summary"
         self.results: list[CycleResult] = []
 
     def prepare(self) -> None:
         prune_old_runs(self.run_root.parent, self.args.max_old_runs)
         ensure_free_space(self.run_root.parent, self.args.min_free_gb)
-        self.docs_dir.mkdir(parents=True, exist_ok=True)
+        self.summary_dir.mkdir(parents=True, exist_ok=True)
         self.run_root.mkdir(parents=True, exist_ok=True)
 
     def new_cycle(self, index: int) -> tuple[CycleResult, Path, Path, Path]:
@@ -278,7 +278,8 @@ class PortableMinecraftHarness:
         }
         if extra:
             payload["extra"] = extra
-        (self.docs_dir / "summary.json").write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+        self.summary_dir.mkdir(parents=True, exist_ok=True)
+        (self.summary_dir / "summary.json").write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
         lines = [
             f"# {self.config.name} Summary",
@@ -293,7 +294,7 @@ class PortableMinecraftHarness:
             lines.append(
                 f"| {result.index} | {result.port or ''} | {result.status} | {', '.join(result.phases)} | {result.failure_class or ''} | {result.reason or ''} |"
             )
-        (self.docs_dir / "summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+        (self.summary_dir / "summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def prune_old_runs(parent: Path, max_old_runs: int) -> None:

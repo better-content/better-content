@@ -51,7 +51,10 @@ function btmChemCompacting(event, id, ingredients, results, heat) {
 function btmChemPressure(event, id, inputs, result, pressure) {
     event.custom({
         type: 'pneumaticcraft:pressure_chamber',
-        inputs: inputs,
+        inputs: inputs.map(function (input) {
+            if (input.fluid === 'minecraft:water') return { item: 'minecraft:water_bucket' }
+            return input
+        }),
         pressure: pressure,
         results: [result]
     }).id('kubejs:chemistry/pneumaticcraft/pressure_chamber/' + id)

@@ -4,7 +4,7 @@ import path from 'node:path'
 
 const repoRoot = process.cwd()
 const inputPath = process.argv[2] || path.join(repoRoot, 'kubejs/config/food_effect_index.json')
-const reportPath = process.argv[3] || path.join(repoRoot, 'docs/food_effect_graph_audit.md')
+const reportPath = process.argv[3] || path.join(repoRoot, 'generated/validation/food_effect_graph_audit.md')
 const catalogPath = process.argv[4] || path.join(repoRoot, 'kubejs/config/food_effect_progression_candidates.json')
 
 const beneficialWeights = {

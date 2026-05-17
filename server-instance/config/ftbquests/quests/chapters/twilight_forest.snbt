@@ -3,7 +3,7 @@
 	default_quest_shape: "rsquare"
 	filename: "twilight_forest"
 	group: "3BF99559A31D6EB4"
-	id: "2B0B0766322E100F"
+	id: "547E73C8EDE11F2D"
 	order_index: 2
 	quest_links: [ ]
 	quests: [
@@ -21,26 +21,26 @@
 			rewards: [
 				{
 					count: 4
-					id: "342333116D1AE268"
-					item: "dotcoinmod:copper_coin"
+					id: "54C07137F36614DA"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "201FBF378E5EC3FB"
-					item: "dotcoinmod:iron_coin"
+					id: "4120A8A62D7E7778"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "16305C08613A3D3D"
-					item: "dotcoinmod:brass_coin"
+					id: "43FF5F579036B9E5"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "33654A62B2F2F43D"
-					item: "dotcoinmod:gold_coin"
+					id: "43C51727D55C99FA"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -69,25 +69,25 @@
 				{
 					count: 4
 					id: "55489E46BACF7344"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "086B6A2CCB5AED30"
-					item: "dotcoinmod:iron_coin"
+					id: "7682F2473585EC9D"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "04FF300CB65D09C5"
-					item: "dotcoinmod:brass_coin"
+					id: "14FF34457E4B409F"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "071104F6581CBC09"
-					item: "dotcoinmod:gold_coin"
+					id: "3D755DDC243FA472"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -95,7 +95,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "0E00185D35EEBC7E"
+				id: "1B8640A1C8D61301"
 				item: "twilightforest:naga_scale"
 				type: "item"
 			}]
@@ -112,30 +112,30 @@
 			hide_dependency_lines: false
 			icon: "twilightforest:lich_trophy"
 			icon_scale: 1.18d
-			id: "6D3413BE78514071"
+			id: "7797897E8659A581"
 			rewards: [
 				{
 					count: 4
 					id: "3A424DB07B275C60"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "24FBF08A18CD458D"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "16FD34553C74D8EE"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "0F67D4F6C77C3C11"
-					item: "dotcoinmod:gold_coin"
+					id: "460CBF2E1C675FDC"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -159,30 +159,30 @@
 			]
 			hide_dependency_lines: false
 			icon: "twilightforest:maze_map"
-			id: "17C35F1D2ECFB9E8"
+			id: "60B784D82E339F33"
 			rewards: [
 				{
 					count: 4
 					id: "04162340808CA589"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "028ED4B732790D57"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "4F5440C65D0E687A"
-					item: "dotcoinmod:brass_coin"
+					id: "55801DC1C2667CB2"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6CD57B9D86247858"
-					item: "dotcoinmod:gold_coin"
+					id: "14734D7F6DAEC077"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -205,30 +205,30 @@
 			]
 			hide_dependency_lines: false
 			icon: "twilightforest:carminite"
-			id: "06B6AE257DE532B2"
+			id: "40665FA06725E1A7"
 			rewards: [
 				{
 					count: 4
 					id: "21F60223DA0195BC"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "5AE3EA41F41FA451"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "4F66BF1B8848CC91"
-					item: "dotcoinmod:brass_coin"
+					id: "4E2FE790AD5831E8"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "330BA259ACFE0B1D"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -251,30 +251,30 @@
 			]
 			hide_dependency_lines: false
 			icon: "twilightforest:fiery_blood"
-			id: "562AFA525D6DC1F2"
+			id: "7DA1DC0D2D789CE5"
 			rewards: [
 				{
 					count: 4
-					id: "7B6E6CADAA2D2061"
-					item: "dotcoinmod:copper_coin"
+					id: "53326536123C9EDE"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "5EE6E87EBC8E198D"
-					item: "dotcoinmod:iron_coin"
+					id: "3E461A08B9593742"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "73252C08FAFF895E"
-					item: "dotcoinmod:brass_coin"
+					id: "1C235440F66B3490"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "7F0C34E0286E4181"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -302,25 +302,25 @@
 				{
 					count: 4
 					id: "5E60C4DB3E69AAE7"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "0C83DAC35CC95B90"
-					item: "dotcoinmod:iron_coin"
+					id: "74DDEF0E1EF006EB"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "61A52A1C18D4CA34"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6246F2F9BF87D98E"
-					item: "dotcoinmod:gold_coin"
+					id: "1CDBEDA219C4BFB8"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -328,7 +328,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "78529F1BE6F41E95"
+				id: "660E60A1A54020AE"
 				item: "twilightforest:alpha_yeti_fur"
 				type: "item"
 			}]
@@ -349,26 +349,26 @@
 			rewards: [
 				{
 					count: 4
-					id: "06426B362F4D1FC3"
-					item: "dotcoinmod:copper_coin"
+					id: "7ABE53183D5E74F4"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "60CD81029F46C71A"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "469C48979D38233A"
-					item: "dotcoinmod:brass_coin"
+					id: "2565AE0CD6EB18A0"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "69F7247E44621065"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -376,7 +376,7 @@
 			size: 1.75d
 			subtitle: "Process"
 			tasks: [{
-				id: "2B9D2F580AC2F1C3"
+				id: "0BABF5AF62AED305"
 				item: "twilightforest:ur_ghast_trophy"
 				type: "item"
 			}]

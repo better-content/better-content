@@ -16,24 +16,24 @@
 			hide_dependency_lines: false
 			icon: "create:water_wheel"
 			icon_scale: 1.18d
-			id: "19F02F74B86C205D"
+			id: "737147E73974A544"
 			rewards: [
 				{
 					count: 4
 					id: "64B73496E662B55D"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "7B5633EC335D798F"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "552B85FABB6776B2"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]
@@ -62,19 +62,19 @@
 				{
 					count: 4
 					id: "225C18F17E8AF555"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "684F30239CDEF5F1"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "245E74592CBF15B6"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]
@@ -82,7 +82,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "208A2987C1E7C0D9"
+				id: "7F27065C8B8BA682"
 				item: "create:windmill_bearing"
 				type: "item"
 			}]
@@ -98,24 +98,24 @@
 			]
 			hide_dependency_lines: false
 			icon: "create:shaft"
-			id: "1ADCDAD436CB1439"
+			id: "1BE8A26C8FDE76CF"
 			rewards: [
 				{
 					count: 4
-					id: "41D2ABA5186E8594"
-					item: "dotcoinmod:copper_coin"
+					id: "39C3FFEA8EB1D1D9"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "628FA718DD94593D"
-					item: "dotcoinmod:iron_coin"
+					id: "552C2A55AAFBC70F"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "53BE66644EEF101E"
-					item: "dotcoinmod:brass_coin"
+					id: "57CD7DDC43771996"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]
@@ -124,12 +124,12 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "6DF55BEE803A42D4"
+					id: "5AF61EBB7C967AB7"
 					item: "create:shaft"
 					type: "item"
 				}
 				{
-					id: "494AF2287F4D46B3"
+					id: "2557BA17E4C7036C"
 					item: "create:gearbox"
 					type: "item"
 				}
@@ -160,20 +160,20 @@
 			rewards: [
 				{
 					count: 4
-					id: "792B0F221821A390"
-					item: "dotcoinmod:copper_coin"
+					id: "02837C6C0DEC89BA"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "6559EF12EBABF559"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "204F2550863B662A"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]
@@ -181,7 +181,7 @@
 			size: 1.75d
 			subtitle: "Process"
 			tasks: [{
-				id: "23D0C1C8ABBA4EDA"
+				id: "0BFC71E2F2A8B97C"
 				item: "create:blaze_burner"
 				type: "item"
 			}]
@@ -202,20 +202,20 @@
 			rewards: [
 				{
 					count: 4
-					id: "757E1CBD7373A53E"
-					item: "dotcoinmod:copper_coin"
+					id: "2FB7BCA8D46480CC"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2B1765E1464B3A98"
-					item: "dotcoinmod:iron_coin"
+					id: "7149A16C1259CA08"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "1E00C626A90C98CE"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]
@@ -223,7 +223,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "2C86EE05A962B905"
+				id: "52EEFB4CFC83BE91"
 				item: "createdieselgenerators:diesel_engine"
 				type: "item"
 			}]
@@ -240,24 +240,24 @@
 			]
 			hide_dependency_lines: false
 			icon: "createdieselgenerators:distillation_controller"
-			id: "38C8BED2CDFB2199"
+			id: "231793FD077AC41F"
 			rewards: [
 				{
 					count: 4
 					id: "3B0613A83853C251"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "771087C40A34F9BD"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "05173EE2AFFEB5AC"
-					item: "dotcoinmod:brass_coin"
+					id: "4E788FB7A2619B95"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]
@@ -265,7 +265,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "5E99161D1FC84697"
+				id: "446AFFFE7C31C08E"
 				item: "createdieselgenerators:distillation_controller"
 				type: "item"
 			}]
@@ -282,24 +282,24 @@
 			]
 			hide_dependency_lines: false
 			icon: "create_new_age:basic_solar_heating_plate"
-			id: "0AC5D0B02334F258"
+			id: "127D2DD5CE3E59F4"
 			rewards: [
 				{
 					count: 4
 					id: "1E8028D491DA9DF9"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "1AF690F672AE4127"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "540D7E151907D2B9"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]
@@ -323,24 +323,24 @@
 			]
 			hide_dependency_lines: false
 			icon: "create_new_age:heat_pipe"
-			id: "4C401335A7187918"
+			id: "2323C4FF12784338"
 			rewards: [
 				{
 					count: 4
-					id: "2CC5A4B5E67CA066"
-					item: "dotcoinmod:copper_coin"
+					id: "6BC336E178FF54A8"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "46B0839858B77173"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "026631783C811699"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]
@@ -368,20 +368,20 @@
 			rewards: [
 				{
 					count: 4
-					id: "76DD6D726883750B"
-					item: "dotcoinmod:copper_coin"
+					id: "3FCD84020A091EE7"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "530E5AECC27B7AA5"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "7C4341A7FAD9F5A7"
-					item: "dotcoinmod:brass_coin"
+					id: "42DC5C2959B959FB"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]
@@ -412,19 +412,19 @@
 				{
 					count: 4
 					id: "2E8031B95D7CC4E2"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "0C306842DCC71DA8"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "72C118C17BB8F4F1"
-					item: "dotcoinmod:brass_coin"
+					id: "20F9AB618F09E324"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]
@@ -455,19 +455,19 @@
 				{
 					count: 4
 					id: "79213922BC115095"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "6271119FBD5C21FD"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "6ED640EE0B6D87DD"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 			]

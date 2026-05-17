@@ -3,7 +3,7 @@
 	default_quest_shape: "rsquare"
 	filename: "synthesis_i"
 	group: "77AFAA45BDFC5D88"
-	id: "740899DE4171BF14"
+	id: "0D95C2F4239C9FE1"
 	order_index: 1
 	quest_links: [ ]
 	quests: [
@@ -14,30 +14,30 @@
 			]
 			hide_dependency_lines: false
 			icon: "acid_vat:acid_vat"
-			id: "1AE0C8479367EF6F"
+			id: "3CD67521B784CD85"
 			rewards: [
 				{
 					count: 4
-					id: "7BCBAE9AC56D29BC"
-					item: "dotcoinmod:copper_coin"
+					id: "1AEF22822F3381D5"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "070BCA2199FBECD5"
-					item: "dotcoinmod:iron_coin"
+					id: "7D36A1B24E84EC9B"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "7D9D0E8210D0FB4D"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6D5FA6A67B4AE8D6"
-					item: "dotcoinmod:gold_coin"
+					id: "126F9ACCD5763934"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -65,25 +65,25 @@
 				{
 					count: 4
 					id: "1BCBEEF81C8F659B"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "100EDCA4459A46DB"
-					item: "dotcoinmod:iron_coin"
+					id: "14CEEBA667209E58"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "7D15D76F985D0893"
-					item: "dotcoinmod:brass_coin"
+					id: "0EBBD7457D5A0593"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "3647EF81D0ACCFEF"
-					item: "dotcoinmod:gold_coin"
+					id: "47760D998609BB38"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -114,30 +114,30 @@
 			]
 			hide_dependency_lines: false
 			icon: "acid_vat:centrifuge_bearing"
-			id: "5F4E618B68C744F5"
+			id: "50492B7AB8CACC07"
 			rewards: [
 				{
 					count: 4
-					id: "3A8DAB6269B2CEF6"
-					item: "dotcoinmod:copper_coin"
+					id: "349217EDE699DDF9"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6BF3C77C554123EC"
-					item: "dotcoinmod:iron_coin"
+					id: "59C18AB88D1342FA"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "358618DBAA35BF90"
-					item: "dotcoinmod:brass_coin"
+					id: "3ADD6FFCD0F77A0D"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "77CD560D327670AE"
-					item: "dotcoinmod:gold_coin"
+					id: "1876493B8783F790"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -151,7 +151,7 @@
 					type: "item"
 				}
 				{
-					id: "19F212BA893042D2"
+					id: "0EF0BAF05979EBB3"
 					item: "acid_vat:centrifuge_chamber"
 					type: "item"
 				}
@@ -167,30 +167,30 @@
 			]
 			hide_dependency_lines: false
 			icon: "chemlib:copper"
-			id: "543BB92865DD94E6"
+			id: "6CF2967E0629771C"
 			rewards: [
 				{
 					count: 4
-					id: "78146590360A2BD1"
-					item: "dotcoinmod:copper_coin"
+					id: "1CAAECFF981ECB75"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6FC74957031A398F"
-					item: "dotcoinmod:iron_coin"
+					id: "372F7EBA6111E583"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "0B719632B1BA850A"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "5FFDFA243B8638EC"
-					item: "dotcoinmod:gold_coin"
+					id: "39158AD2FD6A06D4"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -220,30 +220,30 @@
 			]
 			hide_dependency_lines: false
 			icon: "chemlib:platinum_plate"
-			id: "0D1685473C78F70A"
+			id: "7697B2B5948AD5D8"
 			rewards: [
 				{
 					count: 4
 					id: "5B28E072855398BD"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "09BAF568F600407A"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "5790C57DABB019A7"
-					item: "dotcoinmod:brass_coin"
+					id: "434CB19E02D9B4E4"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "5B7CC455808723C2"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -272,26 +272,26 @@
 			rewards: [
 				{
 					count: 4
-					id: "7FB6730F842344FE"
-					item: "dotcoinmod:copper_coin"
+					id: "3A74092A0DEAC124"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "091287B1F7390F0C"
-					item: "dotcoinmod:iron_coin"
+					id: "16BC973AAA833708"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "58E0D728ED5F03FB"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "68DF598D668E1678"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]

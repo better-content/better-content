@@ -21,26 +21,26 @@
 			rewards: [
 				{
 					count: 4
-					id: "4E699BFFAE555118"
-					item: "dotcoinmod:copper_coin"
+					id: "285B085CDE85FED2"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "47822009FBAA7E1F"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "1C09D7EF36147FB8"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "716DB1CACA31BF6D"
-					item: "dotcoinmod:gold_coin"
+					id: "1D3021F93FD1450B"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -70,26 +70,26 @@
 			rewards: [
 				{
 					count: 4
-					id: "28DF71E626A6FEE6"
-					item: "dotcoinmod:copper_coin"
+					id: "474BF510EE3FDE2C"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "674B73785A5D2DF8"
-					item: "dotcoinmod:iron_coin"
+					id: "2D5BC48282B5F33B"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2A0C30F329971EE3"
-					item: "dotcoinmod:brass_coin"
+					id: "1EF4FC233C7906BA"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "1FDBFE0D2FFE9A31"
-					item: "dotcoinmod:gold_coin"
+					id: "79787904744D5A9E"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -97,7 +97,7 @@
 			size: 1.75d
 			subtitle: "Milestone"
 			tasks: [{
-				id: "33709BE91658B563"
+				id: "0A283F8A28B14E75"
 				item: "kubejs:power_grid_machine_casing"
 				type: "item"
 			}]
@@ -113,30 +113,30 @@
 			]
 			hide_dependency_lines: false
 			icon: "powergrid:generator_housing"
-			id: "1C9D8775B8015CD3"
+			id: "47E130BB54E80D81"
 			rewards: [
 				{
 					count: 4
 					id: "6C6CFC98B51A57E6"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "22264058B2A992C6"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "22CE336E74344499"
-					item: "dotcoinmod:brass_coin"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "5A62AC09086C80FF"
-					item: "dotcoinmod:gold_coin"
+					id: "197E5612CB2C33AD"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -160,30 +160,30 @@
 			]
 			hide_dependency_lines: false
 			icon: "powergrid:generator_induction_rotor"
-			id: "3479C4673A335B30"
+			id: "122BF8401EFD68BA"
 			rewards: [
 				{
 					count: 4
 					id: "33A2DF07B51A7BC9"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "4716713D1594FFDC"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "32A4B443845FBD89"
-					item: "dotcoinmod:brass_coin"
+					id: "542B2D0B2A5F4856"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "421E6DA8CEED7B82"
-					item: "dotcoinmod:gold_coin"
+					id: "056F40FE980342F8"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -191,7 +191,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "3D9A0D3BDF30B98E"
+				id: "246159832E4A4B37"
 				item: "powergrid:generator_induction_rotor"
 				type: "item"
 			}]
@@ -207,30 +207,30 @@
 			]
 			hide_dependency_lines: false
 			icon: "powergrid:generator_commutator"
-			id: "7261FB70E6757B5C"
+			id: "068909C110197FE2"
 			rewards: [
 				{
 					count: 4
 					id: "3D0ACF71F8B54626"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "25C021A2D5970E5A"
-					item: "dotcoinmod:iron_coin"
+					id: "442D1AE7ED384278"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "1A7B729F799E07A6"
-					item: "dotcoinmod:brass_coin"
+					id: "03DBB7B4F1BA6BB7"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "46B44D619CA82672"
-					item: "dotcoinmod:gold_coin"
+					id: "38D722E1045120CF"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -238,7 +238,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "1296DF55491B063B"
+				id: "1606EF3F12E2C145"
 				item: "powergrid:generator_commutator"
 				type: "item"
 			}]
@@ -253,30 +253,30 @@
 			]
 			hide_dependency_lines: false
 			icon: "powergrid:wire_connector"
-			id: "08B453A6163AE47C"
+			id: "1E281CA166D46FED"
 			rewards: [
 				{
 					count: 4
 					id: "048785DDECA14F05"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "506A9BD03AB5A865"
-					item: "dotcoinmod:iron_coin"
+					id: "21D2D77DE4852E07"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "06A2B88502647821"
-					item: "dotcoinmod:brass_coin"
+					id: "39F0DB8938840C8A"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "54E87687D6B7531C"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -285,7 +285,7 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "6DF8149273F5E096"
+					id: "12C3A0D78B3CD8C9"
 					item: "powergrid:wire_connector"
 					type: "item"
 				}
@@ -306,30 +306,30 @@
 			]
 			hide_dependency_lines: false
 			icon: "powergrid:integrated_circuit"
-			id: "09F6F2DB6DA6B908"
+			id: "7A36953694C54306"
 			rewards: [
 				{
 					count: 4
 					id: "6580C0A0240D9137"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "7B5243A5BEF94F04"
-					item: "dotcoinmod:iron_coin"
+					id: "35C9742F998645F7"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "32C8B640B0C37DAD"
-					item: "dotcoinmod:brass_coin"
+					id: "00DE3A8F2622469A"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "095E2F28195C59E7"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -337,7 +337,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "3C3073938A93F14C"
+				id: "2BDDD156EB104F92"
 				item: "powergrid:integrated_circuit"
 				type: "item"
 			}]
@@ -359,25 +359,25 @@
 				{
 					count: 4
 					id: "0CB0435533003A1D"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "6E5DBF43F841E48F"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "75AAC1DE9A070CE9"
-					item: "dotcoinmod:brass_coin"
+					id: "5E77AC08C8ECF158"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "38977E78E26856E0"
-					item: "dotcoinmod:gold_coin"
+					id: "32BE4280FB430055"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -407,26 +407,26 @@
 			rewards: [
 				{
 					count: 4
-					id: "5778FEBCC0EDC9B3"
-					item: "dotcoinmod:copper_coin"
+					id: "7B7CD8CAB194977D"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "48596F83FC9F150E"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "138DC8888201BCEF"
-					item: "dotcoinmod:brass_coin"
+					id: "194C6E686A41F99B"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "0A228F3D5F091173"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -434,7 +434,7 @@
 			size: 1.75d
 			subtitle: "Process"
 			tasks: [{
-				id: "09FD07D5BE66F164"
+				id: "5D0DFD86791F2668"
 				item: "powergrid:battery"
 				type: "item"
 			}]
@@ -456,25 +456,25 @@
 				{
 					count: 4
 					id: "65F255296A535FE4"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "113AF3B4AF5FC515"
-					item: "dotcoinmod:iron_coin"
+					id: "3BB60FADBBC25FC5"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2628700CA4197431"
-					item: "dotcoinmod:brass_coin"
+					id: "34E57554AC0B1ABC"
+					item: "createdeco:brass_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "4CE7D89EA2B12417"
-					item: "dotcoinmod:gold_coin"
+					item: "createdeco:gold_coin"
 					type: "item"
 				}
 			]
@@ -488,7 +488,7 @@
 					type: "item"
 				}
 				{
-					id: "390C68834754944E"
+					id: "7C9B5F56366785AB"
 					item: "create:stressometer"
 					type: "item"
 				}

@@ -20,14 +20,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "44301D21E5FBDABD"
-					item: "dotcoinmod:copper_coin"
+					id: "12ACEECA36F0817A"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "3337A2140AB7B2DA"
-					item: "dotcoinmod:iron_coin"
+					id: "6226BBBDCD023F65"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -35,7 +35,7 @@
 			size: 1.75d
 			subtitle: "Process"
 			tasks: [{
-				id: "6D9AA8F262C7DBA1"
+				id: "5870B10D6A94A12D"
 				item: "rpgstats:still_beating_heart"
 				type: "item"
 			}]
@@ -55,14 +55,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "778BEF624C794088"
-					item: "dotcoinmod:copper_coin"
+					id: "1B9BA1BB27A2A691"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "52F12FA2A2976FF8"
-					item: "dotcoinmod:iron_coin"
+					id: "7641FF60C37A812F"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -90,14 +90,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "7D807AA004309289"
-					item: "dotcoinmod:copper_coin"
+					id: "61471D720E7527E0"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "48FAC8E7E9C47D11"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -126,14 +126,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "2EF732D1CC3E272B"
-					item: "dotcoinmod:copper_coin"
+					id: "2A18F213A107D425"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6DE9149B79EF41B8"
-					item: "dotcoinmod:iron_coin"
+					id: "68A5ADC382A65D00"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -158,18 +158,18 @@
 			hide_dependency_lines: false
 			icon: "bloodmagic:blankslate"
 			icon_scale: 1.18d
-			id: "0BBB96C712C01E5C"
+			id: "3AE704F13645B631"
 			rewards: [
 				{
 					count: 4
-					id: "6436F58704719AA4"
-					item: "dotcoinmod:copper_coin"
+					id: "07CCCB85328CD556"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "3126B96DCA5D01C6"
-					item: "dotcoinmod:iron_coin"
+					id: "500DB2D03A65FF8B"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -198,13 +198,13 @@
 				{
 					count: 4
 					id: "0CA34C8868CBFA65"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2F17F7CBA7E14B33"
-					item: "dotcoinmod:iron_coin"
+					id: "555BFA8DD54922B9"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]

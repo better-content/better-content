@@ -7889,6 +7889,10 @@ file = "kubejs/data/btm/advancements/creating_space_access.json"
 hash = "2768427d9f5d6a715203824283cf01a9386fa01c4570ae56b5ae3b074931f962"
 
 [[files]]
+file = "kubejs/data/burnt/recipes/gunpowder_recipe.json"
+hash = "ac7bd6b6a6625a7f036590d6109c972b94e528886556b1b750718344a791c0d3"
+
+[[files]]
 file = "kubejs/data/burnt/tags/blocks/fire_resistant.json"
 hash = "78228ed784d87138ec9a63c59c96f71351a00bec30f5423fc35a4c1278351c05"
 
@@ -8101,6 +8105,10 @@ file = "kubejs/data/mynethersdelight/loot_tables/blocks/blackstone_cooking_pot.j
 hash = "f2ef2d7bc8fa2d343b0a7dd834f0eb550f84937bc0ce41f37b2cbae81c945496"
 
 [[files]]
+file = "kubejs/data/nethersdelight/recipes/cutting/hoglin_sausage_alt.json"
+hash = "ac7bd6b6a6625a7f036590d6109c972b94e528886556b1b750718344a791c0d3"
+
+[[files]]
 file = "kubejs/data/sophisticatedbackpacks/loot_tables/inject/chests/abandoned_mineshaft.json"
 hash = "7adc1de210634653989451c2a0398434feef7e678ba11176c1bda0ebba243153"
 
@@ -8179,6 +8187,10 @@ hash = "78dbd7a9e752cc9d140200c8ed2b043f926be2a998b53257072cb6950c609c2b"
 [[files]]
 file = "kubejs/data/sophisticatedstorage/recipes/warped_chest_from_quark_warped_chest.json"
 hash = "a705ed3db981853c6f42c8c9c0ec877a23b2587b376cf3591313c3de5c2b2453"
+
+[[files]]
+file = "kubejs/data/starcatcher/recipes/aquaculture_fillet.json"
+hash = "ac7bd6b6a6625a7f036590d6109c972b94e528886556b1b750718344a791c0d3"
 
 [[files]]
 file = "kubejs/data/swem/forge/biome_modifier/add_swem_horses.json"
@@ -8578,11 +8590,11 @@ hash = "91ed276cd9a27a12557e127734f9fa78e7dfa948b4b2afd511e29b71ddc2cdc5"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/58_create_pncr_molecular_synthesis.js"
-hash = "d49a5b13297bf2fdadec6c168c52799b06efab68225db1da0e984cc3b0215c9a"
+hash = "e10361da165efcd6844e4e3d4c1d304729e0c59e8ca179c5989cf8dfcb211f14"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/59_formulaic_synthesis_magic_routes.js"
-hash = "7756fe9c7478708e234aaef9250acc4ab3b42c89ffe498d75c8554393d5683f1"
+hash = "13053d1d522dabf10691037c22c816dd6c929c89697da655b281ee9d8992995b"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/65_chemlib_plate_manufacturing_routes.js"
@@ -8750,6 +8762,11 @@ metafile = true
 [[files]]
 file = "mods/blueprint.pw.toml"
 hash = "790de162313fcbe950496580db107eb8da2ae29060cbf611764d1bb352461d03"
+metafile = true
+
+[[files]]
+file = "mods/botania.pw.toml"
+hash = "3527ccd8867741dfe6d21c4b6bac9e87ce1f6373e5b98c5f2cc1ea52681bd687"
 metafile = true
 
 [[files]]
@@ -9045,7 +9062,12 @@ metafile = true
 
 [[files]]
 file = "mods/fission_reactor-0.1.0.jar"
-hash = "9918124e1823e5e7f434862cdcdc118e7e6b837c30ea3d6708b1451126ab7c7f"
+hash = "3563096babe3ba836a9400b03c549323ec2f9779dbaa8d9aebe0e83813403602"
+
+[[files]]
+file = "mods/forbidden-arcanus.pw.toml"
+hash = "edeefca9053ee0da1511185568d0241798273fb7d03ed09f7b5fd3dbbbc582bb"
+metafile = true
 
 [[files]]
 file = "mods/forgeendertech.pw.toml"
@@ -9094,7 +9116,7 @@ metafile = true
 
 [[files]]
 file = "mods/gases_and_plasmas-0.1.0.jar"
-hash = "1fe45fadcd83b510833b9c76de7fbdc27f4c9c438e3eda821b5fef692f13d83a"
+hash = "15afbc4f8bae16a0a72466fdfad468ea8a5fd3ab6f7e7f558fd83d858e90e4ce"
 
 [[files]]
 file = "mods/gauges-and-switches-ported.pw.toml"
@@ -9114,6 +9136,11 @@ metafile = true
 [[files]]
 file = "mods/global-gamerules.pw.toml"
 hash = "96a48353e105f0d2ebeb2a06b8281606f999471d672a77f462e556ca7fe607d2"
+metafile = true
+
+[[files]]
+file = "mods/goety.pw.toml"
+hash = "605ab3ce79d289cba6892615e2f82ba55682116c415053a2c3b226b336878b59"
 metafile = true
 
 [[files]]
@@ -9138,7 +9165,12 @@ metafile = true
 
 [[files]]
 file = "mods/heatsync-0.1.0.jar"
-hash = "9a3cccb633f4fd866ad845606dec2d7c7ee79d143af224f12c53a9762f61e25d"
+hash = "9b54e0711efe7f2a39cc3413c302195afc3f93964a165b9a807558da98882bec"
+
+[[files]]
+file = "mods/hexerei.pw.toml"
+hash = "79bfdf5bd4e7cc009b4ae84ab27b1f358bf2da1aa8f30102e77e1aae66aed688"
+metafile = true
 
 [[files]]
 file = "mods/hold-my-items-reforged.pw.toml"
@@ -9183,6 +9215,16 @@ metafile = true
 [[files]]
 file = "mods/inventory-sorter-configurable.pw.toml"
 hash = "38a72fbee92dd05ee980ccb70857c1e3ed638b4bdcc65ac646a05d6a77deaf58"
+metafile = true
+
+[[files]]
+file = "mods/irons-lib.pw.toml"
+hash = "72a8ce5ebe4af779de8996545200c48e863798d352dc454abb7eab8773a9ca15"
+metafile = true
+
+[[files]]
+file = "mods/irons-spells-n-spellbooks.pw.toml"
+hash = "f61d1835a5c388d7eb1bc9727e3a436d9e10bb806ee215ec0f72a8e36d7f5dd2"
 metafile = true
 
 [[files]]
@@ -9232,15 +9274,20 @@ metafile = true
 
 [[files]]
 file = "mods/latent_chemlib-0.1.0.jar"
-hash = "da8c54ae539e0a9bd1c54238aebf9f13e94c447c16f1e2c0dda26295c80fe359"
+hash = "4360714d6b2eae1ecf41018e47ec800a6f2fc472f28f12ea51f490375cdbaa25"
 
 [[files]]
 file = "mods/liquid_coolant-0.1.0.jar"
-hash = "bd62cecff7ebd9b3f72ebee24bd91e7dd49003d6788d805faae8e9a70fc32a81"
+hash = "917bc3ba2f73ff4b577c1fd4f064dfd161fddc7e93edd8c7fba20bf08f68d992"
 
 [[files]]
 file = "mods/lithostitched.pw.toml"
 hash = "1d623ba29fcb52d5db733af383a13273792ac3dc1ac7a8f9e3f58a17ae1bc2c7"
+metafile = true
+
+[[files]]
+file = "mods/lodestone.pw.toml"
+hash = "a484a0a768e886244dab01dd9793d979ca5d57b8327f9f4caa36a3031fc46d63"
 metafile = true
 
 [[files]]
@@ -9264,6 +9311,11 @@ hash = "e8b4876d403b4f4daab64bad9704a5b271a33031d1ff8d19d23ebd1e3b8dd39a"
 metafile = true
 
 [[files]]
+file = "mods/malum.pw.toml"
+hash = "19821414a26c40c40f4584102cbc73df7282ef1aadf8f948b37f97c6f44a91a3"
+metafile = true
+
+[[files]]
 file = "mods/man-of-many-planes.pw.toml"
 hash = "e3b7a1a0ed3353dead103974c5249ddfcab3e70a1c77fab5fd3a47b19b4ba26b"
 metafile = true
@@ -9281,6 +9333,11 @@ metafile = true
 [[files]]
 file = "mods/modernfix.pw.toml"
 hash = "d27a9b44e3562cfd6ee8ffa9ffb4f7bd9df42f15652dc2885acf883304e45fe8"
+metafile = true
+
+[[files]]
+file = "mods/modonomicon.pw.toml"
+hash = "80124bd3e7bc9917e41ee22534baddfd0578f1cad90906e4c5f0c8966ce1367a"
 metafile = true
 
 [[files]]
@@ -9340,6 +9397,11 @@ hash = "2d1e1a0f79dc64211d894880e7a390c5dd94f6a9c70b3b8b022563491d376b69"
 [[files]]
 file = "mods/oc2r.pw.toml"
 hash = "8e3834e431956cc612e45943355764e970f237d6222dbfa6632c1273d05726b9"
+metafile = true
+
+[[files]]
+file = "mods/occultism.pw.toml"
+hash = "173bfdd9a39233cbbcfca3db2e55291a8da1949ca35b059ef64c48ba90e4cf5b"
 metafile = true
 
 [[files]]
@@ -9450,6 +9512,11 @@ hash = "072c186c33fe564e4c49f6f1bf65f5b0efa28256d450edd922e1961b07e2a812"
 metafile = true
 
 [[files]]
+file = "mods/reliquary-reincarnations.pw.toml"
+hash = "2ee33caa3dab100d44d9a9e941af5f374ce93cc59fdd0da10a0cc1393e56edc0"
+metafile = true
+
+[[files]]
 file = "mods/resourceful-config.pw.toml"
 hash = "e242387207a2538b5ccb55697174c65e549e1eb2fef9da37e1ad3734e0372b65"
 metafile = true
@@ -9520,6 +9587,11 @@ metafile = true
 [[files]]
 file = "mods/sleepingoverhaul2.pw.toml"
 hash = "0cab9964d74302b2b3cab1d89252eaa443a2a69681c4736b048c2b278a9a993c"
+metafile = true
+
+[[files]]
+file = "mods/smartbrainlib.pw.toml"
+hash = "8d3e9ef52ac3b65fb976629b55652ca30f9ad8b7ff37925c3111ae78386e1a97"
 metafile = true
 
 [[files]]
@@ -9695,6 +9767,11 @@ metafile = true
 [[files]]
 file = "mods/unloaded-activity.pw.toml"
 hash = "672716713e45546f6c192f4e3d424bb08da872bf4353d3b3a563a0587ae9ee16"
+metafile = true
+
+[[files]]
+file = "mods/valhelsia-core.pw.toml"
+hash = "d8d6daa50fdac46d3176520da691a94c6905465c164dd07458ac02338ae2f62f"
 metafile = true
 
 [[files]]

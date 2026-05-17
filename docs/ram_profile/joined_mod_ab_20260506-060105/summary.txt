@@ -1,2 +1,0 @@
-out=/home/gerald/obelisks/docs/ram_profile/joined_mod_ab_20260506-060105
-phase=baseline

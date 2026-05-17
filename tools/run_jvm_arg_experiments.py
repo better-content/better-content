@@ -21,8 +21,8 @@ ROOT = Path("/home/gerald/obelisks")
 INSTANCE = Path.home() / ".local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1"
 INSTANCE_CFG = INSTANCE / "instance.cfg"
 SERVER_JVM_ARGS = ROOT / "server-instance/user_jvm_args.txt"
-PHASES_FILE = ROOT / "docs/ram_profile/trimmed_repo_stack_join_phase_20260506.json"
-OUT_BASE = ROOT / "docs/ram_profile"
+PHASES_FILE = Path(os.environ.get("PHASES_FILE", str(ROOT / "generated" / "validation" / "trimmed_repo_stack_join_phase_20260506.json")))
+OUT_BASE = Path(os.environ.get("OUT_BASE", "/tmp/btm-ram-profile"))
 
 
 @dataclass(frozen=True)

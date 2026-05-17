@@ -15,7 +15,7 @@ LIVE_MC = Path(os.environ.get(
     "LIVE_MC",
     "/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1/minecraft",
 ))
-OUT_ROOT = ROOT / "docs" / "c2me_feature_matrix"
+OUT_ROOT = Path(os.environ.get("OUT_ROOT", "/tmp/btm-c2me-feature-matrix"))
 PORT = int(os.environ.get("SERVER_PORT", "25566"))
 
 BASE_VALUES = {

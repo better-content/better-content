@@ -284,8 +284,9 @@ const multiSource = [...itemSources.entries()].filter(([, sources]) => sources.l
   .sort((a, b) => b.count - a.count)
 
 function top(obj, n = 20) { return Object.entries(obj).sort((a, b) => b[1] - a[1]).slice(0, n) }
-function writeDoc(name, content) { fs.writeFileSync(path.join(repo, 'docs', name), content) }
-ensureDir(path.join(repo, 'docs'))
+const outDir = process.env.OUT_DIR || path.join(repo, 'generated', 'validation', 'expert_graph')
+function writeDoc(name, content) { fs.writeFileSync(path.join(outDir, name), content) }
+ensureDir(outDir)
 
 writeDoc('expert_item_graph.md', `# Expert Item Graph\n\nGenerated: ${new Date().toISOString()}\n\nThis is the current source-of-truth graph model used by the offline audit. It treats recipes, loot, villager trades, Wares contracts, quest rewards, mob drops, and worldgen as material-conversion systems.\n\n## Tier Order\n\n${catalog.tierOrder.map((t, i) => `${i}. ${t}`).join('\n')}\n\n## Machine Tiers\n\n${table([['Tier', 'Casing', 'Authority', 'Requires Previous'], ...catalog.machineTiers.map(t => [t.id, t.casing, t.authority, t.requiresPrevious || 'none'])])}\n## Blood Magic Authority\n\n${table([['Tier', 'Gate', 'Mods'], ...catalog.bloodMagicTiers.map(t => [t.id, t.gate, t.mods.join(', ')])])}\n## Coin Tiers\n\n${table([['Index', 'Tier', 'Item', 'Intended Sources'], ...catalog.coinTiers.map(t => [t.index, t.id, t.item, t.intendedSources.join(', ')])])}\n## Critical Rules\n\n${catalog.criticalRules.map(r => `- ${r}`).join('\n')}\n`)
 
@@ -316,5 +317,5 @@ const summary = {
   villagerTradeRows: tradeStats.rows,
   multiSourceItems: multiSource.length
 }
-fs.writeFileSync(path.join(repo, 'docs/expert_item_graph_summary.json'), JSON.stringify(summary, null, 2) + '\n')
+fs.writeFileSync(path.join(outDir, 'expert_item_graph_summary.json'), JSON.stringify(summary, null, 2) + '\n')
 console.log(JSON.stringify(summary, null, 2))

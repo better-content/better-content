@@ -15,7 +15,7 @@ var BTM_CLOSURE = {
     copperPlate: '#forge:plates/copper',
     goldPlate: '#forge:plates/gold',
     brassPlate: '#forge:plates/brass',
-    redstoneRelay: 'powergrid:redstone_relay',
+    redstoneRelay: 'morered:red_alloy_wire',
     circuit: 'powergrid:integrated_circuit',
     skySteelSheet: 'kubejs:sky_steel_sheet'
 }

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd /home/gerald/obelisks
-OUT=docs/memory_variants/cluster_ab_$(date +%Y%m%d-%H%M%S)
+OUT="${OUT:-/tmp/btm-memory-variants/cluster_ab_$(date +%Y%m%d-%H%M%S)}"
 mkdir -p "$OUT"
 CSV="$OUT/results.csv"
 echo "variant,peak_rss_kb,peak_rss_gib" > "$CSV"

@@ -3,7 +3,7 @@
 	default_quest_shape: "rsquare"
 	filename: "food_ii"
 	group: "1535A2E7C7CA772B"
-	id: "0BBCE0B98626D476"
+	id: "03C6054DEFF6EAF7"
 	order_index: 2
 	quest_links: [ ]
 	quests: [
@@ -20,14 +20,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "1F6B77462F7B7962"
-					item: "dotcoinmod:copper_coin"
+					id: "7A6DD8E46A4BBAC7"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "53FDB674F894539B"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -35,7 +35,7 @@
 			size: 1.75d
 			subtitle: "Process"
 			tasks: [{
-				id: "045467BCD56BD60E"
+				id: "7E039AAD15ACF4C3"
 				item: "farmersrespite:kettle"
 				type: "item"
 			}]
@@ -52,18 +52,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "farmersrespite:green_tea"
-			id: "652B90A01534D45C"
+			id: "56D42570156297D4"
 			rewards: [
 				{
 					count: 4
 					id: "4963E239735D67F4"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "50A61CE7B40F1981"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -89,18 +89,18 @@
 			hide_dependency_lines: false
 			icon: "brewinandchewin:keg"
 			icon_scale: 1.18d
-			id: "666391DA08CAF6E9"
+			id: "4664D9A7E072E02F"
 			rewards: [
 				{
 					count: 4
 					id: "09A47B4E9384AE9A"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "41B840B054CF9980"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -124,18 +124,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "brewinandchewin:jerky"
-			id: "6072FF63CC0F05F2"
+			id: "69685F67A3669CA0"
 			rewards: [
 				{
 					count: 4
-					id: "5980430D3DB9FCA6"
-					item: "dotcoinmod:copper_coin"
+					id: "7B54454116452DD5"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "0D872B603B6FF7F5"
-					item: "dotcoinmod:iron_coin"
+					id: "15CAC9AAB7851428"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -171,13 +171,13 @@
 				{
 					count: 4
 					id: "45DD6195DAA878B1"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "7BF255F558C9951E"
-					item: "dotcoinmod:iron_coin"
+					id: "22DD6ECFA8E9E726"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -203,18 +203,18 @@
 			hide_dependency_lines: false
 			icon: "farmersdelight:rice_roll_medley_block"
 			icon_scale: 1.18d
-			id: "20B862D4621325D3"
+			id: "3F60F3965F534459"
 			rewards: [
 				{
 					count: 4
-					id: "194BA61A704B781A"
-					item: "dotcoinmod:copper_coin"
+					id: "5BEA709356C58761"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "51F5D16315BB09F6"
-					item: "dotcoinmod:iron_coin"
+					id: "4D02F43429E0CB7A"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -223,12 +223,12 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "53EED7C51399C9BD"
+					id: "43BB413A90536A30"
 					item: "farmersdelight:rice_roll_medley_block"
 					type: "item"
 				}
 				{
-					id: "68F68934F0EF4E7B"
+					id: "33567297CCDD1F2E"
 					item: "brewinandchewin:kimchi"
 					type: "item"
 				}

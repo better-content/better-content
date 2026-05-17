@@ -102,7 +102,7 @@ def main() -> int:
             break
 
     harness.write_summary()
-    print(f"summary: {harness.docs_dir / 'summary.md'}")
+    print(f"summary: {harness.summary_dir / 'summary.md'}")
     print(f"raw run root: {harness.run_root}")
     passed = all(result.status == "PASS" for result in harness.results) and len(harness.results) == args.cycles
     return 0 if passed else 1

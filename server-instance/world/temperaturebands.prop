@@ -1,0 +1,11 @@
+#World-specific Temperature Bands settings. Do not edit!
+#Thu May 14 09:00:17 AEST 2026
+configBandSize=2048
+configAlgo1BandVariance=32
+configPosShift=0.25
+configTempRange=0.65
+configAlgo1bandVarianceSteepness=0.2
+configUseVerticalBands=false
+configAlgorithm=1
+configNoiseFactor=100
+configGradeShift=-0.05

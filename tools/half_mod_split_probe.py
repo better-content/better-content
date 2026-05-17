@@ -30,7 +30,7 @@ LIVE = Path(
         "/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1/minecraft",
     )
 )
-OUT_ROOT = ROOT / "docs" / "half_mod_tests"
+OUT_ROOT = Path(os.environ.get("OUT_ROOT", "/tmp/btm-half-mod-tests"))
 OUT = OUT_ROOT / time.strftime("%Y%m%d-%H%M%S")
 MOD_DIRS = [SERVER / "mods", LIVE / "mods"]
 PORT = int(os.environ.get("SERVER_PORT", "25566"))

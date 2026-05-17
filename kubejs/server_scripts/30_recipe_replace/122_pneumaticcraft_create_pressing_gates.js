@@ -50,20 +50,21 @@ ServerEvents.recipes(function (event) {
     event.replaceInput({ output: 'pneumaticcraft:liquid_compressor' }, 'pneumaticcraft:air_compressor', 'kubejs:rotational_compressor_core')
     event.replaceInput({ output: 'pneumaticcraft:advanced_air_compressor' }, 'pneumaticcraft:air_compressor', 'kubejs:rotational_compressor_core')
 
-    event.remove({ id: 'pneumaticcraft:printed_circuit_board' })
+    event.remove({ id: 'pneumaticcraft:assembly/unassembled_pcb' })
+    event.remove({ output: 'pneumaticcraft:unassembled_pcb' })
     event.custom({
         type: 'pneumaticcraft:pressure_chamber',
         inputs: [
-            { item: 'pneumaticcraft:unassembled_pcb' },
-            { item: 'pneumaticcraft:capacitor' },
+            { item: 'pneumaticcraft:empty_pcb' },
             { item: 'pneumaticcraft:capacitor' },
             { item: 'pneumaticcraft:transistor' },
-            { item: 'pneumaticcraft:transistor' },
+            { item: 'morered:diode' },
+            { item: 'morered:red_alloy_wire' },
             { item: 'chemlib:copper_chloride' },
             { item: 'chemlib:silicon_dioxide' },
             { item: 'kubejs:pressure_seal' }
         ],
         pressure: 2.0,
-        results: [{ item: 'pneumaticcraft:printed_circuit_board' }]
-    }).id('kubejs:pneumaticcraft/pressure_chamber/printed_circuit_board')
+        results: [{ item: 'pneumaticcraft:unassembled_pcb' }]
+    }).id('kubejs:pneumaticcraft/pressure_chamber/unassembled_pcb_with_primitive_logic')
 })

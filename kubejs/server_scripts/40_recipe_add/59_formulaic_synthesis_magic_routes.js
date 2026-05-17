@@ -115,6 +115,7 @@ function btmSynArsImbuement(event, id, input, output, pedestalItems, sourceCost)
     if (!btmSynExists(input) || !btmSynExists(output)) return
     event.custom({
         type: 'ars_nouveau:imbuement',
+        count: 1,
         input: { item: input },
         output: output,
         pedestalItems: pedestalItems.map(function (item) { return { item: { item: item } } }),

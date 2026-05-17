@@ -117,8 +117,15 @@ ServerEvents.recipes(function (event) {
             K: { item: 'kubejs:kimberlite_diamond_seed' },
             R: { item: 'kubejs:redbed_signal_salt' }
         },
+        result: { item: 'kubejs:raw_impossible_circuit' }
+    }).id('kubejs:tomeofblood/mechanical_crafting/raw_impossible_circuit')
+
+    event.custom({
+        type: 'pneumaticcraft:assembly_laser',
+        input: { item: 'kubejs:raw_impossible_circuit' },
+        program: 'laser',
         result: { item: 'kubejs:impossible_circuit' }
-    }).id('kubejs:tomeofblood/mechanical_crafting/impossible_circuit')
+    }).id('kubejs:tomeofblood/pncr_assembly/impossible_circuit')
 
     btmTobAlchemy(event, 'tomeofblood:novice_tome_of_blood', [
         { item: 'ars_nouveau:novice_spell_book' },

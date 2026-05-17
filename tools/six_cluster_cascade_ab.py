@@ -13,7 +13,7 @@ PRISM_ROOT = Path(os.environ.get("PRISM_ROOT", str(Path.home() / ".local/share/P
 INSTANCE = os.environ.get("INSTANCE", "Bound to Matter-Playtest 3 - v1")
 MODS_DIR = PRISM_ROOT / "instances" / INSTANCE / "minecraft" / "mods"
 PROFILE = ROOT / "tools" / "profile_prism_variant.sh"
-OUT_BASE = ROOT / "docs/memory_variants"
+OUT_BASE = Path(os.environ.get("OUT_BASE", "/tmp/btm-memory-variants"))
 
 from datetime import datetime
 STAMP = os.environ.get("STAMP", datetime.now().strftime("%Y%m%d-%H%M%S"))

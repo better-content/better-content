@@ -3,7 +3,7 @@
 	default_quest_shape: "rsquare"
 	filename: "food_catalogue"
 	group: "1535A2E7C7CA772B"
-	id: "7457EB2B106AF545"
+	id: "73DF60D97802BBE7"
 	order_index: 5
 	quest_links: [ ]
 	quests: [
@@ -21,13 +21,13 @@
 				{
 					count: 4
 					id: "173CD5F3AE17071B"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "18635639B2ED1EC5"
-					item: "dotcoinmod:iron_coin"
+					id: "41E4453139A6056A"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -41,7 +41,7 @@
 					type: "item"
 				}
 				{
-					id: "2D930515FC0ADDD6"
+					id: "1795669F4B329989"
 					item: "minecraft:baked_potato"
 					type: "item"
 				}
@@ -71,12 +71,12 @@
 					type: "item"
 				}
 				{
-					id: "1F197627E5628B67"
+					id: "69BA8BFA5D8AAC83"
 					item: "minecraft:cod"
 					type: "item"
 				}
 				{
-					id: "5DA8A19E3700E960"
+					id: "509B074E19886C7E"
 					item: "minecraft:cooked_beef"
 					type: "item"
 				}
@@ -86,7 +86,7 @@
 					type: "item"
 				}
 				{
-					id: "44D742EFB0896B7B"
+					id: "7659C34A124711FF"
 					item: "minecraft:cooked_cod"
 					type: "item"
 				}
@@ -96,7 +96,7 @@
 					type: "item"
 				}
 				{
-					id: "373B19CBDF704CE3"
+					id: "5E56C0130846ECAC"
 					item: "minecraft:cooked_porkchop"
 					type: "item"
 				}
@@ -146,12 +146,12 @@
 					type: "item"
 				}
 				{
-					id: "545FB23E533C8E0A"
+					id: "7EBDBAFB58E192DE"
 					item: "minecraft:mushroom_stew"
 					type: "item"
 				}
 				{
-					id: "0C91E9E1DEDC9B58"
+					id: "09578819CCEA7CAD"
 					item: "minecraft:poisonous_potato"
 					type: "item"
 				}
@@ -161,27 +161,27 @@
 					type: "item"
 				}
 				{
-					id: "45F4BDD535531D3E"
+					id: "4DD4941A30DDEBB5"
 					item: "minecraft:potato"
 					type: "item"
 				}
 				{
-					id: "6304C13EED850C1D"
+					id: "0F08524ED00F22C2"
 					item: "minecraft:pufferfish"
 					type: "item"
 				}
 				{
-					id: "1BB0976950355824"
+					id: "257A8111E9CF26B2"
 					item: "minecraft:pumpkin_pie"
 					type: "item"
 				}
 				{
-					id: "7DB35486A973B31C"
+					id: "2F5EDD49E76B114F"
 					item: "minecraft:rabbit"
 					type: "item"
 				}
 				{
-					id: "3ED904E7E6EF174F"
+					id: "2601920625B3201A"
 					item: "minecraft:rabbit_stew"
 					type: "item"
 				}
@@ -196,17 +196,17 @@
 					type: "item"
 				}
 				{
-					id: "17AB9F232685972C"
+					id: "28461EAD37EFB90A"
 					item: "minecraft:spider_eye"
 					type: "item"
 				}
 				{
-					id: "4AE18670DAE78724"
+					id: "4207CA318674FFB7"
 					item: "minecraft:suspicious_stew"
 					type: "item"
 				}
 				{
-					id: "1EAE47EBD4734AB6"
+					id: "4C70BB08003D8452"
 					item: "minecraft:sweet_berries"
 					type: "item"
 				}
@@ -224,19 +224,19 @@
 			hide_dependency_lines: false
 			icon: "farmersdelight:apple_cider"
 			icon_scale: 1.18d
-			id: "0977E2DD91C81565"
+			id: "134B1319C9B92E95"
 			min_width: 2
 			rewards: [
 				{
 					count: 4
 					id: "6D9F7CA1E4111FDF"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "0E360DF72DC3707D"
-					item: "dotcoinmod:iron_coin"
+					id: "08783B5189F0F2A3"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -245,17 +245,17 @@
 			subtitle: "Showcase"
 			tasks: [
 				{
-					id: "0A530744AFF80DB1"
+					id: "131BF0B3BD11BE74"
 					item: "farmersdelight:apple_cider"
 					type: "item"
 				}
 				{
-					id: "1F0D245E1C5158AB"
+					id: "26CA5419DC62D335"
 					item: "farmersdelight:apple_pie"
 					type: "item"
 				}
 				{
-					id: "10B72F4483803408"
+					id: "289CD94B95EE8FBD"
 					item: "farmersdelight:apple_pie_slice"
 					type: "item"
 				}
@@ -265,17 +265,17 @@
 					type: "item"
 				}
 				{
-					id: "49A14AA85EE2C3A4"
+					id: "4A1CACABF9239A46"
 					item: "farmersdelight:bacon_and_eggs"
 					type: "item"
 				}
 				{
-					id: "1763B21DA2F29378"
+					id: "53C1E7B0A2A8AD7E"
 					item: "farmersdelight:bacon_sandwich"
 					type: "item"
 				}
 				{
-					id: "03D6B50F4D1C0636"
+					id: "5DB65397C77BDEAF"
 					item: "farmersdelight:baked_cod_stew"
 					type: "item"
 				}
@@ -295,22 +295,22 @@
 					type: "item"
 				}
 				{
-					id: "7A3C6234A770E37A"
+					id: "05F26EF163AE6485"
 					item: "farmersdelight:bone_broth"
 					type: "item"
 				}
 				{
-					id: "5BDE0CD55BF24441"
+					id: "575A6090710DB76A"
 					item: "farmersdelight:cake_slice"
 					type: "item"
 				}
 				{
-					id: "3A8DB458A0C952E9"
+					id: "5A9FCD4DB2CED03F"
 					item: "farmersdelight:chicken_cuts"
 					type: "item"
 				}
 				{
-					id: "7798C8ABB9D750F4"
+					id: "571AC5BD7BEFAE08"
 					item: "farmersdelight:chicken_sandwich"
 					type: "item"
 				}
@@ -330,12 +330,12 @@
 					type: "item"
 				}
 				{
-					id: "3994051BC5E91716"
+					id: "2AE3531041215119"
 					item: "farmersdelight:cod_roll"
 					type: "item"
 				}
 				{
-					id: "28D5DE1F5AC01484"
+					id: "2B830A549CE37D87"
 					item: "farmersdelight:cod_slice"
 					type: "item"
 				}
@@ -345,17 +345,17 @@
 					type: "item"
 				}
 				{
-					id: "4DDFE95241266B1A"
+					id: "49C5230DBC6FD40E"
 					item: "farmersdelight:cooked_chicken_cuts"
 					type: "item"
 				}
 				{
-					id: "70254506EFA0AF4C"
+					id: "4598B816B0627408"
 					item: "farmersdelight:cooked_cod_slice"
 					type: "item"
 				}
 				{
-					id: "669AD5F018AE0EA9"
+					id: "49F8B66530983598"
 					item: "farmersdelight:cooked_mutton_chops"
 					type: "item"
 				}
@@ -365,22 +365,22 @@
 					type: "item"
 				}
 				{
-					id: "0D8F4C5305007DC0"
+					id: "30D8FFC0975DD44F"
 					item: "farmersdelight:cooked_salmon_slice"
 					type: "item"
 				}
 				{
-					id: "07D5917C01ECC91C"
+					id: "4A74FFEFD720D241"
 					item: "farmersdelight:dumplings"
 					type: "item"
 				}
 				{
-					id: "3D2AB4BDCEA70A7E"
+					id: "6CA4050599A7AD1E"
 					item: "farmersdelight:egg_sandwich"
 					type: "item"
 				}
 				{
-					id: "43CB2EA261C64EFF"
+					id: "3385326BC4E10906"
 					item: "farmersdelight:fish_stew"
 					type: "item"
 				}
@@ -395,17 +395,17 @@
 					type: "item"
 				}
 				{
-					id: "72058D93656EE20B"
+					id: "5EE19D3C07A7CF79"
 					item: "farmersdelight:fruit_salad"
 					type: "item"
 				}
 				{
-					id: "1A4498C19B2403EC"
+					id: "1E9E54F0245CD0B8"
 					item: "farmersdelight:glow_berry_custard"
 					type: "item"
 				}
 				{
-					id: "539F94BA007BBE2A"
+					id: "712FB7D0D1A65252"
 					item: "farmersdelight:grilled_salmon"
 					type: "item"
 				}
@@ -430,7 +430,7 @@
 					type: "item"
 				}
 				{
-					id: "2B01547D81871495"
+					id: "0CA483F843E3D0F1"
 					item: "farmersdelight:hot_cocoa"
 					type: "item"
 				}
@@ -440,7 +440,7 @@
 					type: "item"
 				}
 				{
-					id: "55024BC1BC7443F8"
+					id: "6BE9AC4E4556E0F4"
 					item: "farmersdelight:kelp_roll_slice"
 					type: "item"
 				}
@@ -450,12 +450,12 @@
 					type: "item"
 				}
 				{
-					id: "252AB6E08935C0FB"
+					id: "10D4AB0F672C8E49"
 					item: "farmersdelight:melon_popsicle"
 					type: "item"
 				}
 				{
-					id: "20C62E500B4BF837"
+					id: "115F0066F6CFF3EE"
 					item: "farmersdelight:minced_beef"
 					type: "item"
 				}
@@ -470,7 +470,7 @@
 					type: "item"
 				}
 				{
-					id: "3A2BDF93E90B15CF"
+					id: "2778E17BCAC86C05"
 					item: "farmersdelight:mutton_chops"
 					type: "item"
 				}
@@ -480,7 +480,7 @@
 					type: "item"
 				}
 				{
-					id: "3F3E0D88ACDC72C0"
+					id: "7E971D28CCCE0127"
 					item: "farmersdelight:nether_salad"
 					type: "item"
 				}
@@ -490,17 +490,17 @@
 					type: "item"
 				}
 				{
-					id: "6DC26F63B0FC58EF"
+					id: "02EA63A24AF6EC39"
 					item: "farmersdelight:pasta_with_meatballs"
 					type: "item"
 				}
 				{
-					id: "5D4875A15378E630"
+					id: "5A8B569AF401979A"
 					item: "farmersdelight:pasta_with_mutton_chop"
 					type: "item"
 				}
 				{
-					id: "1D879AF1593E952A"
+					id: "646BE88C6F822019"
 					item: "farmersdelight:pumpkin_slice"
 					type: "item"
 				}
@@ -520,7 +520,7 @@
 					type: "item"
 				}
 				{
-					id: "538B7FA26FD438B5"
+					id: "71229D38401B8613"
 					item: "farmersdelight:roasted_mutton_chops"
 					type: "item"
 				}
@@ -535,12 +535,12 @@
 					type: "item"
 				}
 				{
-					id: "77E97031300A7F38"
+					id: "598978600590E46A"
 					item: "farmersdelight:shepherds_pie"
 					type: "item"
 				}
 				{
-					id: "5905855AEB636912"
+					id: "4E757F27B93E956F"
 					item: "farmersdelight:smoked_ham"
 					type: "item"
 				}
@@ -550,7 +550,7 @@
 					type: "item"
 				}
 				{
-					id: "689484917DB9F558"
+					id: "50521EC1C47E801B"
 					item: "farmersdelight:steak_and_potatoes"
 					type: "item"
 				}
@@ -560,7 +560,7 @@
 					type: "item"
 				}
 				{
-					id: "3C8655B273F4DD37"
+					id: "2789FF337C0E1330"
 					item: "farmersdelight:sweet_berry_cheesecake"
 					type: "item"
 				}
@@ -585,7 +585,7 @@
 					type: "item"
 				}
 				{
-					id: "116612C0492B0B63"
+					id: "4850FE8F8AAF664E"
 					item: "farmersdelight:vegetable_soup"
 					type: "item"
 				}
@@ -608,13 +608,13 @@
 				{
 					count: 4
 					id: "7C1E6F5B3BBB1F90"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "0F621A8F97F8692C"
-					item: "dotcoinmod:iron_coin"
+					id: "7AE34B15D09FDE5A"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -628,7 +628,7 @@
 					type: "item"
 				}
 				{
-					id: "12ABF99BB5B4A6CC"
+					id: "00A302FC44716B1F"
 					item: "farmersrespite:coffee"
 					type: "item"
 				}
@@ -638,22 +638,22 @@
 					type: "item"
 				}
 				{
-					id: "2D08A9223E8947F9"
+					id: "1726957C0D81706C"
 					item: "farmersrespite:gamblers_tea"
 					type: "item"
 				}
 				{
-					id: "7460B3173451E1DD"
+					id: "1E5FE8D92218DAF3"
 					item: "farmersrespite:green_tea"
 					type: "item"
 				}
 				{
-					id: "3BAE625B522EDC5A"
+					id: "121D0ACCC60ED068"
 					item: "farmersrespite:green_tea_cookie"
 					type: "item"
 				}
 				{
-					id: "09A4EFE7119AA332"
+					id: "4084F5DE587E4727"
 					item: "farmersrespite:long_apple_cider"
 					type: "item"
 				}
@@ -688,7 +688,7 @@
 					type: "item"
 				}
 				{
-					id: "08125AD3CD8ADEE9"
+					id: "1A2B339C43ED0847"
 					item: "farmersrespite:long_rose_hip_tea"
 					type: "item"
 				}
@@ -698,7 +698,7 @@
 					type: "item"
 				}
 				{
-					id: "4D219B8F48D57D6B"
+					id: "062E461C601CE7BE"
 					item: "farmersrespite:purulent_tea"
 					type: "item"
 				}
@@ -708,7 +708,7 @@
 					type: "item"
 				}
 				{
-					id: "33EF7747C808D411"
+					id: "352AF2C9EF949091"
 					item: "farmersrespite:rose_hip_pie_slice"
 					type: "item"
 				}
@@ -733,12 +733,12 @@
 					type: "item"
 				}
 				{
-					id: "17CA208CCB7A270C"
+					id: "58326DD1C898487B"
 					item: "farmersrespite:strong_gamblers_tea"
 					type: "item"
 				}
 				{
-					id: "0B87D120ECCD3FBC"
+					id: "4E7F85931DE5D5FD"
 					item: "farmersrespite:strong_green_tea"
 					type: "item"
 				}
@@ -748,7 +748,7 @@
 					type: "item"
 				}
 				{
-					id: "6C96630CF248E925"
+					id: "4BB55B520DEE5189"
 					item: "farmersrespite:strong_melon_juice"
 					type: "item"
 				}
@@ -763,7 +763,7 @@
 					type: "item"
 				}
 				{
-					id: "2FDAD80C11E38D5E"
+					id: "4DA36C676E2ADC9F"
 					item: "farmersrespite:strong_yellow_tea"
 					type: "item"
 				}
@@ -773,12 +773,12 @@
 					type: "item"
 				}
 				{
-					id: "77E5A41527D6794B"
+					id: "384ECD16704B419E"
 					item: "farmersrespite:yellow_tea"
 					type: "item"
 				}
 				{
-					id: "439E282E86CA3657"
+					id: "60D65160CE35A1D9"
 					item: "brewinandchewin:apple_jelly"
 					type: "item"
 				}
@@ -793,17 +793,17 @@
 					type: "item"
 				}
 				{
-					id: "367B5D4EE66B893E"
+					id: "1B170CD6DCD975CA"
 					item: "brewinandchewin:cheesy_pasta"
 					type: "item"
 				}
 				{
-					id: "509CC59ED64D5D26"
+					id: "5E6F61EAEBAE3666"
 					item: "brewinandchewin:cocoa_fudge"
 					type: "item"
 				}
 				{
-					id: "1D3DA1D84A827929"
+					id: "28A0D845351B6D0C"
 					item: "brewinandchewin:creamy_onion_soup"
 					type: "item"
 				}
@@ -823,12 +823,12 @@
 					type: "item"
 				}
 				{
-					id: "3C85D129718FA09D"
+					id: "110220C96EDC3502"
 					item: "brewinandchewin:flaxen_cheese_wedge"
 					type: "item"
 				}
 				{
-					id: "13383857B1F76A27"
+					id: "55C534AC95BB1E3A"
 					item: "brewinandchewin:glittering_grenadine"
 					type: "item"
 				}
@@ -843,7 +843,7 @@
 					type: "item"
 				}
 				{
-					id: "16181D78AC82EA61"
+					id: "1333A08DD46EBCA0"
 					item: "brewinandchewin:horror_lasagna"
 					type: "item"
 				}
@@ -858,12 +858,12 @@
 					type: "item"
 				}
 				{
-					id: "06113DAE50378AF7"
+					id: "08FE1A258CFE2476"
 					item: "brewinandchewin:kippers"
 					type: "item"
 				}
 				{
-					id: "03E9F6220A89B4F9"
+					id: "25EF5C0B0695A919"
 					item: "brewinandchewin:mead"
 					type: "item"
 				}
@@ -873,17 +873,17 @@
 					type: "item"
 				}
 				{
-					id: "05D984BC15DC0956"
+					id: "126CF42A91AC43A0"
 					item: "brewinandchewin:pizza"
 					type: "item"
 				}
 				{
-					id: "2EACF6DA5A1A5180"
+					id: "3C817DD1F83D57AE"
 					item: "brewinandchewin:pizza_slice"
 					type: "item"
 				}
 				{
-					id: "328DA5D2691FB892"
+					id: "426AEAA7282065B5"
 					item: "brewinandchewin:quiche"
 					type: "item"
 				}
@@ -898,12 +898,12 @@
 					type: "item"
 				}
 				{
-					id: "1B58A12A4707A84C"
+					id: "5D5B7C468C26C7C9"
 					item: "brewinandchewin:rice_wine"
 					type: "item"
 				}
 				{
-					id: "14CAF42590B1F1C3"
+					id: "4EAC437FEB964DF1"
 					item: "brewinandchewin:saccharine_rum"
 					type: "item"
 				}
@@ -923,7 +923,7 @@
 					type: "item"
 				}
 				{
-					id: "4BA5BAA8A39C6C5B"
+					id: "64ED7F6F8F8CEA2C"
 					item: "brewinandchewin:strongroot_ale"
 					type: "item"
 				}
@@ -938,7 +938,7 @@
 					type: "item"
 				}
 				{
-					id: "6DB68AFA8AED7130"
+					id: "00A0D7697D0ACD7C"
 					item: "brewinandchewin:vodka"
 					type: "item"
 				}
@@ -961,19 +961,19 @@
 			]
 			hide_dependency_lines: false
 			icon: "veggiesdelight:rice_and_vegetables"
-			id: "00D5182BFCAA9795"
+			id: "530E6B6C043145B4"
 			min_width: 2
 			rewards: [
 				{
 					count: 4
-					id: "6D5084F4B5AB9E19"
-					item: "dotcoinmod:copper_coin"
+					id: "0133D4FA9B98C005"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "594EB33FDA16E1D9"
-					item: "dotcoinmod:iron_coin"
+					id: "4870A680CA5E0526"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -982,7 +982,7 @@
 			subtitle: "Showcase"
 			tasks: [
 				{
-					id: "05FE537761D4DFE3"
+					id: "41C47BF0D292C4D0"
 					item: "veggiesdelight:rice_and_vegetables"
 					type: "item"
 				}
@@ -997,12 +997,12 @@
 					type: "item"
 				}
 				{
-					id: "2184BAB959325D6E"
+					id: "4A11FE070FD7023F"
 					item: "veggiesdelight:garlic_bread"
 					type: "item"
 				}
 				{
-					id: "2DE805FB57F2627B"
+					id: "1BA700B628BA7EF5"
 					item: "veggiesdelight:stuffed_zucchini_boat"
 					type: "item"
 				}
@@ -1012,7 +1012,7 @@
 					type: "item"
 				}
 				{
-					id: "656EB0E99785D72F"
+					id: "0F19F4D96CB9CDB7"
 					item: "veggiesdelight:bellpepper"
 					type: "item"
 				}
@@ -1022,7 +1022,7 @@
 					type: "item"
 				}
 				{
-					id: "2EA0860BA19AD691"
+					id: "225F8B3E71037634"
 					item: "veggiesdelight:garlic"
 					type: "item"
 				}
@@ -1032,17 +1032,17 @@
 					type: "item"
 				}
 				{
-					id: "0929837EB5562B2A"
+					id: "301AD97D3CB6D412"
 					item: "veggiesdelight:zucchini"
 					type: "item"
 				}
 				{
-					id: "5DED99C4497288DF"
+					id: "36468F8C7E0E3497"
 					item: "corn_delight:boiled_corn"
 					type: "item"
 				}
 				{
-					id: "1663D5D1FF4A3178"
+					id: "7AD41330C0C28A35"
 					item: "corn_delight:creamy_corn_drink"
 					type: "item"
 				}
@@ -1057,17 +1057,17 @@
 					type: "item"
 				}
 				{
-					id: "6A84323DEAAB0824"
+					id: "0B07597A4AD7EF6F"
 					item: "corn_delight:corn_dog"
 					type: "item"
 				}
 				{
-					id: "08DC99BB817A2750"
+					id: "7C5035E01454DC4F"
 					item: "corn_delight:corn_soup"
 					type: "item"
 				}
 				{
-					id: "73FEA3EC66905C22"
+					id: "6D60DB2CF08FD3AD"
 					item: "corn_delight:grilled_corn"
 					type: "item"
 				}
@@ -1077,12 +1077,12 @@
 					type: "item"
 				}
 				{
-					id: "2B1163037961A06A"
+					id: "32EE877E5FD74460"
 					item: "corn_delight:creamed_corn"
 					type: "item"
 				}
 				{
-					id: "11F5070A5938D700"
+					id: "6F271439B65686F8"
 					item: "corn_delight:nachos_bowl"
 					type: "item"
 				}
@@ -1097,17 +1097,17 @@
 					type: "item"
 				}
 				{
-					id: "543B99767BAE7360"
+					id: "5B588891AE0B11AC"
 					item: "rusticdelight:coffee"
 					type: "item"
 				}
 				{
-					id: "3EC6DF3866E65C3F"
+					id: "3CC7EF7BB18D12F5"
 					item: "rusticdelight:cooked_calamari"
 					type: "item"
 				}
 				{
-					id: "133118CB4B46604C"
+					id: "33C406081164FF6B"
 					item: "rusticdelight:cooked_calamari_slice"
 					type: "item"
 				}
@@ -1117,7 +1117,7 @@
 					type: "item"
 				}
 				{
-					id: "7F53FF8CA703B15B"
+					id: "45DFAA26C010C0C7"
 					item: "rusticdelight:fried_mushrooms"
 					type: "item"
 				}
@@ -1132,7 +1132,7 @@
 					type: "item"
 				}
 				{
-					id: "318C8C16AF0170B7"
+					id: "63434DBE8B1697BB"
 					item: "rusticdelight:roasted_coffee_beans"
 					type: "item"
 				}
@@ -1147,7 +1147,7 @@
 					type: "item"
 				}
 				{
-					id: "6767EAC12709F1E4"
+					id: "04C4181D735AA8D9"
 					item: "rusticdelight:stuffed_bell_pepper_red"
 					type: "item"
 				}
@@ -1174,14 +1174,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "67B70856F034263F"
-					item: "dotcoinmod:copper_coin"
+					id: "0B8717E0A94A1286"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "3A9C674B645D1C86"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -1205,27 +1205,27 @@
 					type: "item"
 				}
 				{
-					id: "7BF40BF680AFC487"
+					id: "54A16A1DF45A0197"
 					item: "delightful:berry_matcha_latte"
 					type: "item"
 				}
 				{
-					id: "5872B56787DE9340"
+					id: "5B582A794973BDF7"
 					item: "delightful:cactus_chili"
 					type: "item"
 				}
 				{
-					id: "0431CDB9C2BC2E99"
+					id: "12F28A2933B2D23C"
 					item: "delightful:cantaloupe"
 					type: "item"
 				}
 				{
-					id: "39A2F963BBF9EDFA"
+					id: "39B3716B1C18D64E"
 					item: "delightful:cantaloupe_bread"
 					type: "item"
 				}
 				{
-					id: "0FB758B2A9817B52"
+					id: "7520C33F0C9FF180"
 					item: "delightful:cheeseburger"
 					type: "item"
 				}
@@ -1240,7 +1240,7 @@
 					type: "item"
 				}
 				{
-					id: "15D585C89B008018"
+					id: "018A2386809B85F7"
 					item: "delightful:cooked_goat"
 					type: "item"
 				}
@@ -1250,7 +1250,7 @@
 					type: "item"
 				}
 				{
-					id: "689CE38A91A77EE2"
+					id: "04E817523DD4774B"
 					item: "delightful:glow_jam_cookie"
 					type: "item"
 				}
@@ -1260,12 +1260,12 @@
 					type: "item"
 				}
 				{
-					id: "0A3E9CF8414885BA"
+					id: "0191EDB3073E5B2D"
 					item: "delightful:marshmallow_stick"
 					type: "item"
 				}
 				{
-					id: "4298C12978CC29E1"
+					id: "027C776882C05827"
 					item: "delightful:matcha_gummy"
 					type: "item"
 				}
@@ -1275,7 +1275,7 @@
 					type: "item"
 				}
 				{
-					id: "2A51662F5AE76A8D"
+					id: "396CF0453644D4A4"
 					item: "delightful:matcha_latte"
 					type: "item"
 				}
@@ -1290,7 +1290,7 @@
 					type: "item"
 				}
 				{
-					id: "44C6245C125429E0"
+					id: "65158C22FF4AB4F4"
 					item: "delightful:mutton_pie_slice"
 					type: "item"
 				}
@@ -1300,7 +1300,7 @@
 					type: "item"
 				}
 				{
-					id: "41DA478331F164D8"
+					id: "057A88A0A8B70347"
 					item: "delightful:passion_fruit_tart_slice"
 					type: "item"
 				}
@@ -1310,7 +1310,7 @@
 					type: "item"
 				}
 				{
-					id: "3E2AE5B1CB09C2E0"
+					id: "2AB4B0BB9D69E45F"
 					item: "delightful:salmon_and_roe_blini"
 					type: "item"
 				}
@@ -1325,7 +1325,7 @@
 					type: "item"
 				}
 				{
-					id: "13013F60D9EDF7F9"
+					id: "00D4A01835481CB1"
 					item: "delightful:sinigang"
 					type: "item"
 				}
@@ -1335,7 +1335,7 @@
 					type: "item"
 				}
 				{
-					id: "12E545E061945ECD"
+					id: "59EE3687CC5F1D7E"
 					item: "delightful:source_berry_cookie"
 					type: "item"
 				}
@@ -1355,7 +1355,7 @@
 					type: "item"
 				}
 				{
-					id: "6597FD84363438A6"
+					id: "70E6C0E1CEFFF7E4"
 					item: "delightful:source_berry_pie_slice"
 					type: "item"
 				}
@@ -1384,14 +1384,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "2EE5B2C293C7799A"
-					item: "dotcoinmod:copper_coin"
+					id: "6FF806E7D88BE349"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "500FD1FA8083DF6A"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -1400,7 +1400,7 @@
 			subtitle: "Showcase"
 			tasks: [
 				{
-					id: "1068FA683E516695"
+					id: "4215F69B1B755349"
 					item: "mynethersdelight:egg_soup"
 					type: "item"
 				}
@@ -1415,22 +1415,22 @@
 					type: "item"
 				}
 				{
-					id: "33063F5981823D81"
+					id: "6C0EBE8F4117986A"
 					item: "mynethersdelight:burnt_roll"
 					type: "item"
 				}
 				{
-					id: "005D051A9D742D2D"
+					id: "2721B498F127611F"
 					item: "mynethersdelight:crimson_stroganoff"
 					type: "item"
 				}
 				{
-					id: "22118254584BFDD5"
+					id: "26BD82B16F52672A"
 					item: "mynethersdelight:deviled_egg"
 					type: "item"
 				}
 				{
-					id: "19977FEA9DFDA5E5"
+					id: "3E28CA4348462511"
 					item: "mynethersdelight:ghasta"
 					type: "item"
 				}
@@ -1440,7 +1440,7 @@
 					type: "item"
 				}
 				{
-					id: "3E10BDA5FB839AF3"
+					id: "0DAFF25E3EA8CFC5"
 					item: "mynethersdelight:hot_wings"
 					type: "item"
 				}
@@ -1455,12 +1455,12 @@
 					type: "item"
 				}
 				{
-					id: "4C4340791688DF23"
+					id: "4F0BF9B0CD22E82D"
 					item: "mynethersdelight:plate_of_stuffed_hoglin"
 					type: "item"
 				}
 				{
-					id: "789A794005DB6B3C"
+					id: "4D1F86C6752346E4"
 					item: "mynethersdelight:sausage_and_potatoes"
 					type: "item"
 				}
@@ -1470,7 +1470,7 @@
 					type: "item"
 				}
 				{
-					id: "21365DE223B121F8"
+					id: "421D64EEE28D57DD"
 					item: "mynethersdelight:red_loin_on_a_stick"
 					type: "item"
 				}
@@ -1480,7 +1480,7 @@
 					type: "item"
 				}
 				{
-					id: "724DFC30BC9E05B6"
+					id: "11F4166AF779AAA5"
 					item: "mynethersdelight:hotdog_with_mixed_salad"
 					type: "item"
 				}
@@ -1490,12 +1490,12 @@
 					type: "item"
 				}
 				{
-					id: "1737A6BC77A01576"
+					id: "65A38B4619AF5618"
 					item: "ends_delight:chorus_fruit_grain"
 					type: "item"
 				}
 				{
-					id: "473C6A7FB42443AB"
+					id: "7A0E732B8C34AADD"
 					item: "ends_delight:chorus_fruit_milk_tea"
 					type: "item"
 				}
@@ -1525,12 +1525,12 @@
 					type: "item"
 				}
 				{
-					id: "2871423F1DCD673B"
+					id: "2F6361A3A5157ADB"
 					item: "ends_delight:dried_endermite_meat"
 					type: "item"
 				}
 				{
-					id: "1EF81E3C457EF67C"
+					id: "02AD02B99252AAB9"
 					item: "ends_delight:end_barbecue_stick"
 					type: "item"
 				}
@@ -1545,7 +1545,7 @@
 					type: "item"
 				}
 				{
-					id: "4C22C0E6A2B876DF"
+					id: "025F4501EBBBD8C0"
 					item: "ends_delight:grilled_shulker"
 					type: "item"
 				}
@@ -1555,12 +1555,12 @@
 					type: "item"
 				}
 				{
-					id: "292608D089ED2FC2"
+					id: "5C05A85233712461"
 					item: "ends_delight:roasted_dragon_meat_cuts"
 					type: "item"
 				}
 				{
-					id: "72EBA61AB7A13155"
+					id: "32BDDA8CE4BB93E9"
 					item: "ends_delight:roasted_shulker_meat"
 					type: "item"
 				}
@@ -1585,7 +1585,7 @@
 					type: "item"
 				}
 				{
-					id: "714F919D5EF29EF8"
+					id: "4A2E885A922423CD"
 					item: "oceansdelight:braised_sea_pickle"
 					type: "item"
 				}
@@ -1600,7 +1600,7 @@
 					type: "item"
 				}
 				{
-					id: "352E8D1B4122445E"
+					id: "0D6FCDD9657C1AC6"
 					item: "oceansdelight:elder_guardian_roll"
 					type: "item"
 				}
@@ -1610,7 +1610,7 @@
 					type: "item"
 				}
 				{
-					id: "3E1D1B3E06ED3695"
+					id: "2DC5EFE6614D6D47"
 					item: "oceansdelight:fugu_roll"
 					type: "item"
 				}
@@ -1635,7 +1635,7 @@
 					type: "item"
 				}
 				{
-					id: "1B9CFD89303A9B4B"
+					id: "24084637E7B692DE"
 					item: "oceansdelight:stuffed_cod"
 					type: "item"
 				}
@@ -1657,19 +1657,19 @@
 			]
 			hide_dependency_lines: false
 			icon: "ubesdelight:lumpia"
-			id: "44C8DD3723AD6A92"
+			id: "1FE922B13D433232"
 			min_width: 2
 			rewards: [
 				{
 					count: 4
 					id: "38129C4103C352B7"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "4CF82952598B8644"
-					item: "dotcoinmod:iron_coin"
+					id: "22F043B8F759A2EE"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -1678,12 +1678,12 @@
 			subtitle: "Showcase"
 			tasks: [
 				{
-					id: "38B83EC9109BC906"
+					id: "0776E580BF0EDFDC"
 					item: "ubesdelight:lumpia"
 					type: "item"
 				}
 				{
-					id: "14E717EAD86EBAAB"
+					id: "23EE151AB933F56E"
 					item: "ubesdelight:ensaymada"
 					type: "item"
 				}
@@ -1693,12 +1693,12 @@
 					type: "item"
 				}
 				{
-					id: "5D5C5F9AB39F3600"
+					id: "59EB3209B19847B1"
 					item: "ubesdelight:condensed_milk_bottle"
 					type: "item"
 				}
 				{
-					id: "3DD555A5ABEA4E6C"
+					id: "517939FE16F40703"
 					item: "ubesdelight:garlic_chop"
 					type: "item"
 				}
@@ -1708,12 +1708,12 @@
 					type: "item"
 				}
 				{
-					id: "730E4D1862983BA2"
+					id: "42DAEC1F2578CD00"
 					item: "ubesdelight:halo_halo"
 					type: "item"
 				}
 				{
-					id: "0F3149B1EE051323"
+					id: "4A3984D7C060DA60"
 					item: "ubesdelight:milk_tea_ube"
 					type: "item"
 				}
@@ -1738,22 +1738,22 @@
 					type: "item"
 				}
 				{
-					id: "46DC32B926C70A76"
+					id: "3B79F90C96F937DC"
 					item: "ubesdelight:ube_cake_slice"
 					type: "item"
 				}
 				{
-					id: "67B59991DB60098B"
+					id: "13420813D550AB90"
 					item: "ubesdelight:cookie_ube"
 					type: "item"
 				}
 				{
-					id: "74E891DF2C06604C"
+					id: "1A98DC0DF51AA3F3"
 					item: "ubesdelight:polvorone_ube"
 					type: "item"
 				}
 				{
-					id: "55F781D91A74BDF9"
+					id: "4D27CC669CFA5AE7"
 					item: "ubesdelight:ensaymada_ube"
 					type: "item"
 				}
@@ -1778,7 +1778,7 @@
 					type: "item"
 				}
 				{
-					id: "467E409850446839"
+					id: "42AA0E1B8D041422"
 					item: "undergardendelight:mogsteak"
 					type: "item"
 				}
@@ -1798,7 +1798,7 @@
 					type: "item"
 				}
 				{
-					id: "61E6B6E062933C93"
+					id: "170E982DE26512D8"
 					item: "undergardendelight:cooked_gwibling_fillet"
 					type: "item"
 				}
@@ -1818,22 +1818,22 @@
 					type: "item"
 				}
 				{
-					id: "736C8FFE4E4BB0B9"
+					id: "4E198D21F9301A33"
 					item: "undergardendelight:underbean_salad"
 					type: "item"
 				}
 				{
-					id: "48968F677A4F0192"
+					id: "1657DD6005EB320A"
 					item: "undergardendelight:dweller_meat_slice"
 					type: "item"
 				}
 				{
-					id: "30F4FDC8CC22A8FF"
+					id: "2465DC59CC0D4E48"
 					item: "undergardendelight:raw_gloomper_cuts"
 					type: "item"
 				}
 				{
-					id: "7C73BCE6A52CA277"
+					id: "05F0640D90F7D67F"
 					item: "undergardendelight:raw_gwibling_fillet"
 					type: "item"
 				}
@@ -1843,12 +1843,12 @@
 					type: "item"
 				}
 				{
-					id: "028FE089319BC89F"
+					id: "0DF00E73269E8106"
 					item: "undergardendelight:shimmerpearl"
 					type: "item"
 				}
 				{
-					id: "574B96F02B9558ED"
+					id: "7F92D35FAA1DE80F"
 					item: "undergardendelight:gronglet_with_roasted_veggies"
 					type: "item"
 				}
@@ -1858,12 +1858,12 @@
 					type: "item"
 				}
 				{
-					id: "3679D381FEC0C185"
+					id: "3BCB1712ED6167A6"
 					item: "undergardendelight:glitterwrap"
 					type: "item"
 				}
 				{
-					id: "0CD1A9834D38F873"
+					id: "783BCF4DFE1E1832"
 					item: "undergardendelight:stuffed_gloomgourd"
 					type: "item"
 				}
@@ -1891,14 +1891,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "3A6347ED550714D9"
-					item: "dotcoinmod:copper_coin"
+					id: "550B5F0BF4484346"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "154B0129BC41B624"
-					item: "dotcoinmod:iron_coin"
+					id: "1C82B973B9AE0DCA"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]

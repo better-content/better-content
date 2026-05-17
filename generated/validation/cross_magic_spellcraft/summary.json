@@ -1,0 +1,1794 @@
+{
+  "modsDir": "/tmp/btm-magic-audit-mods/mods",
+  "ironJar": "irons_spellbooks-1.20.1-3.15.6.jar",
+  "generatedAt": "2026-05-17T03:26:23.072Z",
+  "ironCraftOutputs": 205,
+  "uniqueIronCraftOutputs": 156,
+  "ironLootTablesWithIronEntries": 104,
+  "magicRecipeTypeCount": 130,
+  "craftOutputs": [
+    {
+      "id": "irons_spellbooks:affinity_ring",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:affinity_ring"
+    },
+    {
+      "id": "irons_spellbooks:alchemist_cauldron",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:alchemist_cauldron"
+    },
+    {
+      "id": "irons_spellbooks:alchemist_cauldron/empty_blood_vial",
+      "type": "irons_spellbooks:alchemist_cauldron_empty",
+      "output": "irons_spellbooks:blood_vial"
+    },
+    {
+      "id": "irons_spellbooks:alchemist_cauldron/empty_common_ink",
+      "type": "irons_spellbooks:alchemist_cauldron_empty",
+      "output": "irons_spellbooks:common_ink"
+    },
+    {
+      "id": "irons_spellbooks:alchemist_cauldron/empty_epic_ink",
+      "type": "irons_spellbooks:alchemist_cauldron_empty",
+      "output": "irons_spellbooks:epic_ink"
+    },
+    {
+      "id": "irons_spellbooks:alchemist_cauldron/empty_evasion_elixir",
+      "type": "irons_spellbooks:alchemist_cauldron_empty",
+      "output": "irons_spellbooks:evasion_elixir"
+    },
+    {
+      "id": "irons_spellbooks:alchemist_cauldron/empty_greater_evasion_elixir",
+      "type": "irons_spellbooks:alchemist_cauldron_empty",
+      "output": "irons_spellbooks:greater_evasion_elixir"
+    },
+    {
+      "id": "irons_spellbooks:alchemist_cauldron/empty_greater_healing_potion",
+      "type": "irons_spellbooks:alchemist_cauldron_empty",
+      "output": "irons_spellbooks:greater_healing_potion"
+    },
+    {
+      "id": "irons_spellbooks:alchemist_cauldron/empty_greater_invisibility_elixir",
+      "type": "irons_spellbooks:alchemist_cauldron_empty",
+      "output": "irons_spellbooks:greater_invisibility_elixir"
+    },
+    {
+      "id": "irons_spellbooks:alchemist_cauldron/empty_greater_oakskin_elixir",
+      "type": "irons_spellbooks:alchemist_cauldron_empty",
+      "output": "irons_spellbooks:greater_oakskin_elixir"
+    },
+    {
+      "id": "irons_spellbooks:alchemist_cauldron/empty_ice_venom_vial",
+      "type": "irons_spellbooks:alchemist_cauldron_empty",
+      "output": "irons_spellbooks:ice_venom_vial"
+    },
+    {
+      "id": "irons_spellbooks:alchemist_cauldron/empty_invisibility_elixir",
+      "type": "irons_spellbooks:alchemist_cauldron_empty",
+      "output": "irons_spellbooks:invisibility_elixir"
+    },
+    {
+      "id": "irons_spellbooks:alchemist_cauldron/empty_legendary_ink",
+      "type": "irons_spellbooks:alchemist_cauldron_empty",
+      "output": "irons_spellbooks:legendary_ink"
+    },
+    {
+      "id": "irons_spellbooks:alchemist_cauldron/empty_oakskin_elixir",
+      "type": "irons_spellbooks:alchemist_cauldron_empty",
+      "output": "irons_spellbooks:oakskin_elixir"
+    },
+    {
+      "id": "irons_spellbooks:alchemist_cauldron/empty_rare_ink",
+      "type": "irons_spellbooks:alchemist_cauldron_empty",
+      "output": "irons_spellbooks:rare_ink"
+    },
+    {
+      "id": "irons_spellbooks:alchemist_cauldron/empty_timeless_slurry",
+      "type": "irons_spellbooks:alchemist_cauldron_empty",
+      "output": "irons_spellbooks:timeless_slurry"
+    },
+    {
+      "id": "irons_spellbooks:alchemist_cauldron/empty_uncommon_ink",
+      "type": "irons_spellbooks:alchemist_cauldron_empty",
+      "output": "irons_spellbooks:uncommon_ink"
+    },
+    {
+      "id": "irons_spellbooks:amethyst_rapier",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:amethyst_rapier"
+    },
+    {
+      "id": "irons_spellbooks:amethyst_resonance_charm",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:amethyst_resonance_charm"
+    },
+    {
+      "id": "irons_spellbooks:arcane_anvil",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:arcane_anvil"
+    },
+    {
+      "id": "irons_spellbooks:arcane_ingot",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:arcane_ingot"
+    },
+    {
+      "id": "irons_spellbooks:arcane_rune",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:arcane_rune"
+    },
+    {
+      "id": "irons_spellbooks:arcane_salvage_from_debris",
+      "type": "minecraft:blasting",
+      "output": "irons_spellbooks:arcane_salvage"
+    },
+    {
+      "id": "irons_spellbooks:archevoker_boots_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:archevoker_boots"
+    },
+    {
+      "id": "irons_spellbooks:archevoker_boots_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:archevoker_boots"
+    },
+    {
+      "id": "irons_spellbooks:archevoker_chestplate_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:archevoker_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:archevoker_chestplate_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:archevoker_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:archevoker_helmet_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:archevoker_helmet"
+    },
+    {
+      "id": "irons_spellbooks:archevoker_helmet_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:archevoker_helmet"
+    },
+    {
+      "id": "irons_spellbooks:archevoker_leggings_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:archevoker_leggings"
+    },
+    {
+      "id": "irons_spellbooks:archevoker_leggings_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:archevoker_leggings"
+    },
+    {
+      "id": "irons_spellbooks:artificer_cane",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:artificer_cane"
+    },
+    {
+      "id": "irons_spellbooks:blood_rune",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:blood_rune"
+    },
+    {
+      "id": "irons_spellbooks:blood_upgrade_orb",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:blood_upgrade_orb"
+    },
+    {
+      "id": "irons_spellbooks:book_stack",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:book_stack"
+    },
+    {
+      "id": "irons_spellbooks:boreal_blade",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:boreal_blade"
+    },
+    {
+      "id": "irons_spellbooks:brazier",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:brazier"
+    },
+    {
+      "id": "irons_spellbooks:brazier_soul",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:brazier_soul"
+    },
+    {
+      "id": "irons_spellbooks:cast_time_ring",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:cast_time_ring"
+    },
+    {
+      "id": "irons_spellbooks:chronicle",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:chronicle"
+    },
+    {
+      "id": "irons_spellbooks:cinderous_soulcaller",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:cinderous_soulcaller"
+    },
+    {
+      "id": "irons_spellbooks:citadel_map",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:furled_map_citadel"
+    },
+    {
+      "id": "irons_spellbooks:concentration_amulet",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:concentration_amulet"
+    },
+    {
+      "id": "irons_spellbooks:conjurers_talisman",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:conjurers_talisman"
+    },
+    {
+      "id": "irons_spellbooks:cooldown_ring",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:cooldown_ring"
+    },
+    {
+      "id": "irons_spellbooks:cooldown_rune",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:cooldown_rune"
+    },
+    {
+      "id": "irons_spellbooks:cooldown_upgrade_orb",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:cooldown_upgrade_orb"
+    },
+    {
+      "id": "irons_spellbooks:copper_spell_book",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:copper_spell_book"
+    },
+    {
+      "id": "irons_spellbooks:create_compat/create_fill_blood_vial",
+      "type": "create:filling",
+      "output": "irons_spellbooks:blood_vial"
+    },
+    {
+      "id": "irons_spellbooks:create_compat/create_fill_common_ink",
+      "type": "create:filling",
+      "output": "irons_spellbooks:common_ink"
+    },
+    {
+      "id": "irons_spellbooks:create_compat/create_fill_epic_ink",
+      "type": "create:filling",
+      "output": "irons_spellbooks:epic_ink"
+    },
+    {
+      "id": "irons_spellbooks:create_compat/create_fill_evasion_elixir",
+      "type": "create:filling",
+      "output": "irons_spellbooks:evasion_elixir"
+    },
+    {
+      "id": "irons_spellbooks:create_compat/create_fill_greater_evasion_elixir",
+      "type": "create:filling",
+      "output": "irons_spellbooks:greater_evasion_elixir"
+    },
+    {
+      "id": "irons_spellbooks:create_compat/create_fill_greater_healing_potion",
+      "type": "create:filling",
+      "output": "irons_spellbooks:greater_healing_potion"
+    },
+    {
+      "id": "irons_spellbooks:create_compat/create_fill_greater_invisibility_elixir",
+      "type": "create:filling",
+      "output": "irons_spellbooks:greater_invisibility_elixir"
+    },
+    {
+      "id": "irons_spellbooks:create_compat/create_fill_greater_oakskin_elixir",
+      "type": "create:filling",
+      "output": "irons_spellbooks:greater_oakskin_elixir"
+    },
+    {
+      "id": "irons_spellbooks:create_compat/create_fill_ice_venom_vial",
+      "type": "create:filling",
+      "output": "irons_spellbooks:ice_venom_vial"
+    },
+    {
+      "id": "irons_spellbooks:create_compat/create_fill_invisibility_elixir",
+      "type": "create:filling",
+      "output": "irons_spellbooks:invisibility_elixir"
+    },
+    {
+      "id": "irons_spellbooks:create_compat/create_fill_legendary_ink",
+      "type": "create:filling",
+      "output": "irons_spellbooks:legendary_ink"
+    },
+    {
+      "id": "irons_spellbooks:create_compat/create_fill_oakskin_elixir",
+      "type": "create:filling",
+      "output": "irons_spellbooks:oakskin_elixir"
+    },
+    {
+      "id": "irons_spellbooks:create_compat/create_fill_rare_ink",
+      "type": "create:filling",
+      "output": "irons_spellbooks:rare_ink"
+    },
+    {
+      "id": "irons_spellbooks:create_compat/create_fill_timeless_slurry",
+      "type": "create:filling",
+      "output": "irons_spellbooks:timeless_slurry"
+    },
+    {
+      "id": "irons_spellbooks:create_compat/create_fill_uncommon_ink",
+      "type": "create:filling",
+      "output": "irons_spellbooks:uncommon_ink"
+    },
+    {
+      "id": "irons_spellbooks:cryomancer_boots_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:cryomancer_boots"
+    },
+    {
+      "id": "irons_spellbooks:cryomancer_boots_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:cryomancer_boots"
+    },
+    {
+      "id": "irons_spellbooks:cryomancer_chestplate_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:cryomancer_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:cryomancer_chestplate_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:cryomancer_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:cryomancer_helmet_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:cryomancer_helmet"
+    },
+    {
+      "id": "irons_spellbooks:cryomancer_helmet_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:cryomancer_helmet"
+    },
+    {
+      "id": "irons_spellbooks:cryomancer_leggings_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:cryomancer_leggings"
+    },
+    {
+      "id": "irons_spellbooks:cryomancer_leggings_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:cryomancer_leggings"
+    },
+    {
+      "id": "irons_spellbooks:cultist_boots_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:cultist_boots"
+    },
+    {
+      "id": "irons_spellbooks:cultist_boots_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:cultist_boots"
+    },
+    {
+      "id": "irons_spellbooks:cultist_chestplate_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:cultist_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:cultist_chestplate_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:cultist_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:cultist_helmet_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:cultist_helmet"
+    },
+    {
+      "id": "irons_spellbooks:cultist_helmet_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:cultist_helmet"
+    },
+    {
+      "id": "irons_spellbooks:cultist_leggings_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:cultist_leggings"
+    },
+    {
+      "id": "irons_spellbooks:cultist_leggings_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:cultist_leggings"
+    },
+    {
+      "id": "irons_spellbooks:cursed_doll_spell_book",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:cursed_doll_spell_book"
+    },
+    {
+      "id": "irons_spellbooks:decrepit_scythe_repair",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:hellrazor"
+    },
+    {
+      "id": "irons_spellbooks:diamond_spell_book",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:diamond_spell_book"
+    },
+    {
+      "id": "irons_spellbooks:divine_pearl",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:divine_pearl"
+    },
+    {
+      "id": "irons_spellbooks:dragonskin_spell_book",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:dragonskin_spell_book"
+    },
+    {
+      "id": "irons_spellbooks:druidic_spell_book",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:druidic_spell_book"
+    },
+    {
+      "id": "irons_spellbooks:eldritch_manuscript",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:eldritch_manuscript"
+    },
+    {
+      "id": "irons_spellbooks:electromancer_boots_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:electromancer_boots"
+    },
+    {
+      "id": "irons_spellbooks:electromancer_boots_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:electromancer_boots"
+    },
+    {
+      "id": "irons_spellbooks:electromancer_chestplate_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:electromancer_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:electromancer_chestplate_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:electromancer_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:electromancer_helmet_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:electromancer_helmet"
+    },
+    {
+      "id": "irons_spellbooks:electromancer_helmet_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:electromancer_helmet"
+    },
+    {
+      "id": "irons_spellbooks:electromancer_leggings_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:electromancer_leggings"
+    },
+    {
+      "id": "irons_spellbooks:electromancer_leggings_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:electromancer_leggings"
+    },
+    {
+      "id": "irons_spellbooks:emerald_stoneplate_ring",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:emerald_stoneplate_ring"
+    },
+    {
+      "id": "irons_spellbooks:ender_rune",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:ender_rune"
+    },
+    {
+      "id": "irons_spellbooks:ender_upgrade_orb",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:ender_upgrade_orb"
+    },
+    {
+      "id": "irons_spellbooks:energized_core",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:energized_core"
+    },
+    {
+      "id": "irons_spellbooks:evocation_rune",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:evocation_rune"
+    },
+    {
+      "id": "irons_spellbooks:evocation_upgrade_orb",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:evocation_upgrade_orb"
+    },
+    {
+      "id": "irons_spellbooks:fire_rune",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:fire_rune"
+    },
+    {
+      "id": "irons_spellbooks:fire_upgrade_orb",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:fire_upgrade_orb"
+    },
+    {
+      "id": "irons_spellbooks:firefly_jar",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:firefly_jar"
+    },
+    {
+      "id": "irons_spellbooks:fireward_ring",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:fireward_ring"
+    },
+    {
+      "id": "irons_spellbooks:frosted_helve",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:frosted_helve"
+    },
+    {
+      "id": "irons_spellbooks:frostward_ring",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:frostward_ring"
+    },
+    {
+      "id": "irons_spellbooks:gold_spell_book",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:gold_spell_book"
+    },
+    {
+      "id": "irons_spellbooks:graybeard_staff",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:graybeard_staff"
+    },
+    {
+      "id": "irons_spellbooks:greater_conjurers_talisman",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:greater_conjurers_talisman"
+    },
+    {
+      "id": "irons_spellbooks:heavy_chain_necklace",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:heavy_chain_necklace"
+    },
+    {
+      "id": "irons_spellbooks:holy_rune",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:holy_rune"
+    },
+    {
+      "id": "irons_spellbooks:holy_upgrade_orb",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:holy_upgrade_orb"
+    },
+    {
+      "id": "irons_spellbooks:ice_rune",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:ice_rune"
+    },
+    {
+      "id": "irons_spellbooks:ice_spell_book",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:ice_spell_book"
+    },
+    {
+      "id": "irons_spellbooks:ice_staff",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:ice_staff"
+    },
+    {
+      "id": "irons_spellbooks:ice_upgrade_orb",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:ice_upgrade_orb"
+    },
+    {
+      "id": "irons_spellbooks:infernal_sorcerer_chestplate",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:infernal_sorcerer_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:inscription_table",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:inscription_table"
+    },
+    {
+      "id": "irons_spellbooks:iron_spell_book",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:iron_spell_book"
+    },
+    {
+      "id": "irons_spellbooks:legionnaire_flamberge_repair",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:legionnaire_flamberge"
+    },
+    {
+      "id": "irons_spellbooks:lesser_spell_slot_upgrade",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:lesser_spell_slot_upgrade"
+    },
+    {
+      "id": "irons_spellbooks:lightning_rune",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:lightning_rune"
+    },
+    {
+      "id": "irons_spellbooks:lightning_upgrade_orb",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:lightning_upgrade_orb"
+    },
+    {
+      "id": "irons_spellbooks:magic_cloth",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:magic_cloth"
+    },
+    {
+      "id": "irons_spellbooks:mana_ring",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:mana_ring"
+    },
+    {
+      "id": "irons_spellbooks:mana_upgrade_orb",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:mana_upgrade_orb"
+    },
+    {
+      "id": "irons_spellbooks:mithril_ingot_from_scrap",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:mithril_ingot"
+    },
+    {
+      "id": "irons_spellbooks:mithril_scrap_from_ingot",
+      "type": "minecraft:blasting",
+      "output": "irons_spellbooks:mithril_scrap"
+    },
+    {
+      "id": "irons_spellbooks:mithril_scrap_from_ore",
+      "type": "minecraft:blasting",
+      "output": "irons_spellbooks:mithril_scrap"
+    },
+    {
+      "id": "irons_spellbooks:mithril_scrap_from_salvage",
+      "type": "minecraft:blasting",
+      "output": "irons_spellbooks:mithril_scrap"
+    },
+    {
+      "id": "irons_spellbooks:mithril_weave",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:mithril_weave"
+    },
+    {
+      "id": "irons_spellbooks:music_disc_flame_still_burns",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:music_disc_flame_still_burns"
+    },
+    {
+      "id": "irons_spellbooks:nature_rune",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:nature_rune"
+    },
+    {
+      "id": "irons_spellbooks:nature_upgrade_orb",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:nature_upgrade_orb"
+    },
+    {
+      "id": "irons_spellbooks:nether_brick_pillar",
+      "type": "minecraft:stonecutting",
+      "output": "irons_spellbooks:nether_brick_pillar"
+    },
+    {
+      "id": "irons_spellbooks:netherite_mage_boots",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:netherite_mage_boots"
+    },
+    {
+      "id": "irons_spellbooks:netherite_mage_chestplate",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:netherite_mage_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:netherite_mage_helmet",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:netherite_mage_helmet"
+    },
+    {
+      "id": "irons_spellbooks:netherite_mage_leggings",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:netherite_mage_leggings"
+    },
+    {
+      "id": "irons_spellbooks:netherite_spell_book",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:netherite_spell_book"
+    },
+    {
+      "id": "irons_spellbooks:paladin_chestplate",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:paladin_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:pedestal",
+      "type": "minecraft:stonecutting",
+      "output": "irons_spellbooks:pedestal"
+    },
+    {
+      "id": "irons_spellbooks:plagued_boots_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:plagued_boots"
+    },
+    {
+      "id": "irons_spellbooks:plagued_boots_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:plagued_boots"
+    },
+    {
+      "id": "irons_spellbooks:plagued_chestplate_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:plagued_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:plagued_chestplate_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:plagued_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:plagued_helmet_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:plagued_helmet"
+    },
+    {
+      "id": "irons_spellbooks:plagued_helmet_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:plagued_helmet"
+    },
+    {
+      "id": "irons_spellbooks:plagued_leggings_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:plagued_leggings"
+    },
+    {
+      "id": "irons_spellbooks:plagued_leggings_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:plagued_leggings"
+    },
+    {
+      "id": "irons_spellbooks:poisonward_ring",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:poisonward_ring"
+    },
+    {
+      "id": "irons_spellbooks:portal_frame",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:portal_frame"
+    },
+    {
+      "id": "irons_spellbooks:priest_boots_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:priest_boots"
+    },
+    {
+      "id": "irons_spellbooks:priest_boots_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:priest_boots"
+    },
+    {
+      "id": "irons_spellbooks:priest_chestplate_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:priest_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:priest_chestplate_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:priest_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:priest_helmet_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:priest_helmet"
+    },
+    {
+      "id": "irons_spellbooks:priest_helmet_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:priest_helmet"
+    },
+    {
+      "id": "irons_spellbooks:priest_leggings_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:priest_leggings"
+    },
+    {
+      "id": "irons_spellbooks:priest_leggings_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:priest_leggings"
+    },
+    {
+      "id": "irons_spellbooks:protection_rune",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:protection_rune"
+    },
+    {
+      "id": "irons_spellbooks:protection_upgrade_orb",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:protection_upgrade_orb"
+    },
+    {
+      "id": "irons_spellbooks:pumpkin_boots",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:pumpkin_boots"
+    },
+    {
+      "id": "irons_spellbooks:pumpkin_chestplate",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:pumpkin_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:pumpkin_helmet",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:pumpkin_helmet"
+    },
+    {
+      "id": "irons_spellbooks:pumpkin_leggings",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:pumpkin_leggings"
+    },
+    {
+      "id": "irons_spellbooks:pyrium_staff",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:pyrium_staff"
+    },
+    {
+      "id": "irons_spellbooks:pyromancer_boots_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:pyromancer_boots"
+    },
+    {
+      "id": "irons_spellbooks:pyromancer_boots_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:pyromancer_boots"
+    },
+    {
+      "id": "irons_spellbooks:pyromancer_chestplate_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:pyromancer_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:pyromancer_chestplate_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:pyromancer_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:pyromancer_helmet_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:pyromancer_helmet"
+    },
+    {
+      "id": "irons_spellbooks:pyromancer_helmet_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:pyromancer_helmet"
+    },
+    {
+      "id": "irons_spellbooks:pyromancer_leggings_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:pyromancer_leggings"
+    },
+    {
+      "id": "irons_spellbooks:pyromancer_leggings_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:pyromancer_leggings"
+    },
+    {
+      "id": "irons_spellbooks:scroll_forge",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:scroll_forge"
+    },
+    {
+      "id": "irons_spellbooks:shadowwalker_boots_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:shadowwalker_boots"
+    },
+    {
+      "id": "irons_spellbooks:shadowwalker_boots_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:shadowwalker_boots"
+    },
+    {
+      "id": "irons_spellbooks:shadowwalker_chestplate_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:shadowwalker_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:shadowwalker_chestplate_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:shadowwalker_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:shadowwalker_helmet_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:shadowwalker_helmet"
+    },
+    {
+      "id": "irons_spellbooks:shadowwalker_helmet_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:shadowwalker_helmet"
+    },
+    {
+      "id": "irons_spellbooks:shadowwalker_leggings_crafting",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:shadowwalker_leggings"
+    },
+    {
+      "id": "irons_spellbooks:shadowwalker_leggings_smithing",
+      "type": "minecraft:smithing_transform",
+      "output": "irons_spellbooks:shadowwalker_leggings"
+    },
+    {
+      "id": "irons_spellbooks:shriving_stone",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:shriving_stone"
+    },
+    {
+      "id": "irons_spellbooks:speed_boots",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:speed_boots"
+    },
+    {
+      "id": "irons_spellbooks:spellbreaker",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:spellbreaker"
+    },
+    {
+      "id": "irons_spellbooks:spider_den_map",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:furled_map_ice_spider_den"
+    },
+    {
+      "id": "irons_spellbooks:twilight_gale",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:twilight_gale"
+    },
+    {
+      "id": "irons_spellbooks:tyros_statue",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:tyros_statue"
+    },
+    {
+      "id": "irons_spellbooks:uninscribe_rune",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:blank_rune"
+    },
+    {
+      "id": "irons_spellbooks:upgrade_orb",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:upgrade_orb"
+    },
+    {
+      "id": "irons_spellbooks:visibility_ring",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:visibility_ring"
+    },
+    {
+      "id": "irons_spellbooks:wandering_magician_boots",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:wandering_magician_boots"
+    },
+    {
+      "id": "irons_spellbooks:wandering_magician_chestplate",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:wandering_magician_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:wandering_magician_helmet",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:wandering_magician_helmet"
+    },
+    {
+      "id": "irons_spellbooks:wandering_magician_leggings",
+      "type": "minecraft:crafting_shapeless",
+      "output": "irons_spellbooks:wandering_magician_leggings"
+    },
+    {
+      "id": "irons_spellbooks:wayward_compass",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:wayward_compass"
+    },
+    {
+      "id": "irons_spellbooks:weapon_parts",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:weapon_parts"
+    },
+    {
+      "id": "irons_spellbooks:wisewood_bookshelf",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:wisewood_bookshelf"
+    },
+    {
+      "id": "irons_spellbooks:wizard_boots",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:wizard_boots"
+    },
+    {
+      "id": "irons_spellbooks:wizard_chestplate",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:wizard_chestplate"
+    },
+    {
+      "id": "irons_spellbooks:wizard_helmet_hat",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:wizard_hat"
+    },
+    {
+      "id": "irons_spellbooks:wizard_helmet_hood",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:wizard_helmet"
+    },
+    {
+      "id": "irons_spellbooks:wizard_leggings",
+      "type": "minecraft:crafting_shaped",
+      "output": "irons_spellbooks:wizard_leggings"
+    }
+  ],
+  "lootTables": [
+    "irons_spellbooks:blocks/alchemist_cauldron",
+    "irons_spellbooks:blocks/arcane_anvil",
+    "irons_spellbooks:blocks/arcane_debris",
+    "irons_spellbooks:blocks/book_stack",
+    "irons_spellbooks:blocks/brazier",
+    "irons_spellbooks:blocks/brazier_soul",
+    "irons_spellbooks:blocks/deepslate_mithril_ore",
+    "irons_spellbooks:blocks/firefly_jar",
+    "irons_spellbooks:blocks/ice_spider_egg",
+    "irons_spellbooks:blocks/inscription_table",
+    "irons_spellbooks:blocks/mithril_ore",
+    "irons_spellbooks:blocks/nether_brick_pillar",
+    "irons_spellbooks:blocks/pedestal",
+    "irons_spellbooks:blocks/portal_frame",
+    "irons_spellbooks:blocks/scroll_forge",
+    "irons_spellbooks:blocks/wisewood_bookshelf",
+    "irons_spellbooks:chests/additional_ancient_city_loot",
+    "irons_spellbooks:chests/additional_end_city_loot",
+    "irons_spellbooks:chests/additional_generic_loot",
+    "irons_spellbooks:chests/additional_good_loot",
+    "irons_spellbooks:chests/additional_library_loot",
+    "irons_spellbooks:chests/additional_nether_loot",
+    "irons_spellbooks:chests/additional_treasure_loot",
+    "irons_spellbooks:chests/battleground/burial_loot",
+    "irons_spellbooks:chests/bookshelf_loot",
+    "irons_spellbooks:chests/catacombs/coffin_loot",
+    "irons_spellbooks:chests/catacombs/crypt_loot",
+    "irons_spellbooks:chests/catacombs/hidden_trough_treasure",
+    "irons_spellbooks:chests/catacombs/pot",
+    "irons_spellbooks:chests/catacombs/wall_loot",
+    "irons_spellbooks:chests/citadel/citadel_bookshelf",
+    "irons_spellbooks:chests/citadel/citadel_vault",
+    "irons_spellbooks:chests/citadel/rampart_chest",
+    "irons_spellbooks:chests/citadel/rampart_supplies",
+    "irons_spellbooks:chests/citadel/spawner_reward",
+    "irons_spellbooks:chests/component_storage",
+    "irons_spellbooks:chests/evoker_fort",
+    "irons_spellbooks:chests/filler_storage_loot",
+    "irons_spellbooks:chests/generic_magic_treasure",
+    "irons_spellbooks:chests/ice_spider_den/basement",
+    "irons_spellbooks:chests/ice_spider_den/dungeon",
+    "irons_spellbooks:chests/ice_spider_den/pot",
+    "irons_spellbooks:chests/ice_spider_den/spawner_reward",
+    "irons_spellbooks:chests/ice_spider_den/tower",
+    "irons_spellbooks:chests/impaled_icebreaker/captain_quarters",
+    "irons_spellbooks:chests/impaled_icebreaker/food_barrel",
+    "irons_spellbooks:chests/magic_bookshelf_loot",
+    "irons_spellbooks:chests/mangrove_hut",
+    "irons_spellbooks:chests/mangrove_hut/hidden_potion_storage",
+    "irons_spellbooks:chests/mangrove_hut/potion_ingredient_storage",
+    "irons_spellbooks:chests/mountain_tower/ice_barrel",
+    "irons_spellbooks:chests/mountain_tower/mountain_tower",
+    "irons_spellbooks:chests/priest_house",
+    "irons_spellbooks:chests/pyromancer_tower/burnt_chest",
+    "irons_spellbooks:chests/pyromancer_tower/fire_ale_cask",
+    "irons_spellbooks:chests/pyromancer_tower/fire_ale_trove",
+    "irons_spellbooks:chests/pyromancer_tower/pot",
+    "irons_spellbooks:chests/pyromancer_tower/pyromancer_basic_storage",
+    "irons_spellbooks:chests/pyromancer_tower/pyromancer_supplies",
+    "irons_spellbooks:chests/sewer_loot",
+    "irons_spellbooks:chests/trial_chambers/additional_ominous_spawner_consumable_loot",
+    "irons_spellbooks:chests/trial_chambers/additional_ominous_vault_loot",
+    "irons_spellbooks:chests/trial_chambers/additional_regular_spawner_consumable_loot",
+    "irons_spellbooks:chests/trial_chambers/additional_regular_vault_loot",
+    "irons_spellbooks:chests/trial_chambers/additional_trial_chest_loot",
+    "irons_spellbooks:chests/trial_chambers/pot_replacement",
+    "irons_spellbooks:entities/additional_blaze_loot",
+    "irons_spellbooks:entities/additional_dragon_loot",
+    "irons_spellbooks:entities/additional_evoker_loot",
+    "irons_spellbooks:entities/additional_hoglin_loot",
+    "irons_spellbooks:entities/additional_stray_loot",
+    "irons_spellbooks:entities/apothecarist",
+    "irons_spellbooks:entities/archevoker",
+    "irons_spellbooks:entities/citadel_keeper",
+    "irons_spellbooks:entities/cryomancer",
+    "irons_spellbooks:entities/cultist",
+    "irons_spellbooks:entities/dead_king",
+    "irons_spellbooks:entities/fire_boss",
+    "irons_spellbooks:entities/fire_boss_per_player",
+    "irons_spellbooks:entities/ice_spider",
+    "irons_spellbooks:entities/necromancer",
+    "irons_spellbooks:entities/priest",
+    "irons_spellbooks:entities/pyromancer",
+    "irons_spellbooks:magic_items/all_focuses",
+    "irons_spellbooks:magic_items/basic_curios",
+    "irons_spellbooks:magic_items/decent_ink",
+    "irons_spellbooks:magic_items/good_ink",
+    "irons_spellbooks:magic_items/great_ink",
+    "irons_spellbooks:magic_items/poor_ink",
+    "irons_spellbooks:magic_items/random_elixir",
+    "irons_spellbooks:magic_items/random_potion",
+    "irons_spellbooks:magic_items/random_potion_or_elixir",
+    "irons_spellbooks:magic_items/reward_ink",
+    "irons_spellbooks:magic_items/scroll_pouch",
+    "irons_spellbooks:spawners/catacombs/ominous_zombie_spawner",
+    "irons_spellbooks:spawners/catacombs/regular_zombie_spawner",
+    "irons_spellbooks:test/ring_gen",
+    "irons_spellbooks:test/ring_gen_all_schools",
+    "irons_spellbooks:test/ring_gen_break_me",
+    "irons_spellbooks:test/scroll_gen",
+    "irons_spellbooks:test/scroll_gen_fire",
+    "irons_spellbooks:test/scroll_gen_force_eldritch",
+    "irons_spellbooks:test/scroll_gen_magic_missile",
+    "irons_spellbooks:test/scroll_gen_notforce_eldritch"
+  ],
+  "magicRecipeTypes": {
+    "UNKNOWN": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/advancements/recipes/building_blocks/azulejo_0.json",
+      "count": 3776
+    },
+    "minecraft:crafting_shaped": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/abstruse_platform.json",
+      "count": 1898
+    },
+    "minecraft:crafting_shapeless": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/aura_ring_greater.json",
+      "count": 674
+    },
+    "botania:gog_alternation": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/blaze_block.json",
+      "count": 6
+    },
+    "botania:brew": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/brew/absorption.json",
+      "count": 20
+    },
+    "botania:twig_wand": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dreamwood_wand.json",
+      "count": 2
+    },
+    "botania:ancient_will_attach": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dynamic/ancient_will_attach.json",
+      "count": 1
+    },
+    "botania:black_hole_talisman_extract": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dynamic/black_hole_talisman_extract.json",
+      "count": 1
+    },
+    "botania:composite_lens": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dynamic/composite_lens.json",
+      "count": 1
+    },
+    "botania:cosmetic_attach": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dynamic/cosmetic_attach.json",
+      "count": 1
+    },
+    "botania:cosmetic_remove": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dynamic/cosmetic_remove.json",
+      "count": 1
+    },
+    "botania:keep_ivy": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dynamic/keep_ivy.json",
+      "count": 1
+    },
+    "botania:laputa_shard_upgrade": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dynamic/laputa_shard_upgrade.json",
+      "count": 1
+    },
+    "botania:lens_dye": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dynamic/lens_dye.json",
+      "count": 1
+    },
+    "botania:mana_gun_add_clip": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dynamic/mana_gun_add_clip.json",
+      "count": 1
+    },
+    "botania:mana_gun_add_lens": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dynamic/mana_gun_add_lens.json",
+      "count": 1
+    },
+    "botania:mana_gun_remove_lens": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dynamic/mana_gun_remove_lens.json",
+      "count": 1
+    },
+    "botania:merge_vial": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dynamic/merge_vial.json",
+      "count": 1
+    },
+    "botania:phantom_ink_apply": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dynamic/phantom_ink_apply.json",
+      "count": 1
+    },
+    "botania:spell_cloth_apply": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dynamic/spell_cloth_apply.json",
+      "count": 1
+    },
+    "botania:split_lens": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dynamic/split_lens.json",
+      "count": 1
+    },
+    "botania:terra_pick_tipping": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/dynamic/terra_pick_tipping.json",
+      "count": 1
+    },
+    "botania:elven_trade": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/elven_trade/diamond_block_return.json",
+      "count": 14
+    },
+    "botania:elven_trade_lexicon": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/elven_trade/lexicon_elven.json",
+      "count": 1
+    },
+    "botania:nbt_output_wrapper": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/flighttiara_1.json",
+      "count": 9
+    },
+    "botania:mana_infusion": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/mana_infusion/acacia_leaves_dupe.json",
+      "count": 139
+    },
+    "botania:mana_upgrade": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/mana_ring.json",
+      "count": 2
+    },
+    "botania:mana_upgrade_shapeless": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/mana_ring_greater.json",
+      "count": 1
+    },
+    "botania:marimorphosis": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/marimorphosis/metamorphic_desert_stone.json",
+      "count": 8
+    },
+    "botania:orechid": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/orechid/coal_ore.json",
+      "count": 16
+    },
+    "botania:orechid_ignem": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/orechid_ignem/ancient_debris.json",
+      "count": 3
+    },
+    "botania:petal_apothecary": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/petal_apothecary/agricarnation.json",
+      "count": 43
+    },
+    "botania:pure_daisy": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/pure_daisy/blue_ice.json",
+      "count": 8
+    },
+    "botania:state_copying_pure_daisy": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/pure_daisy/livingwood.json",
+      "count": 1
+    },
+    "botania:runic_altar": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/runic_altar/air.json",
+      "count": 16
+    },
+    "botania:runic_altar_head": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/runic_altar/head.json",
+      "count": 1
+    },
+    "minecraft:smelting": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/smelting/cracked_livingrock_bricks.json",
+      "count": 74
+    },
+    "minecraft:stonecutting": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/stonecutting/azulejo_0.json",
+      "count": 909
+    },
+    "botania:terra_plate": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/terra_plate/terrasteel_ingot.json",
+      "count": 1
+    },
+    "botania:armor_upgrade": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/terrasteel_boots.json",
+      "count": 4
+    },
+    "botania:water_bottle_matching_shaped": {
+      "jar": "Botania-1.20.1-452-FORGE.jar",
+      "example": "data/botania/recipes/water_rod.json",
+      "count": 1
+    },
+    "ars_nouveau:enchanting_apparatus": {
+      "jar": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "example": "data/ars_nouveau/recipes/alchemists_crown.json",
+      "count": 75
+    },
+    "ars_nouveau:book_upgrade": {
+      "jar": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "example": "data/ars_nouveau/recipes/apprentice_spell_book_upgrade.json",
+      "count": 2
+    },
+    "ars_nouveau:enchantment": {
+      "jar": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "example": "data/ars_nouveau/recipes/aqua_affinity_1.json",
+      "count": 96
+    },
+    "ars_nouveau:budding_conversion": {
+      "jar": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "example": "data/ars_nouveau/recipes/budding_conversion/budding_amethyst.json",
+      "count": 1
+    },
+    "ars_nouveau:glyph": {
+      "jar": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "example": "data/ars_nouveau/recipes/burst.json",
+      "count": 81
+    },
+    "ars_nouveau:crush": {
+      "jar": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "example": "data/ars_nouveau/recipes/crush_blue_dye.json",
+      "count": 26
+    },
+    "ars_nouveau:dispel_entity": {
+      "jar": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "example": "data/ars_nouveau/recipes/dispel_entity/blaze_powder.json",
+      "count": 1
+    },
+    "ars_nouveau:dye": {
+      "jar": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "example": "data/ars_nouveau/recipes/dye_apprentice_spell_book.json",
+      "count": 15
+    },
+    "ars_nouveau:imbuement": {
+      "jar": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "example": "data/ars_nouveau/recipes/imbuement_abjuration_essence.json",
+      "count": 13
+    },
+    "ars_nouveau:potion_flask": {
+      "jar": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "example": "data/ars_nouveau/recipes/potion_flask_amp_fill.json",
+      "count": 3
+    },
+    "ars_nouveau:reactive_enchantment": {
+      "jar": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "example": "data/ars_nouveau/recipes/reactive_1.json",
+      "count": 1
+    },
+    "ars_nouveau:scry_ritual": {
+      "jar": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "example": "data/ars_nouveau/recipes/scry_ritual/amethyst_blocks.json",
+      "count": 12
+    },
+    "ars_nouveau:spell_write": {
+      "jar": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "example": "data/ars_nouveau/recipes/spell_write.json",
+      "count": 1
+    },
+    "ars_nouveau:summon_ritual": {
+      "jar": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "example": "data/ars_nouveau/recipes/summon_ritual/bats.json",
+      "count": 1
+    },
+    "ars_nouveau:caster_tome": {
+      "jar": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "example": "data/ars_nouveau/recipes/tomes/alex_tome.json",
+      "count": 27
+    },
+    "ars_nouveau:armor_upgrade": {
+      "jar": "ars_nouveau-1.20.1-4.12.7-all.jar",
+      "example": "data/ars_nouveau/recipes/upgrade_1.json",
+      "count": 2
+    },
+    "bloodmagic:alchemytable": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/alchemytable/advance_cutting_fluid.json",
+      "count": 128
+    },
+    "bloodmagic:filteralchemytable": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/alchemytable/filter/composite_enchant_filter.json",
+      "count": 3
+    },
+    "bloodmagic:altar": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/altar/air_tool.json",
+      "count": 23
+    },
+    "bloodmagic:anointment_apply": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/anointment_apply.json",
+      "count": 1
+    },
+    "bloodmagic:arc": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/arc/clay_from_sand.json",
+      "count": 96
+    },
+    "bloodmagic:arc_potion": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/arc/tipped_copper.json",
+      "count": 1
+    },
+    "bloodmagic:array": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/array/airsigil.json",
+      "count": 26
+    },
+    "bloodmagic:livingdowngrade": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/downgrade/battle_hungry.json",
+      "count": 9
+    },
+    "bloodmagic:filter_copy": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/filter_copy.json",
+      "count": 1
+    },
+    "bloodmagic:flask_potioneffect": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/flask/bounce.json",
+      "count": 14
+    },
+    "bloodmagic:flask_potioncycle": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/flask/cycle_basic.json",
+      "count": 1
+    },
+    "bloodmagic:flask_potiontransform": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/flask/fall_to_levitation.json",
+      "count": 13
+    },
+    "bloodmagic:flask_potionfill": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/flask/fill_standard.json",
+      "count": 2
+    },
+    "bloodmagic:flask_potionflasktransform": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/flask/flask_lingering.json",
+      "count": 2
+    },
+    "bloodmagic:flask_potionlength": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/flask/length_average_bounce.json",
+      "count": 46
+    },
+    "bloodmagic:flask_potionpotency": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/flask/potency_average_flight.json",
+      "count": 32
+    },
+    "forge:conditional": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/meteor/ae2.json",
+      "count": 170
+    },
+    "bloodmagic:meteor": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/meteor/diamond.json",
+      "count": 6
+    },
+    "minecraft:blasting": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/smelting/blasting_ingot_copper.json",
+      "count": 35
+    },
+    "bloodmagic:soulforge": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/soulforge/aug_shaped_charge.json",
+      "count": 89
+    },
+    "bloodmagic:tome_combine": {
+      "jar": "bloodmagic-1.20.1-3.3.7-49.jar",
+      "example": "data/bloodmagic/recipes/tome_combine.json",
+      "count": 1
+    },
+    "forbidden_arcanus:clibano_combustion": {
+      "jar": "forbidden_arcanus-1.20.1-2.2.6.jar",
+      "example": "data/forbidden_arcanus/recipes/clibano_combustion/arcane_crystal_dust_from_clibano_combusting.json",
+      "count": 15
+    },
+    "forbidden_arcanus:combine_residues": {
+      "jar": "forbidden_arcanus-1.20.1-2.2.6.jar",
+      "example": "data/forbidden_arcanus/recipes/combine_residues/arcane_crystal_residues_to_arcane_crystal_block.json",
+      "count": 10
+    },
+    "minecraft:campfire_cooking": {
+      "jar": "forbidden_arcanus-1.20.1-2.2.6.jar",
+      "example": "data/forbidden_arcanus/recipes/cooked_tentacle_from_campfire_cooking.json",
+      "count": 2
+    },
+    "minecraft:smoking": {
+      "jar": "forbidden_arcanus-1.20.1-2.2.6.jar",
+      "example": "data/forbidden_arcanus/recipes/cooked_tentacle_from_smoking.json",
+      "count": 2
+    },
+    "smelting": {
+      "jar": "forbidden_arcanus-1.20.1-2.2.6.jar",
+      "example": "data/forbidden_arcanus/recipes/dark_matter.json",
+      "count": 2
+    },
+    "forbidden_arcanus:increase_edelwood_bucket_fullness": {
+      "jar": "forbidden_arcanus-1.20.1-2.2.6.jar",
+      "example": "data/forbidden_arcanus/recipes/increase_edelwood_bucket_fullness.json",
+      "count": 1
+    },
+    "forbidden_arcanus:apply_modifier": {
+      "jar": "forbidden_arcanus-1.20.1-2.2.6.jar",
+      "example": "data/forbidden_arcanus/recipes/smithing/apply_aquatic_modifier.json",
+      "count": 5
+    },
+    "goety:ritual": {
+      "jar": "goety-2.5.53.1.jar",
+      "example": "data/goety/recipes/abyss_crown.json",
+      "count": 311
+    },
+    "goety:cursed_infuser_recipes": {
+      "jar": "goety-2.5.53.1.jar",
+      "example": "data/goety/recipes/awakened_emerald_block_burner.json",
+      "count": 32
+    },
+    "goety:brewing": {
+      "jar": "goety-2.5.53.1.jar",
+      "example": "data/goety/recipes/brewing/aether/inebriation.json",
+      "count": 27
+    },
+    "goety:brazier": {
+      "jar": "goety-2.5.53.1.jar",
+      "example": "data/goety/recipes/dark/dark_ingot.json",
+      "count": 4
+    },
+    "goety:soul_absorber_recipes": {
+      "jar": "goety-2.5.53.1.jar",
+      "example": "data/goety/recipes/ectoplasm_souls.json",
+      "count": 8
+    },
+    "goety:pulverize": {
+      "jar": "goety-2.5.53.1.jar",
+      "example": "data/goety/recipes/pulverize/amethyst_shard_pulverize.json",
+      "count": 82
+    },
+    "hexerei:add_base_to_candle": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/add_base_to_candle.json",
+      "count": 1
+    },
+    "hexerei:pestle_and_mortar": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/black_dye_from_pestle_and_mortar.json",
+      "count": 4
+    },
+    "hexerei:mixingcauldron": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/blood_sigil_from_mixing_cauldron.json",
+      "count": 36
+    },
+    "hexerei:book_of_shadows_dye": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/book_of_shadows_dye.json",
+      "count": 1
+    },
+    "hexerei:drying_rack": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/broom_brush_from_drying_rack.json",
+      "count": 13
+    },
+    "hexerei:dipper": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/candle_from_dipper.json",
+      "count": 15
+    },
+    "hexerei:add_to_candle": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/candles/add_brick_base_to_candle.json",
+      "count": 4
+    },
+    "hexerei:cauldron_emptying": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/cauldron_emptying/blood_to_bottle.json",
+      "count": 4
+    },
+    "hexerei:cauldron_filling": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/cauldron_filling/blood_bottle.json",
+      "count": 4
+    },
+    "hexerei:crow_amulet_apply": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/crow_amulet_apply.json",
+      "count": 1
+    },
+    "hexerei:crow_amulet_undo": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/crow_amulet_undo.json",
+      "count": 1
+    },
+    "hexerei:crow_flute_dye": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/crow_flute_dye.json",
+      "count": 1
+    },
+    "hexerei:cut_candle": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/cut_candle.json",
+      "count": 1
+    },
+    "hexerei:fill_waxing_kit": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/fill_waxing_kit.json",
+      "count": 1
+    },
+    "hexerei:keychain_apply": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/keychain_apply.json",
+      "count": 1
+    },
+    "hexerei:keychain_undo": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/keychain_undo.json",
+      "count": 1
+    },
+    "hexerei:fluid_mixing": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/tallow_from_mixing_cauldron.json",
+      "count": 1
+    },
+    "hexerei:whistle_bind": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/whistle_bind.json",
+      "count": 1
+    },
+    "hexerei:woodcutting": {
+      "jar": "hexerei-0.4.2.3.jar",
+      "example": "data/hexerei/recipes/woodcutting/acacia/acacia_boat_from_acacia_planks_woodcutting.json",
+      "count": 1066
+    },
+    "create:crushing": {
+      "jar": "malum-1.20.1-1.6.7.jar",
+      "example": "data/malum/recipes/create/crushing/crush_blazing_quartz.json",
+      "count": 11
+    },
+    "create:cutting": {
+      "jar": "malum-1.20.1-1.6.7.jar",
+      "example": "data/malum/recipes/create/cutting/cutting_runewood_to_planks.json",
+      "count": 6
+    },
+    "create:splashing": {
+      "jar": "malum-1.20.1-1.6.7.jar",
+      "example": "data/malum/recipes/create/washing/copper_node.json",
+      "count": 6
+    },
+    "lodestone:nbt_carry": {
+      "jar": "malum-1.20.1-1.6.7.jar",
+      "example": "data/malum/recipes/ether_torch_alternative.json",
+      "count": 6
+    },
+    "farmersdelight:cooking": {
+      "jar": "malum-1.20.1-1.6.7.jar",
+      "example": "data/malum/recipes/farmersdelight/holy_caramel.json",
+      "count": 2
+    },
+    "jeed:effect_provider": {
+      "jar": "malum-1.20.1-1.6.7.jar",
+      "example": "data/malum/recipes/jeed/aethers_charm.json",
+      "count": 9
+    },
+    "malum:spirit_repair": {
+      "jar": "malum-1.20.1-1.6.7.jar",
+      "example": "data/malum/recipes/malum/spirit_crucible/repair/botania/alfsteel.json",
+      "count": 45
+    },
+    "malum:favor_of_the_void": {
+      "jar": "malum-1.20.1-1.6.7.jar",
+      "example": "data/malum/recipes/mnemonic_fragment_from_cluster.json",
+      "count": 13
+    },
+    "malum:spirit_focusing": {
+      "jar": "malum-1.20.1-1.6.7.jar",
+      "example": "data/malum/recipes/node_focusing_copper.json",
+      "count": 10
+    },
+    "malum:runeworking": {
+      "jar": "malum-1.20.1-1.6.7.jar",
+      "example": "data/malum/recipes/runeworking/rune_of_aliment_cleansing.json",
+      "count": 24
+    },
+    "malum:spirit_infusion": {
+      "jar": "malum-1.20.1-1.6.7.jar",
+      "example": "data/malum/recipes/spirit_infusion/accelerating_inlay.json",
+      "count": 98
+    },
+    "malum:spirit_transmutation": {
+      "jar": "malum-1.20.1-1.6.7.jar",
+      "example": "data/malum/recipes/spirit_transmutation/basalt.json",
+      "count": 66
+    },
+    "tconstruct:melting": {
+      "jar": "malum-1.20.1-1.6.7.jar",
+      "example": "data/malum/recipes/tconstruct/smeltery/melting/aluminum_node.json",
+      "count": 12
+    },
+    "occultism:crafting_special_book_binding": {
+      "jar": "occultism-1.20.1-1.157.0.jar",
+      "example": "data/occultism/recipes/crafting/bound_book_of_binding.json",
+      "count": 1
+    },
+    "occultism:crushing": {
+      "jar": "occultism-1.20.1-1.157.0.jar",
+      "example": "data/occultism/recipes/crushing/allthemodium_dust.json",
+      "count": 180
+    },
+    "occultism:miner": {
+      "jar": "occultism-1.20.1-1.157.0.jar",
+      "example": "data/occultism/recipes/miner/basic_resources/andesite.json",
+      "count": 86
+    },
+    "occultism:ritual": {
+      "jar": "occultism-1.20.1-1.157.0.jar",
+      "example": "data/occultism/recipes/ritual/craft_dimensional_matrix.json",
+      "count": 66
+    },
+    "occultism:spirit_fire": {
+      "jar": "occultism-1.20.1-1.157.0.jar",
+      "example": "data/occultism/recipes/spirit_fire/awakened_feather.json",
+      "count": 13
+    },
+    "occultism:spirit_trade": {
+      "jar": "occultism-1.20.1-1.157.0.jar",
+      "example": "data/occultism/recipes/spirit_trade/otherworld_sapling.json",
+      "count": 3
+    },
+    "reliquary:infernal_tear_value": {
+      "jar": "reliquary-1.20.1-2.0.57.1468.jar",
+      "example": "data/reliquary/recipes/infernal_tear/blaze_rod.json",
+      "count": 32
+    }
+  }
+}

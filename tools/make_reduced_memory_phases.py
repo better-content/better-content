@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path("/home/gerald/obelisks")
-OUT = ROOT / "docs" / "ram_profile" / "reduced_stack_phase_matrix_20260506.json"
+OUT = Path(os.environ.get("OUT", str(ROOT / "generated" / "validation" / "reduced_stack_phase_matrix_20260506.json")))
 
 REDUCED_BASELINE = [
     r"^ticex-.*\.jar$",

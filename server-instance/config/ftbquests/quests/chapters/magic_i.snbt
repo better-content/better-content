@@ -3,7 +3,7 @@
 	default_quest_shape: "rsquare"
 	filename: "magic_i"
 	group: "77AFAA45BDFC5D88"
-	id: "1892E60323328CF3"
+	id: "1A1BCA818D91A4EC"
 	order_index: 0
 	quest_links: [ ]
 	quests: [
@@ -16,19 +16,19 @@
 			hide_dependency_lines: false
 			icon: "bloodmagic:blankslate"
 			icon_scale: 1.18d
-			id: "5C9FBDB96C3823F8"
+			id: "3307B8FE40F6F5B8"
 			min_width: 2
 			rewards: [
 				{
 					count: 4
-					id: "6A4B27E835B402ED"
-					item: "dotcoinmod:copper_coin"
+					id: "7F8C894D45E031FC"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "0C38687065A63DCC"
-					item: "dotcoinmod:iron_coin"
+					id: "0068C1B0C3B28DC5"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -36,7 +36,7 @@
 			size: 1.75d
 			subtitle: "Milestone"
 			tasks: [{
-				id: "190BAD3A42DC920E"
+				id: "35FD56D66F428C8F"
 				item: "bloodmagic:blankslate"
 				type: "item"
 			}]
@@ -57,13 +57,13 @@
 				{
 					count: 4
 					id: "5199AD627EB87C48"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "6DE47A009B264008"
-					item: "dotcoinmod:iron_coin"
+					id: "61B410DA6625BB60"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -71,7 +71,7 @@
 			size: 1.12d
 			subtitle: "Milestone"
 			tasks: [{
-				id: "2F85012F8DAF48DC"
+				id: "605580F37BDB7282"
 				item: "hexerei:mixing_cauldron"
 				type: "item"
 			}]
@@ -91,14 +91,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "233B45015BB3D4A5"
-					item: "dotcoinmod:copper_coin"
+					id: "438EDEA10212AE7C"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "066C21AB4965CFBE"
-					item: "dotcoinmod:iron_coin"
+					id: "75A42213DB34ECF9"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -106,7 +106,7 @@
 			size: 1.12d
 			subtitle: "Milestone"
 			tasks: [{
-				id: "45F7F78E3061702B"
+				id: "3E99D7C53220CD1C"
 				item: "malum:spirit_altar"
 				type: "item"
 			}]
@@ -128,13 +128,13 @@
 				{
 					count: 4
 					id: "7A0C8AF8E09AA045"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "1F69D0F2A6B25665"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -168,19 +168,19 @@
 			]
 			hide_dependency_lines: false
 			icon: "bloodmagic:reinforcedslate"
-			id: "1A4C0C61426D77F6"
+			id: "275C4FB029229CDC"
 			min_width: 2
 			rewards: [
 				{
 					count: 4
 					id: "595DDBF95930947A"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "4ACA35606B3D537A"
-					item: "dotcoinmod:iron_coin"
+					id: "26D3986BDC6D05FE"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -188,7 +188,7 @@
 			size: 1.12d
 			subtitle: "Milestone"
 			tasks: [{
-				id: "5CA5690E92DCF24B"
+				id: "789751F701BC93C8"
 				item: "bloodmagic:reinforcedslate"
 				type: "item"
 			}]
@@ -203,18 +203,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "ars_nouveau:imbuement_chamber"
-			id: "12760891F83B56D0"
+			id: "0F872EB1F2F31107"
 			rewards: [
 				{
 					count: 4
-					id: "1D6A8AC3FE336036"
-					item: "dotcoinmod:copper_coin"
+					id: "105A60F2177A68DF"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "2E5D284CC9F2BEDE"
-					item: "dotcoinmod:iron_coin"
+					id: "4756DC23D11EE29F"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -222,7 +222,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "68CC6E4211A02CE3"
+				id: "61F8A38C028D3B50"
 				item: "ars_nouveau:imbuement_chamber"
 				type: "item"
 			}]
@@ -237,18 +237,18 @@
 			]
 			hide_dependency_lines: false
 			icon: "ars_nouveau:enchanting_apparatus"
-			id: "1FA0DA640B938FD8"
+			id: "58B5CB97076C8909"
 			rewards: [
 				{
 					count: 4
 					id: "682391CE22AB0A80"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "78CEC1A81EAD4DF0"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -275,14 +275,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "399CC504E1790D6A"
-					item: "dotcoinmod:copper_coin"
+					id: "00C91354528D2C9D"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "575A8F9D048A1624"
-					item: "dotcoinmod:iron_coin"
+					id: "5648F15241B22742"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -290,7 +290,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "42F9D09BA0FB4619"
+				id: "79BFE46111FB7A1A"
 				item: "ars_nouveau:ritual_brazier"
 				type: "item"
 			}]
@@ -309,14 +309,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "52A1F92B25616100"
-					item: "dotcoinmod:copper_coin"
+					id: "771497F5B1A83C9C"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "0DE477AC20B62845"
-					item: "dotcoinmod:iron_coin"
+					id: "48A2A3E3BD06BE1B"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -340,19 +340,19 @@
 			]
 			hide_dependency_lines: false
 			icon: "bloodmagic:infusedslate"
-			id: "2CC6E28276A98760"
+			id: "0CECF4CAA07CF8A4"
 			min_width: 2
 			rewards: [
 				{
 					count: 4
-					id: "3CC9733C38DC6A50"
-					item: "dotcoinmod:copper_coin"
+					id: "26EB89DE06DA9F69"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "3E9CE7AE3F7A8564"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -379,14 +379,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "038C774A560A4F34"
-					item: "dotcoinmod:copper_coin"
+					id: "5F8D19FF3AB4A36E"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "72AA00AA5CFD8785"
-					item: "dotcoinmod:iron_coin"
+					id: "0C8D651E8B98AFDA"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -394,7 +394,7 @@
 			size: 1.0d
 			subtitle: "Process"
 			tasks: [{
-				id: "08E5FB96F8A04D17"
+				id: "7322459C39B89600"
 				item: "occultism:chalk_white_impure"
 				type: "item"
 			}]
@@ -413,14 +413,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "0830EA9AC92632A0"
-					item: "dotcoinmod:copper_coin"
+					id: "3D10870C347DF1CB"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "32E7752CE8E7982E"
-					item: "dotcoinmod:iron_coin"
+					id: "3670F16D4EC33134"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -453,14 +453,14 @@
 			rewards: [
 				{
 					count: 4
-					id: "16E3DA31273821A7"
-					item: "dotcoinmod:copper_coin"
+					id: "0E1EAB2785C162A2"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "3C5A999447E9982B"
-					item: "dotcoinmod:iron_coin"
+					id: "576E4113516FF423"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -468,7 +468,7 @@
 			size: 1.75d
 			subtitle: "Milestone"
 			tasks: [{
-				id: "4313F500C607E5C9"
+				id: "6C4AE891420CCCFF"
 				item: "bloodmagic:demonslate"
 				type: "item"
 			}]
@@ -490,13 +490,13 @@
 				{
 					count: 4
 					id: "1054EEA283A6C131"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "546B8D01DD709225"
-					item: "dotcoinmod:iron_coin"
+					id: "173A36E88A59BEF2"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -504,7 +504,7 @@
 			size: 1.12d
 			subtitle: "Milestone"
 			tasks: [{
-				id: "1E16D85727831585"
+				id: "412BE497816B6837"
 				item: "botania:runic_altar"
 				type: "item"
 			}]
@@ -521,19 +521,19 @@
 			hide_dependency_lines: false
 			icon: "bloodmagic:etherealslate"
 			icon_scale: 1.18d
-			id: "0E562BB34EEF3E95"
+			id: "387BD39770B94768"
 			min_width: 2
 			rewards: [
 				{
 					count: 4
-					id: "52CCCCCC44A2BACD"
-					item: "dotcoinmod:copper_coin"
+					id: "7A384EBA01CFCEB5"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "003567507778B45B"
-					item: "dotcoinmod:iron_coin"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -561,13 +561,13 @@
 				{
 					count: 4
 					id: "0903F26C96AB2C2A"
-					item: "dotcoinmod:copper_coin"
+					item: "createdeco:copper_coin"
 					type: "item"
 				}
 				{
 					count: 4
-					id: "79515DA78E4C9F6A"
-					item: "dotcoinmod:iron_coin"
+					id: "5ADE829808B74904"
+					item: "createdeco:iron_coin"
 					type: "item"
 				}
 			]
@@ -576,7 +576,7 @@
 			subtitle: "Process"
 			tasks: [
 				{
-					id: "50CDEA87DC78CF27"
+					id: "618DDF09473F5DB9"
 					item: "psi:programmer"
 					type: "item"
 				}

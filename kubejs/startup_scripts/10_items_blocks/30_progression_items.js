@@ -52,6 +52,7 @@ StartupEvents.registry('item', function (event) {
         ['pressure_seal', 'Pressure Seal'],
         ['purified_blood_catalyst', 'Purified Blood Catalyst'],
         ['purified_source_core', 'Purified Source Core'],
+        ['raw_impossible_circuit', 'Raw Impossible Circuit'],
         ['impossible_circuit', 'Impossible Circuit'],
         ['living_binding', 'Living Binding'],
         ['mountain_beryl_lens', 'Mountain Beryl Lens'],

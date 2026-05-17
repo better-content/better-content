@@ -19,8 +19,37 @@ function listJar(jarPath) {
   }
 }
 
+function readJarJson(jarPath, entry) {
+  return JSON.parse(execFileSync('unzip', ['-p', jarPath, entry], { encoding: 'utf8' }))
+}
+
+function readJarText(jarPath, entry) {
+  try {
+    return execFileSync('unzip', ['-p', jarPath, entry], { encoding: 'utf8' })
+  } catch {
+    return ''
+  }
+}
+
 function firstExisting(paths) {
   return paths.find(candidate => fs.existsSync(candidate))
+}
+
+function logicalRecipeList(recipe) {
+  if (recipe.type === 'forge:conditional') return (recipe.recipes || []).map(row => row.recipe).filter(Boolean)
+  return [recipe]
+}
+
+function mandatoryAlchemyDependencies(jarPath) {
+  const text = readJarText(jarPath, 'META-INF/mods.toml')
+  if (!text) return []
+  const deps = []
+  for (const block of text.split(/\n(?=\[\[dependencies\.)/g)) {
+    const modId = block.match(/\bmodId\s*=\s*"([^"]+)"/)?.[1]
+    const mandatory = block.match(/\bmandatory\s*=\s*(true|false)/)?.[1] === 'true'
+    if (mandatory && (modId === 'alchemistry' || modId === 'alchemylib')) deps.push(modId)
+  }
+  return deps
 }
 
 function extractValue(text, name) {
@@ -123,6 +152,7 @@ const synthesisText = read('kubejs/server_scripts/40_recipe_add/59_formulaic_syn
 const molecularText = read('kubejs/server_scripts/40_recipe_add/58_create_pncr_molecular_synthesis.js')
 const rules = JSON.parse(read('kubejs/data/latent_chemlib/reaction_rules/default.json')).rules
 const nuclearDecayRules = JSON.parse(read('kubejs/data/latent_chemlib/nuclear_decay/default.json')).rules
+const auditDate = new Date().toISOString().slice(0, 10)
 
 const deposits = extractValue(oreText, 'BTM_RO_DEPOSITS')
 const solvents = extractValue(oreText, 'BTM_RO_SOLVENTS')
@@ -160,6 +190,56 @@ const alchemistryStillInstalled = fs.existsSync(path.join(repo, 'mods/alchemistr
   fs.existsSync(path.join(repo, 'mods/alchemylib.pw.toml')) ||
   read('index.toml').includes('mods/alchemistry.pw.toml') ||
   read('index.toml').includes('mods/alchemylib.pw.toml')
+
+const alchemistryJar = firstExisting([
+  path.join(repo, 'server-instance/mods/alchemistry-1.20.1-2.3.4.jar'),
+  path.join(repo, 'server-template/mods/alchemistry-1.20.1-2.3.4.jar'),
+  path.join(repo, 'server-instance/mods/alchemistry-293425-4770614.jar'),
+  path.join(repo, 'server-template/mods/alchemistry-293425-4770614.jar'),
+  path.join('/home/gerald/.gradle/caches/modules-2/files-2.1/curse.maven/alchemistry-293425/4770614/f0656d019a7254befb87e46bcae1dc0ce7acd173/alchemistry-293425-4770614.jar')
+])
+const alchemistryLogicalTypes = {}
+const alchemistryFileTypes = {}
+let sourceDissolverGasInputs = 0
+if (alchemistryJar) {
+  const entries = listJar(alchemistryJar)
+    .filter(entry => entry.startsWith('data/alchemistry/recipes/') && entry.endsWith('.json'))
+  for (const entry of entries) {
+    const top = readJarJson(alchemistryJar, entry)
+    const fileType = top.type || 'NO_TYPE'
+    alchemistryFileTypes[fileType] = (alchemistryFileTypes[fileType] || 0) + 1
+    for (const recipe of logicalRecipeList(top)) {
+      const recipeType = recipe.type || 'NO_TYPE'
+      alchemistryLogicalTypes[recipeType] = (alchemistryLogicalTypes[recipeType] || 0) + 1
+      if (recipeType === 'alchemistry:dissolver') {
+        const input = recipe.input?.ingredient
+        if (input?.item && dissolverLooseGasInputs.has(input.item)) sourceDissolverGasInputs++
+      }
+    }
+  }
+}
+const sourceDissolverCount = alchemistryLogicalTypes['alchemistry:dissolver'] || 0
+const sourceCombinerCount = alchemistryLogicalTypes['alchemistry:combiner'] || 0
+const sourceCompactorCount = alchemistryLogicalTypes['alchemistry:compactor'] || 0
+const sourceAtomizerCount = alchemistryLogicalTypes['alchemistry:atomizer'] || 0
+const sourceLiquifierCount = alchemistryLogicalTypes['alchemistry:liquifier'] || 0
+const sourceFissionCount = alchemistryLogicalTypes['alchemistry:fission'] || 0
+const sourceFusionCount = alchemistryLogicalTypes['alchemistry:fusion'] || 0
+const dissolverParityCoverage = sourceDissolverCount
+  ? dissolverRecipes.length + sourceDissolverGasInputs
+  : dissolverRecipes.length
+const alchemistryReplacementFailures = []
+if (alchemistryJar && dissolverParityCoverage !== sourceDissolverCount) {
+  alchemistryReplacementFailures.push(`dissolver source parity mismatch: ${dissolverRecipes.length} ported + ${sourceDissolverGasInputs} gas exclusions != ${sourceDissolverCount}`)
+}
+
+const customAlchemyDependencies = []
+for (const file of fs.readdirSync(path.join(repo, 'mods')).filter(file => file.endsWith('.jar')).sort()) {
+  const rel = `mods/${file}`
+  for (const dependency of mandatoryAlchemyDependencies(path.join(repo, rel))) {
+    customAlchemyDependencies.push(`${rel} -> ${dependency}`)
+  }
+}
 
 const oreMissing = []
 for (const dep of deposits) {
@@ -338,6 +418,18 @@ const ruleKinds = {
   fusion: rules.filter(rule => rule.id.includes(':fusion/')).length,
   capture: rules.filter(rule => rule.id.includes(':capture/')).length
 }
+if (sourceCombinerCount > 0 && missingFamilyCompounds.length > 0) {
+  alchemistryReplacementFailures.push(`combiner replacement leaves ${missingFamilyCompounds.length} installed ChemLib family compounds without routes`)
+}
+if (sourceFissionCount > 0 && nuclearDecayRules.length < 30) {
+  alchemistryReplacementFailures.push(`fission replacement nuclear decay table too sparse: ${nuclearDecayRules.length}`)
+}
+if (sourceFusionCount > 0 && ruleKinds.fusion < 50) {
+  alchemistryReplacementFailures.push(`fusion replacement rules too sparse: ${ruleKinds.fusion}`)
+}
+if (customAlchemyDependencies.length > 0) {
+  alchemistryReplacementFailures.push(`${customAlchemyDependencies.length} mandatory custom mod dependencies still point at Alchemistry/AlchemyLib`)
+}
 const latentShapeFailures = []
 const ruleIds = new Set(rules.map(rule => rule.id))
 if (ruleIds.size !== rules.length) latentShapeFailures.push('reaction rules contain duplicate IDs')
@@ -371,6 +463,7 @@ const status = oreMissing.length === 0 &&
   dissolverBalls.length >= 5 &&
   dissolverInvalid.length === 0 &&
   !alchemistryStillInstalled &&
+  alchemistryReplacementFailures.length === 0 &&
   magicParityFailures.length === 0 &&
   latentShapeFailures.length === 0
   ? 'complete for the current installed synthesis surfaces'
@@ -382,7 +475,7 @@ const missingSummary = [...missingByFamily.entries()]
 
 const md = `# Synthesis Pipeline Completeness Audit
 
-Date: 2026-05-16
+Date: ${auditDate}
 
 ## Verdict
 
@@ -400,11 +493,19 @@ special molecular route.
 - Ore solvents/acids: ${solvents.length}
 - Grinding balls: ${balls.length}
 - Intended ore mixer combinations: ${deposits.length * solvents.length * balls.length}
+- Reference Alchemistry jar audited: ${alchemistryJar ? path.relative(repo, alchemistryJar) : 'not found'}
+- Reference Alchemistry logical recipes: ${Object.values(alchemistryLogicalTypes).reduce((sum, count) => sum + count, 0)}
+- Reference Alchemistry dissolver/combiner/compactor recipes: ${sourceDissolverCount}/${sourceCombinerCount}/${sourceCompactorCount}
+- Reference Alchemistry atomizer/liquifier recipes: ${sourceAtomizerCount}/${sourceLiquifierCount}
+- Reference Alchemistry fission/fusion recipes: ${sourceFissionCount}/${sourceFusionCount}
 - Alchemistry dissolver routes ported to Create mixer: ${dissolverRecipes.length}
+- Alchemistry dissolver gas-item routes intentionally excluded: ${sourceDissolverGasInputs}
+- Alchemistry dissolver source coverage after exclusions: ${dissolverParityCoverage}/${sourceDissolverCount || 'UNKNOWN'}
 - Dissolver-port acid families used: ${dissolverAcids.length}
 - Dissolver-port grinding ball families used: ${dissolverBalls.length}
 - Invalid dissolver-port routes: ${dissolverInvalid.length}
 - Alchemistry/AlchemyLib still installed: ${alchemistryStillInstalled ? 'yes' : 'no'}
+- Mandatory custom mod dependencies on Alchemistry/AlchemyLib: ${customAlchemyDependencies.length}
 - Missing ore matrix IDs: ${oreMissing.length}
 - Missing ball retention cells: ${retentionMissing.length}
 - Minimum unique solvent outputs per ore: ${Math.min(...acidUniqueCounts)}
@@ -443,6 +544,8 @@ ${[
   ...(dissolverAcids.length < 5 ? [`- dissolver port acid families too sparse: ${dissolverAcids.join(', ')}`] : []),
   ...(dissolverBalls.length < 5 ? [`- dissolver port ball families too sparse: ${dissolverBalls.join(', ')}`] : []),
   ...(alchemistryStillInstalled ? ['- Alchemistry/AlchemyLib still installed despite Create dissolver port'] : []),
+  ...customAlchemyDependencies.map(failure => `- custom mod dependency: ${failure}`),
+  ...alchemistryReplacementFailures.map(failure => `- Alchemistry replacement: ${failure}`),
   ...missingAcidLadderRoutes.map(id => `- missing acid ladder route: ${id}`),
   ...(pncrAcidBypass ? ['- PNCR formulaic routes bypass acid fluids with pressure chamber item-only recipes'] : []),
   ...magicParityFailures.map(failure => `- magic parity: ${failure}`),
@@ -467,6 +570,11 @@ ${decayMissing.length ? decayMissing.map(id => `- ${id}`).join('\n') : '- none'}
 
 ## Audit Findings
 
+- The reference Alchemistry jar has ${Object.values(alchemistryLogicalTypes).reduce((sum, count) => sum + count, 0)}
+  logical recipes: ${sourceDissolverCount} dissolver, ${sourceCombinerCount}
+  combiner, ${sourceCompactorCount} compactor, ${sourceAtomizerCount}
+  atomizer, ${sourceLiquifierCount} liquifier, ${sourceFissionCount} fission,
+  and ${sourceFusionCount} fusion.
 - Ore acid/ball coverage is complete at the table level: every deposit has every
   solvent and every ball.
 - Acid identity is not flat: each deposit has at least four distinct
@@ -481,7 +589,22 @@ ${decayMissing.length ? decayMissing.map(id => `- ${id}`).join('\n') : '- none'}
   mixer matrix.
 - Alchemistry dissolver semantics are ported into ${dissolverRecipes.length}
   Create mixing routes that require a selected acid/solvent and grinding ball;
-  Alchemistry and AlchemyLib packwiz entries are removed.
+  the ${sourceDissolverGasInputs} source dissolver routes with loose gas item
+  inputs are intentionally excluded because gas identity now belongs to sealed
+  cells and Latent ChemLib machine state. Alchemistry and AlchemyLib packwiz
+  entries are removed.
+- Alchemistry combiner semantics are not copied one-for-one. The replacement is
+  the Create/PNCR formulaic synthesis layer plus special molecular routes; all
+  ${existingFamilyCompounds.length} installed ChemLib family compounds audited
+  have a route.
+- Alchemistry atomizer/liquifier gas and liquid conversion is replaced by
+  sealed cells, acid/fluid production recipes, and Latent ChemLib stateful gas
+  handling rather than loose gas item loops.
+- Alchemistry fission/fusion recipe spam is replaced by Latent ChemLib nuclear
+  decay, capture, and fusion rules under the simulation scheduler budget.
+- Packwiz no longer installs Alchemistry or AlchemyLib, but bundled custom jars
+  must also remove mandatory metadata dependencies before the replacement is
+  runtime-complete. Current blocking dependencies: ${customAlchemyDependencies.length}.
 - Acid production has a progression ladder from biological/basic solvent work
   through sulfur, chlorine, nitrogen oxide, and phosphate chemistry instead of a
   single best universal acid.
@@ -508,7 +631,9 @@ ${decayMissing.length ? decayMissing.map(id => `- ${id}`).join('\n') : '- none'}
 `
 
 if (process.argv.includes('--write')) {
-  fs.writeFileSync(path.join(repo, 'docs/synthesis_pipeline_completeness_audit.md'), md)
+  const outDir = process.env.OUT_DIR || path.join(repo, 'generated', 'validation')
+  fs.mkdirSync(outDir, { recursive: true })
+  fs.writeFileSync(path.join(outDir, 'synthesis_pipeline_completeness_audit.md'), md)
 }
 
 console.log(md)

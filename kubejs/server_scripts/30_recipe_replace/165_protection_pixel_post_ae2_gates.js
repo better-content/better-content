@@ -119,7 +119,7 @@ ServerEvents.recipes(function (event) {
         ingredients: [
             { item: 'minecraft:white_terracotta' },
             { item: 'minecraft:netherite_scrap' },
-            { item: 'create_new_age:heat_pipe' },
+            { item: 'heatsync:heat_pipe' },
             { item: 'chemlib:thorium_plate' },
             { item: 'chemlib:uranium_plate' }
         ],
@@ -143,7 +143,7 @@ ServerEvents.recipes(function (event) {
     ], {
         S: { item: 'kubejs:sky_steel_sheet' },
         Q: { item: 'kubejs:sky_steel_sheet' },
-        L: { item: 'create_new_age:heat_pipe' },
+        L: { item: 'heatsync:heat_pipe' },
         A: { item: 'protection_pixel:alloyarmorplate' },
         F: { item: 'latent_chemlib:gas_reaction_chamber' },
         C: { item: 'kubejs:impossible_machine_casing' }
@@ -156,7 +156,7 @@ ServerEvents.recipes(function (event) {
         'FQCQF',
         'HFHFH'
     ], {
-        H: { item: 'create_new_age:heat_pipe' },
+        H: { item: 'heatsync:heat_pipe' },
         F: { item: 'latent_chemlib:gas_reaction_chamber' },
         Q: { item: 'kubejs:impossible_circuit' },
         C: { item: 'kubejs:impossible_machine_casing' },
@@ -169,7 +169,7 @@ ServerEvents.recipes(function (event) {
         'RHR'
     ], {
         R: { item: 'chemlib:ruthenium_plate' },
-        H: { item: 'create_new_age:heat_pump' },
+        H: { item: 'heatsync:coolant_exchanger' },
         Q: { item: 'kubejs:impossible_circuit' },
         E: { item: 'protection_pixel:powerengine' }
     }, 'kubejs:create/mechanical_crafting/protection_pixel/heat_overlock_mechanism')

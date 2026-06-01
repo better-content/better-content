@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#kubejs:no_biomes",
+  "features": "malum:quartz_geode",
+  "step": "underground_decoration"
+}

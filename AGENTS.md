@@ -61,6 +61,9 @@ Do not sync or delete player/runtime state by default. Use explicit reset flags 
 - Bootstrap client: `tools/bootstrap_client_runtime.sh --client-dir /tmp/btm-client`
 - Launch direct client: `tools/launch_client_direct.sh --client-dir /tmp/btm-client --username AgentClient --server 127.0.0.1:25566`
 - Direct join probe: `tools/client_join_probe_direct.sh --client-dir /tmp/btm-client --server 127.0.0.1:25566`
+- Agent static validation: `tools/agent_validate.sh --static`
+- Agent existing-runtime validation: `tools/agent_validate.sh --runtime --instance /path/to/fresh/runtime`
+- Agent fresh smoke validation: `tools/agent_validate.sh --smoke --server-dir /tmp/btm-agent-validate-smoke --port 25566 --reset-runtime`
 - Content smoke: `tools/server_content_smoke.sh --server-dir /tmp/btm-content-smoke --port 25566 --reset-runtime`
 - Prism fallback: `tools/launch_prism_instance.sh "Bound to Matter"`
 
@@ -104,12 +107,14 @@ Current LC/DH scenario:
 5. Record concise findings in the relevant living doc under `docs/`.
 
 Recommended validation ladder:
-1. Static checks: `node --check` for touched JS, JSON parsing for touched data, and targeted validators such as `node tools/validate_kubejs_assets.mjs`.
-2. Existing fresh runtime: `BTM_INSTANCE=/path/to/runtime node tools/pack_test_suite.mjs`.
-3. Server-only content smoke for recipe/config/content changes: `tools/server_content_smoke.sh --server-dir /tmp/btm-content-smoke --reset-runtime`.
+1. Static checks: `tools/agent_validate.sh --static`.
+2. Existing fresh runtime: `tools/agent_validate.sh --runtime --instance /path/to/fresh/runtime`.
+3. Fresh server smoke for recipe/config/content changes: `tools/agent_validate.sh --smoke --server-dir /tmp/btm-content-smoke --port 25566 --reset-runtime`.
 4. Client/server scenario harnesses for stability, rendering, login, LC/DH/TFTH, or client-only work.
 
-Treat `tools/pack_test_suite.mjs` as authoritative only when it reads a recent runtime log from a fresh or intentionally reused runtime. For routine KubeJS recipe work, prefer `tools/server_content_smoke.sh` because it bootstraps, prunes stale mods, boots the server, scans hard log failures, and then runs the suite.
+Treat runtime validation as authoritative only when it reads logs and KubeJS audit dumps from a fresh or intentionally reused current runtime. `--runtime` and `--smoke` run the pack suite in strict runtime mode. Add `--strict-data-dumps` only when vanilla `/dump` output such as `dump/data_raw/loot_tables` was intentionally generated; this is separate from KubeJS audit dumps under `kubejs/config`.
+
+After changing agent validation entry points or evidence claims, run `tools/test_agent_validate_surfaces.sh`. Use `tools/test_agent_validate_surfaces.sh --include-static --runtime /path/to/fresh/runtime` when changing static isolation, runtime claims, report summaries, or strict data-dump behavior.
 
 For runtime/tooling changes, also run:
 1. `bash -n tools/*.sh`
@@ -125,11 +130,9 @@ Active pack-critical sources:
 - `class-selector` (`classselector`)
 - `create-transmission-loss` (`transmissionloss`)
 - `cursed-biomes` (`cursedbiomes`)
+- `dynamic-trees-hexerei` (`dthexerei`)
 - `dynamic-trees-malum` (`dtmalum`)
-- `fission-reactor` (`fission_reactor`)
-- `gases-and-plasmas` (`gases_and_plasmas`)
 - `heat-sync` (`heatsync`)
-- `liquid-coolant` (`liquid_coolant`)
 - `meteor-obelisks` (`obelisks`)
 - `oc2r-create-bridge` (`computerbridge`)
 - `pillager-campaigns` (`pillagercampaigns`)

@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "create_new_age:heater",
-    "create_new_age:stirling_engine"
+    "heatsync:heat_pipe",
+    "heatsync:coolant_exchanger"
   ]
 }

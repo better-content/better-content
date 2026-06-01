@@ -1,0 +1,303 @@
+{
+  "mode": "embark_points",
+  "pointQuota": 18,
+  "items": [
+    {
+      "id": "terracotta_bowl",
+      "title": "Terracotta Bowl",
+      "category": "Water",
+      "blurb": "Minimum field hydration vessel.",
+      "item": "thirst:terracotta_bowl",
+      "count": 1,
+      "cost": 1,
+      "maxPurchases": 1,
+      "slot": "inventory"
+    },
+    {
+      "id": "filled_waterskin",
+      "title": "Filled Waterskin",
+      "category": "Water",
+      "blurb": "Portable emergency water for bad starts.",
+      "item": "cold_sweat:filled_waterskin",
+      "count": 1,
+      "cost": 4,
+      "maxPurchases": 1,
+      "slot": "inventory"
+    },
+    {
+      "id": "torch_bundle",
+      "title": "Torch Bundle",
+      "category": "Camp",
+      "blurb": "First-night lighting and route marking.",
+      "item": "minecraft:torch",
+      "count": 16,
+      "cost": 2,
+      "maxPurchases": 2,
+      "slot": "inventory"
+    },
+    {
+      "id": "lantern",
+      "title": "Lantern",
+      "category": "Camp",
+      "blurb": "Reusable camp light.",
+      "item": "minecraft:lantern",
+      "count": 1,
+      "cost": 2,
+      "maxPurchases": 1,
+      "slot": "weapon.offhand"
+    },
+    {
+      "id": "candle_bundle",
+      "title": "Candle Bundle",
+      "category": "Camp",
+      "blurb": "Compact lighting with recipe value but no tool or storage shortcut.",
+      "item": "minecraft:candle",
+      "count": 8,
+      "cost": 1,
+      "maxPurchases": 2,
+      "slot": "inventory"
+    },
+    {
+      "id": "rope_coil",
+      "title": "Rope Coil",
+      "category": "Route",
+      "blurb": "Vertical route utility without tools or storage.",
+      "item": "farmersdelight:rope",
+      "count": 12,
+      "cost": 3,
+      "maxPurchases": 1,
+      "slot": "inventory"
+    },
+    {
+      "id": "compass",
+      "title": "Compass",
+      "category": "Route",
+      "blurb": "Basic bearing for spawn routes.",
+      "item": "minecraft:compass",
+      "count": 1,
+      "cost": 2,
+      "maxPurchases": 1,
+      "slot": "weapon.offhand"
+    },
+    {
+      "id": "clock",
+      "title": "Clock",
+      "category": "Route",
+      "blurb": "Timekeeping for route and seasonal planning.",
+      "item": "minecraft:clock",
+      "count": 1,
+      "cost": 2,
+      "maxPurchases": 1,
+      "slot": "weapon.offhand"
+    },
+    {
+      "id": "empty_map",
+      "title": "Empty Map",
+      "category": "Route",
+      "blurb": "Local survey record.",
+      "item": "minecraft:map",
+      "count": 1,
+      "cost": 2,
+      "maxPurchases": 2,
+      "slot": "inventory"
+    },
+    {
+      "id": "spyglass",
+      "title": "Spyglass",
+      "category": "Route",
+      "blurb": "Landmark reading and safe scouting.",
+      "item": "minecraft:spyglass",
+      "count": 1,
+      "cost": 4,
+      "maxPurchases": 1,
+      "slot": "weapon.offhand"
+    },
+    {
+      "id": "natures_compass",
+      "title": "Nature's Compass",
+      "category": "Route",
+      "blurb": "Biome targeting for route-first starts.",
+      "item": "naturescompass:naturescompass",
+      "count": 1,
+      "cost": 7,
+      "maxPurchases": 1,
+      "slot": "weapon.offhand"
+    },
+    {
+      "id": "recovery_compass",
+      "title": "Recovery Compass",
+      "category": "Route",
+      "blurb": "Corpse-route recovery for risky scouting.",
+      "item": "minecraft:recovery_compass",
+      "count": 1,
+      "cost": 6,
+      "maxPurchases": 1,
+      "slot": "inventory"
+    },
+    {
+      "id": "reinforced_hang_glider",
+      "title": "Reinforced Hang Glider",
+      "category": "Route",
+      "blurb": "Terrain traversal without flight or extraction power.",
+      "item": "hangglider:reinforced_hang_glider",
+      "count": 1,
+      "cost": 9,
+      "maxPurchases": 1,
+      "slot": "inventory"
+    },
+    {
+      "id": "diving_helmet",
+      "title": "Copper Diving Helmet",
+      "category": "Water",
+      "blurb": "Flooded cave and water-route access.",
+      "item": "create:copper_diving_helmet",
+      "count": 1,
+      "cost": 6,
+      "maxPurchases": 1,
+      "slot": "armor:head"
+    },
+    {
+      "id": "diving_boots",
+      "title": "Copper Diving Boots",
+      "category": "Water",
+      "blurb": "Underwater route stability.",
+      "item": "create:copper_diving_boots",
+      "count": 1,
+      "cost": 5,
+      "maxPurchases": 1,
+      "slot": "armor:feet"
+    },
+    {
+      "id": "rail_bundle",
+      "title": "Rail Bundle",
+      "category": "Route",
+      "blurb": "Small physical-route starter.",
+      "item": "minecraft:rail",
+      "count": 32,
+      "cost": 4,
+      "maxPurchases": 1,
+      "slot": "inventory"
+    },
+    {
+      "id": "powered_rail_bundle",
+      "title": "Powered Rail Bundle",
+      "category": "Route",
+      "blurb": "Limited momentum for early minecart routes.",
+      "item": "minecraft:powered_rail",
+      "count": 8,
+      "cost": 4,
+      "maxPurchases": 1,
+      "slot": "inventory"
+    },
+    {
+      "id": "minecart",
+      "title": "Minecart",
+      "category": "Route",
+      "blurb": "Personal transport for built rails.",
+      "item": "minecraft:minecart",
+      "count": 1,
+      "cost": 3,
+      "maxPurchases": 1,
+      "slot": "inventory"
+    },
+    {
+      "id": "lead_pair",
+      "title": "Lead Pair",
+      "category": "Route",
+      "blurb": "Animal and settlement routing without storage or automation.",
+      "item": "minecraft:lead",
+      "count": 2,
+      "cost": 2,
+      "maxPurchases": 1,
+      "slot": "inventory"
+    },
+    {
+      "id": "saddle",
+      "title": "Saddle",
+      "category": "Route",
+      "blurb": "Mount-focused scouting without flight, tools, or production.",
+      "item": "minecraft:saddle",
+      "count": 1,
+      "cost": 5,
+      "maxPurchases": 1,
+      "slot": "inventory"
+    },
+    {
+      "id": "copper_coin_float",
+      "title": "Copper Coin Float",
+      "category": "Trade",
+      "blurb": "Low-tier recovery trade money.",
+      "item": "createdeco:copper_coin",
+      "count": 8,
+      "cost": 3,
+      "maxPurchases": 2,
+      "slot": "inventory"
+    },
+    {
+      "id": "zinc_coin_float",
+      "title": "Zinc Coin Float",
+      "category": "Trade",
+      "blurb": "A small reserve for better early barter.",
+      "item": "createdeco:zinc_coin",
+      "count": 2,
+      "cost": 4,
+      "maxPurchases": 1,
+      "slot": "inventory"
+    },
+    {
+      "id": "season_calendar",
+      "title": "Season Calendar",
+      "category": "Food",
+      "blurb": "Crop timing and seasonal planning.",
+      "item": "sereneseasons:calendar",
+      "count": 1,
+      "cost": 2,
+      "maxPurchases": 1,
+      "slot": "weapon.offhand"
+    },
+    {
+      "id": "wheat_seeds",
+      "title": "Wheat Seeds",
+      "category": "Food",
+      "blurb": "Baseline field crop.",
+      "item": "minecraft:wheat_seeds",
+      "count": 16,
+      "cost": 1,
+      "maxPurchases": 2,
+      "slot": "inventory"
+    },
+    {
+      "id": "apple_ration",
+      "title": "Apple Ration",
+      "category": "Food",
+      "blurb": "Simple travel food.",
+      "item": "minecraft:apple",
+      "count": 8,
+      "cost": 2,
+      "maxPurchases": 2,
+      "slot": "inventory"
+    },
+    {
+      "id": "vodka_stock",
+      "title": "Vodka Stock",
+      "category": "Drink",
+      "blurb": "Compact drink stock for body-system starts.",
+      "item": "brewinandchewin:vodka",
+      "count": 3,
+      "cost": 4,
+      "maxPurchases": 1,
+      "slot": "inventory"
+    },
+    {
+      "id": "bread_ration",
+      "title": "Bread Ration",
+      "category": "Food",
+      "blurb": "Simple travel food with broad recipe connections.",
+      "item": "minecraft:bread",
+      "count": 8,
+      "cost": 2,
+      "maxPurchases": 1,
+      "slot": "inventory"
+    }
+  ]
+}

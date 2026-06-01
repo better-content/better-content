@@ -65,14 +65,7 @@ function btmLateAssembly(event, program, id, input, output) {
 function btmLateEnergising(event, id, output, energy, inputs) {
     if (!btmLateCanMake(output, inputs)) return
     event.remove({ output: output })
-    event.custom({
-        type: 'create_new_age:energising',
-        energy_needed: energy,
-        ingredients: inputs.map(function (input) {
-            return input.charAt(0) === '#' ? { tag: input.substring(1) } : { item: input }
-        }),
-        results: [{ item: output }]
-    }).id('kubejs:late_material_economy/electrical_energising/' + id)
+    event.shapeless(output, inputs).id('kubejs:late_material_economy/powergrid_component/' + id)
 }
 
 function btmLateReplace(event, outputs, oldInputs, newInput) {
@@ -91,23 +84,11 @@ function btmLateShaped(event, output, pattern, keys, id) {
 }
 
 ServerEvents.recipes(function (event) {
-    // Bootstrap the first energiser without requiring already-energised wire.
-    btmLateShaped(event, 'create_new_age:basic_energiser', [
-        ' W ',
-        'CAC',
-        ' S '
-    ], {
-        W: 'create_new_age:copper_wire',
-        C: 'powergrid:capacitor',
-        A: 'kubejs:electrical_machine_casing',
-        S: 'create:shaft'
-    }, 'kubejs:late_material_economy/electrical/basic_energiser_bootstrap')
-
     // Gas cells are PNCR-sealed pressure goods, not generic mechanical-crafter parts.
     btmLatePressure(event, 'sealed_chemical_cell', BTM_LATE_ECON.sealedCell, 4, 2.0, [
         { id: 'pneumaticcraft:small_tank' },
         { id: BTM_LATE_ECON.pressureSeal, count: 2 },
-        { id: 'create_new_age:heat_pipe' },
+        { id: 'heatsync:heat_pipe' },
         { id: '#forge:glass', count: 2 }
     ])
 
@@ -147,18 +128,18 @@ ServerEvents.recipes(function (event) {
     // electrical surface instead of leaving them as simple metal/redstone crafts.
     btmLateEnergising(event, 'heating_coil', 'powergrid:heating_coil', 4000, [
         'powergrid:copper_coil',
-        'create_new_age:overcharged_iron_sheet',
+        'kubejs:electrical_machine_casing',
         BTM_LATE_ECON.redstoneRelay
     ])
     btmLateEnergising(event, 'carbon_pile_coil', 'powergrid:carbon_pile_coil', 5000, [
         'powergrid:heating_coil',
         'minecraft:coal',
-        'create_new_age:overcharged_iron_sheet'
+        BTM_LATE_ECON.redstoneRelay
     ])
     btmLateEnergising(event, 'electromagnet', 'powergrid:electromagnet', 8000, [
         'powergrid:copper_coil',
-        'create_new_age:redstone_magnet',
-        'create_new_age:overcharged_golden_sheet'
+        'powergrid:heating_coil',
+        BTM_LATE_ECON.redstoneRelay
     ])
     btmLateEnergising(event, 'electrical_gizmo', 'powergrid:electrical_gizmo', 12000, [
         BTM_LATE_ECON.circuit,

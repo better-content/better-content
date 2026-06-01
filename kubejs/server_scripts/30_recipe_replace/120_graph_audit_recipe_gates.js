@@ -91,7 +91,7 @@ ServerEvents.recipes(function (event) {
     event.remove({ type: 'createdieselgenerators:distillation' })
 
     // Power Grid / New Age heat infrastructure should not be simple Create-era crafting.
-    btmGraphShaped(event, 'create_new_age:heat_pipe', [
+    btmGraphShaped(event, 'heatsync:heat_pipe', [
         'SCS',
         'PBP',
         'SCS'
@@ -100,18 +100,18 @@ ServerEvents.recipes(function (event) {
         C: 'powergrid:conductive_casing',
         P: 'create:fluid_pipe',
         B: BTM_GRAPH_GATE.power
-    }, 'kubejs:graph_gate/create_new_age/heat_pipe')
+    }, 'kubejs:graph_gate/heatsync/heat_pipe')
 
-    btmGraphShaped(event, 'create_new_age:heat_pump', [
+    btmGraphShaped(event, 'heatsync:coolant_exchanger', [
         'PHP',
         'CBC',
         'PHP'
     ], {
-        P: 'create_new_age:heat_pipe',
+        P: 'heatsync:heat_pipe',
         H: 'powergrid:electric_motor',
         C: 'powergrid:conductive_casing',
         B: BTM_GRAPH_GATE.power
-    }, 'kubejs:graph_gate/create_new_age/heat_pump')
+    }, 'kubejs:graph_gate/heatsync/coolant_exchanger')
 
     // Chunk loading is remote-site infrastructure and must sit behind power/compute logistics.
     btmGraphShaped(event, 'create_power_loader:empty_andesite_chunk_loader', [

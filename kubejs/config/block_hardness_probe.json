@@ -1,0 +1,31 @@
+{
+  "enabled": false,
+  "outputDir": "generated/runtime-dumps/",
+  "writeAllBlocks": false,
+  "blockIds": [
+    "minecraft:dirt",
+    "minecraft:grass_block",
+    "minecraft:coarse_dirt",
+    "minecraft:rooted_dirt",
+    "minecraft:mud",
+    "minecraft:sand",
+    "minecraft:gravel",
+    "minecraft:stone",
+    "minecraft:cobblestone",
+    "minecraft:deepslate",
+    "minecraft:tuff",
+    "minecraft:calcite",
+    "minecraft:oak_log",
+    "minecraft:oak_planks",
+    "minecraft:iron_block",
+    "minecraft:obsidian",
+    "minecraft:bedrock",
+    "ae2:sky_stone_block",
+    "create:andesite_casing",
+    "undergarden:shiverstone",
+    "undergarden:depthrock",
+    "malum:runewood_log",
+    "hexerei:willow_log",
+    "hexerei:mahogany_log"
+  ]
+}

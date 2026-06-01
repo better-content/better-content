@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#kubejs:no_biomes",
+  "features": "irons_spellbooks:ore_mithril_placement",
+  "step": "underground_ores"
+}

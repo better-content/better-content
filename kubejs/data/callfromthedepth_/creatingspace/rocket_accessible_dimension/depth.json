@@ -1,0 +1,11 @@
+{
+  "adjacentDimensions": {
+    "creatingspace:earth_orbit": {
+      "deltaV": 1500
+    }
+  },
+  "arrivalHeight": 80,
+  "gravity": 9.81,
+  "orbitedBody": "minecraft:overworld",
+  "distanceToOrbitingBody": 120
+}

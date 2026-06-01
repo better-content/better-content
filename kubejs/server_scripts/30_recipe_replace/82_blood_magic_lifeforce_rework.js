@@ -9,12 +9,12 @@ ServerEvents.recipes(function (event) {
         'BFB',
         'CSC'
     ], {
-        O: 'minecraft:obsidian',
+        O: 'undergarden:shiverstone',
         G: 'minecraft:gold_block',
-        B: 'minecraft:blaze_rod',
+        B: 'undergarden:cloggrum_ingot',
         F: 'minecraft:furnace',
-        C: 'minecraft:crying_obsidian',
-        S: 'minecraft:ghast_tear'
+        C: 'undergarden:regalium_crystal',
+        S: 'undergarden:blood_globule'
     }).id('kubejs:bloodmagic/expensive_blood_altar')
 
     if (event.recipes.bloodmagic && event.recipes.bloodmagic.altar) {

@@ -1,0 +1,9 @@
+{
+  "primitive_soil": "minecraft:packed_mud",
+  "acceptable_soils": [
+    "dirt_like",
+    "mud_like"
+  ],
+  "substitute_soil": "mud",
+  "only_if_loaded": "minecraft"
+}

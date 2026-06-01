@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "conditions": [
+    {
+      "type": "forge:false"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "forbidden_arcanus:edelwood_boat"
+    },
+    {
+      "tag": "forge:chests/wooden"
+    }
+  ],
+  "result": {
+    "item": "forbidden_arcanus:edelwood_chest_boat"
+  }
+}

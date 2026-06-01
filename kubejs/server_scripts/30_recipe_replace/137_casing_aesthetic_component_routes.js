@@ -116,12 +116,7 @@ function btmAestheticAssembly(event, program, id, input, output) {
 function btmAestheticEnergising(event, id, output, energy, inputs) {
     if (!btmAestheticCanMake(output, inputs)) return
     btmAestheticRemove(event, output)
-    event.custom({
-        type: 'create_new_age:energising',
-        energy_needed: energy,
-        ingredients: inputs.map(btmAestheticIngredient),
-        results: [{ item: output }]
-    }).id('kubejs:casing_aesthetic/electrical_energising/' + id)
+    event.shapeless(output, inputs).id('kubejs:casing_aesthetic/powergrid_component/' + id)
 }
 
 function btmAestheticMechanical(event, id, output, pattern, keys) {

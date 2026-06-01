@@ -20,6 +20,7 @@ var BTM_EXTREME = {
         thorium: 'kubejs:fissile_salt_blend',
         osmium: 'kubejs:soulstone_carbon_matrix',
         iridium: 'kubejs:titanium_thermal_plate',
+        osmiridium: 'realisticores:crushed_osmiridium_lava_sulfide_ore',
         debris: 'minecraft:netherite_scrap'
     },
     gate: {
@@ -163,7 +164,7 @@ ServerEvents.recipes(function (event) {
         'PBP',
         'OIO'
     ], {
-        O: BTM_EXTREME.lava.osmium,
+        O: BTM_EXTREME.lava.osmiridium,
         I: BTM_EXTREME.lava.iridium,
         P: BTM_EXTREME.deepslate.palladium,
         B: BTM_EXTREME.gate.ae2

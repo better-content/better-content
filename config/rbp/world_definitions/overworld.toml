@@ -48,6 +48,24 @@ PhysicsEnabled = true
 	#	Tags:         '#forge:stone'
 	#	IDs:          'minecraft:stone'
 	DefaultBlocksBlacklist = [
+		# World-floor and admin/control blocks must never receive fallback falling physics.
+		"minecraft:bedrock",
+		"minecraft:barrier",
+		"minecraft:command_block",
+		"minecraft:chain_command_block",
+		"minecraft:repeating_command_block",
+		"minecraft:structure_block",
+		"minecraft:structure_void",
+		"minecraft:jigsaw",
+		"minecraft:end_portal_frame",
+		# Dynamic Trees branch/leaves blocks manage their own support and decay lifecycle.
+		"<dynamictrees>",
+		"<dynamictreesplus>",
+		"<dtarsnouveau>",
+		"<dtquark>",
+		"<dtnatures_spirit>",
+		"<dthexerei>",
+		"<dtmalum>",
 		"ae2:sky_stone_block",
 		"ae2:smooth_sky_stone_block",
 		"ae2:sky_stone_brick",

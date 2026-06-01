@@ -1,7 +1,7 @@
 {
   "type": "realisticores:lava_exposed_ore",
   "config": {
-    "size": 9,
+    "size": 7,
     "discard_chance_on_air_exposure": 0.0,
     "targets": [
       {
@@ -10,7 +10,7 @@
           "tag": "minecraft:deepslate_ore_replaceables"
         },
         "state": {
-          "Name": "realisticores:deepslate_thorium_ore"
+          "Name": "realisticores:deepslate_osmiridium_lava_sulfide_ore"
         }
       }
     ]

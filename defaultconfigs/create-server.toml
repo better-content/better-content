@@ -341,20 +341,20 @@
 	#[-1 to disable this behaviour]
 	#The minimum amount of fluid blocks the hose pulley needs to find before deeming it an infinite source.
 	#Range: > -1
-	hosePulleyBlockThreshold = 10000
+	hosePulleyBlockThreshold = -1
 	#.
 	#Whether hose pulleys should continue filling up above-threshold sources.
 	fillInfinite = false
 	#.
 	#Configure which fluids can be drained infinitely.
 	#Allowed Values: ALLOW_ALL, DENY_ALL, ALLOW_BY_TAG, DENY_BY_TAG
-	bottomlessFluidMode = "ALLOW_BY_TAG"
+	bottomlessFluidMode = "DENY_ALL"
 	#.
 	#Whether hose pulleys should be allowed to place fluid sources.
-	fluidFillPlaceFluidSourceBlocks = true
+	fluidFillPlaceFluidSourceBlocks = false
 	#.
 	#Whether open-ended pipes should be allowed to place fluid sources.
-	pipesPlaceFluidSourceBlocks = true
+	pipesPlaceFluidSourceBlocks = false
 
 #.
 #Tweaks for logistical components

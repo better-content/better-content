@@ -27,11 +27,17 @@ Deposit processing is multi-surface:
 
 Alchemistry/ChemLib content informs material identity, but the authored progression route is Create, TCon, PNCR, and Blood Magic-adjacent synthesis rather than a direct free transmutation lane.
 
+Non-grown infinite matter is not an authored resource source. `30_remove_items.js` removes passive ore/matter generators such as Occultism miners, Blood Magic meteors, Botania Orechid/Marimorphosis/catalyst routes, Ars conjured islands/fluid glyph routes, and Create Diesel lava fermentation. Create bottomless draining and finite-water biome refills are disabled in config; raw/geologic/material villager buy restocks are skipped by `35_villager_trades/10_coin_villager_trades.js`. Renewable grown sources such as crops, trees, animals, and ordinary biological drops remain valid economy inputs.
+
+The lava-depth material loop is a late exception within the Overworld geology stack. Tectonic extends terrain to Y -64; `datapacks/realistic_ores_lava_depths` places only lava-exposed Realistic Ores uranium, thorium, and osmiridium lava sulfide in the Y -64 to 0 band. Osmiridium feeds Create washing, TCon ore melting, acid/ball chemistry, Protection Pixel Tosaki gear, and selected post-AE2 utility.
+
 ## Create And Tinkers
 
 Tinkers establishes seared/scorched metallurgy before Create authority. Create addon integration is handled through `121_create_stack_integration_gates.js`; PNCR compression gates in `122_pneumaticcraft_create_pressing_gates.js` make compressed iron and compressed stone Create pressing outputs and remove pressure/explosion shortcuts.
 
 The first woodcutting tool is a flint TConstruct hand axe crafted from a Farmer's Delight flint knife and a stick. No Tree Punching tools, loose rocks, pottery, vessels, and straw-binding routes are not part of the active early-game spine.
+
+`60_vanilla_tools_to_tcon_heads.js` removes and hides vanilla-shaped pickaxe, axe, shovel, sword, and hoe outputs from Minecraft and installed tool-clone mods. Existing vanilla tool inputs are remapped to TConstruct parts where recipes still need that semantic role; player-facing tool progression should remain TConstruct-authored rather than disposable material-tier clones.
 
 Create trains and physical logistics are a first-class progression lane. Package teleportation remains removed until redesigned.
 
@@ -39,11 +45,17 @@ Create trains and physical logistics are a first-class progression lane. Package
 
 ## World Physics
 
-Realistic Block Physics uses authored material definitions where available, then applies the `stone` definition as the overworld default for every otherwise-unmatched supported block. AE2 sky stone blocks are the intentional gravity-exempt exception.
+Realistic Block Physics uses authored material definitions where available, then applies the `stone` definition as the overworld default for every otherwise-unmatched supported block. Bedrock, world-control/admin blocks, and AE2 sky stone blocks are intentional gravity-exempt exceptions so chunk analysis cannot destabilize the world floor or structure internals.
+
+Dynamic Trees namespaces are also excluded from the Overworld default physics pass. Branches and generated leaf blocks use Dynamic Trees' own support, decay, and growth lifecycle; letting the RBP stone default analyze those blocks can make generated trees disassemble during chunk analysis.
 
 ## Blood Magic And Body Systems
 
 Blood Magic is the magic parent spine. `40_blood_orbs_from_still_beating_hearts.js` removes default Blood Orb altar recipes and replaces them with level-threshold heart-key recipes. `82_blood_magic_lifeforce_rework.js` makes altar/rune escalation costly, uses Undergarden materials for the Blood Altar body, and keeps sacrifice helpers deeper in the tree.
+
+The death overhaul is a body-system progression surface. `defaultconfigs/configurabledeath-server.toml` keeps carried items and food state on death, so deaths are not balanced around random inventory scatter. `rpg-stats` owns the life ledger: `PointAwarder` grants power from new XP levels above `lifePeakLevel`, `CommonForgeEvents` clears allocations and unspent points on death, and `StillBeatingHeartData` creates the respawn-delivered `rpgstats:still_beating_heart` with that life's level. The intended pressure is "how long and how far did this life get" plus the return to the locked spawn.
+
+Permanent-ish spawn is owned by Class Selector onboarding and the no-moving-spawn startup hook. Players lock a starting site during class or embark selection; ordinary spawn changes are cancelled, bed and respawn-anchor updates are rejected while the class spawn is locked, and respawn teleports back to the stored `classselector:respawn_*` point with mob repel protection plus scripted sound and sculk-particle FX. Any future player-facing spawn relocation should be late-game content, not a bed-level convenience.
 
 Food and potion identity are handled through `70_food_potion_reagents.js`: food blocks discover/refine effect identity, and the brewing stand combines processed extracts rather than serving as the main discovery ladder. Body-survival mods and configs include Diet, Thirst Was Taken, Cold Sweat, Diminishing Health defaults, PlayerRevive, and related KubeJS tooltip/content support.
 
@@ -62,6 +74,8 @@ Do not add a simple crafting recipe for a component that bypasses a cased or man
 ## Loot, Coins, Wares, And Trades
 
 Coins are defined in `global.BTM_COIN_TIERS`: copper, zinc, iron, industrial iron, brass, gold, and platinum using Create Deco coin items. `35_villager_trades/10_coin_villager_trades.js` replaces village trades with dotcoin purchases and lossy coin exchange.
+
+Villager and wandering-trader markets are recovery and route-planning support, not renewable material factories. Their registration helper rejects raw/geologic/material buy results such as stone, ores/metals, redstone-class dusts, Botania/Blood/Ars matter shortcuts, AE2 sky stone/certus, and core Create material components; grown foods, fibers, animal products, and selected expedition drops can still participate in the coin lane.
 
 Loot is treated as a crafting surface:
 

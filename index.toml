@@ -5490,7 +5490,7 @@ hash = "7404819a88566283053656c89b2f699a643327f24967d3acb0a89f15c123d216"
 
 [[files]]
 file = "config/flowing_fluids.json"
-hash = "4f3c2d5706b5df2bc47456e3cc81c3cd45129d7902215692e5ac7ba04cfe3240"
+hash = "3a9d2c8f78ed10b9dba2febb9c18a39c397448dc3eb60fbbb91034a16028b7ad"
 
 [[files]]
 file = "config/geolosys-common.toml"
@@ -5722,7 +5722,7 @@ hash = "c5724214802c5afd6a93dead8a544ae69ff48ea5cf1aa5522ddcd792ef9d3c7d"
 
 [[files]]
 file = "config/incontrol/spawner.json"
-hash = "8b031e8fac6d69d5f6f9294f98d0feeba4b03d53a17e5ec4cc48f7a8c6d43462"
+hash = "bf18db701d43811026d536acd154682daa2929b2dcd7d80f72633778b04c52e5"
 
 [[files]]
 file = "config/incontrol/structure.json"
@@ -6102,7 +6102,7 @@ hash = "7818661178baf82b538fd8b790fd34aaaf6b47e038b8d07f50834863dd11fbcc"
 
 [[files]]
 file = "config/rbp/world_definitions/overworld.toml"
-hash = "0eafa6b3ed03c79cf7605d3bd1e342a811f663ec94b33248ec3edd913d0c8a34"
+hash = "d891c0f0f9f4405a277c6727b56a0a0bc3fe477c7dd8d0eb60921e6e8414874b"
 
 [[files]]
 file = "config/realisticphysics/realisticphysics-common.toml"
@@ -7749,6 +7749,10 @@ file = "datapacks/no_thorium_or_magnetite_veins/pack.mcmeta"
 hash = "eac48f5922295fa8e0c6b88de4187abe63dd205e2a0d5e9f36b618378ca68e40"
 
 [[files]]
+file = "datapacks/realistic_ores_lava_depths/data/realisticores/forge/biome_modifier/add_osmiridium_lava_sulfide_ore_deepslate.json"
+hash = "19c8176efd4a7e1a46ad01185b69e3224f0d51f1b0f4780ca33385ce508cf198"
+
+[[files]]
 file = "datapacks/realistic_ores_lava_depths/data/realisticores/forge/biome_modifier/add_thorium_ore_deepslate.json"
 hash = "d113c0bd0b0b165e0508fd2e02b6816de94705a06eaf585489b9acd2acb697e4"
 
@@ -7757,24 +7761,32 @@ file = "datapacks/realistic_ores_lava_depths/data/realisticores/forge/biome_modi
 hash = "575a0d36b91be84b00ef44d883b148cd5f9963c74035b26ac7abeba43fe6fd26"
 
 [[files]]
+file = "datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/configured_feature/osmiridium_lava_sulfide_ore_deepslate.json"
+hash = "6571957b306d174919f503d9aad5ec490a7a146c2539b123b1093d6f28d200cf"
+
+[[files]]
 file = "datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/configured_feature/thorium_ore_deepslate.json"
-hash = "d6bc554c8f53380c5c3e2bc132e8cd10092fc3c0449b86101c08ddc100f6b52a"
+hash = "1ddc50ddf8f94efd25e2f143ac223e59409b444829e91525d1cbcf2ad22c5f1f"
 
 [[files]]
 file = "datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/configured_feature/uranium_ore_deepslate.json"
-hash = "48396ac9c16e9faae7dd5e7a6a7a9aa1690d78bcf741a8bb5d4c91078e0d247a"
+hash = "32911fe0a2662f5b1539424016c9b022278fc4e188f297240dcf1eab38b57ce2"
+
+[[files]]
+file = "datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/placed_feature/osmiridium_lava_sulfide_ore_deepslate.json"
+hash = "2c505aa5e2a84b2dcff0301215534cdcb179d35b6af11af5bfe2d4ffee0be6c5"
 
 [[files]]
 file = "datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/placed_feature/thorium_ore_deepslate.json"
-hash = "1df8f8ba767188521a05018637c37029d6b48661a3d3b07aec0208ba1eb226ff"
+hash = "dba9e88e32c0407697962fd2ecbff47031e155e37759806ac47602a505f62fdf"
 
 [[files]]
 file = "datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/placed_feature/uranium_ore_deepslate.json"
-hash = "3de5fca4aef121a24201dd4c118e1e6ecbf8bb7dee543d4891c145b72a49c783"
+hash = "edb5ceeda94094d73dc1cd134d64c69dd1349a05336c0107b954b5f63a05bffa"
 
 [[files]]
 file = "datapacks/realistic_ores_lava_depths/pack.mcmeta"
-hash = "25b25f2d310a82fbe02c593dac143ffe1556600a709b48e98a5a362a676caf8c"
+hash = "2e69b890b2e44b67e2d5adc2cd88b4cfab95bd588cee3f3d92abcbec99f21e36"
 
 [[files]]
 file = "defaultconfigs/Diminishing_Health.toml"
@@ -7786,7 +7798,7 @@ hash = "7d94d8343d08f9ec17a8b041441604401d1dd7a849453182d4b0f62a9d0c149a"
 
 [[files]]
 file = "defaultconfigs/create-server.toml"
-hash = "2b237508e7610f27826d91d086f87d1bbd924e6057ed17892893fe0b41ed0e3f"
+hash = "5f7035fdba24002f84c268f581ca64a161492ff3efae32e72943c4f138d26407"
 
 [[files]]
 file = "defaultconfigs/farsightedmobs-server.toml"
@@ -8862,15 +8874,15 @@ hash = "39e70d5010bbebe1f5eda30ae8902b8cbc3391b3ba81fa2eb605d28d70c380a2"
 
 [[files]]
 file = "kubejs/client_scripts/15_ore_origin_tooltips.js"
-hash = "d48171b0f0d2cee8048c358f6054b089cd395043e73e30dbf8b075a1d4a82218"
+hash = "aeb7c3947850b204a20d1ff0a8cdd1956461f316331ef80c67b59b2aa0e60e9b"
 
 [[files]]
 file = "kubejs/client_scripts/20_hide_vanilla_tools.js"
-hash = "ee6dd1eb04cd5a290900b42775e14c765793e06dc4a838a0423fed2ca7569c7f"
+hash = "d0c62741136b3cf1e546b82b9af19eae3f88511199f1f106124c98ac5d4a4c32"
 
 [[files]]
 file = "kubejs/client_scripts/40_hide_quarantined_systems.js"
-hash = "02e1ee96d135e5698b9fba1af1704bc3365bc7ee6c3419a58d9bd171dc9691ed"
+hash = "59064d5328a7bbea72f00bd820a051c59af9a7f283d2c0a6f3967922b7ed2345"
 
 [[files]]
 file = "kubejs/client_scripts/45_hide_vanilla_style_boats.js"
@@ -9742,7 +9754,7 @@ hash = "56f2fd6078c57f42b66aed52d5e1a4a587d626668edeb5bcac4f38c01ba6a2b1"
 
 [[files]]
 file = "kubejs/server_scripts/10_tags/60_realistic_ores_deposit_tags.js"
-hash = "144c435ca784eb59dccbd559281e45f8774a7bff57446347b5c9cbba01410774"
+hash = "819ce311323aff6f52efbc046f05ed060e6228268999d6a06c545b058dbcbd65"
 
 [[files]]
 file = "kubejs/server_scripts/20_recipe_remove/10_no_boats.js"
@@ -9754,7 +9766,7 @@ hash = "c2a82b99259f6281874089a5f4a9e16932d5d71993d299fadcb454c806148b65"
 
 [[files]]
 file = "kubejs/server_scripts/20_recipe_remove/30_remove_items.js"
-hash = "46dde6529c309e0acebb09b09cf860693890199d29af3bd5fed565e4a3b7dde8"
+hash = "3028c8c96842ceda946b454bfdd5f443267114225e03dcee95f7082f2b3142d8"
 
 [[files]]
 file = "kubejs/server_scripts/20_recipe_remove/50_disable_createdeco_coin_recipes.js"
@@ -9770,7 +9782,7 @@ hash = "24c62acdb6c0d3d64166b27deb0fe2b6e74eb59a8540bfe960cc27cefc6a8056"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/110_extreme_y_band_reward_gates.js"
-hash = "6a4376e8c296a03c46d99795b99ff622a2b7c85801210cad6cf8749186855c4f"
+hash = "eaf0ed264092864e9074a6a2d93ba91fa3c2c239f102b2d741d22189e4dc5832"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/115_material_economy_recipe_pass.js"
@@ -9842,7 +9854,7 @@ hash = "3d19a64032d8dde83563a4f60d41fd134c5ca6d04556141f116a8f2bdf637988"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/165_protection_pixel_post_ae2_gates.js"
-hash = "54223805b1e7a1d2123b4a5df330c8e52ef1c27101ebb4b7f81089a569a3bcd0"
+hash = "fa6f0a37a697e3df31e12b30b07a67d9db8f5f8638ad8856752b3a7890f7ac87"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js"
@@ -9878,7 +9890,7 @@ hash = "bb9d6744e0676c5a762256e254ea1e1f46b6e898c1ba37894d8ee13b33154488"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/60_vanilla_tools_to_tcon_heads.js"
-hash = "d141df75a8f301a979c4af7c1b6cbe1f8a8bf94ea5f241d09841f3fc1d4c7053"
+hash = "7b0aee8a93f5144028bde063a4bb420914db17e8193aa313526a7807d06d8ee9"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/70_kettle_rune_swap.js"
@@ -9918,7 +9930,7 @@ hash = "2c52b9a886b8b530d7cba36b3259ba0804386cd6361793483daa915b35d8a982"
 
 [[files]]
 file = "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js"
-hash = "a38e593835177e000b9735321c87b141bdb8ec1e7c4d9aa9f482d27abae731dd"
+hash = "4a0e6915fe2c1b7e10b187f06c91f892b905e54a9dcc5827a5d1dd4acbd007de"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/10_campfire_recipe.js"
@@ -9946,11 +9958,11 @@ hash = "4a20b38aec0f9d59d932d78fe17259716ef7d6ecfe74b8668b758dfcf93ba534"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js"
-hash = "c350791cc1f351620f86eeb4cce5f6464549e7966fdb8e75be9b1933bbbb993a"
+hash = "ca73733e78a1b7cb0bd490c90d5fb1c89e57f97f3f6e9497444793e602407fe1"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js"
-hash = "61fb3429ed8f9bf23e32aaec14e08d108e33bad8fbc0600a0add3b4197e3de11"
+hash = "b9feb3ba05212b1553e8290d881f44b016df1633a2f44193c2ce5ed968189139"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/56_alchemistry_dissolver_create_port.js"
@@ -9990,7 +10002,7 @@ hash = "d45ba1051163a131787143abc9089a268f4be06c4e43f41c78348b97317d2811"
 
 [[files]]
 file = "kubejs/server_scripts/60_worldgen/10_r_ores_melted.js"
-hash = "1dd35d9687db3a928998205eddb018c4f2df3eeb857b073e9d48c6e162a65e1e"
+hash = "d88eb1f131a7798416f606942f059d524723c47bfc82bad149782730c1e3a232"
 
 [[files]]
 file = "kubejs/server_scripts/70_spawn/10_spawn_randomizer.js"
@@ -10906,7 +10918,7 @@ metafile = true
 
 [[files]]
 file = "mods/realisticores-0.1.0.jar"
-hash = "6ce38fbffc4263b6b73bcec2e452d152fb41bd2afb82b9c3af24b7139e37caf3"
+hash = "5d673cc992ac113ce77d23ca56431b0f72194220181ee59c7daf086757e52dbd"
 
 [[files]]
 file = "mods/rehooked.pw.toml"

@@ -189,6 +189,20 @@ ServerEvents.recipes(function (event) {
                      oreTime: 180
         },
         {
+            id: 'osmiridium_lava_sulfide',
+            tag: 'kubejs:deposit_blocks/osmiridium_lava_sulfide',
+            primary: fluidTag('osmium'),
+                     secondary: fluidTag('iridium'),
+                     tertiary: fluidTag('platinum'),
+                     temperature: 1450,
+                     melterAmount: 45,
+                     oreAmount: 90,
+                     secondaryAmount: 45,
+                     tertiaryAmount: 22,
+                     melterTime: 160,
+                     oreTime: 240
+        },
+        {
             id: 'tin_tungsten_greisen',
             tag: 'kubejs:deposit_blocks/tin_tungsten_greisen',
             primary: fluidTag('tungsten'),

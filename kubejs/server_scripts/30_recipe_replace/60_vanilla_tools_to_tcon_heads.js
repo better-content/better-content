@@ -1,15 +1,93 @@
-// Removes vanilla tool outputs and remaps vanilla tool inputs to TCon parts.
+// Removes vanilla-style tool outputs and remaps vanilla tool inputs to TCon parts.
 
-var VANILLA_TOOL_TIERS = ['wooden', 'stone', 'iron', 'golden', 'diamond', 'netherite']
-var VANILLA_TOOL_KINDS = ['pickaxe', 'axe', 'shovel', 'sword', 'hoe']
+var BTM_VANILLA_TOOL_TIERS = ['wooden', 'stone', 'iron', 'golden', 'diamond', 'netherite']
+var BTM_VANILLA_TOOL_KINDS = ['pickaxe', 'axe', 'shovel', 'sword', 'hoe']
+
+var BTM_VANILLA_STYLE_TOOL_FAMILIES = [
+    ['ae2', ['certus_quartz', 'fluix', 'nether_quartz']],
+    ['aether', ['gravitite', 'holystone', 'skyroot', 'zanite']],
+    ['blue_skies', ['aquite', 'bluebright', 'charoite', 'comet', 'diopside', 'dusk', 'frostbright', 'horizonite', 'lunar', 'lunar_stone', 'maple', 'pyrope', 'starlit', 'turquoise_stone']],
+    ['botania', ['elementium']],
+    ['deeperdarker', ['resonarium', 'warden']],
+    ['everythingcopper', ['copper']],
+    ['forbidden_arcanus', ['draco_arcanus']],
+    ['goety', ['dark']],
+    ['iceandfire', ['copper', 'dragonbone', 'dragonsteel_fire', 'dragonsteel_ice', 'dragonsteel_lightning', 'myrmex_desert', 'myrmex_jungle', 'silver']],
+    ['malum', ['soul_stained_steel']],
+    ['the_finley_dimension_remastered', ['forglite']],
+    ['undergarden', ['cloggrum', 'forgotten', 'froststeel', 'utherium']]
+]
+
+var BTM_VANILLA_STYLE_TOOL_EXTRAS = [
+    'ars_nouveau:enchanters_sword',
+    'botania:glass_pickaxe',
+    'botania:manasteel_axe',
+    'botania:manasteel_hoe',
+    'botania:manasteel_shovel',
+    'botania:manasteel_sword',
+    'botania:star_sword',
+    'botania:terra_axe',
+    'botania:terra_sword',
+    'botania:thunder_sword',
+    'create:cardboard_sword',
+    'forbidden_arcanus:slimec_pickaxe',
+    'goety:diamond_ice_axe',
+    'goety:eerie_pickaxe',
+    'goety:graverobber_shovel',
+    'goety:iron_ice_axe',
+    'goety:rampaging_axe',
+    'iceandfire:ghost_sword',
+    'iceandfire:hippogryph_sword',
+    'occultism:iesnium_pickaxe',
+    'occultism:infused_pickaxe',
+    'the_flesh_that_hates:flesh_axe',
+    'the_flesh_that_hates:flesh_sword',
+    'twilightforest:fiery_pickaxe',
+    'twilightforest:fiery_sword',
+    'twilightforest:giant_pickaxe',
+    'twilightforest:giant_sword',
+    'twilightforest:ironwood_axe',
+    'twilightforest:ironwood_hoe',
+    'twilightforest:ironwood_pickaxe',
+    'twilightforest:ironwood_shovel',
+    'twilightforest:ironwood_sword',
+    'twilightforest:knightmetal_axe',
+    'twilightforest:knightmetal_pickaxe',
+    'twilightforest:knightmetal_sword',
+    'twilightforest:steeleaf_axe',
+    'twilightforest:steeleaf_hoe',
+    'twilightforest:steeleaf_pickaxe',
+    'twilightforest:steeleaf_shovel',
+    'twilightforest:steeleaf_sword'
+]
+
+var BTM_VANILLA_STYLE_TOOL_RECIPE_IDS = [
+    'occultism:ritual/craft_infused_pickaxe'
+]
+
+function btmItemExists(id) {
+    try { return Item.exists(id) } catch (e) { return false }
+}
 
 function vanillaToolIds() {
     var tools = []
-    for (var ti = 0; ti < VANILLA_TOOL_TIERS.length; ti++) {
-        for (var ki = 0; ki < VANILLA_TOOL_KINDS.length; ki++) {
-            tools.push('minecraft:' + VANILLA_TOOL_TIERS[ti] + '_' + VANILLA_TOOL_KINDS[ki])
+    for (var ti = 0; ti < BTM_VANILLA_TOOL_TIERS.length; ti++) {
+        for (var ki = 0; ki < BTM_VANILLA_TOOL_KINDS.length; ki++) {
+            tools.push('minecraft:' + BTM_VANILLA_TOOL_TIERS[ti] + '_' + BTM_VANILLA_TOOL_KINDS[ki])
         }
     }
+
+    for (var fi = 0; fi < BTM_VANILLA_STYLE_TOOL_FAMILIES.length; fi++) {
+        var family = BTM_VANILLA_STYLE_TOOL_FAMILIES[fi]
+        for (var mi = 0; mi < family[1].length; mi++) {
+            for (var fki = 0; fki < BTM_VANILLA_TOOL_KINDS.length; fki++) {
+                tools.push(family[0] + ':' + family[1][mi] + '_' + BTM_VANILLA_TOOL_KINDS[fki])
+            }
+        }
+    }
+
+    for (var ei = 0; ei < BTM_VANILLA_STYLE_TOOL_EXTRAS.length; ei++) tools.push(BTM_VANILLA_STYLE_TOOL_EXTRAS[ei])
+
     return tools
 }
 
@@ -30,14 +108,26 @@ ServerEvents.recipes(function (event) {
         hoe: Item.of('tinkers_thinking:narrow_blade', '{Material:"tconstruct:manyullyn"}')
     }
 
-    for (var ti = 0; ti < VANILLA_TOOL_TIERS.length; ti++) {
-        for (var ki = 0; ki < VANILLA_TOOL_KINDS.length; ki++) {
-            var tier = VANILLA_TOOL_TIERS[ti]
-            var kind = VANILLA_TOOL_KINDS[ki]
-            var vanillaTool = 'minecraft:' + tier + '_' + kind
+    var tools = vanillaToolIds()
+    for (var i = 0; i < tools.length; i++) {
+        var tool = tools[i]
+        if (!btmItemExists(tool)) continue
 
-            event.remove({ output: vanillaTool })
-            event.remove({ type: 'minecraft:smithing_transform', output: vanillaTool })
+        event.remove({ output: tool })
+        event.remove({ id: tool })
+        event.remove({ type: tool })
+        event.remove({ type: 'minecraft:smithing_transform', output: tool })
+    }
+
+    for (var ri = 0; ri < BTM_VANILLA_STYLE_TOOL_RECIPE_IDS.length; ri++) {
+        event.remove({ id: BTM_VANILLA_STYLE_TOOL_RECIPE_IDS[ri] })
+    }
+
+    for (var ti = 0; ti < BTM_VANILLA_TOOL_TIERS.length; ti++) {
+        for (var ki = 0; ki < BTM_VANILLA_TOOL_KINDS.length; ki++) {
+            var tier = BTM_VANILLA_TOOL_TIERS[ti]
+            var kind = BTM_VANILLA_TOOL_KINDS[ki]
+            var vanillaTool = 'minecraft:' + tier + '_' + kind
 
             // Diamond tools gate into a real alloyed TCon material, not steel.
             if (tier === 'diamond') {
@@ -54,5 +144,8 @@ ServerEvents.recipes(function (event) {
 })
 
 ServerEvents.tags('item', function (event) {
-    event.add('c:hidden_from_recipe_viewers', vanillaToolIds())
+    var tools = vanillaToolIds()
+    for (var i = 0; i < tools.length; i++) {
+        if (btmItemExists(tools[i])) event.add('c:hidden_from_recipe_viewers', tools[i])
+    }
 })

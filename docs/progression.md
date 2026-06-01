@@ -10,6 +10,14 @@ The pack has two primary crafting spines and one pressure spine:
 
 Local logistics stays first. Create trains and physical routes should matter before AE2 dominates a site, and OC2R is the intended intersite information bridge.
 
+## Death Loop
+
+Death is a structured life-length and location penalty, not a random item-loss pressure. `defaultconfigs/configurabledeath-server.toml` keeps inventory, armor, hotbar, mainhand, offhand, food, and saturation on death, with no durability loss on kept items. The costly loss is the current life's RPG Stats power and the trip back to the locked spawn.
+
+RPG Stats awards one stat point for each new XP level above `lifePeakLevel`. On death, `/home/gerald/mcmods/rpg-stats` clears unspent points and allocations, baselines the next life to the post-death XP level, and delivers a level-stamped `rpgstats:still_beating_heart` on respawn when Blood Magic is present. The heart records how far that life got and then feeds the Blood Magic bridge; it is the high-score token for the run, not a bulk currency.
+
+Spawn is intentionally sticky. New players use Class Selector or embark onboarding to lock both starting supplies and a starting site. `kubejs/startup_scripts/20_globals/10_immobile_spawn.js` cancels ordinary spawn changes, and Class Selector persists `classselector:respawn_*` coordinates, refreshes them before death, rejects bed and respawn-anchor style changes while locked, and teleports the player back there on respawn with protection plus scripted sound and particle FX. Player-facing spawn relocation should remain a very-late-game exception; normal beds are not a progression bypass.
+
 ## Obelisk Dimension Graph Starts
 
 Meteor/obelisk dimensions are origin proofs for outside reward systems. A valid edge needs native dimensional resources, hazards or structures, a first meaningful proof item, and a system whose entry feels earned there. The dimension is not a self-label and does not take ownership of the main tech or magic spine.
@@ -74,9 +82,13 @@ Deposit progression is authored through ADLODS configs, Realistic Ores tags, and
 
 The starter catalogue in `global.BTM_STARTER_DEPOSITS` currently names coal measures, ironstone, copper sulfide, tin, zinc, lead-zinc vein, quartz vein, and bauxite laterite. Processing should keep furnace output as a poor fallback, TCon melter/smeltery as first primary interpretation, foundry/byproduct work as better interpretation, and Create/PNCR chemistry as later material identity.
 
+The late lava-diving band is Overworld terrain below Y 0, enabled by Tectonic `min_y = -64` and lava tunnels. `datapacks/realistic_ores_lava_depths` adds lava-exposed Realistic Ores uranium, thorium, and osmiridium lava sulfide in Y -64 to 0 only; the custom `realisticores:lava_exposed_ore` feature only places ore blocks that touch lava. Magma cubes are the current lava-band hazard, and Protection Pixel Tosaki gear is the intended post-AE2 diving suit for this route.
+
+All non-grown renewable resource sources should be absent or quarantined. Geological, fluid, ore, and manufactured material growth comes from finite worldgen, authored dimension routes, lava-depth routes, loot, or processing of already-owned matter, not from passive ore rituals, bottomless pumps, conjured islands, fluid sigils/glyphs, lava fermentation, or restocking raw-material trades.
+
 ## Magic Gates
 
-Still-Beating Hearts bridge body systems into Blood Magic. `rpgstats:still_beating_heart` is a milestone item, not bulk fuel. Current KubeJS adds pack-owned heart keys and Blood Orb altar recipes in `40_blood_orbs_from_still_beating_hearts.js`; `82_blood_magic_lifeforce_rework.js` makes Blood Altar infrastructure more expensive and routes the altar body through Undergarden shiverstone, cloggrum, regalium, and blood globules instead of Nether mob/block materials.
+Still-Beating Hearts bridge the death loop and body systems into Blood Magic. `rpgstats:still_beating_heart` is a milestone item, not bulk fuel. Current KubeJS adds pack-owned heart keys and Blood Orb altar recipes in `40_blood_orbs_from_still_beating_hearts.js`; `82_blood_magic_lifeforce_rework.js` makes Blood Altar infrastructure more expensive and routes the altar body through Undergarden shiverstone, cloggrum, regalium, and blood globules instead of Nether mob/block materials.
 
 Blood Magic slates are the side-magic authority:
 
@@ -93,5 +105,7 @@ Iron's Spells is integrated as a cross-magic spellcraft branch, not as an indepe
 ## Late And Post-AE2
 
 AE2 is late local intelligence, not early global logistics. `impossible_machine_casing` should mark the point where AE2-scale systems, high Sophisticated Storage control, and late utility can appear. Post-AE2 branches currently include Protection Pixel, Tome of Blood, hooks/drones/backpack utility gates, and Creating Space dimension access gates where the installed mods exist.
+
+Lava-depth osmiridium is a post-AE2 material pressure point for Protection Pixel Tosaki recipes and selected late utility. JEI/EMI ore-origin tooltips should make clear when a material is a normal deposit, meteor-dimension origin, or lava-diving origin.
 
 Theurgy, Psi, and Hex Casting are not active manifest entries in the current repo. Treat references to them in old reports or generator comments as candidate/future design, not current pack state.

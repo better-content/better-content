@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T02:18:15.713Z",
+  "generatedAt": "2026-06-01T03:54:47.454Z",
   "repo": "/home/gerald/obelisks",
   "instance": "/tmp/btm-content-smoke",
   "explicitInstance": true,
@@ -15,24 +15,24 @@
   "metrics": {
     "questChapters": 0,
     "villagerProfessionsCovered": 13,
-    "generatedRecipes": 27084,
+    "generatedRecipes": 27091,
     "engineWorld": {
       "latestLog": "/tmp/btm-content-smoke/logs/latest.log",
-      "latestLogAgeMinutes": 0.04,
-      "latestLogLines": 10906,
+      "latestLogAgeMinutes": 0.03,
+      "latestLogLines": 10888,
       "reachedIntegratedServer": false,
       "reachedDedicatedServer": true,
       "startedServingLan": false,
       "reachedInGame": true,
       "mainMenuToInGameMs": null,
       "totalLoadToWorldMs": null,
-      "spawnPrepTimeMs": 32827,
+      "spawnPrepTimeMs": 24976,
       "serverTickBehindWarnings": 0,
       "maxTickBehindMs": 0,
       "totalTickBehindMs": 0,
       "maxTickBehindTicks": 0,
-      "worldSaveDurationMs": 1291,
-      "worldSaveFromSavingWorldsMs": 1289,
+      "worldSaveDurationMs": 599,
+      "worldSaveFromSavingWorldsMs": 598,
       "dimensionSaveCount": 22,
       "distantHorizonsIncompleteTasks": 0,
       "settlementRoadsRebuilds": 0,
@@ -83,85 +83,85 @@
       "results": [
         {
           "name": "JSON and JS syntax validation",
-          "durationMs": 948.38,
+          "durationMs": 658.85,
           "budgetMs": 8000,
           "hardLimitMs": 24000
         },
         {
           "name": "critical progression surfaces",
-          "durationMs": 6.39,
+          "durationMs": 6.04,
           "budgetMs": 750,
           "hardLimitMs": 3000
         },
         {
           "name": "pack contract validation",
-          "durationMs": 134.56,
+          "durationMs": 120.18,
           "budgetMs": 1000,
           "hardLimitMs": 5000
         },
         {
           "name": "contract completeness classification",
-          "durationMs": 59.53,
+          "durationMs": 51.14,
           "budgetMs": 1000,
           "hardLimitMs": 5000
         },
         {
           "name": "autonomous contract validation",
-          "durationMs": 164.66,
+          "durationMs": 127.28,
           "budgetMs": 1500,
           "hardLimitMs": 6000
         },
         {
           "name": "quest book validation",
-          "durationMs": 0.6,
+          "durationMs": 0.4,
           "budgetMs": 250,
           "hardLimitMs": 1500
         },
         {
           "name": "Wares and villager trade validation",
-          "durationMs": 1.47,
+          "durationMs": 0.91,
           "budgetMs": 250,
           "hardLimitMs": 1500
         },
         {
           "name": "repo loot data validation",
-          "durationMs": 3.8,
+          "durationMs": 2.58,
           "budgetMs": 500,
           "hardLimitMs": 3000
         },
         {
           "name": "generated recipe graph validation",
-          "durationMs": 206.7,
+          "durationMs": 154.28,
           "budgetMs": 5000,
           "hardLimitMs": 20000
         },
         {
           "name": "generated loot dump validation",
-          "durationMs": 0.28,
+          "durationMs": 0.24,
           "budgetMs": 2500,
           "hardLimitMs": 10000
         },
         {
           "name": "engine and world performance log analysis",
-          "durationMs": 40.92,
+          "durationMs": 29.38,
           "budgetMs": 250,
           "hardLimitMs": 1500
         },
         {
           "name": "KubeJS asset validation",
-          "durationMs": 82.28,
+          "durationMs": 58.06,
           "budgetMs": 500,
           "hardLimitMs": 2000
         },
         {
           "name": "chemistry identity validation",
-          "durationMs": 74.6,
+          "durationMs": 57.31,
           "budgetMs": 500,
           "hardLimitMs": 2000
         },
         {
           "name": "dev dump health validation",
-          "durationMs": 0.27,
+          "durationMs": 0.38,
           "budgetMs": 50,
           "hardLimitMs": 500
         }

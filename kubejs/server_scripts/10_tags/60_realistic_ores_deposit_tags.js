@@ -11,6 +11,7 @@ var BTM_DEPOSIT_SOURCE_BLOCKS = {
     quartz_vein: ['realisticores:quartz_vein', 'realisticores:deepslate_quartz_vein'],
     bauxite_laterite: ['realisticores:bauxite_laterite', 'realisticores:deepslate_bauxite_laterite'],
     nickel_sulfide: ['realisticores:nickel_sulfide_ore', 'realisticores:deepslate_nickel_sulfide_ore'],
+    osmiridium_lava_sulfide: ['realisticores:osmiridium_lava_sulfide_ore', 'realisticores:deepslate_osmiridium_lava_sulfide_ore'],
     tin_tungsten_greisen: ['realisticores:tin_tungsten_greisen', 'realisticores:deepslate_tin_tungsten_greisen'],
     titanium_iron_oxide: ['realisticores:titanium_iron_oxide_ore', 'realisticores:deepslate_titanium_iron_oxide_ore'],
     kimberlite_pipe: ['realisticores:kimberlite_pipe', 'realisticores:deepslate_kimberlite_pipe'],

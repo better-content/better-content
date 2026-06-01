@@ -42,6 +42,8 @@ var BTM_RO_SOLVENT_GAS_PRODUCTS = {
     phosphoric: { item: 'chemlib:hydrogen', chance: 0.08 }
 }
 
+var BTM_RO_CREATE_ITEM_OUTPUT_LIMIT = 4
+
 var BTM_RO_DEPOSITS = [
     {
         id: 'coal_measures', crushed: 'realisticores:crushed_coal_measures', primary: 'minecraft:coal',
@@ -87,6 +89,11 @@ var BTM_RO_DEPOSITS = [
         id: 'nickel_sulfide', crushed: 'realisticores:crushed_nickel_sulfide_ore', primary: 'chemlib:nickel',
         ethanol: 'chemlib:nickel_carbonate', acetic: 'chemlib:nickel_carbonate', sulfuric: 'chemlib:nickel_sulfate', hydrochloric: 'chemlib:nickel_chloride', nitric: 'chemlib:nickel_nitrate', phosphoric: 'chemlib:sulfur',
         ferrous: 'chemlib:iron', nonferrous: 'create:crushed_raw_nickel', hard: 'chemlib:cobalt', rare: 'chemlib:platinum', blood: 'minecraft:redstone', ae: 'chemlib:silicon', gangue: 'chemlib:sulfur', trace: 'chemlib:palladium'
+    },
+    {
+        id: 'osmiridium_lava_sulfide', crushed: 'realisticores:crushed_osmiridium_lava_sulfide_ore', primary: 'chemlib:osmium',
+        ethanol: 'chemlib:sulfur', acetic: 'chemlib:nickel', sulfuric: 'chemlib:platinum', hydrochloric: 'chemlib:iridium', nitric: 'chemlib:iridium', phosphoric: 'chemlib:palladium',
+        ferrous: 'chemlib:iron', nonferrous: 'chemlib:nickel', hard: 'chemlib:ruthenium', rare: 'chemlib:iridium', blood: 'minecraft:redstone', ae: 'chemlib:silicon', gangue: 'chemlib:sulfur', trace: 'chemlib:osmium'
     },
     {
         id: 'tin_tungsten_greisen', crushed: 'realisticores:crushed_tin_tungsten_greisen', primary: 'chemlib:tungsten',
@@ -159,12 +166,16 @@ function btmRoItemExists(id) {
     try { return Item.exists(id) } catch (e) { return false }
 }
 
+function btmRoPushResult(results, result) {
+    if (results.length < BTM_RO_CREATE_ITEM_OUTPUT_LIMIT) results.push(result)
+}
+
 function btmRoAddResult(results, id, count, chance) {
     if (!id || id.indexOf('kubejs:') === 0 || !btmRoItemExists(id)) return
     var result = { item: id }
     if (count && count > 1) result.count = count
     if (chance && chance < 1) result.chance = Math.max(0.01, Math.min(0.99, chance))
-    results.push(result)
+    btmRoPushResult(results, result)
 }
 
 function btmRoAddGasResult(results, seen, id, chance) {
@@ -215,7 +226,7 @@ function btmRoRecipeResults(dep, solvent, ball) {
     btmRoAddResult(results, btmRoBallResult(dep, ball), 1, 0.42 + ball.secondaryBonus)
     btmRoAddResult(results, dep.trace, 1, solvent.trace + ball.traceBonus)
     var retained = BTM_RO_RETENTION[solvent.id][ball.id]
-    if (retained && retained > 0) results.push({ item: ball.item, chance: retained })
+    if (retained && retained > 0) btmRoPushResult(results, { item: ball.item, chance: retained })
     btmRoAddGasSideProducts(results, dep, solvent)
     return results
 }

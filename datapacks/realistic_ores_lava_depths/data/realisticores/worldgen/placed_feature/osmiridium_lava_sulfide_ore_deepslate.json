@@ -1,9 +1,9 @@
 {
-  "feature": "realisticores:thorium_ore_deepslate",
+  "feature": "realisticores:osmiridium_lava_sulfide_ore_deepslate",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 10
+      "count": 6
     },
     {
       "type": "minecraft:in_square"

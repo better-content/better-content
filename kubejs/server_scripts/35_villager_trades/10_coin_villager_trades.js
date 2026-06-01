@@ -277,6 +277,97 @@ var BTM_WANDERER_MARKET = [
     [2, 'platinum', 10, 'minecraft:nether_star', 1, 1, 32]
 ]
 
+var BTM_NON_GROWN_TRADE_BUY_BLOCKLIST = {
+    'minecraft:coal': true,
+    'minecraft:glass': true,
+    'minecraft:bucket': true,
+    'minecraft:lantern': true,
+    'minecraft:cobblestone': true,
+    'minecraft:stone': true,
+    'minecraft:stone_bricks': true,
+    'minecraft:mossy_stone_bricks': true,
+    'minecraft:andesite': true,
+    'minecraft:granite': true,
+    'minecraft:diorite': true,
+    'minecraft:calcite': true,
+    'minecraft:tuff': true,
+    'minecraft:dripstone_block': true,
+    'minecraft:pointed_dripstone': true,
+    'minecraft:mud': true,
+    'minecraft:packed_mud': true,
+    'minecraft:clay': true,
+    'minecraft:clay_ball': true,
+    'minecraft:terracotta': true,
+    'minecraft:sand': true,
+    'minecraft:red_sand': true,
+    'minecraft:gravel': true,
+    'minecraft:ice': true,
+    'minecraft:packed_ice': true,
+    'minecraft:blue_ice': true,
+    'minecraft:iron_ingot': true,
+    'minecraft:copper_ingot': true,
+    'minecraft:redstone': true,
+    'minecraft:lapis_lazuli': true,
+    'minecraft:glowstone_dust': true,
+    'minecraft:quartz': true,
+    'minecraft:amethyst_shard': true,
+    'minecraft:quartz_block': true,
+    'minecraft:obsidian': true,
+    'minecraft:crying_obsidian': true,
+    'minecraft:ancient_debris': true,
+    'minecraft:netherite_scrap': true,
+    'minecraft:rail': true,
+    'minecraft:tnt': true,
+    'minecraft:chain': true,
+    'minecraft:soul_lantern': true,
+    'minecraft:campfire': true,
+    'minecraft:soul_campfire': true,
+    'minecraft:experience_bottle': true,
+    'minecraft:echo_shard': true,
+    'minecraft:sculk_catalyst': true,
+    'minecraft:stone_pickaxe': true,
+    'minecraft:iron_pickaxe': true,
+    'minecraft:diamond_pickaxe': true,
+    'minecraft:stone_sword': true,
+    'minecraft:iron_axe': true,
+    'minecraft:diamond_sword': true,
+    'minecraft:diamond_helmet': true,
+    'minecraft:diamond_chestplate': true,
+    'minecraft:diamond_leggings': true,
+    'minecraft:diamond_boots': true,
+    'minecraft:netherite_upgrade_smithing_template': true,
+    'create:andesite_alloy': true,
+    'create:andesite_casing': true,
+    'create:brass_sheet': true,
+    'create:cut_limestone': true,
+    'create:cut_scoria': true,
+    'create:cut_ochrum': true,
+    'create:belt_connector': true,
+    'create:depot': true,
+    'create:chute': true,
+    'create:andesite_funnel': true,
+    'create:andesite_tunnel': true,
+    'create:portable_storage_interface': true,
+    'create:track': true,
+    'create:controller_rail': true,
+    'create:track_signal': true,
+    'create:track_observer': true,
+    'create:track_station': true,
+    'create:redstone_link': true,
+    'create:display_link': true,
+    'create:display_board': true,
+    'create:content_observer': true,
+    'tconstruct:seared_brick': true,
+    'tconstruct:scorched_brick': true,
+    'bloodmagic:blankslate': true,
+    'ae2:sky_stone_block': true,
+    'ae2:certus_quartz_crystal': true
+}
+
+function btmIsNonGrownInfiniteBuyResult(item) {
+    return BTM_NON_GROWN_TRADE_BUY_BLOCKLIST[item] === true
+}
+
 function btmAddThirtyBuys(event, tier, baseCost) {
     for (var i = 0; i < BTM_30_ITEMS.length; i++) {
         var p = BTM_LOW_TIER_PROFESSIONS[i % BTM_LOW_TIER_PROFESSIONS.length]
@@ -299,6 +390,7 @@ function btmItemExists(id) {
 }
 
 function btmTrade(event, profession, level, coinTier, costCount, resultItem, resultCount, uses, xp) {
+    if (btmIsNonGrownInfiniteBuyResult(resultItem)) return
     if (!BTM_VILLAGER_COIN_WHITELIST[coinTier]) return
     var coin = BTM_COIN[coinTier]
     if (!coin) {
@@ -318,6 +410,7 @@ function btmTrade(event, profession, level, coinTier, costCount, resultItem, res
 }
 
 function btmWandererTrade(event, level, coinTier, costCount, resultItem, resultCount, uses, xp) {
+    if (btmIsNonGrownInfiniteBuyResult(resultItem)) return false
     if (!BTM_VILLAGER_COIN_WHITELIST[coinTier]) return
     var coin = BTM_COIN[coinTier]
     if (!coin || !btmItemExists(coin) || !btmItemExists(resultItem)) return false

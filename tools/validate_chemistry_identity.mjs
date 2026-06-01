@@ -60,7 +60,7 @@ else {
 
   if (solvents.length !== 6) fail(`expected 6 solvents, found ${solvents.length}: ${solvents.join(', ')}`)
   if (balls.length !== 8) fail(`expected 8 balls, found ${balls.length}: ${balls.join(', ')}`)
-  if (deposits.length !== 21) fail(`expected 21 deposits, found ${deposits.length}`)
+  if (deposits.length !== 22) fail(`expected 22 deposits, found ${deposits.length}`)
   if (fs.existsSync(tagPath)) {
     const tagDeposits = mapKeysFrom(read(tagPath), 'BTM_DEPOSIT_SOURCE_BLOCKS')
     const missingFromMatrix = tagDeposits.filter(id => !deposits.includes(id))

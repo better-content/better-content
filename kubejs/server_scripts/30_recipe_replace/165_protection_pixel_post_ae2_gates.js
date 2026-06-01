@@ -318,6 +318,48 @@ ServerEvents.recipes(function (event) {
         B: { item: 'kubejs:impossible_machine_casing' }
     }, 'kubejs:create/mechanical_crafting/protection_pixel/maneuvering_wing')
 
+    btmPpMechanical(event, 'protection_pixel:tosaki_helmet', [
+        'HOH',
+        'QLQ',
+        'STS'
+    ], {
+        H: { item: 'protection_pixel:heatresistantceramicsheet' },
+        O: { item: 'realisticores:crushed_osmiridium_lava_sulfide_ore' },
+        Q: { item: 'kubejs:impossible_circuit' },
+        L: { item: 'protection_pixel:linkplate_helmet' },
+        S: { item: 'protection_pixel:smallnetheritesheet' },
+        T: { item: 'chemlib:thorium_plate' }
+    }, 'kubejs:create/mechanical_crafting/protection_pixel/tosaki_helmet_lava_diving')
+
+    btmPpMechanical(event, 'protection_pixel:tosaki_chestplate', [
+        'HOH',
+        'QLQ',
+        'AEA',
+        'SOS'
+    ], {
+        H: { item: 'protection_pixel:heatresistantceramicsheet' },
+        O: { item: 'realisticores:crushed_osmiridium_lava_sulfide_ore' },
+        Q: { item: 'kubejs:impossible_circuit' },
+        L: { item: 'protection_pixel:linkplate_chestplate' },
+        A: { item: 'protection_pixel:heatoverlockingmechanism' },
+        E: { item: 'protection_pixel:equipmentkit' },
+        S: { item: 'protection_pixel:smallnetheritesheet' }
+    }, 'kubejs:create/mechanical_crafting/protection_pixel/tosaki_chestplate_lava_diving')
+
+    btmPpMechanical(event, 'protection_pixel:tosaki_leggings', [
+        'HQH',
+        'OLO',
+        'SIS',
+        ' H '
+    ], {
+        H: { item: 'protection_pixel:heatresistantceramicsheet' },
+        Q: { item: 'kubejs:impossible_circuit' },
+        O: { item: 'realisticores:crushed_osmiridium_lava_sulfide_ore' },
+        L: { item: 'protection_pixel:linkplate_leggings' },
+        S: { item: 'protection_pixel:smallnetheritesheet' },
+        I: { item: 'chemlib:iridium_plate' }
+    }, 'kubejs:create/mechanical_crafting/protection_pixel/tosaki_leggings_lava_diving')
+
     btmPpSequence(event, 'protection_pixel:wingsofprism_chestplate', 'protection_pixel:incompletewingsofprism', 'protection_pixel:wingsofprismas_chestplate', [
         btmPpFillLava('protection_pixel:incompletewingsofprism', 500),
         btmPpPress('protection_pixel:incompletewingsofprism'),

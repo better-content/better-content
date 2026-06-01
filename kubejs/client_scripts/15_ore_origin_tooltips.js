@@ -129,7 +129,7 @@ var BTM_REALISTIC_ORE_ORIGINS = [
     {
         name: 'Uranium ore',
         source: 'Realistic Ores deposit',
-        detail: 'Deep Overworld uranium field, Y -64 to -48, with an extra lava-depth deepslate pass.',
+        detail: 'Deep Overworld uranium field, Y -64 to -48, plus a lava-exposed Y -64 to 0 diving pass.',
         processing: 'Crush for uranium with lead, thorium, and calcium traces.',
         blocks: ['realisticores:uranium_ore', 'realisticores:deepslate_uranium_ore'],
         crushed: 'realisticores:crushed_uranium_ore'
@@ -137,10 +137,18 @@ var BTM_REALISTIC_ORE_ORIGINS = [
     {
         name: 'Thorium ore',
         source: 'Realistic Ores lava-depth pass',
-        detail: 'Extreme-depth deepslate source near the lava-depth nuclear pass.',
+        detail: 'Deep Overworld lava-exposed deepslate source, Y -64 to 0.',
         processing: 'Crush for thorium with uranium and lead traces.',
         blocks: ['realisticores:thorium_ore', 'realisticores:deepslate_thorium_ore'],
         crushed: 'realisticores:crushed_thorium_ore'
+    },
+    {
+        name: 'Osmiridium lava sulfide',
+        source: 'Realistic Ores lava-depth pass',
+        detail: 'Deep Overworld lava-exposed deposit, Y -64 to 0; each generated ore block must touch lava.',
+        processing: 'Crush and wash for osmium, iridium, and platinum-group traces used by Protection Pixel and post-AE2 utility.',
+        blocks: ['realisticores:osmiridium_lava_sulfide_ore', 'realisticores:deepslate_osmiridium_lava_sulfide_ore'],
+        crushed: 'realisticores:crushed_osmiridium_lava_sulfide_ore'
     },
     {
         name: 'Cupriferous redbed redstone',

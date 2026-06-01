@@ -173,7 +173,15 @@ function validateEconomy() {
   }
 
   const buys = []
+  function blockedBuyResult(item) {
+    try {
+      return typeof context.btmIsNonGrownInfiniteBuyResult === 'function' && context.btmIsNonGrownInfiniteBuyResult(item)
+    } catch {
+      return false
+    }
+  }
   function addBuy(tier, cost, item, count, source) {
+    if (blockedBuyResult(item)) return
     buys.push({ tier, cost: Number(cost), item, count: Number(count), source })
   }
   ;(context.BTM_30_ITEMS || []).forEach((row, i) => {
@@ -320,6 +328,57 @@ function validateMagicBody() {
   const missingMarkers = lifeforceMarkers.filter(marker => !lifeforce.includes(marker))
   missingMarkers.length ? fail('Blood Magic lifeforce escalation markers exist', missingMarkers.join(', ')) : ok('Blood Magic lifeforce escalation markers exist')
 
+  const deathConfig = read('defaultconfigs/configurabledeath-server.toml')
+  const noMovingSpawn = read('kubejs/startup_scripts/20_globals/10_immobile_spawn.js')
+  const contract = readJson('tools/pack_contract.json')
+  const sourceRoot = process.env.BTM_CUSTOM_MODS_DIR || contract.customMods.sourceRoot
+  const rpgEventsPath = path.join(sourceRoot, 'rpg-stats/src/main/kotlin/com/example/rpgstats/common/event/CommonForgeEvents.kt')
+  const rpgPointsPath = path.join(sourceRoot, 'rpg-stats/src/main/kotlin/com/example/rpgstats/common/points/PointAwarder.kt')
+  const rpgHeartPath = path.join(sourceRoot, 'rpg-stats/src/main/kotlin/com/example/rpgstats/common/item/StillBeatingHeartData.kt')
+  const classRespawnPath = path.join(sourceRoot, 'class-selector/src/main/kotlin/com/example/classselector/respawn/PersonalRespawnSystem.kt')
+  const deathSourceText = [
+    deathConfig,
+    noMovingSpawn,
+    fs.existsSync(rpgEventsPath) ? readAbs(rpgEventsPath) : '',
+    fs.existsSync(rpgPointsPath) ? readAbs(rpgPointsPath) : '',
+    fs.existsSync(rpgHeartPath) ? readAbs(rpgHeartPath) : '',
+    fs.existsSync(classRespawnPath) ? readAbs(classRespawnPath) : ''
+  ].join('\n')
+  const deathSourceMarkers = [
+    'keepInventory = true',
+    'keepArmor = true',
+    'keepHotbar = true',
+    'newStats.unspentPoints = 0',
+    'newStats.allocations.clear()',
+    'StillBeatingHeartData.create',
+    'root.putInt("level", player.experienceLevel)',
+    'classselector:respawn_dim',
+    'PlayerSetSpawnEvent',
+    'event.setCanceled(true)',
+    'Bed respawn changes are disabled while class spawn is locked.',
+    'playRespawnSoundForPlayer',
+    'spawnRespawnParticlesForPlayer'
+  ]
+  const missingDeathSourceMarkers = deathSourceMarkers.filter(marker => !deathSourceText.includes(marker))
+  missingDeathSourceMarkers.length
+    ? fail('death overhaul source contract keeps items, resets RPG power, and locks respawn', missingDeathSourceMarkers.join(', '))
+    : ok('death overhaul source contract keeps items, resets RPG power, and locks respawn')
+
+  const deathDocs = [read('docs/README.md'), read('docs/content_systems.md'), read('docs/progression.md')].join('\n')
+  const deathDocMarkers = [
+    'death/respawn life-length loop',
+    'life-length and location penalty',
+    'rpgstats:still_beating_heart',
+    'lifePeakLevel',
+    'classselector:respawn_*',
+    'sound and particle FX',
+    'very-late-game exception'
+  ]
+  const missingDeathDocMarkers = deathDocMarkers.filter(marker => !deathDocs.includes(marker))
+  missingDeathDocMarkers.length
+    ? fail('death overhaul is covered in living docs', missingDeathDocMarkers.join(', '))
+    : ok('death overhaul is covered in living docs')
+
   const starterSources = []
   const kits = readJson('config/classselector/kits.json')
   for (const kit of kits) {
@@ -396,6 +455,63 @@ function validateClientQuestIntent() {
   missing.length ? fail('quarantined items are removed and hidden from JEI/EMI source hooks', missing.join(', ')) : ok('quarantined items are removed and hidden from JEI/EMI source hooks', `${requiredHidden.length} anchors`)
 }
 
+function validateVanillaStyleToolSuppression() {
+  const serverPath = 'kubejs/server_scripts/30_recipe_replace/60_vanilla_tools_to_tcon_heads.js'
+  const clientPath = 'kubejs/client_scripts/20_hide_vanilla_tools.js'
+  const server = read(serverPath)
+  const client = read(clientPath)
+
+  const requiredToolMarkers = [
+    'minecraft:',
+    'ae2',
+    'aether',
+    'blue_skies',
+    'botania',
+    'deeperdarker',
+    'everythingcopper',
+    'forbidden_arcanus',
+    'goety',
+    'iceandfire',
+    'malum',
+    'occultism:iesnium_pickaxe',
+    'the_finley_dimension_remastered',
+    'undergarden',
+    'twilightforest:ironwood_pickaxe',
+    'ars_nouveau:enchanters_sword',
+    'create:cardboard_sword'
+  ]
+  const missingToolMarkers = requiredToolMarkers.filter(marker => !server.includes(marker) || !client.includes(marker))
+  missingToolMarkers.length
+    ? fail('vanilla-style tool suppression covers audited mod families', missingToolMarkers.join(', '))
+    : ok('vanilla-style tool suppression covers audited mod families', `${requiredToolMarkers.length} markers`)
+
+  const serverNeedles = [
+    'event.remove({ output: tool })',
+    'event.remove({ id: tool })',
+    'event.remove({ type: tool })',
+    'BTM_VANILLA_STYLE_TOOL_RECIPE_IDS',
+    'occultism:ritual/craft_infused_pickaxe',
+    "event.add('c:hidden_from_recipe_viewers'",
+    'btmItemExists'
+  ]
+  const missingServerNeedles = serverNeedles.filter(marker => !server.includes(marker))
+  missingServerNeedles.length
+    ? fail('vanilla-style tools are blocked from crafting and recipe viewers server-side', missingServerNeedles.join(', '))
+    : ok('vanilla-style tools are blocked from crafting and recipe viewers server-side', `${serverNeedles.length} hooks`)
+
+  const clientNeedles = ['JEIEvents.hideItems', 'EMIEvents.hideItems']
+  const missingClientNeedles = clientNeedles.filter(marker => !client.includes(marker))
+  missingClientNeedles.length
+    ? fail('vanilla-style tools are hidden from JEI and EMI', missingClientNeedles.join(', '))
+    : ok('vanilla-style tools are hidden from JEI and EMI')
+
+  const forbiddenFamilies = ["['tconstruct'", '"tconstruct"', 'notreepunching:flint_pickaxe']
+  const forbiddenHits = forbiddenFamilies.filter(marker => server.includes(marker) || client.includes(marker))
+  forbiddenHits.length
+    ? fail('vanilla-style tool suppression avoids TConstruct and stale inactive No Tree Punching entries', forbiddenHits.join(', '))
+    : ok('vanilla-style tool suppression avoids TConstruct and stale inactive No Tree Punching entries')
+}
+
 function validateVanillishExpertRecipePass() {
   const recipeFile = 'kubejs/server_scripts/30_recipe_replace/145_vanillish_recipe_expert_pass.js'
   if (!exists(recipeFile)) {
@@ -454,7 +570,122 @@ function validateVanillishExpertRecipePass() {
     : ok('vanillish magic shortcuts are routed to Blood Magic alchemy', `${bloodMarkers.length} markers`)
 }
 
+function validateNonGrownInfiniteResourceBoundaries() {
+  const remove = read('kubejs/server_scripts/20_recipe_remove/30_remove_items.js')
+  const hidden = read('kubejs/client_scripts/40_hide_quarantined_systems.js')
+  const trades = read('kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js')
+  const docs = [read('docs/content_systems.md'), read('docs/progression.md')].join('\n')
+
+  const removeMarkers = [
+    "event.remove({ type: 'occultism:miner' })",
+    "event.remove({ type: 'bloodmagic:meteor' })",
+    "event.remove({ id: 'createdieselgenerators:bulk_fermenting/lava' })",
+    "event.remove({ id: 'ars_nouveau:water_essence_to_bucket' })",
+    'botania:orechid',
+    'botania:conjuration_catalyst',
+    'ars_nouveau:glyph_conjure_water',
+    'bloodmagic:watersigil',
+    'bloodmagic:lavasigil'
+  ]
+  const missingRemoveMarkers = removeMarkers.filter(marker => !remove.includes(marker))
+  missingRemoveMarkers.length
+    ? fail('non-grown infinite resource recipe sources are quarantined', missingRemoveMarkers.join(', '))
+    : ok('non-grown infinite resource recipe sources are quarantined', `${removeMarkers.length} markers`)
+
+  const hiddenMarkers = [
+    'JEIEvents.hideItems',
+    'EMIEvents.hideItems',
+    'botania:orechid',
+    'botania:alchemy_catalyst',
+    'ars_nouveau:ritual_conjure_island_plains',
+    'ars_nouveau:glyph_conjure_water',
+    'bloodmagic:watersigil',
+    'bloodmagic:lavasigil'
+  ]
+  const missingHiddenMarkers = hiddenMarkers.filter(marker => !hidden.includes(marker))
+  missingHiddenMarkers.length
+    ? fail('non-grown infinite resource shortcuts are hidden from JEI/EMI', missingHiddenMarkers.join(', '))
+    : ok('non-grown infinite resource shortcuts are hidden from JEI/EMI', `${hiddenMarkers.length} markers`)
+
+  const create = read('defaultconfigs/create-server.toml')
+  const createMarkers = [
+    'hosePulleyBlockThreshold = -1',
+    'bottomlessFluidMode = "DENY_ALL"',
+    'fluidFillPlaceFluidSourceBlocks = false',
+    'pipesPlaceFluidSourceBlocks = false'
+  ]
+  const missingCreateMarkers = createMarkers.filter(marker => !create.includes(marker))
+  missingCreateMarkers.length
+    ? fail('Create config disables bottomless fluid sources and source placement', missingCreateMarkers.join(', '))
+    : ok('Create config disables bottomless fluid sources and source placement')
+
+  const finiteWater = readJson('config/flowing_fluids.json')
+  const finiteWaterProblems = []
+  ;['rainRefillChance', 'oceanRiverSwampRefillChance', 'infiniteWaterBiomeNonConsumeChance', 'infiniteWaterBiomeDrainSurfaceChance'].forEach(key => {
+    if (Number(finiteWater[key]) !== 0) finiteWaterProblems.push(`${key}=${finiteWater[key]}`)
+  })
+  if (finiteWater.create_infinitePipes !== false) finiteWaterProblems.push(`create_infinitePipes=${finiteWater.create_infinitePipes}`)
+  finiteWaterProblems.length
+    ? fail('Finite Water config has no infinite biome/refill pipe sources', finiteWaterProblems.join(', '))
+    : ok('Finite Water config has no infinite biome/refill pipe sources')
+
+  const tradeMarkers = [
+    'BTM_NON_GROWN_TRADE_BUY_BLOCKLIST',
+    'btmIsNonGrownInfiniteBuyResult(resultItem)',
+    "'minecraft:cobblestone': true",
+    "'minecraft:redstone': true",
+    "'create:andesite_alloy': true",
+    "'bloodmagic:blankslate': true",
+    "'ae2:certus_quartz_crystal': true"
+  ]
+  const missingTradeMarkers = tradeMarkers.filter(marker => !trades.includes(marker))
+  missingTradeMarkers.length
+    ? fail('restocking trades reject non-grown material buy results', missingTradeMarkers.join(', '))
+    : ok('restocking trades reject non-grown material buy results', `${tradeMarkers.length} markers`)
+
+  const docMarkers = [
+    'Non-grown infinite matter is not an authored resource source',
+    'not from passive ore rituals, bottomless pumps, conjured islands, fluid sigils/glyphs, lava fermentation, or restocking raw-material trades'
+  ]
+  const missingDocMarkers = docMarkers.filter(marker => !docs.includes(marker))
+  missingDocMarkers.length
+    ? fail('living docs cover non-grown infinite resource policy', missingDocMarkers.join(', '))
+    : ok('living docs cover non-grown infinite resource policy')
+}
+
 function validateWorldgenStaticContracts() {
+  const rbpOverworld = read('config/rbp/world_definitions/overworld.toml')
+  const requiredRbpDefaultExclusions = [
+    'minecraft:bedrock',
+    'minecraft:barrier',
+    'minecraft:command_block',
+    'minecraft:chain_command_block',
+    'minecraft:repeating_command_block',
+    'minecraft:structure_block',
+    'minecraft:structure_void',
+    'minecraft:jigsaw',
+    'minecraft:end_portal_frame',
+    '<dynamictrees>',
+    '<dynamictreesplus>',
+    '<dtarsnouveau>',
+    '<dtquark>',
+    '<dtnatures_spirit>',
+    '<dthexerei>',
+    '<dtmalum>',
+    'ae2:sky_stone_block'
+  ]
+  const missingRbpDefaultExclusions = requiredRbpDefaultExclusions.filter(marker => !rbpOverworld.includes(`"${marker}"`))
+  if (!rbpOverworld.includes('DefaultBlockDefinition = "stone"')) missingRbpDefaultExclusions.push('DefaultBlockDefinition = "stone"')
+  missingRbpDefaultExclusions.length
+    ? fail('RBP Overworld default physics excludes generated and immutable infrastructure blocks', missingRbpDefaultExclusions.join(', '))
+    : ok('RBP Overworld default physics excludes generated and immutable infrastructure blocks', `${requiredRbpDefaultExclusions.length} exclusions`)
+
+  const tectonic = readJson('config/tectonic.json')
+  const terrain = tectonic.global_terrain || {}
+  terrain.min_y === -64 && terrain.lava_tunnels === true
+    ? ok('Tectonic Overworld exposes lava-depth terrain band', `min_y=${terrain.min_y}, lava_tunnels=${terrain.lava_tunnels}`)
+    : fail('Tectonic Overworld exposes lava-depth terrain band', `min_y=${terrain.min_y}, lava_tunnels=${terrain.lava_tunnels}`)
+
   const adlodDeposits = walk('config/adlods/Deposits', file => file.endsWith('.cfg'))
   adlodDeposits.length >= 28 ? ok('ADLODS deposit surface remains broad', `${adlodDeposits.length} deposits`) : fail('ADLODS deposit surface remains broad', `${adlodDeposits.length} < 28`)
   ;['config/adlods/Deposits/thorium.cfg', 'config/adlods/Deposits/magnetite.cfg'].filter(exists).length
@@ -493,8 +724,13 @@ function validateWorldgenStaticContracts() {
     : fail('foraging datapack is Undergarden-only', `placed=${foragePlacedFeatures.length} modifiers=${forageBiomeModifiers.length} tags=${forageBiomeTags.length} bad=${forageFailures.join(', ')}`)
 
   const lavaDepthFiles = [
+    'datapacks/realistic_ores_lava_depths/data/realisticores/forge/biome_modifier/add_osmiridium_lava_sulfide_ore_deepslate.json',
     'datapacks/realistic_ores_lava_depths/data/realisticores/forge/biome_modifier/add_thorium_ore_deepslate.json',
     'datapacks/realistic_ores_lava_depths/data/realisticores/forge/biome_modifier/add_uranium_ore_deepslate.json',
+    'datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/configured_feature/osmiridium_lava_sulfide_ore_deepslate.json',
+    'datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/configured_feature/thorium_ore_deepslate.json',
+    'datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/configured_feature/uranium_ore_deepslate.json',
+    'datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/placed_feature/osmiridium_lava_sulfide_ore_deepslate.json',
     'datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/placed_feature/thorium_ore_deepslate.json',
     'datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/placed_feature/uranium_ore_deepslate.json',
     'datapacks/hyle_deep/data/hyledata/regions/vanilla.json',
@@ -502,6 +738,88 @@ function validateWorldgenStaticContracts() {
   ]
   const missingLava = lavaDepthFiles.filter(file => !exists(file))
   missingLava.length ? fail('deep geology datapacks cover lava-depth and Hyle anchors', missingLava.join(', ')) : ok('deep geology datapacks cover lava-depth and Hyle anchors', `${lavaDepthFiles.length} files`)
+
+  const lavaConfigured = walk('datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/configured_feature', file => file.endsWith('.json'))
+  const nonLavaFeatureConfigured = lavaConfigured.filter(file => readJson(file).type !== 'realisticores:lava_exposed_ore')
+  nonLavaFeatureConfigured.length
+    ? fail('lava-depth configured features use the Realistic Ores lava-exposed feature', nonLavaFeatureConfigured.join(', '))
+    : ok('lava-depth configured features use the Realistic Ores lava-exposed feature', `${lavaConfigured.length} configured features`)
+
+  const lavaPlaced = walk('datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/placed_feature', file => file.endsWith('.json'))
+  const lavaPlacementFailures = lavaPlaced.filter(file => {
+    const text = read(file)
+    return !text.includes('minecraft:block_predicate_filter')
+      || !text.includes('minecraft:matching_fluids')
+      || !text.includes('minecraft:lava')
+      || !text.includes('"absolute": -64')
+      || !text.includes('"absolute": 0')
+  })
+  lavaPlacementFailures.length
+    ? fail('lava-depth placed features are height-bounded and lava-contact filtered', lavaPlacementFailures.join(', '))
+    : ok('lava-depth placed features are height-bounded and lava-contact filtered', `${lavaPlaced.length} placed features`)
+
+  const spawnerText = read('config/incontrol/spawner.json')
+  const lavaSpawnerMarkers = ['minecraft:magma_cube', '"inlava": true', '"minheight": -64', '"maxheight": 0']
+  const missingLavaSpawnerMarkers = lavaSpawnerMarkers.filter(marker => !spawnerText.includes(marker))
+  missingLavaSpawnerMarkers.length
+    ? fail('lava-depth danger spawner targets lava diving band', missingLavaSpawnerMarkers.join(', '))
+    : ok('lava-depth danger spawner targets lava diving band')
+
+  const contract = readJson('tools/pack_contract.json')
+  const sourceRoot = process.env.BTM_CUSTOM_MODS_DIR || contract.customMods.sourceRoot
+  const lavaFeaturePath = path.join(sourceRoot, 'realistic-ores/src/main/java/io/github/realisticores/worldgen/LavaExposedOreFeature.java')
+  const lavaFeatureText = fs.existsSync(lavaFeaturePath) ? readAbs(lavaFeaturePath) : ''
+  const missingLavaFeatureMarkers = ['Feature.checkNeighbors', 'FluidTags.LAVA', 'target.target.test'].filter(marker => !lavaFeatureText.includes(marker))
+  missingLavaFeatureMarkers.length
+    ? fail('Realistic Ores implements per-block lava-exposed ore placement', `${lavaFeaturePath}: ${missingLavaFeatureMarkers.join(', ')}`)
+    : ok('Realistic Ores implements per-block lava-exposed ore placement')
+
+  const osmiridiumDefinitionPath = path.join(sourceRoot, 'realistic-ores/src/main/resources/data/realisticores/realistic_ores/osmiridium_lava_sulfide.json')
+  const osmiridiumDefinitionText = fs.existsSync(osmiridiumDefinitionPath) ? readAbs(osmiridiumDefinitionPath) : ''
+  const osmiridiumNormalOreTagFiles = [
+    path.join(sourceRoot, 'realistic-ores/src/main/resources/data/forge/tags/blocks/ores/osmium.json'),
+    path.join(sourceRoot, 'realistic-ores/src/main/resources/data/forge/tags/items/ores/osmium.json'),
+    path.join(sourceRoot, 'realistic-ores/src/main/resources/data/forge/tags/blocks/ores/iridium.json'),
+    path.join(sourceRoot, 'realistic-ores/src/main/resources/data/forge/tags/items/ores/iridium.json')
+  ]
+  const leakedOsmiridiumMaterialTags = []
+  ;['forge:ores/osmium', 'forge:ores/iridium'].forEach(tag => {
+    if (osmiridiumDefinitionText.includes(tag)) leakedOsmiridiumMaterialTags.push(`${osmiridiumDefinitionPath}: ${tag}`)
+  })
+  osmiridiumNormalOreTagFiles.forEach(file => {
+    if (fs.existsSync(file) && readAbs(file).includes('osmiridium_lava_sulfide')) leakedOsmiridiumMaterialTags.push(file)
+  })
+  leakedOsmiridiumMaterialTags.length
+    ? fail('osmiridium avoids normal osmium/iridium ore-source tags', leakedOsmiridiumMaterialTags.join(', '))
+    : ok('osmiridium avoids normal osmium/iridium ore-source tags')
+
+  const removeItemsText = read('kubejs/server_scripts/20_recipe_remove/30_remove_items.js')
+  const missingLavaBypassRemovals = ["event.remove({ type: 'occultism:miner' })"]
+    .filter(marker => !removeItemsText.includes(marker))
+  missingLavaBypassRemovals.length
+    ? fail('Occultism miner bypass recipes stay removed', missingLavaBypassRemovals.join(', '))
+    : ok('Occultism miner bypass recipes stay removed')
+
+  const lavaProgressionText = [
+    'kubejs/server_scripts/10_tags/60_realistic_ores_deposit_tags.js',
+    'kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js',
+    'kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js',
+    'kubejs/server_scripts/30_recipe_replace/110_extreme_y_band_reward_gates.js',
+    'kubejs/server_scripts/30_recipe_replace/165_protection_pixel_post_ae2_gates.js',
+    'kubejs/client_scripts/15_ore_origin_tooltips.js'
+  ].map(read).join('\n')
+  const lavaProgressionMarkers = [
+    'realisticores:deepslate_osmiridium_lava_sulfide_ore',
+    'realisticores:crushed_osmiridium_lava_sulfide_ore',
+    'kubejs:deposit_blocks/osmiridium_lava_sulfide',
+    'protection_pixel:tosaki_helmet',
+    'protection_pixel:tosaki_chestplate',
+    'protection_pixel:tosaki_leggings'
+  ]
+  const missingLavaProgressionMarkers = lavaProgressionMarkers.filter(marker => !lavaProgressionText.includes(marker))
+  missingLavaProgressionMarkers.length
+    ? fail('osmiridium lava diving route is visible and consumed by post-AE2 progression', missingLavaProgressionMarkers.join(', '))
+    : ok('osmiridium lava diving route is visible and consumed by post-AE2 progression')
 }
 
 function validateDimensionProofGraphStarts() {
@@ -789,7 +1107,9 @@ if (instance && !fs.existsSync(instance)) {
 validateEconomy()
 validateMagicBody()
 validateClientQuestIntent()
+validateVanillaStyleToolSuppression()
 validateVanillishExpertRecipePass()
+validateNonGrownInfiniteResourceBoundaries()
 validateWorldgenStaticContracts()
 validateDimensionProofGraphStarts()
 validateDimensionTravelRoutes()

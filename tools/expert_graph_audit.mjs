@@ -24,7 +24,6 @@ const machineNamespaceTier = {
   createadditionallogistics: 'create_brass',
   createadvlogistics: 'create_brass',
   createdieselgenerators: 'create_brass',
-  create_new_age: 'power_grid',
   powergrid: 'power_grid',
   oc2r: 'oc2r',
   creatingspace: 'space',

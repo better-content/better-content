@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#kubejs:no_biomes",
+  "features": "tconstruct:ichor_geode",
+  "step": "local_modifications"
+}

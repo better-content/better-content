@@ -46,17 +46,39 @@ server_log="$evidence_dir/server-console.log"
 scan_log="$evidence_dir/hard-failure-scan.log"
 suite_log="$evidence_dir/pack-test-suite.log"
 latest_log="$server_dir/logs/latest.log"
+fatal_patterns='Missing or unsupported mandatory dependencies|Mod Loading has failed|Failed to start the minecraft server|Encountered an unexpected exception|Preparing crash report|This crash report has been saved|\[main/FATAL\]'
 
 server_pid=""
 server_stdin_fd=""
+
+kill_leftover_server_processes() {
+  local pids pid
+  pids="$(pgrep -f -- "$server_dir/run.sh nogui" 2>/dev/null || true)"
+  [[ -n "$pids" ]] || return 0
+  while IFS= read -r pid; do
+    [[ -n "$pid" ]] || continue
+    [[ "$pid" != "$$" && "$pid" != "${BASHPID:-}" ]] || continue
+    kill "$pid" 2>/dev/null || true
+  done <<<"$pids"
+}
 
 cleanup() {
   if [[ -n "$server_pid" ]] && kill -0 "$server_pid" 2>/dev/null; then
     if [[ "$keep_running" == "0" && -n "$server_stdin_fd" ]]; then
       printf 'stop\n' >&"$server_stdin_fd" || true
       exec {server_stdin_fd}>&- || true
+      for _ in {1..30}; do
+        kill -0 "$server_pid" 2>/dev/null || break
+        sleep 1
+      done
+      if kill -0 "$server_pid" 2>/dev/null; then
+        kill "$server_pid" 2>/dev/null || true
+      fi
       wait "$server_pid" || true
     fi
+  fi
+  if [[ "$keep_running" == "0" ]]; then
+    kill_leftover_server_processes
   fi
 }
 trap cleanup EXIT
@@ -101,6 +123,11 @@ while (( SECONDS < deadline )); do
     tail -120 "$server_log" >&2 || true
     exit 1
   fi
+  if [[ -f "$server_log" ]] && rg -q "$fatal_patterns" "$server_log"; then
+    echo "content smoke: server emitted a hard startup failure; tail follows ($server_log)" >&2
+    tail -160 "$server_log" >&2 || true
+    exit 1
+  fi
   if [[ -f "$latest_log" ]] && rg -q 'Done \([\d.]+s\)! For help, type "help"' "$latest_log"; then
     echo "content smoke: server reached Done"
     break
@@ -131,7 +158,7 @@ echo "content smoke: scanning hard log failures"
 "$ROOT/tools/log_hard_failure_scan.mjs" --instance "$server_dir" --log "$latest_log" | tee "$scan_log"
 
 echo "content smoke: running pack test suite"
-if BTM_INSTANCE="$server_dir" node "$ROOT/tools/pack_test_suite.mjs" >"$suite_log" 2>&1; then
+if BTM_INSTANCE="$server_dir" BTM_STRICT_RUNTIME=1 node "$ROOT/tools/pack_test_suite.mjs" >"$suite_log" 2>&1; then
   rg '^(pack test suite passed|ok - KubeJS recipe parse health|FAIL -|MUST -|SHOULD -)' "$suite_log" || true
 else
   echo "content smoke: pack test suite failed; tail follows ($suite_log)" >&2

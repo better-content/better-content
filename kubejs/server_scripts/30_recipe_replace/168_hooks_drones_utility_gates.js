@@ -20,7 +20,7 @@ ServerEvents.recipes(function (event) {
         H: 'minecraft:blaze_rod',
         B: 'rehooked:diamond_hook',
         P: 'kubejs:electrical_machine_casing',
-        C: 'create_new_age:heat_pipe'
+        C: 'heatsync:heat_pipe'
     }, 'kubejs:rehooked/blaze_hook_post_electricity')
 
     btmMobilityShaped(event, 'rehooked:ender_hook', [

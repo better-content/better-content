@@ -1,32 +1,42 @@
-// Late dimension access routes. Twilight Forest, Fallout Wastelands, and Lost Cities
-// are space-era route branches; the direct Fallout portal recipes are rewritten here.
+// Direct dimension portals are not pack routes. Player dimension travel should
+// come from meteor rift anchors or Creating Space rocket graph entries only.
+
+var BTM_DIRECT_DIMENSION_ROUTE_ITEMS = [
+    'fallout_wastelands_:portal_frame',
+    'fallout_wastelands_:wastelands',
+    'the_finley_dimension_remastered:finley_dimension',
+    'undergarden:catalyst',
+    'callfromthedepth_:depth',
+    'bloodmagic:simplekey',
+    'bloodmagic:minekey',
+    'bloodmagic:mineentrancekey',
+    'bloodmagic:teleposer',
+    'bloodmagic:telepositionsigil',
+    'bloodmagic:reagentteleposition',
+    'bloodmagic:teleposerfocus',
+    'bloodmagic:reinforcedteleposerfocus',
+    'bloodmagic:enhancedteleposerfocus',
+    'aether:aether_portal_frame',
+    'blue_skies:everbright_portal',
+    'blue_skies:everdawn_portal',
+    'blue_skies:multi_portal_item',
+    'blue_skies:portal_activator',
+    'deeperdarker:otherside_portal'
+]
 
 ServerEvents.recipes(function (event) {
-    if (Item.exists('fallout_wastelands_:portal_frame')) {
-        event.remove({ output: 'fallout_wastelands_:portal_frame' })
-        event.shaped(Item.of('fallout_wastelands_:portal_frame', 4), [
-            'HSH',
-            'SCS',
-            'HSH'
-        ], {
-            H: 'creatingspace:hastelloy_sheet',
-            S: 'kubejs:space_machine_casing',
-            C: 'creatingspace:chemical_synthesizer'
-        }).id('kubejs:space_dimension_access/fallout_portal_frame')
+    for (var i = 0; i < BTM_DIRECT_DIMENSION_ROUTE_ITEMS.length; i++) {
+        var item = BTM_DIRECT_DIMENSION_ROUTE_ITEMS[i]
+        if (Item.exists(item)) event.remove({ output: item })
     }
 
-    if (Item.exists('fallout_wastelands_:wastelands')) {
-        event.remove({ output: 'fallout_wastelands_:wastelands' })
-        event.shaped('fallout_wastelands_:wastelands', [
-            ' R ',
-            'OCO',
-            'SES'
-        ], {
-            R: 'creatingspace:rocket_controls',
-            O: 'creatingspace:netherite_oxygen_backtank',
-            C: 'kubejs:space_machine_casing',
-            S: 'creatingspace:hastelloy_sheet',
-            E: 'creatingspace:rocket_engine'
-        }).id('kubejs:space_dimension_access/fallout_portal_igniter')
-    }
+    event.remove({ id: 'fallout_wastelands_:portalframecraft' })
+    event.remove({ id: 'fallout_wastelands_:portalignitercraft' })
+    event.remove({ id: 'the_finley_dimension_remastered:igniterrecipie' })
+    event.remove({ id: 'undergarden:catalyst' })
+    event.remove({ id: 'callfromthedepth_:depthkeycraft' })
+    event.remove({ id: 'bloodmagic:soulforge/simple_key' })
+    event.remove({ id: 'bloodmagic:soulforge/mine_key' })
+
+    console.info('[space-dimension-access] disabled direct portal/key recipe outputs; use meteor rifts or Creating Space rocket routes')
 })

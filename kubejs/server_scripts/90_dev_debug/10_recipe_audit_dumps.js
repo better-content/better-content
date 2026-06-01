@@ -5,6 +5,18 @@
 
 var BTM_AUDIT_DUMP_CONFIG = 'kubejs/config/audit_dumps.json'
 var BTM_AUDIT_DUMP_DIR = 'kubejs/config/'
+var BTM_RECIPE_AUDIT_GENERATED_BY = 'kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js'
+var BTM_RECIPE_AUDIT_STAGE = 'pre_mutation_recipe_event'
+var BTM_RECIPE_AUDIT_SOURCE = 'ServerEvents.recipes event.forEachRecipe before KubeJS mutations are applied'
+var BTM_RECIPE_AUDIT_SCHEMA = 'btm.recipe_audit.v2'
+
+function btmAuditTimestamp() {
+    try {
+        return new Date().toISOString()
+    } catch (e) {
+        return String(new Date())
+    }
+}
 
 function btmAuditReadConfig() {
     var fallback = {
@@ -55,7 +67,7 @@ function btmAuditMakeBucketMap(keys) {
     return map
 }
 
-function btmAuditWriteFullIndexChunks(fullIndex, cfg) {
+function btmAuditWriteFullIndexChunks(fullIndex, cfg, metadata) {
     if (!cfg.writeFullRecipeIndex) return 0
 
     var chunkSize = cfg.fullRecipeChunkSize
@@ -72,6 +84,10 @@ function btmAuditWriteFullIndexChunks(fullIndex, cfg) {
         var padded = String(chunkCount)
         while (padded.length < 4) padded = '0' + padded
         JsonIO.write(BTM_AUDIT_DUMP_DIR + 'full_recipe_index_' + padded + '.json', {
+            schema: metadata.schema,
+            generatedBy: metadata.generatedBy,
+            generatedAt: metadata.generatedAt,
+            recipeEventStage: metadata.recipeEventStage,
             chunk: chunkCount,
             start: start,
             endExclusive: end,
@@ -82,6 +98,13 @@ function btmAuditWriteFullIndexChunks(fullIndex, cfg) {
     }
 
     JsonIO.write(BTM_AUDIT_DUMP_DIR + 'full_recipe_index_manifest.json', {
+        schema: metadata.schema,
+        generatedBy: metadata.generatedBy,
+        generatedAt: metadata.generatedAt,
+        source: metadata.source,
+        recipeEventStage: metadata.recipeEventStage,
+        writeMatchedRecipeJson: cfg.writeMatchedRecipeJson,
+        maxJsonCharsPerRecipe: cfg.maxJsonCharsPerRecipe,
         chunkSize: chunkSize,
         chunkCount: chunkCount,
         recipeCount: fullIndex.length,
@@ -179,8 +202,20 @@ ServerEvents.recipes(function (event) {
         }
     })
 
+    var metadata = {
+        schema: BTM_RECIPE_AUDIT_SCHEMA,
+        generatedBy: BTM_RECIPE_AUDIT_GENERATED_BY,
+        generatedAt: btmAuditTimestamp(),
+        source: BTM_RECIPE_AUDIT_SOURCE,
+        recipeEventStage: BTM_RECIPE_AUDIT_STAGE
+    }
+
     var summary = {
-        generatedBy: 'kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js',
+        schema: metadata.schema,
+        generatedBy: metadata.generatedBy,
+        generatedAt: metadata.generatedAt,
+        source: metadata.source,
+        recipeEventStage: metadata.recipeEventStage,
         scannedRecipes: scanned,
         writeFullRecipeIndex: cfg.writeFullRecipeIndex,
         writeMatchedRecipeJson: cfg.writeMatchedRecipeJson,
@@ -209,7 +244,7 @@ ServerEvents.recipes(function (event) {
     JsonIO.write(BTM_AUDIT_DUMP_DIR + 'progression_recipe_mentions.json', progressionMentions)
     JsonIO.write(BTM_AUDIT_DUMP_DIR + 'valuable_material_usage_recipes.json', materialMatches)
     JsonIO.write(BTM_AUDIT_DUMP_DIR + 'known_bypass_candidate_recipes.json', bypassMatches)
-    summary.fullRecipeChunkCount = btmAuditWriteFullIndexChunks(fullIndex, cfg)
+    summary.fullRecipeChunkCount = btmAuditWriteFullIndexChunks(fullIndex, cfg, metadata)
     JsonIO.write(BTM_AUDIT_DUMP_DIR + 'recipe_audit_summary.json', summary)
 
     console.info('[BTM-RECIPE-AUDIT] scanned=' + scanned + ' fullChunks=' + summary.fullRecipeChunkCount + ' wrote ' + BTM_AUDIT_DUMP_DIR + 'recipe_audit_summary.json')

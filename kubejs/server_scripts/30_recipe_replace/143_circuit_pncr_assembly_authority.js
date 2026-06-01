@@ -31,9 +31,6 @@ ServerEvents.recipes(function (event) {
     btmCircuitAssembly(event, 'laser', 'powergrid_integrated_circuit', 'powergrid:incomplete_circuit', 'powergrid:integrated_circuit', 1)
     btmCircuitAssembly(event, 'laser', 'oc2r_circuit_board', 'pneumaticcraft:printed_circuit_board', 'oc2r:circuit_board', 1)
 
-    btmCircuitAssembly(event, 'laser', 'create_new_age_blank_circuit', 'powergrid:integrated_circuit', 'create_new_age:blank_circuit', 1)
-    btmCircuitAssembly(event, 'drill', 'create_new_age_copper_circuit', 'create_new_age:blank_circuit', 'create_new_age:copper_circuit', 1)
-
     btmCircuitAssembly(event, 'laser', 'ae2_logic_processor', 'ae2:printed_logic_processor', 'ae2:logic_processor', 1)
     btmCircuitAssembly(event, 'laser', 'ae2_calculation_processor', 'ae2:printed_calculation_processor', 'ae2:calculation_processor', 1)
     btmCircuitAssembly(event, 'laser', 'ae2_engineering_processor', 'ae2:printed_engineering_processor', 'ae2:engineering_processor', 1)

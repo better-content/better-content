@@ -1,25 +1,7 @@
 // Latent ChemLib owns chemical cloud containment, high-energy reactions, and
-// neutron-economy traversal. CNA reactor blocks are intentionally retired.
-
-function btmLatentRemove(event, ids) {
-    for (var i = 0; i < ids.length; i++) event.remove({ id: ids[i] })
-}
+// neutron-economy traversal. Heat transfer uses HeatSync.
 
 ServerEvents.recipes(function (event) {
-    btmLatentRemove(event, [
-        'create_new_age:reactor_fuel_acceptor',
-        'create_new_age:reactor_rod',
-        'create_new_age:reactor_heat_vent',
-        'create_new_age:reactor_casing',
-        'create_new_age:reactor_glass'
-    ])
-
-    event.remove({ output: 'create_new_age:reactor_fuel_acceptor' })
-    event.remove({ output: 'create_new_age:reactor_rod' })
-    event.remove({ output: 'create_new_age:reactor_heat_vent' })
-    event.remove({ output: 'create_new_age:reactor_casing' })
-    event.remove({ output: 'create_new_age:reactor_glass' })
-
     event.custom({
         type: 'create:mechanical_crafting',
         acceptMirrored: false,
@@ -47,7 +29,7 @@ ServerEvents.recipes(function (event) {
         ],
         key: {
             G: { tag: 'forge:glass' },
-            P: { item: 'create_new_age:heat_pipe' },
+            P: { item: 'heatsync:heat_pipe' },
             A: { item: 'kubejs:airtight_machine_casing' },
             C: { item: 'latent_chemlib:gas_capture' }
         },
@@ -82,7 +64,7 @@ ServerEvents.recipes(function (event) {
         ],
         key: {
             P: { item: 'create:propeller' },
-            T: { item: 'create_new_age:heat_pipe' },
+            T: { item: 'heatsync:heat_pipe' },
             C: { item: 'latent_chemlib:gas_tank' },
             V: { item: 'create:fluid_valve' }
         },
@@ -101,7 +83,7 @@ ServerEvents.recipes(function (event) {
             G: { tag: 'forge:glass' },
             S: { item: 'kubejs:pressure_seal' },
             C: { item: 'pneumaticcraft:small_tank' },
-            P: { item: 'create_new_age:heat_pipe' }
+            P: { item: 'heatsync:heat_pipe' }
         },
         result: { item: 'latent_chemlib:sealed_chemical_cell', count: 4 }
     }).id('kubejs:create/mechanical_crafting/latent_chemlib/sealed_chemical_cell')

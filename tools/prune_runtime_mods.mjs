@@ -112,3 +112,6 @@ console.log(`runtime mod prune: side=${side} expected=${expected.size} actual=${
 if (finalMissing.length) {
   console.log(`missing expected runtime mods: ${finalMissing.slice(0, 40).join(', ')}${finalMissing.length > 40 ? `, ... (${finalMissing.length - 40} more)` : ''}`)
 }
+if (finalUnexpected.length || finalMissing.length) {
+  process.exit(1)
+}

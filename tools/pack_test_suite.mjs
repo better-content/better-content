@@ -7,10 +7,20 @@ import { scanHardFailures } from './log_hard_failure_scan.mjs'
 const repo = process.cwd()
 const defaultInstance = '/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 3 - v1/minecraft'
 const instance = process.env.BTM_INSTANCE || defaultInstance
+const explicitInstance = Boolean(process.env.BTM_INSTANCE)
+const strictRuntime = process.env.BTM_STRICT_RUNTIME === '1' || process.argv.includes('--strict-runtime')
+const strictDataDumps = process.env.BTM_STRICT_DATA_DUMPS === '1' || process.argv.includes('--strict-data-dumps')
+
+if (explicitInstance && !fs.existsSync(instance)) {
+  console.error(`FAIL - explicit BTM_INSTANCE exists: ${instance}`)
+  process.exit(1)
+}
+
 const generatedConfigDir = path.join(instance, 'kubejs/config')
 const generatedDumpDir = path.join(instance, 'dump/data_raw')
 const reportDir = process.env.BTM_REPORT_DIR || path.join(repo, 'generated', 'validation')
 fs.mkdirSync(reportDir, { recursive: true })
+const validateJobs = validationJobs()
 
 const hardFailures = []
 const softFindings = []
@@ -21,6 +31,9 @@ const performanceResults = []
 const performanceBudgetsMs = {
   'JSON and JS syntax validation': { budget: 8000, hard: 24000 },
   'critical progression surfaces': { budget: 750, hard: 3000 },
+  'pack contract validation': { budget: 1000, hard: 5000 },
+  'contract completeness classification': { budget: 1000, hard: 5000 },
+  'autonomous contract validation': { budget: 1500, hard: 6000 },
   'quest book validation': { budget: 250, hard: 1500 },
   'Wares and villager trade validation': { budget: 250, hard: 1500 },
   'repo loot data validation': { budget: 500, hard: 3000 },
@@ -50,6 +63,14 @@ function finding(name, detail, severity = 'SHOULD') {
 function skip(name, detail) {
   skips.push({ name, detail })
   console.log(`skip - ${name}${detail ? ` (${detail})` : ''}`)
+}
+function missingRuntimeEvidence(name, detail) {
+  if (strictRuntime) fail(name, detail)
+  else skip(name, detail)
+}
+function missingDataDumpEvidence(name, detail) {
+  if (strictDataDumps) fail(name, detail)
+  else skip(name, detail)
 }
 
 function nowMs() { return Number(process.hrtime.bigint()) / 1e6 }
@@ -83,7 +104,20 @@ function runMeasured(name, fn) {
 function exists(p) { return fs.existsSync(p) }
 function read(p) { return fs.readFileSync(p, 'utf8') }
 function readJson(p) { return JSON.parse(read(p)) }
+function latestRuntimeLog() { return path.join(instance, 'logs/latest.log') }
 function rel(p) { return path.relative(repo, p) || '.' }
+function validationJobs() {
+  const raw = process.env.BTM_VALIDATE_JOBS || ''
+  if (raw) {
+    const parsed = Number(raw)
+    if (Number.isInteger(parsed) && parsed > 0) return parsed
+    console.error('FAIL - BTM_VALIDATE_JOBS must be a positive integer')
+    process.exit(1)
+  }
+  const result = spawnSync('nproc', { encoding: 'utf8' })
+  const parsed = Number((result.stdout || '').trim())
+  return Number.isInteger(parsed) && parsed > 0 ? parsed : 4
+}
 function walk(root, pred = () => true, out = []) {
   if (!exists(root)) return out
   for (const ent of fs.readdirSync(root, { withFileTypes: true })) {
@@ -220,7 +254,7 @@ function intendedMachineTier(output) {
   if (ns === 'tconstruct') return 'tcon_seared'
   if (ns === 'create') return name.includes('brass') || name.includes('precision') ? 'create_brass' : 'create_andesite'
   if (['railways', 'createdieselgenerators', 'create_connected'].includes(ns)) return 'create_brass'
-  if (ns === 'powergrid' || ns === 'create_new_age') return 'power_grid'
+  if (ns === 'powergrid') return 'power_grid'
   if (ns === 'oc2r') return 'oc2r'
   if (ns === 'creatingspace') return 'space'
   if (['ae2', 'advanced_ae', 'ae2additions', 'expatternprovider', 'merequester', 'createappliedkinetics'].includes(ns)) return 'ae2'
@@ -239,6 +273,7 @@ function loadGeneratedRecipes() {
   if (!exists(manifestPath)) return null
   const manifest = readJson(manifestPath)
   const recipes = []
+  const chunkProblems = []
   for (let i = 0; i < manifest.chunkCount; i++) {
     const chunkPath = path.join(generatedConfigDir, `full_recipe_index_${String(i).padStart(4, '0')}.json`)
     if (!exists(chunkPath)) {
@@ -246,9 +281,16 @@ function loadGeneratedRecipes() {
       continue
     }
     const chunk = readJson(chunkPath)
+    if (manifest.schema && chunk.schema !== manifest.schema) chunkProblems.push(`${path.basename(chunkPath)} schema=${chunk.schema || '<missing>'}`)
+    if (manifest.generatedBy && chunk.generatedBy !== manifest.generatedBy) chunkProblems.push(`${path.basename(chunkPath)} generatedBy=${chunk.generatedBy || '<missing>'}`)
+    if (manifest.generatedAt && chunk.generatedAt !== manifest.generatedAt) chunkProblems.push(`${path.basename(chunkPath)} generatedAt=${chunk.generatedAt || '<missing>'}`)
+    if (manifest.recipeEventStage && chunk.recipeEventStage !== manifest.recipeEventStage) chunkProblems.push(`${path.basename(chunkPath)} recipeEventStage=${chunk.recipeEventStage || '<missing>'}`)
+    if (chunk.chunk !== i) chunkProblems.push(`${path.basename(chunkPath)} chunk=${chunk.chunk}`)
+    if (chunk.start !== recipes.length) chunkProblems.push(`${path.basename(chunkPath)} start=${chunk.start}, expected ${recipes.length}`)
+    if (Array.isArray(chunk.recipes) && chunk.count !== chunk.recipes.length) chunkProblems.push(`${path.basename(chunkPath)} count=${chunk.count}, actual ${chunk.recipes.length}`)
     recipes.push(...chunk.recipes)
   }
-  return { manifest, recipes }
+  return { manifest, recipes, chunkProblems }
 }
 
 function testJsonAndSyntax() {
@@ -265,9 +307,15 @@ function testJsonAndSyntax() {
 
   const jsFiles = [...walk(path.join(repo, 'kubejs'), p => p.endsWith('.js')), ...walk(path.join(repo, 'tools'), p => p.endsWith('.mjs') || p.endsWith('.js'))]
   const badJs = []
-  for (const file of jsFiles) {
-    const result = spawnSync(process.execPath, ['--check', file], { encoding: 'utf8' })
-    if (result.status !== 0) badJs.push(`${rel(file)}\n${result.stderr || result.stdout}`)
+  const parallel = spawnSync('xargs', ['-0', '-r', '-n', '1', '-P', String(validateJobs), process.execPath, '--check'], {
+    input: `${jsFiles.join('\0')}\0`,
+    encoding: 'utf8'
+  })
+  if (parallel.status !== 0) {
+    for (const file of jsFiles) {
+      const result = spawnSync(process.execPath, ['--check', file], { encoding: 'utf8' })
+      if (result.status !== 0) badJs.push(`${rel(file)}\n${result.stderr || result.stdout}`)
+    }
   }
   badJs.length ? fail('all KubeJS/tool JS parses with node --check', badJs.slice(0, 10).join('\n')) : ok('all KubeJS/tool JS parses with node --check', `${jsFiles.length} files`)
 }
@@ -278,7 +326,6 @@ function testCriticalSurfaces() {
     'kubejs/server_scripts/30_recipe_replace/98_starting_progression_bypasses.js',
 	    'kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js',
 	    'kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js',
-	    'kubejs/server_scripts/30_recipe_replace/160_ticex_post_ae2_gates.js',
 	    'kubejs/server_scripts/30_recipe_replace/165_protection_pixel_post_ae2_gates.js',
 	    'kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js',
 	    'kubejs/server_scripts/30_recipe_replace/168_hooks_drones_utility_gates.js',
@@ -328,18 +375,10 @@ function testCriticalSurfaces() {
 	    ? fail('Raw Impossible casing does not consume AE2 controller', 'controller belongs after the Impossible casing unlock')
 	    : ok('Raw Impossible casing does not consume AE2 controller')
 
-  const ticexScript = read(path.join(repo, 'kubejs/server_scripts/30_recipe_replace/160_ticex_post_ae2_gates.js'))
-  const ticexHardGates = [
-    'ticex:reconstruction_core',
-    'kubejs:impossible_machine_casing',
-    'kubejs:impossible_circuit',
-    'kubejs:sky_steel_sheet',
-    'bloodmagic:etherealslate',
-    'latent_chemlib:gas_reaction_chamber'
-  ].filter(id => !ticexScript.includes(id))
-  ticexHardGates.length
-    ? fail('TiCEX Reconstruction Core is hard-gated post-AE2', ticexHardGates.join(', '))
-    : ok('TiCEX Reconstruction Core is hard-gated post-AE2')
+  const ticexScriptPath = path.join(repo, 'kubejs/server_scripts/30_recipe_replace/160_ticex_post_ae2_gates.js')
+  exists(ticexScriptPath)
+    ? fail('retired TiCEX post-AE2 gate script is absent', rel(ticexScriptPath))
+    : ok('retired TiCEX post-AE2 gate script is absent')
 
   const protectionPixelScript = read(path.join(repo, 'kubejs/server_scripts/30_recipe_replace/165_protection_pixel_post_ae2_gates.js'))
   const protectionPixelGates = [
@@ -358,6 +397,27 @@ function testCriticalSurfaces() {
   protectionPixelScript.includes('protection_pixel:wingsofprismas_chestplate') && protectionPixelScript.includes('protection_pixel:maneuveringwing')
     ? ok('Protection Pixel late armor is displaced into explicit post-AE2 recipes')
     : fail('Protection Pixel late armor is displaced into explicit post-AE2 recipes', 'missing late armor recipe coverage')
+
+  const pncrCreateScript = read(path.join(repo, 'kubejs/server_scripts/30_recipe_replace/122_pneumaticcraft_create_pressing_gates.js'))
+  const retiredCompressors = [
+    'pneumaticcraft:air_compressor',
+    'pneumaticcraft:advanced_air_compressor',
+    'pneumaticcraft:liquid_compressor',
+    'pneumaticcraft:advanced_liquid_compressor',
+    'pneumaticcraft:thermal_compressor',
+    'pneumaticcraft:manual_compressor',
+    'pneumaticcraft:electrostatic_compressor',
+    'pneumaticcraft:solar_compressor',
+    'pneumaticcraft:flux_compressor',
+    'pneumaticcraft:creative_compressor'
+  ]
+  const missingCompressorRetirements = retiredCompressors.filter(id => !pncrCreateScript.includes(id))
+  missingCompressorRetirements.length
+    ? fail('compressed air is gated to the SU rotational compressor', missingCompressorRetirements.join(', '))
+    : ok('compressed air is gated to the SU rotational compressor')
+  pncrCreateScript.includes('compressedcreativity:rotational_compressor') && pncrCreateScript.includes('create:mechanical_crafting')
+    ? ok('SU rotational compressor has explicit Create mechanical crafting recipe')
+    : fail('SU rotational compressor has explicit Create mechanical crafting recipe', 'missing compressedcreativity:rotational_compressor mechanical crafting recipe')
 
   const tomeOfBloodScript = read(path.join(repo, 'kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js'))
   const tomeOfBloodGates = [
@@ -421,23 +481,100 @@ function testCriticalSurfaces() {
     : ok('Quarantined machines/upgrades are removed and hidden')
 
   const dimensionAccessScript = read(path.join(repo, 'kubejs/server_scripts/30_recipe_replace/170_space_dimension_access_gates.js'))
-  const dimensionGateNeedles = [
+  const directDimensionRouteItems = [
     'fallout_wastelands_:portal_frame',
     'fallout_wastelands_:wastelands',
-    'kubejs:space_machine_casing',
-    'creatingspace:chemical_synthesizer',
-    'creatingspace:netherite_oxygen_backtank',
-    'creatingspace:rocket_engine',
-    'creatingspace:rocket_controls'
-  ].filter(id => !dimensionAccessScript.includes(id))
-  dimensionGateNeedles.length
-    ? fail('Fallout Wastelands portal is gated by Creating Space', dimensionGateNeedles.join(', '))
-    : ok('Fallout Wastelands portal is gated by Creating Space')
+    'the_finley_dimension_remastered:finley_dimension',
+    'undergarden:catalyst',
+    'callfromthedepth_:depth',
+    'bloodmagic:simplekey',
+    'bloodmagic:minekey',
+    'bloodmagic:mineentrancekey',
+    'bloodmagic:teleposer',
+    'bloodmagic:telepositionsigil',
+    'bloodmagic:reagentteleposition',
+    'bloodmagic:teleposerfocus',
+    'bloodmagic:reinforcedteleposerfocus',
+    'bloodmagic:enhancedteleposerfocus',
+    'aether:aether_portal_frame',
+    'blue_skies:everbright_portal',
+    'blue_skies:everdawn_portal',
+    'blue_skies:multi_portal_item',
+    'blue_skies:portal_activator',
+    'deeperdarker:otherside_portal'
+  ]
+  const missingDirectRouteSuppressions = directDimensionRouteItems.filter(id => !dimensionAccessScript.includes(id) || !hiddenScript.includes(id))
+  missingDirectRouteSuppressions.length
+    ? fail('Direct dimension portal/key items are removed and hidden', missingDirectRouteSuppressions.join(', '))
+    : ok('Direct dimension portal/key items are removed and hidden', `${directDimensionRouteItems.length} items`)
+
+  const directRecipeConstructors = /event\.(shaped|shapeless)\s*\(/.test(dimensionAccessScript)
+  directRecipeConstructors
+    ? fail('Direct dimension route pass does not re-author portal recipes', 'event.shaped/event.shapeless present')
+    : ok('Direct dimension route pass does not re-author portal recipes')
 
   const twilightConfig = read(path.join(repo, 'config/twilightforest-common.toml'))
-  twilightConfig.includes('portalUnlockedByAdvancement = "btm:creating_space_access"')
-    ? ok('Twilight Forest portal is advancement-locked by Creating Space')
-    : fail('Twilight Forest portal is advancement-locked by Creating Space', 'missing btm:creating_space_access config')
+  const twilightProblems = [
+    ['disablePortalCreation = true', 'portal creation disabled'],
+    ['shouldReturnPortalBeUsable = false', 'return portal disabled'],
+    ['portalUnlockedByAdvancement = ""', 'portal advancement lock empty']
+  ].filter(([needle]) => !twilightConfig.includes(needle)).map(([, label]) => label)
+  twilightProblems.length
+    ? fail('Twilight Forest direct portal is disabled', twilightProblems.join(', '))
+    : ok('Twilight Forest direct portal is disabled')
+
+  const earthOrbitRoute = readJson(path.join(repo, 'kubejs/data/creatingspace/creatingspace/rocket_accessible_dimension/earth_orbit.json'))
+  const requiredSpaceRoutes = [
+    'lostcities:lostcity',
+    'twilightforest:twilight_forest',
+    'fallout_wastelands_:wastelands',
+    'the_finley_dimension_remastered:finley_dimension',
+    'callfromthedepth_:depth'
+  ]
+  const missingEarthRoutes = requiredSpaceRoutes.filter(dimension => !earthOrbitRoute.adjacentDimensions?.[dimension])
+  missingEarthRoutes.length
+    ? fail('Creating Space Earth orbit exposes all non-meteor adventure dimensions', missingEarthRoutes.join(', '))
+    : ok('Creating Space Earth orbit exposes all non-meteor adventure dimensions', `${requiredSpaceRoutes.length} routes`)
+
+  const missingReturnRoutes = [
+    'kubejs/data/lostcities/creatingspace/rocket_accessible_dimension/lostcity.json',
+    'kubejs/data/twilightforest/creatingspace/rocket_accessible_dimension/twilight_forest.json',
+    'kubejs/data/fallout_wastelands_/creatingspace/rocket_accessible_dimension/wastelands.json',
+    'kubejs/data/the_finley_dimension_remastered/creatingspace/rocket_accessible_dimension/finley_dimension.json',
+    'kubejs/data/callfromthedepth_/creatingspace/rocket_accessible_dimension/depth.json'
+  ].filter(file => {
+    const route = path.join(repo, file)
+    return !exists(route) || !readJson(route).adjacentDimensions?.['creatingspace:earth_orbit']
+  })
+  missingReturnRoutes.length
+    ? fail('Space-routed adventure dimensions return to Earth orbit', missingReturnRoutes.join(', '))
+    : ok('Space-routed adventure dimensions return to Earth orbit')
+
+  const structurify = readJson(path.join(repo, 'config/structurify.json'))
+  const disabledStructures = new Set((structurify.structures || []).filter(entry => entry.is_disabled).map(entry => entry.name))
+  const directPortalStructures = [
+    'minecraft:ruined_portal',
+    'minecraft:stronghold',
+    'aether:ruined_portal',
+    'aether:ruined_portal_aether',
+    'aether:ruined_portal_desert',
+    'aether:ruined_portal_jungle',
+    'aether:ruined_portal_mountain',
+    'aether:ruined_portal_swamp',
+    'blue_skies:gatekeeper_house_mountain',
+    'blue_skies:gatekeeper_house_plains',
+    'blue_skies:gatekeeper_house_snowy',
+    'callfromthedepth_:ancientportal',
+    'deeperdarker:ancient_temple',
+    'the_finley_dimension_remastered:constructed_finley_portal_living',
+    'the_finley_dimension_remastered:constructed_finley_portal_plains',
+    'the_finley_dimension_remastered:constructed_finley_portal_wastes',
+    'the_finley_dimension_remastered:ruined_finley_portal'
+  ]
+  const enabledPortalStructures = directPortalStructures.filter(name => !disabledStructures.has(name))
+  enabledPortalStructures.length
+    ? fail('Direct portal structures are disabled', enabledPortalStructures.join(', '))
+    : ok('Direct portal structures are disabled', `${directPortalStructures.length} structures`)
 
   const spaceAccessAdvancement = readJson(path.join(repo, 'kubejs/data/btm/advancements/creating_space_access.json'))
   const advancementText = JSON.stringify(spaceAccessAdvancement)
@@ -532,10 +669,8 @@ function testQuestBook() {
     'latent_chemlib:gas_tank',
     'latent_chemlib:gas_reaction_chamber',
     'latent_chemlib:gas_release',
-	    'liquid_coolant:coolant_exchanger',
+	    'heatsync:coolant_exchanger',
 	    'rpgstats:still_beating_heart',
-	    'ticex:reconstruction_core',
-	    'ticex:fluid_transmuter',
       'protection_pixel:armorloadplatform',
       'protection_pixel:wingsofprismas_chestplate',
       'tomeofblood:novice_tome_of_blood',
@@ -548,8 +683,7 @@ function testQuestBook() {
       'buildinggadgets2:gadget_building',
       'create_sa:brass_drone',
       'sophisticatedbackpacks:feeding_upgrade',
-      'fallout_wastelands_:portal_frame',
-      'fallout_wastelands_:wastelands',
+      'creatingspace:rocket_controls',
       'creatingspace:netherite_oxygen_backtank'
 	  ]
   const absent = requiredNodes.filter(n => !chapterText.includes(n))
@@ -649,13 +783,63 @@ function testLootData() {
 function testGeneratedRecipeGraph() {
   let loaded = null
   try { loaded = loadGeneratedRecipes() } catch (e) { return fail('generated recipe index loads', e.message) }
-  if (!loaded) return skip('generated recipe graph tests', `missing ${path.join(generatedConfigDir, 'full_recipe_index_manifest.json')}`)
-  const { manifest, recipes } = loaded
+  if (!loaded) return missingRuntimeEvidence('generated recipe graph tests', `missing ${path.join(generatedConfigDir, 'full_recipe_index_manifest.json')}`)
+  const { manifest, recipes, chunkProblems } = loaded
   const manifestPath = path.join(generatedConfigDir, 'full_recipe_index_manifest.json')
+  const summaryPath = path.join(generatedConfigDir, 'recipe_audit_summary.json')
+  const manifestProblems = []
+  if (manifest.schema !== 'btm.recipe_audit.v2') manifestProblems.push(`schema=${manifest.schema || '<missing>'}`)
+  if (manifest.generatedBy !== 'kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js') manifestProblems.push(`generatedBy=${manifest.generatedBy || '<missing>'}`)
+  if (manifest.recipeEventStage !== 'pre_mutation_recipe_event') manifestProblems.push(`recipeEventStage=${manifest.recipeEventStage || '<missing>'}`)
+  if (!manifest.generatedAt) manifestProblems.push('generatedAt=<missing>')
+  if (manifestProblems.length) {
+    const detail = manifestProblems.join(', ')
+    strictRuntime ? fail('generated recipe dump has provenance metadata', detail) : finding('generated recipe dump has provenance metadata', detail, 'SHOULD')
+  } else {
+    ok('generated recipe dump has provenance metadata', `${manifest.schema}, ${manifest.recipeEventStage}, ${manifest.generatedAt}`)
+  }
+  if (chunkProblems.length) {
+    const detail = chunkProblems.slice(0, 40).join('\n')
+    strictRuntime ? fail('generated recipe chunks match manifest metadata', detail) : finding('generated recipe chunks match manifest metadata', detail, 'SHOULD')
+  } else {
+    ok('generated recipe chunks match manifest metadata', `${manifest.chunkCount} chunks`)
+  }
+  if (exists(summaryPath)) {
+    const auditSummary = readJson(summaryPath)
+    const summaryProblems = []
+    if (auditSummary.schema !== manifest.schema) summaryProblems.push(`schema=${auditSummary.schema || '<missing>'}`)
+    if (auditSummary.generatedBy !== manifest.generatedBy) summaryProblems.push(`generatedBy=${auditSummary.generatedBy || '<missing>'}`)
+    if (auditSummary.generatedAt !== manifest.generatedAt) summaryProblems.push(`generatedAt=${auditSummary.generatedAt || '<missing>'}`)
+    if (auditSummary.recipeEventStage !== manifest.recipeEventStage) summaryProblems.push(`recipeEventStage=${auditSummary.recipeEventStage || '<missing>'}`)
+    if (auditSummary.scannedRecipes !== manifest.recipeCount) summaryProblems.push(`scannedRecipes=${auditSummary.scannedRecipes}, recipeCount=${manifest.recipeCount}`)
+    if (auditSummary.fullRecipeChunkCount !== manifest.chunkCount) summaryProblems.push(`fullRecipeChunkCount=${auditSummary.fullRecipeChunkCount}, chunkCount=${manifest.chunkCount}`)
+    if (summaryProblems.length) {
+      const detail = summaryProblems.join(', ')
+      strictRuntime ? fail('recipe audit summary matches manifest', detail) : finding('recipe audit summary matches manifest', detail, 'SHOULD')
+    } else {
+      ok('recipe audit summary matches manifest', `${auditSummary.scannedRecipes} recipes`)
+    }
+  } else {
+    missingRuntimeEvidence('recipe audit summary exists', summaryPath)
+  }
+  const logPath = latestRuntimeLog()
+  if (exists(logPath)) {
+    const logText = read(logPath)
+    const expectedLine = `[BTM-RECIPE-AUDIT] scanned=${manifest.recipeCount} fullChunks=${manifest.chunkCount}`
+    if (logText.includes(expectedLine)) {
+      ok('latest log confirms recipe dump emission', expectedLine)
+    } else {
+      const detail = `missing ${expectedLine} in ${logPath}`
+      strictRuntime ? fail('latest log confirms recipe dump emission', detail) : finding('latest log confirms recipe dump emission', detail, 'SHOULD')
+    }
+  } else {
+    missingRuntimeEvidence('latest log exists for recipe dump correlation', logPath)
+  }
   const newestRecipeScript = newestFile(walk(path.join(repo, 'kubejs/server_scripts'), p => p.endsWith('.js')))
   const manifestStat = fs.statSync(manifestPath)
   if (newestRecipeScript && manifestStat.mtimeMs + 1000 < newestRecipeScript.mtimeMs) {
-    finding('generated recipe graph is older than repo recipe scripts', `${path.basename(newestRecipeScript.file)} is newer than live recipe dump; reload the instance to refresh full_recipe_index_*.json`, 'MUST')
+    const detail = `${path.basename(newestRecipeScript.file)} is newer than live recipe dump; reload the instance to refresh full_recipe_index_*.json`
+    strictRuntime ? fail('generated recipe graph is older than repo recipe scripts', detail) : finding('generated recipe graph is older than repo recipe scripts', detail, 'MUST')
     return
   }
   metrics.generatedRecipes = recipes.length
@@ -733,7 +917,7 @@ function testGeneratedRecipeGraph() {
 
 function testGeneratedDumpLoot() {
   const lootRoot = path.join(generatedDumpDir, 'loot_tables')
-  if (!exists(lootRoot)) return skip('generated loot dump tests', `missing ${lootRoot}`)
+  if (!exists(lootRoot)) return missingDataDumpEvidence('generated loot dump tests', `missing ${lootRoot}`)
   const files = walk(lootRoot, p => p.endsWith('.json'))
   metrics.generatedLootTables = files.length
   const coinHits = []
@@ -764,7 +948,7 @@ function testGeneratedDumpLoot() {
 
 function testEngineWorldPerformanceLogs() {
   const logPath = path.join(instance, 'logs/latest.log')
-  if (!exists(logPath)) return skip('engine/world performance log analysis', `missing ${logPath}`)
+  if (!exists(logPath)) return missingRuntimeEvidence('engine/world performance log analysis', `missing ${logPath}`)
 
   const text = read(logPath)
   const lines = text.split(/\r?\n/)
@@ -992,8 +1176,38 @@ function testKubejsAssets() {
   else fail('KubeJS custom assets validate', (result.stdout + result.stderr).trim())
 }
 
+function testPackContract() {
+  const result = spawnSync('node', ['tools/validate_pack_contract.mjs'], {
+    cwd: repo,
+    encoding: 'utf8'
+  })
+  if (result.status === 0) ok('pack contract validates', (result.stdout + result.stderr).trim())
+  else fail('pack contract validates', (result.stdout + result.stderr).trim())
+}
+
+function testContractCompleteness() {
+  const result = spawnSync('node', ['tools/contract_completeness_report.mjs', '--check', '--no-write'], {
+    cwd: repo,
+    encoding: 'utf8'
+  })
+  if (result.status === 0) ok('contract completeness is classified', (result.stdout + result.stderr).trim())
+  else fail('contract completeness is classified', (result.stdout + result.stderr).trim())
+}
+
+function testAutonomousContracts() {
+  const result = spawnSync('node', ['tools/validate_autonomous_contracts.mjs'], {
+    cwd: repo,
+    encoding: 'utf8'
+  })
+  if (result.status === 0) ok('autonomous contract validators pass', (result.stdout + result.stderr).trim())
+  else fail('autonomous contract validators pass', (result.stdout + result.stderr).trim())
+}
+
 runMeasured('JSON and JS syntax validation', testJsonAndSyntax)
 runMeasured('critical progression surfaces', testCriticalSurfaces)
+runMeasured('pack contract validation', testPackContract)
+runMeasured('contract completeness classification', testContractCompleteness)
+runMeasured('autonomous contract validation', testAutonomousContracts)
 runMeasured('quest book validation', testQuestBook)
 runMeasured('Wares and villager trade validation', testWaresAndTrades)
 runMeasured('repo loot data validation', testLootData)
@@ -1014,6 +1228,12 @@ const summary = {
   generatedAt: new Date().toISOString(),
   repo,
   instance,
+  explicitInstance,
+  strictRuntime,
+  strictDataDumps,
+  runtimeEvidenceClaim: strictRuntime ? 'strict-runtime' : 'opportunistic-runtime',
+  dataDumpEvidenceClaim: strictDataDumps ? 'strict-vanilla-dump' : 'opportunistic-vanilla-dump',
+  dataDumpEvidenceScope: 'vanilla /dump output under dump/data_raw, separate from KubeJS audit dumps under kubejs/config',
   passes: passes.length,
   hardFailures: hardFailures.length,
   softFindings: softFindings.length,
@@ -1028,6 +1248,14 @@ Generated: ${summary.generatedAt}
 Repo: \`${repo}\`
 
 Instance: \`${instance}\`
+
+Runtime evidence mode: \`${strictRuntime ? 'strict' : 'opportunistic'}\`
+
+Data dump evidence mode: \`${strictDataDumps ? 'strict' : 'opportunistic'}\`
+
+Data dump evidence scope: vanilla \`/dump\` output under \`dump/data_raw\`, separate from KubeJS audit dumps under \`kubejs/config\`
+
+Explicit instance: \`${explicitInstance ? 'yes' : 'no'}\`
 
 ## Result
 

@@ -35,7 +35,6 @@ const CRAFT_SURFACE_TIERS = [
   [/^create:(pressing|mixing|compacting|crushing|milling|cutting|filling|emptying|splashing|haunting)$/, 'create andesite machine surfaces', 'kubejs:andesite_machine_casing'],
   [/^create:sequenced_assembly$/, 'Create staged assembly line', 'kubejs:brass_machine_casing'],
   [/^create:mechanical_crafting$/, 'Create mechanical crafters', 'kubejs:andesite_machine_casing'],
-  [/^create_new_age:energising$/, 'Create New Age electrical energising', 'kubejs:electrical_machine_casing'],
   [/^pneumaticcraft:(pressure_chamber|thermo_plant|fluid_mixer|assembly_laser|assembly_drill|refinery)$/, 'PNCR pressure/sealed processing', 'kubejs:airtight_machine_casing'],
   [/^tconstruct:(melting|alloying|casting_table|casting_basin|table_casting|basin_casting|table_casting_composite)$/, 'TCon molten/casting work', 'kubejs:seared_machine_casing'],
   [/^bloodmagic:/, 'Blood Magic LP/will processing', 'MAGIC:Blood Magic'],

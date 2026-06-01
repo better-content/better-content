@@ -168,8 +168,7 @@ ServerEvents.recipes(function (event) {
         btmEcoRecipe('pneumaticcraft:assembly_controller', ['GCG', 'PAP', 'SSS'], { G: BTM_CASING_ECO.glass, C: BTM_CASING_ECO.circuit, P: 'pneumaticcraft:pressure_tube', A: BTM_CASING_ECO.airtight, S: BTM_CASING_ECO.pressureSeal }, 'kubejs:casing_ecosystem/airtight/assembly_controller'),
         btmEcoRecipe('pneumaticcraft:assembly_platform', ['SSS', 'PAP', 'III'], { S: BTM_CASING_ECO.pressureSeal, P: 'pneumaticcraft:pressure_tube', A: BTM_CASING_ECO.airtight, I: 'pneumaticcraft:ingot_iron_compressed' }, 'kubejs:casing_ecosystem/airtight/assembly_platform'),
         btmEcoRecipe('pneumaticcraft:assembly_laser', [' R ', 'PAP', 'SCS'], { R: 'minecraft:redstone', P: 'pneumaticcraft:pressure_tube', A: BTM_CASING_ECO.airtight, S: BTM_CASING_ECO.pressureSeal, C: BTM_CASING_ECO.circuit }, 'kubejs:casing_ecosystem/airtight/assembly_laser'),
-        btmEcoRecipe('pneumaticcraft:assembly_drill', [' D ', 'PAP', 'SCS'], { D: 'minecraft:diamond', P: 'pneumaticcraft:pressure_tube', A: BTM_CASING_ECO.airtight, S: BTM_CASING_ECO.pressureSeal, C: BTM_CASING_ECO.compressorCore }, 'kubejs:casing_ecosystem/airtight/assembly_drill'),
-        btmEcoRecipe('pneumaticcraft:advanced_air_compressor', ['PCP', 'TAT', 'PCP'], { P: 'pneumaticcraft:pressure_tube', C: BTM_CASING_ECO.compressorCore, T: 'pneumaticcraft:turbine_blade', A: BTM_CASING_ECO.airtight }, 'kubejs:casing_ecosystem/airtight/advanced_air_compressor')
+        btmEcoRecipe('pneumaticcraft:assembly_drill', [' D ', 'PAP', 'SCS'], { D: 'minecraft:diamond', P: 'pneumaticcraft:pressure_tube', A: BTM_CASING_ECO.airtight, S: BTM_CASING_ECO.pressureSeal, C: BTM_CASING_ECO.compressorCore }, 'kubejs:casing_ecosystem/airtight/assembly_drill')
     ])
 
     btmEcoAddMany(event, [
@@ -186,10 +185,7 @@ ServerEvents.recipes(function (event) {
         btmEcoRecipe('powergrid:voltage_gauge', [' G ', 'CAC', ' R '], { G: BTM_CASING_ECO.glass, C: 'powergrid:capacitor', A: BTM_CASING_ECO.electrical, R: BTM_CASING_ECO.redstoneRelay }, 'kubejs:casing_ecosystem/electrical/voltage_gauge'),
         btmEcoRecipe('powergrid:power_gauge', ['GVG', 'CAC', ' W '], { G: BTM_CASING_ECO.glass, V: 'powergrid:voltage_gauge', C: 'powergrid:current_gauge', A: BTM_CASING_ECO.electrical, W: 'powergrid:wire' }, 'kubejs:casing_ecosystem/electrical/power_gauge'),
         btmEcoRecipe('powergrid:device_connector', [' W ', 'CAC', ' W '], { W: 'powergrid:wire_connector', C: BTM_CASING_ECO.circuit, A: BTM_CASING_ECO.electrical }, 'kubejs:casing_ecosystem/electrical/device_connector'),
-        btmEcoRecipe('powergrid:heavy_wire_connector', ['WWW', 'CAC', 'WWW'], { W: 'powergrid:wire_connector', C: 'powergrid:conductive_casing', A: BTM_CASING_ECO.electrical }, 'kubejs:casing_ecosystem/electrical/heavy_wire_connector'),
-        btmEcoRecipe('create_new_age:basic_energiser', [' W ', 'CAC', ' S '], { W: 'create_new_age:overcharged_iron_wire', C: 'powergrid:capacitor', A: BTM_CASING_ECO.electrical, S: 'create:shaft' }, 'kubejs:casing_ecosystem/electrical/basic_energiser'),
-        btmEcoRecipe('create_new_age:advanced_energiser', [' W ', 'CAC', ' S '], { W: 'create_new_age:overcharged_golden_wire', C: 'powergrid:battery', A: BTM_CASING_ECO.electrical, S: 'create:shaft' }, 'kubejs:casing_ecosystem/electrical/advanced_energiser'),
-        btmEcoRecipe('create_new_age:reinforced_energiser', [' W ', 'CAC', ' S '], { W: 'create_new_age:overcharged_diamond_wire', C: 'powergrid:battery', A: BTM_CASING_ECO.electrical, S: 'create:shaft' }, 'kubejs:casing_ecosystem/electrical/reinforced_energiser')
+        btmEcoRecipe('powergrid:heavy_wire_connector', ['WWW', 'CAC', 'WWW'], { W: 'powergrid:wire_connector', C: 'powergrid:conductive_casing', A: BTM_CASING_ECO.electrical }, 'kubejs:casing_ecosystem/electrical/heavy_wire_connector')
     ])
 
     btmEcoAddMany(event, [

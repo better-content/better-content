@@ -4,7 +4,10 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
+
+from pack_mod_source import bundled_mod_regexes
 
 
 ROOT = Path("/home/gerald/obelisks")
@@ -127,45 +130,9 @@ PHASES = [
     phase("reduced_no_cursedbiomes", "Reduced baseline plus custom cursedbiomes disabled", [
         r"^cursedbiomes-.*\.jar$",
     ]),
-    phase("reduced_no_fission_reactor", "Reduced baseline plus custom fission_reactor disabled", [
-        r"^fission_reactor-.*\.jar$",
-    ]),
-    phase("reduced_no_gases_and_plasmas", "Reduced baseline plus custom gases_and_plasmas disabled", [
-        r"^gases_and_plasmas-.*\.jar$",
-    ]),
-    phase("reduced_no_heatsync", "Reduced baseline plus custom heatsync disabled", [
-        r"^heatsync-.*\.jar$",
-    ]),
-    phase("reduced_no_liquid_coolant", "Reduced baseline plus custom liquid_coolant disabled", [
-        r"^liquid_coolant-.*\.jar$",
-    ]),
-    phase("reduced_no_obelisks", "Reduced baseline plus custom obelisks disabled", [
-        r"^obelisks-.*\.jar$",
-    ]),
-    phase("reduced_no_pillagercampaigns", "Reduced baseline plus custom pillagercampaigns disabled", [
-        r"^pillagercampaigns-.*\.jar$",
-    ]),
-    phase("reduced_no_procedural_bouquets", "Reduced baseline plus custom procedural_bouquets disabled", [
-        r"^procedural_bouquets-.*\.jar$",
-    ]),
-    phase("reduced_no_realisticores", "Reduced baseline plus custom realisticores disabled", [
-        r"^realisticores-.*\.jar$",
-    ]),
-    phase("reduced_no_rpgstats", "Reduced baseline plus custom rpgstats disabled", [
-        r"^rpgstats-.*\.jar$",
-    ]),
-    phase("reduced_no_settlementroads", "Reduced baseline plus custom settlementroads disabled", [
-        r"^settlementroads-.*\.jar$",
-    ]),
-    phase("reduced_no_villagewalls", "Reduced baseline plus custom villagewalls disabled", [
-        r"^villagewalls-.*\.jar$",
-    ]),
+    phase("reduced_no_custom_jars", "Reduced baseline plus active bundled custom jars disabled", bundled_mod_regexes(ROOT)),
     phase("reduced_no_compressedcreativity", "Reduced baseline plus Compressed Creativity disabled", [
         r"^compressedcreativity-.*\.jar$",
-    ]),
-    phase("reduced_no_create_new_age", "Reduced baseline plus Create New Age and direct bridge disabled", [
-        r"^create-new-age-.*\.jar$",
-        r"^create_cold_sweat-.*\.jar$",
     ]),
     phase("reduced_no_create_stuff_additions", "Reduced baseline plus Create Stuff Additions disabled", [
         r"^create-stuff-additions.*\.jar$",

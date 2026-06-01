@@ -5,16 +5,16 @@ allowPortalsInOtherDimensions = false
 #Allow portals only for admins (Operators). This severely reduces the range in which the mod usually scans for valid portal conditions, and it scans near ops only.
 adminOnlyPortals = false
 #Disable Twilight Forest portal creation entirely. Provided for server operators looking to restrict action to the dimension.
-disablePortalCreation = false
+disablePortalCreation = true
 #Determines if new portals should be pre-checked for safety. If enabled, portals will fail to form rather than redirect to a safe alternate destination.
 #Note that enabling this also reduces the rate at which portal formation checks are performed.
 checkPortalDestination = false
 #Set this true if you want the lightning that zaps the portal to not set things on fire. For those who don't like fun.
 portalLightning = false
 #If false, the return portal will require the activation item.
-shouldReturnPortalBeUsable = true
+shouldReturnPortalBeUsable = false
 #Use a valid advancement resource location as a string. For example, using the string "minecraft:story/mine_diamond" will lock the portal behind the "Diamonds!" advancement. Invalid/Empty Advancement resource IDs will leave the portal entirely unlocked.
-portalUnlockedByAdvancement = "btm:creating_space_access"
+portalUnlockedByAdvancement = ""
 #The max amount of water spaces the mod will check for when creating a portal. Very high numbers may cause issues.
 #Range: > 4
 maxPortalSize = 64
@@ -107,4 +107,3 @@ cloudBlockPrecipitationDistance = 32
 	#The amount of ticks after raising a shield that makes it OK to parry a projectile.
 	#Range: > 0
 	shieldParryTicksArrow = 40
-

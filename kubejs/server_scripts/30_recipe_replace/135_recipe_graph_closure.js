@@ -207,19 +207,6 @@ ServerEvents.recipes(function (event) {
     ], { A: 'create:andesite_alloy', Z: '#forge:ingots/zinc', F: 'create:fluid_pipe', S: BTM_CLOSURE.ironPlate, B: BTM_CLOSURE.brass }, 'kubejs:closure/createdieselgenerators/engine_turbocharger')
     event.remove({ type: 'createdieselgenerators:distillation' })
 
-    // Heat/electricity machinery belongs to the power-grid casing tier.
-    event.remove({ output: 'create_new_age:reactor_casing' })
-    event.remove({ output: 'create_new_age:reactor_glass' })
-    event.remove({ output: 'create_new_age:reactor_heat_vent' })
-    event.remove({ output: 'create_new_age:reactor_fuel_acceptor' })
-    event.remove({ output: 'create_new_age:reactor_rod' })
-    btmClosureShaped(event, 'create_new_age:stirling_engine', [
-        'NSN',
-        'PCP',
-        ' B '
-    ], { N: '#forge:nuggets/iron', S: 'create:shaft', P: 'create_new_age:heat_pipe', C: '#forge:storage_blocks/copper', B: BTM_CLOSURE.power }, 'kubejs:closure/create_new_age/stirling_engine')
-    btmClosureReplace(event, ['create_new_age:advanced_motor_extension'], ['create_new_age:overcharged_diamond', 'create_new_age:overcharged_iron_sheet'], BTM_CLOSURE.power)
-
     // AE2 addon conversions require the AE2 casing tier so part/full cycling is not free.
     btmClosureShapeless(event, 'expatternprovider:ex_interface_part', ['expatternprovider:ex_interface', BTM_CLOSURE.ae2], 'kubejs:closure/expatternprovider/ex_interface_part')
     btmClosureShaped(event, 'expatternprovider:ex_interface', [

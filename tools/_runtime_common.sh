@@ -102,7 +102,7 @@ btm_client_only_mod_globs=(
   "mods/ambientsounds*"
   "bettergrassify*"
   "mods/bettergrassify*"
-  "configured*"
+  "/configured*"
   "mods/configured*"
   "controllable*"
   "mods/controllable*"

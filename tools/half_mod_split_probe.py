@@ -21,6 +21,8 @@ import tomllib
 import zipfile
 from pathlib import Path
 
+from pack_mod_source import bundled_mod_ids
+
 
 ROOT = Path(os.environ.get("ROOT", "/home/gerald/obelisks"))
 SERVER = ROOT / "server-instance"
@@ -40,25 +42,7 @@ SPLIT_MODE = os.environ.get("HALF_MOD_SPLIT_MODE", "primary")
 IGNORED_DEPS = {"minecraft", "forge", "java", "neoforge"}
 DISABLED_SUFFIX = ".half-test-disabled"
 
-CUSTOM_MOD_IDS = {
-    "btmfixes",
-    "classselector",
-    "computerbridge",
-    "cursedbiomes",
-    "dtmalum",
-    "fission_reactor",
-    "gases_and_plasmas",
-    "heatsync",
-    "liquid_coolant",
-    "obelisks",
-    "pillagercampaigns",
-    "procedural_bouquets",
-    "realisticores",
-    "rpgstats",
-    "settlementroads",
-    "transmissionloss",
-    "villagewalls",
-}
+CUSTOM_MOD_IDS = bundled_mod_ids(ROOT)
 
 CORE_KEEP_IDS = {
     "c2me",

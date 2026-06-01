@@ -9,6 +9,8 @@ import time
 from contextlib import contextmanager
 from pathlib import Path
 
+from pack_mod_source import bundled_mod_jar_patterns
+
 ROOT = Path(os.environ.get("ROOT", "/home/gerald/obelisks"))
 SERVER_DIR = ROOT / "server-instance"
 LIVE_MC = Path(os.environ.get(
@@ -65,24 +67,7 @@ VARIANTS = {
     },
 }
 
-CUSTOM_MOD_JARS = {
-    "btmfixes": ["btmfixes*.jar"],
-    "classselector": ["classselector*.jar"],
-    "computerbridge": ["computerbridge*.jar"],
-    "cursedbiomes": ["cursedbiomes*.jar"],
-    "fission_reactor": ["fission_reactor*.jar"],
-    "gases_and_plasmas": ["gases_and_plasmas*.jar"],
-    "heatsync": ["heatsync*.jar"],
-    "liquid_coolant": ["liquid_coolant*.jar"],
-    "obelisks": ["obelisks*.jar"],
-    "pillagercampaigns": ["pillagercampaigns*.jar"],
-    "procedural_bouquets": ["procedural_bouquets*.jar"],
-    "realisticores": ["realisticores*.jar"],
-    "rpgstats": ["rpgstats*.jar"],
-    "settlementroads": ["settlementroads*.jar"],
-    "transmissionloss": ["transmissionloss*.jar"],
-    "villagewalls": ["villagewalls*.jar"],
-}
+CUSTOM_MOD_JARS = bundled_mod_jar_patterns(ROOT)
 
 
 def bool_string(value: bool) -> str:

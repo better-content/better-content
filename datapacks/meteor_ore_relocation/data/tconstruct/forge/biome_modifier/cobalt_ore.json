@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#kubejs:no_biomes",
+  "features": [
+    "tconstruct:cobalt_ore_small",
+    "tconstruct:cobalt_ore_large"
+  ],
+  "step": "underground_decoration"
+}

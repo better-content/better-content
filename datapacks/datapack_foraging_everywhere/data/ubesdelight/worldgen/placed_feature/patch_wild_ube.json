@@ -16,7 +16,8 @@
       "type": "minecraft:biome"
     },
     {
-      "type": "ubesdelight:biome_is_overworld"
+      "type": "farmersdelight:biome_tag",
+      "tag": "kubejs:undergarden_forage/forest"
     }
   ]
 }

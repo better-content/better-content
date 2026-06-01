@@ -10,6 +10,25 @@ The pack has two primary crafting spines and one pressure spine:
 
 Local logistics stays first. Create trains and physical routes should matter before AE2 dominates a site, and OC2R is the intended intersite information bridge.
 
+## Obelisk Dimension Graph Starts
+
+Meteor/obelisk dimensions are origin proofs for outside reward systems. A valid edge needs native dimensional resources, hazards or structures, a first meaningful proof item, and a system whose entry feels earned there. The dimension is not a self-label and does not take ownership of the main tech or magic spine.
+
+Current graph-start recipe gates are in `kubejs/server_scripts/30_recipe_replace/155_dimension_proof_graph_starts.js`. Existing Nether and Undergarden edges live in the TCon grout and Blood Magic altar passes.
+
+Dimension travel has two authored surfaces only: meteor rift anchors from `obelisks-1.0.0.jar` plus `config/obelisks/`, and Creating Space rocket graph entries under `kubejs/data/*/creatingspace/rocket_accessible_dimension/`. Direct portal/key routes are removed or hidden by `170_space_dimension_access_gates.js`, `40_hide_quarantined_systems.js`, `config/twilightforest-common.toml`, and `config/structurify.json`. Lost Cities, Twilight Forest, Fallout Wastelands, Finley, and Call From The Depths are space-routed adventure dimensions.
+
+| Dimension | Graph Start Opened | Proof Route |
+| --- | --- | --- |
+| Nether | TConstruct metallurgy proof edge | Netherrack grout and Nether heat/material recipes prove the first serious molten-material route. This keeps TCon rooted in the tech spine while letting Nether travel supply its first hard proof. |
+| Undergarden | Blood Magic altar/body proof edge | Shiverstone, depthrock, cloggrum, regalium, and blood globules build the altar body and bind deep survival to the still-beating-heart magic bridge. |
+| Aether | Air travel and expedition mobility | `aether:blue_aercloud`, `aether:skyroot_stick`, `aether:zanite_gemstone`, `aether:aerogel`, `aether:quicksoil_glass`, and `aether:ambrosium_shard` enter Hang Glider wings/frameworks and Immersive Aircraft sail/hull/propeller components. |
+| Everdawn | Heat/desert hydration and brewing route supplies | `blue_skies:brewberry`, `blue_skies:pyrope_gem`, `blue_skies:lunar_planks`, and `blue_skies:polished_umber` open Cold Sweat waterskins and Brewin kegs. Thirst bowls, bottles, buckets, and basic water purification remain ungated by dimensions. |
+
+Everbright, Otherside, and End have no active graph-start mapping until their material identities are redesigned.
+
+Mod-specific natural ore and geode origins that are not part of the Realistic Ores deposit pass are meteor-dimension content. Their Overworld and ordinary Nether biome modifiers are suppressed by `datapacks/meteor_ore_relocation`, then reintroduced in Aether, Blue Skies, Undergarden, Otherside, or Nether-obelisk target tags with Excavated Variants support for the local stone skins. This relocates raw worldgen origins only; workstation and recipe entry still follows the Blood-Magic-parented magic spine unless a future pass deliberately changes that spine. JEI/EMI-facing ore origin tooltips live in `kubejs/client_scripts/15_ore_origin_tooltips.js` and should be updated with any future ore source move.
+
 ## Machine Casing Ladder
 
 The active casing catalogue is `global.BTM_MACHINE_CASING_TIERS` in `kubejs/startup_scripts/00_globals/20_progression_catalogues.js`:
@@ -31,10 +50,12 @@ The active casing catalogue is `global.BTM_MACHINE_CASING_TIERS` in `kubejs/star
 
 ## Early Chokepoints
 
+- No Tree Punching is replaced by a KubeJS first-hour gate: bare hands can break only the `kubejs:hand_breakable` block whitelist and loose surfaces such as sand or gravel, while other blocks need matching tools. Surface plants and all leaf-like blocks, including Dynamic Trees leaves, are knife-only so the Farmer's Delight flint knife is the first authored harvest intermediary. The first authored woodcutting tool is a flint TConstruct hand axe made from that knife and a stick.
 - Netherrack grout keeps seared metallurgy tied to Nether-obelisk preparation.
 - `create:andesite_alloy` is an alloying output, not easy nugget crafting.
 - `create:deployer` gates `create:andesite_casing`.
 - More Red is the terrestrial primitive circuitry layer around early Create: red alloy comes from Create mixing, wire from Create pressing, and the soldering table consumes andesite-tier parts instead of Nether/blaze ingredients.
+- Vanilla-style automation such as pistons, hoppers, observers, rails, carts, and similar modded hand-stacked machinery is assembled on Create surfaces by `145_vanillish_recipe_expert_pass.js`; magic/alchemy workstations such as brewing, enchanting, Ars apparatus, and hellforged processing use Blood Magic alchemy instead of grid or furnace recipes.
 - Finished circuit items belong to PNCR assembly laser/drill. Earlier surfaces prepare boards, traces, wafers, and printed processors; PNCR assembly completes the circuit.
 - Passive Create SU sources are pushed to the andesite machine-casing tier.
 - Clean water, serious extraction, and body-system recovery depend on sustainable tech rather than free early infrastructure.
@@ -49,13 +70,13 @@ Deadlock checks:
 
 ## Deposits And Y Bands
 
-Deposit progression is authored through ADLODS configs, Realistic Ores tags, and KubeJS processing. Active deposit config files exist for aluminum, amethyst, ancient debris, coal, cobalt, copper, diamond, emerald, gas pockets, gold, iridium, iron, lapis, lead, magnetite, nether gold, nether quartz, nickel, osmium, palladium, platinum, redstone, rhodium, ruby, ruthenium, sapphire, silver, thorium, tin, topaz, uranium, and zinc.
+Deposit progression is authored through ADLODS configs, Realistic Ores tags, and KubeJS processing. Active deposit config files exist for aluminum, amethyst, ancient debris, coal, cobalt, copper, diamond, emerald, gas pockets, gold, iridium, iron, lapis, lead, nether gold, nether quartz, nickel, osmium, palladium, platinum, redstone, rhodium, ruby, ruthenium, sapphire, silver, tin, topaz, uranium, and zinc.
 
 The starter catalogue in `global.BTM_STARTER_DEPOSITS` currently names coal measures, ironstone, copper sulfide, tin, zinc, lead-zinc vein, quartz vein, and bauxite laterite. Processing should keep furnace output as a poor fallback, TCon melter/smeltery as first primary interpretation, foundry/byproduct work as better interpretation, and Create/PNCR chemistry as later material identity.
 
 ## Magic Gates
 
-Still-Beating Hearts bridge body systems into Blood Magic. `rpgstats:still_beating_heart` is a milestone item, not bulk fuel. Current KubeJS adds pack-owned heart keys and Blood Orb altar recipes in `40_blood_orbs_from_still_beating_hearts.js`; `82_blood_magic_lifeforce_rework.js` makes Blood Altar infrastructure more expensive.
+Still-Beating Hearts bridge body systems into Blood Magic. `rpgstats:still_beating_heart` is a milestone item, not bulk fuel. Current KubeJS adds pack-owned heart keys and Blood Orb altar recipes in `40_blood_orbs_from_still_beating_hearts.js`; `82_blood_magic_lifeforce_rework.js` makes Blood Altar infrastructure more expensive and routes the altar body through Undergarden shiverstone, cloggrum, regalium, and blood globules instead of Nether mob/block materials.
 
 Blood Magic slates are the side-magic authority:
 
@@ -71,6 +92,6 @@ Iron's Spells is integrated as a cross-magic spellcraft branch, not as an indepe
 
 ## Late And Post-AE2
 
-AE2 is late local intelligence, not early global logistics. `impossible_machine_casing` should mark the point where AE2-scale systems, high Sophisticated Storage control, and late utility can appear. Post-AE2 branches currently include Protection Pixel, Tome of Blood, TiCEX data files, hooks/drones/backpack utility gates, and Creating Space dimension access gates where the installed mods exist.
+AE2 is late local intelligence, not early global logistics. `impossible_machine_casing` should mark the point where AE2-scale systems, high Sophisticated Storage control, and late utility can appear. Post-AE2 branches currently include Protection Pixel, Tome of Blood, hooks/drones/backpack utility gates, and Creating Space dimension access gates where the installed mods exist.
 
 Theurgy, Psi, and Hex Casting are not active manifest entries in the current repo. Treat references to them in old reports or generator comments as candidate/future design, not current pack state.

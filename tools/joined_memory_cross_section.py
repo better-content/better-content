@@ -21,6 +21,8 @@ from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 
+from pack_mod_source import bundled_mod_regexes
+
 
 ROOT = Path(os.environ.get("ROOT", "/home/gerald/obelisks"))
 SERVER_DIR = Path(os.environ.get("SERVER_DIR", str(ROOT / "server-instance")))
@@ -40,6 +42,7 @@ PHASE_FILTER = os.environ.get("PHASE_FILTER", "")
 BASELINE_REPEATS = int(os.environ.get("BASELINE_REPEATS", "2"))
 DISABLED_SUFFIX = ".joined-cross-disabled"
 PHASES_FILE = os.environ.get("PHASES_FILE", "")
+CUSTOM_JAR_PATTERNS = bundled_mod_regexes(ROOT)
 
 
 @dataclass
@@ -124,7 +127,6 @@ DEFAULT_PHASES: list[Phase] = [
         "Create addon surface, core Create retained",
         [
             r"^compressedcreativity-.*\.jar$",
-            r"^create-new-age-.*\.jar$",
             r"^create-stuff-additions.*\.jar$",
             r"^create_bb-.*\.jar$",
             r"^create_central_kitchen-.*\.jar$",
@@ -142,10 +144,7 @@ DEFAULT_PHASES: list[Phase] = [
             r"^createdieselgenerators-.*\.jar$",
             r"^createliquidfuel-.*\.jar$",
             r"^createmoredrillheads-.*\.jar$",
-            r"^fission_reactor-.*\.jar$",
-            r"^gases_and_plasmas-.*\.jar$",
             r"^heatsync-.*\.jar$",
-            r"^liquid_coolant-.*\.jar$",
             r"^Steam_Rails-.*\.jar$",
         ],
     ),
@@ -233,26 +232,8 @@ DEFAULT_PHASES: list[Phase] = [
     ),
     Phase(
         "no_custom_mods",
-        "all custom pack-critical jars",
-        [
-            r"^btmfixes-.*\.jar$",
-            r"^classselector-.*\.jar$",
-            r"^computerbridge-.*\.jar$",
-            r"^create-transmission-loss-.*\.jar$",
-            r"^cursedbiomes-.*\.jar$",
-            r"^dtmalum-.*\.jar$",
-            r"^fission_reactor-.*\.jar$",
-            r"^gases_and_plasmas-.*\.jar$",
-            r"^heatsync-.*\.jar$",
-            r"^liquid_coolant-.*\.jar$",
-            r"^obelisks-.*\.jar$",
-            r"^pillagercampaigns-.*\.jar$",
-            r"^procedural_bouquets-.*\.jar$",
-            r"^realisticores-.*\.jar$",
-            r"^rpgstats-.*\.jar$",
-            r"^settlementroads-.*\.jar$",
-            r"^villagewalls-.*\.jar$",
-        ],
+        "active bundled custom jars from the pack mods directory",
+        CUSTOM_JAR_PATTERNS,
     ),
     Phase("no_emi_only", "EMI client/server indexing without JEI removal", [r"^emi-.*\.jar$", r"^emitrades-.*\.jar$"]),
     Phase("no_jei_only", "JEI stack without EMI removal", [r"^jei-.*\.jar$", r"^tconjei-.*\.jar$"]),
@@ -287,18 +268,6 @@ DEFAULT_PHASES: list[Phase] = [
             r"^FastFurnace-.*\.jar$",
             r"^FastWorkbench-.*\.jar$",
             r"^Placebo-.*\.jar$",
-        ],
-    ),
-    Phase(
-        "no_create_new_age_stack",
-        "Create New Age and pack custom mods requiring it",
-        [
-            r"^create-new-age-.*\.jar$",
-            r"^create_cold_sweat-.*\.jar$",
-            r"^fission_reactor-.*\.jar$",
-            r"^gases_and_plasmas-.*\.jar$",
-            r"^heatsync-.*\.jar$",
-            r"^liquid_coolant-.*\.jar$",
         ],
     ),
     Phase("no_coldsweat_only", "Cold Sweat bridge without FIAHI removal", [r"^ColdSweat-.*\.jar$", r"^create_cold_sweat-.*\.jar$"]),

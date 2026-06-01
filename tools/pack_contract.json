@@ -1,0 +1,954 @@
+{
+  "schema": "btm.pack_contract.v1",
+  "description": "Versioned validation contract for Bound to Matter's expert-pack content layer.",
+  "pack": {
+    "name": "Bound to Matter",
+    "minecraft": "1.20.1",
+    "forge": "47.4.13",
+    "localServerPort": 25566
+  },
+  "sourceSurface": {
+    "authoritativeRoots": [
+      "kubejs",
+      "config",
+      "defaultconfigs",
+      "datapacks",
+      "globalresources",
+      "resourcepacks",
+      "shaderpacks",
+      "mods",
+      "docs",
+      "tools"
+    ],
+    "generatedRoots": [
+      "server-instance",
+      "server-template",
+      "generated",
+      "worlds",
+      "saves",
+      "logs",
+      "crash-reports"
+    ],
+    "minimumTotalFiles": 1900,
+    "rootFileMinimums": {
+      "kubejs": 500,
+      "config": 1400,
+      "defaultconfigs": 5,
+      "datapacks": 30,
+      "mods": 220,
+      "docs": 5,
+      "tools": 50
+    },
+    "kubejsMinimums": {
+      "js": 80,
+      "json": 300
+    },
+    "livingDocs": [
+      "README.md",
+      "content_systems.md",
+      "performance_and_mods.md",
+      "progression.md",
+      "runtime_validation.md"
+    ]
+  },
+  "packwiz": {
+    "indexFile": "index.toml",
+    "packFile": "pack.toml",
+    "excludedIndexPrefixes": [
+      "tools/",
+      "generated/",
+      "server-instance/",
+      "server-template/"
+    ],
+    "hashDriftSeverity": "SHOULD"
+  },
+  "mods": {
+    "minimumManifestCount": 200,
+    "minimumBundledJarCount": 15,
+    "requiredManifests": [
+      "mods/applied-energistics-2.pw.toml",
+      "mods/ars-nouveau.pw.toml",
+      "mods/blood-magic.pw.toml",
+      "mods/botania.pw.toml",
+      "mods/chemlib.pw.toml",
+      "mods/cold-sweat.pw.toml",
+      "mods/concurrent-chunk-management-engine-for-forge-the.pw.toml",
+      "mods/create.pw.toml",
+      "mods/create-creating-space.pw.toml",
+      "mods/create-deco.pw.toml",
+      "mods/diet.pw.toml",
+      "mods/distant-horizons.pw.toml",
+      "mods/emi.pw.toml",
+      "mods/ftb-quests-forge.pw.toml",
+      "mods/goety.pw.toml",
+      "mods/hexerei.pw.toml",
+      "mods/irons-spells-n-spellbooks.pw.toml",
+      "mods/jei.pw.toml",
+      "mods/large-ore-deposits.pw.toml",
+      "mods/malum.pw.toml",
+      "mods/oc2r.pw.toml",
+      "mods/occultism.pw.toml",
+      "mods/pneumaticcraft-repressurized.pw.toml",
+      "mods/power-grid.pw.toml",
+      "mods/the-flesh-that-hates.pw.toml",
+      "mods/the-lost-cities.pw.toml",
+      "mods/thirst-was-taken.pw.toml",
+      "mods/tinkers-construct.pw.toml",
+      "mods/wares.pw.toml"
+    ],
+    "requiredBundledJars": [
+      "mods/btmfixes-0.1.0.jar",
+      "mods/classselector-1.0.0.jar",
+      "mods/computerbridge-0.1.0.jar",
+      "mods/create-transmission-loss-0.1.0.jar",
+      "mods/dtmalum-1.0.0.jar",
+      "mods/dthexerei-1.0.0.jar",
+      "mods/heatsync-0.1.0.jar",
+      "mods/latent_chemlib-0.1.0.jar",
+      "mods/obelisks-1.0.0.jar",
+      "mods/oc2rwireless-1.0.0.jar",
+      "mods/pillagercampaigns-0.2.0.jar",
+      "mods/procedural_bouquets-0.1.0.jar",
+      "mods/realisticores-0.1.0.jar",
+      "mods/rpgstats-1.0.0.jar",
+      "mods/settlementroads-0.1.0.jar",
+      "mods/villagewalls-1.0.0.jar"
+    ],
+    "forbiddenFiles": [
+      "mods/alchemistry.pw.toml",
+      "mods/alchemylib.pw.toml",
+      "mods/create-new-age.pw.toml",
+      "mods/liquid_coolant-0.1.0.jar",
+      "kubejs/server_scripts/40_recipe_add/60_acid_vat_deposit_slurries.js"
+    ]
+  },
+  "progression": {
+    "tierOrder": [
+      "survival",
+      "tcon_seared",
+      "tcon_scorched",
+      "create_andesite",
+      "create_brass",
+      "airtight",
+      "power_grid",
+      "oc2r",
+      "space",
+      "raw_impossible",
+      "ae2",
+      "hybrid_matter"
+    ],
+    "coinTiers": [
+      "createdeco:copper_coin",
+      "createdeco:zinc_coin",
+      "createdeco:iron_coin",
+      "createdeco:industrial_iron_coin",
+      "createdeco:brass_coin",
+      "createdeco:gold_coin",
+      "createdeco:netherite_coin"
+    ],
+    "machineCasings": [
+      "kubejs:seared_machine_casing",
+      "kubejs:scorched_machine_casing",
+      "kubejs:andesite_machine_casing",
+      "kubejs:brass_machine_casing",
+      "kubejs:airtight_machine_casing",
+      "kubejs:electrical_machine_casing",
+      "kubejs:circuited_machine_casing",
+      "kubejs:space_machine_casing",
+      "kubejs:raw_impossible_casing",
+      "kubejs:impossible_machine_casing"
+    ],
+    "bloodMagicGates": [
+      "bloodmagic:blankslate",
+      "bloodmagic:reinforcedslate",
+      "bloodmagic:infusedslate",
+      "bloodmagic:demonslate",
+      "bloodmagic:etherealslate"
+    ]
+  },
+  "systems": [
+    {
+      "id": "bounded_matter_geology_chemistry",
+      "tier": "L2",
+      "requiredFiles": [
+        "kubejs/server_scripts/10_tags/60_realistic_ores_deposit_tags.js",
+        "kubejs/server_scripts/40_recipe_add/45_deposit_furnace_fallbacks.js",
+        "kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js",
+        "kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js",
+        "kubejs/server_scripts/40_recipe_add/56_alchemistry_dissolver_create_port.js",
+        "kubejs/server_scripts/40_recipe_add/58_create_pncr_molecular_synthesis.js",
+        "kubejs/server_scripts/40_recipe_add/59_formulaic_synthesis_magic_routes.js",
+        "kubejs/server_scripts/40_recipe_add/65_chemlib_plate_manufacturing_routes.js",
+        "kubejs/config/alchemistry_dissolver_port.json",
+        "kubejs/data/latent_chemlib/reaction_rules/default.json",
+        "kubejs/data/latent_chemlib/material_coefficients/default.json",
+        "kubejs/data/latent_chemlib/nuclear_decay/default.json",
+        "kubejs/data/latent_chemlib/scheduler_profiles/default.json",
+        "datapacks/datapack_foraging_everywhere/pack.mcmeta",
+        "datapacks/hyle_deep/pack.mcmeta",
+        "datapacks/realistic_ores_lava_depths/pack.mcmeta"
+      ],
+      "contains": [
+        {
+          "file": "kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js",
+          "all": [
+            "global.BTM_RO_DEPOSITS",
+            "global.BTM_RO_SOLVENTS",
+            "global.BTM_RO_BALLS",
+            "BTM_RO_RETENTION"
+          ]
+        },
+        {
+          "file": "kubejs/server_scripts/40_recipe_add/56_alchemistry_dissolver_create_port.js",
+          "all": [
+            "JsonIO.read",
+            "create:mixing",
+            "btmAdpRetention"
+          ]
+        }
+      ],
+      "jsonMinimums": [
+        {
+          "file": "kubejs/config/alchemistry_dissolver_port.json",
+          "path": [
+            "recipes"
+          ],
+          "minLength": 1000
+        }
+      ]
+    },
+    {
+      "id": "machine_casing_spine",
+      "tier": "L2",
+      "requiredFiles": [
+        "kubejs/startup_scripts/00_globals/20_progression_catalogues.js",
+        "kubejs/startup_scripts/10_items_blocks/30_progression_items.js",
+        "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js",
+        "kubejs/server_scripts/30_recipe_replace/120_graph_audit_recipe_gates.js",
+        "kubejs/server_scripts/30_recipe_replace/121_create_stack_integration_gates.js",
+        "kubejs/server_scripts/30_recipe_replace/122_pneumaticcraft_create_pressing_gates.js",
+        "kubejs/server_scripts/30_recipe_replace/130_manufactured_plate_recipe_pass.js",
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js",
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js",
+        "kubejs/server_scripts/30_recipe_replace/140_latent_chemlib_power_gates.js",
+        "kubejs/server_scripts/30_recipe_replace/143_circuit_pncr_assembly_authority.js",
+        "kubejs/server_scripts/30_recipe_replace/150_integrated_deferred_mod_gates.js"
+      ],
+      "contains": [
+        {
+          "file": "kubejs/server_scripts/30_recipe_replace/143_circuit_pncr_assembly_authority.js",
+          "all": [
+            "pneumaticcraft:assembly_",
+            "'drill'",
+            "'laser'",
+            "ae2:engineering_processor"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magic_body_survival_spine",
+      "tier": "L2",
+      "requiredFiles": [
+        "kubejs/server_scripts/40_recipe_add/40_blood_orbs_from_still_beating_hearts.js",
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js",
+        "kubejs/server_scripts/30_recipe_replace/82_blood_magic_lifeforce_rework.js",
+        "kubejs/server_scripts/30_recipe_replace/126_cross_magic_irons_spellcraft.js",
+        "kubejs/server_scripts/40_recipe_add/70_food_potion_reagents.js",
+        "kubejs/server_scripts/90_dev_debug/20_food_effect_audit_dumps.js",
+        "tools/analyze_food_effect_graph.mjs",
+        "config/thirst/common.toml",
+        "config/coldsweat/main.toml",
+        "config/classselector/kits.json"
+      ],
+      "contains": [
+        {
+          "file": "kubejs/server_scripts/40_recipe_add/40_blood_orbs_from_still_beating_hearts.js",
+          "all": [
+            "kubejs:weak_blood_heart",
+            "bloodmagic:weakbloodorb"
+          ]
+        },
+        {
+          "file": "kubejs/server_scripts/30_recipe_replace/126_cross_magic_irons_spellcraft.js",
+          "all": [
+            "bloodmagic:",
+            "ars_nouveau:",
+            "botania:",
+            "malum:",
+            "goety:"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "coin_villager_wares_economy",
+      "tier": "L2",
+      "requiredFiles": [
+        "kubejs/server_scripts/20_recipe_remove/50_disable_createdeco_coin_recipes.js",
+        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js",
+        "kubejs/server_scripts/50_loot/20_world_chest_coin_tiers.js",
+        "kubejs/server_scripts/50_loot/30_global_loot_progression_scrub.js",
+        "kubejs/server_scripts/50_loot/40_emerald_loot_coin_replacement.js"
+      ],
+      "requiredDirs": [
+        "kubejs/data/wares/loot_tables/agreement",
+        "kubejs/data/wares/loot_tables/package"
+      ],
+      "contains": [
+        {
+          "file": "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js",
+          "all": [
+            "createdeco:copper_coin",
+            "createdeco:netherite_coin",
+            "btmAddCoinExchangeTrades",
+            "morejs$replaceEmeralds"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adventure_dimensions_combat_pressure",
+      "tier": "L4",
+      "requiredFiles": [
+        "kubejs/server_scripts/30_recipe_replace/170_space_dimension_access_gates.js",
+        "kubejs/client_scripts/40_hide_quarantined_systems.js",
+        "kubejs/server_scripts/70_spawn/10_spawn_randomizer.js",
+        "kubejs/data/btm/advancements/creating_space_access.json",
+        "kubejs/data/creatingspace/creatingspace/rocket_accessible_dimension/earth_orbit.json",
+        "kubejs/data/lostcities/creatingspace/rocket_accessible_dimension/lostcity.json",
+        "kubejs/data/twilightforest/creatingspace/rocket_accessible_dimension/twilight_forest.json",
+        "kubejs/data/fallout_wastelands_/creatingspace/rocket_accessible_dimension/wastelands.json",
+        "kubejs/data/the_finley_dimension_remastered/creatingspace/rocket_accessible_dimension/finley_dimension.json",
+        "kubejs/data/callfromthedepth_/creatingspace/rocket_accessible_dimension/depth.json",
+        "config/twilightforest-common.toml",
+        "config/structurify.json",
+        "config/obelisks/obelisks/aether.json",
+        "config/TFTH.toml",
+        "config/TFTH-Data.toml",
+        "config/pillagercampaigns-common.toml",
+        "config/villagewalls-common.toml"
+      ],
+      "contains": [
+        {
+          "file": "kubejs/server_scripts/30_recipe_replace/170_space_dimension_access_gates.js",
+          "all": [
+            "meteor rifts or Creating Space rocket routes",
+            "fallout_wastelands_:portal_frame",
+            "callfromthedepth_:depth"
+          ]
+        },
+        {
+          "file": "kubejs/data/creatingspace/creatingspace/rocket_accessible_dimension/earth_orbit.json",
+          "all": [
+            "lostcities:lostcity",
+            "twilightforest:twilight_forest",
+            "fallout_wastelands_:wastelands",
+            "the_finley_dimension_remastered:finley_dimension",
+            "callfromthedepth_:depth"
+          ]
+        },
+        {
+          "file": "config/twilightforest-common.toml",
+          "all": [
+            "disablePortalCreation = true",
+            "shouldReturnPortalBeUsable = false",
+            "portalUnlockedByAdvancement = \"\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "runtime_concurrency_performance",
+      "tier": "L4",
+      "requiredFiles": [
+        "tools/portable_minecraft_harness.py",
+        "tools/lc_tfth_c2me_dh_stability.py",
+        "tools/server_content_smoke.sh",
+        "tools/bootstrap_server.sh",
+        "tools/bootstrap_client_runtime.sh",
+        "tools/prune_runtime_mods.mjs",
+        "tools/log_hard_failure_scan.mjs",
+        "config/c2me.toml",
+        "config/DistantHorizons.toml"
+      ],
+      "contains": [
+        {
+          "file": "tools/lc_tfth_c2me_dh_stability.py",
+          "all": [
+            "modernfix_watchdog",
+            "C2ME",
+            "DistantHorizons",
+            "The Flesh That Hates"
+          ]
+        },
+        {
+          "file": "tools/log_hard_failure_scan.mjs",
+          "all": [
+            "ModernFix watchdog",
+            "KubeJS recipe parse",
+            "Crash report"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "client_visibility_guidance",
+      "tier": "L3",
+      "requiredFiles": [
+        "kubejs/client_scripts/40_hide_quarantined_systems.js",
+        "tools/generate_expert_quest_book.mjs",
+        "tools/apply_quest_dependencies.mjs"
+      ],
+      "contains": [
+        {
+          "file": "kubejs/client_scripts/40_hide_quarantined_systems.js",
+          "all": [
+            "alchemistry:dissolver",
+            "occultism:miner_foliot_unspecialized",
+            "sophisticatedbackpacks:stack_upgrade_omega_tier"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "worldgen_statistical_sampling",
+      "tier": "L5",
+      "requiredFiles": [
+        "tools/content_memory_inventory.py",
+        "tools/engine_world_log_metrics.mjs",
+        "tools/c2me_feature_matrix.py",
+        "datapacks/realistic_ores_lava_depths/pack.mcmeta",
+        "datapacks/hyle_deep/pack.mcmeta"
+      ],
+      "contains": [
+        {
+          "file": "docs/runtime_validation.md",
+          "all": [
+            "settlement-roads",
+            "village-walls",
+            "Hyle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "playtest_telemetry_friction",
+      "tier": "L6",
+      "requiredFiles": [
+        "tools/engine_world_log_metrics.mjs",
+        "tools/analyze_food_effect_graph.mjs",
+        "docs/runtime_validation.md",
+        "docs/progression.md"
+      ],
+      "contains": [
+        {
+          "file": "tools/engine_world_log_metrics.mjs",
+          "all": [
+            "main menu to in-game",
+            "spawn",
+            "tick"
+          ]
+        }
+      ]
+    }
+  ],
+  "validationTiers": [
+    {
+      "id": "L0",
+      "name": "inventory/source integrity",
+      "requiredTools": [
+        "tools/contract_completeness_report.mjs",
+        "tools/validate_pack_contract.mjs",
+        "tools/sync_to_server.sh",
+        "tools/sync_to_client.sh"
+      ]
+    },
+    {
+      "id": "L1",
+      "name": "static syntax/schema/reference checks",
+      "requiredTools": [
+        "tools/validate_autonomous_contracts.mjs",
+        "tools/validate_kubejs_assets.mjs",
+        "tools/validate_chemistry_identity.mjs",
+        "tools/validate_synthesis_pipeline.mjs"
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "extracted progression/economy graph invariants",
+      "requiredTools": [
+        "tools/pack_test_suite.mjs",
+        "tools/expert_graph_audit.mjs",
+        "tools/audit_indirect_casing_economy.mjs"
+      ]
+    },
+    {
+      "id": "L3",
+      "name": "fresh runtime dump invariants",
+      "requiredTools": [
+        "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
+        "kubejs/server_scripts/90_dev_debug/20_food_effect_audit_dumps.js",
+        "kubejs/server_scripts/90_dev_debug/30_runtime_graph_dumps.js"
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "client/server scenario harnesses",
+      "requiredTools": [
+        "tools/server_content_smoke.sh",
+        "tools/client_join_probe_direct.sh",
+        "tools/lc_tfth_c2me_dh_stability.py"
+      ]
+    },
+    {
+      "id": "L5",
+      "name": "statistical seed/worldgen/performance sampling",
+      "requiredTools": [
+        "tools/c2me_feature_matrix.py",
+        "tools/content_memory_inventory.py",
+        "tools/joined_memory_cross_section.py"
+      ]
+    },
+    {
+      "id": "L6",
+      "name": "human playtest telemetry and friction metrics",
+      "requiredTools": [
+        "tools/engine_world_log_metrics.mjs",
+        "tools/analyze_food_effect_graph.mjs"
+      ]
+    }
+  ],
+  "completeness": {
+    "schema": 1,
+    "allowedStatuses": [
+      "hard_checked",
+      "runtime_checked",
+      "marker_checked",
+      "scenario_required",
+      "statistical_required",
+      "telemetry_required"
+    ],
+    "strongStatuses": [
+      "hard_checked",
+      "runtime_checked"
+    ],
+    "dimensions": [
+      {
+        "id": "source_integrity",
+        "status": "hard_checked",
+        "tierRefs": [
+          "L0"
+        ],
+        "claim": "Authoritative source roots, source scale, packwiz index membership, indexed hashes, retired files, required manifests, bundled jars, and living-doc boundaries are checked as hard invariants.",
+        "evidence": [
+          "tools/pack_contract.json",
+          "tools/validate_pack_contract.mjs",
+          "index.toml",
+          "pack.toml",
+          ".packwizignore"
+        ],
+        "validators": [
+          "tools/validate_pack_contract.mjs"
+        ],
+        "openRequirements": []
+      },
+      {
+        "id": "static_registry_assets",
+        "status": "hard_checked",
+        "tierRefs": [
+          "L1"
+        ],
+        "claim": "KubeJS/tool syntax, JSON parse health, custom item/block assets, casing assets, chemistry identity, and synthesis pipeline structure are checked by static validators.",
+        "evidence": [
+          "tools/pack_test_suite.mjs",
+          "tools/validate_kubejs_assets.mjs",
+          "tools/validate_chemistry_identity.mjs",
+          "tools/validate_synthesis_pipeline.mjs"
+        ],
+        "validators": [
+          "tools/pack_test_suite.mjs",
+          "tools/validate_kubejs_assets.mjs",
+          "tools/validate_chemistry_identity.mjs",
+          "tools/validate_synthesis_pipeline.mjs"
+        ],
+        "openRequirements": []
+      },
+      {
+        "id": "progression_recipe_graph",
+        "status": "runtime_checked",
+        "tierRefs": [
+          "L2",
+          "L3"
+        ],
+        "systemRefs": [
+          "machine_casing_spine"
+        ],
+        "claim": "Tier order, machine-casing ladder, high-impact gates, removed bypasses, generated recipe IDs, and recipe parse health are checked from source plus fresh runtime dumps when pack_test_suite runs against a current instance.",
+        "evidence": [
+          "kubejs/config/btm_expert_graph_catalog.json",
+          "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
+          "tools/pack_test_suite.mjs",
+          "tools/expert_graph_audit.mjs",
+          "tools/audit_indirect_casing_economy.mjs"
+        ],
+        "validators": [
+          "tools/pack_test_suite.mjs",
+          "tools/expert_graph_audit.mjs",
+          "tools/audit_indirect_casing_economy.mjs"
+        ],
+        "openRequirements": []
+      },
+      {
+        "id": "bounded_matter_geology_chemistry",
+        "status": "hard_checked",
+        "tierRefs": [
+          "L1",
+          "L2"
+        ],
+        "systemRefs": [
+          "bounded_matter_geology_chemistry"
+        ],
+        "claim": "Deposit processing scripts, acid/ball matrix identity, Alchemistry-to-Create port shape, Chemlib/Latent Chemlib data, and synthesis routes are checked as hard source invariants.",
+        "evidence": [
+          "tools/validate_chemistry_identity.mjs",
+          "tools/validate_synthesis_pipeline.mjs",
+          "kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js",
+          "kubejs/config/alchemistry_dissolver_port.json"
+        ],
+        "validators": [
+          "tools/validate_chemistry_identity.mjs",
+          "tools/validate_synthesis_pipeline.mjs",
+          "tools/pack_test_suite.mjs"
+        ],
+        "openRequirements": []
+      },
+      {
+        "id": "magic_body_survival",
+        "status": "hard_checked",
+        "tierRefs": [
+          "L2",
+          "L3"
+        ],
+        "systemRefs": [
+          "magic_body_survival_spine"
+        ],
+        "claim": "Blood-orb heart bridge, Blood Magic slate parenting, cross-magic spellcraft files, food/potion reagent scripts, and body-system configs are present and marker-checked.",
+        "evidence": [
+          "tools/validate_autonomous_contracts.mjs",
+          "kubejs/server_scripts/40_recipe_add/40_blood_orbs_from_still_beating_hearts.js",
+          "kubejs/server_scripts/30_recipe_replace/126_cross_magic_irons_spellcraft.js",
+          "kubejs/server_scripts/90_dev_debug/20_food_effect_audit_dumps.js",
+          "tools/analyze_food_effect_graph.mjs"
+        ],
+        "validators": [
+          "tools/validate_autonomous_contracts.mjs",
+          "tools/validate_pack_contract.mjs",
+          "tools/audit_cross_magic_spellcraft.mjs",
+          "tools/analyze_food_effect_graph.mjs"
+        ],
+        "openRequirements": []
+      },
+      {
+        "id": "coin_villager_wares_economy",
+        "status": "hard_checked",
+        "tierRefs": [
+          "L2",
+          "L3"
+        ],
+        "systemRefs": [
+          "coin_villager_wares_economy"
+        ],
+        "claim": "Coin tiers, Wares loot tables, villager-trade rewrites, emerald removal, coin loot injection, and broad profession coverage are checked.",
+        "evidence": [
+          "tools/validate_autonomous_contracts.mjs",
+          "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js",
+          "kubejs/server_scripts/50_loot/40_emerald_loot_coin_replacement.js",
+          "kubejs/data/wares/loot_tables/agreement",
+          "kubejs/data/wares/loot_tables/package",
+          "tools/pack_test_suite.mjs"
+        ],
+        "validators": [
+          "tools/validate_autonomous_contracts.mjs",
+          "tools/pack_test_suite.mjs",
+          "tools/validate_pack_contract.mjs"
+        ],
+        "openRequirements": []
+      },
+      {
+        "id": "adventure_dimensions_combat",
+        "status": "scenario_required",
+        "tierRefs": [
+          "L4"
+        ],
+        "systemRefs": [
+          "adventure_dimensions_combat_pressure"
+        ],
+        "claim": "Dimension travel is source-checked to meteor rift anchors and Creating Space rocket routes; direct portal/key routes, TFTH config, pillager campaigns, spawn randomizer, and village-wall pressure require scenario execution for full proof.",
+        "evidence": [
+          "kubejs/server_scripts/30_recipe_replace/170_space_dimension_access_gates.js",
+          "kubejs/client_scripts/40_hide_quarantined_systems.js",
+          "kubejs/data/btm/advancements/creating_space_access.json",
+          "kubejs/data/creatingspace/creatingspace/rocket_accessible_dimension/earth_orbit.json",
+          "kubejs/data/lostcities/creatingspace/rocket_accessible_dimension/lostcity.json",
+          "kubejs/data/twilightforest/creatingspace/rocket_accessible_dimension/twilight_forest.json",
+          "config/twilightforest-common.toml",
+          "config/structurify.json",
+          "config/obelisks/obelisks/aether.json",
+          "tools/lc_tfth_c2me_dh_stability.py"
+        ],
+        "validators": [
+          "tools/lc_tfth_c2me_dh_stability.py",
+          "tools/client_join_probe_direct.sh",
+          "tools/pack_test_suite.mjs"
+        ],
+        "openRequirements": [
+          "Run and retain fresh evidence for actual Creating Space travel UI and travel to all space-routed adventure dimensions.",
+          "Add long-run pillager campaign, settlement-roads, and village-walls generation scenarios."
+        ]
+      },
+      {
+        "id": "runtime_concurrency_performance",
+        "status": "runtime_checked",
+        "tierRefs": [
+          "L3",
+          "L4"
+        ],
+        "systemRefs": [
+          "runtime_concurrency_performance"
+        ],
+        "claim": "Fresh server smoke validates boot, hard log scan, recipe parse health, tick/save budgets, dimension save fanout, DH backlog, and recent crash state.",
+        "evidence": [
+          "tools/server_content_smoke.sh",
+          "tools/pack_test_suite.mjs",
+          "tools/log_hard_failure_scan.mjs",
+          "tools/portable_minecraft_harness.py",
+          "tools/lc_tfth_c2me_dh_stability.py"
+        ],
+        "validators": [
+          "tools/server_content_smoke.sh",
+          "tools/pack_test_suite.mjs",
+          "tools/lc_tfth_c2me_dh_stability.py"
+        ],
+        "openRequirements": []
+      },
+      {
+        "id": "client_visibility_quests",
+        "status": "hard_checked",
+        "tierRefs": [
+          "L3",
+          "L4"
+        ],
+        "systemRefs": [
+          "client_visibility_guidance"
+        ],
+        "claim": "Client hiding, quest generator, dependency application, and recipe-hook expectations are present; the current live FTB Quests config is intentionally empty.",
+        "evidence": [
+          "tools/validate_autonomous_contracts.mjs",
+          "kubejs/client_scripts/40_hide_quarantined_systems.js",
+          "tools/generate_expert_quest_book.mjs",
+          "tools/apply_quest_dependencies.mjs"
+        ],
+        "validators": [
+          "tools/validate_autonomous_contracts.mjs",
+          "tools/pack_test_suite.mjs",
+          "tools/validate_pack_contract.mjs"
+        ],
+        "openRequirements": []
+      },
+      {
+        "id": "worldgen_statistics",
+        "status": "marker_checked",
+        "tierRefs": [
+          "L5"
+        ],
+        "systemRefs": [
+          "worldgen_statistical_sampling"
+        ],
+        "claim": "Worldgen datapacks, C2ME matrix tooling, memory inventory, runtime metrics, and known follow-ups exist; density and accessibility proof requires seed sampling.",
+        "evidence": [
+          "tools/validate_autonomous_contracts.mjs",
+          "tools/c2me_feature_matrix.py",
+          "tools/content_memory_inventory.py",
+          "tools/engine_world_log_metrics.mjs",
+          "datapacks/realistic_ores_lava_depths/pack.mcmeta",
+          "datapacks/hyle_deep/pack.mcmeta"
+        ],
+        "validators": [
+          "tools/validate_autonomous_contracts.mjs",
+          "tools/c2me_feature_matrix.py",
+          "tools/content_memory_inventory.py",
+          "tools/engine_world_log_metrics.mjs"
+        ],
+        "openRequirements": [
+          "Add deterministic seed sampling for deposits, Y-bands, villages, roads, walls, structures, forageables, and spawn viability.",
+          "Define acceptable distance/depth distributions and fail outside confidence bounds."
+        ]
+      },
+      {
+        "id": "custom_mods",
+        "status": "hard_checked",
+        "tierRefs": [
+          "L0",
+          "L1",
+          "L4"
+        ],
+        "claim": "All pack-critical custom mod sources, build files, minimum code/test surface, bundled jars, and packwiz jar entries are checked.",
+        "evidence": [
+          "tools/validate_autonomous_contracts.mjs",
+          "tools/validate_pack_contract.mjs",
+          "/home/gerald/mcmods",
+          "mods/btmfixes-0.1.0.jar",
+          "mods/pillagercampaigns-0.2.0.jar"
+        ],
+        "validators": [
+          "tools/validate_autonomous_contracts.mjs",
+          "tools/validate_pack_contract.mjs"
+        ],
+        "openRequirements": []
+      },
+      {
+        "id": "playtest_telemetry_friction",
+        "status": "telemetry_required",
+        "tierRefs": [
+          "L6"
+        ],
+        "systemRefs": [
+          "playtest_telemetry_friction"
+        ],
+        "claim": "The pack has tooling that can parse runtime timing and food-effect pressure, but human-route friction is not mathematically proven by static tests.",
+        "evidence": [
+          "tools/engine_world_log_metrics.mjs",
+          "tools/analyze_food_effect_graph.mjs",
+          "docs/progression.md",
+          "docs/runtime_validation.md"
+        ],
+        "validators": [
+          "tools/engine_world_log_metrics.mjs",
+          "tools/analyze_food_effect_graph.mjs"
+        ],
+        "openRequirements": [
+          "Capture route telemetry for time-to-tier, deaths, lookup stalls, travel distance, recovery loops, and player confusion.",
+          "Define friction budgets per progression segment and compare playtest traces against them."
+        ]
+      }
+    ]
+  },
+  "customMods": {
+    "sourceRoot": "/home/gerald/mcmods",
+    "entries": [
+      {
+        "id": "btmfixes",
+        "repo": "bound-to-matter-fixes",
+        "jar": "mods/btmfixes-0.1.0.jar",
+        "minCodeFiles": 8,
+        "minTestFiles": 1
+      },
+      {
+        "id": "classselector",
+        "repo": "class-selector",
+        "jar": "mods/classselector-1.0.0.jar",
+        "minCodeFiles": 20,
+        "minTestFiles": 5
+      },
+      {
+        "id": "transmissionloss",
+        "repo": "create-transmission-loss",
+        "jar": "mods/create-transmission-loss-0.1.0.jar",
+        "minCodeFiles": 12,
+        "minTestFiles": 4
+      },
+      {
+        "id": "dtmalum",
+        "repo": "dynamic-trees-malum",
+        "jar": "mods/dtmalum-1.0.0.jar",
+        "minCodeFiles": 3,
+        "minTestFiles": 1
+      },
+      {
+        "id": "dthexerei",
+        "repo": "dynamic-trees-hexerei",
+        "jar": "mods/dthexerei-1.0.0.jar",
+        "minCodeFiles": 3,
+        "minTestFiles": 1
+      },
+      {
+        "id": "heatsync",
+        "repo": "heat-sync",
+        "jar": "mods/heatsync-0.1.0.jar",
+        "minCodeFiles": 35,
+        "minTestFiles": 7
+      },
+      {
+        "id": "latent_chemlib",
+        "repo": "latent-chemlib",
+        "jar": "mods/latent_chemlib-0.1.0.jar",
+        "minCodeFiles": 30,
+        "minTestFiles": 10
+      },
+      {
+        "id": "obelisks",
+        "repo": "meteor-obelisks",
+        "jar": "mods/obelisks-1.0.0.jar",
+        "minCodeFiles": 50,
+        "minTestFiles": 5
+      },
+      {
+        "id": "computerbridge",
+        "repo": "oc2r-create-bridge",
+        "jar": "mods/computerbridge-0.1.0.jar",
+        "minCodeFiles": 25,
+        "minTestFiles": 4
+      },
+      {
+        "id": "oc2rwireless",
+        "repo": "oc2rwireless",
+        "jar": "mods/oc2rwireless-1.0.0.jar",
+        "minCodeFiles": 10,
+        "minTestFiles": 2
+      },
+      {
+        "id": "pillagercampaigns",
+        "repo": "pillager-campaigns",
+        "jar": "mods/pillagercampaigns-0.2.0.jar",
+        "minCodeFiles": 35,
+        "minTestFiles": 15
+      },
+      {
+        "id": "procedural_bouquets",
+        "repo": "procedural-bouquets",
+        "jar": "mods/procedural_bouquets-0.1.0.jar",
+        "minCodeFiles": 20,
+        "minTestFiles": 1
+      },
+      {
+        "id": "realisticores",
+        "repo": "realistic-ores",
+        "jar": "mods/realisticores-0.1.0.jar",
+        "minCodeFiles": 10,
+        "minTestFiles": 2
+      },
+      {
+        "id": "rpgstats",
+        "repo": "rpg-stats",
+        "jar": "mods/rpgstats-1.0.0.jar",
+        "minCodeFiles": 35,
+        "minTestFiles": 2
+      },
+      {
+        "id": "settlementroads",
+        "repo": "settlement-roads",
+        "jar": "mods/settlementroads-0.1.0.jar",
+        "minCodeFiles": 35,
+        "minTestFiles": 10
+      },
+      {
+        "id": "villagewalls",
+        "repo": "village-walls",
+        "jar": "mods/villagewalls-1.0.0.jar",
+        "minCodeFiles": 15,
+        "minTestFiles": 5
+      }
+    ]
+  }
+}

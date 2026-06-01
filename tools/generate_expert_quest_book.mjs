@@ -14,7 +14,7 @@ for (const id of [
   'latent_chemlib:gas_tank',
   'latent_chemlib:gas_reaction_chamber',
   'latent_chemlib:gas_release',
-  'liquid_coolant:coolant_exchanger',
+  'heatsync:coolant_exchanger',
   'procedural_bouquets:bouquet_grid',
   'procedural_bouquets:potted_bouquet',
   'creatingspace:basic_spacesuit_fabric',
@@ -35,8 +35,10 @@ for (const id of [
   'creatingspace:combustion_chamber',
   'creatingspace:power_pack',
   'creatingspace:exhaust_pack',
-  'fallout_wastelands_:portal_frame',
-  'fallout_wastelands_:wastelands',
+  'creatingspace:rocket_engine',
+  'creatingspace:rocket_casing',
+  'creatingspace:rocket_controls',
+  'undergarden:forgotten_upgrade_smithing_template',
   'protection_pixel:armorloadplatform',
   'protection_pixel:smallnetheritesheet',
   'protection_pixel:reinforcedfiber',
@@ -231,8 +233,6 @@ function itemLabel(id) {
     'creatingspace:combustion_chamber': 'Combustion Chamber',
     'creatingspace:power_pack': 'Power Pack',
     'creatingspace:exhaust_pack': 'Exhaust Pack',
-    'fallout_wastelands_:portal_frame': 'Wasteland Portal Frame',
-    'fallout_wastelands_:wastelands': 'Wasteland Portal Igniter',
     'protection_pixel:armorloadplatform': 'Armor Load Platform',
     'protection_pixel:smallnetheritesheet': 'Small Netherite Sheet',
     'protection_pixel:reinforcedfiber': 'Reinforced Fiber',
@@ -379,7 +379,7 @@ function chapterDescription(ch) {
     BS: ['Explore Blue Skies through materials, alchemy, keys, and trophies.', 'Each key path supports a different part of the dimension route.'],
     TW: ['Progress through Twilight Forest bosses and reward materials.', 'Maps, trophies, and boss drops mark your route through the dimension.'],
     LC: ['Explore Lost Cities as a space-era ruin route.', 'Use suit, oxygen, and rocket logistics before treating city scavenging as available.'],
-    UG: ['Explore the Undergarden and collect its local metals and materials.', 'Food, ores, and catalysts support deeper route planning.'],
+    UG: ['Explore the Undergarden and collect its local metals and materials.', 'Food, ores, and forgotten gear support deeper route planning.'],
     DD: ['Enter deeper sculk content and collect late depth materials.', 'Prepare carefully before pursuing resonarium and soul materials.'],
     IAF: ['Hunt major creatures and collect dragon materials.', 'Dragon blood, dragonsteel, skulls, and dread materials mark major combat progress.'],
     FW: ['Scavenge hazardous wasteland materials and technology.', 'Protection, scrap, electronics, and power armor parts support late route work.'],
@@ -471,10 +471,10 @@ const importantQuestIds = {
   BS: ['BS_ALCHEMY', 'BS_BLINDING_KEY', 'BS_BOSS_TROPHY'],
   TW: ['TW_MAGIC_MAP', 'TW_LICH', 'TW_UR_GHAST'],
   LC: ['LC_SPACE_ROUTE', 'LC_RAIL_DUNGEON', 'LC_CITY_RECOVERY'],
-  UG: ['UG_CLOGGRUM', 'UG_FORGOTTEN', 'UG_CATALYST'],
+  UG: ['UG_CLOGGRUM', 'UG_FORGOTTEN', 'UG_FORGOTTEN_ARMING'],
   DD: ['DD_HEART', 'DD_RESONARIUM', 'DD_SOUL'],
   IAF: ['IAF_BESTIARY', 'IAF_DRAGONSTEEL', 'IAF_DREAD'],
-  FW: ['FW_RAD_SUIT', 'FW_POWER_CORE', 'FW_POWER_ARMOR'],
+  FW: ['FW_SPACE_ROUTE', 'FW_POWER_CORE', 'FW_POWER_ARMOR'],
   AN: ['AN_IMBUEMENT', 'AN_APPARATUS', 'AN_ARCHMAGE'],
   MAL: ['MAL_ALTAR', 'MAL_SPIRIT_CRUCIBLE', 'MAL_SOUL_STEEL'],
   OCC: ['OCC_RITUAL_BOWLS', 'OCC_STORAGE', 'OCC_DIMENSIONAL_MATRIX'],
@@ -926,11 +926,9 @@ const chapters = [
       q('SH_BLAZE', 'Blaze Burner Heat', 4, 0, [item('create:blaze_burner')], ['SH_WIND', 'C2_MIXER'], ['Blaze burners are process heat infrastructure, not just a mixer upgrade.']),
       q('SH_DIESEL', 'Diesel Engine Source', 6, -2, [item('createdieselgenerators:diesel_engine')], ['SH_BLAZE', 'C2_BRASS'], ['Diesel converts fluid logistics into dense rotational power.']),
       q('SH_REFINING', 'Diesel Refining', 8, -2, [item('createdieselgenerators:distillation_controller')], ['SH_DIESEL'], ['Refining turns one engine recipe into an industrial chain.']),
-      q('SH_SOLAR', 'Solar Heat Source', 6, 2, [item('create_new_age:basic_solar_heating_plate')], ['SH_BLAZE', 'C2_BRASS'], ['Solar heat rewards planned sites with clear exposure and enough material investment.']),
-      q('SH_HEAT_PIPE', 'Heat Pipe Network', 8, 1, [item('create_new_age:heat_pipe')], ['SH_SOLAR'], ['Heat pipes make thermal work visible and routable instead of implicit.']),
-      q('SH_HEAT_PUMP', 'Heat Pump', 10, 1, [item('create_new_age:heat_pump')], ['SH_HEAT_PIPE'], ['Heat pumps are the active thermal-control step before electricity and coolant work.']),
-      q('SH_STIRLING', 'Stirling Engine', 12, 0, [item('create_new_age:stirling_engine')], ['SH_REFINING', 'SH_HEAT_PUMP'], ['Stirling closes the loop: structured heat can become rotational output again.']),
-      q('SH_EXIT_GRID', 'Exit: Electrical Grid', 14, 0, [item('powergrid:conductive_casing')], ['SH_STIRLING'], ['You now understand SU generation, transmission, and heat well enough to build a grid.'])
+      q('SH_HEAT_PIPE', 'Heat Pipe Network', 6, 2, [item('heatsync:heat_pipe')], ['SH_BLAZE', 'C2_BRASS'], ['Heat pipes make thermal work visible and routable instead of implicit.']),
+      q('SH_COOLANT', 'Coolant Exchanger', 8, 1, [item('heatsync:coolant_exchanger')], ['SH_HEAT_PIPE'], ['Coolant exchange turns stored heat into fluid logistics and back again.']),
+      q('SH_EXIT_GRID', 'Exit: Electrical Grid', 12, 0, [item('powergrid:conductive_casing')], ['SH_REFINING', 'SH_COOLANT'], ['You now understand SU generation, transmission, and heat well enough to build a grid.'])
     ]
   },
   {
@@ -949,7 +947,7 @@ const chapters = [
   },
   {
     filename: 'latent_chemlib', prefix: 'FI', id: 'BTM_LATENT_CHEMLIB', order: 1, title: 'Latent ChemLib', tier: 'platinum', group: 'power', description: ['Build chemical containment, high-energy matter handling, and periodic-table traversal.'], quests: [
-      q('FI_COOLANT', 'Liquid Coolant Exchanger', 0, 0, [item('liquid_coolant:coolant_exchanger')], ['GP_BATTERY']),
+      q('FI_COOLANT', 'Liquid Coolant Exchanger', 0, 0, [item('heatsync:coolant_exchanger')], ['GP_BATTERY']),
       q('FI_CAPTURE', 'Gas Capture', 2, -1, [item('latent_chemlib:gas_capture')], ['FI_COOLANT', 'S1_SYNTHESIS_EXIT'], ['Volatile ChemLib matter must be captured before it can become a production lane.']),
       q('FI_TANK', 'Chemical Containment', 4, -1, [item('latent_chemlib:gas_tank')], ['FI_CAPTURE']),
       q('FI_RELEASE', 'Controlled Release', 6, 1, [item('latent_chemlib:gas_release')], ['FI_TANK']),
@@ -1134,10 +1132,10 @@ const chapters = [
     ]
   },
   {
-    filename: 'twilight_forest', prefix: 'TW', id: 'BTM_TWILIGHT_FOREST', order: 2, title: 'Twilight Forest', tier: 'gold', group: 'worlds', description: ['A readable boss-ladder chapter for Twilight Forest progression.', 'Portal creation is locked behind Creating Space access; treat this as a space-era expedition world, not an early flower-and-diamond shortcut.'], quests: [
+    filename: 'twilight_forest', prefix: 'TW', id: 'BTM_TWILIGHT_FOREST', order: 2, title: 'Twilight Forest', tier: 'gold', group: 'worlds', description: ['A readable boss-ladder chapter for Twilight Forest progression.', 'Direct portal creation is disabled; treat this as a Creating Space rocket-route expedition world, not an early flower-and-diamond shortcut.'], quests: [
       q('TW_MAGIC_MAP', 'Magic Map', 0, 0, [item('twilightforest:magic_map')], ['SP_SUIT_ADV'], [
-        'Twilight Forest access is unlocked by the Creating Space access advancement, granted when you have a netherite oxygen backtank.',
-        'Build the portal only after the space survival chain is complete; this keeps Twilight as a later route branch instead of an early alternate overworld.'
+        'Twilight Forest access is via the Creating Space rocket graph after the advanced suit and netherite oxygen backtank.',
+        'The ordinary Twilight portal is disabled so Twilight stays a later route branch instead of an early alternate overworld.'
       ]),
       q('TW_NAGA', 'Naga Scale', 2, -1, [item('twilightforest:naga_scale')], ['TW_MAGIC_MAP']),
       q('TW_LICH', 'Lich Trophy', 4, -1, [item('twilightforest:lich_trophy')], ['TW_NAGA']),
@@ -1149,7 +1147,7 @@ const chapters = [
     ]
   },
   {
-    filename: 'undergarden', prefix: 'UG', id: 'BTM_UNDERGARDEN', order: 3, title: 'The Undergarden', tier: 'gold', group: 'worlds', description: ['A deep hostile ecology branch with its own metals, food pressure, and late catalyst.'], quests: [
+    filename: 'undergarden', prefix: 'UG', id: 'BTM_UNDERGARDEN', order: 3, title: 'The Undergarden', tier: 'gold', group: 'worlds', description: ['A deep hostile ecology branch with its own metals, food pressure, and forgotten gear.'], quests: [
       q('UG_DEPTHROCK', 'Depthrock Route', 0, 0, [item('undergarden:depthrock')], ['AD_IRON_FLOAT']),
       q('UG_GLOOMGOURD', 'Gloomgourd Food', 2, 1, [item('undergarden:gloomgourd')], ['UG_DEPTHROCK']),
       q('UG_CLOGGRUM', 'Cloggrum Ingot', 2, -1, [item('undergarden:cloggrum_ingot')], ['UG_DEPTHROCK']),
@@ -1157,7 +1155,7 @@ const chapters = [
       q('UG_UTHERIUM', 'Utherium Crystal', 6, -2, [item('undergarden:utherium_crystal')], ['UG_FROSTSTEEL']),
       q('UG_REGALIUM', 'Regalium Crystal', 6, 0, [item('undergarden:regalium_crystal')], ['UG_FROSTSTEEL']),
       q('UG_FORGOTTEN', 'Forgotten Ingot', 8, -1, [item('undergarden:forgotten_ingot')], ['UG_UTHERIUM', 'UG_REGALIUM']),
-      q('UG_CATALYST', 'Undergarden Catalyst', 10, 0, [item('undergarden:catalyst')], ['UG_FORGOTTEN'])
+      q('UG_FORGOTTEN_ARMING', 'Forgotten Arming', 10, 0, [item('undergarden:forgotten_upgrade_smithing_template')], ['UG_FORGOTTEN'])
     ]
   },
   {
@@ -1184,7 +1182,7 @@ const chapters = [
     ]
   },
   {
-    filename: 'lost_cities', prefix: 'LC', id: 'BTM_LOST_CITIES', order: 6, title: 'Lost Cities', tier: 'platinum', group: 'worlds', description: ['Lost Cities is a space-era ruin and scavenging route.', 'It has no ordinary crafting entry item, so the chapter is gated by the Creating Space capstone and uses route-prep checkpoints.'], quests: [
+    filename: 'lost_cities', prefix: 'LC', id: 'BTM_LOST_CITIES', order: 6, title: 'Lost Cities', tier: 'platinum', group: 'worlds', description: ['Lost Cities is a space-era ruin and scavenging route.', 'It has no ordinary crafting entry item, so the chapter is gated by the Creating Space rocket graph and uses route-prep checkpoints.'], quests: [
       q('LC_SPACE_ROUTE', 'Space-Era City Route', 0, 0, [item('creatingspace:netherite_oxygen_backtank')], ['SP_SUIT_ADV'], [
         'Do not treat Lost Cities as an early world preset. Enter it only after advanced space survival is online.',
         'Pack oxygen, food, water, blocks, lights, and return logistics before committing to a city route.'
@@ -1207,12 +1205,12 @@ const chapters = [
     ]
   },
   {
-    filename: 'fallout_wastelands', prefix: 'FW', id: 'BTM_FALLOUT_WASTELANDS', order: 7, title: 'Fallout Wastelands', tier: 'platinum', group: 'worlds', description: ['Hazard-route scavenging: anti-rad protection, scrap electronics, weapons, and power armor.', 'The Wasteland portal frame and igniter are rewritten as Creating Space recipes.'], quests: [
-      q('FW_PORTAL', 'Wasteland Portal', 0, 0, [item('fallout_wastelands_:portal_frame'), item('fallout_wastelands_:wastelands')], ['SP_SUIT_ADV'], [
-        'Craft the portal frame and igniter through the space-gated recipes. They consume space casing, rocket controls, rocket engine work, netherite oxygen, and Hastelloy.',
-        'This makes Fallout access a manufactured route, not an early decorative portal.'
+    filename: 'fallout_wastelands', prefix: 'FW', id: 'BTM_FALLOUT_WASTELANDS', order: 7, title: 'Fallout Wastelands', tier: 'platinum', group: 'worlds', description: ['Hazard-route scavenging: anti-rad protection, scrap electronics, weapons, and power armor.', 'The direct Wasteland portal frame and igniter are disabled; access comes from the Creating Space rocket graph.'], quests: [
+      q('FW_SPACE_ROUTE', 'Wasteland Rocket Route', 0, 0, [item('creatingspace:rocket_controls'), item('creatingspace:netherite_oxygen_backtank')], ['SP_SUIT_ADV'], [
+        'Use the Creating Space route graph for Wasteland access after advanced suit survival is online.',
+        'The direct portal frame and igniter are intentionally absent from JEI/EMI so the route source stays clear.'
       ]),
-      q('FW_RAD_SUIT', 'Anti-Rad Suit', 2, 0, [item('fallout_wastelands_:antiradsuit_helmet'), item('fallout_wastelands_:antiradsuit_chestplate')], ['FW_PORTAL']),
+      q('FW_RAD_SUIT', 'Anti-Rad Suit', 2, 0, [item('fallout_wastelands_:antiradsuit_helmet'), item('fallout_wastelands_:antiradsuit_chestplate')], ['FW_SPACE_ROUTE']),
       q('FW_SCRAP', 'Wasteland Scrap', 4, -1, [item('fallout_wastelands_:dented_can'), item('fallout_wastelands_:copperwires')], ['FW_RAD_SUIT']),
       q('FW_FOOD', 'Packaged Food', 4, 1, [item('fallout_wastelands_:cram'), item('fallout_wastelands_:canned_beef')], ['FW_RAD_SUIT']),
       q('FW_ELECTRONICS', 'Advanced Electronics', 6, -1, [item('fallout_wastelands_:advanced_motherboard'), item('fallout_wastelands_:advanced_motor')], ['FW_SCRAP']),

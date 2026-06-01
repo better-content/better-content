@@ -1,11 +1,3 @@
 {
-  "biomes": [
-    [
-      {
-        "type": "BIOME_TAG",
-        "negate": false,
-        "value": "minecraft:is_overworld"
-      }
-    ]
-  ]
+  "biomes": []
 }

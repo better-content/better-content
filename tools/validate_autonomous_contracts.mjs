@@ -655,30 +655,39 @@ function validateNonGrownInfiniteResourceBoundaries() {
 
 function validateWorldgenStaticContracts() {
   const rbpOverworld = read('config/rbp/world_definitions/overworld.toml')
-  const requiredRbpDefaultExclusions = [
-    'minecraft:bedrock',
-    'minecraft:barrier',
-    'minecraft:command_block',
-    'minecraft:chain_command_block',
-    'minecraft:repeating_command_block',
-    'minecraft:structure_block',
-    'minecraft:structure_void',
-    'minecraft:jigsaw',
-    'minecraft:end_portal_frame',
-    '<dynamictrees>',
-    '<dynamictreesplus>',
-    '<dtarsnouveau>',
-    '<dtquark>',
-    '<dtnatures_spirit>',
-    '<dthexerei>',
-    '<dtmalum>',
-    'ae2:sky_stone_block'
+  rbpOverworld.includes('DefaultBlockDefinition = ""')
+    ? ok('RBP Overworld physics is explicit-definition only')
+    : fail('RBP Overworld physics is explicit-definition only', 'DefaultBlockDefinition must be empty to avoid fallback physics on decorative/support-sensitive mod blocks')
+
+  const generatedRbpWhitelistFiles = walk('config/rbp/block_definitions', file => path.basename(file).startsWith('generated_modded_') && file.endsWith('.toml'))
+  const generatedRbpWhitelistText = generatedRbpWhitelistFiles.map(read).join('\n')
+  const generatedRbpWhitelistIds = generatedRbpWhitelistText
+    .split('\n')
+    .map(line => line.trim())
+    .filter(line => line.startsWith('"'))
+    .map(line => line.replace(/^"([^"]+)".*$/, '$1'))
+  generatedRbpWhitelistFiles.length >= 10 && generatedRbpWhitelistIds.length >= 4000
+    ? ok('RBP modded whitelist covers broad explicit block surface', `${generatedRbpWhitelistIds.length} ids in ${generatedRbpWhitelistFiles.length} files`)
+    : fail('RBP modded whitelist covers broad explicit block surface', `${generatedRbpWhitelistIds.length} ids in ${generatedRbpWhitelistFiles.length} files`)
+
+  const forbiddenRbpWhitelistPatterns = [
+    /(^|:)bedrock$/,
+    /sky_stone|skystone/,
+    /^dynamictrees:/,
+    /^dynamictreesplus:/,
+    /^dtarsnouveau:/,
+    /^dtquark:/,
+    /^dtnatures_spirit:/,
+    /^dthexerei:/,
+    /^dtmalum:/,
+    /^projectvibrantjourneys:/,
+    /(^|[_:/])seashell($|[_:/])/,
+    /(^|[_:/])shell($|[_:/])/
   ]
-  const missingRbpDefaultExclusions = requiredRbpDefaultExclusions.filter(marker => !rbpOverworld.includes(`"${marker}"`))
-  if (!rbpOverworld.includes('DefaultBlockDefinition = "stone"')) missingRbpDefaultExclusions.push('DefaultBlockDefinition = "stone"')
-  missingRbpDefaultExclusions.length
-    ? fail('RBP Overworld default physics excludes generated and immutable infrastructure blocks', missingRbpDefaultExclusions.join(', '))
-    : ok('RBP Overworld default physics excludes generated and immutable infrastructure blocks', `${requiredRbpDefaultExclusions.length} exclusions`)
+  const forbiddenRbpWhitelistIds = generatedRbpWhitelistIds.filter(id => forbiddenRbpWhitelistPatterns.some(pattern => pattern.test(id)))
+  forbiddenRbpWhitelistIds.length
+    ? fail('RBP generated whitelist excludes lifecycle/progression/decor-sensitive blocks', forbiddenRbpWhitelistIds.slice(0, 20).join(', '))
+    : ok('RBP generated whitelist excludes lifecycle/progression/decor-sensitive blocks')
 
   const tectonic = readJson('config/tectonic.json')
   const terrain = tectonic.global_terrain || {}
@@ -733,11 +742,23 @@ function validateWorldgenStaticContracts() {
     'datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/placed_feature/osmiridium_lava_sulfide_ore_deepslate.json',
     'datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/placed_feature/thorium_ore_deepslate.json',
     'datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/placed_feature/uranium_ore_deepslate.json',
-    'datapacks/hyle_deep/data/hyledata/regions/vanilla.json',
-    'datapacks/hyle_deep/data/hyledata/stone_types/vanilla/deepslate.json'
+    'datapacks/hyle_deep/data/hyle/worldgen/placed_feature/stone_replacer.json'
   ]
   const missingLava = lavaDepthFiles.filter(file => !exists(file))
   missingLava.length ? fail('deep geology datapacks cover lava-depth and Hyle anchors', missingLava.join(', ')) : ok('deep geology datapacks cover lava-depth and Hyle anchors', `${lavaDepthFiles.length} files`)
+
+  const hyleStoneReplacer = readJson('datapacks/hyle_deep/data/hyle/worldgen/placed_feature/stone_replacer.json')
+  const hyleStoneReplacerY = hyleStoneReplacer?.placement?.[0]?.height?.value?.absolute
+  hyleStoneReplacerY === -64
+    ? ok('Hyle stone replacement starts at world bottom', `y=${hyleStoneReplacerY}`)
+    : fail('Hyle stone replacement starts at world bottom', `y=${hyleStoneReplacerY}`)
+
+  const misplacedHyleData = exists('datapacks/hyle_deep/data/hyledata')
+    ? walk('datapacks/hyle_deep/data/hyledata', file => file.endsWith('.json'))
+    : []
+  misplacedHyleData.length
+    ? fail('Hyle datapack data uses namespaced loader paths', misplacedHyleData.join(', '))
+    : ok('Hyle datapack data uses namespaced loader paths')
 
   const lavaConfigured = walk('datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/configured_feature', file => file.endsWith('.json'))
   const nonLavaFeatureConfigured = lavaConfigured.filter(file => readJson(file).type !== 'realisticores:lava_exposed_ore')

@@ -5913,6 +5913,50 @@ file = "config/rbp/block_definitions/end_stone.toml"
 hash = "c943208b98620743d524c4012c43e2dec2743afe89f7ada9b38ef4539d6dd7fd"
 
 [[files]]
+file = "config/rbp/block_definitions/generated_modded_basic_construction_slab.toml"
+hash = "9fa5c3d503ab4185af592738b0e7443fecade3ff08f1653436e8ff2fcb06d1db"
+
+[[files]]
+file = "config/rbp/block_definitions/generated_modded_basic_construction_stairs.toml"
+hash = "7fb7eb3f8ee98a897ffd73dc0f344d271d4a56e0300faf2fbe26b273b4f0b1ef"
+
+[[files]]
+file = "config/rbp/block_definitions/generated_modded_basic_construction_wall.toml"
+hash = "67020bd7ebd326ddeb979253437cdcd66052dc61938e32ab2113b55732947902"
+
+[[files]]
+file = "config/rbp/block_definitions/generated_modded_dirt.toml"
+hash = "52ba664bf5dafd97ac3b287389bc992ee8115668ba6d2d3cf5eba4babc24ac0f"
+
+[[files]]
+file = "config/rbp/block_definitions/generated_modded_glass.toml"
+hash = "860b44f46610b5a9f901adabcd1ca1b61bc18fac9399f1ef76db934987a3c38c"
+
+[[files]]
+file = "config/rbp/block_definitions/generated_modded_glass_pane.toml"
+hash = "f9a427a2d24c3fdcc47ae49c82fd364803ccb0e7242bf9339d98e8cf09033180"
+
+[[files]]
+file = "config/rbp/block_definitions/generated_modded_refined_ore.toml"
+hash = "302bee4d32d3dc9281e965b7d5e8b31a4d1b18402307680ace692be8dde94bf4"
+
+[[files]]
+file = "config/rbp/block_definitions/generated_modded_sand.toml"
+hash = "ebc10a892517de6d405b35be3affd22c10e9dbc20100c6e4e4ac997a3c0ed67e"
+
+[[files]]
+file = "config/rbp/block_definitions/generated_modded_stone.toml"
+hash = "875fd70656a5e42c33a31828d1acd06fd9ab642ecabb308eec635ba03cfdba99"
+
+[[files]]
+file = "config/rbp/block_definitions/generated_modded_wood.toml"
+hash = "37758ff9a288061fc424818bb771ea00aab66c7fd665e96397460ec8be825a30"
+
+[[files]]
+file = "config/rbp/block_definitions/generated_modded_wooden_fence.toml"
+hash = "f1406b9947fb97c1487713093d39ebc79b7c9b6de2cb9934ce4d4c60653b0b95"
+
+[[files]]
 file = "config/rbp/block_definitions/glass.toml"
 hash = "cc0ed76ccfcd00fe194bafd2fed7cc3e0c6e700ec609b7d14720b328b7f02e67"
 
@@ -6102,7 +6146,7 @@ hash = "7818661178baf82b538fd8b790fd34aaaf6b47e038b8d07f50834863dd11fbcc"
 
 [[files]]
 file = "config/rbp/world_definitions/overworld.toml"
-hash = "d891c0f0f9f4405a277c6727b56a0a0bc3fe477c7dd8d0eb60921e6e8414874b"
+hash = "033c20b463af07d9ede5506f124633d00250788e8f8a96abf6778c5d0eea4324"
 
 [[files]]
 file = "config/realisticphysics/realisticphysics-common.toml"
@@ -7337,16 +7381,12 @@ file = "datapacks/dt_soil_compat/trees/kubejs/soil_properties/unearthed_white_gr
 hash = "6cc680cb6aa757cad225939e73ac05d6f14c85935f93d1d2173fb7ebd6817df6"
 
 [[files]]
-file = "datapacks/hyle_deep/data/hyledata/regions/vanilla.json"
-hash = "1f74e5e64e33e54ec2c68fa127f5b992b1573f51c3ec3655a69ffc33bb150664"
-
-[[files]]
-file = "datapacks/hyle_deep/data/hyledata/stone_types/vanilla/deepslate.json"
-hash = "e4914863e206c01c564fe46fbad0401d7a5eb02f94e3f604ff653fd327d62b42"
+file = "datapacks/hyle_deep/data/hyle/worldgen/placed_feature/stone_replacer.json"
+hash = "67453945a5be3673fcee3a57bca921a5fe1b3c5ab25784926e0929d1b2829ef4"
 
 [[files]]
 file = "datapacks/hyle_deep/pack.mcmeta"
-hash = "76cda21bcb9d92e20f4755e541416287d105c9daf8543879384b1e6d0ad5fd4d"
+hash = "2941e4c4414744b58c321386269b186c41b1be37cddf40a85674cf94d6ac3ab7"
 
 [[files]]
 file = "datapacks/meteor_ore_relocation/data/create/forge/biome_modifier/striated_ores_nether.json"
@@ -10160,7 +10200,7 @@ metafile = true
 
 [[files]]
 file = "mods/btmfixes-0.1.0.jar"
-hash = "96555e52b2f80a0fdc81150fece8864b4d74773b9a86a052c305d7f9ac7b5ee0"
+hash = "665fac20373358b2d5f4d2e5a217038641a51f79126f56f54f0a3b4ffd5699a6"
 
 [[files]]
 file = "mods/building-gadgets.pw.toml"
@@ -10199,7 +10239,7 @@ metafile = true
 
 [[files]]
 file = "mods/classselector-1.0.0.jar"
-hash = "c8093c77d73ff4089c2ae6517929bcf697063d95d8bfd7f6fe4ac1f82110c075"
+hash = "93e1543d6c6e6a3f07acf44fd6f5941f7c049d080f852bba651f8e0c1392e2a6"
 
 [[files]]
 file = "mods/cloth-config.pw.toml"
@@ -10228,7 +10268,7 @@ metafile = true
 
 [[files]]
 file = "mods/computerbridge-0.1.0.jar"
-hash = "967546d62b2d72b3a5be41c59a0a448782f6ac239a5eb7ae6ee3119bbff5a4b1"
+hash = "c6ab34716ccc2123e706c1eba9fe493274f06b0e18682061197d0f8c56055c8c"
 
 [[files]]
 file = "mods/concurrent-chunk-management-engine-for-forge-the.pw.toml"
@@ -10282,7 +10322,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-transmission-loss-0.1.0.jar"
-hash = "7a78aa25b035f1bd4ecd35396ac2c425ecedd6e4fc45814f6c97d70b8562aa3d"
+hash = "325047880b72eaf3b8b04306e8349b2289d77326dd8733e1a17d0ad07745df12"
 
 [[files]]
 file = "mods/create.pw.toml"
@@ -10331,11 +10371,11 @@ metafile = true
 
 [[files]]
 file = "mods/dthexerei-1.0.0.jar"
-hash = "73dd7870932cd764896bd2189c825df08a33014ce360f9d70d5adb77faf6da7a"
+hash = "6ab5f76661350717f593616459f5df3c3c31f0895d80bf4a2e27f79b1fbc9ccf"
 
 [[files]]
 file = "mods/dtmalum-1.0.0.jar"
-hash = "68e0d56dbaa8580b07bfb2da1c7da296198dbe5074171f82854e5ff585643d83"
+hash = "b322f7d884859afd8a5fea9bde449bacf6c74ef210cf59c991acca9ddfe29f1a"
 
 [[files]]
 file = "mods/dynamic-asset-generator.pw.toml"
@@ -10564,7 +10604,7 @@ metafile = true
 
 [[files]]
 file = "mods/heatsync-0.1.0.jar"
-hash = "ff6b3fdf66fa3e5e68d2f8f5bc00b64ad1b6397abca85cb584ec03380d2a928f"
+hash = "cc894bcc57c1ea57dac95f7f206a0f53241db794fa044b0fde26920501190dca"
 
 [[files]]
 file = "mods/hexerei.pw.toml"
@@ -10683,7 +10723,11 @@ metafile = true
 
 [[files]]
 file = "mods/latent_chemlib-0.1.0.jar"
-hash = "9e94bda4535d249686fb1411b09f92dd00fac278f3d68f881116ba19940ae6b4"
+hash = "0ec2abc34fc39dbdc97bc56cebb8cef024b8b6c4104c22625ab12c7f51895834"
+
+[[files]]
+file = "mods/latent_water_sim-0.1.0.jar"
+hash = "20839443933df5ddb66ac9b67625c61863b5a686e3bfc929c91e2e86f41f2ec2"
 
 [[files]]
 file = "mods/lithostitched.pw.toml"
@@ -10802,7 +10846,7 @@ metafile = true
 
 [[files]]
 file = "mods/obelisks-1.0.0.jar"
-hash = "5ee16f1ab3dd94aea240696334dacebb4e47e4ab15d881f08706573160f162bf"
+hash = "9db0261499decff5ce3e186671d5e9f94b00c17a93308e3f4ad6aec9202ad224"
 
 [[files]]
 file = "mods/oc2r.pw.toml"
@@ -10811,7 +10855,7 @@ metafile = true
 
 [[files]]
 file = "mods/oc2rwireless-1.0.0.jar"
-hash = "cffe4cd7868ca5eb38ac066656d167028237599419a7680716a45fa72c8f9952"
+hash = "b3b6c71645992bce1231367bd6cdfd14e61b0604ae7dfb5a1963448e4cc5f36d"
 
 [[files]]
 file = "mods/occultism.pw.toml"
@@ -10835,7 +10879,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillagercampaigns-0.2.0.jar"
-hash = "2df708a62825e8915c438b66d0c7372727bbea1c60b101d5376f91ba8610006f"
+hash = "b9cfdc4dc650617c78d65f33119d2dc2919632e1ca4d54745089ab45c7cd9c12"
 
 [[files]]
 file = "mods/placebo.pw.toml"
@@ -10879,7 +10923,7 @@ metafile = true
 
 [[files]]
 file = "mods/procedural_bouquets-0.1.0.jar"
-hash = "00e6b80364f12add9fc27f0daa69dc8bb7d9ebfb7ed4bc1c488199978e22d908"
+hash = "224637c40c0fbbd8155759aa4bf2830e21f42a2e8ae84982f510e50cbcd8f374"
 
 [[files]]
 file = "mods/project-vibrant-journeys.pw.toml"
@@ -10918,7 +10962,7 @@ metafile = true
 
 [[files]]
 file = "mods/realisticores-0.1.0.jar"
-hash = "5d673cc992ac113ce77d23ca56431b0f72194220181ee59c7daf086757e52dbd"
+hash = "f33ca65d1f126aa7085c220db4e6271af9610fefde30a19113e693d19e0b2109"
 
 [[files]]
 file = "mods/rehooked.pw.toml"
@@ -10952,7 +10996,7 @@ metafile = true
 
 [[files]]
 file = "mods/rpgstats-1.0.0.jar"
-hash = "50b6cf600de5ec889a0199444886c7a2d5dc512a88b074065a6412b24f972044"
+hash = "582071ecc921ca72b0f1496a50cca7ccc3d1453f0bb169eae3ba0960f99c59de"
 
 [[files]]
 file = "mods/rustic-delight.pw.toml"
@@ -10986,7 +11030,7 @@ metafile = true
 
 [[files]]
 file = "mods/settlementroads-0.1.0.jar"
-hash = "c1eee34d3fcfbe2d76c94d34bdc17650018966045f2cd7354b1ec6b71984eaa8"
+hash = "1dc54696e39225bd0e7a2109d554ec8e08e0c210587931415839a0db4ba843b3"
 
 [[files]]
 file = "mods/shoulder-surfing-reloaded.pw.toml"
@@ -11205,7 +11249,7 @@ metafile = true
 
 [[files]]
 file = "mods/villagewalls-1.0.0.jar"
-hash = "b6ed2462e69fac87ffac1193a59007d8a0cf913463a0517bd76340d07445032a"
+hash = "89e266737e559ea128b865f19b64e7ab544543b64c77dd987e68e11ff285e740"
 
 [[files]]
 file = "mods/wares.pw.toml"

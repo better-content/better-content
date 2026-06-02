@@ -40,7 +40,7 @@ PhysicsEnabled = true
 	#Specifies the default block definition to give to blocks that do not have one specified.
 	#Leave this empty if you do not wish to apply physics to blocks that do not have a specified block definition.
 	#Note: Setting this to a block definition that has been blacklisted will only allow it to be applied to blocks that are not within that original block definition.
-	DefaultBlockDefinition = "stone"
+	DefaultBlockDefinition = ""
 
 	#A list of block IDs and tags that should not be given default block definitions.
 	#Entries can be supplied in the below formats:

@@ -10710,7 +10710,7 @@ hash = "2f877d1dcdfe376099f4fd6df097168f161caa846416332e19fe64637c45ad83"
 
 [[files]]
 file = "kubejs/startup_scripts/99_ntp_audit_assignments.js"
-hash = "ab1b99b23848d5cf787f44ec6eb7118bd1547132cdb6439d579de2fae1663806"
+hash = "3af1f23e8e57c620b8bebecdd127dfc096192c97756799d47566924b87acd505"
 
 [[files]]
 file = "kubejs/startup_scripts/README.md"

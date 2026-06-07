@@ -1007,12 +1007,14 @@ function validateWorldgenStaticContracts() {
     'gravel_natural_quartz_ore',
     'gravel_zinc_ore'
   ].map(path => `excavated_variants:${path}`)
+  const shovelSet = new Set(ntpAssignments.blocks?.shovel || [])
   const pickaxeSet = new Set(ntpAssignments.blocks?.pickaxe || [])
-  const missingGravelPickaxe = expectedGravelEvOres.filter(id => !pickaxeSet.has(id))
+  const missingGravelShovel = expectedGravelEvOres.filter(id => !shovelSet.has(id))
+  const wronglyPickaxeGravel = expectedGravelEvOres.filter(id => pickaxeSet.has(id))
   const missingGravelRbp = expectedGravelEvOres.filter(id => !rbpGeneratedSolid.includes(`"${id}"`))
-  missingGravelPickaxe.length || missingGravelRbp.length
-    ? fail('gravel Excavated Variants ore blocks are pickaxe-gated and RBP-managed', `pickaxe=${missingGravelPickaxe.join(', ')} rbp=${missingGravelRbp.join(', ')}`)
-    : ok('gravel Excavated Variants ore blocks are pickaxe-gated and RBP-managed', `${expectedGravelEvOres.length} representatives`)
+  missingGravelShovel.length || wronglyPickaxeGravel.length || missingGravelRbp.length
+    ? fail('gravel Excavated Variants ore blocks stay shovel-gated and RBP-managed', `shovel=${missingGravelShovel.join(', ')} pickaxe=${wronglyPickaxeGravel.join(', ')} rbp=${missingGravelRbp.join(', ')}`)
+    : ok('gravel Excavated Variants ore blocks stay shovel-gated and RBP-managed', `${expectedGravelEvOres.length} representatives`)
 
   const lavaDepthFiles = [
     'datapacks/realistic_ores_lava_depths/data/realisticores/forge/biome_modifier/add_osmiridium_lava_sulfide_ore_deepslate.json',

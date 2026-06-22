@@ -1,5 +1,5 @@
 {
-  "type": "btmdimtrees:species_tree",
+  "type": "dynamictrees:tree",
   "config": {
     "species": "btmdimtrees:grongle",
     "radius": 3

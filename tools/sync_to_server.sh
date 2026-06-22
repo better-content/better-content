@@ -14,7 +14,6 @@ Usage: $(basename "$0") --dry-run|--apply [--server-dir PATH]
 
 Syncs repo-managed pack source into a dedicated server root.
 Preserves runtime state such as world, logs, crash reports, user caches, and player data.
-Client-only mod entries are excluded from the server target.
 USAGE
 }
 

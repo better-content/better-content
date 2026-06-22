@@ -54,8 +54,7 @@ fi
 for jar_cache in "$ROOT/server-template/mods" "$ROOT/server-instance/mods"; do
   [[ -d "$jar_cache" ]] || continue
   [[ "$(cd "$jar_cache" && pwd)" == "$(cd "$server_dir/mods" 2>/dev/null && pwd)" ]] && continue
-  mapfile -t server_excludes < <(btm_rsync_server_excludes)
-  rsync -a --ignore-existing "${server_excludes[@]}" --include='*/' --include='*.jar' --include='*.so' --exclude='*' "$jar_cache/" "$server_dir/mods/"
+  rsync -a --ignore-existing --include='*/' --include='*.jar' --include='*.so' --exclude='*' "$jar_cache/" "$server_dir/mods/"
 done
 
 for library_cache in \

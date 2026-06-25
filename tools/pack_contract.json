@@ -903,7 +903,7 @@
       },
       {
         "id": "dimensionalfonts",
-        "repo": "meteor-obelisks",
+        "repo": "dimensional-fonts",
         "jar": "mods/dimensionalfonts-1.0.0.jar",
         "minCodeFiles": 50,
         "minTestFiles": 5

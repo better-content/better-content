@@ -1360,7 +1360,7 @@ function validateDimensionTravelRoutes() {
 
   const contract = readJson('tools/pack_contract.json')
   const sourceRoot = process.env.BTM_CUSTOM_MODS_DIR || contract.customMods.sourceRoot
-  const blockerPath = path.join(sourceRoot, 'meteor-obelisks/src/main/kotlin/dev/yourname/obelisks/runtime/player/VanillaPortalBlocker.kt')
+  const blockerPath = path.join(sourceRoot, 'dimensional-fonts/src/main/kotlin/dev/yourname/obelisks/runtime/player/VanillaPortalBlocker.kt')
   const blockerText = fs.existsSync(blockerPath) ? readAbs(blockerPath) : ''
   const blockerNeedles = [
     'BlockEvent.PortalSpawnEvent',

@@ -133,7 +133,7 @@ Active pack-critical sources:
 - `dynamic-trees-hexerei` (`dthexerei`)
 - `dynamic-trees-malum` (`dtmalum`)
 - `heat-sync` (`heatsync`)
-- `meteor-obelisks` (`obelisks`)
+- `dimensional-fonts` (`obelisks`)
 - `oc2r-create-bridge` (`computerbridge`)
 - `pillager-campaigns` (`pillagercampaigns`)
 - `procedural-bouquets` (`procedural_bouquets`)

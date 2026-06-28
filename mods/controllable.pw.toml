@@ -1,6 +1,6 @@
 name = "Controllable"
 filename = "controllable-forge-1.20.1-0.21.9.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"

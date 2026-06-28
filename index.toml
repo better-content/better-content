@@ -11134,7 +11134,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimensionalfonts-1.0.0.jar"
-hash = "fa4de08d5860b706f248eefab2b453703b5547283f641579a8136cb32a8f3dee"
+hash = "ec22cf1907177df789069ffca36772de00444c9224d5590c1f22f053d1fcfdb5"
 
 [[files]]
 file = "mods/ding.pw.toml"

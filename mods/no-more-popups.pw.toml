@@ -1,6 +1,6 @@
 name = "No More Pop-ups"
 filename = "nomorepopups-forge-1.20.1-2.2.0.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"

@@ -11716,7 +11716,7 @@ metafile = true
 
 [[files]]
 file = "mods/protect-mobs-from-daylight.pw.toml"
-hash = "10d952f329fd24bd805395d5cfb90739a8b46baa1bd9bb24ff0c1d62a28fc02e"
+hash = "a29a6e26506892036838fb49bfb70de3dd4abb881267d9882af104de00ee9928"
 metafile = true
 
 [[files]]
@@ -12048,7 +12048,7 @@ metafile = true
 
 [[files]]
 file = "mods/unloaded-activity.pw.toml"
-hash = "672716713e45546f6c192f4e3d424bb08da872bf4353d3b3a563a0587ae9ee16"
+hash = "0547690bac129b6e27f0dc2b959877521a7631c5d4735d044bf154b3fce8f3e2"
 metafile = true
 
 [[files]]

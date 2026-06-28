@@ -10702,7 +10702,7 @@ hash = "250744b660a45e48a3af6e8620ff3201dddcaa1fd7e46a6c9255ec9f35e2f8fb"
 
 [[files]]
 file = "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js"
-hash = "0657ba1c4682c5699e392fd177362a0a4276835b5fb7d099ff220082f0dd683d"
+hash = "581a54dd653e2d7ec599d7bfcb0745fdfa3e3914d68650d33ecc3177a052ddd4"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/10_campfire_recipe.js"

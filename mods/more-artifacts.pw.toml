@@ -1,0 +1,13 @@
+name = "More Artifacts"
+filename = "moreartifacts-1.5.5-1.20.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2d777e7a8354669c268cbf097424a2e9c40fcf04"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7553653
+project-id = 1143299

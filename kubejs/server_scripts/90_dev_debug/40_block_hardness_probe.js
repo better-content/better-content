@@ -346,7 +346,7 @@ function btmBlockProbeIsSurfacePlantId(id) {
     return btmBlockProbeIsSurfacePlantPath(path)
 }
 
-function btmBlockProbeNtprClassification(id, tags) {
+function btmBlockProbeRealisticHandsClassification(id, tags) {
     var surfacePlant = btmBlockProbeIsSurfacePlantId(id)
     var leaf = btmBlockProbeIsLeafId(id)
     var looseSurface = btmBlockProbeIsLooseSurfaceId(id)
@@ -394,7 +394,7 @@ function btmBlockProbeRecord(id) {
         requiresCorrectToolForDrops: btmBlockProbeBool(btmBlockProbeCall(state, ['requiresCorrectToolForDrops', 'm_60815_'], [])),
         runtimeTags: runtimeTags,
         miningTags: btmBlockProbeMiningTags(runtimeTags),
-        ntpr: btmBlockProbeNtprClassification(id, runtimeTags)
+        realisticHands: btmBlockProbeRealisticHandsClassification(id, runtimeTags)
     }
 }
 

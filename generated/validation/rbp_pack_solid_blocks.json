@@ -1,30 +1,32 @@
 {
   "schema": "btm.rbp_pack_solid_blocks.v1",
-  "source": "generated/runtime-dumps/ntp_breakability_audit.json",
+  "source": "generated/runtime-dumps/realistic_hands_audit.json",
   "output": "config/rbp/block_definitions/generated_pack_solid_blocks.toml",
-  "runtimeBlockCount": 14784,
-  "includedCount": 9472,
+  "runtimeBlockCount": 14819,
+  "includedCount": 11051,
   "includedByReason": {
-    "hand_solid_candidate": 50,
-    "knife_solid_candidate": 141,
-    "mineable_solid_candidate": 7443,
-    "unassigned_solid_name": 1764,
+    "hand_solid_candidate": 431,
+    "knife_solid_candidate": 365,
+    "mineable_solid_candidate": 10181,
     "existing_rbp_solid_name": 74
   },
   "excludedByReason": {
-    "not_solid_candidate": 2110,
-    "attached_or_thin": 1222,
-    "plant_or_fluid_like": 1308,
+    "not_solid_candidate": 566,
     "dynamic_trees_managed": 378,
-    "support_owned": 254,
+    "plant_or_fluid_like": 1308,
+    "attached_or_thin": 1222,
     "admin_or_virtual": 16,
+    "support_owned": 254,
     "protected_structure": 24
   },
   "bedrockIncluded": false,
   "sampleIncluded": [
+    "adpother:carbon",
     "adpother:diamond_filter_frame",
+    "adpother:dust",
     "adpother:gold_filter_frame",
     "adpother:iron_filter_frame",
+    "adpother:sulfur",
     "ae2:16k_crafting_storage",
     "ae2:1k_crafting_storage",
     "ae2:256k_crafting_storage",
@@ -68,9 +70,6 @@
     "ae2:pattern_provider",
     "ae2:quantum_link",
     "ae2:quantum_ring",
-    "ae2:quartz_block",
-    "ae2:quartz_brick_slab",
-    "ae2:quartz_brick_stairs",
-    "ae2:quartz_brick_wall"
+    "ae2:quartz_block"
   ]
 }

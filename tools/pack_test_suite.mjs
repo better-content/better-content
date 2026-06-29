@@ -40,6 +40,7 @@ const performanceBudgetsMs = {
   'generated recipe graph validation': { budget: 5000, hard: 20000 },
   'generated loot dump validation': { budget: 2500, hard: 10000 },
   'engine and world performance log analysis': { budget: 250, hard: 1500 },
+  'Realistic Hands validation': { budget: 250, hard: 1500 },
   'KubeJS asset validation': { budget: 500, hard: 2000 },
   'chemistry identity validation': { budget: 500, hard: 2000 },
   'dev dump health validation': { budget: 50, hard: 500 }
@@ -1174,6 +1175,15 @@ function testKubejsAssets() {
   else fail('KubeJS custom assets validate', (result.stdout + result.stderr).trim())
 }
 
+function testRealisticHands() {
+  const result = spawnSync('node', ['tools/validate_realistic_hands.mjs'], {
+    cwd: repo,
+    encoding: 'utf8'
+  })
+  if (result.status === 0) ok('Realistic Hands validates', (result.stdout + result.stderr).trim())
+  else fail('Realistic Hands validates', (result.stdout + result.stderr).trim())
+}
+
 function testPackContract() {
   const result = spawnSync('node', ['tools/validate_pack_contract.mjs'], {
     cwd: repo,
@@ -1212,6 +1222,7 @@ runMeasured('repo loot data validation', testLootData)
 runMeasured('generated recipe graph validation', testGeneratedRecipeGraph)
 runMeasured('generated loot dump validation', testGeneratedDumpLoot)
 runMeasured('engine and world performance log analysis', testEngineWorldPerformanceLogs)
+runMeasured('Realistic Hands validation', testRealisticHands)
 runMeasured('KubeJS asset validation', testKubejsAssets)
 runMeasured('chemistry identity validation', testChemistryIdentity)
 runMeasured('dev dump health validation', testDevDumpHealth)

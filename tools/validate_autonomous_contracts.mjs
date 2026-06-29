@@ -538,29 +538,29 @@ function validateVanillaStyleToolSuppression() {
     : ok('vanilla-style tool recipe removals are unconditional')
 }
 
-function validateNoTreePunchingReplacement() {
-  const hook = read('kubejs/startup_scripts/20_blocks/20_no_tree_punching_replacement.js')
-  const assignments = read('kubejs/startup_scripts/99_ntp_audit_assignments.js')
+function validateRealisticHands() {
+  const hook = read('kubejs/startup_scripts/20_blocks/20_realistic_hands.js')
+  const assignments = read('kubejs/startup_scripts/99_realistic_hands_assignments.js')
   const handBreakable = readJson('kubejs/data/kubejs/tags/blocks/hand_breakable.json')
 
   const assignmentsContainGravel = /"hand"\s*:\s*\[[\s\S]*"minecraft:gravel"/.test(assignments)
   assignmentsContainGravel
-    ? ok('NTP audited assignments keep gravel hand-breakable')
-    : fail('NTP audited assignments keep gravel hand-breakable', 'minecraft:gravel missing from blocks.hand')
+    ? ok('Realistic Hands assignments keep gravel hand-breakable')
+    : fail('Realistic Hands assignments keep gravel hand-breakable', 'minecraft:gravel missing from blocks.hand')
 
   const handTagText = JSON.stringify(handBreakable)
   handTagText.includes('minecraft:gravel') && handTagText.includes('#forge:gravel')
-    ? ok('NTP hand-breakable tag covers vanilla and forge gravel')
-    : fail('NTP hand-breakable tag covers vanilla and forge gravel', 'missing minecraft:gravel or #forge:gravel')
+    ? ok('Realistic Hands hand-breakable tag covers vanilla and forge gravel')
+    : fail('Realistic Hands hand-breakable tag covers vanilla and forge gravel', 'missing minecraft:gravel or #forge:gravel')
 
-  hook.includes('function btmNtprRefreshAssignments()') && /function btmNtprShouldDeny[\s\S]*btmNtprRefreshAssignments\(\)/.test(hook)
-    ? ok('NTP hook refreshes audited assignments after startup load ordering')
-    : fail('NTP hook refreshes audited assignments after startup load ordering', 'hook must not snapshot global.BTM_NTPR_AUDIT_ASSIGNMENTS before 99_ntp_audit_assignments.js loads')
+  hook.includes('function btmRealisticHandsRefreshAssignments()') && /function btmRealisticHandsShouldDeny[\s\S]*btmRealisticHandsRefreshAssignments\(\)/.test(hook)
+    ? ok('Realistic Hands hook refreshes audited assignments after startup load ordering')
+    : fail('Realistic Hands hook refreshes audited assignments after startup load ordering', 'hook must not snapshot global.BTM_REALISTIC_HANDS_ASSIGNMENTS before 99_realistic_hands_assignments.js loads')
 }
 
 function validatePrimitiveMiningRegressionContracts() {
-  const assignmentText = read('kubejs/startup_scripts/99_ntp_audit_assignments.js')
-  const assignmentMatch = assignmentText.match(/global\.BTM_NTPR_AUDIT_ASSIGNMENTS\s*=\s*({[\s\S]*})\s*$/)
+  const assignmentText = read('kubejs/startup_scripts/99_realistic_hands_assignments.js')
+  const assignmentMatch = assignmentText.match(/global\.BTM_REALISTIC_HANDS_ASSIGNMENTS\s*=\s*({[\s\S]*})\s*$/)
   const assignments = assignmentMatch ? JSON.parse(assignmentMatch[1]) : null
   const blockSets = Object.fromEntries(Object.entries(assignments?.blocks || {}).map(([key, values]) => [key, new Set(values)]))
 
@@ -677,15 +677,15 @@ function validatePrimitiveMiningRegressionContracts() {
     ? fail('flint butcher knife remains a Farmer Delight straw harvester', knifeTagProblems.join(', '))
     : ok('flint butcher knife remains a Farmer Delight straw harvester')
 
-  const ntprHook = read('kubejs/startup_scripts/20_blocks/20_no_tree_punching_replacement.js')
+  const ntprHook = read('kubejs/startup_scripts/20_blocks/20_realistic_hands.js')
   const knifeDurabilityMarkers = [
-    'function btmNtprDamageMainHandKnife',
-    "btmNtprBlockIn('knife', blockId)",
-    "btmNtprItemIn('knife', itemId)",
+    'function btmRealisticHandsDamageMainHandKnife',
+    "btmRealisticHandsBlockIn('knife', blockId)",
+    "btmRealisticHandsItemIn('knife', itemId)",
     "['isDamageableItem', 'm_41763_']",
     "['setDamageValue', 'm_41721_']",
     "['shrink', 'm_41774_']",
-    'btmNtprDamageMainHandKnife(event.getPlayer(), event.getState())'
+    'btmRealisticHandsDamageMainHandKnife(event.getPlayer(), event.getState())'
   ]
   const missingKnifeDurabilityMarkers = knifeDurabilityMarkers.filter(marker => !ntprHook.includes(marker))
   missingKnifeDurabilityMarkers.length
@@ -1020,7 +1020,7 @@ function validateWorldgenStaticContracts() {
     ? fail('stone-style meteor ores can replace gravel', gravelTargetProblems.join(', '))
     : ok('stone-style meteor ores can replace gravel')
 
-  const ntpAssignments = JSON.parse(read('kubejs/startup_scripts/99_ntp_audit_assignments.js').match(/global\.BTM_NTPR_AUDIT_ASSIGNMENTS\s*=\s*({[\s\S]*})\s*$/)[1])
+  const ntpAssignments = JSON.parse(read('kubejs/startup_scripts/99_realistic_hands_assignments.js').match(/global\.BTM_REALISTIC_HANDS_ASSIGNMENTS\s*=\s*({[\s\S]*})\s*$/)[1])
   const rbpGeneratedSolid = read('config/rbp/block_definitions/generated_pack_solid_blocks.toml')
   const rbpGeneratedModdedSand = read('config/rbp/block_definitions/generated_modded_sand.toml')
   const expectedGravelEvOres = [
@@ -1413,7 +1413,7 @@ validateEconomy()
 validateMagicBody()
 validateClientQuestIntent()
 validateVanillaStyleToolSuppression()
-validateNoTreePunchingReplacement()
+validateRealisticHands()
 validatePrimitiveMiningRegressionContracts()
 validateVanillishExpertRecipePass()
 validateNonGrownInfiniteResourceBoundaries()

@@ -1,0 +1,37 @@
+{
+  "schema": "obelisks.realistic_hands_exemptions.v1",
+  "exactIds": [
+    "minecraft:bedrock",
+    "buildinggadgets2:construction_block_powder",
+    "buildinggadgets2:render_block",
+    "buildinggadgets2:template_manager"
+  ],
+  "namespaces": [],
+  "pathPrefixes": [
+    "assets/"
+  ],
+  "pathSuffixes": [
+    "_portal",
+    "_portal_frame",
+    "end_gateway",
+    "end_portal"
+  ],
+  "pathContains": [
+    "barrier",
+    "command_block",
+    "debug",
+    "fake_air",
+    "fluid",
+    "intangible_air",
+    "jigsaw",
+    "light_block",
+    "liquid",
+    "portal",
+    "structure_block",
+    "structure_void",
+    "temporary_block",
+    "temporary_light_block",
+    "water",
+    "lava"
+  ]
+}

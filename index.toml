@@ -6002,7 +6002,7 @@ hash = "f1406b9947fb97c1487713093d39ebc79b7c9b6de2cb9934ce4d4c60653b0b95"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_pack_solid_blocks.toml"
-hash = "028d0ede8fc6c2c34b31f2817f48d6042aa14f621337030086f20968b56a6d6a"
+hash = "0e3ad472bf540196b0ea759f5c4fac453bb4ef0ae8ad61687df90b74159969dd"
 
 [[files]]
 file = "config/rbp/block_definitions/glass.toml"
@@ -10794,7 +10794,11 @@ hash = "84269ce05c5dd450d6fd5a20cf673ba0ac944e3c24b0f74cb859719891287207"
 
 [[files]]
 file = "kubejs/server_scripts/50_loot/10_overworld_block_drops.js"
-hash = "1d8b1efb393cb1265d32e28ff6d5f001f4bb036a95911fbb432aac2d6dbd2084"
+hash = "cfbed8c61ca5b728f9af4e463f05a43a578c761ae14e960fa017f596cabd8221"
+
+[[files]]
+file = "kubejs/server_scripts/50_loot/11_realistic_hands_outcomes.js"
+hash = "3b12da5d7a0dba877592e1c103728eee81ce02cb665d9b8933e77aae4c4cf2b1"
 
 [[files]]
 file = "kubejs/server_scripts/50_loot/20_world_chest_coin_tiers.js"
@@ -10834,7 +10838,7 @@ hash = "2fc1dbaed2a21f5ba3f420e798a024fee5809c05552d19edb6eb22943a7905a8"
 
 [[files]]
 file = "kubejs/server_scripts/90_dev_debug/40_block_hardness_probe.js"
-hash = "c542ef098c40bb863987902070dbedc93727cfb1e2d5202fb384e4b40a02db03"
+hash = "94c966a0ab6936f7240092f613167530f4fc95a9b6609e71d68959e6391ae7ec"
 
 [[files]]
 file = "kubejs/server_scripts/README.md"
@@ -10857,8 +10861,8 @@ file = "kubejs/startup_scripts/20_blocks/10_ae2_skystone_hardness.js"
 hash = "75e2d05543db8c5dac81701c327452f62b499f69a3dfd3394e4d036d4d07f469"
 
 [[files]]
-file = "kubejs/startup_scripts/20_blocks/20_no_tree_punching_replacement.js"
-hash = "d8e409136a4a22715cb34df90ff042c7fee9ae6a78661e8705e2172157415275"
+file = "kubejs/startup_scripts/20_blocks/20_realistic_hands.js"
+hash = "bff30844056991002574891293113b2b7181218b98b341ca2e0a90472f12b615"
 
 [[files]]
 file = "kubejs/startup_scripts/20_globals/10_immobile_spawn.js"
@@ -10877,8 +10881,8 @@ file = "kubejs/startup_scripts/40_potion_brewing_registry.js"
 hash = "2f877d1dcdfe376099f4fd6df097168f161caa846416332e19fe64637c45ad83"
 
 [[files]]
-file = "kubejs/startup_scripts/99_ntp_audit_assignments.js"
-hash = "caaf0f14fc12842b2899a65c16f935bb7dd19020e89a02efbe6aee16904147b1"
+file = "kubejs/startup_scripts/99_realistic_hands_assignments.js"
+hash = "5ea6064986ac2ad145c6244631c986d274a41a5416cf665332f49730c93815ba"
 
 [[files]]
 file = "kubejs/startup_scripts/README.md"
@@ -10940,6 +10944,11 @@ hash = "44505ec6c8d7ac5948b3f192cff3db191b07c4d39d501ce3af916006cda3c5a6"
 metafile = true
 
 [[files]]
+file = "mods/artifacts.pw.toml"
+hash = "9224b29b7fc388a0a030f8a6e87b26b24ec73dbc853bcdd531a144ed8e59ccea"
+metafile = true
+
+[[files]]
 file = "mods/better-combat-by-daedelus.pw.toml"
 hash = "95e1e53b02444a363aef8e309fd75422bae1d8844ddf681ba8750f8e6d3e1942"
 metafile = true
@@ -10981,7 +10990,7 @@ metafile = true
 
 [[files]]
 file = "mods/btmfixes-0.1.0.jar"
-hash = "01e7e8eb8d7667f036da8f6eb66bf11f5019f5bbb3401e89f257321d11614c79"
+hash = "8d8a2c5e927060a10da058ed889350a38d134d6aa897b7fdc2beebec6cc8caa5"
 
 [[files]]
 file = "mods/building-gadgets.pw.toml"
@@ -11020,7 +11029,7 @@ metafile = true
 
 [[files]]
 file = "mods/classselector-1.0.0.jar"
-hash = "f34cbaf502cfd64353292f4e23973d65946d0560024eedac3ee6905e17abea8c"
+hash = "e4e11feccf9f5da1b4e6665ff2cc12a329e80740460cf4598514b4edcbd9710a"
 
 [[files]]
 file = "mods/cloth-config.pw.toml"
@@ -11146,7 +11155,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimensionalfonts-1.0.0.jar"
-hash = "8f11b0ec0344dd3f34ce95f3b7d04a849d8f87b2da6d4fa36b5347608321d2d7"
+hash = "409e03961dfc727e2eb3562dcdb3708127e0dc28da1348cbac7a1293fd5584a8"
 
 [[files]]
 file = "mods/ding.pw.toml"
@@ -11591,6 +11600,11 @@ hash = "80124bd3e7bc9917e41ee22534baddfd0578f1cad90906e4c5f0c8966ce1367a"
 metafile = true
 
 [[files]]
+file = "mods/more-artifacts.pw.toml"
+hash = "a0841f01b7ec14e64cc3d65948bab6de3a59d2efa92c0ef3ee43d512f05c12ea"
+metafile = true
+
+[[files]]
 file = "mods/more-red.pw.toml"
 hash = "bb8dd1fa0f1ee88f8f947a2ab2101c414cb2808dac81c21ac66c8ad32cdfec29"
 metafile = true
@@ -11671,7 +11685,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillagercampaigns-0.2.0.jar"
-hash = "4a88eb0693a17158bc6cf1391a6c8ea91e99ea5f8e1d9670a8fc27d776e6ed42"
+hash = "3bee66120d8865833dbf1a6e37674c1b6e3190b71b09ab9907d4c1b069a2c88f"
 
 [[files]]
 file = "mods/placebo.pw.toml"
@@ -11762,6 +11776,11 @@ hash = "072c186c33fe564e4c49f6f1bf65f5b0efa28256d450edd922e1961b07e2a812"
 metafile = true
 
 [[files]]
+file = "mods/relics-mod.pw.toml"
+hash = "fa3c0a19b839ec89df408368ae4886ffa36179c1973335ce7cd4654f2fa842ca"
+metafile = true
+
+[[files]]
 file = "mods/reliquary-reincarnations.pw.toml"
 hash = "2ee33caa3dab100d44d9a9e941af5f374ce93cc59fdd0da10a0cc1393e56edc0"
 metafile = true
@@ -11822,7 +11841,12 @@ metafile = true
 
 [[files]]
 file = "mods/settlementroads-0.1.0.jar"
-hash = "3d9cd302b4b04be9e4b0d0c7ad1a8148b146c8f5ca818ebb49604b89c596b0d0"
+hash = "23a898434a4f788c2f99e168b75f90eae1a6980b5b7196bb6ee58b34c957c4bf"
+
+[[files]]
+file = "mods/shatterbyte-lib.pw.toml"
+hash = "21a65898c3292880bf020c3c7e1e9da3e3725b046625d24cb5e0742d342621a0"
+metafile = true
 
 [[files]]
 file = "mods/shoulder-surfing-reloaded.pw.toml"
@@ -12071,7 +12095,7 @@ metafile = true
 
 [[files]]
 file = "mods/villagewalls-1.0.0.jar"
-hash = "3c519513208b9ccc8d84d662ac995f85f1782ab934f5d5603bf9b5a2b8049b6c"
+hash = "7d29f80c1a6dffa97d4bbbc5f9a21c119817cbedecc638315746410031fb4aea"
 
 [[files]]
 file = "mods/wares.pw.toml"
@@ -12081,11 +12105,6 @@ metafile = true
 [[files]]
 file = "mods/weather-storms-tornadoes.pw.toml"
 hash = "8f24f728e1e69034beb9fe44cf2b2e0b40147a4ed5559f38cc851edcb43ceaab"
-metafile = true
-
-[[files]]
-file = "mods/when-dungeons-arise.pw.toml"
-hash = "0cb70caa22009a495a64a4332480b5ae80cb7fc7ba34c0a48ab8aff7df20b4f7"
 metafile = true
 
 [[files]]

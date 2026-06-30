@@ -238,7 +238,6 @@ Public commands:
   tools/btm test static
   tools/btm test runtime --instance PATH [--strict-data-dumps]
   tools/btm test smoke [--server-dir PATH] [--port N] [--reset-runtime]
-  tools/btm test join [--server-dir PATH] [--client-dir PATH] [--port N] [--username NAME] [--reset-runtime]
   tools/btm test scenario NAME [scenario args]
   tools/btm build sync server --dir PATH --dry-run|--apply
   tools/btm build sync client --dir PATH --dry-run|--apply
@@ -256,7 +255,6 @@ Commands:
   static
   runtime --instance PATH [--strict-data-dumps]
   smoke [--server-dir PATH] [--port N] [--reset-runtime]
-  join [--server-dir PATH] [--client-dir PATH] [--port N] [--username NAME] [--reset-runtime]
   scenario NAME [scenario args]
   kotlin [--filter NAME]
 
@@ -1555,33 +1553,6 @@ fun startServerProcess(serverDir: Path, port: Int, extraArgs: List<String> = lis
     return RunningProcess(process, logPath, process.outputStream.bufferedWriter())
 }
 
-fun startClientProcess(clientDir: Path, username: String, serverHostPort: String, port: Int, logPath: Path): RunningProcess {
-    val versionId = "$mcVersion-forge-$forgeVersion"
-    val versionJsonCandidates = listOf(
-        clientDir.resolve("versions/$versionId/$versionId.json"),
-        clientDir.resolve("versions/$forgeCoord/$forgeCoord.json"),
-    )
-    require(versionJsonCandidates.any { it.exists() }) { "Forge client version JSON for $versionId was not found." }
-    val argfile = clientDir.resolve(".runtime/launch-$versionId.args")
-    argfile.parent.createDirectories()
-    val argRun = generateMinecraftClientArgfile(clientDir, versionId, username, serverHostPort, argfile)
-    require(argRun.exitCode == 0) { outputSnippet(argRun.output) ?: "failed to create launch argfile" }
-    val javaPath = requireJava17Path()
-    val command = mutableListOf<String>()
-    if ((System.getenv("DISPLAY") ?: "").isBlank()) {
-        require(commandExists("xvfb-run")) { "client launch requires DISPLAY or xvfb-run for headless execution" }
-        command += listOf("xvfb-run", "-a", "-s", "-screen 0 1280x720x24")
-    }
-    command += listOf(javaPath, "@${argfile.toString()}")
-    val builder = ProcessBuilder(command)
-    builder.directory(clientDir.toFile())
-    builder.redirectErrorStream(true)
-    builder.environment()["BTM_SERVER_PORT"] = port.toString()
-    builder.redirectOutput(logPath.toFile())
-    val process = builder.start()
-    return RunningProcess(process, logPath, null)
-}
-
 fun tailText(path: Path, limit: Long = 256_000): String {
     if (!path.exists()) return ""
     val file = path.toFile()
@@ -2570,77 +2541,6 @@ fun runSmokeValidation(serverDir: Path, port: Int, reset: Boolean): ProcessRun {
     return runPackSuite(serverDir, strictDataDumps = false)
 }
 
-fun runHeadlessJoinValidation(serverDir: Path, clientDir: Path, port: Int, username: String, reset: Boolean): ProcessRun {
-    val stamp = timestamp()
-    val evidenceDir = serverDir.resolve("validation-evidence/$stamp")
-    evidenceDir.createDirectories()
-    val bootstrap = bootstrapServerRuntime(serverDir, port, reset)
-    if (bootstrap.exitCode != 0) return bootstrap
-    if (reset && clientDir.exists()) {
-        runProcess(listOf("bash", "-lc", "rm -rf '${clientDir.resolve("logs").toString().replace("'", "'\\''")}' '${clientDir.resolve("crash-reports").toString().replace("'", "'\\''")}' '${clientDir.resolve("saves").toString().replace("'", "'\\''")}' '${clientDir.resolve(".runtime").toString().replace("'", "'\\''")}'"))
-    }
-    val clientBootstrap = bootstrapClientRuntime(clientDir)
-    if (clientBootstrap.exitCode != 0) return clientBootstrap
-    val pruneServer = pruneRuntimeMods(serverDir, "server", apply = false)
-    if (pruneServer.exitCode != 0) return pruneServer
-    val pruneClient = pruneRuntimeMods(clientDir, "client", apply = false)
-    if (pruneClient.exitCode != 0) return pruneClient
-    val serverLog = evidenceDir.resolve("server-console.log")
-    val clientLog = evidenceDir.resolve("client-console.log")
-    val latestServerLog = serverDir.resolve("logs/latest.log")
-    val runningServer = startServerProcess(serverDir, port, listOf("nogui"), serverLog)
-    var runningClient: RunningProcess? = null
-    try {
-        val donePattern = Regex("""Done \([\d.]+s\)! For help, type "help"""")
-        val joinPattern = Regex("""joined the game|logged in with entity id|UUID of player|is now connected""", RegexOption.IGNORE_CASE)
-        val fatalPattern = Regex("""Crash report|Mod Loading has failed|OutOfMemoryError|Preparing crash report|This crash report has been saved|Encountered an unexpected exception|\[[^]]*/FATAL]""", RegexOption.IGNORE_CASE)
-        val startupDeadline = System.currentTimeMillis() + 900_000L
-        while (System.currentTimeMillis() < startupDeadline) {
-            if (!runningServer.process.isAlive) return ProcessRun(1, "server exited before Done marker")
-            val text = tailText(serverLog, 256_000)
-            if (fatalPattern.containsMatchIn(text)) return ProcessRun(1, "server emitted a hard startup failure")
-            if (donePattern.containsMatchIn(text)) break
-            Thread.sleep(2000)
-        }
-        runningClient = startClientProcess(clientDir, username, "127.0.0.1:$port", port, clientLog)
-        val joinDeadline = System.currentTimeMillis() + 600_000L
-        while (System.currentTimeMillis() < joinDeadline) {
-            if (!runningServer.process.isAlive) return ProcessRun(1, "server exited before client join completed")
-            if (!runningClient.process.isAlive) return ProcessRun(1, "client exited before join success")
-            val serverText = tailText(serverLog, 512_000)
-            val clientText = tailText(clientLog, 512_000)
-            if (fatalPattern.containsMatchIn(serverText)) return ProcessRun(1, "server emitted a hard failure during client join")
-            if (fatalPattern.containsMatchIn(clientText)) return ProcessRun(1, "client emitted a hard failure during join")
-            if (joinPattern.containsMatchIn(serverText)) {
-                Thread.sleep(10_000)
-                break
-            }
-            Thread.sleep(2000)
-        }
-        if (!joinPattern.containsMatchIn(tailText(serverLog, 512_000))) {
-            return ProcessRun(1, "client did not join server before timeout")
-        }
-    } finally {
-        stopProcess(runningClient)
-        stopProcess(runningServer, "stop")
-    }
-    val scan = scanHardFailures(latestServerLog, serverDir)
-    if (!scan.ok) {
-        val output = buildString {
-            appendLine("FAIL - hard log failure scan (${scan.logPath ?: "UNKNOWN"})")
-            for (finding in scan.findings) {
-                appendLine("FAIL - ${finding.label}: ${finding.count}")
-                for (match in finding.matches) {
-                    val prefix = if (match.lineNumber > 0) "${match.lineNumber}:" else ""
-                    appendLine("  $prefix${match.line}")
-                }
-            }
-        }.trim()
-        return ProcessRun(1, output)
-    }
-    return ProcessRun(0, "headless client joined headless server successfully")
-}
-
 fun runKotlinTests(filter: String?): ProcessRun {
     val script = root.resolve("tools/kotlin-tests/run-tests.main.kts")
     if (!script.exists()) {
@@ -3238,68 +3138,6 @@ fun handleTest(subArgs: List<String>): CommandResult {
                 summary = "test smoke failed with exit $exitCode",
                 findings = listOf(ValidationFinding("error", "test smoke failed with exit $exitCode")),
                 details = mapOf("serverDir" to serverPath.toString(), "port" to port.toInt(), "resetRuntime" to reset) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
-                exitCode = exitCode,
-                evidenceLevel = "fresh-runtime",
-                mutated = true,
-            )
-        }
-        "join" -> {
-            val missing = ensureCommands("bash", "java", "curl")
-            if (missing.isNotEmpty()) return prereqFailure("join validation prerequisites missing", missing)
-            if ((System.getenv("DISPLAY") ?: "").isBlank() && !commandExists("xvfb-run")) {
-                return prereqFailure("headless client join requires xvfb-run when DISPLAY is unset")
-            }
-            var serverDir = "/tmp/btm-agent-validate-join/server"
-            var clientDir = "/tmp/btm-agent-validate-join/client"
-            var port = "25565"
-            var username = "AgentClient"
-            var reset = false
-            val rest = subArgs.drop(1)
-            var index = 0
-            while (index < rest.size) {
-                when (rest[index]) {
-                    "--server-dir" -> {
-                        serverDir = rest.getOrNull(index + 1) ?: return usageError("--server-dir needs a path", testHelp())
-                        index += 2
-                    }
-                    "--client-dir" -> {
-                        clientDir = rest.getOrNull(index + 1) ?: return usageError("--client-dir needs a path", testHelp())
-                        index += 2
-                    }
-                    "--port" -> {
-                        port = rest.getOrNull(index + 1) ?: return usageError("--port needs a number", testHelp())
-                        if (!port.all(Char::isDigit)) return usageError("--port needs a number", testHelp())
-                        index += 2
-                    }
-                    "--username" -> {
-                        username = rest.getOrNull(index + 1) ?: return usageError("--username needs a value", testHelp())
-                        index += 2
-                    }
-                    "--reset-runtime" -> {
-                        reset = true
-                        index += 1
-                    }
-                    "--help" -> return success("test join", testHelp(), evidenceLevel = "fresh-runtime")
-                    else -> return usageError("unknown argument: ${rest[index]}", testHelp())
-                }
-            }
-            val serverPath = resolveUserPath(serverDir)
-            val clientPath = resolveUserPath(clientDir)
-            val run = runHeadlessJoinValidation(serverPath, clientPath, port.toInt(), username, reset)
-            val exitCode = if (run.exitCode == 0) 0 else 1
-            if (exitCode == 0) success(
-                command = "test join",
-                summary = "headless client join validation passed",
-                artifacts = listOf(ArtifactRef(serverPath.toString(), "directory"), ArtifactRef(clientPath.toString(), "directory")),
-                details = mapOf("serverDir" to serverPath.toString(), "clientDir" to clientPath.toString(), "port" to port.toInt(), "username" to username, "resetRuntime" to reset) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
-                mutated = true,
-                evidenceLevel = "fresh-runtime",
-            ) else CommandResult(
-                command = "test join",
-                status = "failure",
-                summary = "test join failed with exit $exitCode",
-                findings = listOf(ValidationFinding("error", "test join failed with exit $exitCode")),
-                details = mapOf("serverDir" to serverPath.toString(), "clientDir" to clientPath.toString(), "port" to port.toInt(), "username" to username, "resetRuntime" to reset) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
                 exitCode = exitCode,
                 evidenceLevel = "fresh-runtime",
                 mutated = true,

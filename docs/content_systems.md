@@ -13,6 +13,7 @@ Important policies:
 - Keep recipes Rhino-safe and deterministic under `kubejs:*` IDs.
 
 Dimension travel is intentionally narrow: Dimensional Fonts and Creating Space rocket routes are the only authored cross-dimension surfaces. Direct portal/key recipes, portal structures, and JEI/EMI visibility for those route items should stay disabled unless a route is deliberately re-authored through one of those two surfaces.
+Current Dimensional Fonts graveyard generation intentionally embeds each raised altar into a copper-framed square junction court: packed mud stays the outer graveyard path language, the altar seam is reclaimed into a built ritual square, and biome-reactive court dressing is limited to perimeter pots rather than loose center clutter.
 
 ## Materials And Chemistry
 

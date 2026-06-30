@@ -1406,17 +1406,16 @@ fun syncManaged(side: String, targetDir: Path, apply: Boolean): ProcessRun {
 }
 
 fun bootstrapServerRuntime(serverDir: Path, port: Int, reset: Boolean): ProcessRun {
-    val bundleRoot = serverDir.parent.resolve("${serverDir.fileName}.bundle-work")
-    val exportsDir = bundleRoot.resolve("exports")
-    val serverTreeDir = bundleRoot.resolve("server-tree/better-content-server")
+    val exportsDir = root.resolve("generated/exports")
+    val serverTreeDir = exportsDir.resolve("server-tree/better-content-server")
     val serverZip = exportsDir.resolve("better-content-playtest-4-v1-server.zip")
-    val extractRoot = bundleRoot.resolve("unzipped")
+    val extractRoot = serverDir.parent.resolve("${serverDir.fileName}.bundle-work/unzipped")
     if (reset) {
         runProcess(
             listOf(
                 "bash",
                 "-lc",
-                "rm -rf '${bundleRoot.toString().replace("'", "'\\''")}' '${serverDir.toString().replace("'", "'\\''")}'"
+                "rm -rf '${extractRoot.parent.toString().replace("'", "'\\''")}' '${serverDir.toString().replace("'", "'\\''")}'"
             ),
             stream = false,
         )

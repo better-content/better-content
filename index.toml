@@ -11155,7 +11155,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimensionalfonts-1.0.0.jar"
-hash = "b48861977a4161530a72f622e1aebd9d5dd1e8419910b0d1bf1ac39c109b76ab"
+hash = "2172e1eaee219329440fe255d076aa084b172e6687beb402e11f99792a304fb4"
 
 [[files]]
 file = "mods/ding.pw.toml"
@@ -11807,7 +11807,7 @@ metafile = true
 
 [[files]]
 file = "mods/rpgstats-1.0.0.jar"
-hash = "f6104df745b2350ebc97ad3fe40486e641337456e42919517c3537ab611c8e48"
+hash = "54691a2fe43780492945cdfb5b965a5988e7f60b71bb97e1817406d6f80e8bc8"
 
 [[files]]
 file = "mods/rustic-delight.pw.toml"

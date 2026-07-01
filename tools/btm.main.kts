@@ -208,12 +208,12 @@ val scenarios = linkedMapOf(
     "lc_tfth_c2me_dh" to ScenarioDefinition(
         "lc_tfth_c2me_dh",
         "Lost Cities + TFTH + C2ME + Distant Horizons stability cycle",
-        "tools/quarantine/original-tools/lc_tfth_c2me_dh_stability.py",
+        "tools/lc_tfth_c2me_dh_stability.py",
     ),
     "dimension_worldgen" to ScenarioDefinition(
         "dimension_worldgen",
         "All-dimension worldgen stress run",
-        "tools/quarantine/original-tools/dimension_worldgen_stress.py",
+        "tools/dimension_worldgen_stress.py",
     ),
 )
 
@@ -589,7 +589,7 @@ server-ip=
 server-port=$port
 simulation-distance=6
 spawn-protection=0
-view-distance=8
+view-distance=12
 white-list=false
 """.trimIndent() + "\n"
     Files.writeString(path, text)

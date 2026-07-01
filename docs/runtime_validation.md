@@ -87,6 +87,8 @@ tools/btm test scenario dimension_worldgen --cycles 1 --radius 1 --samples 1
 
 Current clean evidence: `/tmp/btm-dimension-worldgen/20260701-041811` passed two server-only Overworld cycles with 8 samples at radius 4 after Dimensional Fonts graveyard generation was moved from biome-modifier feature placement to vanilla structure-set placement. `/tmp/btm-dimension-worldgen/20260604-215117` remains the last recorded all-dimension radius-1 baseline. The harness treats C2ME far-chunk writes, DH worldgen exceptions, crash reports, watchdogs, internal disconnects, and C2ME thread-guard failures as fatal.
 
+Current pack mitigation: Quark `Shiba` spawns are disabled in checked-in `config/quark-common.toml` after repeated 2026-07-01 client-side entity metadata desyncs (`field 22`, `Integer` vs `ItemStack`) during normal play.
+
 Current LC/DH/C2ME/TFTH scenario:
 
 ```bash

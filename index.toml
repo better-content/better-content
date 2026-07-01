@@ -5274,7 +5274,7 @@ hash = "62f528a6cbed5a846e9afb0f42b90e91a7bbbf0948412643d460ea872b8bcb51"
 
 [[files]]
 file = "config/btmfixes-common.toml"
-hash = "b02053aaeaaab4de749efb449e78f7baaf34e8c9c9e0dc2e988fa853720f1b7a"
+hash = "74bb0668ee5cf7ca1221e2bfd161468a904364f0fcffe9a615512f56f65015f9"
 
 [[files]]
 file = "config/c2me.toml"
@@ -11014,7 +11014,7 @@ hash = "4309e4cdca62b0760c43f81bf1d5a2a6ac3c530a93603479e6e4a0f9f500677d"
 
 [[files]]
 file = "mods/btmfixes-0.1.0.jar"
-hash = "694aaa489889ee06bda176118f04ac1e98538f555a2528f2884fb9eda3b5ab54"
+hash = "eabb35ddeb4e759f9daa9876daf588b1bf7edaca76a96a7b9624024eb744da3e"
 
 [[files]]
 file = "mods/building-gadgets.pw.toml"

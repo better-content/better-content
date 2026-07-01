@@ -21,6 +21,13 @@ StartupEvents.registry('block', function (event) {
     }
 })
 
+StartupEvents.registry('fluid', function (event) {
+    event.create('phosphoric_acid_fluid')
+        .displayName('Phosphoric Acid')
+        .thinTexture(0xd8b65a)
+        .bucketColor(0xd8b65a)
+})
+
 StartupEvents.registry('item', function (event) {
     var hearts = [
         ['weak_blood_heart', 'Blood-Touched Heart'],
@@ -43,8 +50,13 @@ StartupEvents.registry('item', function (event) {
     var overhaulIntermediates = [
         ['rotational_compressor_core', 'Rotational Compressor Core'],
         ['pressure_seal', 'Pressure Seal'],
+        ['brass_control_assembly', 'Brass Control Assembly'],
+        ['airtight_fluid_module', 'Airtight Fluid Module'],
+        ['electrical_control_module', 'Electrical Control Module'],
+        ['ae_logic_package', 'AE Logic Package'],
         ['purified_blood_catalyst', 'Purified Blood Catalyst'],
         ['purified_source_core', 'Purified Source Core'],
+        ['raw_impossible_circuit', 'Raw Impossible Circuit'],
         ['impossible_circuit', 'Impossible Circuit'],
         ['living_binding', 'Living Binding'],
         ['mountain_beryl_lens', 'Mountain Beryl Lens'],
@@ -70,6 +82,21 @@ StartupEvents.registry('item', function (event) {
 
     for (var o = 0; o < overhaulIntermediates.length; o++) {
         event.create(overhaulIntermediates[o][0]).displayName(overhaulIntermediates[o][1])
+    }
+
+    var magicCuttingFluids = [
+        ['sanguine_acetic_cutting_fluid', 'Sanguine Acetic Cutting Fluid', 64],
+        ['sanguine_sulfuric_cutting_fluid', 'Sanguine Sulfuric Cutting Fluid', 256],
+        ['sanguine_hydrochloric_cutting_fluid', 'Sanguine Hydrochloric Cutting Fluid', 256],
+        ['sanguine_nitric_cutting_fluid', 'Sanguine Nitric Cutting Fluid', 1024],
+        ['sanguine_phosphoric_cutting_fluid', 'Sanguine Phosphoric Cutting Fluid', 1024]
+    ]
+
+    for (var m = 0; m < magicCuttingFluids.length; m++) {
+        event.create(magicCuttingFluids[m][0])
+            .displayName(magicCuttingFluids[m][1])
+            .maxDamage(magicCuttingFluids[m][2])
+            .glow(true)
     }
 
     var reagents = [

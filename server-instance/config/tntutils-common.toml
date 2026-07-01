@@ -56,7 +56,4 @@
 	disableItemDamage = true
 	#Disables explosion damage to mobs and animals. Will not affect entities tagged with #tntutils:explosion_whitelist.
 	disableMobDamage = false
-	#Multiplies the damage dealt to entities by this value.
-	#Range: 0.0 ~ Infinity
-	entityDamageMultiplier = 1.0
 

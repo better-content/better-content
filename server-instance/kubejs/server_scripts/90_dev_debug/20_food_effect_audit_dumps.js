@@ -7,6 +7,9 @@
 
 var BTM_FOOD_AUDIT_CONFIG = 'kubejs/config/audit_dumps.json'
 var BTM_FOOD_AUDIT_DIR = 'kubejs/config/'
+var BTM_FOOD_AUDIT_GENERATED_BY = 'kubejs/server_scripts/90_dev_debug/20_food_effect_audit_dumps.js'
+var BTM_FOOD_AUDIT_SCHEMA = 'btm.food_effect_audit.v2'
+var BTM_FOOD_AUDIT_SOURCE = 'runtime vanilla/Forge FoodProperties from BuiltInRegistries.ITEM during ServerEvents.recipes'
 
 var BtmFoodBuiltInRegistries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries')
 var BtmFoodItemStack = Java.loadClass('net.minecraft.world.item.ItemStack')
@@ -15,6 +18,14 @@ try {
     BtmFoodDietApi = Java.loadClass('com.illusivesoulworks.diet.api.DietApi')
 } catch (e) {
     BtmFoodDietApi = null
+}
+
+function btmFoodAuditTimestamp() {
+    try {
+        return new Date().toISOString()
+    } catch (e) {
+        return String(new Date())
+    }
 }
 
 function btmFoodAuditReadConfig() {
@@ -329,8 +340,10 @@ function btmFoodWriteAuditDump() {
     var records = []
     var errors = []
     var summary = {
-        generatedBy: 'kubejs/server_scripts/90_dev_debug/20_food_effect_audit_dumps.js',
-        source: 'runtime vanilla/Forge FoodProperties',
+        schema: BTM_FOOD_AUDIT_SCHEMA,
+        generatedBy: BTM_FOOD_AUDIT_GENERATED_BY,
+        generatedAt: btmFoodAuditTimestamp(),
+        source: BTM_FOOD_AUDIT_SOURCE,
         limitations: [
             'Custom item effects applied only inside finishUsingItem may not appear here.',
             'Suspicious stew dynamic NBT effects are not expanded because they are not a fixed item-level food property.'
@@ -409,7 +422,9 @@ function btmFoodWriteAuditDump() {
     summary.errorCount = errors.length
 
     JsonIO.write(BTM_FOOD_AUDIT_DIR + 'food_effect_index.json', {
+        schema: summary.schema,
         generatedBy: summary.generatedBy,
+        generatedAt: summary.generatedAt,
         source: summary.source,
         limitations: summary.limitations,
         foodCount: records.length,

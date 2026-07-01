@@ -1,0 +1,8 @@
+{
+  "primitive_soil": "goety:grassy_end_stone_tiles",
+  "acceptable_soils": [
+    "dirt_like"
+  ],
+  "substitute_soil": "dynamictrees:grass_block",
+  "only_if_loaded": "goety"
+}

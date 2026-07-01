@@ -25,16 +25,6 @@ ServerEvents.recipes(function (event) {
         C: 'minecraft:copper_ingot'
     }).id('kubejs:machine_casing/seared')
 
-    event.shaped('kubejs:scorched_machine_casing', [
-        'BGB',
-        'GCG',
-        'BGB'
-    ], {
-        B: 'tconstruct:scorched_brick',
-        G: 'tconstruct:scorched_glass',
-        C: 'kubejs:seared_machine_casing'
-    }).id('kubejs:machine_casing/scorched')
-
     event.shaped('kubejs:andesite_machine_casing', [
         'ADA',
         'DCD',
@@ -42,7 +32,7 @@ ServerEvents.recipes(function (event) {
     ], {
         A: 'create:andesite_alloy',
         D: 'create:andesite_casing',
-        C: 'kubejs:scorched_machine_casing'
+        C: 'tconstruct:scorched_bricks'
     }).id('kubejs:machine_casing/andesite')
 
     // Brass and later casing tiers require Create manufacturing. Remove the simple shaped
@@ -98,14 +88,17 @@ ServerEvents.recipes(function (event) {
         loops: 2
     }).id('kubejs:create/sequenced_assembly/machine_casing/brass')
 
-    event.shaped('kubejs:pressure_seal', [
-        'RRR',
-        'RLR',
-        'RRR'
-    ], {
-        R: 'minecraft:dried_kelp',
-        L: 'minecraft:slime_ball'
-    }).id('kubejs:pneumaticcraft/pressure_seal')
+    global.btmCreateCompacting(event, 'kubejs:pneumaticcraft/pressure_seal', 'kubejs:pressure_seal', 1, [
+        'minecraft:dried_kelp',
+        'minecraft:dried_kelp',
+        'minecraft:dried_kelp',
+        'minecraft:dried_kelp',
+        'minecraft:dried_kelp',
+        'minecraft:dried_kelp',
+        'minecraft:dried_kelp',
+        'minecraft:dried_kelp',
+        'minecraft:slime_ball'
+    ])
 
     event.custom({
         type: 'create:sequenced_assembly',
@@ -167,60 +160,36 @@ ServerEvents.recipes(function (event) {
     }).id('kubejs:create/mechanical_crafting/machine_casing/airtight')
 
     event.custom({
-        type: 'create:mechanical_crafting',
-        acceptMirrored: false,
-        pattern: [
-            'ZCCZ',
-            'IBBI',
-            'IKKI',
-            'ZCCZ'
+        type: 'pneumaticcraft:pressure_chamber',
+        inputs: [
+            { type: 'pneumaticcraft:stacked_item', item: 'kubejs:airtight_machine_casing', count: 1 },
+            { type: 'pneumaticcraft:stacked_item', item: 'powergrid:conductive_casing', count: 2 },
+            { type: 'pneumaticcraft:stacked_item', item: 'powergrid:capacitor', count: 2 },
+            { type: 'pneumaticcraft:stacked_item', item: 'powergrid:integrated_circuit', count: 1 },
+            { type: 'pneumaticcraft:stacked_item', item: 'pneumaticcraft:printed_circuit_board', count: 1 },
+            { type: 'pneumaticcraft:stacked_item', item: 'pneumaticcraft:transistor', count: 2 },
+            { type: 'pneumaticcraft:stacked_item', item: 'oc2r:silicon_wafer', count: 1 },
+            { type: 'pneumaticcraft:stacked_item', item: 'oc2r:network_connector', count: 1 },
+            { type: 'pneumaticcraft:stacked_item', item: 'chemlib:copper_chloride', count: 1 },
+            { type: 'pneumaticcraft:stacked_item', item: 'chemlib:aluminum_oxide', count: 1 }
         ],
-        key: {
-            Z: { tag: 'forge:plates/zinc' },
-            C: { item: 'powergrid:capacitor' },
-            I: { item: 'powergrid:integrated_circuit' },
-            K: { item: 'powergrid:conductive_casing' },
-            B: { item: 'kubejs:airtight_machine_casing' }
-        },
-        result: { item: 'kubejs:electrical_machine_casing' }
-    }).id('kubejs:create/mechanical_crafting/machine_casing/electrical')
+        pressure: 4.0,
+        results: [{ item: 'kubejs:electrical_machine_casing' }]
+    }).id('kubejs:pneumaticcraft/pressure_chamber/machine_casing/electrical')
 
     event.custom({
-        type: 'create:mechanical_crafting',
-        acceptMirrored: false,
-        pattern: [
-            'TWWT',
-            'CBBC',
-            'CNNC',
-            'TWWT'
+        type: 'pneumaticcraft:pressure_chamber',
+        inputs: [
+            { type: 'pneumaticcraft:stacked_item', item: 'kubejs:electrical_machine_casing', count: 1 },
+            { type: 'pneumaticcraft:stacked_item', item: 'creatingspace:rocket_casing', count: 2 },
+            { type: 'pneumaticcraft:stacked_item', item: 'kubejs:titanium_thermal_plate', count: 1 },
+            { type: 'pneumaticcraft:stacked_item', item: 'creatingspace:inconel_sheet', count: 2 },
+            { type: 'pneumaticcraft:stacked_item', item: 'creatingspace:hastelloy_ingot', count: 1 },
+            { type: 'pneumaticcraft:stacked_item', item: 'pneumaticcraft:pressure_tube', count: 2 }
         ],
-        key: {
-            T: { item: 'pneumaticcraft:transistor' },
-            W: { item: 'oc2r:silicon_wafer' },
-            C: { item: 'pneumaticcraft:printed_circuit_board' },
-            N: { item: 'oc2r:network_connector' },
-            B: { item: 'kubejs:electrical_machine_casing' }
-        },
-        result: { item: 'kubejs:circuited_machine_casing' }
-    }).id('kubejs:create/mechanical_crafting/machine_casing/circuited')
-
-    event.custom({
-        type: 'create:mechanical_crafting',
-        acceptMirrored: false,
-        pattern: [
-            'RCR',
-            'SBS',
-            'RHR'
-        ],
-        key: {
-            R: { item: 'creatingspace:rocket_casing' },
-            C: { item: 'kubejs:titanium_thermal_plate' },
-            S: { item: 'creatingspace:inconel_sheet' },
-            H: { item: 'creatingspace:hastelloy_ingot' },
-            B: { item: 'kubejs:circuited_machine_casing' }
-        },
-        result: { item: 'kubejs:space_machine_casing' }
-    }).id('kubejs:create/mechanical_crafting/machine_casing/space')
+        pressure: 4.5,
+        results: [{ item: 'kubejs:space_machine_casing' }]
+    }).id('kubejs:pneumaticcraft/pressure_chamber/machine_casing/space')
 
     event.custom({
         type: 'create:mixing',
@@ -241,25 +210,19 @@ ServerEvents.recipes(function (event) {
     }).id('kubejs:create/pressing/sky_steel_sheet')
 
     event.custom({
-        type: 'create:mechanical_crafting',
-        acceptMirrored: false,
-        pattern: [
-            'SFPFS',
-            'FCBCF',
-            'PBABP',
-            'FCBCF',
-            'SFPFS'
+        type: 'pneumaticcraft:pressure_chamber',
+        inputs: [
+            { type: 'pneumaticcraft:stacked_item', item: 'kubejs:space_machine_casing', count: 1 },
+            { type: 'pneumaticcraft:stacked_item', item: 'kubejs:sky_steel_sheet', count: 4 },
+            { type: 'pneumaticcraft:stacked_item', item: 'ae2:fluix_crystal', count: 4 },
+            { type: 'pneumaticcraft:stacked_item', item: 'ae2:engineering_processor', count: 2 },
+            { type: 'pneumaticcraft:stacked_item', item: 'ae2:sky_stone_block', count: 2 },
+            { type: 'pneumaticcraft:stacked_item', item: 'chemlib:silicon_dioxide', count: 2 },
+            { type: 'pneumaticcraft:stacked_item', item: 'ae2:fluix_glass_cable', count: 1 }
         ],
-        key: {
-            S: { item: 'kubejs:sky_steel_sheet' },
-            F: { item: 'ae2:fluix_crystal' },
-            C: { item: 'ae2:engineering_processor' },
-            P: { item: 'ae2:sky_stone_block' },
-            A: { item: 'ae2:fluix_glass_cable' },
-            B: { item: 'kubejs:space_machine_casing' }
-        },
-        result: { item: 'kubejs:raw_impossible_casing' }
-    }).id('kubejs:create/mechanical_crafting/machine_casing/raw_impossible')
+        pressure: 4.5,
+        results: [{ item: 'kubejs:raw_impossible_casing' }]
+    }).id('kubejs:pneumaticcraft/pressure_chamber/machine_casing/raw_impossible')
 
     if (event.recipes.bloodmagic && event.recipes.bloodmagic.altar) {
         event.recipes.bloodmagic
@@ -285,16 +248,16 @@ ServerEvents.recipes(function (event) {
     event.remove({ output: 'pneumaticcraft:pressure_chamber_glass' })
     event.remove({ output: 'pneumaticcraft:pressure_chamber_interface' })
 
-    event.shaped('16x pneumaticcraft:pressure_chamber_wall', [
+    global.btmFactoryCrafting(event, 'kubejs:pneumaticcraft/pressure_chamber_wall_airtight', 'pneumaticcraft:pressure_chamber_wall', 16, [
         'RRR',
         'RAR',
         'RRR'
     ], {
         R: 'pneumaticcraft:reinforced_bricks',
         A: 'kubejs:airtight_machine_casing'
-    }).id('kubejs:pneumaticcraft/pressure_chamber_wall_airtight')
+    }, { mirrored: true })
 
-    event.shaped('16x pneumaticcraft:pressure_chamber_glass', [
+    global.btmFactoryCrafting(event, 'kubejs:pneumaticcraft/pressure_chamber_glass_airtight', 'pneumaticcraft:pressure_chamber_glass', 16, [
         'RGR',
         'GAG',
         'RGR'
@@ -302,14 +265,17 @@ ServerEvents.recipes(function (event) {
         R: 'pneumaticcraft:reinforced_bricks',
         G: '#forge:glass',
         A: 'kubejs:airtight_machine_casing'
-    }).id('kubejs:pneumaticcraft/pressure_chamber_glass_airtight')
+    }, { mirrored: true })
 
-    event.shapeless('2x pneumaticcraft:pressure_chamber_interface', [
-        'minecraft:hopper',
-        'kubejs:airtight_machine_casing',
-        'pneumaticcraft:pressure_chamber_wall',
-        'pneumaticcraft:pressure_chamber_wall'
-    ]).id('kubejs:pneumaticcraft/pressure_chamber_interface_airtight')
+    event.remove({ output: 'pneumaticcraft:pressure_chamber_interface' })
+    event.shaped('2x pneumaticcraft:pressure_chamber_interface', [
+        'HW',
+        'AW'
+    ], {
+        H: 'minecraft:hopper',
+        A: 'kubejs:airtight_machine_casing',
+        W: 'pneumaticcraft:pressure_chamber_wall'
+    }).id('kubejs:pneumaticcraft/pressure_chamber_interface_airtight')
 
     // First block-like machines per tier. Avoid deadlocking Deployer; it remains pre-casing.
     btmGateAny(event, [
@@ -317,12 +283,6 @@ ServerEvents.recipes(function (event) {
         'tconstruct:seared_fuel_tank',
         'tconstruct:seared_melter'
     ], ['tconstruct:seared_bricks', 'tconstruct:seared_brick'], 'kubejs:seared_machine_casing')
-
-    btmGateAny(event, [
-        'tconstruct:foundry_controller',
-        'tconstruct:scorched_fuel_tank',
-        'tconstruct:alloyer'
-    ], ['tconstruct:scorched_bricks', 'tconstruct:scorched_brick'], 'kubejs:scorched_machine_casing')
 
     btmGateAny(event, [
         'create:mechanical_press',
@@ -368,7 +328,7 @@ ServerEvents.recipes(function (event) {
         'oc2r:monitor',
         'oc2r:pci_card_cage',
         'oc2r:charger'
-    ], ['minecraft:iron_ingot', '#forge:ingots/iron', 'powergrid:integrated_circuit'], 'kubejs:circuited_machine_casing')
+    ], ['minecraft:iron_ingot', '#forge:ingots/iron', 'powergrid:integrated_circuit'], 'kubejs:electrical_machine_casing')
 
     btmGateAny(event, [
         'creatingspace:chemical_synthesizer',

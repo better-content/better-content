@@ -11,11 +11,11 @@ ServerEvents.recipes(function (event) {
     ], {
         O: 'minecraft:obsidian',
         G: 'minecraft:gold_block',
-        B: 'minecraft:blaze_rod',
+        B: 'minecraft:bone_block',
         F: 'minecraft:furnace',
-        C: 'minecraft:crying_obsidian',
-        S: 'minecraft:ghast_tear'
-    }).id('kubejs:bloodmagic/expensive_blood_altar')
+        C: 'minecraft:copper_block',
+        S: 'rpgstats:still_beating_heart'
+    }).id('kubejs:bloodmagic/heart_bound_blood_altar')
 
     if (event.recipes.bloodmagic && event.recipes.bloodmagic.altar) {
         event.remove({ id: 'bloodmagic:altar/daggerofsacrifice' })

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#kubejs:no_biomes",
+  "features": "forbidden_arcanus:runic_stone",
+  "step": "underground_ores"
+}

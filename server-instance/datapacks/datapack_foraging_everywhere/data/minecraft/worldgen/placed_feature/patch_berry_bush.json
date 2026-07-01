@@ -1,0 +1,9 @@
+{
+  "feature": "minecraft:patch_berry_bush",
+  "placement": [
+    {
+      "type": "farmersdelight:biome_tag",
+      "tag": "kubejs:undergarden_forage/forest"
+    }
+  ]
+}

@@ -4,10 +4,12 @@
 // heat/electric power -> OC2R/AE2 bridges. It also removes package teleportation.
 
 var BTM_CREATE_STACK = {
+    seared: 'kubejs:seared_machine_casing',
+    scorched: 'tconstruct:scorched_bricks',
     andesite: 'kubejs:andesite_machine_casing',
     brass: 'kubejs:brass_machine_casing',
     power: 'kubejs:electrical_machine_casing',
-    oc2r: 'kubejs:circuited_machine_casing',
+    oc2r: 'kubejs:electrical_machine_casing',
     ae2: 'kubejs:impossible_machine_casing',
     ironPlate: '#forge:plates/iron',
     copperPlate: '#forge:plates/copper',
@@ -30,7 +32,7 @@ function btmCreateRemove(event, outputs) {
 function btmCreateShaped(event, output, pattern, keys, id) {
     if (!btmCreateExists(output)) return
     event.remove({ output: output })
-    event.shaped(output, pattern, keys).id(id)
+    global.btmFactoryCrafting(event, id, output, 1, pattern, keys, { mirrored: true })
 }
 
 function btmCreateReplaceInputs(event, outputs, oldInputs, newInput) {
@@ -44,37 +46,38 @@ ServerEvents.recipes(function (event) {
     // Package wormholes are direct logistics teleportation. Keep them absent until explicitly redesigned.
     btmCreateRemove(event, ['createadvlogistics:package_wormhole'])
 
-    // Core fluid/package logistics are real Create infrastructure, not cheap copper/redstone utilities.
+    // Passive fluid utilities do not consume SU; they can sit at the high-heat
+    // TCon handoff before Andesite kinetic machinery.
     btmCreateShaped(event, 'create:fluid_tank', [
         'CPC',
-        'GAG',
+        'GSG',
         'CPC'
     ], {
         C: BTM_CREATE_STACK.copperPlate,
         P: 'create:fluid_pipe',
         G: 'minecraft:glass',
-        A: BTM_CREATE_STACK.andesite
+        S: BTM_CREATE_STACK.scorched
     }, 'kubejs:create_stack/create/fluid_tank')
 
     btmCreateShaped(event, 'create:item_drain', [
         ' G ',
-        'PAP',
+        'PSP',
         ' C '
     ], {
         G: 'minecraft:iron_bars',
         P: 'create:fluid_pipe',
-        A: BTM_CREATE_STACK.andesite,
+        S: BTM_CREATE_STACK.scorched,
         C: BTM_CREATE_STACK.copperPlate
     }, 'kubejs:create_stack/create/item_drain')
 
     btmCreateShaped(event, 'create:spout', [
         ' P ',
-        'TAT',
+        'TST',
         ' C '
     ], {
         P: 'create:fluid_pipe',
         T: 'create:fluid_tank',
-        A: BTM_CREATE_STACK.andesite,
+        S: BTM_CREATE_STACK.scorched,
         C: BTM_CREATE_STACK.copperPlate
     }, 'kubejs:create_stack/create/spout')
 
@@ -308,103 +311,6 @@ ServerEvents.recipes(function (event) {
         'createdieselgenerators:huge_diesel_engine',
         'createdieselgenerators:engine_turbocharger'
     ], ['create:brass_casing', 'create:precision_mechanism', 'minecraft:redstone', '#forge:dusts/redstone'], BTM_CREATE_STACK.power)
-
-    // Reintroduce the Create New Age electric path after Power Grid instead of leaving removed recipes as dead ends.
-    btmCreateShaped(event, 'create_new_age:copper_wire', [
-        'CCC'
-    ], { C: BTM_CREATE_STACK.copperPlate }, 'kubejs:create_stack/create_new_age/copper_wire')
-
-    btmCreateShaped(event, 'create_new_age:blank_circuit', [
-        'GCG',
-        'WPW',
-        'GCG'
-    ], {
-        G: 'minecraft:glass_pane',
-        C: BTM_CREATE_STACK.circuit,
-        W: 'create_new_age:copper_wire',
-        P: BTM_CREATE_STACK.power
-    }, 'kubejs:create_stack/create_new_age/blank_circuit')
-
-    btmCreateShaped(event, 'create_new_age:copper_circuit', [
-        'RWR',
-        'CBC',
-        'RWR'
-    ], {
-        R: BTM_CREATE_STACK.redstoneRelay,
-        W: 'create_new_age:copper_wire',
-        C: BTM_CREATE_STACK.copperPlate,
-        B: 'create_new_age:blank_circuit'
-    }, 'kubejs:create_stack/create_new_age/copper_circuit')
-
-    btmCreateShaped(event, 'create_new_age:generator_coil', [
-        'WWW',
-        'WPW',
-        'WWW'
-    ], {
-        W: 'create_new_age:copper_wire',
-        P: BTM_CREATE_STACK.power
-    }, 'kubejs:create_stack/create_new_age/generator_coil')
-
-    btmCreateShaped(event, 'create_new_age:carbon_brushes', [
-        ' C ',
-        'SPS',
-        ' C '
-    ], {
-        C: 'minecraft:coal',
-        S: BTM_CREATE_STACK.copperPlate,
-        P: BTM_CREATE_STACK.power
-    }, 'kubejs:create_stack/create_new_age/carbon_brushes')
-
-    btmCreateShaped(event, 'create_new_age:layered_magnet', [
-        'IRI',
-        'RPR',
-        'IRI'
-    ], {
-        I: BTM_CREATE_STACK.ironPlate,
-        R: BTM_CREATE_STACK.redstoneRelay,
-        P: BTM_CREATE_STACK.power
-    }, 'kubejs:create_stack/create_new_age/layered_magnet')
-
-    btmCreateShaped(event, 'create_new_age:redstone_magnet', [
-        ' R ',
-        'RMR',
-        ' R '
-    ], {
-        R: BTM_CREATE_STACK.redstoneRelay,
-        M: 'create_new_age:layered_magnet'
-    }, 'kubejs:create_stack/create_new_age/redstone_magnet')
-
-    btmCreateShaped(event, 'create_new_age:basic_motor', [
-        'BCB',
-        'MPM',
-        'BCB'
-    ], {
-        B: 'create_new_age:carbon_brushes',
-        C: 'create_new_age:copper_circuit',
-        M: 'create_new_age:redstone_magnet',
-        P: BTM_CREATE_STACK.power
-    }, 'kubejs:create_stack/create_new_age/basic_motor')
-
-    btmCreateShaped(event, 'create_new_age:reinforced_motor', [
-        'BCB',
-        'MPM',
-        'BCB'
-    ], {
-        B: 'create_new_age:basic_motor',
-        C: BTM_CREATE_STACK.circuit,
-        M: 'create_new_age:redstone_magnet',
-        P: BTM_CREATE_STACK.power
-    }, 'kubejs:create_stack/create_new_age/reinforced_motor')
-
-    btmCreateShaped(event, 'create_new_age:electrical_connector', [
-        ' W ',
-        'CPC',
-        ' W '
-    ], {
-        W: 'create_new_age:copper_wire',
-        C: BTM_CREATE_STACK.circuit,
-        P: BTM_CREATE_STACK.power
-    }, 'kubejs:create_stack/create_new_age/electrical_connector')
 
     // Applied Kinetics is post-AE2; reinforce the existing broad gate with full-output input rewrites.
     btmCreateReplaceInputs(event, [

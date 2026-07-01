@@ -1,0 +1,7 @@
+{
+  "type": "dynamictrees:tree",
+  "config": {
+    "species": "btmdimtrees:maple",
+    "radius": 3
+  }
+}

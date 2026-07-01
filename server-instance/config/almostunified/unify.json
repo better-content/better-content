@@ -83,7 +83,21 @@
     "zinc"
   ],
   "priorityOverrides": {},
-  "customTags": {},
+  "custom_tags": {
+    "forge:ingots/bronze": [
+      "tcintegrations:bronze_ingot",
+      "tinkers_thinking:tinkers_bronze_ingot",
+      "metallictinkering:bronze_ingot"
+    ],
+    "forge:ingots/steel": [
+      "tconstruct:steel_ingot",
+      "davebuildingmod:steel_ingot",
+      "fallout_wastelands_:steel_ingot"
+    ],
+    "forge:storage_blocks/steel": [
+      "fallout_wastelands_:steel_block"
+    ]
+  },
   "tagOwnerships": {},
   "itemTagInheritanceMode": "ALLOW",
   "itemTagInheritance": {},

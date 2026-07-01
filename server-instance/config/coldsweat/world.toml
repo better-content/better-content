@@ -131,29 +131,34 @@
 	# • *nbt: The NBT data that the block must have for the temperature to be applied.
 	# • *tempLimit: The maximum world temperature at which this block temp will have any effect.
 	#   (Represents the minimum temp if the block temp is negative)
-	"Block Temperatures" = [
-	    ["cold_sweat:boiler", 12, 7, "f", 36, "lit=true", "", 212],
-	    ["cold_sweat:icebox", -12, 7, "f", 36, "frosted=true", "", 32],
-	    ["minecraft:lava", 20, 7, "f", 200, "", "", 1000, true],
-	    ["#minecraft:fire", 15, 7, "f", 45, "", "", 400],
-	    ["#minecraft:campfires", 15, 7, "f", 45, "lit=true", " ", 400],
-	    ["minecraft:magma_block", 12, 3, "f", 48],
-	    ["minecraft:lava_cauldron", 20, 7, "f", 200, "", "", 1000, true],
-	    ["minecraft:ice", -6, 4, "f", 24, "", "", 33],
-	    ["minecraft:packed_ice", -12, 4, "f", 48, "", "", 16],
-	    ["minecraft:blue_ice", -16, 4, "f", 64, "", "", 0],
-	    ["#minecraft:ice", -6, 4, "f", 27, "", "", 33],
-	    ["create:blaze_burner", 5, 3, "f", 30, "blaze=smouldering", "", 400],
-	    ["create:blaze_burner", 10, 4, "f", 30, "blaze=fading", "", 400],
-	    ["create:blaze_burner", 15, 5, "f", 45, "blaze=kindled", "", 400],
-	    ["create:blaze_burner", 20, 6, "f", 60, "blaze=seething", "", 400],
-	    ["farmersdelight:stove", 12, 6, "f", 45, "lit=true", "", 400],
-	    ["tconstruct:seared_heater", 15, 5, "f", 60, "", "", 400],
-	    ["tconstruct:seared_melter", 10, 4, "f", 45, "", "", 400],
-	    ["tconstruct:smeltery_controller", 8, 4, "f", 45, "", "", 400],
-	    ["tconstruct:foundry_controller", 8, 4, "f", 45, "", "", 400],
-	    ["tconstruct:scorched_alloyer", 12, 5, "f", 60, "", "", 400]
-	]
+"Block Temperatures" = [
+    ["cold_sweat:boiler", 12, 7, "f", 36, "lit=true", "", 212],
+    ["cold_sweat:icebox", -12, 7, "f", 36, "frosted=true", "", 32],
+    ["minecraft:lava", 20, 7, "f", 200, "", "", 1000, true],
+    ["#minecraft:fire", 15, 7, "f", 45, "", "", 400],
+    ["#minecraft:campfires", 15, 7, "f", 45, "lit=true", " ", 400],
+    ["minecraft:magma_block", 12, 3, "f", 48],
+    ["minecraft:lava_cauldron", 20, 7, "f", 200, "", "", 1000, true],
+    ["minecraft:ice", -6, 4, "f", 24, "", "", 33],
+    ["minecraft:packed_ice", -12, 4, "f", 48, "", "", 16],
+    ["minecraft:blue_ice", -16, 4, "f", 64, "", "", 0],
+    ["#minecraft:ice", -6, 4, "f", 27, "", "", 33],
+
+    ["create:blaze_burner", 5, 3, "f", 30, "blaze=smouldering", "", 400],
+    ["create:blaze_burner", 10, 4, "f", 30, "blaze=fading", "", 400],
+    ["create:blaze_burner", 15, 5, "f", 45, "blaze=kindled", "", 400],
+    ["create:blaze_burner", 20, 6, "f", 60, "blaze=seething", "", 400],
+
+    # --- NEW: Farmer's Delight ---
+    ["farmersdelight:stove", 12, 6, "f", 45, "lit=true", "", 400],
+
+    # --- NEW: Tinkers' Construct (safe, “kitchen/foundry feels warm” defaults) ---
+    ["tconstruct:seared_heater", 15, 5, "f", 60, "", "", 400],
+    ["tconstruct:seared_melter", 10, 4, "f", 45, "", "", 400],
+    ["tconstruct:smeltery_controller", 8, 4, "f", 45, "", "", 400],
+    ["tconstruct:foundry_controller", 8, 4, "f", 45, "", "", 400],
+    ["tconstruct:scorched_alloyer", 12, 5, "f", 60, "", "", 400]
+]
 	#─────────────────────────────────────────────────────────────────────────
 	# The maximum range of blocks' area of effect
 	# - Note: This will not change anything unless blocks are configured to utilize the expanded range
@@ -164,7 +169,7 @@
 	# When set to true, uses Cold Sweat's temperature system to determine water freezing behavior
 	"Custom Freezing Behavior" = true
 	#─────────────────────────────────────────────────────────────────────────
-	# When set to true, modifies ice blocks to be harvestable with a pickaxe and tweaks its mining speed
+	# When set to true, modifies ice blocks to be harvestable with a pickaxe
 	"Custom Ice Drops" = true
 	#─────────────────────────────────────────────────────────────────────────
 	# The speed at which wet players dry off

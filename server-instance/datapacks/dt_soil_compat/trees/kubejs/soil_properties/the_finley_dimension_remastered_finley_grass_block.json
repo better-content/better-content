@@ -1,0 +1,8 @@
+{
+  "primitive_soil": "the_finley_dimension_remastered:finley_grass_block",
+  "acceptable_soils": [
+    "dirt_like"
+  ],
+  "substitute_soil": "dynamictrees:grass_block",
+  "only_if_loaded": "the_finley_dimension_remastered"
+}

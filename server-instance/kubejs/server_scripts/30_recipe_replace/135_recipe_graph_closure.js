@@ -4,18 +4,18 @@
 
 var BTM_CLOSURE = {
     seared: 'kubejs:seared_machine_casing',
-    scorched: 'kubejs:scorched_machine_casing',
+    scorched: 'tconstruct:scorched_bricks',
     andesite: 'kubejs:andesite_machine_casing',
     brass: 'kubejs:brass_machine_casing',
     power: 'kubejs:electrical_machine_casing',
-    oc2r: 'kubejs:circuited_machine_casing',
+    oc2r: 'kubejs:electrical_machine_casing',
     space: 'kubejs:space_machine_casing',
     ae2: 'kubejs:impossible_machine_casing',
     ironPlate: '#forge:plates/iron',
     copperPlate: '#forge:plates/copper',
     goldPlate: '#forge:plates/gold',
     brassPlate: '#forge:plates/brass',
-    redstoneRelay: 'powergrid:redstone_relay',
+    redstoneRelay: 'morered:red_alloy_wire',
     circuit: 'powergrid:integrated_circuit',
     skySteelSheet: 'kubejs:sky_steel_sheet'
 }
@@ -35,13 +35,13 @@ function btmClosureRemoveIds(event, ids) {
 function btmClosureShaped(event, output, pattern, keys, id) {
     if (!btmClosureExists(output)) return
     event.remove({ output: output })
-    event.shaped(output, pattern, keys).id(id)
+    global.btmCreateMechanicalCrafting(event, id, output, 1, pattern, keys, true)
 }
 
 function btmClosureShapeless(event, output, inputs, id) {
     if (!btmClosureExists(output)) return
     event.remove({ output: output })
-    event.shapeless(output, inputs).id(id)
+    global.btmCreateMechanicalFromInputs(event, id, output, 1, inputs)
 }
 
 function btmClosureReplace(event, outputs, oldInputs, newInput) {
@@ -52,7 +52,7 @@ function btmClosureReplace(event, outputs, oldInputs, newInput) {
 }
 
 ServerEvents.recipes(function (event) {
-    // Alchemistry and ChemLib own chemistry identity; Acid Vat is retired from the active pack.
+    // Alchemistry and ChemLib own chemistry identity; Create/PNCR own player-facing synthesis.
     event.remove({ id: 'alchemistry:patchouli_book' })
 
     // Remove controller casting shortcuts so the controller recipes visibly consume machine casings.
@@ -73,7 +73,7 @@ ServerEvents.recipes(function (event) {
     ], {
         B: 'tconstruct:scorched_bricks',
         G: 'tconstruct:scorched_glass',
-        C: BTM_CLOSURE.scorched
+        C: 'tconstruct:scorched_brick'
     }, 'kubejs:closure/tconstruct/foundry_controller')
 
     // Andesite Create machines and controls: gearbox/control infrastructure should be casing-visible.
@@ -114,9 +114,9 @@ ServerEvents.recipes(function (event) {
     ], { G: BTM_CLOSURE.goldPlate, S: '#forge:rods/wooden', A: BTM_CLOSURE.andesite, E: 'create:electron_tube' }, 'kubejs:closure/create/controller_rail')
     btmClosureShaped(event, 'create:steam_engine', [
         ' G ',
-        ' A ',
+        ' B ',
         ' C '
-    ], { G: BTM_CLOSURE.goldPlate, A: BTM_CLOSURE.andesite, C: '#forge:storage_blocks/copper' }, 'kubejs:closure/create/steam_engine')
+    ], { G: BTM_CLOSURE.goldPlate, B: BTM_CLOSURE.brass, C: '#forge:storage_blocks/copper' }, 'kubejs:closure/create/steam_engine')
     btmClosureShaped(event, 'create:transmitter', [
         ' L ',
         'CAC',
@@ -174,7 +174,7 @@ ServerEvents.recipes(function (event) {
         'CLC'
     ], { L: 'create:large_cogwheel', C: 'create_connected:vertical_parallel_gearbox', B: BTM_CLOSURE.brass }, 'kubejs:closure/create_connected/vertical_six_way_gearbox')
 
-    // Diesel and Acid Vat machinery: every block-like component consumes the brass casing tier.
+    // Diesel machinery: every block-like component consumes the brass casing tier.
     btmClosureShaped(event, 'createdieselgenerators:engine_piston', [
         'AIA',
         ' S ',
@@ -206,29 +206,6 @@ ServerEvents.recipes(function (event) {
         'AZA'
     ], { A: 'create:andesite_alloy', Z: '#forge:ingots/zinc', F: 'create:fluid_pipe', S: BTM_CLOSURE.ironPlate, B: BTM_CLOSURE.brass }, 'kubejs:closure/createdieselgenerators/engine_turbocharger')
     event.remove({ type: 'createdieselgenerators:distillation' })
-
-    // Heat/electricity machinery belongs to the power-grid casing tier.
-    btmClosureShaped(event, 'create_new_age:reactor_casing', [
-        'IPI',
-        'PCP',
-        'IPI'
-    ], { I: BTM_CLOSURE.ironPlate, P: BTM_CLOSURE.power, C: 'powergrid:conductive_casing' }, 'kubejs:closure/create_new_age/reactor_casing')
-    btmClosureShaped(event, 'create_new_age:reactor_glass', [
-        'CGC',
-        'GPG',
-        'CGC'
-    ], { C: 'create_new_age:reactor_casing', G: '#forge:glass', P: BTM_CLOSURE.power }, 'kubejs:closure/create_new_age/reactor_glass')
-    btmClosureShaped(event, 'create_new_age:reactor_heat_vent', [
-        'PHP',
-        'HCH',
-        'PHP'
-    ], { P: BTM_CLOSURE.power, H: 'create_new_age:heat_pipe', C: 'create_new_age:reactor_casing' }, 'kubejs:closure/create_new_age/reactor_heat_vent')
-    btmClosureShaped(event, 'create_new_age:stirling_engine', [
-        'NSN',
-        'PCP',
-        ' B '
-    ], { N: '#forge:nuggets/iron', S: 'create:shaft', P: 'create_new_age:heat_pipe', C: '#forge:storage_blocks/copper', B: BTM_CLOSURE.power }, 'kubejs:closure/create_new_age/stirling_engine')
-    btmClosureReplace(event, ['create_new_age:advanced_motor_extension'], ['create_new_age:overcharged_diamond', 'create_new_age:overcharged_iron_sheet'], BTM_CLOSURE.power)
 
     // AE2 addon conversions require the AE2 casing tier so part/full cycling is not free.
     btmClosureShapeless(event, 'expatternprovider:ex_interface_part', ['expatternprovider:ex_interface', BTM_CLOSURE.ae2], 'kubejs:closure/expatternprovider/ex_interface_part')

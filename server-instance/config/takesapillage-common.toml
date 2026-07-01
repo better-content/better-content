@@ -1,4 +1,3 @@
-
 ["It Takes A Pillage - Config"]
 	#Replace naturally spawning Iron Golems with Clay Golems?
 	"Replace Iron Golems" = true
@@ -14,4 +13,3 @@
 	"Milk Removes Bad Omen" = false
 	#Pillage Sieges occur at night?
 	"Enable Pillage Sieges" = true
-

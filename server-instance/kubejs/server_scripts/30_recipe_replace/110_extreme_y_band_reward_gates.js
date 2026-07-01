@@ -20,12 +20,13 @@ var BTM_EXTREME = {
         thorium: 'kubejs:fissile_salt_blend',
         osmium: 'kubejs:soulstone_carbon_matrix',
         iridium: 'kubejs:titanium_thermal_plate',
+        osmiridium: 'realisticores:crushed_osmiridium_lava_sulfide_ore',
         debris: 'minecraft:netherite_scrap'
     },
     gate: {
         brass: 'kubejs:brass_machine_casing',
         power: 'kubejs:electrical_machine_casing',
-        oc2r: 'kubejs:circuited_machine_casing',
+        oc2r: 'kubejs:electrical_machine_casing',
         space: 'kubejs:space_machine_casing',
         ae2: 'kubejs:impossible_machine_casing',
         etherealSlate: 'bloodmagic:etherealslate'
@@ -38,12 +39,12 @@ function btmExtremeItemExists(id) {
 
 function btmExtremeRecipe(event, output, pattern, keys, id) {
     if (!btmExtremeItemExists(output)) {
-        console.warn('[extreme-y-rewards] Skipping recipe for missing output: ' + output)
+        console.info('[extreme-y-rewards] Skipping recipe for missing optional output: ' + output)
         return
     }
 
     event.remove({ output: output })
-    event.shaped(output, pattern, keys).id(id)
+    global.btmCreateMechanicalCrafting(event, id, output, 1, pattern, keys, true)
 }
 
 ServerEvents.recipes(function (event) {
@@ -163,7 +164,7 @@ ServerEvents.recipes(function (event) {
         'PBP',
         'OIO'
     ], {
-        O: BTM_EXTREME.lava.osmium,
+        O: BTM_EXTREME.lava.osmiridium,
         I: BTM_EXTREME.lava.iridium,
         P: BTM_EXTREME.deepslate.palladium,
         B: BTM_EXTREME.gate.ae2

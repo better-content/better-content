@@ -8,4 +8,3 @@
 	#The size of the chunk grid used for heightmap sampling. Default is 1 which means every chunk is sampled. Higher values will sample less chunks and thus be faster but also less accurate
 	#Range: 1 ~ 100
 	heightSampleSize = 3
-

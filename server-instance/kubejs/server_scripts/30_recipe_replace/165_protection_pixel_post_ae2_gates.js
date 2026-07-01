@@ -119,7 +119,7 @@ ServerEvents.recipes(function (event) {
         ingredients: [
             { item: 'minecraft:white_terracotta' },
             { item: 'minecraft:netherite_scrap' },
-            { item: 'create_new_age:heat_pipe' },
+            { item: 'heatsync:heat_pipe' },
             { item: 'chemlib:thorium_plate' },
             { item: 'chemlib:uranium_plate' }
         ],
@@ -143,9 +143,9 @@ ServerEvents.recipes(function (event) {
     ], {
         S: { item: 'kubejs:sky_steel_sheet' },
         Q: { item: 'kubejs:sky_steel_sheet' },
-        L: { item: 'create_new_age:heat_pipe' },
+        L: { item: 'heatsync:heat_pipe' },
         A: { item: 'protection_pixel:alloyarmorplate' },
-        F: { item: 'fission_reactor:fission_reactor_rod' },
+        F: { item: 'latent_chemlib:gas_reaction_chamber' },
         C: { item: 'kubejs:impossible_machine_casing' }
     }, 'kubejs:create/mechanical_crafting/protection_pixel/armor_load_platform')
 
@@ -156,8 +156,8 @@ ServerEvents.recipes(function (event) {
         'FQCQF',
         'HFHFH'
     ], {
-        H: { item: 'create_new_age:heat_pipe' },
-        F: { item: 'fission_reactor:fission_reactor_rod' },
+        H: { item: 'heatsync:heat_pipe' },
+        F: { item: 'latent_chemlib:gas_reaction_chamber' },
         Q: { item: 'kubejs:impossible_circuit' },
         C: { item: 'kubejs:impossible_machine_casing' },
         A: { item: 'protection_pixel:alloyarmorplate' }
@@ -169,7 +169,7 @@ ServerEvents.recipes(function (event) {
         'RHR'
     ], {
         R: { item: 'chemlib:ruthenium_plate' },
-        H: { item: 'create_new_age:heat_pump' },
+        H: { item: 'heatsync:coolant_exchanger' },
         Q: { item: 'kubejs:impossible_circuit' },
         E: { item: 'protection_pixel:powerengine' }
     }, 'kubejs:create/mechanical_crafting/protection_pixel/heat_overlock_mechanism')
@@ -317,6 +317,48 @@ ServerEvents.recipes(function (event) {
         W: { item: 'minecraft:elytra' },
         B: { item: 'kubejs:impossible_machine_casing' }
     }, 'kubejs:create/mechanical_crafting/protection_pixel/maneuvering_wing')
+
+    btmPpMechanical(event, 'protection_pixel:tosaki_helmet', [
+        'HOH',
+        'QLQ',
+        'STS'
+    ], {
+        H: { item: 'protection_pixel:heatresistantceramicsheet' },
+        O: { item: 'realisticores:crushed_osmiridium_lava_sulfide_ore' },
+        Q: { item: 'kubejs:impossible_circuit' },
+        L: { item: 'protection_pixel:linkplate_helmet' },
+        S: { item: 'protection_pixel:smallnetheritesheet' },
+        T: { item: 'chemlib:thorium_plate' }
+    }, 'kubejs:create/mechanical_crafting/protection_pixel/tosaki_helmet_lava_diving')
+
+    btmPpMechanical(event, 'protection_pixel:tosaki_chestplate', [
+        'HOH',
+        'QLQ',
+        'AEA',
+        'SOS'
+    ], {
+        H: { item: 'protection_pixel:heatresistantceramicsheet' },
+        O: { item: 'realisticores:crushed_osmiridium_lava_sulfide_ore' },
+        Q: { item: 'kubejs:impossible_circuit' },
+        L: { item: 'protection_pixel:linkplate_chestplate' },
+        A: { item: 'protection_pixel:heatoverlockingmechanism' },
+        E: { item: 'protection_pixel:equipmentkit' },
+        S: { item: 'protection_pixel:smallnetheritesheet' }
+    }, 'kubejs:create/mechanical_crafting/protection_pixel/tosaki_chestplate_lava_diving')
+
+    btmPpMechanical(event, 'protection_pixel:tosaki_leggings', [
+        'HQH',
+        'OLO',
+        'SIS',
+        ' H '
+    ], {
+        H: { item: 'protection_pixel:heatresistantceramicsheet' },
+        Q: { item: 'kubejs:impossible_circuit' },
+        O: { item: 'realisticores:crushed_osmiridium_lava_sulfide_ore' },
+        L: { item: 'protection_pixel:linkplate_leggings' },
+        S: { item: 'protection_pixel:smallnetheritesheet' },
+        I: { item: 'chemlib:iridium_plate' }
+    }, 'kubejs:create/mechanical_crafting/protection_pixel/tosaki_leggings_lava_diving')
 
     btmPpSequence(event, 'protection_pixel:wingsofprism_chestplate', 'protection_pixel:incompletewingsofprism', 'protection_pixel:wingsofprismas_chestplate', [
         btmPpFillLava('protection_pixel:incompletewingsofprism', 500),

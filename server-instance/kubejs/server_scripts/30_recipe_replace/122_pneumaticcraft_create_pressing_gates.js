@@ -7,6 +7,18 @@
 ServerEvents.recipes(function (event) {
     var compressedIron = 'pneumaticcraft:ingot_iron_compressed'
     var compressedStone = 'pneumaticcraft:compressed_stone'
+    var retiredCompressors = [
+        'pneumaticcraft:air_compressor',
+        'pneumaticcraft:advanced_air_compressor',
+        'pneumaticcraft:liquid_compressor',
+        'pneumaticcraft:advanced_liquid_compressor',
+        'pneumaticcraft:thermal_compressor',
+        'pneumaticcraft:manual_compressor',
+        'pneumaticcraft:electrostatic_compressor',
+        'pneumaticcraft:solar_compressor',
+        'pneumaticcraft:flux_compressor',
+        'pneumaticcraft:creative_compressor'
+    ]
     var removedIds = [
         'pneumaticcraft:pressure_chamber/compressed_stone',
         'pneumaticcraft:pressure_chamber/compressed_iron_ingot',
@@ -40,28 +52,46 @@ ServerEvents.recipes(function (event) {
         ]
     }).id('kubejs:create/pressing/pneumaticcraft/compressed_stone')
 
-    event.remove({ output: 'pneumaticcraft:solar_compressor' })
-    event.remove({ output: 'pneumaticcraft:flux_compressor' })
+    event.remove({ output: 'compressedcreativity:rotational_compressor' })
+    for (var c = 0; c < retiredCompressors.length; c++) {
+        event.remove({ output: retiredCompressors[c] })
+    }
     event.remove({ output: 'pneumaticcraft:jet_boots_upgrade_4' })
     event.remove({ output: 'pneumaticcraft:jet_boots_upgrade_5' })
 
-    event.replaceInput({ output: 'pneumaticcraft:air_compressor' }, 'minecraft:furnace', 'kubejs:rotational_compressor_core')
-    event.replaceInput({ output: 'pneumaticcraft:thermal_compressor' }, 'pneumaticcraft:air_compressor', 'kubejs:rotational_compressor_core')
-    event.replaceInput({ output: 'pneumaticcraft:liquid_compressor' }, 'pneumaticcraft:air_compressor', 'kubejs:rotational_compressor_core')
-    event.replaceInput({ output: 'pneumaticcraft:advanced_air_compressor' }, 'pneumaticcraft:air_compressor', 'kubejs:rotational_compressor_core')
+    event.custom({
+        type: 'create:mechanical_crafting',
+        acceptMirrored: false,
+        pattern: [
+            'PTP',
+            'PCP',
+            'SAS'
+        ],
+        key: {
+            P: { item: 'pneumaticcraft:pressure_tube' },
+            T: { item: 'pneumaticcraft:turbine_blade' },
+            C: { item: 'kubejs:rotational_compressor_core' },
+            S: { item: 'kubejs:pressure_seal' },
+            A: { item: 'kubejs:airtight_machine_casing' }
+        },
+        result: { item: 'compressedcreativity:rotational_compressor' }
+    }).id('kubejs:create/mechanical_crafting/compressedcreativity/rotational_compressor')
 
-    event.remove({ id: 'pneumaticcraft:printed_circuit_board' })
+    event.remove({ id: 'pneumaticcraft:assembly/unassembled_pcb' })
+    event.remove({ output: 'pneumaticcraft:unassembled_pcb' })
     event.custom({
         type: 'pneumaticcraft:pressure_chamber',
         inputs: [
-            { item: 'pneumaticcraft:unassembled_pcb' },
-            { item: 'pneumaticcraft:capacitor' },
+            { item: 'pneumaticcraft:empty_pcb' },
             { item: 'pneumaticcraft:capacitor' },
             { item: 'pneumaticcraft:transistor' },
-            { item: 'pneumaticcraft:transistor' },
+            { item: 'morered:diode' },
+            { item: 'morered:red_alloy_wire' },
+            { item: 'chemlib:copper_chloride' },
+            { item: 'chemlib:silicon_dioxide' },
             { item: 'kubejs:pressure_seal' }
         ],
         pressure: 2.0,
-        results: [{ item: 'pneumaticcraft:printed_circuit_board' }]
-    }).id('kubejs:pneumaticcraft/pressure_chamber/printed_circuit_board')
+        results: [{ item: 'pneumaticcraft:unassembled_pcb' }]
+    }).id('kubejs:pneumaticcraft/pressure_chamber/unassembled_pcb_with_primitive_logic')
 })

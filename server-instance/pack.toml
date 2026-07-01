@@ -1,15 +1,15 @@
-name = "Bound to Matter"
-version = "Playtest 3 - v1"
+name = "Better Content"
+version = "Playtest 4 - v1"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "450f2d504be40360d6541634e6a7fadd0ee562fb8ae5a5875dacf6c4567ea914"
+hash = "e97c33f11a731431729f5640c736a6da44c595c3b8e507884ffbd0afef7dd290"
 
 [versions]
 forge = "47.4.13"
 minecraft = "1.20.1"
 
 [options]
-acceptable-game-versions = ["forge"]
+acceptable-game-versions = ["list"]

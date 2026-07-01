@@ -24,6 +24,25 @@ const DISABLED_ITEMS = [
 'alchemistry:reactor_glass',
 'alchemistry:reactor_input',
 'alchemistry:reactor_output',
+'botania:orechid',
+'botania:orechid_ignem',
+'botania:marimorphosis',
+'botania:alchemy_catalyst',
+'botania:conjuration_catalyst',
+'ars_nouveau:glyph_conjure_water',
+'ars_nouveau:ritual_conjure_island_plains',
+'ars_nouveau:ritual_conjure_island_desert',
+'ars_caelum:ritual_conjure_island_geode',
+'ars_caelum:ritual_conjure_island_vexing',
+'ars_caelum:ritual_conjure_island_village',
+'ars_caelum:ritual_conjure_island_flourishing',
+'ars_caelum:ritual_conjure_island_end_portal',
+'ars_caelum:ritual_conjure_island_blazing',
+'ars_caelum:ritual_sedimentation',
+'bloodmagic:watersigil',
+'bloodmagic:lavasigil',
+'bloodmagic:reagentwater',
+'bloodmagic:reagentlava',
 'occultism:miner_foliot_unspecialized',
 'occultism:miner_djinni_ores',
 'occultism:miner_afrit_deeps',
@@ -37,10 +56,36 @@ const DISABLED_ITEMS = [
 'createdieselgenerators:pumpjack_bearing',
 'createdieselgenerators:pumpjack_crank',
 'createdieselgenerators:oil_scanner',
+'pneumaticcraft:air_compressor',
+'pneumaticcraft:advanced_air_compressor',
+'pneumaticcraft:liquid_compressor',
+'pneumaticcraft:advanced_liquid_compressor',
+'pneumaticcraft:thermal_compressor',
+'pneumaticcraft:manual_compressor',
+'pneumaticcraft:electrostatic_compressor',
 'pneumaticcraft:solar_compressor',
 'pneumaticcraft:flux_compressor',
+'pneumaticcraft:creative_compressor',
 'pneumaticcraft:jet_boots_upgrade_4',
-'pneumaticcraft:jet_boots_upgrade_5'
+'pneumaticcraft:jet_boots_upgrade_5',
+'fallout_wastelands_:portal_frame',
+'fallout_wastelands_:wastelands',
+'the_finley_dimension_remastered:finley_dimension',
+'undergarden:catalyst',
+'callfromthedepth_:depth',
+'bloodmagic:simplekey',
+'bloodmagic:minekey',
+'bloodmagic:mineentrancekey',
+'bloodmagic:reagentteleposition',
+'bloodmagic:teleposerfocus',
+'bloodmagic:reinforcedteleposerfocus',
+'bloodmagic:enhancedteleposerfocus',
+'aether:aether_portal_frame',
+'blue_skies:everbright_portal',
+'blue_skies:everdawn_portal',
+'blue_skies:multi_portal_item',
+'blue_skies:portal_activator',
+'deeperdarker:otherside_portal'
 ]
 
 function safeString(value) {
@@ -69,6 +114,14 @@ ServerEvents.recipes(event => {
 
     event.remove({ id: 'burnt:gunpowder_recipe' })
     event.remove({ id: 'burnt:fire_barrel_recipe_2' })
+    event.remove({ type: 'occultism:miner' })
+    event.remove({ type: 'bloodmagic:meteor' })
+    event.remove({ id: 'createdieselgenerators:bulk_fermenting/lava' })
+    event.remove({ id: 'ars_nouveau:water_essence_to_bucket' })
+    event.remove({ id: 'ars_nouveau:water_essence_to_obsidian' })
+    event.remove({ id: 'ars_nouveau:fire_essence_to_magma_block' })
+    event.remove({ id: 'ars_nouveau:conjuration_essence_to_soul_sand' })
+    event.remove({ id: 'ars_nouveau:conjuration_essence_to_end_stone' })
 
     // Normal output selector pass.
     DISABLED_ITEMS.forEach(item => {

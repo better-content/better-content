@@ -5,6 +5,18 @@
 
 var BTM_AUDIT_DUMP_CONFIG = 'kubejs/config/audit_dumps.json'
 var BTM_AUDIT_DUMP_DIR = 'kubejs/config/'
+var BTM_RECIPE_AUDIT_GENERATED_BY = 'kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js'
+var BTM_RECIPE_AUDIT_STAGE = 'pre_mutation_recipe_event'
+var BTM_RECIPE_AUDIT_SOURCE = 'ServerEvents.recipes event.forEachRecipe before KubeJS mutations are applied'
+var BTM_RECIPE_AUDIT_SCHEMA = 'btm.recipe_audit.v2'
+
+function btmAuditTimestamp() {
+    try {
+        return new Date().toISOString()
+    } catch (e) {
+        return String(new Date())
+    }
+}
 
 function btmAuditReadConfig() {
     var fallback = {
@@ -55,7 +67,7 @@ function btmAuditMakeBucketMap(keys) {
     return map
 }
 
-function btmAuditWriteFullIndexChunks(fullIndex, cfg) {
+function btmAuditWriteFullIndexChunks(fullIndex, cfg, metadata) {
     if (!cfg.writeFullRecipeIndex) return 0
 
     var chunkSize = cfg.fullRecipeChunkSize
@@ -72,6 +84,10 @@ function btmAuditWriteFullIndexChunks(fullIndex, cfg) {
         var padded = String(chunkCount)
         while (padded.length < 4) padded = '0' + padded
         JsonIO.write(BTM_AUDIT_DUMP_DIR + 'full_recipe_index_' + padded + '.json', {
+            schema: metadata.schema,
+            generatedBy: metadata.generatedBy,
+            generatedAt: metadata.generatedAt,
+            recipeEventStage: metadata.recipeEventStage,
             chunk: chunkCount,
             start: start,
             endExclusive: end,
@@ -82,6 +98,13 @@ function btmAuditWriteFullIndexChunks(fullIndex, cfg) {
     }
 
     JsonIO.write(BTM_AUDIT_DUMP_DIR + 'full_recipe_index_manifest.json', {
+        schema: metadata.schema,
+        generatedBy: metadata.generatedBy,
+        generatedAt: metadata.generatedAt,
+        source: metadata.source,
+        recipeEventStage: metadata.recipeEventStage,
+        writeMatchedRecipeJson: cfg.writeMatchedRecipeJson,
+        maxJsonCharsPerRecipe: cfg.maxJsonCharsPerRecipe,
         chunkSize: chunkSize,
         chunkCount: chunkCount,
         recipeCount: fullIndex.length,
@@ -115,20 +138,17 @@ var BTM_AUDIT_PROGRESSION_NEEDLES = [
     { id: 'minecraft_gunpowder', needles: ['"result":{"item":"minecraft:gunpowder"', '"result":"minecraft:gunpowder"', '"item":"minecraft:gunpowder"'] },
     { id: 'minecraft_tnt', needles: ['"result":{"item":"minecraft:tnt"', '"result":"minecraft:tnt"', '"item":"minecraft:tnt"'] },
     { id: 'kubejs_seared_machine_casing', needles: ['"result":{"item":"kubejs:seared_machine_casing"', '"result":"kubejs:seared_machine_casing"', '"item":"kubejs:seared_machine_casing"'] },
-    { id: 'kubejs_scorched_machine_casing', needles: ['"result":{"item":"kubejs:scorched_machine_casing"', '"result":"kubejs:scorched_machine_casing"', '"item":"kubejs:scorched_machine_casing"'] },
     { id: 'kubejs_andesite_machine_casing', needles: ['"result":{"item":"kubejs:andesite_machine_casing"', '"result":"kubejs:andesite_machine_casing"', '"item":"kubejs:andesite_machine_casing"'] },
     { id: 'kubejs_brass_machine_casing', needles: ['"result":{"item":"kubejs:brass_machine_casing"', '"result":"kubejs:brass_machine_casing"', '"item":"kubejs:brass_machine_casing"'] },
     { id: 'kubejs_airtight_machine_casing', needles: ['"result":{"item":"kubejs:airtight_machine_casing"', '"result":"kubejs:airtight_machine_casing"', '"item":"kubejs:airtight_machine_casing"'] },
     { id: 'kubejs_electrical_machine_casing', needles: ['"result":{"item":"kubejs:electrical_machine_casing"', '"result":"kubejs:electrical_machine_casing"', '"item":"kubejs:electrical_machine_casing"'] },
-    { id: 'kubejs_circuited_machine_casing', needles: ['"result":{"item":"kubejs:circuited_machine_casing"', '"result":"kubejs:circuited_machine_casing"', '"item":"kubejs:circuited_machine_casing"'] },
     { id: 'kubejs_space_machine_casing', needles: ['"result":{"item":"kubejs:space_machine_casing"', '"result":"kubejs:space_machine_casing"', '"item":"kubejs:space_machine_casing"'] },
     { id: 'kubejs_raw_impossible_casing', needles: ['"result":{"item":"kubejs:raw_impossible_casing"', '"result":"kubejs:raw_impossible_casing"', '"item":"kubejs:raw_impossible_casing"'] },
     { id: 'kubejs_impossible_machine_casing', needles: ['"result":{"item":"kubejs:impossible_machine_casing"', '"result":"kubejs:impossible_machine_casing"', '"item":"kubejs:impossible_machine_casing"'] },
     { id: 'bloodmagic_weakbloodorb', needles: ['"result":{"item":"bloodmagic:weakbloodorb"', '"result":"bloodmagic:weakbloodorb"', '"item":"bloodmagic:weakbloodorb"'] },
     { id: 'ars_nouveau_imbuement_chamber', needles: ['"result":{"item":"ars_nouveau:imbuement_chamber"', '"result":"ars_nouveau:imbuement_chamber"', '"item":"ars_nouveau:imbuement_chamber"'] },
     { id: 'ae2_controller', needles: ['"result":{"item":"ae2:controller"', '"result":"ae2:controller"', '"item":"ae2:controller"'] },
-    { id: 'ae2_drive', needles: ['"result":{"item":"ae2:drive"', '"result":"ae2:drive"', '"item":"ae2:drive"'] },
-    { id: 'acid_vat', needles: ['"result":{"item":"acid_vat:acid_vat"', '"result":"acid_vat:acid_vat"', '"item":"acid_vat:acid_vat"'] }
+    { id: 'ae2_drive', needles: ['"result":{"item":"ae2:drive"', '"result":"ae2:drive"', '"item":"ae2:drive"'] }
 ]
 
 var BTM_AUDIT_BYPASS_NEEDLES = [
@@ -180,8 +200,20 @@ ServerEvents.recipes(function (event) {
         }
     })
 
+    var metadata = {
+        schema: BTM_RECIPE_AUDIT_SCHEMA,
+        generatedBy: BTM_RECIPE_AUDIT_GENERATED_BY,
+        generatedAt: btmAuditTimestamp(),
+        source: BTM_RECIPE_AUDIT_SOURCE,
+        recipeEventStage: BTM_RECIPE_AUDIT_STAGE
+    }
+
     var summary = {
-        generatedBy: 'kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js',
+        schema: metadata.schema,
+        generatedBy: metadata.generatedBy,
+        generatedAt: metadata.generatedAt,
+        source: metadata.source,
+        recipeEventStage: metadata.recipeEventStage,
         scannedRecipes: scanned,
         writeFullRecipeIndex: cfg.writeFullRecipeIndex,
         writeMatchedRecipeJson: cfg.writeMatchedRecipeJson,
@@ -210,7 +242,7 @@ ServerEvents.recipes(function (event) {
     JsonIO.write(BTM_AUDIT_DUMP_DIR + 'progression_recipe_mentions.json', progressionMentions)
     JsonIO.write(BTM_AUDIT_DUMP_DIR + 'valuable_material_usage_recipes.json', materialMatches)
     JsonIO.write(BTM_AUDIT_DUMP_DIR + 'known_bypass_candidate_recipes.json', bypassMatches)
-    summary.fullRecipeChunkCount = btmAuditWriteFullIndexChunks(fullIndex, cfg)
+    summary.fullRecipeChunkCount = btmAuditWriteFullIndexChunks(fullIndex, cfg, metadata)
     JsonIO.write(BTM_AUDIT_DUMP_DIR + 'recipe_audit_summary.json', summary)
 
     console.info('[BTM-RECIPE-AUDIT] scanned=' + scanned + ' fullChunks=' + summary.fullRecipeChunkCount + ' wrote ' + BTM_AUDIT_DUMP_DIR + 'recipe_audit_summary.json')

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#kubejs:no_biomes",
+  "features": "malum:cthonic_gold_ore",
+  "step": "underground_ores"
+}

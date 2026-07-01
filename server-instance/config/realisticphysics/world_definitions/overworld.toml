@@ -6,4 +6,3 @@ Dimensions = ["minecraft:overworld"]
 	#Note: This value is currently only used for calculations of forces, and does not physically affect the gravity of the dimension(s).
 	#Range: 0.0 ~ 100.0
 	GravityForce = 4
-

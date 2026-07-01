@@ -13,6 +13,8 @@
 
     { "name": "dungeons_arise:small_blimp", "is_disabled": true },
     { "name": "dungeons_arise:heavenly_challenger", "is_disabled": true },
+    { "name": "dungeons_arise:heavenly_conqueror", "is_disabled": true },
+    { "name": "dungeons_arise:heavenly_rider", "is_disabled": true },
     { "name": "ars_additions:nexus_tower", "is_disabled": true },
 
     { "name": "dungeons_arise:mechanical_nest", "is_disabled": true },
@@ -26,18 +28,33 @@
     { "name": "minecraft:ruined_portal_ocean", "is_disabled": true },
     { "name": "minecraft:ruined_portal_swamp", "is_disabled": true },
     { "name": "ars_additions:ruined_portal", "is_disabled": true },
+    { "name": "aether:ruined_portal", "is_disabled": true },
+    { "name": "aether:ruined_portal_aether", "is_disabled": true },
+    { "name": "aether:ruined_portal_desert", "is_disabled": true },
+    { "name": "aether:ruined_portal_jungle", "is_disabled": true },
+    { "name": "aether:ruined_portal_mountain", "is_disabled": true },
+    { "name": "aether:ruined_portal_swamp", "is_disabled": true },
+    { "name": "blue_skies:gatekeeper_house_mountain", "is_disabled": true },
+    { "name": "blue_skies:gatekeeper_house_plains", "is_disabled": true },
+    { "name": "blue_skies:gatekeeper_house_snowy", "is_disabled": true },
+    { "name": "callfromthedepth_:ancientportal", "is_disabled": true },
+    { "name": "deeperdarker:ancient_temple", "is_disabled": true },
+    { "name": "the_finley_dimension_remastered:constructed_finley_portal_living", "is_disabled": true },
+    { "name": "the_finley_dimension_remastered:constructed_finley_portal_plains", "is_disabled": true },
+    { "name": "the_finley_dimension_remastered:constructed_finley_portal_wastes", "is_disabled": true },
+    { "name": "the_finley_dimension_remastered:ruined_finley_portal", "is_disabled": true },
 
     { "name": "tconstruct:earth_slime_island", "is_disabled": true },
     { "name": "tconstruct:sky_slime_island", "is_disabled": true },
-    { "name": "tconstruct:ocean_sky_slime_island", "is_disabled": true },
+    { "name": "tconstruct:ocean_skyslime_island", "is_disabled": true },
     { "name": "tconstruct:clay_island", "is_disabled": true },
     { "name": "tconstruct:blood_island", "is_disabled": true },
 
     { "name": "graveyard:lich_prison", "is_disabled": true },
     { "name": "mna:faction/boss/council_island", "is_disabled": true },
     { "name": "minecraft:ancient_city", "is_disabled": true },
+    { "name":  "forbidden_arcanus:nipa_floating", "is_disabled": true },
 
-    { "name": "minecraft:ruined_portal_swamp", "is_disabled": true },
 
 
 

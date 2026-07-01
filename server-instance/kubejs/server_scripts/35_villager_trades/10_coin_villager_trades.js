@@ -29,7 +29,7 @@ var BTM_INDUSTRIAL_IRON_MARKET = [
     ['minecraft:mason',3,4,'create:cut_limestone',16,8,8],
     ['minecraft:mason',3,4,'create:cut_scoria',16,8,8],
     ['minecraft:mason',3,4,'create:cut_ochrum',16,8,8],
-    ['minecraft:toolsmith',2,3,'create:wrench',1,6,6],
+    ['minecraft:toolsmith',2,3,'additionalweaponry:wrench',1,6,6],
     ['minecraft:toolsmith',2,3,'create:super_glue',1,8,6],
     ['minecraft:toolsmith',3,4,'create:belt_connector',16,8,8],
     ['minecraft:toolsmith',3,4,'create:depot',2,8,8],
@@ -96,8 +96,8 @@ var BTM_PLATINUM_MARKET = [
     ['minecraft:armorer',5,8,'minecraft:diamond_leggings',1,1,24],
     ['minecraft:weaponsmith',5,8,'minecraft:enchanted_golden_apple',1,1,28],
     ['minecraft:weaponsmith',5,9,'minecraft:netherite_scrap',2,1,28],
-    ['minecraft:cleric',5,8,'bloodmagic:demonslate',1,2,24],
-    ['minecraft:cleric',5,10,'bloodmagic:etherealslate',1,1,30],
+    ['minecraft:cleric',5,8,'minecraft:ghast_tear',2,2,24],
+    ['minecraft:cleric',5,10,'minecraft:sculk_catalyst',1,1,30],
     ['minecraft:librarian',5,8,'minecraft:enchanted_book',1,2,24],
     ['minecraft:librarian',5,8,'minecraft:dragon_breath',2,2,30],
     ['minecraft:cartographer',5,8,'minecraft:lodestone',1,2,24],
@@ -128,6 +128,9 @@ var BTM_WANDERER_MARKET = [
     [1, 'copper', 4, 'minecraft:glow_berries', 8, 6, 3],
     [1, 'copper', 2, 'minecraft:sweet_berries', 12, 8, 2],
     [1, 'copper', 2, 'minecraft:cocoa_beans', 12, 8, 2],
+    [1, 'copper', 2, 'swem:alfalfa_seeds', 8, 8, 2],
+    [1, 'copper', 2, 'swem:oat_seeds', 8, 8, 2],
+    [1, 'copper', 2, 'swem:timothy_seeds', 8, 8, 2],
     [1, 'copper', 2, 'minecraft:brown_mushroom', 8, 8, 2],
     [1, 'copper', 2, 'minecraft:red_mushroom', 8, 8, 2],
     [1, 'copper', 3, 'minecraft:sea_pickle', 4, 8, 2],
@@ -265,7 +268,7 @@ var BTM_WANDERER_MARKET = [
     [2, 'platinum', 7, 'minecraft:wild_armor_trim_smithing_template', 1, 1, 22],
     [2, 'iron', 5, 'create:track', 32, 5, 12],
     [2, 'brass', 6, 'create:super_glue', 1, 4, 14],
-    [2, 'gold', 6, 'create:wrench', 1, 3, 16],
+    [2, 'gold', 6, 'additionalweaponry:wrench', 1, 3, 16],
     [2, 'gold', 7, 'create:linked_controller', 1, 2, 18],
     [2, 'gold', 6, 'create:copper_diving_helmet', 1, 2, 16],
     [2, 'gold', 6, 'create:copper_diving_boots', 1, 2, 16],
@@ -276,6 +279,97 @@ var BTM_WANDERER_MARKET = [
     [2, 'platinum', 8, 'minecraft:dragon_head', 1, 1, 28],
     [2, 'platinum', 10, 'minecraft:nether_star', 1, 1, 32]
 ]
+
+var BTM_NON_GROWN_TRADE_BUY_BLOCKLIST = {
+    'minecraft:coal': true,
+    'minecraft:glass': true,
+    'minecraft:bucket': true,
+    'minecraft:lantern': true,
+    'minecraft:cobblestone': true,
+    'minecraft:stone': true,
+    'minecraft:stone_bricks': true,
+    'minecraft:mossy_stone_bricks': true,
+    'minecraft:andesite': true,
+    'minecraft:granite': true,
+    'minecraft:diorite': true,
+    'minecraft:calcite': true,
+    'minecraft:tuff': true,
+    'minecraft:dripstone_block': true,
+    'minecraft:pointed_dripstone': true,
+    'minecraft:mud': true,
+    'minecraft:packed_mud': true,
+    'minecraft:clay': true,
+    'minecraft:clay_ball': true,
+    'minecraft:terracotta': true,
+    'minecraft:sand': true,
+    'minecraft:red_sand': true,
+    'minecraft:gravel': true,
+    'minecraft:ice': true,
+    'minecraft:packed_ice': true,
+    'minecraft:blue_ice': true,
+    'minecraft:iron_ingot': true,
+    'minecraft:copper_ingot': true,
+    'minecraft:redstone': true,
+    'minecraft:lapis_lazuli': true,
+    'minecraft:glowstone_dust': true,
+    'minecraft:quartz': true,
+    'minecraft:amethyst_shard': true,
+    'minecraft:quartz_block': true,
+    'minecraft:obsidian': true,
+    'minecraft:crying_obsidian': true,
+    'minecraft:ancient_debris': true,
+    'minecraft:netherite_scrap': true,
+    'minecraft:rail': true,
+    'minecraft:tnt': true,
+    'minecraft:chain': true,
+    'minecraft:soul_lantern': true,
+    'minecraft:campfire': true,
+    'minecraft:soul_campfire': true,
+    'minecraft:experience_bottle': true,
+    'minecraft:echo_shard': true,
+    'minecraft:sculk_catalyst': true,
+    'minecraft:stone_pickaxe': true,
+    'minecraft:iron_pickaxe': true,
+    'minecraft:diamond_pickaxe': true,
+    'minecraft:stone_sword': true,
+    'minecraft:iron_axe': true,
+    'minecraft:diamond_sword': true,
+    'minecraft:diamond_helmet': true,
+    'minecraft:diamond_chestplate': true,
+    'minecraft:diamond_leggings': true,
+    'minecraft:diamond_boots': true,
+    'minecraft:netherite_upgrade_smithing_template': true,
+    'create:andesite_alloy': true,
+    'create:andesite_casing': true,
+    'create:brass_sheet': true,
+    'create:cut_limestone': true,
+    'create:cut_scoria': true,
+    'create:cut_ochrum': true,
+    'create:belt_connector': true,
+    'create:depot': true,
+    'create:chute': true,
+    'create:andesite_funnel': true,
+    'create:andesite_tunnel': true,
+    'create:portable_storage_interface': true,
+    'create:track': true,
+    'create:controller_rail': true,
+    'create:track_signal': true,
+    'create:track_observer': true,
+    'create:track_station': true,
+    'create:redstone_link': true,
+    'create:display_link': true,
+    'create:display_board': true,
+    'create:content_observer': true,
+    'tconstruct:seared_brick': true,
+    'tconstruct:scorched_brick': true,
+    'bloodmagic:blankslate': true,
+    'ae2:sky_stone_block': true,
+    'ae2:certus_quartz_crystal': true
+}
+
+function btmIsNonGrownInfiniteBuyResult(item) {
+    return BTM_NON_GROWN_TRADE_BUY_BLOCKLIST[item] === true
+}
 
 function btmAddThirtyBuys(event, tier, baseCost) {
     for (var i = 0; i < BTM_30_ITEMS.length; i++) {
@@ -299,6 +393,7 @@ function btmItemExists(id) {
 }
 
 function btmTrade(event, profession, level, coinTier, costCount, resultItem, resultCount, uses, xp) {
+    if (btmIsNonGrownInfiniteBuyResult(resultItem)) return
     if (!BTM_VILLAGER_COIN_WHITELIST[coinTier]) return
     var coin = BTM_COIN[coinTier]
     if (!coin) {
@@ -318,6 +413,7 @@ function btmTrade(event, profession, level, coinTier, costCount, resultItem, res
 }
 
 function btmWandererTrade(event, level, coinTier, costCount, resultItem, resultCount, uses, xp) {
+    if (btmIsNonGrownInfiniteBuyResult(resultItem)) return false
     if (!BTM_VILLAGER_COIN_WHITELIST[coinTier]) return
     var coin = BTM_COIN[coinTier]
     if (!coin || !btmItemExists(coin) || !btmItemExists(resultItem)) return false
@@ -506,6 +602,9 @@ if (typeof MoreJSEvents !== 'undefined') {
             [1, 'copper', 2, 'minecraft:apple', 4, 12, 2],
             [1, 'copper', 3, 'farmersdelight:cabbage', 4, 12, 2],
             [1, 'copper', 3, 'farmersdelight:onion', 4, 12, 2],
+            [1, 'copper', 2, 'swem:alfalfa_seeds', 8, 12, 2],
+            [1, 'copper', 2, 'swem:oat_seeds', 8, 12, 2],
+            [1, 'copper', 2, 'swem:timothy_seeds', 8, 12, 2],
             [2, 'iron', 2, 'farmersdelight:cooking_pot', 1, 4, 8],
             [2, 'iron', 3, 'farmersdelight:skillet', 1, 4, 8],
             [2, 'brass', 3, 'farmersdelight:tomato_sauce', 3, 8, 8],
@@ -614,7 +713,7 @@ if (typeof MoreJSEvents !== 'undefined') {
             [2, 'iron', 4, 'minecraft:iron_pickaxe', 1, 4, 6],
             [2, 'brass', 4, 'minecraft:shears', 1, 6, 6],
             [3, 'brass', 4, 'create:super_glue', 1, 6, 10],
-            [4, 'gold', 6, 'create:wrench', 1, 4, 16],
+            [4, 'gold', 6, 'additionalweaponry:wrench', 1, 4, 16],
             [5, 'platinum', 6, 'minecraft:diamond_pickaxe', 1, 2, 22]
         ])
 
@@ -646,18 +745,18 @@ if (typeof MoreJSEvents !== 'undefined') {
             [5, 'platinum', 8, 'minecraft:netherite_scrap', 1, 1, 28]
         ])
 
-        // Cleric: magic recovery and ritual support. Slates are convenience, not the main altar route.
+        // Cleric: magic recovery and ritual support. High slates stay altar-authored.
         btmAddTrades(event, 'minecraft:cleric', [
             [1, 'copper', 3, 'minecraft:redstone', 8, 12, 3],
             [1, 'copper', 3, 'minecraft:lapis_lazuli', 8, 12, 3],
             [2, 'iron', 4, 'minecraft:glowstone_dust', 8, 10, 6],
             [2, 'brass', 4, 'bloodmagic:blankslate', 1, 6, 10],
-            [3, 'brass', 4, 'bloodmagic:reinforcedslate', 1, 4, 14],
+            [3, 'brass', 4, 'minecraft:amethyst_shard', 8, 8, 14],
             [3, 'brass', 5, 'minecraft:ender_pearl', 2, 6, 12],
-            [4, 'gold', 6, 'bloodmagic:infusedslate', 1, 3, 18],
+            [4, 'gold', 6, 'minecraft:ghast_tear', 2, 4, 18],
             [4, 'platinum', 6, 'minecraft:blaze_rod', 4, 4, 18],
-            [5, 'platinum', 8, 'bloodmagic:demonslate', 1, 2, 24],
-            [5, 'platinum', 10, 'bloodmagic:etherealslate', 1, 1, 30]
+            [5, 'platinum', 8, 'minecraft:sculk_catalyst', 1, 2, 24],
+            [5, 'platinum', 10, 'minecraft:echo_shard', 2, 1, 30]
         ])
 
         // Librarian: books, manuals, local intelligence, and late knowledge artifacts.

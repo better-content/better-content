@@ -12,7 +12,7 @@ _version = 3
 	#
 	# Defines the distance allowed to be synchronized around the player. 
 	# Should be the same or larger than maxGenerationRequestDistance in most cases.
-	maxSyncOnLoadRequestDistance = 512
+	maxSyncOnLoadRequestDistance = 32
 	#
 	# If true, clients will receive updated LODs when joining or loading new LODs.
 	synchronizeOnLoad = true
@@ -24,7 +24,7 @@ _version = 3
 	serverKey = ""
 	#
 	# Defines the distance allowed to generate around the player.
-	maxGenerationRequestDistance = 512
+	maxGenerationRequestDistance = 16
 	#
 	# Makes the server send level keys for each world.
 	# Disable this if you use alternative ways to send level keys.
@@ -52,12 +52,12 @@ _version = 3
 	#
 	# Maximum per-player speed for uploading LODs to the clients, in KB/s.
 	# Value of 0 disables the limit.
-	playerBandwidthLimit = 500
+	playerBandwidthLimit = 256
 	#
 	# Enables adaptive transfer speed based on client performance.
 	# If true, DH will automatically adjust transfer rate to minimize connection lag.
 	# If false, transfer speed will remain fixed.
-	enableAdaptiveTransferSpeed = false
+	enableAdaptiveTransferSpeed = true
 
 	[server.experimental]
 		#
@@ -821,4 +821,3 @@ _version = 3
 			# NAME_IP: Example: "Minecraft Server IP 192.168.1.40" 
 			# NAME_IP_PORT: Example: "Minecraft Server IP 192.168.1.40:25565"NAME_IP_PORT_MC_VERSION: Example: "Minecraft Server IP 192.168.1.40:25565 GameVersion 1.16.5"
 			serverFolderNameMode = "NAME_ONLY"
-

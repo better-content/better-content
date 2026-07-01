@@ -45,7 +45,7 @@ function btmTobArmor(event, output, reagent, id) {
             { item: 'kubejs:impossible_circuit' },
             { item: 'kubejs:sky_steel_sheet' },
             { item: 'kubejs:purified_source_core' },
-            { item: 'kubejs:impossible_machine_casing' }
+            { item: 'kubejs:living_binding' }
         ],
         reagent: [{ item: reagent }],
         sourceCost: 12000
@@ -95,7 +95,7 @@ ServerEvents.recipes(function (event) {
             { item: 'kubejs:mountain_beryl_lens' },
             { item: 'kubejs:corundum_lapping_grit' },
             { item: 'kubejs:purified_blood_catalyst' },
-            { item: 'kubejs:impossible_machine_casing' }
+            { item: 'kubejs:impossible_circuit' }
         ],
         reagent: [{ item: 'ars_nouveau:archmage_spell_book' }],
         sourceCost: 12000
@@ -111,21 +111,27 @@ ServerEvents.recipes(function (event) {
         ],
         key: {
             I: { item: 'kubejs:impossible_machine_casing' },
-            C: { item: 'kubejs:circuited_machine_casing' },
+            C: { item: 'kubejs:electrical_machine_casing' },
             F: { item: 'ae2:fluix_crystal' },
             A: { item: 'ae2:engineering_processor' },
             K: { item: 'kubejs:kimberlite_diamond_seed' },
             R: { item: 'kubejs:redbed_signal_salt' }
         },
+        result: { item: 'kubejs:raw_impossible_circuit' }
+    }).id('kubejs:tomeofblood/mechanical_crafting/raw_impossible_circuit')
+
+    event.custom({
+        type: 'pneumaticcraft:assembly_laser',
+        input: { item: 'kubejs:raw_impossible_circuit' },
+        program: 'laser',
         result: { item: 'kubejs:impossible_circuit' }
-    }).id('kubejs:tomeofblood/mechanical_crafting/impossible_circuit')
+    }).id('kubejs:tomeofblood/pncr_assembly/impossible_circuit')
 
     btmTobAlchemy(event, 'tomeofblood:novice_tome_of_blood', [
         { item: 'ars_nouveau:novice_spell_book' },
         { item: 'ars_nouveau:archmage_spell_book' },
         { item: 'bloodmagic:archmagebloodorb' },
         { item: 'ae2:controller' },
-        { item: 'kubejs:impossible_machine_casing' },
         { item: 'kubejs:impossible_circuit' },
         { item: 'kubejs:purified_source_core' },
         { item: 'kubejs:living_binding' }
@@ -146,14 +152,14 @@ ServerEvents.recipes(function (event) {
         { item: 'minecraft:nether_star' },
         { item: 'bloodmagic:etherealslate' },
         { item: 'kubejs:impossible_circuit' },
-        { item: 'fission_reactor:fission_reactor_rod' }
+        { item: 'latent_chemlib:gas_reaction_chamber' }
     ], 100000, 320, 5, 'kubejs:tomeofblood/alchemytable/archmage_tome_post_ae2')
 
     btmTobGlyph(event, 'tomeofblood:glyph_sentient_harm', 80, [
         'bloodmagic:soulsword',
         'bloodmagic:etherealslate',
         'kubejs:impossible_circuit',
-        'kubejs:impossible_machine_casing'
+        'kubejs:purified_source_core'
     ], 'kubejs:tomeofblood/glyph_sentient_harm_post_ae2')
 
     btmTobGlyph(event, 'tomeofblood:glyph_sentient_wrath', 120, [
@@ -162,7 +168,7 @@ ServerEvents.recipes(function (event) {
         'ars_nouveau:conjuration_essence',
         'bloodmagic:etherealslate',
         'kubejs:impossible_circuit',
-        'fission_reactor:fission_reactor_rod'
+        'latent_chemlib:gas_reaction_chamber'
     ], 'kubejs:tomeofblood/glyph_sentient_wrath_post_ae2')
 
     btmTobArmor(event, 'tomeofblood:living_mage_hood', 'bloodmagic:livinghelmet', 'kubejs:tomeofblood/living_mage_hood_post_ae2')

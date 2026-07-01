@@ -193,7 +193,7 @@
 	"Enable Leaders" = true
 	#Makes mobs be able to climb ladders and similar blocks. Only entity types in `enhancedai:mobs/can_climb` tag are affected by this feature.
 	"Enable Climbing" = true
-	#Changes mobs attack range to use the 1.20.2 mechanic. Only entities in the `enhancedai:mobs/melee_attacking` entity type tag will be affected.
+	#Changes mobs attack range to use the 1.20.2 mechanic
 	"Enable Melee attacking" = true
 	#Prevent players from abusing water or 2 high gaps to bully endermen.
 	"Enable Teleport anti-cheese" = true
@@ -290,7 +290,7 @@
 		#Range: 0.0 ~ 1.0
 		"Ladder climb chance" = 1.0
 
-	#Changes mobs attack range to use the 1.20.2 mechanic. Only entities in the `enhancedai:mobs/melee_attacking` entity type tag will be affected.
+	#Changes mobs attack range to use the 1.20.2 mechanic
 	[Mobs."Melee attacking"]
 		#If true melee monsters (zombies, etc) will attack like 1.20.2+ and the attack range is based off the forge:entity_reach attribute (default 0.82 blocks).
 		"Attack reach attribute based" = true
@@ -471,6 +471,9 @@
 		#Damage per block of fall distance.
 		#Range: 0.0 ~ 1.7976931348623157E308
 		"Damage per block" = 1.0
+		#Fall distance multiplied by this
+		#Range: 0.0 ~ 1.7976931348623157E308
+		"Knockup strength ratio" = 0.08
 		#Range: 0.0 ~ 1.7976931348623157E308
 		"Horizontal base range" = 2.0
 		#Range: 0.0 ~ 1.7976931348623157E308
@@ -479,12 +482,6 @@
 		"Horizontal range per block" = 0.2
 		#Range: 0.0 ~ 1.7976931348623157E308
 		"Vertical range per block" = 0.1
-		#If the mob falls for less than these blocks, the shockwave will not happen
-		#Range: > 0
-		"Min fall distance" = 3
-		#Fall distance multiplied by this
-		#Range: 0.0 ~ 1.7976931348623157E308
-		"Knock up strength ratio" = 0.08
 
 	#Makes mobs pick up and throw other mobs. Mobs in the `enhancedai:mobs/pick_up_and_throw/can_be_picked_up` tag will be able to be picked up, while mobs in the `enhancedai:mobs/pick_up_and_throw/can_pick_up` tag will be able to pick up other mobs.
 	[Mobs."Pick up and throw"]
@@ -538,14 +535,14 @@
 		#Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
 		"Max visited nodes multiplier" = 4.0
 
-		#How far away can the mobs see targets. This overrides the vanilla value (16 for most mobs). Setting 'Max' to 0 will leave the follow range as vanilla. Use mods like Mobs Properties Randomness to have more control over the attribute. Only mobs in the entity type tag `enhancedai:mobs/targeting/follow_range_override` will be affected by this override
+		#How far away can the mobs see the player. This overrides the vanilla value (16 for most mobs). Setting 'Max' to 0 will leave the follow range as vanilla. Use mods like Mobs Properties Randomness to have more control over the attribute. Only mobs in the entity type tag `enhancedai:mobs/targeting/follow_range_override` will be affected by this override
 		[Mobs.Targeting."Follow range override"]
 			#Range: 0.0 ~ 128.0
 			Minimum = 32.0
 			#Range: 0.0 ~ 128.0
 			Maximum = 48.0
 
-		#How far away can the mobs see targets even through walls. This only works with 'Better Nearby Targeting' enabled. Setting 'Max' to 0 will make mobs not able to see through walls. Use mods like Mobs Properties Randomness to have more control over the attribute; the attribute name is 'enhancedai:xray_follow_range'. Only mobs in the entity type tag `enhancedai:mobs/targeting/apply_xray` will be affected by this override.
+		#How far away can the mobs see the player even through walls. This only works with 'Better Nearby Targeting' enabled. Setting 'Max' to 0 will make mobs not able to see through walls. Use mods like Mobs Properties Randomness to have more control over the attribute; the attribute name is 'enhancedai:xray_follow_range'. Only mobs in the entity type tag `enhancedai:mobs/targeting/apply_xray` will be affected by this override.
 		[Mobs.Targeting."Xray range override"]
 			#Range: 0.0 ~ 128.0
 			Minimum = 16.0

@@ -81,7 +81,7 @@ All-dimension worldgen stress:
 tools/btm test scenario dimension_worldgen --cycles 1 --radius 1 --samples 1
 ```
 
-Current clean evidence: `/tmp/btm-dimension-worldgen/20260604-215117` passed radius-1 chunk generation in every authored dimension with C2ME, Distant Horizons, and `btmfixes` enabled. The harness treats C2ME far-chunk writes, DH worldgen exceptions, crash reports, watchdogs, internal disconnects, and C2ME thread-guard failures as fatal.
+Current clean evidence: `/tmp/btm-dimension-worldgen/20260701-041811` passed two server-only Overworld cycles with 8 samples at radius 4 after Dimensional Fonts graveyard generation was moved from biome-modifier feature placement to vanilla structure-set placement. `/tmp/btm-dimension-worldgen/20260604-215117` remains the last recorded all-dimension radius-1 baseline. The harness treats C2ME far-chunk writes, DH worldgen exceptions, crash reports, watchdogs, internal disconnects, and C2ME thread-guard failures as fatal.
 
 Current LC/DH/C2ME/TFTH scenario:
 

@@ -5333,6 +5333,10 @@ file = "config/dynamictreesplus-common.toml"
 hash = "cabd47cb17c0259108df37d86adbd71309a2d2cf52c842fbd28becdc964120ae"
 
 [[files]]
+file = "config/embeddium-options.json"
+hash = "18b453ebd91dfaa8e6e50b68453f8445e5477c81f926c5a5c539fd35d10f46cc"
+
+[[files]]
 file = "config/enhancedai/Mobs/Break anger/break_anger_config.json"
 hash = "f8e69c88a3d84a154f46c91799d69af204b528cc4f0833b1fab6a9327c53687f"
 
@@ -9734,7 +9738,7 @@ hash = "78228ed784d87138ec9a63c59c96f71351a00bec30f5423fc35a4c1278351c05"
 
 [[files]]
 file = "kubejs/data/burnt/tags/blocks/grass_blocks.json"
-hash = "023e2ba64d2011e0ccf6e65290fc44d6ad2ddf4b422b193ac54ae2cd41deeaf9"
+hash = "f7f58152be7154513750b864a267eefebca53546b3bed7199db20e271e75ca84"
 
 [[files]]
 file = "kubejs/data/burnt/tags/blocks/plants_will_burn.json"
@@ -10862,7 +10866,7 @@ hash = "2d8a78ea31797897891856bf25f84e717c01ed2d8cccfc2e57bb047a127786b4"
 
 [[files]]
 file = "kubejs/server_scripts/90_dev_debug/30_runtime_graph_dumps.js"
-hash = "2fc1dbaed2a21f5ba3f420e798a024fee5809c05552d19edb6eb22943a7905a8"
+hash = "96099ddc16c0385e6f71361b2b1b15a8b62ed43e862095142d44f7ab7babfe71"
 
 [[files]]
 file = "kubejs/server_scripts/90_dev_debug/40_block_hardness_probe.js"
@@ -11010,11 +11014,11 @@ metafile = true
 
 [[files]]
 file = "mods/btmfixes-0.1.0-all.jar"
-hash = "4309e4cdca62b0760c43f81bf1d5a2a6ac3c530a93603479e6e4a0f9f500677d"
+hash = "5b07b4e59a0005e947c0ab258fdec734f34990b782f49a168e9631bf360b9e48"
 
 [[files]]
 file = "mods/btmfixes-0.1.0.jar"
-hash = "eabb35ddeb4e759f9daa9876daf588b1bf7edaca76a96a7b9624024eb744da3e"
+hash = "53134349cea2208d8b05001c9555792f2088516b50f1e734b70627e29c420f10"
 
 [[files]]
 file = "mods/building-gadgets.pw.toml"
@@ -12177,7 +12181,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "3a716883e14f3561b0f9f58d426b345044f4c609981e2fd32a9db3918a7f27e1"
+hash = "ccf01b1e6cabba4e5e0ad9a08c92515a4aff881f955da89d36922b24741713d7"
 
 [[files]]
 file = "quests/graph.yml"

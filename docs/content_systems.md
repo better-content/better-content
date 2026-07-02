@@ -25,7 +25,7 @@ Cross-mod standardization is moderate rather than total:
 
 - Collapse exact duplicate physical materials into one canonical family when the pack already has a clear owner. Mahogany is the active case: `146_hexerei_mahogany_to_natures_spirit.js` rewrites Hexerei mahogany inputs into `natures_spirit` mahogany.
 - Standardize generic feedstocks through tags and shared substrate items where possible: planks/logs, generic glass, common sheets/plates, silica-bearing feedstocks, and chemistry precursors.
-- Keep mod-native proof reagents distinct. Blood Magic slates and orbs, Botania petals/runes/mana matter, Ars source items, Malum spirits, Occultism attunement materials, Goety cursed matter, AE2 certus/fluix/sky stone, PneumaticCraft PCB stages, and OC2R wafers should interoperate in recipes without collapsing into generic substitutes.
+- Keep mod-native proof reagents distinct. Blood Magic slates and orbs, Ars source items, Malum spirits, Occultism attunement materials, Goety cursed matter, AE2 certus/fluix/sky stone, PneumaticCraft PCB stages, and OC2R wafers should interoperate in recipes without collapsing into generic substitutes.
 
 Deposit processing is multi-surface:
 
@@ -39,10 +39,11 @@ Deposit processing is multi-surface:
 - `65_chemlib_plate_manufacturing_routes.js`: Chemlib plates through Create pressing and TCon casting where supported.
 
 Alchemistry/ChemLib content informs material identity, but the authored progression route is Create, TCon, PNCR, and Blood Magic-adjacent synthesis rather than a direct free transmutation lane. Chemicals now have downstream jobs as reagents, intermediates, and specialty manufacturing inputs: common biological and ore byproducts feed bulk routes, while rarer salts, oxides, platinum-group materials, tungsten, beryllium, thorium, uranium, and titanium chemistry feed precision machinery and late protection. A properly integrated ChemLib element or molecule must have a clear identity, at least one believable source, at least one transformation role, existing-item demand, sensible tier placement, and no dead-end bulk production. Create is the open bulk chemistry surface, PNCR is sealed pressure/thermal/gas/plastic/etching authority, and Blood Magic is manual LP-paid high-yield chemistry rather than passive automation.
+Containment hardware is infrastructure, not feedstock: `latent_chemlib:sealed_chemical_cell`, gas tanks, and similar vessel parts should gate or host sealed chemistry, but authored chemistry routes should spend the actual gas, acid, seal, slate, or electrode input rather than consuming the vessel itself batch after batch.
 
 The active pack carries a narrow set of standalone KubeJS crafting intermediates where the authored graph needs explicit manufactured subassemblies: pressure seals, compressor cores, control modules, impossible-circuit parts, era support modules, and selected chemistry or magic components. Reusable processing media, such as grinding balls for the Realistic Ores routes, remain valid registered components. Machine casings are reserved for machine, logistics, storage, and control bodies; non-producing support, wearable, decor, or convenience items should inherit their era through machine-made support intermediates rather than consuming casings directly.
 
-Non-grown infinite matter is not an authored resource source. `30_remove_items.js` removes passive ore/matter generators such as Occultism miners, Blood Magic meteors, Botania Orechid/Marimorphosis/catalyst routes, Ars conjured islands/fluid glyph routes, and Create Diesel lava fermentation. Create bottomless draining and finite-water biome refills are disabled in config; raw/geologic/material villager buy restocks are skipped by `35_villager_trades/10_coin_villager_trades.js`. Renewable grown sources such as crops, trees, animals, and ordinary biological drops remain valid economy inputs.
+Non-grown infinite matter is not an authored resource source. `30_remove_items.js` removes passive ore/matter generators such as Occultism miners, Blood Magic meteors, Ars conjured islands/fluid glyph routes, and Create Diesel lava fermentation. Create bottomless draining and finite-water biome refills are disabled in config; raw/geologic/material villager buy restocks are skipped by `35_villager_trades/10_coin_villager_trades.js`. Renewable grown sources such as crops, trees, animals, and ordinary biological drops remain valid economy inputs.
 
 The lava-depth material loop is a late exception within the Overworld geology stack. Tectonic extends terrain to Y -64; `datapacks/realistic_ores_lava_depths` places only lava-exposed Realistic Ores uranium, thorium, and osmiridium lava sulfide in the Y -64 to 0 band. Osmiridium feeds Create washing, TCon ore melting, acid/ball chemistry, Protection Pixel Tosaki gear, and selected post-AE2 utility.
 
@@ -80,7 +81,7 @@ This pass only owns first-order compatibility tags such as `burnt:plants_will_bu
 
 ## Blood Magic And Body Systems
 
-Blood Magic is the magic parent spine. `40_blood_orbs_from_still_beating_hearts.js` removes default Blood Orb altar recipes and replaces them with level-threshold heart-key recipes, including a direct still-beating-heart fallback for the first weak orb. `82_blood_magic_lifeforce_rework.js` makes the first Blood Altar heart-bound instead of dimension-bound, keeps rune escalation costly, and keeps sacrifice helpers deeper in the tree. `58_blood_magic_manual_create_yields.js` adds LP-paid manual batch alternatives for essential Create materials without replacing factory automation.
+Blood Magic remains one of the two authored dirty-magic spines rather than the universal parent of every magical system. `40_blood_orbs_from_still_beating_hearts.js` removes default Blood Orb altar recipes and replaces them with level-threshold heart-key recipes, including a direct still-beating-heart fallback for the first weak orb. `82_blood_magic_lifeforce_rework.js` makes the first Blood Altar heart-bound instead of dimension-bound, keeps rune escalation costly, and keeps sacrifice helpers deeper in the tree. `58_blood_magic_manual_create_yields.js` adds LP-paid manual batch alternatives for essential Create materials without replacing factory automation.
 
 The death overhaul is a body-system progression surface. `defaultconfigs/configurabledeath-server.toml` keeps carried items and food state on death while dropping XP, so deaths are not balanced around random inventory scatter but still erase the current life's vanilla experience. `rpg-stats` owns the life ledger: `PointAwarder` grants power from new XP levels above `lifePeakLevel`, `CommonForgeEvents` clears allocations and unspent points on death, and `StillBeatingHeartData` creates the respawn-delivered `rpgstats:still_beating_heart` with that life's level. The intended pressure is "how long and how far did this life get" plus the return to the locked spawn.
 
@@ -94,14 +95,14 @@ Non-village natural crop and edible-plant diversity is relocated into Undergarde
 
 Starting loadouts are owned by the embark point-buy config in `config/classselector/embark.json`; `config/classselector/kits.json` remains safe legacy fallback data. The active embark quota is 18 points. The Class Selector embark UI now presents one dozen high-signal support choices instead of a broad catalogue: hydration, climate scouting, light, route marking, rope, a small vanilla rail start, and basic rations. It must not include starter tools, armor, logs/planks, functional crafting blocks, generic storage, coins, scuba gear, gliders, recovery compass routes, renewable specialty crop starts, ready-made TNT or TNT inputs, Protection Pixel gear, AE2, PNCR pressure items, Blood Magic LP/orbs, Create trains, Wares routes, or other missing-logistics progression before those systems provide power.
 
-`126_cross_magic_irons_spellcraft.js` is the current Iron's Spells integration surface. It treats Iron's spellcraft as an authored branch of the magic spine: Blood Magic slates set tier, Ars apparatus handles source stabilization, Botania runic altar handles rune school identity, Hexerei cauldron handles folk/alchemical setup, Malum spirit infusion upgrades school power, and Goety rituals handle cursed/high-danger artifacts. Occultism, Forbidden and Arcanus, Reliquary, Hexerei, Botania, Goety, Ars, and Malum reagents are intentionally mixed into the recipes so Iron's spell outputs cannot be mass-crafted from only vanilla valuables and Iron's own drops.
+`126_cross_magic_irons_spellcraft.js` is the current Iron's Spells integration surface. It treats Iron's spellcraft as an authored cross-magic branch: Blood Magic slates set tier, Ars apparatus handles source stabilization, Hexerei cauldron handles folk/alchemical setup, Malum spirit infusion upgrades school power, and Goety rituals handle cursed/high-danger artifacts. Occultism, Forbidden and Arcanus, Reliquary, Hexerei, Goety, Ars, and Malum reagents are intentionally mixed into the recipes so Iron's spell outputs cannot be mass-crafted from only vanilla valuables and Iron's own drops.
 
 The current slate order is deliberate and should stay easy to audit in recipes and docs:
 
-- Blank Slate: Malum and other first-contact death-native work
-- Reinforced Slate: first Botania and allied natural-magic systems
-- Infused Slate: Occultism bridge content and Botania runic proof
-- Demonic Slate: Ars source precision plus Goety and Hexerei operational dark work
+- Blank Slate: first Blood work, Malum, and the earliest Ars teaser/manuscript proofs
+- Reinforced Slate: Hexerei and low-tier cross-magic utility
+- Infused Slate: Occultism bridge content, Ars source handling, and stronger manuscript conversion
+- Demonic Slate: Goety operations, heavier Ars apparatus/glyph manuscripts, and stronger hybrid magic
 - Ethereal Slate: programmable, networked, or post-AE2 hybrid magic
 
 ## Casings And Manufactured Parts
@@ -114,7 +115,7 @@ Do not add a simple crafting recipe for a component that bypasses a cased or man
 
 Coins are defined in `global.BTM_COIN_TIERS`: copper, zinc, iron, industrial iron, brass, gold, and platinum using Create Deco coin items. `35_villager_trades/10_coin_villager_trades.js` replaces village trades with dotcoin purchases and lossy coin exchange.
 
-Villager and wandering-trader markets are recovery and route-planning support, not renewable material factories. Their registration helper rejects raw/geologic/material buy results such as stone, ores/metals, redstone-class dusts, Botania/Blood/Ars matter shortcuts, AE2 sky stone/certus, and core Create material components; grown foods, fibers, animal products, and selected expedition drops can still participate in the coin lane.
+Villager and wandering-trader markets are recovery and route-planning support, not renewable material factories. Their registration helper rejects raw/geologic/material buy results such as stone, ores/metals, redstone-class dusts, Blood/Ars matter shortcuts, AE2 sky stone/certus, and core Create material components; grown foods, fibers, animal products, and selected expedition drops can still participate in the coin lane.
 
 Loot is treated as a crafting surface:
 
@@ -127,8 +128,8 @@ Trades should support recovery and route planning without replacing factories, m
 
 ## Quests
 
-Quest generation is driven by the internal quest-book generator and exported generated state under `generated/ftbquests/`. The generator retains future/candidate quest definitions, but only installed manifests, bundled jars, and emitted current quest files are source truth. When quest intent changes, update this doc or `progression.md`, then regenerate and validate the generated quest content.
+The live quest book is hand-authored under `config/ftbquests/`, especially `config/ftbquests/quests/chapters/`. That tree is the current source of truth for chapter layout, quest text, tasks, rewards, and progression presentation. When quest intent changes, update this doc or `progression.md`, then validate the live `config/ftbquests/` content.
 
-Quest authoring uses stable chapter and node keys with explicit stage, icon, position, body, tasks, rewards, dependency, source tag, mod tag, optional-branch, FTB-export, and icon-path metadata where needed. Supported task shapes are item, fluid, and entity tasks; rewards are item-shaped unless an exporter explicitly adds more. Generated quest/site outputs are build products, not living documentation.
+Quest authoring uses stable chapter and node keys with explicit stage, icon, position, body, tasks, rewards, dependency, source tag, mod tag, optional-branch, FTB-export, and icon-path metadata where needed. Supported task shapes are item, fluid, entity, and dimension tasks where installed FTB Quests surfaces support them. `generated/ftbquests/` and generated site outputs are artifact surfaces only, not living documentation or the authoring source.
 
 Explosion Overhaul helper files are config surfaces, not docs. `DestroyingBlacklist.json` lists crater-immune blocks, `GlassBlacklist.json` lists blocks exempt from glass breaking, and `ExplosionSourceBlacklist.json` maps entity IDs to `DEFAULT`, `VANILLA`, `NO_DESTRUCTION`, or `NO_DESTRUCTION_GLASSWORKS`. These JSON files must remain strict JSON because invalid syntax causes the mod to fall back to defaults.

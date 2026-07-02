@@ -2,10 +2,11 @@
 
 ## Spine
 
-The pack has two primary crafting spines and one pressure spine:
+The pack has two primary crafting spines, one independent magic lane, and one pressure spine:
 
 - Tech spine: Tinkers seared/scorched metallurgy into Create andesite/brass automation, then Power Grid, OC2R, Creating Space, and AE2-local intelligence.
-- Magic spine: Still-Beating Heart and Blood Magic orb/slate progression parent most side magic rather than letting each magic mod open independently.
+- Magic spines: `Dimensional Fonts -> Hexerei -> Occultism` and `Blood Magic -> Malum -> Goety`, with Blood Magic still supplying shared slate proofs where recipes need explicit authority.
+- Independent magic lane: Ars Nouveau opens as an early teaser book, but real spell power comes from manuscript-authored glyph unlocks fed by both dirty spines plus control/electrical precision.
 - Adventure spine: obelisks, dimensions, combat, villages, wares, and coins provide route pressure and recovery options without replacing production.
 
 Local logistics stays first. Create trains and physical routes should matter before AE2 dominates a site, and OC2R is the intended intersite information bridge.
@@ -16,7 +17,7 @@ Pillager campaign pressure is adaptive by warband rather than global time scalin
 
 Tier design should feel like conquest rather than checklisting: each new tier needs a new resource domain plus a signature transformation, not just a renamed ingredient. Matter should keep memory of where it came from, so geology, death, heat, pressure, distance, and biological growth remain visible in downstream recipes instead of collapsing into generic dusts.
 
-Death-native magic starts from Blood Magic and the dark substrate languages it can discipline: Malum first, Occultism as the bridge tier, and Goety plus Hexerei once the player has already proven deeper slate authority. Reformist or abstraction-heavy schools such as Ars-style spellcraft should arrive after Botania's natural-mana engineering rather than opening as independent vanilla crafting islands.
+Magic should now read as two dirty parent traditions feeding one later clean formalism. Fonts leads into Hexerei and then Occultism's attunement and entity bargaining. Blood Magic leads into Malum and then Goety's dangerous command work. Ars Nouveau is no longer a separate light-ritual branch; the novice book appears early, but meaningful glyph access is spread across authored manuscripts crafted throughout the pack.
 
 ## Death Loop
 
@@ -46,7 +47,7 @@ Dimension travel has two authored surfaces only: Dimensional Fonts from `dimensi
 
 Otherside and End have no active graph-start mapping until their material identities are redesigned.
 
-Mod-specific natural ore and geode origins that are not part of the Realistic Ores deposit pass are meteor-dimension content. Their Overworld and ordinary Nether biome modifiers are suppressed by `datapacks/meteor_ore_relocation`, then reintroduced in Aether, Blue Skies, Undergarden, Otherside, or Nether-obelisk target tags with Excavated Variants support for the local stone skins. Gravel is registered as a gravel Excavated Variants substrate, so gravel-specific meteor ores resolve to `excavated_variants:gravel_*` blocks and remain shovel-gated. This relocates raw worldgen origins only; workstation and recipe entry still follows the Blood-Magic-parented magic spine unless a future pass deliberately changes that spine. JEI/EMI-facing ore origin tooltips live in `kubejs/client_scripts/15_ore_origin_tooltips.js` and should be updated with any future ore source move.
+Mod-specific natural ore and geode origins that are not part of the Realistic Ores deposit pass are meteor-dimension content. Their Overworld and ordinary Nether biome modifiers are suppressed by `datapacks/meteor_ore_relocation`, then reintroduced in Aether, Blue Skies, Undergarden, Otherside, or Nether-obelisk target tags with Excavated Variants support for the local stone skins. Gravel is registered as a gravel Excavated Variants substrate, so gravel-specific meteor ores resolve to `excavated_variants:gravel_*` blocks and remain shovel-gated. This relocates raw worldgen origins only; workstation and recipe entry still follows the authored two-spine magic graph plus the independent Ars manuscript lane. JEI/EMI-facing ore origin tooltips live in `kubejs/client_scripts/15_ore_origin_tooltips.js` and should be updated with any future ore source move.
 
 ## Machine Casing Ladder
 
@@ -111,29 +112,30 @@ The downstream chemistry pass makes those side streams matter without turning th
 
 Chemical alternatives can offer higher yield, earlier access with more setup, or byproduct-consuming substitutions depending on the target. Finished circuits remain PNCR assembly authority; chemistry prepares wafers, boards, printed processors, etchants, capacitors, and transistors rather than bypassing that completion step. Create recipes represent open bulk processing, grinding media, acids, precipitation, and reduction; PNCR recipes represent sealed pressure, gas handling, thermal control, polymers, and etching; Blood Magic recipes are deliberately manual LP/slate routes with better yield instead of unattended throughput.
 
-Blood Magic slates are the side-magic authority, with light and dark branches intentionally offset rather than opening together:
+Blood Magic slates are the side-magic authority where a recipe needs hard proof, but the authored graph is no longer a light-versus-dark split:
 
-- Blank Slate: Malum and other first-contact death-native practice.
-- Reinforced Slate: Botania's first natural-mana engineering, Nature's Aura support systems, and low-tier cross-magic utility.
-- Infused Slate: Botania runic proof plus Occultism's bridge layer into attunement, chalk, and otherworld work.
-- Demonic Slate: Ars source precision, Goety plus Hexerei operational dark practice, Forbidden and Arcanus, and stronger hybrid schools.
+- Blank Slate: first Blood work, Malum, and the earliest Ars teaser/manuscript proofs.
+- Reinforced Slate: Hexerei and low-tier cross-magic utility.
+- Infused Slate: Occultism bridge content, Ars source handling, and stronger manuscript conversion.
+- Demonic Slate: Goety operations, heavier Ars apparatus/glyph manuscripts, Forbidden and Arcanus, and stronger hybrid schools.
 - Ethereal Slate: late programmable or endgame magic where installed and confirmed.
 
-This keeps the agreed branch order explicit:
+This keeps the agreed graph explicit:
 
-- Light: Blood Magic -> Botania -> Ars Nouveau
-- Dark: Blood Magic -> Malum -> Occultism -> Goety plus Hexerei
-- Blue Skies: Everdawn feeds the light expedition lane and Everbright feeds the dark expedition lane, but both still depend on Blood Magic authority to matter downstream.
+- Fonts spine: Dimensional Fonts -> Hexerei -> Occultism
+- Blood spine: Blood Magic -> Malum -> Goety
+- Ars lane: early novice book, then manuscript-authored glyph unlocks fed by both dirty spines plus Create/control precision
+- Blue Skies: Everdawn and Everbright remain expedition lanes rather than owners of a magic spine.
 
 Cross-mod material standardization stays moderate:
 
 - Exact duplicate physical materials collapse to one canonical family. The active example is mahogany, where Hexerei inputs are redirected into `natures_spirit` mahogany.
 - Shared feedstocks such as planks, logs, generic glass, silica-bearing inputs, and plate/sheet tags should standardize through tags and common substrates.
-- Mod-native proof reagents stay distinct. Do not flatten Blood Magic slates, Botania petals/runes, Ars source items, Malum spirits, Occultism attunement matter, Goety cursed matter, AE2 certus/fluix/sky stone, PNCR PCB stages, or OC2R wafers into interchangeable "magic parts."
+- Mod-native proof reagents stay distinct. Do not flatten Blood Magic slates, Ars source items, Malum spirits, Occultism attunement matter, Goety cursed matter, AE2 certus/fluix/sky stone, PNCR PCB stages, or OC2R wafers into interchangeable "magic parts."
 
 Do not gate guidebooks when a workstation/core item can be gated. Do not use hearts in side-magic recipe spam; use slates and authored intermediates.
 
-Iron's Spells is integrated as a cross-magic spellcraft branch, not as an independent vanilla-crafting branch. `126_cross_magic_irons_spellcraft.js` removes the direct Iron's spellcraft outputs and rebuilds them through Blood Magic tier costs plus Ars apparatus, Botania runic altar, Hexerei cauldron, Malum spirit infusion, and Goety ritual work. Malum spirits are the shared reagent language for schools and upgrades; Occultism, Forbidden and Arcanus, Hexerei, Botania, Goety, Reliquary, and Ars reagents provide theme and tier identity. Low-tier scroll discovery may remain loot-based, but high-tier spell books, upgrade orbs, high inks, and high-tier scroll tables are scrubbed as progression bypasses.
+Iron's Spells is integrated as a cross-magic spellcraft branch, not as an independent vanilla-crafting branch. `126_cross_magic_irons_spellcraft.js` removes the direct Iron's spellcraft outputs and rebuilds them through Blood Magic tier costs plus Ars apparatus, Hexerei cauldron, Malum spirit infusion, and Goety ritual work. Malum spirits are the shared reagent language for schools and upgrades; Occultism, Forbidden and Arcanus, Hexerei, Goety, Reliquary, and Ars reagents provide theme and tier identity. Low-tier scroll discovery may remain loot-based, but high-tier spell books, upgrade orbs, high inks, and high-tier scroll tables are scrubbed as progression bypasses.
 
 ## Late And Post-AE2
 

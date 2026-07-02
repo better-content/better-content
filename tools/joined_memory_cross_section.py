@@ -319,7 +319,6 @@ DEFAULT_PHASES: list[Phase] = [
             r"^occultism-.*\.jar$",
         ],
     ),
-    Phase("no_botania_only", "Botania only", [r"^Botania-.*\.jar$"]),
     Phase(
         "no_adventure_mob_stack",
         "adventure mobs, artifacts, relics, and combat-adjacent content",

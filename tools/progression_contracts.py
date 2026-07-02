@@ -88,7 +88,6 @@ DIMENSION_NAMESPACES = {
 MAGIC_NAMESPACES = {
     "bloodmagic",
     "malum",
-    "botania",
     "occultism",
     "eidolon",
     "mahoutsukai",
@@ -346,17 +345,9 @@ MAGIC_EXACT = {
     "malum:spirit_altar": ("slate_t1_blank", "dark"),
     "reliquary:apothecary_cauldron": ("slate_t1_blank", "dark"),
     "irons_spellbooks:magic_cloth": ("slate_t1_blank", "dark"),
-    "botania:mana_spreader": ("slate_t2_reinforced", "light"),
-    "botania:apothecary_default": ("slate_t2_reinforced", "light"),
-    "botania:pure_daisy": ("slate_t2_reinforced", "light"),
     "irons_spellbooks:scroll_forge": ("slate_t2_reinforced", "light"),
     "irons_spellbooks:arcane_ingot": ("slate_t2_reinforced", "light"),
     "irons_spellbooks:blank_rune": ("slate_t2_reinforced", "light"),
-    "botania:runic_altar": ("slate_t3_infused", "light"),
-    "botania:pump": ("slate_t3_infused", "light"),
-    "botania:avatar": ("slate_t3_infused", "light"),
-    "botania:fel_pumpkin": ("slate_t3_infused", "light"),
-    "botania:cell_block": ("slate_t3_infused", "light"),
     "irons_spellbooks:arcane_rune": ("slate_t3_infused", "light"),
     "irons_spellbooks:blood_rune": ("slate_t3_infused", "light"),
     "irons_spellbooks:cooldown_rune": ("slate_t3_infused", "light"),
@@ -385,8 +376,6 @@ MAGIC_EXACT = {
     "ars_nouveau:novice_spell_book": ("slate_t4_demonic", "light"),
     "ars_nouveau:enchanting_apparatus": ("slate_t4_demonic", "light"),
     "ars_nouveau:apprentice_spell_book_upgrade": ("slate_t4_demonic", "light"),
-    "botania:terrasteel_ingot": ("slate_t4_demonic", "light"),
-    "botania:terra_plate": ("slate_t4_demonic", "light"),
     "hexerei:mixing_cauldron": ("slate_t4_demonic", "dark"),
     "hexerei:book_of_shadows_altar": ("slate_t4_demonic", "dark"),
     "goety:cursed_cage": ("slate_t4_demonic", "dark"),
@@ -471,12 +460,9 @@ MAGIC_ASSERTIONS = [
     ("bloodmagic:weakbloodorb", "blood_root", "blood_root"),
     ("bloodmagic:etherealslate", "blood_root", "blood_root"),
     ("malum:spirit_altar", "slate_t1_blank", "dark"),
-    ("botania:mana_spreader", "slate_t2_reinforced", "light"),
-    ("botania:runic_altar", "slate_t3_infused", "light"),
     ("occultism:chalk_white_impure", "slate_t3_infused", "dark"),
     ("eidolon:crucible", "slate_t3_infused", "dark"),
     ("ars_nouveau:enchanting_apparatus", "slate_t4_demonic", "light"),
-    ("botania:terrasteel_ingot", "slate_t4_demonic", "light"),
     ("hexerei:mixing_cauldron", "slate_t4_demonic", "dark"),
     ("goety:dark_altar", "slate_t4_demonic", "dark"),
     ("forbidden_arcanus:deorum_ingot", "slate_t4_demonic", "dark"),
@@ -738,12 +724,6 @@ def infer_magic_parent(item: str):
         return "blood_root", "blood_root", "namespace:bloodmagic"
     if item_ns == "malum":
         return "slate_t1_blank", "dark", "namespace:malum"
-    if item_ns == "botania":
-        if "runic" in name or name.startswith("rune_"):
-            return "slate_t3_infused", "light", "namespace:botania"
-        if "terrasteel" in name or "terra_plate" in name:
-            return "slate_t4_demonic", "light", "namespace:botania"
-        return "slate_t2_reinforced", "light", "namespace:botania"
     if item_ns == "occultism":
         if "dimensional_mineshaft" in name or "ritual" in name:
             return "slate_t4_demonic", "dark", "namespace:occultism"
@@ -815,7 +795,6 @@ def build_recipe_indexes(recipe_rows):
 
 def recipe_id_to_output(recipe_id: str) -> str:
     overrides = {
-        "botania:terra_plate/terrasteel_ingot": "botania:terrasteel_ingot",
         "occultism:crafting/chalk_white_impure": "occultism:chalk_white_impure",
         "occultism:ritual/craft_dimensional_mineshaft": "occultism:dimensional_mineshaft",
     }

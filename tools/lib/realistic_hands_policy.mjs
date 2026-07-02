@@ -73,7 +73,6 @@ const PICKAXE_EXACT_IDS = new Set([
   'minecraft:torch',
   'minecraft:wall_torch',
   'ars_nouveau:rune',
-  'botania:pump',
   'fallout_wastelands_:cage',
   'fallout_wastelands_:oven',
   'fallout_wastelands_:pipe',

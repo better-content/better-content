@@ -140,4 +140,35 @@ StartupEvents.registry('item', function (event) {
     for (var r = 0; r < reagents.length; r++) {
         event.create(reagents[r][0]).displayName(reagents[r][1])
     }
+
+    var arsManuscripts = [
+        ['manuscript_touch', 'Touch Manuscript'],
+        ['manuscript_self', 'Self Manuscript'],
+        ['manuscript_projectile', 'Projectile Manuscript'],
+        ['manuscript_break', 'Break Manuscript'],
+        ['manuscript_harm', 'Harm Manuscript'],
+        ['manuscript_light', 'Light Manuscript'],
+        ['manuscript_interact', 'Interact Manuscript'],
+        ['manuscript_ignite', 'Ignite Manuscript'],
+        ['manuscript_launch', 'Launch Manuscript'],
+        ['manuscript_harvest', 'Harvest Manuscript'],
+        ['manuscript_leap', 'Leap Manuscript'],
+        ['manuscript_freeze', 'Freeze Manuscript'],
+        ['manuscript_glide', 'Glide Manuscript'],
+        ['manuscript_blink', 'Blink Manuscript'],
+        ['manuscript_extract', 'Extract Manuscript'],
+        ['manuscript_exchange', 'Exchange Manuscript'],
+        ['manuscript_redstone_signal', 'Redstone Signal Manuscript'],
+        ['manuscript_extend_time', 'Extend Time Manuscript'],
+        ['manuscript_wall', 'Wall Manuscript'],
+        ['manuscript_linger', 'Linger Manuscript'],
+        ['manuscript_lightning', 'Lightning Manuscript'],
+        ['manuscript_wither', 'Wither Manuscript']
+    ]
+
+    for (var a = 0; a < arsManuscripts.length; a++) {
+        event.create(arsManuscripts[a][0])
+            .displayName(arsManuscripts[a][1])
+            .asset('minecraft:item/writable_book')
+    }
 })

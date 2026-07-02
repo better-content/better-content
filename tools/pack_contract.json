@@ -69,7 +69,6 @@
       "mods/applied-energistics-2.pw.toml",
       "mods/ars-nouveau.pw.toml",
       "mods/blood-magic.pw.toml",
-      "mods/botania.pw.toml",
       "mods/chemlib.pw.toml",
       "mods/cold-sweat.pw.toml",
       "mods/concurrent-chunk-management-engine-for-forge-the.pw.toml",
@@ -287,7 +286,7 @@
           "all": [
             "bloodmagic:",
             "ars_nouveau:",
-            "botania:",
+            "ars_nouveau:source_gem",
             "malum:",
             "goety:"
           ]
@@ -295,11 +294,11 @@
         {
           "file": "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js",
           "all": [
-            "Botania light progression precedes Ars source precision.",
-            "gate(event, { id: 'botania:runic_altar' }, 'botania:mana_pearl', BM_SLATE_T3)",
-            "gate(event, { id: 'ars_nouveau:imbuement_chamber' }, '#forge:ingots/gold', BM_SLATE_T4)",
-            "Occultism bridges Malum into Goety plus Hexerei dark progression.",
-            "gate(event, { id: 'hexerei:mixing_cauldron' }, 'minecraft:torch', BM_SLATE_T4)"
+            "Hexerei is the first authored folk branch off fonts.",
+            "gate(event, { id: 'hexerei:mixing_cauldron' }, 'minecraft:torch', BM_SLATE_T2)",
+            "Occultism completes the Fonts -> Hexerei -> Occultism spine.",
+            "gate(event, { id: 'ars_nouveau:imbuement_chamber' }, '#forge:ingots/gold', BM_SLATE_T3)",
+            "gate(event, { id: 'goety:dark_altar' }, 'goety:magic_emerald', BM_SLATE_T4)"
           ]
         },
         {

@@ -816,6 +816,25 @@ fun validateWorldgenStaticContractsImpl() {
     val dynamicTreesManagedPackSolidIds = generatedPackSolidIds.filter { id -> dynamicTreesManagedRbpPatterns.any { it.containsMatchIn(id) } }
     if (dynamicTreesManagedPackSolidIds.isEmpty()) ok("RBP generated pack-solid definition excludes Dynamic Trees-managed blocks")
     else fail("RBP generated pack-solid definition excludes Dynamic Trees-managed blocks", dynamicTreesManagedPackSolidIds.take(20).joinToString(", "))
+    val pvjDetailPackSolidBlocklist = setOf(
+        "projectvibrantjourneys:bones",
+        "projectvibrantjourneys:charred_bones",
+        "projectvibrantjourneys:dead_fallen_leaves",
+        "projectvibrantjourneys:fallen_leaves",
+        "projectvibrantjourneys:ice_chunks",
+        "projectvibrantjourneys:icicle",
+        "projectvibrantjourneys:pinecones",
+        "projectvibrantjourneys:pink_lotus",
+        "projectvibrantjourneys:red_sandstone_rocks",
+        "projectvibrantjourneys:rocks",
+        "projectvibrantjourneys:sandstone_rocks",
+        "projectvibrantjourneys:seashells",
+        "projectvibrantjourneys:slime_nodule",
+        "projectvibrantjourneys:twigs"
+    )
+    val pvjDetailPackSolidIds = generatedPackSolidIds.filter { it in pvjDetailPackSolidBlocklist }
+    if (pvjDetailPackSolidIds.isEmpty()) ok("RBP generated pack-solid definition excludes exact PVJ loose detail blocks")
+    else fail("RBP generated pack-solid definition excludes exact PVJ loose detail blocks", pvjDetailPackSolidIds.joinToString(", "))
     val generatedRbpWhitelistFiles = walk("config/rbp/block_definitions") { it.substringAfterLast('/').startsWith("generated_modded_") && it.endsWith(".toml") }
     val generatedRbpWhitelistText = generatedRbpWhitelistFiles.joinToString("\n") { read(it) }
     val generatedRbpWhitelistIds = generatedRbpWhitelistText.lineSequence().map(String::trim).filter { it.startsWith('"') }.map { it.replace(Regex("""^"([^"]+)".*$"""), "$1") }.toList()

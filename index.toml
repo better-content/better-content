@@ -6010,7 +6010,7 @@ hash = "f1406b9947fb97c1487713093d39ebc79b7c9b6de2cb9934ce4d4c60653b0b95"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_pack_solid_blocks.toml"
-hash = "fff030b2dbfa0872eac5ad4d1241e09f6a31c8b3bd9a9701ff24cb0b2ac6f87d"
+hash = "9d6f52645eac958df0884eebb5697680af21cd0dad56565fe3446c0c612d4a07"
 
 [[files]]
 file = "config/rbp/block_definitions/glass.toml"

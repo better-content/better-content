@@ -17,6 +17,7 @@ tools/btm test runtime --instance /path/to/fresh/runtime --strict-data-dumps
 tools/btm test smoke --server-dir /tmp/btm-agent-validate-smoke --port 25565 --reset-runtime
 tools/btm test scenario dimension_worldgen --cycles 1 --radius 1 --samples 1
 tools/btm test scenario lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30
+tools/btm test scenario opening_progression --cycles 1
 tools/btm test kotlin
 tools/btm doctor env
 tools/btm doctor repo
@@ -99,6 +100,14 @@ tools/btm test scenario lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seco
 ```
 
 Expected full validation: three clean boot/join/space-routed dimension teleport/Distant Horizons generation/TFTH pressure cycles, required jars present, no crash reports, no ModernFix watchdog, no C2ME thread-guard failures, and Distant Horizons activity observed.
+
+Opening progression runtime GameTest:
+
+```bash
+tools/btm test scenario opening_progression --cycles 1
+```
+
+Expected validation: a fresh disposable pack server boots with the `pillagercampaigns` GameTest namespace enabled, then the opening progression fixture proves runtime gravel hand-breakability, hand denial on stone and logs, live flint availability from placed gravel, straw drops from placed tall grass cut with the primitive butcher knife, runtime primitive recipe presence for the butcher knife and hand axe, and first log access with the crafted primitive hand axe.
 
 ## Current Follow-Ups
 

@@ -82494,12 +82494,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:arrow_drone_item",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:arrow_drone"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82507,12 +82507,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:arrow_turret_item",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:arrow_turret"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82520,12 +82520,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:brick_drone_item",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:brick_drone"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "decor_theme"
     },
     {
@@ -82533,12 +82533,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:brick_turret_item",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:brick_turret"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "decor_theme"
     },
     {
@@ -82546,13 +82546,13 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:bullet",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shapeless",
       "evidence": [
         "k_turrets:bullet4",
         "k_turrets:bullet3"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82560,12 +82560,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:bullet_drone_item",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:bullet_drone"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82573,12 +82573,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:bullet_turret_item",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:bullet_turret"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82586,12 +82586,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:cobble_drone_item",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:cobble_drone"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82599,12 +82599,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:cobble_turret_item",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:cobble_turret"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82612,12 +82612,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:copper_plate",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:copper_plate"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82625,12 +82625,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:exp_link",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:exp_link"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82638,12 +82638,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:explosive_powder",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shapeless",
       "evidence": [
         "k_turrets:explosive_powder"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82651,12 +82651,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:fire_shield",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:fire_shield"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82664,12 +82664,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:firecharge_drone_item",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:fireball_drone"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82677,12 +82677,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:firecharge_turret_item",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:fireball_turret"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82690,12 +82690,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:gauss_bullet",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:gauss_bullet"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82703,12 +82703,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:gauss_drone_item",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:gauss_drone"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82716,12 +82716,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:gauss_turret_item",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:gauss_turret"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82729,12 +82729,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:light_upgrade",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:lantern"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82742,12 +82742,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:looting_link",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:looting_link"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82755,12 +82755,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:magnet_upgrade",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:magnet"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82768,12 +82768,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:recall_upgrade",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:recall_upgrade"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82781,12 +82781,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:reloader",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:reloader"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82794,12 +82794,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:storage_drone_item",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:storage_drone"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {
@@ -82807,12 +82807,12 @@
       "kind": "crafted",
       "mod": "k_turrets",
       "output": "k_turrets:wrench",
-      "authority": "default:k_turrets",
+      "authority": "namespace:k_turrets",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "k_turrets:wrench"
       ],
-      "era": "survival",
+      "era": "electrical",
       "weight_class": "utility_support"
     },
     {

@@ -1617,6 +1617,7 @@ fun runStaticValidation(): ProcessRun {
         appendLine("tools/btm internal validate-pack-contract")
         appendLine("tools/btm internal contract-completeness-report --check --no-write")
         appendLine("tools/btm internal validate-autonomous-contracts")
+        appendLine("OUT_DIR=/tmp/btm-indirect-casing-audit node tools/audit_indirect_casing_economy.mjs --check")
         appendLine("tools/btm internal validate-kubejs-assets")
         appendLine("tools/btm internal validate-chemistry-identity")
         appendLine("tools/btm internal validate-synthesis-pipeline")

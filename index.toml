@@ -8429,12 +8429,20 @@ file = "kubejs/assets/kubejs/models/item/airtight_machine_casing.json"
 hash = "6e083d8b74c228d150f6f66eaa2f47e520b30cb96e4bb1defa8e320b8ca77c07"
 
 [[files]]
+file = "kubejs/assets/kubejs/models/item/airtight_service_module.json"
+hash = "cfbed7762de7bb65f42a38f842fabbd3e7144ec404668267cddc6d7d516f5c27"
+
+[[files]]
 file = "kubejs/assets/kubejs/models/item/andesite_grinding_ball.json"
 hash = "990d77197302317c5f24062c1f4e0cd8cc84e554ad41a7de3bd7c1a3a49561e1"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/andesite_machine_casing.json"
 hash = "1db299e82af3236afee72f54599e48d213c105fb961518761aee390d962eadbf"
+
+[[files]]
+file = "kubejs/assets/kubejs/models/item/andesite_utility_frame.json"
+hash = "ea34609d9b7491bfdd22ac509e967a0ca1079193dc42b811ded4bcc44375bb43"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/apprentice_blood_heart.json"
@@ -8525,6 +8533,10 @@ file = "kubejs/assets/kubejs/models/item/brass_machine_casing.json"
 hash = "1a066af512671502def30499aafc940b361999ea8b90611113bcf6fc48bbb6f9"
 
 [[files]]
+file = "kubejs/assets/kubejs/models/item/brass_utility_assembly.json"
+hash = "af19904f13fea8c6fa79041b8dfeb13970ccb8c0c6daa40abf5595f5ad2b2222"
+
+[[files]]
 file = "kubejs/assets/kubejs/models/item/brine_extract.json"
 hash = "99f95d81c813cee4c406611e248ff50fe97e30d18f3b9832ba16e29f2d7f9c1a"
 
@@ -8551,6 +8563,10 @@ hash = "784484df4c2b237850fdb9ee0d0411e20212e41f6db0b62bb70c883ecf31c2be"
 [[files]]
 file = "kubejs/assets/kubejs/models/item/electrical_control_module.json"
 hash = "da1a696a119f9adad57803ee6a4f4aef1e7b874181c4829ce5a28896e4c884f2"
+
+[[files]]
+file = "kubejs/assets/kubejs/models/item/electrical_instrumentation_module.json"
+hash = "f1575fe8b3b215d374b12f4261be4fe0ac8cc523b370d4f871ecd1722c1a1695"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/electrical_machine_casing.json"
@@ -8595,6 +8611,10 @@ hash = "19892d00070987ed76385f0811e234d0f65edeb0b4f8a0fde251bd442bf57f36"
 [[files]]
 file = "kubejs/assets/kubejs/models/item/impossible_machine_casing.json"
 hash = "5e3939a0417b02d2c870f828e12a006c9c4b3029ce979fe1f435132f1adb4b9b"
+
+[[files]]
+file = "kubejs/assets/kubejs/models/item/impossible_support_matrix.json"
+hash = "65f418b68341a7e2c874923b1faee1ff617cc11b63c237cdbe0ecff3ea31b3ef"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/iron_grinding_ball.json"
@@ -8669,6 +8689,10 @@ file = "kubejs/assets/kubejs/models/item/raw_impossible_circuit.json"
 hash = "012bc049ff6b9bbba1eca66b839e23e2a63fbb3d1d15d7ee009be10994aed13e"
 
 [[files]]
+file = "kubejs/assets/kubejs/models/item/raw_impossible_storage_matrix.json"
+hash = "445a2340ea3ffea8187800187832170ba6ce92b4709205fd58f97c42b6c7b6e4"
+
+[[files]]
 file = "kubejs/assets/kubejs/models/item/redbed_signal_salt.json"
 hash = "0392aaea7640360c393837546e93a21523634ff00fac0f2b3e86a2a579b84e50"
 
@@ -8713,6 +8737,10 @@ file = "kubejs/assets/kubejs/models/item/seared_machine_casing.json"
 hash = "1184a951a34a745a6464c5cb01d102548bd80e9dc11eb98ab791961f2d920e49"
 
 [[files]]
+file = "kubejs/assets/kubejs/models/item/seared_service_fitting.json"
+hash = "1a1bfc9cbce438fa84becd007c5358a24f475ce72d24be3a2eeddaeb44a1e95b"
+
+[[files]]
 file = "kubejs/assets/kubejs/models/item/shadow_extract.json"
 hash = "721f9604ceaa676676422e4fed0a1b59da771f474566b26ed1124ae9b0c67e27"
 
@@ -8731,6 +8759,10 @@ hash = "86dd9c0eb95bca4ad59320680051b05aee993f8d34b0b72db153c10e47d7e2ac"
 [[files]]
 file = "kubejs/assets/kubejs/models/item/soulstone_carbon_matrix.json"
 hash = "51a43fcc08030830e1368e60b8f06ddd8553a5fbac06fa11fa23479853f35d4a"
+
+[[files]]
+file = "kubejs/assets/kubejs/models/item/space_expedition_kit.json"
+hash = "2721302dd7201233e7ebc2ba4237e94c8fd7bf99955ea622e1257ee05e1d1206"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/space_machine_casing.json"
@@ -9430,7 +9462,7 @@ hash = "ac91d60561206d71e19666534e8d7daa19da736043be7bdd4aebfd034f506364"
 
 [[files]]
 file = "kubejs/config/tech_parenting.json"
-hash = "378a86a47d101fb253c6d7c20c3349a1858806c0ae6b86c5b75e69cb8b13890a"
+hash = "073a3677e15cc1c72e6990f83a41c420691646529be2c5a47d09539a7f84b050"
 
 [[files]]
 file = "kubejs/data/additionalweaponry/recipes/embellishment/amethyst.json"
@@ -10654,11 +10686,11 @@ hash = "03bbccce682207ebeb3c8df7ba57d97baa33cc8511cfa30782416eea7bd603e6"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js"
-hash = "c3c1c0491a499af7e2a6b512887dff85c5f36c542b0bc448b8da16cee557b9f5"
+hash = "ab3f342512b53b10431d2af9a438bef9290d61eccfc2573a994b9ec38f152f14"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js"
-hash = "2a8b49c7eae5102efd952b56a4f15ca48349ffecd0fc2ef05ef4b38714634f68"
+hash = "8fd82018745c18fb281ff3736c7245f386951da6e51aa684d9b128bb6375b424"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/140_latent_chemlib_power_gates.js"
@@ -10666,7 +10698,7 @@ hash = "0e5af3b9f00d90c5640852b3dcbdf5bb47d458ddf38c58d1797061100d425dd9"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js"
-hash = "d8965f4a912def1250b64908f51f43156e7badaca6fcd775d1d7a0a78f0e55fb"
+hash = "b291a5c36d61d106ad8d3cf2802b791961391f44d7ad75374acd49b682b5bba9"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/143_circuit_pncr_assembly_authority.js"
@@ -10694,7 +10726,7 @@ hash = "e2b3fb1a06d82e9b060f4f385e5c2fc32814956120fab4cfe801a341d355ce1f"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js"
-hash = "d4f598c338a05665d18daef27f90da1bc6b5f8383937507daa986ecb9f00bf9c"
+hash = "a44a64c1ff47acf574e2366fbfb915ead3239cd3356c704dbec6a0b72f6a9dd4"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/168_hooks_drones_utility_gates.js"
@@ -10902,7 +10934,7 @@ hash = "967a736c0355743c7a6acbecf2772bb1a5be27db9620debc1cc1775ea9aada9b"
 
 [[files]]
 file = "kubejs/startup_scripts/10_items_blocks/30_progression_items.js"
-hash = "d11aa653ef28d3ed570c060b5fb1e062c0acc5a7356c1a23f9a2da8e62f82560"
+hash = "2ac17551d4dc9c0df445ded12dafe13599f0f62ab2c6ecbeabfeaced92de52d0"
 
 [[files]]
 file = "kubejs/startup_scripts/20_blocks/10_ae2_skystone_hardness.js"

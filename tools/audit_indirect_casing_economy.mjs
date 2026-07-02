@@ -29,6 +29,27 @@ const CASINGS = [
   'kubejs:impossible_machine_casing'
 ]
 
+const SUPPORT_INTERMEDIATES = new Set([
+  'kubejs:seared_service_fitting',
+  'kubejs:andesite_utility_frame',
+  'kubejs:brass_utility_assembly',
+  'kubejs:airtight_service_module',
+  'kubejs:electrical_instrumentation_module',
+  'kubejs:space_expedition_kit',
+  'kubejs:raw_impossible_storage_matrix',
+  'kubejs:impossible_support_matrix',
+  'kubejs:brass_control_assembly',
+  'kubejs:airtight_fluid_module',
+  'kubejs:electrical_control_module',
+  'kubejs:ae_logic_package'
+])
+
+const DIRECT_CASING_SPECIAL_OUTPUTS = new Set([
+  'create:precision_mechanism'
+])
+
+const DIRECT_CASING_ALLOWED_OUTPUT = /(^|:).*(machine|controller|generator|motor|battery|drive|interface|assembler|crafter|processor|terminal|bus|cell|storage|chamber|refinery|plant|station|platform|laser|drill|deployer|valve|tube|pipe|connector|relay|gauge|computer|monitor|hub|charger|cage|module|card|network|transmitter|receiver|wireless|loader|engine|gearbox|piston|pump|depot|basin|funnel|tunnel|chute|tank|drain|faucet|channel|melter|heater|table|workbench|condenser|plane|port|link|ticker|switch|observer|packager|sealer|liquefier|electrolyzer|controls|recorder|meter|blueprint).*/i
+
 const CRAFT_SURFACE_TIERS = [
   [/^create:(pressing|mixing|compacting|crushing|milling|cutting|filling|emptying|splashing|haunting)$/, 'create andesite machine surfaces', 'kubejs:andesite_machine_casing'],
   [/^create:sequenced_assembly$/, 'Create staged assembly line', 'kubejs:brass_machine_casing'],
@@ -141,12 +162,15 @@ function idsFromRecipeInputs(recipe) {
   const out = new Set()
   if (!recipe || typeof recipe !== 'object') return []
   idsFromValue(recipe.ingredients, out)
+  idsFromValue(recipe.ingredient, out)
   idsFromValue(recipe.inputs, out)
   idsFromValue(recipe.input, out)
   idsFromValue(recipe.item_input, out)
   idsFromValue(recipe.reagent, out)
   idsFromValue(recipe.pedestalItems, out)
   idsFromValue(recipe.key, out)
+  idsFromValue(recipe.cast, out)
+  idsFromValue(recipe.sequence, out)
   return [...out].filter(Boolean)
 }
 
@@ -171,6 +195,10 @@ const DIRECT_COMPONENT_PATTERNS = [
 
 function isAestheticComponentOutput(id) {
   return DIRECT_COMPONENT_PATTERNS.some(pattern => pattern.test(id))
+}
+
+function isAllowedDirectCasingOutput(id) {
+  return CASINGS.includes(id) || SUPPORT_INTERMEDIATES.has(id) || DIRECT_CASING_SPECIAL_OUTPUTS.has(id) || DIRECT_CASING_ALLOWED_OUTPUT.test(id)
 }
 
 function createRecorder(file, records, removes, replaces, nextSeq) {
@@ -446,6 +474,39 @@ const aestheticDirectCasingConsumers = directCasingConsumers
   .filter(row => isAestheticComponentOutput(row.output))
   .sort((a, b) => a.output.localeCompare(b.output))
 
+const invalidDirectCasingConsumers = directCasingConsumers
+  .filter(row => !isAllowedDirectCasingOutput(row.output))
+  .sort((a, b) => a.output.localeCompare(b.output))
+
+const supportIntermediateRecipes = activeAuthoredRecords
+  .filter(recipe => recipe.outputs.some(output => SUPPORT_INTERMEDIATES.has(output)))
+  .map(recipe => ({
+    output: recipe.outputs.find(output => SUPPORT_INTERMEDIATES.has(output)),
+    type: recipe.type,
+    id: recipe.id,
+    file: recipe.file,
+    casingInputs: recipe.inputs.filter(input => CASINGS.includes(input))
+  }))
+const supportIntermediateOutputs = new Set(supportIntermediateRecipes.map(row => row.output))
+const missingSupportIntermediateRecipes = [...SUPPORT_INTERMEDIATES]
+  .filter(output => ![
+    'kubejs:brass_control_assembly',
+    'kubejs:airtight_fluid_module',
+    'kubejs:electrical_control_module',
+    'kubejs:ae_logic_package'
+  ].includes(output))
+  .filter(output => !supportIntermediateOutputs.has(output))
+  .sort()
+const supportIntermediatesRequiringCasing = [...SUPPORT_INTERMEDIATES]
+  .filter(output => ![
+    'kubejs:brass_control_assembly',
+    'kubejs:airtight_fluid_module',
+    'kubejs:electrical_control_module'
+  ].includes(output))
+const supportIntermediatesMissingCasingInput = supportIntermediatesRequiringCasing
+  .filter(output => !supportIntermediateRecipes.some(row => row.output === output && row.casingInputs.length))
+  .sort()
+
 const byGate = {}
 for (const row of indirect) {
   const gate = row.gate
@@ -466,6 +527,10 @@ const report = {
   aestheticDirectCasingConsumerCount: new Set(aestheticDirectCasingConsumers.map(row => row.output)).size,
   directCasingConsumers,
   aestheticDirectCasingConsumers,
+  invalidDirectCasingConsumers,
+  supportIntermediateRecipes,
+  missingSupportIntermediateRecipes,
+  supportIntermediatesMissingCasingInput,
   byGate: Object.fromEntries(Object.entries(byGate).map(([gate, set]) => [gate, [...set].sort()])),
   bypasses,
   classifiedBypasses,
@@ -484,6 +549,8 @@ console.log(`indirect valuable outputs: ${indirectByOutput.size}`)
 console.log(`direct casing-input outputs: ${new Set(direct.map(row => row.output)).size}`)
 console.log(`active direct casing consumers: ${new Set(directCasingConsumers.map(row => row.output)).size}`)
 console.log(`aesthetic direct casing consumers: ${new Set(aestheticDirectCasingConsumers.map(row => row.output)).size}`)
+console.log(`invalid direct casing consumers: ${new Set(invalidDirectCasingConsumers.map(row => row.output)).size}`)
+console.log(`support intermediary recipes: ${supportIntermediateRecipes.length}`)
 console.log(`potential simple bypasses: ${bypasses.length}`)
 console.log(`benign classified bypasses: ${benignBypasses.length}`)
 console.log(`actionable component bypasses: ${actionableBypasses.length}`)
@@ -494,4 +561,23 @@ console.log(`source eval warnings: ${errors.length}`)
 console.log(`wrote ${path.relative(repo, outJson)}`)
 if (actionableBypasses.length) {
   for (const bypass of actionableBypasses.slice(0, 20)) console.log(`ACTIONABLE? ${bypass.output}`)
+}
+if (process.argv.includes('--check')) {
+  let failed = false
+  if (invalidDirectCasingConsumers.length) {
+    failed = true
+    console.error('invalid direct casing consumers:')
+    for (const row of invalidDirectCasingConsumers.slice(0, 80)) console.error(`  ${row.output} (${row.type}) ${row.file}`)
+  }
+  if (missingSupportIntermediateRecipes.length) {
+    failed = true
+    console.error('missing support intermediary recipes:')
+    for (const output of missingSupportIntermediateRecipes) console.error(`  ${output}`)
+  }
+  if (supportIntermediatesMissingCasingInput.length) {
+    failed = true
+    console.error('support intermediary recipes missing casing input:')
+    for (const output of supportIntermediatesMissingCasingInput) console.error(`  ${output}`)
+  }
+  if (failed) process.exit(1)
 }

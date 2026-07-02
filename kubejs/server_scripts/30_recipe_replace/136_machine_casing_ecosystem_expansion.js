@@ -14,9 +14,15 @@ var BTM_CASING_ECO = {
     rawImpossible: 'kubejs:raw_impossible_casing',
     impossible: 'kubejs:impossible_machine_casing',
     brassControlAssembly: 'kubejs:brass_control_assembly',
+    brassUtilityAssembly: 'kubejs:brass_utility_assembly',
     airtightFluidModule: 'kubejs:airtight_fluid_module',
+    airtightServiceModule: 'kubejs:airtight_service_module',
     electricalControlModule: 'kubejs:electrical_control_module',
+    electricalInstrumentationModule: 'kubejs:electrical_instrumentation_module',
+    spaceExpeditionKit: 'kubejs:space_expedition_kit',
+    rawImpossibleStorageMatrix: 'kubejs:raw_impossible_storage_matrix',
     aeLogicPackage: 'kubejs:ae_logic_package',
+    impossibleSupportMatrix: 'kubejs:impossible_support_matrix',
     pressureSeal: 'kubejs:pressure_seal',
     compressorCore: 'kubejs:rotational_compressor_core',
     skySteelSheet: 'kubejs:sky_steel_sheet',
@@ -202,9 +208,9 @@ ServerEvents.recipes(function (event) {
         btmEcoRecipe('oc2r:inventory_operations_module', [' H ', 'BAB', ' C '], { H: 'minecraft:hopper', B: 'oc2r:circuit_board', A: BTM_CASING_ECO.circuited, C: BTM_CASING_ECO.electricalControlModule }, 'kubejs:casing_ecosystem/circuited/inventory_operations_module'),
         btmEcoRecipe('oc2r:network_interface_card', [' N ', 'BAB', ' C '], { N: 'oc2r:network_connector', B: 'oc2r:circuit_board', A: BTM_CASING_ECO.circuited, C: BTM_CASING_ECO.electricalControlModule }, 'kubejs:casing_ecosystem/circuited/network_interface_card'),
         btmEcoRecipe('oc2r:redstone_interface_card', [' R ', 'BAB', ' C '], { R: BTM_CASING_ECO.redstoneRelay, B: 'oc2r:circuit_board', A: BTM_CASING_ECO.circuited, C: BTM_CASING_ECO.electricalControlModule }, 'kubejs:casing_ecosystem/circuited/redstone_interface_card'),
-        btmEcoRecipe('oc2r:cpu_tier_2', ['STS', 'BAB', 'STS'], { S: 'oc2r:silicon_wafer', T: BTM_CASING_ECO.transistor, B: 'oc2r:circuit_board', A: BTM_CASING_ECO.circuited }, 'kubejs:casing_ecosystem/circuited/cpu_tier_2'),
+        btmEcoRecipe('oc2r:cpu_tier_2', ['STS', 'BAB', 'STS'], { S: 'oc2r:silicon_wafer', T: BTM_CASING_ECO.transistor, B: 'oc2r:circuit_board', A: BTM_CASING_ECO.electricalInstrumentationModule }, 'kubejs:casing_ecosystem/circuited/cpu_tier_2'),
         btmEcoRecipe('oc2r:hard_drive_large', ['SSS', 'BAB', 'SSS'], { S: 'oc2r:silicon_wafer', B: 'oc2r:circuit_board', A: BTM_CASING_ECO.circuited }, 'kubejs:casing_ecosystem/circuited/hard_drive_large'),
-        btmEcoRecipe('oc2r:memory_large', ['STS', 'BAB', 'STS'], { S: 'oc2r:silicon_wafer', T: BTM_CASING_ECO.transistor, B: 'oc2r:circuit_board', A: BTM_CASING_ECO.circuited }, 'kubejs:casing_ecosystem/circuited/memory_large')
+        btmEcoRecipe('oc2r:memory_large', ['STS', 'BAB', 'STS'], { S: 'oc2r:silicon_wafer', T: BTM_CASING_ECO.transistor, B: 'oc2r:circuit_board', A: BTM_CASING_ECO.electricalInstrumentationModule }, 'kubejs:casing_ecosystem/circuited/memory_large')
     ])
 
     btmEcoAddMany(event, [
@@ -217,21 +223,21 @@ ServerEvents.recipes(function (event) {
         btmEcoRecipe('creatingspace:cryogenic_tank', ['SGS', 'GCG', 'SGS'], { S: 'creatingspace:inconel_sheet', G: BTM_CASING_ECO.glass, C: BTM_CASING_ECO.space }, 'kubejs:casing_ecosystem/space/cryogenic_tank'),
         btmEcoRecipe('creatingspace:flight_recorder', ['GPG', 'CAC', 'SRS'], { G: BTM_CASING_ECO.glass, P: BTM_CASING_ECO.pcb, C: BTM_CASING_ECO.space, A: BTM_CASING_ECO.circuited, S: 'creatingspace:inconel_sheet', R: BTM_CASING_ECO.redstoneRelay }, 'kubejs:casing_ecosystem/space/flight_recorder'),
         btmEcoRecipe('creatingspace:flow_meter', ['GPG', 'SCS', 'GPG'], { G: BTM_CASING_ECO.glass, P: 'create:fluid_pipe', S: 'creatingspace:inconel_sheet', C: BTM_CASING_ECO.space }, 'kubejs:casing_ecosystem/space/flow_meter'),
-        btmEcoRecipe('creatingspace:engine_blueprint', [' P ', 'CAC', ' P '], { P: 'minecraft:paper', C: BTM_CASING_ECO.circuit, A: BTM_CASING_ECO.space }, 'kubejs:casing_ecosystem/space/engine_blueprint'),
-        btmEcoRecipe('creatingspace:power_pack', ['SBS', 'BCB', 'SBS'], { S: 'creatingspace:inconel_sheet', B: 'powergrid:battery', C: BTM_CASING_ECO.space }, 'kubejs:casing_ecosystem/space/power_pack'),
-        btmEcoRecipe('creatingspace:exhaust_pack', ['SPS', 'PCP', 'SPS'], { S: 'creatingspace:hastelloy_sheet', P: 'pneumaticcraft:pressure_tube', C: BTM_CASING_ECO.space }, 'kubejs:casing_ecosystem/space/exhaust_pack'),
-        btmEcoRecipe('creatingspace:copper_oxygen_backtank', ['SPS', 'TCT', 'SPS'], { S: BTM_CASING_ECO.pressureSeal, P: 'pneumaticcraft:pressure_tube', T: 'pneumaticcraft:small_tank', C: BTM_CASING_ECO.space }, 'kubejs:casing_ecosystem/space/copper_oxygen_backtank'),
-        btmEcoRecipe('creatingspace:netherite_oxygen_backtank', ['SPS', 'TCT', 'SPS'], { S: 'minecraft:netherite_ingot', P: 'pneumaticcraft:reinforced_pressure_tube', T: 'creatingspace:copper_oxygen_backtank', C: BTM_CASING_ECO.space }, 'kubejs:casing_ecosystem/space/netherite_oxygen_backtank'),
-        btmEcoRecipe('creatingspace:advanced_spacesuit_fabric', ['TST', 'SCS', 'TOT'], { T: 'kubejs:titanium_thermal_plate', S: 'creatingspace:basic_spacesuit_fabric', C: BTM_CASING_ECO.space, O: BTM_CASING_ECO.titaniumOxide }, 'kubejs:casing_ecosystem/space/advanced_spacesuit_fabric')
+        btmEcoRecipe('creatingspace:engine_blueprint', [' P ', 'CAC', ' P '], { P: 'minecraft:paper', C: BTM_CASING_ECO.circuit, A: BTM_CASING_ECO.spaceExpeditionKit }, 'kubejs:casing_ecosystem/space/engine_blueprint'),
+        btmEcoRecipe('creatingspace:power_pack', ['SBS', 'BCB', 'SBS'], { S: 'creatingspace:inconel_sheet', B: 'powergrid:battery', C: BTM_CASING_ECO.spaceExpeditionKit }, 'kubejs:casing_ecosystem/space/power_pack'),
+        btmEcoRecipe('creatingspace:exhaust_pack', ['SPS', 'PCP', 'SPS'], { S: 'creatingspace:hastelloy_sheet', P: 'pneumaticcraft:pressure_tube', C: BTM_CASING_ECO.spaceExpeditionKit }, 'kubejs:casing_ecosystem/space/exhaust_pack'),
+        btmEcoRecipe('creatingspace:copper_oxygen_backtank', ['SPS', 'TCT', 'SPS'], { S: BTM_CASING_ECO.pressureSeal, P: 'pneumaticcraft:pressure_tube', T: 'pneumaticcraft:small_tank', C: BTM_CASING_ECO.spaceExpeditionKit }, 'kubejs:casing_ecosystem/space/copper_oxygen_backtank'),
+        btmEcoRecipe('creatingspace:netherite_oxygen_backtank', ['SPS', 'TCT', 'SPS'], { S: 'minecraft:netherite_ingot', P: 'pneumaticcraft:reinforced_pressure_tube', T: 'creatingspace:copper_oxygen_backtank', C: BTM_CASING_ECO.spaceExpeditionKit }, 'kubejs:casing_ecosystem/space/netherite_oxygen_backtank'),
+        btmEcoRecipe('creatingspace:advanced_spacesuit_fabric', ['TST', 'SCS', 'TOT'], { T: 'kubejs:titanium_thermal_plate', S: 'creatingspace:basic_spacesuit_fabric', C: BTM_CASING_ECO.spaceExpeditionKit, O: BTM_CASING_ECO.titaniumOxide }, 'kubejs:casing_ecosystem/space/advanced_spacesuit_fabric')
     ])
 
     btmEcoAddMany(event, [
-        btmEcoRecipe('ae2:cell_component_64k', ['SPS', 'PRP', 'SPS'], { S: BTM_CASING_ECO.skySteelSheet, P: 'ae2:calculation_processor', R: BTM_CASING_ECO.rawImpossible }, 'kubejs:casing_ecosystem/raw_impossible/cell_component_64k'),
-        btmEcoRecipe('ae2:cell_component_256k', ['SPS', 'PRP', 'SPS'], { S: BTM_CASING_ECO.skySteelSheet, P: 'ae2:engineering_processor', R: BTM_CASING_ECO.rawImpossible }, 'kubejs:casing_ecosystem/raw_impossible/cell_component_256k'),
-        btmEcoRecipe('ae2:spatial_cell_component_16', ['SPS', 'PRP', 'SPS'], { S: 'ae2:sky_stone_block', P: 'ae2:engineering_processor', R: BTM_CASING_ECO.rawImpossible }, 'kubejs:casing_ecosystem/raw_impossible/spatial_cell_component_16'),
-        btmEcoRecipe('ae2:spatial_cell_component_128', ['SPS', 'PRP', 'SPS'], { S: BTM_CASING_ECO.skySteelSheet, P: 'ae2:engineering_processor', R: BTM_CASING_ECO.rawImpossible }, 'kubejs:casing_ecosystem/raw_impossible/spatial_cell_component_128'),
-        btmEcoRecipe('ae2:item_cell_housing', ['SGS', 'GRG', 'SGS'], { S: BTM_CASING_ECO.skySteelSheet, G: 'ae2:quartz_glass', R: BTM_CASING_ECO.rawImpossible }, 'kubejs:casing_ecosystem/raw_impossible/item_cell_housing'),
-        btmEcoRecipe('ae2:fluid_cell_housing', ['SGS', 'GRG', 'SGS'], { S: BTM_CASING_ECO.skySteelSheet, G: 'ae2:quartz_glass', R: BTM_CASING_ECO.rawImpossible }, 'kubejs:casing_ecosystem/raw_impossible/fluid_cell_housing')
+        btmEcoRecipe('ae2:cell_component_64k', ['SPS', 'PRP', 'SPS'], { S: BTM_CASING_ECO.skySteelSheet, P: 'ae2:calculation_processor', R: BTM_CASING_ECO.rawImpossibleStorageMatrix }, 'kubejs:casing_ecosystem/raw_impossible/cell_component_64k'),
+        btmEcoRecipe('ae2:cell_component_256k', ['SPS', 'PRP', 'SPS'], { S: BTM_CASING_ECO.skySteelSheet, P: 'ae2:engineering_processor', R: BTM_CASING_ECO.rawImpossibleStorageMatrix }, 'kubejs:casing_ecosystem/raw_impossible/cell_component_256k'),
+        btmEcoRecipe('ae2:spatial_cell_component_16', ['SPS', 'PRP', 'SPS'], { S: 'ae2:sky_stone_block', P: 'ae2:engineering_processor', R: BTM_CASING_ECO.rawImpossibleStorageMatrix }, 'kubejs:casing_ecosystem/raw_impossible/spatial_cell_component_16'),
+        btmEcoRecipe('ae2:spatial_cell_component_128', ['SPS', 'PRP', 'SPS'], { S: BTM_CASING_ECO.skySteelSheet, P: 'ae2:engineering_processor', R: BTM_CASING_ECO.rawImpossibleStorageMatrix }, 'kubejs:casing_ecosystem/raw_impossible/spatial_cell_component_128'),
+        btmEcoRecipe('ae2:item_cell_housing', ['SGS', 'GRG', 'SGS'], { S: BTM_CASING_ECO.skySteelSheet, G: 'ae2:quartz_glass', R: BTM_CASING_ECO.rawImpossibleStorageMatrix }, 'kubejs:casing_ecosystem/raw_impossible/item_cell_housing'),
+        btmEcoRecipe('ae2:fluid_cell_housing', ['SGS', 'GRG', 'SGS'], { S: BTM_CASING_ECO.skySteelSheet, G: 'ae2:quartz_glass', R: BTM_CASING_ECO.rawImpossibleStorageMatrix }, 'kubejs:casing_ecosystem/raw_impossible/fluid_cell_housing')
     ])
 
     btmEcoAddMany(event, [

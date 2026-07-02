@@ -159,7 +159,7 @@ ServerEvents.recipes(function (event) {
         { item: 'ars_nouveau:archmage_spell_book' },
         { item: 'minecraft:nether_star' },
         { item: 'bloodmagic:etherealslate' },
-        { item: 'kubejs:impossible_machine_casing' },
+        { item: 'kubejs:impossible_support_matrix' },
         { item: 'latent_chemlib:gas_reaction_chamber' }
     ], 100000, 320, 5, 'kubejs:tomeofblood/alchemytable/archmage_tome_post_ae2')
 
@@ -175,7 +175,7 @@ ServerEvents.recipes(function (event) {
         'bloodmagic:throwing_dagger',
         'ars_nouveau:conjuration_essence',
         'bloodmagic:etherealslate',
-        'kubejs:impossible_machine_casing',
+        'kubejs:impossible_support_matrix',
         'latent_chemlib:gas_reaction_chamber'
     ], 'kubejs:tomeofblood/glyph_sentient_wrath_post_ae2')
 

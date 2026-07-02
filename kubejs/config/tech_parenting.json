@@ -8189,7 +8189,7 @@
       "authority": "default:ars_instrumentum",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:67"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:60"
       ],
       "era": "survival",
       "weight_class": "utility_support"
@@ -72524,7 +72524,7 @@
       "authority": "default:hexalia",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:96"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:87"
       ],
       "era": "survival",
       "weight_class": "utility_support"
@@ -72537,7 +72537,7 @@
       "authority": "default:hexcasting",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:92"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:83"
       ],
       "era": "survival",
       "weight_class": "utility_support"
@@ -106755,7 +106755,7 @@
       "authority": "default:mna",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:95"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:86"
       ],
       "era": "survival",
       "weight_class": "structural_progression"
@@ -106768,7 +106768,7 @@
       "authority": "default:mna",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:94"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:85"
       ],
       "era": "survival",
       "weight_class": "utility_support"
@@ -119183,19 +119183,6 @@
       "weight_class": "utility_support"
     },
     {
-      "id": "crafted:kubejs:replace_input_gate:naturesaura:offering_table",
-      "kind": "crafted",
-      "mod": "naturesaura",
-      "output": "naturesaura:offering_table",
-      "authority": "default:naturesaura",
-      "surface_type": "kubejs:replace_input_gate",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:26"
-      ],
-      "era": "survival",
-      "weight_class": "decor_theme"
-    },
-    {
       "id": "crafted:minecraft:crafting_shaped:naturescompass:naturescompass",
       "kind": "crafted",
       "mod": "naturescompass",
@@ -127995,7 +127982,7 @@
       "authority": "default:psi",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:91"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:82"
       ],
       "era": "survival",
       "weight_class": "utility_support"
@@ -143088,7 +143075,7 @@
       "authority": "default:rootsclassic",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:18"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:17"
       ],
       "era": "survival",
       "weight_class": "structural_progression"
@@ -173159,7 +173146,7 @@
       "authority": "default:theurgy",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:82"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:73"
       ],
       "era": "survival",
       "weight_class": "utility_support"
@@ -173172,7 +173159,7 @@
       "authority": "default:theurgy",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:83"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:74"
       ],
       "era": "survival",
       "weight_class": "structural_progression"

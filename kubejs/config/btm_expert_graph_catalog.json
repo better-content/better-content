@@ -150,7 +150,6 @@
       "id": "blood_2",
       "gate": "bloodmagic:reinforcedslate",
       "mods": [
-        "botania",
         "naturesaura",
         "irons_spellbooks"
       ]
@@ -159,7 +158,6 @@
       "id": "blood_3",
       "gate": "bloodmagic:infusedslate",
       "mods": [
-        "botania",
         "occultism",
         "mahoutsukai",
         "eidolon"
@@ -207,7 +205,7 @@
   "criticalRules": [
     "Block-like machines must require their assigned casing tier.",
     "Magic workstations must be parented to Blood Magic tiers.",
-    "Botania light progression must precede Ars source precision.",
+    "Hexerei progression must precede Occultism attunement and Ars source precision.",
     "Exact duplicate physical materials should collapse to canonical pack families; mahogany standardizes on natures_spirit.",
     "Loot, Wares, trades, mob drops, and quests are recipe-equivalent material sources.",
     "Emerald currency must not drive villager or Wares economy.",

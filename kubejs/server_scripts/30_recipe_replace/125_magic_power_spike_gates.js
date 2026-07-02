@@ -39,17 +39,7 @@ ServerEvents.recipes(function (event) {
         'reliquary:apothecary_cauldron'
     ], commonVanillaValuables.concat(['minecraft:torch', 'reliquary:catalyzing_gland']), BTM_MAGIC_T1)
 
-    // Blood III: Botania engineering comes before Ars source precision.
-    btmMagicGateOutputs(event, [
-        'botania:runic_altar',
-        'botania:pump',
-        'botania:avatar',
-        'botania:fel_pumpkin',
-        'botania:cell_block'
-    ], commonVanillaValuables.concat(['botania:livingrock', 'botania:mana_pearl', '#botania:mana_diamond_gems']), BTM_MAGIC_T3)
-
-    // Blood IV: Ars apparatus, glyph, and ritual expansion. Botania light progression
-    // precedes Ars source precision in the authored graph.
+    // Blood III: early Ars operations start once the teaser book can be fed by real proof.
     btmMagicGateOutputs(event, [
         'ars_nouveau:ritual_brazier',
         'ars_nouveau:ritual_scrying',
@@ -76,25 +66,17 @@ ServerEvents.recipes(function (event) {
     ], commonVanillaValuables.concat([
         '#forge:storage_blocks/source', '#forge:gems/source', 'ars_nouveau:source_gem',
         'ars_nouveau:earth_essence', 'ars_nouveau:air_essence', 'minecraft:ender_pearl'
-    ]), BTM_MAGIC_T4)
-
-    btmMagicGateOutputs(event, [
-        'naturesaura:slime_split_generator',
-        'naturesaura:animal_generator',
-        'naturesaura:flower_generator',
-        'naturesaura:chorus_generator',
-        'naturesaura:auto_crafter'
-    ], commonVanillaValuables.concat(['naturesaura:infused_iron']), BTM_MAGIC_T2)
+    ]), BTM_MAGIC_T3)
 
     btmMagicGateOutputs(event, [
         'irons_spellbooks:pumpkin_helmet'
     ], commonVanillaValuables, BTM_MAGIC_T2)
 
-    // Blood IV: Occultism bridges Malum into Goety plus Hexerei dark progression.
+    // Blood II: Hexerei is the first folk surface off the Fonts spine.
     btmMagicGateOutputs(event, [
         'hexerei:book_of_shadows_altar',
         'hexerei:mixing_cauldron'
-    ], commonVanillaValuables.concat(['minecraft:torch']), BTM_MAGIC_T4)
+    ], commonVanillaValuables.concat(['minecraft:torch']), BTM_MAGIC_T2)
 
     // Blood IV: Goety/Eidolon operational power. Keep Goety's internal focus chain,
     // but make the cheap focus entry and altar variants require a Demonic Slate.

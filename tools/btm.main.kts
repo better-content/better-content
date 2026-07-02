@@ -1847,8 +1847,11 @@ fun runSynthesisPipelineValidation(): ProcessRun {
     }
     if (exists(coreFiles[3])) {
         val fileText = text(coreFiles[3])
-        if (!fileText.contains("var BTM_CHEM_SEALED_CELL = 'latent_chemlib:sealed_chemical_cell'")) fail("molecular synthesis does not define sealed-cell gas bridge")
-        for (looseGas in listOf("{ item: 'chemlib:oxygen' }", "{ item: 'chemlib:hydrogen' }", "{ item: 'chemlib:chlorine' }", "{ item: 'chemlib:nitrogen_dioxide' }", "{ item: 'chemlib:sulfur_trioxide' }", "{ item: 'chemlib:ethylene' }")) if (fileText.contains(looseGas)) fail("late molecular synthesis still has loose gas item input: $looseGas")
+        if (!fileText.contains("function btmChemGas(original)")) fail("molecular synthesis gas helper is missing")
+        if (fileText.contains("var BTM_CHEM_SEALED_CELL = 'latent_chemlib:sealed_chemical_cell'")) fail("molecular synthesis still defines sealed-cell gas bridge")
+        if (fileText.contains("latent_chemlib:sealed_chemical_cell")) fail("molecular synthesis still consumes sealed chemical cells directly")
+        if (!fileText.contains("return { item: original }")) fail("molecular synthesis gas helper no longer returns explicit gas items")
+        for (gasNeedle in listOf("btmChemGas('chemlib:oxygen')", "btmChemGas('chemlib:hydrogen')", "btmChemGas('chemlib:chlorine')", "btmChemGas('chemlib:nitrogen_dioxide')", "btmChemGas('chemlib:sulfur_trioxide')", "btmChemGas('chemlib:ethylene')")) if (!fileText.contains(gasNeedle)) fail("molecular synthesis no longer routes gas through explicit gas helper call: $gasNeedle")
         for (molecule in listOf("hydrogen_sulfide", "nitric_oxide", "ammonium_chloride", "diammonium_phosphate", "arsenic_sulfide", "mercury_sulfide", "iron_ii_oxide")) if (!fileText.contains("'$molecule'")) fail("special molecular route missing: $molecule")
         for (route in listOf("ethanol_from_sugar", "acetic_acid_from_ethanol", "sulfur_dioxide", "sulfur_trioxide", "sulfuric_acid_from_sulfur_trioxide", "hydrochloric_acid_from_chlorine", "nitric_oxide", "nitrogen_dioxide", "nitric_acid_from_nitrogen_dioxide", "phosphoric_acid_fluid")) if (!fileText.contains("'$route'")) fail("acid progression route missing: $route")
     }

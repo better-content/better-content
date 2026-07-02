@@ -8,10 +8,8 @@ function btmChemItem(id) {
     try { return Item.exists(id) } catch (e) { return false }
 }
 
-var BTM_CHEM_SEALED_CELL = 'latent_chemlib:sealed_chemical_cell'
-
 function btmChemGas(original) {
-    return btmChemItem(BTM_CHEM_SEALED_CELL) ? { item: BTM_CHEM_SEALED_CELL } : { item: original }
+    return { item: original }
 }
 
 function btmChemResults(primaryResults, sideProducts) {

@@ -215,6 +215,11 @@ val scenarios = linkedMapOf(
         "All-dimension worldgen stress run",
         "tools/dimension_worldgen_stress.py",
     ),
+    "opening_progression" to ScenarioDefinition(
+        "opening_progression",
+        "Opening progression runtime GameTest validation",
+        "tools/opening_progression_gametest.py",
+    ),
 )
 
 val rawArgs = args.toList()

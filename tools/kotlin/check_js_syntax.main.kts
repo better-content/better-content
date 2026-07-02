@@ -29,7 +29,7 @@ fun walk(rootDir: Path, predicate: (Path) -> Boolean = { true }): List<Path> {
 
 val files = (
     walk(root.resolve("kubejs")) { it.toString().endsWith(".js") } +
-    walk(root.resolve("tools")) { it.toString().endsWith(".js") || it.toString().endsWith(".mjs") }
+    walk(root.resolve("tools")) { it.toString().endsWith(".js") }
 ).sortedBy { root.relativize(it).toString() }
 
 val reporter = CollectingReporter()
@@ -50,10 +50,10 @@ for (file in files) {
 }
 
 if (reporter.errors.isEmpty()) {
-    println("ok - all KubeJS/tool JS parses with Rhino (${"%d".format(files.size)} files)")
+    println("ok - all KubeJS JS parses with Rhino (${"%d".format(files.size)} files)")
     exitProcess(0)
 }
 
-System.err.println("FAIL - all KubeJS/tool JS parses with Rhino")
+System.err.println("FAIL - all KubeJS JS parses with Rhino")
 System.err.println(reporter.errors.take(20).joinToString("\n"))
 exitProcess(1)

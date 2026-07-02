@@ -68,6 +68,8 @@ Do not sync or delete player/runtime state by default. Use explicit reset flags 
 - Runtime inspection: `tools/btm doctor runtime --instance /path/to/fresh/runtime`
 
 The supported public contract is the `btm` tree only. Legacy shell, Python, and Node entrypoints remain as internal implementation detail until their Kotlin replacements land; do not teach or depend on them as the front door.
+Outside `kubejs/`, JavaScript is transitional only where an existing pack/runtime integration requires it. Do not add new `.js` or `.mjs` entrypoints under `tools/`. New non-KubeJS automation should default to Kotlin under the `btm` surface or to internal Kotlin support scripts it calls.
+The active tooling surface is Kotlin-first. If you find legacy Node-era instructions or generated metadata, treat them as cleanup debt and port them to Kotlin instead of extending them.
 Original shell/Python tools are quarantined under `tools/quarantine/original-tools/` for archival reference. Do not move them back into the active `tools/` root.
 
 ## Tool Prerequisites
@@ -83,6 +85,7 @@ Original shell/Python tools are quarantined under `tools/quarantine/original-too
   - `packwiz` for bundle export flows
 - Treat `tools/btm doctor env` as authoritative when a command fails due to missing local dependencies.
 - `tools/btm` is the only supported front door. Some internal generators and archival compatibility shims remain outside Kotlin, but supported `test`, `build`, and `doctor` flows should not be taught as Node entrypoints.
+- KubeJS scripts are the only normal place for pack-authored JavaScript. Repo tooling should be Kotlin unless the user explicitly asks for a quarantined compatibility path.
 
 ## Modular Harnesses
 Use the portable harness layer for repeatable runtime tests instead of hand-built local instances.

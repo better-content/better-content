@@ -1622,7 +1622,7 @@ fun runStaticValidation(): ProcessRun {
         appendLine("tools/btm internal validate-pack-contract")
         appendLine("tools/btm internal contract-completeness-report --check --no-write")
         appendLine("tools/btm internal validate-autonomous-contracts")
-        appendLine("OUT_DIR=/tmp/btm-indirect-casing-audit node tools/audit_indirect_casing_economy.mjs --check")
+        appendLine("OUT_DIR=/tmp/btm-indirect-casing-audit kotlin tools/kotlin/audit_indirect_casing_economy.main.kts --check")
         appendLine("tools/btm internal validate-kubejs-assets")
         appendLine("tools/btm internal validate-chemistry-identity")
         appendLine("tools/btm internal validate-synthesis-pipeline")
@@ -2766,7 +2766,7 @@ fun handleDoctor(subArgs: List<String>): CommandResult {
     return when (subArgs.first()) {
         "env" -> {
             val findings = mutableListOf<ValidationFinding>()
-            val required = listOf("kotlin", "node", "python3", "java", "curl", "bash", "rg")
+            val required = listOf("kotlin", "python3", "java", "curl", "bash", "rg")
             for (command in required) {
                 if (!commandExists(command)) {
                     findings += ValidationFinding("error", "missing required command: $command")
@@ -2781,7 +2781,6 @@ fun handleDoctor(subArgs: List<String>): CommandResult {
             val details = linkedMapOf<String, Any?>(
                 "repoRoot" to root.toString(),
                 "kotlin" to readCommand(listOf("kotlin", "-version")).ifBlank { null },
-                "node" to readCommand(listOf("node", "--version")).ifBlank { null },
                 "python3" to readCommand(listOf("python3", "--version")).ifBlank { null },
                 "java" to readCommand(listOf("bash", "-lc", "java -version 2>&1 | head -n 1")).ifBlank { null },
                 "rg" to readCommand(listOf("bash", "-lc", "command -v rg || true")).ifBlank { null },

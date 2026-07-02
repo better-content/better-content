@@ -53,7 +53,7 @@ done
 }
 
 argfile="$client_dir/.runtime/launch-${version_id}.args"
-"$ROOT/tools/minecraft_client_argfile.mjs" --client-dir "$client_dir" --version-id "$version_id" --username "$username" --server "$server" --out "$argfile" >/dev/null
+"$ROOT/tools/btm" internal minecraft-client-argfile --client-dir "$client_dir" --version-id "$version_id" --username "$username" --server "$server" --out "$argfile" >/dev/null
 
 mkdir -p "$client_dir/logs" "$client_dir/.runtime"
 cd "$client_dir"

@@ -47,9 +47,9 @@ fi
 cp "$installer" "$server_dir/forge-${BTM_FORGE_COORD}-installer.jar"
 "$ROOT/tools/btm" build sync server --dir "$server_dir" --apply
 if [[ "${BTM_SKIP_PACKWIZ_DOWNLOADS:-0}" != "1" ]]; then
-  node "$ROOT/tools/resolve_packwiz_downloads.mjs" --apply --pack-root "$ROOT" --target-dir "$server_dir" --side server
+  "$ROOT/tools/btm" internal resolve-packwiz-downloads --target-dir "$server_dir" --side server --apply
 fi
-node "$ROOT/tools/prune_runtime_mods.mjs" --apply --pack-root "$ROOT" --target-dir "$server_dir" --side server
+"$ROOT/tools/btm" internal prune-runtime-mods --target-dir "$server_dir" --side server --apply
 
 if [[ ! -f "$server_dir/run.sh" || ! -d "$server_dir/libraries/net/minecraftforge/forge/${BTM_FORGE_COORD}" ]]; then
   (cd "$server_dir" && "$java_bin" -jar "forge-${BTM_FORGE_COORD}-installer.jar" --installServer)

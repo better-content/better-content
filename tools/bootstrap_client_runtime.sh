@@ -31,9 +31,9 @@ done
 mkdir -p "$client_dir"/{logs,saves,versions,libraries,assets}
 "$ROOT/tools/btm" build sync client --dir "$client_dir" --apply
 if [[ "${BTM_SKIP_PACKWIZ_DOWNLOADS:-0}" != "1" ]]; then
-  node "$ROOT/tools/resolve_packwiz_downloads.mjs" --apply --pack-root "$ROOT" --target-dir "$client_dir" --side client
+  "$ROOT/tools/btm" internal resolve-packwiz-downloads --target-dir "$client_dir" --side client --apply
 fi
-node "$ROOT/tools/prune_runtime_mods.mjs" --apply --pack-root "$ROOT" --target-dir "$client_dir" --side client
+"$ROOT/tools/btm" internal prune-runtime-mods --target-dir "$client_dir" --side client --apply
 
 prism_root="${BTM_PRISM_ROOT:-$HOME/.local/share/PrismLauncher}"
 forge_client_id="${BTM_MC_VERSION}-forge-${BTM_FORGE_VERSION}"
@@ -55,20 +55,11 @@ if [[ -f "$prism_root/libraries/com/mojang/minecraft/${BTM_MC_VERSION}/minecraft
 fi
 if [[ -f "$prism_root/meta/net.minecraftforge/${BTM_FORGE_VERSION}.json" ]]; then
   mkdir -p "$client_dir/versions/${forge_client_id}"
-  node --input-type=module - "$prism_root/meta/net.minecraftforge/${BTM_FORGE_VERSION}.json" "$client_dir/versions/${forge_client_id}/${forge_client_id}.json" "$BTM_MC_VERSION" "$forge_client_id" <<'NODE'
-import { readFileSync, writeFileSync } from 'node:fs'
-const [src, dest, mcVersion, versionId] = process.argv.slice(2)
-const forge = JSON.parse(readFileSync(src, 'utf8'))
-const out = {
-  id: versionId,
-  inheritsFrom: mcVersion,
-  type: 'release',
-  mainClass: forge.mainClass,
-  minecraftArguments: forge.minecraftArguments,
-  libraries: forge.libraries || [],
-}
-writeFileSync(dest, JSON.stringify(out, null, 2) + '\n')
-NODE
+  kotlin "$ROOT/tools/kotlin/write_forge_client_version.main.kts" \
+    "$prism_root/meta/net.minecraftforge/${BTM_FORGE_VERSION}.json" \
+    "$client_dir/versions/${forge_client_id}/${forge_client_id}.json" \
+    "$BTM_MC_VERSION" \
+    "$forge_client_id"
 fi
 
 installer="$(btm_find_forge_installer "$ROOT")"

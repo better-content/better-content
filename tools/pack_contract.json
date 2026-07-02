@@ -494,8 +494,8 @@
       "name": "extracted progression/economy graph invariants",
       "requiredTools": [
         "tools/kotlin/pack_test_suite.main.kts",
-        "tools/expert_graph_audit.mjs",
-        "tools/audit_indirect_casing_economy.mjs"
+        "tools/kotlin/expert_graph_audit.main.kts",
+        "tools/kotlin/audit_indirect_casing_economy.main.kts"
       ]
     },
     {
@@ -593,13 +593,13 @@
           "kubejs/config/btm_expert_graph_catalog.json",
           "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
           "tools/kotlin/pack_test_suite.main.kts",
-          "tools/expert_graph_audit.mjs",
-          "tools/audit_indirect_casing_economy.mjs"
+          "tools/kotlin/expert_graph_audit.main.kts",
+          "tools/kotlin/audit_indirect_casing_economy.main.kts"
         ],
         "validators": [
           "tools/kotlin/pack_test_suite.main.kts",
-          "tools/expert_graph_audit.mjs",
-          "tools/audit_indirect_casing_economy.mjs"
+          "tools/kotlin/expert_graph_audit.main.kts",
+          "tools/kotlin/audit_indirect_casing_economy.main.kts"
         ],
         "openRequirements": []
       },
@@ -645,7 +645,7 @@
         "validators": [
           "tools/kotlin/validate_autonomous_contracts.main.kts",
           "tools/kotlin/validate_pack_contract.main.kts",
-          "tools/audit_cross_magic_spellcraft.mjs"
+          "tools/kotlin/audit_cross_magic_spellcraft.main.kts"
         ],
         "openRequirements": []
       },

@@ -480,14 +480,10 @@ fun testJsonAndSyntax() {
         try { readJson(file) } catch (error: Exception) { badJson += "${rel(file)}: ${error.message}" }
     }
     if (badJson.isEmpty()) ok("all repo JSON parses", "${jsonFiles.size} files") else fail("all repo JSON parses", badJson.take(20).joinToString("\n"))
-    val jsFiles = walk(repo.resolve("kubejs")) { it.toString().endsWith(".js") } + walk(repo.resolve("tools")) { it.toString().endsWith(".mjs") || it.toString().endsWith(".js") }
-    if (!commandExists("node")) return finding("all KubeJS/tool JS parses with node --check", "node unavailable for syntax validation", "SHOULD")
-    val badJs = mutableListOf<String>()
-    for (file in jsFiles) {
-        val result = runCommand("node", "--check", file.toString())
-        if (result.exitCode != 0) badJs += "${rel(file)}\n${result.output}"
-    }
-    if (badJs.isEmpty()) ok("all KubeJS/tool JS parses with node --check", "${jsFiles.size} files") else fail("all KubeJS/tool JS parses with node --check", badJs.take(10).joinToString("\n"))
+    val jsFiles = walk(repo.resolve("kubejs")) { it.toString().endsWith(".js") }
+    if (!commandExists("kotlin")) return finding("all KubeJS JS parses with Rhino", "kotlin unavailable for syntax validation", "SHOULD")
+    val result = runCommand("kotlin", repo.resolve("tools/kotlin/check_js_syntax.main.kts").toString())
+    if (result.exitCode == 0) ok("all KubeJS JS parses with Rhino", "${jsFiles.size} files") else fail("all KubeJS JS parses with Rhino", result.output)
 }
 
 fun testCriticalSurfaces() {

@@ -169,6 +169,5 @@ StartupEvents.registry('item', function (event) {
     for (var a = 0; a < arsManuscripts.length; a++) {
         event.create(arsManuscripts[a][0])
             .displayName(arsManuscripts[a][1])
-            .asset('minecraft:item/writable_book')
     }
 })

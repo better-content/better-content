@@ -10818,7 +10818,7 @@ hash = "679f04e3f2d6de2163a1597b8c3bb5160f080824c40a0786b89478a9c9e5c548"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/171_k_turrets_electrical_gates.js"
-hash = "76b80f4ec46c4d202f2c938f9fa2661a2fd8a8072b885e274ec7aad6628b44e5"
+hash = "61d45098ff4c77e153d9999ca589bb8db6de95001fff1f5dacfd3fe55a3e6cc7"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/20_expensive_grout.js"
@@ -11014,7 +11014,7 @@ hash = "967a736c0355743c7a6acbecf2772bb1a5be27db9620debc1cc1775ea9aada9b"
 
 [[files]]
 file = "kubejs/startup_scripts/10_items_blocks/30_progression_items.js"
-hash = "106cff791a843fc578ef0f83a6fd1dd8285a3b638136d8614edf47a11b08b6e9"
+hash = "7a784664db3270e65a52621e23c350ae264ed83f47c1d6dcfae6d851ebfb0899"
 
 [[files]]
 file = "kubejs/startup_scripts/20_blocks/10_ae2_skystone_hardness.js"
@@ -11030,7 +11030,7 @@ hash = "222e35db563a535007bd5913a2129fce5abd2b41d1d54d7399d36d1e5e631aa3"
 
 [[files]]
 file = "kubejs/startup_scripts/20_globals/30_blood_heart_types.js"
-hash = "81bc078b554fba8b07f4a87b86591c0af1ce1772a7c88e9f995724b17df4d01e"
+hash = "c276a2c89cbd30c38b6c5c76ddafaa5438f7b0abe7e43d207bc6063ad3493b9e"
 
 [[files]]
 file = "kubejs/startup_scripts/30_hide_vanilla_tools_from_creative.js"

@@ -270,7 +270,7 @@
       "authority": "exact:impossible",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:250"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:256"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -713,7 +713,7 @@
       "authority": "namespace:ae2",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:230"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:236"
       ],
       "era": "raw_impossible",
       "weight_class": "utility_support"
@@ -752,7 +752,7 @@
       "authority": "namespace:ae2",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:229"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:235"
       ],
       "era": "raw_impossible",
       "weight_class": "utility_support"
@@ -778,7 +778,7 @@
       "authority": "exact:impossible",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:247"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:253"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -1133,7 +1133,7 @@
       "authority": "exact:impossible",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:244"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:250"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -1159,7 +1159,7 @@
       "authority": "exact:impossible",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:238"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:244"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -1250,7 +1250,7 @@
       "authority": "exact:impossible",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:248"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:254"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -1536,7 +1536,7 @@
       "authority": "exact:impossible",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:239"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:245"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -1588,7 +1588,7 @@
       "authority": "exact:impossible",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:240"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:246"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -1744,7 +1744,7 @@
       "authority": "namespace:ae2",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:234"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:240"
       ],
       "era": "raw_impossible",
       "weight_class": "utility_support"
@@ -2245,7 +2245,7 @@
       "authority": "exact:impossible",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:251"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:257"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -2519,7 +2519,7 @@
       "authority": "exact:impossible",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:241"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:247"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -2584,7 +2584,7 @@
       "authority": "exact:impossible",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:242"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:248"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -2610,7 +2610,7 @@
       "authority": "namespace:ae2",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:233"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:239"
       ],
       "era": "raw_impossible",
       "weight_class": "utility_support"
@@ -3234,7 +3234,7 @@
       "authority": "exact:impossible",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:245"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:251"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -3494,7 +3494,7 @@
       "authority": "exact:impossible",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:252"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:258"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -3520,7 +3520,7 @@
       "authority": "exact:impossible",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:246"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:252"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -5134,7 +5134,7 @@
       "authority": "namespace:ae2",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:232"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:238"
       ],
       "era": "raw_impossible",
       "weight_class": "utility_support"
@@ -5160,7 +5160,7 @@
       "authority": "namespace:ae2",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:231"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:237"
       ],
       "era": "raw_impossible",
       "weight_class": "utility_support"
@@ -5199,7 +5199,7 @@
       "authority": "exact:impossible",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:243"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:249"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -5550,7 +5550,7 @@
       "authority": "exact:impossible",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:249"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:255"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -30161,7 +30161,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:161"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:165"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -30252,7 +30252,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:139"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:143"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -30382,7 +30382,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:96"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:102"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -30701,7 +30701,7 @@
       "authority": "exact:brass",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:144"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:150"
       ],
       "era": "brass",
       "weight_class": "structural_progression"
@@ -30925,7 +30925,7 @@
       "authority": "exact:brass",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:145"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:151"
       ],
       "era": "brass",
       "weight_class": "structural_progression"
@@ -31254,7 +31254,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:191"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:195"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -31332,7 +31332,7 @@
       "authority": "exact:andesite",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:135"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:141"
       ],
       "era": "andesite",
       "weight_class": "structural_progression"
@@ -31397,7 +31397,7 @@
       "authority": "exact:brass",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:143"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:149"
       ],
       "era": "brass",
       "weight_class": "structural_progression"
@@ -32223,7 +32223,7 @@
       "authority": "exact:andesite",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:131"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:137"
       ],
       "era": "andesite",
       "weight_class": "structural_progression"
@@ -35294,7 +35294,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:97"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:103"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -35346,7 +35346,7 @@
       "authority": "exact:brass",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:148"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:154"
       ],
       "era": "brass",
       "weight_class": "structural_progression"
@@ -35372,7 +35372,7 @@
       "authority": "exact:brass",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:147"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:153"
       ],
       "era": "brass",
       "weight_class": "structural_progression"
@@ -35555,7 +35555,7 @@
       "authority": "exact:andesite",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:125"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:131"
       ],
       "era": "andesite",
       "weight_class": "structural_progression"
@@ -35891,7 +35891,7 @@
       "authority": "namespace:create",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:167"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:171"
       ],
       "era": "andesite",
       "weight_class": "utility_support"
@@ -35904,7 +35904,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:118"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:124"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -36047,7 +36047,7 @@
       "authority": "exact:andesite",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:134"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:140"
       ],
       "era": "andesite",
       "weight_class": "structural_progression"
@@ -36417,7 +36417,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:119"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:125"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -37067,7 +37067,7 @@
       "authority": "exact:brass",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:141"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:147"
       ],
       "era": "brass",
       "weight_class": "structural_progression"
@@ -37106,7 +37106,7 @@
       "authority": "exact:andesite",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:130"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:136"
       ],
       "era": "andesite",
       "weight_class": "structural_progression"
@@ -37132,7 +37132,7 @@
       "authority": "exact:andesite",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:129"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:135"
       ],
       "era": "andesite",
       "weight_class": "structural_progression"
@@ -37171,7 +37171,7 @@
       "authority": "exact:andesite",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:127"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:133"
       ],
       "era": "andesite",
       "weight_class": "structural_progression"
@@ -37197,7 +37197,7 @@
       "authority": "exact:andesite",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:132"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:138"
       ],
       "era": "andesite",
       "weight_class": "structural_progression"
@@ -37236,7 +37236,7 @@
       "authority": "exact:andesite",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:126"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:132"
       ],
       "era": "andesite",
       "weight_class": "structural_progression"
@@ -37288,7 +37288,7 @@
       "authority": "exact:andesite",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:128"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:134"
       ],
       "era": "andesite",
       "weight_class": "structural_progression"
@@ -37340,7 +37340,7 @@
       "authority": "exact:andesite",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:124"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:130"
       ],
       "era": "andesite",
       "weight_class": "structural_progression"
@@ -37840,7 +37840,7 @@
       "authority": "exact:brass",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:151"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:157"
       ],
       "era": "brass",
       "weight_class": "structural_progression"
@@ -39456,7 +39456,7 @@
       "authority": "exact:brass",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:150"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:156"
       ],
       "era": "brass",
       "weight_class": "decor_theme"
@@ -39469,7 +39469,7 @@
       "authority": "exact:brass",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:149"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:155"
       ],
       "era": "brass",
       "weight_class": "decor_theme"
@@ -39982,7 +39982,7 @@
       "authority": "exact:brass",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:140"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:146"
       ],
       "era": "brass",
       "weight_class": "structural_progression"
@@ -40204,7 +40204,7 @@
       "authority": "namespace:create",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:185"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:189"
       ],
       "era": "andesite",
       "weight_class": "utility_support"
@@ -41712,7 +41712,7 @@
       "authority": "exact:brass",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:146"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:152"
       ],
       "era": "brass",
       "weight_class": "structural_progression"
@@ -41855,7 +41855,7 @@
       "authority": "exact:andesite",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:133"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:139"
       ],
       "era": "andesite",
       "weight_class": "structural_progression"
@@ -41881,7 +41881,7 @@
       "authority": "exact:brass",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:179"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:183"
       ],
       "era": "brass",
       "weight_class": "structural_progression"
@@ -41894,7 +41894,7 @@
       "authority": "exact:brass",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:153"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:159"
       ],
       "era": "brass",
       "weight_class": "structural_progression"
@@ -41907,7 +41907,7 @@
       "authority": "exact:brass",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:142"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:148"
       ],
       "era": "brass",
       "weight_class": "structural_progression"
@@ -54735,7 +54735,7 @@
       "authority": "exact:brass",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:155"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:161"
       ],
       "era": "brass",
       "weight_class": "structural_progression"
@@ -54761,7 +54761,7 @@
       "authority": "exact:brass",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:154"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:160"
       ],
       "era": "brass",
       "weight_class": "structural_progression"
@@ -55054,7 +55054,7 @@
       "authority": "exact:space",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:343"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:352"
       ],
       "era": "space",
       "weight_class": "structural_progression"
@@ -55110,7 +55110,7 @@
       "authority": "exact:space",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:212"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:218"
       ],
       "era": "space",
       "weight_class": "structural_progression"
@@ -55534,7 +55534,7 @@
       "authority": "exact:space",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:332"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:341"
       ],
       "era": "space",
       "weight_class": "structural_progression"
@@ -55743,7 +55743,7 @@
       "authority": "exact:space",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:217"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:223"
       ],
       "era": "space",
       "weight_class": "structural_progression"
@@ -55785,7 +55785,7 @@
       "authority": "exact:space",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:317"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:326"
       ],
       "era": "space",
       "weight_class": "structural_progression"
@@ -55812,7 +55812,7 @@
       "authority": "exact:space",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:327"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:336"
       ],
       "era": "space",
       "weight_class": "structural_progression"
@@ -55825,7 +55825,7 @@
       "authority": "exact:space",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:218"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:224"
       ],
       "era": "space",
       "weight_class": "structural_progression"
@@ -55851,7 +55851,7 @@
       "authority": "exact:space",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:219"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:225"
       ],
       "era": "space",
       "weight_class": "structural_progression"
@@ -56726,7 +56726,7 @@
       "authority": "exact:space",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:211"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:217"
       ],
       "era": "space",
       "weight_class": "structural_progression"
@@ -56921,7 +56921,7 @@
       "authority": "exact:space",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:338"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:347"
       ],
       "era": "space",
       "weight_class": "structural_progression"
@@ -56947,7 +56947,7 @@
       "authority": "exact:space",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:213"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:219"
       ],
       "era": "space",
       "weight_class": "structural_progression"
@@ -56990,7 +56990,7 @@
       "authority": "exact:space",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:322"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:331"
       ],
       "era": "space",
       "weight_class": "structural_progression"
@@ -57224,7 +57224,7 @@
       "authority": "exact:space",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:215"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:221"
       ],
       "era": "space",
       "weight_class": "structural_progression"
@@ -57276,7 +57276,7 @@
       "authority": "exact:space",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:214"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:220"
       ],
       "era": "space",
       "weight_class": "structural_progression"
@@ -57302,7 +57302,7 @@
       "authority": "exact:space",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:216"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:222"
       ],
       "era": "space",
       "weight_class": "structural_progression"
@@ -61247,7 +61247,7 @@
       "authority": "namespace:expatternprovider",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:293"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:302"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -61273,7 +61273,7 @@
       "authority": "namespace:expatternprovider",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:303"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:312"
       ],
       "era": "impossible",
       "weight_class": "structural_progression"
@@ -82842,6 +82842,19 @@
       ]
     },
     {
+      "id": "crafted:event.custom(kubejs):kubejs:airtight_service_module",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:airtight_service_module",
+      "era": "airtight",
+      "weight_class": "structural_progression",
+      "authority": "synthetic_exact:airtight",
+      "surface_type": "event.custom(kubejs)",
+      "evidence": [
+        "kubejs/config/player_progression_regression.json"
+      ]
+    },
+    {
       "id": "crafted:event.custom(kubejs):kubejs:andesite_machine_casing",
       "kind": "crafted",
       "mod": "kubejs",
@@ -82855,13 +82868,52 @@
       ]
     },
     {
-      "id": "crafted:event.custom(kubejs):kubejs:brass_machine_casing",
+      "id": "crafted:event.custom(kubejs):kubejs:andesite_utility_frame",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:andesite_utility_frame",
+      "era": "andesite",
+      "weight_class": "structural_progression",
+      "authority": "synthetic_exact:andesite",
+      "surface_type": "event.custom(kubejs)",
+      "evidence": [
+        "kubejs/config/player_progression_regression.json"
+      ]
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:brass_machine_casing",
       "kind": "crafted",
       "mod": "kubejs",
       "output": "kubejs:brass_machine_casing",
+      "authority": "exact:brass",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:181"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:event.custom(kubejs):kubejs:brass_utility_assembly",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:brass_utility_assembly",
       "era": "brass",
       "weight_class": "structural_progression",
       "authority": "synthetic_exact:brass",
+      "surface_type": "event.custom(kubejs)",
+      "evidence": [
+        "kubejs/config/player_progression_regression.json"
+      ]
+    },
+    {
+      "id": "crafted:event.custom(kubejs):kubejs:electrical_instrumentation_module",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:electrical_instrumentation_module",
+      "era": "electrical",
+      "weight_class": "structural_progression",
+      "authority": "synthetic_exact:electrical",
       "surface_type": "event.custom(kubejs)",
       "evidence": [
         "kubejs/config/player_progression_regression.json"
@@ -82907,6 +82959,19 @@
       ]
     },
     {
+      "id": "crafted:event.custom(kubejs):kubejs:impossible_support_matrix",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:impossible_support_matrix",
+      "era": "impossible",
+      "weight_class": "structural_progression",
+      "authority": "synthetic_exact:impossible",
+      "surface_type": "event.custom(kubejs)",
+      "evidence": [
+        "kubejs/config/player_progression_regression.json"
+      ]
+    },
+    {
       "id": "machine_output:event.custom(kubejs):kubejs:pressure_seal",
       "kind": "machine_output",
       "mod": "kubejs",
@@ -82924,6 +82989,19 @@
       "kind": "crafted",
       "mod": "kubejs",
       "output": "kubejs:raw_impossible_casing",
+      "era": "raw_impossible",
+      "weight_class": "structural_progression",
+      "authority": "synthetic_exact:raw_impossible",
+      "surface_type": "event.custom(kubejs)",
+      "evidence": [
+        "kubejs/config/player_progression_regression.json"
+      ]
+    },
+    {
+      "id": "crafted:event.custom(kubejs):kubejs:raw_impossible_storage_matrix",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:raw_impossible_storage_matrix",
       "era": "raw_impossible",
       "weight_class": "structural_progression",
       "authority": "synthetic_exact:raw_impossible",
@@ -82959,6 +83037,19 @@
       ]
     },
     {
+      "id": "crafted:event.custom(kubejs):kubejs:seared_service_fitting",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:seared_service_fitting",
+      "era": "seared",
+      "weight_class": "structural_progression",
+      "authority": "synthetic_exact:seared",
+      "surface_type": "event.custom(kubejs)",
+      "evidence": [
+        "kubejs/config/player_progression_regression.json"
+      ]
+    },
+    {
       "id": "crafted:event.custom(kubejs):kubejs:sky_steel_ingot",
       "kind": "crafted",
       "mod": "kubejs",
@@ -82979,6 +83070,19 @@
       "era": "raw_impossible",
       "weight_class": "structural_progression",
       "authority": "synthetic_exact:raw_impossible",
+      "surface_type": "event.custom(kubejs)",
+      "evidence": [
+        "kubejs/config/player_progression_regression.json"
+      ]
+    },
+    {
+      "id": "crafted:event.custom(kubejs):kubejs:space_expedition_kit",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:space_expedition_kit",
+      "era": "space",
+      "weight_class": "structural_progression",
+      "authority": "synthetic_exact:space",
       "surface_type": "event.custom(kubejs)",
       "evidence": [
         "kubejs/config/player_progression_regression.json"
@@ -119780,7 +119884,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:259"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:263"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -119806,7 +119910,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:167"
+        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:243"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -119832,7 +119936,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:199"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:205"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -119858,7 +119962,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:197"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:203"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -119884,7 +119988,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:161"
+        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:237"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -119910,7 +120014,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:193"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:199"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -119949,7 +120053,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:205"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:283"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -120001,7 +120105,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:195"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:201"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -120131,7 +120235,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:280"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:288"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -120183,7 +120287,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:264"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:268"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -120248,7 +120352,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:285"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:293"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -120300,7 +120404,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:196"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:202"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -120326,7 +120430,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:172"
+        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:248"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -120352,7 +120456,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:194"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:200"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -120378,7 +120482,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:269"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:273"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -120430,7 +120534,7 @@
       "authority": "namespace:oc2r",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:198"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:204"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -120456,7 +120560,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:149"
+        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:225"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -120482,7 +120586,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:200"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:206"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -120508,7 +120612,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:274"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:278"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -120873,7 +120977,7 @@
       "authority": "namespace:pneumaticcraft",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:169"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:175"
       ],
       "era": "airtight",
       "weight_class": "structural_progression"
@@ -121003,7 +121107,7 @@
       "authority": "namespace:pneumaticcraft",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:170"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:176"
       ],
       "era": "airtight",
       "weight_class": "structural_progression"
@@ -121172,7 +121276,7 @@
       "authority": "namespace:pneumaticcraft",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:166"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:172"
       ],
       "era": "airtight",
       "weight_class": "structural_progression"
@@ -121903,7 +122007,7 @@
       "authority": "namespace:pneumaticcraft",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:168"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:174"
       ],
       "era": "airtight",
       "weight_class": "utility_support"
@@ -121955,7 +122059,7 @@
       "authority": "namespace:pneumaticcraft",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:165"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:171"
       ],
       "era": "airtight",
       "weight_class": "structural_progression"
@@ -123243,7 +123347,7 @@
       "authority": "namespace:pneumaticcraft",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:161"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:167"
       ],
       "era": "airtight",
       "weight_class": "structural_progression"
@@ -123465,7 +123569,7 @@
       "authority": "namespace:pneumaticcraft",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:162"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:168"
       ],
       "era": "airtight",
       "weight_class": "structural_progression"
@@ -123491,7 +123595,7 @@
       "authority": "namespace:pneumaticcraft",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:163"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:169"
       ],
       "era": "airtight",
       "weight_class": "structural_progression"
@@ -123740,7 +123844,7 @@
       "authority": "namespace:pneumaticcraft",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:201"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:205"
       ],
       "era": "airtight",
       "weight_class": "utility_support"
@@ -123871,7 +123975,7 @@
       "authority": "namespace:pneumaticcraft",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:167"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:173"
       ],
       "era": "airtight",
       "weight_class": "structural_progression"
@@ -124379,7 +124483,7 @@
       "authority": "namespace:pneumaticcraft",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:164"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:170"
       ],
       "era": "airtight",
       "weight_class": "utility_support"
@@ -125185,7 +125289,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:176"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:182"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -125252,7 +125356,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:186"
+        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:262"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -125317,7 +125421,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:179"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:185"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -125408,7 +125512,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:230"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:234"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -125434,7 +125538,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:245"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:249"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -125499,7 +125603,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:178"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:184"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -125525,7 +125629,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:196"
+        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:272"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -125551,7 +125655,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:191"
+        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:267"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -125616,7 +125720,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:182"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:188"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -125668,7 +125772,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:180"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:186"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -125772,7 +125876,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:181"
+        "kubejs/server_scripts/30_recipe_replace/142_late_tier_material_economy_completion.js:257"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -125798,7 +125902,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:250"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:254"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -126136,7 +126240,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:215"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:219"
       ],
       "era": "electrical",
       "weight_class": "decor_theme"
@@ -126188,7 +126292,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:240"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:244"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -126279,7 +126383,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:220"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:224"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -126305,7 +126409,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:225"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:229"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -126500,7 +126604,7 @@
       "authority": "namespace:powergrid",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:181"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:187"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -126539,7 +126643,7 @@
       "authority": "exact:electrical",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:235"
+        "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js:239"
       ],
       "era": "electrical",
       "weight_class": "structural_progression"
@@ -163533,7 +163637,7 @@
       "authority": "namespace:tconstruct",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:104"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:110"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -167500,7 +167604,7 @@
       "authority": "namespace:tconstruct",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:105"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:111"
       ],
       "era": "seared",
       "weight_class": "utility_support"
@@ -167526,7 +167630,7 @@
       "authority": "namespace:tconstruct",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:115"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:121"
       ],
       "era": "seared",
       "weight_class": "utility_support"
@@ -167567,7 +167671,7 @@
       "authority": "namespace:tconstruct",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:107"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:113"
       ],
       "era": "seared",
       "weight_class": "utility_support"
@@ -167712,7 +167816,7 @@
       "authority": "namespace:tconstruct",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:110"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:116"
       ],
       "era": "seared",
       "weight_class": "utility_support"
@@ -167738,7 +167842,7 @@
       "authority": "namespace:tconstruct",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:111"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:117"
       ],
       "era": "seared",
       "weight_class": "utility_support"
@@ -167777,7 +167881,7 @@
       "authority": "namespace:tconstruct",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:108"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:114"
       ],
       "era": "seared",
       "weight_class": "utility_support"
@@ -167816,7 +167920,7 @@
       "authority": "namespace:tconstruct",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:116"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:122"
       ],
       "era": "seared",
       "weight_class": "utility_support"
@@ -167855,7 +167959,7 @@
       "authority": "namespace:tconstruct",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:109"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:115"
       ],
       "era": "seared",
       "weight_class": "utility_support"
@@ -167881,7 +167985,7 @@
       "authority": "namespace:tconstruct",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:117"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:123"
       ],
       "era": "seared",
       "weight_class": "utility_support"
@@ -167907,7 +168011,7 @@
       "authority": "namespace:tconstruct",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:113"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:119"
       ],
       "era": "seared",
       "weight_class": "utility_support"
@@ -167933,7 +168037,7 @@
       "authority": "namespace:tconstruct",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:112"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:118"
       ],
       "era": "seared",
       "weight_class": "utility_support"
@@ -168024,7 +168128,7 @@
       "authority": "namespace:tconstruct",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:114"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:120"
       ],
       "era": "seared",
       "weight_class": "utility_support"
@@ -168260,7 +168364,7 @@
       "authority": "namespace:tconstruct",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:106"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:112"
       ],
       "era": "seared",
       "weight_class": "decor_theme"
@@ -168325,7 +168429,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:88"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:94"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -168562,7 +168666,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:93"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:99"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -168588,7 +168692,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:91"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:97"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -168614,7 +168718,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:92"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:98"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -168809,7 +168913,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:89"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:95"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -168913,7 +169017,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:90"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:96"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -168952,7 +169056,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:95"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:101"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -168978,7 +169082,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:94"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:100"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -169056,7 +169160,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:86"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:92"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -169160,7 +169264,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:85"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:91"
       ],
       "era": "seared",
       "weight_class": "structural_progression"
@@ -169448,7 +169552,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:87"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:93"
       ],
       "era": "seared",
       "weight_class": "decor_theme"
@@ -170553,7 +170657,7 @@
       "authority": "exact:seared",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:84"
+        "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js:90"
       ],
       "era": "seared",
       "weight_class": "structural_progression"

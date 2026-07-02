@@ -214,6 +214,7 @@ ServerEvents.recipes(function (event) {
         B: 'k_turrets:bullet',
         T: 'kubejs:electrical_control_module',
         C: 'k_turrets:copper_plate',
+        A: 'kubejs:electrical_machine_casing',
         R: 'powergrid:redstone_relay',
         M: 'kubejs:electrical_machine_casing'
     }, 'kubejs:k_turrets/bullet_turret_electrical')
@@ -226,6 +227,7 @@ ServerEvents.recipes(function (event) {
         B: 'k_turrets:bullet',
         I: 'kubejs:electrical_instrumentation_module',
         C: 'k_turrets:copper_plate',
+        A: 'kubejs:electrical_machine_casing',
         F: 'minecraft:feather',
         M: 'powergrid:electric_motor'
     }, 'kubejs:k_turrets/bullet_drone_electrical')
@@ -238,6 +240,7 @@ ServerEvents.recipes(function (event) {
         E: 'k_turrets:explosive_powder',
         T: 'kubejs:electrical_control_module',
         C: 'k_turrets:copper_plate',
+        A: 'kubejs:electrical_machine_casing',
         B: 'powergrid:battery',
         M: 'kubejs:electrical_machine_casing'
     }, 'kubejs:k_turrets/firecharge_turret_electrical')
@@ -250,6 +253,7 @@ ServerEvents.recipes(function (event) {
         E: 'k_turrets:explosive_powder',
         I: 'kubejs:electrical_instrumentation_module',
         C: 'k_turrets:copper_plate',
+        A: 'kubejs:electrical_machine_casing',
         F: 'minecraft:feather',
         M: 'powergrid:electric_motor'
     }, 'kubejs:k_turrets/firecharge_drone_electrical')
@@ -273,6 +277,7 @@ ServerEvents.recipes(function (event) {
         G: 'k_turrets:gauss_bullet',
         T: 'kubejs:electrical_control_module',
         C: 'oc2r:circuit_board',
+        A: 'kubejs:electrical_machine_casing',
         R: 'powergrid:redstone_relay',
         M: 'kubejs:electrical_machine_casing'
     }, 'kubejs:k_turrets/gauss_turret_electrical')
@@ -285,6 +290,7 @@ ServerEvents.recipes(function (event) {
         G: 'k_turrets:gauss_bullet',
         I: 'kubejs:electrical_instrumentation_module',
         C: 'oc2r:circuit_board',
+        A: 'kubejs:electrical_machine_casing',
         F: 'minecraft:feather',
         M: 'powergrid:electric_motor'
     }, 'kubejs:k_turrets/gauss_drone_electrical')
@@ -297,6 +303,7 @@ ServerEvents.recipes(function (event) {
         B: 'minecraft:barrel',
         I: 'kubejs:electrical_instrumentation_module',
         C: 'oc2r:circuit_board',
+        A: 'kubejs:electrical_machine_casing',
         F: 'minecraft:feather',
         M: 'kubejs:electrical_machine_casing'
     }, 'kubejs:k_turrets/storage_drone_electrical')

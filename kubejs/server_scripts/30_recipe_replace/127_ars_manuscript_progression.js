@@ -94,7 +94,7 @@ function btmArsGlyph(event, id, glyph, exp, inputs) {
         type: 'ars_nouveau:glyph',
         count: 1,
         exp: exp,
-        inputItems: inputs.map(btmArsIngredient),
+        inputItems: inputs.map(function (input) { return { item: btmArsIngredient(input) } }),
         output: glyph
     }).id('kubejs:ars_progression/glyph/' + id)
 }

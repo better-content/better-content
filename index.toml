@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "AGENTS.md"
-hash = "e48b29ccf509d60a47d3271e964910889998aa051d087152a764d9731955f4f5"
+hash = "17d2f29897e80f41ad55994c3814f8eff0cec8f62ceece2405693adec856567f"
 
 [[files]]
 file = "LICENSE"
@@ -6356,6 +6356,9 @@ hash = "6374c6ede33abd94b79adff0cf15808a97701fa4e4bc6c4768c635f2eb4a4b59"
 file = "config/transmissionloss-common.toml"
 hash = "00daf23ac24e5efd448fc7ee8f4817db71a5bf72b7d18f9e432a0b14f6035ca5"
 
+[[files]]
+file = "config/travelerstitles-forge-1_20.toml"
+hash = "0f3048742c33a9d7b63d420f2658294a1d5bb574d688021b6ddcfdf8024249b4"
 
 [[files]]
 file = "config/twilightforest-common.toml"
@@ -9479,7 +9482,7 @@ hash = "627b340a9c28a68ad8860c2a1a689c879c7420dc789ee582fe0b49e3bacadfe9"
 
 [[files]]
 file = "kubejs/config/btm_expert_graph_catalog.json"
-hash = "d57556e07091bf3430147a8ca0bf00cf1f90bae8cb7c53d94e421bec43770a71"
+hash = "cab2f5db4b540b24a4d54cb5907da2229bf6953cbd7a4c9f3499265ac30b7d8b"
 
 [[files]]
 file = "kubejs/config/client.properties"
@@ -9507,7 +9510,7 @@ hash = "9d734d8f9b4ba19dce7c21e44f618524733742516fe647ee72c820c71649acbb"
 
 [[files]]
 file = "kubejs/config/magic_parenting.json"
-hash = "2ef1e0e975e6381f091640f51bc046be1274605522bd996b86b4b8e51223c8f2"
+hash = "cd358881cf2259734d4eabecaccb5f7a58a292e60553a03561e15e6dd004addb"
 
 [[files]]
 file = "kubejs/config/perf_probe.json"
@@ -9531,7 +9534,7 @@ hash = "ac91d60561206d71e19666534e8d7daa19da736043be7bdd4aebfd034f506364"
 
 [[files]]
 file = "kubejs/config/tech_parenting.json"
-hash = "e46d35ef35ba37857734b7c6096c53e2e5d172dbc84e1a6115a17d748ed8f50d"
+hash = "a9ee273320bedba6dedc7da6c5532575b305844a31dd5eaa5bd4804cb08e55c5"
 
 [[files]]
 file = "kubejs/data/additionalweaponry/recipes/embellishment/amethyst.json"
@@ -11067,7 +11070,7 @@ hash = "2f877d1dcdfe376099f4fd6df097168f161caa846416332e19fe64637c45ad83"
 
 [[files]]
 file = "kubejs/startup_scripts/99_realistic_hands_assignments.js"
-hash = "c82fb18712b13f0c0bdf1ed3304662a76982699bc65c008db79a9b3ced1b9cd4"
+hash = "ddc8eccbd9eb10f3411fc6dc75cbebc034d705f26e735e8628eb3ccc39518594"
 
 [[files]]
 file = "mods/advanced-loot-info.pw.toml"
@@ -11166,7 +11169,7 @@ metafile = true
 
 [[files]]
 file = "mods/btmfixes-0.1.0-all.jar"
-hash = "5b07b4e59a0005e947c0ab258fdec734f34990b782f49a168e9631bf360b9e48"
+hash = "d9af68d5cf708468fdc050ba094cbafa0ba5c0659a778deea27f11e72fa0a2e6"
 
 [[files]]
 file = "mods/btmfixes-0.1.0.jar"
@@ -11345,7 +11348,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimensionalfonts-1.0.0.jar"
-hash = "55b601b5e6770d4c7b1da911f75e1e717b1cf8f619be1e1c4868a621b873bd08"
+hash = "873d67165dd1acb3d4dd120e370854dbafbd68dc425ed049be45b66723f20092"
 
 [[files]]
 file = "mods/ding.pw.toml"
@@ -11879,7 +11882,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillagercampaigns-0.2.0.jar"
-hash = "b1cf7dcf62cdfdf68e838ef948bb3ca148995a7b5955c09bcc85140628787ff0"
+hash = "2ffeb0a9b76f7d9a2a4bf3a3b0d289f94010c2acce7473787283ab7c941d5265"
 
 [[files]]
 file = "mods/placebo.pw.toml"
@@ -12262,6 +12265,10 @@ file = "mods/trading-post.pw.toml"
 hash = "4bb5104e0b99b2d6b72b55b97d420baaf3f336182feb457f69d8213e7839e16b"
 metafile = true
 
+[[files]]
+file = "mods/travelers-titles.pw.toml"
+hash = "dec5a52502d55acaa36a0b3f21a533a43e392e5bfd7e9053bed347e8dba8b8bc"
+metafile = true
 
 [[files]]
 file = "mods/true-darkness-forge-updated-fork.pw.toml"
@@ -12295,7 +12302,7 @@ metafile = true
 
 [[files]]
 file = "mods/villagewalls-1.0.0.jar"
-hash = "d847e168ae87a374a1e3196fa71edf4b503ab6a8c27c6ea745654a9d52cb1985"
+hash = "38a5856fbddcc264cf9944039620836ccb5e1cc89bbc33818b151e24774de137"
 
 [[files]]
 file = "mods/wares.pw.toml"
@@ -12339,6 +12346,10 @@ hash = "7453670fb3efb81bcd0d1d39cb375b3fd4e5229aabfbdfcd5db2dabc1c7dacd4"
 file = "recipe-policies.yml"
 hash = "135dc2f9c7add9ff0929ee834e0639073734bfe9a440a14816dbb20c71a4d9ec"
 
+[[files]]
+file = "resourcepacks/visual-travelers-titles.pw.toml"
+hash = "6488e8100ae61aed581986f7a7a371590f4dcd20e031d86c3cf9ec53edc28aef"
+metafile = true
 
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.7.1.zip.txt"

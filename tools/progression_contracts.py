@@ -365,19 +365,41 @@ MAGIC_EXACT = {
     "irons_spellbooks:iron_spell_book": ("slate_t3_infused", "light"),
     "irons_spellbooks:gold_spell_book": ("slate_t3_infused", "light"),
     "irons_spellbooks:ice_spell_book": ("slate_t3_infused", "light"),
-    "occultism:chalk_white_impure": ("slate_t3_infused", "dark"),
-    "occultism:chalk_white": ("slate_t3_infused", "dark"),
+    "occultism:chalk_white_impure": ("slate_t3_infused", "fonts"),
+    "occultism:chalk_white": ("slate_t3_infused", "fonts"),
     "eidolon:crucible": ("slate_t3_infused", "dark"),
     "eidolon:soul_enchanter": ("slate_t3_infused", "dark"),
     "mahoutsukai:attuned_diamond": ("slate_t3_infused", "dark"),
-    "ars_nouveau:source_gem": ("slate_t4_demonic", "light"),
-    "ars_nouveau:source_gem_block": ("slate_t4_demonic", "light"),
-    "ars_nouveau:imbuement_chamber": ("slate_t4_demonic", "light"),
-    "ars_nouveau:novice_spell_book": ("slate_t4_demonic", "light"),
-    "ars_nouveau:enchanting_apparatus": ("slate_t4_demonic", "light"),
-    "ars_nouveau:apprentice_spell_book_upgrade": ("slate_t4_demonic", "light"),
-    "hexerei:mixing_cauldron": ("slate_t4_demonic", "dark"),
-    "hexerei:book_of_shadows_altar": ("slate_t4_demonic", "dark"),
+    "ars_nouveau:novice_spell_book": ("slate_t1_blank", "ars"),
+    "ars_nouveau:source_gem": ("slate_t3_infused", "ars"),
+    "ars_nouveau:source_gem_block": ("slate_t3_infused", "ars"),
+    "ars_nouveau:imbuement_chamber": ("slate_t3_infused", "ars"),
+    "ars_nouveau:enchanting_apparatus": ("slate_t4_demonic", "ars"),
+    "ars_nouveau:apprentice_spell_book_upgrade": ("slate_t4_demonic", "ars"),
+    "hexerei:mixing_cauldron": ("slate_t2_reinforced", "fonts"),
+    "hexerei:book_of_shadows_altar": ("slate_t2_reinforced", "fonts"),
+    "kubejs:manuscript_projectile": ("slate_t1_blank", "ars"),
+    "kubejs:manuscript_touch": ("slate_t1_blank", "ars"),
+    "kubejs:manuscript_self": ("slate_t1_blank", "ars"),
+    "kubejs:manuscript_break": ("slate_t1_blank", "ars"),
+    "kubejs:manuscript_light": ("slate_t1_blank", "ars"),
+    "kubejs:manuscript_harm": ("slate_t2_reinforced", "ars"),
+    "kubejs:manuscript_interact": ("slate_t2_reinforced", "ars"),
+    "kubejs:manuscript_ignite": ("slate_t2_reinforced", "ars"),
+    "kubejs:manuscript_launch": ("slate_t2_reinforced", "ars"),
+    "kubejs:manuscript_harvest": ("slate_t2_reinforced", "ars"),
+    "kubejs:manuscript_leap": ("slate_t2_reinforced", "ars"),
+    "kubejs:manuscript_freeze": ("slate_t3_infused", "ars"),
+    "kubejs:manuscript_glide": ("slate_t3_infused", "ars"),
+    "kubejs:manuscript_blink": ("slate_t3_infused", "ars"),
+    "kubejs:manuscript_extract": ("slate_t3_infused", "ars"),
+    "kubejs:manuscript_exchange": ("slate_t3_infused", "ars"),
+    "kubejs:manuscript_redstone_signal": ("slate_t3_infused", "ars"),
+    "kubejs:manuscript_extend_time": ("slate_t3_infused", "ars"),
+    "kubejs:manuscript_wall": ("slate_t4_demonic", "ars"),
+    "kubejs:manuscript_linger": ("slate_t4_demonic", "ars"),
+    "kubejs:manuscript_lightning": ("slate_t4_demonic", "ars"),
+    "kubejs:manuscript_wither": ("slate_t4_demonic", "ars"),
     "goety:cursed_cage": ("slate_t4_demonic", "dark"),
     "goety:dark_altar": ("slate_t4_demonic", "dark"),
     "goety:empty_focus": ("slate_t4_demonic", "dark"),
@@ -460,10 +482,12 @@ MAGIC_ASSERTIONS = [
     ("bloodmagic:weakbloodorb", "blood_root", "blood_root"),
     ("bloodmagic:etherealslate", "blood_root", "blood_root"),
     ("malum:spirit_altar", "slate_t1_blank", "dark"),
-    ("occultism:chalk_white_impure", "slate_t3_infused", "dark"),
+    ("occultism:chalk_white_impure", "slate_t3_infused", "fonts"),
     ("eidolon:crucible", "slate_t3_infused", "dark"),
-    ("ars_nouveau:enchanting_apparatus", "slate_t4_demonic", "light"),
-    ("hexerei:mixing_cauldron", "slate_t4_demonic", "dark"),
+    ("ars_nouveau:novice_spell_book", "slate_t1_blank", "ars"),
+    ("ars_nouveau:source_gem", "slate_t3_infused", "ars"),
+    ("ars_nouveau:enchanting_apparatus", "slate_t4_demonic", "ars"),
+    ("hexerei:mixing_cauldron", "slate_t2_reinforced", "fonts"),
     ("goety:dark_altar", "slate_t4_demonic", "dark"),
     ("forbidden_arcanus:deorum_ingot", "slate_t4_demonic", "dark"),
     ("irons_spellbooks:mithril_weave", "slate_t4_demonic", "dark"),
@@ -726,14 +750,14 @@ def infer_magic_parent(item: str):
         return "slate_t1_blank", "dark", "namespace:malum"
     if item_ns == "occultism":
         if "dimensional_mineshaft" in name or "ritual" in name:
-            return "slate_t4_demonic", "dark", "namespace:occultism"
-        return "slate_t3_infused", "dark", "namespace:occultism"
+            return "slate_t4_demonic", "fonts", "namespace:occultism"
+        return "slate_t3_infused", "fonts", "namespace:occultism"
     if item_ns in {"eidolon", "mahoutsukai"}:
         return "slate_t3_infused", "dark", f"namespace:{item_ns}"
     if item_ns.startswith("ars_") or item_ns == "ars_nouveau":
-        return "slate_t4_demonic", "light", f"namespace:{item_ns}"
+        return "slate_t4_demonic", "ars", f"namespace:{item_ns}"
     if item_ns == "hexerei":
-        return "slate_t4_demonic", "dark", "namespace:hexerei"
+        return "slate_t2_reinforced", "fonts", "namespace:hexerei"
     if item_ns == "goety":
         return "slate_t4_demonic", "dark", "namespace:goety"
     if item_ns == "forbidden_arcanus":
@@ -833,7 +857,7 @@ def parse_authored_kubejs_surfaces():
     output_arg0 = re.compile(r"\bbtmEcoRecipe\(\s*'([a-z0-9_.-]+:[a-z0-9_./-]+)'")
     output_arg2 = re.compile(
         r"\b(?:btmIrons[A-Za-z]+|btmLate[A-Za-z]+|btmChem(?:Alt|Use)[A-Za-z]+|btmPpSequence|"
-        r"btmAesthetic[A-Za-z]+)\(event,\s*'[^']+'\s*,\s*'([a-z0-9_.-]+:[a-z0-9_./-]+)'"
+        r"btmAesthetic[A-Za-z]+|btmArs[A-Za-z]+)\(event,\s*'[^']+'\s*,\s*'([a-z0-9_.-]+:[a-z0-9_./-]+)'"
     )
     custom_output = re.compile(r"\boutput:\s*(?:btmIronsResult\()?['{ ]*(?:item:\s*)?'([a-z0-9_.-]+:[a-z0-9_./-]+)'")
     gate_output = re.compile(r"gate\(event,\s*\{\s*output:\s*'([a-z0-9_.-]+:[a-z0-9_./-]+)'")

@@ -10,10 +10,10 @@
       "authority": "namespace:ars_additions",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:66"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:59"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -24,10 +24,10 @@
       "authority": "namespace:ars_caelum",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:86"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:77"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -38,10 +38,10 @@
       "authority": "namespace:ars_caelum",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:87"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:78"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -52,10 +52,10 @@
       "authority": "namespace:ars_creo",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:84"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:75"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -66,10 +66,10 @@
       "authority": "namespace:ars_elemental",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:68"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:61"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -80,10 +80,10 @@
       "authority": "namespace:ars_elemental",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:69"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:62"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -94,10 +94,10 @@
       "authority": "namespace:ars_elemental",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:70"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:63"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -108,10 +108,10 @@
       "authority": "namespace:ars_elemental",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:71"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:64"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -125,7 +125,7 @@
         "ars_nouveau:imbuement_abjuration_essence"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -139,7 +139,7 @@
         "ars_nouveau:agronomic_sourcelink"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -153,7 +153,7 @@
         "ars_nouveau:imbuement_air_essence"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -167,7 +167,7 @@
         "ars_nouveau:alchemical_sourcelink"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -181,7 +181,7 @@
         "ars_nouveau:alchemists_crown"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -196,7 +196,7 @@
         "ars_nouveau:clear_allow"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -210,7 +210,7 @@
         "ars_nouveau:alteration_table"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -224,7 +224,7 @@
         "ars_nouveau:imbuement_amplify_arrow"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -238,7 +238,7 @@
         "ars_nouveau:amulet_of_mana_boost"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -252,7 +252,7 @@
         "ars_nouveau:amulet_of_mana_regen"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -266,7 +266,7 @@
         "ars_nouveau:annotated_codex"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -280,7 +280,7 @@
         "ars_nouveau:apprentice_spell_book_upgrade"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -294,7 +294,7 @@
         "ars_nouveau:dye_apprentice_spell_book"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -302,13 +302,13 @@
       "kind": "crafted",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:apprentice_spell_book_upgrade",
-      "authority": "exact:slate_t4_demonic/light",
+      "authority": "exact:slate_t4_demonic/ars",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:65"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:58"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -322,7 +322,7 @@
         "ars_nouveau:arcane_core"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -336,7 +336,7 @@
         "ars_nouveau:arcane_pedestal"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -350,7 +350,7 @@
         "ars_nouveau:platform_to_pedestal"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -364,7 +364,7 @@
         "ars_nouveau:arcane_platform"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -378,7 +378,7 @@
         "ars_nouveau:dye_arcanist_boots"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -392,7 +392,7 @@
         "ars_nouveau:arcanist_boots"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -406,7 +406,7 @@
         "ars_nouveau:dye_arcanist_hood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -420,7 +420,7 @@
         "ars_nouveau:arcanist_hood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -434,7 +434,7 @@
         "ars_nouveau:dye_arcanist_leggings"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -448,7 +448,7 @@
         "ars_nouveau:arcanist_leggings"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -462,7 +462,7 @@
         "ars_nouveau:dye_arcanist_robes"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -476,7 +476,7 @@
         "ars_nouveau:arcanist_robes"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -490,7 +490,7 @@
         "ars_nouveau:archmage_spell_book_upgrade"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -504,7 +504,7 @@
         "ars_nouveau:dye_archmage_spell_book"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -515,7 +515,7 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:100"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:91"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
@@ -532,7 +532,7 @@
         "create:cutting/runtime_generated/compat/ars_nouveau/archwood_planks_to_archwood_button"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -546,7 +546,7 @@
         "ars_nouveau:archwood_button"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -560,7 +560,7 @@
         "ars_nouveau:archwood_chest"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -574,7 +574,7 @@
         "create:cutting/runtime_generated/compat/ars_nouveau/archwood_planks_to_archwood_door"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -588,7 +588,7 @@
         "ars_nouveau:archwood_door"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -602,7 +602,7 @@
         "create:cutting/runtime_generated/compat/ars_nouveau/archwood_planks_to_archwood_fence"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -616,7 +616,7 @@
         "ars_nouveau:archwood_fence"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -630,7 +630,7 @@
         "create:cutting/runtime_generated/compat/ars_nouveau/archwood_planks_to_archwood_fence_gate"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -644,7 +644,7 @@
         "ars_nouveau:archwood_fence_gate"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -662,7 +662,7 @@
         "create:cutting/compat/ars_nouveau/stripped_purple_archwood_wood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -676,7 +676,7 @@
         "ars_nouveau:archwood_planks"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -690,7 +690,7 @@
         "create:cutting/runtime_generated/compat/ars_nouveau/archwood_planks_to_archwood_pressure_plate"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -704,7 +704,7 @@
         "ars_nouveau:archwood_pressure_plate"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -718,7 +718,7 @@
         "ars_nouveau:archwood_sconce"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -732,7 +732,7 @@
         "create:cutting/runtime_generated/compat/ars_nouveau/archwood_planks_to_archwood_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -746,7 +746,7 @@
         "ars_nouveau:archwood_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -760,7 +760,7 @@
         "create:cutting/runtime_generated/compat/ars_nouveau/archwood_planks_to_archwood_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -774,7 +774,7 @@
         "ars_nouveau:archwood_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -788,7 +788,7 @@
         "create:cutting/runtime_generated/compat/ars_nouveau/archwood_planks_to_archwood_trapdoor"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -802,7 +802,7 @@
         "ars_nouveau:archwood_trapdoor"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -816,7 +816,7 @@
         "ars_nouveau:basic_spell_turret"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -830,7 +830,7 @@
         "ars_nouveau:rotating_turret_to_basic_spell_turret"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -844,7 +844,7 @@
         "ars_nouveau:dye_battlemage_boots"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -858,7 +858,7 @@
         "ars_nouveau:battlemage_boots"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -872,7 +872,7 @@
         "ars_nouveau:dye_battlemage_hood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -886,7 +886,7 @@
         "ars_nouveau:battlemage_hood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -900,7 +900,7 @@
         "ars_nouveau:dye_battlemage_leggings"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -914,7 +914,7 @@
         "ars_nouveau:battlemage_leggings"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -928,7 +928,7 @@
         "ars_nouveau:dye_battlemage_robes"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -942,7 +942,7 @@
         "ars_nouveau:battlemage_robes"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -956,7 +956,7 @@
         "ars_nouveau:belt_of_levitation"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -970,7 +970,7 @@
         "ars_nouveau:belt_of_unstable_gifts"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -984,7 +984,7 @@
         "ars_nouveau:blank_parchment"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -999,7 +999,7 @@
         "ars_nouveau:wipe_spell_parchment"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1013,7 +1013,7 @@
         "ars_nouveau:blank_thread"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1027,7 +1027,7 @@
         "ars_nouveau:manipulation_essence_to_cascading_sapling"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1041,7 +1041,7 @@
         "ars_nouveau:blue_archwood_wood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1055,7 +1055,7 @@
         "ars_nouveau:blue_sbed"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1069,7 +1069,7 @@
         "ars_nouveau:brazier_relay"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1083,7 +1083,7 @@
         "ars_nouveau:burst"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1097,7 +1097,7 @@
         "ars_nouveau:imbuement_conjuration_essence"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1112,7 +1112,7 @@
         "ars_nouveau:deny_scroll"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1126,7 +1126,7 @@
         "ars_nouveau:dominion_wand"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1140,7 +1140,7 @@
         "ars_nouveau:dowsing_rod"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1154,7 +1154,7 @@
         "ars_nouveau:drygmy_charm"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1168,7 +1168,7 @@
         "ars_nouveau:dull_trinket"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1182,7 +1182,7 @@
         "ars_nouveau:imbuement_earth_essence"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1196,7 +1196,7 @@
         "ars_nouveau:enchanters_eye"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1210,7 +1210,7 @@
         "ars_nouveau:enchanters_mirror"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1224,7 +1224,7 @@
         "ars_nouveau:enchanters_shield"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1238,7 +1238,7 @@
         "ars_nouveau:enchanters_sword"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1246,13 +1246,13 @@
       "kind": "crafted",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:enchanting_apparatus",
-      "authority": "exact:slate_t4_demonic/light",
+      "authority": "exact:slate_t4_demonic/ars",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:64"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:57"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -1260,13 +1260,13 @@
       "kind": "crafted",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:enchanting_apparatus",
-      "authority": "exact:slate_t4_demonic/light",
+      "authority": "exact:slate_t4_demonic/ars",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "ars_nouveau:enchanting_apparatus"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -1280,7 +1280,7 @@
         "ars_nouveau:experience_gem"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1294,7 +1294,7 @@
         "ars_nouveau:falseweave"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1308,7 +1308,7 @@
         "ars_nouveau:imbuement_fire_essence"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1322,7 +1322,7 @@
         "ars_nouveau:ghostweave"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1336,7 +1336,7 @@
         "ars_nouveau:sourcestone_14"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1350,7 +1350,7 @@
         "ars_nouveau:gilded_sourcestone_alternating_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1364,7 +1364,7 @@
         "ars_nouveau:gilded_sourcestone_alternating_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1378,7 +1378,7 @@
         "ars_nouveau:gilded_sourcestone_alternating_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1392,7 +1392,7 @@
         "ars_nouveau:gilded_sourcestone_alternating_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1406,7 +1406,7 @@
         "ars_nouveau:sourcestone_13"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1420,7 +1420,7 @@
         "ars_nouveau:gilded_sourcestone_basketweave_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1434,7 +1434,7 @@
         "ars_nouveau:gilded_sourcestone_basketweave_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1448,7 +1448,7 @@
         "ars_nouveau:gilded_sourcestone_basketweave_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1462,7 +1462,7 @@
         "ars_nouveau:gilded_sourcestone_basketweave_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1476,7 +1476,7 @@
         "ars_nouveau:sourcestone_15"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1490,7 +1490,7 @@
         "ars_nouveau:gilded_sourcestone_large_bricks_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1504,7 +1504,7 @@
         "ars_nouveau:gilded_sourcestone_large_bricks_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1518,7 +1518,7 @@
         "ars_nouveau:gilded_sourcestone_large_bricks_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1532,7 +1532,7 @@
         "ars_nouveau:gilded_sourcestone_large_bricks_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1546,7 +1546,7 @@
         "ars_nouveau:sourcestone_12"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1560,7 +1560,7 @@
         "ars_nouveau:gilded_sourcestone_mosaic_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1574,7 +1574,7 @@
         "ars_nouveau:gilded_sourcestone_mosaic_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1588,7 +1588,7 @@
         "ars_nouveau:gilded_sourcestone_mosaic_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1602,7 +1602,7 @@
         "ars_nouveau:gilded_sourcestone_mosaic_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1616,7 +1616,7 @@
         "ars_nouveau:sourcestone_16"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1630,7 +1630,7 @@
         "ars_nouveau:gilded_sourcestone_small_bricks_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1644,7 +1644,7 @@
         "ars_nouveau:gilded_sourcestone_small_bricks_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1658,7 +1658,7 @@
         "ars_nouveau:gilded_sourcestone_small_bricks_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1672,7 +1672,7 @@
         "ars_nouveau:gilded_sourcestone_small_bricks_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -1686,7 +1686,7 @@
         "ars_nouveau:glyph_accelerate"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1700,7 +1700,7 @@
         "ars_nouveau:glyph_amplify"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1714,7 +1714,7 @@
         "ars_nouveau:glyph_animate_block"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1728,7 +1728,7 @@
         "ars_nouveau:glyph_aoe"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1742,7 +1742,21 @@
         "ars_nouveau:glyph_blink"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_blink",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_blink",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:275"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1756,7 +1770,7 @@
         "ars_nouveau:glyph_bounce"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1770,7 +1784,21 @@
         "ars_nouveau:glyph_break"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_break",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_break",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:265"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1784,7 +1812,7 @@
         "ars_nouveau:glyph_cold_snap"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1798,7 +1826,7 @@
         "ars_nouveau:glyph_conjure_water"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1812,7 +1840,7 @@
         "ars_nouveau:glyph_craft"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1826,7 +1854,7 @@
         "ars_nouveau:glyph_crush"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1840,7 +1868,7 @@
         "ars_nouveau:glyph_cut"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1854,7 +1882,7 @@
         "ars_nouveau:glyph_dampen"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1868,7 +1896,7 @@
         "ars_nouveau:glyph_decelerate"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1882,7 +1910,7 @@
         "ars_nouveau:glyph_delay"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1896,7 +1924,7 @@
         "ars_nouveau:glyph_dispel"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1910,7 +1938,7 @@
         "ars_nouveau:glyph_duration_down"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1924,7 +1952,7 @@
         "ars_nouveau:glyph_ender_inventory"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1938,7 +1966,7 @@
         "ars_nouveau:glyph_evaporate"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1952,7 +1980,21 @@
         "ars_nouveau:glyph_exchange"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_exchange",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_exchange",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:277"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1966,7 +2008,7 @@
         "ars_nouveau:glyph_explosion"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1980,7 +2022,21 @@
         "ars_nouveau:glyph_extend_time"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_extend_time",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_extend_time",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:279"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -1994,7 +2050,21 @@
         "ars_nouveau:glyph_extract"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_extract",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_extract",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:276"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2008,7 +2078,7 @@
         "ars_nouveau:glyph_fangs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2022,7 +2092,7 @@
         "ars_nouveau:glyph_fell"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2036,7 +2106,7 @@
         "ars_nouveau:glyph_firework"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2050,7 +2120,7 @@
         "ars_nouveau:glyph_flare"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2064,7 +2134,7 @@
         "ars_nouveau:glyph_fortune"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2078,7 +2148,21 @@
         "ars_nouveau:glyph_freeze"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_freeze",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_freeze",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:273"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2092,7 +2176,21 @@
         "ars_nouveau:glyph_glide"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_glide",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_glide",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:274"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2106,7 +2204,7 @@
         "ars_nouveau:glyph_gravity"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2120,7 +2218,7 @@
         "ars_nouveau:glyph_grow"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2134,7 +2232,7 @@
         "ars_nouveau:glyph_gust"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2148,7 +2246,21 @@
         "ars_nouveau:glyph_harm"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_harm",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_harm",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:266"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2162,7 +2274,21 @@
         "ars_nouveau:glyph_harvest"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_harvest",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_harvest",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:271"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2176,7 +2302,7 @@
         "ars_nouveau:glyph_heal"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2190,7 +2316,7 @@
         "ars_nouveau:glyph_hex"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2204,7 +2330,21 @@
         "ars_nouveau:glyph_ignite"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_ignite",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_ignite",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:269"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2218,7 +2358,7 @@
         "ars_nouveau:glyph_infuse"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2232,7 +2372,7 @@
         "ars_nouveau:glyph_intangible"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2246,7 +2386,21 @@
         "ars_nouveau:glyph_interact"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_interact",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_interact",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:268"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2260,7 +2414,7 @@
         "ars_nouveau:glyph_invisibility"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2274,7 +2428,21 @@
         "ars_nouveau:glyph_launch"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_launch",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_launch",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:270"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2288,7 +2456,21 @@
         "ars_nouveau:glyph_leap"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_leap",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_leap",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:272"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2302,7 +2484,21 @@
         "ars_nouveau:glyph_light"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_light",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_light",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:267"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2316,7 +2512,21 @@
         "ars_nouveau:glyph_lightning"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_lightning",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_lightning",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:282"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2330,7 +2540,21 @@
         "ars_nouveau:glyph_linger"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_linger",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_linger",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:281"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2344,7 +2568,7 @@
         "ars_nouveau:glyph_name"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2358,7 +2582,7 @@
         "ars_nouveau:glyph_orbit"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2372,7 +2596,7 @@
         "ars_nouveau:glyph_phantom_block"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2386,7 +2610,7 @@
         "ars_nouveau:glyph_pickup"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2400,7 +2624,7 @@
         "ars_nouveau:glyph_pierce"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2414,7 +2638,7 @@
         "ars_nouveau:glyph_place_block"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2428,7 +2652,21 @@
         "ars_nouveau:glyph_projectile"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "decor_theme"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_projectile",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_projectile",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:264"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -2442,7 +2680,7 @@
         "ars_nouveau:glyph_pull"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2456,7 +2694,7 @@
         "ars_nouveau:glyph_randomize"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2470,7 +2708,21 @@
         "ars_nouveau:glyph_redstone_signal"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "decor_theme"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_redstone_signal",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_redstone_signal",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:278"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -2484,7 +2736,7 @@
         "ars_nouveau:glyph_rotate"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2498,7 +2750,7 @@
         "ars_nouveau:glyph_rune"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2512,7 +2764,21 @@
         "ars_nouveau:glyph_self"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_self",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_self",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:263"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2526,7 +2792,7 @@
         "ars_nouveau:glyph_sense_magic"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2540,7 +2806,7 @@
         "ars_nouveau:glyph_sensitive"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2554,7 +2820,7 @@
         "ars_nouveau:glyph_slowfall"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2568,7 +2834,7 @@
         "ars_nouveau:glyph_smelt"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2582,7 +2848,7 @@
         "ars_nouveau:glyph_snare"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2596,7 +2862,7 @@
         "ars_nouveau:glyph_split"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2610,7 +2876,7 @@
         "ars_nouveau:glyph_summon_decoy"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2624,7 +2890,7 @@
         "ars_nouveau:glyph_summon_steed"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2638,7 +2904,7 @@
         "ars_nouveau:glyph_summon_undead"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2652,7 +2918,7 @@
         "ars_nouveau:glyph_summon_vex"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2666,7 +2932,7 @@
         "ars_nouveau:glyph_summon_wolves"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2680,7 +2946,7 @@
         "ars_nouveau:glyph_toss"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2694,7 +2960,21 @@
         "ars_nouveau:glyph_touch"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_touch",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_touch",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:262"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2708,7 +2988,7 @@
         "ars_nouveau:glyph_underfoot"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2722,7 +3002,21 @@
         "ars_nouveau:glyph_wall"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "decor_theme"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_wall",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_wall",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:280"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -2736,7 +3030,7 @@
         "ars_nouveau:glyph_wind_shear"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2750,7 +3044,21 @@
         "ars_nouveau:glyph_wither"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:glyph_wither",
+      "kind": "crafted",
+      "mod": "ars_nouveau",
+      "output": "ars_nouveau:glyph_wither",
+      "authority": "namespace:ars_nouveau",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:283"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2764,7 +3072,7 @@
         "ars_nouveau:greater_experience_gem"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2778,7 +3086,7 @@
         "ars_nouveau:manipulation_essence_to_flourishing_sapling"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -2792,7 +3100,7 @@
         "ars_nouveau:green_archwood_wood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -2806,7 +3114,7 @@
         "ars_nouveau:green_sbed"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2814,13 +3122,13 @@
       "kind": "crafted",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:imbuement_chamber",
-      "authority": "exact:slate_t4_demonic/light",
+      "authority": "exact:slate_t3_infused/ars",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:62"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:54"
       ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -2828,13 +3136,13 @@
       "kind": "crafted",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:imbuement_chamber",
-      "authority": "exact:slate_t4_demonic/light",
+      "authority": "exact:slate_t3_infused/ars",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "ars_nouveau:imbuement_chamber"
       ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -2848,7 +3156,7 @@
         "ars_nouveau:item_detector"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2862,7 +3170,7 @@
         "ars_nouveau:jar_of_light"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2876,7 +3184,7 @@
         "ars_nouveau:jump_ring"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2890,7 +3198,7 @@
         "ars_nouveau:lingering_flask_cannon"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2904,7 +3212,7 @@
         "ars_nouveau:magebloom_block"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2918,7 +3226,7 @@
         "ars_nouveau:magebloom_crop"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2933,7 +3241,7 @@
         "ars_nouveau:magebloom_block_to_magebloom"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2947,7 +3255,7 @@
         "ars_nouveau:magelight_torch"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2961,7 +3269,7 @@
         "ars_nouveau:imbuement_manipulation_essence"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2975,7 +3283,7 @@
         "ars_nouveau:mimic_scroll"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -2989,7 +3297,7 @@
         "ars_nouveau:mirrorweave"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3003,7 +3311,7 @@
         "ars_nouveau:mob_jar"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3017,7 +3325,7 @@
         "ars_nouveau:mundane_belt"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3031,7 +3339,7 @@
         "ars_nouveau:mycelial_sourcelink"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3039,27 +3347,27 @@
       "kind": "machine_output",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:novice_spell_book",
-      "authority": "exact:slate_t4_demonic/light",
+      "authority": "exact:slate_t1_blank/ars",
       "surface_type": "ars_nouveau:dye",
       "evidence": [
         "ars_nouveau:dye_novice_spell_book"
       ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "blood_era": "slate_t1_blank",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
-      "id": "crafted:kubejs:replace_input_gate:ars_nouveau:novice_spell_book",
+      "id": "crafted:kubejs:authored_recipe:ars_nouveau:novice_spell_book",
       "kind": "crafted",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:novice_spell_book",
-      "authority": "exact:slate_t4_demonic/light",
-      "surface_type": "kubejs:replace_input_gate",
+      "authority": "exact:slate_t1_blank/ars",
+      "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:63"
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:130"
       ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "blood_era": "slate_t1_blank",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -3067,13 +3375,13 @@
       "kind": "crafted",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:novice_spell_book",
-      "authority": "exact:slate_t4_demonic/light",
+      "authority": "exact:slate_t1_blank/ars",
       "surface_type": "minecraft:crafting_shapeless",
       "evidence": [
         "ars_nouveau:novice_spell_book"
       ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "blood_era": "slate_t1_blank",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -3087,7 +3395,7 @@
         "ars_nouveau:orange_sbed"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3101,7 +3409,7 @@
         "ars_nouveau:imbuement_pierce_arrow"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3115,7 +3423,7 @@
         "ars_nouveau:polished_sconce"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -3129,7 +3437,7 @@
         "ars_nouveau:potion_diffuser"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3143,7 +3451,7 @@
         "ars_nouveau:potion_flask"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3157,7 +3465,7 @@
         "ars_nouveau:potion_flask_fill"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3171,7 +3479,7 @@
         "ars_nouveau:potion_flask_amplify"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3185,7 +3493,7 @@
         "ars_nouveau:potion_flask_amp_fill"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3199,7 +3507,7 @@
         "ars_nouveau:potion_flask_extend_time"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3213,7 +3521,7 @@
         "ars_nouveau:potion_flask_et_fill"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3228,7 +3536,7 @@
         "ars_nouveau:potion_jar"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3242,7 +3550,7 @@
         "ars_nouveau:potion_melder"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3256,7 +3564,7 @@
         "ars_nouveau:manipulation_essence_to_vexing_sapling"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -3270,7 +3578,7 @@
         "ars_nouveau:purple_archwood_wood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -3284,7 +3592,7 @@
         "ars_nouveau:purple_sbed"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3298,7 +3606,7 @@
         "ars_nouveau:manipulation_essence_to_blazin_sapling"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -3312,7 +3620,7 @@
         "ars_nouveau:red_archwood_wood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -3326,7 +3634,7 @@
         "ars_nouveau:red_sbed"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3340,7 +3648,7 @@
         "ars_nouveau:redstone_relay"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3354,7 +3662,7 @@
         "ars_nouveau:relay"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3368,7 +3676,7 @@
         "ars_nouveau:relay_collector"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3382,7 +3690,7 @@
         "ars_nouveau:relay_deposit"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3396,7 +3704,7 @@
         "ars_nouveau:relay_splitter"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3410,7 +3718,7 @@
         "ars_nouveau:relay_warp"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3424,7 +3732,7 @@
         "ars_nouveau:repository"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3438,7 +3746,7 @@
         "ars_nouveau:reset"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3452,7 +3760,7 @@
         "ars_nouveau:rewind"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3466,7 +3774,7 @@
         "ars_nouveau:ring_of_greater_discount"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3480,7 +3788,7 @@
         "ars_nouveau:ring_of_lesser_discount"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3494,7 +3802,7 @@
         "ars_nouveau:ring_of_potential"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3508,7 +3816,7 @@
         "ars_nouveau:ritual_animal_summon"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3522,7 +3830,7 @@
         "ars_nouveau:ritual_awakening"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3536,7 +3844,7 @@
         "ars_nouveau:ritual_binding"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3550,7 +3858,7 @@
         "ars_nouveau:ritual_brazier"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3564,7 +3872,7 @@
         "ars_nouveau:ritual_burrowing"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3579,7 +3887,7 @@
         "ars_nouveau:challenge_2"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3593,7 +3901,7 @@
         "ars_nouveau:ritual_cloudshaping"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3607,7 +3915,7 @@
         "ars_nouveau:ritual_conjure_island_desert"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3621,7 +3929,7 @@
         "ars_nouveau:ritual_conjure_island_plains"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3635,7 +3943,7 @@
         "ars_nouveau:ritual_containment"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3649,7 +3957,7 @@
         "ars_nouveau:ritual_disintegration"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3663,7 +3971,7 @@
         "ars_nouveau:ritual_fertility"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3677,7 +3985,7 @@
         "ars_nouveau:ritual_flowering"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3691,7 +3999,7 @@
         "ars_nouveau:ritual_forestation"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -3705,7 +4013,7 @@
         "ars_nouveau:ritual_gravity"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3719,7 +4027,7 @@
         "ars_nouveau:ritual_harvest"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3734,7 +4042,7 @@
         "ars_nouveau:moonfall_2"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3748,7 +4056,7 @@
         "ars_nouveau:ritual_overgrowth"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3762,7 +4070,7 @@
         "ars_nouveau:ritual_restoration"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3776,7 +4084,7 @@
         "ars_nouveau:ritual_sanctuary"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3790,7 +4098,7 @@
         "ars_nouveau:ritual_scrying"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3805,7 +4113,7 @@
         "ars_nouveau:sunrise_2"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3820,7 +4128,7 @@
         "ars_nouveau:wilden_summon_alt"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3834,7 +4142,7 @@
         "ars_nouveau:rotating_spell_turret"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3848,7 +4156,7 @@
         "ars_nouveau:runic_chalk"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3862,7 +4170,7 @@
         "ars_nouveau:sconce"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3876,7 +4184,7 @@
         "ars_nouveau:scribes_table"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -3890,7 +4198,7 @@
         "ars_nouveau:scryers_crystal"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3904,7 +4212,7 @@
         "ars_nouveau:scryers_oculus"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3918,7 +4226,7 @@
         "ars_nouveau:shapers_focus"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3932,7 +4240,7 @@
         "ars_nouveau:sky_block"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3946,7 +4254,7 @@
         "ars_nouveau:sourcestone_19"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -3960,7 +4268,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_alternating_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -3974,7 +4282,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_alternating_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -3988,7 +4296,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_alternating_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4002,7 +4310,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_alternating_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4016,7 +4324,7 @@
         "ars_nouveau:sourcestone_18"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4030,7 +4338,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_basketweave_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4044,7 +4352,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_basketweave_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4058,7 +4366,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_basketweave_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4072,7 +4380,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_basketweave_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4086,7 +4394,7 @@
         "ars_nouveau:sourcestone_20"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4100,7 +4408,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_large_bricks_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4114,7 +4422,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_large_bricks_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4128,7 +4436,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_large_bricks_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4142,7 +4450,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_large_bricks_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4156,7 +4464,7 @@
         "ars_nouveau:sourcestone_17"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4170,7 +4478,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_mosaic_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4184,7 +4492,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_mosaic_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4198,7 +4506,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_mosaic_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4212,7 +4520,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_mosaic_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4226,7 +4534,7 @@
         "ars_nouveau:sourcestone_21"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4240,7 +4548,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_small_bricks_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4254,7 +4562,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_small_bricks_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4268,7 +4576,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_small_bricks_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4282,7 +4590,7 @@
         "ars_nouveau:smooth_gilded_sourcestone_small_bricks_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4296,7 +4604,7 @@
         "ars_nouveau:sourcestone_10"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4310,7 +4618,7 @@
         "ars_nouveau:sourcestone_8"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4324,7 +4632,7 @@
         "ars_nouveau:smooth_sourcestone_alternating_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4338,7 +4646,7 @@
         "ars_nouveau:smooth_sourcestone_alternating_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4352,7 +4660,7 @@
         "ars_nouveau:smooth_sourcestone_alternating_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4366,7 +4674,7 @@
         "ars_nouveau:smooth_sourcestone_alternating_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4380,7 +4688,7 @@
         "ars_nouveau:sourcestone_6"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4394,7 +4702,7 @@
         "ars_nouveau:smooth_sourcestone_basketweave_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4408,7 +4716,7 @@
         "ars_nouveau:smooth_sourcestone_basketweave_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4422,7 +4730,7 @@
         "ars_nouveau:smooth_sourcestone_basketweave_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4436,7 +4744,7 @@
         "ars_nouveau:smooth_sourcestone_basketweave_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4450,7 +4758,7 @@
         "ars_nouveau:sourcestone_9"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4464,7 +4772,7 @@
         "ars_nouveau:smooth_sourcestone_large_bricks_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4478,7 +4786,7 @@
         "ars_nouveau:smooth_sourcestone_large_bricks_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4492,7 +4800,7 @@
         "ars_nouveau:smooth_sourcestone_large_bricks_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4506,7 +4814,7 @@
         "ars_nouveau:smooth_sourcestone_large_bricks_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4520,7 +4828,7 @@
         "ars_nouveau:sourcestone_7"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4534,7 +4842,7 @@
         "ars_nouveau:smooth_sourcestone_mosaic_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4548,7 +4856,7 @@
         "ars_nouveau:smooth_sourcestone_mosaic_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4562,7 +4870,7 @@
         "ars_nouveau:smooth_sourcestone_mosaic_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4576,7 +4884,7 @@
         "ars_nouveau:smooth_sourcestone_mosaic_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4590,7 +4898,7 @@
         "ars_nouveau:smooth_sourcestone_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4604,7 +4912,7 @@
         "ars_nouveau:smooth_sourcestone_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4618,7 +4926,7 @@
         "ars_nouveau:sourcestone_11"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4632,7 +4940,7 @@
         "ars_nouveau:smooth_sourcestone_small_bricks_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4646,7 +4954,7 @@
         "ars_nouveau:smooth_sourcestone_small_bricks_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4660,7 +4968,7 @@
         "ars_nouveau:smooth_sourcestone_small_bricks_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4674,7 +4982,7 @@
         "ars_nouveau:smooth_sourcestone_small_bricks_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4688,7 +4996,7 @@
         "ars_nouveau:smooth_sourcestone_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4702,7 +5010,7 @@
         "ars_nouveau:smooth_sourcestone_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -4716,7 +5024,7 @@
         "ars_nouveau:dye_sorcerer_boots"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4730,7 +5038,7 @@
         "ars_nouveau:sorcerer_boots"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4744,7 +5052,7 @@
         "ars_nouveau:dye_sorcerer_hood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4758,7 +5066,7 @@
         "ars_nouveau:sorcerer_hood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4772,7 +5080,7 @@
         "ars_nouveau:dye_sorcerer_leggings"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4786,7 +5094,7 @@
         "ars_nouveau:sorcerer_leggings"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4800,7 +5108,7 @@
         "ars_nouveau:dye_sorcerer_robes"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4814,7 +5122,7 @@
         "ars_nouveau:sorcerer_robes"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4828,7 +5136,7 @@
         "ars_nouveau:source_berry_pie"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4842,7 +5150,7 @@
         "ars_nouveau:source_berry_roll"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4850,14 +5158,14 @@
       "kind": "machine_output",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:source_gem",
-      "authority": "exact:slate_t4_demonic/light",
+      "authority": "exact:slate_t3_infused/ars",
       "surface_type": "ars_nouveau:imbuement",
       "evidence": [
         "ars_nouveau:imbuement_lapis",
         "ars_nouveau:imbuement_amethyst"
       ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -4865,13 +5173,13 @@
       "kind": "machine_output",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:source_gem",
-      "authority": "exact:slate_t4_demonic/light",
+      "authority": "exact:slate_t3_infused/ars",
       "surface_type": "event.custom(kubejs)",
       "evidence": [
         "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js:260"
       ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -4879,13 +5187,13 @@
       "kind": "crafted",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:source_gem",
-      "authority": "exact:slate_t4_demonic/light",
+      "authority": "exact:slate_t3_infused/ars",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
         "kubejs/server_scripts/40_recipe_add/62_chemical_electronics_magic_growth_routes.js:240"
       ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -4893,13 +5201,13 @@
       "kind": "crafted",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:source_gem",
-      "authority": "exact:slate_t4_demonic/light",
+      "authority": "exact:slate_t3_infused/ars",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:60"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:52"
       ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -4907,13 +5215,13 @@
       "kind": "crafted",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:source_gem",
-      "authority": "exact:slate_t4_demonic/light",
+      "authority": "exact:slate_t3_infused/ars",
       "surface_type": "minecraft:crafting_shapeless",
       "evidence": [
         "ars_nouveau:source_gem_block_2"
       ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -4921,13 +5229,13 @@
       "kind": "machine_output",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:source_gem_block",
-      "authority": "exact:slate_t4_demonic/light",
+      "authority": "exact:slate_t3_infused/ars",
       "surface_type": "ars_nouveau:imbuement",
       "evidence": [
         "ars_nouveau:imbuement_amethyst_block"
       ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -4935,13 +5243,13 @@
       "kind": "machine_output",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:source_gem_block",
-      "authority": "exact:slate_t4_demonic/light",
+      "authority": "exact:slate_t3_infused/ars",
       "surface_type": "event.custom(kubejs)",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:61"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:53"
       ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -4949,13 +5257,13 @@
       "kind": "crafted",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:source_gem_block",
-      "authority": "exact:slate_t4_demonic/light",
+      "authority": "exact:slate_t3_infused/ars",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:61"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:53"
       ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -4963,13 +5271,13 @@
       "kind": "crafted",
       "mod": "ars_nouveau",
       "output": "ars_nouveau:source_gem_block",
-      "authority": "exact:slate_t4_demonic/light",
+      "authority": "exact:slate_t3_infused/ars",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
         "ars_nouveau:source_gem_block"
       ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -4983,7 +5291,7 @@
         "ars_nouveau:source_jar"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -4997,7 +5305,7 @@
         "ars_nouveau:sourceberry_sack_to_bush"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5011,7 +5319,7 @@
         "ars_nouveau:sourceberry_sack"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5025,7 +5333,7 @@
         "ars_nouveau:sourcestone"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5043,7 +5351,7 @@
         "ars_nouveau:smooth_sourcestone_to_sourcestone"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5057,7 +5365,7 @@
         "ars_nouveau:sourcestone_3"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5071,7 +5379,7 @@
         "ars_nouveau:sourcestone_alternating_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5085,7 +5393,7 @@
         "ars_nouveau:sourcestone_alternating_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5099,7 +5407,7 @@
         "ars_nouveau:sourcestone_alternating_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5113,7 +5421,7 @@
         "ars_nouveau:sourcestone_alternating_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5127,7 +5435,7 @@
         "ars_nouveau:sourcestone_2"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5141,7 +5449,7 @@
         "ars_nouveau:sourcestone_basketweave_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5155,7 +5463,7 @@
         "ars_nouveau:sourcestone_basketweave_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5169,7 +5477,7 @@
         "ars_nouveau:sourcestone_basketweave_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5183,7 +5491,7 @@
         "ars_nouveau:sourcestone_basketweave_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5197,7 +5505,7 @@
         "ars_nouveau:sourcestone_4"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5211,7 +5519,7 @@
         "ars_nouveau:sourcestone_large_bricks_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5225,7 +5533,7 @@
         "ars_nouveau:sourcestone_large_bricks_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5239,7 +5547,7 @@
         "ars_nouveau:sourcestone_large_bricks_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5253,7 +5561,7 @@
         "ars_nouveau:sourcestone_large_bricks_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5267,7 +5575,7 @@
         "ars_nouveau:sourcestone_1"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5281,7 +5589,7 @@
         "ars_nouveau:sourcestone_mosaic_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5295,7 +5603,7 @@
         "ars_nouveau:sourcestone_mosaic_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5309,7 +5617,7 @@
         "ars_nouveau:sourcestone_mosaic_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5323,7 +5631,7 @@
         "ars_nouveau:sourcestone_mosaic_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5338,7 +5646,7 @@
         "ars_nouveau:sourcestone_sconce"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5352,7 +5660,7 @@
         "ars_nouveau:sourcestone_5"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5366,7 +5674,7 @@
         "ars_nouveau:sourcestone_small_bricks_slab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5380,7 +5688,7 @@
         "ars_nouveau:sourcestone_small_bricks_stone_cutterslab"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5394,7 +5702,7 @@
         "ars_nouveau:sourcestone_small_bricks_stairs"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5408,7 +5716,7 @@
         "ars_nouveau:sourcestone_small_bricks_stonecutter_stair"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5422,7 +5730,7 @@
         "ars_nouveau:spell_bow"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5436,7 +5744,7 @@
         "ars_nouveau:spell_crossbow"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5450,7 +5758,7 @@
         "ars_nouveau:spell_prism"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5464,7 +5772,7 @@
         "ars_nouveau:spell_sensor"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5478,7 +5786,7 @@
         "ars_nouveau:spell_turret"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5492,7 +5800,7 @@
         "ars_nouveau:splash_flask_cannon"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5506,7 +5814,7 @@
         "ars_nouveau:imbuement_split_arrow"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5520,7 +5828,7 @@
         "ars_nouveau:starbuncle_charm"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5534,7 +5842,7 @@
         "ars_nouveau:starbuncle_shades"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5548,7 +5856,7 @@
         "ars_nouveau:wipe_starby_shard"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5562,7 +5870,7 @@
         "ars_nouveau:storage_lectern"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5576,7 +5884,7 @@
         "create:cutting/runtime_generated/compat/ars_nouveau/blue_archwood_log_to_stripped_blue_archwood_log"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5590,7 +5898,7 @@
         "create:cutting/runtime_generated/compat/ars_nouveau/blue_archwood_wood_to_stripped_blue_archwood_wood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5604,7 +5912,7 @@
         "ars_nouveau:stripped_blue_archwood_wood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5618,7 +5926,7 @@
         "create:cutting/runtime_generated/compat/ars_nouveau/green_archwood_log_to_stripped_green_archwood_log"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5632,7 +5940,7 @@
         "create:cutting/runtime_generated/compat/ars_nouveau/green_archwood_wood_to_stripped_green_archwood_wood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5646,7 +5954,7 @@
         "ars_nouveau:stripped_green_archwood_wood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5660,7 +5968,7 @@
         "create:cutting/runtime_generated/compat/ars_nouveau/purple_archwood_log_to_stripped_purple_archwood_log"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5674,7 +5982,7 @@
         "create:cutting/runtime_generated/compat/ars_nouveau/purple_archwood_wood_to_stripped_purple_archwood_wood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5688,7 +5996,7 @@
         "ars_nouveau:stripped_purple_archwood_wood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5702,7 +6010,7 @@
         "create:cutting/runtime_generated/compat/ars_nouveau/red_archwood_log_to_stripped_red_archwood_log"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5716,7 +6024,7 @@
         "create:cutting/runtime_generated/compat/ars_nouveau/red_archwood_wood_to_stripped_red_archwood_wood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5730,7 +6038,7 @@
         "ars_nouveau:stripped_red_archwood_wood"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "decor_theme"
     },
     {
@@ -5744,7 +6052,7 @@
         "ars_nouveau:summon_focus"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5758,7 +6066,7 @@
         "ars_nouveau:thread_amethyst_golem"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5772,7 +6080,7 @@
         "ars_nouveau:thread_chilling"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5786,7 +6094,7 @@
         "ars_nouveau:thread_depths"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5800,7 +6108,7 @@
         "ars_nouveau:thread_drygmy"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5814,7 +6122,7 @@
         "ars_nouveau:thread_feather"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5828,7 +6136,7 @@
         "ars_nouveau:thread_gliding"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5842,7 +6150,7 @@
         "ars_nouveau:thread_heights"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5856,7 +6164,7 @@
         "ars_nouveau:thread_high_step"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5870,7 +6178,7 @@
         "ars_nouveau:thread_immolation"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5884,7 +6192,7 @@
         "ars_nouveau:thread_kindling"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5898,7 +6206,7 @@
         "ars_nouveau:thread_life_drain"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5912,7 +6220,7 @@
         "ars_nouveau:thread_magic_capacity"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5926,7 +6234,7 @@
         "ars_nouveau:thread_repairing"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5940,7 +6248,7 @@
         "ars_nouveau:thread_spellpower"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5954,7 +6262,7 @@
         "ars_nouveau:thread_starbuncle"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5968,7 +6276,7 @@
         "ars_nouveau:thread_undying"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5982,7 +6290,7 @@
         "ars_nouveau:thread_warding"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -5996,7 +6304,7 @@
         "ars_nouveau:thread_whirlisprig"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -6010,7 +6318,7 @@
         "ars_nouveau:thread_wixie"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -6024,7 +6332,7 @@
         "ars_nouveau:timer_spell_turret"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -6038,7 +6346,7 @@
         "ars_nouveau:vitalic_sourcelink"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -6052,7 +6360,7 @@
         "ars_nouveau:void_jar"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -6066,7 +6374,7 @@
         "ars_nouveau:void_prism"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -6080,7 +6388,7 @@
         "ars_nouveau:volcanic_sourcelink"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -6094,7 +6402,7 @@
         "ars_nouveau:wand"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -6108,7 +6416,7 @@
         "ars_nouveau:imbuement_water_essence"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -6122,7 +6430,7 @@
         "ars_nouveau:whirlisprig_charm"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -6136,7 +6444,7 @@
         "ars_nouveau:wixie_charm"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -6150,7 +6458,7 @@
         "ars_nouveau:wixie_hat"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -6164,7 +6472,7 @@
         "ars_nouveau:wololo"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -6178,7 +6486,7 @@
         "ars_nouveau:worn_notebook"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -6192,7 +6500,7 @@
         "ars_nouveau:yellow_sbed"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "utility_support"
     },
     {
@@ -6203,10 +6511,10 @@
       "authority": "namespace:ars_technica",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:85"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:76"
       ],
       "blood_era": "slate_t4_demonic",
-      "branch": "light",
+      "branch": "ars",
       "weight_class": "structural_progression"
     },
     {
@@ -6217,7 +6525,7 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:97"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:88"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
@@ -6259,7 +6567,7 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:98"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:89"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
@@ -6273,7 +6581,7 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:99"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:90"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
@@ -13203,7 +13511,7 @@
       "authority": "exact:slate_t3_infused/dark",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:56"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:48"
       ],
       "blood_era": "slate_t3_infused",
       "branch": "dark",
@@ -13217,7 +13525,7 @@
       "authority": "exact:slate_t3_infused/dark",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:57"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:49"
       ],
       "blood_era": "slate_t3_infused",
       "branch": "dark",
@@ -13231,7 +13539,7 @@
       "authority": "exact:slate_t4_demonic/dark",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:80"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:71"
       ],
       "blood_era": "slate_t4_demonic",
       "branch": "dark",
@@ -13245,7 +13553,7 @@
       "authority": "exact:slate_t4_demonic/dark",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:81"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:72"
       ],
       "blood_era": "slate_t4_demonic",
       "branch": "dark",
@@ -13259,7 +13567,7 @@
       "authority": "exact:slate_t4_demonic/dark",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:73"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:65"
       ],
       "blood_era": "slate_t4_demonic",
       "branch": "dark",
@@ -13273,7 +13581,7 @@
       "authority": "exact:slate_t4_demonic/dark",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:74"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:66"
       ],
       "blood_era": "slate_t4_demonic",
       "branch": "dark",
@@ -13331,8 +13639,8 @@
       "evidence": [
         "kubejs/server_scripts/40_recipe_add/62_chemical_electronics_magic_growth_routes.js:229"
       ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "dark",
+      "blood_era": "slate_t2_reinforced",
+      "branch": "fonts",
       "weight_class": "utility_support"
     },
     {
@@ -13340,10 +13648,10 @@
       "kind": "crafted",
       "mod": "hexerei",
       "output": "hexerei:book_of_shadows_altar",
-      "blood_era": "slate_t4_demonic",
-      "branch": "dark",
+      "blood_era": "slate_t2_reinforced",
+      "branch": "fonts",
       "weight_class": "structural_progression",
-      "authority": "synthetic_exact:slate_t4_demonic/dark",
+      "authority": "synthetic_exact:slate_t2_reinforced/fonts",
       "surface_type": "event.custom(kubejs)",
       "evidence": [
         "kubejs/config/player_progression_regression.json"
@@ -13354,13 +13662,13 @@
       "kind": "crafted",
       "mod": "hexerei",
       "output": "hexerei:mixing_cauldron",
-      "authority": "exact:slate_t4_demonic/dark",
+      "authority": "exact:slate_t2_reinforced/fonts",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:72"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:22"
       ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "dark",
+      "blood_era": "slate_t2_reinforced",
+      "branch": "fonts",
       "weight_class": "structural_progression"
     },
     {
@@ -13581,7 +13889,7 @@
       "authority": "exact:slate_t3_infused/light",
       "surface_type": "event.custom(kubejs)",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/126_cross_magic_irons_spellcraft.js:183"
+        "kubejs/server_scripts/30_recipe_replace/126_cross_magic_irons_spellcraft.js:173"
       ],
       "blood_era": "slate_t3_infused",
       "branch": "light",
@@ -13735,7 +14043,7 @@
       "authority": "exact:slate_t3_infused/light",
       "surface_type": "event.custom(kubejs)",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/126_cross_magic_irons_spellcraft.js:184"
+        "kubejs/server_scripts/30_recipe_replace/126_cross_magic_irons_spellcraft.js:174"
       ],
       "blood_era": "slate_t3_infused",
       "branch": "light",
@@ -13791,7 +14099,7 @@
       "authority": "exact:slate_t3_infused/light",
       "surface_type": "event.custom(kubejs)",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/126_cross_magic_irons_spellcraft.js:185"
+        "kubejs/server_scripts/30_recipe_replace/126_cross_magic_irons_spellcraft.js:175"
       ],
       "blood_era": "slate_t3_infused",
       "branch": "light",
@@ -13959,7 +14267,7 @@
       "authority": "exact:slate_t3_infused/light",
       "surface_type": "event.custom(kubejs)",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/126_cross_magic_irons_spellcraft.js:187"
+        "kubejs/server_scripts/30_recipe_replace/126_cross_magic_irons_spellcraft.js:177"
       ],
       "blood_era": "slate_t3_infused",
       "branch": "light",
@@ -14183,7 +14491,7 @@
       "authority": "exact:slate_t4_demonic/dark",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/126_cross_magic_irons_spellcraft.js:396"
+        "kubejs/server_scripts/30_recipe_replace/126_cross_magic_irons_spellcraft.js:386"
       ],
       "blood_era": "slate_t4_demonic",
       "branch": "dark",
@@ -14351,7 +14659,7 @@
       "authority": "exact:slate_t2_reinforced/light",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:27"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:23"
       ],
       "blood_era": "slate_t2_reinforced",
       "branch": "light",
@@ -14484,6 +14792,314 @@
       ]
     },
     {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_blink",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_blink",
+      "authority": "exact:slate_t3_infused/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:214"
+      ],
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_break",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_break",
+      "authority": "exact:slate_t1_blank/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:155"
+      ],
+      "blood_era": "slate_t1_blank",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_exchange",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_exchange",
+      "authority": "exact:slate_t3_infused/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:224"
+      ],
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_extend_time",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_extend_time",
+      "authority": "exact:slate_t3_infused/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:235"
+      ],
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_extract",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_extract",
+      "authority": "exact:slate_t3_infused/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:219"
+      ],
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_freeze",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_freeze",
+      "authority": "exact:slate_t3_infused/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:203"
+      ],
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_glide",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_glide",
+      "authority": "exact:slate_t3_infused/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:209"
+      ],
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_harm",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_harm",
+      "authority": "exact:slate_t2_reinforced/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:161"
+      ],
+      "blood_era": "slate_t2_reinforced",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_harvest",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_harvest",
+      "authority": "exact:slate_t2_reinforced/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:191"
+      ],
+      "blood_era": "slate_t2_reinforced",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_ignite",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_ignite",
+      "authority": "exact:slate_t2_reinforced/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:179"
+      ],
+      "blood_era": "slate_t2_reinforced",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_interact",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_interact",
+      "authority": "exact:slate_t2_reinforced/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:173"
+      ],
+      "blood_era": "slate_t2_reinforced",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_launch",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_launch",
+      "authority": "exact:slate_t2_reinforced/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:185"
+      ],
+      "blood_era": "slate_t2_reinforced",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_leap",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_leap",
+      "authority": "exact:slate_t2_reinforced/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:197"
+      ],
+      "blood_era": "slate_t2_reinforced",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_light",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_light",
+      "authority": "exact:slate_t1_blank/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:167"
+      ],
+      "blood_era": "slate_t1_blank",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_lightning",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_lightning",
+      "authority": "exact:slate_t4_demonic/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:251"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_linger",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_linger",
+      "authority": "exact:slate_t4_demonic/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:246"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_projectile",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_projectile",
+      "authority": "exact:slate_t1_blank/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:137"
+      ],
+      "blood_era": "slate_t1_blank",
+      "branch": "ars",
+      "weight_class": "decor_theme"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_redstone_signal",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_redstone_signal",
+      "authority": "exact:slate_t3_infused/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:229"
+      ],
+      "blood_era": "slate_t3_infused",
+      "branch": "ars",
+      "weight_class": "decor_theme"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_self",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_self",
+      "authority": "exact:slate_t1_blank/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:149"
+      ],
+      "blood_era": "slate_t1_blank",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_touch",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_touch",
+      "authority": "exact:slate_t1_blank/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:143"
+      ],
+      "blood_era": "slate_t1_blank",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_wall",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_wall",
+      "authority": "exact:slate_t4_demonic/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:241"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
+      "weight_class": "decor_theme"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_wither",
+      "kind": "crafted",
+      "mod": "kubejs",
+      "output": "kubejs:manuscript_wither",
+      "authority": "exact:slate_t4_demonic/ars",
+      "surface_type": "kubejs:authored_recipe",
+      "evidence": [
+        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:256"
+      ],
+      "blood_era": "slate_t4_demonic",
+      "branch": "ars",
+      "weight_class": "structural_progression"
+    },
+    {
       "id": "crafted:event.custom(kubejs):kubejs:master_blood_heart",
       "kind": "crafted",
       "mod": "kubejs",
@@ -14547,7 +15163,7 @@
       "authority": "exact:slate_t3_infused/dark",
       "surface_type": "event.custom(kubejs)",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:49"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:41"
       ],
       "blood_era": "slate_t3_infused",
       "branch": "dark",
@@ -14561,7 +15177,7 @@
       "authority": "exact:slate_t1_blank/dark",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:17"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:16"
       ],
       "blood_era": "slate_t1_blank",
       "branch": "dark",
@@ -14586,13 +15202,13 @@
       "kind": "crafted",
       "mod": "occultism",
       "output": "occultism:chalk_white",
-      "authority": "exact:slate_t3_infused/dark",
+      "authority": "exact:slate_t3_infused/fonts",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
         "kubejs/server_scripts/40_recipe_add/62_chemical_electronics_magic_growth_routes.js:217"
       ],
       "blood_era": "slate_t3_infused",
-      "branch": "dark",
+      "branch": "fonts",
       "weight_class": "structural_progression"
     },
     {
@@ -14600,13 +15216,13 @@
       "kind": "crafted",
       "mod": "occultism",
       "output": "occultism:chalk_white_impure",
-      "authority": "exact:slate_t3_infused/dark",
+      "authority": "exact:slate_t3_infused/fonts",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:34"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:26"
       ],
       "blood_era": "slate_t3_infused",
-      "branch": "dark",
+      "branch": "fonts",
       "weight_class": "structural_progression"
     },
     {
@@ -14617,7 +15233,7 @@
       "authority": "exact:slate_t4_demonic/dark",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:77"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:69"
       ],
       "blood_era": "slate_t4_demonic",
       "branch": "dark",
@@ -14631,7 +15247,7 @@
       "authority": "exact:slate_t4_demonic/dark",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:88"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:79"
       ],
       "blood_era": "slate_t4_demonic",
       "branch": "dark",
@@ -14645,7 +15261,7 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:101"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:92"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
@@ -14659,7 +15275,7 @@
       "authority": "exact:slate_t1_blank/dark",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:19"
+        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:18"
       ],
       "blood_era": "slate_t1_blank",
       "branch": "dark",

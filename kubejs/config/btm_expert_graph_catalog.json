@@ -150,7 +150,7 @@
       "id": "blood_2",
       "gate": "bloodmagic:reinforcedslate",
       "mods": [
-        "naturesaura",
+        "hexerei",
         "irons_spellbooks"
       ]
     },
@@ -172,7 +172,6 @@
         "ars_instrumentum",
         "ars_elemental",
         "goety",
-        "hexerei",
         "forbidden_arcanus",
         "theurgy",
         "ars_creo",

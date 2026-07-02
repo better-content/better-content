@@ -3170,6 +3170,7 @@ fun handleTest(subArgs: List<String>): CommandResult {
             val missing = ensureCommands("python3")
             if (missing.isNotEmpty()) return prereqFailure("scenario prerequisites missing", missing)
             val name = subArgs.getOrNull(1) ?: return usageError("test scenario requires a scenario name", testHelp())
+            if (name == "--help") return success("test scenario", testHelp(), evidenceLevel = "scenario-runtime")
             val scenario = scenarios[name] ?: return usageError("unknown scenario: $name", testHelp())
             val passthroughArgs = subArgs.drop(2)
             wrapProcessResult(

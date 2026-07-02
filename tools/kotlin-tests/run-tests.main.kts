@@ -48,6 +48,19 @@ test("runtime without instance is usage error") {
     assertContains(output, "test runtime requires --instance PATH", "runtime usage error should be specific")
 }
 
+test("scenario help shows scenarios") {
+    val (exit, output) = runCommand("tools/btm", "test", "scenario", "--help")
+    assertTrue(exit == 0, "scenario help should exit 0, got $exit")
+    assertContains(output, "Scenarios:", "scenario help should list scenario section")
+    assertContains(output, "opening_progression", "scenario help should include opening_progression")
+}
+
+test("unknown scenario is a usage error") {
+    val (exit, output) = runCommand("tools/btm", "test", "scenario", "not_a_real_scenario")
+    assertTrue(exit == 2, "unknown scenario should exit 2, got $exit")
+    assertContains(output, "unknown scenario: not_a_real_scenario", "unknown scenario error should be specific")
+}
+
 test("doctor repo succeeds") {
     val (exit, output) = runCommand("tools/btm", "doctor", "repo")
     assertTrue(exit == 0, "doctor repo should exit 0, got $exit")
@@ -92,6 +105,18 @@ test("internal autonomous contracts validator runs through btm") {
     assertContains(output, "autonomous contract validators: 88 pass(es), 0 hard failure(s)", "internal validate-autonomous-contracts should match expected summary")
 }
 
+test("internal pack contract validator runs through btm") {
+    val (exit, output) = runCommand("tools/btm", "internal", "validate-pack-contract")
+    assertTrue(exit == 0, "internal validate-pack-contract should exit 0, got $exit")
+    assertContains(output, "pack contract audit:", "internal validate-pack-contract should report contract audit summary")
+}
+
+test("internal contract completeness report runs through btm") {
+    val (exit, output) = runCommand("tools/btm", "internal", "contract-completeness-report", "--check", "--no-write")
+    assertTrue(exit == 0, "internal contract-completeness-report --check --no-write should exit 0, got $exit")
+    assertContains(output, "contract completeness:", "internal contract-completeness-report should report classification summary")
+}
+
 test("internal realistic hands validator runs through btm") {
     val (exit, output) = runCommand("tools/btm", "internal", "validate-realistic-hands")
     assertTrue(exit == 0, "internal validate-realistic-hands should exit 0, got $exit")
@@ -114,6 +139,18 @@ test("internal burnt sync check runs through btm") {
     val (exit, output) = runCommand("tools/btm", "internal", "sync-burnt-coverage-tags", "--check")
     assertTrue(exit == 0, "internal sync-burnt-coverage-tags --check should exit 0, got $exit")
     assertContains(output, "missing_rows", "internal sync-burnt-coverage-tags should report missing_rows")
+}
+
+test("internal chemistry identity validator runs through btm") {
+    val (exit, output) = runCommand("tools/btm", "internal", "validate-chemistry-identity")
+    assertTrue(exit == 0, "internal validate-chemistry-identity should exit 0, got $exit")
+    assertContains(output, "chemistry identity matrix validates", "internal validate-chemistry-identity should report validator summary")
+}
+
+test("internal player progression contracts validator runs through btm") {
+    val (exit, output) = runCommand("tools/btm", "internal", "validate-player-progression-contracts")
+    assertTrue(exit == 0, "internal validate-player-progression-contracts should exit 0, got $exit")
+    assertContains(output, "player progression contract validators:", "internal validate-player-progression-contracts should report validator summary")
 }
 
 var failures = 0

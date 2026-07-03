@@ -53,8 +53,27 @@ done
 }
 
 argfile="$client_dir/.runtime/launch-${version_id}.args"
+mkdir -p "$client_dir/logs" "$client_dir/.runtime"
 "$ROOT/tools/btm" internal minecraft-client-argfile --client-dir "$client_dir" --version-id "$version_id" --username "$username" --server "$server" --out "$argfile" >/dev/null
 
-mkdir -p "$client_dir/logs" "$client_dir/.runtime"
 cd "$client_dir"
-exec "$java_bin" ${extra_jvm} @"$argfile"
+
+launch_cmd=("$java_bin")
+if [[ -n "${extra_jvm:-}" ]]; then
+  # shellcheck disable=SC2206
+  extra_jvm_parts=(${extra_jvm})
+  launch_cmd+=("${extra_jvm_parts[@]}")
+fi
+launch_cmd+=("@$argfile")
+
+if [[ -n "${DISPLAY:-}" ]]; then
+  exec "${launch_cmd[@]}"
+fi
+
+if command -v xvfb-run >/dev/null 2>&1; then
+  exec xvfb-run -a "${launch_cmd[@]}"
+fi
+
+echo "ERROR: no DISPLAY is set and xvfb-run is unavailable; Forge client launch requires an X display or xvfb." >&2
+echo "Install xvfb or run from a graphical session before using tools/launch_client_direct.sh." >&2
+exit 4

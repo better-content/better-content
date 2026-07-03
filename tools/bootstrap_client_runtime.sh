@@ -62,6 +62,38 @@ if [[ -f "$prism_root/meta/net.minecraftforge/${BTM_FORGE_VERSION}.json" ]]; the
     "$forge_client_id"
 fi
 
+if [[ ! -f "$client_dir/versions/${BTM_MC_VERSION}/${BTM_MC_VERSION}.json" ]]; then
+  btm_need curl
+  btm_need python3
+  mkdir -p "$client_dir/versions/${BTM_MC_VERSION}"
+  manifest_tmp="$(mktemp)"
+  trap 'rm -f "$manifest_tmp"' EXIT
+  curl -fsSL "https://launchermeta.mojang.com/mc/game/version_manifest_v2.json" -o "$manifest_tmp"
+  version_url="$(python3 - "$manifest_tmp" "$BTM_MC_VERSION" <<'PY'
+import json
+import sys
+
+manifest_path, target = sys.argv[1], sys.argv[2]
+with open(manifest_path, "r", encoding="utf-8") as handle:
+    manifest = json.load(handle)
+
+for version in manifest.get("versions", []):
+    if version.get("id") == target:
+        print(version.get("url", ""))
+        break
+else:
+    sys.exit(1)
+PY
+)"
+  [[ -n "$version_url" ]] || {
+    echo "ERROR: could not resolve Minecraft version metadata URL for $BTM_MC_VERSION" >&2
+    exit 1
+  }
+  curl -fsSL "$version_url" -o "$client_dir/versions/${BTM_MC_VERSION}/${BTM_MC_VERSION}.json"
+  rm -f "$manifest_tmp"
+  trap - EXIT
+fi
+
 installer="$(btm_find_forge_installer "$ROOT")"
 if [[ -n "$installer" && -f "$installer" ]]; then
   java_bin="$(btm_java17)"

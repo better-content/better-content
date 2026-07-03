@@ -19,6 +19,8 @@ Current Dimensional Fonts reliquary generation is structure-set driven rather th
 
 KubeJS layout remains load-order grouped by responsibility. `startup_scripts/00_boot` is for shared globals/helpers, startup item/block registration lives under startup item/block domains, and global startup behavior toggles live under startup globals. Server scripts use `10_tags`, `20_recipe_remove`, `30_recipe_replace`, `35_villager_trades`, `40_recipe_add`, `50_loot`, `60_worldgen`, `70_spawn`, `80_recipe_policy`, and `90_dev_debug`; keep `90_dev_debug` empty for release. Client scripts own JEI/EMI visibility, tooltips, and client-only presentation.
 
+The live FTB Quests repo surface now carries a separate `Completionist` chapter group under `config/ftbquests/quests/chapters/` with scaffold chapters for consumables, potion effects, enchantments, TCon weapon families, plants, and armour sets. These are exhaustive starter stubs meant for in-place authoring refinement later, not polished progression chapters: collectible categories use broad item-task coverage, while effect and enchantment coverage uses checkmark quests with runtime/source hints instead of brittle NBT-perfect tasks.
+
 ## Materials And Chemistry
 
 Cross-mod standardization is moderate rather than total:

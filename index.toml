@@ -5510,7 +5510,7 @@ hash = "3a9d2c8f78ed10b9dba2febb9c18a39c397448dc3eb60fbbb91034a16028b7ad"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
-hash = "84b93b9be41acc8a7dfd31f18a4b33b303deed5a191e2397ede357a27822f6fe"
+hash = "0c92db54e83545c42bb4d09aa1c7aa3f15211d2a9a9686522bbfff439db398b1"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/better_tools.snbt"
@@ -5519,6 +5519,30 @@ hash = "562cb84b0bfc586c310d673de1311986c2ee3231c8dd0d64f8b50f6d48af3a18"
 [[files]]
 file = "config/ftbquests/quests/chapters/casings.snbt"
 hash = "fc8d79fd48bb1f08a93585334f5801287e4509fbffcfaef02fd9e487acc1a22f"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/completionist_armour_sets.snbt"
+hash = "59e89d4dedacf49105310d4e22895361c3451f9ac595aade5698b44e7f5f64e1"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/completionist_consumables.snbt"
+hash = "2740215b4e265b3ea1344c2765b68a701253734ca0afb3ff6d03f9fcf82a1ee6"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/completionist_effects.snbt"
+hash = "dbe880985910f1fecacc2696f2e091c66c0f7ab861d456dbbbc95fb080ef4b1a"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/completionist_enchantments.snbt"
+hash = "c0b8651684d10962378d8fcc0041da3a9905c8523dc9b94efc970347e0e48372"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/completionist_plants.snbt"
+hash = "d6b3297bbc74b35a7b1c25e02dd150df3f62ff0950f36f1bba40fe2a9bcb71a2"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/completionist_tcon_weapons.snbt"
+hash = "8df325ee364b859089ee3b94ff2cd2f26d9691b12d27129c7af509500be2ae93"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/dimensions.snbt"

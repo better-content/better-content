@@ -1,0 +1,517 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "completionist_effects"
+	group: "0D8C0A1E9F5B4C72"
+	icon: "minecraft:potion"
+	id: "B6F0AC9E2D7C1348"
+	order_index: 11
+	quest_links: [ ]
+	quests: [
+		{
+			id: "1D536648137FD911"
+			title: "A-H"
+			icon: "minecraft:potion"
+			shape: "square"
+			size: 0.8d
+			x: 0.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "4CAB3908277E8179"
+					type: "checkmark"
+					title: "A-H"
+				}
+			]
+			rewards: [ ]
+			description: ["7 starter stubs."]
+		}
+		{
+			id: "1FA63C0A869ACCAC"
+			title: "All Effects: Comfort"
+			icon: "farmersrespite:rose_hips"
+			shape: "rsquare"
+			size: 1.0d
+			x: 1.5d
+			y: 0.0d
+			tasks: [
+				{
+					id: "4964084465B3F4F5"
+					type: "checkmark"
+					title: "Comfort"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: farmersrespite:rose_hips, farmersdelight:chicken_soup", "Runtime hint: kitchen_infrastructure"]
+		}
+		{
+			id: "5D83FB266C21DA36"
+			title: "All Effects: Caffeinated"
+			icon: "farmersrespite:coffee_beans"
+			shape: "rsquare"
+			size: 1.0d
+			x: 2.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "2E96D44EDFBF3EAE"
+					type: "checkmark"
+					title: "Caffeinated"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: farmersrespite:coffee_beans, farmersrespite:green_tea_leaves", "Runtime hint: kitchen_infrastructure"]
+		}
+		{
+			id: "9C949B567733C3CC"
+			title: "All Effects: Absorption"
+			icon: "minecraft:golden_apple"
+			shape: "rsquare"
+			size: 1.0d
+			x: 4.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "3B646DA8C82318A8"
+					type: "checkmark"
+					title: "Absorption"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: minecraft:golden_apple, mynethersdelight:enchanted_golden_egg", "Runtime hint: kettle_infusion"]
+		}
+		{
+			id: "8E32FB6EACB9FB2B"
+			title: "All Effects: Fire Resistance"
+			icon: "delightful:cactus_chili"
+			shape: "rsquare"
+			size: 1.0d
+			x: 5.2d
+			y: 0.0d
+			tasks: [
+				{
+					id: "B70B76928EF5C449"
+					type: "checkmark"
+					title: "Fire Resistance"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: delightful:cactus_chili, mynethersdelight:hot_spice, minecraft:magma_cream", "Runtime hint: keg_distillation"]
+		}
+		{
+			id: "F1CA1393F840EDFA"
+			title: "All Effects: Glowing"
+			icon: "minecraft:glow_berries"
+			shape: "rsquare"
+			size: 1.0d
+			x: 6.5d
+			y: 0.0d
+			tasks: [
+				{
+					id: "B1F123F46B7C151D"
+					type: "checkmark"
+					title: "Glowing"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: minecraft:glow_berries, minecraft:glow_ink_sac", "Runtime hint: kettle_infusion"]
+		}
+		{
+			id: "A01866B4C12532CE"
+			title: "All Effects: Haste"
+			icon: "farmersrespite:green_tea_leaves"
+			shape: "rsquare"
+			size: 1.0d
+			x: 7.8d
+			y: 0.0d
+			tasks: [
+				{
+					id: "ADEE4AC3669AB72A"
+					type: "checkmark"
+					title: "Haste"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: farmersrespite:green_tea_leaves, farmersrespite:coffee_beans", "Runtime hint: kettle_infusion"]
+		}
+		{
+			id: "5EBE6D35DB8C15F0"
+			title: "All Effects: B Pungent"
+			icon: "delightful:cactus_chili"
+			shape: "rsquare"
+			size: 1.0d
+			x: 9.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "517806CDC210F3F4"
+					type: "checkmark"
+					title: "B Pungent"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: delightful:cactus_chili, mynethersdelight:hot_spice", "Runtime hint: kitchen_infrastructure"]
+		}
+		{
+			id: "45A7F33D784E34BC"
+			title: "I-P"
+			icon: "minecraft:potion"
+			shape: "square"
+			size: 0.8d
+			x: 0.0d
+			y: 2.0d
+			tasks: [
+				{
+					id: "08567589971CDEE9"
+					type: "checkmark"
+					title: "I-P"
+				}
+			]
+			rewards: [ ]
+			description: ["8 starter stubs."]
+		}
+		{
+			id: "D744BB5053F8DB56"
+			title: "All Effects: Mana Regen"
+			icon: "ars_nouveau:sourceberry_bush"
+			shape: "rsquare"
+			size: 1.0d
+			x: 1.5d
+			y: 2.0d
+			tasks: [
+				{
+					id: "C91565E9F4FEACEF"
+					type: "checkmark"
+					title: "Mana Regen"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: ars_nouveau:sourceberry_bush, ars_nouveau:source_berry", "Runtime hint: magic_distillation"]
+		}
+		{
+			id: "B65AE9093F328A3B"
+			title: "All Effects: Intoxication"
+			icon: "brewinandchewin:vodka"
+			shape: "rsquare"
+			size: 1.0d
+			x: 2.8d
+			y: 2.0d
+			tasks: [
+				{
+					id: "FEC484F96B533046"
+					type: "checkmark"
+					title: "Intoxication"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: brewinandchewin:vodka, brewinandchewin:mead", "Runtime hint: keg_distillation"]
+		}
+		{
+			id: "A1CF9719179ED64B"
+			title: "All Effects: Nourishment"
+			icon: "farmersdelight:cabbage"
+			shape: "rsquare"
+			size: 1.0d
+			x: 4.0d
+			y: 2.0d
+			tasks: [
+				{
+					id: "861075A0ADB0C8B1"
+					type: "checkmark"
+					title: "Nourishment"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: farmersdelight:cabbage, farmersdelight:ham, brewinandchewin:scarlet_pierogi", "Runtime hint: kitchen_infrastructure"]
+		}
+		{
+			id: "A75D09DDAAD0332F"
+			title: "All Effects: Jump Boost"
+			icon: "undergarden:gloomper_leg"
+			shape: "rsquare"
+			size: 1.0d
+			x: 5.2d
+			y: 2.0d
+			tasks: [
+				{
+					id: "C21740A62BEDD402"
+					type: "checkmark"
+					title: "Jump Boost"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: undergarden:gloomper_leg, minecraft:rabbit_foot", "Runtime hint: kettle_infusion"]
+		}
+		{
+			id: "AC98D1991A6728C8"
+			title: "All Effects: Levitation"
+			icon: "ends_delight:shulker_meat"
+			shape: "rsquare"
+			size: 1.0d
+			x: 6.5d
+			y: 2.0d
+			tasks: [
+				{
+					id: "3522ABC68BE61201"
+					type: "checkmark"
+					title: "Levitation"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: ends_delight:shulker_meat, minecraft:shulker_shell", "Runtime hint: dangerous_extraction"]
+		}
+		{
+			id: "4211D53FF01885C3"
+			title: "All Effects: Luck"
+			icon: "occultism:otherworld_essence"
+			shape: "rsquare"
+			size: 1.0d
+			x: 7.8d
+			y: 2.0d
+			tasks: [
+				{
+					id: "2DC152A4D46A32A4"
+					type: "checkmark"
+					title: "Luck"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: occultism:otherworld_essence, minecraft:rabbit_foot", "Runtime hint: kettle_infusion"]
+		}
+		{
+			id: "1BD01CF2392788E5"
+			title: "All Effects: Night Vision"
+			icon: "ubesdelight:ube"
+			shape: "rsquare"
+			size: 1.0d
+			x: 9.0d
+			y: 2.0d
+			tasks: [
+				{
+					id: "6D721CE7E12C7F41"
+					type: "checkmark"
+					title: "Night Vision"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: ubesdelight:ube, minecraft:golden_carrot, collectorsreap:carrot_gummy", "Runtime hint: kettle_infusion"]
+		}
+		{
+			id: "BBCFB985F3D55F7A"
+			title: "All Effects: Poison"
+			icon: "minecraft:spider_eye"
+			shape: "rsquare"
+			size: 1.0d
+			x: 10.2d
+			y: 2.0d
+			tasks: [
+				{
+					id: "5A43755540819DC1"
+					type: "checkmark"
+					title: "Poison"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: minecraft:spider_eye, minecraft:pufferfish, minecraft:poisonous_potato", "Runtime hint: dangerous_extraction"]
+		}
+		{
+			id: "2DBE01C9F2C21552"
+			title: "Q-Z"
+			icon: "minecraft:potion"
+			shape: "square"
+			size: 0.8d
+			x: 0.0d
+			y: 4.0d
+			tasks: [
+				{
+					id: "FF67D3B43E48F94B"
+					type: "checkmark"
+					title: "Q-Z"
+				}
+			]
+			rewards: [ ]
+			description: ["10 starter stubs."]
+		}
+		{
+			id: "7C77BB1A83A94047"
+			title: "All Effects: Raging"
+			icon: "brewinandchewin:red_rum"
+			shape: "rsquare"
+			size: 1.0d
+			x: 1.5d
+			y: 4.0d
+			tasks: [
+				{
+					id: "766EE6F027305A87"
+					type: "checkmark"
+					title: "Raging"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: brewinandchewin:red_rum, collectorsreap:deific_blood", "Runtime hint: keg_distillation"]
+		}
+		{
+			id: "A82CD666D6817B0F"
+			title: "All Effects: Sweet Heart"
+			icon: "brewinandchewin:mead"
+			shape: "rsquare"
+			size: 1.0d
+			x: 2.8d
+			y: 4.0d
+			tasks: [
+				{
+					id: "2043E6CDD13A21E2"
+					type: "checkmark"
+					title: "Sweet Heart"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: brewinandchewin:mead, minecraft:honey_bottle", "Runtime hint: keg_distillation"]
+		}
+		{
+			id: "19E5C4AE1B878A83"
+			title: "All Effects: Regeneration"
+			icon: "farmersrespite:rose_hips"
+			shape: "rsquare"
+			size: 1.0d
+			x: 4.0d
+			y: 4.0d
+			tasks: [
+				{
+					id: "5B78DB65D11EEBE3"
+					type: "checkmark"
+					title: "Regeneration"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: farmersrespite:rose_hips, collectorsreap:strawberry, minecraft:ghast_tear", "Runtime hint: keg_distillation"]
+		}
+		{
+			id: "420F506A463EC4C6"
+			title: "All Effects: Resistance"
+			icon: "farmersrespite:yellow_tea_leaves"
+			shape: "rsquare"
+			size: 1.0d
+			x: 5.2d
+			y: 4.0d
+			tasks: [
+				{
+					id: "AB1A0E7A06F05095"
+					type: "checkmark"
+					title: "Resistance"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: farmersrespite:yellow_tea_leaves, delightful:cantaloupe, undergarden:ink_mushroom", "Runtime hint: keg_distillation"]
+		}
+		{
+			id: "8FB1392BDDE8E7D2"
+			title: "All Effects: Slow Falling"
+			icon: "delightful:marshmallow_stick"
+			shape: "rsquare"
+			size: 1.0d
+			x: 6.5d
+			y: 4.0d
+			tasks: [
+				{
+					id: "07461FEDBC7200F0"
+					type: "checkmark"
+					title: "Slow Falling"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: delightful:marshmallow_stick, minecraft:phantom_membrane", "Runtime hint: kettle_infusion"]
+		}
+		{
+			id: "0F5C21BC8F8348D1"
+			title: "All Effects: Speed"
+			icon: "farmersrespite:coffee_beans"
+			shape: "rsquare"
+			size: 1.0d
+			x: 7.8d
+			y: 4.0d
+			tasks: [
+				{
+					id: "9A1215C7A646BFB8"
+					type: "checkmark"
+					title: "Speed"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: farmersrespite:coffee_beans, create:bar_of_chocolate, minecraft:sugar", "Runtime hint: kettle_infusion"]
+		}
+		{
+			id: "74A7FF6B3A0F695D"
+			title: "All Effects: Strength"
+			icon: "brewinandchewin:red_rum"
+			shape: "rsquare"
+			size: 1.0d
+			x: 9.0d
+			y: 4.0d
+			tasks: [
+				{
+					id: "24B5AA4F0DF7F2D3"
+					type: "checkmark"
+					title: "Strength"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: brewinandchewin:red_rum, collectorsreap:pomegranate, minecraft:blaze_powder", "Runtime hint: keg_distillation"]
+		}
+		{
+			id: "E0A6EDFEFB806A0D"
+			title: "All Effects: Water Breathing"
+			icon: "delightful:salmonberries"
+			shape: "rsquare"
+			size: 1.0d
+			x: 10.2d
+			y: 4.0d
+			tasks: [
+				{
+					id: "2036CC0FB4E22F2A"
+					type: "checkmark"
+					title: "Water Breathing"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: delightful:salmonberries, minecraft:sea_pickle, minecraft:pufferfish", "Runtime hint: kettle_infusion"]
+		}
+		{
+			id: "65E1168A20B362AA"
+			title: "All Effects: Weakness"
+			icon: "farmersrespite:purulent_tea"
+			shape: "rsquare"
+			size: 1.0d
+			x: 11.5d
+			y: 4.0d
+			tasks: [
+				{
+					id: "D8670BC0DB58ECE3"
+					type: "checkmark"
+					title: "Weakness"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: farmersrespite:purulent_tea, minecraft:fermented_spider_eye", "Runtime hint: dangerous_extraction"]
+		}
+		{
+			id: "95BF2E6AB2B31525"
+			title: "All Effects: Third Eye"
+			icon: "occultism:datura"
+			shape: "rsquare"
+			size: 1.0d
+			x: 12.8d
+			y: 4.0d
+			tasks: [
+				{
+					id: "F5C3EBCB23878822"
+					type: "checkmark"
+					title: "Third Eye"
+				}
+			]
+			rewards: [ ]
+			description: ["Best known sources: occultism:datura, occultism:demons_dream_essence", "Runtime hint: magic_distillation"]
+		}
+	]
+	title: "Potion Effects"
+}

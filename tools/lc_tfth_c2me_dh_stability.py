@@ -10,6 +10,11 @@ from portable_minecraft_harness import HarnessConfig, HarnessFailure, PortableMi
 
 
 LC_DIMENSION = "lostcities:lostcity"
+SERIOUS_EXCEPTION = (
+    r"(?:ReportedException|IllegalStateException|NullPointerException|RuntimeException|"
+    r"ExceptionInInitializerError|ConcurrentModificationException|ArrayIndexOutOfBoundsException|"
+    r"ClassCastException|UnsupportedOperationException|LinkageError|AssertionError)"
+)
 
 CONFIG = HarnessConfig(
     name="LC + TFTH + C2ME + DH Stability",
@@ -39,14 +44,16 @@ CONFIG = HarnessConfig(
             r"(?:DistantHorizons|LOD World Gen|DhServerLevel|BatchGenerator|WorldGenerationQueue).*\b(?:Exception|Throwable)\b",
             re.I,
         ),
+        # Restrict mod-specific fatal detection to real exception/error type markers,
+        # not generic log levels like "[ERROR]" on otherwise recoverable datapack noise.
         "lostcities_exception": re.compile(
-            r"(lostcities|LostCityFeature|LostCityTerrainFeature).*\b(Exception|Error)\b|"
-            r"\b(Exception|Error)\b.*(lostcities|LostCityFeature|LostCityTerrainFeature)",
+            rf"(lostcities|LostCityFeature|LostCityTerrainFeature).*\b{SERIOUS_EXCEPTION}\b|"
+            rf"\b{SERIOUS_EXCEPTION}\b.*(lostcities|LostCityFeature|LostCityTerrainFeature)",
             re.I,
         ),
         "tfth_exception": re.compile(
-            r"(the_flesh_that_hates|FleshBlockSpread|net\.mcreator\.thefleshthathates).*\b(Exception|Error)\b|"
-            r"\b(Exception|Error)\b.*(the_flesh_that_hates|FleshBlockSpread|net\.mcreator\.thefleshthathates)",
+            rf"(the_flesh_that_hates|FleshBlockSpread|net\.mcreator\.thefleshthathates).*\b{SERIOUS_EXCEPTION}\b|"
+            rf"\b{SERIOUS_EXCEPTION}\b.*(the_flesh_that_hates|FleshBlockSpread|net\.mcreator\.thefleshthathates)",
             re.I,
         ),
         "jvm_fatal": re.compile(r"OutOfMemoryError|hs_err_pid|fatal error has been detected", re.I),

@@ -241,6 +241,64 @@ fun walk(rootDir: Path, predicate: (Path) -> Boolean = { true }): List<Path> {
 fun countOccurrences(text: String, needle: String): Int = Regex(Regex.escape(needle)).findAll(text).count()
 fun newestFile(files: List<Path>): Path? = files.maxByOrNull { Files.getLastModifiedTime(it).toMillis() }
 fun roundMs(value: Double): Double = round(value * 100.0) / 100.0
+fun humanizeId(id: String): String =
+    id.substringAfter(':')
+        .replace('/', ' ')
+        .replace('_', ' ')
+        .split(' ')
+        .filter { it.isNotBlank() }
+        .joinToString(" ") { token ->
+            when (token.lowercase(Locale.ROOT)) {
+                "of" -> "Of"
+                "the" -> "The"
+                else -> token.replaceFirstChar { ch -> ch.titlecase(Locale.ROOT) }
+            }
+        }
+
+fun loadBurntCoverageCategories(): Map<String, String>? {
+    val path = repo.resolve("generated/runtime-dumps/burnt-coverage-current-covered.tsv")
+    if (!exists(path)) return null
+    return read(path).lineSequence()
+        .drop(1)
+        .mapNotNull { line ->
+            val parts = line.split('\t')
+            if (parts.size < 2 || ':' !in parts[0]) null else parts[0] to parts[1]
+        }
+        .toMap()
+}
+
+fun isPlantCollectionCandidate(itemId: String, questTitle: String, burntCategories: Map<String, String>): Boolean {
+    val loweredId = itemId.lowercase(Locale.ROOT)
+    val loweredTitle = questTitle.lowercase(Locale.ROOT)
+    val burntCategory = burntCategories[itemId]
+    if (burntCategory != null && burntCategory !in setOf("plants_will_burn", "crops")) return false
+    val tokens = (loweredId.replace(':', '_') + "_" + loweredTitle.replace(' ', '_'))
+        .split(Regex("""[^a-z0-9]+"""))
+        .filter { it.isNotBlank() }
+        .toSet()
+    val hardExclusionTokens = setOf(
+        "block", "brick", "bricks", "wall", "wood", "log", "planks", "bookshelf", "chest", "ladder", "post",
+        "cabinet", "basket", "crate", "bed", "bucket", "ingot", "nugget", "axe", "hoe", "pickaxe", "shovel",
+        "sword", "cannon", "battery", "grapple", "lamp", "panel", "pane", "connector", "banister", "hook",
+        "paste", "stone", "cobblestone", "travertine", "phyllite", "slate", "mazestone", "nagastone",
+        "towerwood", "underbrick", "quartz", "tiles", "tile"
+    )
+    if (tokens.any { it in hardExclusionTokens }) return false
+    val plantFormTokens = setOf("seed", "seeds", "sapling", "saplings", "potted", "flower", "flowers", "grass", "fern", "bush", "vine", "vines", "root", "roots", "moss", "lily", "reed", "mushroom", "fungus", "crop", "crops", "leaf", "leaves")
+    val solidSuffixes = listOf("stone", "brick", "bricks", "wood", "log", "block", "wall", "planks", "bookshelf", "chest", "post", "cabinet", "basket", "crate", "bed", "bucket", "panel", "pane", "connector", "banister", "hook", "paste", "slab", "stairs", "door", "trapdoor", "button", "plate", "ingot", "nugget", "quartz", "travertine", "phyllite", "slate", "mazestone", "nagastone", "towerwood", "underbrick", "cobblestone", "holystone", "mosaic")
+    if (tokens.any { token -> solidSuffixes.any { suffix -> token.endsWith(suffix) } } &&
+        !(burntCategory in setOf("plants_will_burn", "crops") && tokens.any { it in plantFormTokens })
+    ) return false
+    val allowedSignals = listOf(
+        "seed", "sapling", "potted", "flower", "leaf", "leaves", "lily", "vine", "roots", "root", "moss",
+        "grass", "fern", "bush", "berry", "berries", "reed", "cactus", "bamboo", "mushroom", "fungus",
+        "wart", "crop", "fiber", "fibre", "petal", "blossom", "fruit", "bean", "pepper", "tomato",
+        "cabbage", "beetroot", "potato", "carrot", "onion", "pumpkin", "melon", "apple", "cocoa", "lemongrass",
+        "turnip", "cauliflower"
+    )
+    return burntCategory in setOf("plants_will_burn", "crops") || allowedSignals.any { loweredId.contains(it) || loweredTitle.contains(it) }
+}
+
 fun table(rows: List<List<String>>): String {
     if (rows.isEmpty()) return "_None._\n"
     val widths = mutableListOf<Int>()
@@ -537,6 +595,130 @@ fun testQuestBook() {
     if (groupIds.isEmpty() && badGroupRefs.size == questFiles.size) ok("all chapters are assigned to existing chapter groups", "chapter groups intentionally unused")
     else if (badGroupRefs.isEmpty()) ok("all chapters are assigned to existing chapter groups", "${questFiles.size} chapters") else fail("all chapters are assigned to existing chapter groups", badGroupRefs.joinToString("\n"))
     if (tierTitleLabels.isEmpty()) ok("chapter titles do not duplicate chapter group labels") else fail("chapter titles do not duplicate chapter group labels", tierTitleLabels.joinToString("\n"))
+    val validDumpItems = loadQuestDumpItemIds()
+    if (validDumpItems == null) {
+        missingRuntimeEvidence("completionist quest item validity", repo.resolve("generated/pack-site/assets/icon-manifest.json").toString())
+        return
+    }
+    val validDumpEnchantments = loadQuestDumpEnchantments()
+    if (validDumpEnchantments == null) {
+        missingRuntimeEvidence("completionist enchantment validity", repo.resolve("generated/runtime-dumps/kubejs-config/full_recipe_index_manifest.json").toString())
+        return
+    }
+    val validDumpEffects = loadQuestDumpEffects(validDumpItems)
+    if (validDumpEffects == null) {
+        missingRuntimeEvidence("completionist effect validity", repo.resolve("server-instance/kubejs/config/food_effect_source_catalog.json").toString())
+        return
+    }
+    val burntCoverageCategories = loadBurntCoverageCategories()
+    if (burntCoverageCategories == null) {
+        missingRuntimeEvidence("completionist plant solidity validity", repo.resolve("generated/runtime-dumps/burnt-coverage-current-covered.tsv").toString())
+        return
+    }
+    val badQuestItems = mutableListOf<String>()
+    val badEnchantments = mutableListOf<String>()
+    val badEffects = mutableListOf<String>()
+    val badPlantEntries = mutableListOf<String>()
+    val seenEnchantments = mutableSetOf<String>()
+    val seenEffects = mutableSetOf<String>()
+    for (file in questFiles.filter { it.fileName.toString().startsWith("completionist_") }) {
+        val text = read(file)
+        val titleByQuestId = Regex("""id:\s*"([0-9A-Fa-f]{16})"[\s\S]*?title:\s*"([^"]+)"""").findAll(text).associate { it.groupValues[1] to it.groupValues[2] }
+        val questBlocks = Regex("""\{[\s\S]*?tasks:\s*\[[\s\S]*?]}""").findAll(text)
+        for (questBlock in questBlocks) {
+            val block = questBlock.value
+            val questId = Regex("""id:\s*"([0-9A-Fa-f]{16})"""").find(block)?.groupValues?.get(1).orEmpty()
+            val questTitle = Regex("""title:\s*"([^"]+)"""").find(block)?.groupValues?.get(1) ?: titleByQuestId[questId] ?: file.fileName.toString()
+            Regex("""\bitem:\s*"([^"]+)"""").findAll(block).forEach { match ->
+                val itemId = match.groupValues[1]
+                if (itemId !in validDumpItems) badQuestItems += "${file.fileName}: $questTitle -> $itemId"
+                if (file.fileName.toString() == "completionist_plants.snbt" && !isPlantCollectionCandidate(itemId, questTitle, burntCoverageCategories)) {
+                    badPlantEntries += "${file.fileName}: $questTitle -> $itemId"
+                }
+            }
+            if (file.fileName.toString() == "completionist_effects.snbt" && questTitle.startsWith("All Effects: ")) {
+                val effectTitle = questTitle.removePrefix("All Effects: ").trim()
+                val expectedSources = validDumpEffects[effectTitle]
+                if (expectedSources == null) {
+                    badEffects += "${file.fileName}: unknown $questTitle"
+                } else {
+                    seenEffects += effectTitle
+                    val actualSources = Regex("""\bitem:\s*"([^"]+)"""").findAll(block).map { it.groupValues[1] }.toList()
+                    if (actualSources.isEmpty()) badEffects += "${file.fileName}: $questTitle has no item tasks"
+                    else if (actualSources != expectedSources) badEffects += "${file.fileName}: $questTitle -> ${actualSources.joinToString(", ")} expected ${expectedSources.joinToString(", ")}"
+                }
+            }
+            if (file.fileName.toString() == "completionist_enchantments.snbt" && questTitle.startsWith("All Enchantments: ")) {
+                val enchantmentTitle = questTitle.removePrefix("All Enchantments: ").trim()
+                val matchedId = validDumpEnchantments.entries.find { it.value == enchantmentTitle }?.key
+                if (matchedId == null) badEnchantments += "${file.fileName}: $questTitle"
+                else if (!seenEnchantments.add(matchedId)) badEnchantments += "${file.fileName}: duplicate $questTitle"
+            }
+        }
+    }
+    if (badQuestItems.isEmpty()) ok("completionist quest item tasks resolve in current dumps", "${questFiles.count { it.fileName.toString().startsWith("completionist_") }} chapters")
+    else fail("completionist quest item tasks resolve in current dumps", badQuestItems.take(120).joinToString("\n"))
+    val missingEffects = validDumpEffects.keys.filter { it !in seenEffects }.sorted()
+    if (badEffects.isEmpty() && missingEffects.isEmpty()) ok("completionist effect quests match current dump-backed source items", "${seenEffects.size} effects")
+    else fail("completionist effect quests match current dump-backed source items", (badEffects + missingEffects.map { "missing quest for $it" }).take(120).joinToString("\n"))
+    if (badPlantEntries.isEmpty()) ok("completionist plant quests exclude solid block derivatives", "completionist_plants.snbt")
+    else fail("completionist plant quests exclude solid block derivatives", badPlantEntries.take(120).joinToString("\n"))
+    val missingEnchantments = validDumpEnchantments.filterKeys { it !in seenEnchantments }.values.sorted()
+    if (badEnchantments.isEmpty() && missingEnchantments.isEmpty()) ok("completionist enchantment quests match current dumps", "${seenEnchantments.size} enchantments")
+    else fail("completionist enchantment quests match current dumps", (badEnchantments + missingEnchantments.map { "missing quest for $it" }).take(120).joinToString("\n"))
+}
+
+fun loadQuestDumpItemIds(): Set<String>? {
+    val resourceLocationPattern = Regex("""^[a-z0-9_.-]+:[a-z0-9/._-]+$""")
+    fun isValidResourceLocation(id: String): Boolean = resourceLocationPattern.matches(id)
+    val registriesPath = repo.resolve("generated/runtime-dumps/registries.json")
+    if (exists(registriesPath)) {
+        val registries = jsonObject(readJson(registriesPath))
+        val items = jsonObject(registries["items"]).keys.filter(::isValidResourceLocation).toSet()
+        if (items.isNotEmpty()) return items
+    }
+    val iconManifestPath = repo.resolve("generated/pack-site/assets/icon-manifest.json")
+    if (!exists(iconManifestPath)) return null
+    return jsonObject(readJson(iconManifestPath)).keys.filter(::isValidResourceLocation).toSet()
+}
+
+fun loadQuestDumpEnchantments(): Map<String, String>? {
+    val manifestPath = repo.resolve("generated/runtime-dumps/kubejs-config/full_recipe_index_manifest.json")
+    if (!exists(manifestPath)) return null
+    val manifest = jsonObject(readJson(manifestPath))
+    val chunkCount = jsonInt(manifest["chunkCount"]) ?: return null
+    val pattern = jsonString(manifest["pattern"]) ?: "full_recipe_index_0000.json"
+    val enchantments = linkedMapOf<String, String>()
+    for (i in 0 until chunkCount) {
+        val chunkName = pattern.replace(Regex("""\d{4}(?=\.json$)"""), i.toString().padStart(4, '0'))
+        val chunkPath = repo.resolve("generated/runtime-dumps/kubejs-config").resolve(chunkName)
+        if (!exists(chunkPath)) continue
+        val chunk = jsonObject(readJson(chunkPath))
+        for (recipe in jsonArray(chunk["recipes"]).map(::jsonObject)) {
+            if (jsonString(recipe["type"]) != "ars_nouveau:enchantment") continue
+            val payload = jsonObject(parseJson(jsonString(recipe["json"]) ?: continue))
+            val enchantmentId = jsonString(payload["enchantment"]) ?: continue
+            enchantments[enchantmentId] = humanizeId(enchantmentId)
+        }
+    }
+    return enchantments
+}
+
+fun loadQuestDumpEffects(validItems: Set<String>): Map<String, List<String>>? {
+    val path = repo.resolve("server-instance/kubejs/config/food_effect_source_catalog.json")
+    if (!exists(path)) return null
+    val rootObject = jsonObject(readJson(path))
+    val effects = jsonArray(rootObject["effects"])
+    val byTitle = linkedMapOf<String, List<String>>()
+    for (entry in effects.map(::jsonObject)) {
+        val effectId = jsonString(entry["effect"]) ?: continue
+        val title = humanizeId(effectId)
+        val preferredSources = jsonArray(entry["preferredSources"]).mapNotNull(::jsonString)
+        val topFoods = jsonArray(entry["topFoods"]).map(::jsonObject).mapNotNull { jsonString(it["id"]) }
+        val sources = (preferredSources + topFoods).distinct().filter { it in validItems }.take(3)
+        if (sources.isNotEmpty()) byTitle[title] = sources
+    }
+    return byTitle
 }
 
 fun testWaresAndTrades() {

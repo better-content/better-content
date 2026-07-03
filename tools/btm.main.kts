@@ -89,7 +89,12 @@ data class CommandResult(
 )
 
 data class ProcessRun(val exitCode: Int, val output: String)
-data class ScenarioDefinition(val name: String, val description: String, val script: String)
+data class ScenarioDefinition(
+    val name: String,
+    val description: String,
+    val script: String,
+    val headful: Boolean = false,
+)
 data class CycleResult(
     val index: Int,
     var status: String = "FAIL",
@@ -209,11 +214,13 @@ val scenarios = linkedMapOf(
         "lc_tfth_c2me_dh",
         "Lost Cities + TFTH + C2ME + Distant Horizons stability cycle",
         "tools/lc_tfth_c2me_dh_stability.py",
+        headful = true,
     ),
     "dimension_worldgen" to ScenarioDefinition(
         "dimension_worldgen",
         "All-dimension worldgen stress run",
         "tools/dimension_worldgen_stress.py",
+        headful = true,
     ),
     "opening_progression" to ScenarioDefinition(
         "opening_progression",
@@ -261,11 +268,20 @@ Commands:
   runtime --instance PATH [--strict-data-dumps]
   smoke [--server-dir PATH] [--port N] [--reset-runtime]
   scenario NAME [scenario args]
+  scenario-headful NAME [scenario args]
   kotlin [--filter NAME]
 
-Scenarios:
-${scenarios.values.joinToString("\n") { "  ${it.name.padEnd(18)} ${it.description}" }}
+Headless Scenarios:
+${scenarios.values.filterNot { it.headful }.joinToString("\n") { "  ${it.name.padEnd(18)} ${it.description}" }}
+
+Headful Scenarios:
+${scenarios.values.filter { it.headful }.joinToString("\n") { "  ${it.name.padEnd(18)} ${it.description}" }}
 """.trimIndent()
+
+fun canRunHeadfulScenario(): Boolean {
+    if (!System.getenv("DISPLAY").isNullOrBlank()) return true
+    return runProcess(listOf("bash", "-lc", "command -v xvfb-run >/dev/null 2>&1")).exitCode == 0
+}
 
 fun buildHelp(): String = """
 Usage: tools/btm build <sync|bundle> ...
@@ -287,7 +303,7 @@ Commands:
 """.trimIndent()
 
 fun internalHelp(): String = """
-Usage: tools/btm internal <resolve-packwiz-downloads|prune-runtime-mods|log-hard-failure-scan|minecraft-client-argfile|sync-burnt-coverage-tags|check-js-syntax|check-json-surface|validate-pack-contract|contract-completeness-report|validate-kubejs-assets|validate-autonomous-contracts|validate-realistic-hands|validate-chemistry-identity|validate-synthesis-pipeline|validate-player-progression-contracts|validate-progression-reachability|validate-burnt-coverage> ...
+Usage: tools/btm internal <resolve-packwiz-downloads|prune-runtime-mods|log-hard-failure-scan|minecraft-client-argfile|sync-burnt-coverage-tags|generate-completionist-quests|check-js-syntax|check-json-surface|validate-pack-contract|contract-completeness-report|validate-kubejs-assets|validate-autonomous-contracts|validate-realistic-hands|validate-chemistry-identity|validate-synthesis-pipeline|validate-player-progression-contracts|validate-progression-reachability|validate-burnt-coverage|validate-lc-tfth-dh-contracts> ...
 """.trimIndent()
 
 fun usageError(message: String, help: String = mainHelp()): CommandResult =
@@ -2571,10 +2587,10 @@ fun runKotlinTests(filter: String?): ProcessRun {
         return ProcessRun(4, "missing Kotlin test runner: $script")
     }
     val command = mutableListOf("kotlin", script.toString())
-    if (!filter.isNullOrBlank()) {
-        // Filtering is not implemented yet; keep the flag accepted for forward compatibility.
+    val extraEnv = buildMap<String, String> {
+        if (!filter.isNullOrBlank()) put("BTM_KOTLIN_TEST_FILTER", filter)
     }
-    return runProcess(command)
+    return runProcess(command, extraEnv = extraEnv)
 }
 
 fun runPackContractValidation(): ProcessRun =
@@ -2595,6 +2611,9 @@ fun runAutonomousContractsValidation(): ProcessRun =
 
 fun runRealisticHandsValidation(): ProcessRun =
     runKotlinScript(root.resolve("tools/kotlin/validate_realistic_hands.main.kts"))
+
+fun runCompletionistQuestGeneration(): ProcessRun =
+    runKotlinScript(root.resolve("tools/kotlin/generate_completionist_quests.main.kts"))
 
 fun runJsSyntaxCheck(): ProcessRun =
     runKotlinScript(root.resolve("tools/kotlin/check_js_syntax.main.kts"))
@@ -2987,6 +3006,10 @@ fun handleInternal(subArgs: List<String>): CommandResult {
             val run = runBurntCoverageTagSync(recommendations, evidence, exclusions, writeChanges)
             CommandResult("internal sync-burnt-coverage-tags", if (run.exitCode == 0) "success" else "failure", run.output, exitCode = if (run.exitCode == 0) 0 else 1)
         }
+        "generate-completionist-quests" -> {
+            val run = runCompletionistQuestGeneration()
+            CommandResult("internal generate-completionist-quests", if (run.exitCode == 0) "success" else "failure", run.output, exitCode = if (run.exitCode == 0) 0 else 1, mutated = run.exitCode == 0, evidenceLevel = "source")
+        }
         "check-js-syntax" -> {
             val run = runJsSyntaxCheck()
             CommandResult("internal check-js-syntax", if (run.exitCode == 0) "success" else "failure", run.output, exitCode = if (run.exitCode == 0) 0 else 1)
@@ -3176,21 +3199,34 @@ fun handleTest(subArgs: List<String>): CommandResult {
                 mutated = true,
             )
         }
-        "scenario" -> {
+        "scenario", "scenario-headful" -> {
             val missing = ensureCommands("python3")
             if (missing.isNotEmpty()) return prereqFailure("scenario prerequisites missing", missing)
             val name = subArgs.getOrNull(1) ?: return usageError("test scenario requires a scenario name", testHelp())
-            if (name == "--help") return success("test scenario", testHelp(), evidenceLevel = "scenario-runtime")
+            val headfulCommand = subArgs.first() == "scenario-headful"
+            if (name == "--help") return success(if (headfulCommand) "test scenario-headful" else "test scenario", testHelp(), evidenceLevel = "scenario-runtime")
             val scenario = scenarios[name] ?: return usageError("unknown scenario: $name", testHelp())
+            if (scenario.headful && !headfulCommand) {
+                return usageError("scenario '$name' is headful; run it via `tools/btm test scenario-headful $name ...`", testHelp())
+            }
+            if (!scenario.headful && headfulCommand) {
+                return usageError("scenario '$name' is headless-safe; run it via `tools/btm test scenario $name ...`", testHelp())
+            }
+            if (scenario.headful && !canRunHeadfulScenario()) {
+                return prereqFailure(
+                    "headful scenario prerequisites missing",
+                    listOf(ValidationFinding("error", "DISPLAY or xvfb-run is required")),
+                )
+            }
             val passthroughArgs = subArgs.drop(2)
             wrapProcessResult(
-                commandName = "test scenario $name",
+                commandName = if (scenario.headful) "test scenario-headful $name" else "test scenario $name",
                 processCommand = listOf("python3", scenario.script) + passthroughArgs,
                 summaryOnSuccess = "scenario $name passed",
                 evidenceLevel = "scenario-runtime",
                 mutated = true,
                 exitMapper = { exitCode, _ -> if (exitCode == 0) 0 else 1 },
-                details = mapOf("scenario" to scenario.name, "script" to scenario.script, "args" to passthroughArgs),
+                details = mapOf("scenario" to scenario.name, "script" to scenario.script, "args" to passthroughArgs, "headful" to scenario.headful),
             )
         }
         "kotlin" -> {

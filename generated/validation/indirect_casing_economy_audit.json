@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-04T04:14:41.963366860Z",
+  "generatedAt": "2026-07-04T04:59:34.729185411Z",
   "note": "Hybrid audit. KubeJS source is used for authored recipes/removes; runtime recipe dumps are used for base mod machine-surface outputs and simple recipe bypass candidates. Current dumps still lack KubeJS recipes.",
   "sourceRecipeCount": 5603,
-  "dumpRecipeCount": 23169,
-  "dumpMachineSurfaceRecipeCount": 3027,
-  "casedSurfaceRecipeCount": 7404,
-  "indirectOutputCount": 1192,
+  "dumpRecipeCount": 26285,
+  "dumpMachineSurfaceRecipeCount": 3453,
+  "casedSurfaceRecipeCount": 7816,
+  "indirectOutputCount": 1208,
   "directCasingOutputCount": 13,
   "directCasingConsumerCount": 14,
   "aestheticDirectCasingConsumerCount": 0,
@@ -1168,15 +1168,11 @@
       "chemlib:zirconium_sulfide",
       "create:brass_ingot",
       "create:brass_sheet",
+      "create:crushed_raw_osmium",
       "create:crushed_raw_uranium",
       "create:industrial_iron_block",
       "create:precision_mechanism",
       "create_more_additions:electrum_ingot",
-      "create_new_age:overcharged_golden_sheet",
-      "create_new_age:overcharged_golden_wire",
-      "create_new_age:overcharged_iron_sheet",
-      "create_new_age:overcharged_iron_wire",
-      "create_new_age:radioactive_thorium",
       "createbigcannons:autocannon_cartridge_sheet",
       "createbigcannons:autocannon_recoil_spring_cast_mould",
       "createbigcannons:bronze_ingot",
@@ -1202,6 +1198,18 @@
       "creatingspace:reinforced_copper_sheet",
       "deeperdarker:bloom_pressure_plate",
       "deeperdarker:echo_pressure_plate",
+      "forbidden_arcanus:aurum_pressure_plate",
+      "forbidden_arcanus:edelwood_pressure_plate",
+      "forbidden_arcanus:fungyss_pressure_plate",
+      "goety:chorus_pressure_plate",
+      "goety:corrupt_chorus_pressure_plate",
+      "goety:haunted_pressure_plate",
+      "goety:pine_pressure_plate",
+      "goety:rotten_pressure_plate",
+      "goety:windswept_pressure_plate",
+      "hexerei:mahogany_pressure_plate",
+      "hexerei:willow_pressure_plate",
+      "hexerei:witch_hazel_pressure_plate",
       "kubejs:andesite_grinding_ball",
       "kubejs:blood_infused_grinding_ball",
       "kubejs:brass_grinding_ball",
@@ -1249,6 +1257,7 @@
       "morered:red_alloy_ingot",
       "morered:red_alloy_wire",
       "morered:stone_plate",
+      "mynethersdelight:powdery_pressure_plate",
       "natures_spirit:aspen_pressure_plate",
       "natures_spirit:cedar_pressure_plate",
       "natures_spirit:coconut_pressure_plate",
@@ -1280,11 +1289,18 @@
       "powergrid:punch_card_reader",
       "powergrid:unetched_circuit",
       "powergrid:wire",
+      "protection_pixel:armorplatekit",
+      "protection_pixel:brassarmorplate",
       "protection_pixel:breaker_chestplate",
       "protection_pixel:falconnest_chestplate",
       "protection_pixel:floatshield_chestplate",
       "protection_pixel:heatresistantceramicsheet",
       "protection_pixel:hellsnake_chestplate",
+      "protection_pixel:ironarmorplate",
+      "protection_pixel:linkplate_boots",
+      "protection_pixel:linkplate_chestplate",
+      "protection_pixel:linkplate_helmet",
+      "protection_pixel:linkplate_leggings",
       "protection_pixel:magneticstorm_chestplate",
       "protection_pixel:pioneer_chestplate",
       "protection_pixel:smallnetheritesheet",
@@ -2231,7 +2247,6 @@
       "create:andesite_alloy",
       "create:precision_mechanism",
       "create:sturdy_sheet",
-      "create_new_age:overcharged_diamond_wire",
       "createbigcannons:recoil_spring",
       "kubejs:brass_control_assembly",
       "kubejs:rotational_compressor_core",
@@ -2245,6 +2260,7 @@
       "protection_pixel:alloyarmorplate",
       "protection_pixel:breakeras_chestplate",
       "protection_pixel:falconnestas_chestplate",
+      "protection_pixel:heatoverlockingmechanism",
       "protection_pixel:hellsnakeas_chestplate",
       "protection_pixel:magneticstormas_chestplate",
       "protection_pixel:pioneeras_chestplate",
@@ -2613,6 +2629,13 @@
           "type": "minecraft:crafting_shapeless",
           "inputs": [
             "swem:plate_gold"
+          ]
+        },
+        {
+          "id": "goety:indented_gold/gold_from_indented_gold",
+          "type": "minecraft:crafting_shapeless",
+          "inputs": [
+
           ]
         },
         {
@@ -5243,6 +5266,912 @@
       ]
     },
     {
+      "output": "minecraft:glowstone_dust",
+      "casedProducers": [
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/ethanol/andesite",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:andesite_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/ethanol/iron",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:iron_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/ethanol/brass",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:brass_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/ethanol/steel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:steel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/ethanol/nickel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:nickel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/ethanol/titanium",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:titanium_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/ethanol/blood_infused",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:blood_infused_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/ethanol/fluix",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:fluix_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/acetic/andesite",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:andesite_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/acetic/iron",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:iron_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/acetic/brass",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:brass_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/acetic/steel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:steel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/acetic/nickel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:nickel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/acetic/titanium",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:titanium_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/acetic/blood_infused",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:blood_infused_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/acetic/fluix",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:fluix_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/sulfuric/andesite",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:andesite_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/sulfuric/iron",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:iron_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/sulfuric/brass",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:brass_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/sulfuric/steel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:steel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/sulfuric/nickel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:nickel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/sulfuric/titanium",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:titanium_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/sulfuric/blood_infused",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:blood_infused_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/sulfuric/fluix",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:fluix_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/hydrochloric/andesite",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:andesite_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/hydrochloric/iron",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:iron_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/hydrochloric/brass",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:brass_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/hydrochloric/steel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:steel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/hydrochloric/nickel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:nickel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/hydrochloric/titanium",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:titanium_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/hydrochloric/blood_infused",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:blood_infused_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/hydrochloric/fluix",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:fluix_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/nitric/andesite",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:andesite_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/nitric/iron",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:iron_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/nitric/brass",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:brass_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/nitric/steel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:steel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/nitric/nickel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:nickel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/nitric/titanium",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:titanium_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/nitric/blood_infused",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:blood_infused_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/nitric/fluix",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:fluix_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/phosphoric/andesite",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:andesite_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/phosphoric/iron",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:iron_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/phosphoric/brass",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:brass_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/phosphoric/steel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:steel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/phosphoric/nickel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:nickel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/phosphoric/titanium",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:titanium_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/phosphoric/blood_infused",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:blood_infused_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/phosphoric/fluix",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:fluix_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/lanthanum/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:lanthanum",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/cerium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:cerium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/praseodymium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:praseodymium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/neodymium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:neodymium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/samarium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:samarium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/europium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:europium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/gadolinium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:gadolinium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/terbium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:terbium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/dysprosium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:dysprosium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/holmium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:holmium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/erbium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:erbium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/thulium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:thulium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/ytterbium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:ytterbium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/lutetium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:lutetium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/yttrium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:yttrium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:filling",
+          "id": "create:filling/glowstone",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "create:cinder_flour"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:crushing",
+          "id": "create:crushing/glowstone",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glowstone"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:crushing",
+          "id": "create:crushing/prismarine_crystals",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:prismarine_crystals"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "ars_nouveau:crush",
+          "id": "ars_nouveau:crush_glowstone_block_to_dust",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "Ars purified source processing",
+          "gate": "MAGIC:Ars Nouveau",
+          "inputs": [
+            "minecraft:glowstone"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "reliquary:uncrafting/glowstone_dust",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        },
+        {
+          "id": "projectvibrantjourneys:glowcap_to_glowstone_dust",
+          "type": "minecraft:smelting",
+          "inputs": [
+            "projectvibrantjourneys:glowcap"
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ]
+    },
+    {
       "output": "create:brass_ingot",
       "casedProducers": [
         {
@@ -6008,6 +6937,18 @@
         {
           "output": "chemlib:zinc_nugget",
           "type": "create:splashing",
+          "id": "malum:create/washing/zinc_node",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "malum:zinc_node"
+          ]
+        },
+        {
+          "output": "chemlib:zinc_nugget",
+          "type": "create:splashing",
           "id": "create:splashing/crushed_raw_zinc",
           "file": "generated/runtime-dumps/kubejs-config",
           "origin": "runtime-dump",
@@ -6079,6 +7020,20 @@
         }
       ],
       "simpleDumpProducers": [
+        {
+          "id": "delightful:knives/blasting/zinc_create",
+          "type": "minecraft:blasting",
+          "inputs": [
+            "delightful:zinc_knife"
+          ]
+        },
+        {
+          "id": "delightful:knives/smelting/zinc_create",
+          "type": "minecraft:smelting",
+          "inputs": [
+            "delightful:zinc_knife"
+          ]
+        },
         {
           "id": "chemlib:zinc_ingot_to_nugget",
           "type": "minecraft:crafting_shapeless",
@@ -6495,6 +7450,35 @@
       ]
     },
     {
+      "output": "hexerei:mahogany_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "hexerei:mahogany_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/hexerei/mahogany_planks_to_mahogany_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "hexerei:mahogany_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "hexerei:mahogany_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ]
+    },
+    {
       "output": "creatingspace:hastelloy_ingot",
       "casedProducers": [
         {
@@ -6571,6 +7555,64 @@
       "simpleDumpProducers": [
         {
           "id": "natures_spirit:cedar_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ]
+    },
+    {
+      "output": "forbidden_arcanus:edelwood_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "forbidden_arcanus:edelwood_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/forbidden_arcanus/edelwood_planks_to_edelwood_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "forbidden_arcanus:edelwood_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "forbidden_arcanus:edelwood_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ]
+    },
+    {
+      "output": "hexerei:witch_hazel_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "hexerei:witch_hazel_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/hexerei/witch_hazel_planks_to_witch_hazel_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "hexerei:witch_hazel_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "hexerei:witch_hazel_pressure_plate",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -7102,6 +8144,35 @@
       ]
     },
     {
+      "output": "goety:chorus_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:chorus_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/chorus_planks_to_chorus_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:chorus_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:chorus/chorus_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ]
+    },
+    {
       "output": "chemlib:aluminum_metal_block",
       "casedProducers": [
         {
@@ -7220,6 +8291,35 @@
       ]
     },
     {
+      "output": "goety:windswept_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:windswept_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/windswept_planks_to_windswept_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:windswept_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:windswept/windswept_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ]
+    },
+    {
       "output": "deeperdarker:echo_pressure_plate",
       "casedProducers": [
         {
@@ -7307,6 +8407,35 @@
       ]
     },
     {
+      "output": "forbidden_arcanus:aurum_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "forbidden_arcanus:aurum_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/forbidden_arcanus/aurum_planks_to_aurum_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "forbidden_arcanus:aurum_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "forbidden_arcanus:aurum_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ]
+    },
+    {
       "output": "quark:blossom_pressure_plate",
       "casedProducers": [
         {
@@ -7325,6 +8454,35 @@
       "simpleDumpProducers": [
         {
           "id": "quark:world/crafting/woodsets/blossom/pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ]
+    },
+    {
+      "output": "goety:corrupt_chorus_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:corrupt_chorus_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/corrupt_chorus_planks_to_corrupt_chorus_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:corrupt_chorus_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:corrupt_chorus/corrupt_chorus_pressure_plate",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -7499,6 +8657,35 @@
       "simpleDumpProducers": [
         {
           "id": "twilightforest:wood/transformation_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ]
+    },
+    {
+      "output": "forbidden_arcanus:fungyss_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "forbidden_arcanus:fungyss_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/forbidden_arcanus/fungyss_planks_to_fungyss_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "forbidden_arcanus:fungyss_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "forbidden_arcanus:fungyss_pressure_plate",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -7743,6 +8930,64 @@
       "simpleDumpProducers": [
         {
           "id": "blue_skies:maple_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ]
+    },
+    {
+      "output": "goety:haunted_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:haunted_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/haunted_planks_to_haunted_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:haunted_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:haunted/haunted_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ]
+    },
+    {
+      "output": "goety:pine_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:pine_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/pine_planks_to_pine_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:pine_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:pine/pine_pressure_plate",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -8022,6 +9267,35 @@
             "kubejs:deposit_blocks/bauxite_laterite"
           ]
         }
+      ]
+    },
+    {
+      "output": "goety:rotten_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:rotten_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/rotten_planks_to_rotten_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:rotten_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:rotten/rotten_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
       ]
     },
     {
@@ -8472,6 +9746,35 @@
       ]
     },
     {
+      "output": "mynethersdelight:powdery_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "mynethersdelight:powdery_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/mynethersdelight/powdery_planks_to_powdery_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "mynethersdelight:powdery_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "mynethersdelight:crafting/powdery_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ]
+    },
+    {
       "output": "blue_skies:lunar_pressure_plate",
       "casedProducers": [
         {
@@ -8584,6 +9887,35 @@
       "simpleDumpProducers": [
         {
           "id": "natures_spirit:maple_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ]
+    },
+    {
+      "output": "hexerei:willow_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "hexerei:willow_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/hexerei/willow_planks_to_willow_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "hexerei:willow_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "hexerei:willow_pressure_plate",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -8995,6 +10327,13 @@
           "type": "minecraft:crafting_shapeless",
           "inputs": [
             "swem:plate_gold"
+          ]
+        },
+        {
+          "id": "goety:indented_gold/gold_from_indented_gold",
+          "type": "minecraft:crafting_shapeless",
+          "inputs": [
+
           ]
         },
         {
@@ -11753,6 +13092,914 @@
       "reason": "component-like simple recipe"
     },
     {
+      "output": "minecraft:glowstone_dust",
+      "casedProducers": [
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/ethanol/andesite",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:andesite_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/ethanol/iron",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:iron_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/ethanol/brass",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:brass_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/ethanol/steel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:steel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/ethanol/nickel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:nickel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/ethanol/titanium",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:titanium_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/ethanol/blood_infused",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:blood_infused_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/ethanol/fluix",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:fluix_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/acetic/andesite",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:andesite_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/acetic/iron",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:iron_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/acetic/brass",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:brass_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/acetic/steel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:steel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/acetic/nickel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:nickel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/acetic/titanium",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:titanium_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/acetic/blood_infused",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:blood_infused_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/acetic/fluix",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:fluix_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/sulfuric/andesite",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:andesite_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/sulfuric/iron",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:iron_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/sulfuric/brass",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:brass_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/sulfuric/steel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:steel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/sulfuric/nickel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:nickel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/sulfuric/titanium",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:titanium_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/sulfuric/blood_infused",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:blood_infused_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/sulfuric/fluix",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:fluix_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/hydrochloric/andesite",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:andesite_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/hydrochloric/iron",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:iron_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/hydrochloric/brass",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:brass_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/hydrochloric/steel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:steel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/hydrochloric/nickel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:nickel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/hydrochloric/titanium",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:titanium_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/hydrochloric/blood_infused",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:blood_infused_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/hydrochloric/fluix",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:fluix_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/nitric/andesite",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:andesite_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/nitric/iron",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:iron_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/nitric/brass",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:brass_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/nitric/steel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:steel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/nitric/nickel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:nickel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/nitric/titanium",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:titanium_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/nitric/blood_infused",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:blood_infused_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/nitric/fluix",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:fluix_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/phosphoric/andesite",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:andesite_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/phosphoric/iron",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:iron_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/phosphoric/brass",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:brass_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/phosphoric/steel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:steel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/phosphoric/nickel",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:nickel_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/phosphoric/titanium",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:titanium_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/phosphoric/blood_infused",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:blood_infused_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:grown_materials/acid_ball/glow_berry_extract/phosphoric/fluix",
+          "file": "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glow_berries",
+            "kubejs:fluix_grinding_ball"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/lanthanum/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:lanthanum",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/cerium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:cerium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/praseodymium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:praseodymium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/neodymium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:neodymium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/samarium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:samarium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/europium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:europium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/gadolinium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:gadolinium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/terbium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:terbium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/dysprosium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:dysprosium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/holmium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:holmium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/erbium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:erbium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/thulium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:thulium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/ytterbium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:ytterbium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/lutetium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:lutetium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:mixing",
+          "id": "kubejs:chemlib_full/create_mixing/sink/rare_earth/yttrium/rare_earth_signal_pigment",
+          "file": "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js",
+          "origin": "kubejs-source",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "chemlib:yttrium",
+            "minecraft:redstone",
+            "minecraft:lapis_lazuli"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:filling",
+          "id": "create:filling/glowstone",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "create:cinder_flour"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:crushing",
+          "id": "create:crushing/glowstone",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:glowstone"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "create:crushing",
+          "id": "create:crushing/prismarine_crystals",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "minecraft:prismarine_crystals"
+          ]
+        },
+        {
+          "output": "minecraft:glowstone_dust",
+          "type": "ars_nouveau:crush",
+          "id": "ars_nouveau:crush_glowstone_block_to_dust",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "Ars purified source processing",
+          "gate": "MAGIC:Ars Nouveau",
+          "inputs": [
+            "minecraft:glowstone"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "reliquary:uncrafting/glowstone_dust",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        },
+        {
+          "id": "projectvibrantjourneys:glowcap_to_glowstone_dust",
+          "type": "minecraft:smelting",
+          "inputs": [
+            "projectvibrantjourneys:glowcap"
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": false,
+      "reason": "component-like simple recipe"
+    },
+    {
       "output": "create:brass_ingot",
       "casedProducers": [
         {
@@ -12552,6 +14799,18 @@
         {
           "output": "chemlib:zinc_nugget",
           "type": "create:splashing",
+          "id": "malum:create/washing/zinc_node",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "malum:zinc_node"
+          ]
+        },
+        {
+          "output": "chemlib:zinc_nugget",
+          "type": "create:splashing",
           "id": "create:splashing/crushed_raw_zinc",
           "file": "generated/runtime-dumps/kubejs-config",
           "origin": "runtime-dump",
@@ -12623,6 +14882,20 @@
         }
       ],
       "simpleDumpProducers": [
+        {
+          "id": "delightful:knives/blasting/zinc_create",
+          "type": "minecraft:blasting",
+          "inputs": [
+            "delightful:zinc_knife"
+          ]
+        },
+        {
+          "id": "delightful:knives/smelting/zinc_create",
+          "type": "minecraft:smelting",
+          "inputs": [
+            "delightful:zinc_knife"
+          ]
+        },
         {
           "id": "chemlib:zinc_ingot_to_nugget",
           "type": "minecraft:crafting_shapeless",
@@ -13063,6 +15336,37 @@
       "reason": "decorative pressure plate"
     },
     {
+      "output": "hexerei:mahogany_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "hexerei:mahogany_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/hexerei/mahogany_planks_to_mahogany_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "hexerei:mahogany_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "hexerei:mahogany_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
       "output": "creatingspace:hastelloy_ingot",
       "casedProducers": [
         {
@@ -13143,6 +15447,68 @@
       "simpleDumpProducers": [
         {
           "id": "natures_spirit:cedar_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
+      "output": "forbidden_arcanus:edelwood_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "forbidden_arcanus:edelwood_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/forbidden_arcanus/edelwood_planks_to_edelwood_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "forbidden_arcanus:edelwood_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "forbidden_arcanus:edelwood_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
+      "output": "hexerei:witch_hazel_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "hexerei:witch_hazel_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/hexerei/witch_hazel_planks_to_witch_hazel_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "hexerei:witch_hazel_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "hexerei:witch_hazel_pressure_plate",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -13706,6 +16072,37 @@
       "reason": "decorative pressure plate"
     },
     {
+      "output": "goety:chorus_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:chorus_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/chorus_planks_to_chorus_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:chorus_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:chorus/chorus_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
       "output": "chemlib:aluminum_metal_block",
       "casedProducers": [
         {
@@ -13830,6 +16227,37 @@
       "reason": "decorative pressure plate"
     },
     {
+      "output": "goety:windswept_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:windswept_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/windswept_planks_to_windswept_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:windswept_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:windswept/windswept_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
       "output": "deeperdarker:echo_pressure_plate",
       "casedProducers": [
         {
@@ -13923,6 +16351,37 @@
       "reason": "decorative pressure plate"
     },
     {
+      "output": "forbidden_arcanus:aurum_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "forbidden_arcanus:aurum_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/forbidden_arcanus/aurum_planks_to_aurum_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "forbidden_arcanus:aurum_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "forbidden_arcanus:aurum_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
       "output": "quark:blossom_pressure_plate",
       "casedProducers": [
         {
@@ -13941,6 +16400,37 @@
       "simpleDumpProducers": [
         {
           "id": "quark:world/crafting/woodsets/blossom/pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
+      "output": "goety:corrupt_chorus_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:corrupt_chorus_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/corrupt_chorus_planks_to_corrupt_chorus_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:corrupt_chorus_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:corrupt_chorus/corrupt_chorus_pressure_plate",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -14127,6 +16617,37 @@
       "simpleDumpProducers": [
         {
           "id": "twilightforest:wood/transformation_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
+      "output": "forbidden_arcanus:fungyss_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "forbidden_arcanus:fungyss_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/forbidden_arcanus/fungyss_planks_to_fungyss_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "forbidden_arcanus:fungyss_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "forbidden_arcanus:fungyss_pressure_plate",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -14387,6 +16908,68 @@
       "simpleDumpProducers": [
         {
           "id": "blue_skies:maple_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
+      "output": "goety:haunted_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:haunted_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/haunted_planks_to_haunted_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:haunted_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:haunted/haunted_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
+      "output": "goety:pine_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:pine_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/pine_planks_to_pine_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:pine_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:pine/pine_pressure_plate",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -14685,6 +17268,37 @@
       ],
       "benign": true,
       "reason": "raw metal form"
+    },
+    {
+      "output": "goety:rotten_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:rotten_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/rotten_planks_to_rotten_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:rotten_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:rotten/rotten_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
     },
     {
       "output": "undergarden:grongle_pressure_plate",
@@ -15164,6 +17778,37 @@
       "reason": "raw metal form"
     },
     {
+      "output": "mynethersdelight:powdery_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "mynethersdelight:powdery_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/mynethersdelight/powdery_planks_to_powdery_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "mynethersdelight:powdery_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "mynethersdelight:crafting/powdery_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
       "output": "blue_skies:lunar_pressure_plate",
       "casedProducers": [
         {
@@ -15282,6 +17927,37 @@
       "simpleDumpProducers": [
         {
           "id": "natures_spirit:maple_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
+      "output": "hexerei:willow_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "hexerei:willow_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/hexerei/willow_planks_to_willow_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "hexerei:willow_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "hexerei:willow_pressure_plate",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -15703,6 +18379,13 @@
           "type": "minecraft:crafting_shapeless",
           "inputs": [
             "swem:plate_gold"
+          ]
+        },
+        {
+          "id": "goety:indented_gold/gold_from_indented_gold",
+          "type": "minecraft:crafting_shapeless",
+          "inputs": [
+
           ]
         },
         {
@@ -19227,6 +21910,18 @@
         {
           "output": "chemlib:zinc_nugget",
           "type": "create:splashing",
+          "id": "malum:create/washing/zinc_node",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "malum:zinc_node"
+          ]
+        },
+        {
+          "output": "chemlib:zinc_nugget",
+          "type": "create:splashing",
           "id": "create:splashing/crushed_raw_zinc",
           "file": "generated/runtime-dumps/kubejs-config",
           "origin": "runtime-dump",
@@ -19298,6 +21993,20 @@
         }
       ],
       "simpleDumpProducers": [
+        {
+          "id": "delightful:knives/blasting/zinc_create",
+          "type": "minecraft:blasting",
+          "inputs": [
+            "delightful:zinc_knife"
+          ]
+        },
+        {
+          "id": "delightful:knives/smelting/zinc_create",
+          "type": "minecraft:smelting",
+          "inputs": [
+            "delightful:zinc_knife"
+          ]
+        },
         {
           "id": "chemlib:zinc_ingot_to_nugget",
           "type": "minecraft:crafting_shapeless",
@@ -19738,6 +22447,37 @@
       "reason": "decorative pressure plate"
     },
     {
+      "output": "hexerei:mahogany_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "hexerei:mahogany_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/hexerei/mahogany_planks_to_mahogany_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "hexerei:mahogany_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "hexerei:mahogany_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
       "output": "creatingspace:hastelloy_ingot",
       "casedProducers": [
         {
@@ -19818,6 +22558,68 @@
       "simpleDumpProducers": [
         {
           "id": "natures_spirit:cedar_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
+      "output": "forbidden_arcanus:edelwood_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "forbidden_arcanus:edelwood_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/forbidden_arcanus/edelwood_planks_to_edelwood_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "forbidden_arcanus:edelwood_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "forbidden_arcanus:edelwood_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
+      "output": "hexerei:witch_hazel_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "hexerei:witch_hazel_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/hexerei/witch_hazel_planks_to_witch_hazel_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "hexerei:witch_hazel_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "hexerei:witch_hazel_pressure_plate",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -20381,6 +23183,37 @@
       "reason": "decorative pressure plate"
     },
     {
+      "output": "goety:chorus_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:chorus_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/chorus_planks_to_chorus_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:chorus_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:chorus/chorus_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
       "output": "chemlib:aluminum_metal_block",
       "casedProducers": [
         {
@@ -20505,6 +23338,37 @@
       "reason": "decorative pressure plate"
     },
     {
+      "output": "goety:windswept_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:windswept_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/windswept_planks_to_windswept_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:windswept_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:windswept/windswept_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
       "output": "deeperdarker:echo_pressure_plate",
       "casedProducers": [
         {
@@ -20598,6 +23462,37 @@
       "reason": "decorative pressure plate"
     },
     {
+      "output": "forbidden_arcanus:aurum_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "forbidden_arcanus:aurum_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/forbidden_arcanus/aurum_planks_to_aurum_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "forbidden_arcanus:aurum_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "forbidden_arcanus:aurum_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
       "output": "quark:blossom_pressure_plate",
       "casedProducers": [
         {
@@ -20616,6 +23511,37 @@
       "simpleDumpProducers": [
         {
           "id": "quark:world/crafting/woodsets/blossom/pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
+      "output": "goety:corrupt_chorus_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:corrupt_chorus_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/corrupt_chorus_planks_to_corrupt_chorus_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:corrupt_chorus_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:corrupt_chorus/corrupt_chorus_pressure_plate",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -20802,6 +23728,37 @@
       "simpleDumpProducers": [
         {
           "id": "twilightforest:wood/transformation_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
+      "output": "forbidden_arcanus:fungyss_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "forbidden_arcanus:fungyss_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/forbidden_arcanus/fungyss_planks_to_fungyss_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "forbidden_arcanus:fungyss_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "forbidden_arcanus:fungyss_pressure_plate",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -21062,6 +24019,68 @@
       "simpleDumpProducers": [
         {
           "id": "blue_skies:maple_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
+      "output": "goety:haunted_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:haunted_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/haunted_planks_to_haunted_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:haunted_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:haunted/haunted_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
+      "output": "goety:pine_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:pine_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/pine_planks_to_pine_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:pine_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:pine/pine_pressure_plate",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -21360,6 +24379,37 @@
       ],
       "benign": true,
       "reason": "raw metal form"
+    },
+    {
+      "output": "goety:rotten_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "goety:rotten_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/goety/rotten_planks_to_rotten_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "goety:rotten_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "goety:rotten/rotten_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
     },
     {
       "output": "undergarden:grongle_pressure_plate",
@@ -21839,6 +24889,37 @@
       "reason": "raw metal form"
     },
     {
+      "output": "mynethersdelight:powdery_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "mynethersdelight:powdery_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/mynethersdelight/powdery_planks_to_powdery_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "mynethersdelight:powdery_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "mynethersdelight:crafting/powdery_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
       "output": "blue_skies:lunar_pressure_plate",
       "casedProducers": [
         {
@@ -21957,6 +25038,37 @@
       "simpleDumpProducers": [
         {
           "id": "natures_spirit:maple_pressure_plate",
+          "type": "minecraft:crafting_shaped",
+          "inputs": [
+
+          ]
+        }
+      ],
+      "authoredSimpleProducers": [
+
+      ],
+      "benign": true,
+      "reason": "decorative pressure plate"
+    },
+    {
+      "output": "hexerei:willow_pressure_plate",
+      "casedProducers": [
+        {
+          "output": "hexerei:willow_pressure_plate",
+          "type": "create:cutting",
+          "id": "create:cutting/runtime_generated/compat/hexerei/willow_planks_to_willow_pressure_plate",
+          "file": "generated/runtime-dumps/kubejs-config",
+          "origin": "runtime-dump",
+          "surface": "create andesite machine surfaces",
+          "gate": "kubejs:andesite_machine_casing",
+          "inputs": [
+            "hexerei:willow_planks"
+          ]
+        }
+      ],
+      "simpleDumpProducers": [
+        {
+          "id": "hexerei:willow_pressure_plate",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -22095,8 +25207,8 @@
     }
   ],
   "bypassReasonCounts": {
-    "component-like simple recipe": 1,
-    "decorative pressure plate": 61,
+    "component-like simple recipe": 2,
+    "decorative pressure plate": 74,
     "decorative weathered plate": 1,
     "raw metal form": 101,
     "reversible orientation conversion": 1

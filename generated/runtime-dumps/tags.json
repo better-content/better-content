@@ -1,5 +1,7 @@
 {
 	"schema": "obelisks.tags.v1",
 	"item_tags": {},
-	"fluid_tags": {}
+	"block_tags": {},
+	"fluid_tags": {},
+	"entity_tags": {}
 }

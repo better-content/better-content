@@ -15,6 +15,7 @@ tools/btm test static
 tools/btm test runtime --instance /path/to/fresh/runtime
 tools/btm test runtime --instance /path/to/fresh/runtime --strict-data-dumps
 tools/btm test smoke --server-dir /tmp/btm-agent-validate-smoke --port 25565 --reset-runtime
+tools/btm build dumps --server-dir /tmp/btm-dump-refresh --port 25565 --reset-runtime
 tools/btm test scenario dimension_worldgen --cycles 1 --radius 1 --samples 1
 tools/btm test scenario lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30
 tools/btm test scenario opening_progression --cycles 1
@@ -32,13 +33,14 @@ tools/btm doctor runtime --instance /path/to/fresh/runtime
 - `--runtime`: strict validation of an existing fresh runtime's logs and KubeJS audit dumps.
 - `--strict-data-dumps`: additionally requires vanilla `/dump` output such as `dump/data_raw/loot_tables`; this is separate from KubeJS audit dumps under `kubejs/config`.
 - `--smoke`: fresh disposable server bootstrap, boot, hard-log scan, and strict runtime suite.
+- `build dumps`: fresh disposable server bootstrap plus retained dump refresh into `generated/runtime-dumps/` and `generated/runtime-dumps/kubejs-config/`.
 - `tools/btm test scenario` is the supported front door for harness-backed runtime scenarios.
 - `worldgen_sampling` and `client_smoke` are versioned scenario lanes with checked-in contracts at `tools/worldgen_sampling_contract.json` and `tools/client_smoke_contract.json`.
 - `tools/btm doctor ...` is the supported front door for prerequisite, repo-surface, and runtime-shape checks.
 - `tools/btm internal validate-kotlin-tool-surface` fails if active `tools/` contains `.py` or `.sh` files outside `tools/quarantine/`.
 - `tools/btm internal validate-lc-tfth-dh-contracts` is a source-level LC/TFTH/DH correctness contract and is included in `tools/btm test static`; it does not launch Minecraft.
 
-Realistic Hands static regressions now cover primitive loose-earth hand breakability, representative knife/sword separation, first-class tool coverage, primitive flint/bone/rock butcher knife and hand axe recipes, Farmer's Delight straw-harvester knife tags, and ore/deepslate hardness probe coverage. The exact deepslate `+1` hardness assertion is enforced when a retained `generated/runtime-dumps/block_hardness_probe.json` exists.
+Realistic Hands static regressions now cover primitive loose-earth hand breakability, representative knife/sword separation, first-class tool coverage, primitive flint/bone/rock butcher knife and hand axe recipes, Farmer's Delight straw-harvester knife tags, and ore/deepslate hardness probe coverage. The retained runtime hardness assertion currently expects deepslate ore variants at `+1.5` destroy-time over their stone counterparts when `generated/runtime-dumps/block_hardness_probe.json` exists.
 
 Player progression regressions are data-driven by `kubejs/config/player_progression_regression.json` plus the authoritative parenting/acquisition manifests in `kubejs/config/tech_parenting.json`, `magic_parenting.json`, `economy_acquisition.json`, and `surface_registry.json`. `tools/btm internal validate-player-progression-contracts` now checks the primitive tool route, the full machine casing ladder, Blood Magic heart/orb/slate authority, Creating Space dimension routes, reward-surface bypass bans, direct coin-crafting bans, Font coin-only payouts, registered recipe/acquisition surfaces, and parenting coverage for retained craftable outputs. Effective recipe graph route reachability still requires a refreshed strict runtime dump.
 
@@ -61,11 +63,22 @@ For runtime-facing content changes:
 
 ```bash
 tools/btm doctor env
+tools/btm build dumps --server-dir /tmp/btm-dump-refresh --port 25565 --reset-runtime
 tools/btm test kotlin
 tools/btm test static
 tools/btm test runtime --instance /path/to/fresh/runtime
 tools/btm test smoke --server-dir /tmp/btm-content-smoke --port 25565 --reset-runtime
 ```
+
+For retained runtime dump refresh:
+
+```bash
+tools/btm doctor env
+tools/btm build dumps --server-dir /tmp/btm-dump-refresh --port 25565 --reset-runtime
+tools/btm test static
+```
+
+`tools/btm build dumps` is the supported front door for rebuilding the repo-carried runtime dump set. It boots a fresh disposable server runtime, waits for the KubeJS dump passes, promotes the runtime outputs back into `generated/runtime-dumps/`, and refreshes the retained Realistic Hands audit from the new block-hardness probe.
 
 For toolchain/build changes:
 

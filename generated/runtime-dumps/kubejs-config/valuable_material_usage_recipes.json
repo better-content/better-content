@@ -37,6 +37,14 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:black_iron/black_iron_chestplate",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "create:crafting/materials/andesite_alloy",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "bloodmagic:soulforge/master_node_upgrade",
 			"type": "bloodmagic:soulforge"
 		},
@@ -57,6 +65,14 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "hexerei:candelabra_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
+		},
+		{
+			"id": "supplementaries:candle_holders/candle_holder_red",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:pasture_lime_care",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -73,6 +89,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:lock_block",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "sophisticatedstorage:stack_upgrade_tier_2",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -85,12 +105,20 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "forbidden_arcanus:clibano_combustion/iron_ingot_from_clibano_combusting",
+			"type": "forbidden_arcanus:clibano_combustion"
+		},
+		{
 			"id": "morered:pulse_gate_from_soldering",
 			"type": "morered:soldering"
 		},
 		{
 			"id": "tconstruct:tables/recycling/twilightforest/ironwood_helmet",
 			"type": "tconstruct:part_builder_recycling"
+		},
+		{
+			"id": "goety:spiteful_belt",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "sophisticatedbackpacks:compacting_upgrade",
@@ -109,6 +137,10 @@
 			"type": "create:compacting"
 		},
 		{
+			"id": "supplementaries:candle_holders/candle_holder_yellow",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "rsgauges:industrial/industrial_green_led_recipe",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -119,6 +151,10 @@
 		{
 			"id": "iceandfire:dragonarmor_iron_body",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "protection_pixel:equipmentkitloot",
+			"type": "create:mechanical_crafting"
 		},
 		{
 			"id": "sophisticatedstorage:iron_chest",
@@ -163,6 +199,10 @@
 		{
 			"id": "immersive_aircraft:propeller",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:iron_ravager_armor",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "protection_pixel:hookcannonloot",
@@ -217,6 +257,14 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:candle_holders/candle_holder_light_blue",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:goblet",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "immersive_weathering:iron_ingot_from_weathered_block_blasting",
 			"type": "minecraft:blasting"
 		},
@@ -225,11 +273,23 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "irons_spellbooks:brazier",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "quark:tweaks/smelting/raw_iron_bricks_smelt",
 			"type": "minecraft:smelting"
 		},
 		{
+			"id": "hexerei:mixing_cauldron",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:metal_grate",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:barrel_assembly",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -257,6 +317,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "littlelogistics:seater_car",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "iceandfire:dragonforge/dragonsteel_fire_ingot",
 			"type": "iceandfire:dragonforge"
 		},
@@ -273,8 +337,16 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "oc2rwireless:wireless_relay",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "createbigcannons:fluid_shell",
 			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "reliquary:ice_magus_rod",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "oc2r:network_interface_card",
@@ -305,6 +377,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "ubesdelight:minecraft/crafting/kalan",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:pasture_black_horse",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -317,8 +393,24 @@
 			"type": "create:sequenced_assembly"
 		},
 		{
+			"id": "malum:spirit_infusion/sacred_spirited_glass",
+			"type": "malum:spirit_infusion"
+		},
+		{
+			"id": "goety:cursed_ingot_burner",
+			"type": "goety:cursed_infuser_recipes"
+		},
+		{
+			"id": "tinkers_things:sack/stowing",
+			"type": "tconstruct:modifier"
+		},
+		{
 			"id": "protection_pixel:slingshotloot",
 			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "minecraft:iron_sword",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "swem:halter_brown",
@@ -333,8 +425,16 @@
 			"type": "bloodmagic:soulforge"
 		},
 		{
+			"id": "sophisticatedstorage:alchemy_upgrade",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "oc2r:network_connector",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:spirit_infusion/aqueous_spirited_glass",
+			"type": "malum:spirit_infusion"
 		},
 		{
 			"id": "ae2:network/crystal_resonance_generator",
@@ -369,8 +469,16 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:candle_holders/candle_holder_white",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:western_saddle/western_saddle_brown",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:convert_wolf_to_ripper",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "oc2r:charger",
@@ -401,12 +509,20 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
+			"id": "supplementaries:candle_holders/candle_holder_black",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "createbigcannons:mixing/alloy_steel",
 			"type": "create:mixing"
 		},
 		{
 			"id": "fallout_wastelands_:sheetmetalblockcraft",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:focus/vanguard_focus",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "tconstruct:tables/recycling/twilightforest/ironwood_shovel",
@@ -423,6 +539,10 @@
 		{
 			"id": "swem:sweet_feed",
 			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "malum:spirit_infusion/infernal_spirited_glass",
+			"type": "malum:spirit_infusion"
 		},
 		{
 			"id": "swem:halter_red",
@@ -457,6 +577,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "minecraft:iron_hoe",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "framedblocks:framed_iron_pressure_plate",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -485,12 +609,20 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "delightful:knives/ironwood_knife",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:separator_blue",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "swem:hose",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "hexerei:candle_dipper_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
 		},
 		{
 			"id": "farmersdelight:stove",
@@ -517,6 +649,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "irons_spellbooks:alchemist_cauldron/brew_rare_ink",
+			"type": "irons_spellbooks:alchemist_cauldron_brew"
+		},
+		{
 			"id": "swem:pasture_magenta_care",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -529,6 +665,10 @@
 			"type": "tconstruct:modifier"
 		},
 		{
+			"id": "goety:focus/rotting_focus",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "undergarden:catalyst",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -537,12 +677,20 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "hexerei:reading_glasses_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
+		},
+		{
 			"id": "sophisticatedstorage:compacting_upgrade",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "swem:pasture_white_care",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:spirit_infusion/belt_of_the_prospector",
+			"type": "malum:spirit_infusion"
 		},
 		{
 			"id": "swem:helmet_riding",
@@ -625,7 +773,19 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:wind_vane",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:adventure_breast_collar",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:focus/ignite_focus",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:focus/rotation_focus",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -639,6 +799,10 @@
 		{
 			"id": "oc2r:flash_memory_flasher",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:malum/spirit_crucible/repair/skillet",
+			"type": "malum:spirit_repair"
 		},
 		{
 			"id": "protection_pixel:anchorpointloot",
@@ -693,6 +857,10 @@
 			"type": "bloodmagic:alchemytable"
 		},
 		{
+			"id": "goety:thrall/summon_vanguard_thrall",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "swem:tack_box_pink",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -701,11 +869,19 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "minecraft:iron_ingot_from_smelting_raw_iron",
+			"type": "minecraft:smelting"
+		},
+		{
 			"id": "minecraft:bucket",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "ae2:materials/advancedcard",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "fallout_wastelands_:portalignitercraft",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -721,7 +897,19 @@
 			"type": "morered:soldering"
 		},
 		{
+			"id": "supplementaries:candle_holders/candle_holder_cyan",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "rsgauges:oldfancy/oldfancy_bistableswitch1_recipe",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "littlelogistics:steam_locomotive",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:sconce_soul",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -757,6 +945,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "reliquary:alkahestry/crafting/iron_ingot",
+			"type": "reliquary:alkahestry_crafting"
+		},
+		{
 			"id": "k_turrets:gauss_bullet",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -769,11 +961,19 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "forbidden_arcanus:combine_residues/iron_residues_to_iron_block",
+			"type": "forbidden_arcanus:combine_residues"
+		},
+		{
 			"id": "swem:western_bridle/western_bridle_black",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "swem:western_girth_strap/western_girth_strap_pink",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "littlelogistics:seater_barge",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -786,6 +986,10 @@
 		},
 		{
 			"id": "fallout_wastelands_:tire_ironcraft_2",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdieselgenerators:crafting/oil_scanner",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -813,6 +1017,10 @@
 			"type": "createdieselgenerators:compression_molding"
 		},
 		{
+			"id": "littlelogistics:tug_route",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:web_guard_light_blue_rider",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -823,6 +1031,10 @@
 		{
 			"id": "iceandfire:hippogryph_sword",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:pale_steel_ingot",
+			"type": "minecraft:crafting_shapeless"
 		},
 		{
 			"id": "rsgauges:industrial/industrial_entity_detector_recipe",
@@ -865,8 +1077,16 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "minecraft:iron_axe",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "ae2:matter_cannon/nuggets/iron",
 			"type": "ae2:matter_cannon"
+		},
+		{
+			"id": "goety:enchant/efficiency",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "ae2:network/parts/panels_semi_dark_monitor",
@@ -933,6 +1153,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "littlelogistics:barge_dock",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:tack_box_light_blue",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -950,6 +1174,10 @@
 		},
 		{
 			"id": "swem:separator_purple",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "ubesdelight:minecraft/crafting/rolling_pin_iron",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -981,11 +1209,31 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:candle_holders/candle_holder_orange",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:great_hammer",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "create:crafting/logistics/redstone_requester",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "oc2r:flash_memory",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "minecraft:iron_chestplate",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "fallout_wastelands_:industrial_hullcraft",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:frosted_throne",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -1025,6 +1273,10 @@
 			"type": "morered:soldering"
 		},
 		{
+			"id": "forbidden_arcanus:silver_dragon_scale",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "creatingspace:rocket_ingredients_recipes/iron_turbine_shaft",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -1033,8 +1285,16 @@
 			"type": "minecraft:blasting"
 		},
 		{
+			"id": "goety:diamond_ravager_armor",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "quark:building/crafting/furnaces/blackstone_blast_furnace",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:cursed_metal_block_burner",
+			"type": "goety:cursed_infuser_recipes"
 		},
 		{
 			"id": "sophisticatedbackpacks:stack_upgrade_tier_1",
@@ -1051,6 +1311,14 @@
 		{
 			"id": "framedblocks:framing_saw/framed_iron_gate",
 			"type": "framedblocks:frame"
+		},
+		{
+			"id": "malum:spirit_crucible/repair/iron",
+			"type": "malum:spirit_repair"
+		},
+		{
+			"id": "goety:focus/telekinesis_focus",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "rsgauges:industrial/industrial_switchlink_receiver_recipe",
@@ -1093,6 +1361,10 @@
 			"type": "morered:soldering"
 		},
 		{
+			"id": "supplementaries:candle_holders/candle_holder_lime",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "rsgauges:industrial/industrial_day_timer_recipe",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -1113,6 +1385,14 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "minecraft:iron_shovel",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:hammer_assembly",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "weather2:tornado_siren",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -1123,6 +1403,10 @@
 		{
 			"id": "twilightforest:equipment/ironwood_hoe",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:iron_trampler_armor",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "swem:western_girth_strap/western_girth_strap_magenta",
@@ -1157,6 +1441,14 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "malum:spirit_infusion/aerial_spirited_glass",
+			"type": "malum:spirit_infusion"
+		},
+		{
+			"id": "supplementaries:candle_holders/candle_holder_green",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "framedblocks:framed_key",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -1165,11 +1457,43 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:bubble_blower",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "sophisticatedstorage:advanced_magnet_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
+			"id": "malum:spirit_infusion/tuning_fork",
+			"type": "malum:spirit_infusion"
+		},
+		{
 			"id": "swem:pasture_red_care",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "ae2:network/blocks/spatial_anchor",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:handgun",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:iron_ice_axe",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "sophisticatedbackpacks:alchemy_upgrade",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:black_iron/black_iron_leggings",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "forbidden_arcanus:obsidian_with_iron",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -1179,6 +1503,10 @@
 		{
 			"id": "adpother:iron_vacuum_tube",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "occultism:ritual/summon_djinni_manage_machine",
+			"type": "occultism:ritual"
 		},
 		{
 			"id": "quark:building/crafting/furnaces/deepslate_blast_furnace",
@@ -1229,6 +1557,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "littlelogistics:vacuum_barge",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:halter_green",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -1261,10 +1593,6 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "create_new_age:shaped/basic_solar_heating_plate",
-			"type": "minecraft:crafting_shaped"
-		},
-		{
 			"id": "swem:western_girth_strap/western_girth_strap_light_gray",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -1290,6 +1618,10 @@
 		},
 		{
 			"id": "sophisticatedbackpacks:refill_upgrade",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:faucet",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -1353,6 +1685,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:spring_launcher",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "minecraft:iron_ingot_to_coin",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -1362,6 +1698,14 @@
 		},
 		{
 			"id": "fallout_wastelands_:tenmmammocraft",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "deeperdarker:iron_ingot_from_blasting_gloomslate_iron_ore",
+			"type": "minecraft:blasting"
+		},
+		{
+			"id": "irons_spellbooks:brazier_soul",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -1381,8 +1725,28 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "littlelogistics:energy_locomotive",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:web_guard_blue_horse",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:magazines/empty_magazine",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "protection_pixel:leggingsliningloot",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:void_favor/anomalous_design",
+			"type": "malum:favor_of_the_void"
+		},
+		{
+			"id": "malum:spirit_infusion/esoteric_spool",
+			"type": "malum:spirit_infusion"
 		},
 		{
 			"id": "pneumaticcraft:explosion_crafting/compressed_iron_block",
@@ -1394,6 +1758,10 @@
 		},
 		{
 			"id": "adpother:diamond_vacuum_tube",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:cursed_ingot_craft",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -1433,6 +1801,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:candle_holders/candle_holder_gray",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:western_saddle/western_saddle_magenta",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -1449,6 +1821,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "reliquary:lantern_of_paranoia",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "twilightforest:equipment/ironwood_boots",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -1461,7 +1837,15 @@
 			"type": "sophisticatedstorage:storage_tier_upgrade"
 		},
 		{
+			"id": "tinkers_things:sack/pouch",
+			"type": "tconstruct:modifier"
+		},
+		{
 			"id": "swem:tack_box_yellow",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "littlelogistics:fishing_barge",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -1509,6 +1893,22 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "malum:spirit_infusion/catalyst_lobber",
+			"type": "malum:spirit_infusion"
+		},
+		{
+			"id": "protection_pixel:wingloot",
+			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "malum:cornered_weave",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "protection_pixel:susploot",
+			"type": "create:mechanical_crafting"
+		},
+		{
 			"id": "swem:fence_tool",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -1521,15 +1921,31 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:candle_holders/candle_holder_magenta",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:web_guard_blue_rider",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "pneumaticcraft:pressure_chamber/compressed_iron_ingot",
+			"type": "pneumaticcraft:pressure_chamber"
 		},
 		{
 			"id": "swem:measurement_tool",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "minecraft:iron_ingot_from_blasting_raw_iron",
+			"type": "minecraft:blasting"
+		},
+		{
 			"id": "create:crafting/kinetics/mechanical_press",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "occultism:crafting/spirit_lantern",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -1537,11 +1953,19 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "malum:spirit_infusion/ring_of_the_hoarder",
+			"type": "malum:spirit_infusion"
+		},
+		{
 			"id": "sophisticatedstorage:copper_to_iron_tier_upgrade",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "swem:pasture_pink_care",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "hexerei:witch_hazel_courier_depot",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -1589,6 +2013,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "malum:spirit_infusion/ring_of_the_demolitionist",
+			"type": "malum:spirit_infusion"
+		},
+		{
 			"id": "framedblocks:framed_iron_trapdoor",
 			"type": "minecraft:crafting_shapeless"
 		},
@@ -1603,6 +2031,10 @@
 		{
 			"id": "ae2:network/cells/item_storage_cell_16k",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:gold_ravager_armor",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "morered:multiplexer",
@@ -1645,6 +2077,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "malum:crude_scythe",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "twilightforest:compressed_blocks/ironwood_block",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -1669,7 +2105,19 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "create:crafting/logistics/packager",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:enchant/protection",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "ae2:tools/nether_quartz_cutting_knife",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "irons_spellbooks:wayward_compass",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -1681,8 +2129,16 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "moreartifacts:mechanical_gears",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:western_saddle/western_saddle_blue",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdeco:pressing/coins/iron_coin",
+			"type": "create:pressing"
 		},
 		{
 			"id": "swem:web_guard_green_rider",
@@ -1721,12 +2177,24 @@
 			"type": "create:mechanical_crafting"
 		},
 		{
+			"id": "supplementaries:candle_holders/candle_holder_pink",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "minecraft:iron_pickaxe",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:web_guard_pink_care",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "ae2:tools/network_memory_card",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:spirit_infusion/eldritch_spirited_glass",
+			"type": "malum:spirit_infusion"
 		},
 		{
 			"id": "sophisticatedstorage:iron_chest_from_copper_chest",
@@ -1745,11 +2213,23 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "moreartifacts:mechanical_gloves",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:black_iron/black_iron_helmet",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "starcatcher:split_hook",
 			"type": "starcatcher:modifier_shaped_recipe"
 		},
 		{
 			"id": "sophisticatedbackpacks:smithing_upgrade",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "hexerei:willow_broom_stand",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -1797,12 +2277,24 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "forbidden_arcanus:clibano_combustion/iron_ingot_from_clibano_combusting_raw_iron",
+			"type": "forbidden_arcanus:clibano_combustion"
+		},
+		{
+			"id": "occultism:crafting/butcher_knife",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "aether:skyroot_iron_vanilla_shield",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "protection_pixel:oxyloot",
 			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "create:mixing/andesite_alloy",
+			"type": "create:mixing"
 		},
 		{
 			"id": "tconstruct:smeltery/casting/metal/iron/ingot_sand_cast",
@@ -1813,8 +2305,24 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "malum:spirit_infusion/lamplighters_tongs",
+			"type": "malum:spirit_infusion"
+		},
+		{
+			"id": "littlelogistics:conductors_wrench",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "oc2r:computer",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:nameless_crown",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "malum:spirit_infusion/soul_stained_steel_ingot",
+			"type": "malum:spirit_infusion"
 		},
 		{
 			"id": "twilightforest:equipment/fiery_ingot_crafting",
@@ -1826,6 +2334,10 @@
 		},
 		{
 			"id": "ae2:network/cells/item_cell_housing",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "fallout_wastelands_:portalframecraft",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -1847,6 +2359,10 @@
 		{
 			"id": "quark:tweaks/blasting/raw_iron_bricks_blast",
 			"type": "minecraft:blasting"
+		},
+		{
+			"id": "buildinggadgets2:gadget_destruction",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "swem:pasture_green_horse",
@@ -1877,6 +2393,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:candle_holders/candle_holder",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:western_bridle/western_bridle_red",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -1893,7 +2413,19 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "littlelogistics:tug_dock",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "sophisticatedbackpacks:smoking_upgrade",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:spirit_infusion/earthen_spirited_glass",
+			"type": "malum:spirit_infusion"
+		},
+		{
+			"id": "irons_spellbooks:graybeard_staff",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -1941,11 +2473,19 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:focus/pulverize_focus",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "ae2:network/blocks/crystal_processing_charger",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "swem:shining_amethyst_shard_to_coin",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "sushigocrafting:rice_cooker",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -1961,8 +2501,16 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:cage",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "oc2r:redstone_interface",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:spirit_infusion/necklace_of_blissful_harmony",
+			"type": "malum:spirit_infusion"
 		},
 		{
 			"id": "sophisticatedstorage:hopper_upgrade",
@@ -1982,6 +2530,10 @@
 		},
 		{
 			"id": "aether:iron_pendant",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "hexerei:willow_woodcutter",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -2013,6 +2565,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:diamond_trampler_armor",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "ae2:network/blocks/interfaces_interface",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -2029,11 +2585,19 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "littlelogistics:energy_tug",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "tconstruct:tools/materials/iron/ingot",
 			"type": "tconstruct:material"
 		},
 		{
 			"id": "sophisticatedbackpacks:blasting_upgrade",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:pulley",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -2065,6 +2629,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "protection_pixel:armorkit",
+			"type": "create:mechanical_crafting"
+		},
+		{
 			"id": "minecraft:gold_ingot_to_coin",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -2074,6 +2642,18 @@
 		},
 		{
 			"id": "rsgauges:sensitiveglass/stained_sensitiveglass",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:spirit_infusion/arcane_spirited_glass",
+			"type": "malum:spirit_infusion"
+		},
+		{
+			"id": "protection_pixel:ironplate",
+			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "goety:steep/steep_sconce",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -2099,6 +2679,14 @@
 		{
 			"id": "protection_pixel:magneticloot",
 			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "goety:ring_of_the_dragon",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "supplementaries:candle_holders/candle_holder_purple",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "swem:separator_light_gray",
@@ -2133,6 +2721,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "create:crafting/kinetics/encased_chain_drive",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
 			"id": "rsgauges:misc/valve_wheel_switch_recipe",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -2142,6 +2734,10 @@
 		},
 		{
 			"id": "framedblocks:framed_fancy_detector_rail",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:candle_holders/candle_holder_light_gray",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -2162,6 +2758,18 @@
 		},
 		{
 			"id": "minecraft:hopper",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:magicbane",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:thrall/summon_zombie_thrall",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "forbidden_arcanus:iron_blacksmith_gavel",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -2187,6 +2795,10 @@
 		{
 			"id": "swem:halter_gray",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "hexerei:waxing_kit_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
 		},
 		{
 			"id": "swem:web_guard_black_care",
@@ -2265,6 +2877,14 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "hexerei:pestle_and_mortar_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
+		},
+		{
+			"id": "occultism:crushing/iron_dust_from_ingot",
+			"type": "occultism:crushing"
+		},
+		{
 			"id": "minecraft:crossbow",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -2277,7 +2897,15 @@
 			"type": "morered:soldering"
 		},
 		{
+			"id": "sophisticatedbackpacks:tool_swapper_upgrade",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "createbigcannons:cannon_builder",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "littlelogistics:fluid_barge",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -2313,6 +2941,18 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
+			"id": "fallout_wastelands_:wrenchcraft_2",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "hexerei:willow_courier_depot",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:relayer",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:separator_cyan",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -2321,12 +2961,24 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "hexerei:warhammer_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
+		},
+		{
 			"id": "sophisticatedstorage:double_iron_chest",
 			"type": "sophisticatedstorage:double_chest_tier_upgrade"
 		},
 		{
 			"id": "swem:tack_box_purple",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "littlelogistics:barrel_barge",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:spirit_infusion/wicked_spirited_glass",
+			"type": "malum:spirit_infusion"
 		},
 		{
 			"id": "tconstruct:tables/recycling/crossbow",
@@ -2345,7 +2997,19 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "pneumaticcraft:explosion_crafting/compressed_iron_ingot",
+			"type": "pneumaticcraft:explosion_crafting"
+		},
+		{
 			"id": "sophisticatedstorage:compression_upgrade",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "protection_pixel:chestplatelingingloot",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:focus/burrowing_focus",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -2379,6 +3043,10 @@
 		{
 			"id": "swem:western_saddle/western_saddle_purple",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:spirit_infusion/malignant_pewter_ingot",
+			"type": "malum:spirit_infusion"
 		},
 		{
 			"id": "twilightforest:compressed_blocks/reversed/ironwood_block_ingot",
@@ -2419,6 +3087,14 @@
 		{
 			"id": "rsgauges:industrial/industrial_switchlink_pulse_receiver_recipe",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "sushigocrafting:cleaver_knife",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "sophisticatedbackpacks:advanced_magnet_upgrade",
+			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
 			"id": "adpother:iron_vacuum_bag",
@@ -2473,11 +3149,19 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "reliquary:grip_assembly",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "weather2:wind_turbine",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "adpother:gold_vacuum_tube",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "littlelogistics:locomotive_route",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -2533,6 +3217,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "tinkers_things:sack/crafting",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "rsgauges:industrial/industrial_comparator_switch_recipe",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -2557,11 +3245,11 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "create_new_age:shaped/heater",
+			"id": "ae2:network/crafting/molecular_assembler",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "ae2:network/crafting/molecular_assembler",
+			"id": "littlelogistics:vessel_charger",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -2573,11 +3261,23 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "hexerei:witch_hazel_woodcutter",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "immersive_aircraft:hull",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:focus/iron_hide_focus",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:separator_green",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:cannon",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -2609,12 +3309,20 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "moreartifacts:artifacts_smithing_upgrade_template",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "ae2:network/crafting/cpu_crafting_unit",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "protection_pixel:boosterloot",
 			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "supplementaries:candle_holders/candle_holder_blue",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "minecraft:blast_furnace",
@@ -2626,6 +3334,10 @@
 		},
 		{
 			"id": "swem:western_bridle/western_bridle_light_blue",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:cannon_2",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -2657,7 +3369,15 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:sconce",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:halter_yellow",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:iron_gate",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -2671,6 +3391,10 @@
 		{
 			"id": "swem:pasture_cyan_horse",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "deeperdarker:iron_ingot_from_smelting_gloomslate_iron_ore",
+			"type": "minecraft:smelting"
 		},
 		{
 			"id": "sophisticatedstorage:double_iron_chest_from_copper_chest",
@@ -2697,8 +3421,8 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "create_new_age:energising/overcharged_iron",
-			"type": "create_new_age:energising"
+			"id": "supplementaries:bomb",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "swem:tack_box_light_gray",
@@ -2713,8 +3437,20 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:slidy_block",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "quark:automation/crafting/iron_rod",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "aether:skyroot_piston",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "occultism:ritual/familiar_greedy",
+			"type": "occultism:ritual"
 		},
 		{
 			"id": "createbigcannons:ap_shot",
@@ -2726,6 +3462,10 @@
 		},
 		{
 			"id": "swem:pasture_brown_care",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "irons_spellbooks:alchemist_cauldron",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -2757,6 +3497,14 @@
 			"type": "minecraft:smelting"
 		},
 		{
+			"id": "reliquary:infernal_tear/iron_ingot",
+			"type": "reliquary:infernal_tear_value"
+		},
+		{
+			"id": "reliquary:twilight_cloak",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "iceandfire:dragonforge_fire_input",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -2781,6 +3529,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "littlelogistics:spring",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "tconstruct:tools/materials/melting/ironwood",
 			"type": "tconstruct:material_melting"
 		},
@@ -2801,6 +3553,14 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "fallout_wastelands_:ninemmpistolcraft",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "littlelogistics:barge",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "framedblocks:powered_framing_saw",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -2817,6 +3577,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "hexerei:mahogany_woodcutter",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:web_guard_purple_care",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -2829,6 +3593,14 @@
 			"type": "pneumaticcraft:pressure_chamber"
 		},
 		{
+			"id": "hexerei:witch_hazel_broom_stand",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:dispenser_minecart_quark",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "quark:building/crafting/raw_iron_bricks_revert",
 			"type": "minecraft:crafting_shapeless"
 		},
@@ -2838,6 +3610,10 @@
 		},
 		{
 			"id": "rsgauges:sensitiveglass/sensitive_glass_block_recipe",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:candle_holders/candle_holder_brown",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -2871,6 +3647,14 @@
 		{
 			"id": "framedblocks:framed_iron_door",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:gold_trampler_armor",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "malum:spirit_infusion/necklace_of_the_narrow_edge",
+			"type": "malum:spirit_infusion"
 		},
 		{
 			"id": "createdeco:yellow_iron_lamp",
@@ -2929,6 +3713,10 @@
 			"type": "minecraft:stonecutting"
 		},
 		{
+			"id": "goety:iron_dungeon_torch",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "twilightforest:equipment/ironwood_chestplate",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -2963,6 +3751,10 @@
 		{
 			"id": "swem:separator_red",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:spirit_infusion/iron_impetus",
+			"type": "malum:spirit_infusion"
 		},
 		{
 			"id": "bloodmagic:alchemytable/bow_power_anointment_3",
@@ -3041,6 +3833,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "littlelogistics:tug",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:western_bridle/western_bridle_green",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -3093,6 +3889,10 @@
 		{
 			"id": "tconstruct:tools/modifiers/ability/spilling",
 			"type": "tconstruct:modifier"
+		},
+		{
+			"id": "create:crafting/kinetics/fluid_pipe_vertical",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "createdieselgenerators:hammering/copper_sheet",
@@ -3151,8 +3951,16 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:storm_staff",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "create:crafting/appliances/copper_backtank",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:focus/lightning_focus",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "everythingcopper:copper_door",
@@ -3169,6 +3977,10 @@
 		{
 			"id": "sophisticatedbackpacks:stack_upgrade_starter_tier",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "deeperdarker:copper_ingot_from_blasting_gloomslate_copper_ore",
+			"type": "minecraft:blasting"
 		},
 		{
 			"id": "powergrid:crafting/lv_button",
@@ -3207,12 +4019,20 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:wrench",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "tconstruct:tools/materials/copper/block",
 			"type": "tconstruct:material"
 		},
 		{
 			"id": "createbigcannons:sequenced_assembly/assembling_machine_gun_round",
 			"type": "create:sequenced_assembly"
+		},
+		{
+			"id": "farmersrespite:kettle",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "immersive_aircraft:enhanced_propeller",
@@ -3237,6 +4057,10 @@
 		{
 			"id": "protection_pixel:floatshieldloot",
 			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "malum:spirit_infusion/belt_of_the_prospector",
+			"type": "malum:spirit_infusion"
 		},
 		{
 			"id": "fallout_wastelands_:advanced_motor_craft",
@@ -3267,6 +4091,10 @@
 			"type": "create:mixing"
 		},
 		{
+			"id": "irons_spellbooks:energized_core",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "iceandfire:copper_pickaxe",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -3277,6 +4105,10 @@
 		{
 			"id": "bloodmagic:alchemytable/weapon_repair_anointment",
 			"type": "bloodmagic:alchemytable"
+		},
+		{
+			"id": "goety:focus/thunderstorm_focus",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "tconstruct:common/copper_platform",
@@ -3299,12 +4131,24 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "occultism:crushing/copper_dust_from_ingot",
+			"type": "occultism:crushing"
+		},
+		{
+			"id": "fallout_wastelands_:portalignitercraft",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "tconstruct:tools/materials/copper/oxidized",
 			"type": "tconstruct:material"
 		},
 		{
 			"id": "minecraft:cut_copper",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:alkahestry/crafting/copper_ingot",
+			"type": "reliquary:alkahestry_crafting"
 		},
 		{
 			"id": "creatingspace:copper_coil",
@@ -3329,6 +4173,14 @@
 		{
 			"id": "sophisticatedstorage:double_copper_chest",
 			"type": "sophisticatedstorage:double_chest_tier_upgrade"
+		},
+		{
+			"id": "goety:focus/shocking_focus",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "irons_spellbooks:alchemist_cauldron/brew_uncommon_ink",
+			"type": "irons_spellbooks:alchemist_cauldron_brew"
 		},
 		{
 			"id": "everythingcopper:copper_hopper",
@@ -3369,6 +4221,10 @@
 		{
 			"id": "minecraft:raw_copper_block",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:spirit_crucible/repair/copper",
+			"type": "malum:spirit_repair"
 		},
 		{
 			"id": "tconstruct:tools/modifiers/ability/slurping",
@@ -3427,6 +4283,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:focus/tunnel_focus",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "quark:tweaks/blasting/raw_copper_bricks_blast",
 			"type": "minecraft:blasting"
 		},
@@ -3441,6 +4301,10 @@
 		{
 			"id": "bloodmagic:soulforge/aug_shaped_charge",
 			"type": "bloodmagic:soulforge"
+		},
+		{
+			"id": "forbidden_arcanus:clibano_combustion/copper_ingot_from_clibano_combusting_raw_copper",
+			"type": "forbidden_arcanus:clibano_combustion"
 		},
 		{
 			"id": "creatingspace:rocket_ingredients_recipes/copper_blisk",
@@ -3459,8 +4323,20 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "irons_spellbooks:copper_spell_book",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "minecraft:copper_ingot_from_smelting_raw_copper",
+			"type": "minecraft:smelting"
+		},
+		{
 			"id": "createdeco:copper_catwalk_stairs_from_stonecutting",
 			"type": "minecraft:stonecutting"
+		},
+		{
+			"id": "goety:focus/charge_focus",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "everythingcopper:copper_axe",
@@ -3469,6 +4345,10 @@
 		{
 			"id": "powergrid:mechanical_crafting/punch_card_reader",
 			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "supplementaries:fire_pit",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "bloodmagic:soulforge/shaped_charge_deep",
@@ -3487,6 +4367,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:cog_block",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "oc2r:cpu_tier_1",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -3497,6 +4381,10 @@
 		{
 			"id": "create:blasting/copper_ingot_from_crushed",
 			"type": "minecraft:blasting"
+		},
+		{
+			"id": "malum:spirit_infusion/copper_impetus",
+			"type": "malum:spirit_infusion"
 		},
 		{
 			"id": "everythingcopper:copper_anvil",
@@ -3525,6 +4413,10 @@
 		{
 			"id": "bloodmagic:arc/oxidize/copper_block_to_exposed_copper",
 			"type": "bloodmagic:arc"
+		},
+		{
+			"id": "deeperdarker:copper_ingot_from_smelting_gloomslate_copper_ore",
+			"type": "minecraft:smelting"
 		},
 		{
 			"id": "everythingcopper:copper_pickaxe",
@@ -3603,12 +4495,20 @@
 			"type": "bloodmagic:soulforge"
 		},
 		{
+			"id": "irons_spellbooks:cooldown_ring",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "everythingcopper:copper_shield",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "sophisticatedstorage:stack_upgrade_tier_1_plus",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdeco:pressing/coins/copper_coin",
+			"type": "create:pressing"
 		},
 		{
 			"id": "minecraft:copper_ingot_from_waxed_copper_block",
@@ -3643,12 +4543,20 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:storm_robe",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "tconstruct:smeltery/copper_can",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "fallout_wastelands_:melted_copperingot",
 			"type": "minecraft:smelting"
+		},
+		{
+			"id": "occultism:ritual/craft_soul_gem",
+			"type": "occultism:ritual"
 		},
 		{
 			"id": "sophisticatedstorage:limited_copper_barrel_1",
@@ -3687,6 +4595,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "malum:dreaded_weave",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
 			"id": "create:copper_table_cloth_from_ingots_copper_stonecutting",
 			"type": "minecraft:stonecutting"
 		},
@@ -3695,12 +4607,24 @@
 			"type": "tconstruct:casting_table"
 		},
 		{
+			"id": "goety:focus/trident_storm_focus",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "chemlib:copper_ingot_from_blasting_copper_dust",
+			"type": "minecraft:blasting"
+		},
+		{
+			"id": "minecraft:copper_ingot_from_blasting_raw_copper",
 			"type": "minecraft:blasting"
 		},
 		{
 			"id": "powergrid:mechanical_crafting/electrozapper",
 			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "occultism:ritual/craft_stabilizer_tier1",
+			"type": "occultism:ritual"
 		},
 		{
 			"id": "creatingspace:rocket_ingredients_recipes/copper_turbine_shaft",
@@ -3709,6 +4633,10 @@
 		{
 			"id": "starcatcher:steady_bobber",
 			"type": "starcatcher:modifier_shaped_recipe"
+		},
+		{
+			"id": "forbidden_arcanus:clibano_combustion/copper_ingot_from_clibano_combusting",
+			"type": "forbidden_arcanus:clibano_combustion"
 		},
 		{
 			"id": "powergrid:crafting/wire_connector",
@@ -3731,8 +4659,16 @@
 			"type": "tconstruct:casting_basin"
 		},
 		{
+			"id": "goety:thrall/summon_stormhound_thrall",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "sophisticatedstorage:copper_shulker_box",
 			"type": "sophisticatedstorage:storage_tier_upgrade"
+		},
+		{
+			"id": "goety:focus/bolting_focus",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "immersive_aircraft:boiler",
@@ -3755,8 +4691,16 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "occultism:ritual/summon_wild_hunt",
+			"type": "occultism:ritual"
+		},
+		{
 			"id": "creatingspace:rocket_ingredients_recipes/copper_rib",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:infernal_tear/copper_ingot",
+			"type": "reliquary:infernal_tear_value"
 		},
 		{
 			"id": "everythingcopper:copper_helmet",
@@ -3791,6 +4735,10 @@
 			"type": "framedblocks:frame"
 		},
 		{
+			"id": "goety:enchant/channeling",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "create:deploying/copper_block_from_removing_wax",
 			"type": "create:deploying"
 		},
@@ -3801,6 +4749,10 @@
 		{
 			"id": "creatingspace:alloy_recipe/reinforced_copper_ingot_mixing",
 			"type": "create:mixing"
+		},
+		{
+			"id": "create:crafting/kinetics/steam_engine",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "createdieselgenerators:mechanical_crafting/chemcial_sprayer",
@@ -3843,6 +4795,14 @@
 			"type": "minecraft:stonecutting"
 		},
 		{
+			"id": "forbidden_arcanus:combine_residues/copper_residues_to_copper_block",
+			"type": "forbidden_arcanus:combine_residues"
+		},
+		{
+			"id": "create:crafting/kinetics/fluid_pipe",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "bloodmagic:soulforge/mine_key",
 			"type": "bloodmagic:soulforge"
 		},
@@ -3864,6 +4824,10 @@
 		},
 		{
 			"id": "minecraft:brush",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:altimeter",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -3931,6 +4895,10 @@
 			"type": "minecraft:blasting"
 		},
 		{
+			"id": "oc2rwireless:wireless_card",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "tconstruct:tools/materials/copper/ingot",
 			"type": "tconstruct:material"
 		},
@@ -3971,6 +4939,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:turn_table",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "k_turrets:copper_plate",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -3985,6 +4957,10 @@
 		{
 			"id": "create:copper_tiles_from_ingots_copper_stonecutting",
 			"type": "minecraft:stonecutting"
+		},
+		{
+			"id": "goety:focus/discharge_focus",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "ae2:network/blocks/inscribers",
@@ -4013,6 +4989,10 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
+			"id": "goety:royal_carpet_corner",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "sophisticatedstorage:storage_output",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -4023,6 +5003,14 @@
 		{
 			"id": "ars_nouveau:enchanters_shield",
 			"type": "ars_nouveau:enchanting_apparatus"
+		},
+		{
+			"id": "goety:thrall/summon_bound_storm_caster",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "reliquary:pedestals/passive/light_blue_passive_pedestal",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "tconstruct:tools/modifiers/ability/luck_level_2",
@@ -4037,11 +5025,19 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:magic_fabric",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
 			"id": "sophisticatedbackpacks:advanced_restock_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
 			"id": "tconstruct:gadgets/frame/gold",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:pedestals/passive/cyan_passive_pedestal",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -4053,11 +5049,23 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "hexerei:crow_blank_amulet_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
+		},
+		{
 			"id": "swem:nametag",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "ars_nouveau:magelight_torch",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "createdeco:pressing/coins/gold_coin",
+			"type": "create:pressing"
+		},
+		{
+			"id": "supplementaries:hourglass",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -4077,11 +5085,27 @@
 			"type": "sophisticatedstorage:storage_tier_upgrade"
 		},
 		{
+			"id": "occultism:ritual/craft_infused_lenses",
+			"type": "occultism:ritual"
+		},
+		{
 			"id": "pneumaticcraft:gun_ammo_weighted",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "sophisticatedbackpacks:advanced_alchemy_upgrade",
+			"type": "sophisticatedcore:upgrade_next_tier"
+		},
+		{
+			"id": "reliquary:pedestals/passive/brown_passive_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "minecraft:light_weighted_pressure_plate",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:highrock/gold_chiseled_highrock_bricks",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -4097,6 +5121,14 @@
 			"type": "minecraft:smelting"
 		},
 		{
+			"id": "reliquary:bullets/neutral_bullet",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "goety:nether_robe",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "minecraft:clock",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -4109,8 +5141,20 @@
 			"type": "sophisticatedstorage:storage_tier_upgrade"
 		},
 		{
+			"id": "mynethersdelight:crafting/golden_egg",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "hexerei:gold_rings_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
+		},
+		{
 			"id": "sophisticatedstorage:auto_smoking_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
+		},
+		{
+			"id": "reliquary:bullets/blaze_bullet",
+			"type": "minecraft:crafting_shapeless"
 		},
 		{
 			"id": "minecraft:raw_gold_block",
@@ -4123,6 +5167,18 @@
 		{
 			"id": "ars_nouveau:dominion_wand",
 			"type": "ars_nouveau:enchanting_apparatus"
+		},
+		{
+			"id": "goety:dark_hat",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "forbidden_arcanus:combine_residues/gold_residues_to_gold_block",
+			"type": "forbidden_arcanus:combine_residues"
+		},
+		{
+			"id": "forbidden_arcanus:clibano_combustion/gold_ingot_from_clibano_combusting",
+			"type": "forbidden_arcanus:clibano_combustion"
 		},
 		{
 			"id": "bloodmagic:arc/reversion/netherite_ingot",
@@ -4141,12 +5197,24 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:gold_door",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "sophisticatedstorage:gold_chest",
 			"type": "sophisticatedstorage:storage_tier_upgrade"
 		},
 		{
+			"id": "goety:sea_amulet",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "aether:golden_ring",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:focus/vanguard_focus",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "oc2r:projector",
@@ -4157,7 +5225,27 @@
 			"type": "bloodmagic:arc"
 		},
 		{
+			"id": "reliquary:emperor_chalice",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
 			"id": "pneumaticcraft:memory_stick",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:pedestals/passive/pink_passive_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:pedestals/passive/magenta_passive_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "irons_spellbooks:chronicle",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "reliquary:pedestals/passive/light_gray_passive_pedestal",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -4167,6 +5255,22 @@
 		{
 			"id": "tconstruct:smeltery/melting/metal/gold/block",
 			"type": "tconstruct:melting"
+		},
+		{
+			"id": "rusticdelight:golden_coffee_beans",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:spirit_infusion/belt_of_the_prospector",
+			"type": "malum:spirit_infusion"
+		},
+		{
+			"id": "malum:spirit_infusion/hallowed_gold_ingot",
+			"type": "malum:spirit_infusion"
+		},
+		{
+			"id": "occultism:ritual/craft_familiar_ring",
+			"type": "occultism:ritual"
 		},
 		{
 			"id": "iceandfire:dragonarmor_gold_neck",
@@ -4189,6 +5293,18 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "reliquary:mercy_cross",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:midas_touchstone",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "supplementaries:gold_gate",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "rsgauges:oldfancy/oldfancy_button_recipe",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -4197,8 +5313,16 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
+			"id": "goety:ring_of_want",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "createaddition:mixing/electrum",
 			"type": "create:mixing"
+		},
+		{
+			"id": "irons_spellbooks:paladin_chestplate",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "minecraft:golden_helmet",
@@ -4209,8 +5333,24 @@
 			"type": "createdieselgenerators:hammering"
 		},
 		{
+			"id": "moreartifacts:golden_headgear",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:marble/gold_holder_marble",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:gold_dungeon_torch",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "bloodmagic:alchemytable/reagent_magnetism",
 			"type": "bloodmagic:alchemytable"
+		},
+		{
+			"id": "goety:thrall/summon_vanguard_thrall",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "sophisticatedstorage:advanced_compacting_upgrade",
@@ -4225,11 +5365,19 @@
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
+			"id": "irons_lib:transmog_table",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "oc2r:memory_medium",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "ars_nouveau:redstone_relay",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "minecraft:golden_sword",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -4257,6 +5405,14 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:indented_gold/gold_from_indented_gold",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "goety:steep/rimmed_steep_wood",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "tconstruct:tools/modifiers/worktable/enchantment_converting/defense_book",
 			"type": "tconstruct:enchantment_converting"
 		},
@@ -4265,23 +5421,55 @@
 			"type": "ars_nouveau:enchantment"
 		},
 		{
+			"id": "irons_spellbooks:alchemist_cauldron/brew_epic_ink",
+			"type": "irons_spellbooks:alchemist_cauldron_brew"
+		},
+		{
 			"id": "powergrid:mechanical_crafting/integrated_circuit",
 			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "goety:marble/gold_arch_marble",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "bloodmagic:alchemytable/bow_velocity_anointment",
 			"type": "bloodmagic:alchemytable"
 		},
 		{
+			"id": "reliquary:pedestals/passive/green_passive_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:gold_candelabra",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "sophisticatedbackpacks:advanced_pickup_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
+		},
+		{
+			"id": "occultism:ritual/summon_demonic_husband",
+			"type": "occultism:ritual"
 		},
 		{
 			"id": "ars_nouveau:vitalic_sourcelink",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:royal_throne",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:holy_hand_grenade",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
 			"id": "ars_nouveau:wixie_hat",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:pedestals/passive/white_passive_pedestal",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -4293,6 +5481,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "reliquary:alkahestry/crafting/gold_ingot",
+			"type": "reliquary:alkahestry_crafting"
+		},
+		{
 			"id": "immersive_weathering:golden_moss_clump",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -4301,8 +5493,32 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "minecraft:golden_shovel",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:pendant_of_hunger",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "reliquary:bullets/sand_bullet",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
 			"id": "weather2:weather_item",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:key",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:pedestals/passive/red_passive_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "sophisticatedbackpacks:advanced_feeding_upgrade",
+			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
 			"id": "ars_nouveau:wand",
@@ -4313,8 +5529,24 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "hexerei:sage_burning_plate_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
+		},
+		{
+			"id": "occultism:ritual/craft_storage_controller_base",
+			"type": "occultism:ritual"
+		},
+		{
 			"id": "ae2:matter_cannon/nuggets/gold",
 			"type": "ae2:matter_cannon"
+		},
+		{
+			"id": "bloodmagic:alchemytable/reagent_suppression",
+			"type": "bloodmagic:alchemytable"
+		},
+		{
+			"id": "malum:spirit_crucible/repair/gold",
+			"type": "malum:spirit_repair"
 		},
 		{
 			"id": "create:blasting/gold_ingot_from_crushed",
@@ -4322,6 +5554,10 @@
 		},
 		{
 			"id": "sophisticatedbackpacks:stack_upgrade_tier_2",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:royal_carpet_inner_corner",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -4337,12 +5573,24 @@
 			"type": "bloodmagic:alchemytable"
 		},
 		{
+			"id": "goety:focus/telekinesis_focus",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "adpother:gold_respirator",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "bloodmagic:altar/magicianbloodorb",
+			"type": "bloodmagic:altar"
+		},
+		{
 			"id": "bloodmagic:soulforge/shaped_charge_silk_touch",
 			"type": "bloodmagic:soulforge"
+		},
+		{
+			"id": "goety:indented_gold/indented_gold",
+			"type": "goety:cursed_infuser_recipes"
 		},
 		{
 			"id": "creatingspace:basic_spacesuit_fabric",
@@ -4353,24 +5601,60 @@
 			"type": "tconstruct:material"
 		},
 		{
+			"id": "reliquary:pedestals/passive/yellow_passive_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "immersive_aircraft:gyroscope_hud",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "littlelogistics:rapid_hopper",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:spirit_infusion/gold_impetus",
+			"type": "malum:spirit_infusion"
 		},
 		{
 			"id": "sophisticatedbackpacks:advanced_pump_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
+			"id": "forbidden_arcanus:deorum_ingot",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "occultism:ritual/craft_dimensional_mineshaft",
+			"type": "occultism:ritual"
+		},
+		{
 			"id": "oc2r:network_tunnel_module",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "occultism:crushing/gold_dust_from_ingot",
+			"type": "occultism:crushing"
+		},
+		{
+			"id": "occultism:ritual/summon_djinni_manage_machine",
+			"type": "occultism:ritual"
 		},
 		{
 			"id": "tconstruct:common/gold_bars",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "minecraft:gold_ingot_from_blasting_raw_gold",
+			"type": "minecraft:blasting"
+		},
+		{
 			"id": "minecraft:gold_ingot_from_blasting_gold_ore",
 			"type": "minecraft:blasting"
+		},
+		{
+			"id": "goety:ring_of_force",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "pneumaticcraft:medium_tank",
@@ -4389,6 +5673,10 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
+			"id": "goety:steep/steep_lamp",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "minecraft:golden_apple",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -4405,6 +5693,22 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:haunted/haunted_mirror",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "protection_pixel:hrcsheetloot",
+			"type": "create:compacting"
+		},
+		{
+			"id": "sophisticatedstorage:advanced_alchemy_upgrade",
+			"type": "sophisticatedcore:upgrade_next_tier"
+		},
+		{
+			"id": "reliquary:rending_gale",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "ars_nouveau:potion_flask",
 			"type": "ars_nouveau:enchanting_apparatus"
 		},
@@ -4417,15 +5721,35 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
-			"id": "create_new_age:sequenced_assembly/enchanted_golden_apple",
-			"type": "create:sequenced_assembly"
+			"id": "hexerei:small_satchel_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
+		},
+		{
+			"id": "reliquary:fortune_coin",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "goety:steep/studded_steep_wood",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "tconstruct:tools/modifiers/worktable/enchantment_converting/defense_tool",
 			"type": "tconstruct:enchantment_converting"
 		},
 		{
+			"id": "occultism:crafting/wormhole_frame",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:plate_gold",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:enchant/smite",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:cursed_ingot_craft",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -4435,6 +5759,14 @@
 		{
 			"id": "tconstruct:smeltery/scorched/duct_retextured",
 			"type": "mantle:crafting_shaped_retextured"
+		},
+		{
+			"id": "reliquary:pedestals/passive/lime_passive_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:marble/marble_brazier",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "oc2r:cpu_tier_2",
@@ -4473,7 +5805,19 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:marble/gold_banded_marble",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:spirit_altar",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "iceandfire:dragonarmor_gold_body",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "ubesdelight:minecraft/crafting/rolling_pin_gold",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -4493,20 +5837,60 @@
 			"type": "ars_nouveau:enchanting_apparatus"
 		},
 		{
+			"id": "reliquary:bullets/storm_bullet",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
 			"id": "sophisticatedbackpacks:advanced_refill_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
+		},
+		{
+			"id": "minecraft:golden_hoe",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "iceandfire:dragonarmor_gold_tail",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "reliquary:infernal_tear/gold_ingot",
+			"type": "reliquary:infernal_tear_value"
+		},
+		{
 			"id": "k_turrets:bullet4",
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
+			"id": "minecraft:golden_pickaxe",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "hexerei:keychain_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
+		},
+		{
+			"id": "goety:convert_drowned_to_drowned_necromancer",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "bloodmagic:alchemytable/reagent_teleposition",
+			"type": "bloodmagic:alchemytable"
+		},
+		{
+			"id": "deeperdarker:gold_ingot_from_blasting_gloomslate_gold_ore",
+			"type": "minecraft:blasting"
+		},
+		{
 			"id": "quark:automation/crafting/gold_button",
 			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "goety:gold_ravager_armor",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "reliquary:pedestals/passive/blue_passive_pedestal",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "oc2r:hard_drive_medium",
@@ -4521,8 +5905,16 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
+			"id": "goety:highrock/gold_indented_highrock_bricks",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "tconstruct:smeltery/casting/metal/gold/ingot_gold_cast",
 			"type": "tconstruct:casting_table"
+		},
+		{
+			"id": "sophisticatedbackpacks:advanced_tool_swapper_upgrade",
+			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
 			"id": "sophisticatedstorage:advanced_feeding_upgrade",
@@ -4541,12 +5933,20 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:blazing_horn",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "ae2:tools/network_memory_card",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "sophisticatedstorage:advanced_jukebox_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
+		},
+		{
+			"id": "hexerei:mahogany_broom_stand",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "tconstruct:smeltery/casting/metal/gold/block",
@@ -4561,8 +5961,20 @@
 			"type": "bloodmagic:alchemytable"
 		},
 		{
+			"id": "minecraft:gold_ingot_from_smelting_raw_gold",
+			"type": "minecraft:smelting"
+		},
+		{
 			"id": "quark:building/crafting/raw_gold_bricks_revert",
 			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "reliquary:sojourner_staff",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "goety:marble/gold_covered_marble",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "create:pressing/gold_ingot",
@@ -4577,6 +5989,14 @@
 			"type": "ae2:inscriber"
 		},
 		{
+			"id": "goety:storm_robe",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "occultism:crafting/golden_sacrificial_bowl",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "pneumaticcraft:gilded_upgrade",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -4585,8 +6005,20 @@
 			"type": "minecraft:blasting"
 		},
 		{
+			"id": "occultism:ritual/craft_soul_gem",
+			"type": "occultism:ritual"
+		},
+		{
+			"id": "irons_spellbooks:divine_pearl",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
 			"id": "createdieselgenerators:basin_fermenting/golden_carrot",
 			"type": "createdieselgenerators:basin_fermenting"
+		},
+		{
+			"id": "goety:steep/lined_steep_wood",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "sophisticatedbackpacks:auto_blasting_upgrade",
@@ -4621,6 +6053,10 @@
 			"type": "mantle:crafting_shaped_retextured"
 		},
 		{
+			"id": "deeperdarker:gold_ingot_from_smelting_gloomslate_gold_ore",
+			"type": "minecraft:smelting"
+		},
+		{
 			"id": "ars_nouveau:imbuement_chamber",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -4631,6 +6067,10 @@
 		{
 			"id": "bloodmagic:alchemytable/bow_velocity_anointment_l",
 			"type": "bloodmagic:alchemytable"
+		},
+		{
+			"id": "goety:psgold",
+			"type": "minecraft:crafting_shapeless"
 		},
 		{
 			"id": "bloodmagic:alchemytable/bow_velocity_anointment_2",
@@ -4649,12 +6089,28 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "bloodmagic:teleposer",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "oc2r:block_operations_module",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "minecraft:gold_block",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "sophisticatedbackpacks:advanced_magnet_upgrade_from_basic",
+			"type": "sophisticatedcore:upgrade_next_tier"
+		},
+		{
+			"id": "occultism:ritual/familiar_dragon",
+			"type": "occultism:ritual"
+		},
+		{
+			"id": "occultism:ritual/craft_stabilizer_tier3",
+			"type": "occultism:ritual"
 		},
 		{
 			"id": "quark:tweaks/blasting/raw_gold_block_blast",
@@ -4685,8 +6141,20 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "reliquary:pedestals/passive/purple_passive_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:targeting_monocle",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "sophisticatedstorage:gold_shulker_box",
 			"type": "sophisticatedstorage:storage_tier_upgrade"
+		},
+		{
+			"id": "create:crafting/logistics/stock_ticker",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "ars_nouveau:blank_thread",
@@ -4701,6 +6169,10 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
+			"id": "reliquary:magicbane",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "bloodmagic:soulforge/deforester_charge_silk_touch",
 			"type": "bloodmagic:soulforge"
 		},
@@ -4709,12 +6181,24 @@
 			"type": "minecraft:smelting"
 		},
 		{
+			"id": "goety:royal_carpet_edge",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "tconstruct:smeltery/melting/metal/gold/ingot",
 			"type": "tconstruct:melting"
 		},
 		{
+			"id": "goety:indented_gold/indented_gold_craft",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "framedblocks:framing_saw/framed_fancy_powered_rail",
 			"type": "framedblocks:frame"
+		},
+		{
+			"id": "irons_patreon_lib:transmog_table",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "minecraft:powered_rail",
@@ -4722,6 +6206,18 @@
 		},
 		{
 			"id": "ars_nouveau:alchemical_sourcelink",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "occultism:ritual/summon_wild_hunt",
+			"type": "occultism:ritual"
+		},
+		{
+			"id": "hexerei:coffer_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
+		},
+		{
+			"id": "forbidden_arcanus:golden_blacksmith_gavel",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -4741,6 +6237,10 @@
 			"type": "ars_nouveau:enchanting_apparatus"
 		},
 		{
+			"id": "goety:totem_of_souls",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "oc2r:inventory_operations_module",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -4757,8 +6257,16 @@
 			"type": "createdieselgenerators:basin_fermenting"
 		},
 		{
+			"id": "occultism:crafting/storage_remote_inert",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "bloodmagic:experience_tome",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:bullets/seeker_bullet",
+			"type": "minecraft:crafting_shapeless"
 		},
 		{
 			"id": "bloodmagic:soulforge/commontartaricgem",
@@ -4769,11 +6277,23 @@
 			"type": "minecraft:smelting"
 		},
 		{
+			"id": "create:crafting/kinetics/controller_rail",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "hexerei:mahogany_courier_depot",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "sophisticatedbackpacks:advanced_filter_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
 			"id": "weather2:wind_turbine",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "forbidden_arcanus:sanity_meter",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -4785,11 +6305,23 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:focus_bag",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:gold_candlestick",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "sophisticatedstorage:copper_to_gold_tier_upgrade",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "swem:nova_offering",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "littlelogistics:vessel_charger",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -4805,6 +6337,10 @@
 			"type": "ars_nouveau:enchanting_apparatus"
 		},
 		{
+			"id": "goety:convert_wither_skeleton_to_wither_necromancer",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "bloodmagic:blood_rune_acceleration",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -4813,8 +6349,8 @@
 			"type": "sophisticatedstorage:double_chest_tier_upgrade"
 		},
 		{
-			"id": "create_new_age:energising/overcharged_gold",
-			"type": "create_new_age:energising"
+			"id": "goety:enchant/looting",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "ars_nouveau:sconce",
@@ -4823,6 +6359,10 @@
 		{
 			"id": "tconstruct:tools/materials/gold/nugget",
 			"type": "tconstruct:material"
+		},
+		{
+			"id": "goety:marble/marble_soul_brazier",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "framedblocks:framing_saw/framed_gold_pressure_plate",
@@ -4841,12 +6381,24 @@
 			"type": "starcatcher:modifier_shaped_recipe"
 		},
 		{
+			"id": "goety:wayfarers_belt",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "ars_nouveau:scribes_table",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "hexerei:willow_broom_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
+		},
+		{
 			"id": "ars_nouveau:spell_crossbow",
 			"type": "ars_nouveau:enchanting_apparatus"
+		},
+		{
+			"id": "goety:storm_crown",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "bloodmagic:alchemy_table",
@@ -4862,6 +6414,18 @@
 		},
 		{
 			"id": "sophisticatedstorage:storage_input",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "irons_spellbooks:artificer_cane",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "minecraft:golden_axe",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "irons_spellbooks:gold_spell_book",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -4893,8 +6457,16 @@
 			"type": "tconstruct:material"
 		},
 		{
+			"id": "oc2rwireless:wireless_card",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "sophisticatedbackpacks:gold_backpack",
 			"type": "sophisticatedbackpacks:backpack_upgrade"
+		},
+		{
+			"id": "forbidden_arcanus:clibano_combustion/gold_ingot_from_clibano_combusting_raw_gold",
+			"type": "forbidden_arcanus:clibano_combustion"
 		},
 		{
 			"id": "iceandfire:dragonarmor_gold_head",
@@ -4905,8 +6477,16 @@
 			"type": "bloodmagic:alchemytable"
 		},
 		{
+			"id": "goety:gold_trampler_armor",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "sophisticatedbackpacks:advanced_deposit_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
+		},
+		{
+			"id": "bloodmagic:blood_altar",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "sophisticatedbackpacks:advanced_void_upgrade",
@@ -4921,15 +6501,47 @@
 			"type": "pneumaticcraft:pressure_chamber"
 		},
 		{
+			"id": "reliquary:pedestals/passive/gray_passive_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "k_turrets:bullet_drone",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:pedestals/passive/black_passive_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:marble/gold_plated_marble",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "occultism:ritual/summon_demonic_wife",
+			"type": "occultism:ritual"
 		},
 		{
 			"id": "sophisticatedstorage:advanced_pickup_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
+			"id": "reliquary:bullets/concussive_bullet",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "moreartifacts:ankh_charm",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:pedestals/passive/orange_passive_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "cold_sweat:soulspring_lamp",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:gold_trapdoor",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -4938,6 +6550,10 @@
 		},
 		{
 			"id": "ars_nouveau:agronomic_sourcelink",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "mynethersdelight:crafting/hoglin_trophy",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -4977,6 +6593,10 @@
 		{
 			"id": "morered:diode_from_soldering",
 			"type": "morered:soldering"
+		},
+		{
+			"id": "supplementaries:lock_block",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "morered:pulse_gate_from_soldering",
@@ -5023,6 +6643,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "forbidden_arcanus:mundabitur_dust",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
 			"id": "rsgauges:industrial/industrial_shock_sensitive_trapdoor_recipe",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -5041,6 +6665,10 @@
 		{
 			"id": "pneumaticcraft:thermostat_module",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "sophisticatedbackpacks:advanced_alchemy_upgrade",
+			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
 			"id": "create:crafting/kinetics/gantry_shaft",
@@ -5075,6 +6703,14 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "oc2rwireless:wireless_relay",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:storm_staff",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "sophisticatedstorage:auto_smoking_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
@@ -5093,6 +6729,10 @@
 		{
 			"id": "tconstruct:gadgets/fancy_frame/reversed_gold",
 			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "supplementaries:redstone_illuminator",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "createdeco:red_andesite_lamp",
@@ -5159,6 +6799,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "pneumaticcraft:flux_compressor",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "minecraft:detector_rail",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -5195,12 +6839,20 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "supplementaries:wind_vane",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "pneumaticcraft:wall_lamp_inverted_gray",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "ae2:inscriber/logic_processor",
 			"type": "ae2:inscriber"
+		},
+		{
+			"id": "reliquary:alkahestry/drain/redstone",
+			"type": "reliquary:alkahestry_drain"
 		},
 		{
 			"id": "ae2:network/parts/level_emitter",
@@ -5215,11 +6867,19 @@
 			"type": "bloodmagic:alchemytable"
 		},
 		{
+			"id": "rehooked:red_hook",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "create:crafting/logistics/powered_latch",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "create:crafting/kinetics/sticker",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "littlelogistics:vessel_detector",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -5259,6 +6919,10 @@
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
+			"id": "fallout_wastelands_:portalignitercraft",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "morered:multiplexer_from_soldering",
 			"type": "morered:soldering"
 		},
@@ -5281,6 +6945,10 @@
 		{
 			"id": "create:crafting/kinetics/clutch",
 			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "occultism:crushing/redstone_dust",
+			"type": "occultism:crushing"
 		},
 		{
 			"id": "framedblocks:framed_fancy_powered_rail",
@@ -5312,6 +6980,10 @@
 		},
 		{
 			"id": "twilightforest:encased_smoker",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "littlelogistics:tug_route",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -5351,6 +7023,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:enchant/quick_charge",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "morered:and_2_gate_from_soldering",
 			"type": "morered:soldering"
 		},
@@ -5365,6 +7041,14 @@
 		{
 			"id": "quark:building/crafting/lamps/white_corundum_lamp",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:alkahestry/charging/redstone_block",
+			"type": "reliquary:alkahestry_charging"
+		},
+		{
+			"id": "sophisticatedbackpacks:advanced_feeding_upgrade",
+			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
 			"id": "rsgauges:industrial/industrial_switchlink_pulse_relay_recipe",
@@ -5385,6 +7069,10 @@
 		{
 			"id": "morered:nand_gate_from_soldering",
 			"type": "morered:soldering"
+		},
+		{
+			"id": "create:crafting/logistics/redstone_requester",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "bloodmagic:dungeon_emitter",
@@ -5447,6 +7135,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "reliquary:alkahestry_altar",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
 			"id": "morered:not_gate",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -5459,8 +7151,16 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "reliquary:uncrafting/redstone",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "create:crafting/logistics/redstone_contact",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:create/washing/iron_node",
+			"type": "create:splashing"
 		},
 		{
 			"id": "rsgauges:industrial/industrial_day_timer_recipe",
@@ -5488,6 +7188,14 @@
 		},
 		{
 			"id": "immersive_aircraft:gyroscope_hud",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:freezing_lamp",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "littlelogistics:rapid_hopper",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -5535,6 +7243,18 @@
 			"type": "ae2:transform"
 		},
 		{
+			"id": "goety:focus/sensing_focus",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:wind_blower",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:soul_transfer",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "morered:bitwise_not_gate_from_soldering",
 			"type": "morered:soldering"
 		},
@@ -5559,8 +7279,16 @@
 			"type": "bloodmagic:meteor"
 		},
 		{
+			"id": "tinkers_things:speedy_from_block",
+			"type": "tconstruct:incremental_modifier"
+		},
+		{
 			"id": "ars_nouveau:jar_of_light",
 			"type": "ars_nouveau:enchanting_apparatus"
+		},
+		{
+			"id": "sophisticatedstorage:advanced_alchemy_upgrade",
+			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
 			"id": "bloodmagic:synthetic_point",
@@ -5583,7 +7311,15 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "hexerei:candles/add_redstone_base_to_candle",
+			"type": "hexerei:add_to_candle"
+		},
+		{
 			"id": "quark:building/crafting/lamps/black_corundum_lamp",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:cog_block",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -5635,6 +7371,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "hexerei:blood_sigil_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
+		},
+		{
 			"id": "cold_sweat:thermometer",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -5668,6 +7408,10 @@
 		},
 		{
 			"id": "pneumaticcraft:wall_lamp_inverted_white",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:apparition_door",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -5731,8 +7475,24 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "create:crafting/logistics/packager",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "littlelogistics:receiver_component",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:empty_focus_craft2",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "tconstruct:tools/modifiers/upgrade/speedy_from_block",
 			"type": "tconstruct:incremental_modifier"
+		},
+		{
+			"id": "sophisticatedbackpacks:advanced_tool_swapper_upgrade",
+			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
 			"id": "sophisticatedstorage:advanced_feeding_upgrade",
@@ -5741,6 +7501,10 @@
 		{
 			"id": "bloodmagic:soulforge/demon_will_gauge",
 			"type": "bloodmagic:soulforge"
+		},
+		{
+			"id": "moreartifacts:mechanical_gears",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "create:crafting/kinetics/gearshift",
@@ -5760,6 +7524,10 @@
 		},
 		{
 			"id": "ae2:materials/cardinverter",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "malum:mechanical_weave_v2",
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
@@ -5815,6 +7583,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "moreartifacts:shadow_dust",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "pneumaticcraft:wall_lamp_purple",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -5823,11 +7595,19 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "fallout_wastelands_:portalframecraft",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "create:splashing/crushed_raw_iron",
 			"type": "create:splashing"
 		},
 		{
 			"id": "quark:automation/crafting/crafter",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "buildinggadgets2:gadget_destruction",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -5848,6 +7628,10 @@
 		},
 		{
 			"id": "sophisticatedbackpacks:smelting_upgrade",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:ice_bouquet_trap",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -5883,6 +7667,18 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "sushigocrafting:rice_cooker",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "protection_pixel:steamexoloot",
+			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "occultism:miner/ores/redstone_ore",
+			"type": "occultism:miner"
+		},
+		{
 			"id": "bloodmagic:alchemytable/mod_router_filter",
 			"type": "bloodmagic:alchemytable"
 		},
@@ -5899,6 +7695,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "sophisticatedbackpacks:advanced_magnet_upgrade_from_basic",
+			"type": "sophisticatedcore:upgrade_next_tier"
+		},
+		{
 			"id": "pneumaticcraft:logistics_module",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -5913,6 +7713,10 @@
 		{
 			"id": "sophisticatedbackpacks:blasting_upgrade",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "malum:spirit_crucible/redstone",
+			"type": "malum:spirit_focusing"
 		},
 		{
 			"id": "ae2:network/cells/item_storage_cell_4k",
@@ -5999,6 +7803,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "create:crafting/materials/transmitter",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "rsgauges:industrial/industrial_alarm_lamp_recipe",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -6043,11 +7851,27 @@
 			"type": "bloodmagic:soulforge"
 		},
 		{
+			"id": "reliquary:alkahestry/charging/redstone",
+			"type": "reliquary:alkahestry_charging"
+		},
+		{
+			"id": "sophisticatedbackpacks:tool_swapper_upgrade",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "create:crafting/logistics/pulse_timer",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "pneumaticcraft:wall_lamp_black",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:marble_wind_blower",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:relayer",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -6103,12 +7927,20 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "sophisticatedbackpacks:advanced_magnet_upgrade",
+			"type": "sophisticatedcore:upgrade_next_tier"
+		},
+		{
 			"id": "k_turrets:lantern",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "quark:building/crafting/lamps/red_corundum_lamp",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "hexerei:moon_dust_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
 		},
 		{
 			"id": "pneumaticcraft:thermo_plant/lubricant_from_diesel",
@@ -6136,6 +7968,10 @@
 		},
 		{
 			"id": "weather2:wind_turbine",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "littlelogistics:locomotive_route",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -6203,6 +8039,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "littlelogistics:vessel_charger",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "ae2:network/cells/spatial_storage_cell_16_cubed",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -6235,11 +8075,23 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:mystic_core",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "pneumaticcraft:wall_lamp_inverted_light_blue",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "morered:nand_2_gate",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:altimeter",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:cannon_2",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -6271,6 +8123,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "aether:skyroot_piston",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "ae2:inscriber/engineering_processor",
 			"type": "ae2:inscriber"
 		},
@@ -6289,6 +8145,10 @@
 		{
 			"id": "swem:mineral_bone_meal",
 			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "supplementaries:sconce_lever",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "bloodmagic:alchemytable/enchant_router_filter",
@@ -6327,11 +8187,19 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "oc2rwireless:wireless_card",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "minecraft:activator_rail",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "ae2:network/cells/item_storage_components_cell_4k_part",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "create:crafting/kinetics/cart_assembler",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -6357,6 +8225,10 @@
 		{
 			"id": "bloodmagic:alchemytable/reagent_blood_light",
 			"type": "bloodmagic:alchemytable"
+		},
+		{
+			"id": "tinkers_things:speedy_from_dust",
+			"type": "tconstruct:incremental_modifier"
 		},
 		{
 			"id": "rsgauges:industrial/industrial_switchlink_cased_receiver_recipe",
@@ -6385,6 +8257,10 @@
 		{
 			"id": "morered:latch_from_soldering",
 			"type": "morered:soldering"
+		},
+		{
+			"id": "supplementaries:turn_table",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "buildinggadgets2:gadget_copy_paste",
@@ -6457,6 +8333,38 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
+			"id": "goety:thrall/summon_bound_storm_caster",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:magic_fabric",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "goety:enchant/knockback",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:enchant/thorns",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:occult_fabric",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "goety:enchant/luck_of_the_sea",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:blazing_cage",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:enchant/multishot",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "create:crushing/deepslate_lapis_ore",
 			"type": "create:crushing"
 		},
@@ -6477,6 +8385,22 @@
 			"type": "minecraft:blasting"
 		},
 		{
+			"id": "goety:enchant/binding_curse",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:spirit_fabric",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "reliquary:alkahestry/crafting/lapis_lazuli",
+			"type": "reliquary:alkahestry_crafting"
+		},
+		{
+			"id": "goety:marble/slate_glazed_marble",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
 			"id": "create:haunting/lapis_recycling",
 			"type": "create:haunting"
 		},
@@ -6485,44 +8409,152 @@
 			"type": "bloodmagic:soulforge"
 		},
 		{
+			"id": "goety:chill_fabric",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
 			"id": "ars_nouveau:relay_splitter",
 			"type": "ars_nouveau:enchanting_apparatus"
+		},
+		{
+			"id": "goety:enchant/feather_falling",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:ring_of_want",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:enchant/power",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "bloodmagic:alchemytable/looting_anointment_xl",
 			"type": "bloodmagic:alchemytable"
 		},
 		{
+			"id": "goety:convert_spider_to_brood_mother",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:feline_amulet",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:ominous/ominous_stone",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "powergrid:mechanical_crafting/integrated_circuit",
 			"type": "create:mechanical_crafting"
+		},
+		{
+			"id": "reliquary:void_tear",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "goety:pale_steel_ingot",
+			"type": "minecraft:crafting_shapeless"
 		},
 		{
 			"id": "create:crushing/lapis_ore",
 			"type": "create:crushing"
 		},
 		{
+			"id": "goety:enchant/efficiency",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:enchant/quick_charge",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "create:milling/lapis_lazuli",
 			"type": "create:milling"
+		},
+		{
+			"id": "goety:pendant_of_hunger",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:graverobber_shovel",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:enchant/fire_aspect",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:enchant/piercing",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "tconstruct:tools/modifiers/worktable/enchantment_converting/upgrade_book",
 			"type": "tconstruct:enchantment_converting"
 		},
 		{
+			"id": "goety:enchant/projectile_protection",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:enchant/respiration",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "reliquary:infernal_tear/lapis_lazuli",
+			"type": "reliquary:infernal_tear_value"
+		},
+		{
+			"id": "goety:convert_villager_to_ravaged",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "sophisticatedstorage:advanced_magnet_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
+		},
+		{
+			"id": "goety:ring_of_force",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "ars_nouveau:warp_scroll",
+			"type": "minecraft:crafting_shapeless"
 		},
 		{
 			"id": "tconstruct:tools/modifiers/worktable/enchantment_converting/upgrade_tool",
 			"type": "tconstruct:enchantment_converting"
 		},
 		{
+			"id": "goety:enchant/depth_strider",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "deeperdarker:lapis_lazuli_from_smelting_gloomslate_lapis_ore",
 			"type": "minecraft:smelting"
 		},
 		{
+			"id": "supplementaries:lapis_bricks",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:dark_fabric",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "goety:thrall/summon_bound_wind_caller",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "pneumaticcraft:thermo_plant/upgrade_matrix",
 			"type": "pneumaticcraft:thermo_plant"
+		},
+		{
+			"id": "goety:enchant/smite",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:enchant/aqua_affinity",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "minecraft:lapis_block",
@@ -6533,8 +8565,40 @@
 			"type": "bloodmagic:soulforge"
 		},
 		{
+			"id": "forbidden_arcanus:combine_residues/lapis_lazuli_residues_to_lapis_block",
+			"type": "forbidden_arcanus:combine_residues"
+		},
+		{
+			"id": "goety:enchant/fire_protection",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:death_scythe",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:ring_of_thirst",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "minecraft:blue_dye",
 			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "goety:enchant/riptide",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:star_amulet",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:enchant/protection",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:enchant/blast_protection",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "bloodmagic:alchemytable/looting_anointment_2",
@@ -6549,12 +8613,44 @@
 			"type": "bloodmagic:alchemytable"
 		},
 		{
+			"id": "malum:mechanical_weave_v1",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
 			"id": "deeperdarker:lapis_lazuli_from_blasting_gloomslate_lapis_ore",
 			"type": "minecraft:blasting"
 		},
 		{
+			"id": "goety:totem_of_roots",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:enchant/flame",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:enchant/sharpness",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:marble/slate_marble",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:storm_robe",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:cursed_infuser",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "bloodmagic:array/night",
 			"type": "bloodmagic:array"
+		},
+		{
+			"id": "buildinggadgets2:gadget_destruction",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "buildinggadgets2:gadget_building",
@@ -6565,8 +8661,16 @@
 			"type": "bloodmagic:alchemytable"
 		},
 		{
+			"id": "goety:bonehead_hammer",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "rpgstats:synapsis_catalyst",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:dark/dark_metal_scythe",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "sophisticatedbackpacks:magnet_upgrade",
@@ -6581,12 +8685,48 @@
 			"type": "create:mixing"
 		},
 		{
+			"id": "goety:focus/illusion_focus",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:enchant/loyalty",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:enchant/impaling",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "tconstruct:tables/tinkers_chest",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:totem_of_souls",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:enchant/vanishing_curse",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:gale_fabric",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "reliquary:bullets/seeker_bullet",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
 			"id": "create:crushing/gloomslate_lapis_ore",
 			"type": "create:crushing"
+		},
+		{
+			"id": "sophisticatedbackpacks:advanced_magnet_upgrade",
+			"type": "sophisticatedcore:upgrade_next_tier"
+		},
+		{
+			"id": "goety:sky_wood_planks",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "sophisticatedstorage:magnet_upgrade",
@@ -6597,6 +8737,10 @@
 			"type": "bloodmagic:soulforge"
 		},
 		{
+			"id": "supplementaries:integration/lapis_bricks_fd",
+			"type": "farmersdelight:cutting"
+		},
+		{
 			"id": "buildinggadgets2:my_book_recipe_shapeless",
 			"type": "patchouli:shapeless_book_recipe"
 		},
@@ -6605,8 +8749,28 @@
 			"type": "bloodmagic:alchemytable"
 		},
 		{
+			"id": "goety:magic_emerald_craft",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "swem:nova_offering",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "forbidden_arcanus:clibano_combustion/lapis_lazuli_from_clibano_combusting",
+			"type": "forbidden_arcanus:clibano_combustion"
+		},
+		{
+			"id": "goety:thrall/summon_bound_evoker",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:dark_wand",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:enchant/punch",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "buildinggadgets2:gadget_cut_paste",
@@ -6615,6 +8779,18 @@
 		{
 			"id": "buildinggadgets2:gadget_exchanging",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:enchant/bane_of_arthropods",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:enchant/sweeping_edge",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:enchant/unbreaking",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "tconstruct:tools/modifiers/upgrade/killager_from_dust",
@@ -6631,9 +8807,17 @@
 		{
 			"id": "bloodmagic:soulforge/demon_pylon",
 			"type": "bloodmagic:soulforge"
+		},
+		{
+			"id": "goety:enchant/lure",
+			"type": "goety:ritual"
 		}
 	],
 	"diamond": [
+		{
+			"id": "goety:eerie_pickaxe",
+			"type": "goety:ritual"
+		},
 		{
 			"id": "ars_nouveau:mana_boost_2",
 			"type": "ars_nouveau:enchantment"
@@ -6643,16 +8827,32 @@
 			"type": "ars_nouveau:enchantment"
 		},
 		{
+			"id": "tomeofblood:alchemytable/apprentice_tome",
+			"type": "bloodmagic:alchemytable"
+		},
+		{
 			"id": "ars_nouveau:amulet_of_mana_boost",
 			"type": "ars_nouveau:enchanting_apparatus"
+		},
+		{
+			"id": "bloodmagic:altar/weakbloodorb",
+			"type": "bloodmagic:altar"
 		},
 		{
 			"id": "tconstruct:smeltery/casting/diamond/block",
 			"type": "tconstruct:casting_basin"
 		},
 		{
+			"id": "irons_spellbooks:mana_ring",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "tconstruct:tools/modifiers/ability/luck_level_3",
 			"type": "tconstruct:modifier"
+		},
+		{
+			"id": "reliquary:pedestals/lime_pedestal",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "sophisticatedstorage:stack_upgrade_tier_4",
@@ -6671,12 +8871,20 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "ubesdelight:minecraft/crafting/rolling_pin_diamond",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "sophisticatedstorage:iron_to_diamond_tier_upgrade",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "iceandfire:tide_trident",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "sophisticatedbackpacks:advanced_alchemy_upgrade",
+			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
 			"id": "tconstruct:smeltery/melting/diamond/horse_armor",
@@ -6691,6 +8899,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "reliquary:pedestals/cyan_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "sophisticatedbackpacks:diamond_backpack",
 			"type": "sophisticatedbackpacks:backpack_upgrade"
 		},
@@ -6699,7 +8911,15 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "occultism:spirit_fire/spirit_attuned_gem",
+			"type": "occultism:spirit_fire"
+		},
+		{
 			"id": "minecraft:eye_armor_trim_smithing_template",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "moreartifacts:mechanical_claw",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -6715,6 +8935,14 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "reliquary:ice_magus_rod",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:storm_staff",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "sophisticatedstorage:auto_smoking_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
@@ -6723,11 +8951,19 @@
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
+			"id": "goety:budding_amethyst",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "create:crushing/deepslate_diamond_ore",
 			"type": "create:crushing"
 		},
 		{
 			"id": "minecraft:rib_armor_trim_smithing_template",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "forbidden_arcanus:draco_arcanus_pickaxe",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -6749,6 +8985,10 @@
 		{
 			"id": "ars_nouveau:imbuement_amplify_arrow",
 			"type": "ars_nouveau:imbuement"
+		},
+		{
+			"id": "goety:focus/banish_focus",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "oc2r:memory_extra_large",
@@ -6775,7 +9015,23 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "forbidden_arcanus:draco_arcanus_axe",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "undergarden:catalyst",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:infernal_tear/diamond",
+			"type": "reliquary:infernal_tear_value"
+		},
+		{
+			"id": "reliquary:pedestals/purple_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "minecraft:diamond_pickaxe",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -6787,7 +9043,15 @@
 			"type": "bloodmagic:array"
 		},
 		{
+			"id": "forbidden_arcanus:draco_arcanus_scepter",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "minecraft:shaper_armor_trim_smithing_template",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "minecraft:diamond_hoe",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -6807,8 +9071,24 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "minecraft:netherite_hoe_smithing",
+			"type": "minecraft:smithing_transform"
+		},
+		{
 			"id": "sophisticatedstorage:diamond_shulker_box",
 			"type": "sophisticatedstorage:storage_tier_upgrade"
+		},
+		{
+			"id": "minecraft:netherite_pickaxe_smithing",
+			"type": "minecraft:smithing_transform"
+		},
+		{
+			"id": "reliquary:pedestals/blue_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "moreartifacts:golden_headgear",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "pneumaticcraft:gun_ammo_ap",
@@ -6823,6 +9103,10 @@
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
+			"id": "goety:hunters_bow",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "ae2:materials/advancedcard",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -6833,6 +9117,10 @@
 		{
 			"id": "minecraft:netherite_boots_smithing",
 			"type": "minecraft:smithing_transform"
+		},
+		{
+			"id": "reliquary:pedestals/light_gray_pedestal",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "ars_nouveau:battlemage_hood",
@@ -6855,6 +9143,10 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "occultism:ritual/summon_afrit_rain_weather",
+			"type": "occultism:ritual"
+		},
+		{
 			"id": "ars_nouveau:blast_protection_4",
 			"type": "ars_nouveau:enchantment"
 		},
@@ -6863,12 +9155,32 @@
 			"type": "ars_nouveau:enchantment"
 		},
 		{
+			"id": "goety:diamond_ice_axe",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:rampaging_axe",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "sophisticatedbackpacks:advanced_pickup_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
 			"id": "bloodmagic:lava_crystal",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "minecraft:diamond_axe",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "hexerei:crystal_ball_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
+		},
+		{
+			"id": "goety:dark_scythe",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "minecraft:diamond_helmet",
@@ -6883,8 +9195,24 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "occultism:ritual/familiar_guardian",
+			"type": "occultism:ritual"
+		},
+		{
 			"id": "minecraft:netherite_leggings_smithing",
 			"type": "minecraft:smithing_transform"
+		},
+		{
+			"id": "ars_nouveau:ritual_flight",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "sophisticatedbackpacks:advanced_feeding_upgrade",
+			"type": "sophisticatedcore:upgrade_next_tier"
+		},
+		{
+			"id": "goety:graverobber_shovel",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "minecraft:vex_armor_trim_smithing_template",
@@ -6893,6 +9221,10 @@
 		{
 			"id": "create:crushing/diamond_ore",
 			"type": "create:crushing"
+		},
+		{
+			"id": "aether:diamond_axe_repairing",
+			"type": "aether:repairing"
 		},
 		{
 			"id": "bloodmagic:soulforge/master_routing_node",
@@ -6919,8 +9251,16 @@
 			"type": "ars_nouveau:enchantment"
 		},
 		{
+			"id": "goety:diamond_ravager_armor",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "sophisticatedstorage:auto_smelting_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
+		},
+		{
+			"id": "goety:focus/telekinesis_focus",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "adpother:diamond_filter_frame",
@@ -6931,8 +9271,16 @@
 			"type": "sophisticatedstorage:double_chest_tier_upgrade"
 		},
 		{
+			"id": "occultism:ritual/summon_afrit_crusher",
+			"type": "occultism:ritual"
+		},
+		{
 			"id": "aether:diamond_helmet_repairing",
 			"type": "aether:repairing"
+		},
+		{
+			"id": "irons_spellbooks:diamond_spell_book",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "ars_nouveau:glyph_amplify",
@@ -6947,12 +9295,24 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "forbidden_arcanus:draco_arcanus_sword",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:pedestals/black_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "tconstruct:tools/modifiers/worktable/enchantment_converting/ability_tool",
 			"type": "tconstruct:enchantment_converting"
 		},
 		{
 			"id": "ars_nouveau:whirlisprig_charm",
 			"type": "ars_nouveau:enchanting_apparatus"
+		},
+		{
+			"id": "aether:diamond_sword_repairing",
+			"type": "aether:repairing"
 		},
 		{
 			"id": "swem:revert_diamond_pony_armor",
@@ -6967,8 +9327,20 @@
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
+			"id": "reliquary:pedestals/brown_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:focus/frostborn_focus",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "minecraft:netherite_upgrade_smithing_template",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "sophisticatedstorage:advanced_alchemy_upgrade",
+			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
 			"id": "create:crushing/gloomslate_diamond_ore",
@@ -6976,6 +9348,14 @@
 		},
 		{
 			"id": "sophisticatedstorage:basic_to_diamond_tier_upgrade",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "forbidden_arcanus:diamond_blacksmith_gavel",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:pedestals/yellow_pedestal",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -6995,7 +9375,15 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:focus/thunderbolt_focus",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "sophisticatedstorage:copper_to_diamond_tier_upgrade",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:pedestals/pink_pedestal",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
@@ -7005,6 +9393,10 @@
 		{
 			"id": "bloodmagic:soulforge/demon_crucible",
 			"type": "bloodmagic:soulforge"
+		},
+		{
+			"id": "reliquary:pedestals/white_pedestal",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "ars_nouveau:apprentice_spell_book_upgrade",
@@ -7019,6 +9411,10 @@
 			"type": "ars_nouveau:enchanting_apparatus"
 		},
 		{
+			"id": "additionalweaponry:scepter",
+			"type": "tconstruct:tool_building"
+		},
+		{
 			"id": "sophisticatedbackpacks:advanced_refill_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
@@ -7029,6 +9425,10 @@
 		{
 			"id": "oc2r:hard_drive_large",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "hexerei:witch_hazel_broom_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
 		},
 		{
 			"id": "quark:tools/crafting/pickarang_heart",
@@ -7047,6 +9447,14 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
+			"id": "aether:diamond_shovel_repairing",
+			"type": "aether:repairing"
+		},
+		{
+			"id": "sophisticatedbackpacks:advanced_tool_swapper_upgrade",
+			"type": "sophisticatedcore:upgrade_next_tier"
+		},
+		{
 			"id": "aether:diamond_chestplate_repairing",
 			"type": "aether:repairing"
 		},
@@ -7063,8 +9471,8 @@
 			"type": "tconstruct:modifier"
 		},
 		{
-			"id": "create_new_age:energising/overcharged_diamond",
-			"type": "create_new_age:energising"
+			"id": "reliquary:pedestals/red_pedestal",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "sophisticatedstorage:advanced_jukebox_upgrade",
@@ -7073,6 +9481,18 @@
 		{
 			"id": "minecraft:diamond_leggings",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:black_iron/black_iron_helmet",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "irons_spellbooks:spellbreaker",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:shears_of_winter",
+			"type": "minecraft:crafting_shapeless"
 		},
 		{
 			"id": "starcatcher:crystal_hook",
@@ -7095,8 +9515,24 @@
 			"type": "tconstruct:enchantment_converting"
 		},
 		{
+			"id": "goety:storm_robe",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "oc2r:hard_drive_extra_large",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:pedestals/magenta_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "moreartifacts:shadow_dust",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "occultism:ritual/craft_soul_gem",
+			"type": "occultism:ritual"
 		},
 		{
 			"id": "ars_nouveau:power_1",
@@ -7119,6 +9555,10 @@
 			"type": "ars_nouveau:enchantment"
 		},
 		{
+			"id": "reliquary:pedestals/gray_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "buildinggadgets2:gadget_building",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -7139,6 +9579,10 @@
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
+			"id": "goety:bonehead_hammer",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "minecraft:diamond_uncraft_plate",
 			"type": "minecraft:crafting_shapeless"
 		},
@@ -7151,12 +9595,40 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "minecraft:netherite_sword_smithing",
+			"type": "minecraft:smithing_transform"
+		},
+		{
+			"id": "occultism:ritual/possess_ghast",
+			"type": "occultism:ritual"
+		},
+		{
 			"id": "bloodmagic:flask/hard_to_obsidian",
 			"type": "bloodmagic:flask_potiontransform"
 		},
 		{
+			"id": "malum:spirit_infusion/necklace_of_blissful_harmony",
+			"type": "malum:spirit_infusion"
+		},
+		{
 			"id": "oc2r:block_operations_module",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:focus/frost_nova_focus",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "sophisticatedbackpacks:advanced_magnet_upgrade_from_basic",
+			"type": "sophisticatedcore:upgrade_next_tier"
+		},
+		{
+			"id": "goety:diamond_trampler_armor",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "forbidden_arcanus:combine_residues/diamond_residues_to_diamond_block",
+			"type": "forbidden_arcanus:combine_residues"
 		},
 		{
 			"id": "rpgstats:diamond_ritual_dagger",
@@ -7195,6 +9667,10 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
+			"id": "occultism:ritual/summon_wild_hunt",
+			"type": "occultism:ritual"
+		},
+		{
 			"id": "sophisticatedstorage:limited_diamond_barrel_1",
 			"type": "sophisticatedstorage:storage_tier_upgrade"
 		},
@@ -7211,8 +9687,16 @@
 			"type": "sophisticatedstorage:storage_tier_upgrade"
 		},
 		{
+			"id": "reliquary:alkahestry/crafting/diamond",
+			"type": "reliquary:alkahestry_crafting"
+		},
+		{
 			"id": "minecraft:diamond_to_coin",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "hexerei:warhammer_from_mixing_cauldron",
+			"type": "hexerei:mixingcauldron"
 		},
 		{
 			"id": "iceandfire:summoning_crystal_fire",
@@ -7225,6 +9709,14 @@
 		{
 			"id": "sophisticatedstorage:diamond_chest",
 			"type": "sophisticatedstorage:storage_tier_upgrade"
+		},
+		{
+			"id": "minecraft:diamond_sword",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:pedestals/light_blue_pedestal",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "rehooked:diamond_hook",
@@ -7255,8 +9747,20 @@
 			"type": "tconstruct:casting_table"
 		},
 		{
+			"id": "malum:spirit_crucible/repair/diamond",
+			"type": "malum:spirit_repair"
+		},
+		{
+			"id": "minecraft:netherite_shovel_smithing",
+			"type": "minecraft:smithing_transform"
+		},
+		{
 			"id": "starcatcher:aqua_bobber",
 			"type": "starcatcher:modifier_shaped_recipe"
+		},
+		{
+			"id": "minecraft:diamond_shovel",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "minecraft:diamond_chestplate",
@@ -7267,12 +9771,20 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:hungry_dagger",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "weather2:wind_turbine",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "undergarden:smelt_catalyst",
 			"type": "minecraft:smelting"
+		},
+		{
+			"id": "forbidden_arcanus:draco_arcanus_hoe",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "sophisticatedbackpacks:inception_upgrade",
@@ -7297,6 +9809,10 @@
 		{
 			"id": "iceandfire:summoning_crystal_lightning",
 			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "forbidden_arcanus:clibano_combustion/diamond_from_clibano_combusting",
+			"type": "forbidden_arcanus:clibano_combustion"
 		},
 		{
 			"id": "bloodmagic:soulforge/lessertartaricgem",
@@ -7363,6 +9879,10 @@
 			"type": "ars_nouveau:enchanting_apparatus"
 		},
 		{
+			"id": "goety:focus/blizzard_focus",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "ars_nouveau:scryers_oculus",
 			"type": "ars_nouveau:enchanting_apparatus"
 		},
@@ -7387,8 +9907,20 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "protection_pixel:heatoverlockmechanismloot",
+			"type": "create:sequenced_assembly"
+		},
+		{
 			"id": "tconstruct:smeltery/casting/diamond/gem_sand_cast",
 			"type": "tconstruct:casting_table"
+		},
+		{
+			"id": "moreartifacts:spectre_amulet",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "minecraft:netherite_axe_smithing",
+			"type": "minecraft:smithing_transform"
 		},
 		{
 			"id": "tconstruct:smeltery/melting/diamond/helmet",
@@ -7411,6 +9943,14 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "reliquary:pedestals/orange_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "aether:diamond_hoe_repairing",
+			"type": "aether:repairing"
+		},
+		{
 			"id": "sophisticatedbackpacks:advanced_void_upgrade",
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
@@ -7421,6 +9961,18 @@
 		{
 			"id": "ars_nouveau:ring_of_greater_discount",
 			"type": "ars_nouveau:enchanting_apparatus"
+		},
+		{
+			"id": "malum:spirit_infusion/glass_brooch",
+			"type": "malum:spirit_infusion"
+		},
+		{
+			"id": "aether:diamond_pickaxe_repairing",
+			"type": "aether:repairing"
+		},
+		{
+			"id": "occultism:ritual/summon_demonic_wife",
+			"type": "occultism:ritual"
 		},
 		{
 			"id": "minecraft:coin_to_diamond",
@@ -7439,8 +9991,20 @@
 			"type": "sophisticatedcore:upgrade_next_tier"
 		},
 		{
+			"id": "irons_spellbooks:arcane_anvil",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "reliquary:pedestals/green_pedestal",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "ae2:inscriber/engineering_processor_print",
 			"type": "ae2:inscriber"
+		},
+		{
+			"id": "forbidden_arcanus:draco_arcanus_shovel",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "ars_nouveau:shapers_focus",
@@ -7449,12 +10013,32 @@
 	],
 	"emerald": [
 		{
+			"id": "goety:focus/ghost_fire_focus",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:focus/teeth_focus",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "pneumaticcraft:spawner_core_shell",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:focus/shredding_focus",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:necro_brazier",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "blue_skies:emerald_from_blasting_everbright_emerald_ore",
 			"type": "minecraft:blasting"
+		},
+		{
+			"id": "goety:enchant/luck_of_the_sea",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "minecraft:emerald_to_coin",
@@ -7469,6 +10053,10 @@
 			"type": "tconstruct:casting_basin"
 		},
 		{
+			"id": "goety:awakened_emerald_block",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "pneumaticcraft:amadron/assembly_program_laser",
 			"type": "pneumaticcraft:amadron"
 		},
@@ -7481,12 +10069,20 @@
 			"type": "minecraft:smelting"
 		},
 		{
+			"id": "goety:dark_altar_prismarine",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "oc2r:memory_extra_large",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "create:crushing/emerald_ore",
 			"type": "create:crushing"
+		},
+		{
+			"id": "reliquary:emperor_chalice",
+			"type": "minecraft:crafting_shapeless"
 		},
 		{
 			"id": "pneumaticcraft:memory_stick",
@@ -7497,8 +10093,28 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
+			"id": "goety:dark_altar_ominous_stone",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "pneumaticcraft:amadron/assembly_program_drill_laser",
 			"type": "pneumaticcraft:amadron"
+		},
+		{
+			"id": "goety:dark_altar_crypt_stone",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:hook_bell",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:hunters_bow",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:ominous_charm",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "pneumaticcraft:amadron/pcb_blueprint",
@@ -7513,6 +10129,10 @@
 			"type": "ars_nouveau:glyph"
 		},
 		{
+			"id": "goety:soul_emerald",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "pneumaticcraft:amadron/oil_to_emerald",
 			"type": "pneumaticcraft:amadron"
 		},
@@ -7521,20 +10141,64 @@
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
+			"id": "goety:awakened_emerald_block_burner",
+			"type": "goety:cursed_infuser_recipes"
+		},
+		{
+			"id": "goety:stash_urn",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "occultism:ritual/summon_demonic_husband",
+			"type": "occultism:ritual"
+		},
+		{
 			"id": "pneumaticcraft:amadron/emerald_to_lubricant",
 			"type": "pneumaticcraft:amadron"
+		},
+		{
+			"id": "goety:dark_altar_marble",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:sculk_devourer",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "pneumaticcraft:amadron/lpg_to_emerald",
 			"type": "pneumaticcraft:amadron"
 		},
 		{
+			"id": "goety:magic_emerald",
+			"type": "goety:cursed_infuser_recipes"
+		},
+		{
 			"id": "pneumaticcraft:amadron/assembly_program_drill",
 			"type": "pneumaticcraft:amadron"
 		},
 		{
+			"id": "goety:great_hammer",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:focus/iceology_focus",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "minecraft:emerald_block",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "occultism:ritual/summon_afrit_crusher",
+			"type": "occultism:ritual"
+		},
+		{
+			"id": "reliquary:infernal_tear/emerald",
+			"type": "reliquary:infernal_tear_value"
+		},
+		{
+			"id": "goety:focus/barricade_focus",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "ars_nouveau:looting_1",
@@ -7545,16 +10209,52 @@
 			"type": "ars_nouveau:enchantment"
 		},
 		{
+			"id": "goety:dark_altar_end_stone",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "ars_nouveau:wixie_charm",
 			"type": "ars_nouveau:enchanting_apparatus"
+		},
+		{
+			"id": "goety:focus/earth_punch_focus",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:ominous_pyre",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:soul_transfer",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:focus/biting_focus",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:dark_altar_stone",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "create:crushing/gloomslate_emerald_ore",
 			"type": "create:crushing"
 		},
 		{
+			"id": "occultism:ritual/possess_elder_guardian",
+			"type": "occultism:ritual"
+		},
+		{
+			"id": "goety:focus/quaking_focus",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "tconstruct:smeltery/melting/emerald/gem",
 			"type": "tconstruct:melting"
+		},
+		{
+			"id": "goety:dark_altar",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "pneumaticcraft:amadron/gasoline_to_emerald",
@@ -7565,6 +10265,14 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "reliquary:alkahestry/crafting/emerald",
+			"type": "reliquary:alkahestry_crafting"
+		},
+		{
+			"id": "malum:spirit_infusion/intricate_assembly",
+			"type": "malum:spirit_infusion"
+		},
+		{
 			"id": "pneumaticcraft:amadron/diesel_to_emerald",
 			"type": "pneumaticcraft:amadron"
 		},
@@ -7573,12 +10281,28 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:dark_altar_nether_brick",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "oc2r:hard_drive_medium",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:thrash_glove_silver",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:dark_altar_deepslate",
 			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "bloodmagic:meteor/diamond",
 			"type": "bloodmagic:meteor"
+		},
+		{
+			"id": "supplementaries:speaker_block",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "oc2r:hard_drive_extra_large",
@@ -7593,12 +10317,32 @@
 			"type": "pneumaticcraft:amadron"
 		},
 		{
+			"id": "goety:dark_altar_highrock",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "create:crushing/deepslate_emerald_ore",
 			"type": "create:crushing"
 		},
 		{
+			"id": "goety:ice_bouquet_trap",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "ars_nouveau:archmage_spell_book_upgrade",
 			"type": "ars_nouveau:book_upgrade"
+		},
+		{
+			"id": "goety:dark/dark_helmet",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:convert_blazes_to_wildfire",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:magic_emerald_from_block",
+			"type": "minecraft:crafting_shapeless"
 		},
 		{
 			"id": "pneumaticcraft:amadron/kerosene_to_emerald",
@@ -7609,20 +10353,60 @@
 			"type": "minecraft:crafting_shaped"
 		},
 		{
+			"id": "goety:dark_altar_blackstone",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:animator",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "minecraft:emerald_from_smelting_emerald_ore",
 			"type": "minecraft:smelting"
+		},
+		{
+			"id": "goety:thrash_glove",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:focus/monsoon_focus",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:infernal_tome",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:totem_of_souls",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "iceandfire:summoning_crystal_fire",
 			"type": "minecraft:crafting_shapeless"
 		},
 		{
+			"id": "goety:focus/burrowing_focus",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "tomeofblood:alchemytable/archmage_tome",
+			"type": "bloodmagic:alchemytable"
+		},
+		{
 			"id": "ars_nouveau:reactive_3",
 			"type": "ars_nouveau:enchantment"
 		},
 		{
-			"id": "minecraft:emerald",
+			"id": "reliquary:wraith_node",
 			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "forbidden_arcanus:combine_residues/emerald_residues_to_emerald_block",
+			"type": "forbidden_arcanus:combine_residues"
+		},
+		{
+			"id": "goety:magic_emerald_craft",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "swem:nova_offering",
@@ -7631,6 +10415,10 @@
 		{
 			"id": "minecraft:emerald_from_blasting_emerald_ore",
 			"type": "minecraft:blasting"
+		},
+		{
+			"id": "goety:focus/iron_hide_focus",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "tconstruct:tools/modifiers/upgrade/emerald",
@@ -7649,12 +10437,36 @@
 			"type": "tconstruct:casting_table"
 		},
 		{
+			"id": "goety:ominous_idol",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:convert_trader_to_reprobate",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "create:crushing/sculk_stone_emerald_ore",
 			"type": "create:crushing"
 		},
 		{
+			"id": "goety:focus/cyclone_focus",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "buildinggadgets2:gadget_copy_paste",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "tradingpost:trading_post",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "forbidden_arcanus:clibano_combustion/emerald_from_clibano_combusting",
+			"type": "forbidden_arcanus:clibano_combustion"
+		},
+		{
+			"id": "goety:alarming_charm",
+			"type": "goety:ritual"
 		}
 	],
 	"amethyst": [
@@ -7663,8 +10475,16 @@
 			"type": "create:crushing"
 		},
 		{
+			"id": "malum:spirit_crucible/amethyst_shard",
+			"type": "malum:spirit_focusing"
+		},
+		{
 			"id": "bloodmagic:soulforge/throwing_dagger_copper",
 			"type": "bloodmagic:soulforge"
+		},
+		{
+			"id": "goety:focus/vexing_focus",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "powergrid:crafting/regulator_tube",
@@ -7679,6 +10499,18 @@
 			"type": "create:crushing"
 		},
 		{
+			"id": "goety:pulverize/amethyst_shard_pulverize",
+			"type": "goety:pulverize"
+		},
+		{
+			"id": "irons_spellbooks:cast_time_ring",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "irons_spellbooks:amethyst_rapier",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "bloodmagic:alchemytable/voiding_anointment_xl",
 			"type": "bloodmagic:alchemytable"
 		},
@@ -7689,6 +10521,10 @@
 		{
 			"id": "pneumaticcraft:pressure_chamber/solar_wafer",
 			"type": "pneumaticcraft:pressure_chamber"
+		},
+		{
+			"id": "goety:haunted_glass_tinted",
+			"type": "minecraft:crafting_shapeless"
 		},
 		{
 			"id": "ars_nouveau:imbuement_amethyst_block",
@@ -7707,12 +10543,36 @@
 			"type": "ars_nouveau:imbuement"
 		},
 		{
+			"id": "goety:empty_focus_craft",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "supplementaries:crystal_display",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:thrall/summon_ministrosity_thrall",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:thrall/summon_bound_geomancer",
+			"type": "goety:ritual"
+		},
+		{
+			"id": "goety:thrall/summon_redstone_ministrosity_thrall",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "bloodmagic:soulforge/primitive_resonator",
 			"type": "bloodmagic:soulforge"
 		},
 		{
 			"id": "tconstruct:tools/modifiers/worktable/enchantment_converting/slotless_book",
 			"type": "tconstruct:enchantment_converting"
+		},
+		{
+			"id": "goety:focus/sensing_focus",
+			"type": "minecraft:crafting_shaped"
 		},
 		{
 			"id": "tconstruct:tools/modifiers/worktable/extract/slotless_dagger",
@@ -7735,6 +10595,10 @@
 			"type": "bloodmagic:alchemytable"
 		},
 		{
+			"id": "irons_spellbooks:alchemist_cauldron/brew_legendary_ink",
+			"type": "irons_spellbooks:alchemist_cauldron_brew"
+		},
+		{
 			"id": "bloodmagic:alchemytable/weapon_repair_anointment_xl",
 			"type": "bloodmagic:alchemytable"
 		},
@@ -7751,6 +10615,26 @@
 			"type": "tconstruct:enchantment_converting"
 		},
 		{
+			"id": "irons_spellbooks:amethyst_resonance_charm",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "irons_spellbooks:shriving_stone",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "tinkers_things:amethyst_staff",
+			"type": "tconstruct:tool_building"
+		},
+		{
+			"id": "irons_spellbooks:divine_pearl",
+			"type": "minecraft:crafting_shapeless"
+		},
+		{
+			"id": "irons_spellbooks:alchemist_cauldron/brew_greater_healing_elixir",
+			"type": "irons_spellbooks:alchemist_cauldron_brew"
+		},
+		{
 			"id": "minecraft:tinted_glass",
 			"type": "minecraft:crafting_shaped"
 		},
@@ -7765,6 +10649,14 @@
 		{
 			"id": "ars_nouveau:summon_ritual/bats",
 			"type": "ars_nouveau:summon_ritual"
+		},
+		{
+			"id": "goety:empty_focus_burner",
+			"type": "goety:cursed_infuser_recipes"
+		},
+		{
+			"id": "goety:geo_staff",
+			"type": "goety:ritual"
 		},
 		{
 			"id": "tconstruct:tools/modifiers/worktable/extract/slotless",
@@ -7787,12 +10679,20 @@
 			"type": "bloodmagic:alchemytable"
 		},
 		{
+			"id": "goety:mystic_core",
+			"type": "goety:ritual"
+		},
+		{
 			"id": "protection_pixel:hunterloot",
 			"type": "create:mechanical_crafting"
 		},
 		{
 			"id": "minecraft:calibrated_sculk_sensor",
 			"type": "minecraft:crafting_shaped"
+		},
+		{
+			"id": "goety:haunted_glass_mob_tinted",
+			"type": "minecraft:crafting_shapeless"
 		},
 		{
 			"id": "farmersdelight:salvaging/amethyst_block",
@@ -7815,6 +10715,10 @@
 			"type": "tconstruct:casting_table"
 		},
 		{
+			"id": "irons_spellbooks:artificer_cane",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "bloodmagic:alchemytable/fortune_anointment_xl",
 			"type": "bloodmagic:alchemytable"
 		},
@@ -7823,12 +10727,20 @@
 			"type": "bloodmagic:alchemytable"
 		},
 		{
+			"id": "irons_spellbooks:arcane_anvil",
+			"type": "minecraft:crafting_shaped"
+		},
+		{
 			"id": "tconstruct:smeltery/casting/amethyst/gem_gold_cast",
 			"type": "tconstruct:casting_table"
 		},
 		{
 			"id": "bloodmagic:alchemytable/quick_draw_anointment_xl",
 			"type": "bloodmagic:alchemytable"
+		},
+		{
+			"id": "irons_spellbooks:alchemist_cauldron/brew_greater_oakskin_elixir",
+			"type": "irons_spellbooks:alchemist_cauldron_brew"
 		}
 	]
 }

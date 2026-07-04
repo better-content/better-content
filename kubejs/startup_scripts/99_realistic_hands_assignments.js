@@ -3,10 +3,10 @@
 global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
   "schema": "obelisks.realistic_hands.assignments.v1",
   "generatedBy": "tools/kotlin/audit_realistic_hands.main.kts",
-  "input": "generated/runtime-dumps/realistic_hands_audit.json + kubejs/startup_scripts/99_realistic_hands_assignments.js",
-  "runtimeProbeSchema": "realistic-hands-assignment-seed",
-  "blockCount": 14665,
-  "itemCount": 493,
+  "input": "generated/runtime-dumps/block_hardness_probe.json",
+  "runtimeProbeSchema": "obelisks.block_hardness_probe.v3",
+  "blockCount": 13942,
+  "itemCount": 20738,
   "blocks": {
     "hand": [
       "aether:aether_dirt",
@@ -50,6 +50,39 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "blue_skies:turquoise_comet_grass_block",
       "blue_skies:turquoise_dirt",
       "blue_skies:turquoise_grass_block",
+      "btmfixes:burnt_aether_grass_block",
+      "btmfixes:burnt_beige_limestone_grassy_regolith",
+      "btmfixes:burnt_chorus_grass_block",
+      "btmfixes:burnt_conglomerate_grassy_regolith",
+      "btmfixes:burnt_dolomite_grassy_regolith",
+      "btmfixes:burnt_enchanted_aether_grass_block",
+      "btmfixes:burnt_finley_grass_block",
+      "btmfixes:burnt_gabbro_grassy_regolith",
+      "btmfixes:burnt_granodiorite_grassy_regolith",
+      "btmfixes:burnt_grassy_permafrost",
+      "btmfixes:burnt_grassy_silt",
+      "btmfixes:burnt_grey_limestone_grassy_regolith",
+      "btmfixes:burnt_kimberlite_grassy_regolith",
+      "btmfixes:burnt_limestone_grassy_regolith",
+      "btmfixes:burnt_living_grass_block",
+      "btmfixes:burnt_lunar_comet_grass_block",
+      "btmfixes:burnt_lunar_grass_block",
+      "btmfixes:burnt_mudstone_grassy_regolith",
+      "btmfixes:burnt_phyllite_grassy_regolith",
+      "btmfixes:burnt_quartzite_grassy_regolith",
+      "btmfixes:burnt_rhyolite_grassy_regolith",
+      "btmfixes:burnt_rooted_grass_block",
+      "btmfixes:burnt_rooty_aether_grass_block",
+      "btmfixes:burnt_rooty_enchanted_aether_grass_block",
+      "btmfixes:burnt_rooty_frozen_aether_grass_block",
+      "btmfixes:burnt_rooty_grass_block",
+      "btmfixes:burnt_sandstone_grassy_regolith",
+      "btmfixes:burnt_siltstone_grassy_regolith",
+      "btmfixes:burnt_slate_grassy_regolith",
+      "btmfixes:burnt_stone_grassy_regolith",
+      "btmfixes:burnt_turquoise_comet_grass_block",
+      "btmfixes:burnt_turquoise_grass_block",
+      "btmfixes:burnt_white_granite_grassy_regolith",
       "burnt:burnt_dirt",
       "burnt:burnt_grassy_earthen_clay",
       "burnt:burnt_grassy_sandy_d_irt",
@@ -494,6 +527,9 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "quark:soul_sandstone_stairs",
       "quark:soul_sandstone_vertical_slab",
       "quark:soul_sandstone_wall",
+      "supplementaries:gravel_bricks",
+      "supplementaries:raked_gravel",
+      "supplementaries:suspicious_gravel_bricks",
       "swem:soiled_shavings",
       "tconstruct:earth_slime_dirt",
       "tconstruct:ender_slime_dirt",
@@ -601,6 +637,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "aether:skyroot_slab",
       "aether:skyroot_stairs",
       "aether:white_flower",
+      "amendments:blue_skies/double_comet_berry_pie",
+      "amendments:hanging_flower_pot",
       "ars_nouveau:arcane_core",
       "ars_nouveau:arcane_pedestal",
       "ars_nouveau:arcane_platform",
@@ -729,22 +767,13 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "blue_skies:upsidedown_black_fire",
       "blue_skies:upsidedown_blue_fire",
       "blue_skies:winter_leaves",
-      "btmdimtrees:bluebright_leaves",
-      "btmdimtrees:bluebright_sapling",
-      "btmdimtrees:dusk_leaves",
-      "btmdimtrees:dusk_sapling",
-      "btmdimtrees:frostbright_leaves",
-      "btmdimtrees:frostbright_sapling",
-      "btmdimtrees:grongle_leaves",
-      "btmdimtrees:grongle_sapling",
-      "btmdimtrees:maple_leaves",
-      "btmdimtrees:maple_sapling",
-      "btmdimtrees:silent_tree_leaves",
-      "btmdimtrees:silent_tree_sapling",
-      "btmdimtrees:smogstem_leaves",
-      "btmdimtrees:smogstem_sapling",
-      "btmdimtrees:starlit_leaves",
-      "btmdimtrees:starlit_sapling",
+      "btmfixes:burnt_chared_grass",
+      "btmfixes:burnt_crackled_grass",
+      "btmfixes:burnt_deepgrass",
+      "btmfixes:burnt_depthsforestgrass",
+      "btmfixes:burnt_frozen_grass",
+      "btmfixes:burnt_swampgrass",
+      "btmfixes:burnt_wastelandgrassblock",
       "burnt:blast_leaves",
       "burnt:burning_cave_vines_plant",
       "burnt:burnt_cave_vines",
@@ -1374,14 +1403,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "immersive_weathering:blue_skies/lunar_leaf_pile",
       "immersive_weathering:blue_skies/maple_leaf_pile",
       "immersive_weathering:blue_skies/starlit_leaf_pile",
-      "immersive_weathering:btmdimtrees/bluebright_leaf_pile",
-      "immersive_weathering:btmdimtrees/dusk_leaf_pile",
-      "immersive_weathering:btmdimtrees/frostbright_leaf_pile",
-      "immersive_weathering:btmdimtrees/grongle_leaf_pile",
-      "immersive_weathering:btmdimtrees/maple_leaf_pile",
-      "immersive_weathering:btmdimtrees/silent_tree_leaf_pile",
-      "immersive_weathering:btmdimtrees/smogstem_leaf_pile",
-      "immersive_weathering:btmdimtrees/starlit_leaf_pile",
       "immersive_weathering:burnt/blast_leaf_pile",
       "immersive_weathering:burnt/burnt_leaf_pile",
       "immersive_weathering:burnt/smoldering_acacia_leaf_pile",
@@ -1950,6 +1971,15 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "rusticdelight:wild_coffee",
       "rusticdelight:wild_cotton",
       "savage_and_ravage:potted_creeper_spores",
+      "supplementaries:flower_box",
+      "supplementaries:potted_flax",
+      "sushigocrafting:avocado_leaves",
+      "sushigocrafting:avocado_sapling",
+      "sushigocrafting:cucumber_crop",
+      "sushigocrafting:rice_crop",
+      "sushigocrafting:sesame_crop",
+      "sushigocrafting:soy_crop",
+      "sushigocrafting:wasabi_crop",
       "swem:alfalfa_plant",
       "swem:jump_flower_box_black",
       "swem:jump_flower_box_blue",
@@ -2465,34 +2495,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "brewinandchewin:heating_cask",
       "brewinandchewin:ice_crate",
       "brewinandchewin:keg",
-      "btmdimtrees:bluebright_branch",
-      "btmdimtrees:dusk_branch",
-      "btmdimtrees:finley_wood_branch",
-      "btmdimtrees:finley_wood_leaves",
-      "btmdimtrees:finley_wood_sapling",
-      "btmdimtrees:frostbright_branch",
-      "btmdimtrees:grongle_branch",
-      "btmdimtrees:living_wood_branch",
-      "btmdimtrees:living_wood_leaves",
-      "btmdimtrees:living_wood_sapling",
-      "btmdimtrees:maple_branch",
-      "btmdimtrees:silent_tree_branch",
-      "btmdimtrees:smogstem_branch",
-      "btmdimtrees:starlit_branch",
-      "btmdimtrees:stripped_bluebright_branch",
-      "btmdimtrees:stripped_dusk_branch",
-      "btmdimtrees:stripped_finley_wood_branch",
-      "btmdimtrees:stripped_frostbright_branch",
-      "btmdimtrees:stripped_grongle_branch",
-      "btmdimtrees:stripped_living_wood_branch",
-      "btmdimtrees:stripped_maple_branch",
-      "btmdimtrees:stripped_silent_tree_branch",
-      "btmdimtrees:stripped_smogstem_branch",
-      "btmdimtrees:stripped_starlit_branch",
-      "btmdimtrees:stripped_wigglewood_branch",
-      "btmdimtrees:wigglewood_branch",
-      "btmdimtrees:wigglewood_leaves",
-      "btmdimtrees:wigglewood_sapling",
       "burnt:blazing_fence",
       "burnt:blazing_fence_gate",
       "burnt:blazing_log",
@@ -3739,9 +3741,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "immersive_weathering:ars_nouveau/green_archwood_leaf_pile",
       "immersive_weathering:ars_nouveau/purple_archwood_leaf_pile",
       "immersive_weathering:ars_nouveau/red_archwood_leaf_pile",
-      "immersive_weathering:btmdimtrees/finley_wood_leaf_pile",
-      "immersive_weathering:btmdimtrees/living_wood_leaf_pile",
-      "immersive_weathering:btmdimtrees/wigglewood_leaf_pile",
       "immersive_weathering:charred_fence",
       "immersive_weathering:charred_fence_gate",
       "immersive_weathering:charred_log",
@@ -3776,262 +3775,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "irons_spellbooks:inscription_table",
       "irons_spellbooks:wisewood_bookshelf",
       "irons_spellbooks:wisewood_planks",
-      "kubejs:crate_blue_ice_t01",
-      "kubejs:crate_blue_ice_t02",
-      "kubejs:crate_blue_ice_t03",
-      "kubejs:crate_blue_ice_t04",
-      "kubejs:crate_blue_ice_t05",
-      "kubejs:crate_blue_ice_t06",
-      "kubejs:crate_blue_ice_t07",
-      "kubejs:crate_blue_ice_t08",
-      "kubejs:crate_blue_ice_t09",
-      "kubejs:crate_blue_ice_t10",
-      "kubejs:crate_blue_ice_t11",
-      "kubejs:crate_blue_ice_t12",
-      "kubejs:crate_blue_ice_t13",
-      "kubejs:crate_blue_ice_t14",
-      "kubejs:crate_blue_ice_t15",
-      "kubejs:crate_blue_ice_t16",
-      "kubejs:crate_clay_t01",
-      "kubejs:crate_clay_t02",
-      "kubejs:crate_clay_t03",
-      "kubejs:crate_clay_t04",
-      "kubejs:crate_clay_t05",
-      "kubejs:crate_clay_t06",
-      "kubejs:crate_clay_t07",
-      "kubejs:crate_clay_t08",
-      "kubejs:crate_clay_t09",
-      "kubejs:crate_clay_t10",
-      "kubejs:crate_clay_t11",
-      "kubejs:crate_clay_t12",
-      "kubejs:crate_clay_t13",
-      "kubejs:crate_clay_t14",
-      "kubejs:crate_clay_t15",
-      "kubejs:crate_clay_t16",
-      "kubejs:crate_cobblestone_t01",
-      "kubejs:crate_cobblestone_t02",
-      "kubejs:crate_cobblestone_t03",
-      "kubejs:crate_cobblestone_t04",
-      "kubejs:crate_cobblestone_t05",
-      "kubejs:crate_cobblestone_t06",
-      "kubejs:crate_cobblestone_t07",
-      "kubejs:crate_cobblestone_t08",
-      "kubejs:crate_cobblestone_t09",
-      "kubejs:crate_cobblestone_t10",
-      "kubejs:crate_cobblestone_t11",
-      "kubejs:crate_cobblestone_t12",
-      "kubejs:crate_cobblestone_t13",
-      "kubejs:crate_cobblestone_t14",
-      "kubejs:crate_cobblestone_t15",
-      "kubejs:crate_cobblestone_t16",
-      "kubejs:crate_deepslate_t01",
-      "kubejs:crate_deepslate_t02",
-      "kubejs:crate_deepslate_t03",
-      "kubejs:crate_deepslate_t04",
-      "kubejs:crate_deepslate_t05",
-      "kubejs:crate_deepslate_t06",
-      "kubejs:crate_deepslate_t07",
-      "kubejs:crate_deepslate_t08",
-      "kubejs:crate_deepslate_t09",
-      "kubejs:crate_deepslate_t10",
-      "kubejs:crate_deepslate_t11",
-      "kubejs:crate_deepslate_t12",
-      "kubejs:crate_deepslate_t13",
-      "kubejs:crate_deepslate_t14",
-      "kubejs:crate_deepslate_t15",
-      "kubejs:crate_deepslate_t16",
-      "kubejs:crate_dirt_t01",
-      "kubejs:crate_dirt_t02",
-      "kubejs:crate_dirt_t03",
-      "kubejs:crate_dirt_t04",
-      "kubejs:crate_dirt_t05",
-      "kubejs:crate_dirt_t06",
-      "kubejs:crate_dirt_t07",
-      "kubejs:crate_dirt_t08",
-      "kubejs:crate_dirt_t09",
-      "kubejs:crate_dirt_t10",
-      "kubejs:crate_dirt_t11",
-      "kubejs:crate_dirt_t12",
-      "kubejs:crate_dirt_t13",
-      "kubejs:crate_dirt_t14",
-      "kubejs:crate_dirt_t15",
-      "kubejs:crate_dirt_t16",
-      "kubejs:crate_end_stone_t01",
-      "kubejs:crate_end_stone_t02",
-      "kubejs:crate_end_stone_t03",
-      "kubejs:crate_end_stone_t04",
-      "kubejs:crate_end_stone_t05",
-      "kubejs:crate_end_stone_t06",
-      "kubejs:crate_end_stone_t07",
-      "kubejs:crate_end_stone_t08",
-      "kubejs:crate_end_stone_t09",
-      "kubejs:crate_end_stone_t10",
-      "kubejs:crate_end_stone_t11",
-      "kubejs:crate_end_stone_t12",
-      "kubejs:crate_end_stone_t13",
-      "kubejs:crate_end_stone_t14",
-      "kubejs:crate_end_stone_t15",
-      "kubejs:crate_end_stone_t16",
-      "kubejs:crate_gravel_t01",
-      "kubejs:crate_gravel_t02",
-      "kubejs:crate_gravel_t03",
-      "kubejs:crate_gravel_t04",
-      "kubejs:crate_gravel_t05",
-      "kubejs:crate_gravel_t06",
-      "kubejs:crate_gravel_t07",
-      "kubejs:crate_gravel_t08",
-      "kubejs:crate_gravel_t09",
-      "kubejs:crate_gravel_t10",
-      "kubejs:crate_gravel_t11",
-      "kubejs:crate_gravel_t12",
-      "kubejs:crate_gravel_t13",
-      "kubejs:crate_gravel_t14",
-      "kubejs:crate_gravel_t15",
-      "kubejs:crate_gravel_t16",
-      "kubejs:crate_ice_t01",
-      "kubejs:crate_ice_t02",
-      "kubejs:crate_ice_t03",
-      "kubejs:crate_ice_t04",
-      "kubejs:crate_ice_t05",
-      "kubejs:crate_ice_t06",
-      "kubejs:crate_ice_t07",
-      "kubejs:crate_ice_t08",
-      "kubejs:crate_ice_t09",
-      "kubejs:crate_ice_t10",
-      "kubejs:crate_ice_t11",
-      "kubejs:crate_ice_t12",
-      "kubejs:crate_ice_t13",
-      "kubejs:crate_ice_t14",
-      "kubejs:crate_ice_t15",
-      "kubejs:crate_ice_t16",
-      "kubejs:crate_nether_star_t01",
-      "kubejs:crate_nether_star_t02",
-      "kubejs:crate_nether_star_t03",
-      "kubejs:crate_nether_star_t04",
-      "kubejs:crate_nether_star_t05",
-      "kubejs:crate_nether_star_t06",
-      "kubejs:crate_nether_star_t07",
-      "kubejs:crate_nether_star_t08",
-      "kubejs:crate_nether_star_t09",
-      "kubejs:crate_nether_star_t10",
-      "kubejs:crate_nether_star_t11",
-      "kubejs:crate_nether_star_t12",
-      "kubejs:crate_nether_star_t13",
-      "kubejs:crate_nether_star_t14",
-      "kubejs:crate_nether_star_t15",
-      "kubejs:crate_nether_star_t16",
-      "kubejs:crate_netherrack_t01",
-      "kubejs:crate_netherrack_t02",
-      "kubejs:crate_netherrack_t03",
-      "kubejs:crate_netherrack_t04",
-      "kubejs:crate_netherrack_t05",
-      "kubejs:crate_netherrack_t06",
-      "kubejs:crate_netherrack_t07",
-      "kubejs:crate_netherrack_t08",
-      "kubejs:crate_netherrack_t09",
-      "kubejs:crate_netherrack_t10",
-      "kubejs:crate_netherrack_t11",
-      "kubejs:crate_netherrack_t12",
-      "kubejs:crate_netherrack_t13",
-      "kubejs:crate_netherrack_t14",
-      "kubejs:crate_netherrack_t15",
-      "kubejs:crate_netherrack_t16",
-      "kubejs:crate_obsidian_t01",
-      "kubejs:crate_obsidian_t02",
-      "kubejs:crate_obsidian_t03",
-      "kubejs:crate_obsidian_t04",
-      "kubejs:crate_obsidian_t05",
-      "kubejs:crate_obsidian_t06",
-      "kubejs:crate_obsidian_t07",
-      "kubejs:crate_obsidian_t08",
-      "kubejs:crate_obsidian_t09",
-      "kubejs:crate_obsidian_t10",
-      "kubejs:crate_obsidian_t11",
-      "kubejs:crate_obsidian_t12",
-      "kubejs:crate_obsidian_t13",
-      "kubejs:crate_obsidian_t14",
-      "kubejs:crate_obsidian_t15",
-      "kubejs:crate_obsidian_t16",
-      "kubejs:crate_packed_ice_t01",
-      "kubejs:crate_packed_ice_t02",
-      "kubejs:crate_packed_ice_t03",
-      "kubejs:crate_packed_ice_t04",
-      "kubejs:crate_packed_ice_t05",
-      "kubejs:crate_packed_ice_t06",
-      "kubejs:crate_packed_ice_t07",
-      "kubejs:crate_packed_ice_t08",
-      "kubejs:crate_packed_ice_t09",
-      "kubejs:crate_packed_ice_t10",
-      "kubejs:crate_packed_ice_t11",
-      "kubejs:crate_packed_ice_t12",
-      "kubejs:crate_packed_ice_t13",
-      "kubejs:crate_packed_ice_t14",
-      "kubejs:crate_packed_ice_t15",
-      "kubejs:crate_packed_ice_t16",
-      "kubejs:crate_sand_t01",
-      "kubejs:crate_sand_t02",
-      "kubejs:crate_sand_t03",
-      "kubejs:crate_sand_t04",
-      "kubejs:crate_sand_t05",
-      "kubejs:crate_sand_t06",
-      "kubejs:crate_sand_t07",
-      "kubejs:crate_sand_t08",
-      "kubejs:crate_sand_t09",
-      "kubejs:crate_sand_t10",
-      "kubejs:crate_sand_t11",
-      "kubejs:crate_sand_t12",
-      "kubejs:crate_sand_t13",
-      "kubejs:crate_sand_t14",
-      "kubejs:crate_sand_t15",
-      "kubejs:crate_sand_t16",
-      "kubejs:crate_soul_sand_t01",
-      "kubejs:crate_soul_sand_t02",
-      "kubejs:crate_soul_sand_t03",
-      "kubejs:crate_soul_sand_t04",
-      "kubejs:crate_soul_sand_t05",
-      "kubejs:crate_soul_sand_t06",
-      "kubejs:crate_soul_sand_t07",
-      "kubejs:crate_soul_sand_t08",
-      "kubejs:crate_soul_sand_t09",
-      "kubejs:crate_soul_sand_t10",
-      "kubejs:crate_soul_sand_t11",
-      "kubejs:crate_soul_sand_t12",
-      "kubejs:crate_soul_sand_t13",
-      "kubejs:crate_soul_sand_t14",
-      "kubejs:crate_soul_sand_t15",
-      "kubejs:crate_soul_sand_t16",
-      "kubejs:crate_soul_soil_t01",
-      "kubejs:crate_soul_soil_t02",
-      "kubejs:crate_soul_soil_t03",
-      "kubejs:crate_soul_soil_t04",
-      "kubejs:crate_soul_soil_t05",
-      "kubejs:crate_soul_soil_t06",
-      "kubejs:crate_soul_soil_t07",
-      "kubejs:crate_soul_soil_t08",
-      "kubejs:crate_soul_soil_t09",
-      "kubejs:crate_soul_soil_t10",
-      "kubejs:crate_soul_soil_t11",
-      "kubejs:crate_soul_soil_t12",
-      "kubejs:crate_soul_soil_t13",
-      "kubejs:crate_soul_soil_t14",
-      "kubejs:crate_soul_soil_t15",
-      "kubejs:crate_soul_soil_t16",
-      "kubejs:crate_stone_t01",
-      "kubejs:crate_stone_t02",
-      "kubejs:crate_stone_t03",
-      "kubejs:crate_stone_t04",
-      "kubejs:crate_stone_t05",
-      "kubejs:crate_stone_t06",
-      "kubejs:crate_stone_t07",
-      "kubejs:crate_stone_t08",
-      "kubejs:crate_stone_t09",
-      "kubejs:crate_stone_t10",
-      "kubejs:crate_stone_t11",
-      "kubejs:crate_stone_t12",
-      "kubejs:crate_stone_t13",
-      "kubejs:crate_stone_t14",
-      "kubejs:crate_stone_t15",
-      "kubejs:crate_stone_t16",
       "lootr:lootr_barrel",
       "lootr:lootr_chest",
       "lootr:lootr_trapped_chest",
@@ -5103,6 +4846,21 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "sophisticatedstorage:oak_storage_connector",
       "sophisticatedstorage:spruce_storage_connector",
       "sophisticatedstorage:warped_storage_connector",
+      "supplementaries:doormat",
+      "supplementaries:fine_wood",
+      "supplementaries:fine_wood_slab",
+      "supplementaries:fine_wood_stairs",
+      "supplementaries:gold_door",
+      "supplementaries:gold_trapdoor",
+      "supplementaries:jar_boat",
+      "supplementaries:netherite_door",
+      "supplementaries:netherite_trapdoor",
+      "supplementaries:sign_post",
+      "supplementaries:sign_post_wall",
+      "supplementaries:wicker_fence",
+      "sushigocrafting:avocado_leaves_logged",
+      "sushigocrafting:avocado_log",
+      "sushigocrafting:fermentation_barrel",
       "swem:alaharran_banner",
       "swem:alaharran_wall_banner",
       "swem:compost",
@@ -5820,6 +5578,42 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "aether:zanite_ore",
       "alekiships:cleat",
       "alekiships:oarlock",
+      "amendments:carpet_slab",
+      "amendments:carpet_stairs",
+      "amendments:cauldron_hack",
+      "amendments:ceiling_banner_black",
+      "amendments:ceiling_banner_blue",
+      "amendments:ceiling_banner_brown",
+      "amendments:ceiling_banner_cyan",
+      "amendments:ceiling_banner_gray",
+      "amendments:ceiling_banner_green",
+      "amendments:ceiling_banner_light_blue",
+      "amendments:ceiling_banner_light_gray",
+      "amendments:ceiling_banner_lime",
+      "amendments:ceiling_banner_magenta",
+      "amendments:ceiling_banner_orange",
+      "amendments:ceiling_banner_pink",
+      "amendments:ceiling_banner_purple",
+      "amendments:ceiling_banner_red",
+      "amendments:ceiling_banner_white",
+      "amendments:ceiling_banner_yellow",
+      "amendments:directional_cake",
+      "amendments:double_cake",
+      "amendments:dye_cauldron",
+      "amendments:farmersrespite/double_coffee_cake",
+      "amendments:liquid_cauldron",
+      "amendments:mynethersdelight/double_magma_cake",
+      "amendments:natures_spirit/double_cheese_block",
+      "amendments:skull_candle",
+      "amendments:skull_candle_soul",
+      "amendments:skull_candle_soul_wall",
+      "amendments:skull_candle_wall",
+      "amendments:skull_pile",
+      "amendments:tool_hook",
+      "amendments:ubesdelight/double_ube_cake",
+      "amendments:veggiesdelight/double_carrot_cake",
+      "amendments:wall_lantern",
+      "amendments:water_lily_pad",
       "ars_nouveau:agronomic_sourcelink",
       "ars_nouveau:alchemical_sourcelink",
       "ars_nouveau:basic_spell_turret",
@@ -6352,6 +6146,9 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "brewinandchewin:scarlet_cheese_wheel",
       "brewinandchewin:unripe_flaxen_cheese_wheel",
       "brewinandchewin:unripe_scarlet_cheese_wheel",
+      "btmfixes:burnt_overgrown_andesite",
+      "btmfixes:burnt_overgrown_diorite",
+      "btmfixes:burnt_overgrown_granite",
       "buildinggadgets2:render_block",
       "buildinggadgets2:template_manager",
       "burnt:burnt_azalea",
@@ -7770,6 +7567,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "delightful:passion_fruit_tart",
       "delightful:pumpkin_pie",
       "delightful:quartz_cabinet",
+      "dimensionalfonts:dimensional_font",
+      "dimensionalfonts:return_seal",
       "dtaether:golden_apple",
       "dtaether:white_apple",
       "dtarsnouveau:bastion",
@@ -10514,12 +10313,10 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "kubejs:airtight_machine_casing",
       "kubejs:andesite_machine_casing",
       "kubejs:brass_machine_casing",
-      "kubejs:circuited_machine_casing",
       "kubejs:electrical_machine_casing",
       "kubejs:impossible_machine_casing",
       "kubejs:phosphoric_acid_fluid",
       "kubejs:raw_impossible_casing",
-      "kubejs:scorched_machine_casing",
       "kubejs:seared_machine_casing",
       "kubejs:space_machine_casing",
       "latent_chemlib:chemical_cloud",
@@ -11490,8 +11287,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "natures_spirit:yellow_kaolin_slab",
       "natures_spirit:yellow_kaolin_stairs",
       "natures_spirit:yellow_paper_lantern",
-      "obelisks:meteoric_rift_anchor",
-      "obelisks:return_pad",
       "oc2r:bus_cable",
       "oc2r:charger",
       "oc2r:computer",
@@ -12244,6 +12039,7 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "rehooked:blaze_chain",
       "rehooked:diamond_chain",
       "rehooked:ender_chain",
+      "relics:researching_table",
       "reliquary:alkahestry_altar",
       "reliquary:apothecary_cauldron",
       "reliquary:apothecary_mortar",
@@ -12362,6 +12158,191 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "structure_gel:orange_gel",
       "structure_gel:red_gel",
       "structure_gel:yellow_gel",
+      "supplementaries:awning",
+      "supplementaries:awning_black",
+      "supplementaries:awning_blue",
+      "supplementaries:awning_brown",
+      "supplementaries:awning_cyan",
+      "supplementaries:awning_gray",
+      "supplementaries:awning_green",
+      "supplementaries:awning_light_blue",
+      "supplementaries:awning_light_gray",
+      "supplementaries:awning_lime",
+      "supplementaries:awning_magenta",
+      "supplementaries:awning_orange",
+      "supplementaries:awning_pink",
+      "supplementaries:awning_purple",
+      "supplementaries:awning_red",
+      "supplementaries:awning_white",
+      "supplementaries:awning_yellow",
+      "supplementaries:bamboo_spikes",
+      "supplementaries:bellows",
+      "supplementaries:blackboard",
+      "supplementaries:blackstone_lamp",
+      "supplementaries:blackstone_tile",
+      "supplementaries:blackstone_tile_slab",
+      "supplementaries:blackstone_tile_stairs",
+      "supplementaries:blackstone_tile_wall",
+      "supplementaries:blaze_rod",
+      "supplementaries:block_generator",
+      "supplementaries:book_pile",
+      "supplementaries:book_pile_horizontal",
+      "supplementaries:bubble_block",
+      "supplementaries:cage",
+      "supplementaries:candle_holder",
+      "supplementaries:candle_holder_black",
+      "supplementaries:candle_holder_blue",
+      "supplementaries:candle_holder_brown",
+      "supplementaries:candle_holder_cyan",
+      "supplementaries:candle_holder_gray",
+      "supplementaries:candle_holder_green",
+      "supplementaries:candle_holder_light_blue",
+      "supplementaries:candle_holder_light_gray",
+      "supplementaries:candle_holder_lime",
+      "supplementaries:candle_holder_magenta",
+      "supplementaries:candle_holder_orange",
+      "supplementaries:candle_holder_pink",
+      "supplementaries:candle_holder_purple",
+      "supplementaries:candle_holder_red",
+      "supplementaries:candle_holder_white",
+      "supplementaries:candle_holder_yellow",
+      "supplementaries:cannon",
+      "supplementaries:cannonball",
+      "supplementaries:checker_block",
+      "supplementaries:checker_slab",
+      "supplementaries:clock_block",
+      "supplementaries:cog_block",
+      "supplementaries:crank",
+      "supplementaries:crystal_display",
+      "supplementaries:daub",
+      "supplementaries:daub_brace",
+      "supplementaries:daub_cross_brace",
+      "supplementaries:daub_frame",
+      "supplementaries:deepslate_lamp",
+      "supplementaries:end_stone_lamp",
+      "supplementaries:enderman_head",
+      "supplementaries:enderman_wall_head",
+      "supplementaries:faucet",
+      "supplementaries:feather_block",
+      "supplementaries:fire_pit",
+      "supplementaries:flag_black",
+      "supplementaries:flag_blue",
+      "supplementaries:flag_brown",
+      "supplementaries:flag_cyan",
+      "supplementaries:flag_gray",
+      "supplementaries:flag_green",
+      "supplementaries:flag_light_blue",
+      "supplementaries:flag_light_gray",
+      "supplementaries:flag_lime",
+      "supplementaries:flag_magenta",
+      "supplementaries:flag_orange",
+      "supplementaries:flag_pink",
+      "supplementaries:flag_purple",
+      "supplementaries:flag_red",
+      "supplementaries:flag_white",
+      "supplementaries:flag_yellow",
+      "supplementaries:flax",
+      "supplementaries:flax_block",
+      "supplementaries:flint_block",
+      "supplementaries:fodder",
+      "supplementaries:globe",
+      "supplementaries:globe_sepia",
+      "supplementaries:goblet",
+      "supplementaries:gold_gate",
+      "supplementaries:hourglass",
+      "supplementaries:iron_gate",
+      "supplementaries:item_shelf",
+      "supplementaries:jar",
+      "supplementaries:lapis_bricks",
+      "supplementaries:lapis_bricks_slab",
+      "supplementaries:lapis_bricks_stairs",
+      "supplementaries:lapis_bricks_wall",
+      "supplementaries:lock_block",
+      "supplementaries:lumisene",
+      "supplementaries:lunch_basket",
+      "supplementaries:moving_slidy_block_source",
+      "supplementaries:notice_board",
+      "supplementaries:pancake",
+      "supplementaries:pedestal",
+      "supplementaries:planter",
+      "supplementaries:present",
+      "supplementaries:present_black",
+      "supplementaries:present_blue",
+      "supplementaries:present_brown",
+      "supplementaries:present_cyan",
+      "supplementaries:present_gray",
+      "supplementaries:present_green",
+      "supplementaries:present_light_blue",
+      "supplementaries:present_light_gray",
+      "supplementaries:present_lime",
+      "supplementaries:present_magenta",
+      "supplementaries:present_orange",
+      "supplementaries:present_pink",
+      "supplementaries:present_purple",
+      "supplementaries:present_red",
+      "supplementaries:present_white",
+      "supplementaries:present_yellow",
+      "supplementaries:pulley_block",
+      "supplementaries:redstone_illuminator",
+      "supplementaries:relayer",
+      "supplementaries:rope",
+      "supplementaries:rope_buntings",
+      "supplementaries:rope_knot",
+      "supplementaries:rope_tomatoes",
+      "supplementaries:sack",
+      "supplementaries:safe",
+      "supplementaries:sconce",
+      "supplementaries:sconce_green",
+      "supplementaries:sconce_lever",
+      "supplementaries:sconce_soul",
+      "supplementaries:sconce_wall",
+      "supplementaries:sconce_wall_green",
+      "supplementaries:sconce_wall_soul",
+      "supplementaries:slidy_block",
+      "supplementaries:soap_block",
+      "supplementaries:speaker_block",
+      "supplementaries:spring_launcher",
+      "supplementaries:spring_launcher_arm",
+      "supplementaries:spring_launcher_head",
+      "supplementaries:statue",
+      "supplementaries:stick",
+      "supplementaries:stick_tomatoes",
+      "supplementaries:stone_lamp",
+      "supplementaries:stone_tile",
+      "supplementaries:stone_tile_slab",
+      "supplementaries:stone_tile_stairs",
+      "supplementaries:stone_tile_wall",
+      "supplementaries:structure_temp",
+      "supplementaries:sugar_cube",
+      "supplementaries:tater_in_a_jar",
+      "supplementaries:timber_brace",
+      "supplementaries:timber_cross_brace",
+      "supplementaries:timber_frame",
+      "supplementaries:trapped_present",
+      "supplementaries:trapped_present_black",
+      "supplementaries:trapped_present_blue",
+      "supplementaries:trapped_present_brown",
+      "supplementaries:trapped_present_cyan",
+      "supplementaries:trapped_present_gray",
+      "supplementaries:trapped_present_green",
+      "supplementaries:trapped_present_light_blue",
+      "supplementaries:trapped_present_light_gray",
+      "supplementaries:trapped_present_lime",
+      "supplementaries:trapped_present_magenta",
+      "supplementaries:trapped_present_orange",
+      "supplementaries:trapped_present_pink",
+      "supplementaries:trapped_present_purple",
+      "supplementaries:trapped_present_red",
+      "supplementaries:trapped_present_white",
+      "supplementaries:trapped_present_yellow",
+      "supplementaries:turn_table",
+      "supplementaries:urn",
+      "supplementaries:wild_flax",
+      "supplementaries:wind_vane",
+      "sushigocrafting:cooler_box",
+      "sushigocrafting:cutting_board",
+      "sushigocrafting:rice_cooker",
+      "sushigocrafting:roller",
       "swem:acacia_stall_care",
       "swem:acacia_stall_horse",
       "swem:alfalfa_bale",
@@ -13861,6 +13842,13 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "rsgauges:industrial_white_led",
       "rsgauges:industrial_yellow_blinking_led",
       "rsgauges:industrial_yellow_led",
+      "supplementaries:ash",
+      "supplementaries:ash_bricks",
+      "supplementaries:ash_bricks_slab",
+      "supplementaries:ash_bricks_stairs",
+      "supplementaries:ash_bricks_wall",
+      "supplementaries:ashen_basalt",
+      "supplementaries:gunpowder",
       "swem:whitewash_slab",
       "swem:whitewash_stairs",
       "swem:whitewash_stall_care",
@@ -13980,8 +13968,566 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
   "items": {
     "knife": [
       "additionalweaponry:butcher_knife",
+      "ae2:certus_quartz_cutting_knife",
+      "ae2:nether_quartz_cutting_knife",
+      "aether:lightning_knife",
+      "ars_nouveau:glyph_wind_shear",
+      "blue_skies:ventium_shears",
+      "everythingcopper:copper_shears",
+      "goety:dark_metal_scythe",
+      "goety:dark_scythe",
+      "goety:death_scythe",
+      "malum:soul_of_a_scythe",
+      "minecraft:shears",
+      "reliquary:shears_of_winter",
+      "sushigocrafting:cleaver_knife",
+      "swem:scythe_copper",
+      "swem:scythe_diamond",
+      "swem:scythe_gold",
+      "swem:scythe_iron",
+      "swem:scythe_leather",
+      "swem:scythe_netherite",
+      "tconstruct:kama",
+      "tconstruct:scythe"
+    ],
+    "axe": [
+      "ae2:certus_quartz_axe",
+      "ae2:fluix_axe",
+      "ae2:nether_quartz_axe",
+      "aether:gravitite_axe",
+      "aether:holystone_axe",
+      "aether:skyroot_axe",
+      "aether:valkyrie_axe",
+      "aether:zanite_axe",
+      "bloodmagic:soulaxe",
+      "blue_skies:aquite_axe",
+      "blue_skies:bluebright_axe",
+      "blue_skies:charoite_axe",
+      "blue_skies:comet_axe",
+      "blue_skies:diopside_axe",
+      "blue_skies:dusk_axe",
+      "blue_skies:frostbright_axe",
+      "blue_skies:horizonite_axe",
+      "blue_skies:lunar_axe",
+      "blue_skies:lunar_stone_axe",
+      "blue_skies:maple_axe",
+      "blue_skies:pyrope_axe",
+      "blue_skies:starlit_axe",
+      "blue_skies:turquoise_stone_axe",
+      "brewinandchewin:flaxen_cheese_wedge",
+      "brewinandchewin:flaxen_cheese_wheel",
+      "brewinandchewin:unripe_flaxen_cheese_wheel",
+      "callfromthedepth_:immemorialaxe",
+      "create:waxed_copper_shingle_slab",
+      "create:waxed_copper_shingle_stairs",
+      "create:waxed_copper_shingles",
+      "create:waxed_copper_tile_slab",
+      "create:waxed_copper_tile_stairs",
+      "create:waxed_copper_tiles",
+      "create:waxed_exposed_copper_shingle_slab",
+      "create:waxed_exposed_copper_shingle_stairs",
+      "create:waxed_exposed_copper_shingles",
+      "create:waxed_exposed_copper_tile_slab",
+      "create:waxed_exposed_copper_tile_stairs",
+      "create:waxed_exposed_copper_tiles",
+      "create:waxed_oxidized_copper_shingle_slab",
+      "create:waxed_oxidized_copper_shingle_stairs",
+      "create:waxed_oxidized_copper_shingles",
+      "create:waxed_oxidized_copper_tile_slab",
+      "create:waxed_oxidized_copper_tile_stairs",
+      "create:waxed_oxidized_copper_tiles",
+      "create:waxed_weathered_copper_shingle_slab",
+      "create:waxed_weathered_copper_shingle_stairs",
+      "create:waxed_weathered_copper_shingles",
+      "create:waxed_weathered_copper_tile_slab",
+      "create:waxed_weathered_copper_tile_stairs",
+      "create:waxed_weathered_copper_tiles",
+      "deeperdarker:resonarium_axe",
+      "deeperdarker:warden_axe",
+      "everythingcopper:copper_axe",
+      "everythingcopper:waxed_chipped_copper_anvil",
+      "everythingcopper:waxed_chipped_exposed_copper_anvil",
+      "everythingcopper:waxed_chipped_oxidized_copper_anvil",
+      "everythingcopper:waxed_chipped_weathered_copper_anvil",
+      "everythingcopper:waxed_chiseled_copper",
+      "everythingcopper:waxed_copper_anvil",
+      "everythingcopper:waxed_copper_bars",
+      "everythingcopper:waxed_copper_button",
+      "everythingcopper:waxed_copper_chain",
+      "everythingcopper:waxed_copper_door",
+      "everythingcopper:waxed_copper_grate",
+      "everythingcopper:waxed_copper_hopper",
+      "everythingcopper:waxed_copper_ladder",
+      "everythingcopper:waxed_copper_lamp",
+      "everythingcopper:waxed_copper_lantern",
+      "everythingcopper:waxed_copper_pressure_plate",
+      "everythingcopper:waxed_copper_rail",
+      "everythingcopper:waxed_copper_soul_lantern",
+      "everythingcopper:waxed_copper_trapdoor",
+      "everythingcopper:waxed_damaged_copper_anvil",
+      "everythingcopper:waxed_damaged_exposed_copper_anvil",
+      "everythingcopper:waxed_damaged_oxidized_copper_anvil",
+      "everythingcopper:waxed_damaged_weathered_copper_anvil",
+      "everythingcopper:waxed_exposed_chiseled_copper",
+      "everythingcopper:waxed_exposed_copper_anvil",
+      "everythingcopper:waxed_exposed_copper_bars",
+      "everythingcopper:waxed_exposed_copper_button",
+      "everythingcopper:waxed_exposed_copper_chain",
+      "everythingcopper:waxed_exposed_copper_door",
+      "everythingcopper:waxed_exposed_copper_grate",
+      "everythingcopper:waxed_exposed_copper_hopper",
+      "everythingcopper:waxed_exposed_copper_ladder",
+      "everythingcopper:waxed_exposed_copper_lamp",
+      "everythingcopper:waxed_exposed_copper_lantern",
+      "everythingcopper:waxed_exposed_copper_pressure_plate",
+      "everythingcopper:waxed_exposed_copper_rail",
+      "everythingcopper:waxed_exposed_copper_soul_lantern",
+      "everythingcopper:waxed_exposed_copper_trapdoor",
+      "everythingcopper:waxed_oxidized_chiseled_copper",
+      "everythingcopper:waxed_oxidized_copper_anvil",
+      "everythingcopper:waxed_oxidized_copper_bars",
+      "everythingcopper:waxed_oxidized_copper_button",
+      "everythingcopper:waxed_oxidized_copper_chain",
+      "everythingcopper:waxed_oxidized_copper_door",
+      "everythingcopper:waxed_oxidized_copper_grate",
+      "everythingcopper:waxed_oxidized_copper_hopper",
+      "everythingcopper:waxed_oxidized_copper_ladder",
+      "everythingcopper:waxed_oxidized_copper_lamp",
+      "everythingcopper:waxed_oxidized_copper_lantern",
+      "everythingcopper:waxed_oxidized_copper_pressure_plate",
+      "everythingcopper:waxed_oxidized_copper_rail",
+      "everythingcopper:waxed_oxidized_copper_soul_lantern",
+      "everythingcopper:waxed_oxidized_copper_trapdoor",
+      "everythingcopper:waxed_weathered_chiseled_copper",
+      "everythingcopper:waxed_weathered_copper_anvil",
+      "everythingcopper:waxed_weathered_copper_bars",
+      "everythingcopper:waxed_weathered_copper_button",
+      "everythingcopper:waxed_weathered_copper_chain",
+      "everythingcopper:waxed_weathered_copper_door",
+      "everythingcopper:waxed_weathered_copper_grate",
+      "everythingcopper:waxed_weathered_copper_hopper",
+      "everythingcopper:waxed_weathered_copper_ladder",
+      "everythingcopper:waxed_weathered_copper_lamp",
+      "everythingcopper:waxed_weathered_copper_lantern",
+      "everythingcopper:waxed_weathered_copper_pressure_plate",
+      "everythingcopper:waxed_weathered_copper_rail",
+      "everythingcopper:waxed_weathered_copper_soul_lantern",
+      "everythingcopper:waxed_weathered_copper_trapdoor",
+      "fallout_wastelands_:hachet",
+      "forbidden_arcanus:draco_arcanus_axe",
+      "forbidden_arcanus:reinforced_deorum_axe",
+      "goety:dark_axe",
+      "goety:diamond_ice_axe",
+      "goety:iron_ice_axe",
+      "goety:rampaging_axe",
+      "hexerei:waxed_infused_fabric_block",
+      "hexerei:waxed_infused_fabric_block_ornate",
+      "hexerei:waxed_infused_fabric_carpet",
+      "hexerei:waxed_infused_fabric_carpet_ornate",
+      "hexerei:waxed_mahogany_connected",
+      "hexerei:waxed_mahogany_window",
+      "hexerei:waxed_mahogany_window_pane",
+      "hexerei:waxed_polished_mahogany_connected",
+      "hexerei:waxed_polished_mahogany_layered",
+      "hexerei:waxed_polished_mahogany_pillar",
+      "hexerei:waxed_polished_willow_connected",
+      "hexerei:waxed_polished_willow_layered",
+      "hexerei:waxed_polished_willow_pillar",
+      "hexerei:waxed_polished_witch_hazel_connected",
+      "hexerei:waxed_polished_witch_hazel_layered",
+      "hexerei:waxed_polished_witch_hazel_pillar",
+      "hexerei:waxed_stone_window",
+      "hexerei:waxed_stone_window_pane",
+      "hexerei:waxed_willow_connected",
+      "hexerei:waxed_willow_window",
+      "hexerei:waxed_willow_window_pane",
+      "hexerei:waxed_witch_hazel_connected",
+      "hexerei:waxed_witch_hazel_window",
+      "hexerei:waxed_witch_hazel_window_pane",
+      "iceandfire:copper_axe",
+      "iceandfire:dragonbone_axe",
+      "iceandfire:dragonsteel_fire_axe",
+      "iceandfire:dragonsteel_ice_axe",
+      "iceandfire:dragonsteel_lightning_axe",
+      "iceandfire:myrmex_desert_axe",
+      "iceandfire:myrmex_jungle_axe",
+      "iceandfire:silver_axe",
+      "immersive_weathering:waxed_cut_iron",
+      "immersive_weathering:waxed_cut_iron_slab",
+      "immersive_weathering:waxed_cut_iron_stairs",
+      "immersive_weathering:waxed_exposed_cut_iron",
+      "immersive_weathering:waxed_exposed_cut_iron_slab",
+      "immersive_weathering:waxed_exposed_cut_iron_stairs",
+      "immersive_weathering:waxed_exposed_iron_bars",
+      "immersive_weathering:waxed_exposed_iron_door",
+      "immersive_weathering:waxed_exposed_iron_trapdoor",
+      "immersive_weathering:waxed_exposed_plate_iron",
+      "immersive_weathering:waxed_exposed_plate_iron_slab",
+      "immersive_weathering:waxed_exposed_plate_iron_stairs",
+      "immersive_weathering:waxed_iron_bars",
+      "immersive_weathering:waxed_iron_door",
+      "immersive_weathering:waxed_iron_trapdoor",
+      "immersive_weathering:waxed_plate_iron",
+      "immersive_weathering:waxed_plate_iron_slab",
+      "immersive_weathering:waxed_plate_iron_stairs",
+      "immersive_weathering:waxed_rusted_cut_iron",
+      "immersive_weathering:waxed_rusted_cut_iron_slab",
+      "immersive_weathering:waxed_rusted_cut_iron_stairs",
+      "immersive_weathering:waxed_rusted_iron_bars",
+      "immersive_weathering:waxed_rusted_iron_door",
+      "immersive_weathering:waxed_rusted_iron_trapdoor",
+      "immersive_weathering:waxed_rusted_plate_iron",
+      "immersive_weathering:waxed_rusted_plate_iron_slab",
+      "immersive_weathering:waxed_rusted_plate_iron_stairs",
+      "immersive_weathering:waxed_weathered_cut_iron",
+      "immersive_weathering:waxed_weathered_cut_iron_slab",
+      "immersive_weathering:waxed_weathered_cut_iron_stairs",
+      "immersive_weathering:waxed_weathered_iron_bars",
+      "immersive_weathering:waxed_weathered_iron_door",
+      "immersive_weathering:waxed_weathered_iron_trapdoor",
+      "immersive_weathering:waxed_weathered_plate_iron",
+      "immersive_weathering:waxed_weathered_plate_iron_slab",
+      "immersive_weathering:waxed_weathered_plate_iron_stairs",
+      "malum:soul_stained_steel_axe",
+      "malum:weight_of_worlds",
+      "minecraft:diamond_axe",
+      "minecraft:golden_axe",
+      "minecraft:iron_axe",
+      "minecraft:netherite_axe",
+      "minecraft:stone_axe",
+      "minecraft:waxed_copper_block",
+      "minecraft:waxed_cut_copper",
+      "minecraft:waxed_cut_copper_slab",
+      "minecraft:waxed_cut_copper_stairs",
+      "minecraft:waxed_exposed_copper",
+      "minecraft:waxed_exposed_cut_copper",
+      "minecraft:waxed_exposed_cut_copper_slab",
+      "minecraft:waxed_exposed_cut_copper_stairs",
+      "minecraft:waxed_oxidized_copper",
+      "minecraft:waxed_oxidized_cut_copper",
+      "minecraft:waxed_oxidized_cut_copper_slab",
+      "minecraft:waxed_oxidized_cut_copper_stairs",
+      "minecraft:waxed_weathered_copper",
+      "minecraft:waxed_weathered_cut_copper",
+      "minecraft:waxed_weathered_cut_copper_slab",
+      "minecraft:waxed_weathered_cut_copper_stairs",
+      "minecraft:wooden_axe",
+      "mynethersdelight:waxed_hoglin_trophy",
+      "natures_spirit:flaxen_fern",
+      "natures_spirit:large_flaxen_fern",
+      "quark:waxed_black_corundum",
+      "quark:waxed_blue_corundum",
+      "quark:waxed_cut_copper_vertical_slab",
+      "quark:waxed_exposed_cut_copper_vertical_slab",
+      "quark:waxed_green_corundum",
+      "quark:waxed_indigo_corundum",
+      "quark:waxed_orange_corundum",
+      "quark:waxed_oxidized_cut_copper_vertical_slab",
+      "quark:waxed_red_corundum",
+      "quark:waxed_violet_corundum",
+      "quark:waxed_weathered_cut_copper_vertical_slab",
+      "quark:waxed_white_corundum",
+      "quark:waxed_yellow_corundum",
+      "swem:axe_amethyst",
+      "swem:axe_copper",
+      "swem:axe_diamond",
+      "swem:axe_gold",
+      "swem:axe_iron",
+      "swem:axe_leather",
+      "swem:axe_netherite",
+      "tconstruct:adze_head",
+      "tconstruct:adze_head_cast",
+      "tconstruct:adze_head_red_sand_cast",
+      "tconstruct:adze_head_sand_cast",
+      "tconstruct:broad_axe",
+      "tconstruct:broad_axe_head",
+      "tconstruct:broad_axe_head_cast",
+      "tconstruct:broad_axe_head_red_sand_cast",
+      "tconstruct:broad_axe_head_sand_cast",
+      "tconstruct:hand_axe",
+      "tconstruct:mattock",
+      "tconstruct:minotaur_axe",
+      "tconstruct:pickadze",
+      "tconstruct:small_axe_head",
+      "tconstruct:small_axe_head_cast",
+      "tconstruct:small_axe_head_red_sand_cast",
+      "tconstruct:small_axe_head_sand_cast",
+      "tconstruct:throwing_axe",
+      "tconstruct:waxed_copper_platform",
+      "tconstruct:waxed_exposed_copper_platform",
+      "tconstruct:waxed_oxidized_copper_platform",
+      "tconstruct:waxed_weathered_copper_platform",
+      "the_finley_dimension_remastered:forglite_axe",
+      "the_flesh_that_hates:flesh_axe",
+      "twilightforest:diamond_minotaur_axe",
+      "twilightforest:gold_minotaur_axe",
+      "twilightforest:ironwood_axe",
+      "twilightforest:knightmetal_axe",
+      "twilightforest:steeleaf_axe",
+      "undergarden:cloggrum_axe",
+      "undergarden:forgotten_axe",
+      "undergarden:froststeel_axe",
+      "undergarden:utherium_axe"
+    ],
+    "pickaxe": [
+      "ae2:certus_quartz_pickaxe",
+      "ae2:fluix_pickaxe",
+      "ae2:nether_quartz_pickaxe",
+      "aether:gravitite_pickaxe",
+      "aether:holystone_pickaxe",
+      "aether:skyroot_pickaxe",
+      "aether:valkyrie_pickaxe",
+      "aether:zanite_pickaxe",
+      "artifacts:pickaxe_heater",
+      "bloodmagic:soulpickaxe",
+      "blue_skies:aquite_pickaxe",
+      "blue_skies:bluebright_pickaxe",
+      "blue_skies:charoite_pickaxe",
+      "blue_skies:comet_pickaxe",
+      "blue_skies:diopside_pickaxe",
+      "blue_skies:dusk_pickaxe",
+      "blue_skies:frostbright_pickaxe",
+      "blue_skies:horizonite_pickaxe",
+      "blue_skies:lunar_pickaxe",
+      "blue_skies:lunar_stone_pickaxe",
+      "blue_skies:maple_pickaxe",
+      "blue_skies:pyrope_pickaxe",
+      "blue_skies:starlit_pickaxe",
+      "blue_skies:turquoise_stone_pickaxe",
+      "callfromthedepth_:immemorialpickaxe",
+      "deeperdarker:resonarium_pickaxe",
+      "deeperdarker:warden_pickaxe",
+      "everythingcopper:copper_pickaxe",
+      "fallout_wastelands_:industrialhammer",
+      "fallout_wastelands_:industrialshovel",
+      "fallout_wastelands_:super_sledge",
+      "forbidden_arcanus:diamond_blacksmith_gavel",
+      "forbidden_arcanus:draco_arcanus_pickaxe",
+      "forbidden_arcanus:golden_blacksmith_gavel",
+      "forbidden_arcanus:iron_blacksmith_gavel",
+      "forbidden_arcanus:netherite_blacksmith_gavel",
+      "forbidden_arcanus:reinforced_deorum_blacksmith_gavel",
+      "forbidden_arcanus:reinforced_deorum_pickaxe",
+      "forbidden_arcanus:slimec_pickaxe",
+      "forbidden_arcanus:stone_blacksmith_gavel",
+      "forbidden_arcanus:wooden_blacksmith_gavel",
+      "goety:dark_pickaxe",
+      "goety:eerie_pickaxe",
+      "iceandfire:copper_pickaxe",
+      "iceandfire:dragonbone_pickaxe",
+      "iceandfire:dragonsteel_fire_pickaxe",
+      "iceandfire:dragonsteel_ice_pickaxe",
+      "iceandfire:dragonsteel_lightning_pickaxe",
+      "iceandfire:myrmex_desert_pickaxe",
+      "iceandfire:myrmex_jungle_pickaxe",
+      "iceandfire:silver_pickaxe",
+      "malum:soul_stained_steel_pickaxe",
+      "minecraft:diamond_pickaxe",
+      "minecraft:golden_pickaxe",
+      "minecraft:iron_pickaxe",
+      "minecraft:netherite_pickaxe",
+      "minecraft:stone_pickaxe",
+      "minecraft:wooden_pickaxe",
+      "occultism:iesnium_pickaxe",
+      "occultism:infused_pickaxe",
+      "occultism:ritual_dummy/craft_infused_pickaxe",
+      "occultism:spirit_attuned_pickaxe_head",
+      "swem:pickaxe_amethyst",
+      "swem:pickaxe_copper",
+      "swem:pickaxe_diamond",
+      "swem:pickaxe_gold",
+      "swem:pickaxe_iron",
+      "swem:pickaxe_leather",
+      "swem:pickaxe_netherite",
+      "tconstruct:pickaxe",
+      "tconstruct:sledge_hammer",
+      "tconstruct:vein_hammer",
+      "tconstruct:war_pick",
+      "the_finley_dimension_remastered:forglite_pickaxe",
+      "tinkers_things:chisel",
+      "twilightforest:fiery_pickaxe",
+      "twilightforest:giant_pickaxe",
+      "twilightforest:ironwood_pickaxe",
+      "twilightforest:knightmetal_pickaxe",
+      "twilightforest:mazebreaker_pickaxe",
+      "twilightforest:steeleaf_pickaxe",
+      "undergarden:cloggrum_pickaxe",
+      "undergarden:forgotten_pickaxe",
+      "undergarden:froststeel_pickaxe",
+      "undergarden:utherium_pickaxe"
+    ],
+    "shovel": [
+      "ae2:certus_quartz_shovel",
+      "ae2:fluix_shovel",
+      "ae2:nether_quartz_shovel",
+      "aether:gravitite_shovel",
+      "aether:holystone_shovel",
+      "aether:skyroot_shovel",
+      "aether:valkyrie_shovel",
+      "aether:zanite_shovel",
+      "bloodmagic:soulshovel",
+      "blue_skies:aquite_shovel",
+      "blue_skies:bluebright_shovel",
+      "blue_skies:charoite_shovel",
+      "blue_skies:comet_shovel",
+      "blue_skies:diopside_shovel",
+      "blue_skies:dusk_shovel",
+      "blue_skies:frostbright_shovel",
+      "blue_skies:horizonite_shovel",
+      "blue_skies:lunar_shovel",
+      "blue_skies:lunar_stone_shovel",
+      "blue_skies:maple_shovel",
+      "blue_skies:pyrope_shovel",
+      "blue_skies:starlit_shovel",
+      "blue_skies:turquoise_stone_shovel",
+      "callfromthedepth_:immemorialshovel",
+      "deeperdarker:resonarium_shovel",
+      "deeperdarker:warden_shovel",
+      "everythingcopper:copper_shovel",
+      "forbidden_arcanus:draco_arcanus_shovel",
+      "forbidden_arcanus:reinforced_deorum_shovel",
+      "goety:dark_shovel",
+      "goety:graverobber_shovel",
+      "iceandfire:copper_shovel",
+      "iceandfire:dragonbone_shovel",
+      "iceandfire:dragonsteel_fire_shovel",
+      "iceandfire:dragonsteel_ice_shovel",
+      "iceandfire:dragonsteel_lightning_shovel",
+      "iceandfire:myrmex_desert_shovel",
+      "iceandfire:myrmex_jungle_shovel",
+      "iceandfire:silver_shovel",
+      "malum:soul_stained_steel_shovel",
+      "minecraft:diamond_shovel",
+      "minecraft:golden_shovel",
+      "minecraft:iron_shovel",
+      "minecraft:netherite_shovel",
+      "minecraft:stone_shovel",
+      "minecraft:wooden_shovel",
+      "swem:shovel_amethyst",
+      "swem:shovel_copper",
+      "swem:shovel_diamond",
+      "swem:shovel_gold",
+      "swem:shovel_iron",
+      "swem:shovel_leather",
+      "swem:shovel_netherite",
+      "tconstruct:excavator",
+      "the_finley_dimension_remastered:forglite_shovel",
+      "tinkers_battle_spades:battle_spade",
+      "tinkers_things:shovel",
+      "twilightforest:ironwood_shovel",
+      "twilightforest:steeleaf_shovel",
+      "undergarden:cloggrum_shovel",
+      "undergarden:forgotten_shovel",
+      "undergarden:froststeel_shovel",
+      "undergarden:utherium_shovel"
+    ],
+    "hoe": [
+      "ae2:certus_quartz_hoe",
+      "ae2:fluix_hoe",
+      "ae2:nether_quartz_hoe",
+      "aether:gravitite_hoe",
+      "aether:holystone_hoe",
+      "aether:phoenix_boots",
+      "aether:phoenix_bow",
+      "aether:phoenix_chestplate",
+      "aether:phoenix_gloves",
+      "aether:phoenix_helmet",
+      "aether:phoenix_leggings",
+      "aether:skyroot_hoe",
+      "aether:valkyrie_hoe",
+      "aether:zanite_hoe",
+      "artifacts:running_shoes",
+      "artifacts:snowshoes",
       "bloodmagic:soulscythe",
+      "blue_skies:aquite_hoe",
+      "blue_skies:bluebright_hoe",
+      "blue_skies:charoite_hoe",
+      "blue_skies:comet_hoe",
+      "blue_skies:diopside_hoe",
+      "blue_skies:dusk_hoe",
+      "blue_skies:frostbright_hoe",
+      "blue_skies:horizonite_hoe",
+      "blue_skies:lunar_hoe",
+      "blue_skies:lunar_stone_hoe",
+      "blue_skies:maple_hoe",
+      "blue_skies:pyrope_hoe",
+      "blue_skies:starlit_hoe",
+      "blue_skies:turquoise_stone_hoe",
+      "callfromthedepth_:immemorialhoe",
+      "deeperdarker:resonarium_hoe",
+      "deeperdarker:warden_hoe",
+      "everythingcopper:copper_hoe",
+      "forbidden_arcanus:draco_arcanus_hoe",
+      "forbidden_arcanus:reinforced_deorum_hoe",
+      "goety:dark_hoe",
+      "iceandfire:copper_hoe",
+      "iceandfire:dragonbone_hoe",
+      "iceandfire:dragonsteel_fire_hoe",
+      "iceandfire:dragonsteel_ice_hoe",
+      "iceandfire:dragonsteel_lightning_hoe",
+      "iceandfire:myrmex_desert_hoe",
+      "iceandfire:myrmex_jungle_hoe",
+      "iceandfire:silver_hoe",
+      "malum:soul_stained_steel_hoe",
+      "minecraft:diamond_hoe",
+      "minecraft:golden_hoe",
+      "minecraft:iron_hoe",
+      "minecraft:netherite_hoe",
+      "minecraft:stone_hoe",
+      "minecraft:wooden_hoe",
+      "reliquary:phoenix_down",
+      "swem:scythe_amethyst",
+      "the_finley_dimension_remastered:forglite_hoe",
+      "twilightforest:ironwood_hoe",
+      "twilightforest:steeleaf_hoe",
+      "undergarden:cloggrum_hoe",
+      "undergarden:forgotten_hoe",
+      "undergarden:froststeel_hoe",
+      "undergarden:utherium_hoe"
+    ],
+    "sword": [
+      "additionalweaponry:cutlass",
+      "ae2:certus_quartz_sword",
+      "ae2:fluix_sword",
+      "ae2:nether_quartz_sword",
+      "aether:candy_cane_sword",
+      "aether:flaming_sword",
+      "aether:gravitite_sword",
+      "aether:hammer_of_kingbdogz",
+      "aether:holy_sword",
+      "aether:holystone_sword",
+      "aether:lightning_sword",
+      "aether:pig_slayer",
+      "aether:skyroot_sword",
+      "aether:valkyrie_lance",
+      "aether:vampire_blade",
+      "aether:zanite_sword",
+      "ars_nouveau:enchanters_sword",
+      "bloodmagic:soulsword",
+      "blue_skies:aquite_sword",
+      "blue_skies:bluebright_sword",
+      "blue_skies:charoite_sword",
+      "blue_skies:comet_sword",
+      "blue_skies:debug_sword",
+      "blue_skies:different_sword",
+      "blue_skies:diopside_sword",
+      "blue_skies:dusk_sword",
+      "blue_skies:frostbright_sword",
+      "blue_skies:horizonite_sword",
+      "blue_skies:infused_arc_sword",
+      "blue_skies:lunar_stone_sword",
+      "blue_skies:lunar_sword",
+      "blue_skies:maple_sword",
+      "blue_skies:pyrope_sword",
+      "blue_skies:starlit_sword",
+      "blue_skies:turquoise_stone_sword",
       "callfromthedepth_:dark_abyssscythe",
+      "callfromthedepth_:immemorialsword",
+      "callfromthedepth_:soulclaymore",
+      "callfromthedepth_:soulmarblehammer",
+      "create:cardboard_sword",
+      "deeperdarker:resonarium_sword",
+      "deeperdarker:warden_sword",
       "delightful:adamantium_knife",
       "delightful:alf_knife",
       "delightful:allthemodium_knife",
@@ -14053,335 +14599,23 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "delightful:warden_knife",
       "delightful:zanite_knife",
       "delightful:zinc_knife",
-      "fallout_wastelands_:knife",
-      "farmersdelight:diamond_knife",
-      "farmersdelight:flint_knife",
-      "farmersdelight:golden_knife",
-      "farmersdelight:iron_knife",
-      "farmersdelight:netherite_knife",
-      "immersive_weathering:ice_sickle",
-      "irons_spellbooks:decrepit_scythe",
-      "malum:creative_scythe",
-      "malum:crude_scythe",
-      "malum:soul_stained_steel_knife",
-      "malum:soul_stained_steel_scythe",
-      "occultism:butcher_knife",
-      "swem:scythe_amethyst",
-      "tconstruct:kama",
-      "tconstruct:scythe"
-    ],
-    "axe": [
-      "ae2:certus_quartz_axe",
-      "ae2:fluix_axe",
-      "ae2:nether_quartz_axe",
-      "aether:gravitite_axe",
-      "aether:holystone_axe",
-      "aether:skyroot_axe",
-      "aether:valkyrie_axe",
-      "aether:zanite_axe",
-      "bloodmagic:soulaxe",
-      "blue_skies:aquite_axe",
-      "blue_skies:bluebright_axe",
-      "blue_skies:charoite_axe",
-      "blue_skies:comet_axe",
-      "blue_skies:diopside_axe",
-      "blue_skies:dusk_axe",
-      "blue_skies:frostbright_axe",
-      "blue_skies:horizonite_axe",
-      "blue_skies:lunar_axe",
-      "blue_skies:lunar_stone_axe",
-      "blue_skies:maple_axe",
-      "blue_skies:pyrope_axe",
-      "blue_skies:starlit_axe",
-      "blue_skies:turquoise_stone_axe",
-      "callfromthedepth_:immemorialaxe",
-      "deeperdarker:resonarium_axe",
-      "deeperdarker:warden_axe",
-      "everythingcopper:copper_axe",
-      "fallout_wastelands_:hachet",
-      "forbidden_arcanus:draco_arcanus_axe",
-      "forbidden_arcanus:reinforced_deorum_axe",
-      "goety:dark_axe",
-      "goety:rampaging_axe",
-      "iceandfire:copper_axe",
-      "iceandfire:dragonbone_axe",
-      "iceandfire:dragonsteel_fire_axe",
-      "iceandfire:dragonsteel_ice_axe",
-      "iceandfire:dragonsteel_lightning_axe",
-      "iceandfire:myrmex_desert_axe",
-      "iceandfire:myrmex_jungle_axe",
-      "iceandfire:silver_axe",
-      "iceandfire:troll_weapon_axe",
-      "malum:soul_stained_steel_axe",
-      "malum:weight_of_worlds",
-      "minecraft:diamond_axe",
-      "minecraft:golden_axe",
-      "minecraft:iron_axe",
-      "minecraft:netherite_axe",
-      "minecraft:stone_axe",
-      "minecraft:wooden_axe",
-      "swem:axe_amethyst",
-      "tconstruct:broad_axe",
-      "tconstruct:hand_axe",
-      "tconstruct:mattock",
-      "tconstruct:minotaur_axe",
-      "tconstruct:pickadze",
-      "the_finley_dimension_remastered:forglite_axe",
-      "twilightforest:diamond_minotaur_axe",
-      "twilightforest:gold_minotaur_axe",
-      "twilightforest:ironwood_axe",
-      "twilightforest:knightmetal_axe",
-      "twilightforest:steeleaf_axe",
-      "undergarden:cloggrum_axe",
-      "undergarden:cloggrum_battleaxe",
-      "undergarden:forgotten_axe",
-      "undergarden:forgotten_battleaxe",
-      "undergarden:froststeel_axe",
-      "undergarden:utherium_axe"
-    ],
-    "pickaxe": [
-      "ae2:certus_quartz_pickaxe",
-      "ae2:fluix_pickaxe",
-      "ae2:nether_quartz_pickaxe",
-      "aether:gravitite_pickaxe",
-      "aether:holystone_pickaxe",
-      "aether:skyroot_pickaxe",
-      "aether:valkyrie_pickaxe",
-      "aether:zanite_pickaxe",
-      "bloodmagic:soulpickaxe",
-      "blue_skies:aquite_pickaxe",
-      "blue_skies:bluebright_pickaxe",
-      "blue_skies:charoite_pickaxe",
-      "blue_skies:comet_pickaxe",
-      "blue_skies:diopside_pickaxe",
-      "blue_skies:dusk_pickaxe",
-      "blue_skies:frostbright_pickaxe",
-      "blue_skies:horizonite_pickaxe",
-      "blue_skies:lunar_pickaxe",
-      "blue_skies:lunar_stone_pickaxe",
-      "blue_skies:maple_pickaxe",
-      "blue_skies:pyrope_pickaxe",
-      "blue_skies:starlit_pickaxe",
-      "blue_skies:turquoise_stone_pickaxe",
-      "callfromthedepth_:immemorialpickaxe",
-      "deeperdarker:resonarium_pickaxe",
-      "deeperdarker:warden_pickaxe",
-      "everythingcopper:copper_pickaxe",
-      "fallout_wastelands_:industrialhammer",
-      "fallout_wastelands_:super_sledge",
-      "forbidden_arcanus:diamond_blacksmith_gavel",
-      "forbidden_arcanus:draco_arcanus_pickaxe",
-      "forbidden_arcanus:golden_blacksmith_gavel",
-      "forbidden_arcanus:iron_blacksmith_gavel",
-      "forbidden_arcanus:netherite_blacksmith_gavel",
-      "forbidden_arcanus:reinforced_deorum_blacksmith_gavel",
-      "forbidden_arcanus:reinforced_deorum_pickaxe",
-      "forbidden_arcanus:slimec_pickaxe",
-      "forbidden_arcanus:stone_blacksmith_gavel",
-      "forbidden_arcanus:wooden_blacksmith_gavel",
-      "goety:dark_pickaxe",
-      "goety:eerie_pickaxe",
-      "iceandfire:copper_pickaxe",
-      "iceandfire:dragonbone_pickaxe",
-      "iceandfire:dragonsteel_fire_pickaxe",
-      "iceandfire:dragonsteel_ice_pickaxe",
-      "iceandfire:dragonsteel_lightning_pickaxe",
-      "iceandfire:myrmex_desert_pickaxe",
-      "iceandfire:myrmex_jungle_pickaxe",
-      "iceandfire:silver_pickaxe",
-      "malum:soul_stained_steel_pickaxe",
-      "minecraft:diamond_pickaxe",
-      "minecraft:golden_pickaxe",
-      "minecraft:iron_pickaxe",
-      "minecraft:netherite_pickaxe",
-      "minecraft:stone_pickaxe",
-      "minecraft:wooden_pickaxe",
-      "occultism:iesnium_pickaxe",
-      "occultism:infused_pickaxe",
-      "swem:pickaxe_amethyst",
-      "tconstruct:pickaxe",
-      "tconstruct:sledge_hammer",
-      "tconstruct:vein_hammer",
-      "tconstruct:war_pick",
-      "the_finley_dimension_remastered:forglite_pickaxe",
-      "tinkers_things:chisel",
-      "twilightforest:fiery_pickaxe",
-      "twilightforest:giant_pickaxe",
-      "twilightforest:ironwood_pickaxe",
-      "twilightforest:knightmetal_pickaxe",
-      "twilightforest:mazebreaker_pickaxe",
-      "twilightforest:steeleaf_pickaxe",
-      "undergarden:cloggrum_pickaxe",
-      "undergarden:forgotten_pickaxe",
-      "undergarden:froststeel_pickaxe",
-      "undergarden:utherium_pickaxe"
-    ],
-    "shovel": [
-      "ae2:certus_quartz_shovel",
-      "ae2:fluix_shovel",
-      "ae2:nether_quartz_shovel",
-      "aether:gravitite_shovel",
-      "aether:holystone_shovel",
-      "aether:skyroot_shovel",
-      "aether:valkyrie_shovel",
-      "aether:zanite_shovel",
-      "bloodmagic:soulshovel",
-      "blue_skies:aquite_shovel",
-      "blue_skies:bluebright_shovel",
-      "blue_skies:charoite_shovel",
-      "blue_skies:comet_shovel",
-      "blue_skies:diopside_shovel",
-      "blue_skies:dusk_shovel",
-      "blue_skies:frostbright_shovel",
-      "blue_skies:horizonite_shovel",
-      "blue_skies:lunar_shovel",
-      "blue_skies:lunar_stone_shovel",
-      "blue_skies:maple_shovel",
-      "blue_skies:pyrope_shovel",
-      "blue_skies:starlit_shovel",
-      "blue_skies:turquoise_stone_shovel",
-      "callfromthedepth_:immemorialshovel",
-      "deeperdarker:resonarium_shovel",
-      "deeperdarker:warden_shovel",
-      "everythingcopper:copper_shovel",
-      "fallout_wastelands_:industrialshovel",
-      "forbidden_arcanus:draco_arcanus_shovel",
-      "forbidden_arcanus:reinforced_deorum_shovel",
-      "goety:dark_shovel",
-      "goety:graverobber_shovel",
-      "iceandfire:copper_shovel",
-      "iceandfire:dragonbone_shovel",
-      "iceandfire:dragonsteel_fire_shovel",
-      "iceandfire:dragonsteel_ice_shovel",
-      "iceandfire:dragonsteel_lightning_shovel",
-      "iceandfire:myrmex_desert_shovel",
-      "iceandfire:myrmex_jungle_shovel",
-      "iceandfire:silver_shovel",
-      "malum:soul_stained_steel_shovel",
-      "minecraft:diamond_shovel",
-      "minecraft:golden_shovel",
-      "minecraft:iron_shovel",
-      "minecraft:netherite_shovel",
-      "minecraft:stone_shovel",
-      "minecraft:wooden_shovel",
-      "swem:shovel_amethyst",
-      "tconstruct:excavator",
-      "the_finley_dimension_remastered:forglite_shovel",
-      "tinkers_battle_spades:battle_spade",
-      "tinkers_things:shovel",
-      "twilightforest:ironwood_shovel",
-      "twilightforest:steeleaf_shovel",
-      "undergarden:cloggrum_shovel",
-      "undergarden:forgotten_shovel",
-      "undergarden:froststeel_shovel",
-      "undergarden:utherium_shovel"
-    ],
-    "hoe": [
-      "ae2:certus_quartz_hoe",
-      "ae2:fluix_hoe",
-      "ae2:nether_quartz_hoe",
-      "aether:gravitite_hoe",
-      "aether:holystone_hoe",
-      "aether:skyroot_hoe",
-      "aether:valkyrie_hoe",
-      "aether:zanite_hoe",
-      "blue_skies:aquite_hoe",
-      "blue_skies:bluebright_hoe",
-      "blue_skies:charoite_hoe",
-      "blue_skies:comet_hoe",
-      "blue_skies:diopside_hoe",
-      "blue_skies:dusk_hoe",
-      "blue_skies:frostbright_hoe",
-      "blue_skies:horizonite_hoe",
-      "blue_skies:lunar_hoe",
-      "blue_skies:lunar_stone_hoe",
-      "blue_skies:maple_hoe",
-      "blue_skies:pyrope_hoe",
-      "blue_skies:starlit_hoe",
-      "blue_skies:turquoise_stone_hoe",
-      "callfromthedepth_:immemorialhoe",
-      "deeperdarker:resonarium_hoe",
-      "deeperdarker:warden_hoe",
-      "everythingcopper:copper_hoe",
-      "forbidden_arcanus:draco_arcanus_hoe",
-      "forbidden_arcanus:reinforced_deorum_hoe",
-      "goety:dark_hoe",
-      "iceandfire:copper_hoe",
-      "iceandfire:dragonbone_hoe",
-      "iceandfire:dragonsteel_fire_hoe",
-      "iceandfire:dragonsteel_ice_hoe",
-      "iceandfire:dragonsteel_lightning_hoe",
-      "iceandfire:myrmex_desert_hoe",
-      "iceandfire:myrmex_jungle_hoe",
-      "iceandfire:silver_hoe",
-      "malum:soul_stained_steel_hoe",
-      "minecraft:diamond_hoe",
-      "minecraft:golden_hoe",
-      "minecraft:iron_hoe",
-      "minecraft:netherite_hoe",
-      "minecraft:stone_hoe",
-      "minecraft:wooden_hoe",
-      "the_finley_dimension_remastered:forglite_hoe",
-      "twilightforest:ironwood_hoe",
-      "twilightforest:steeleaf_hoe",
-      "undergarden:cloggrum_hoe",
-      "undergarden:forgotten_hoe",
-      "undergarden:froststeel_hoe",
-      "undergarden:utherium_hoe"
-    ],
-    "sword": [
-      "additionalweaponry:cutlass",
-      "ae2:certus_quartz_sword",
-      "ae2:fluix_sword",
-      "ae2:nether_quartz_sword",
-      "aether:candy_cane_sword",
-      "aether:flaming_sword",
-      "aether:gravitite_sword",
-      "aether:hammer_of_kingbdogz",
-      "aether:holy_sword",
-      "aether:holystone_sword",
-      "aether:lightning_sword",
-      "aether:pig_slayer",
-      "aether:skyroot_sword",
-      "aether:valkyrie_lance",
-      "aether:vampire_blade",
-      "aether:zanite_sword",
-      "ars_nouveau:enchanters_sword",
-      "bloodmagic:soulsword",
-      "blue_skies:aquite_sword",
-      "blue_skies:bluebright_sword",
-      "blue_skies:charoite_sword",
-      "blue_skies:comet_sword",
-      "blue_skies:debug_sword",
-      "blue_skies:different_sword",
-      "blue_skies:diopside_sword",
-      "blue_skies:dusk_sword",
-      "blue_skies:frostbright_sword",
-      "blue_skies:horizonite_sword",
-      "blue_skies:infused_arc_sword",
-      "blue_skies:lunar_stone_sword",
-      "blue_skies:lunar_sword",
-      "blue_skies:maple_sword",
-      "blue_skies:pyrope_sword",
-      "blue_skies:starlit_sword",
-      "blue_skies:turquoise_stone_sword",
-      "callfromthedepth_:immemorialsword",
-      "callfromthedepth_:soulclaymore",
-      "callfromthedepth_:soulmarblehammer",
-      "create:cardboard_sword",
-      "deeperdarker:resonarium_sword",
-      "deeperdarker:warden_sword",
       "everythingcopper:copper_sword",
       "fallout_wastelands_:baseball_bat",
       "fallout_wastelands_:baseball_club",
       "fallout_wastelands_:cattle_rod",
       "fallout_wastelands_:deathclaw_gauntlet",
+      "fallout_wastelands_:knife",
       "fallout_wastelands_:machete",
       "fallout_wastelands_:nailed_wrench",
       "fallout_wastelands_:rollingpin",
       "fallout_wastelands_:security_baton",
       "fallout_wastelands_:tire_iron",
       "fallout_wastelands_:wrench",
+      "farmersdelight:diamond_knife",
+      "farmersdelight:flint_knife",
+      "farmersdelight:golden_knife",
+      "farmersdelight:iron_knife",
+      "farmersdelight:netherite_knife",
       "forbidden_arcanus:draco_arcanus_sword",
       "forbidden_arcanus:mystical_dagger",
       "forbidden_arcanus:reinforced_deorum_sword",
@@ -14389,6 +14623,7 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "goety:dark_sword",
       "goety:fell_blade",
       "goety:frozen_blade",
+      "goety:sword_focus",
       "hexerei:warhammer",
       "iceandfire:amphithere_macuahuitl",
       "iceandfire:copper_sword",
@@ -14411,15 +14646,18 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "iceandfire:myrmex_jungle_sword_venom",
       "iceandfire:silver_sword",
       "iceandfire:stymphalian_bird_dagger",
+      "iceandfire:troll_weapon_axe",
       "iceandfire:troll_weapon_column",
       "iceandfire:troll_weapon_column_forest",
       "iceandfire:troll_weapon_column_frost",
       "iceandfire:troll_weapon_hammer",
       "iceandfire:troll_weapon_trunk",
       "iceandfire:troll_weapon_trunk_frost",
+      "immersive_weathering:ice_sickle",
       "irons_spellbooks:amethyst_rapier",
       "irons_spellbooks:boreal_blade",
       "irons_spellbooks:claymore",
+      "irons_spellbooks:decrepit_scythe",
       "irons_spellbooks:hellrazor",
       "irons_spellbooks:keeper_flamberge",
       "irons_spellbooks:legionnaire_flamberge",
@@ -14427,24 +14665,46 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "irons_spellbooks:misery",
       "irons_spellbooks:spellbreaker",
       "irons_spellbooks:twilight_gale",
+      "malum:creative_scythe",
+      "malum:crude_scythe",
       "malum:edge_of_deliverance",
       "malum:erosion_scepter",
       "malum:mnemonic_hex_staff",
+      "malum:necklace_of_the_hidden_blade",
+      "malum:soul_stained_steel_knife",
+      "malum:soul_stained_steel_scythe",
       "malum:soul_stained_steel_sword",
       "malum:staff_of_the_auric_flame",
       "malum:tyrving",
+      "minecraft:blade_pottery_sherd",
       "minecraft:diamond_sword",
       "minecraft:golden_sword",
       "minecraft:iron_sword",
       "minecraft:netherite_sword",
       "minecraft:stone_sword",
       "minecraft:wooden_sword",
+      "occultism:butcher_knife",
+      "pneumaticcraft:turbine_blade",
       "powergrid:electrobaton",
       "reliquary:magicbane",
       "reliquary:mercy_cross",
       "swem:sword_amethyst",
+      "swem:sword_copper",
+      "swem:sword_diamond",
+      "swem:sword_gold",
+      "swem:sword_iron",
+      "swem:sword_leather",
+      "swem:sword_netherite",
+      "tconstruct:broad_blade",
+      "tconstruct:broad_blade_cast",
+      "tconstruct:broad_blade_red_sand_cast",
+      "tconstruct:broad_blade_sand_cast",
       "tconstruct:cleaver",
       "tconstruct:dagger",
+      "tconstruct:small_blade",
+      "tconstruct:small_blade_cast",
+      "tconstruct:small_blade_red_sand_cast",
+      "tconstruct:small_blade_sand_cast",
       "tconstruct:swasher",
       "tconstruct:sword",
       "the_finley_dimension_remastered:forglite_sword",
@@ -14452,7 +14712,15 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "the_flesh_that_hates:scalpel",
       "tinker_rapier:estoc_tic",
       "tinker_rapier:rapier_tic",
+      "tinker_rapier:slender_blade",
+      "tinker_rapier:slender_blade_cast",
+      "tinker_rapier:slender_blade_red_sand_cast",
+      "tinker_rapier:slender_blade_sand_cast",
       "tinkers_katanas:katana",
+      "tinkersweaponry:great_blade",
+      "tinkersweaponry:great_blade_cast",
+      "tinkersweaponry:great_blade_red_sand_cast",
+      "tinkersweaponry:great_blade_sand_cast",
       "tinkersweaponry:greatsword",
       "twilightforest:fiery_sword",
       "twilightforest:giant_sword",
@@ -14461,7 +14729,9 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "twilightforest:ironwood_sword",
       "twilightforest:knightmetal_sword",
       "twilightforest:steeleaf_sword",
+      "undergarden:cloggrum_battleaxe",
       "undergarden:cloggrum_sword",
+      "undergarden:forgotten_battleaxe",
       "undergarden:forgotten_sword",
       "undergarden:froststeel_sword",
       "undergarden:utherium_sword"
@@ -16402,6 +16672,310 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       ],
       "origin": "delegation:wood-products",
       "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "amendments:blue_skies/double_comet_berry_pie": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "delegation:organics",
+      "detail": "plants, leaves, vines, crops, pods, or small organics",
+      "outcome": "knife_transform_organics"
+    },
+    "amendments:carpet_slab": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:carpet_stairs": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:cauldron_hack": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ceiling_banner_black": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ceiling_banner_blue": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ceiling_banner_brown": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ceiling_banner_cyan": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ceiling_banner_gray": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ceiling_banner_green": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ceiling_banner_light_blue": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ceiling_banner_light_gray": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ceiling_banner_lime": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ceiling_banner_magenta": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ceiling_banner_orange": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ceiling_banner_pink": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ceiling_banner_purple": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ceiling_banner_red": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ceiling_banner_white": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ceiling_banner_yellow": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:directional_cake": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:double_cake": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:dye_cauldron": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:farmersrespite/double_coffee_cake": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:hanging_flower_pot": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "delegation:organics",
+      "detail": "plants, leaves, vines, crops, pods, or small organics",
+      "outcome": "knife_transform_organics"
+    },
+    "amendments:liquid_cauldron": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:mynethersdelight/double_magma_cake": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:natures_spirit/double_cheese_block": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:skull_candle": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:skull_candle_soul": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:skull_candle_soul_wall": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:skull_candle_wall": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:skull_pile": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:tool_hook": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:ubesdelight/double_ube_cake": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:veggiesdelight/double_carrot_cake": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:wall_lantern": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "amendments:water_lily_pad": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "ars_nouveau:agronomic_sourcelink": {
@@ -23724,356 +24298,348 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
-    "btmdimtrees:bluebright_branch": {
+    "btmfixes:burnt_aether_grass_block": {
       "tools": [
-        "axe"
+        "hand"
       ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
-    "btmdimtrees:bluebright_leaves": {
+    "btmfixes:burnt_beige_limestone_grassy_regolith": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_chared_grass": {
       "tools": [
         "knife"
       ],
       "origin": "delegation:organics",
       "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
+      "outcome": "knife_transform_fiber"
     },
-    "btmdimtrees:bluebright_sapling": {
+    "btmfixes:burnt_chorus_grass_block": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_conglomerate_grassy_regolith": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_crackled_grass": {
       "tools": [
         "knife"
       ],
       "origin": "delegation:organics",
       "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
+      "outcome": "knife_transform_fiber"
     },
-    "btmdimtrees:dusk_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:dusk_leaves": {
+    "btmfixes:burnt_deepgrass": {
       "tools": [
         "knife"
       ],
       "origin": "delegation:organics",
       "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
+      "outcome": "knife_transform_fiber"
     },
-    "btmdimtrees:dusk_sapling": {
+    "btmfixes:burnt_depthsforestgrass": {
       "tools": [
         "knife"
       ],
       "origin": "delegation:organics",
       "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
+      "outcome": "knife_transform_fiber"
     },
-    "btmdimtrees:finley_wood_branch": {
+    "btmfixes:burnt_dolomite_grassy_regolith": {
       "tools": [
-        "axe"
+        "hand"
       ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
-    "btmdimtrees:finley_wood_leaves": {
+    "btmfixes:burnt_enchanted_aether_grass_block": {
       "tools": [
-        "axe"
+        "hand"
       ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
-    "btmdimtrees:finley_wood_sapling": {
+    "btmfixes:burnt_finley_grass_block": {
       "tools": [
-        "axe"
+        "hand"
       ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
-    "btmdimtrees:frostbright_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:frostbright_leaves": {
+    "btmfixes:burnt_frozen_grass": {
       "tools": [
         "knife"
       ],
       "origin": "delegation:organics",
       "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
+      "outcome": "knife_transform_fiber"
     },
-    "btmdimtrees:frostbright_sapling": {
+    "btmfixes:burnt_gabbro_grassy_regolith": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_granodiorite_grassy_regolith": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_grassy_permafrost": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_grassy_silt": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_grey_limestone_grassy_regolith": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_kimberlite_grassy_regolith": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_limestone_grassy_regolith": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_living_grass_block": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_lunar_comet_grass_block": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_lunar_grass_block": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_mudstone_grassy_regolith": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_overgrown_andesite": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_overgrown_diorite": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_overgrown_granite": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_phyllite_grassy_regolith": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_quartzite_grassy_regolith": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_rhyolite_grassy_regolith": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_rooted_grass_block": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_rooty_aether_grass_block": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_rooty_enchanted_aether_grass_block": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_rooty_frozen_aether_grass_block": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_rooty_grass_block": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_sandstone_grassy_regolith": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_siltstone_grassy_regolith": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_slate_grassy_regolith": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_stone_grassy_regolith": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_swampgrass": {
       "tools": [
         "knife"
       ],
       "origin": "delegation:organics",
       "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
+      "outcome": "knife_transform_fiber"
     },
-    "btmdimtrees:grongle_branch": {
+    "btmfixes:burnt_turquoise_comet_grass_block": {
       "tools": [
-        "axe"
+        "hand"
       ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
-    "btmdimtrees:grongle_leaves": {
+    "btmfixes:burnt_turquoise_grass_block": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "btmfixes:burnt_wastelandgrassblock": {
       "tools": [
         "knife"
       ],
       "origin": "delegation:organics",
       "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
+      "outcome": "knife_transform_fiber"
     },
-    "btmdimtrees:grongle_sapling": {
+    "btmfixes:burnt_white_granite_grassy_regolith": {
       "tools": [
-        "knife"
+        "hand"
       ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "btmdimtrees:living_wood_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:living_wood_leaves": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:living_wood_sapling": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:maple_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:maple_leaves": {
-      "tools": [
-        "knife"
-      ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "btmdimtrees:maple_sapling": {
-      "tools": [
-        "knife"
-      ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "btmdimtrees:silent_tree_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:silent_tree_leaves": {
-      "tools": [
-        "knife"
-      ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "btmdimtrees:silent_tree_sapling": {
-      "tools": [
-        "knife"
-      ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "btmdimtrees:smogstem_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:smogstem_leaves": {
-      "tools": [
-        "knife"
-      ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "btmdimtrees:smogstem_sapling": {
-      "tools": [
-        "knife"
-      ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "btmdimtrees:starlit_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:starlit_leaves": {
-      "tools": [
-        "knife"
-      ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "btmdimtrees:starlit_sapling": {
-      "tools": [
-        "knife"
-      ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "btmdimtrees:stripped_bluebright_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:stripped_dusk_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:stripped_finley_wood_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:stripped_frostbright_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:stripped_grongle_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:stripped_living_wood_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:stripped_maple_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:stripped_silent_tree_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:stripped_smogstem_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:stripped_starlit_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:stripped_wigglewood_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:wigglewood_branch": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:wigglewood_leaves": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "btmdimtrees:wigglewood_sapling": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "buildinggadgets2:render_block": {
@@ -40618,6 +41184,22 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       ],
       "origin": "delegation:wood-products",
       "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "dimensionalfonts:dimensional_font": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "dimensionalfonts:return_seal": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "dtaether:crystal_leaves": {
@@ -75204,94 +75786,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "detail": "plants, leaves, vines, crops, pods, or small organics",
       "outcome": "knife_transform_organics"
     },
-    "immersive_weathering:btmdimtrees/bluebright_leaf_pile": {
-      "tools": [
-        "knife"
-      ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "immersive_weathering:btmdimtrees/dusk_leaf_pile": {
-      "tools": [
-        "knife"
-      ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "immersive_weathering:btmdimtrees/finley_wood_leaf_pile": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "immersive_weathering:btmdimtrees/frostbright_leaf_pile": {
-      "tools": [
-        "knife"
-      ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "immersive_weathering:btmdimtrees/grongle_leaf_pile": {
-      "tools": [
-        "knife"
-      ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "immersive_weathering:btmdimtrees/living_wood_leaf_pile": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "immersive_weathering:btmdimtrees/maple_leaf_pile": {
-      "tools": [
-        "knife"
-      ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "immersive_weathering:btmdimtrees/silent_tree_leaf_pile": {
-      "tools": [
-        "knife"
-      ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "immersive_weathering:btmdimtrees/smogstem_leaf_pile": {
-      "tools": [
-        "knife"
-      ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "immersive_weathering:btmdimtrees/starlit_leaf_pile": {
-      "tools": [
-        "knife"
-      ],
-      "origin": "delegation:organics",
-      "detail": "plants, leaves, vines, crops, pods, or small organics",
-      "outcome": "knife_transform_organics"
-    },
-    "immersive_weathering:btmdimtrees/wigglewood_leaf_pile": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
     "immersive_weathering:burnt/blast_leaf_pile": {
       "tools": [
         "knife"
@@ -77700,2062 +78194,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
-    "kubejs:circuited_machine_casing": {
-      "tools": [
-        "pickaxe"
-      ],
-      "origin": "inference:legacy:pickaxe",
-      "detail": "legacy assignment carried forward",
-      "outcome": "default"
-    },
-    "kubejs:crate_blue_ice_t01": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_blue_ice_t02": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_blue_ice_t03": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_blue_ice_t04": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_blue_ice_t05": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_blue_ice_t06": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_blue_ice_t07": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_blue_ice_t08": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_blue_ice_t09": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_blue_ice_t10": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_blue_ice_t11": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_blue_ice_t12": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_blue_ice_t13": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_blue_ice_t14": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_blue_ice_t15": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_blue_ice_t16": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_clay_t01": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_clay_t02": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_clay_t03": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_clay_t04": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_clay_t05": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_clay_t06": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_clay_t07": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_clay_t08": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_clay_t09": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_clay_t10": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_clay_t11": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_clay_t12": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_clay_t13": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_clay_t14": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_clay_t15": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_clay_t16": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_cobblestone_t01": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_cobblestone_t02": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_cobblestone_t03": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_cobblestone_t04": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_cobblestone_t05": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_cobblestone_t06": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_cobblestone_t07": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_cobblestone_t08": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_cobblestone_t09": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_cobblestone_t10": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_cobblestone_t11": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_cobblestone_t12": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_cobblestone_t13": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_cobblestone_t14": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_cobblestone_t15": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_cobblestone_t16": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_deepslate_t01": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_deepslate_t02": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_deepslate_t03": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_deepslate_t04": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_deepslate_t05": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_deepslate_t06": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_deepslate_t07": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_deepslate_t08": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_deepslate_t09": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_deepslate_t10": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_deepslate_t11": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_deepslate_t12": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_deepslate_t13": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_deepslate_t14": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_deepslate_t15": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_deepslate_t16": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_dirt_t01": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_dirt_t02": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_dirt_t03": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_dirt_t04": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_dirt_t05": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_dirt_t06": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_dirt_t07": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_dirt_t08": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_dirt_t09": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_dirt_t10": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_dirt_t11": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_dirt_t12": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_dirt_t13": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_dirt_t14": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_dirt_t15": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_dirt_t16": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_end_stone_t01": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_end_stone_t02": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_end_stone_t03": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_end_stone_t04": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_end_stone_t05": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_end_stone_t06": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_end_stone_t07": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_end_stone_t08": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_end_stone_t09": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_end_stone_t10": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_end_stone_t11": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_end_stone_t12": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_end_stone_t13": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_end_stone_t14": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_end_stone_t15": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_end_stone_t16": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_gravel_t01": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_gravel_t02": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_gravel_t03": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_gravel_t04": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_gravel_t05": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_gravel_t06": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_gravel_t07": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_gravel_t08": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_gravel_t09": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_gravel_t10": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_gravel_t11": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_gravel_t12": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_gravel_t13": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_gravel_t14": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_gravel_t15": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_gravel_t16": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_ice_t01": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_ice_t02": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_ice_t03": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_ice_t04": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_ice_t05": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_ice_t06": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_ice_t07": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_ice_t08": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_ice_t09": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_ice_t10": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_ice_t11": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_ice_t12": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_ice_t13": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_ice_t14": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_ice_t15": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_ice_t16": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_nether_star_t01": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_nether_star_t02": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_nether_star_t03": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_nether_star_t04": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_nether_star_t05": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_nether_star_t06": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_nether_star_t07": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_nether_star_t08": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_nether_star_t09": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_nether_star_t10": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_nether_star_t11": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_nether_star_t12": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_nether_star_t13": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_nether_star_t14": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_nether_star_t15": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_nether_star_t16": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_netherrack_t01": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_netherrack_t02": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_netherrack_t03": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_netherrack_t04": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_netherrack_t05": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_netherrack_t06": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_netherrack_t07": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_netherrack_t08": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_netherrack_t09": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_netherrack_t10": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_netherrack_t11": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_netherrack_t12": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_netherrack_t13": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_netherrack_t14": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_netherrack_t15": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_netherrack_t16": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_obsidian_t01": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_obsidian_t02": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_obsidian_t03": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_obsidian_t04": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_obsidian_t05": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_obsidian_t06": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_obsidian_t07": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_obsidian_t08": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_obsidian_t09": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_obsidian_t10": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_obsidian_t11": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_obsidian_t12": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_obsidian_t13": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_obsidian_t14": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_obsidian_t15": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_obsidian_t16": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_packed_ice_t01": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_packed_ice_t02": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_packed_ice_t03": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_packed_ice_t04": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_packed_ice_t05": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_packed_ice_t06": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_packed_ice_t07": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_packed_ice_t08": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_packed_ice_t09": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_packed_ice_t10": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_packed_ice_t11": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_packed_ice_t12": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_packed_ice_t13": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_packed_ice_t14": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_packed_ice_t15": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_packed_ice_t16": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_sand_t01": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_sand_t02": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_sand_t03": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_sand_t04": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_sand_t05": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_sand_t06": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_sand_t07": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_sand_t08": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_sand_t09": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_sand_t10": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_sand_t11": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_sand_t12": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_sand_t13": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_sand_t14": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_sand_t15": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_sand_t16": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_sand_t01": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_sand_t02": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_sand_t03": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_sand_t04": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_sand_t05": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_sand_t06": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_sand_t07": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_sand_t08": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_sand_t09": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_sand_t10": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_sand_t11": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_sand_t12": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_sand_t13": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_sand_t14": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_sand_t15": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_sand_t16": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_soil_t01": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_soil_t02": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_soil_t03": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_soil_t04": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_soil_t05": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_soil_t06": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_soil_t07": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_soil_t08": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_soil_t09": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_soil_t10": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_soil_t11": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_soil_t12": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_soil_t13": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_soil_t14": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_soil_t15": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_soul_soil_t16": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_stone_t01": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_stone_t02": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_stone_t03": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_stone_t04": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_stone_t05": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_stone_t06": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_stone_t07": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_stone_t08": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_stone_t09": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_stone_t10": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_stone_t11": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_stone_t12": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_stone_t13": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_stone_t14": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_stone_t15": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
-    "kubejs:crate_stone_t16": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "delegation:wood-products",
-      "detail": "logs, branches, planks, or wood products",
-      "outcome": "default"
-    },
     "kubejs:electrical_machine_casing": {
       "tools": [
         "pickaxe"
@@ -79781,14 +78219,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "outcome": "default"
     },
     "kubejs:raw_impossible_casing": {
-      "tools": [
-        "pickaxe"
-      ],
-      "origin": "inference:legacy:pickaxe",
-      "detail": "legacy assignment carried forward",
-      "outcome": "default"
-    },
-    "kubejs:scorched_machine_casing": {
       "tools": [
         "pickaxe"
       ],
@@ -97012,22 +95442,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "detail": "plants, leaves, vines, crops, pods, or small organics",
       "outcome": "knife_transform_organics"
     },
-    "obelisks:meteoric_rift_anchor": {
-      "tools": [
-        "pickaxe"
-      ],
-      "origin": "inference:legacy:pickaxe",
-      "detail": "legacy assignment carried forward",
-      "outcome": "default"
-    },
-    "obelisks:return_pad": {
-      "tools": [
-        "pickaxe"
-      ],
-      "origin": "inference:legacy:pickaxe",
-      "detail": "legacy assignment carried forward",
-      "outcome": "default"
-    },
     "oc2r:bus_cable": {
       "tools": [
         "pickaxe"
@@ -102352,8 +100766,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "axe"
       ],
-      "origin": "inference:legacy:axe",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:block-tag:minecraft:mineable/axe",
+      "detail": "runtime or authored mining tag evidence",
       "outcome": "default"
     },
     "quark:hollow_dark_oak_log": {
@@ -102400,8 +100814,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "axe"
       ],
-      "origin": "inference:legacy:axe",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:block-tag:minecraft:mineable/axe",
+      "detail": "runtime or authored mining tag evidence",
       "outcome": "default"
     },
     "quark:indigo_corundum": {
@@ -106660,6 +105074,14 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "detail": "logs, branches, planks, or wood products",
       "outcome": "default"
     },
+    "relics:researching_table": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
     "reliquary:alkahestry_altar": {
       "tools": [
         "pickaxe"
@@ -108667,6 +107089,1758 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "origin": "inference:legacy:pickaxe",
       "detail": "legacy assignment carried forward",
       "outcome": "default"
+    },
+    "supplementaries:ash": {
+      "tools": [
+        "shovel"
+      ],
+      "origin": "delegation:loose-worked-earth",
+      "detail": "loose non-hand earth surface",
+      "outcome": "default"
+    },
+    "supplementaries:ash_bricks": {
+      "tools": [
+        "shovel"
+      ],
+      "origin": "delegation:loose-worked-earth",
+      "detail": "loose non-hand earth surface",
+      "outcome": "default"
+    },
+    "supplementaries:ash_bricks_slab": {
+      "tools": [
+        "shovel"
+      ],
+      "origin": "delegation:loose-worked-earth",
+      "detail": "loose non-hand earth surface",
+      "outcome": "default"
+    },
+    "supplementaries:ash_bricks_stairs": {
+      "tools": [
+        "shovel"
+      ],
+      "origin": "delegation:loose-worked-earth",
+      "detail": "loose non-hand earth surface",
+      "outcome": "default"
+    },
+    "supplementaries:ash_bricks_wall": {
+      "tools": [
+        "shovel"
+      ],
+      "origin": "delegation:loose-worked-earth",
+      "detail": "loose non-hand earth surface",
+      "outcome": "default"
+    },
+    "supplementaries:ashen_basalt": {
+      "tools": [
+        "shovel"
+      ],
+      "origin": "delegation:loose-worked-earth",
+      "detail": "loose non-hand earth surface",
+      "outcome": "default"
+    },
+    "supplementaries:awning": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:awning_black": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:awning_blue": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:awning_brown": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:awning_cyan": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:awning_gray": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:awning_green": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:awning_light_blue": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:awning_light_gray": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:awning_lime": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:awning_magenta": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:awning_orange": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:awning_pink": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:awning_purple": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:awning_red": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:awning_white": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:awning_yellow": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:bamboo_spikes": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:bellows": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:blackboard": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:blackstone_lamp": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:blackstone_tile": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:blackstone_tile_slab": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:blackstone_tile_stairs": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:blackstone_tile_wall": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:blaze_rod": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:block_generator": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:book_pile": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:book_pile_horizontal": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:bubble_block": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:cage": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder_black": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder_blue": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder_brown": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder_cyan": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder_gray": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder_green": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder_light_blue": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder_light_gray": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder_lime": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder_magenta": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder_orange": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder_pink": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder_purple": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder_red": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder_white": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:candle_holder_yellow": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:cannon": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:cannonball": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:checker_block": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:checker_slab": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:clock_block": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:cog_block": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:crank": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:crystal_display": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:daub": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:daub_brace": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:daub_cross_brace": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:daub_frame": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:deepslate_lamp": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:doormat": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "delegation:wood-products",
+      "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "supplementaries:end_stone_lamp": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:enderman_head": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:enderman_wall_head": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:faucet": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:feather_block": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:fine_wood": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "delegation:wood-products",
+      "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "supplementaries:fine_wood_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "delegation:wood-products",
+      "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "supplementaries:fine_wood_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "delegation:wood-products",
+      "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "supplementaries:fire_pit": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flag_black": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flag_blue": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flag_brown": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flag_cyan": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flag_gray": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flag_green": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flag_light_blue": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flag_light_gray": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flag_lime": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flag_magenta": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flag_orange": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flag_pink": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flag_purple": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flag_red": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flag_white": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flag_yellow": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flax": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flax_block": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flint_block": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:flower_box": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "delegation:organics",
+      "detail": "plants, leaves, vines, crops, pods, or small organics",
+      "outcome": "knife_transform_organics"
+    },
+    "supplementaries:fodder": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:globe": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:globe_sepia": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:goblet": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:gold_door": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "delegation:wood-products",
+      "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "supplementaries:gold_gate": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:gold_trapdoor": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "delegation:wood-products",
+      "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "supplementaries:gravel_bricks": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "supplementaries:gunpowder": {
+      "tools": [
+        "shovel"
+      ],
+      "origin": "delegation:loose-worked-earth",
+      "detail": "loose non-hand earth surface",
+      "outcome": "default"
+    },
+    "supplementaries:hourglass": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:iron_gate": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:item_shelf": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:jar": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:jar_boat": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "delegation:wood-products",
+      "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "supplementaries:lapis_bricks": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:lapis_bricks_slab": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:lapis_bricks_stairs": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:lapis_bricks_wall": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:lock_block": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:lumisene": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:lunch_basket": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:moving_slidy_block_source": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:netherite_door": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "delegation:wood-products",
+      "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "supplementaries:netherite_trapdoor": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "delegation:wood-products",
+      "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "supplementaries:notice_board": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:pancake": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:pedestal": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:planter": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:potted_flax": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "delegation:potted-plants",
+      "detail": "potted plant family",
+      "outcome": "knife_transform_organics"
+    },
+    "supplementaries:present": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:present_black": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:present_blue": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:present_brown": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:present_cyan": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:present_gray": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:present_green": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:present_light_blue": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:present_light_gray": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:present_lime": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:present_magenta": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:present_orange": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:present_pink": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:present_purple": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:present_red": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:present_white": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:present_yellow": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:pulley_block": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:raked_gravel": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "supplementaries:redstone_illuminator": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:relayer": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:rope": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:rope_buntings": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:rope_knot": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:rope_tomatoes": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:sack": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:safe": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:sconce": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:sconce_green": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:sconce_lever": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:sconce_soul": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:sconce_wall": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:sconce_wall_green": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:sconce_wall_soul": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:sign_post": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "delegation:wood-products",
+      "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "supplementaries:sign_post_wall": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "delegation:wood-products",
+      "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "supplementaries:slidy_block": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:soap_block": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:speaker_block": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:spring_launcher": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:spring_launcher_arm": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:spring_launcher_head": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:statue": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:stick": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:stick_tomatoes": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:stone_lamp": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:stone_tile": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:stone_tile_slab": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:stone_tile_stairs": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:stone_tile_wall": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:structure_temp": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:sugar_cube": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:suspicious_gravel_bricks": {
+      "tools": [
+        "hand"
+      ],
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
+      "outcome": "default"
+    },
+    "supplementaries:tater_in_a_jar": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:timber_brace": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:timber_cross_brace": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:timber_frame": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present_black": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present_blue": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present_brown": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present_cyan": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present_gray": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present_green": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present_light_blue": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present_light_gray": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present_lime": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present_magenta": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present_orange": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present_pink": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present_purple": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present_red": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present_white": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:trapped_present_yellow": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:turn_table": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:urn": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:wicker_fence": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "delegation:wood-products",
+      "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "supplementaries:wild_flax": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "supplementaries:wind_vane": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "sushigocrafting:avocado_leaves": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "delegation:organics",
+      "detail": "plants, leaves, vines, crops, pods, or small organics",
+      "outcome": "knife_transform_organics"
+    },
+    "sushigocrafting:avocado_leaves_logged": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "delegation:wood-products",
+      "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "sushigocrafting:avocado_log": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "delegation:wood-products",
+      "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "sushigocrafting:avocado_sapling": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "delegation:organics",
+      "detail": "plants, leaves, vines, crops, pods, or small organics",
+      "outcome": "knife_transform_organics"
+    },
+    "sushigocrafting:cooler_box": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "sushigocrafting:cucumber_crop": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "delegation:organics",
+      "detail": "plants, leaves, vines, crops, pods, or small organics",
+      "outcome": "knife_transform_organics"
+    },
+    "sushigocrafting:cutting_board": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "sushigocrafting:fermentation_barrel": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "delegation:wood-products",
+      "detail": "logs, branches, planks, or wood products",
+      "outcome": "default"
+    },
+    "sushigocrafting:rice_cooker": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "sushigocrafting:rice_crop": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "delegation:organics",
+      "detail": "plants, leaves, vines, crops, pods, or small organics",
+      "outcome": "knife_transform_organics"
+    },
+    "sushigocrafting:roller": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
+      "outcome": "default"
+    },
+    "sushigocrafting:sesame_crop": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "delegation:organics",
+      "detail": "plants, leaves, vines, crops, pods, or small organics",
+      "outcome": "knife_transform_organics"
+    },
+    "sushigocrafting:soy_crop": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "delegation:organics",
+      "detail": "plants, leaves, vines, crops, pods, or small organics",
+      "outcome": "knife_transform_organics"
+    },
+    "sushigocrafting:wasabi_crop": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "delegation:organics",
+      "detail": "plants, leaves, vines, crops, pods, or small organics",
+      "outcome": "knife_transform_organics"
     },
     "swem:acacia_stall_care": {
       "tools": [
@@ -126122,3115 +126296,4467 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "ae2:certus_quartz_cutting_knife": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "heuristic:blade-cutters",
+      "detail": "knife-equivalent cutter family",
       "outcome": "default"
     },
     "ae2:certus_quartz_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "ae2:certus_quartz_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "ae2:certus_quartz_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "ae2:certus_quartz_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "ae2:fluix_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "ae2:fluix_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "ae2:fluix_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "ae2:fluix_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "ae2:fluix_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "ae2:nether_quartz_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "ae2:nether_quartz_cutting_knife": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "heuristic:blade-cutters",
+      "detail": "knife-equivalent cutter family",
       "outcome": "default"
     },
     "ae2:nether_quartz_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "ae2:nether_quartz_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "ae2:nether_quartz_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "ae2:nether_quartz_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:candy_cane_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:flaming_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:gravitite_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:gravitite_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:gravitite_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:gravitite_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:gravitite_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:hammer_of_kingbdogz": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:holy_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:holystone_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:holystone_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:holystone_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:holystone_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:holystone_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "aether:lightning_knife": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "heuristic:blade-cutters",
+      "detail": "knife-equivalent cutter family",
       "outcome": "default"
     },
     "aether:lightning_sword": {
       "tools": [
         "sword"
       ],
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "aether:phoenix_boots": {
+      "tools": [
+        "hoe"
+      ],
       "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "detail": "hoe name heuristic",
+      "outcome": "default"
+    },
+    "aether:phoenix_bow": {
+      "tools": [
+        "hoe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "hoe name heuristic",
+      "outcome": "default"
+    },
+    "aether:phoenix_chestplate": {
+      "tools": [
+        "hoe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "hoe name heuristic",
+      "outcome": "default"
+    },
+    "aether:phoenix_gloves": {
+      "tools": [
+        "hoe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "hoe name heuristic",
+      "outcome": "default"
+    },
+    "aether:phoenix_helmet": {
+      "tools": [
+        "hoe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "hoe name heuristic",
+      "outcome": "default"
+    },
+    "aether:phoenix_leggings": {
+      "tools": [
+        "hoe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "hoe name heuristic",
       "outcome": "default"
     },
     "aether:pig_slayer": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:skyroot_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:skyroot_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:skyroot_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:skyroot_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:skyroot_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:valkyrie_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:valkyrie_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:valkyrie_lance": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:valkyrie_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:valkyrie_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:vampire_blade": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:zanite_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:zanite_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:zanite_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:zanite_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "aether:zanite_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "ars_nouveau:enchanters_sword": {
       "tools": [
         "sword"
       ],
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "ars_nouveau:glyph_wind_shear": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "heuristic:blade-cutters",
+      "detail": "knife-equivalent cutter family",
+      "outcome": "default"
+    },
+    "artifacts:pickaxe_heater": {
+      "tools": [
+        "pickaxe"
+      ],
       "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "detail": "pickaxe name heuristic",
+      "outcome": "default"
+    },
+    "artifacts:running_shoes": {
+      "tools": [
+        "hoe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "hoe name heuristic",
+      "outcome": "default"
+    },
+    "artifacts:snowshoes": {
+      "tools": [
+        "hoe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "hoe name heuristic",
       "outcome": "default"
     },
     "bloodmagic:soulaxe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "bloodmagic:soulpickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "bloodmagic:soulscythe": {
       "tools": [
-        "knife"
+        "hoe"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "bloodmagic:soulshovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "bloodmagic:soulsword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:aquite_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:aquite_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:aquite_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:aquite_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:aquite_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:bluebright_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:bluebright_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:bluebright_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:bluebright_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:bluebright_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:charoite_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:charoite_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:charoite_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:charoite_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:charoite_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:comet_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:comet_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:comet_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:comet_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:comet_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:debug_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:different_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:diopside_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:diopside_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:diopside_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:diopside_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:diopside_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:dusk_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:dusk_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:dusk_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:dusk_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:dusk_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:frostbright_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:frostbright_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:frostbright_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:frostbright_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:frostbright_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:horizonite_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:horizonite_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:horizonite_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:horizonite_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:horizonite_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:infused_arc_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:lunar_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:lunar_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:lunar_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:lunar_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:lunar_stone_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:lunar_stone_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:lunar_stone_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:lunar_stone_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:lunar_stone_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:lunar_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:maple_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:maple_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:maple_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:maple_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:maple_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:pyrope_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:pyrope_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:pyrope_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:pyrope_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:pyrope_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:starlit_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:starlit_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:starlit_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:starlit_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:starlit_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:turquoise_stone_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:turquoise_stone_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:turquoise_stone_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:turquoise_stone_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "blue_skies:turquoise_stone_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
-    "callfromthedepth_:dark_abyssscythe": {
+    "blue_skies:ventium_shears": {
       "tools": [
         "knife"
       ],
       "origin": "heuristic:blade-cutters",
       "detail": "knife-equivalent cutter family",
+      "outcome": "default"
+    },
+    "brewinandchewin:flaxen_cheese_wedge": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "brewinandchewin:flaxen_cheese_wheel": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "brewinandchewin:unripe_flaxen_cheese_wheel": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "callfromthedepth_:dark_abyssscythe": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "callfromthedepth_:immemorialaxe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "callfromthedepth_:immemorialhoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "callfromthedepth_:immemorialpickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "callfromthedepth_:immemorialshovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "callfromthedepth_:immemorialsword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "callfromthedepth_:soulclaymore": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "callfromthedepth_:soulmarblehammer": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "create:cardboard_sword": {
       "tools": [
         "sword"
       ],
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "create:waxed_copper_shingle_slab": {
+      "tools": [
+        "axe"
+      ],
       "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_copper_shingle_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_copper_shingles": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_copper_tile_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_copper_tile_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_copper_tiles": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_exposed_copper_shingle_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_exposed_copper_shingle_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_exposed_copper_shingles": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_exposed_copper_tile_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_exposed_copper_tile_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_exposed_copper_tiles": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_oxidized_copper_shingle_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_oxidized_copper_shingle_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_oxidized_copper_shingles": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_oxidized_copper_tile_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_oxidized_copper_tile_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_oxidized_copper_tiles": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_weathered_copper_shingle_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_weathered_copper_shingle_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_weathered_copper_shingles": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_weathered_copper_tile_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_weathered_copper_tile_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "create:waxed_weathered_copper_tiles": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
       "outcome": "default"
     },
     "deeperdarker:resonarium_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "deeperdarker:resonarium_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "deeperdarker:resonarium_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "deeperdarker:resonarium_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "deeperdarker:resonarium_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "deeperdarker:warden_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "deeperdarker:warden_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "deeperdarker:warden_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "deeperdarker:warden_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "deeperdarker:warden_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:adamantium_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:alf_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:allthemodium_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:aluminum_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:amethyst_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:black_opal_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:blazing_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:bone_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:brass_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:bronze_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:certus_quartz_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:cloggrum_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:constantan_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:copper_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:crystalline_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:draco_arcanus_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:electrum_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:elementium_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:emerald_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:enderite_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:experience_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:fiery_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:fluix_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:forgotten_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:froststeel_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:gilded_netherite_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:gilded_quartz_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:gravitite_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:holystone_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:infused_veridium_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:invar_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:ironwood_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:kiwano_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:knightmetal_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:lapis_lazuli_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:large_amethyst_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:lead_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:leaf_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:living_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:manasteel_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:mythril_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:necronium_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:nether_quartz_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:netherite_opal_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:nickel_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:obsidian_infused_enderite_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:onyx_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:osmium_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:pearlescent_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:phoenix_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:refined_glowstone_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:refined_obsidian_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:resonarium_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:rose_gold_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:silver_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:sinisite_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:skyjade_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:skyroot_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:soul_steel_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:steel_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:steeleaf_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:stratus_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:terra_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:thyrium_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:tin_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:utherium_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:valkyrum_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:veridium_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:warden_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:zanite_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "delightful:zinc_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "everythingcopper:copper_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "everythingcopper:copper_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "everythingcopper:copper_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "everythingcopper:copper_shears": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "heuristic:blade-cutters",
+      "detail": "knife-equivalent cutter family",
       "outcome": "default"
     },
     "everythingcopper:copper_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "everythingcopper:copper_sword": {
       "tools": [
         "sword"
       ],
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_chipped_copper_anvil": {
+      "tools": [
+        "axe"
+      ],
       "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_chipped_exposed_copper_anvil": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_chipped_oxidized_copper_anvil": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_chipped_weathered_copper_anvil": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_chiseled_copper": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_copper_anvil": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_copper_bars": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_copper_button": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_copper_chain": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_copper_door": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_copper_grate": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_copper_hopper": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_copper_ladder": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_copper_lamp": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_copper_lantern": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_copper_pressure_plate": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_copper_rail": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_copper_soul_lantern": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_copper_trapdoor": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_damaged_copper_anvil": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_damaged_exposed_copper_anvil": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_damaged_oxidized_copper_anvil": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_damaged_weathered_copper_anvil": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_exposed_chiseled_copper": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_exposed_copper_anvil": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_exposed_copper_bars": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_exposed_copper_button": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_exposed_copper_chain": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_exposed_copper_door": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_exposed_copper_grate": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_exposed_copper_hopper": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_exposed_copper_ladder": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_exposed_copper_lamp": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_exposed_copper_lantern": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_exposed_copper_pressure_plate": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_exposed_copper_rail": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_exposed_copper_soul_lantern": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_exposed_copper_trapdoor": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_oxidized_chiseled_copper": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_oxidized_copper_anvil": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_oxidized_copper_bars": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_oxidized_copper_button": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_oxidized_copper_chain": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_oxidized_copper_door": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_oxidized_copper_grate": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_oxidized_copper_hopper": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_oxidized_copper_ladder": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_oxidized_copper_lamp": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_oxidized_copper_lantern": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_oxidized_copper_pressure_plate": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_oxidized_copper_rail": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_oxidized_copper_soul_lantern": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_oxidized_copper_trapdoor": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_weathered_chiseled_copper": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_weathered_copper_anvil": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_weathered_copper_bars": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_weathered_copper_button": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_weathered_copper_chain": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_weathered_copper_door": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_weathered_copper_grate": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_weathered_copper_hopper": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_weathered_copper_ladder": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_weathered_copper_lamp": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_weathered_copper_lantern": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_weathered_copper_pressure_plate": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_weathered_copper_rail": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_weathered_copper_soul_lantern": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "everythingcopper:waxed_weathered_copper_trapdoor": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
       "outcome": "default"
     },
     "fallout_wastelands_:baseball_bat": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "fallout_wastelands_:baseball_club": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "fallout_wastelands_:cattle_rod": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "fallout_wastelands_:deathclaw_gauntlet": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "fallout_wastelands_:hachet": {
       "tools": [
         "axe"
       ],
-      "origin": "inference:legacy:axe",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "fallout_wastelands_:industrialhammer": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "inference:legacy:pickaxe",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "fallout_wastelands_:industrialshovel": {
       "tools": [
-        "shovel"
+        "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "fallout_wastelands_:knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "fallout_wastelands_:machete": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "fallout_wastelands_:nailed_wrench": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "fallout_wastelands_:rollingpin": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "fallout_wastelands_:security_baton": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "fallout_wastelands_:super_sledge": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "inference:legacy:pickaxe",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "fallout_wastelands_:tire_iron": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "fallout_wastelands_:wrench": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "farmersdelight:diamond_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "farmersdelight:flint_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "farmersdelight:golden_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "farmersdelight:iron_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "farmersdelight:netherite_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:diamond_blacksmith_gavel": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "inference:legacy:pickaxe",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:draco_arcanus_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:draco_arcanus_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:draco_arcanus_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:draco_arcanus_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:draco_arcanus_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:golden_blacksmith_gavel": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "inference:legacy:pickaxe",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:iron_blacksmith_gavel": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "inference:legacy:pickaxe",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:mystical_dagger": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:netherite_blacksmith_gavel": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "inference:legacy:pickaxe",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:reinforced_deorum_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:reinforced_deorum_blacksmith_gavel": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "inference:legacy:pickaxe",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:reinforced_deorum_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:reinforced_deorum_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:reinforced_deorum_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:reinforced_deorum_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:slimec_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:stone_blacksmith_gavel": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "inference:legacy:pickaxe",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "forbidden_arcanus:wooden_blacksmith_gavel": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "inference:legacy:pickaxe",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "goety:blade_of_ender": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "goety:dark_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "goety:dark_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "goety:dark_metal_scythe": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "heuristic:blade-cutters",
+      "detail": "knife-equivalent cutter family",
       "outcome": "default"
     },
     "goety:dark_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "goety:dark_scythe": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "heuristic:blade-cutters",
+      "detail": "knife-equivalent cutter family",
       "outcome": "default"
     },
     "goety:dark_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "goety:dark_sword": {
       "tools": [
         "sword"
       ],
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "goety:death_scythe": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "heuristic:blade-cutters",
+      "detail": "knife-equivalent cutter family",
+      "outcome": "default"
+    },
+    "goety:diamond_ice_axe": {
+      "tools": [
+        "axe"
+      ],
       "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "detail": "axe name heuristic",
       "outcome": "default"
     },
     "goety:eerie_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "goety:fell_blade": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "goety:frozen_blade": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "goety:graverobber_shovel": {
       "tools": [
         "shovel"
       ],
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "goety:iron_ice_axe": {
+      "tools": [
+        "axe"
+      ],
       "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "detail": "axe name heuristic",
       "outcome": "default"
     },
     "goety:rampaging_axe": {
       "tools": [
         "axe"
       ],
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "goety:sword_focus": {
+      "tools": [
+        "sword"
+      ],
       "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "detail": "sword name heuristic",
       "outcome": "default"
     },
     "hexerei:warhammer": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "hexerei:waxed_infused_fabric_block": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_infused_fabric_block_ornate": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_infused_fabric_carpet": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_infused_fabric_carpet_ornate": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_mahogany_connected": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_mahogany_window": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_mahogany_window_pane": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_polished_mahogany_connected": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_polished_mahogany_layered": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_polished_mahogany_pillar": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_polished_willow_connected": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_polished_willow_layered": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_polished_willow_pillar": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_polished_witch_hazel_connected": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_polished_witch_hazel_layered": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_polished_witch_hazel_pillar": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_stone_window": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_stone_window_pane": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_willow_connected": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_willow_window": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_willow_window_pane": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_witch_hazel_connected": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_witch_hazel_window": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "hexerei:waxed_witch_hazel_window_pane": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
       "outcome": "default"
     },
     "iceandfire:amphithere_macuahuitl": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:copper_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:copper_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:copper_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:copper_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:copper_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonbone_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonbone_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonbone_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonbone_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonbone_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonbone_sword_fire": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonbone_sword_ice": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonbone_sword_lightning": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonsteel_fire_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonsteel_fire_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonsteel_fire_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonsteel_fire_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonsteel_fire_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonsteel_ice_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonsteel_ice_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonsteel_ice_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonsteel_ice_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonsteel_ice_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonsteel_lightning_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonsteel_lightning_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonsteel_lightning_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonsteel_lightning_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dragonsteel_lightning_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dread_knight_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dread_queen_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:dread_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:ghost_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:hippocampus_slapper": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:hippogryph_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:myrmex_desert_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:myrmex_desert_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:myrmex_desert_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:myrmex_desert_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:myrmex_desert_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:myrmex_desert_sword_venom": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:myrmex_jungle_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:myrmex_jungle_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:myrmex_jungle_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:myrmex_jungle_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:myrmex_jungle_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:myrmex_jungle_sword_venom": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:silver_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:silver_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:silver_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:silver_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:silver_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:stymphalian_bird_dagger": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:troll_weapon_axe": {
       "tools": [
-        "axe"
+        "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:troll_weapon_column": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:troll_weapon_column_forest": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:troll_weapon_column_frost": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:troll_weapon_hammer": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:troll_weapon_trunk": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "iceandfire:troll_weapon_trunk_frost": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "immersive_weathering:ice_sickle": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_cut_iron": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_cut_iron_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_cut_iron_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_exposed_cut_iron": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_exposed_cut_iron_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_exposed_cut_iron_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_exposed_iron_bars": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_exposed_iron_door": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_exposed_iron_trapdoor": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_exposed_plate_iron": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_exposed_plate_iron_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_exposed_plate_iron_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_iron_bars": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_iron_door": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_iron_trapdoor": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_plate_iron": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_plate_iron_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_plate_iron_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_rusted_cut_iron": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_rusted_cut_iron_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_rusted_cut_iron_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_rusted_iron_bars": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_rusted_iron_door": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_rusted_iron_trapdoor": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_rusted_plate_iron": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_rusted_plate_iron_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_rusted_plate_iron_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_weathered_cut_iron": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_weathered_cut_iron_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_weathered_cut_iron_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_weathered_iron_bars": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_weathered_iron_door": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_weathered_iron_trapdoor": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_weathered_plate_iron": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_weathered_plate_iron_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "immersive_weathering:waxed_weathered_plate_iron_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
       "outcome": "default"
     },
     "irons_spellbooks:amethyst_rapier": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "irons_spellbooks:boreal_blade": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "irons_spellbooks:claymore": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "irons_spellbooks:decrepit_scythe": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "irons_spellbooks:hellrazor": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "irons_spellbooks:keeper_flamberge": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "irons_spellbooks:legionnaire_flamberge": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "irons_spellbooks:magehunter": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "irons_spellbooks:misery": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "irons_spellbooks:spellbreaker": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "irons_spellbooks:twilight_gale": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "malum:creative_scythe": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "malum:crude_scythe": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "malum:edge_of_deliverance": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "malum:erosion_scepter": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "malum:mnemonic_hex_staff": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "malum:necklace_of_the_hidden_blade": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "malum:soul_of_a_scythe": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "heuristic:blade-cutters",
+      "detail": "knife-equivalent cutter family",
       "outcome": "default"
     },
     "malum:soul_stained_steel_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "malum:soul_stained_steel_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "malum:soul_stained_steel_knife": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "malum:soul_stained_steel_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "malum:soul_stained_steel_scythe": {
       "tools": [
-        "knife"
+        "sword"
       ],
-      "origin": "heuristic:blade-cutters",
-      "detail": "knife-equivalent cutter family",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "malum:soul_stained_steel_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "malum:soul_stained_steel_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "malum:staff_of_the_auric_flame": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "malum:tyrving": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "malum:weight_of_worlds": {
       "tools": [
         "axe"
       ],
-      "origin": "inference:legacy:axe",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "minecraft:blade_pottery_sherd": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
       "outcome": "default"
     },
     "minecraft:diamond_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:diamond_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:diamond_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:diamond_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:diamond_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:golden_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:golden_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:golden_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:golden_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:golden_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:iron_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:iron_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:iron_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:iron_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:iron_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:netherite_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:netherite_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:netherite_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:netherite_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "minecraft:netherite_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
-    "minecraft:stone_axe": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
-      "outcome": "default"
-    },
-    "minecraft:stone_hoe": {
-      "tools": [
-        "hoe"
-      ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
-      "outcome": "default"
-    },
-    "minecraft:stone_pickaxe": {
-      "tools": [
-        "pickaxe"
-      ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
-      "outcome": "default"
-    },
-    "minecraft:stone_shovel": {
-      "tools": [
-        "shovel"
-      ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
-      "outcome": "default"
-    },
-    "minecraft:stone_sword": {
-      "tools": [
-        "sword"
-      ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
-      "outcome": "default"
-    },
-    "minecraft:wooden_axe": {
-      "tools": [
-        "axe"
-      ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
-      "outcome": "default"
-    },
-    "minecraft:wooden_hoe": {
-      "tools": [
-        "hoe"
-      ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
-      "outcome": "default"
-    },
-    "minecraft:wooden_pickaxe": {
-      "tools": [
-        "pickaxe"
-      ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
-      "outcome": "default"
-    },
-    "minecraft:wooden_shovel": {
-      "tools": [
-        "shovel"
-      ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
-      "outcome": "default"
-    },
-    "minecraft:wooden_sword": {
-      "tools": [
-        "sword"
-      ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
-      "outcome": "default"
-    },
-    "occultism:butcher_knife": {
+    "minecraft:shears": {
       "tools": [
         "knife"
       ],
@@ -129238,47 +130764,487 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "detail": "knife-equivalent cutter family",
       "outcome": "default"
     },
+    "minecraft:stone_axe": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "minecraft:stone_hoe": {
+      "tools": [
+        "hoe"
+      ],
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "minecraft:stone_pickaxe": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "minecraft:stone_shovel": {
+      "tools": [
+        "shovel"
+      ],
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "minecraft:stone_sword": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "minecraft:waxed_copper_block": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "minecraft:waxed_cut_copper": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "minecraft:waxed_cut_copper_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "minecraft:waxed_cut_copper_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "minecraft:waxed_exposed_copper": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "minecraft:waxed_exposed_cut_copper": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "minecraft:waxed_exposed_cut_copper_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "minecraft:waxed_exposed_cut_copper_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "minecraft:waxed_oxidized_copper": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "minecraft:waxed_oxidized_cut_copper": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "minecraft:waxed_oxidized_cut_copper_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "minecraft:waxed_oxidized_cut_copper_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "minecraft:waxed_weathered_copper": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "minecraft:waxed_weathered_cut_copper": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "minecraft:waxed_weathered_cut_copper_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "minecraft:waxed_weathered_cut_copper_stairs": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "minecraft:wooden_axe": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "minecraft:wooden_hoe": {
+      "tools": [
+        "hoe"
+      ],
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "minecraft:wooden_pickaxe": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "minecraft:wooden_shovel": {
+      "tools": [
+        "shovel"
+      ],
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "minecraft:wooden_sword": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "mynethersdelight:waxed_hoglin_trophy": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "natures_spirit:flaxen_fern": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "natures_spirit:large_flaxen_fern": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "occultism:butcher_knife": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
     "occultism:iesnium_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "occultism:infused_pickaxe": {
       "tools": [
         "pickaxe"
       ],
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "occultism:ritual_dummy/craft_infused_pickaxe": {
+      "tools": [
+        "pickaxe"
+      ],
       "origin": "heuristic:name",
       "detail": "pickaxe name heuristic",
+      "outcome": "default"
+    },
+    "occultism:spirit_attuned_pickaxe_head": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "pickaxe name heuristic",
+      "outcome": "default"
+    },
+    "pneumaticcraft:turbine_blade": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
       "outcome": "default"
     },
     "powergrid:electrobaton": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "quark:waxed_black_corundum": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "quark:waxed_blue_corundum": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "quark:waxed_cut_copper_vertical_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "quark:waxed_exposed_cut_copper_vertical_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "quark:waxed_green_corundum": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "quark:waxed_indigo_corundum": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "quark:waxed_orange_corundum": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "quark:waxed_oxidized_cut_copper_vertical_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "quark:waxed_red_corundum": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "quark:waxed_violet_corundum": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "quark:waxed_weathered_cut_copper_vertical_slab": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "quark:waxed_white_corundum": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "quark:waxed_yellow_corundum": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
       "outcome": "default"
     },
     "reliquary:magicbane": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "reliquary:mercy_cross": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "reliquary:phoenix_down": {
+      "tools": [
+        "hoe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "hoe name heuristic",
+      "outcome": "default"
+    },
+    "reliquary:shears_of_winter": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "heuristic:blade-cutters",
+      "detail": "knife-equivalent cutter family",
+      "outcome": "default"
+    },
+    "sushigocrafting:cleaver_knife": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "heuristic:blade-cutters",
+      "detail": "knife-equivalent cutter family",
       "outcome": "default"
     },
     "swem:axe_amethyst": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "swem:axe_copper": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "swem:axe_diamond": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "swem:axe_gold": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "swem:axe_iron": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "swem:axe_leather": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "swem:axe_netherite": {
       "tools": [
         "axe"
       ],
@@ -129290,11 +131256,107 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "swem:pickaxe_copper": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "pickaxe name heuristic",
+      "outcome": "default"
+    },
+    "swem:pickaxe_diamond": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "pickaxe name heuristic",
+      "outcome": "default"
+    },
+    "swem:pickaxe_gold": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "pickaxe name heuristic",
+      "outcome": "default"
+    },
+    "swem:pickaxe_iron": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "pickaxe name heuristic",
+      "outcome": "default"
+    },
+    "swem:pickaxe_leather": {
+      "tools": [
+        "pickaxe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "pickaxe name heuristic",
+      "outcome": "default"
+    },
+    "swem:pickaxe_netherite": {
+      "tools": [
+        "pickaxe"
+      ],
       "origin": "heuristic:name",
       "detail": "pickaxe name heuristic",
       "outcome": "default"
     },
     "swem:scythe_amethyst": {
+      "tools": [
+        "hoe"
+      ],
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "swem:scythe_copper": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "heuristic:blade-cutters",
+      "detail": "knife-equivalent cutter family",
+      "outcome": "default"
+    },
+    "swem:scythe_diamond": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "heuristic:blade-cutters",
+      "detail": "knife-equivalent cutter family",
+      "outcome": "default"
+    },
+    "swem:scythe_gold": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "heuristic:blade-cutters",
+      "detail": "knife-equivalent cutter family",
+      "outcome": "default"
+    },
+    "swem:scythe_iron": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "heuristic:blade-cutters",
+      "detail": "knife-equivalent cutter family",
+      "outcome": "default"
+    },
+    "swem:scythe_leather": {
+      "tools": [
+        "knife"
+      ],
+      "origin": "heuristic:blade-cutters",
+      "detail": "knife-equivalent cutter family",
+      "outcome": "default"
+    },
+    "swem:scythe_netherite": {
       "tools": [
         "knife"
       ],
@@ -129306,6 +131368,54 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "shovel"
       ],
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "swem:shovel_copper": {
+      "tools": [
+        "shovel"
+      ],
+      "origin": "heuristic:name",
+      "detail": "shovel name heuristic",
+      "outcome": "default"
+    },
+    "swem:shovel_diamond": {
+      "tools": [
+        "shovel"
+      ],
+      "origin": "heuristic:name",
+      "detail": "shovel name heuristic",
+      "outcome": "default"
+    },
+    "swem:shovel_gold": {
+      "tools": [
+        "shovel"
+      ],
+      "origin": "heuristic:name",
+      "detail": "shovel name heuristic",
+      "outcome": "default"
+    },
+    "swem:shovel_iron": {
+      "tools": [
+        "shovel"
+      ],
+      "origin": "heuristic:name",
+      "detail": "shovel name heuristic",
+      "outcome": "default"
+    },
+    "swem:shovel_leather": {
+      "tools": [
+        "shovel"
+      ],
+      "origin": "heuristic:name",
+      "detail": "shovel name heuristic",
+      "outcome": "default"
+    },
+    "swem:shovel_netherite": {
+      "tools": [
+        "shovel"
+      ],
       "origin": "heuristic:name",
       "detail": "shovel name heuristic",
       "outcome": "default"
@@ -129314,8 +131424,88 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "sword"
       ],
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "swem:sword_copper": {
+      "tools": [
+        "sword"
+      ],
       "origin": "heuristic:name",
       "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "swem:sword_diamond": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "swem:sword_gold": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "swem:sword_iron": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "swem:sword_leather": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "swem:sword_netherite": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:adze_head": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:adze_head_cast": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:adze_head_red_sand_cast": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:adze_head_sand_cast": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
       "outcome": "default"
     },
     "tconstruct:broad_axe": {
@@ -129324,6 +131514,70 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       ],
       "origin": "heuristic:name",
       "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:broad_axe_head": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:broad_axe_head_cast": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:broad_axe_head_red_sand_cast": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:broad_axe_head_sand_cast": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:broad_blade": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:broad_blade_cast": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:broad_blade_red_sand_cast": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:broad_blade_sand_cast": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
       "outcome": "default"
     },
     "tconstruct:cleaver": {
@@ -129414,6 +131668,70 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
+    "tconstruct:small_axe_head": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:small_axe_head_cast": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:small_axe_head_red_sand_cast": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:small_axe_head_sand_cast": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:small_blade": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:small_blade_cast": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:small_blade_red_sand_cast": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:small_blade_sand_cast": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
     "tconstruct:swasher": {
       "tools": [
         "sword"
@@ -129428,6 +131746,14 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       ],
       "origin": "heuristic:name",
       "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:throwing_axe": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
       "outcome": "default"
     },
     "tconstruct:vein_hammer": {
@@ -129446,7 +131772,7 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "detail": "pickaxe name heuristic",
       "outcome": "default"
     },
-    "the_finley_dimension_remastered:forglite_axe": {
+    "tconstruct:waxed_copper_platform": {
       "tools": [
         "axe"
       ],
@@ -129454,52 +131780,92 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "detail": "axe name heuristic",
       "outcome": "default"
     },
+    "tconstruct:waxed_exposed_copper_platform": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:waxed_oxidized_copper_platform": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "tconstruct:waxed_weathered_copper_platform": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "heuristic:name",
+      "detail": "axe name heuristic",
+      "outcome": "default"
+    },
+    "the_finley_dimension_remastered:forglite_axe": {
+      "tools": [
+        "axe"
+      ],
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
     "the_finley_dimension_remastered:forglite_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "the_finley_dimension_remastered:forglite_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "the_finley_dimension_remastered:forglite_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "the_finley_dimension_remastered:forglite_sword": {
       "tools": [
         "sword"
       ],
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
+      "outcome": "default"
+    },
+    "the_flesh_that_hates:flesh_axe": {
+      "tools": [
+        "axe"
+      ],
       "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "detail": "axe name heuristic",
       "outcome": "default"
     },
     "the_flesh_that_hates:flesh_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "the_flesh_that_hates:scalpel": {
       "tools": [
         "sword"
       ],
-      "origin": "inference:legacy:sword",
-      "detail": "legacy assignment carried forward",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "tinker_rapier:estoc_tic": {
@@ -129516,6 +131882,38 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       ],
       "origin": "delegation:item-tag:minecraft:swords",
       "detail": "authored item tag delegation",
+      "outcome": "default"
+    },
+    "tinker_rapier:slender_blade": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "tinker_rapier:slender_blade_cast": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "tinker_rapier:slender_blade_red_sand_cast": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "tinker_rapier:slender_blade_sand_cast": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
       "outcome": "default"
     },
     "tinkers_battle_spades:battle_spade": {
@@ -129550,6 +131948,38 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "detail": "authored item tag delegation",
       "outcome": "default"
     },
+    "tinkersweaponry:great_blade": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "tinkersweaponry:great_blade_cast": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "tinkersweaponry:great_blade_red_sand_cast": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
+    "tinkersweaponry:great_blade_sand_cast": {
+      "tools": [
+        "sword"
+      ],
+      "origin": "heuristic:name",
+      "detail": "sword name heuristic",
+      "outcome": "default"
+    },
     "tinkersweaponry:greatsword": {
       "tools": [
         "sword"
@@ -129562,352 +131992,352 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:fiery_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:fiery_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:giant_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:giant_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:glass_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:gold_minotaur_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:ice_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:ironwood_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:ironwood_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:ironwood_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:ironwood_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:ironwood_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:knightmetal_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:knightmetal_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:knightmetal_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:mazebreaker_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:steeleaf_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:steeleaf_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:steeleaf_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:steeleaf_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "twilightforest:steeleaf_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:cloggrum_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:cloggrum_battleaxe": {
       "tools": [
-        "axe"
+        "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:cloggrum_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:cloggrum_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:cloggrum_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:cloggrum_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:forgotten_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:forgotten_battleaxe": {
       "tools": [
-        "axe"
+        "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:forgotten_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:forgotten_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:forgotten_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:forgotten_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:froststeel_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:froststeel_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:froststeel_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:froststeel_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:froststeel_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:utherium_axe": {
       "tools": [
         "axe"
       ],
-      "origin": "heuristic:name",
-      "detail": "axe name heuristic",
+      "origin": "inference:tool-action:axe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:utherium_hoe": {
       "tools": [
         "hoe"
       ],
-      "origin": "heuristic:name",
-      "detail": "hoe name heuristic",
+      "origin": "inference:tool-action:hoe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:utherium_pickaxe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:name",
-      "detail": "pickaxe name heuristic",
+      "origin": "inference:tool-action:pickaxe",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:utherium_shovel": {
       "tools": [
         "shovel"
       ],
-      "origin": "heuristic:name",
-      "detail": "shovel name heuristic",
+      "origin": "inference:tool-action:shovel",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     },
     "undergarden:utherium_sword": {
       "tools": [
         "sword"
       ],
-      "origin": "heuristic:name",
-      "detail": "sword name heuristic",
+      "origin": "inference:tool-action:sword",
+      "detail": "runtime tool action evidence",
       "outcome": "default"
     }
   },
@@ -129923,6 +132353,13 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "blue_skies:tall_lunar_grass",
       "blue_skies:tall_turquoise_grass",
       "blue_skies:turquoise_grass",
+      "btmfixes:burnt_chared_grass",
+      "btmfixes:burnt_crackled_grass",
+      "btmfixes:burnt_deepgrass",
+      "btmfixes:burnt_depthsforestgrass",
+      "btmfixes:burnt_frozen_grass",
+      "btmfixes:burnt_swampgrass",
+      "btmfixes:burnt_wastelandgrassblock",
       "burnt:burnt_grass",
       "burnt:burnt_high_grass",
       "burnt:burnt_sugar_cane",
@@ -130118,6 +132555,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "aether:skyroot_slab",
       "aether:skyroot_stairs",
       "aether:white_flower",
+      "amendments:blue_skies/double_comet_berry_pie",
+      "amendments:hanging_flower_pot",
       "ars_nouveau:bastion_pod",
       "ars_nouveau:bombegranate_pod",
       "ars_nouveau:frostaya_pod",
@@ -130220,22 +132659,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "blue_skies:starlit_sapling",
       "blue_skies:starlit_vine",
       "blue_skies:winter_leaves",
-      "btmdimtrees:bluebright_leaves",
-      "btmdimtrees:bluebright_sapling",
-      "btmdimtrees:dusk_leaves",
-      "btmdimtrees:dusk_sapling",
-      "btmdimtrees:frostbright_leaves",
-      "btmdimtrees:frostbright_sapling",
-      "btmdimtrees:grongle_leaves",
-      "btmdimtrees:grongle_sapling",
-      "btmdimtrees:maple_leaves",
-      "btmdimtrees:maple_sapling",
-      "btmdimtrees:silent_tree_leaves",
-      "btmdimtrees:silent_tree_sapling",
-      "btmdimtrees:smogstem_leaves",
-      "btmdimtrees:smogstem_sapling",
-      "btmdimtrees:starlit_leaves",
-      "btmdimtrees:starlit_sapling",
       "burnt:blast_leaves",
       "burnt:burning_cave_vines_plant",
       "burnt:burnt_cave_vines",
@@ -130734,14 +133157,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "immersive_weathering:blue_skies/lunar_leaf_pile",
       "immersive_weathering:blue_skies/maple_leaf_pile",
       "immersive_weathering:blue_skies/starlit_leaf_pile",
-      "immersive_weathering:btmdimtrees/bluebright_leaf_pile",
-      "immersive_weathering:btmdimtrees/dusk_leaf_pile",
-      "immersive_weathering:btmdimtrees/frostbright_leaf_pile",
-      "immersive_weathering:btmdimtrees/grongle_leaf_pile",
-      "immersive_weathering:btmdimtrees/maple_leaf_pile",
-      "immersive_weathering:btmdimtrees/silent_tree_leaf_pile",
-      "immersive_weathering:btmdimtrees/smogstem_leaf_pile",
-      "immersive_weathering:btmdimtrees/starlit_leaf_pile",
       "immersive_weathering:burnt/blast_leaf_pile",
       "immersive_weathering:burnt/burnt_leaf_pile",
       "immersive_weathering:burnt/smoldering_acacia_leaf_pile",
@@ -131216,6 +133631,15 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "rusticdelight:potted_wild_coffee",
       "rusticdelight:potted_wild_cotton",
       "savage_and_ravage:potted_creeper_spores",
+      "supplementaries:flower_box",
+      "supplementaries:potted_flax",
+      "sushigocrafting:avocado_leaves",
+      "sushigocrafting:avocado_sapling",
+      "sushigocrafting:cucumber_crop",
+      "sushigocrafting:rice_crop",
+      "sushigocrafting:sesame_crop",
+      "sushigocrafting:soy_crop",
+      "sushigocrafting:wasabi_crop",
       "swem:alfalfa_plant",
       "swem:jump_flower_box_black",
       "swem:jump_flower_box_blue",
@@ -131423,25 +133847,26 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     ]
   },
   "originCounts": {
-    "inference:legacy:pickaxe": 8177,
-    "delegation:loose-worked-earth": 250,
-    "delegation:wood-products": 2726,
-    "delegation:loose-earth": 552,
+    "inference:legacy:pickaxe": 8075,
+    "delegation:loose-worked-earth": 257,
+    "delegation:wood-products": 2405,
+    "delegation:loose-earth": 587,
     "delegation:cultivated-soil": 15,
-    "delegation:organics": 1375,
-    "inference:legacy:hoe": 58,
-    "delegation:potted-plants": 343,
-    "inference:legacy:axe": 804,
-    "override:exact": 52,
+    "delegation:organics": 1241,
+    "inference:legacy:hoe": 57,
+    "delegation:potted-plants": 241,
+    "inference:legacy:axe": 785,
+    "override:exact": 51,
     "inference:legacy:knife": 127,
     "override:web-family": 5,
-    "inference:legacy:shovel": 73,
-    "override:gravel-ore-family": 35,
+    "inference:legacy:shovel": 21,
     "inference:block-tag:minecraft:crops": 7,
     "inference:block-tag:minecraft:mineable/pickaxe": 57,
-    "inference:block-tag:minecraft:mineable/axe": 3,
+    "inference:block-tag:minecraft:mineable/axe": 5,
     "inference:legacy:sword": 5,
     "inference:block-tag:minecraft:leaves": 1
   },
-  "unassignedBreakableBlocks": []
+  "unassignedBreakableBlocks": [
+
+  ]
 }

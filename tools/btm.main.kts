@@ -114,6 +114,7 @@ val btmMainPath: Path = toolsDir.resolve("btm.main.kts")
 val migrationMatrixPath: Path = root.resolve("TOOL_MIGRATION_MATRIX.md")
 
 val defaultServerDir = root.resolve("server-instance").toString()
+val defaultDumpRefreshServerDir = "/tmp/btm-dump-refresh"
 val defaultExportsDir = root.resolve("generated/exports").toString()
 val mcVersion = "1.20.1"
 val forgeVersion = "47.4.13"
@@ -264,6 +265,7 @@ Public commands:
   tools/btm test scenario-headful NAME [scenario args]
   tools/btm build sync server --dir PATH --dry-run|--apply
   tools/btm build sync client --dir PATH --dry-run|--apply
+  tools/btm build dumps [--server-dir PATH] [--port N] [--reset-runtime]
   tools/btm build bundle curseforge [--exports-dir PATH]
   tools/btm build bundle server [--exports-dir PATH] [--server-tree-dir PATH] [--server-zip PATH] [--clean]
   tools/btm doctor env
@@ -300,6 +302,7 @@ Usage: tools/btm build <sync|bundle> ...
 Commands:
   sync server --dir PATH --dry-run|--apply
   sync client --dir PATH --dry-run|--apply
+  dumps [--server-dir PATH] [--port N] [--reset-runtime]
   bundle curseforge [--exports-dir PATH]
   bundle server [--exports-dir PATH] [--server-tree-dir PATH] [--server-zip PATH] [--clean]
 """.trimIndent()
@@ -1673,6 +1676,19 @@ fun waitForLogPattern(logs: List<Path>, pattern: Regex, timeoutSeconds: Int, pro
     error("$phase timed out after ${timeoutSeconds}s")
 }
 
+fun waitForFiles(paths: List<Path>, timeoutSeconds: Int, process: Process, phase: String) {
+    val deadline = System.currentTimeMillis() + timeoutSeconds * 1000L
+    while (System.currentTimeMillis() < deadline) {
+        if (!process.isAlive) {
+            error("$phase process exited with ${process.exitValue()}")
+        }
+        if (paths.all { it.exists() }) return
+        Thread.sleep(1000)
+    }
+    val missing = paths.filterNot { it.exists() }.joinToString(", ")
+    error("$phase timed out after ${timeoutSeconds}s waiting for $missing")
+}
+
 fun sendCommand(runningProcess: RunningProcess?, command: String) {
     runningProcess?.stdin?.apply {
         write(command)
@@ -2608,6 +2624,138 @@ fun runBurntCoverageValidation(): ProcessRun {
     return ProcessRun(0, output.joinToString("\n"))
 }
 
+fun runtimeKubejsDumpFiles(configDir: Path): List<Path> {
+    if (!configDir.exists()) return emptyList()
+    val wantedExact = setOf(
+        "food_effect_index.json",
+        "food_effect_summary.json",
+        "full_recipe_index_manifest.json",
+        "known_bypass_candidate_recipes.json",
+        "progression_recipe_mentions.json",
+        "recipe_audit_summary.json",
+        "valuable_material_usage_recipes.json",
+    )
+    return Files.list(configDir).use { entries ->
+        entries
+            .filter { Files.isRegularFile(it) }
+            .filter { path ->
+                val name = path.fileName.toString()
+                name in wantedExact || Regex("""^full_recipe_index_\d{4}\.json$""").matches(name)
+            }
+            .sorted(Comparator.comparing<Path, String> { it.fileName.toString() })
+            .toList()
+    }
+}
+
+fun clearRuntimeDumpInputs(serverDir: Path) {
+    deleteTree(serverDir.resolve("generated/runtime-dumps"))
+    serverDir.resolve("generated/runtime-dumps").createDirectories()
+    val configDir = serverDir.resolve("kubejs/config")
+    for (file in runtimeKubejsDumpFiles(configDir)) {
+        Files.deleteIfExists(file)
+    }
+}
+
+fun promoteRuntimeDumpArtifacts(serverDir: Path): ProcessRun {
+    val runtimeDumpDir = serverDir.resolve("generated/runtime-dumps")
+    val runtimeConfigDir = serverDir.resolve("kubejs/config")
+    val targetDumpDir = root.resolve("generated/runtime-dumps")
+    val targetConfigDumpDir = targetDumpDir.resolve("kubejs-config")
+    if (!runtimeDumpDir.exists()) return ProcessRun(1, "missing runtime dump dir: $runtimeDumpDir")
+
+    val directDumpNames = listOf(
+        "recipes.json",
+        "registries.json",
+        "tags.json",
+        "mods.json",
+        "block_hardness_probe.json",
+    )
+    val output = mutableListOf<String>()
+
+    targetDumpDir.createDirectories()
+    deleteTree(targetConfigDumpDir)
+    targetConfigDumpDir.createDirectories()
+
+    for (name in directDumpNames) {
+        val source = runtimeDumpDir.resolve(name)
+        val target = targetDumpDir.resolve(name)
+        Files.deleteIfExists(target)
+        if (source.exists()) {
+            Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES)
+            output += "copied ${serverDir.relativize(source)} -> ${root.relativize(target)}"
+        }
+    }
+
+    for (source in runtimeKubejsDumpFiles(runtimeConfigDir)) {
+        val target = targetConfigDumpDir.resolve(source.fileName.toString())
+        Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES)
+        output += "copied ${serverDir.relativize(source)} -> ${root.relativize(target)}"
+    }
+
+    Files.deleteIfExists(root.resolve("generated/runtime-dumps/realistic_hands_audit.json"))
+
+    val realisticAudit = runKotlinScript(root.resolve("tools/kotlin/audit_realistic_hands.main.kts"))
+    output += realisticAudit.output.trim()
+    if (realisticAudit.exitCode != 0) return ProcessRun(realisticAudit.exitCode, output.filter { it.isNotBlank() }.joinToString("\n"))
+
+    return ProcessRun(0, output.filter { it.isNotBlank() }.joinToString("\n"))
+}
+
+fun runDumpRefresh(serverDir: Path, port: Int, reset: Boolean): ProcessRun {
+    val stamp = timestamp()
+    val bootstrap = bootstrapServerRuntime(serverDir, port, reset)
+    if (bootstrap.exitCode != 0) return bootstrap
+    clearRuntimeDumpInputs(serverDir)
+    val evidenceDir = serverDir.resolve("validation-evidence/$stamp")
+    evidenceDir.createDirectories()
+    val serverLog = evidenceDir.resolve("server-console.log")
+    val latestLog = serverDir.resolve("logs/latest.log")
+    val running = startServerProcess(serverDir, port, listOf("nogui"), serverLog)
+    try {
+        val donePattern = Regex("""Done \([\d.]+s\)! For help, type "help"""")
+        val fatalPattern = Regex("""Missing or unsupported mandatory dependencies|Mod Loading has failed|Failed to start the minecraft server|Encountered an unexpected exception|Preparing crash report|This crash report has been saved|\[main/FATAL\]""")
+        val deadline = System.currentTimeMillis() + 900_000L
+        while (System.currentTimeMillis() < deadline) {
+            if (!running.process.isAlive) return ProcessRun(1, "server exited before Done marker")
+            val text = tailText(serverLog, 256_000)
+            if (fatalPattern.containsMatchIn(text)) return ProcessRun(1, "server emitted a hard startup failure")
+            if (donePattern.containsMatchIn(text)) break
+            Thread.sleep(2000)
+        }
+        waitForFiles(
+            listOf(
+                serverDir.resolve("generated/runtime-dumps/recipes.json"),
+                serverDir.resolve("generated/runtime-dumps/registries.json"),
+                serverDir.resolve("generated/runtime-dumps/block_hardness_probe.json"),
+                serverDir.resolve("kubejs/config/full_recipe_index_manifest.json"),
+                serverDir.resolve("kubejs/config/food_effect_index.json"),
+            ),
+            timeoutSeconds = 120,
+            process = running.process,
+            phase = "dump refresh",
+        )
+        sendCommand(running, "stop")
+        running.process.waitFor()
+    } finally {
+        stopProcess(running)
+    }
+    val scan = scanHardFailures(latestLog, serverDir)
+    if (!scan.ok) {
+        val output = buildString {
+            appendLine("FAIL - hard log failure scan (${scan.logPath ?: "UNKNOWN"})")
+            for (finding in scan.findings) {
+                appendLine("FAIL - ${finding.label}: ${finding.count}")
+                for (match in finding.matches) {
+                    val prefix = if (match.lineNumber > 0) "${match.lineNumber}:" else ""
+                    appendLine("  $prefix${match.line}")
+                }
+            }
+        }.trim()
+        return ProcessRun(1, output)
+    }
+    return promoteRuntimeDumpArtifacts(serverDir)
+}
+
 fun runLcTfthDhContractsValidation(): ProcessRun =
     runKotlinScript(root.resolve("tools/kotlin/validate_lc_tfth_dh_contracts.main.kts"))
 
@@ -3437,6 +3585,58 @@ fun handleBuild(subArgs: List<String>): CommandResult {
                 exitCode = exitCode,
                 mutated = mode == "--apply",
                 evidenceLevel = "build",
+            )
+        }
+        "dumps" -> {
+            val missing = ensureCommands("kotlin", "java")
+            if (missing.isNotEmpty()) return prereqFailure("dump refresh prerequisites missing", missing)
+            var serverDir = defaultDumpRefreshServerDir
+            var port = "25565"
+            var reset = false
+            val rest = subArgs.drop(1)
+            var index = 0
+            while (index < rest.size) {
+                when (rest[index]) {
+                    "--server-dir" -> {
+                        serverDir = rest.getOrNull(index + 1) ?: return usageError("--server-dir needs a path", buildHelp())
+                        index += 2
+                    }
+                    "--port" -> {
+                        port = rest.getOrNull(index + 1) ?: return usageError("--port needs a number", buildHelp())
+                        if (!port.all(Char::isDigit)) return usageError("--port needs a number", buildHelp())
+                        index += 2
+                    }
+                    "--reset-runtime" -> {
+                        reset = true
+                        index += 1
+                    }
+                    "--help" -> return success("build dumps", buildHelp(), evidenceLevel = "build")
+                    else -> return usageError("unknown argument: ${rest[index]}", buildHelp())
+                }
+            }
+            val serverPath = resolveUserPath(serverDir)
+            val run = runDumpRefresh(serverPath, port.toInt(), reset)
+            val exitCode = if (run.exitCode == 0) 0 else 1
+            if (exitCode == 0) success(
+                command = "build dumps",
+                summary = "runtime dumps regenerated",
+                artifacts = listOf(
+                    ArtifactRef(serverPath.toString(), "directory"),
+                    ArtifactRef(root.resolve("generated/runtime-dumps").toString(), "directory"),
+                ),
+                details = mapOf("serverDir" to serverPath.toString(), "port" to port.toInt(), "resetRuntime" to reset) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
+                mutated = true,
+                evidenceLevel = "fresh-runtime",
+            ) else CommandResult(
+                command = "build dumps",
+                status = "failure",
+                summary = "build dumps failed with exit $exitCode",
+                findings = listOf(ValidationFinding("error", "build dumps failed with exit $exitCode")),
+                details = mapOf("serverDir" to serverPath.toString(), "port" to port.toInt(), "resetRuntime" to reset) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
+                artifacts = listOf(ArtifactRef(serverPath.toString(), "directory")),
+                exitCode = exitCode,
+                mutated = true,
+                evidenceLevel = "fresh-runtime",
             )
         }
         "bundle" -> {

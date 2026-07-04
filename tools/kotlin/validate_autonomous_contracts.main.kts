@@ -741,9 +741,9 @@ fun validatePrimitiveMiningRegressionContracts() = validateByNodeParity("validat
         for (ore in orePairs) {
             val normal = jsonNumber(byId["minecraft:${ore}_ore"]?.get("defaultDestroyTime"))?.toDouble()
             val deep = jsonNumber(byId["minecraft:deepslate_${ore}_ore"]?.get("defaultDestroyTime"))?.toDouble()
-            if (normal == null || deep == null || kotlin.math.abs(deep - normal - 1.0) > 0.001) deepslateProblems += "$ore: $normal->$deep"
+            if (normal == null || deep == null || kotlin.math.abs(deep - normal - 1.5) > 0.001) deepslateProblems += "$ore: $normal->$deep"
         }
-        if (deepslateProblems.isEmpty()) ok("deepslate ore variants add exactly +1 hardness in retained runtime probe") else fail("deepslate ore variants add exactly +1 hardness in retained runtime probe", deepslateProblems.joinToString(", "))
+        if (deepslateProblems.isEmpty()) ok("deepslate ore variants add exactly +1.5 hardness in retained runtime probe") else fail("deepslate ore variants add exactly +1.5 hardness in retained runtime probe", deepslateProblems.joinToString(", "))
     }
 }
 

@@ -55,8 +55,10 @@ Do not sync or delete player/runtime state by default. Use explicit reset flags 
 - Validation: `tools/btm test static`
 - Existing runtime validation: `tools/btm test runtime --instance /path/to/fresh/runtime`
 - Fresh smoke validation: `tools/btm test smoke --server-dir /tmp/btm-agent-validate-smoke --port 25565 --reset-runtime`
-- Scenario validation: `tools/btm test scenario lc_tfth_c2me_dh`
+- Headless scenario validation: `tools/btm test scenario opening_progression --cycles 1`
+- Headful scenario validation: `tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30`
 - Kotlin test runner: `tools/btm test kotlin`
+- Runtime dump refresh: `tools/btm build dumps --server-dir /tmp/btm-dump-refresh --port 25565 --reset-runtime`
 - Server sync dry run: `tools/btm build sync server --dir server-instance --dry-run`
 - Server sync apply: `tools/btm build sync server --dir server-instance --apply`
 - Client sync dry run: `tools/btm build sync client --dir /path/to/client --dry-run`
@@ -86,10 +88,15 @@ Original shell/Python tools are quarantined under `tools/quarantine/original-too
 ## Modular Harnesses
 Use the portable harness layer for repeatable runtime tests instead of hand-built local instances.
 
-- Public scenario entrypoint: `tools/btm test scenario NAME [scenario args]`
+- Public scenario entrypoints:
+  - `tools/btm test scenario NAME [scenario args]` for headless-safe scenarios
+  - `tools/btm test scenario-headful NAME [scenario args]` for headful scenarios
 - Current public scenarios:
   - `lc_tfth_c2me_dh`
   - `dimension_worldgen`
+  - `opening_progression`
+  - `worldgen_sampling`
+  - `client_smoke`
 - Internal harness/scenario implementation should define only:
   - scenario metadata and default run/docs paths
   - required mod jar patterns
@@ -105,8 +112,8 @@ Use the portable harness layer for repeatable runtime tests instead of hand-buil
 - On stalls, timeouts, watchdogs, JVM exits, or crash reports, capture diagnostics through the harness before stopping processes.
 
 Current LC/DH scenario:
-- Run: `tools/btm test scenario lc_tfth_c2me_dh`
-- Short smoke: `tools/btm test scenario lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30`
+- Run: `tools/btm test scenario-headful lc_tfth_c2me_dh`
+- Short smoke: `tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30`
 - Full validation expectation: 3 clean boot/join/LC teleport/DH generation/TFTH pressure cycles, required jars present on server and client, no crash reports, no ModernFix watchdog, no C2ME thread-guard failures, and DH activity observed.
 
 ## Core Rules

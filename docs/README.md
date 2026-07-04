@@ -4,6 +4,7 @@ This directory is intentionally limited to five living Markdown files. The repo 
 
 ## Current Docs
 
+- `README.md`: docs index, pack thesis, and living-doc policy.
 - `progression.md`: progression spine, gates, chokepoints, pinnacle powers, and deadlock checks.
 - `content_systems.md`: recipes, materials, chemistry, casings, loot, trades, quests, and content surfaces.
 - `runtime_validation.md`: validation commands, harness usage, current pass/fail state, and runtime-output policy.

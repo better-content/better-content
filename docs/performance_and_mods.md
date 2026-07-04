@@ -46,7 +46,7 @@ Current full-pack work should assume a higher memory budget unless the user expl
 
 ## C2ME, DH, LC, And TFTH
 
-Current source state keeps C2ME, Distant Horizons, Lost Cities, and The Flesh That Hates active. The focused stability harness entrypoint is `tools/btm test scenario lc_tfth_c2me_dh`.
+Current source state keeps C2ME, Distant Horizons, Lost Cities, and The Flesh That Hates active. The focused stability harness entrypoint is `tools/btm test scenario-headful lc_tfth_c2me_dh`.
 
 Historical conclusions to preserve:
 

@@ -10994,7 +10994,7 @@ hash = "2d8a78ea31797897891856bf25f84e717c01ed2d8cccfc2e57bb047a127786b4"
 
 [[files]]
 file = "kubejs/server_scripts/90_dev_debug/30_runtime_graph_dumps.js"
-hash = "dcecc87c42390c14bec7bfbc9c7eb712681dad0af0376051236891e841b1ecaa"
+hash = "778b3738b5fdf6762a5217640f7c37598a472863a01354ba95ed8ac7e6348ce4"
 
 [[files]]
 file = "kubejs/server_scripts/90_dev_debug/40_block_hardness_probe.js"
@@ -11034,7 +11034,7 @@ hash = "2f877d1dcdfe376099f4fd6df097168f161caa846416332e19fe64637c45ad83"
 
 [[files]]
 file = "kubejs/startup_scripts/99_realistic_hands_assignments.js"
-hash = "ddc8eccbd9eb10f3411fc6dc75cbebc034d705f26e735e8628eb3ccc39518594"
+hash = "f0c78da228d7a077d689bbd94e2b87e8c41d242f77c65828465c557747bf3fb3"
 
 [[files]]
 file = "mods/advanced-loot-info.pw.toml"

@@ -11,24 +11,31 @@ Generated Markdown reports under `generated/` are temporary evidence products. F
 ## Agent Entry Points
 
 ```bash
+tools/btm test fast
+tools/btm test full
+tools/btm test full --workspace
 tools/btm test static
 tools/btm test runtime --instance /path/to/fresh/runtime
 tools/btm test runtime --instance /path/to/fresh/runtime --strict-data-dumps
 tools/btm test smoke --server-dir /tmp/btm-agent-validate-smoke --port 25565 --reset-runtime
 tools/btm build dumps --server-dir /tmp/btm-dump-refresh --port 25565 --reset-runtime
-tools/btm test scenario-headful dimension_worldgen --cycles 1 --radius 1 --samples 1
-tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30
-tools/btm test scenario opening_progression --cycles 1
-tools/btm test scenario worldgen_sampling --profile quick
-tools/btm test scenario worldgen_sampling --profile release
-tools/btm test scenario-headful client_smoke --profile quick
-tools/btm test scenario-headful client_smoke --profile release
+tools/btm test scenario-headful dimension_worldgen --cycles 1 --radius 1 --samples 1 --bootstrap-mode once
+tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30 --bootstrap-mode once
+tools/btm test scenario opening_progression --cycles 1 --bootstrap-mode once
+tools/btm test scenario worldgen_sampling --profile local --bootstrap-mode once
+tools/btm test scenario worldgen_sampling --profile quick --bootstrap-mode once
+tools/btm test scenario worldgen_sampling --profile release --bootstrap-mode once
+tools/btm test scenario-headful client_smoke --profile quick --bootstrap-mode once
+tools/btm test scenario-headful client_smoke --profile release --bootstrap-mode once
 tools/btm test kotlin
 tools/btm doctor env
 tools/btm doctor repo
 tools/btm doctor runtime --instance /path/to/fresh/runtime
 ```
 
+- `fast`: root-pack fast lane plus workspace repo `verifyFast` fan-out from `tools/workspace_test_inventory.json`. Use `--repo ID|PATH` to target a subset and `--list-repos` to inspect the resolved order without running commands.
+- `full`: root-pack full lane only. This is the default heavier local release-confidence lane.
+- `full --workspace`: root-pack full lane plus only inventory repos whose `verifyFull` lane adds distinct signal beyond `fast`.
 - `--static`: source plus retained generated-dump checks. No fresh runtime claim.
 - `--runtime`: strict validation of an existing fresh runtime's logs and KubeJS audit dumps.
 - `--strict-data-dumps`: additionally requires vanilla `/dump` output such as `dump/data_raw/loot_tables`; this is separate from KubeJS audit dumps under `kubejs/config`.
@@ -36,6 +43,7 @@ tools/btm doctor runtime --instance /path/to/fresh/runtime
 - `build dumps`: fresh disposable server bootstrap plus refresh of the full retained runtime-dump surface, including direct runtime JSON, retained Burnt coverage tables, functional-block audits, and KubeJS config dumps.
 - `tools/btm test scenario` is the supported front door for headless-safe harness-backed runtime scenarios.
 - `tools/btm test scenario-headful` is the supported front door for headful harness-backed runtime scenarios.
+- `--bootstrap-mode always|once|never` controls scenario/runtime bootstrap reuse. `always` rebuilds each cycle, `once` prepares one reusable runtime per invocation, and `never` requires a prepared runtime and fails fast if it is missing.
 - `worldgen_sampling` and `client_smoke` are versioned scenario lanes with checked-in contracts at `tools/worldgen_sampling_contract.json` and `tools/client_smoke_contract.json`.
 - `tools/btm doctor ...` is the supported front door for prerequisite, repo-surface, and runtime-shape checks.
 - `tools/btm internal validate-kotlin-tool-surface` fails if active `tools/` contains `.py` or `.sh` files outside `tools/quarantine/`.
@@ -55,8 +63,8 @@ For normal content work:
 
 ```bash
 tools/btm doctor env
+tools/btm test fast
 tools/btm test kotlin
-tools/btm test static
 tools/btm doctor repo
 ```
 
@@ -64,11 +72,14 @@ For runtime-facing content changes:
 
 ```bash
 tools/btm doctor env
-tools/btm build dumps --server-dir /tmp/btm-dump-refresh --port 25565 --reset-runtime
-tools/btm test kotlin
-tools/btm test static
-tools/btm test runtime --instance /path/to/fresh/runtime
-tools/btm test smoke --server-dir /tmp/btm-content-smoke --port 25565 --reset-runtime
+tools/btm test full
+```
+
+For workspace-wide full verification:
+
+```bash
+tools/btm doctor env
+tools/btm test full --workspace
 ```
 
 For retained runtime dump refresh:
@@ -113,7 +124,7 @@ The supported public tool surface is `tools/btm`. Kotlin-backed `btm test`, `btm
 All-dimension worldgen stress:
 
 ```bash
-tools/btm test scenario-headful dimension_worldgen --cycles 1 --radius 1 --samples 1
+tools/btm test scenario-headful dimension_worldgen --cycles 1 --radius 1 --samples 1 --bootstrap-mode once
 ```
 
 Current clean evidence: `/tmp/btm-dimension-worldgen/20260701-041811` passed two server-only Overworld cycles with 8 samples at radius 4 after Dimensional Fonts site generation was moved from biome-modifier feature placement to vanilla structure-set placement. Dimensional Fonts sites are now ancient interdimensional reliquaries without grave-soil tiles; a fresh worldgen validation should refresh this evidence after the next scenario run. `/tmp/btm-dimension-worldgen/20260604-215117` remains the last recorded all-dimension radius-1 baseline. The harness treats C2ME far-chunk writes, DH worldgen exceptions, crash reports, watchdogs, internal disconnects, and C2ME thread-guard failures as fatal.
@@ -124,7 +135,7 @@ Current LC/DH/C2ME/TFTH scenario:
 
 ```bash
 tools/btm test scenario-headful lc_tfth_c2me_dh
-tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30
+tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30 --bootstrap-mode once
 ```
 
 LC/TFTH/DH correctness contract: `tools/btm test static` runs `tools/btm internal validate-lc-tfth-dh-contracts`, which verifies the Lost Cities, TFTH, C2ME, Distant Horizons, and `btmfixes` source contracts without launching Minecraft. The contract checks active manifests/custom jars, parseable `config/c2me.toml`, `config/DistantHorizons.toml`, `config/TFTH.toml`, and `config/TFTH-Data.toml`, Lost Cities Creating Space route ownership, required scenario fatal classifiers, and the requirement that Distant Horizons activity is observed before the scenario can pass.
@@ -132,7 +143,7 @@ LC/TFTH/DH correctness contract: `tools/btm test static` runs `tools/btm interna
 LC/TFTH/DH runtime stability is a targeted lane, not a default correctness gate. Run the short profile after touching C2ME, Distant Horizons, Lost Cities, TFTH, dimension routing, custom worldgen jars, entity/worldgen behavior, or scenario harness logic:
 
 ```bash
-tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30
+tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30 --bootstrap-mode once
 ```
 
 Run the default three-cycle profile for release candidates or after high-risk fixes in those systems:
@@ -146,7 +157,7 @@ Expected full validation: three clean boot/join/space-routed dimension teleport/
 Opening progression runtime validation:
 
 ```bash
-tools/btm test scenario opening_progression --cycles 1
+tools/btm test scenario opening_progression --cycles 1 --bootstrap-mode once
 ```
 
 Expected validation: a fresh disposable pack server boots normally, then the `sam validate_opening_progression` runtime validator proves gravel hand-breakability, hand denial on stone and logs, live flint availability from placed gravel, straw drops from placed tall grass cut with the primitive butcher knife, runtime primitive recipe presence for the butcher knife and hand axe, and first log access with the crafted primitive hand axe.
@@ -154,17 +165,18 @@ Expected validation: a fresh disposable pack server boots normally, then the `sa
 Worldgen sampling:
 
 ```bash
-tools/btm test scenario worldgen_sampling --profile quick
-tools/btm test scenario worldgen_sampling --profile release
+tools/btm test scenario worldgen_sampling --profile quick --bootstrap-mode once
+tools/btm test scenario worldgen_sampling --profile release --bootstrap-mode once
+tools/btm test scenario worldgen_sampling --profile local --bootstrap-mode once
 ```
 
-`quick` is the short seeded Overworld lane; `release` broadens the dimension set and sample count. Both profiles are validated against `tools/worldgen_sampling_contract.json` before the runtime backend starts.
+`local` is the cheapest single-cycle local confidence lane, `quick` is the short seeded Overworld lane, and `release` broadens the dimension set and sample count. All profiles are validated against `tools/worldgen_sampling_contract.json` before the runtime backend starts.
 
 Client smoke:
 
 ```bash
-tools/btm test scenario-headful client_smoke --profile quick
-tools/btm test scenario-headful client_smoke --profile release
+tools/btm test scenario-headful client_smoke --profile quick --bootstrap-mode once
+tools/btm test scenario-headful client_smoke --profile release --bootstrap-mode once
 ```
 
 `client_smoke` is a headful-only lane. Its checked-in contract lives at `tools/client_smoke_contract.json`; run it through `scenario-headful` only.

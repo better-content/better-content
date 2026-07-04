@@ -58,13 +58,14 @@ data class Config(
     val keepGoing: Boolean,
     val keepRuns: Boolean,
     val runRoot: Path,
+    val serverDirOverride: Path?,
 )
 
 data class RunningServer(val process: Process, val stdin: BufferedWriter?, val logPath: Path)
 
 fun usage(message: String? = null): Nothing {
     if (message != null) System.err.println(message)
-    System.err.println("Usage: tools/btm test scenario-headful dimension_worldgen [--cycles N] [--port N] [--radius N] [--samples N] [--settle-seconds N] [--dimensions a,b,c] [--server-only] [--bootstrap-mode always|once|never] [--run-root PATH] [--keep-going] [--keep-runs]")
+    System.err.println("Usage: tools/btm test scenario-headful dimension_worldgen [--cycles N] [--port N] [--radius N] [--samples N] [--settle-seconds N] [--dimensions a,b,c] [--server-dir PATH] [--server-only] [--bootstrap-mode always|once|never] [--run-root PATH] [--keep-going] [--keep-runs]")
     exitProcess(2)
 }
 
@@ -79,6 +80,7 @@ fun parseConfig(args: Array<String>): Config {
     var keepGoing = false
     var keepRuns = false
     var runRoot = Paths.get("/tmp/btm-dimension-worldgen")
+    var serverDirOverride: Path? = null
     var index = 0
     while (index < args.size) {
         when (args[index]) {
@@ -104,6 +106,10 @@ fun parseConfig(args: Array<String>): Config {
             }
             "--dimensions" -> {
                 dimensions = args.getOrNull(index + 1)?.split(',')?.map(String::trim)?.filter(String::isNotBlank) ?: usage("--dimensions needs a comma-separated value")
+                index += 2
+            }
+            "--server-dir" -> {
+                serverDirOverride = Paths.get(args.getOrNull(index + 1) ?: usage("--server-dir needs a path")).toAbsolutePath().normalize()
                 index += 2
             }
             "--server-only" -> index += 1
@@ -132,7 +138,7 @@ fun parseConfig(args: Array<String>): Config {
         }
     }
     if (cycles <= 0 || basePort <= 0 || samples <= 0 || settleSeconds <= 0) usage("numeric arguments must be positive")
-    return Config(cycles, basePort, radius.coerceIn(0, 7), samples, settleSeconds, dimensions, bootstrapMode, keepGoing, keepRuns, runRoot)
+    return Config(cycles, basePort, radius.coerceIn(0, 7), samples, settleSeconds, dimensions, bootstrapMode, keepGoing, keepRuns, runRoot, serverDirOverride)
 }
 
 fun deleteTree(path: Path) {
@@ -233,7 +239,7 @@ val readyPattern = Regex("""Done \([\d.]+s\)! For help, type "help"""")
 var failed = false
 for (cycle in 1..config.cycles) {
     val cycleRoot = config.runRoot.resolve("cycle-$cycle")
-    val serverDir = when (config.bootstrapMode) {
+    val serverDir = config.serverDirOverride ?: when (config.bootstrapMode) {
         "once", "never" -> config.runRoot.resolve("prepared/server")
         else -> cycleRoot.resolve("server")
     }

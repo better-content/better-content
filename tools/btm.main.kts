@@ -1853,7 +1853,7 @@ fun runPackFullLane(): ProcessRun = runStepSequence(
         "worldgen sampling scenario" to {
             runKotlinScript(
                 root.resolve("tools/kotlin/worldgen_sampling.main.kts"),
-                scriptArgs = listOf("--profile", "local", "--bootstrap-mode", "once"),
+                scriptArgs = listOf("--profile", "local", "--bootstrap-mode", "never", "--server-dir", "/tmp/btm-pack-full-smoke"),
             )
         },
         "LC TFTH C2ME DH scenario" to {
@@ -3011,6 +3011,7 @@ fun runSmokeValidation(serverDir: Path, port: Int, reset: Boolean, bootstrapMode
         val donePattern = Regex("""Done \([\d.]+s\)! For help, type "help"""")
         val fatalPattern = Regex("""Missing or unsupported mandatory dependencies|Mod Loading has failed|Failed to start the minecraft server|Encountered an unexpected exception|Preparing crash report|This crash report has been saved|\[main/FATAL\]""")
         val deadline = System.currentTimeMillis() + 900_000L
+        var reachedDone = false
         while (System.currentTimeMillis() < deadline) {
             if (!running.process.isAlive) {
                 return ProcessRun(1, "server exited before Done marker")
@@ -3019,8 +3020,14 @@ fun runSmokeValidation(serverDir: Path, port: Int, reset: Boolean, bootstrapMode
             if (fatalPattern.containsMatchIn(text)) {
                 return ProcessRun(1, "server emitted a hard startup failure")
             }
-            if (donePattern.containsMatchIn(text)) break
+            if (donePattern.containsMatchIn(text)) {
+                reachedDone = true
+                break
+            }
             Thread.sleep(2000)
+        }
+        if (!reachedDone) {
+            return ProcessRun(1, "server startup timed out before Done marker")
         }
         stopProcess(running, "stop")
     } finally {

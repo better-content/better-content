@@ -16,8 +16,8 @@ tools/btm test runtime --instance /path/to/fresh/runtime
 tools/btm test runtime --instance /path/to/fresh/runtime --strict-data-dumps
 tools/btm test smoke --server-dir /tmp/btm-agent-validate-smoke --port 25565 --reset-runtime
 tools/btm build dumps --server-dir /tmp/btm-dump-refresh --port 25565 --reset-runtime
-tools/btm test scenario dimension_worldgen --cycles 1 --radius 1 --samples 1
-tools/btm test scenario lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30
+tools/btm test scenario-headful dimension_worldgen --cycles 1 --radius 1 --samples 1
+tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30
 tools/btm test scenario opening_progression --cycles 1
 tools/btm test scenario worldgen_sampling --profile quick
 tools/btm test scenario worldgen_sampling --profile release
@@ -34,7 +34,8 @@ tools/btm doctor runtime --instance /path/to/fresh/runtime
 - `--strict-data-dumps`: additionally requires vanilla `/dump` output such as `dump/data_raw/loot_tables`; this is separate from KubeJS audit dumps under `kubejs/config`.
 - `--smoke`: fresh disposable server bootstrap, boot, hard-log scan, and strict runtime suite.
 - `build dumps`: fresh disposable server bootstrap plus refresh of the full retained runtime-dump surface, including direct runtime JSON, retained Burnt coverage tables, functional-block audits, and KubeJS config dumps.
-- `tools/btm test scenario` is the supported front door for harness-backed runtime scenarios.
+- `tools/btm test scenario` is the supported front door for headless-safe harness-backed runtime scenarios.
+- `tools/btm test scenario-headful` is the supported front door for headful harness-backed runtime scenarios.
 - `worldgen_sampling` and `client_smoke` are versioned scenario lanes with checked-in contracts at `tools/worldgen_sampling_contract.json` and `tools/client_smoke_contract.json`.
 - `tools/btm doctor ...` is the supported front door for prerequisite, repo-surface, and runtime-shape checks.
 - `tools/btm internal validate-kotlin-tool-surface` fails if active `tools/` contains `.py` or `.sh` files outside `tools/quarantine/`.
@@ -103,7 +104,7 @@ Current smoke evidence: `/tmp/btm-content-smoke` passed `tools/btm test smoke --
 
 ## Scenario Harnesses
 
-`tools/btm test scenario` is the supported front door for portable harness scenarios. Scenario runs should create disposable server/client runtimes under `/tmp` and keep raw evidence there.
+`tools/btm test scenario` and `tools/btm test scenario-headful` are the supported front doors for portable harness scenarios. Use `scenario` for headless-safe lanes and `scenario-headful` for headful lanes. Scenario runs should create disposable server/client runtimes under `/tmp` and keep raw evidence there.
 
 Older Prism/server-instance profiling tools that mutate live mod directories or kill broad launcher/java processes are guarded by `BTM_ALLOW_LEGACY_LIVE_MUTATION=1`. Use them only for intentional archival profiling; current validation should use disposable runtimes and the portable harness layer.
 
@@ -112,7 +113,7 @@ The supported public tool surface is `tools/btm`. Kotlin-backed `btm test`, `btm
 All-dimension worldgen stress:
 
 ```bash
-tools/btm test scenario dimension_worldgen --cycles 1 --radius 1 --samples 1
+tools/btm test scenario-headful dimension_worldgen --cycles 1 --radius 1 --samples 1
 ```
 
 Current clean evidence: `/tmp/btm-dimension-worldgen/20260701-041811` passed two server-only Overworld cycles with 8 samples at radius 4 after Dimensional Fonts site generation was moved from biome-modifier feature placement to vanilla structure-set placement. Dimensional Fonts sites are now ancient interdimensional reliquaries without grave-soil tiles; a fresh worldgen validation should refresh this evidence after the next scenario run. `/tmp/btm-dimension-worldgen/20260604-215117` remains the last recorded all-dimension radius-1 baseline. The harness treats C2ME far-chunk writes, DH worldgen exceptions, crash reports, watchdogs, internal disconnects, and C2ME thread-guard failures as fatal.
@@ -122,8 +123,8 @@ Current pack mitigation: Quark `Shiba` spawns are disabled in checked-in `config
 Current LC/DH/C2ME/TFTH scenario:
 
 ```bash
-tools/btm test scenario lc_tfth_c2me_dh
-tools/btm test scenario lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30
+tools/btm test scenario-headful lc_tfth_c2me_dh
+tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30
 ```
 
 LC/TFTH/DH correctness contract: `tools/btm test static` runs `tools/btm internal validate-lc-tfth-dh-contracts`, which verifies the Lost Cities, TFTH, C2ME, Distant Horizons, and `btmfixes` source contracts without launching Minecraft. The contract checks active manifests/custom jars, parseable `config/c2me.toml`, `config/DistantHorizons.toml`, `config/TFTH.toml`, and `config/TFTH-Data.toml`, Lost Cities Creating Space route ownership, required scenario fatal classifiers, and the requirement that Distant Horizons activity is observed before the scenario can pass.
@@ -131,13 +132,13 @@ LC/TFTH/DH correctness contract: `tools/btm test static` runs `tools/btm interna
 LC/TFTH/DH runtime stability is a targeted lane, not a default correctness gate. Run the short profile after touching C2ME, Distant Horizons, Lost Cities, TFTH, dimension routing, custom worldgen jars, entity/worldgen behavior, or scenario harness logic:
 
 ```bash
-tools/btm test scenario lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30
+tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30
 ```
 
 Run the default three-cycle profile for release candidates or after high-risk fixes in those systems:
 
 ```bash
-tools/btm test scenario lc_tfth_c2me_dh
+tools/btm test scenario-headful lc_tfth_c2me_dh
 ```
 
 Expected full validation: three clean boot/join/space-routed dimension teleport/Distant Horizons generation/TFTH pressure cycles, required jars present, no crash reports, no ModernFix watchdog, no C2ME thread-guard failures, no DH/Lost Cities/TFTH exceptions, and Distant Horizons activity observed.

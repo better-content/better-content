@@ -317,7 +317,7 @@ Commands:
 """.trimIndent()
 
 fun internalHelp(): String = """
-Usage: tools/btm internal <resolve-packwiz-downloads|prune-runtime-mods|log-hard-failure-scan|minecraft-client-argfile|sync-burnt-coverage-tags|generate-completionist-quests|check-js-syntax|check-json-surface|validate-pack-contract|contract-completeness-report|validate-kubejs-assets|validate-autonomous-contracts|validate-realistic-hands|validate-chemistry-identity|validate-synthesis-pipeline|validate-player-progression-contracts|validate-progression-reachability|validate-burnt-coverage|validate-lc-tfth-dh-contracts|validate-kotlin-tool-surface|validate-worldgen-sampling-contracts|validate-client-smoke-contracts> ...
+Usage: tools/btm internal <resolve-packwiz-downloads|prune-runtime-mods|log-hard-failure-scan|minecraft-client-argfile|sync-burnt-coverage-tags|generate-completionist-quests|check-js-syntax|check-json-surface|validate-pack-contract|contract-completeness-report|validate-kubejs-assets|validate-autonomous-contracts|validate-realistic-hands|validate-chemistry-identity|validate-synthesis-pipeline|validate-player-progression-contracts|validate-progression-reachability|validate-burnt-coverage|validate-lc-tfth-dh-contracts|validate-kotlin-tool-surface|validate-tool-doc-surface|validate-worldgen-sampling-contracts|validate-client-smoke-contracts> ...
 """.trimIndent()
 
 fun usageError(message: String, help: String = mainHelp()): CommandResult =
@@ -1718,6 +1718,7 @@ fun stopProcess(runningProcess: RunningProcess?, stopCommand: String? = null) {
 fun runStaticValidation(): ProcessRun {
     val commands = listOf(
         listOf("tools/btm", "internal", "validate-kotlin-tool-surface"),
+        listOf("tools/btm", "internal", "validate-tool-doc-surface"),
         listOf("tools/btm", "internal", "check-js-syntax"),
         listOf("tools/btm", "internal", "check-json-surface"),
         listOf("tools/btm", "internal", "validate-pack-contract"),
@@ -2763,6 +2764,98 @@ fun runDumpRefresh(serverDir: Path, port: Int, reset: Boolean): ProcessRun {
 fun runLcTfthDhContractsValidation(): ProcessRun =
     runKotlinScript(root.resolve("tools/kotlin/validate_lc_tfth_dh_contracts.main.kts"))
 
+fun runToolDocSurfaceValidation(): ProcessRun {
+    val failures = mutableListOf<String>()
+    fun fail(message: String) {
+        failures += message
+    }
+
+    val agentsPath = "AGENTS.md"
+    val runtimeValidationPath = "docs/runtime_validation.md"
+    val performancePath = "docs/performance_and_mods.md"
+    val docsReadmePath = "docs/README.md"
+    val agentsText = repoRead(agentsPath)
+    val runtimeText = repoRead(runtimeValidationPath)
+    val performanceText = repoRead(performancePath)
+    val docsReadmeText = repoRead(docsReadmePath)
+
+    val expectedAgentCommands = listOf(
+        "Headless scenario validation: `tools/btm test scenario opening_progression --cycles 1`",
+        "Headful scenario validation: `tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30`",
+        "Runtime dump refresh: `tools/btm build dumps --server-dir /tmp/btm-dump-refresh --port 25565 --reset-runtime`",
+    )
+    for (line in expectedAgentCommands) {
+        if (!agentsText.contains(line)) fail("$agentsPath missing documented command: $line")
+    }
+
+    val expectedScenarios = scenarios.keys.toList()
+    val publicScenarioBlock = Regex(
+        """- Current public scenarios:\n((?:  - `[^`]+`\n)+)""",
+        setOf(RegexOption.MULTILINE),
+    ).find(agentsText)?.groupValues?.get(1).orEmpty()
+    val documentedScenarios = Regex("""`([^`]+)`""").findAll(publicScenarioBlock).map { it.groupValues[1] }.toList()
+    if (documentedScenarios != expectedScenarios) {
+        fail("$agentsPath scenario list drift: expected ${expectedScenarios.joinToString(", ")}, found ${documentedScenarios.joinToString(", ")}")
+    }
+
+    val staleHeadfulCommands = listOf(
+        agentsPath to listOf(
+            "tools/btm test scenario lc_tfth_c2me_dh",
+            "tools/btm test scenario dimension_worldgen",
+        ),
+        runtimeValidationPath to listOf(
+            "tools/btm test scenario lc_tfth_c2me_dh",
+            "tools/btm test scenario dimension_worldgen",
+        ),
+        performancePath to listOf(
+            "tools/btm test scenario lc_tfth_c2me_dh",
+        ),
+    )
+    for ((path, commands) in staleHeadfulCommands) {
+        val text = when (path) {
+            agentsPath -> agentsText
+            runtimeValidationPath -> runtimeText
+            performancePath -> performanceText
+            else -> ""
+        }
+        for (command in commands) {
+            if (text.contains(command)) fail("$path still documents invalid headful command: `$command`")
+        }
+    }
+
+    val requiredRuntimeCommands = listOf(
+        "tools/btm test scenario-headful dimension_worldgen --cycles 1 --radius 1 --samples 1",
+        "tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30",
+        "tools/btm test scenario opening_progression --cycles 1",
+        "tools/btm test scenario worldgen_sampling --profile quick",
+        "tools/btm test scenario worldgen_sampling --profile release",
+        "tools/btm test scenario-headful client_smoke --profile quick",
+        "tools/btm test scenario-headful client_smoke --profile release",
+    )
+    for (command in requiredRuntimeCommands) {
+        if (!runtimeText.contains(command)) fail("$runtimeValidationPath missing scenario command: `$command`")
+    }
+    if (!runtimeText.contains("`tools/btm test scenario` is the supported front door for headless-safe harness-backed runtime scenarios.")) {
+        fail("$runtimeValidationPath must distinguish the headless-safe scenario front door")
+    }
+    if (!runtimeText.contains("`tools/btm test scenario-headful` is the supported front door for headful harness-backed runtime scenarios.")) {
+        fail("$runtimeValidationPath must distinguish the headful scenario front door")
+    }
+
+    if (!performanceText.contains("`tools/btm test scenario-headful lc_tfth_c2me_dh`")) {
+        fail("$performancePath missing headful LC/TFTH/C2ME/DH harness reference")
+    }
+
+    val docsList = Regex("""- `([^`]+)`:""").findAll(docsReadmeText).map { it.groupValues[1] }.toList()
+    val expectedDocs = listOf("README.md", "progression.md", "content_systems.md", "runtime_validation.md", "performance_and_mods.md")
+    if (docsList != expectedDocs) {
+        fail("$docsReadmePath living-doc index drift: expected ${expectedDocs.joinToString(", ")}, found ${docsList.joinToString(", ")}")
+    }
+
+    return if (failures.isEmpty()) ProcessRun(0, "ok - tool doc surface matches live tools/btm command surface")
+    else ProcessRun(1, failures.joinToString("\n") { "FAIL - $it" })
+}
+
 fun runSmokeValidation(serverDir: Path, port: Int, reset: Boolean): ProcessRun {
     val stamp = timestamp()
     val bootstrap = bootstrapServerRuntime(serverDir, port, reset)
@@ -3340,6 +3433,10 @@ fun handleInternal(subArgs: List<String>): CommandResult {
         "validate-kotlin-tool-surface" -> {
             val run = runKotlinScript(root.resolve("tools/kotlin/validate_kotlin_tool_surface.main.kts"))
             CommandResult("internal validate-kotlin-tool-surface", if (run.exitCode == 0) "success" else "failure", run.output, exitCode = if (run.exitCode == 0) 0 else 1)
+        }
+        "validate-tool-doc-surface" -> {
+            val run = runToolDocSurfaceValidation()
+            CommandResult("internal validate-tool-doc-surface", if (run.exitCode == 0) "success" else "failure", run.output, exitCode = if (run.exitCode == 0) 0 else 1)
         }
         "validate-worldgen-sampling-contracts" -> {
             val run = runKotlinScript(root.resolve("tools/kotlin/validate_worldgen_sampling_contracts.main.kts"))

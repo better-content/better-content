@@ -1832,10 +1832,12 @@ fun runStepSequence(steps: List<Pair<String, () -> ProcessRun>>): ProcessRun {
 }
 
 fun runPackFastLane(): ProcessRun = runStepSequence(
-    listOf(
-        "kotlin tests" to { runKotlinTests(null) },
-        "static validation" to { runStaticValidation() },
-    ),
+    buildList {
+        if (System.getenv("BTM_SKIP_KOTLIN_TESTS") != "1") {
+            add("kotlin tests" to { runKotlinTests(null) })
+        }
+        add("static validation" to { runStaticValidation() })
+    },
 )
 
 fun runPackFullLane(): ProcessRun = runStepSequence(

@@ -13,17 +13,23 @@ fun deleteTree(path: java.nio.file.Path) {
 
 fun usage(message: String? = null): Nothing {
     if (message != null) System.err.println(message)
-    System.err.println("Usage: tools/btm test scenario-headful client_smoke --profile quick|release [--keep-runs]")
+    System.err.println("Usage: tools/btm test scenario-headful client_smoke --profile quick|release [--bootstrap-mode always|once|never] [--keep-runs]")
     exitProcess(2)
 }
 
 var profile: String? = null
+var bootstrapMode = "always"
 var keepRuns = false
 var index = 0
 while (index < args.size) {
     when (args[index]) {
         "--profile" -> {
             profile = args.getOrNull(index + 1) ?: usage("--profile needs quick or release")
+            index += 2
+        }
+        "--bootstrap-mode" -> {
+            bootstrapMode = args.getOrNull(index + 1) ?: usage("--bootstrap-mode needs always, once, or never")
+            if (bootstrapMode !in setOf("always", "once", "never")) usage("invalid bootstrap mode: $bootstrapMode")
             index += 2
         }
         "--keep-runs" -> {
@@ -47,7 +53,7 @@ if (contractExit != 0) exitProcess(contractExit)
 
 val runtimeDir = Paths.get("/tmp", if (selected == "quick") "btm-client-smoke-quick" else "btm-client-smoke-release")
 val smokePort = if (selected == "quick") "25567" else "25568"
-if (!keepRuns && Files.exists(runtimeDir)) {
+if (!keepRuns && bootstrapMode != "never" && Files.exists(runtimeDir)) {
     deleteTree(runtimeDir)
 }
 
@@ -59,7 +65,9 @@ val smoke = ProcessBuilder(
     runtimeDir.toString(),
     "--port",
     smokePort,
-    "--reset-runtime",
+    "--bootstrap-mode",
+    bootstrapMode,
+    *if (bootstrapMode == "always" || bootstrapMode == "once") arrayOf("--reset-runtime") else emptyArray(),
 )
     .directory(Paths.get("").toAbsolutePath().normalize().toFile())
     .inheritIO()

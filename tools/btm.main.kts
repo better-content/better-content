@@ -95,6 +95,14 @@ data class ScenarioDefinition(
     val script: String,
     val headful: Boolean = false,
 )
+data class WorkspaceRepoDefinition(
+    val id: String,
+    val path: String,
+    val kind: String,
+    val fastCommand: List<String>,
+    val fullCommand: List<String>,
+    val fullMeaningful: Boolean,
+)
 data class CycleResult(
     val index: Int,
     var status: String = "FAIL",
@@ -111,6 +119,7 @@ val root: Path = Paths.get("").toAbsolutePath().normalize()
 val toolsDir: Path = root.resolve("tools")
 val btmPath: Path = toolsDir.resolve("btm")
 val btmMainPath: Path = toolsDir.resolve("btm.main.kts")
+val workspaceInventoryPath: Path = toolsDir.resolve("workspace_test_inventory.json")
 val migrationMatrixPath: Path = root.resolve("TOOL_MIGRATION_MATRIX.md")
 
 val defaultServerDir = root.resolve("server-instance").toString()
@@ -229,7 +238,7 @@ val scenarios = linkedMapOf(
     ),
     "worldgen_sampling" to ScenarioDefinition(
         "worldgen_sampling",
-        "Seeded worldgen sampling lane with quick/release profiles",
+        "Seeded worldgen sampling lane with local/quick/release profiles",
         "tools/kotlin/worldgen_sampling.main.kts",
     ),
     "client_smoke" to ScenarioDefinition(
@@ -258,6 +267,8 @@ fun mainHelp(): String = """
 Usage: tools/btm [--json] [--quiet] <command> ...
 
 Public commands:
+  tools/btm test fast [--repo ID|PATH] [--list-repos]
+  tools/btm test full [--workspace [--repo ID|PATH] [--list-repos]]
   tools/btm test static
   tools/btm test runtime --instance PATH [--strict-data-dumps]
   tools/btm test smoke [--server-dir PATH] [--port N] [--reset-runtime]
@@ -274,12 +285,14 @@ Public commands:
 """.trimIndent()
 
 fun testHelp(): String = """
-Usage: tools/btm test <static|runtime|smoke|scenario|kotlin> ...
+Usage: tools/btm test <fast|full|static|runtime|smoke|scenario|kotlin> ...
 
 Commands:
+  fast [--repo ID|PATH] [--list-repos]
+  full [--workspace [--repo ID|PATH] [--list-repos]]
   static
   runtime --instance PATH [--strict-data-dumps]
-  smoke [--server-dir PATH] [--port N] [--reset-runtime]
+  smoke [--server-dir PATH] [--port N] [--reset-runtime] [--bootstrap-mode always|once|never]
   scenario NAME [scenario args]
   scenario-headful NAME [scenario args]
   kotlin [--filter NAME]
@@ -317,7 +330,7 @@ Commands:
 """.trimIndent()
 
 fun internalHelp(): String = """
-Usage: tools/btm internal <resolve-packwiz-downloads|prune-runtime-mods|log-hard-failure-scan|minecraft-client-argfile|sync-burnt-coverage-tags|generate-completionist-quests|check-js-syntax|check-json-surface|validate-pack-contract|contract-completeness-report|validate-kubejs-assets|validate-autonomous-contracts|validate-realistic-hands|validate-chemistry-identity|validate-synthesis-pipeline|validate-player-progression-contracts|validate-progression-reachability|validate-burnt-coverage|validate-lc-tfth-dh-contracts|validate-kotlin-tool-surface|validate-tool-doc-surface|validate-worldgen-sampling-contracts|validate-client-smoke-contracts> ...
+Usage: tools/btm internal <resolve-packwiz-downloads|prune-runtime-mods|log-hard-failure-scan|minecraft-client-argfile|sync-burnt-coverage-tags|generate-completionist-quests|check-js-syntax|check-json-surface|validate-pack-contract|contract-completeness-report|validate-kubejs-assets|validate-autonomous-contracts|validate-realistic-hands|validate-chemistry-identity|validate-synthesis-pipeline|validate-player-progression-contracts|validate-progression-reachability|validate-burnt-coverage|validate-lc-tfth-dh-contracts|validate-kotlin-tool-surface|validate-tool-doc-surface|validate-worldgen-sampling-contracts|validate-client-smoke-contracts|verify-pack-fast|verify-pack-full> ...
 """.trimIndent()
 
 fun usageError(message: String, help: String = mainHelp()): CommandResult =
@@ -1137,6 +1150,7 @@ fun jsonArray(value: Any?): List<Any?> = value as? List<Any?> ?: emptyList()
 fun jsonString(value: Any?): String? = value as? String
 fun jsonBoolean(value: Any?): Boolean? = value as? Boolean
 fun jsonNumber(value: Any?): Number? = value as? Number
+fun jsonStringList(value: Any?): List<String> = jsonArray(value).mapNotNull(::jsonString)
 
 fun repoText(relPath: String): String = Files.readString(root.resolve(relPath))
 fun repoExists(relPath: String): Boolean = root.resolve(relPath).exists()
@@ -1168,6 +1182,87 @@ fun repoPath(relPath: String): Path = root.resolve(relPath)
 fun repoRead(relPath: String): String = Files.readString(repoPath(relPath))
 fun repoReadJson(relPath: String): Any? = parseJson(repoRead(relPath))
 fun repoRel(path: Path): String = root.relativize(path).toString().replace(File.separatorChar, '/')
+
+fun loadWorkspaceRepoDefinitions(): List<WorkspaceRepoDefinition> {
+    val rootObject = jsonObject(repoReadJson("tools/workspace_test_inventory.json"))
+    return jsonArray(rootObject["repos"]).map { entry ->
+        val repo = jsonObject(entry)
+        WorkspaceRepoDefinition(
+            id = jsonString(repo["id"]) ?: error("workspace repo entry missing id"),
+            path = jsonString(repo["path"]) ?: error("workspace repo entry missing path"),
+            kind = jsonString(repo["kind"]) ?: "unknown",
+            fastCommand = jsonStringList(repo["fastCommand"]).ifEmpty { error("workspace repo entry missing fastCommand") },
+            fullCommand = jsonStringList(repo["fullCommand"]).ifEmpty { error("workspace repo entry missing fullCommand") },
+            fullMeaningful = jsonBoolean(repo["fullMeaningful"]) ?: true,
+        )
+    }
+}
+
+fun parseRepoFilters(args: List<String>, mode: String): Pair<List<String>, Boolean> {
+    val filters = mutableListOf<String>()
+    var listOnly = false
+    var index = 0
+    while (index < args.size) {
+        when (args[index]) {
+            "--repo" -> {
+                val raw = args.getOrNull(index + 1) ?: return emptyList<String>() to listOnly
+                filters += raw.split(',').map(String::trim).filter(String::isNotBlank)
+                index += 2
+            }
+            "--list-repos" -> {
+                listOnly = true
+                index += 1
+            }
+            "--help" -> return filters to listOnly
+            else -> error("unknown argument for test $mode: ${args[index]}")
+        }
+    }
+    return filters to listOnly
+}
+
+fun repoMatchesFilter(repo: WorkspaceRepoDefinition, filter: String): Boolean {
+    val normalized = filter.trim().trimEnd('/').replace('\\', '/')
+    val repoPath = repo.path.trimEnd('/').replace('\\', '/')
+    return normalized == repo.id || normalized == repoPath || normalized == Paths.get(repoPath).fileName.toString()
+}
+
+fun selectWorkspaceRepos(mode: String, filters: List<String>): Pair<List<WorkspaceRepoDefinition>, List<String>> {
+    val repos = loadWorkspaceRepoDefinitions()
+    val eligible = if (mode == "full") repos.filter { it.fullMeaningful } else repos
+    if (filters.isEmpty()) return eligible to emptyList()
+    val selected = eligible.filter { repo -> filters.any { repoMatchesFilter(repo, it) } }
+    val unmatched = filters.filterNot { filter -> eligible.any { repoMatchesFilter(it, filter) } }
+    return selected to unmatched
+}
+
+fun formatWorkspaceRepoList(mode: String, repos: List<WorkspaceRepoDefinition>): String = buildString {
+    appendLine("workspace $mode repo selection:")
+    repos.forEach { repo ->
+        val command = if (mode == "full") repo.fullCommand else repo.fastCommand
+        appendLine("  ${repo.id.padEnd(34)} ${repo.path} :: ${command.joinToString(" ")}")
+    }
+}
+
+fun runWorkspaceLane(mode: String, filters: List<String>, listOnly: Boolean): ProcessRun {
+    val (selected, unmatched) = selectWorkspaceRepos(mode, filters)
+    if (unmatched.isNotEmpty()) return ProcessRun(2, "unknown repo filter(s): ${unmatched.joinToString(", ")}")
+    if (selected.isEmpty()) return ProcessRun(2, "no workspace repos matched test $mode selection")
+    if (listOnly) return ProcessRun(0, formatWorkspaceRepoList(mode, selected))
+
+    val output = mutableListOf<String>()
+    for (repo in selected) {
+        val workDir = root.resolve(repo.path).normalize()
+        val command = if (mode == "full") repo.fullCommand else repo.fastCommand
+        val run = runProcess(command, stream = false, workDir = workDir)
+        output += buildString {
+            appendLine("==> ${repo.id} (${repoRel(workDir)})")
+            appendLine(command.joinToString(" "))
+            if (run.output.isNotBlank()) append(run.output)
+        }.trim()
+        if (run.exitCode != 0) return ProcessRun(run.exitCode, output.joinToString("\n\n"))
+    }
+    return ProcessRun(0, output.joinToString("\n\n"))
+}
 
 fun sha256(path: Path): String {
     val digest = MessageDigest.getInstance("SHA-256")
@@ -1716,33 +1811,7 @@ fun stopProcess(runningProcess: RunningProcess?, stopCommand: String? = null) {
 }
 
 fun runStaticValidation(): ProcessRun {
-    val commands = listOf(
-        listOf("tools/btm", "internal", "validate-kotlin-tool-surface"),
-        listOf("tools/btm", "internal", "validate-tool-doc-surface"),
-        listOf("tools/btm", "internal", "check-js-syntax"),
-        listOf("tools/btm", "internal", "check-json-surface"),
-        listOf("tools/btm", "internal", "validate-pack-contract"),
-        listOf("tools/btm", "internal", "contract-completeness-report", "--check", "--no-write"),
-        listOf("tools/btm", "internal", "validate-autonomous-contracts"),
-        listOf("kotlin", "tools/kotlin/audit_indirect_casing_economy.main.kts", "--check"),
-        listOf("tools/btm", "internal", "validate-kubejs-assets"),
-        listOf("tools/btm", "internal", "validate-chemistry-identity"),
-        listOf("tools/btm", "internal", "validate-synthesis-pipeline"),
-        listOf("tools/btm", "internal", "validate-player-progression-contracts"),
-        listOf("tools/btm", "internal", "validate-progression-reachability"),
-        listOf("tools/btm", "internal", "validate-burnt-coverage"),
-        listOf("tools/btm", "internal", "validate-lc-tfth-dh-contracts"),
-        listOf("tools/btm", "internal", "validate-worldgen-sampling-contracts"),
-        listOf("tools/btm", "internal", "validate-client-smoke-contracts"),
-    )
-    val output = mutableListOf<String>()
-    for (command in commands) {
-        val extraEnv = if (command.contains("audit_indirect_casing_economy.main.kts")) mapOf("OUT_DIR" to "/tmp/btm-indirect-casing-audit") else emptyMap()
-        val run = runProcess(command, extraEnv = extraEnv, stream = false)
-        if (run.output.isNotBlank()) output += run.output
-        if (run.exitCode != 0) return ProcessRun(run.exitCode, output.joinToString("\n"))
-    }
-    return ProcessRun(0, output.joinToString("\n"))
+    return runKotlinScript(root.resolve("tools/kotlin/static_validation.main.kts"))
 }
 
 fun runPackSuite(instance: Path, strictDataDumps: Boolean, runtimeOnly: Boolean = false): ProcessRun {
@@ -1751,6 +1820,56 @@ fun runPackSuite(instance: Path, strictDataDumps: Boolean, runtimeOnly: Boolean 
     if (runtimeOnly) env["BTM_RUNTIME_ONLY"] = "1"
     return runKotlinScript(root.resolve("tools/kotlin/pack_test_suite.main.kts"), extraEnv = env)
 }
+
+fun runStepSequence(steps: List<Pair<String, () -> ProcessRun>>): ProcessRun {
+    val output = mutableListOf<String>()
+    for ((label, step) in steps) {
+        val run = step()
+        if (run.output.isNotBlank()) output += "==> $label\n${run.output}"
+        if (run.exitCode != 0) return ProcessRun(run.exitCode, output.joinToString("\n\n"))
+    }
+    return ProcessRun(0, output.joinToString("\n\n"))
+}
+
+fun runPackFastLane(): ProcessRun = runStepSequence(
+    listOf(
+        "kotlin tests" to { runKotlinTests(null) },
+        "static validation" to { runStaticValidation() },
+    ),
+)
+
+fun runPackFullLane(): ProcessRun = runStepSequence(
+    listOf(
+        "pack fast" to { runPackFastLane() },
+        "runtime smoke" to { runSmokeValidation(resolveUserPath("/tmp/btm-pack-full-smoke"), defaultServerPort, reset = true, bootstrapMode = "always") },
+        "opening progression scenario" to {
+            runKotlinScript(
+                root.resolve("tools/kotlin/opening_progression_runtime_validation.main.kts"),
+                scriptArgs = listOf("--cycles", "1", "--bootstrap-mode", "once"),
+            )
+        },
+        "worldgen sampling scenario" to {
+            runKotlinScript(
+                root.resolve("tools/kotlin/worldgen_sampling.main.kts"),
+                scriptArgs = listOf("--profile", "local", "--bootstrap-mode", "once"),
+            )
+        },
+        "LC TFTH C2ME DH scenario" to {
+            if (!canRunHeadfulScenario()) return@to ProcessRun(3, "DISPLAY or xvfb-run is required")
+            runKotlinScript(
+                root.resolve("tools/kotlin/lc_tfth_c2me_dh_stability.main.kts"),
+                scriptArgs = listOf("--cycles", "1", "--idle-seconds", "30", "--tfth-seconds", "30", "--bootstrap-mode", "once"),
+            )
+        },
+        "client smoke scenario" to {
+            if (!canRunHeadfulScenario()) return@to ProcessRun(3, "DISPLAY or xvfb-run is required")
+            runKotlinScript(
+                root.resolve("tools/kotlin/client_smoke.main.kts"),
+                scriptArgs = listOf("--profile", "quick", "--bootstrap-mode", "once"),
+            )
+        },
+    ),
+)
 
 fun runChemistryIdentityValidation(): ProcessRun {
     val failures = mutableListOf<String>()
@@ -2824,13 +2943,17 @@ fun runToolDocSurfaceValidation(): ProcessRun {
     }
 
     val requiredRuntimeCommands = listOf(
-        "tools/btm test scenario-headful dimension_worldgen --cycles 1 --radius 1 --samples 1",
-        "tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30",
-        "tools/btm test scenario opening_progression --cycles 1",
-        "tools/btm test scenario worldgen_sampling --profile quick",
-        "tools/btm test scenario worldgen_sampling --profile release",
-        "tools/btm test scenario-headful client_smoke --profile quick",
-        "tools/btm test scenario-headful client_smoke --profile release",
+        "tools/btm test fast",
+        "tools/btm test full",
+        "tools/btm test full --workspace",
+        "tools/btm test scenario-headful dimension_worldgen --cycles 1 --radius 1 --samples 1 --bootstrap-mode once",
+        "tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30 --bootstrap-mode once",
+        "tools/btm test scenario opening_progression --cycles 1 --bootstrap-mode once",
+        "tools/btm test scenario worldgen_sampling --profile local --bootstrap-mode once",
+        "tools/btm test scenario worldgen_sampling --profile quick --bootstrap-mode once",
+        "tools/btm test scenario worldgen_sampling --profile release --bootstrap-mode once",
+        "tools/btm test scenario-headful client_smoke --profile quick --bootstrap-mode once",
+        "tools/btm test scenario-headful client_smoke --profile release --bootstrap-mode once",
     )
     for (command in requiredRuntimeCommands) {
         if (!runtimeText.contains(command)) fail("$runtimeValidationPath missing scenario command: `$command`")
@@ -2840,6 +2963,12 @@ fun runToolDocSurfaceValidation(): ProcessRun {
     }
     if (!runtimeText.contains("`tools/btm test scenario-headful` is the supported front door for headful harness-backed runtime scenarios.")) {
         fail("$runtimeValidationPath must distinguish the headful scenario front door")
+    }
+    if (!runtimeText.contains("`--bootstrap-mode always|once|never`")) {
+        fail("$runtimeValidationPath must document bootstrap-mode semantics")
+    }
+    if (!runtimeText.contains("`tools/workspace_test_inventory.json`")) {
+        fail("$runtimeValidationPath must document the workspace inventory")
     }
 
     if (!performanceText.contains("`tools/btm test scenario-headful lc_tfth_c2me_dh`")) {
@@ -2856,10 +2985,19 @@ fun runToolDocSurfaceValidation(): ProcessRun {
     else ProcessRun(1, failures.joinToString("\n") { "FAIL - $it" })
 }
 
-fun runSmokeValidation(serverDir: Path, port: Int, reset: Boolean): ProcessRun {
+fun runSmokeValidation(serverDir: Path, port: Int, reset: Boolean, bootstrapMode: String = "always"): ProcessRun {
     val stamp = timestamp()
-    val bootstrap = bootstrapServerRuntime(serverDir, port, reset)
-    if (bootstrap.exitCode != 0) return bootstrap
+    when (bootstrapMode) {
+        "always", "once" -> {
+            val bootstrap = bootstrapServerRuntime(serverDir, port, reset)
+            if (bootstrap.exitCode != 0) return bootstrap
+        }
+        "never" -> {
+            if (reset) return ProcessRun(2, "--reset-runtime cannot be combined with --bootstrap-mode never")
+            if (!serverDir.resolve("run.sh").exists()) return ProcessRun(2, "prepared runtime missing for bootstrap-mode never: $serverDir")
+        }
+        else -> return ProcessRun(2, "invalid bootstrap mode: $bootstrapMode")
+    }
     val prune = pruneRuntimeMods(serverDir, "server", apply = false)
     if (prune.exitCode != 0) return prune
     val evidenceDir = serverDir.resolve("validation-evidence/$stamp")
@@ -2882,8 +3020,7 @@ fun runSmokeValidation(serverDir: Path, port: Int, reset: Boolean): ProcessRun {
             if (donePattern.containsMatchIn(text)) break
             Thread.sleep(2000)
         }
-        sendCommand(running, "stop")
-        running.process.waitFor()
+        stopProcess(running, "stop")
     } finally {
         stopProcess(running)
     }
@@ -3446,8 +3583,135 @@ fun handleInternal(subArgs: List<String>): CommandResult {
             val run = runKotlinScript(root.resolve("tools/kotlin/validate_client_smoke_contracts.main.kts"))
             CommandResult("internal validate-client-smoke-contracts", if (run.exitCode == 0) "success" else "failure", run.output, exitCode = if (run.exitCode == 0) 0 else 1)
         }
+        "verify-pack-fast" -> {
+            val run = runPackFastLane()
+            CommandResult("internal verify-pack-fast", if (run.exitCode == 0) "success" else "failure", run.output, exitCode = if (run.exitCode == 0) 0 else if (run.exitCode == 3) 3 else 1)
+        }
+        "verify-pack-full" -> {
+            val run = runPackFullLane()
+            CommandResult("internal verify-pack-full", if (run.exitCode == 0) "success" else "failure", run.output, exitCode = if (run.exitCode == 0) 0 else if (run.exitCode == 3) 3 else 1)
+        }
         else -> usageError("unknown internal command: ${subArgs.first()}", internalHelp())
     }
+}
+
+fun runWorkspaceVerification(mode: String, rawArgs: List<String>): CommandResult {
+    val filters = mutableListOf<String>()
+    var listOnly = false
+    var index = 0
+    while (index < rawArgs.size) {
+        when (rawArgs[index]) {
+            "--repo" -> {
+                val raw = rawArgs.getOrNull(index + 1) ?: return usageError("--repo needs an ID or path", testHelp())
+                filters += raw.split(',').map(String::trim).filter(String::isNotBlank)
+                index += 2
+            }
+            "--list-repos" -> {
+                listOnly = true
+                index += 1
+            }
+            "--help" -> return success("test $mode", testHelp(), evidenceLevel = "source")
+            else -> return usageError("unknown argument for test $mode: ${rawArgs[index]}", testHelp())
+        }
+    }
+    val (selectedRepos, unmatched) = selectWorkspaceRepos(mode, filters)
+    if (unmatched.isNotEmpty()) {
+        return usageError("unknown repo filter(s): ${unmatched.joinToString(", ")}", testHelp())
+    }
+    if (selectedRepos.isEmpty()) {
+        return usageError("no workspace repos selected for test $mode", testHelp())
+    }
+    if (listOnly) {
+        return success(
+            command = "test $mode",
+            summary = formatWorkspaceRepoList(mode, selectedRepos).trim(),
+            details = mapOf(
+                "mode" to mode,
+                "filters" to filters,
+                "repos" to selectedRepos.map { mapOf("id" to it.id, "path" to it.path, "kind" to it.kind, "fullMeaningful" to it.fullMeaningful) },
+            ),
+            artifacts = listOf(ArtifactRef(workspaceInventoryPath.toString())),
+            evidenceLevel = "source",
+        )
+    }
+
+    val repoRuns = mutableListOf<Map<String, Any?>>()
+    for (repo in selectedRepos) {
+        val command = if (mode == "full") repo.fullCommand else repo.fastCommand
+        val workDir = if (repo.path == ".") root else root.resolve(repo.path)
+        if (!workDir.exists() || !workDir.isDirectory()) {
+            return CommandResult(
+                command = "test $mode",
+                status = "failure",
+                summary = "workspace repo path missing for ${repo.id}",
+                findings = listOf(ValidationFinding("error", "workspace repo path missing for ${repo.id}: ${repo.path}")),
+                details = mapOf("mode" to mode, "repo" to repo.id, "path" to repo.path),
+                artifacts = listOf(ArtifactRef(workspaceInventoryPath.toString())),
+                exitCode = 1,
+                evidenceLevel = "source",
+            )
+        }
+        val run = runProcess(command, stream = false, workDir = workDir)
+        repoRuns += mapOf(
+            "id" to repo.id,
+            "path" to repo.path,
+            "command" to command,
+            "exitCode" to run.exitCode,
+            "outputSnippet" to outputSnippet(run.output),
+        )
+        if (run.exitCode != 0) {
+            return CommandResult(
+                command = "test $mode",
+                status = "failure",
+                summary = "workspace $mode failed in ${repo.id}",
+                findings = listOf(ValidationFinding("error", "${repo.id} ${mode} lane failed with exit ${run.exitCode}")),
+                details = mapOf("mode" to mode, "failedRepo" to repo.id, "repoRuns" to repoRuns),
+                artifacts = listOf(ArtifactRef(workspaceInventoryPath.toString())),
+                exitCode = classifyBuildExit(run.exitCode, run.output),
+                evidenceLevel = "source",
+            )
+        }
+    }
+    return success(
+        command = "test $mode",
+        summary = "workspace $mode passed for ${selectedRepos.size} repo(s)",
+        details = mapOf("mode" to mode, "repoRuns" to repoRuns),
+        artifacts = listOf(ArtifactRef(workspaceInventoryPath.toString())),
+        evidenceLevel = "source",
+    )
+}
+
+fun runFullCommand(rawArgs: List<String>): CommandResult {
+    if (rawArgs.isEmpty()) {
+        val run = runPackFullLane()
+        return if (run.exitCode == 0) success(
+            command = "test full",
+            summary = "pack full passed",
+            evidenceLevel = "scenario-runtime",
+        ) else CommandResult(
+            command = "test full",
+            status = "failure",
+            summary = "pack full failed",
+            findings = listOf(ValidationFinding("error", "pack full lane failed with exit ${run.exitCode}")),
+            exitCode = classifyBuildExit(run.exitCode, run.output),
+            evidenceLevel = "scenario-runtime",
+        )
+    }
+
+    if (rawArgs == listOf("--help")) {
+        return success("test full", testHelp(), evidenceLevel = "source")
+    }
+
+    if ("--workspace" !in rawArgs) {
+        val invalidArgs = rawArgs.joinToString(" ")
+        return usageError(
+            "test full workspace selection requires --workspace before repo filters or listing: $invalidArgs",
+            testHelp(),
+        )
+    }
+
+    val workspaceArgs = rawArgs.filterNot { it == "--workspace" }
+    return runWorkspaceVerification("full", workspaceArgs)
 }
 
 fun handleTest(subArgs: List<String>): CommandResult {
@@ -3455,6 +3719,8 @@ fun handleTest(subArgs: List<String>): CommandResult {
         return success("test", testHelp(), evidenceLevel = "source")
     }
     return when (subArgs.first()) {
+        "fast" -> runWorkspaceVerification("fast", subArgs.drop(1))
+        "full" -> runFullCommand(subArgs.drop(1))
         "static" -> {
             val missing = ensureCommands("kotlin")
             if (missing.isNotEmpty()) return prereqFailure("static validation prerequisites missing", missing)
@@ -3505,7 +3771,7 @@ fun handleTest(subArgs: List<String>): CommandResult {
             val instancePath = resolveUserPath(instance!!)
             if (!instancePath.exists() || !instancePath.isDirectory()) return usageError("runtime instance does not exist: $instancePath", testHelp())
             val run = runPackSuite(instancePath, strict)
-            val exitCode = if (run.exitCode == 0) 0 else 1
+            val exitCode = if (run.exitCode == 0) 0 else if (run.exitCode == 2) 2 else 1
             if (exitCode == 0) success(
                 command = "test runtime",
                 summary = "runtime validation passed",
@@ -3531,6 +3797,7 @@ fun handleTest(subArgs: List<String>): CommandResult {
             var serverDir = "/tmp/btm-agent-validate-smoke"
             var port = "25565"
             var reset = false
+            var bootstrapMode = "always"
             val rest = subArgs.drop(1)
             var index = 0
             while (index < rest.size) {
@@ -3548,18 +3815,23 @@ fun handleTest(subArgs: List<String>): CommandResult {
                         reset = true
                         index += 1
                     }
+                    "--bootstrap-mode" -> {
+                        bootstrapMode = rest.getOrNull(index + 1) ?: return usageError("--bootstrap-mode needs always, once, or never", testHelp())
+                        if (bootstrapMode !in setOf("always", "once", "never")) return usageError("invalid bootstrap mode: $bootstrapMode", testHelp())
+                        index += 2
+                    }
                     "--help" -> return success("test smoke", testHelp(), evidenceLevel = "fresh-runtime")
                     else -> return usageError("unknown argument: ${rest[index]}", testHelp())
                 }
             }
             val serverPath = resolveUserPath(serverDir)
-            val run = runSmokeValidation(serverPath, port.toInt(), reset)
+            val run = runSmokeValidation(serverPath, port.toInt(), reset, bootstrapMode)
             val exitCode = if (run.exitCode == 0) 0 else 1
             if (exitCode == 0) success(
                 command = "test smoke",
                 summary = "smoke validation passed",
                 artifacts = listOf(ArtifactRef(serverPath.toString(), "directory")),
-                details = mapOf("serverDir" to serverPath.toString(), "port" to port.toInt(), "resetRuntime" to reset),
+                details = mapOf("serverDir" to serverPath.toString(), "port" to port.toInt(), "resetRuntime" to reset, "bootstrapMode" to bootstrapMode),
                 mutated = true,
                 evidenceLevel = "fresh-runtime",
             ) else CommandResult(
@@ -3567,7 +3839,7 @@ fun handleTest(subArgs: List<String>): CommandResult {
                 status = "failure",
                 summary = "test smoke failed with exit $exitCode",
                 findings = listOf(ValidationFinding("error", "test smoke failed with exit $exitCode")),
-                details = mapOf("serverDir" to serverPath.toString(), "port" to port.toInt(), "resetRuntime" to reset) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
+                details = mapOf("serverDir" to serverPath.toString(), "port" to port.toInt(), "resetRuntime" to reset, "bootstrapMode" to bootstrapMode) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
                 exitCode = exitCode,
                 evidenceLevel = "fresh-runtime",
                 mutated = true,

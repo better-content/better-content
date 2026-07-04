@@ -52,6 +52,8 @@ fun deleteTree(path: Path) {
 test("help shows public commands") {
     val (exit, output) = runCommand("tools/btm", "--help")
     assertTrue(exit == 0, "help should exit 0, got $exit")
+    assertContains(output, "tools/btm test fast", "help should list fast test")
+    assertContains(output, "tools/btm test full", "help should list full test")
     assertContains(output, "tools/btm test static", "help should list static test")
     assertContains(output, "tools/btm build sync server", "help should list build sync server")
     assertContains(output, "tools/btm doctor env", "help should list doctor env")
@@ -66,11 +68,42 @@ test("runtime without instance is usage error") {
 test("scenario help shows scenarios") {
     val (exit, output) = runCommand("tools/btm", "test", "scenario", "--help")
     assertTrue(exit == 0, "scenario help should exit 0, got $exit")
+    assertContains(output, "fast [--repo ID|PATH] [--list-repos]", "scenario help should show fast usage")
+    assertContains(output, "full [--workspace [--repo ID|PATH] [--list-repos]]", "scenario help should show full workspace usage")
+    assertContains(output, "--bootstrap-mode always|once|never", "scenario help should show bootstrap mode")
     assertContains(output, "Headless Scenarios:", "scenario help should list headless scenarios")
     assertContains(output, "Headful Scenarios:", "scenario help should list headful scenarios")
     assertContains(output, "opening_progression", "scenario help should include opening_progression")
     assertContains(output, "worldgen_sampling", "scenario help should include worldgen_sampling")
     assertContains(output, "client_smoke", "scenario help should include client_smoke")
+}
+
+test("fast repo listing shows workspace inventory") {
+    val (exit, output) = runCommand("tools/btm", "test", "fast", "--list-repos")
+    assertTrue(exit == 0, "test fast --list-repos should exit 0, got $exit")
+    assertContains(output, "workspace fast repo selection:", "fast listing should show repo heading")
+    assertContains(output, "pack", "fast listing should include pack")
+    assertContains(output, "bound-to-matter-fixes", "fast listing should include nested repos")
+}
+
+test("full repo listing honors repo filters and meaningful full lanes") {
+    val (exit, output) = runCommand("tools/btm", "test", "full", "--workspace", "--list-repos", "--repo", "pack", "--repo", "class-selector")
+    assertTrue(exit == 0, "test full --workspace --list-repos with filters should exit 0, got $exit")
+    assertContains(output, "pack", "filtered full listing should include pack")
+    assertContains(output, "class-selector", "filtered full listing should include selected repo")
+    assertNotContains(output, "rpg-stats", "filtered full listing should exclude unselected repos")
+}
+
+test("full repo listing without workspace flag is a usage error") {
+    val (exit, output) = runCommand("tools/btm", "test", "full", "--list-repos")
+    assertTrue(exit == 2, "test full --list-repos without --workspace should exit 2, got $exit")
+    assertContains(output, "test full workspace selection requires --workspace", "full listing without --workspace should explain the requirement")
+}
+
+test("unknown workspace repo filter is a usage error") {
+    val (exit, output) = runCommand("tools/btm", "test", "fast", "--list-repos", "--repo", "not-a-real-repo")
+    assertTrue(exit == 2, "unknown workspace repo filter should exit 2, got $exit")
+    assertContains(output, "unknown repo filter(s): not-a-real-repo", "unknown repo filter error should be specific")
 }
 
 test("unknown scenario is a usage error") {
@@ -262,6 +295,24 @@ test("client smoke rejects invalid profile with usage error") {
     val (exit, output) = runCommand("tools/btm", "test", "scenario-headful", "client_smoke", "--profile", "bad")
     assertTrue(exit == 2, "client_smoke with invalid profile should exit 2, got $exit")
     assertContains(output, "invalid profile: bad", "client_smoke should reject invalid profile")
+}
+
+test("opening progression rejects invalid bootstrap mode with usage error") {
+    val (exit, output) = runCommand("tools/btm", "test", "scenario", "opening_progression", "--bootstrap-mode", "bad")
+    assertTrue(exit == 2, "opening_progression with invalid bootstrap mode should exit 2, got $exit")
+    assertContains(output, "invalid bootstrap mode: bad", "opening_progression should reject invalid bootstrap mode")
+}
+
+test("worldgen sampling rejects invalid bootstrap mode with usage error") {
+    val (exit, output) = runCommand("tools/btm", "test", "scenario", "worldgen_sampling", "--profile", "quick", "--bootstrap-mode", "bad")
+    assertTrue(exit == 2, "worldgen_sampling with invalid bootstrap mode should exit 2, got $exit")
+    assertContains(output, "invalid bootstrap mode: bad", "worldgen_sampling should reject invalid bootstrap mode")
+}
+
+test("client smoke rejects invalid bootstrap mode with usage error") {
+    val (exit, output) = runCommand("tools/btm", "test", "scenario-headful", "client_smoke", "--profile", "quick", "--bootstrap-mode", "bad")
+    assertTrue(exit == 2, "client_smoke with invalid bootstrap mode should exit 2, got $exit")
+    assertContains(output, "invalid bootstrap mode: bad", "client_smoke should reject invalid bootstrap mode")
 }
 
 test("kotlin test filter runs only matching cases") {

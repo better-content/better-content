@@ -1,0 +1,148 @@
+{
+  "repos": [
+    {
+      "id": "pack",
+      "path": ".",
+      "kind": "root-pack",
+      "fastCommand": ["tools/btm", "internal", "verify-pack-fast"],
+      "fullCommand": ["tools/btm", "internal", "verify-pack-full"],
+      "fullMeaningful": true
+    },
+    {
+      "id": "bound-to-matter-fixes",
+      "path": "generated/custom-mod-sources/bound-to-matter-fixes",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": true
+    },
+    {
+      "id": "class-selector",
+      "path": "generated/custom-mod-sources/class-selector",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": true
+    },
+    {
+      "id": "create-train-fuel-scaling",
+      "path": "generated/custom-mod-sources/create-train-fuel-scaling",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": true
+    },
+    {
+      "id": "create-transmission-loss",
+      "path": "generated/custom-mod-sources/create-transmission-loss",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": true
+    },
+    {
+      "id": "dimensional-fonts",
+      "path": "generated/custom-mod-sources/dimensional-fonts",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": true
+    },
+    {
+      "id": "dynamic-trees-hexerei",
+      "path": "generated/custom-mod-sources/dynamic-trees-hexerei",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": false
+    },
+    {
+      "id": "dynamic-trees-malum",
+      "path": "generated/custom-mod-sources/dynamic-trees-malum",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": false
+    },
+    {
+      "id": "heat-sync",
+      "path": "generated/custom-mod-sources/heat-sync",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": true
+    },
+    {
+      "id": "latent-chemlib",
+      "path": "generated/custom-mod-sources/latent_chemlib",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": true
+    },
+    {
+      "id": "oc2r-create-bridge",
+      "path": "generated/custom-mod-sources/oc2r-create-bridge",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": true
+    },
+    {
+      "id": "oc2rwireless-global-pubsub-addon",
+      "path": "generated/custom-mod-sources/oc2rwireless-global-pubsub-addon",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": false
+    },
+    {
+      "id": "pillager-campaigns",
+      "path": "generated/custom-mod-sources/pillager-campaigns",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": true
+    },
+    {
+      "id": "procedural-bouquets",
+      "path": "generated/custom-mod-sources/procedural-bouquets",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": true
+    },
+    {
+      "id": "realistic-ores",
+      "path": "generated/custom-mod-sources/realistic-ores",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": false
+    },
+    {
+      "id": "rpg-stats",
+      "path": "generated/custom-mod-sources/rpg-stats",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": false
+    },
+    {
+      "id": "settlement-roads",
+      "path": "generated/custom-mod-sources/settlement-roads",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": true
+    },
+    {
+      "id": "village-walls",
+      "path": "generated/custom-mod-sources/village-walls",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": true
+    }
+  ]
+}

@@ -14,6 +14,7 @@ data class ScenarioConfig(
     val cycles: Int,
     val timeoutSeconds: Int,
     val basePort: Int,
+    val bootstrapMode: String,
     val keepGoing: Boolean,
     val keepRuns: Boolean,
     val runRoot: Path,
@@ -23,7 +24,7 @@ data class RunningServer(val process: Process, val stdin: BufferedWriter?, val l
 
 fun usage(message: String? = null): Nothing {
     if (message != null) System.err.println(message)
-    System.err.println("Usage: tools/btm test scenario opening_progression [--cycles N] [--timeout N] [--port N] [--run-root PATH] [--keep-going] [--keep-runs]")
+    System.err.println("Usage: tools/btm test scenario opening_progression [--cycles N] [--timeout N] [--port N] [--bootstrap-mode always|once|never] [--run-root PATH] [--keep-going] [--keep-runs]")
     exitProcess(2)
 }
 
@@ -31,6 +32,7 @@ fun parseConfig(args: Array<String>): ScenarioConfig {
     var cycles = 1
     var timeoutSeconds = 240
     var basePort = 25565
+    var bootstrapMode = "always"
     var keepGoing = false
     var keepRuns = false
     var runRoot = Paths.get("/tmp/btm-opening-progression")
@@ -47,6 +49,11 @@ fun parseConfig(args: Array<String>): ScenarioConfig {
             }
             "--port" -> {
                 basePort = args.getOrNull(index + 1)?.toIntOrNull() ?: usage("--port needs a positive integer")
+                index += 2
+            }
+            "--bootstrap-mode" -> {
+                bootstrapMode = args.getOrNull(index + 1) ?: usage("--bootstrap-mode needs always, once, or never")
+                if (bootstrapMode !in setOf("always", "once", "never")) usage("invalid bootstrap mode: $bootstrapMode")
                 index += 2
             }
             "--run-root" -> {
@@ -68,7 +75,7 @@ fun parseConfig(args: Array<String>): ScenarioConfig {
     if (cycles <= 0) usage("--cycles must be >= 1")
     if (timeoutSeconds <= 0) usage("--timeout must be >= 1")
     if (basePort <= 0) usage("--port must be >= 1")
-    return ScenarioConfig(cycles, timeoutSeconds, basePort, keepGoing, keepRuns, runRoot)
+    return ScenarioConfig(cycles, timeoutSeconds, basePort, bootstrapMode, keepGoing, keepRuns, runRoot)
 }
 
 fun deleteTree(path: Path) {
@@ -100,6 +107,12 @@ fun ensureSmokeBootstrapped(root: Path, serverDir: Path, port: Int) {
         root,
     )
     if (exit != 0) exitProcess(exit)
+}
+
+fun requirePreparedRuntime(serverDir: Path) {
+    if (!serverDir.resolve("run.sh").exists()) {
+        usage("prepared runtime missing for --bootstrap-mode never: $serverDir")
+    }
 }
 
 fun startServer(serverDir: Path, port: Int, evidenceDir: Path): RunningServer {
@@ -157,6 +170,7 @@ fun stopServer(server: RunningServer?) {
 val root = Paths.get("").toAbsolutePath().normalize()
 val config = parseConfig(args)
 config.runRoot.createDirectories()
+if (!config.keepRuns && config.bootstrapMode == "once") deleteTree(config.runRoot.resolve("prepared"))
 
 val passPattern = Regex("""OPENING_PROGRESSION_VALIDATION PASS""", RegexOption.IGNORE_CASE)
 val failPattern = Regex("""OPENING_PROGRESSION_VALIDATION FAIL|Unknown or incomplete command""", RegexOption.IGNORE_CASE)
@@ -165,17 +179,37 @@ val readyPattern = Regex("""Done \([\d.]+s\)! For help, type "help"""")
 var failed = false
 for (cycle in 1..config.cycles) {
     val cycleRoot = config.runRoot.resolve("cycle-$cycle")
-    val serverDir = cycleRoot.resolve("server")
+    val serverDir = when (config.bootstrapMode) {
+        "once", "never" -> config.runRoot.resolve("prepared/server")
+        else -> cycleRoot.resolve("server")
+    }
     val evidenceDir = cycleRoot.resolve("evidence")
     if (!config.keepRuns) deleteTree(cycleRoot)
     evidenceDir.createDirectories()
 
-    println("cycle $cycle/${config.cycles}: smoke bootstrap")
-    ensureSmokeBootstrapped(root, serverDir, config.basePort + cycle - 1)
+    when (config.bootstrapMode) {
+        "always" -> {
+            println("cycle $cycle/${config.cycles}: smoke bootstrap")
+            ensureSmokeBootstrapped(root, serverDir, config.basePort + cycle - 1)
+        }
+        "once" -> {
+            if (!serverDir.resolve("run.sh").exists()) {
+                println("cycle $cycle/${config.cycles}: smoke bootstrap")
+                ensureSmokeBootstrapped(root, serverDir, config.basePort)
+            } else {
+                println("cycle $cycle/${config.cycles}: reusing prepared runtime")
+            }
+        }
+        "never" -> {
+            requirePreparedRuntime(serverDir)
+            println("cycle $cycle/${config.cycles}: using prepared runtime")
+        }
+    }
 
     var server: RunningServer? = null
     try {
-        server = startServer(serverDir, config.basePort + cycle - 1, evidenceDir)
+        val cyclePort = if (config.bootstrapMode == "always") config.basePort + cycle - 1 else config.basePort
+        server = startServer(serverDir, cyclePort, evidenceDir)
         val logs = listOf(serverDir.resolve("logs/latest.log"), server.logPath)
         waitForPattern(logs, readyPattern, 900, server.process, "server boot")
         sendCommand(server, "sam validate_opening_progression")

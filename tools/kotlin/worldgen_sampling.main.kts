@@ -5,17 +5,23 @@ import kotlin.system.exitProcess
 
 fun usage(message: String? = null): Nothing {
     if (message != null) System.err.println(message)
-    System.err.println("Usage: tools/btm test scenario worldgen_sampling --profile quick|release [--keep-going] [--keep-runs]")
+    System.err.println("Usage: tools/btm test scenario worldgen_sampling --profile quick|release|local [--bootstrap-mode always|once|never] [--keep-going] [--keep-runs]")
     exitProcess(2)
 }
 
 var profile: String? = null
+var bootstrapMode = "always"
 val passthrough = mutableListOf<String>()
 var index = 0
 while (index < args.size) {
     when (args[index]) {
         "--profile" -> {
-            profile = args.getOrNull(index + 1) ?: usage("--profile needs quick or release")
+            profile = args.getOrNull(index + 1) ?: usage("--profile needs quick, release, or local")
+            index += 2
+        }
+        "--bootstrap-mode" -> {
+            bootstrapMode = args.getOrNull(index + 1) ?: usage("--bootstrap-mode needs always, once, or never")
+            if (bootstrapMode !in setOf("always", "once", "never")) usage("invalid bootstrap mode: $bootstrapMode")
             index += 2
         }
         "--help" -> usage()
@@ -28,6 +34,7 @@ while (index < args.size) {
 
 val selected = profile ?: usage("--profile is required")
 val mappedArgs = when (selected) {
+    "local" -> listOf("--cycles", "1", "--dimensions", "minecraft:overworld", "--radius", "1", "--samples", "1", "--server-only")
     "quick" -> listOf("--cycles", "1", "--dimensions", "minecraft:overworld", "--radius", "2", "--samples", "1", "--server-only")
     "release" -> listOf("--cycles", "1", "--dimensions", "minecraft:overworld,lostcities:lostcity,creatingspace:earth_orbit", "--radius", "4", "--samples", "3", "--server-only")
     else -> usage("invalid profile: $selected")
@@ -42,7 +49,7 @@ val contractExit = contract.waitFor()
 if (contractExit != 0) exitProcess(contractExit)
 
 val backend = root.resolve("tools/kotlin/dimension_worldgen_stress.main.kts")
-val process = ProcessBuilder(listOf("kotlin", backend.toString()) + mappedArgs + passthrough)
+val process = ProcessBuilder(listOf("kotlin", backend.toString()) + mappedArgs + listOf("--bootstrap-mode", bootstrapMode) + passthrough)
     .directory(root.toFile())
     .inheritIO()
     .start()

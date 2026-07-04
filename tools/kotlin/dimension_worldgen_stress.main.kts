@@ -151,6 +151,19 @@ fun deleteTree(path: Path) {
 fun runCommand(command: List<String>, root: Path): Int =
     ProcessBuilder(command).directory(root.toFile()).inheritIO().start().waitFor()
 
+fun setServerPort(path: Path, port: Int) {
+    val lines = if (Files.exists(path)) Files.readAllLines(path).toMutableList() else mutableListOf<String>()
+    var replaced = false
+    for (index in lines.indices) {
+        if (lines[index].startsWith("server-port=")) {
+            lines[index] = "server-port=$port"
+            replaced = true
+        }
+    }
+    if (!replaced) lines += "server-port=$port"
+    Files.write(path, lines.map { "$it\n" }.joinToString("").toByteArray(Charsets.UTF_8))
+}
+
 fun ensureSmokeBootstrapped(root: Path, serverDir: Path, port: Int) {
     val exit = runCommand(
         listOf("tools/btm", "test", "smoke", "--server-dir", serverDir.toString(), "--port", port.toString(), "--reset-runtime"),
@@ -165,6 +178,7 @@ fun requirePreparedRuntime(serverDir: Path) {
 
 fun startServer(serverDir: Path, port: Int, evidenceDir: Path): RunningServer {
     val logPath = evidenceDir.resolve("server-console.log")
+    setServerPort(serverDir.resolve("server.properties"), port)
     val builder = ProcessBuilder(listOf("./run.sh", "nogui"))
         .directory(serverDir.toFile())
         .redirectErrorStream(true)

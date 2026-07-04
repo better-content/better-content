@@ -715,6 +715,23 @@ white-list=false
     Files.writeString(path, text)
 }
 
+fun setServerPort(path: Path, port: Int) {
+    if (!path.exists()) {
+        writeLocalServerProperties(path, port, onlineMode = false)
+        return
+    }
+    val lines = Files.readAllLines(path).toMutableList()
+    var replaced = false
+    for (index in lines.indices) {
+        if (lines[index].startsWith("server-port=")) {
+            lines[index] = "server-port=$port"
+            replaced = true
+        }
+    }
+    if (!replaced) lines += "server-port=$port"
+    Files.write(path, lines.map { "$it\n" }.joinToString("").toByteArray(Charsets.UTF_8))
+}
+
 fun runKotlinScript(script: Path, scriptArgs: List<String> = emptyList(), extraEnv: Map<String, String> = emptyMap()): ProcessRun {
     if (!script.exists()) return ProcessRun(4, "missing Kotlin script: $script")
     return runProcess(listOf("kotlin", script.toString()) + scriptArgs, extraEnv)
@@ -1737,6 +1754,7 @@ fun startServerProcess(serverDir: Path, port: Int, extraArgs: List<String> = lis
     val javaDir = Paths.get(javaPath).parent.toString()
     require(serverDir.isDirectory()) { "server directory does not exist: $serverDir" }
     require(serverDir.resolve("run.sh").exists()) { "missing executable run.sh in $serverDir" }
+    setServerPort(serverDir.resolve("server.properties"), port)
     val builder = ProcessBuilder(listOf("./run.sh") + extraArgs)
     builder.directory(serverDir.toFile())
     builder.redirectErrorStream(true)
@@ -1853,7 +1871,7 @@ fun runPackFullLane(): ProcessRun = runStepSequence(
         "worldgen sampling scenario" to {
             runKotlinScript(
                 root.resolve("tools/kotlin/worldgen_sampling.main.kts"),
-                scriptArgs = listOf("--profile", "local", "--bootstrap-mode", "never", "--server-dir", "/tmp/btm-pack-full-smoke"),
+                scriptArgs = listOf("--profile", "local", "--bootstrap-mode", "never", "--server-dir", "/tmp/btm-pack-full-smoke", "--port", "25566"),
             )
         },
         "LC TFTH C2ME DH scenario" to {

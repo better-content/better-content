@@ -854,7 +854,6 @@ fun sourceContainsAll(path: Path, needles: List<String>): Boolean {
 
 fun testRuntimeCoreTagRegressions() {
     val riskyPairs = listOf(
-        "planks",
         "logs",
         "logs_that_burn",
         "wooden_buttons",

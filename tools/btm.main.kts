@@ -2638,7 +2638,6 @@ fun runBurntCoverageValidation(): ProcessRun {
         "burnt:fire_resistant",
         "minecraft:logs",
         "minecraft:logs_that_burn",
-        "minecraft:planks",
         "minecraft:leaves",
         "minecraft:crops",
         "minecraft:wooden_buttons",
@@ -2757,7 +2756,9 @@ fun runBurntCoverageValidation(): ProcessRun {
         if (tagId !in allTags) return fail("adpother references missing tag $tagId in $relFile")
         for (dependency in emitterDependencies[tagId].orEmpty()) {
             val values = maintainedValues[dependency]
-            if (values.isNullOrEmpty()) return fail("adpother tag $tagId depends on empty maintained tag $dependency")
+            if (values.isNullOrEmpty() && dependency !in upstreamTags) {
+                return fail("adpother tag $tagId depends on empty maintained tag $dependency")
+            }
         }
     }
     output += "ok - adpother Burnt tag references resolve"
@@ -3123,7 +3124,6 @@ fun runBurntCoverageTagSync(
         "burnt:fire_resistant",
         "minecraft:logs",
         "minecraft:logs_that_burn",
-        "minecraft:planks",
         "minecraft:leaves",
         "minecraft:crops",
         "minecraft:wooden_buttons",

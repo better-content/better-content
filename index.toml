@@ -10273,6 +10273,10 @@ file = "kubejs/data/minecraft/tags/blocks/mineable/shovel.json"
 hash = "f043d4bb601471ccfa509f15da7de6af6fcc9fd9c11ff5254aa5dcb93479a608"
 
 [[files]]
+file = "kubejs/data/minecraft/tags/blocks/planks.json"
+hash = "81e33f6373048d8f105dd5f890352bdef8d195a2494959a780b811a7aec0faab"
+
+[[files]]
 file = "kubejs/data/minecraft/tags/blocks/wooden_buttons.json"
 hash = "1f462787e0a9580607d80e053d3102cee8f9dc77cea510987ccacff4b67da9c9"
 
@@ -10351,6 +10355,10 @@ hash = "cee09dec79eaf898a5ecbf50767dd2b9b1f258be79f2a44406b694f555022cd2"
 [[files]]
 file = "kubejs/data/minecraft/tags/items/pickaxes.json"
 hash = "4f88be7693a077a31300a1c01f9e2aa045ed1ea62efd242ab7c884a135486f33"
+
+[[files]]
+file = "kubejs/data/minecraft/tags/items/planks.json"
+hash = "81e33f6373048d8f105dd5f890352bdef8d195a2494959a780b811a7aec0faab"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/shears.json"

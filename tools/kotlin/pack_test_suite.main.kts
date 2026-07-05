@@ -1172,6 +1172,23 @@ fun testDevDumpHealth() {
 fun zipEntryNames(path: Path): List<String> =
     ZipFile(path.toFile()).use { zip -> zip.entries().asSequence().map { it.name }.toList() }
 
+fun zipEntryText(path: Path, entryName: String): String? =
+    ZipFile(path.toFile()).use { zip ->
+        val entry = zip.getEntry(entryName) ?: return null
+        zip.getInputStream(entry).bufferedReader().use { it.readText() }
+    }
+
+fun validateAdditivePlanksTag(label: String, root: Map<String, Any?>): List<String> {
+    val problems = mutableListOf<String>()
+    if (jsonBool(root["replace"]) != false) problems += "$label must set replace=false"
+    val values = jsonArray(root["values"]).mapNotNull(::jsonString)
+    if (values.isEmpty()) problems += "$label must list additive plank values"
+    val vanillaValues = values.filter { namespace(it) == "minecraft" }
+    if (vanillaValues.isNotEmpty()) problems += "$label must not restate vanilla plank values: ${vanillaValues.joinToString(", ")}"
+    if ("natures_spirit:mahogany_planks" !in values) problems += "$label must keep natures_spirit:mahogany_planks"
+    return problems
+}
+
 fun testPlankRegressionStaticAndExports() {
     val broadHexereiRewrites = mutableListOf<String>()
     for (file in walk(repo.resolve("kubejs/server_scripts")) { it.toString().endsWith(".js") }) {
@@ -1183,29 +1200,58 @@ fun testPlankRegressionStaticAndExports() {
     if (broadHexereiRewrites.isEmpty()) ok("Hexerei mahogany plank rewrites are scoped")
     else fail("Hexerei mahogany plank rewrites are scoped", broadHexereiRewrites.joinToString("\n"))
 
-    val ownedPlanksTags = listOf(
-        repo.resolve("kubejs/data/minecraft/tags/items/planks.json"),
-        repo.resolve("kubejs/data/minecraft/tags/blocks/planks.json"),
-    ).filter(::exists)
-    if (ownedPlanksTags.isEmpty()) ok("repo does not own minecraft:planks tags")
-    else fail("repo does not own minecraft:planks tags", ownedPlanksTags.joinToString("\n") { rel(it) })
+    val sourcePlanksTags = mapOf(
+        "items" to repo.resolve("kubejs/data/minecraft/tags/items/planks.json"),
+        "blocks" to repo.resolve("kubejs/data/minecraft/tags/blocks/planks.json"),
+    ).filterValues(::exists)
+    val sourcePlanksProblems = mutableListOf<String>()
+    val sourceValues = mutableMapOf<String, List<String>>()
+    for ((kind, path) in sourcePlanksTags) {
+        val root = jsonObject(readJson(path))
+        sourcePlanksProblems += validateAdditivePlanksTag(rel(path), root)
+        sourceValues[kind] = jsonArray(root["values"]).mapNotNull(::jsonString).sorted()
+    }
+    val itemValues = sourceValues["items"]
+    val blockValues = sourceValues["blocks"]
+    if (itemValues != null && blockValues != null && itemValues != blockValues) {
+        sourcePlanksProblems += "item and block minecraft:planks additive values must match"
+    }
+    if (sourcePlanksProblems.isEmpty()) {
+        ok("repo minecraft:planks tag additions are additive", "${sourcePlanksTags.size} tag file(s)")
+    } else {
+        fail("repo minecraft:planks tag additions are additive", sourcePlanksProblems.joinToString("\n"))
+    }
 
     val exports = listOf(
         repo.resolve("generated/exports/better-content-playtest-4-v1-curseforge.zip"),
         repo.resolve("generated/exports/better-content-playtest-4-v1-server.zip"),
     ).filter(::exists)
     if (exports.isEmpty()) {
-        skip("export bundles omit owned minecraft:planks tags", "generated exports not present")
+        skip("export bundles keep minecraft:planks tag additions additive", "generated exports not present")
     } else {
-        val badEntries = mutableListOf<String>()
         val pattern = Regex("""(^|/)kubejs/data/minecraft/tags/(items|blocks)/planks\.json$|(^|/)data/minecraft/tags/(items|blocks)/planks\.json$""")
+        val exportProblems = mutableListOf<String>()
         for (archive in exports) {
-            for (entry in zipEntryNames(archive)) {
-                if (pattern.containsMatchIn(entry)) badEntries += "${rel(archive)}:$entry"
+            val matchingEntries = zipEntryNames(archive).filter { pattern.containsMatchIn(it) }
+            if (sourcePlanksTags.isNotEmpty() && matchingEntries.isEmpty()) {
+                exportProblems += "${rel(archive)} is missing restored minecraft:planks tag additions"
+            }
+            val archiveKinds = matchingEntries.mapNotNull {
+                when {
+                    it.endsWith("/items/planks.json") || it == "kubejs/data/minecraft/tags/items/planks.json" || it == "data/minecraft/tags/items/planks.json" -> "items"
+                    it.endsWith("/blocks/planks.json") || it == "kubejs/data/minecraft/tags/blocks/planks.json" || it == "data/minecraft/tags/blocks/planks.json" -> "blocks"
+                    else -> null
+                }
+            }.toSet()
+            if (sourcePlanksTags.containsKey("items") && "items" !in archiveKinds) exportProblems += "${rel(archive)} is missing item planks additions"
+            if (sourcePlanksTags.containsKey("blocks") && "blocks" !in archiveKinds) exportProblems += "${rel(archive)} is missing block planks additions"
+            for (entry in matchingEntries) {
+                val root = jsonObject(parseJson(zipEntryText(archive, entry) ?: "{}"))
+                exportProblems += validateAdditivePlanksTag("${rel(archive)}:$entry", root)
             }
         }
-        if (badEntries.isEmpty()) ok("export bundles omit owned minecraft:planks tags", "${exports.size} archives checked")
-        else fail("export bundles omit owned minecraft:planks tags", badEntries.joinToString("\n"))
+        if (exportProblems.isEmpty()) ok("export bundles keep minecraft:planks tag additions additive", "${exports.size} archives checked")
+        else fail("export bundles keep minecraft:planks tag additions additive", exportProblems.joinToString("\n"))
     }
 }
 

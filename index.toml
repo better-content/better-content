@@ -10822,7 +10822,7 @@ hash = "9dda9e7a39b5f5d73d454ca788c37640b1f8122ecc0538e80fec13fc1dab43cd"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/146_hexerei_mahogany_to_natures_spirit.js"
-hash = "75c34cda07a496087efc62f13bdd49693b05b0f02d2fce0c3c9af3c7d4d3d2a1"
+hash = "bba628c7c1f8512e2c9d546d59d454ede1009718a010dca54ce14d69da911d6d"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/150_integrated_deferred_mod_gates.js"
@@ -11030,7 +11030,7 @@ hash = "2d8a78ea31797897891856bf25f84e717c01ed2d8cccfc2e57bb047a127786b4"
 
 [[files]]
 file = "kubejs/server_scripts/90_dev_debug/30_runtime_graph_dumps.js"
-hash = "778b3738b5fdf6762a5217640f7c37598a472863a01354ba95ed8ac7e6348ce4"
+hash = "9f3196c96cd11de54d7ce633e3f84d685a302d9672284e616e7521b9a0b7f2b5"
 
 [[files]]
 file = "kubejs/server_scripts/90_dev_debug/40_block_hardness_probe.js"

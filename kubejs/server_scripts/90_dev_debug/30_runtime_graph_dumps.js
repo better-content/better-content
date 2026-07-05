@@ -9,6 +9,7 @@ var BTM_RUNTIME_DUMP_DIR = 'generated/runtime-dumps/'
 var BTM_RUNTIME_FALLBACK_PREFIX = 'kubejs/config/runtime_graph_'
 
 var BtmRuntimeBuiltInRegistries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries')
+var BtmRuntimeRegistries = Java.loadClass('net.minecraft.core.registries.Registries')
 var BtmRuntimeModList = null
 try {
     BtmRuntimeModList = Java.loadClass('net.minecraftforge.fml.ModList')
@@ -133,6 +134,51 @@ function btmRuntimeCollectRegistryTags(registry) {
     }
     for (var tagId in tagMap) btmRuntimeSortStrings(tagMap[tagId])
     return tagMap
+}
+
+function btmRuntimeRegistryAccess(event) {
+    try {
+        if (event.server && event.server.registryAccess) return event.server.registryAccess()
+    } catch (e) {
+        // Fall back to built-in registry holders below.
+    }
+    return null
+}
+
+function btmRuntimeCollectAccessTags(access, registryKey, fallbackRegistry) {
+    if (!access) return btmRuntimeCollectRegistryTags(fallbackRegistry)
+    try {
+        var registry = access.registryOrThrow(registryKey)
+        var tagMap = {}
+        var tags = registry.getTagNames().iterator()
+        while (tags.hasNext()) {
+            var tagKey = tags.next()
+            var tagId = String(tagKey.location())
+            tagMap[tagId] = []
+            var optional = registry.getTag(tagKey)
+            if (!optional || !optional.isPresent()) continue
+            var holders = optional.get().stream().toArray()
+            for (var i = 0; i < holders.length; i++) {
+                var id = registry.getKey(holders[i].value())
+                if (id) tagMap[tagId].push(String(id))
+            }
+            btmRuntimeSortStrings(tagMap[tagId])
+        }
+        return tagMap
+    } catch (e) {
+        console.warn('[BTM-RUNTIME-GRAPH] server registry tag scan failed; falling back to built-in holders (' + e + ')')
+        return btmRuntimeCollectRegistryTags(fallbackRegistry)
+    }
+}
+
+function btmRuntimeTagsPayload(access) {
+    return {
+        schema: 'obelisks.tags.v1',
+        item_tags: btmRuntimeCollectAccessTags(access, BtmRuntimeRegistries.ITEM, BtmRuntimeBuiltInRegistries.ITEM),
+        block_tags: btmRuntimeCollectAccessTags(access, BtmRuntimeRegistries.BLOCK, BtmRuntimeBuiltInRegistries.BLOCK),
+        fluid_tags: btmRuntimeCollectAccessTags(access, BtmRuntimeRegistries.FLUID, BtmRuntimeBuiltInRegistries.FLUID),
+        entity_tags: btmRuntimeCollectAccessTags(access, BtmRuntimeRegistries.ENTITY_TYPE, BtmRuntimeBuiltInRegistries.ENTITY_TYPE)
+    }
 }
 
 function btmRuntimeModDump() {
@@ -307,10 +353,10 @@ ServerEvents.recipes(function (event) {
 
     btmRuntimeWriteFile(cfg.outputDir, 'tags.json', {
         schema: 'obelisks.tags.v1',
-        item_tags: btmRuntimeCollectRegistryTags(BtmRuntimeBuiltInRegistries.ITEM),
-        block_tags: btmRuntimeCollectRegistryTags(BtmRuntimeBuiltInRegistries.BLOCK),
-        fluid_tags: btmRuntimeCollectRegistryTags(BtmRuntimeBuiltInRegistries.FLUID),
-        entity_tags: btmRuntimeCollectRegistryTags(BtmRuntimeBuiltInRegistries.ENTITY_TYPE)
+        item_tags: {},
+        block_tags: {},
+        fluid_tags: {},
+        entity_tags: {}
     })
 
     btmRuntimeWriteFile(cfg.outputDir, 'mods.json', {
@@ -319,4 +365,18 @@ ServerEvents.recipes(function (event) {
     })
 
     console.info('[BTM-RUNTIME-GRAPH] wrote ' + recipes.length + ' recipes to ' + recipesPath)
+})
+
+ServerEvents.loaded(function (event) {
+    var cfg = btmRuntimeDumpConfig()
+    if (!cfg.enabled) return
+    cfg.outputDir = btmRuntimeNormalizeOutputDir(cfg.outputDir)
+    var access = null
+    try {
+        access = event.server.registryAccess()
+    } catch (e) {
+        access = null
+    }
+    btmRuntimeWriteFile(cfg.outputDir, 'tags.json', btmRuntimeTagsPayload(access))
+    console.info('[BTM-RUNTIME-GRAPH] wrote runtime tags to ' + cfg.outputDir + 'tags.json')
 })

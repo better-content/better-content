@@ -1,19 +1,13 @@
 {
 	"schema": "btm.recipe_audit.v2",
 	"generatedBy": "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
-	"generatedAt": "2026-07-04T05:13:03.691Z",
+	"generatedAt": "2026-07-05T01:02:13.468Z",
 	"recipeEventStage": "pre_mutation_recipe_event",
 	"chunk": 19,
 	"start": 19000,
 	"endExclusive": 20000,
 	"count": 1000,
 	"recipes": [
-		{
-			"id": "aether:ambrosium_enchant_aether_grass_to_enchanted_aether_grass",
-			"type": "aether:ambrosium_enchanting",
-			"namespace": "aether",
-			"json": "{\"type\":\"aether:ambrosium_enchanting\",\"ingredient\":{\"block\":\"aether:aether_grass_block\"},\"result\":{\"block\":\"aether:enchanted_aether_grass_block\"}}"
-		},
 		{
 			"id": "goety:haunted/haunted_hanging_sign",
 			"type": "minecraft:crafting_shaped",
@@ -5118,7 +5112,7 @@
 			"id": "realisticores:compat/create/crushing/deepslate_lead_zinc_vein",
 			"type": "create:crushing",
 			"namespace": "realisticores",
-			"json": "{\"type\":\"create:crushing\",\"conditions\":[{\"type\":\"forge:mod_loaded\",\"modid\":\"create\"}],\"ingredients\":[{\"tag\":\"forge:ores/zinc\"}],\"processingTime\":250,\"results\":[{\"item\":\"realisticores:crushed_lead_zinc_vein\"}]}"
+			"json": "{\"type\":\"create:crushing\",\"conditions\":[{\"type\":\"forge:mod_loaded\",\"modid\":\"create\"}],\"ingredients\":[{\"tag\":\"forge:ores/lead\"}],\"processingTime\":250,\"results\":[{\"item\":\"realisticores:crushed_lead_zinc_vein\"}]}"
 		},
 		{
 			"id": "everythingcopper:weathering_station",
@@ -6007,6 +6001,12 @@
 			"type": "minecraft:crafting_shaped",
 			"namespace": "quark",
 			"json": "{\"type\":\"minecraft:crafting_shaped\",\"group\":\"direct_chest_boat\",\"pattern\":[\"#X#\",\"###\"],\"key\":{\"#\":{\"item\":\"minecraft:acacia_planks\"},\"X\":{\"tag\":\"forge:chests/wooden\"}},\"result\":{\"item\":\"minecraft:acacia_chest_boat\"},\"conditions\":[{\"type\":\"quark:flag\",\"flag\":\"direct_chest_boat\"}]}"
+		},
+		{
+			"id": "framedblocks:framing_saw/framed_stone_pressure_plate",
+			"type": "framedblocks:frame",
+			"namespace": "framedblocks",
+			"json": "{\"type\":\"framedblocks:frame\",\"additives\":[{\"count\":1,\"ingredient\":{\"tag\":\"forge:stone\"}}],\"material\":1536,\"result\":{\"item\":\"framedblocks:framed_stone_pressure_plate\"}}"
 		}
 	]
 }

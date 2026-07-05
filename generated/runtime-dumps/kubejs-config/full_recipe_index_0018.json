@@ -1,19 +1,13 @@
 {
 	"schema": "btm.recipe_audit.v2",
 	"generatedBy": "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
-	"generatedAt": "2026-07-04T05:13:03.691Z",
+	"generatedAt": "2026-07-05T01:02:13.468Z",
 	"recipeEventStage": "pre_mutation_recipe_event",
 	"chunk": 18,
 	"start": 18000,
 	"endExclusive": 19000,
 	"count": 1000,
 	"recipes": [
-		{
-			"id": "swem:pasture_pink_horse",
-			"type": "minecraft:crafting_shaped",
-			"namespace": "swem",
-			"json": "{\"type\":\"minecraft:crafting_shaped\",\"category\":\"misc\",\"group\":\"pasture_gate_horse\",\"key\":{\"x\":{\"tag\":\"forge:ingots/iron\"},\"y\":{\"tag\":\"minecraft:planks\"},\"z\":{\"tag\":\"forge:dyes/pink\"}},\"pattern\":[\"xyx\",\"zy \"],\"result\":{\"item\":\"swem:pasture_pink_horse\"},\"show_notification\":true}"
-		},
 		{
 			"id": "minecraft:crimson_pressure_plate",
 			"type": "minecraft:crafting_shaped",
@@ -6007,6 +6001,12 @@
 			"type": "minecraft:crafting_shapeless",
 			"namespace": "minecraft",
 			"json": "{\"type\":\"minecraft:crafting_shapeless\",\"category\":\"building\",\"group\":\"concrete_powder\",\"ingredients\":[{\"item\":\"minecraft:green_dye\"},{\"item\":\"minecraft:sand\"},{\"item\":\"minecraft:sand\"},{\"item\":\"minecraft:sand\"},{\"item\":\"minecraft:sand\"},{\"item\":\"minecraft:gravel\"},{\"item\":\"minecraft:gravel\"},{\"item\":\"minecraft:gravel\"},{\"item\":\"minecraft:gravel\"}],\"result\":{\"count\":8,\"item\":\"minecraft:green_concrete_powder\"}}"
+		},
+		{
+			"id": "aether:ambrosium_enchant_aether_grass_to_enchanted_aether_grass",
+			"type": "aether:ambrosium_enchanting",
+			"namespace": "aether",
+			"json": "{\"type\":\"aether:ambrosium_enchanting\",\"ingredient\":{\"block\":\"aether:aether_grass_block\"},\"result\":{\"block\":\"aether:enchanted_aether_grass_block\"}}"
 		}
 	]
 }

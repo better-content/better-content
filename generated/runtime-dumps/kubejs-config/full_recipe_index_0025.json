@@ -1,19 +1,13 @@
 {
 	"schema": "btm.recipe_audit.v2",
 	"generatedBy": "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
-	"generatedAt": "2026-07-04T05:13:03.691Z",
+	"generatedAt": "2026-07-05T01:02:13.468Z",
 	"recipeEventStage": "pre_mutation_recipe_event",
 	"chunk": 25,
 	"start": 25000,
 	"endExclusive": 26000,
 	"count": 1000,
 	"recipes": [
-		{
-			"id": "farmersdelight:diamond_knife",
-			"type": "minecraft:crafting_shaped",
-			"namespace": "farmersdelight",
-			"json": "{\"type\":\"minecraft:crafting_shaped\",\"category\":\"equipment\",\"key\":{\"m\":{\"tag\":\"forge:gems/diamond\"},\"s\":{\"item\":\"minecraft:stick\"}},\"pattern\":[\"m\",\"s\"],\"result\":{\"item\":\"farmersdelight:diamond_knife\"},\"show_notification\":true}"
-		},
 		{
 			"id": "ars_nouveau:conjuration_essence_to_end_stone",
 			"type": "minecraft:crafting_shaped",
@@ -6007,6 +6001,12 @@
 			"type": "create:deploying",
 			"namespace": "create",
 			"json": "{\"type\":\"create:deploying\",\"ingredients\":[{\"item\":\"create:copper_tiles\"},{\"item\":\"minecraft:honeycomb_block\"}],\"keepHeldItem\":true,\"results\":[{\"item\":\"create:waxed_copper_tiles\"}]}"
+		},
+		{
+			"id": "createdeco:copper_window_pane",
+			"type": "minecraft:crafting_shaped",
+			"namespace": "createdeco",
+			"json": "{\"type\":\"minecraft:crafting_shaped\",\"category\":\"building\",\"key\":{\"#\":{\"item\":\"createdeco:copper_window\"}},\"pattern\":[\"###\",\"###\"],\"result\":{\"count\":16,\"item\":\"createdeco:copper_window_pane\"},\"show_notification\":true}"
 		}
 	]
 }

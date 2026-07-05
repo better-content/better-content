@@ -1,19 +1,13 @@
 {
 	"schema": "btm.recipe_audit.v2",
 	"generatedBy": "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
-	"generatedAt": "2026-07-04T05:13:03.691Z",
+	"generatedAt": "2026-07-05T01:02:13.468Z",
 	"recipeEventStage": "pre_mutation_recipe_event",
 	"chunk": 23,
 	"start": 23000,
 	"endExclusive": 24000,
 	"count": 1000,
 	"recipes": [
-		{
-			"id": "blue_skies:cinderstone_wall_stonecutting_cinderstone",
-			"type": "minecraft:stonecutting",
-			"namespace": "blue_skies",
-			"json": "{\"type\":\"minecraft:stonecutting\",\"count\":1,\"ingredient\":{\"item\":\"blue_skies:cinderstone\"},\"result\":\"blue_skies:cinderstone_wall\"}"
-		},
 		{
 			"id": "minecraft:enchanting_table",
 			"type": "minecraft:crafting_shaped",
@@ -6007,6 +6001,12 @@
 			"type": "tconstruct:severing",
 			"namespace": "tconstruct",
 			"json": "{\"type\":\"tconstruct:severing\",\"entity\":{\"type\":\"minecraft:shulker\"},\"result\":\"minecraft:shulker_shell\"}"
+		},
+		{
+			"id": "create:cutting/runtime_generated/compat/natures_spirit/coconut_wood_to_stripped_coconut_wood",
+			"type": "create:cutting",
+			"namespace": "create",
+			"json": "{\"type\":\"create:cutting\",\"ingredients\":[{\"item\":\"natures_spirit:coconut_wood\"}],\"results\":[{\"item\":\"natures_spirit:stripped_coconut_wood\"}],\"processingTime\":50}"
 		}
 	]
 }

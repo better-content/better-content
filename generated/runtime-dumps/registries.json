@@ -45772,174 +45772,6 @@
 		"createdeco:black_placard": {
 			"namespace": "createdeco"
 		},
-		"createdeco:dusk_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_dusk_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_dusk_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_dusk_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_dusk_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_dusk_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_dusk_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:dusk_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_dusk_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_dusk_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_dusk_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_dusk_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_dusk_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_dusk_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:dusk_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_dusk_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_dusk_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_dusk_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_dusk_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_dusk_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_dusk_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:dusk_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_dusk_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_dusk_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_dusk_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_dusk_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_dusk_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_dusk_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:umber_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_umber_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_umber_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_umber_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_umber_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_umber_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_umber_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:umber_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_umber_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_umber_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_umber_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_umber_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_umber_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_umber_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:umber_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_umber_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_umber_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_umber_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_umber_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_umber_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_umber_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:umber_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_umber_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_umber_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_umber_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_umber_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_umber_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_umber_brick_wall": {
-			"namespace": "createdeco"
-		},
 		"createdeco:short_red_bricks": {
 			"namespace": "createdeco"
 		},
@@ -46096,172 +45928,88 @@
 		"createdeco:mossy_verdant_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:pearl_bricks": {
+		"createdeco:dean_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:short_pearl_bricks": {
+		"createdeco:short_dean_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:tiled_pearl_bricks": {
+		"createdeco:tiled_dean_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:long_pearl_bricks": {
+		"createdeco:long_dean_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:corner_pearl_bricks": {
+		"createdeco:corner_dean_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:cracked_pearl_bricks": {
+		"createdeco:cracked_dean_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:mossy_pearl_bricks": {
+		"createdeco:mossy_dean_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:pearl_brick_stairs": {
+		"createdeco:dean_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:short_pearl_brick_stairs": {
+		"createdeco:short_dean_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:tiled_pearl_brick_stairs": {
+		"createdeco:tiled_dean_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:long_pearl_brick_stairs": {
+		"createdeco:long_dean_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:corner_pearl_brick_stairs": {
+		"createdeco:corner_dean_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:cracked_pearl_brick_stairs": {
+		"createdeco:cracked_dean_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:mossy_pearl_brick_stairs": {
+		"createdeco:mossy_dean_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:pearl_brick_slab": {
+		"createdeco:dean_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:short_pearl_brick_slab": {
+		"createdeco:short_dean_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:tiled_pearl_brick_slab": {
+		"createdeco:tiled_dean_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:long_pearl_brick_slab": {
+		"createdeco:long_dean_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:corner_pearl_brick_slab": {
+		"createdeco:corner_dean_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:cracked_pearl_brick_slab": {
+		"createdeco:cracked_dean_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:mossy_pearl_brick_slab": {
+		"createdeco:mossy_dean_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:pearl_brick_wall": {
+		"createdeco:dean_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:short_pearl_brick_wall": {
+		"createdeco:short_dean_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:tiled_pearl_brick_wall": {
+		"createdeco:tiled_dean_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:long_pearl_brick_wall": {
+		"createdeco:long_dean_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:corner_pearl_brick_wall": {
+		"createdeco:corner_dean_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:cracked_pearl_brick_wall": {
+		"createdeco:cracked_dean_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:mossy_pearl_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:blue_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_blue_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_blue_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_blue_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_blue_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_blue_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_blue_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:blue_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_blue_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_blue_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_blue_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_blue_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_blue_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_blue_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:blue_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_blue_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_blue_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_blue_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_blue_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_blue_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_blue_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:blue_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_blue_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_blue_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_blue_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_blue_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_blue_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_blue_brick_wall": {
+		"createdeco:mossy_dean_brick_wall": {
 			"namespace": "createdeco"
 		},
 		"createdeco:scarlet_bricks": {
@@ -46348,88 +46096,340 @@
 		"createdeco:mossy_scarlet_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:dean_bricks": {
+		"createdeco:blue_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:short_dean_bricks": {
+		"createdeco:short_blue_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:tiled_dean_bricks": {
+		"createdeco:tiled_blue_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:long_dean_bricks": {
+		"createdeco:long_blue_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:corner_dean_bricks": {
+		"createdeco:corner_blue_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:cracked_dean_bricks": {
+		"createdeco:cracked_blue_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:mossy_dean_bricks": {
+		"createdeco:mossy_blue_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:dean_brick_stairs": {
+		"createdeco:blue_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:short_dean_brick_stairs": {
+		"createdeco:short_blue_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:tiled_dean_brick_stairs": {
+		"createdeco:tiled_blue_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:long_dean_brick_stairs": {
+		"createdeco:long_blue_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:corner_dean_brick_stairs": {
+		"createdeco:corner_blue_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:cracked_dean_brick_stairs": {
+		"createdeco:cracked_blue_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:mossy_dean_brick_stairs": {
+		"createdeco:mossy_blue_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:dean_brick_slab": {
+		"createdeco:blue_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:short_dean_brick_slab": {
+		"createdeco:short_blue_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:tiled_dean_brick_slab": {
+		"createdeco:tiled_blue_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:long_dean_brick_slab": {
+		"createdeco:long_blue_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:corner_dean_brick_slab": {
+		"createdeco:corner_blue_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:cracked_dean_brick_slab": {
+		"createdeco:cracked_blue_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:mossy_dean_brick_slab": {
+		"createdeco:mossy_blue_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:dean_brick_wall": {
+		"createdeco:blue_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:short_dean_brick_wall": {
+		"createdeco:short_blue_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:tiled_dean_brick_wall": {
+		"createdeco:tiled_blue_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:long_dean_brick_wall": {
+		"createdeco:long_blue_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:corner_dean_brick_wall": {
+		"createdeco:corner_blue_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:cracked_dean_brick_wall": {
+		"createdeco:cracked_blue_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:mossy_dean_brick_wall": {
+		"createdeco:mossy_blue_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:dusk_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_dusk_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_dusk_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_dusk_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_dusk_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_dusk_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_dusk_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:dusk_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_dusk_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_dusk_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_dusk_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_dusk_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_dusk_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_dusk_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:dusk_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_dusk_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_dusk_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_dusk_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_dusk_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_dusk_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_dusk_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:dusk_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_dusk_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_dusk_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_dusk_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_dusk_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_dusk_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_dusk_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:pearl_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_pearl_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_pearl_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_pearl_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_pearl_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_pearl_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_pearl_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:pearl_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_pearl_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_pearl_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_pearl_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_pearl_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_pearl_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_pearl_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:pearl_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_pearl_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_pearl_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_pearl_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_pearl_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_pearl_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_pearl_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:pearl_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_pearl_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_pearl_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_pearl_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_pearl_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_pearl_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_pearl_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:umber_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_umber_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_umber_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_umber_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_umber_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_umber_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_umber_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:umber_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_umber_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_umber_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_umber_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_umber_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_umber_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_umber_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:umber_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_umber_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_umber_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_umber_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_umber_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_umber_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_umber_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:umber_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_umber_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_umber_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_umber_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_umber_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_umber_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_umber_brick_wall": {
 			"namespace": "createdeco"
 		},
 		"framedblocks:framed_cube": {
@@ -92529,174 +92529,6 @@
 		"createdeco:zinc_coinstack": {
 			"namespace": "createdeco"
 		},
-		"createdeco:dusk_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_dusk_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_dusk_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_dusk_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_dusk_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_dusk_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_dusk_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:dusk_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_dusk_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_dusk_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_dusk_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_dusk_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_dusk_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_dusk_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:dusk_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_dusk_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_dusk_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_dusk_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_dusk_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_dusk_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_dusk_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:dusk_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_dusk_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_dusk_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_dusk_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_dusk_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_dusk_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_dusk_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:umber_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_umber_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_umber_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_umber_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_umber_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_umber_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_umber_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:umber_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_umber_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_umber_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_umber_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_umber_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_umber_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_umber_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:umber_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_umber_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_umber_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_umber_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_umber_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_umber_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_umber_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:umber_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_umber_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_umber_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_umber_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_umber_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_umber_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_umber_brick_wall": {
-			"namespace": "createdeco"
-		},
 		"createdeco:short_red_bricks": {
 			"namespace": "createdeco"
 		},
@@ -92853,172 +92685,88 @@
 		"createdeco:mossy_verdant_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:pearl_bricks": {
+		"createdeco:dean_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:short_pearl_bricks": {
+		"createdeco:short_dean_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:tiled_pearl_bricks": {
+		"createdeco:tiled_dean_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:long_pearl_bricks": {
+		"createdeco:long_dean_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:corner_pearl_bricks": {
+		"createdeco:corner_dean_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:cracked_pearl_bricks": {
+		"createdeco:cracked_dean_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:mossy_pearl_bricks": {
+		"createdeco:mossy_dean_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:pearl_brick_stairs": {
+		"createdeco:dean_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:short_pearl_brick_stairs": {
+		"createdeco:short_dean_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:tiled_pearl_brick_stairs": {
+		"createdeco:tiled_dean_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:long_pearl_brick_stairs": {
+		"createdeco:long_dean_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:corner_pearl_brick_stairs": {
+		"createdeco:corner_dean_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:cracked_pearl_brick_stairs": {
+		"createdeco:cracked_dean_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:mossy_pearl_brick_stairs": {
+		"createdeco:mossy_dean_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:pearl_brick_slab": {
+		"createdeco:dean_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:short_pearl_brick_slab": {
+		"createdeco:short_dean_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:tiled_pearl_brick_slab": {
+		"createdeco:tiled_dean_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:long_pearl_brick_slab": {
+		"createdeco:long_dean_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:corner_pearl_brick_slab": {
+		"createdeco:corner_dean_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:cracked_pearl_brick_slab": {
+		"createdeco:cracked_dean_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:mossy_pearl_brick_slab": {
+		"createdeco:mossy_dean_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:pearl_brick_wall": {
+		"createdeco:dean_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:short_pearl_brick_wall": {
+		"createdeco:short_dean_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:tiled_pearl_brick_wall": {
+		"createdeco:tiled_dean_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:long_pearl_brick_wall": {
+		"createdeco:long_dean_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:corner_pearl_brick_wall": {
+		"createdeco:corner_dean_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:cracked_pearl_brick_wall": {
+		"createdeco:cracked_dean_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:mossy_pearl_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:blue_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_blue_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_blue_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_blue_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_blue_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_blue_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_blue_bricks": {
-			"namespace": "createdeco"
-		},
-		"createdeco:blue_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_blue_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_blue_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_blue_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_blue_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_blue_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_blue_brick_stairs": {
-			"namespace": "createdeco"
-		},
-		"createdeco:blue_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_blue_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_blue_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_blue_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_blue_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_blue_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_blue_brick_slab": {
-			"namespace": "createdeco"
-		},
-		"createdeco:blue_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:short_blue_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:tiled_blue_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:long_blue_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:corner_blue_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:cracked_blue_brick_wall": {
-			"namespace": "createdeco"
-		},
-		"createdeco:mossy_blue_brick_wall": {
+		"createdeco:mossy_dean_brick_wall": {
 			"namespace": "createdeco"
 		},
 		"createdeco:scarlet_bricks": {
@@ -93105,88 +92853,340 @@
 		"createdeco:mossy_scarlet_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:dean_bricks": {
+		"createdeco:blue_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:short_dean_bricks": {
+		"createdeco:short_blue_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:tiled_dean_bricks": {
+		"createdeco:tiled_blue_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:long_dean_bricks": {
+		"createdeco:long_blue_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:corner_dean_bricks": {
+		"createdeco:corner_blue_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:cracked_dean_bricks": {
+		"createdeco:cracked_blue_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:mossy_dean_bricks": {
+		"createdeco:mossy_blue_bricks": {
 			"namespace": "createdeco"
 		},
-		"createdeco:dean_brick_stairs": {
+		"createdeco:blue_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:short_dean_brick_stairs": {
+		"createdeco:short_blue_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:tiled_dean_brick_stairs": {
+		"createdeco:tiled_blue_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:long_dean_brick_stairs": {
+		"createdeco:long_blue_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:corner_dean_brick_stairs": {
+		"createdeco:corner_blue_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:cracked_dean_brick_stairs": {
+		"createdeco:cracked_blue_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:mossy_dean_brick_stairs": {
+		"createdeco:mossy_blue_brick_stairs": {
 			"namespace": "createdeco"
 		},
-		"createdeco:dean_brick_slab": {
+		"createdeco:blue_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:short_dean_brick_slab": {
+		"createdeco:short_blue_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:tiled_dean_brick_slab": {
+		"createdeco:tiled_blue_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:long_dean_brick_slab": {
+		"createdeco:long_blue_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:corner_dean_brick_slab": {
+		"createdeco:corner_blue_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:cracked_dean_brick_slab": {
+		"createdeco:cracked_blue_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:mossy_dean_brick_slab": {
+		"createdeco:mossy_blue_brick_slab": {
 			"namespace": "createdeco"
 		},
-		"createdeco:dean_brick_wall": {
+		"createdeco:blue_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:short_dean_brick_wall": {
+		"createdeco:short_blue_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:tiled_dean_brick_wall": {
+		"createdeco:tiled_blue_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:long_dean_brick_wall": {
+		"createdeco:long_blue_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:corner_dean_brick_wall": {
+		"createdeco:corner_blue_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:cracked_dean_brick_wall": {
+		"createdeco:cracked_blue_brick_wall": {
 			"namespace": "createdeco"
 		},
-		"createdeco:mossy_dean_brick_wall": {
+		"createdeco:mossy_blue_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:dusk_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_dusk_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_dusk_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_dusk_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_dusk_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_dusk_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_dusk_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:dusk_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_dusk_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_dusk_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_dusk_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_dusk_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_dusk_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_dusk_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:dusk_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_dusk_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_dusk_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_dusk_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_dusk_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_dusk_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_dusk_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:dusk_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_dusk_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_dusk_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_dusk_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_dusk_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_dusk_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_dusk_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:pearl_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_pearl_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_pearl_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_pearl_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_pearl_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_pearl_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_pearl_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:pearl_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_pearl_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_pearl_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_pearl_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_pearl_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_pearl_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_pearl_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:pearl_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_pearl_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_pearl_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_pearl_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_pearl_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_pearl_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_pearl_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:pearl_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_pearl_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_pearl_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_pearl_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_pearl_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_pearl_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_pearl_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:umber_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_umber_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_umber_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_umber_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_umber_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_umber_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_umber_bricks": {
+			"namespace": "createdeco"
+		},
+		"createdeco:umber_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_umber_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_umber_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_umber_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_umber_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_umber_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_umber_brick_stairs": {
+			"namespace": "createdeco"
+		},
+		"createdeco:umber_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_umber_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_umber_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_umber_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_umber_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_umber_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_umber_brick_slab": {
+			"namespace": "createdeco"
+		},
+		"createdeco:umber_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:short_umber_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:tiled_umber_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:long_umber_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:corner_umber_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:cracked_umber_brick_wall": {
+			"namespace": "createdeco"
+		},
+		"createdeco:mossy_umber_brick_wall": {
 			"namespace": "createdeco"
 		},
 		"framedblocks:framed_cube": {

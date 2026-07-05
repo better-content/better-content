@@ -1,19 +1,13 @@
 {
 	"schema": "btm.recipe_audit.v2",
 	"generatedBy": "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
-	"generatedAt": "2026-07-04T05:13:03.691Z",
+	"generatedAt": "2026-07-05T01:02:13.468Z",
 	"recipeEventStage": "pre_mutation_recipe_event",
 	"chunk": 21,
 	"start": 21000,
 	"endExclusive": 22000,
 	"count": 1000,
 	"recipes": [
-		{
-			"id": "createdeco:corner_umber_brick_slab_from_corner_umber_bricks_stonecutting",
-			"type": "minecraft:stonecutting",
-			"namespace": "createdeco",
-			"json": "{\"type\":\"minecraft:stonecutting\",\"count\":2,\"ingredient\":{\"item\":\"createdeco:corner_umber_bricks\"},\"result\":\"createdeco:corner_umber_brick_slab\"}"
-		},
 		{
 			"id": "ubesdelight:minecraft/crafting/baking_mat_bamboo",
 			"type": "minecraft:crafting_shaped",
@@ -6007,6 +6001,12 @@
 			"type": "minecraft:crafting_shaped",
 			"namespace": "fallout_wastelands_",
 			"json": "{\"type\":\"minecraft:crafting_shaped\",\"category\":\"misc\",\"pattern\":[\"aaa\"],\"key\":{\"a\":{\"item\":\"fallout_wastelands_:blue_industrial_walkway\"}},\"result\":{\"item\":\"fallout_wastelands_:blue_industrial_alloy_walkway_slab\",\"count\":6}}"
+		},
+		{
+			"id": "supplementaries:malum/sign_post_runewood",
+			"type": "minecraft:crafting_shapeless",
+			"namespace": "supplementaries",
+			"json": "{\"type\":\"minecraft:crafting_shapeless\",\"category\":\"misc\",\"ingredients\":[{\"block_type\":\"wood_type\",\"from\":\"minecraft:oak\",\"to\":\"malum:runewood\",\"ingredient\":{\"item\":\"minecraft:oak_sign\"},\"type\":\"moonlight:block_type_swap\"}],\"result\":{\"item\":\"supplementaries:malum/sign_post_runewood\",\"count\":2}}"
 		}
 	]
 }

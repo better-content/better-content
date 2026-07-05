@@ -1,19 +1,13 @@
 {
 	"schema": "btm.recipe_audit.v2",
 	"generatedBy": "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
-	"generatedAt": "2026-07-04T05:13:03.691Z",
+	"generatedAt": "2026-07-05T01:02:13.468Z",
 	"recipeEventStage": "pre_mutation_recipe_event",
 	"chunk": 11,
 	"start": 11000,
 	"endExclusive": 12000,
 	"count": 1000,
 	"recipes": [
-		{
-			"id": "cold_sweat:waterskin",
-			"type": "minecraft:crafting_shaped",
-			"namespace": "cold_sweat",
-			"json": "{\"type\":\"minecraft:crafting_shaped\",\"pattern\":[\"  S\",\" L \",\"L  \"],\"key\":{\"S\":{\"item\":\"minecraft:string\"},\"L\":{\"tag\":\"forge:leather\"}},\"result\":{\"item\":\"cold_sweat:waterskin\",\"count\":2}}"
-		},
 		{
 			"id": "chemlib:thorium_ingot_from_blasting_thorium_dust",
 			"type": "minecraft:blasting",
@@ -6007,6 +6001,12 @@
 			"type": "minecraft:crafting_shaped",
 			"namespace": "quark",
 			"json": "{\"type\":\"minecraft:crafting_shaped\",\"pattern\":[\"#\",\"#\",\"#\"],\"key\":{\"#\":{\"item\":\"quark:dripstone_bricks_slab\"}},\"result\":{\"item\":\"quark:dripstone_bricks_vertical_slab\",\"count\":3},\"conditions\":[{\"type\":\"quark:flag\",\"flag\":\"vertical_slabs\"}]}"
+		},
+		{
+			"id": "unearthed:grey_limestone_brick_wall",
+			"type": "minecraft:crafting_shaped",
+			"namespace": "unearthed",
+			"json": "{\"type\":\"minecraft:crafting_shaped\",\"pattern\":[\"###\",\"###\"],\"key\":{\"#\":{\"item\":\"unearthed:grey_limestone_bricks\"}},\"result\":{\"item\":\"unearthed:grey_limestone_brick_wall\",\"count\":6}}"
 		}
 	]
 }

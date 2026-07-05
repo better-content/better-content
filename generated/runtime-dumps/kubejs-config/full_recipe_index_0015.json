@@ -1,19 +1,13 @@
 {
 	"schema": "btm.recipe_audit.v2",
 	"generatedBy": "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
-	"generatedAt": "2026-07-04T05:13:03.691Z",
+	"generatedAt": "2026-07-05T01:02:13.468Z",
 	"recipeEventStage": "pre_mutation_recipe_event",
 	"chunk": 15,
 	"start": 15000,
 	"endExclusive": 16000,
 	"count": 1000,
 	"recipes": [
-		{
-			"id": "twilightforest:stonecutting/mazestone/cut_mazestone",
-			"type": "minecraft:stonecutting",
-			"namespace": "twilightforest",
-			"json": "{\"type\":\"minecraft:stonecutting\",\"count\":1,\"ingredient\":{\"item\":\"twilightforest:mazestone\"},\"result\":\"twilightforest:cut_mazestone\"}"
-		},
 		{
 			"id": "natures_spirit:coconut_pressure_plate",
 			"type": "minecraft:crafting_shaped",
@@ -6007,6 +6001,12 @@
 			"type": "minecraft:crafting_shaped",
 			"namespace": "minecraft",
 			"json": "{\"type\":\"minecraft:crafting_shaped\",\"category\":\"misc\",\"key\":{\"#\":{\"tag\":\"minecraft:planks\"},\"@\":{\"item\":\"minecraft:flint\"}},\"pattern\":[\"@@\",\"##\",\"##\"],\"result\":{\"item\":\"minecraft:fletching_table\"},\"show_notification\":true}"
+		},
+		{
+			"id": "minecraft:dye_lime_bed",
+			"type": "minecraft:crafting_shapeless",
+			"namespace": "minecraft",
+			"json": "{\"type\":\"minecraft:crafting_shapeless\",\"category\":\"building\",\"group\":\"bed\",\"ingredients\":[{\"item\":\"minecraft:lime_dye\"},[{\"item\":\"minecraft:black_bed\"},{\"item\":\"minecraft:blue_bed\"},{\"item\":\"minecraft:brown_bed\"},{\"item\":\"minecraft:cyan_bed\"},{\"item\":\"minecraft:gray_bed\"},{\"item\":\"minecraft:green_bed\"},{\"item\":\"minecraft:light_blue_bed\"},{\"item\":\"minecraft:light_gray_bed\"},{\"item\":\"minecraft:magenta_bed\"},{\"item\":\"minecraft:orange_bed\"},{\"item\":\"minecraft:pink_bed\"},{\"item\":\"minecraft:purple_bed\"},{\"item\":\"minecraft:red_bed\"},{\"item\":\"minecraft:yellow_bed\"},{\"item\":\"minecraft:white_bed\"}]],\"result\":{\"item\":\"minecraft:lime_bed\"}}"
 		}
 	]
 }

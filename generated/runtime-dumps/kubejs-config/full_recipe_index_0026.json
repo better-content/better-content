@@ -1,19 +1,13 @@
 {
 	"schema": "btm.recipe_audit.v2",
 	"generatedBy": "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
-	"generatedAt": "2026-07-04T05:13:03.691Z",
+	"generatedAt": "2026-07-05T01:02:13.468Z",
 	"recipeEventStage": "pre_mutation_recipe_event",
 	"chunk": 26,
 	"start": 26000,
-	"endExclusive": 26285,
-	"count": 285,
+	"endExclusive": 26284,
+	"count": 284,
 	"recipes": [
-		{
-			"id": "createdeco:copper_window_pane",
-			"type": "minecraft:crafting_shaped",
-			"namespace": "createdeco",
-			"json": "{\"type\":\"minecraft:crafting_shaped\",\"category\":\"building\",\"key\":{\"#\":{\"item\":\"createdeco:copper_window\"}},\"pattern\":[\"###\",\"###\"],\"result\":{\"count\":16,\"item\":\"createdeco:copper_window_pane\"},\"show_notification\":true}"
-		},
 		{
 			"id": "tconstruct:world/wood/skyroot/stripped_log_to_wood",
 			"type": "minecraft:crafting_shaped",

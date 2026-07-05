@@ -1,19 +1,13 @@
 {
 	"schema": "btm.recipe_audit.v2",
 	"generatedBy": "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
-	"generatedAt": "2026-07-04T05:13:03.691Z",
+	"generatedAt": "2026-07-05T01:02:13.468Z",
 	"recipeEventStage": "pre_mutation_recipe_event",
 	"chunk": 13,
 	"start": 13000,
 	"endExclusive": 14000,
 	"count": 1000,
 	"recipes": [
-		{
-			"id": "ars_nouveau:stripped_red_archwood_wood",
-			"type": "minecraft:crafting_shaped",
-			"namespace": "ars_nouveau",
-			"json": "{\"type\":\"minecraft:crafting_shaped\",\"category\":\"building\",\"group\":\"bark\",\"key\":{\"#\":{\"item\":\"ars_nouveau:stripped_red_archwood_log\"}},\"pattern\":[\"##\",\"##\"],\"result\":{\"count\":3,\"item\":\"ars_nouveau:stripped_red_archwood_wood\"},\"show_notification\":true}"
-		},
 		{
 			"id": "createdeco:corner_red_brick_stairs_from_short_red_bricks_stonecutting",
 			"type": "minecraft:stonecutting",
@@ -6007,6 +6001,12 @@
 			"type": "minecraft:crafting_shapeless",
 			"namespace": "unearthed",
 			"json": "{\"type\":\"minecraft:crafting_shapeless\",\"ingredients\":[{\"tag\":\"unearthed:regolith\"},{\"tag\":\"unearthed:regolith\"},{\"tag\":\"unearthed:regolith\"},{\"tag\":\"unearthed:regolith\"},{\"tag\":\"unearthed:regolith\"},{\"tag\":\"unearthed:regolith\"},{\"tag\":\"unearthed:regolith\"},{\"tag\":\"unearthed:regolith\"},{\"item\":\"unearthed:quartzite\"}],\"result\":{\"item\":\"unearthed:quartzite_regolith\",\"count\":8}}"
+		},
+		{
+			"id": "iceandfire:summoning_crystal_ice",
+			"type": "minecraft:crafting_shapeless",
+			"namespace": "iceandfire",
+			"json": "{\"type\":\"minecraft:crafting_shapeless\",\"ingredients\":[{\"item\":\"iceandfire:ice_dragon_blood\"},{\"item\":\"minecraft:ender_pearl\"},{\"tag\":\"forge:gems/diamond\"},{\"tag\":\"forge:gems/sapphire\"}],\"result\":{\"item\":\"iceandfire:summoning_crystal_ice\",\"count\":1}}"
 		}
 	]
 }

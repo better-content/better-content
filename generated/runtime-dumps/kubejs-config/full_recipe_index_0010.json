@@ -1,19 +1,13 @@
 {
 	"schema": "btm.recipe_audit.v2",
 	"generatedBy": "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
-	"generatedAt": "2026-07-04T05:13:03.691Z",
+	"generatedAt": "2026-07-05T01:02:13.468Z",
 	"recipeEventStage": "pre_mutation_recipe_event",
 	"chunk": 10,
 	"start": 10000,
 	"endExclusive": 11000,
 	"count": 1000,
 	"recipes": [
-		{
-			"id": "iceandfire:banners/banner_pattern_eye",
-			"type": "minecraft:crafting_shapeless",
-			"namespace": "iceandfire",
-			"json": "{\"type\":\"minecraft:crafting_shapeless\",\"ingredients\":[{\"item\":\"iceandfire:cyclops_eye\"},{\"item\":\"minecraft:paper\"}],\"result\":{\"item\":\"iceandfire:banner_pattern_eye\",\"count\":1}}"
-		},
 		{
 			"id": "create:crafting/appliances/attribute_filter_clear",
 			"type": "minecraft:crafting_shapeless",
@@ -6007,6 +6001,12 @@
 			"type": "hexerei:woodcutting",
 			"namespace": "hexerei",
 			"json": "{\"type\":\"hexerei:woodcutting\",\"ingredient\":{\"item\":\"minecraft:dark_oak_planks\"},\"ingredient_count\":2,\"result\":\"minecraft:dark_oak_trapdoor\"}"
+		},
+		{
+			"id": "cold_sweat:waterskin",
+			"type": "minecraft:crafting_shaped",
+			"namespace": "cold_sweat",
+			"json": "{\"type\":\"minecraft:crafting_shaped\",\"pattern\":[\"  S\",\" L \",\"L  \"],\"key\":{\"S\":{\"item\":\"minecraft:string\"},\"L\":{\"tag\":\"forge:leather\"}},\"result\":{\"item\":\"cold_sweat:waterskin\",\"count\":2}}"
 		}
 	]
 }

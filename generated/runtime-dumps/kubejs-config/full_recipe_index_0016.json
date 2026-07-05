@@ -1,19 +1,13 @@
 {
 	"schema": "btm.recipe_audit.v2",
 	"generatedBy": "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
-	"generatedAt": "2026-07-04T05:13:03.691Z",
+	"generatedAt": "2026-07-05T01:02:13.468Z",
 	"recipeEventStage": "pre_mutation_recipe_event",
 	"chunk": 16,
 	"start": 16000,
 	"endExclusive": 17000,
 	"count": 1000,
 	"recipes": [
-		{
-			"id": "minecraft:dye_lime_bed",
-			"type": "minecraft:crafting_shapeless",
-			"namespace": "minecraft",
-			"json": "{\"type\":\"minecraft:crafting_shapeless\",\"category\":\"building\",\"group\":\"bed\",\"ingredients\":[{\"item\":\"minecraft:lime_dye\"},[{\"item\":\"minecraft:black_bed\"},{\"item\":\"minecraft:blue_bed\"},{\"item\":\"minecraft:brown_bed\"},{\"item\":\"minecraft:cyan_bed\"},{\"item\":\"minecraft:gray_bed\"},{\"item\":\"minecraft:green_bed\"},{\"item\":\"minecraft:light_blue_bed\"},{\"item\":\"minecraft:light_gray_bed\"},{\"item\":\"minecraft:magenta_bed\"},{\"item\":\"minecraft:orange_bed\"},{\"item\":\"minecraft:pink_bed\"},{\"item\":\"minecraft:purple_bed\"},{\"item\":\"minecraft:red_bed\"},{\"item\":\"minecraft:yellow_bed\"},{\"item\":\"minecraft:white_bed\"}]],\"result\":{\"item\":\"minecraft:lime_bed\"}}"
-		},
 		{
 			"id": "deeperdarker:gloomslate_tile_wall_from_gloomslate_tiles_stonecutting",
 			"type": "minecraft:stonecutting",
@@ -6007,6 +6001,12 @@
 			"type": "bloodmagic:alchemytable",
 			"namespace": "bloodmagic",
 			"json": "{\"type\":\"bloodmagic:alchemytable\",\"input\":[{\"item\":\"bloodmagic:componentframeparts\"},{\"item\":\"bloodmagic:reinforcedslate\"},{\"tag\":\"forge:dusts/redstone\"},{\"tag\":\"forge:dyes/yellow\"}],\"output\":{\"item\":\"bloodmagic:itemrouterfiltermoditems\"},\"syphon\":500,\"ticks\":100,\"upgradeLevel\":3}"
+		},
+		{
+			"id": "tconstruct:tools/modifiers/ability/crystalshot_earthslime",
+			"type": "tconstruct:swappable_modifier",
+			"namespace": "tconstruct",
+			"json": "{\"type\":\"tconstruct:swappable_modifier\",\"allow_crystal\":false,\"inputs\":[{\"item\":\"tconstruct:earth_slime_crystal_cluster\"},{\"item\":\"minecraft:blaze_rod\"},{\"item\":\"tconstruct:earth_slime_crystal_cluster\"},{\"tag\":\"forge:ingots/manyullyn\"},{\"tag\":\"forge:ingots/manyullyn\"}],\"result\":{\"name\":\"tconstruct:crystalshot\",\"value\":\"earthslime\"},\"slots\":{\"abilities\":1},\"tools\":{\"tag\":\"tconstruct:modifiable/ranged/bows\"}}"
 		}
 	]
 }

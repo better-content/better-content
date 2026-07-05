@@ -1,10 +1,10 @@
 {
 	"schema": "btm.recipe_audit.v2",
 	"generatedBy": "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
-	"generatedAt": "2026-07-04T05:13:03.691Z",
+	"generatedAt": "2026-07-05T01:02:13.468Z",
 	"source": "ServerEvents.recipes event.forEachRecipe before KubeJS mutations are applied",
 	"recipeEventStage": "pre_mutation_recipe_event",
-	"scannedRecipes": 26285,
+	"scannedRecipes": 26284,
 	"writeFullRecipeIndex": true,
 	"writeMatchedRecipeJson": false,
 	"fullRecipeChunkSize": 1000,
@@ -44,7 +44,7 @@
 		"create:sequenced_assembly": 136,
 		"minecraft:smelting": 537,
 		"tconstruct:molding_table": 68,
-		"tconstruct:material": 175,
+		"tconstruct:material": 174,
 		"tconstruct:alloy": 18,
 		"goety:ritual": 291,
 		"create:deploying": 115,
@@ -408,7 +408,7 @@
 		"sushigocrafting:amount_combine_recipe": 1
 	},
 	"namespaceCounts": {
-		"tconstruct": 2319,
+		"tconstruct": 2318,
 		"farmersdelight": 327,
 		"deeperdarker": 216,
 		"ae2": 462,

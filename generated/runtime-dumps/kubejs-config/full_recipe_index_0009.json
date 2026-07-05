@@ -1,19 +1,13 @@
 {
 	"schema": "btm.recipe_audit.v2",
 	"generatedBy": "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
-	"generatedAt": "2026-07-04T05:13:03.691Z",
+	"generatedAt": "2026-07-05T01:02:13.468Z",
 	"recipeEventStage": "pre_mutation_recipe_event",
 	"chunk": 9,
 	"start": 9000,
 	"endExclusive": 10000,
 	"count": 1000,
 	"recipes": [
-		{
-			"id": "natures_spirit:framed_paper_block",
-			"type": "minecraft:crafting_shaped",
-			"namespace": "natures_spirit",
-			"json": "{\"type\":\"minecraft:crafting_shaped\",\"category\":\"building\",\"key\":{\"#\":{\"item\":\"natures_spirit:paper_block\"},\"A\":{\"item\":\"minecraft:stick\"}},\"pattern\":[\" A \",\"A#A\",\" A \"],\"result\":{\"item\":\"natures_spirit:framed_paper_block\"},\"show_notification\":true}"
-		},
 		{
 			"id": "brewinandchewin:filling/create/farmersrespite/strong_green_tea",
 			"type": "create:filling",
@@ -6007,6 +6001,12 @@
 			"type": "minecraft:crafting_shaped",
 			"namespace": "undergarden",
 			"json": "{\"type\":\"minecraft:crafting_shaped\",\"category\":\"equipment\",\"key\":{\"#\":{\"item\":\"undergarden:froststeel_ingot\"},\"/\":{\"tag\":\"forge:rods/wooden\"}},\"pattern\":[\"#\",\"#\",\"/\"],\"result\":{\"item\":\"undergarden:froststeel_sword\"},\"show_notification\":true}"
+		},
+		{
+			"id": "iceandfire:banners/banner_pattern_eye",
+			"type": "minecraft:crafting_shapeless",
+			"namespace": "iceandfire",
+			"json": "{\"type\":\"minecraft:crafting_shapeless\",\"ingredients\":[{\"item\":\"iceandfire:cyclops_eye\"},{\"item\":\"minecraft:paper\"}],\"result\":{\"item\":\"iceandfire:banner_pattern_eye\",\"count\":1}}"
 		}
 	]
 }

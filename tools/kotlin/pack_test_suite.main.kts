@@ -10,6 +10,7 @@ import java.nio.file.SimpleFileVisitor
 import java.nio.file.attribute.BasicFileAttributes
 import java.time.Instant
 import java.util.Locale
+import java.util.zip.ZipFile
 import kotlin.math.round
 import kotlin.system.exitProcess
 
@@ -185,6 +186,7 @@ val performanceBudgetsMs = linkedMapOf(
     "KubeJS asset validation" to mapOf("budget" to 2000, "hard" to 4000),
     "chemistry identity validation" to mapOf("budget" to 1500, "hard" to 4000),
     "dev dump health validation" to mapOf("budget" to 50, "hard" to 500),
+    "plank regression static validation" to mapOf("budget" to 250, "hard" to 1500),
 )
 
 data class HardFindingMatch(val lineNumber: Int, val line: String)
@@ -248,7 +250,8 @@ fun countOccurrences(text: String, needle: String): Int = Regex(Regex.escape(nee
 fun newestFile(files: List<Path>): Path? = files.maxByOrNull { Files.getLastModifiedTime(it).toMillis() }
 fun roundMs(value: Double): Double = round(value * 100.0) / 100.0
 fun runtimeGeneratedConfigFile(name: String): Path? = firstExisting(generatedConfigDir.resolve(name), retainedGeneratedConfigDir.resolve(name))
-fun runtimeRecipeGraphFile(): Path? = firstExisting(instance.resolve("recipes.json"), instance.resolve("dump/recipes.json"), retainedRuntimeDumpDir.resolve("recipes.json"))
+fun runtimeRecipeGraphFile(): Path? = firstExisting(instance.resolve("generated/runtime-dumps/recipes.json"), instance.resolve("recipes.json"), instance.resolve("dump/recipes.json"), retainedRuntimeDumpDir.resolve("recipes.json"))
+fun runtimeTagGraphFile(): Path? = firstExisting(instance.resolve("generated/runtime-dumps/tags.json"), retainedRuntimeDumpDir.resolve("tags.json"))
 fun humanizeId(id: String): String =
     id.substringAfter(':')
         .replace('/', ' ')
@@ -839,6 +842,19 @@ fun loadOwnedTag(kind: String, name: String): OwnedTag? {
     )
 }
 
+fun loadRuntimeTagValues(kind: String, tag: String): List<String>? {
+    val path = runtimeTagGraphFile() ?: return null
+    val root = jsonObject(readJson(path))
+    val section = when (kind) {
+        "item" -> "item_tags"
+        "block" -> "block_tags"
+        "fluid" -> "fluid_tags"
+        "entity" -> "entity_tags"
+        else -> return null
+    }
+    return jsonArray(jsonObject(root[section])[tag]).mapNotNull(::jsonString)
+}
+
 fun recipeWindow(text: String, id: String, windowChars: Int = 6000): String? {
     val anchor = Regex(""""id"\s*:\s*"${Regex.escape(id)}"\s*,\s*"type"\s*:""")
     val match = anchor.find(text) ?: return null
@@ -936,6 +952,25 @@ fun testRuntimeCoreTagRegressions() {
     }
     if (missingGenericRuntime.isEmpty()) ok("representative runtime generic core-tag consumers remain present")
     else fail("representative runtime generic core-tag consumers remain present", missingGenericRuntime.joinToString("\n"))
+
+    recipeWindow(recipeGraph, "minecraft:crafting_table")?.let { window ->
+        val craftingProblems = mutableListOf<String>()
+        if (!window.contains(""""tag": "minecraft:planks"""")) craftingProblems += "missing #minecraft:planks ingredient"
+        if (window.contains(""""item": "natures_spirit:mahogany_planks"""")) craftingProblems += "collapsed to natures_spirit:mahogany_planks item"
+        if (craftingProblems.isEmpty()) ok("crafting table recipe keeps generic plank ingredient")
+        else fail("crafting table recipe keeps generic plank ingredient", craftingProblems.joinToString(", "))
+    } ?: fail("crafting table recipe keeps generic plank ingredient", "missing minecraft:crafting_table in $recipeGraphPath")
+
+    val plankItems = loadRuntimeTagValues("item", "minecraft:planks")
+    if (plankItems == null) {
+        missingRuntimeEvidence("runtime minecraft:planks item tag evidence", runtimeTagGraphFile()?.toString() ?: retainedRuntimeDumpDir.resolve("tags.json").toString())
+    } else {
+        val plankProblems = mutableListOf<String>()
+        if ("minecraft:oak_planks" !in plankItems) plankProblems += "missing minecraft:oak_planks"
+        if ("natures_spirit:mahogany_planks" !in plankItems) plankProblems += "missing natures_spirit:mahogany_planks"
+        if (plankProblems.isEmpty()) ok("runtime minecraft:planks item tag keeps vanilla and mahogany planks", "${plankItems.size} values")
+        else fail("runtime minecraft:planks item tag keeps vanilla and mahogany planks", plankProblems.joinToString(", "))
+    }
 
     val techParentingText = read(techParentingPath)
     val genericWoodStorageIds = listOf(
@@ -1134,6 +1169,46 @@ fun testDevDumpHealth() {
     ok("dev food effect dump script emits expected artifacts")
 }
 
+fun zipEntryNames(path: Path): List<String> =
+    ZipFile(path.toFile()).use { zip -> zip.entries().asSequence().map { it.name }.toList() }
+
+fun testPlankRegressionStaticAndExports() {
+    val broadHexereiRewrites = mutableListOf<String>()
+    for (file in walk(repo.resolve("kubejs/server_scripts")) { it.toString().endsWith(".js") }) {
+        val text = read(file)
+        if (Regex("""replaceInput\(\s*\{\s*}\s*,\s*['"]#?hexerei:mahogany_planks['"]""").containsMatchIn(text)) {
+            broadHexereiRewrites += rel(file)
+        }
+    }
+    if (broadHexereiRewrites.isEmpty()) ok("Hexerei mahogany plank rewrites are scoped")
+    else fail("Hexerei mahogany plank rewrites are scoped", broadHexereiRewrites.joinToString("\n"))
+
+    val ownedPlanksTags = listOf(
+        repo.resolve("kubejs/data/minecraft/tags/items/planks.json"),
+        repo.resolve("kubejs/data/minecraft/tags/blocks/planks.json"),
+    ).filter(::exists)
+    if (ownedPlanksTags.isEmpty()) ok("repo does not own minecraft:planks tags")
+    else fail("repo does not own minecraft:planks tags", ownedPlanksTags.joinToString("\n") { rel(it) })
+
+    val exports = listOf(
+        repo.resolve("generated/exports/better-content-playtest-4-v1-curseforge.zip"),
+        repo.resolve("generated/exports/better-content-playtest-4-v1-server.zip"),
+    ).filter(::exists)
+    if (exports.isEmpty()) {
+        skip("export bundles omit owned minecraft:planks tags", "generated exports not present")
+    } else {
+        val badEntries = mutableListOf<String>()
+        val pattern = Regex("""(^|/)kubejs/data/minecraft/tags/(items|blocks)/planks\.json$|(^|/)data/minecraft/tags/(items|blocks)/planks\.json$""")
+        for (archive in exports) {
+            for (entry in zipEntryNames(archive)) {
+                if (pattern.containsMatchIn(entry)) badEntries += "${rel(archive)}:$entry"
+            }
+        }
+        if (badEntries.isEmpty()) ok("export bundles omit owned minecraft:planks tags", "${exports.size} archives checked")
+        else fail("export bundles omit owned minecraft:planks tags", badEntries.joinToString("\n"))
+    }
+}
+
 fun testBtmValidator(name: String, vararg command: String) {
     val result = runCommand("tools/btm", "internal", *command)
     if (result.exitCode == 0) ok(name, result.output.trim()) else fail(name, result.output.trim())
@@ -1157,10 +1232,10 @@ if (runtimeOnly) {
     runMeasured("quest book validation", ::testQuestBook)
     runMeasured("Wares and villager trade validation", ::testWaresAndTrades)
     runMeasured("repo loot data validation", ::testLootData)
-    runMeasured("runtime core tag regression validation", ::testRuntimeCoreTagRegressions)
     runMeasured("generated recipe graph validation", ::testGeneratedRecipeGraph)
     runMeasured("generated loot dump validation", ::testGeneratedDumpLoot)
 }
+runMeasured("runtime core tag regression validation", ::testRuntimeCoreTagRegressions)
 runMeasured("engine and world performance log analysis", ::testEngineWorldPerformanceLogs)
 if (runtimeOnly) {
     skip("source asset and tooling validation profile", "runtime-only mode skips repo-wide asset/tool validators")
@@ -1169,6 +1244,7 @@ if (runtimeOnly) {
     runMeasured("KubeJS asset validation") { testBtmValidator("KubeJS custom assets validate", "validate-kubejs-assets") }
     runMeasured("chemistry identity validation") { testBtmValidator("chemistry identity matrix validates", "validate-chemistry-identity") }
     runMeasured("dev dump health validation", ::testDevDumpHealth)
+    runMeasured("plank regression static validation", ::testPlankRegressionStaticAndExports)
 }
 
 metrics["performance"] = mapOf(

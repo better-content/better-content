@@ -1,19 +1,13 @@
 {
 	"schema": "btm.recipe_audit.v2",
 	"generatedBy": "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
-	"generatedAt": "2026-07-04T05:13:03.691Z",
+	"generatedAt": "2026-07-05T01:02:13.468Z",
 	"recipeEventStage": "pre_mutation_recipe_event",
 	"chunk": 17,
 	"start": 17000,
 	"endExclusive": 18000,
 	"count": 1000,
 	"recipes": [
-		{
-			"id": "tconstruct:tools/modifiers/ability/crystalshot_earthslime",
-			"type": "tconstruct:swappable_modifier",
-			"namespace": "tconstruct",
-			"json": "{\"type\":\"tconstruct:swappable_modifier\",\"allow_crystal\":false,\"inputs\":[{\"item\":\"tconstruct:earth_slime_crystal_cluster\"},{\"item\":\"minecraft:blaze_rod\"},{\"item\":\"tconstruct:earth_slime_crystal_cluster\"},{\"tag\":\"forge:ingots/manyullyn\"},{\"tag\":\"forge:ingots/manyullyn\"}],\"result\":{\"name\":\"tconstruct:crystalshot\",\"value\":\"earthslime\"},\"slots\":{\"abilities\":1},\"tools\":{\"tag\":\"tconstruct:modifiable/ranged/bows\"}}"
-		},
 		{
 			"id": "farmersdelight:brown_hanging_canvas_sign",
 			"type": "minecraft:crafting_shapeless",
@@ -6007,6 +6001,12 @@
 			"type": "minecraft:stonecutting",
 			"namespace": "natures_spirit",
 			"json": "{\"type\":\"minecraft:stonecutting\",\"count\":2,\"ingredient\":{\"item\":\"natures_spirit:orange_chalk\"},\"result\":\"natures_spirit:orange_chalk_slab\"}"
+		},
+		{
+			"id": "swem:pasture_pink_horse",
+			"type": "minecraft:crafting_shaped",
+			"namespace": "swem",
+			"json": "{\"type\":\"minecraft:crafting_shaped\",\"category\":\"misc\",\"group\":\"pasture_gate_horse\",\"key\":{\"x\":{\"tag\":\"forge:ingots/iron\"},\"y\":{\"tag\":\"minecraft:planks\"},\"z\":{\"tag\":\"forge:dyes/pink\"}},\"pattern\":[\"xyx\",\"zy \"],\"result\":{\"item\":\"swem:pasture_pink_horse\"},\"show_notification\":true}"
 		}
 	]
 }

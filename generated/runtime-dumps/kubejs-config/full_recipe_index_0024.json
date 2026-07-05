@@ -1,19 +1,13 @@
 {
 	"schema": "btm.recipe_audit.v2",
 	"generatedBy": "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js",
-	"generatedAt": "2026-07-04T05:13:03.691Z",
+	"generatedAt": "2026-07-05T01:02:13.468Z",
 	"recipeEventStage": "pre_mutation_recipe_event",
 	"chunk": 24,
 	"start": 24000,
 	"endExclusive": 25000,
 	"count": 1000,
 	"recipes": [
-		{
-			"id": "create:cutting/runtime_generated/compat/natures_spirit/coconut_wood_to_stripped_coconut_wood",
-			"type": "create:cutting",
-			"namespace": "create",
-			"json": "{\"type\":\"create:cutting\",\"ingredients\":[{\"item\":\"natures_spirit:coconut_wood\"}],\"results\":[{\"item\":\"natures_spirit:stripped_coconut_wood\"}],\"processingTime\":50}"
-		},
 		{
 			"id": "hexerei:woodcutting/mahogany/mahogany_planks_from_stripped_mahogany_wood_woodcutting",
 			"type": "hexerei:woodcutting",
@@ -6007,6 +6001,12 @@
 			"type": "create:filling",
 			"namespace": "brewinandchewin",
 			"json": "{\"type\":\"create:filling\",\"conditions\":[{\"type\":\"forge:mod_loaded\",\"modid\":\"create\"}],\"ingredients\":[{\"item\":\"brewinandchewin:tankard\"},{\"amount\":250,\"fluid\":\"brewinandchewin:red_rum\",\"nbt\":{}}],\"results\":[{\"item\":\"brewinandchewin:red_rum\"}]}"
+		},
+		{
+			"id": "farmersdelight:diamond_knife",
+			"type": "minecraft:crafting_shaped",
+			"namespace": "farmersdelight",
+			"json": "{\"type\":\"minecraft:crafting_shaped\",\"category\":\"equipment\",\"key\":{\"m\":{\"tag\":\"forge:gems/diamond\"},\"s\":{\"item\":\"minecraft:stick\"}},\"pattern\":[\"m\",\"s\"],\"result\":{\"item\":\"farmersdelight:diamond_knife\"},\"show_notification\":true}"
 		}
 	]
 }

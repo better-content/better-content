@@ -19,7 +19,7 @@
 				title: "Read the locked-spawn rule"
 				type: "checkmark"
 			}]
-			x: -11.52d
+			x: -6.34d
 			y: 0.0d
 			description: ["Death snaps back to the locked start. Treat beds as camps, not anchor changes."]
 		}
@@ -34,7 +34,7 @@
 				title: "Mark the road back"
 				type: "checkmark"
 			}]
-			x: -8.64d
+			x: -4.75d
 			y: -3.0d
 			description: ["Use markers, roads, and sightlines so corpse recovery is a planned route, not a panic run."]
 		}
@@ -49,7 +49,7 @@
 				title: "Stage cheap recovery kits"
 				type: "checkmark"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: -3.0d
 			description: ["Put food, blocks, torches, and spare tools along expedition routes."]
 		}
@@ -65,7 +65,7 @@
 				item: "minecraft:bread"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: -3.0d
 			rewards: [{ id: "6014B500804B358D" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Food variety buys working time and distance; it belongs in the same survival loop as water and climate."]
@@ -81,7 +81,7 @@
 				title: "Secure drinkable water"
 				type: "checkmark"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: -1.5d
 			description: ["Bad water turns travel into attrition. Carry clean water or plan around purification."]
 		}
@@ -111,7 +111,7 @@
 				title: "Pack for the return trip"
 				type: "checkmark"
 			}]
-			x: 2.88d
+			x: 1.58d
 			y: -2.25d
 			description: ["The correct expedition inventory includes the walk back after failure, not just the first arrival."]
 		}
@@ -126,7 +126,7 @@
 				title: "Use animals as logistics, not decoration"
 				type: "checkmark"
 			}]
-			x: 5.76d
+			x: 3.17d
 			y: -2.25d
 			description: ["SWEM-style travel support is valuable because local logistics remain physical for most of the pack."]
 		}
@@ -142,7 +142,7 @@
 				item: "rpgstats:still_beating_heart"
 				type: "item"
 			}]
-			x: -8.64d
+			x: -4.75d
 			y: 3.0d
 			rewards: [{ id: "9D225354E0351222" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["A heart records a meaningful life and opens the Blood Magic bridge. It is not a bulk currency."]
@@ -158,7 +158,7 @@
 				item: "additionalweaponry:butcher_knife"
 				type: "item"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: 3.0d
 			description: ["Primitive knife work connects food, plant cutting, and the body loop before machines take over."]
 		}
@@ -173,7 +173,7 @@
 				title: "Respect body progression"
 				type: "checkmark"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: 3.0d
 			description: ["RPG Stats resets and body progression make death a strategic cost, not a free teleport."]
 		}
@@ -205,7 +205,7 @@
 				title: "Build the altar as a recovery consequence"
 				type: "checkmark"
 			}]
-			x: 2.88d
+			x: 1.58d
 			y: 3.0d
 			description: ["Blood Magic starts as a response to bodies, hearts, and risk rather than a generic magic bench."]
 		}
@@ -220,7 +220,7 @@
 				title: "Use settlements as recovery infrastructure"
 				type: "checkmark"
 			}]
-			x: 5.76d
+			x: 3.17d
 			y: 1.5d
 			description: ["Villages, walls, roads, and wares help you survive repeated expeditions."]
 		}
@@ -235,7 +235,7 @@
 				title: "Expect surface pressure"
 				type: "checkmark"
 			}]
-			x: 8.64d
+			x: 4.75d
 			y: 1.5d
 			description: ["Pillager pressure makes route defense part of survival progression."]
 		}
@@ -251,9 +251,178 @@
 				title: "Bridge survival into Blood Magic"
 				type: "checkmark"
 			}]
-			x: 11.52d
+			x: 6.34d
 			y: 1.5d
 			description: ["This chapter should make the body loop feel like the root of the magic spine."]
+		},
+		{
+			dependencies: ["2DF95D9A30A46A2B"]
+			id: "689EE6FDBCD85143"
+			title: "Grave Route"
+			icon: "minecraft:map"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "0086886177E9A604"
+				title: "Mark death routes before travelling"
+				type: "checkmark"
+			}]
+			x: -5.68d
+			y: 1.8d
+			description: ["The player should see recovery as an authored loop from the first screen."]
+		}
+,
+		{
+			dependencies: ["999F66BDD3EBF54E"]
+			id: "57FB61A1AF700D64"
+			title: "Torch Cache"
+			icon: "minecraft:torch"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "16CD0B2DFBCB23E1"
+				title: "Stage light and blocks in every route cache"
+				type: "checkmark"
+			}]
+			x: -2.95d
+			y: -0.9d
+			description: ["Small cache nodes make the survival loop feel practical and dense."]
+		}
+,
+		{
+			dependencies: ["E454A578105E3C5D"]
+			id: "3BE957C18837FB1E"
+			title: "Diet Spread"
+			icon: "minecraft:carrot"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "44B95D3FE4B114E5"
+				title: "Eat varied food, not one stack forever"
+				type: "checkmark"
+			}]
+			x: -1.47d
+			y: -5.0d
+			description: ["Nutrition should be visually tied to travel endurance."]
+		}
+,
+		{
+			dependencies: ["0CC3D3A3FF0F586A"]
+			id: "33D5395E3B545D2F"
+			title: "Purify"
+			icon: "minecraft:campfire"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "017B744B990EAB54"
+				title: "Carry a purification plan"
+				type: "checkmark"
+			}]
+			x: -1.47d
+			y: 0.5d
+			description: ["Water quality needs to be a preparation objective, not text hidden in a node."]
+		}
+,
+		{
+			dependencies: ["50B2F24168118EF2"]
+			id: "8195B915BE8C30D4"
+			title: "Warm Kit"
+			icon: "minecraft:leather_chestplate"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "FA5DD3CAD0793469"
+				title: "Prepare heat/cold counter-gear"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -4.25d
+			description: ["Climate should branch the travel kit instead of just warning the player."]
+		}
+,
+		{
+			dependencies: ["9DCD541E1DBF398C"]
+			id: "8DB9E6993AE49710"
+			title: "Return Slot"
+			icon: "minecraft:ender_pearl"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "D4556C5E782A07DC"
+				title: "Reserve inventory for the trip home"
+				type: "checkmark"
+			}]
+			x: 1.58d
+			y: -0.25d
+			description: ["This reinforces expedition thinking without adding a new gate."]
+		}
+,
+		{
+			dependencies: ["66A303C7B87687A4"]
+			id: "F8A3FFD03EAABC8B"
+			title: "Life Debt"
+			icon: "minecraft:totem_of_undying"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "2DF324EA40753D0E"
+				title: "Treat the heart as a story object, not currency"
+				type: "checkmark"
+			}]
+			x: -4.75d
+			y: 1.0d
+			description: ["The heart node should be visually important because it bridges survival and magic."]
+		}
+,
+		{
+			dependencies: ["11B6803A865589C5"]
+			id: "D3EA42355835E274"
+			title: "LP Safety"
+			icon: "bloodmagic:divinationsigil"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "570BB3DE3A1CA0DA"
+				title: "Read LP before committing sacrifice"
+				type: "checkmark"
+			}]
+			x: 1.58d
+			y: 5.0d
+			description: ["Blood Magic needs safety/proof side nodes to feel like a system."]
+		}
+,
+		{
+			dependencies: ["DC0BBF7695937B20"]
+			id: "E1BEBFBA84DE22DA"
+			title: "Safehouse"
+			icon: "minecraft:bell"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "2926F0B99687ED0B"
+				title: "Convert settlements into route infrastructure"
+				type: "checkmark"
+			}]
+			x: 3.17d
+			y: -0.5d
+			description: ["Villages should visibly connect recovery, economy, and patrol pressure."]
+		}
+,
+		{
+			dependencies: ["E3A44470D379F056"]
+			id: "B18E5A52BB0C9AE9"
+			title: "Alarm Line"
+			icon: "minecraft:tripwire_hook"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "257226FE6512EFEC"
+				title: "Build warning lines and fallback routes"
+				type: "checkmark"
+			}]
+			x: 4.75d
+			y: 3.5d
+			description: ["Surface pressure should become built space."]
 		}
 	]
 	title: "Body, Spawn, and Recovery"

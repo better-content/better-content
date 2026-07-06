@@ -19,7 +19,7 @@
 				title: "Read terrain before mining"
 				type: "checkmark"
 			}]
-			x: -11.52d
+			x: -6.34d
 			y: 0.0d
 			description: ["Ore is local. Deposits, stone type, and Y bands matter more than flat strip-mining."]
 		}
@@ -34,7 +34,7 @@
 				title: "Collect surface evidence"
 				type: "checkmark"
 			}]
-			x: -8.64d
+			x: -4.75d
 			y: -3.0d
 			description: ["Samples and exposed geology teach where the ore body lives before committing labor."]
 		}
@@ -49,7 +49,7 @@
 				title: "Find coal measures"
 				type: "checkmark"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: -4.0d
 			description: ["Coal is fuel, chemistry input, and route planning pressure."]
 		}
@@ -64,7 +64,7 @@
 				item: "minecraft:raw_iron"
 				type: "item"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: -2.5d
 			rewards: [{ id: "D735DD89D7E2A8EC" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Ironstone starts the metal story without pretending every ore appears everywhere."]
@@ -80,7 +80,7 @@
 				item: "minecraft:raw_copper"
 				type: "item"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: -1.0d
 			description: ["Copper sulfide and copper routes connect geology to coins, Create, and early power."]
 		}
@@ -95,7 +95,7 @@
 				item: "chemlib:tin_ingot"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: -4.0d
 			description: ["Tin belongs in the early deposit catalogue because alloys and electronics need distinct source identity."]
 		}
@@ -110,7 +110,7 @@
 				item: "create:zinc_ingot"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: -2.5d
 			description: ["Zinc is the Create-era bridge toward brass and more deliberate mechanical systems."]
 		}
@@ -125,7 +125,7 @@
 				item: "chemlib:lead_ingot"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: -1.0d
 			description: ["Lead-zinc deposits feed chemistry and shielding-style material identity later."]
 		}
@@ -171,7 +171,7 @@
 				item: "tconstruct:seared_melter"
 				type: "item"
 			}]
-			x: 2.88d
+			x: 1.58d
 			y: 1.5d
 			rewards: [{ id: "71DCAF5A5651586C" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Tinkers makes the first strong material interpretation layer: melting, casting, and alloy proof."]
@@ -187,7 +187,7 @@
 				item: "tconstruct:smeltery_controller"
 				type: "item"
 			}]
-			x: 5.76d
+			x: 3.17d
 			y: 1.5d
 			description: ["The smeltery turns deposit identity into scalable molten logistics."]
 		}
@@ -202,7 +202,7 @@
 				item: "create:crushing_wheel"
 				type: "item"
 			}]
-			x: 2.88d
+			x: 1.58d
 			y: -2.5d
 			description: ["Create crushing and washing improve bulk feedstock before sealed chemistry appears."]
 		}
@@ -217,7 +217,7 @@
 				item: "create:encased_fan"
 				type: "item"
 			}]
-			x: 5.76d
+			x: 3.17d
 			y: -2.5d
 			description: ["Fans and washing routes make byproducts visible instead of hidden in a single furnace output."]
 		}
@@ -232,7 +232,7 @@
 				title: "Preserve source identity through chemistry"
 				type: "checkmark"
 			}]
-			x: 8.64d
+			x: 4.75d
 			y: -0.5d
 			description: ["Acids, salts, gases, and media should refine geology, not erase it."]
 		}
@@ -248,9 +248,178 @@
 				title: "Respect lava-depth materials"
 				type: "checkmark"
 			}]
-			x: 11.52d
+			x: 6.34d
 			y: -0.5d
 			description: ["Osmiridium, uranium, and thorium are expedition materials that demand heat, gear, and return logistics."]
+		},
+		{
+			dependencies: ["AD6076BBBC63B6E7"]
+			id: "068185E25590F47B"
+			title: "Field Notes"
+			icon: "minecraft:writable_book"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "2828CCB9CE17169B"
+				title: "Record biome, stone, height, and sample results"
+				type: "checkmark"
+			}]
+			x: -6.34d
+			y: -2.0d
+			description: ["Geology chapters become beautiful when they look like survey maps."]
+		}
+,
+		{
+			dependencies: ["88AB3FECBB5A97EC"]
+			id: "2109184CE541FB35"
+			title: "Claim Stakes"
+			icon: "minecraft:oak_fence"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "C92CC16AD3112274"
+				title: "Mark deposits before digging"
+				type: "checkmark"
+			}]
+			x: -4.75d
+			y: -1.0d
+			description: ["Claims make locality visible and reinforce bounded matter."]
+		}
+,
+		{
+			dependencies: ["D1B0284719CE935D"]
+			id: "2CC9D7DE7EA981B7"
+			title: "Fuel Ledger"
+			icon: "minecraft:charcoal"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "51172C6302628D12"
+				title: "Track fuel as a mining cost"
+				type: "checkmark"
+			}]
+			x: -3.17d
+			y: -5.9d
+			description: ["Coal should anchor processing choices, not vanish into furnaces."]
+		}
+,
+		{
+			dependencies: ["9FB7FAC134090CFF"]
+			id: "2680578FAA63580B"
+			title: "Sulfide Path"
+			icon: "chemlib:sulfur"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "60A5203B3E05EB57"
+				title: "Preserve copper source identity through processing"
+				type: "checkmark"
+			}]
+			x: -3.17d
+			y: 1.1d
+			description: ["Copper should visually point toward chemistry and coins."]
+		}
+,
+		{
+			dependencies: ["FF9487345EDB59C6"]
+			id: "85489E9BDC7D87D1"
+			title: "Brass Future"
+			icon: "create:brass_ingot"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "50FD36CBBFCFB266"
+				title: "Reserve zinc for brass and controls"
+				type: "checkmark"
+			}]
+			x: -1.58d
+			y: -0.5d
+			description: ["Zinc needs a visible forward hook into Create."]
+		}
+,
+		{
+			dependencies: ["5F857A4BFE9337E7"]
+			id: "D52DBF12ACF842FE"
+			title: "Alumina Notes"
+			icon: "minecraft:white_dye"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "45398C132D3B8076"
+				title: "Treat aluminum as geology plus chemistry"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -5.25d
+			description: ["Bauxite deserves a distinct branch instead of generic ingot work."]
+		}
+,
+		{
+			dependencies: ["611CC642195B7D66"]
+			id: "C51A2F86BA4B2A03"
+			title: "Cast Choice"
+			icon: "tconstruct:ingot_cast"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "AE708C6E1A38FB6E"
+				title: "Choose casts before scaling"
+				type: "checkmark"
+			}]
+			x: 1.58d
+			y: -0.5d
+			description: ["Casting decisions make early metallurgy readable."]
+		}
+,
+		{
+			dependencies: ["A67CDD2A30C926B0"]
+			id: "79C3D926C113BD85"
+			title: "Byproduct Watch"
+			icon: "create:crushed_raw_iron"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "6A6743F5B38BE223"
+				title: "Track crushed outputs and secondary products"
+				type: "checkmark"
+			}]
+			x: 1.58d
+			y: -0.5d
+			description: ["Crushing should show why machinery improves geology."]
+		}
+,
+		{
+			dependencies: ["7361C081C9473BE7"]
+			id: "5FBE342F90D8A5EC"
+			title: "Assay Batch"
+			icon: "minecraft:glass_bottle"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "10E4329CB15F7507"
+				title: "Run small chemistry batches before bulk processing"
+				type: "checkmark"
+			}]
+			x: 4.75d
+			y: -2.5d
+			description: ["Chemistry should look like controlled assay work."]
+		}
+,
+		{
+			dependencies: ["2A4B33F864785BB8"]
+			id: "69188677069A302F"
+			title: "Lava Dive Kit"
+			icon: "minecraft:blaze_powder"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "66A5F508D6262336"
+				title: "Prepare heat, recovery, and routing for lava-depth ores"
+				type: "checkmark"
+			}]
+			x: 6.34d
+			y: 1.5d
+			description: ["Late geology should visually feel dangerous."]
 		}
 	]
 	title: "Deposits and Ore Identity"

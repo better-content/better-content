@@ -19,7 +19,7 @@
 				item: "pneumaticcraft:ingot_iron_compressed"
 				type: "item"
 			}]
-			x: -11.52d
+			x: -6.34d
 			y: 0.0d
 			rewards: [{ id: "F4628718B1745B37" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Compressed iron marks the pressure era and should come from authored manufacturing."]
@@ -35,7 +35,7 @@
 				item: "pneumaticcraft:pressure_tube"
 				type: "item"
 			}]
-			x: -8.64d
+			x: -4.75d
 			y: -3.0d
 			description: ["Pressure tubes make air a routed local system."]
 		}
@@ -50,7 +50,7 @@
 				item: "pneumaticcraft:pressure_gauge"
 				type: "item"
 			}]
-			x: -8.64d
+			x: -4.75d
 			y: -1.5d
 			description: ["Pressure must be visible before it can be trusted."]
 		}
@@ -66,7 +66,7 @@
 				item: "pneumaticcraft:pressure_chamber_valve"
 				type: "item"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: -2.25d
 			rewards: [{ id: "E5ED86A3AA7098D9" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["The chamber unlocks sealed processing, airtight bodies, plastics, and board preparation."]
@@ -82,7 +82,7 @@
 				item: "compressedcreativity:rotational_compressor"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: -4.0d
 			description: ["Compressed Creativity ties Create rotation to PNCR pressure instead of inventing isolated power."]
 		}
@@ -97,7 +97,7 @@
 				item: "pneumaticcraft:turbine_rotor"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: -2.5d
 			description: ["Turbine rotors connect pressure to generation and advanced pneumatic machinery."]
 		}
@@ -112,7 +112,7 @@
 				item: "pneumaticcraft:plastic"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: -1.0d
 			description: ["Plastic is the material bridge from pressure processing to electronics."]
 		}
@@ -143,7 +143,7 @@
 				item: "powergrid:circuit_design_table"
 				type: "item"
 			}]
-			x: 2.88d
+			x: 1.58d
 			y: -3.0d
 			description: ["Design prepares circuits; PNCR still owns final board authority."]
 		}
@@ -158,7 +158,7 @@
 				item: "pneumaticcraft:unassembled_pcb"
 				type: "item"
 			}]
-			x: 5.76d
+			x: 3.17d
 			y: -3.0d
 			description: ["Unassembled boards are chemistry plus design waiting for assembly authority."]
 		}
@@ -173,7 +173,7 @@
 				item: "pneumaticcraft:printed_circuit_board"
 				type: "item"
 			}]
-			x: 8.64d
+			x: 4.75d
 			y: -3.0d
 			rewards: [{ id: "735CA19B9D593426" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Printed circuit boards are the key fan-out into PNCR machines, drones, armor, and control."]
@@ -190,7 +190,7 @@
 				item: "pneumaticcraft:assembly_controller"
 				type: "item"
 			}]
-			x: 11.52d
+			x: 6.34d
 			y: -3.0d
 			description: ["Assembly machines turn board authority into real manufacturing."]
 		}
@@ -205,7 +205,7 @@
 				item: "pneumaticcraft:assembly_laser"
 				type: "item"
 			}]
-			x: 14.4d
+			x: 7.92d
 			y: -4.0d
 			description: ["The laser is precision pressure manufacturing, not a crafting-table upgrade."]
 		}
@@ -220,7 +220,7 @@
 				item: "pneumaticcraft:assembly_drill"
 				type: "item"
 			}]
-			x: 14.4d
+			x: 7.92d
 			y: -2.5d
 			description: ["Assembly drills make parts that should feel machined."]
 		}
@@ -235,7 +235,7 @@
 				item: "pneumaticcraft:drone"
 				type: "item"
 			}]
-			x: 11.52d
+			x: 6.34d
 			y: 0.5d
 			description: ["Drones are programmable labor and should arrive after board authority."]
 		}
@@ -250,7 +250,7 @@
 				item: "pneumaticcraft:programmer"
 				type: "item"
 			}]
-			x: 14.4d
+			x: 7.92d
 			y: 0.5d
 			description: ["Programming turns pressure into automation logic."]
 		}
@@ -265,7 +265,7 @@
 				item: "pneumaticcraft:security_station"
 				type: "item"
 			}]
-			x: 17.28d
+			x: 9.5d
 			y: 0.5d
 			description: ["Security stations make control infrastructure explicit."]
 		}
@@ -281,7 +281,7 @@
 				item: "oc2r:computer"
 				type: "item"
 			}]
-			x: 17.28d
+			x: 9.5d
 			y: -3.25d
 			description: ["OC2R is the intersite information bridge; physical logistics still matter before AE2 dominates."]
 		}
@@ -296,7 +296,7 @@
 				item: "oc2rwireless:wireless_card"
 				type: "item"
 			}]
-			x: 20.16d
+			x: 11.09d
 			y: -3.25d
 			description: ["Wireless control should extend built infrastructure, not replace local work."]
 		}
@@ -312,9 +312,178 @@
 				title: "Separate power, logic, and logistics"
 				type: "checkmark"
 			}]
-			x: 23.04d
+			x: 12.67d
 			y: -1.5d
 			description: ["The chapter is about controllable systems: pressure, electricity, boards, programming, and intersite signals."]
+		},
+		{
+			dependencies: ["7BA3BC1109BE6EFA"]
+			id: "27F80DD57773A65C"
+			title: "Compression Cell"
+			icon: "create:mechanical_press"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "3713BABC7ADD46DD"
+				title: "Show how iron becomes pressure material"
+				type: "checkmark"
+			}]
+			x: -6.34d
+			y: -2.1d
+			description: ["Compressed iron should read as a manufacturing threshold."]
+		}
+,
+		{
+			dependencies: ["5DCC13C74FA59703"]
+			id: "6CD9CFD9EDC50210"
+			title: "Safety Valve"
+			icon: "pneumaticcraft:pressure_gauge"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "42127781AACA4425"
+				title: "Build pressure relief into every chamber"
+				type: "checkmark"
+			}]
+			x: -3.17d
+			y: -0.25d
+			description: ["Pressure systems need safety details."]
+		}
+,
+		{
+			dependencies: ["EB8D4711E0C2A4FF"]
+			id: "FBEAAF3C2BC1C2CE"
+			title: "Rotational Feed"
+			icon: "create:shaft"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "6A6BA5C4C5730F19"
+				title: "Feed pressure from local Create power"
+				type: "checkmark"
+			}]
+			x: -1.58d
+			y: -6.0d
+			description: ["This reinforces the dual tech spine."]
+		}
+,
+		{
+			dependencies: ["E9C1DC5036632296"]
+			id: "24DE8706FD21403C"
+			title: "Etch Prep"
+			icon: "pneumaticcraft:empty_pcb"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "72A5770653879E7C"
+				title: "Prepare plastic and substrate before boards"
+				type: "checkmark"
+			}]
+			x: -1.58d
+			y: 1.0d
+			description: ["Plastic should visibly connect to PCB work."]
+		}
+,
+		{
+			dependencies: ["C6D58E68605E0DE0"]
+			id: "17670111DBB9DC72"
+			title: "Circuit Plan"
+			icon: "powergrid:circuit_design_table"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "AF3A3C91FBD67567"
+				title: "Separate design from board manufacture"
+				type: "checkmark"
+			}]
+			x: 1.58d
+			y: -1.0d
+			description: ["Power Grid contributes planning/control before PNCR finalizes boards."]
+		}
+,
+		{
+			dependencies: ["E7B001B84823265B"]
+			id: "087DE37DBBA6BBAB"
+			title: "Board Authority"
+			icon: "pneumaticcraft:transistor"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "2E6EB0370E1E09D5"
+				title: "Use PCB fanout to unlock real control"
+				type: "checkmark"
+			}]
+			x: 4.75d
+			y: -0.8d
+			description: ["The PCB node should feel like a major hub."]
+		}
+,
+		{
+			dependencies: ["82F2BACA61C5F8E1"]
+			id: "6411A35D04A18483"
+			title: "Part Cell"
+			icon: "pneumaticcraft:assembly_io_unit_import"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "EF2D24BC18DCF205"
+				title: "Lay out import/export and platform flow"
+				type: "checkmark"
+			}]
+			x: 6.34d
+			y: -1.0d
+			description: ["Assembly should look like a multiblock workcell."]
+		}
+,
+		{
+			dependencies: ["23B1CD2A1143A540"]
+			id: "34B74EC219A885D4"
+			title: "Program Slot"
+			icon: "pneumaticcraft:programmer"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "A470FDD7DC3BDE2F"
+				title: "Program drones as controlled labor"
+				type: "checkmark"
+			}]
+			x: 6.34d
+			y: 2.5d
+			description: ["Drones should visibly depend on board authority."]
+		}
+,
+		{
+			dependencies: ["E34FCC9DF23493F5"]
+			id: "5F41CC13E2FEC65F"
+			title: "Base Logic"
+			icon: "pneumaticcraft:security_station"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "6C4B05540E2CE15F"
+				title: "Use control for defense and routing"
+				type: "checkmark"
+			}]
+			x: 9.5d
+			y: -1.5d
+			description: ["Security and automation should converge."]
+		}
+,
+		{
+			dependencies: ["C6D673C304DD18FA"]
+			id: "DAA79B1B92850EF0"
+			title: "Control Thesis"
+			icon: "minecraft:comparator"
+			shape: "octagon"
+			size: 0.9d
+			tasks: [{
+				id: "828147116F5E7852"
+				title: "Readable pressure, power, and program state is the goal"
+				type: "checkmark"
+			}]
+			x: 12.67d
+			y: 0.6d
+			description: ["The final node should summarize the chapter visually."]
 		}
 	]
 	title: "Pressure, Power, and Control"

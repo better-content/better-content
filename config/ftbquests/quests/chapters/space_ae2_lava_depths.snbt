@@ -19,7 +19,7 @@
 				title: "Use rockets for late dimension access"
 				type: "checkmark"
 			}]
-			x: -11.52d
+			x: -6.34d
 			y: 0.0d
 			description: ["Lost Cities, Twilight Forest, Fallout Wastelands, Finley, and Call From The Depths are routed through Creating Space."]
 		}
@@ -34,7 +34,7 @@
 				item: "creatingspace:flight_recorder"
 				type: "item"
 			}]
-			x: -8.64d
+			x: -4.75d
 			y: -3.0d
 			description: ["Brass-casing flight hardware ties space access back to Create progression."]
 		}
@@ -49,7 +49,7 @@
 				item: "creatingspace:air_liquefier"
 				type: "item"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: -3.0d
 			description: ["Air liquefaction makes space prep an industrial process, not just a rocket icon."]
 		}
@@ -65,7 +65,7 @@
 				item: "kubejs:space_machine_casing"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: -3.0d
 			description: ["Space casing marks distance as a manufacturing requirement."]
 		}
@@ -80,8 +80,8 @@
 				title: "Treat orbital routes as logistics"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: -4.0d
+			x: -0.25d
+			y: -3.65d
 			description: ["Space routes should extend supply chains, not skip them."]
 		}
 		{
@@ -95,8 +95,8 @@
 				title: "Prepare for hostile distance"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: -2.5d
+			x: -0.25d
+			y: -1.95d
 			description: ["Later planets should demand better logistics, heat planning, and return planning."]
 		}
 		{
@@ -110,8 +110,8 @@
 				item: "ae2:sky_stone_block"
 				type: "item"
 			}]
-			x: 2.88d
-			y: -3.0d
+			x: 1.25d
+			y: -2.85d
 			description: ["AE2 starts from meteor material, not abstract storage magic."]
 		}
 		{
@@ -125,7 +125,7 @@
 				item: "ae2:fluix_crystal"
 				type: "item"
 			}]
-			x: 5.76d
+			x: 3.17d
 			y: -4.0d
 			description: ["Fluix is the first AE2 identity material and should arrive late enough to matter."]
 		}
@@ -140,7 +140,7 @@
 				item: "ae2:inscriber"
 				type: "item"
 			}]
-			x: 5.76d
+			x: 3.17d
 			y: -2.5d
 			description: ["Inscribers make processors a manufacturing chain, not a shapeless shortcut."]
 		}
@@ -155,7 +155,7 @@
 				item: "ae2:logic_processor"
 				type: "item"
 			}]
-			x: 8.64d
+			x: 4.75d
 			y: -4.0d
 			description: ["Logic processors bridge silicon and network control."]
 		}
@@ -170,7 +170,7 @@
 				item: "ae2:engineering_processor"
 				type: "item"
 			}]
-			x: 8.64d
+			x: 4.75d
 			y: -2.5d
 			description: ["Engineering processors carry machine authority into AE2 systems."]
 		}
@@ -186,7 +186,7 @@
 				item: "ae2:controller"
 				type: "item"
 			}]
-			x: 11.52d
+			x: 6.34d
 			y: -3.25d
 			rewards: [{ id: "664D13F351314EE0" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["The recipe explorer shows the controller needs smooth sky stone, fluix, and an engineering processor."]
@@ -203,7 +203,7 @@
 				item: "kubejs:raw_impossible_casing"
 				type: "item"
 			}]
-			x: 14.4d
+			x: 7.92d
 			y: -3.25d
 			description: ["Raw impossible work is an unfinished AE2 body requiring processors, pressure, and material proof."]
 		}
@@ -218,7 +218,7 @@
 				item: "ae2:item_cell_housing"
 				type: "item"
 			}]
-			x: 17.28d
+			x: 9.5d
 			y: -5.0d
 			description: ["Cell housings mark storage as manufactured infrastructure."]
 		}
@@ -233,7 +233,7 @@
 				item: "ae2:drive"
 				type: "item"
 			}]
-			x: 20.16d
+			x: 11.09d
 			y: -5.0d
 			description: ["Drives should not erase trains and routes; they consolidate local intelligence."]
 		}
@@ -249,7 +249,7 @@
 				item: "kubejs:impossible_machine_casing"
 				type: "item"
 			}]
-			x: 17.28d
+			x: 9.5d
 			y: -2.0d
 			description: ["Impossible casing belongs to AE2-scale systems, high utility, and late Blood Magic hybrids."]
 		}
@@ -264,7 +264,7 @@
 				item: "minecraft:lava_bucket"
 				type: "item"
 			}]
-			x: 20.16d
+			x: 11.09d
 			y: -2.0d
 			description: ["Lava-depth osmiridium, uranium, and thorium require heat, mobs, gear, and return logistics."]
 		}
@@ -279,7 +279,7 @@
 				item: "chemlib:uranium_ingot"
 				type: "item"
 			}]
-			x: 23.04d
+			x: 12.67d
 			y: -3.5d
 			description: ["Uranium is not normal mining filler; it belongs to dangerous late geology."]
 		}
@@ -294,7 +294,7 @@
 				item: "chemlib:thorium_ingot"
 				type: "item"
 			}]
-			x: 23.04d
+			x: 12.67d
 			y: -2.0d
 			description: ["Thorium belongs beside nuclear chemistry and lava-depth expedition work."]
 		}
@@ -310,9 +310,178 @@
 				title: "Bring the expedition home"
 				type: "checkmark"
 			}]
-			x: 25.92d
-			y: -2.75d
+			x: 14.7d
+			y: -2.35d
 			description: ["The endgame still respects the pack thesis: distance, logistics, bodies, and infrastructure matter."]
+		},
+		{
+			dependencies: ["DE4D524CF80272D1"]
+			id: "64FD58D857DC8BD8"
+			title: "Launch Checklist"
+			icon: "minecraft:firework_rocket"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "032CE75F4E37198E"
+				title: "Check suit, fuel, oxygen, recovery, and proof item"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -6.8d
+			description: ["Space should look like expedition prep, not a straight line."]
+		}
+,
+		{
+			dependencies: ["E38BFCA4E9BA3B4F"]
+			id: "600082A7634F6423"
+			title: "Meteor Assay"
+			icon: "minecraft:spyglass"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "6D62C9CB0E9D659C"
+				title: "Separate meteor salvage from local geology"
+				type: "checkmark"
+			}]
+			x: -4.75d
+			y: -1.0d
+			description: ["Meteor resources should preserve route identity."]
+		}
+,
+		{
+			dependencies: ["990FBC2BE4DD42E2"]
+			id: "6C4920DF1E4C2273"
+			title: "Red Route"
+			icon: "minecraft:red_sand"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "F99F3A3E9F89879E"
+				title: "Treat Mars as a route with logistics costs"
+				type: "checkmark"
+			}]
+			x: -0.95d
+			y: -5.15d
+			description: ["Mars needs visible expedition texture."]
+		}
+,
+		{
+			dependencies: ["12925948A84BF40B"]
+			id: "0759BB3400A16F7F"
+			title: "Presses"
+			icon: "ae2:inscriber"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "860ABFCD66778F07"
+				title: "Prepare AE2 processors intentionally"
+				type: "checkmark"
+			}]
+			x: 1.3d
+			y: -5.45d
+			description: ["AE2 should become a local infrastructure cluster."]
+		}
+,
+		{
+			dependencies: ["7A15771CDACE42EC"]
+			id: "E1F8E99601292B5E"
+			title: "Channel Plan"
+			icon: "ae2:fluix_smart_cable"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "C0398464D2961ABE"
+				title: "Plan local channels before scaling"
+				type: "checkmark"
+			}]
+			x: 4.75d
+			y: -0.5d
+			description: ["AE2 must read as bounded local logistics."]
+		}
+,
+		{
+			dependencies: ["86339E21F9017663"]
+			id: "62598A31B1CF7BF1"
+			title: "Cell Budget"
+			icon: "ae2:item_cell_housing"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "6EF5AEA532336E2E"
+				title: "Budget cells and drives per base"
+				type: "checkmark"
+			}]
+			x: 6.34d
+			y: -5.25d
+			description: ["Storage should not erase trains and physical movement."]
+		}
+,
+		{
+			dependencies: ["E553185539A744D4"]
+			id: "BE6DA4FE21E4B333"
+			title: "Heat Suit"
+			icon: "minecraft:netherite_chestplate"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "D94C3F7A219EF1AE"
+				title: "Prepare lava-depth equipment and exits"
+				type: "checkmark"
+			}]
+			x: 11.09d
+			y: 0.0d
+			description: ["Lava materials should look dangerous and expeditionary."]
+		}
+,
+		{
+			dependencies: ["76FB4905EE8E60D7"]
+			id: "78FC38567095BCE8"
+			title: "Alloy Proof"
+			icon: "chemlib:osmium_ingot"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "19E6F53DBCAD6B26"
+				title: "Tie rare metals to lava-depth source proof"
+				type: "checkmark"
+			}]
+			x: 12.67d
+			y: -5.5d
+			description: ["Osmiridium should visually demand provenance."]
+		}
+,
+		{
+			dependencies: ["B9903B9513ACD50E"]
+			id: "85DD3799B2948E51"
+			title: "Remote Contract"
+			icon: "oc2r:computer"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "7CDBACC0FE44C797"
+				title: "Use computers for intersite control, not item teleport"
+				type: "checkmark"
+			}]
+			x: 9.5d
+			y: 0.0d
+			description: ["OC2R is the intersite thesis after local AE2."]
+		}
+,
+		{
+			dependencies: ["920AFBA12E4C0196"]
+			id: "38A520E741C6FE27"
+			title: "Endgame Map"
+			icon: "minecraft:filled_map"
+			shape: "octagon"
+			size: 0.9d
+			tasks: [{
+				id: "DB2E49C62FF34258"
+				title: "Keep space, AE2, lava, and OC2R as linked routes"
+				type: "checkmark"
+			}]
+			x: 14.7d
+			y: -4.65d
+			description: ["The final graph should visibly braid the late game."]
 		}
 	]
 	title: "Space, AE2, and Lava Depths"

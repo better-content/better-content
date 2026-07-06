@@ -10,8 +10,10 @@
 	quests: [
 		{
 			id: "ADF5B3000926A300"
-			title: "Growables"
+			title: "Farms"
 			icon: "minecraft:wheat"
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [{
 				id: "8B5DD2FE18619FB6"
 				title: "Use farms as chemistry inputs, not free matter"
@@ -26,6 +28,8 @@
 			id: "BC47E926A63D173D"
 			title: "Solvents"
 			icon: "minecraft:glass_bottle"
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "4C6C7FB90CEB1FEA"
 				item: "minecraft:glass_bottle"
@@ -46,8 +50,10 @@
 		{
 			dependencies: ["BC47E926A63D173D"]
 			id: "529573E3293E843D"
-			title: "Create Chem"
+			title: "Open Chem"
 			icon: "create:mechanical_mixer"
+			shape: "square"
+			size: 1.05d
 			tasks: [{
 				id: "47DF2CE857A36425"
 				title: "Run bulk chemistry in open Create machinery"
@@ -60,8 +66,10 @@
 		{
 			dependencies: ["529573E3293E843D"]
 			id: "B140280510C94C9F"
-			title: "Sealed Chem"
+			title: "Sealed"
 			icon: "pneumaticcraft:pressure_chamber_valve"
+			shape: "square"
+			size: 1.05d
 			tasks: [{
 				id: "BE7A0826EF43FEC8"
 				item: "pneumaticcraft:pressure_chamber_valve"
@@ -82,8 +90,10 @@
 		{
 			dependencies: ["BC47E926A63D173D"]
 			id: "B7B64D8AF271F362"
-			title: "Blood Yield"
+			title: "LP Yield"
 			icon: "bloodmagic:blankslate"
+			shape: "diamond"
+			size: 1.05d
 			tasks: [{
 				id: "4326BADFB0EC2AA7"
 				title: "Spend LP and slates for deliberate batches"
@@ -101,6 +111,8 @@
 			id: "A46D0309DEA75C77"
 			title: "Precursors"
 			icon: "minecraft:redstone"
+			shape: "octagon"
+			size: 1.15d
 			tasks: [{
 				id: "E510814EA9E1F919"
 				title: "Prepare boards and wafers, not finished circuits"

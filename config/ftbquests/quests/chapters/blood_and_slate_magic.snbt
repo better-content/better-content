@@ -12,6 +12,8 @@
 			id: "848241D2FEE82D2A"
 			title: "Life"
 			icon: "rpgstats:still_beating_heart"
+			shape: "diamond"
+			size: 1.25d
 			tasks: [{
 				id: "F1F360ADC9C5E105"
 				item: "rpgstats:still_beating_heart"
@@ -32,8 +34,10 @@
 		{
 			dependencies: ["848241D2FEE82D2A"]
 			id: "CE10C1DE644DB579"
-			title: "Weak Orb"
+			title: "Orb"
 			icon: "bloodmagic:weakbloodorb"
+			shape: "hexagon"
+			size: 1.1d
 			tasks: [{
 				id: "BD8549B6EF46DC6F"
 				item: "bloodmagic:weakbloodorb"
@@ -54,8 +58,10 @@
 		{
 			dependencies: ["CE10C1DE644DB579"]
 			id: "2BD70F2DF5E45E4A"
-			title: "Blank Slate"
+			title: "Blank"
 			icon: "bloodmagic:blankslate"
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "03FE7E42A93A8984"
 				item: "bloodmagic:blankslate"
@@ -76,8 +82,10 @@
 		{
 			dependencies: ["2BD70F2DF5E45E4A"]
 			id: "66157F64A76E144A"
-			title: "Reinforced"
+			title: "Reinforce"
 			icon: "bloodmagic:reinforcedslate"
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "5374AE5195F2BD19"
 				item: "bloodmagic:reinforcedslate"
@@ -98,8 +106,10 @@
 		{
 			dependencies: ["66157F64A76E144A"]
 			id: "1FC1AEBCAAEC1D27"
-			title: "Infused"
+			title: "Infuse"
 			icon: "bloodmagic:infusedslate"
+			shape: "square"
+			size: 1.05d
 			tasks: [{
 				id: "130FDD32D2C189EC"
 				item: "bloodmagic:infusedslate"
@@ -122,6 +132,8 @@
 			id: "64B31AE5BADE3815"
 			title: "Demon"
 			icon: "bloodmagic:demonslate"
+			shape: "hexagon"
+			size: 1.1d
 			tasks: [{
 				id: "32EFEDF55B775924"
 				item: "bloodmagic:demonslate"
@@ -144,6 +156,8 @@
 			id: "1EC17FEEB640FB4B"
 			title: "Ethereal"
 			icon: "bloodmagic:etherealslate"
+			shape: "octagon"
+			size: 1.2d
 			tasks: [{
 				id: "0FA1F4F783AD1F3E"
 				item: "bloodmagic:etherealslate"

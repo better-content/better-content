@@ -10,8 +10,10 @@
 	quests: [
 		{
 			id: "B02B11104EF540FF"
-			title: "Deposits"
+			title: "Survey"
 			icon: "minecraft:spyglass"
+			shape: "hexagon"
+			size: 1.3d
 			tasks: [{
 				id: "0E758C6B3D65C5A8"
 				title: "Read terrain before mining"
@@ -26,6 +28,8 @@
 			id: "80B32871689F147A"
 			title: "Starters"
 			icon: "minecraft:raw_iron"
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "3AD4834F9BF4B652"
 				title: "Find a starter deposit"
@@ -40,6 +44,8 @@
 			id: "3C32AEACBC5C0740"
 			title: "Furnace"
 			icon: "minecraft:iron_ingot"
+			shape: "square"
+			size: 0.95d
 			tasks: [{
 				id: "206251915E8C8CA4"
 				item: "minecraft:iron_ingot"
@@ -62,6 +68,8 @@
 			id: "42A5F3317913C76C"
 			title: "Tinkers"
 			icon: "tconstruct:seared_melter"
+			shape: "square"
+			size: 1.05d
 			tasks: [{
 				id: "1CC72C581BEF9939"
 				title: "Use molten processing for first primary yield"
@@ -74,8 +82,10 @@
 		{
 			dependencies: ["42A5F3317913C76C"]
 			id: "DFFB4840A4A02239"
-			title: "Create Prep"
+			title: "Crush"
 			icon: "create:crushing_wheel"
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "BBDD361C3814F301"
 				title: "Crush, wash, and prepare feedstock"
@@ -88,8 +98,10 @@
 		{
 			dependencies: ["DFFB4840A4A02239"]
 			id: "BFD8A18FA36D5518"
-			title: "Chemistry"
+			title: "Chem"
 			icon: "minecraft:glass_bottle"
+			shape: "octagon"
+			size: 1.15d
 			tasks: [{
 				id: "4EEAE8BD25807272"
 				item: "minecraft:glass_bottle"

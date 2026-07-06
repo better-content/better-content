@@ -12,6 +12,8 @@
 			id: "9251BAE20380A16B"
 			title: "Fonts"
 			icon: "minecraft:book"
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [{
 				id: "41A0480CF04DA980"
 				title: "Treat dimension fonts as the first dirty-magic surface"
@@ -24,8 +26,10 @@
 		{
 			dependencies: ["9251BAE20380A16B"]
 			id: "2C5AFF7708D3181A"
-			title: "Occultism"
+			title: "Pact"
 			icon: "occultism:dictionary_of_spirits"
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "D7CA061C576E50D2"
 				title: "Use Occultism for attunement and entity work"
@@ -39,6 +43,8 @@
 			id: "252D77510D44A4C7"
 			title: "Malum"
 			icon: "malum:spirit_altar"
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [{
 				id: "84A296F542EBBFAE"
 				title: "Treat Malum as the Blood-side spirit branch"
@@ -53,6 +59,8 @@
 			id: "9DA64216FD6DD0EB"
 			title: "Goety"
 			icon: "goety:dark_altar"
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "DC14153D11D6D072"
 				title: "Escalate through dangerous command magic"
@@ -66,6 +74,8 @@
 			id: "600B0B09D437A0AA"
 			title: "Ars"
 			icon: "ars_nouveau:worn_notebook"
+			shape: "diamond"
+			size: 1.05d
 			tasks: [{
 				id: "C641B4DFD4150037"
 				item: "ars_nouveau:worn_notebook"
@@ -90,8 +100,10 @@
 				"600B0B09D437A0AA"
 			]
 			id: "E59751E81AA2BB0A"
-			title: "Manuscripts"
+			title: "Script"
 			icon: "minecraft:paper"
+			shape: "octagon"
+			size: 1.2d
 			tasks: [{
 				id: "908444F6C67BCF8A"
 				title: "Craft glyph access from both dirty spines"
@@ -104,8 +116,10 @@
 		{
 			dependencies: ["E59751E81AA2BB0A"]
 			id: "6E22489F5EE3161A"
-			title: "Spellcraft"
+			title: "Spell"
 			icon: "minecraft:enchanted_book"
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [{
 				id: "5DAB50EE2EF2AB43"
 				title: "Combine slates, source, cauldrons, spirits, and rituals"
@@ -116,5 +130,5 @@
 			description: ["Iron's spellcraft is the cross-magic branch: Blood Magic tier proof plus Ars, Hexerei, Malum, Goety, and related reagents."]
 		}
 	]
-	title: "Fonts, Hexerei, Occultism, Malum, Goety"
+	title: "Fonts and Dirty Magic"
 }

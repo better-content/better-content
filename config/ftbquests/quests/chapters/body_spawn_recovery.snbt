@@ -10,8 +10,10 @@
 	quests: [
 		{
 			id: "8B5A10C3F1E7F1CB"
-			title: "Spawn Anchor"
+			title: "Spawn"
 			icon: "minecraft:red_bed"
+			shape: "hexagon"
+			size: 1.35d
 			tasks: [{
 				id: "8A2C5A396E667318"
 				title: "Read the spawn rule"
@@ -24,8 +26,10 @@
 		{
 			dependencies: ["8B5A10C3F1E7F1CB"]
 			id: "529DBD41E8ABD6D2"
-			title: "Carry Return"
+			title: "Return"
 			icon: "minecraft:torch"
+			shape: "rsquare"
+			size: 0.95d
 			tasks: [{
 				id: "D4144F6BD4F9DD15"
 				title: "Pack light, food, and route markers"
@@ -38,8 +42,10 @@
 		{
 			dependencies: ["529DBD41E8ABD6D2"]
 			id: "D36A4B32695660BA"
-			title: "Food And Water"
+			title: "Food"
 			icon: "minecraft:bread"
+			shape: "square"
+			size: 1.05d
 			tasks: [{
 				id: "E2C9D7A01E8D41C5"
 				item: "minecraft:bread"
@@ -62,6 +68,8 @@
 			id: "F378703CC790BFFA"
 			title: "Heart"
 			icon: "rpgstats:still_beating_heart"
+			shape: "diamond"
+			size: 1.1d
 			tasks: [{
 				id: "2678BF76CF7691F7"
 				item: "rpgstats:still_beating_heart"
@@ -82,8 +90,10 @@
 		{
 			dependencies: ["F378703CC790BFFA"]
 			id: "C8905FE33912AE49"
-			title: "Blood Bridge"
+			title: "Blood"
 			icon: "bloodmagic:weakbloodorb"
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [{
 				id: "FD824F4CFBD81BCF"
 				title: "Use the heart to open Blood Magic"

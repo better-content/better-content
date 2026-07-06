@@ -10,8 +10,10 @@
 	quests: [
 		{
 			id: "B9B81CA3194F7EFC"
-			title: "Compressed"
+			title: "Iron"
 			icon: "pneumaticcraft:ingot_iron_compressed"
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [{
 				id: "C1D672C1059BA038"
 				item: "pneumaticcraft:ingot_iron_compressed"
@@ -34,6 +36,8 @@
 			id: "88EFC171EF15E8AC"
 			title: "Chamber"
 			icon: "pneumaticcraft:pressure_chamber_valve"
+			shape: "square"
+			size: 1.05d
 			tasks: [{
 				id: "C876E224E5520759"
 				item: "pneumaticcraft:pressure_chamber_valve"
@@ -56,6 +60,8 @@
 			id: "55B633745D3D7895"
 			title: "Battery"
 			icon: "powergrid:battery"
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "84AA8FDCB18F09E1"
 				item: "powergrid:battery"
@@ -76,8 +82,10 @@
 		{
 			dependencies: ["55B633745D3D7895"]
 			id: "5D1FB39DA1358B02"
-			title: "Design Table"
+			title: "Design"
 			icon: "powergrid:circuit_design_table"
+			shape: "diamond"
+			size: 1.05d
 			tasks: [{
 				id: "B5C1F34318F9E984"
 				item: "powergrid:circuit_design_table"
@@ -98,8 +106,10 @@
 		{
 			dependencies: ["5D1FB39DA1358B02"]
 			id: "FF76804CF385A71B"
-			title: "PNCR Assembly"
+			title: "Assembly"
 			icon: "pneumaticcraft:assembly_controller"
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [{
 				id: "1953BAD50853C3A6"
 				title: "Finish circuits with pressure assembly"
@@ -114,6 +124,8 @@
 			id: "07EFCE2A253C35EA"
 			title: "OC2R"
 			icon: "oc2r:computer"
+			shape: "octagon"
+			size: 1.15d
 			tasks: [{
 				id: "B8B6A7A17C584EA6"
 				item: "oc2r:computer"

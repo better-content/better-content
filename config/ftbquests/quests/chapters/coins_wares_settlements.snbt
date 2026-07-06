@@ -12,6 +12,8 @@
 			id: "A90A4B71081ADEF0"
 			title: "Copper"
 			icon: "createdeco:copper_coin"
+			shape: "hexagon"
+			size: 1.25d
 			tasks: [{
 				id: "B4C41FC8AE7FAA4C"
 				item: "createdeco:copper_coin"
@@ -34,6 +36,8 @@
 			id: "D42D1FE3670AE095"
 			title: "Wares"
 			icon: "minecraft:barrel"
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "495FCA463A719703"
 				title: "Open package routes"
@@ -48,6 +52,8 @@
 			id: "BA7D1D678009DD33"
 			title: "Exchange"
 			icon: "createdeco:zinc_coin"
+			shape: "diamond"
+			size: 1.0d
 			tasks: [{
 				id: "41813B677D8ADEF9"
 				title: "Exchange only when the route is worth it"
@@ -60,8 +66,10 @@
 		{
 			dependencies: ["D42D1FE3670AE095"]
 			id: "EFCFCA332AA1B957"
-			title: "Settlement"
+			title: "Defense"
 			icon: "minecraft:crossbow"
+			shape: "square"
+			size: 1.05d
 			tasks: [{
 				id: "95A7B04961EC0DEA"
 				title: "Defend routes, walls, and sightlines"
@@ -74,8 +82,10 @@
 		{
 			dependencies: ["BA7D1D678009DD33"]
 			id: "798CA63A0C55F85A"
-			title: "Coin Tiers"
+			title: "Tiers"
 			icon: "createdeco:brass_coin"
+			shape: "octagon"
+			size: 1.15d
 			tasks: [{
 				id: "648AA6089159F086"
 				item: "createdeco:brass_coin"

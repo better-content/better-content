@@ -12,6 +12,8 @@
 			id: "1AE7E9C6A07B1C13"
 			title: "Andesite"
 			icon: "create:andesite_alloy"
+			shape: "hexagon"
+			size: 1.25d
 			tasks: [{
 				id: "A168ACC3AC6FBA89"
 				item: "create:andesite_alloy"
@@ -34,6 +36,8 @@
 			id: "45A1EC3F2775004E"
 			title: "Deployer"
 			icon: "create:deployer"
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "1FDE5054596546A3"
 				item: "create:deployer"
@@ -56,6 +60,8 @@
 			id: "7B2A4CB05D63FA3A"
 			title: "Casing"
 			icon: "create:andesite_casing"
+			shape: "square"
+			size: 1.05d
 			tasks: [{
 				id: "41955E9ED1C14E9B"
 				item: "create:andesite_casing"
@@ -76,8 +82,10 @@
 		{
 			dependencies: ["1AE7E9C6A07B1C13"]
 			id: "FFE91CBDB297C8A8"
-			title: "Red Alloy"
+			title: "Alloy"
 			icon: "morered:red_alloy_ingot"
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "DACD4B25426E3E8D"
 				item: "morered:red_alloy_ingot"
@@ -98,8 +106,10 @@
 		{
 			dependencies: ["FFE91CBDB297C8A8"]
 			id: "F732F085C9C44FA6"
-			title: "Red Wire"
+			title: "Wire"
 			icon: "morered:red_alloy_wire"
+			shape: "square"
+			size: 1.0d
 			tasks: [{
 				id: "7D013F5F7238D55F"
 				item: "morered:red_alloy_wire"
@@ -120,8 +130,10 @@
 		{
 			dependencies: ["F732F085C9C44FA6"]
 			id: "80C6CAE2CBAA2FFD"
-			title: "Soldering"
+			title: "Solder"
 			icon: "morered:soldering_table"
+			shape: "diamond"
+			size: 1.05d
 			tasks: [{
 				id: "26A447699F43717D"
 				item: "morered:soldering_table"
@@ -144,6 +156,8 @@
 			id: "A629F226FFAF738C"
 			title: "Diode"
 			icon: "morered:diode"
+			shape: "octagon"
+			size: 1.15d
 			tasks: [{
 				id: "969EF992FB362640"
 				item: "morered:diode"

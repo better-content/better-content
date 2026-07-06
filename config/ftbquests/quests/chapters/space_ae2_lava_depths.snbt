@@ -12,6 +12,8 @@
 			id: "4243E614A1329CE6"
 			title: "Routes"
 			icon: "minecraft:firework_rocket"
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [{
 				id: "B415AA0A82AF5031"
 				title: "Use rockets for late dimension access"
@@ -24,8 +26,10 @@
 		{
 			dependencies: ["4243E614A1329CE6"]
 			id: "F9DD8483B9E0C5F2"
-			title: "Space Casing"
+			title: "Casing"
 			icon: "kubejs:space_machine_casing"
+			shape: "square"
+			size: 1.05d
 			tasks: [{
 				id: "E65C30E7018F714D"
 				title: "Reach the space casing tier"
@@ -40,6 +44,8 @@
 			id: "1CC01D0695499EAD"
 			title: "AE2"
 			icon: "ae2:controller"
+			shape: "rsquare"
+			size: 1.05d
 			tasks: [{
 				id: "C36A7E2114296EF9"
 				item: "ae2:controller"
@@ -62,6 +68,8 @@
 			id: "4533DAA5D28E7E14"
 			title: "Raw"
 			icon: "kubejs:raw_impossible_casing"
+			shape: "diamond"
+			size: 1.05d
 			tasks: [{
 				id: "CA4349C91C6DD3A4"
 				title: "Stabilize unfinished impossible matter"
@@ -74,8 +82,10 @@
 		{
 			dependencies: ["4533DAA5D28E7E14"]
 			id: "F786934B03C31502"
-			title: "Impossible"
+			title: "Final"
 			icon: "kubejs:impossible_machine_casing"
+			shape: "octagon"
+			size: 1.2d
 			tasks: [{
 				id: "6936211D0836057D"
 				title: "Reach the final machine-frame tier"
@@ -88,8 +98,10 @@
 		{
 			dependencies: ["F786934B03C31502"]
 			id: "2398CF84CF7B4F53"
-			title: "Lava Depths"
+			title: "Depths"
 			icon: "minecraft:lava_bucket"
+			shape: "hexagon"
+			size: 1.15d
 			tasks: [{
 				id: "264562868205E14C"
 				title: "Gear up before diving below Y 0"

@@ -3,370 +3,377 @@
 	default_quest_shape: ""
 	filename: "better_tools"
 	group: "65CC8BE9C7D2A5C0"
+	icon: "tconstruct:pickaxe"
 	id: "2432CAA2B38B2AB2"
 	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
 			id: "15C391E4708D16B9"
-			tasks: [{
-				id: "1EBE9E86314A44CA"
-				item: "minecraft:netherrack"
-				type: "item"
-			}]
-			x: -6.5d
-			y: 1.0d
-			rewards: [
-				{
-					id: "B0663441D528B31C"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
+			title: "Netherrack"
+			icon: "minecraft:netherrack"
+			shape: "hexagon"
+			tasks: [{ id: "1EBE9E86314A44CA" item: "minecraft:netherrack" type: "item" }]
+			x: -12.0d
+			y: 0.0d
+			rewards: [{ id: "B0663441D528B31C" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Nether material pressure starts the seared route toward molten metal work."]
 		}
 		{
+			dependencies: ["15C391E4708D16B9"]
 			id: "7CD10E3F93270496"
-			tasks: [{
-				id: "0ED1612E16B46ED0"
-				item: "tconstruct:grout"
-				type: "item"
-			}]
-			x: -5.5d
-			y: 1.0d
-			rewards: [
-				{
-					id: "D974AB9A3682A133"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
+			title: "Grout"
+			icon: "tconstruct:grout"
+			tasks: [{ id: "0ED1612E16B46ED0" item: "tconstruct:grout" type: "item" }]
+			x: -9.0d
+			y: 0.0d
+			rewards: [{ id: "D974AB9A3682A133" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Grout is the material bridge from clay/sand/gravel work into seared infrastructure."]
 		}
 		{
+			dependencies: ["7CD10E3F93270496"]
 			id: "0C10825F73EDBA68"
-			tasks: [{
-				id: "20BE8A02982451DC"
-				item: "tconstruct:seared_brick"
-				type: "item"
-			}]
-			x: -4.5d
-			y: 1.0d
-			rewards: [
-				{
-					id: "A9B527FAD6481FCD"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
+			title: "Seared Brick"
+			icon: "tconstruct:seared_brick"
+			tasks: [{ id: "20BE8A02982451DC" item: "tconstruct:seared_brick" type: "item" }]
+			x: -6.0d
+			y: 0.0d
+			rewards: [{ id: "A9B527FAD6481FCD" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Seared brick is the first metalworking substrate, not decoration."]
 		}
 		{
-			id: "28DDBFB5911AFA2D"
-			size: 1.5d
-			tasks: [{
-				id: "72AE0CA0668F7FB0"
-				item: "tconstruct:seared_melter"
-				type: "item"
-			}]
-			x: -3.0d
-			y: -0.75d
-			rewards: [
-				{
-					id: "8D781A1034BF5F88"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-		}
-		{
+			dependencies: ["0C10825F73EDBA68"]
 			id: "7A5355E1E30918C4"
-			tasks: [{
-				id: "6233F97DE5265F30"
-				item: "tconstruct:seared_heater"
-				type: "item"
-			}]
+			title: "Heater"
+			icon: "tconstruct:seared_heater"
+			tasks: [{ id: "6233F97DE5265F30" item: "tconstruct:seared_heater" type: "item" }]
 			x: -3.0d
-			y: 0.5d
-			rewards: [
-				{
-					id: "DFF6F04446ACBD61"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
+			y: -3.0d
+			rewards: [{ id: "DFF6F04446ACBD61" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["The heater makes fuel choice part of early molten metal work."]
 		}
 		{
-			id: "0DB9BF3F6DFF3EDD"
-			tasks: [{
-				id: "1B453AA6FD78EB5C"
-				item: "tconstruct:seared_drain"
-				type: "item"
-			}]
-			x: 3.0d
-			y: 1.5d
-			rewards: [
-				{
-					id: "A81C1A9AC85A9B78"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
+			dependencies: ["0C10825F73EDBA68"]
+			id: "28DDBFB5911AFA2D"
+			title: "Melter"
+			icon: "tconstruct:seared_melter"
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{ id: "72AE0CA0668F7FB0" item: "tconstruct:seared_melter" type: "item" }]
+			x: -3.0d
+			y: 0.0d
+			rewards: [{ id: "8D781A1034BF5F88" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["The melter is the first explicit link between mined metals and cast tool parts."]
 		}
 		{
-			id: "1A2A372A607208B1"
-			tasks: [{
-				id: "612DDA62E923622A"
-				item: "tconstruct:seared_duct"
-				type: "item"
-			}]
-			x: 3.0d
-			y: 0.5d
-			rewards: [
-				{
-					id: "BF8F928FC5D7AD14"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-		}
-		{
-			id: "48B3726F25099F68"
-			tasks: [{
-				id: "4D6552EB2A81669E"
-				item: "tconstruct:seared_chute"
-				type: "item"
-			}]
-			x: 1.5d
-			y: 2.0d
-			rewards: [
-				{
-					id: "ED16D7CA80AC3ACD"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-		}
-		{
-			id: "1E7CD8C092AE1895"
-			tasks: [{
-				id: "4358F74BB46B03EB"
-				item: "tconstruct:seared_fuel_tank"
-				type: "item"
-			}]
-			x: 0.5d
-			y: 2.0d
-			rewards: [
-				{
-					id: "BBD97D65370BBD30"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-		}
-		{
-			id: "760336E92F1C069B"
-			tasks: [{
-				id: "2DCA1BD4B033648F"
-				item: "tconstruct:seared_fuel_gauge"
-				type: "item"
-			}]
-			x: 0.5d
-			y: 1.0d
-			rewards: [
-				{
-					id: "D3A6934C8AB9A33E"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-		}
-		{
-			id: "4FABFAF748F8880E"
-			tasks: [{
-				id: "2175F17BB82DDCD0"
-				item: "tconstruct:seared_ingot_tank"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 2.5d
-			rewards: [
-				{
-					id: "EA0E5F52ED5D2DAB"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-		}
-		{
-			id: "7BAF73ECD259B043"
-			tasks: [{
-				id: "46ECB5411C7823C0"
-				item: "tconstruct:seared_ingot_gauge"
-				type: "item"
-			}]
+			dependencies: ["28DDBFB5911AFA2D"]
+			id: "0FE05B3739E9E636"
+			title: "Seared Bricks"
+			icon: "tconstruct:seared_bricks"
+			tasks: [{ id: "5B4452657AAF42FB" item: "tconstruct:seared_bricks" type: "item" }]
 			x: -3.0d
 			y: 3.0d
-			rewards: [
-				{
-					id: "DE0AD64977FC15E6"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
+			rewards: [{ id: "AA45FE929C4C4393" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Seared bricks scale the single-block melter into reusable infrastructure."]
 		}
 		{
-			id: "6E54887445AA930E"
-			tasks: [{
-				id: "68FB159C9122600F"
-				item: "tconstruct:seared_table"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 0.5d
-			rewards: [
-				{
-					id: "CBF12DD1E00F36AB"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-		}
-		{
-			id: "38B4A7E8270AA9F2"
-			tasks: [{
-				id: "6B5774BA4546BC08"
-				item: "tconstruct:seared_channel"
-				type: "item"
-			}]
-			x: -2.0d
-			y: -0.5d
-			rewards: [
-				{
-					id: "9D11024D82AF0C57"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-		}
-		{
-			id: "609904A3320C55BE"
-			tasks: [{
-				id: "1AD322E16AE8C95C"
-				item: "tconstruct:seared_basin"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 0.5d
-			rewards: [
-				{
-					id: "C53CA10697A9F01B"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-		}
-		{
-			id: "0FE05B3739E9E636"
-			tasks: [{
-				id: "5B4452657AAF42FB"
-				item: "tconstruct:seared_bricks"
-				type: "item"
-			}]
-			x: 0.5d
-			y: 0.0d
-			rewards: [
-				{
-					id: "AA45FE929C4C4393"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-		}
-		{
-			id: "46EA90BCC44701CB"
-			tasks: [{
-				id: "6D5B58089F9B3407"
-				item: "tconstruct:seared_lantern"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 3.5d
-			rewards: [
-				{
-					id: "E34F351961E2A46E"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-		}
-		{
-			id: "4EE5822769F6F1F1"
-			tasks: [{
-				id: "6272290D0F88C008"
-				item: "tconstruct:seared_faucet"
-				type: "item"
-			}]
-			x: -1.0d
-			y: -0.5d
-			rewards: [
-				{
-					id: "EB402782CC535454"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-		}
-		{
-			id: "036BF7C739C65CC0"
-			tasks: [{
-				id: "5ADC3A1FC31A37C3"
-				item: "tconstruct:ingot_sand_cast"
-				type: "item"
-			}]
-			x: -1.0d
-			y: -3.5d
-			rewards: [
-				{
-					id: "A6CE52629C63F965"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-		}
-		{
-			id: "38C6C603300A0551"
-			tasks: [{
-				id: "035D96E7679950A8"
-				item: "tconstruct:ingot_cast"
-				type: "item"
-			}]
+			dependencies: ["7A5355E1E30918C4" "28DDBFB5911AFA2D"]
+			id: "1E7CD8C092AE1895"
+			title: "Fuel Tank"
+			icon: "tconstruct:seared_fuel_tank"
+			tasks: [{ id: "4358F74BB46B03EB" item: "tconstruct:seared_fuel_tank" type: "item" }]
 			x: 0.0d
-			y: -3.5d
-			rewards: [
-				{
-					id: "9D6363A695AFA0F4"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
+			y: -4.5d
+			rewards: [{ id: "BBD97D65370BBD30" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Fuel storage turns melting from a stunt into a repeatable metal process."]
+		}
+		{
+			dependencies: ["1E7CD8C092AE1895"]
+			id: "760336E92F1C069B"
+			title: "Fuel Gauge"
+			icon: "tconstruct:seared_fuel_gauge"
+			tasks: [{ id: "2DCA1BD4B033648F" item: "tconstruct:seared_fuel_gauge" type: "item" }]
+			x: 0.0d
+			y: -3.0d
+			rewards: [{ id: "D3A6934C8AB9A33E" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Readable fuel state keeps molten-metal work deliberate."]
+		}
+		{
+			dependencies: ["28DDBFB5911AFA2D"]
+			id: "6E54887445AA930E"
+			title: "Casting Table"
+			icon: "tconstruct:seared_table"
+			tasks: [{ id: "68FB159C9122600F" item: "tconstruct:seared_table" type: "item" }]
+			x: 0.0d
+			y: -1.5d
+			rewards: [{ id: "CBF12DD1E00F36AB" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Tables are where molten metal becomes casts and tool parts."]
+		}
+		{
+			dependencies: ["28DDBFB5911AFA2D"]
+			id: "609904A3320C55BE"
+			title: "Casting Basin"
+			icon: "tconstruct:seared_basin"
+			tasks: [{ id: "1AD322E16AE8C95C" item: "tconstruct:seared_basin" type: "item" }]
+			x: 0.0d
+			y: 1.5d
+			rewards: [{ id: "C53CA10697A9F01B" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Basins connect metal casting to blocks, casings, and larger material batches."]
+		}
+		{
+			dependencies: ["28DDBFB5911AFA2D" "6E54887445AA930E" "609904A3320C55BE"]
+			id: "4EE5822769F6F1F1"
+			title: "Faucet"
+			icon: "tconstruct:seared_faucet"
+			tasks: [{ id: "6272290D0F88C008" item: "tconstruct:seared_faucet" type: "item" }]
+			x: 3.0d
+			y: -3.0d
+			rewards: [{ id: "EB402782CC535454" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["The faucet is the visible act of moving molten metal into a cast."]
+		}
+		{
+			dependencies: ["4EE5822769F6F1F1"]
+			id: "38B4A7E8270AA9F2"
+			title: "Channel"
+			icon: "tconstruct:seared_channel"
+			tasks: [{ id: "6B5774BA4546BC08" item: "tconstruct:seared_channel" type: "item" }]
+			x: 3.0d
+			y: -1.5d
+			rewards: [{ id: "9D11024D82AF0C57" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Channels make molten flow spatial instead of abstract."]
+		}
+		{
+			dependencies: ["4EE5822769F6F1F1"]
+			id: "0DB9BF3F6DFF3EDD"
+			title: "Drain"
+			icon: "tconstruct:seared_drain"
+			tasks: [{ id: "1B453AA6FD78EB5C" item: "tconstruct:seared_drain" type: "item" }]
+			x: 3.0d
+			y: 0.0d
+			rewards: [{ id: "A81C1A9AC85A9B78" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Drains are the smeltery's interface between tanked metal and casting surfaces."]
+		}
+		{
+			dependencies: ["0DB9BF3F6DFF3EDD"]
+			id: "1A2A372A607208B1"
+			title: "Duct"
+			icon: "tconstruct:seared_duct"
+			tasks: [{ id: "612DDA62E923622A" item: "tconstruct:seared_duct" type: "item" }]
+			x: 3.0d
+			y: 1.5d
+			rewards: [{ id: "BF8F928FC5D7AD14" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Ducts teach controlled extraction from molten systems."]
+		}
+		{
+			dependencies: ["1A2A372A607208B1"]
+			id: "48B3726F25099F68"
+			title: "Chute"
+			icon: "tconstruct:seared_chute"
+			tasks: [{ id: "4D6552EB2A81669E" item: "tconstruct:seared_chute" type: "item" }]
+			x: 3.0d
+			y: 3.0d
+			rewards: [{ id: "ED16D7CA80AC3ACD" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Chutes turn the casting setup into real item flow."]
+		}
+		{
+			dependencies: ["28DDBFB5911AFA2D"]
+			id: "4FABFAF748F8880E"
+			title: "Ingot Tank"
+			icon: "tconstruct:seared_ingot_tank"
+			tasks: [{ id: "2175F17BB82DDCD0" item: "tconstruct:seared_ingot_tank" type: "item" }]
+			x: 0.0d
+			y: 4.5d
+			rewards: [{ id: "EA0E5F52ED5D2DAB" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Ingot-volume storage makes metal quantities legible."]
+		}
+		{
+			dependencies: ["4FABFAF748F8880E"]
+			id: "7BAF73ECD259B043"
+			title: "Ingot Gauge"
+			icon: "tconstruct:seared_ingot_gauge"
+			tasks: [{ id: "46ECB5411C7823C0" item: "tconstruct:seared_ingot_gauge" type: "item" }]
+			x: 3.0d
+			y: 4.5d
+			rewards: [{ id: "DE0AD64977FC15E6" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Gauge blocks make metal stock visible before automation."]
+		}
+		{
+			dependencies: ["0FE05B3739E9E636"]
+			id: "46EA90BCC44701CB"
+			title: "Seared Lantern"
+			icon: "tconstruct:seared_lantern"
+			tasks: [{ id: "6D5B58089F9B3407" item: "tconstruct:seared_lantern" type: "item" }]
+			x: -6.0d
+			y: 3.0d
+			rewards: [{ id: "E34F351961E2A46E" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Lanterns are optional, but they reinforce that seared infrastructure is a built workspace."]
+		}
+		{
+			dependencies: ["6E54887445AA930E"]
+			id: "036BF7C739C65CC0"
+			title: "Sand Cast"
+			icon: "tconstruct:ingot_sand_cast"
+			tasks: [{ id: "5ADC3A1FC31A37C3" item: "tconstruct:ingot_sand_cast" type: "item" }]
+			x: 6.0d
+			y: -3.0d
+			rewards: [{ id: "A6CE52629C63F965" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Disposable casts are the first proof that shape matters."]
+		}
+		{
+			dependencies: ["036BF7C739C65CC0" "4EE5822769F6F1F1"]
+			id: "38C6C603300A0551"
+			title: "Ingot Cast"
+			icon: "tconstruct:ingot_cast"
+			tasks: [{ id: "035D96E7679950A8" item: "tconstruct:ingot_cast" type: "item" }]
+			x: 6.0d
+			y: -1.5d
+			rewards: [{ id: "9D6363A695AFA0F4" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Permanent casts turn metalworking into repeatable tool production."]
+		}
+		{
+			dependencies: ["38C6C603300A0551"]
+			id: "A111000000000001"
+			title: "Copper"
+			icon: "minecraft:raw_copper"
+			tasks: [{ id: "A111000000000101" item: "minecraft:raw_copper" type: "item" }]
+			x: 9.0d
+			y: -4.5d
+			description: ["Copper proves that local metals now feed the casting line."]
+		}
+		{
+			dependencies: ["38C6C603300A0551"]
+			id: "A111000000000002"
+			title: "Iron"
+			icon: "minecraft:raw_iron"
+			tasks: [{ id: "A111000000000102" item: "minecraft:raw_iron" type: "item" }]
+			x: 9.0d
+			y: -3.0d
+			description: ["Iron is the first serious metal-tool material, so it must connect to tool parts."]
+		}
+		{
+			dependencies: ["38C6C603300A0551"]
+			id: "A111000000000003"
+			title: "Pick Head Cast"
+			icon: "tconstruct:pick_head_cast"
+			tasks: [{ id: "A111000000000103" item: "tconstruct:pick_head_cast" type: "item" }]
+			x: 9.0d
+			y: -1.5d
+			description: ["Tool-part casts are the explicit bridge from metal to tools."]
+		}
+		{
+			dependencies: ["38C6C603300A0551"]
+			id: "A111000000000004"
+			title: "Binding Cast"
+			icon: "tconstruct:tool_binding_cast"
+			tasks: [{ id: "A111000000000104" item: "tconstruct:tool_binding_cast" type: "item" }]
+			x: 9.0d
+			y: 0.0d
+			description: ["Bindings make the tool assembly legible as parts, not a black-box recipe."]
+		}
+		{
+			dependencies: ["38C6C603300A0551"]
+			id: "A111000000000005"
+			title: "Handle Cast"
+			icon: "tconstruct:tool_handle_cast"
+			tasks: [{ id: "A111000000000105" item: "tconstruct:tool_handle_cast" type: "item" }]
+			x: 9.0d
+			y: 1.5d
+			description: ["Handles connect tool durability and material choice to molten-metal casting."]
+		}
+		{
+			dependencies: ["0C10825F73EDBA68"]
+			id: "A111000000000006"
+			title: "Part Builder"
+			icon: "tconstruct:part_builder"
+			tasks: [{ id: "A111000000000106" item: "tconstruct:part_builder" type: "item" }]
+			x: 9.0d
+			y: 3.0d
+			description: ["The part builder keeps non-metal and pattern work attached to the tool route."]
+		}
+		{
+			dependencies: ["A111000000000003" "A111000000000004" "A111000000000005" "A111000000000006"]
+			id: "A111000000000007"
+			title: "Tinker Station"
+			icon: "tconstruct:tinker_station"
+			shape: "hexagon"
+			tasks: [{ id: "A111000000000107" item: "tconstruct:tinker_station" type: "item" }]
+			x: 12.0d
+			y: -3.0d
+			description: ["The station is the assembly point where cast metal parts become tools."]
+		}
+		{
+			dependencies: ["A111000000000002" "A111000000000003"]
+			id: "A111000000000008"
+			title: "Pick Head"
+			icon: "tconstruct:pick_head"
+			tasks: [{ id: "A111000000000108" item: "tconstruct:pick_head" type: "item" }]
+			x: 12.0d
+			y: -1.5d
+			description: ["The metal pick head makes the metal-to-tool link impossible to miss."]
+		}
+		{
+			dependencies: ["A111000000000004"]
+			id: "A111000000000009"
+			title: "Binding"
+			icon: "tconstruct:tool_binding"
+			tasks: [{ id: "A111000000000109" item: "tconstruct:tool_binding" type: "item" }]
+			x: 12.0d
+			y: 0.0d
+			description: ["Bindings are part of the tool, not a miscellaneous component."]
+		}
+		{
+			dependencies: ["A111000000000005"]
+			id: "A11100000000000A"
+			title: "Handle"
+			icon: "tconstruct:tool_handle"
+			tasks: [{ id: "A11100000000010A" item: "tconstruct:tool_handle" type: "item" }]
+			x: 12.0d
+			y: 1.5d
+			description: ["Handles carry material traits into the finished tool."]
+		}
+		{
+			dependencies: ["A111000000000007" "A111000000000008" "A111000000000009" "A11100000000000A"]
+			id: "A11100000000000B"
+			title: "Metal Pickaxe"
+			icon: "tconstruct:pickaxe"
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{ id: "A11100000000010B" item: "tconstruct:pickaxe" type: "item" }]
+			x: 15.0d
+			y: -1.5d
+			rewards: [{ id: "A11100000000020B" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["This is the chapter thesis: metal infrastructure must visibly culminate in metal tools."]
+		}
+		{
+			dependencies: ["A11100000000000B"]
+			id: "A11100000000000C"
+			title: "Repair Kit"
+			icon: "tconstruct:repair_kit"
+			tasks: [{ id: "A11100000000010C" item: "tconstruct:repair_kit" type: "item" }]
+			x: 15.0d
+			y: 0.0d
+			description: ["Repair keeps tools in the material economy after the first craft."]
+		}
+		{
+			dependencies: ["A11100000000000C"]
+			id: "A11100000000000D"
+			title: "Modifiers"
+			icon: "tconstruct:modifier_worktable"
+			tasks: [{ id: "A11100000000010D" item: "tconstruct:modifier_worktable" type: "item" }]
+			x: 18.0d
+			y: -1.5d
+			description: ["Modifiers make tool growth a progression path instead of a replacement treadmill."]
+		}
+		{
+			dependencies: ["A11100000000000B"]
+			id: "A11100000000000E"
+			title: "Tinker's Anvil"
+			icon: "tconstruct:tinkers_anvil"
+			shape: "octagon"
+			tasks: [{ id: "A11100000000010E" item: "tconstruct:tinkers_anvil" type: "item" }]
+			x: 18.0d
+			y: 0.0d
+			description: ["The anvil is the late metal-tool bench and should remain connected to the casting route."]
 		}
 	]
 	title: "Metals and Metal Tools"

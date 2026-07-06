@@ -114,6 +114,23 @@ data class CycleResult(
     var evidenceDir: String? = null,
     var port: Int? = null,
 )
+data class RecipeStackRef(
+    val kind: String,
+    val id: String,
+    val count: Double? = null,
+    val chance: Double? = null,
+)
+data class RecipeGraphHit(
+    val id: String,
+    val type: String,
+    val machines: List<String>,
+    val inputs: List<RecipeStackRef>,
+    val outputs: List<RecipeStackRef>,
+    val catalysts: List<RecipeStackRef>,
+    val fluidsIn: List<RecipeStackRef>,
+    val fluidsOut: List<RecipeStackRef>,
+    val parsed: Boolean,
+)
 
 val root: Path = Paths.get("").toAbsolutePath().normalize()
 val toolsDir: Path = root.resolve("tools")
@@ -279,9 +296,22 @@ Public commands:
   tools/btm build dumps [--server-dir PATH] [--port N] [--reset-runtime]
   tools/btm build bundle curseforge [--exports-dir PATH]
   tools/btm build bundle server [--exports-dir PATH] [--server-tree-dir PATH] [--server-zip PATH] [--clean]
+  tools/btm inspect item ITEM_ID [--recipes|--uses|--all] [--limit N] [--type RECIPE_TYPE] [--graph PATH]
   tools/btm doctor env
   tools/btm doctor repo
   tools/btm doctor runtime --instance PATH
+""".trimIndent()
+
+fun inspectHelp(): String = """
+Usage: tools/btm inspect item ITEM_ID [--recipes|--uses|--all] [--limit N] [--type RECIPE_TYPE] [--graph PATH]
+
+Queries retained runtime recipe evidence from generated/runtime-dumps/recipes.json.
+
+Examples:
+  tools/btm inspect item minecraft:iron_ingot
+  tools/btm inspect item kubejs:andesite_machine_casing --recipes
+  tools/btm inspect item pneumaticcraft:printed_circuit_board --uses --limit 40
+  tools/btm inspect item minecraft:glass --type minecraft:crafting_shaped
 """.trimIndent()
 
 fun testHelp(): String = """
@@ -1168,6 +1198,11 @@ fun jsonString(value: Any?): String? = value as? String
 fun jsonBoolean(value: Any?): Boolean? = value as? Boolean
 fun jsonNumber(value: Any?): Number? = value as? Number
 fun jsonStringList(value: Any?): List<String> = jsonArray(value).mapNotNull(::jsonString)
+fun jsonDouble(value: Any?): Double? = when (value) {
+    is Number -> value.toDouble()
+    is String -> value.toDoubleOrNull()
+    else -> null
+}
 
 fun repoText(relPath: String): String = Files.readString(root.resolve(relPath))
 fun repoExists(relPath: String): Boolean = root.resolve(relPath).exists()
@@ -1199,6 +1234,183 @@ fun repoPath(relPath: String): Path = root.resolve(relPath)
 fun repoRead(relPath: String): String = Files.readString(repoPath(relPath))
 fun repoReadJson(relPath: String): Any? = parseJson(repoRead(relPath))
 fun repoRel(path: Path): String = root.relativize(path).toString().replace(File.separatorChar, '/')
+fun displayPath(path: Path): String =
+    runCatching { root.relativize(path).toString().replace(File.separatorChar, '/') }.getOrElse { path.toString() }
+
+fun stackRef(value: Any?): RecipeStackRef? {
+    val obj = jsonObject(value)
+    val id = jsonString(obj["id"]) ?: return null
+    return RecipeStackRef(
+        kind = jsonString(obj["kind"]) ?: "unknown",
+        id = id,
+        count = jsonDouble(obj["count"]) ?: jsonDouble(obj["amount"]),
+        chance = jsonDouble(obj["chance"]),
+    )
+}
+
+fun stackRefs(value: Any?): List<RecipeStackRef> = jsonArray(value).mapNotNull(::stackRef)
+
+fun recipeGraphHit(value: Any?): RecipeGraphHit {
+    val obj = jsonObject(value)
+    val machines = jsonArray(obj["machines"]).mapNotNull { machine ->
+        val machineObj = jsonObject(machine)
+        jsonString(machineObj["label"]) ?: jsonString(machineObj["id"])
+    }
+    return RecipeGraphHit(
+        id = jsonString(obj["id"]) ?: "UNKNOWN",
+        type = jsonString(obj["type"]) ?: jsonString(obj["category"]) ?: "UNKNOWN",
+        machines = machines,
+        inputs = stackRefs(obj["inputs"]),
+        outputs = stackRefs(obj["outputs"]),
+        catalysts = stackRefs(obj["catalysts"]),
+        fluidsIn = stackRefs(obj["fluids_in"]),
+        fluidsOut = stackRefs(obj["fluids_out"]),
+        parsed = jsonBoolean(obj["parsed"]) ?: false,
+    )
+}
+
+fun stackMatches(stack: RecipeStackRef, query: String): Boolean {
+    val normalizedQuery = query.removePrefix("#")
+    return stack.id == normalizedQuery || stack.id == query
+}
+
+fun stackText(stack: RecipeStackRef): String {
+    val amount = stack.count?.let {
+        val text = if (it % 1.0 == 0.0) it.toLong().toString() else it.toString()
+        if (text == "1") "" else "${text}x "
+    }.orEmpty()
+    val chance = stack.chance?.takeIf { it < 1.0 }?.let { " @ ${"%.1f".format(it * 100.0)}%" }.orEmpty()
+    val prefix = if (stack.kind == "tag") "#" else ""
+    return "$amount$prefix${stack.id}$chance"
+}
+
+fun stackListText(stacks: List<RecipeStackRef>): String =
+    if (stacks.isEmpty()) "none" else stacks.joinToString(", ", limit = 8, truncated = "...") { stackText(it) }
+
+fun hitDetails(hit: RecipeGraphHit): Map<String, Any?> = mapOf(
+    "id" to hit.id,
+    "type" to hit.type,
+    "machines" to hit.machines,
+    "inputs" to hit.inputs.map { mapOf("kind" to it.kind, "id" to it.id, "count" to it.count, "chance" to it.chance) },
+    "outputs" to hit.outputs.map { mapOf("kind" to it.kind, "id" to it.id, "count" to it.count, "chance" to it.chance) },
+    "catalysts" to hit.catalysts.map { mapOf("kind" to it.kind, "id" to it.id, "count" to it.count, "chance" to it.chance) },
+    "fluidsIn" to hit.fluidsIn.map { mapOf("kind" to it.kind, "id" to it.id, "count" to it.count, "chance" to it.chance) },
+    "fluidsOut" to hit.fluidsOut.map { mapOf("kind" to it.kind, "id" to it.id, "count" to it.count, "chance" to it.chance) },
+    "parsed" to hit.parsed,
+)
+
+fun formatRecipeHit(hit: RecipeGraphHit): String {
+    val machine = hit.machines.firstOrNull() ?: hit.type
+    val inputs = (hit.inputs + hit.fluidsIn + hit.catalysts).let(::stackListText)
+    val outputs = (hit.outputs + hit.fluidsOut).let(::stackListText)
+    return buildString {
+        appendLine("- ${hit.id}")
+        appendLine("  type: ${hit.type}")
+        appendLine("  machine: $machine")
+        appendLine("  in: $inputs")
+        append("  out: $outputs")
+    }
+}
+
+fun loadRecipeGraph(path: Path): Pair<Map<String, Any?>, List<RecipeGraphHit>> {
+    if (!path.exists()) error("recipe graph not found: $path; run tools/btm build dumps or tools/btm test smoke to refresh runtime evidence")
+    val graph = jsonObject(parseJson(Files.readString(path)))
+    if (jsonString(graph["schema"]) != "obelisks.recipe_graph.v1") {
+        error("unsupported recipe graph schema in $path: ${jsonString(graph["schema"]) ?: "<missing>"}")
+    }
+    val recipes = jsonArray(graph["recipes"]).map(::recipeGraphHit)
+    return graph to recipes
+}
+
+fun handleInspect(subArgs: List<String>): CommandResult {
+    if (subArgs.isEmpty() || subArgs == listOf("--help")) {
+        return success("inspect", inspectHelp(), evidenceLevel = "retained-runtime")
+    }
+    if (subArgs.first() != "item") return usageError("unknown inspect command: ${subArgs.first()}", inspectHelp())
+    val itemId = subArgs.getOrNull(1) ?: return usageError("inspect item requires ITEM_ID", inspectHelp())
+    var mode = "all"
+    var limit = 25
+    var typeFilter: String? = null
+    var graphPath = root.resolve("generated/runtime-dumps/recipes.json")
+    val rest = subArgs.drop(2)
+    var index = 0
+    while (index < rest.size) {
+        when (rest[index]) {
+            "--recipes" -> {
+                mode = "recipes"
+                index += 1
+            }
+            "--uses" -> {
+                mode = "uses"
+                index += 1
+            }
+            "--all" -> {
+                mode = "all"
+                index += 1
+            }
+            "--limit" -> {
+                val raw = rest.getOrNull(index + 1) ?: return usageError("--limit needs a number", inspectHelp())
+                limit = raw.toIntOrNull() ?: return usageError("--limit needs a number", inspectHelp())
+                if (limit <= 0) return usageError("--limit must be positive", inspectHelp())
+                index += 2
+            }
+            "--type" -> {
+                typeFilter = rest.getOrNull(index + 1) ?: return usageError("--type needs a recipe type", inspectHelp())
+                index += 2
+            }
+            "--graph" -> {
+                graphPath = resolveUserPath(rest.getOrNull(index + 1) ?: return usageError("--graph needs a path", inspectHelp()))
+                index += 2
+            }
+            "--help" -> return success("inspect item", inspectHelp(), evidenceLevel = "retained-runtime")
+            else -> return usageError("unknown argument: ${rest[index]}", inspectHelp())
+        }
+    }
+    val (graph, recipes) = loadRecipeGraph(graphPath)
+    val filtered = typeFilter?.let { type -> recipes.filter { it.type == type || it.type.contains(type, ignoreCase = true) } } ?: recipes
+    val recipeHits = filtered.filter { hit -> (hit.outputs + hit.fluidsOut).any { stackMatches(it, itemId) } }
+    val useHits = filtered.filter { hit -> (hit.inputs + hit.fluidsIn + hit.catalysts).any { stackMatches(it, itemId) } }
+    val shownRecipes = recipeHits.take(limit)
+    val shownUses = useHits.take(limit)
+    val generatedAt = jsonString(graph["generated_at"]) ?: jsonString(graph["generatedAt"]) ?: "UNKNOWN"
+    val recipeSection = if (mode in setOf("recipes", "all")) {
+        buildString {
+            appendLine("Recipes producing $itemId: ${recipeHits.size}${if (recipeHits.size > shownRecipes.size) " (showing ${shownRecipes.size})" else ""}")
+            if (shownRecipes.isEmpty()) appendLine("- none")
+            else appendLine(shownRecipes.joinToString("\n") { formatRecipeHit(it) })
+        }
+    } else ""
+    val usesSection = if (mode in setOf("uses", "all")) {
+        buildString {
+            appendLine("Uses consuming $itemId: ${useHits.size}${if (useHits.size > shownUses.size) " (showing ${shownUses.size})" else ""}")
+            if (shownUses.isEmpty()) appendLine("- none")
+            else appendLine(shownUses.joinToString("\n") { formatRecipeHit(it) })
+        }
+    } else ""
+    val summary = listOf(
+        "Recipe graph: ${displayPath(graphPath)} ($generatedAt, ${recipes.size} recipes)",
+        recipeSection.trimEnd(),
+        usesSection.trimEnd(),
+    ).filter { it.isNotBlank() }.joinToString("\n\n")
+    return success(
+        command = "inspect item",
+        summary = summary,
+        details = mapOf(
+            "item" to itemId,
+            "mode" to mode,
+            "limit" to limit,
+            "typeFilter" to typeFilter,
+            "graph" to graphPath.toString(),
+            "generatedAt" to generatedAt,
+            "recipeCount" to recipes.size,
+            "recipesProducingCount" to recipeHits.size,
+            "usesConsumingCount" to useHits.size,
+            "recipesProducing" to shownRecipes.map(::hitDetails),
+            "usesConsuming" to shownUses.map(::hitDetails),
+        ),
+        evidenceLevel = "retained-runtime",
+    )
+}
 
 fun loadWorkspaceRepoDefinitions(): List<WorkspaceRepoDefinition> {
     val rootObject = jsonObject(repoReadJson("tools/workspace_test_inventory.json"))
@@ -4151,6 +4363,7 @@ val result = try {
         filteredArgs.isEmpty() || filteredArgs == listOf("--help") -> success("help", mainHelp(), evidenceLevel = "source")
         filteredArgs.first() == "test" -> handleTest(filteredArgs.drop(1))
         filteredArgs.first() == "build" -> handleBuild(filteredArgs.drop(1))
+        filteredArgs.first() == "inspect" -> handleInspect(filteredArgs.drop(1))
         filteredArgs.first() == "doctor" -> handleDoctor(filteredArgs.drop(1))
         filteredArgs.first() == "internal" -> handleInternal(filteredArgs.drop(1))
         else -> usageError("unknown command: ${filteredArgs.first()}")

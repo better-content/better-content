@@ -10,43 +10,43 @@
 	quests: [
 		{
 			id: "4243E614A1329CE6"
-			title: "Space Routes"
+			title: "Routes"
 			icon: "minecraft:firework_rocket"
 			tasks: [{
 				id: "B415AA0A82AF5031"
 				title: "Use rockets for late dimension access"
 				type: "checkmark"
 			}]
-			x: -8.0d
+			x: -12.0d
 			y: 0.0d
 			description: ["Lost Cities, Twilight Forest, Fallout Wastelands, Finley, and Call From The Depths are routed through Creating Space."]
 		}
 		{
 			dependencies: ["4243E614A1329CE6"]
 			id: "F9DD8483B9E0C5F2"
-			title: "Space Machine Casing"
+			title: "Space Casing"
 			icon: "kubejs:space_machine_casing"
 			tasks: [{
 				id: "E65C30E7018F714D"
 				title: "Reach the space casing tier"
 				type: "checkmark"
 			}]
-			x: -6.5d
-			y: -0.75d
+			x: -8.0d
+			y: -1.0d
 			description: ["The Casings chapter tracks the item. Here it marks the route where distance becomes a manufacturing requirement."]
 		}
 		{
 			dependencies: ["F9DD8483B9E0C5F2"]
 			id: "1CC01D0695499EAD"
-			title: "AE2 Local Intelligence"
+			title: "AE2"
 			icon: "ae2:controller"
 			tasks: [{
 				id: "C36A7E2114296EF9"
 				item: "ae2:controller"
 				type: "item"
 			}]
-			x: -5.0d
-			y: -0.75d
+			x: -4.0d
+			y: -1.0d
 			rewards: [
 				{
 					id: "E6269BF956DE9B84"
@@ -60,43 +60,43 @@
 		{
 			dependencies: ["1CC01D0695499EAD"]
 			id: "4533DAA5D28E7E14"
-			title: "Raw Impossible"
+			title: "Raw"
 			icon: "kubejs:raw_impossible_casing"
 			tasks: [{
 				id: "CA4349C91C6DD3A4"
 				title: "Stabilize unfinished impossible matter"
 				type: "checkmark"
 			}]
-			x: -3.5d
-			y: -0.75d
+			x: 0.0d
+			y: -1.0d
 			description: ["Raw impossible work is an unfinished AE2 body. It should still require real pressure, processors, and material proof."]
 		}
 		{
 			dependencies: ["4533DAA5D28E7E14"]
 			id: "F786934B03C31502"
-			title: "Impossible Machine Casing"
+			title: "Impossible"
 			icon: "kubejs:impossible_machine_casing"
 			tasks: [{
 				id: "6936211D0836057D"
 				title: "Reach the final machine-frame tier"
 				type: "checkmark"
 			}]
-			x: -2.0d
-			y: -0.75d
+			x: 4.0d
+			y: -1.0d
 			description: ["The final casing tier belongs to AE2-scale systems, high utility, and late Blood Magic hybrids."]
 		}
 		{
 			dependencies: ["F786934B03C31502"]
 			id: "2398CF84CF7B4F53"
-			title: "Lava-Depth Expedition"
+			title: "Lava Depths"
 			icon: "minecraft:lava_bucket"
 			tasks: [{
 				id: "264562868205E14C"
 				title: "Gear up before diving below Y 0"
 				type: "checkmark"
 			}]
-			x: -0.5d
-			y: -0.75d
+			x: 8.0d
+			y: -1.0d
 			description: ["Lava-depth osmiridium, uranium, and thorium are expedition materials. Prepare for heat, mobs, and return logistics."]
 		}
 	]

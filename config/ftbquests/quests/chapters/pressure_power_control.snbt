@@ -10,14 +10,14 @@
 	quests: [
 		{
 			id: "B9B81CA3194F7EFC"
-			title: "Compressed Iron"
+			title: "Compressed"
 			icon: "pneumaticcraft:ingot_iron_compressed"
 			tasks: [{
 				id: "C1D672C1059BA038"
 				item: "pneumaticcraft:ingot_iron_compressed"
 				type: "item"
 			}]
-			x: -8.0d
+			x: -12.0d
 			y: 0.0d
 			rewards: [
 				{
@@ -32,14 +32,14 @@
 		{
 			dependencies: ["B9B81CA3194F7EFC"]
 			id: "88EFC171EF15E8AC"
-			title: "Pressure Chamber"
+			title: "Chamber"
 			icon: "pneumaticcraft:pressure_chamber_valve"
 			tasks: [{
 				id: "C876E224E5520759"
 				item: "pneumaticcraft:pressure_chamber_valve"
 				type: "item"
 			}]
-			x: -6.5d
+			x: -8.0d
 			y: 0.0d
 			rewards: [
 				{
@@ -54,15 +54,15 @@
 		{
 			dependencies: ["88EFC171EF15E8AC"]
 			id: "55B633745D3D7895"
-			title: "Power Grid Battery"
+			title: "Battery"
 			icon: "powergrid:battery"
 			tasks: [{
 				id: "84AA8FDCB18F09E1"
 				item: "powergrid:battery"
 				type: "item"
 			}]
-			x: -5.0d
-			y: -0.75d
+			x: -4.0d
+			y: -1.0d
 			rewards: [
 				{
 					id: "D711A25E6811064E"
@@ -76,15 +76,15 @@
 		{
 			dependencies: ["55B633745D3D7895"]
 			id: "5D1FB39DA1358B02"
-			title: "Circuit Design Table"
+			title: "Design Table"
 			icon: "powergrid:circuit_design_table"
 			tasks: [{
 				id: "B5C1F34318F9E984"
 				item: "powergrid:circuit_design_table"
 				type: "item"
 			}]
-			x: -3.5d
-			y: -0.75d
+			x: 0.0d
+			y: -1.0d
 			rewards: [
 				{
 					id: "62C879050D858B13"
@@ -98,29 +98,29 @@
 		{
 			dependencies: ["5D1FB39DA1358B02"]
 			id: "FF76804CF385A71B"
-			title: "PNCR Assembly Authority"
+			title: "PNCR Assembly"
 			icon: "pneumaticcraft:assembly_controller"
 			tasks: [{
 				id: "1953BAD50853C3A6"
 				title: "Finish circuits with pressure assembly"
 				type: "checkmark"
 			}]
-			x: -2.0d
-			y: -0.75d
+			x: 4.0d
+			y: -1.0d
 			description: ["Boards, traces, and wafers can be prepared upstream. Finished PCBs and advanced circuits come from PNCR assembly."]
 		}
 		{
 			dependencies: ["FF76804CF385A71B"]
 			id: "07EFCE2A253C35EA"
-			title: "OC2R Control"
+			title: "OC2R"
 			icon: "oc2r:computer"
 			tasks: [{
 				id: "B8B6A7A17C584EA6"
 				item: "oc2r:computer"
 				type: "item"
 			}]
-			x: -0.5d
-			y: -0.75d
+			x: 8.0d
+			y: -1.0d
 			rewards: [
 				{
 					id: "09373A18EF7F6687"

@@ -19,7 +19,7 @@
 				item: "rpgstats:still_beating_heart"
 				type: "item"
 			}]
-			x: -11.52d
+			x: -6.34d
 			y: 0.0d
 			rewards: [{ id: "52A61DDCDA53ABB6" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Blood Magic starts from a lived run and a still-beating heart."]
@@ -35,7 +35,7 @@
 				item: "bloodmagic:altar"
 				type: "item"
 			}]
-			x: -8.64d
+			x: -4.75d
 			y: 0.0d
 			description: ["The altar is infrastructure, not a cheap grid recipe."]
 		}
@@ -51,7 +51,7 @@
 				item: "bloodmagic:weakbloodorb"
 				type: "item"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: 0.0d
 			rewards: [{ id: "5295F392881D61A8" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["The weak orb opens LP control and starts the altar loop."]
@@ -67,7 +67,7 @@
 				item: "bloodmagic:sacrificialdagger"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: -3.0d
 			description: ["Sacrifice converts the body loop into controlled resource pressure."]
 		}
@@ -82,7 +82,7 @@
 				item: "bloodmagic:blankslate"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: 0.0d
 			description: ["Blank slates are the first durable proof of LP work."]
 		}
@@ -127,7 +127,7 @@
 				item: "bloodmagic:reinforcedslate"
 				type: "item"
 			}]
-			x: 2.88d
+			x: 1.58d
 			y: 0.0d
 			rewards: [{ id: "B68214BF84F45752" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Reinforced slates start stronger apparatus and cross-magic recipes."]
@@ -143,7 +143,7 @@
 				item: "bloodmagic:alchemytable"
 				type: "item"
 			}]
-			x: 2.88d
+			x: 1.58d
 			y: -3.0d
 			description: ["Blood alchemy provides manual high-yield alternatives without becoming passive throughput."]
 		}
@@ -158,7 +158,7 @@
 				item: "bloodmagic:apprenticebloodorb"
 				type: "item"
 			}]
-			x: 5.76d
+			x: 3.17d
 			y: -1.5d
 			description: ["Orb tiers should feel like altar commitment, not simple item upgrades."]
 		}
@@ -173,7 +173,7 @@
 				item: "bloodmagic:infusedslate"
 				type: "item"
 			}]
-			x: 8.64d
+			x: 4.75d
 			y: -1.5d
 			description: ["Infused slates connect Blood Magic to chemistry and mid-tier cross-magic."]
 		}
@@ -188,7 +188,7 @@
 				item: "bloodmagic:masterritualstone"
 				type: "item"
 			}]
-			x: 8.64d
+			x: 4.75d
 			y: -4.0d
 			description: ["Rituals are built commitments with space, structure, and maintenance cost."]
 		}
@@ -203,7 +203,7 @@
 				item: "bloodmagic:magicianbloodorb"
 				type: "item"
 			}]
-			x: 11.52d
+			x: 6.34d
 			y: -1.5d
 			description: ["The magician orb marks reliable midgame LP authority."]
 		}
@@ -219,8 +219,8 @@
 				item: "bloodmagic:demonslate"
 				type: "item"
 			}]
-			x: 14.4d
-			y: -1.5d
+			x: 7.55d
+			y: -1.1d
 			description: ["Demon slates prove dangerous command work and dirty-magic authority."]
 		}
 		{
@@ -235,8 +235,8 @@
 				item: "bloodmagic:etherealslate"
 				type: "item"
 			}]
-			x: 17.28d
-			y: -1.5d
+			x: 9.25d
+			y: -1.7d
 			description: ["Ethereal slate belongs with programmable, networked, or post-AE2 hybrid magic."]
 		}
 		{
@@ -250,8 +250,8 @@
 				item: "bloodmagic:archmagebloodorb"
 				type: "item"
 			}]
-			x: 20.16d
-			y: -1.5d
+			x: 11.05d
+			y: -1.2d
 			description: ["The archmage orb is a late Blood Magic finisher tied to the pack's high-tier proof graph."]
 		}
 		{
@@ -265,7 +265,7 @@
 				item: "tomeofblood:novice_tome_of_blood"
 				type: "item"
 			}]
-			x: 11.52d
+			x: 6.34d
 			y: 2.0d
 			description: ["Tome of Blood is the hybrid line where Ars spellbooks meet Blood Magic authority."]
 		}
@@ -280,7 +280,7 @@
 				item: "ars_nouveau:source_gem"
 				type: "item"
 			}]
-			x: 14.4d
+			x: 7.92d
 			y: 2.0d
 			description: ["Source work should connect to Blood proof rather than becoming a separate free magic lane."]
 		}
@@ -295,7 +295,7 @@
 				item: "bloodmagic:soulsnare"
 				type: "item"
 			}]
-			x: 17.28d
+			x: 9.5d
 			y: 2.0d
 			description: ["Binding and snares make entity risk part of late magic, not just crafting tax."]
 		}
@@ -310,9 +310,178 @@
 				item: "bloodmagic:sigilofholding"
 				type: "item"
 			}]
-			x: 20.16d
+			x: 11.09d
 			y: 2.0d
 			description: ["Sigil utility should arrive after the player understands LP as infrastructure."]
+		},
+		{
+			dependencies: ["5E8C58F53FE60C34"]
+			id: "85867C739412F546"
+			title: "Body Cost"
+			icon: "minecraft:bone"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "7EAAC3B5242AD041"
+				title: "Prepare food, regen, and safe sacrifice space"
+				type: "checkmark"
+			}]
+			x: -6.34d
+			y: -2.1d
+			description: ["The Blood graph needs a ritual chamber cluster, not a straight slate line."]
+		}
+,
+		{
+			dependencies: ["58A2AE3B417830D2"]
+			id: "049790EBD178F0D0"
+			title: "Altar Room"
+			icon: "minecraft:polished_blackstone"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "15B34A92C7541C4E"
+				title: "Build access, storage, and safety around the altar"
+				type: "checkmark"
+			}]
+			x: -4.75d
+			y: 2.1d
+			description: ["Blood Magic should look spatial."]
+		}
+,
+		{
+			dependencies: ["D513EA0E9E295123"]
+			id: "7DB505F136234CC3"
+			title: "LP Ledger"
+			icon: "bloodmagic:divinationsigil"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "0E53F22166D1C89C"
+				title: "Read network and altar LP before crafting"
+				type: "checkmark"
+			}]
+			x: -3.17d
+			y: -2.0d
+			description: ["LP awareness is core guidance, not flavor text."]
+		}
+,
+		{
+			dependencies: ["830ECC6DF2B4B54E"]
+			id: "1BE39AE2584EF5CD"
+			title: "Slate Batch"
+			icon: "minecraft:stone"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "0357838AF9911B60"
+				title: "Batch slates deliberately"
+				type: "checkmark"
+			}]
+			x: -1.58d
+			y: 2.0d
+			description: ["Slate density makes the tier ladder feel material."]
+		}
+,
+		{
+			dependencies: ["6872D96759A68336"]
+			id: "36A92395D84B3358"
+			title: "Rune Plan"
+			icon: "bloodmagic:speedrune"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "B0090500E56838FB"
+				title: "Choose speed, capacity, and sacrifice priorities"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 2.1d
+			description: ["Rune planning makes altar upgrades legible."]
+		}
+,
+		{
+			dependencies: ["DD5360E63AA1F7A3"]
+			id: "7E8A9F8119724306"
+			title: "Manual Yield"
+			icon: "minecraft:glass_bottle"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "DCE372BA2C7FCFAA"
+				title: "Use alchemy for deliberate high-yield work"
+				type: "checkmark"
+			}]
+			x: 1.58d
+			y: -5.1d
+			description: ["Blood alchemy should be its own visible subcluster."]
+		}
+,
+		{
+			dependencies: ["B0B81738655E1CBB"]
+			id: "9CAA8CCE6C26D2BD"
+			title: "Ritual Space"
+			icon: "bloodmagic:ritualstone"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "102F8C07751A017A"
+				title: "Leave room for ritual footprints"
+				type: "checkmark"
+			}]
+			x: 4.75d
+			y: -6.0d
+			description: ["Rituals should feel like construction projects."]
+		}
+,
+		{
+			dependencies: ["64EE84D0DB9C887D"]
+			id: "AEEEF2B148661626"
+			title: "Danger Proof"
+			icon: "bloodmagic:soulsnare"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "DA33FC4C3BA585FF"
+				title: "Bind risk into the late slate route"
+				type: "checkmark"
+			}]
+			x: 7.7d
+			y: -3.85d
+			description: ["Demon-tier magic needs visible danger."]
+		}
+,
+		{
+			dependencies: ["8D256F0B203C6C80"]
+			id: "BBBEDE855BE099F6"
+			title: "Spell Bridge"
+			icon: "ars_nouveau:worn_notebook"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "27F7B64079E126BE"
+				title: "Bridge Ars knowledge through Blood authority"
+				type: "checkmark"
+			}]
+			x: 6.34d
+			y: 4.0d
+			description: ["Hybrid magic should look like a branch, not a note."]
+		}
+,
+		{
+			dependencies: ["AD63D83FF48B29EB"]
+			id: "A60F5971239E5215"
+			title: "Utility Rack"
+			icon: "bloodmagic:sigilofholding"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "CF04CFCBB5841664"
+				title: "Organize sigils as earned tools"
+				type: "checkmark"
+			}]
+			x: 11.09d
+			y: 0.0d
+			description: ["Late utility should converge back into the main Blood line."]
 		}
 	]
 	title: "Blood and Slate Magic"

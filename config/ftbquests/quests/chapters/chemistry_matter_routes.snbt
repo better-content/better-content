@@ -19,7 +19,7 @@
 				title: "Use farms as chemistry inputs, not free matter"
 				type: "checkmark"
 			}]
-			x: -11.52d
+			x: -6.34d
 			y: 0.0d
 			description: ["Growables feed side streams after infrastructure exists."]
 		}
@@ -34,7 +34,7 @@
 				item: "minecraft:honeycomb"
 				type: "item"
 			}]
-			x: -8.64d
+			x: -4.75d
 			y: -4.0d
 			description: ["Honeycomb and wax become material inputs without turning farms into infinite ore."]
 		}
@@ -49,7 +49,7 @@
 				item: "minecraft:bone_meal"
 				type: "item"
 			}]
-			x: -8.64d
+			x: -4.75d
 			y: -2.5d
 			description: ["Bone, hide, feathers, venom, and food waste become chemical side streams."]
 		}
@@ -64,7 +64,7 @@
 				item: "minecraft:glass_bottle"
 				type: "item"
 			}]
-			x: -8.64d
+			x: -4.75d
 			y: -1.0d
 			rewards: [{ id: "694E5BA7D2B0572D" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Bottles are cheap but not free: glass logistics gate controlled chemistry."]
@@ -80,7 +80,7 @@
 				item: "chemlib:hydrochloric_acid"
 				type: "item"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: -3.0d
 			description: ["Acids preserve source identity by making transformation explicit."]
 		}
@@ -95,7 +95,7 @@
 				title: "Prepare grinding media and salts"
 				type: "checkmark"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: -1.0d
 			description: ["Grinding media, salts, and reagents are the cost of controlled transformation."]
 		}
@@ -111,7 +111,7 @@
 				item: "create:mechanical_mixer"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: -3.0d
 			description: ["Create handles open mixing, washing, precipitation, reduction, and bulk transformations."]
 		}
@@ -126,7 +126,7 @@
 				item: "create:encased_fan"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: -1.0d
 			description: ["Washing and blasting make chemistry visible before sealed machines appear."]
 		}
@@ -156,7 +156,7 @@
 				item: "latent_chemlib:gas_reaction_chamber"
 				type: "item"
 			}]
-			x: 2.88d
+			x: 1.58d
 			y: -3.0d
 			description: ["Gas reaction chambers own dangerous sealed reactions rather than pretending bottles are enough."]
 		}
@@ -188,7 +188,7 @@
 				item: "pneumaticcraft:plastic"
 				type: "item"
 			}]
-			x: 2.88d
+			x: 1.58d
 			y: -1.0d
 			description: ["Plastic moves chemistry into durable components and circuit infrastructure."]
 		}
@@ -203,7 +203,7 @@
 				item: "pneumaticcraft:solar_wafer"
 				type: "item"
 			}]
-			x: 5.76d
+			x: 3.17d
 			y: -2.0d
 			description: ["Wafers are precursor work, not finished circuit authority."]
 		}
@@ -218,7 +218,7 @@
 				item: "pneumaticcraft:transistor"
 				type: "item"
 			}]
-			x: 5.76d
+			x: 3.17d
 			y: 0.0d
 			description: ["Transistors sit between chemical preparation and PNCR assembly."]
 		}
@@ -233,7 +233,7 @@
 				item: "pneumaticcraft:capacitor"
 				type: "item"
 			}]
-			x: 5.76d
+			x: 3.17d
 			y: 2.0d
 			description: ["Capacitors make circuit progression depend on materials, not just redstone dust."]
 		}
@@ -249,7 +249,7 @@
 				title: "Spend LP and slates for deliberate batches"
 				type: "checkmark"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: 3.0d
 			description: ["Blood Magic can pay LP for high-yield manual chemistry without becoming unattended throughput."]
 		}
@@ -280,7 +280,7 @@
 				title: "Prepare boards and wafers, not finished circuits"
 				type: "checkmark"
 			}]
-			x: 8.64d
+			x: 4.75d
 			y: 0.0d
 			description: ["Chemistry makes etchants, wafers, substrates, and traces; PNCR assembly finishes boards."]
 		}
@@ -295,7 +295,7 @@
 				item: "pneumaticcraft:printed_circuit_board"
 				type: "item"
 			}]
-			x: 11.52d
+			x: 6.34d
 			y: 0.0d
 			description: ["The recipe explorer shows printed boards fan out into drones, assembly, pneumatic armor, security, compressors, and programming."]
 		}
@@ -311,9 +311,178 @@
 				title: "Do not erase geology"
 				type: "checkmark"
 			}]
-			x: 14.4d
+			x: 7.92d
 			y: 0.0d
 			description: ["Chemistry refines source identity through costs and surfaces; it should not flatten the matter economy."]
+		},
+		{
+			dependencies: ["3A2B0FA3A95CE344"]
+			id: "5B516223F348409E"
+			title: "Growable Boundary"
+			icon: "minecraft:carrot"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "F6DDF3DE21FE701B"
+				title: "Separate grown inputs from mined matter"
+				type: "checkmark"
+			}]
+			x: -6.34d
+			y: -2.2d
+			description: ["This policy needs a visible node because it prevents bypass confusion."]
+		}
+,
+		{
+			dependencies: ["4369F36F1439BE66"]
+			id: "E28AF6E5D75E39F2"
+			title: "Glass Logistics"
+			icon: "minecraft:glass"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "A48907296F29467F"
+				title: "Batch bottles and jars for processing"
+				type: "checkmark"
+			}]
+			x: -4.75d
+			y: 1.0d
+			description: ["Chemistry density begins with containers."]
+		}
+,
+		{
+			dependencies: ["9C8D956D9D41353C"]
+			id: "401992B3EDAC644D"
+			title: "Acid Cabinet"
+			icon: "minecraft:cauldron"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "1631F4BB67B44BF1"
+				title: "Store acids as deliberate process inputs"
+				type: "checkmark"
+			}]
+			x: -3.17d
+			y: -5.0d
+			description: ["Acids should feel controlled and costly."]
+		}
+,
+		{
+			dependencies: ["E73E988D633633C2"]
+			id: "9C1947AFEF5F8553"
+			title: "Basin Work"
+			icon: "create:basin"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "399A7FA67C61C0D7"
+				title: "Run open-vat recipes before sealed reactions"
+				type: "checkmark"
+			}]
+			x: -1.58d
+			y: -1.0d
+			description: ["Create chemistry should be a visible station."]
+		}
+,
+		{
+			dependencies: ["15E8F973446C60BC"]
+			id: "259352F93245052C"
+			title: "Seal Proof"
+			icon: "minecraft:iron_bars"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "DDA4F0A90DE4E3C3"
+				title: "Move dangerous reactions into sealed cells"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -0.9d
+			description: ["Sealed cells should look like a threshold."]
+		}
+,
+		{
+			dependencies: ["89BBEA358AA36261"]
+			id: "50AA0F7A25633FED"
+			title: "Pressure Chem"
+			icon: "pneumaticcraft:pressure_gauge"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "BA030BCEB9875EAB"
+				title: "Watch pressure and temperature during chemistry"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 1.0d
+			description: ["PNCR is chemistry authority, not just machines."]
+		}
+,
+		{
+			dependencies: ["ED4C9825703E8F60"]
+			id: "638323B2E2889CDA"
+			title: "Polymer Line"
+			icon: "pneumaticcraft:plastic_brick_red"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "2B27E9C0D19EDB64"
+				title: "Turn chemistry into durable components"
+				type: "checkmark"
+			}]
+			x: 1.58d
+			y: -3.0d
+			description: ["Plastic deserves a visible side line."]
+		}
+,
+		{
+			dependencies: ["2D93F328B5631FF3"]
+			id: "632665DBBB1E2E9D"
+			title: "Blood Batch"
+			icon: "bloodmagic:alchemytable"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "DB7DFEC6F90555E1"
+				title: "Spend LP for deliberate batch boosts"
+				type: "checkmark"
+			}]
+			x: -1.58d
+			y: 5.0d
+			description: ["Blood chemistry should be visible and bounded."]
+		}
+,
+		{
+			dependencies: ["6863547474BA90DE"]
+			id: "8497DCCD2D40E66D"
+			title: "Board Stack"
+			icon: "pneumaticcraft:empty_pcb"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "7B94AE53F9A9E8CB"
+				title: "Accumulate substrates, wafers, capacitors, and transistors"
+				type: "checkmark"
+			}]
+			x: 4.75d
+			y: -2.0d
+			description: ["Circuit precursors should be a convergence node."]
+		}
+,
+		{
+			dependencies: ["F7A4B2C41B81DED6"]
+			id: "B6ED62E8793C218A"
+			title: "Audit Trail"
+			icon: "minecraft:spyglass"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "3875933D94E0B652"
+				title: "Trace outputs back to sources"
+				type: "checkmark"
+			}]
+			x: 7.92d
+			y: 2.0d
+			description: ["The matter economy depends on visible provenance."]
 		}
 	]
 	title: "Chemistry and Matter Routes"

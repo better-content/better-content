@@ -19,7 +19,7 @@
 				item: "create:andesite_alloy"
 				type: "item"
 			}]
-			x: -11.52d
+			x: -6.34d
 			y: 0.0d
 			rewards: [{ id: "EFF046DF7400D0EF" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Andesite alloy is the first Create engineering language after seared metallurgy."]
@@ -35,7 +35,7 @@
 				item: "create:shaft"
 				type: "item"
 			}]
-			x: -8.64d
+			x: -4.75d
 			y: -4.0d
 			description: ["Shafts make rotation tangible: every machine starts as a physical power problem."]
 		}
@@ -50,7 +50,7 @@
 				item: "create:cogwheel"
 				type: "item"
 			}]
-			x: -8.64d
+			x: -4.75d
 			y: -2.5d
 			description: ["Cogs and gearboxes teach local transmission before abstract power networks."]
 		}
@@ -66,7 +66,7 @@
 				item: "create:andesite_casing"
 				type: "item"
 			}]
-			x: -8.64d
+			x: -4.75d
 			y: 0.0d
 			rewards: [{ id: "1F616987450FC867" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Recipe explorer shows andesite casing fans out into deployers, presses, mixers, drills, saws, fans, links, and Power Grid surfaces."]
@@ -82,7 +82,7 @@
 				item: "create:mechanical_press"
 				type: "item"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: -4.0d
 			description: ["Pressing creates plates and mechanical parts, including routes later used by casing and electronics."]
 		}
@@ -97,7 +97,7 @@
 				item: "create:mechanical_mixer"
 				type: "item"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: -2.5d
 			description: ["Open mixing is the first bulk chemistry and alloying surface before pressure containment."]
 		}
@@ -112,7 +112,7 @@
 				item: "create:encased_fan"
 				type: "item"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: -1.0d
 			description: ["Fans connect washing, blasting, haunting, cooling, and air handling."]
 		}
@@ -127,7 +127,7 @@
 				item: "create:mechanical_drill"
 				type: "item"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: 0.5d
 			description: ["The drill is movement plus extraction, not a magic miner."]
 		}
@@ -142,7 +142,7 @@
 				item: "create:mechanical_saw"
 				type: "item"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: 2.0d
 			description: ["Sawing belongs in logistics and tree processing before late auto-crafting."]
 		}
@@ -157,7 +157,7 @@
 				item: "create:deployer"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: -3.0d
 			rewards: [{ id: "A26FAA5C60755673" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["The deployer is the first automation proof: a hand made into a machine."]
@@ -173,7 +173,7 @@
 				item: "create:electron_tube"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: -1.0d
 			description: ["Electron tubes are the visible primitive-electronics bridge into smarter Create blocks."]
 		}
@@ -188,7 +188,7 @@
 				item: "morered:red_alloy_ingot"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: 1.0d
 			description: ["More Red starts primitive circuitry on terrestrial processing, not Nether shortcuts."]
 		}
@@ -219,7 +219,7 @@
 				item: "morered:soldering_table"
 				type: "item"
 			}]
-			x: 2.88d
+			x: 1.58d
 			y: 1.0d
 			rewards: [{ id: "A82440FC29C3FC2F" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["The soldering table belongs in the andesite circuit lane before PNCR final authority."]
@@ -235,7 +235,7 @@
 				item: "morered:diode"
 				type: "item"
 			}]
-			x: 5.76d
+			x: 3.17d
 			y: 1.0d
 			description: ["Diodes and gates are primitive logic proof before finished circuit boards."]
 		}
@@ -266,7 +266,7 @@
 				item: "create:precision_mechanism"
 				type: "item"
 			}]
-			x: 2.88d
+			x: 1.58d
 			y: -3.0d
 			description: ["Precision mechanisms mark the move from rotation to controlled assembly."]
 		}
@@ -281,7 +281,7 @@
 				item: "create:mechanical_arm"
 				type: "item"
 			}]
-			x: 5.76d
+			x: 3.17d
 			y: -3.0d
 			description: ["The mechanical arm is logistics with intent: selective, visible, and local."]
 		}
@@ -296,7 +296,7 @@
 				item: "create:display_link"
 				type: "item"
 			}]
-			x: 8.64d
+			x: 4.75d
 			y: -3.0d
 			description: ["Display links make factories legible without replacing physical control."]
 		}
@@ -312,9 +312,178 @@
 				item: "create:railway_casing"
 				type: "item"
 			}]
-			x: 11.52d
+			x: 6.34d
 			y: -3.0d
 			description: ["Railway casing points toward trains as intersite logistics before AE2 dominance."]
+		},
+		{
+			dependencies: ["5C37980430C2D51F"]
+			id: "54DEA39BC5F4D55B"
+			title: "Stress Budget"
+			icon: "create:stressometer"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "114494D305743507"
+				title: "Measure stress before machine spam"
+				type: "checkmark"
+			}]
+			x: -1.58d
+			y: -1.3d
+			description: ["Create graphs look better when the power budget is explicit."]
+		}
+,
+		{
+			dependencies: ["4145E9AE6FCF2471"]
+			id: "E09D6E32AAD9952D"
+			title: "Fanout Hub"
+			icon: "create:andesite_tunnel"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "96513A95ADFAFA82"
+				title: "Use casing as the machine fanout hub"
+				type: "checkmark"
+			}]
+			x: -4.75d
+			y: 2.3d
+			description: ["This makes the andesite cluster visibly dense."]
+		}
+,
+		{
+			dependencies: ["745F897829E7FFB9"]
+			id: "0DC5AD5B9406C1FA"
+			title: "Plate Line"
+			icon: "create:iron_sheet"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "F097D12CDCB46749"
+				title: "Build a plate line for repeated recipes"
+				type: "checkmark"
+			}]
+			x: -3.17d
+			y: -5.8d
+			description: ["Pressing should become a small production lane."]
+		}
+,
+		{
+			dependencies: ["E7C60362B9AC8F83"]
+			id: "B3533B7F7734590C"
+			title: "Alloy Vat"
+			icon: "create:basin"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "E06BF1E916FE5B37"
+				title: "Feed basin recipes intentionally"
+				type: "checkmark"
+			}]
+			x: -3.17d
+			y: -0.7d
+			description: ["Mixing makes materials feel authored."]
+		}
+,
+		{
+			dependencies: ["D2D49E52D48854FE"]
+			id: "0FF4382CBD152A18"
+			title: "Wash Stack"
+			icon: "minecraft:water_bucket"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "AED393A9BCA56839"
+				title: "Build washing/blasting/haunting spots"
+				type: "checkmark"
+			}]
+			x: -3.17d
+			y: -3.0d
+			description: ["Fan processing is a multi-surface tool."]
+		}
+,
+		{
+			dependencies: ["A78DB795C876699D"]
+			id: "DE2E81A2C25ED50E"
+			title: "Hand Loop"
+			icon: "create:depot"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "72946586AAB303C7"
+				title: "Make deployer+depot loops before autocrafting"
+				type: "checkmark"
+			}]
+			x: -1.58d
+			y: -0.9d
+			description: ["The deployer should look like an automation proof."]
+		}
+,
+		{
+			dependencies: ["8F728191626B1BED"]
+			id: "1A0961A8998C54BD"
+			title: "Logic Bench"
+			icon: "minecraft:redstone"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "3E40784F8591489C"
+				title: "Treat primitive circuits as bench work"
+				type: "checkmark"
+			}]
+			x: 1.58d
+			y: -1.1d
+			description: ["More Red should be a visible circuit subcluster."]
+		}
+,
+		{
+			dependencies: ["B1D2E9D9D4F77E0C"]
+			id: "AC5B64DDFE41CD64"
+			title: "Logistics Pivot"
+			icon: "create:stockpile_switch"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "A595677CC18BA0B0"
+				title: "Use brass for selective movement and sensing"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -5.2d
+			description: ["Brass deserves a denser control cluster."]
+		}
+,
+		{
+			dependencies: ["E52BDE1C2071533D"]
+			id: "58A7FED8289BFF88"
+			title: "Assembly Loop"
+			icon: "create:mechanical_crafter"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "DD351544A14F803D"
+				title: "Build repeatable precision mechanisms"
+				type: "checkmark"
+			}]
+			x: 1.58d
+			y: -0.9d
+			description: ["Precision should bridge into serious automation."]
+		}
+,
+		{
+			dependencies: ["43E30496929C8519"]
+			id: "6ECBF70F9DA72F59"
+			title: "Train Thesis"
+			icon: "create:track"
+			shape: "octagon"
+			size: 0.9d
+			tasks: [{
+				id: "468C452710A20771"
+				title: "Commit to trains before remote storage"
+				type: "checkmark"
+			}]
+			x: 6.34d
+			y: -1.0d
+			description: ["The chapter should visibly point at physical logistics."]
 		}
 	]
 	title: "Create and Primitive Circuits"

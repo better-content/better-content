@@ -19,7 +19,7 @@
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
-			x: -11.52d
+			x: -6.34d
 			y: 0.0d
 			rewards: [{ id: "FD29822C34828A61" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Copper coins are the recovery economy, not a replacement for production."]
@@ -35,7 +35,7 @@
 				title: "Earn through routes and work"
 				type: "checkmark"
 			}]
-			x: -8.64d
+			x: -4.75d
 			y: -3.0d
 			description: ["Coins should come from authored play: quests, markets, wares, and useful settlement contact."]
 		}
@@ -50,7 +50,7 @@
 				item: "wares:delivery_agreement"
 				type: "item"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: -3.0d
 			description: ["Wares packages are expedition support and trade texture, not renewable ore factories."]
 		}
@@ -65,7 +65,7 @@
 				title: "Open packages as risk relief"
 				type: "checkmark"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: -3.0d
 			description: ["Use package contents to recover from distance and pressure without skipping machine gates."]
 		}
@@ -80,7 +80,7 @@
 				title: "Use village specialists intentionally"
 				type: "checkmark"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: -1.0d
 			description: ["Some trades touch early infrastructure, but they should support routes rather than bypass the pack."]
 		}
@@ -95,7 +95,7 @@
 				item: "create:andesite_casing"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: -1.0d
 			description: ["Andesite casing can appear in trade context, but the real progression still runs through Create manufacture."]
 		}
@@ -111,7 +111,7 @@
 				item: "createdeco:zinc_coin"
 				type: "item"
 			}]
-			x: -8.64d
+			x: -4.75d
 			y: 3.0d
 			description: ["Coin conversion has loss; use it for access, not because all value should collapse into one pile."]
 		}
@@ -126,7 +126,7 @@
 				item: "createdeco:brass_coin"
 				type: "item"
 			}]
-			x: -5.76d
+			x: -3.17d
 			y: 3.0d
 			rewards: [{ id: "A567944308870D88" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Higher coins represent harder routes and later markets, not permission to skip casings or circuits."]
@@ -142,7 +142,7 @@
 				item: "createdeco:iron_coin"
 				type: "item"
 			}]
-			x: -2.88d
+			x: -1.58d
 			y: 3.0d
 			description: ["Iron coin spending should feel like midgame procurement, especially where settlements reduce travel friction."]
 		}
@@ -173,7 +173,7 @@
 				item: "createdeco:netherite_coin"
 				type: "item"
 			}]
-			x: 2.88d
+			x: 1.58d
 			y: 3.0d
 			description: ["Top-tier currency should never replace late proof: it helps acquire support, not final authority."]
 		}
@@ -203,7 +203,7 @@
 				title: "Build reliable surface routes"
 				type: "checkmark"
 			}]
-			x: 2.88d
+			x: 1.58d
 			y: -3.0d
 			description: ["Roads and rails turn settlements into infrastructure rather than isolated loot points."]
 		}
@@ -218,7 +218,7 @@
 				title: "Design for visibility"
 				type: "checkmark"
 			}]
-			x: 5.76d
+			x: 3.17d
 			y: -2.0d
 			description: ["Open sightlines make raids and patrols manageable before automated defense exists."]
 		}
@@ -233,7 +233,7 @@
 				title: "Separate support from bypass"
 				type: "checkmark"
 			}]
-			x: 5.76d
+			x: 3.17d
 			y: 2.0d
 			description: ["A good market helps you recover, travel, and build, but does not sell the spine out from under itself."]
 		}
@@ -249,9 +249,178 @@
 				title: "Treat pillagers as a campaign"
 				type: "checkmark"
 			}]
-			x: 8.64d
+			x: 4.75d
 			y: 0.0d
 			description: ["Surface pressure should make economy and settlement work feel necessary, not optional flavor."]
+		},
+		{
+			dependencies: ["3928BE5AE760D41E"]
+			id: "05402A01C5CACCD0"
+			title: "Small Jobs"
+			icon: "minecraft:wheat"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "736E022B61A37C6A"
+				title: "Earn copper through local labor and route help"
+				type: "checkmark"
+			}]
+			x: -6.34d
+			y: -2.1d
+			description: ["Economy density comes from jobs and settlement texture, not raw coin icons."]
+		}
+,
+		{
+			dependencies: ["2E3F90FB1612D18F"]
+			id: "6E7D62EFF5601E64"
+			title: "Delivery Loop"
+			icon: "wares:delivery_agreement"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "5266D0021221529C"
+				title: "Run packages along roads instead of hoarding them"
+				type: "checkmark"
+			}]
+			x: -3.17d
+			y: -0.9d
+			description: ["Wares should look like logistics content, not a loot-box aside."]
+		}
+,
+		{
+			dependencies: ["26402A61C9A8BE8C"]
+			id: "406AABDD6BABDEE9"
+			title: "Relief Not Bypass"
+			icon: "minecraft:bundle"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "4AEE11F4221E5ED0"
+				title: "Use packages to recover from pressure, not skip machines"
+				type: "checkmark"
+			}]
+			x: -1.58d
+			y: -5.0d
+			description: ["This distinguishes economy support from progression bypass."]
+		}
+,
+		{
+			dependencies: ["CEF579B8E8AA139A"]
+			id: "54B10DA35768677C"
+			title: "Stone Demand"
+			icon: "minecraft:bricks"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "62EB9EB5AA59209D"
+				title: "Feed village building demand"
+				type: "checkmark"
+			}]
+			x: -3.17d
+			y: 1.0d
+			description: ["Mason work should visibly support settlement growth."]
+		}
+,
+		{
+			dependencies: ["D071FCB648FDF641"]
+			id: "E5A784465C9CE935"
+			title: "Exchange Loss"
+			icon: "minecraft:gold_nugget"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "3B03679CB381DEB6"
+				title: "Respect lossy exchange tiers"
+				type: "checkmark"
+			}]
+			x: -3.17d
+			y: 1.0d
+			description: ["Coin conversion should have a visible caution node."]
+		}
+,
+		{
+			dependencies: ["E425BFBB92593AB1"]
+			id: "463F8CDB47EDBB9F"
+			title: "Route Tax"
+			icon: "minecraft:rail"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "01257E9141DD700E"
+				title: "Spend high coins on travel support"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 1.0d
+			description: ["Higher money should buy infrastructure pressure relief."]
+		}
+,
+		{
+			dependencies: ["C782E0C59F24EAFA"]
+			id: "B22A3053081E827F"
+			title: "Gatehouse"
+			icon: "minecraft:iron_door"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "A116A7D0A3FCC6BF"
+				title: "Build entrances before decoration"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -1.0d
+			description: ["Settlement defense needs physical design nodes."]
+		}
+,
+		{
+			dependencies: ["925683523DC42F41"]
+			id: "F26EFD7D45BDFFDD"
+			title: "Milestones"
+			icon: "minecraft:oak_sign"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "A13ABAFF039CD105"
+				title: "Mark distances between markets"
+				type: "checkmark"
+			}]
+			x: 1.58d
+			y: -1.0d
+			description: ["Roads should visibly connect settlements into a network."]
+		}
+,
+		{
+			dependencies: ["8ACDA7509F139383"]
+			id: "48E2A42F36643255"
+			title: "Buy Lists"
+			icon: "minecraft:writable_book"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "1C18B314584C8848"
+				title: "Document useful trades and forbidden bypasses"
+				type: "checkmark"
+			}]
+			x: 3.17d
+			y: -0.1d
+			description: ["Markets need curation to stay expert-pack safe."]
+		}
+,
+		{
+			dependencies: ["B26052FCE579CF54"]
+			id: "5D2C1D5BDEF4A15B"
+			title: "Raid Economy"
+			icon: "minecraft:white_banner"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "E3E078BBC76DF689"
+				title: "Treat raids as economic disruption"
+				type: "checkmark"
+			}]
+			x: 4.75d
+			y: 2.0d
+			description: ["Pillagers should pressure settlements and coin loops together."]
 		}
 	]
 	title: "Coins, Wares, and Settlements"

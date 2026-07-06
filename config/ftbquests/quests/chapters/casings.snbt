@@ -19,7 +19,7 @@
 				item: "kubejs:seared_machine_casing"
 				type: "item"
 			}]
-			x: -12.96d
+			x: -7.13d
 			y: 0.0d
 			rewards: [{ id: "62FFE5840CE0E513" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Tier 1: TCon molten work. This is the first machine body tier."]
@@ -35,7 +35,7 @@
 				item: "tconstruct:seared_melter"
 				type: "item"
 			}]
-			x: -10.08d
+			x: -5.54d
 			y: -3.5d
 			description: ["Seared melters prove controlled heat before broad automation."]
 		}
@@ -50,7 +50,7 @@
 				item: "tconstruct:seared_casting_tank"
 				type: "item"
 			}]
-			x: -7.2d
+			x: -3.96d
 			y: -3.5d
 			description: ["Casting tables and basins make parts physical and reusable."]
 		}
@@ -66,7 +66,7 @@
 				item: "kubejs:andesite_machine_casing"
 				type: "item"
 			}]
-			x: -10.08d
+			x: -5.54d
 			y: 0.0d
 			rewards: [{ id: "8AF3C5A2BAAE4A8C" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Tier 2: Create andesite. Rotation becomes the pack's first automation language."]
@@ -82,7 +82,7 @@
 				item: "create:andesite_casing"
 				type: "item"
 			}]
-			x: -7.2d
+			x: -3.96d
 			y: 0.0d
 			description: ["Recipe explorer shows andesite casing unlocks presses, mixers, fans, drills, saws, controls, and Power Grid support."]
 		}
@@ -97,7 +97,7 @@
 				item: "create:mechanical_press"
 				type: "item"
 			}]
-			x: -4.32d
+			x: -2.38d
 			y: -1.5d
 			description: ["Pressing is the first serious manufactured-part surface."]
 		}
@@ -113,7 +113,7 @@
 				item: "kubejs:brass_machine_casing"
 				type: "item"
 			}]
-			x: -4.32d
+			x: -2.38d
 			y: 1.5d
 			rewards: [{ id: "E3CF9AD4A78AF936" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Tier 3: Create brass. Precision and logistics become controlled systems."]
@@ -129,7 +129,7 @@
 				item: "create:brass_casing"
 				type: "item"
 			}]
-			x: -1.44d
+			x: -0.79d
 			y: 1.5d
 			description: ["Recipe explorer shows brass casing feeds mechanical arms, display links, railway casing, and Creating Space parts."]
 		}
@@ -144,7 +144,7 @@
 				item: "create:precision_mechanism"
 				type: "item"
 			}]
-			x: 1.44d
+			x: 0.79d
 			y: 1.5d
 			description: ["Precision mechanisms turn Create from rotation into repeatable assembly."]
 		}
@@ -160,7 +160,7 @@
 				item: "kubejs:airtight_machine_casing"
 				type: "item"
 			}]
-			x: 1.44d
+			x: 0.79d
 			y: -1.5d
 			rewards: [{ id: "BD5F1459FB2244AB" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Tier 4: PneumaticCraft pressure. Sealed work, gas, and plastics become authoritative."]
@@ -176,7 +176,7 @@
 				item: "pneumaticcraft:pressure_chamber_valve"
 				type: "item"
 			}]
-			x: 4.32d
+			x: 2.38d
 			y: -2.5d
 			description: ["Pressure chambers gate sealed chemistry, plastics, and circuit precursors."]
 		}
@@ -191,7 +191,7 @@
 				item: "pneumaticcraft:printed_circuit_board"
 				type: "item"
 			}]
-			x: 7.2d
+			x: 3.96d
 			y: -2.5d
 			description: ["Printed boards fan out into PNCR assembly, drones, security, armor, and compressors."]
 		}
@@ -207,7 +207,7 @@
 				item: "kubejs:electrical_machine_casing"
 				type: "item"
 			}]
-			x: 7.2d
+			x: 3.96d
 			y: 0.5d
 			rewards: [{ id: "51263BF43F447403" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Tier 5: Power Grid, PNCR assembly, and OC2R merge into electrical control."]
@@ -223,7 +223,7 @@
 				item: "powergrid:battery"
 				type: "item"
 			}]
-			x: 10.08d
+			x: 5.54d
 			y: 0.5d
 			description: ["Power storage turns pressure-era parts into an electrical control lane."]
 		}
@@ -238,7 +238,7 @@
 				item: "oc2r:computer"
 				type: "item"
 			}]
-			x: 12.96d
+			x: 7.13d
 			y: 0.5d
 			description: ["OC2R gives intersite information without deleting physical logistics."]
 		}
@@ -254,7 +254,7 @@
 				item: "kubejs:space_machine_casing"
 				type: "item"
 			}]
-			x: 12.96d
+			x: 7.13d
 			y: -2.5d
 			rewards: [{ id: "1A01B4E56ED62278" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Tier 6: Creating Space. Distance becomes a manufacturing requirement."]
@@ -270,7 +270,7 @@
 				item: "minecraft:firework_rocket"
 				type: "item"
 			}]
-			x: 15.84d
+			x: 8.71d
 			y: -3.5d
 			description: ["Rockets are route gates into late dimensions and expedition logistics."]
 		}
@@ -285,7 +285,7 @@
 				item: "ae2:controller"
 				type: "item"
 			}]
-			x: 15.84d
+			x: 8.71d
 			y: 0.0d
 			description: ["AE2 is late local intelligence after space, pressure, and processors prove readiness."]
 		}
@@ -301,7 +301,7 @@
 				item: "kubejs:raw_impossible_casing"
 				type: "item"
 			}]
-			x: 18.72d
+			x: 10.3d
 			y: 0.0d
 			rewards: [{ id: "1B3F5F6EDE3882AF" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Tier 7: raw impossible. AE2 body plus unstable high-tier material proof."]
@@ -318,7 +318,7 @@
 				item: "kubejs:impossible_machine_casing"
 				type: "item"
 			}]
-			x: 21.6d
+			x: 11.88d
 			y: 0.0d
 			rewards: [{ id: "637ACC905A9EB445" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Tier 8: final machine frame for AE2-scale systems, high utility, and late Blood Magic hybrids."]
@@ -334,7 +334,7 @@
 				item: "kubejs:impossible_support_matrix"
 				type: "item"
 			}]
-			x: 24.48d
+			x: 13.46d
 			y: -1.5d
 			description: ["Support matrices keep late utility attached to the casing economy rather than direct bypasses."]
 		}
@@ -350,9 +350,212 @@
 				title: "Read the casing thesis"
 				type: "checkmark"
 			}]
-			x: 27.36d
+			x: 15.05d
 			y: -1.5d
 			description: ["Every tier should add a real manufacturing surface and pull earlier systems forward."]
+		},
+		{
+			dependencies: ["FF2CD75C29493AC2"]
+			id: "FB8064F72EEB6950"
+			title: "Heat Budget"
+			icon: "minecraft:lava_bucket"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "3763B0BD3227AE29"
+				title: "Prove fuel, drain, tank, and casting flow before chasing automation."
+				type: "checkmark"
+			}]
+			x: -7.13d
+			y: -2.1d
+			description: ["The seared tier should read as a little foundry cell, not a single item unlock."]
+		}
+,
+		{
+			dependencies: ["FF2CD75C29493AC2"]
+			id: "541BF8500E645538"
+			title: "Brick Supply"
+			icon: "tconstruct:seared_brick"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "B8B964F41F8F503C"
+				title: "Batch seared bricks and glass"
+				type: "checkmark"
+			}]
+			x: -6.25d
+			y: 2.0d
+			description: ["Make the casing chapter show the material burden behind the first body tier."]
+		}
+,
+		{
+			dependencies: ["F5F62E013FC2AC80"]
+			id: "F29F5BCA5DA3C87D"
+			title: "Rotation Cell"
+			icon: "create:water_wheel"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "CDE43300FD2C52B2"
+				title: "Build water wheel, shafts, cogs, and stress margin"
+				type: "checkmark"
+			}]
+			x: -5.54d
+			y: -2.3d
+			description: ["This anchors Create as a local mechanical system."]
+		}
+,
+		{
+			dependencies: ["A0F2ED2051CC1F98"]
+			id: "4A60DD8AEA0D2ABE"
+			title: "Machine Fanout"
+			icon: "create:mechanical_drill"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "BFE61C7139D1B26C"
+				title: "Inspect press, mixer, fan, saw, drill, and deployer uses"
+				type: "checkmark"
+			}]
+			x: -3.85d
+			y: 2.3d
+			description: ["Andesite casing should visibly explode into useful machines."]
+		}
+,
+		{
+			dependencies: ["A23D8E6A5823FD6E"]
+			id: "551B3272B1D9481B"
+			title: "Precision Cell"
+			icon: "create:electron_tube"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "45D03A9A5C6920F5"
+				title: "Prepare tubes, sheets, deployer loops, and gold casts"
+				type: "checkmark"
+			}]
+			x: -2.38d
+			y: 3.9d
+			description: ["Brass should feel like controlled assembly, not just a prettier casing."]
+		}
+,
+		{
+			dependencies: ["8369DE2CC1CAF0B6"]
+			id: "8BBB01391C01C0BF"
+			title: "Logistics Fanout"
+			icon: "create:mechanical_arm"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "437EAAD93E8B0CE0"
+				title: "Inspect arms, display links, stockpile switches, railway casing"
+				type: "checkmark"
+			}]
+			x: -0.74d
+			y: -1.0d
+			description: ["Brass casing is the pack's first serious local logistics fanout."]
+		}
+,
+		{
+			dependencies: ["E767D2D9AD86FB78"]
+			id: "E5338050F5307A92"
+			title: "Seal Cell"
+			icon: "pneumaticcraft:pressure_tube"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "D6BC3ED311CA5666"
+				title: "Route pressure tube, seals, compressor core, and chamber parts"
+				type: "checkmark"
+			}]
+			x: -0.03d
+			y: -3.8d
+			description: ["Airtight casing should be shown as sealed pressure infrastructure."]
+		}
+,
+		{
+			dependencies: ["E2755613741D999E"]
+			id: "0C870DD3781E7C46"
+			title: "Plastic Proof"
+			icon: "pneumaticcraft:plastic"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "E9D498C09DFFB09B"
+				title: "Make plastic and pressure chamber materials before boards"
+				type: "checkmark"
+			}]
+			x: 2.38d
+			y: -0.3d
+			description: ["Pressure unlocks chemistry surfaces before final electronics."]
+		}
+,
+		{
+			dependencies: ["758F565471A67CA4"]
+			id: "041DA6829A191F13"
+			title: "Control Cell"
+			icon: "powergrid:circuit_design_table"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "79F0F8457AF1FC07"
+				title: "Design circuits before treating electricity as solved"
+				type: "checkmark"
+			}]
+			x: 3.96d
+			y: 2.8d
+			description: ["Electrical casing should merge PNCR boards with Power Grid planning."]
+		}
+,
+		{
+			dependencies: ["4350E20F074AF6C8"]
+			id: "9A87AA8FEFDE0A57"
+			title: "Factory Cell"
+			icon: "pneumaticcraft:assembly_platform"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "A635699F44F97CB1"
+				title: "Lay out controller, platform, laser, and drill"
+				type: "checkmark"
+			}]
+			x: 3.96d
+			y: -4.8d
+			description: ["Assembly needs to look like a machine cell, not an isolated quest."]
+		}
+,
+		{
+			dependencies: ["79111EEB3696ADBC"]
+			id: "A878C5383008D1C5"
+			title: "Local AE"
+			icon: "ae2:controller"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "631D888160BEF777"
+				title: "Limit AE to local bases before intersite control"
+				type: "checkmark"
+			}]
+			x: 8.71d
+			y: 2.3d
+			description: ["Networked casing should show storage authority with boundaries."]
+		}
+,
+		{
+			dependencies: ["71781B17892A20AF"]
+			id: "2B0D44C517A6164A"
+			title: "Launch Cell"
+			icon: "minecraft:firework_rocket"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "2CA32BE79AC9C6AD"
+				title: "Tie space casing to launch infrastructure and dimension proof"
+				type: "checkmark"
+			}]
+			x: 7.13d
+			y: -4.7d
+			description: ["Stellar casing is a route proof, not just another metal shell."]
 		}
 	]
 	title: "Casings"

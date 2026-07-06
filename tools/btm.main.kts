@@ -360,7 +360,7 @@ Commands:
 """.trimIndent()
 
 fun internalHelp(): String = """
-Usage: tools/btm internal <resolve-packwiz-downloads|prune-runtime-mods|log-hard-failure-scan|minecraft-client-argfile|sync-burnt-coverage-tags|generate-completionist-quests|check-js-syntax|check-json-surface|validate-pack-contract|contract-completeness-report|validate-kubejs-assets|validate-autonomous-contracts|validate-realistic-hands|validate-chemistry-identity|validate-synthesis-pipeline|validate-player-progression-contracts|validate-progression-reachability|validate-burnt-coverage|validate-lc-tfth-dh-contracts|validate-kotlin-tool-surface|validate-tool-doc-surface|validate-worldgen-sampling-contracts|validate-client-smoke-contracts|verify-pack-fast|verify-pack-full> ...
+Usage: tools/btm internal <resolve-packwiz-downloads|prune-runtime-mods|log-hard-failure-scan|minecraft-client-argfile|sync-burnt-coverage-tags|generate-completionist-quests|audit-ftbq-layout|check-js-syntax|check-json-surface|validate-pack-contract|contract-completeness-report|validate-kubejs-assets|validate-autonomous-contracts|validate-realistic-hands|validate-chemistry-identity|validate-synthesis-pipeline|validate-player-progression-contracts|validate-progression-reachability|validate-burnt-coverage|validate-lc-tfth-dh-contracts|validate-kotlin-tool-surface|validate-tool-doc-surface|validate-worldgen-sampling-contracts|validate-client-smoke-contracts|verify-pack-fast|verify-pack-full> ...
 """.trimIndent()
 
 fun usageError(message: String, help: String = mainHelp()): CommandResult =
@@ -3743,6 +3743,10 @@ fun handleInternal(subArgs: List<String>): CommandResult {
         "generate-completionist-quests" -> {
             val run = runCompletionistQuestGeneration()
             CommandResult("internal generate-completionist-quests", if (run.exitCode == 0) "success" else "failure", run.output, exitCode = if (run.exitCode == 0) 0 else 1, mutated = run.exitCode == 0, evidenceLevel = "source")
+        }
+        "audit-ftbq-layout" -> {
+            val run = runKotlinScript(root.resolve("tools/kotlin/audit_ftbq_layout.main.kts"), subArgs.drop(1))
+            CommandResult("internal audit-ftbq-layout", if (run.exitCode == 0) "success" else "failure", run.output, exitCode = if (run.exitCode == 0) 0 else 1)
         }
         "check-js-syntax" -> {
             val run = runJsSyntaxCheck()

@@ -310,8 +310,8 @@
 				title: "Bind magic to places and routes"
 				type: "checkmark"
 			}]
-			x: -6.34d
-			y: -2.2d
+			x: -6.95d
+			y: -2.75d
 			description: ["Dirty magic looks better as a web around place identity."]
 		}
 ,
@@ -327,8 +327,8 @@
 				title: "Stage herbs, bottles, candles, and wood"
 				type: "checkmark"
 			}]
-			x: -4.75d
-			y: -2.0d
+			x: -4.55d
+			y: -2.95d
 			description: ["Hexerei needs atmospheric utility nodes."]
 		}
 ,
@@ -344,8 +344,8 @@
 				title: "Keep mobility tied to ritual materials"
 				type: "checkmark"
 			}]
-			x: -1.58d
-			y: -2.0d
+			x: -0.15d
+			y: -5.15d
 			description: ["Brooms should be earned movement, not free flight."]
 		}
 ,
@@ -361,8 +361,8 @@
 				title: "Make spirit work visibly risky"
 				type: "checkmark"
 			}]
-			x: -4.75d
-			y: 0.5d
+			x: -5.55d
+			y: 0.95d
 			description: ["Occultism should not look like a passive miner branch."]
 		}
 ,
@@ -378,8 +378,8 @@
 				title: "Prepare circles before binding"
 				type: "checkmark"
 			}]
-			x: -1.58d
-			y: -3.5d
+			x: -2.35d
+			y: -2.85d
 			description: ["Spatial ritual preparation adds density and clarity."]
 		}
 ,
@@ -395,8 +395,8 @@
 				title: "Route soulstone and spirits into materials"
 				type: "checkmark"
 			}]
-			x: -4.75d
-			y: 0.0d
+			x: -3.75d
+			y: 0.65d
 			description: ["Malum should visibly feed material magic."]
 		}
 ,
@@ -430,7 +430,7 @@
 				type: "checkmark"
 			}]
 			x: 0.0d
-			y: -2.0d
+			y: -2.75d
 			description: ["Ars should converge with the dirty branches."]
 		}
 ,
@@ -446,8 +446,8 @@
 				title: "Spend ink and essence on spell growth"
 				type: "checkmark"
 			}]
-			x: 4.75d
-			y: -2.0d
+			x: 5.55d
+			y: -3.15d
 			description: ["Spellbooks need a visible material cadence."]
 		}
 ,
@@ -464,7 +464,7 @@
 				type: "checkmark"
 			}]
 			x: 7.92d
-			y: 2.1d
+			y: 3.15d
 			description: ["This is the chapter thesis node."]
 		}
 	]

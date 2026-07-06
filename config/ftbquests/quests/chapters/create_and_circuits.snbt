@@ -19,7 +19,7 @@
 				item: "create:andesite_alloy"
 				type: "item"
 			}]
-			x: -6.34d
+			x: -6.8d
 			y: 0.0d
 			rewards: [{ id: "EFF046DF7400D0EF" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Andesite alloy is the first Create engineering language after seared metallurgy."]
@@ -66,7 +66,7 @@
 				item: "create:andesite_casing"
 				type: "item"
 			}]
-			x: -4.75d
+			x: -4.7d
 			y: 0.0d
 			rewards: [{ id: "1F616987450FC867" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
 			description: ["Recipe explorer shows andesite casing fans out into deployers, presses, mixers, drills, saws, fans, links, and Power Grid surfaces."]
@@ -128,7 +128,7 @@
 				type: "item"
 			}]
 			x: -3.17d
-			y: 0.5d
+			y: 1.05d
 			description: ["The drill is movement plus extraction, not a magic miner."]
 		}
 		{
@@ -328,8 +328,8 @@
 				title: "Measure stress before machine spam"
 				type: "checkmark"
 			}]
-			x: -1.58d
-			y: -1.3d
+			x: -0.4d
+			y: -1.95d
 			description: ["Create graphs look better when the power budget is explicit."]
 		}
 ,
@@ -345,8 +345,8 @@
 				title: "Use casing as the machine fanout hub"
 				type: "checkmark"
 			}]
-			x: -4.75d
-			y: 2.3d
+			x: -4.25d
+			y: 2.7d
 			description: ["This makes the andesite cluster visibly dense."]
 		}
 ,
@@ -379,8 +379,8 @@
 				title: "Feed basin recipes intentionally"
 				type: "checkmark"
 			}]
-			x: -3.17d
-			y: -0.7d
+			x: -2.25d
+			y: -1.8d
 			description: ["Mixing makes materials feel authored."]
 		}
 ,
@@ -396,8 +396,8 @@
 				title: "Build washing/blasting/haunting spots"
 				type: "checkmark"
 			}]
-			x: -3.17d
-			y: -3.0d
+			x: -1.5d
+			y: -6.7d
 			description: ["Fan processing is a multi-surface tool."]
 		}
 ,
@@ -413,8 +413,8 @@
 				title: "Make deployer+depot loops before autocrafting"
 				type: "checkmark"
 			}]
-			x: -1.58d
-			y: -0.9d
+			x: -0.7d
+			y: -4.25d
 			description: ["The deployer should look like an automation proof."]
 		}
 ,
@@ -430,8 +430,8 @@
 				title: "Treat primitive circuits as bench work"
 				type: "checkmark"
 			}]
-			x: 1.58d
-			y: -1.1d
+			x: 2.55d
+			y: -1.75d
 			description: ["More Red should be a visible circuit subcluster."]
 		}
 ,
@@ -464,8 +464,8 @@
 				title: "Build repeatable precision mechanisms"
 				type: "checkmark"
 			}]
-			x: 1.58d
-			y: -0.9d
+			x: 2.3d
+			y: -0.15d
 			description: ["Precision should bridge into serious automation."]
 		}
 ,

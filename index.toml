@@ -5290,7 +5290,7 @@ hash = "7cc93c949d9f935afd3bef30b3de1f144c4264d7c437e146c06f565ffa76247c"
 
 [[files]]
 file = "config/classselector/embark.json"
-hash = "39a177d8eb0ef7a5b46e7c6e2e165c408e2636d1a1a80f9f14cb77ddf0253f62"
+hash = "7203d4d5f00a8545023e7ca4ba82dedfdf9e055194b4684b4f38e0ee0b22a23b"
 
 [[files]]
 file = "config/classselector/kits.json"

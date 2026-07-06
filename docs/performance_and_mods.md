@@ -76,7 +76,7 @@ Prior repairs worth retaining as current expectations:
 - `btmfixes` includes compatibility behavior for C2ME safe-random guard noise around EMI tooltip indexing.
 - Worldgen C2ME compatibility fixes now include a pack datapack no-op for PVJ Nether `charred_bones` groundcover, and `meteor_ore_relocation` routes relocated Malum cthonic gold through vanilla `minecraft:ore` instead of Malum's custom cross-chunk writer.
 - `btmdimtrees`, `dtmalum`, and `dthexerei` are active Dynamic Trees extension jars in `mods/`; rebuild and run their unit tests and Forge game tests before redeploying them.
-- `class-selector` owns the embark point-buy path and spawn lock handoff. Keep `config/classselector/embark.json` small, high-signal, and support-only, and keep spawn-biome selection temperate so the locked-spawn loop starts in intended climates.
+- `class-selector` owns the fixed class selection path and spawn lock handoff. `config/classselector/embark.json` is currently set to class mode; keep any inactive embark fallback data small, high-signal, and support-only, and keep spawn-biome selection temperate so the locked-spawn loop starts in intended climates.
 - `realisticores` plus Excavated Variants should produce gravel variants for every custom deposit covered by the stone configured features. If deposit ids change in the custom source, regenerate both `defaultresources/excavated_variants/excavated_variants/variants/realisticores.json5` and the matching `datapacks/worldgen_compat_fixes/data/realisticores/worldgen/configured_feature/*_stone.json` overrides.
 
 Rebuild and redeploy custom jars deliberately; then sync, prune, boot, and validate with the relevant harness.

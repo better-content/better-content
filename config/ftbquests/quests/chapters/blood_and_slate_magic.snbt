@@ -1,0 +1,166 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "blood_and_slate_magic"
+	group: "65CC8BE9C7D2A5C0"
+	icon: "bloodmagic:weakbloodorb"
+	id: "F6892933A4710E38"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			id: "848241D2FEE82D2A"
+			title: "Life Proof"
+			icon: "rpgstats:still_beating_heart"
+			tasks: [{
+				id: "F1F360ADC9C5E105"
+				item: "rpgstats:still_beating_heart"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 0.0d
+			rewards: [
+				{
+					id: "30AC09164CDFE3C1"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["Blood Magic starts from a lived run, not a cheap grid recipe. The first heart proves distance and risk."]
+		}
+		{
+			dependencies: ["848241D2FEE82D2A"]
+			id: "CE10C1DE644DB579"
+			title: "Weak Blood Orb"
+			icon: "bloodmagic:weakbloodorb"
+			tasks: [{
+				id: "BD8549B6EF46DC6F"
+				item: "bloodmagic:weakbloodorb"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 0.0d
+			rewards: [
+				{
+					id: "831A726EE0A0112E"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["The weak orb opens LP work. It does not make hearts a spam ingredient; it starts the altar loop."]
+		}
+		{
+			dependencies: ["CE10C1DE644DB579"]
+			id: "2BD70F2DF5E45E4A"
+			title: "Blank Slate"
+			icon: "bloodmagic:blankslate"
+			tasks: [{
+				id: "03FE7E42A93A8984"
+				item: "bloodmagic:blankslate"
+				type: "item"
+			}]
+			x: -5.0d
+			y: -1.5d
+			rewards: [
+				{
+					id: "85708959A3073340"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["Blank slates are early life-force proof for simple magic, runes, and manual yield routes."]
+		}
+		{
+			dependencies: ["2BD70F2DF5E45E4A"]
+			id: "66157F64A76E144A"
+			title: "Reinforced Slate"
+			icon: "bloodmagic:reinforcedslate"
+			tasks: [{
+				id: "5374AE5195F2BD19"
+				item: "bloodmagic:reinforcedslate"
+				type: "item"
+			}]
+			x: -3.5d
+			y: -0.75d
+			rewards: [
+				{
+					id: "BA3C13D8F2E97BAF"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["Reinforced slates start stronger apparatus, cross-magic runes, and more deliberate altar investment."]
+		}
+		{
+			dependencies: ["66157F64A76E144A"]
+			id: "1FC1AEBCAAEC1D27"
+			title: "Infused Slate"
+			icon: "bloodmagic:infusedslate"
+			tasks: [{
+				id: "130FDD32D2C189EC"
+				item: "bloodmagic:infusedslate"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+			rewards: [
+				{
+					id: "9C5991B07860C04E"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["Infused slates carry higher Blood Magic, chemistry alternatives, and mid-tier cross-magic work."]
+		}
+		{
+			dependencies: ["1FC1AEBCAAEC1D27"]
+			id: "64B31AE5BADE3815"
+			title: "Demon Slate"
+			icon: "bloodmagic:demonslate"
+			tasks: [{
+				id: "32EFEDF55B775924"
+				item: "bloodmagic:demonslate"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 0.75d
+			rewards: [
+				{
+					id: "9638A0172857D677"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["Demon slates prove dangerous command work and late dirty-magic authority."]
+		}
+		{
+			dependencies: ["64B31AE5BADE3815"]
+			id: "1EC17FEEB640FB4B"
+			title: "Ethereal Slate"
+			icon: "bloodmagic:etherealslate"
+			tasks: [{
+				id: "0FA1F4F783AD1F3E"
+				item: "bloodmagic:etherealslate"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 0.75d
+			rewards: [
+				{
+					id: "11667930807B2183"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["Ethereal slate belongs with programmable, networked, or post-AE2 hybrid magic."]
+		}
+	]
+	title: "Blood and Slate Magic"
+}

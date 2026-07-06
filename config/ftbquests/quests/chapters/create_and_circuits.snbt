@@ -1,0 +1,166 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_and_circuits"
+	group: "65CC8BE9C7D2A5C0"
+	icon: "create:cogwheel"
+	id: "908023E4C093B680"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			id: "1AE7E9C6A07B1C13"
+			title: "Andesite Alloy"
+			icon: "create:andesite_alloy"
+			tasks: [{
+				id: "A168ACC3AC6FBA89"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 0.0d
+			rewards: [
+				{
+					id: "C83127B117A7D183"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["This is the first Create engineering language. It should follow seared metallurgy, not replace it."]
+		}
+		{
+			dependencies: ["1AE7E9C6A07B1C13"]
+			id: "45A1EC3F2775004E"
+			title: "Deployer Before Casing"
+			icon: "create:deployer"
+			tasks: [{
+				id: "1FDE5054596546A3"
+				item: "create:deployer"
+				type: "item"
+			}]
+			x: -6.5d
+			y: -0.75d
+			rewards: [
+				{
+					id: "8D24AE782FA176A6"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["The deployer is an early automation proof. Do not assume every Create body is unlocked just because rotation exists."]
+		}
+		{
+			dependencies: ["45A1EC3F2775004E"]
+			id: "7B2A4CB05D63FA3A"
+			title: "Create Casing"
+			icon: "create:andesite_casing"
+			tasks: [{
+				id: "41955E9ED1C14E9B"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			x: -5.0d
+			y: -0.75d
+			rewards: [
+				{
+					id: "ECD3524247E8F8F7"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["This is the Create block casing, not the pack-wide machine casing ladder. The Casings chapter tracks machine-frame tiers."]
+		}
+		{
+			dependencies: ["1AE7E9C6A07B1C13"]
+			id: "FFE91CBDB297C8A8"
+			title: "Red Alloy"
+			icon: "morered:red_alloy_ingot"
+			tasks: [{
+				id: "DACD4B25426E3E8D"
+				item: "morered:red_alloy_ingot"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 0.75d
+			rewards: [
+				{
+					id: "5191B7538AD3D228"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["More Red starts primitive circuitry on terrestrial Create processing, not Nether shortcuts."]
+		}
+		{
+			dependencies: ["FFE91CBDB297C8A8"]
+			id: "F732F085C9C44FA6"
+			title: "Red Alloy Wire"
+			icon: "morered:red_alloy_wire"
+			tasks: [{
+				id: "7D013F5F7238D55F"
+				item: "morered:red_alloy_wire"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.75d
+			rewards: [
+				{
+					id: "EC837361E0482209"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["Wire is the bridge from bulk redstone to circuit work. Later machines consume this before finished PCB authority appears."]
+		}
+		{
+			dependencies: ["F732F085C9C44FA6"]
+			id: "80C6CAE2CBAA2FFD"
+			title: "Soldering Table"
+			icon: "morered:soldering_table"
+			tasks: [{
+				id: "26A447699F43717D"
+				item: "morered:soldering_table"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 0.75d
+			rewards: [
+				{
+					id: "C81CAE75479F9261"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["The table belongs to the andesite-era circuit lane. It should not demand blaze materials before the pack can justify them."]
+		}
+		{
+			dependencies: ["80C6CAE2CBAA2FFD"]
+			id: "A629F226FFAF738C"
+			title: "Diode Logic"
+			icon: "morered:diode"
+			tasks: [{
+				id: "969EF992FB362640"
+				item: "morered:diode"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.75d
+			rewards: [
+				{
+					id: "CFC55BA28C223DD6"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["Diodes and gates are primitive logic proof. Finished circuits still escalate to Power Grid and PNCR assembly."]
+		}
+	]
+	title: "Create and Primitive Circuits"
+}

@@ -1,0 +1,98 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "coins_wares_settlements"
+	group: "3D1BF480E4BCDBA6"
+	icon: "createdeco:copper_coin"
+	id: "E3AA658E94A43325"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			id: "A90A4B71081ADEF0"
+			title: "Copper Coin"
+			icon: "createdeco:copper_coin"
+			tasks: [{
+				id: "B4C41FC8AE7FAA4C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 0.0d
+			rewards: [
+				{
+					id: "992E6904DEE81319"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["Coins are the pack economy lane. They support recovery, route planning, and villagers without replacing production."]
+		}
+		{
+			dependencies: ["A90A4B71081ADEF0"]
+			id: "D42D1FE3670AE095"
+			title: "Wares Packages"
+			icon: "minecraft:barrel"
+			tasks: [{
+				id: "495FCA463A719703"
+				title: "Open package routes"
+				type: "checkmark"
+			}]
+			x: -6.5d
+			y: -0.75d
+			description: ["Wares and trader packages are expedition support. Treat them as recovery options, not renewable ore or machine factories."]
+		}
+		{
+			dependencies: ["A90A4B71081ADEF0"]
+			id: "BA7D1D678009DD33"
+			title: "Lossy Exchange"
+			icon: "createdeco:zinc_coin"
+			tasks: [{
+				id: "41813B677D8ADEF9"
+				title: "Exchange only when the route is worth it"
+				type: "checkmark"
+			}]
+			x: -6.5d
+			y: 0.75d
+			description: ["Coin tiers exchange with loss. Convert for access, distance, or survival pressure, not because every coin should become one pile."]
+		}
+		{
+			dependencies: ["D42D1FE3670AE095"]
+			id: "EFCFCA332AA1B957"
+			title: "Settlement Pressure"
+			icon: "minecraft:crossbow"
+			tasks: [{
+				id: "95A7B04961EC0DEA"
+				title: "Defend routes, walls, and sightlines"
+				type: "checkmark"
+			}]
+			x: -5.0d
+			y: -0.75d
+			description: ["Pillager pressure is spatial. Safer villages come from approach control, cave sealing, walls, elevation, and patrol routes."]
+		}
+		{
+			dependencies: ["BA7D1D678009DD33"]
+			id: "798CA63A0C55F85A"
+			title: "Later Coin Tiers"
+			icon: "createdeco:brass_coin"
+			tasks: [{
+				id: "648AA6089159F086"
+				item: "createdeco:brass_coin"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.75d
+			rewards: [
+				{
+					id: "23A838CA0A7E1666"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["Higher coins represent harder routes and later markets. They should not skip casing, slate, circuit, or dimension proof."]
+		}
+	]
+	title: "Coins, Wares, and Settlements"
+}

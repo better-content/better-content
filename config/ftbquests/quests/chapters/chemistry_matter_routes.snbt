@@ -1,0 +1,115 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chemistry_matter_routes"
+	group: "2DFE3653F3B634B9"
+	icon: "minecraft:glass_bottle"
+	id: "0C4FC29B1196100C"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			id: "ADF5B3000926A300"
+			title: "Grown Matter"
+			icon: "minecraft:wheat"
+			tasks: [{
+				id: "8B5DD2FE18619FB6"
+				title: "Use farms as chemistry inputs, not free matter"
+				type: "checkmark"
+			}]
+			x: -8.0d
+			y: 0.0d
+			description: ["Plants, animals, honeycomb, bone, hide, feathers, and venom can feed chemical side streams after infrastructure exists."]
+		}
+		{
+			dependencies: ["ADF5B3000926A300"]
+			id: "BC47E926A63D173D"
+			title: "Solvents And Media"
+			icon: "minecraft:glass_bottle"
+			tasks: [{
+				id: "4C6C7FB90CEB1FEA"
+				item: "minecraft:glass_bottle"
+				type: "item"
+			}]
+			x: -6.5d
+			y: -0.75d
+			rewards: [
+				{
+					id: "88497B62747B8BDC"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["Acids, bottles, grinding media, and reagents preserve source identity. They are the cost of controlled transformation."]
+		}
+		{
+			dependencies: ["BC47E926A63D173D"]
+			id: "529573E3293E843D"
+			title: "Create Open Chemistry"
+			icon: "create:mechanical_mixer"
+			tasks: [{
+				id: "47DF2CE857A36425"
+				title: "Run bulk chemistry in open Create machinery"
+				type: "checkmark"
+			}]
+			x: -5.0d
+			y: -0.75d
+			description: ["Create handles open mixing, washing, precipitation, reduction, and bulk transformation routes."]
+		}
+		{
+			dependencies: ["529573E3293E843D"]
+			id: "B140280510C94C9F"
+			title: "Sealed Pressure Chemistry"
+			icon: "pneumaticcraft:pressure_chamber_valve"
+			tasks: [{
+				id: "BE7A0826EF43FEC8"
+				item: "pneumaticcraft:pressure_chamber_valve"
+				type: "item"
+			}]
+			x: -3.5d
+			y: -0.75d
+			rewards: [
+				{
+					id: "577D726B7EA647BF"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["PNCR owns sealed pressure, gas handling, thermal control, plastics, and etching authority."]
+		}
+		{
+			dependencies: ["BC47E926A63D173D"]
+			id: "B7B64D8AF271F362"
+			title: "Blood Manual Yields"
+			icon: "bloodmagic:blankslate"
+			tasks: [{
+				id: "4326BADFB0EC2AA7"
+				title: "Spend LP and slates for deliberate batches"
+				type: "checkmark"
+			}]
+			x: -5.0d
+			y: 0.75d
+			description: ["Blood Magic can pay LP for high-yield manual chemistry. It should not become passive unattended throughput."]
+		}
+		{
+			dependencies: [
+				"B140280510C94C9F"
+				"B7B64D8AF271F362"
+			]
+			id: "A46D0309DEA75C77"
+			title: "Circuit Precursors"
+			icon: "minecraft:redstone"
+			tasks: [{
+				id: "E510814EA9E1F919"
+				title: "Prepare boards and wafers, not finished circuits"
+				type: "checkmark"
+			}]
+			x: -2.0d
+			y: 0.0d
+			description: ["Chemistry can make etchants, capacitors, wafers, substrates, and traces. Finished circuits remain PNCR assembly authority."]
+		}
+	]
+	title: "Chemistry and Matter Routes"
+}

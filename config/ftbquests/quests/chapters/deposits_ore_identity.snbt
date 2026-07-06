@@ -1,0 +1,112 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "deposits_ore_identity"
+	group: "65CC8BE9C7D2A5C0"
+	icon: "minecraft:raw_copper"
+	id: "CE25BEAE938B81E2"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			id: "B02B11104EF540FF"
+			title: "Deposit Country"
+			icon: "minecraft:spyglass"
+			tasks: [{
+				id: "0E758C6B3D65C5A8"
+				title: "Read terrain before mining"
+				type: "checkmark"
+			}]
+			x: -8.0d
+			y: 0.0d
+			description: ["Ore is local. Deposits, stone types, and Y bands matter more than strip-mining a flat vanilla distribution."]
+		}
+		{
+			dependencies: ["B02B11104EF540FF"]
+			id: "80B32871689F147A"
+			title: "Starter Deposits"
+			icon: "minecraft:raw_iron"
+			tasks: [{
+				id: "3AD4834F9BF4B652"
+				title: "Find a starter deposit"
+				type: "checkmark"
+			}]
+			x: -6.5d
+			y: 0.0d
+			description: ["Coal measures, ironstone, copper sulfide, tin, zinc, lead-zinc, quartz, and bauxite are the intended early catalogue."]
+		}
+		{
+			dependencies: ["80B32871689F147A"]
+			id: "3C32AEACBC5C0740"
+			title: "Furnace Fallback"
+			icon: "minecraft:iron_ingot"
+			tasks: [{
+				id: "206251915E8C8CA4"
+				item: "minecraft:iron_ingot"
+				type: "item"
+			}]
+			x: -5.0d
+			y: -0.75d
+			rewards: [
+				{
+					id: "B7CF1F0142B3C164"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["A furnace can save a run, but it is the poor route. Better interpretation comes from Tinkers, Create, and chemistry."]
+		}
+		{
+			dependencies: ["80B32871689F147A"]
+			id: "42A5F3317913C76C"
+			title: "Tinkers Reads Ore"
+			icon: "tconstruct:seared_melter"
+			tasks: [{
+				id: "1CC72C581BEF9939"
+				title: "Use molten processing for first primary yield"
+				type: "checkmark"
+			}]
+			x: -5.0d
+			y: 0.75d
+			description: ["Seared and scorched work turn deposits into a stronger material story without duplicating the Metals chapter."]
+		}
+		{
+			dependencies: ["42A5F3317913C76C"]
+			id: "DFFB4840A4A02239"
+			title: "Create Preprocessing"
+			icon: "create:crushing_wheel"
+			tasks: [{
+				id: "BBDD361C3814F301"
+				title: "Crush, wash, and prepare feedstock"
+				type: "checkmark"
+			}]
+			x: -3.5d
+			y: 0.75d
+			description: ["Create handles open bulk preparation. It improves identity and byproducts before sealed chemistry takes over."]
+		}
+		{
+			dependencies: ["DFFB4840A4A02239"]
+			id: "BFD8A18FA36D5518"
+			title: "Chemical Identity Later"
+			icon: "minecraft:glass_bottle"
+			tasks: [{
+				id: "4EEAE8BD25807272"
+				item: "minecraft:glass_bottle"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.75d
+			rewards: [
+				{
+					id: "7326FF71313007E4"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["Chemistry does not erase geology. It preserves source identity through solvents, media, gases, salts, and late specialty outputs."]
+		}
+	]
+	title: "Deposits and Ore Identity"
+}

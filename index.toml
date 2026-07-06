@@ -5450,11 +5450,11 @@ hash = "88b8d5ac5293b4ba72480c8a6be753ccefddeb2c0f9a3fd5d9e52a340a8cd6a6"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/blood_and_slate_magic.snbt"
-hash = "652879084e4b2636e7ad1c016c453e03f923ee1f86e0d590514517c6af217108"
+hash = "07838be4787e55692e4d001d60a33c866c8e37ac7a3f37770a0456c9c5893482"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/body_spawn_recovery.snbt"
-hash = "b1662d5f213000adccc1458ebe73139906cfeef790ec195c964437245f188a84"
+hash = "1904c756d3c7daf0f97dc4e5b48180f68f19383f7f9bf5cbdfe7746e165e354a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/casings.snbt"
@@ -5462,11 +5462,11 @@ hash = "eadebd09f4f14fb5ef585902e05e7b144d07cc4f10eddcdea22d97bcb1c97529"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/chemistry_matter_routes.snbt"
-hash = "3bc0370b351dfd1d620f7ddb70c69997225cfe1102d470c667d5c08a25648869"
+hash = "c1d1ec09bed177aa534c9d1d308e776475839a6f1feb457bd0f73f5905f19295"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/coins_wares_settlements.snbt"
-hash = "4163ae02471d9466bd4a7f7cbc654a3e1306ef5162ea52c00cc4608c87762213"
+hash = "ffc80a6c38519db59d19e3cc620cb5473b414548830a581e31e964b2136a0d26"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/completionist_armour_sets.snbt"
@@ -5494,11 +5494,11 @@ hash = "65b186b80c073186cc927549ce25e487ec53c0c3e34feae46252a1b329eaf15b"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/create_and_circuits.snbt"
-hash = "eb1aa7d1caecd6a49c72cae801641fa78d89350cfbcfc3dc4554beb8eace5399"
+hash = "1fcdddbee5de84e7eb6a88c87c996f5d08d4a314102951d7cdceaa02c9c6097e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/deposits_ore_identity.snbt"
-hash = "98fbe33e88f44288e39e2f4c00f1b38389f671cca81bb63131d9811721ae6eb9"
+hash = "d42224bad99fa574e9d6173fb49c78abfbb07a5454e2c116d042906ec519e382"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/dimensions.snbt"
@@ -5506,7 +5506,7 @@ hash = "45ed8051842578f82ea761ea6a2a0099016520a0b3a248ce291a2cb96814bff4"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/dirty_magic_spines.snbt"
-hash = "5400101eb424bb9551f1ae3ceedd7682dc8e023bc9718dbf40340e8c688331e7"
+hash = "fde11b9b4b4b5efccabaa2f8236d6665c4cc3b70043d431c15c7b7db1f69fcb9"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/information.snbt"
@@ -5518,11 +5518,11 @@ hash = "9ff13d3880ea12238d8e26b6a929f86322a1dfb8a8d92193bbd15f2dd9dc1428"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/pressure_power_control.snbt"
-hash = "1effa155385100214877ccee3326e4d2251e5367b8d4dab0844f19a2d61e86f3"
+hash = "2506a6ec9b740872ec3f8e6a4d56cdb66809864b79a31b880fde2e702cbce944"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/space_ae2_lava_depths.snbt"
-hash = "67711b5578d04bf34d85951bf120ba3b1fd3775f801c415a82a1ffe27e36f740"
+hash = "4528638fa76f5aa1e0b64127230671241376429d023017a3f8a435514bad438d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/the_situation.snbt"

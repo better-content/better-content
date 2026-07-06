@@ -10,14 +10,14 @@
 	quests: [
 		{
 			id: "848241D2FEE82D2A"
-			title: "Life Proof"
+			title: "Life"
 			icon: "rpgstats:still_beating_heart"
 			tasks: [{
 				id: "F1F360ADC9C5E105"
 				item: "rpgstats:still_beating_heart"
 				type: "item"
 			}]
-			x: -8.0d
+			x: -12.0d
 			y: 0.0d
 			rewards: [
 				{
@@ -32,14 +32,14 @@
 		{
 			dependencies: ["848241D2FEE82D2A"]
 			id: "CE10C1DE644DB579"
-			title: "Weak Blood Orb"
+			title: "Weak Orb"
 			icon: "bloodmagic:weakbloodorb"
 			tasks: [{
 				id: "BD8549B6EF46DC6F"
 				item: "bloodmagic:weakbloodorb"
 				type: "item"
 			}]
-			x: -6.5d
+			x: -8.0d
 			y: 0.0d
 			rewards: [
 				{
@@ -61,8 +61,8 @@
 				item: "bloodmagic:blankslate"
 				type: "item"
 			}]
-			x: -5.0d
-			y: -1.5d
+			x: -4.0d
+			y: -2.0d
 			rewards: [
 				{
 					id: "85708959A3073340"
@@ -76,15 +76,15 @@
 		{
 			dependencies: ["2BD70F2DF5E45E4A"]
 			id: "66157F64A76E144A"
-			title: "Reinforced Slate"
+			title: "Reinforced"
 			icon: "bloodmagic:reinforcedslate"
 			tasks: [{
 				id: "5374AE5195F2BD19"
 				item: "bloodmagic:reinforcedslate"
 				type: "item"
 			}]
-			x: -3.5d
-			y: -0.75d
+			x: 0.0d
+			y: -1.0d
 			rewards: [
 				{
 					id: "BA3C13D8F2E97BAF"
@@ -98,14 +98,14 @@
 		{
 			dependencies: ["66157F64A76E144A"]
 			id: "1FC1AEBCAAEC1D27"
-			title: "Infused Slate"
+			title: "Infused"
 			icon: "bloodmagic:infusedslate"
 			tasks: [{
 				id: "130FDD32D2C189EC"
 				item: "bloodmagic:infusedslate"
 				type: "item"
 			}]
-			x: -2.0d
+			x: 4.0d
 			y: 0.0d
 			rewards: [
 				{
@@ -120,15 +120,15 @@
 		{
 			dependencies: ["1FC1AEBCAAEC1D27"]
 			id: "64B31AE5BADE3815"
-			title: "Demon Slate"
+			title: "Demon"
 			icon: "bloodmagic:demonslate"
 			tasks: [{
 				id: "32EFEDF55B775924"
 				item: "bloodmagic:demonslate"
 				type: "item"
 			}]
-			x: -0.5d
-			y: 0.75d
+			x: 8.0d
+			y: 1.0d
 			rewards: [
 				{
 					id: "9638A0172857D677"
@@ -142,15 +142,15 @@
 		{
 			dependencies: ["64B31AE5BADE3815"]
 			id: "1EC17FEEB640FB4B"
-			title: "Ethereal Slate"
+			title: "Ethereal"
 			icon: "bloodmagic:etherealslate"
 			tasks: [{
 				id: "0FA1F4F783AD1F3E"
 				item: "bloodmagic:etherealslate"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 0.75d
+			x: 12.0d
+			y: 1.0d
 			rewards: [
 				{
 					id: "11667930807B2183"

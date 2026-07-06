@@ -1,0 +1,120 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "dirty_magic_spines"
+	group: "2DFE3653F3B634B9"
+	icon: "minecraft:book"
+	id: "236ECAC850ADF7A8"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			id: "9251BAE20380A16B"
+			title: "Fonts To Hexerei"
+			icon: "minecraft:book"
+			tasks: [{
+				id: "41A0480CF04DA980"
+				title: "Treat dimension fonts as the first dirty-magic surface"
+				type: "checkmark"
+			}]
+			x: -8.0d
+			y: -1.0d
+			description: ["Fonts lead into Hexerei and folk-alchemical setup. This spine starts with place, ritual, and route pressure."]
+		}
+		{
+			dependencies: ["9251BAE20380A16B"]
+			id: "2C5AFF7708D3181A"
+			title: "Occultism Bargains"
+			icon: "occultism:dictionary_of_spirits"
+			tasks: [{
+				id: "D7CA061C576E50D2"
+				title: "Use Occultism for attunement and entity work"
+				type: "checkmark"
+			}]
+			x: -6.5d
+			y: -1.0d
+			description: ["Occultism is not a passive miner shortcut. It is a dirty-magic branch for attunement, bindings, and risk."]
+		}
+		{
+			id: "252D77510D44A4C7"
+			title: "Blood To Malum"
+			icon: "malum:spirit_altar"
+			tasks: [{
+				id: "84A296F542EBBFAE"
+				title: "Treat Malum as the Blood-side spirit branch"
+				type: "checkmark"
+			}]
+			x: -8.0d
+			y: 1.0d
+			description: ["Blood Magic leads toward Malum's spirit work. Slates are proof, not interchangeable generic magic plates."]
+		}
+		{
+			dependencies: ["252D77510D44A4C7"]
+			id: "9DA64216FD6DD0EB"
+			title: "Goety Command Work"
+			icon: "goety:dark_altar"
+			tasks: [{
+				id: "DC14153D11D6D072"
+				title: "Escalate through dangerous command magic"
+				type: "checkmark"
+			}]
+			x: -6.5d
+			y: 1.0d
+			description: ["Goety belongs to high-danger command work, not early convenience crafting."]
+		}
+		{
+			id: "600B0B09D437A0AA"
+			title: "Ars Starts Early"
+			icon: "ars_nouveau:worn_notebook"
+			tasks: [{
+				id: "C641B4DFD4150037"
+				item: "ars_nouveau:worn_notebook"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 0.0d
+			rewards: [
+				{
+					id: "D804F970BE896E13"
+					type: "ftbquests:item"
+					item: "createdeco:copper_coin"
+					count: 4
+				}
+			]
+			description: ["The notebook can appear early, but meaningful glyph access is authored through manuscripts and cross-spine proofs."]
+		}
+		{
+			dependencies: [
+				"9251BAE20380A16B"
+				"252D77510D44A4C7"
+				"600B0B09D437A0AA"
+			]
+			id: "E59751E81AA2BB0A"
+			title: "Manuscript Glyphs"
+			icon: "minecraft:paper"
+			tasks: [{
+				id: "908444F6C67BCF8A"
+				title: "Craft glyph access from both dirty spines"
+				type: "checkmark"
+			}]
+			x: -5.0d
+			y: 0.0d
+			description: ["Ars becomes formal magic by spending authored manuscripts, slates, ritual materials, and precision control."]
+		}
+		{
+			dependencies: ["E59751E81AA2BB0A"]
+			id: "6E22489F5EE3161A"
+			title: "Cross-Magic Spellcraft"
+			icon: "minecraft:enchanted_book"
+			tasks: [{
+				id: "5DAB50EE2EF2AB43"
+				title: "Combine slates, source, cauldrons, spirits, and rituals"
+				type: "checkmark"
+			}]
+			x: -3.5d
+			y: 0.0d
+			description: ["Iron's spellcraft is the cross-magic branch: Blood Magic tier proof plus Ars, Hexerei, Malum, Goety, and related reagents."]
+		}
+	]
+	title: "Fonts, Hexerei, Occultism, Malum, Goety"
+}

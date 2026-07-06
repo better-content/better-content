@@ -61,7 +61,7 @@ Revalidate with the current harness after touching `config/c2me.toml`, `config/D
 
 ## Custom Mod Notes
 
-Canonical custom mod sources live under `generated/custom-mod-sources`. Use `generated/custom-mod-sources/settlement-roads` for settlement roads unless explicitly told otherwise.
+Canonical custom mod sources live under `generated/custom-mod-sources`. Use `generated/custom-mod-sources/settlement-roads` for settlement roads unless explicitly told otherwise. `generated/custom-mod-sources/dynamic-trees-dimension-compat` is the canonical `btmdimtrees` source checkout for pack-owned dimension forest Dynamic Trees coverage.
 
 Set `BTM_CUSTOM_MODS_DIR` to use a different custom-mod checkout when running validation in another environment.
 
@@ -75,7 +75,7 @@ Prior repairs worth retaining as current expectations:
 - `pillagercampaigns` placement and materialization scans should use already-loaded `LevelChunk` data via `getChunkNow`, not blocking `ServerLevel.getHeight` or `getBlockState` calls from chunk-load paths.
 - `btmfixes` includes compatibility behavior for C2ME safe-random guard noise around EMI tooltip indexing.
 - Worldgen C2ME compatibility fixes now include a pack datapack no-op for PVJ Nether `charred_bones` groundcover, and `meteor_ore_relocation` routes relocated Malum cthonic gold through vanilla `minecraft:ore` instead of Malum's custom cross-chunk writer.
-- `dtmalum` and `dthexerei` are active Dynamic Trees extension jars in `mods/`; rebuild and run their unit tests and Forge game tests before redeploying them.
+- `btmdimtrees`, `dtmalum`, and `dthexerei` are active Dynamic Trees extension jars in `mods/`; rebuild and run their unit tests and Forge game tests before redeploying them.
 - `class-selector` owns the embark point-buy path and spawn lock handoff. Keep `config/classselector/embark.json` small, high-signal, and support-only, and keep spawn-biome selection temperate so the locked-spawn loop starts in intended climates.
 - `realisticores` plus Excavated Variants should produce gravel variants for every custom deposit covered by the stone configured features. If deposit ids change in the custom source, regenerate both `defaultresources/excavated_variants/excavated_variants/variants/realisticores.json5` and the matching `datapacks/worldgen_compat_fixes/data/realisticores/worldgen/configured_feature/*_stone.json` overrides.
 

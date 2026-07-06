@@ -158,6 +158,7 @@ Active pack-critical sources:
 - `bound-to-matter-fixes` (`btmfixes`)
 - `class-selector` (`classselector`)
 - `create-transmission-loss` (`transmissionloss`)
+- `dynamic-trees-dimension-compat` (`btmdimtrees`)
 - `dynamic-trees-hexerei` (`dthexerei`)
 - `dynamic-trees-malum` (`dtmalum`)
 - `heat-sync` (`heatsync`)

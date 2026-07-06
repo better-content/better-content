@@ -49,6 +49,14 @@
       "fullMeaningful": true
     },
     {
+      "id": "dynamic-trees-dimension-compat",
+      "path": "generated/custom-mod-sources/dynamic-trees-dimension-compat",
+      "kind": "custom-mod",
+      "fastCommand": ["./gradlew", "verifyFast"],
+      "fullCommand": ["./gradlew", "verifyFull"],
+      "fullMeaningful": false
+    },
+    {
       "id": "dynamic-trees-hexerei",
       "path": "generated/custom-mod-sources/dynamic-trees-hexerei",
       "kind": "custom-mod",

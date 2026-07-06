@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "AGENTS.md"
-hash = "922766daaabb417d2558a56d98b26c9c4953c3f6fa78a645c922e215829f8fd0"
+hash = "08968bf7c9479710a1b4eb863fb90628f57df9dfeb1e86542a2d2c8f707f092e"
 
 [[files]]
 file = "LICENSE"
@@ -11174,6 +11174,10 @@ metafile = true
 file = "mods/brewin-and-chewin.pw.toml"
 hash = "dc45e2a3431d818f9bb2b7217a62e62ec8f455ca37b9f4f35947d2c442bad42b"
 metafile = true
+
+[[files]]
+file = "mods/btmdimtrees-0.1.0.jar"
+hash = "80d8343e7a6d8481a735beacd98e266b36be589fb29078a985454bbc36ad3e7e"
 
 [[files]]
 file = "mods/btmfixes-0.1.0-all.jar"

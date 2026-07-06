@@ -113,7 +113,7 @@ tools/btm test smoke --server-dir /tmp/btm-content-smoke --port 25565 --reset-ru
 
 `tools/btm test smoke` bootstraps a fresh server, prunes stale runtime mods, boots the server, scans hard log failures, and runs the strict runtime suite.
 
-Current smoke evidence: `/tmp/btm-content-smoke` passed `tools/btm test smoke --server-dir /tmp/btm-content-smoke --port 25565 --reset-runtime` on 2026-07-02 after the magic-order, dimension-proof, and late-crafting reauthoring pass. Hard runtime checks were clean; the only finding was a soft startup-performance overage for engine/world log analysis (`533.86 ms` against the `250 ms` budget).
+Current smoke evidence: `/tmp/btm-content-smoke` passed `tools/btm test smoke --server-dir /tmp/btm-content-smoke --port 25565 --reset-runtime` on 2026-07-06 with `btmdimtrees-0.1.0.jar` restored as a bundled custom jar and `generated/custom-mod-sources/dynamic-trees-dimension-compat` restored as the canonical source checkout. Hard runtime checks were clean with 0 soft findings. `/tmp/btm-content-smoke` also passed the same lane on 2026-07-02 after the magic-order, dimension-proof, and late-crafting reauthoring pass; that earlier run's only finding was a soft startup-performance overage for engine/world log analysis (`533.86 ms` against the `250 ms` budget).
 
 ## Scenario Harnesses
 
@@ -129,7 +129,7 @@ All-dimension worldgen stress:
 tools/btm test scenario-headful dimension_worldgen --cycles 1 --radius 1 --samples 1 --bootstrap-mode once
 ```
 
-Current clean evidence: `/tmp/btm-dimension-worldgen/20260701-041811` passed two server-only Overworld cycles with 8 samples at radius 4 after Dimensional Fonts site generation was moved from biome-modifier feature placement to vanilla structure-set placement. Dimensional Fonts sites are now ancient interdimensional reliquaries without grave-soil tiles; a fresh worldgen validation should refresh this evidence after the next scenario run. `/tmp/btm-dimension-worldgen/20260604-215117` remains the last recorded all-dimension radius-1 baseline. The harness treats C2ME far-chunk writes, DH worldgen exceptions, crash reports, watchdogs, internal disconnects, and C2ME thread-guard failures as fatal.
+Current clean evidence: `/tmp/btm-dimension-worldgen/cycle-1` passed `tools/btm test scenario-headful dimension_worldgen --cycles 1` on 2026-07-06, including successful sampled passes through the pack-owned `btmdimtrees` target dimensions `blue_skies:everbright`, `blue_skies:everdawn`, `undergarden:undergarden`, `the_finley_dimension_remastered:finley_dimension`, and `callfromthedepth_:depth`. `/tmp/btm-dimension-worldgen/20260701-041811` also passed two server-only Overworld cycles with 8 samples at radius 4 after Dimensional Fonts site generation was moved from biome-modifier feature placement to vanilla structure-set placement. Dimensional Fonts sites are now ancient interdimensional reliquaries without grave-soil tiles. `/tmp/btm-dimension-worldgen/20260604-215117` remains the older all-dimension radius-1 baseline. The harness treats C2ME far-chunk writes, DH worldgen exceptions, crash reports, watchdogs, internal disconnects, and C2ME thread-guard failures as fatal.
 
 Current pack mitigation: Quark `Shiba` spawns are disabled in checked-in `config/quark-common.toml` after repeated 2026-07-01 client-side entity metadata desyncs (`field 22`, `Integer` vs `ItemStack`) during normal play.
 

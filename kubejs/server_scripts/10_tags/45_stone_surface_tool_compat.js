@@ -18,8 +18,7 @@ var BTM_STONE_SURFACE_PICK_ONLY_BLOCKS = [
     'unearthed:siltstone_grassy_regolith',
     'unearthed:slate_grassy_regolith',
     'unearthed:stone_grassy_regolith',
-    'unearthed:white_granite_grassy_regolith',
-    'unearthed:white_granite_regolith'
+    'unearthed:white_granite_grassy_regolith'
 ]
 
 ServerEvents.tags('block', function (event) {

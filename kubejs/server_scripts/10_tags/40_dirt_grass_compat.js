@@ -22,6 +22,27 @@ var dirtLikeEntries = [
 
 var grassLikeEntries = [
     'minecraft:grass_block',
+    'aether:aether_grass_block',
+    'aether:enchanted_aether_grass_block',
+    'callfromthedepth_:deepgrass',
+    'callfromthedepth_:depthsforestgrass',
+    'callfromthedepth_:swampgrass',
+    'dtaether:rooty_aether_grass_block',
+    'dtaether:rooty_enchanted_aether_grass_block',
+    'dtaether:rooty_frozen_aether_grass_block',
+    'dynamictrees:rooty_grass_block',
+    'fallout_wastelands_:wastelandgrassblock',
+    'goety:chorus_grass_block',
+    'iceandfire:chared_grass',
+    'iceandfire:crackled_grass',
+    'iceandfire:frozen_grass',
+    'immersive_weathering:grassy_earthen_clay',
+    'immersive_weathering:grassy_permafrost',
+    'immersive_weathering:grassy_sandy_dirt',
+    'immersive_weathering:grassy_silt',
+    'immersive_weathering:rooted_grass_block',
+    'the_finley_dimension_remastered:finley_grass_block',
+    'the_finley_dimension_remastered:living_grass_block',
     'unearthed:beige_limestone_grassy_regolith',
     'unearthed:conglomerate_grassy_regolith',
     'unearthed:dolomite_grassy_regolith',
@@ -39,6 +60,9 @@ var grassLikeEntries = [
     'unearthed:slate_grassy_regolith',
     'unearthed:stone_grassy_regolith',
     'unearthed:white_granite_grassy_regolith',
+    'unearthed:overgrown_andesite',
+    'unearthed:overgrown_diorite',
+    'unearthed:overgrown_granite',
 ]
 
 ServerEvents.tags('item', function (event) {

@@ -10554,7 +10554,7 @@ hash = "04da141dcaf06e735a697aa976ec4e11c99b85deaa5e3c8e3a8f2dca8a6d77d1"
 
 [[files]]
 file = "kubejs/server_scripts/10_tags/40_dirt_grass_compat.js"
-hash = "7009894ee791fe08472272d5ed08b092fdc999d126e37b4a5fc468edd9b1300d"
+hash = "2587daf89e9f7f655c43d34cb1d6164f437e1598e08ba6648f8a386c0c5f77cb"
 
 [[files]]
 file = "kubejs/server_scripts/10_tags/45_stone_surface_tool_compat.js"

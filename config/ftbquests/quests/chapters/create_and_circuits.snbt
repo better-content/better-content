@@ -222,7 +222,7 @@
 			x: 1.58d
 			y: 1.0d
 			rewards: [{ id: "A82440FC29C3FC2F" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Use the soldering table for early bench logic work. It teaches primitive circuits before PNCR machines take over finished board assembly."]
+			description: ["Use the soldering table for early bench logic work. It teaches primitive circuits before PNCR machines take over PCB assembly."]
 		}
 		{
 			dependencies: ["8F728191626B1BED"]
@@ -283,7 +283,7 @@
 			}]
 			x: 3.17d
 			y: -3.0d
-			description: ["The mechanical arm is logistics with intent: selective, visible, and local."]
+			description: ["Use the mechanical arm when a machine needs to move specific items to specific places. It is best for local sorting, loading, and controlled handoffs."]
 		}
 		{
 			dependencies: ["B1D2E9D9D4F77E0C"]
@@ -298,7 +298,7 @@
 			}]
 			x: 4.75d
 			y: -3.0d
-			description: ["Display links make factories legible without replacing physical control."]
+			description: ["Use display links to show machine states, stock levels, or station information. They help you read a factory without replacing the belts, arms, and trains that move items."]
 		}
 		{
 			dependencies: ["FE246240BF196C7B" "60974CBBB7171B20"]
@@ -314,7 +314,7 @@
 			}]
 			x: 6.34d
 			y: -3.0d
-			description: ["Railway casing points toward trains as intersite logistics before AE2 dominance."]
+			description: ["Railway casing points toward trains for moving items between sites. Use rail before expecting storage networks to solve long-distance transport."]
 		},
 		{
 			dependencies: ["5C37980430C2D51F"]

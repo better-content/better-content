@@ -381,7 +381,7 @@
 			}]
 			x: -1.58d
 			y: 1.0d
-			description: ["Make plastic and substrate before you chase finished boards. Keeping those parts together makes the PCB chain easier to repeat."]
+			description: ["Make plastic and substrate before PCB assembly. Keeping those parts together makes the PCB chain easier to repeat."]
 		}
 ,
 		{

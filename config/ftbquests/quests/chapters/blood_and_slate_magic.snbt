@@ -237,7 +237,7 @@
 			}]
 			x: 9.25d
 			y: -1.7d
-			description: ["Ethereal slates are late hybrid proof. Expect them to matter when networked systems, refined source work, and top-end Blood Magic start overlapping."]
+			description: ["Ethereal slates are a late Blood Magic material. Expect to use them when high-tier Blood crafts start asking for networked storage, refined source work, or stronger altar support."]
 		}
 		{
 			dependencies: ["7537B1C6F801B0BA"]
@@ -252,7 +252,7 @@
 			}]
 			x: 11.05d
 			y: -1.2d
-			description: ["The archmage orb is a late finisher. Craft it after your altar room, LP storage, runes, and ritual space can support repeated high-cost work."]
+			description: ["Craft the archmage orb after your altar room, LP storage, runes, and ritual space can support repeated high-cost work."]
 		}
 		{
 			dependencies: ["11A8E946F5842F9D"]

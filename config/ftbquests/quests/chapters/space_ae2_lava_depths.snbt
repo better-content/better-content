@@ -328,7 +328,7 @@
 			}]
 			x: 0.0d
 			y: -6.8d
-			description: ["Run the checklist before you launch. Suit, fuel, oxygen, recovery items, and a proof target all need to be decided on the ground."]
+			description: ["Run the checklist before you launch. Suit, fuel, oxygen, recovery items, and the item you are traveling for all need to be decided on the ground."]
 		}
 ,
 		{
@@ -379,7 +379,7 @@
 			}]
 			x: 1.3d
 			y: -5.45d
-			description: ["Prepare processor presses and ingredients as a small factory, not as scattered chores. AE2 feels much better when the processor route lives in one place."]
+			description: ["Prepare processor presses and ingredients as a small factory, not as scattered chores. Keep silicon, printed circuits, and finished processors in one work area."]
 		}
 ,
 		{
@@ -396,7 +396,7 @@
 			}]
 			x: 4.75d
 			y: -0.5d
-			description: ["Plan channels before the network sprawls. Bounded local AE2 is easier to debug, cheaper to expand, and closer to the pack's logistics rules."]
+			description: ["Plan channels before the network sprawls. A local AE2 network is easier to debug and cheaper to expand when each base has clear storage boundaries."]
 		}
 ,
 		{

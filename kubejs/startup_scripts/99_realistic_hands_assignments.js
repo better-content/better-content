@@ -575,6 +575,7 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:smooth_siltstone_slab",
       "unearthed:smooth_siltstone_stairs",
       "unearthed:stone_regolith",
+      "unearthed:white_granite_regolith",
       "weather2:sand_layer"
     ],
     "knife": [
@@ -12266,7 +12267,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:white_granite_lapis_ore",
       "unearthed:white_granite_pressure_plate",
       "unearthed:white_granite_redstone_ore",
-      "unearthed:white_granite_regolith",
       "unearthed:white_granite_slab",
       "unearthed:white_granite_stairs",
       "unearthed:white_granite_wall",
@@ -118029,10 +118029,10 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:white_granite_regolith": {
       "tools": [
-        "pickaxe"
+        "hand"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:white_granite_slab": {
@@ -125197,13 +125197,13 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     "inference:legacy:pickaxe": 8075,
     "delegation:loose-worked-earth": 257,
     "delegation:wood-products": 2405,
-    "delegation:loose-earth": 587,
+    "delegation:loose-earth": 588,
     "delegation:cultivated-soil": 15,
     "delegation:organics": 1241,
     "inference:legacy:hoe": 57,
     "delegation:potted-plants": 241,
     "inference:legacy:axe": 785,
-    "override:exact": 51,
+    "override:exact": 50,
     "inference:legacy:knife": 127,
     "override:web-family": 5,
     "inference:legacy:shovel": 21,

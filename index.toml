@@ -10558,7 +10558,7 @@ hash = "7009894ee791fe08472272d5ed08b092fdc999d126e37b4a5fc468edd9b1300d"
 
 [[files]]
 file = "kubejs/server_scripts/10_tags/45_stone_surface_tool_compat.js"
-hash = "7b79d604112515af5e45a9a372d26ae44507bd2f79c4807dbf586ad88d5cf152"
+hash = "4adeab30b4a4dc86edf5559baac2297ae2f83cfb744a62eb5bd2098204d60ab9"
 
 [[files]]
 file = "kubejs/server_scripts/10_tags/50_sand_compat.js"
@@ -10910,7 +10910,7 @@ hash = "2f877d1dcdfe376099f4fd6df097168f161caa846416332e19fe64637c45ad83"
 
 [[files]]
 file = "kubejs/startup_scripts/99_realistic_hands_assignments.js"
-hash = "529e8894a18ab5776d517bf079c065b105702d75dd5568d336be3006fd7b646d"
+hash = "851b4be4d9022c11234c0a7a219b0d1839eeb0906ff8ea0769407dfac9f2414f"
 
 [[files]]
 file = "mods/advanced-loot-info.pw.toml"

@@ -205,7 +205,7 @@
 			}]
 			x: 3.17d
 			y: -2.0d
-			description: ["Wafers are precursors for later circuits, not finished boards by themselves."]
+			description: ["Wafers are precursors for later circuits, not completed PCBs by themselves."]
 		}
 		{
 			dependencies: ["ED4C9825703E8F60"]

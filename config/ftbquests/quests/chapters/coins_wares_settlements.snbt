@@ -37,7 +37,7 @@
 			}]
 			x: -4.75d
 			y: -3.0d
-			description: ["Coins should come from authored play: quests, markets, wares, and useful settlement contact."]
+			description: ["Expect coins to come from routes, jobs, quests, and settlement contact. They reward useful play, not passive farming."]
 		}
 		{
 			dependencies: ["C8005EB1A778738F"]
@@ -82,7 +82,7 @@
 			}]
 			x: -3.17d
 			y: -1.0d
-			description: ["Some trades touch early infrastructure, but they should support routes rather than bypass the pack."]
+			description: ["Use village specialists to support your routes, not to skip the pack. A good trade should solve friction, not replace progression."]
 		}
 		{
 			dependencies: ["CEF579B8E8AA139A"]
@@ -113,7 +113,7 @@
 			}]
 			x: -4.75d
 			y: 3.0d
-			description: ["Coin conversion has loss; use it for access, not because all value should collapse into one pile."]
+			description: ["Coin conversion loses value on purpose. Use it when access matters more than efficiency, not because every coin should collapse into one stack."]
 		}
 		{
 			dependencies: ["414E6E7F667C165B"]
@@ -144,7 +144,7 @@
 			}]
 			x: -1.58d
 			y: 3.0d
-			description: ["Iron coin spending should feel like midgame procurement, especially where settlements reduce travel friction."]
+			description: ["Spend iron coins on midgame support and procurement, especially when a settlement saves a long or dangerous trip."]
 		}
 		{
 			dependencies: ["022C30C02F9E7139"]
@@ -175,7 +175,7 @@
 			}]
 			x: 1.58d
 			y: 3.0d
-			description: ["Top-tier currency should never replace late proof: it helps acquire support, not final authority."]
+			description: ["Top-tier currency buys support, not late proof. If a trade feels like it skips a major route, treat it as suspicious."]
 		}
 		{
 			dependencies: ["26402A61C9A8BE8C"]
@@ -251,7 +251,7 @@
 			}]
 			x: 4.75d
 			y: 0.0d
-			description: ["Surface pressure should make economy and settlement work feel necessary, not optional flavor."]
+			description: ["Let pillager pressure push you toward stronger settlements and better routes. Economy and defense belong together here."]
 		},
 		{
 			dependencies: ["3928BE5AE760D41E"]
@@ -284,7 +284,7 @@
 			}]
 			x: -3.17d
 			y: -0.9d
-			description: ["Wares should look like logistics content, not a loot-box aside."]
+			description: ["Run wares packages through your roads and recovery loops. They are logistics support, not a disconnected loot box."]
 		}
 ,
 		{
@@ -318,7 +318,7 @@
 			}]
 			x: -3.17d
 			y: 1.0d
-			description: ["Mason work should visibly support settlement growth."]
+			description: ["Feed village building demand when it helps a route you care about. That is how trade starts looking like settlement growth instead of barter trivia."]
 		}
 ,
 		{
@@ -335,7 +335,7 @@
 			}]
 			x: -3.17d
 			y: 1.0d
-			description: ["Coin conversion should have a visible caution node."]
+			description: ["Treat exchange loss as a caution sign. If you are converting too often, you may be solving the wrong problem."]
 		}
 ,
 		{
@@ -352,7 +352,7 @@
 			}]
 			x: 0.0d
 			y: 1.0d
-			description: ["Higher money should buy infrastructure pressure relief."]
+			description: ["Spend higher coins on route relief, supply help, and recovery support. That keeps the economy useful without making it a bypass."]
 		}
 ,
 		{
@@ -386,7 +386,7 @@
 			}]
 			x: 1.58d
 			y: -1.0d
-			description: ["Roads should visibly connect settlements into a network."]
+			description: ["Mark distances and connect settlements with roads so they function like a network. That makes the economy easier to use and easier to defend."]
 		}
 ,
 		{
@@ -420,7 +420,7 @@
 			}]
 			x: 4.75d
 			y: 2.0d
-			description: ["Pillagers should pressure settlements and coin loops together."]
+			description: ["Treat raids as disruptions to both travel and trade. If pillagers are hitting your routes, the economy is telling you to fortify."]
 		}
 	]
 	title: "Coins, Wares, and Settlements"

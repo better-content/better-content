@@ -22,7 +22,7 @@
 			x: -6.34d
 			y: 0.0d
 			rewards: [{ id: "F4628718B1745B37" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Compressed iron marks the pressure era and should come from authored manufacturing."]
+			description: ["Compressed iron is the material proof that pressure has begun. Make it through the intended route so the whole chapter starts from real manufacturing instead of a shortcut."]
 		}
 		{
 			dependencies: ["7BA3BC1109BE6EFA"]
@@ -37,7 +37,7 @@
 			}]
 			x: -4.75d
 			y: -3.0d
-			description: ["Pressure tubes make air a routed local system."]
+			description: ["Pressure tubes are how air starts moving like a real resource. Lay them out early so the rest of PNCR stops feeling mysterious."]
 		}
 		{
 			dependencies: ["7BA3BC1109BE6EFA"]
@@ -52,7 +52,7 @@
 			}]
 			x: -4.75d
 			y: -1.5d
-			description: ["Pressure must be visible before it can be trusted."]
+			description: ["Build the gauge before you trust any air network. Reading pressure is what turns experiments into dependable machines."]
 		}
 		{
 			dependencies: ["064CFC665D86BAD3" "0937583E1460B930"]
@@ -69,7 +69,7 @@
 			x: -3.17d
 			y: -2.25d
 			rewards: [{ id: "E5ED86A3AA7098D9" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["The chamber unlocks sealed processing, airtight bodies, plastics, and board preparation."]
+			description: ["The pressure chamber is the first big payoff in this lane. It unlocks sealed processing and the materials that lead into plastics and boards."]
 		}
 		{
 			dependencies: ["5DCC13C74FA59703"]
@@ -84,7 +84,7 @@
 			}]
 			x: -1.58d
 			y: -4.0d
-			description: ["Compressed Creativity ties Create rotation to PNCR pressure instead of inventing isolated power."]
+			description: ["Use the rotational compressor to feed pressure from your existing Create power. That keeps the tech spine connected instead of spawning a separate power island."]
 		}
 		{
 			dependencies: ["5DCC13C74FA59703"]
@@ -99,7 +99,7 @@
 			}]
 			x: -1.58d
 			y: -2.5d
-			description: ["Turbine rotors connect pressure to generation and advanced pneumatic machinery."]
+			description: ["Turbine parts matter once you want pressure to do more than one job. They are the bridge into larger pneumatic systems and better energy planning."]
 		}
 		{
 			dependencies: ["5DCC13C74FA59703"]
@@ -114,7 +114,7 @@
 			}]
 			x: -1.58d
 			y: -1.0d
-			description: ["Plastic is the material bridge from pressure processing to electronics."]
+			description: ["Plastic is the first material that clearly links pressure work to electronics. Make it early so the later board route feels earned."]
 		}
 		{
 			dependencies: ["E9C1DC5036632296"]
@@ -129,7 +129,7 @@
 			}]
 			x: 0.0d
 			y: -3.0d
-			description: ["Power Grid starts electrical control after pressure, not as a survival shortcut."]
+			description: ["Power Grid belongs here because control comes after pressure, not before it. Bring it online when you are ready to separate generation, storage, and logic."]
 		}
 		{
 			dependencies: ["D7A56007EC9F328E"]
@@ -145,7 +145,7 @@
 			}]
 			x: 1.58d
 			y: -3.0d
-			description: ["Design prepares circuits; PNCR still owns final board authority."]
+			description: ["Use the design table to plan circuits, not to skip the board route. PNCR still owns the final assembly step, and that division is intentional."]
 		}
 		{
 			dependencies: ["C6D58E68605E0DE0"]
@@ -160,7 +160,7 @@
 			}]
 			x: 3.17d
 			y: -3.0d
-			description: ["Unassembled boards are chemistry plus design waiting for assembly authority."]
+			description: ["Unassembled boards are a checkpoint, not the finish line. They prove your chemistry and design work is ready for the assembly machines."]
 		}
 		{
 			dependencies: ["15AA1D081CD6B3B2"]
@@ -176,7 +176,7 @@
 			x: 4.75d
 			y: -3.0d
 			rewards: [{ id: "735CA19B9D593426" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Printed circuit boards are the key fan-out into PNCR machines, drones, armor, and control."]
+			description: ["Printed circuit boards are one of the biggest fanout items in the pack. Once you can make them reliably, a lot of control hardware opens at once."]
 		}
 		{
 			dependencies: ["E7B001B84823265B"]
@@ -192,7 +192,7 @@
 			}]
 			x: 6.34d
 			y: -3.0d
-			description: ["Assembly machines turn board authority into real manufacturing."]
+			description: ["Assembly machines are where control hardware becomes serious industry. Build them when you are ready to stop crafting boards one careful step at a time."]
 		}
 		{
 			dependencies: ["82F2BACA61C5F8E1"]
@@ -207,7 +207,7 @@
 			}]
 			x: 7.92d
 			y: -4.0d
-			description: ["The laser is precision pressure manufacturing, not a crafting-table upgrade."]
+			description: ["The assembly laser is for precision work that does not belong on a crafting table. Use it to feel the jump from preparation into finished manufacture."]
 		}
 		{
 			dependencies: ["82F2BACA61C5F8E1"]
@@ -222,7 +222,7 @@
 			}]
 			x: 7.92d
 			y: -2.5d
-			description: ["Assembly drills make parts that should feel machined."]
+			description: ["The assembly drill matters because some parts need to look machined, not hand-finished. It helps the whole board route read as industrial."]
 		}
 		{
 			dependencies: ["E7B001B84823265B"]
@@ -237,7 +237,7 @@
 			}]
 			x: 6.34d
 			y: 0.5d
-			description: ["Drones are programmable labor and should arrive after board authority."]
+			description: ["Drones arrive after the board route for a reason: they are programmable labor, not an early convenience pet. Build them when your control infrastructure is already stable."]
 		}
 		{
 			dependencies: ["23B1CD2A1143A540"]
@@ -252,7 +252,7 @@
 			}]
 			x: 7.92d
 			y: 0.5d
-			description: ["Programming turns pressure into automation logic."]
+			description: ["The programmer is where machines stop being fixed-purpose. Use it once you want pressure hardware to follow instructions instead of just providing force."]
 		}
 		{
 			dependencies: ["9E0BDE917DFAE8ED"]
@@ -267,7 +267,7 @@
 			}]
 			x: 9.5d
 			y: 0.5d
-			description: ["Security stations make control infrastructure explicit."]
+			description: ["Security hardware proves this lane is about control as much as production. Use it to make your base logic visible instead of leaving it implied."]
 		}
 		{
 			dependencies: ["29F946BFE1267DF0" "B1A2D3DF07B2C5A0"]
@@ -283,7 +283,7 @@
 			}]
 			x: 9.5d
 			y: -3.25d
-			description: ["OC2R is the intersite information bridge; physical logistics still matter before AE2 dominates."]
+			description: ["OC2R is for moving information between sites while physical logistics still do the heavy lifting. Use it to coordinate work, not to pretend distance vanished."]
 		}
 		{
 			dependencies: ["C1D0BE5D13A824EB"]
@@ -298,7 +298,7 @@
 			}]
 			x: 11.09d
 			y: -3.25d
-			description: ["Wireless control should extend built infrastructure, not replace local work."]
+			description: ["Wireless control should extend a good base, not rescue a bad one. Get the local machines readable first, then stretch signals outward."]
 		}
 		{
 			dependencies: ["E34FCC9DF23493F5" "FBDA0C0DE35723D0"]
@@ -314,7 +314,7 @@
 			}]
 			x: 12.67d
 			y: -1.5d
-			description: ["The chapter is about controllable systems: pressure, electricity, boards, programming, and intersite signals."]
+			description: ["Read this node as the chapter rule: pressure, boards, electricity, and programming all need to stay legible as one control stack."]
 		},
 		{
 			dependencies: ["7BA3BC1109BE6EFA"]
@@ -381,7 +381,7 @@
 			}]
 			x: -1.58d
 			y: 1.0d
-			description: ["Plastic should visibly connect to PCB work."]
+			description: ["Use this node to tie plastic directly into board preparation. That link matters because pressure chemistry is what makes later control hardware possible."]
 		}
 ,
 		{
@@ -415,7 +415,7 @@
 			}]
 			x: 4.75d
 			y: -0.8d
-			description: ["The PCB node should feel like a major hub."]
+			description: ["Treat the PCB node like a major hub and follow its uses immediately. It is one of the clearest signs that your control lane is now paying off."]
 		}
 ,
 		{
@@ -432,7 +432,7 @@
 			}]
 			x: 6.34d
 			y: -1.0d
-			description: ["Assembly should look like a multiblock workcell."]
+			description: ["Lay out the assembly area like a real workcell with inputs, outputs, and clear flow. That makes repeated board jobs much easier to manage."]
 		}
 ,
 		{
@@ -449,7 +449,7 @@
 			}]
 			x: 6.34d
 			y: 2.5d
-			description: ["Drones should visibly depend on board authority."]
+			description: ["Keep drones tied to the board route on purpose. They are much easier to understand when they clearly grow out of the same control infrastructure."]
 		}
 ,
 		{

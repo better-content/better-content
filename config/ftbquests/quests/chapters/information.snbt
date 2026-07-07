@@ -6,15 +6,66 @@
 	id: "631B17D29CF391EE"
 	order_index: 2
 	quest_links: [ ]
-	quests: [{
-		id: "688F6C1C9B295857"
-		tasks: [{
-			id: "1DE0783E216E02A4"
-			title: "EMI"
-			type: "checkmark"
-		}]
-		x: -4.0d
-		y: -1.5d
-	}]
+	quests: [
+		{
+			id: "688F6C1C9B295857"
+			title: "EMI and Recipe Lookup"
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "1DE0783E216E02A4"
+				title: "Use EMI to check recipes and uses"
+				type: "checkmark"
+			}]
+			x: -4.0d
+			y: -1.5d
+			description: ["When a recipe looks strange, check EMI before guessing. This pack expects you to follow item uses, machine recipes, and hidden prerequisites through the recipe viewer."]
+		}
+		{
+			dependencies: ["688F6C1C9B295857"]
+			id: "75BAAA2A17F4E001"
+			title: "Read the Whole Recipe"
+			icon: "minecraft:book"
+			shape: "rsquare"
+			tasks: [{
+				id: "75BAAA2A17F4E101"
+				title: "Check machine type, byproducts, and ingredients"
+				type: "checkmark"
+			}]
+			x: -2.4d
+			y: -3.0d
+			description: ["Do not stop at the first craft you see. Expert recipes often move through casting, mixing, pressing, pressure, or Blood Magic before the final item appears."]
+		}
+		{
+			dependencies: ["688F6C1C9B295857"]
+			id: "75BAAA2A17F4E002"
+			title: "Trace Item Uses"
+			icon: "minecraft:compass"
+			shape: "rsquare"
+			tasks: [{
+				id: "75BAAA2A17F4E102"
+				title: "Follow what a new item unlocks"
+				type: "checkmark"
+			}]
+			x: -2.4d
+			y: 0.0d
+			description: ["When you craft a new part, immediately inspect its uses. That is the fastest way to see whether it is a dead end, a machine body, or the next real progression gate."]
+		}
+		{
+			dependencies: ["75BAAA2A17F4E002"]
+			id: "75BAAA2A17F4E003"
+			title: "Proof, Not Hoarding"
+			icon: "createdeco:copper_coin"
+			shape: "rsquare"
+			tasks: [{
+				id: "75BAAA2A17F4E103"
+				title: "Treat quest tasks as proof of progress"
+				type: "checkmark"
+			}]
+			x: -0.8d
+			y: 0.0d
+			description: ["Most quests are asking for one proof item, not a permanent shopping list. Make the item once, learn what it unlocks, and move the whole route forward."]
+		}
+	]
 	title: "Information"
 }

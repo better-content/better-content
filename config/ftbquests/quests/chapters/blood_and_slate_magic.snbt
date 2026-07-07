@@ -22,7 +22,7 @@
 			x: -6.34d
 			y: 0.0d
 			rewards: [{ id: "52A61DDCDA53ABB6" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Blood Magic starts from a lived run and a still-beating heart."]
+			description: ["Start Blood Magic with a still-beating heart from a real run. That keeps the system tied to survival risk instead of making it feel free."]
 		}
 		{
 			dependencies: ["5E8C58F53FE60C34"]
@@ -37,7 +37,7 @@
 			}]
 			x: -4.75d
 			y: 0.0d
-			description: ["The altar is infrastructure, not a cheap grid recipe."]
+			description: ["Build the altar as a workspace you will return to often. It is infrastructure, not a one-time bench craft."]
 		}
 		{
 			dependencies: ["58A2AE3B417830D2"]
@@ -54,7 +54,7 @@
 			x: -3.17d
 			y: 0.0d
 			rewards: [{ id: "5295F392881D61A8" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["The weak orb opens LP control and starts the altar loop."]
+			description: ["Make the weak orb as soon as the altar is stable. It is the item that turns random blood cost into something you can control."]
 		}
 		{
 			dependencies: ["D513EA0E9E295123"]
@@ -69,7 +69,7 @@
 			}]
 			x: -1.58d
 			y: -3.0d
-			description: ["Sacrifice converts the body loop into controlled resource pressure."]
+			description: ["The sacrificial knife lets you pay health on purpose instead of waiting for accidents. Use it only when food, safety, and LP reading are already under control."]
 		}
 		{
 			dependencies: ["D513EA0E9E295123"]
@@ -84,7 +84,7 @@
 			}]
 			x: -1.58d
 			y: 0.0d
-			description: ["Blank slates are the first durable proof of LP work."]
+			description: ["Blank slates are your first durable Blood Magic output. Once you can make them on purpose, the altar has become a real production surface."]
 		}
 		{
 			dependencies: ["830ECC6DF2B4B54E"]
@@ -99,7 +99,7 @@
 			}]
 			x: 0.0d
 			y: 0.0d
-			description: ["Runes turn the altar from a block into a built system."]
+			description: ["Runes are how you tune the altar instead of simply owning it. Add them when you need better speed, capacity, or safer repeated work."]
 		}
 		{
 			dependencies: ["830ECC6DF2B4B54E"]
@@ -114,7 +114,7 @@
 			}]
 			x: 0.0d
 			y: -3.0d
-			description: ["Sigils make invisible LP state readable, which is crucial for deliberate altar play."]
+			description: ["Make the divination sigil early and actually use it. Blood Magic gets much less punishing once you stop guessing about LP."]
 		}
 		{
 			dependencies: ["6872D96759A68336"]
@@ -130,7 +130,7 @@
 			x: 1.58d
 			y: 0.0d
 			rewards: [{ id: "B68214BF84F45752" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Reinforced slates start stronger apparatus and cross-magic recipes."]
+			description: ["Reinforced slates prove you can hold a larger LP cost steady. They are the point where Blood Magic starts unlocking stronger cross-magic work."]
 		}
 		{
 			dependencies: ["EDFF6FCCAC8EF9E5"]
@@ -145,7 +145,7 @@
 			}]
 			x: 1.58d
 			y: -3.0d
-			description: ["Blood alchemy provides manual high-yield alternatives without becoming passive throughput."]
+			description: ["Use Blood Alchemy when you want deliberate, high-yield manual batches. It is good for efficiency, not for skipping the rest of the production chain."]
 		}
 		{
 			dependencies: ["EDFF6FCCAC8EF9E5" "DD5360E63AA1F7A3"]
@@ -160,7 +160,7 @@
 			}]
 			x: 3.17d
 			y: -1.5d
-			description: ["Orb tiers should feel like altar commitment, not simple item upgrades."]
+			description: ["Treat the apprentice orb as a commitment check. If this upgrade feels expensive, that means the altar loop is still doing its job."]
 		}
 		{
 			dependencies: ["11A8E946F5842F9D"]
@@ -175,7 +175,7 @@
 			}]
 			x: 4.75d
 			y: -1.5d
-			description: ["Infused slates connect Blood Magic to chemistry and mid-tier cross-magic."]
+			description: ["Infused slates are where Blood Magic starts feeding chemistry and hybrid magic routes. Make them once you can keep LP stable through repeated jobs."]
 		}
 		{
 			dependencies: ["9A82772C59AEEF55"]
@@ -190,7 +190,7 @@
 			}]
 			x: 4.75d
 			y: -4.0d
-			description: ["Rituals are built commitments with space, structure, and maintenance cost."]
+			description: ["Leave room for rituals before you need them. They are construction projects with footprints and upkeep, not tiny upgrades you cram beside the altar."]
 		}
 		{
 			dependencies: ["9A82772C59AEEF55"]
@@ -205,7 +205,7 @@
 			}]
 			x: 6.34d
 			y: -1.5d
-			description: ["The magician orb marks reliable midgame LP authority."]
+			description: ["The magician orb means your LP economy is finally trustworthy. From here on, the question is not whether Blood Magic works, but how much work it can support."]
 		}
 		{
 			dependencies: ["804201B62AF34667"]
@@ -221,7 +221,7 @@
 			}]
 			x: 7.55d
 			y: -1.1d
-			description: ["Demon slates prove dangerous command work and dirty-magic authority."]
+			description: ["Demon slates mark the dangerous side of the tree. Do not rush them until safety, supply, and containment are all stronger than the craft itself."]
 		}
 		{
 			dependencies: ["64EE84D0DB9C887D"]
@@ -237,7 +237,7 @@
 			}]
 			x: 9.25d
 			y: -1.7d
-			description: ["Ethereal slate belongs with programmable, networked, or post-AE2 hybrid magic."]
+			description: ["Ethereal slates are late hybrid proof. Expect them to matter when networked systems, refined source work, and top-end Blood Magic start overlapping."]
 		}
 		{
 			dependencies: ["7537B1C6F801B0BA"]
@@ -252,7 +252,7 @@
 			}]
 			x: 11.05d
 			y: -1.2d
-			description: ["The archmage orb is a late Blood Magic finisher tied to the pack's high-tier proof graph."]
+			description: ["The archmage orb is a late finisher for players who kept the whole Blood route healthy. It is earned through infrastructure, not through one lucky craft sequence."]
 		}
 		{
 			dependencies: ["11A8E946F5842F9D"]
@@ -282,7 +282,7 @@
 			}]
 			x: 7.92d
 			y: 2.0d
-			description: ["Source work should connect to Blood proof rather than becoming a separate free magic lane."]
+			description: ["Keep source work tied to Blood proof so it does not drift into a separate free magic lane."]
 		}
 		{
 			dependencies: ["79D168E33055BB18"]
@@ -312,7 +312,7 @@
 			}]
 			x: 11.09d
 			y: 2.0d
-			description: ["Sigil utility should arrive after the player understands LP as infrastructure."]
+			description: ["Use utility sigils after LP already makes sense as infrastructure. They work best once you understand what the network is spending and saving."]
 		},
 		{
 			dependencies: ["5E8C58F53FE60C34"]
@@ -345,7 +345,7 @@
 			}]
 			x: -4.75d
 			y: 2.1d
-			description: ["Blood Magic should look spatial."]
+			description: ["Build access, storage, and safety around the altar so Blood Magic becomes a real room instead of one dangerous block."]
 		}
 ,
 		{
@@ -413,7 +413,7 @@
 			}]
 			x: 1.58d
 			y: -5.1d
-			description: ["Blood alchemy should be its own visible subcluster."]
+			description: ["Keep Blood Alchemy in its own visible corner of the room. Seeing those tools together makes batch work much easier to repeat."]
 		}
 ,
 		{
@@ -430,7 +430,7 @@
 			}]
 			x: 4.75d
 			y: -6.0d
-			description: ["Rituals should feel like construction projects."]
+			description: ["Leave room for rituals before you craft them. They work best when you treat them like construction projects with real footprints."]
 		}
 ,
 		{
@@ -464,7 +464,7 @@
 			}]
 			x: 6.34d
 			y: 4.0d
-			description: ["Hybrid magic should look like a branch, not a note."]
+			description: ["Make the Ars-to-Blood bridge as a real side branch with its own materials. If it feels like a note in the corner, you are learning too little from it."]
 		}
 ,
 		{
@@ -481,7 +481,7 @@
 			}]
 			x: 11.09d
 			y: 0.0d
-			description: ["Late utility should converge back into the main Blood line."]
+			description: ["Late utility should come back through the main Blood room instead of splintering into disconnected gadgets. That keeps the route readable and easier to maintain."]
 		}
 	]
 	title: "Blood and Slate Magic"

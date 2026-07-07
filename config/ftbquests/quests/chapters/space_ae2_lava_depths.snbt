@@ -21,7 +21,7 @@
 			}]
 			x: -6.34d
 			y: 0.0d
-			description: ["Lost Cities, Twilight Forest, Fallout Wastelands, Finley, and Call From The Depths are routed through Creating Space."]
+			description: ["Use rockets for the late adventure dimensions instead of hunting for old portal shortcuts. Space access is the route gate now, so launch prep matters."]
 		}
 		{
 			dependencies: ["A3BD0DDEF6ED0325"]
@@ -36,7 +36,7 @@
 			}]
 			x: -4.75d
 			y: -3.0d
-			description: ["Brass-casing flight hardware ties space access back to Create progression."]
+			description: ["The flight recorder proves your launch work still grows out of Create hardware. Space is the next tier of logistics, not a disconnected gimmick."]
 		}
 		{
 			dependencies: ["E38BFCA4E9BA3B4F"]
@@ -51,7 +51,7 @@
 			}]
 			x: -3.17d
 			y: -3.0d
-			description: ["Air liquefaction makes space prep an industrial process, not just a rocket icon."]
+			description: ["Build the air liquefier before you trust space travel. Oxygen needs to come from industry, not from hand-waved preparation."]
 		}
 		{
 			dependencies: ["D75B1E9CD31BC40F"]
@@ -67,7 +67,7 @@
 			}]
 			x: -1.58d
 			y: -3.0d
-			description: ["Space casing marks distance as a manufacturing requirement."]
+			description: ["Space casing is the point where distance becomes a crafting cost. Once you reach it, launches and remote work are part of the normal machine ladder."]
 		}
 		{
 			dependencies: ["9A5C64EB7037230A"]
@@ -82,7 +82,7 @@
 			}]
 			x: -0.25d
 			y: -3.65d
-			description: ["Space routes should extend supply chains, not skip them."]
+			description: ["Treat orbital travel as an extension of your supply chain. If a launch cannot be supported repeatedly, it is still only a stunt."]
 		}
 		{
 			dependencies: ["9A5C64EB7037230A"]
@@ -97,7 +97,7 @@
 			}]
 			x: -0.25d
 			y: -1.95d
-			description: ["Later planets should demand better logistics, heat planning, and return planning."]
+			description: ["Planets past orbit demand better logistics, better survival gear, and a better return plan. Do the prep first so the trip teaches something besides panic."]
 		}
 		{
 			dependencies: ["DE4D524CF80272D1" "990FBC2BE4DD42E2"]
@@ -112,7 +112,7 @@
 			}]
 			x: 1.25d
 			y: -2.85d
-			description: ["AE2 starts from meteor material, not abstract storage magic."]
+			description: ["Sky Stone is meteor salvage, so go collect it as route proof instead of treating AE2 as a purely crafted storage mod."]
 		}
 		{
 			dependencies: ["12925948A84BF40B"]
@@ -127,7 +127,7 @@
 			}]
 			x: 3.17d
 			y: -4.0d
-			description: ["Fluix is the first AE2 identity material and should arrive late enough to matter."]
+			description: ["Make Fluix once the AE2 route is truly open. It is the first AE2 material that needs to feel distinct instead of interchangeable with generic tech parts."]
 		}
 		{
 			dependencies: ["12925948A84BF40B"]
@@ -142,7 +142,7 @@
 			}]
 			x: 3.17d
 			y: -2.5d
-			description: ["Inscribers make processors a manufacturing chain, not a shapeless shortcut."]
+			description: ["The inscriber is what makes processors a real manufacturing chain. Build it so AE2 progress comes from machines and planning, not from one recipe surprise."]
 		}
 		{
 			dependencies: ["8E617A54B89E2EB3"]
@@ -157,7 +157,7 @@
 			}]
 			x: 4.75d
 			y: -4.0d
-			description: ["Logic processors bridge silicon and network control."]
+			description: ["Logic processors are the first sign AE2 control is becoming real. Make them once your inscriber work is stable and repeatable."]
 		}
 		{
 			dependencies: ["8E617A54B89E2EB3"]
@@ -172,7 +172,7 @@
 			}]
 			x: 4.75d
 			y: -2.5d
-			description: ["Engineering processors carry machine authority into AE2 systems."]
+			description: ["Engineering processors are the heavier proof item in the same route. They matter because later AE2 bodies need to feel expensive and deliberate."]
 		}
 		{
 			dependencies: ["18BB5327624EDB2D" "B2C2EB0D25A694E4" "7A15771CDACE42EC"]
@@ -189,7 +189,7 @@
 			x: 6.34d
 			y: -3.25d
 			rewards: [{ id: "664D13F351314EE0" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["The recipe explorer shows the controller needs smooth sky stone, fluix, and an engineering processor."]
+			description: ["Check the controller recipe carefully before crafting it. AE2 only belongs here if the whole processor and meteor route already feels under control."]
 		}
 		{
 			dependencies: ["86339E21F9017663"]
@@ -205,7 +205,7 @@
 			}]
 			x: 7.92d
 			y: -3.25d
-			description: ["Raw impossible work is an unfinished AE2 body requiring processors, pressure, and material proof."]
+			description: ["Raw impossible casing is the unstable bridge between AE2 and the final machine frame. Expect it to ask for proof from several late systems at once."]
 		}
 		{
 			dependencies: ["552246EFD8BF3F2C"]
@@ -220,7 +220,7 @@
 			}]
 			x: 9.5d
 			y: -5.0d
-			description: ["Cell housings mark storage as manufactured infrastructure."]
+			description: ["Cell housings are how storage becomes infrastructure instead of a magic convenience. Make them when local AE2 is worth the resource cost."]
 		}
 		{
 			dependencies: ["2BBA260233DB42E2"]
@@ -235,7 +235,7 @@
 			}]
 			x: 11.09d
 			y: -5.0d
-			description: ["Drives should not erase trains and routes; they consolidate local intelligence."]
+			description: ["Use drives to clean up one base at a time. AE2 is there to sharpen local work, not erase your trains, roads, and intersite planning."]
 		}
 		{
 			dependencies: ["552246EFD8BF3F2C"]
@@ -251,7 +251,7 @@
 			}]
 			x: 9.5d
 			y: -2.0d
-			description: ["Impossible casing belongs to AE2-scale systems, high utility, and late Blood Magic hybrids."]
+			description: ["Impossible casing is reserved for truly late systems. If a machine does not feel AE2-scale or hybrid-tier, it probably does not deserve this frame."]
 		}
 		{
 			dependencies: ["B9903B9513ACD50E"]
@@ -266,7 +266,7 @@
 			}]
 			x: 11.09d
 			y: -2.0d
-			description: ["Lava-depth osmiridium, uranium, and thorium require heat, mobs, gear, and return logistics."]
+			description: ["Lava-depth materials are expedition ore, not branch-mining filler. Bring heat gear, combat answers, and a real extraction-and-return plan."]
 		}
 		{
 			dependencies: ["E553185539A744D4"]
@@ -281,7 +281,7 @@
 			}]
 			x: 12.67d
 			y: -3.5d
-			description: ["Uranium is not normal mining filler; it belongs to dangerous late geology."]
+			description: ["Treat uranium as late dangerous geology, not as another ore on the checklist. If the route feels routine, you are probably overgeared or underchallenged."]
 		}
 		{
 			dependencies: ["E553185539A744D4"]
@@ -296,7 +296,7 @@
 			}]
 			x: 12.67d
 			y: -2.0d
-			description: ["Thorium belongs beside nuclear chemistry and lava-depth expedition work."]
+			description: ["Bring thorium home through the same dangerous route as the rest of the lava-depth set. Later chemistry needs a source with real cost."]
 		}
 		{
 			dependencies: ["601091B3080FCF00" "76FB4905EE8E60D7" "60522A1EBE177440"]
@@ -312,7 +312,7 @@
 			}]
 			x: 14.7d
 			y: -2.35d
-			description: ["The endgame still respects the pack thesis: distance, logistics, bodies, and infrastructure matter."]
+			description: ["Finish the expedition by bringing the proof items and yourself home. Endgame still rewards good logistics more than reckless reach."]
 		},
 		{
 			dependencies: ["DE4D524CF80272D1"]
@@ -328,7 +328,7 @@
 			}]
 			x: 0.0d
 			y: -6.8d
-			description: ["Space should look like expedition prep, not a straight line."]
+			description: ["Run the checklist before you launch. Suit, fuel, oxygen, recovery items, and a proof target all need to be decided on the ground."]
 		}
 ,
 		{
@@ -345,7 +345,7 @@
 			}]
 			x: -4.75d
 			y: -1.0d
-			description: ["Meteor resources should preserve route identity."]
+			description: ["Keep meteor salvage mentally separate from ordinary geology. That makes it easier to understand why AE2 begins in orbit instead of in a cave."]
 		}
 ,
 		{
@@ -362,7 +362,7 @@
 			}]
 			x: -0.95d
 			y: -5.15d
-			description: ["Mars needs visible expedition texture."]
+			description: ["Treat Mars like a costly route, not like a color swap on the Moon. If you cannot explain the extra logistics burden, you are not ready yet."]
 		}
 ,
 		{
@@ -379,7 +379,7 @@
 			}]
 			x: 1.3d
 			y: -5.45d
-			description: ["AE2 should become a local infrastructure cluster."]
+			description: ["Prepare processor presses and ingredients as a small factory, not as scattered chores. AE2 feels much better when the processor route lives in one place."]
 		}
 ,
 		{
@@ -396,7 +396,7 @@
 			}]
 			x: 4.75d
 			y: -0.5d
-			description: ["AE2 must read as bounded local logistics."]
+			description: ["Plan channels before the network sprawls. Bounded local AE2 is easier to debug, cheaper to expand, and closer to the pack's logistics rules."]
 		}
 ,
 		{
@@ -413,7 +413,7 @@
 			}]
 			x: 6.34d
 			y: -5.25d
-			description: ["Storage should not erase trains and physical movement."]
+			description: ["Budget cells and drives per base instead of centralizing everything immediately. Storage is strongest when it solves local clutter without deleting route identity."]
 		}
 ,
 		{
@@ -430,7 +430,7 @@
 			}]
 			x: 11.09d
 			y: 0.0d
-			description: ["Lava materials should look dangerous and expeditionary."]
+			description: ["Pack for heat, escape, and extraction before you dive for lava-depth materials. Those ores are meant to test preparation as much as gear."]
 		}
 ,
 		{
@@ -447,7 +447,7 @@
 			}]
 			x: 12.67d
 			y: -5.5d
-			description: ["Osmiridium should visually demand provenance."]
+			description: ["Tie rare alloys back to lava-depth proof whenever possible. That keeps the late material route visible instead of letting it blur into generic metalwork."]
 		}
 ,
 		{
@@ -464,7 +464,7 @@
 			}]
 			x: 9.5d
 			y: 0.0d
-			description: ["OC2R is the intersite thesis after local AE2."]
+			description: ["Use computers to coordinate distant sites after local AE2 is already solving base problems. OC2R is for intersite control, not item teleportation."]
 		}
 ,
 		{
@@ -481,7 +481,7 @@
 			}]
 			x: 14.7d
 			y: -4.65d
-			description: ["The final graph should visibly braid the late game."]
+			description: ["Use this node as a late-game map: space access, local AE2, lava-depth ore, and intersite control now all need to feed each other."]
 		}
 	]
 	title: "Space, AE2, and Lava Depths"

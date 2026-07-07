@@ -17,7 +17,7 @@
 			x: -12.0d
 			y: 0.0d
 			rewards: [{ id: "B0663441D528B31C" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Nether material pressure starts the seared route toward molten metal work."]
+			description: ["Bring back netherrack to prove Nether heat is now part of progression. You need that proof before early metalwork becomes reliable."]
 		}
 		{
 			dependencies: ["15C391E4708D16B9"]
@@ -28,7 +28,7 @@
 			x: -9.0d
 			y: 0.0d
 			rewards: [{ id: "D974AB9A3682A133" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Grout is the material bridge from clay/sand/gravel work into seared infrastructure."]
+			description: ["Make grout from the rough materials you already gathered. This is the first real step from surface scavenging into foundry parts."]
 		}
 		{
 			dependencies: ["7CD10E3F93270496"]
@@ -39,7 +39,7 @@
 			x: -6.0d
 			y: 0.0d
 			rewards: [{ id: "A9B527FAD6481FCD" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Seared brick is the first metalworking substrate, not decoration."]
+			description: ["Fire grout into seared brick and keep batching it. Seared brick is your first real metalwork building material, not optional decoration."]
 		}
 		{
 			dependencies: ["0C10825F73EDBA68"]
@@ -50,7 +50,7 @@
 			x: -3.0d
 			y: -3.0d
 			rewards: [{ id: "DFF6F04446ACBD61" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["The heater makes fuel choice part of early molten metal work."]
+			description: ["Build the heater so fuel and heat become visible parts of the process. Early molten metal work only feels stable once the heat source is controlled."]
 		}
 		{
 			dependencies: ["0C10825F73EDBA68"]
@@ -63,7 +63,7 @@
 			x: -3.0d
 			y: 0.0d
 			rewards: [{ id: "8D781A1034BF5F88" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["The melter is the first explicit link between mined metals and cast tool parts."]
+			description: ["The melter is your first true metal machine. Use it to turn ore into liquid metal and prove that tools now come from processing, not from simple crafting."]
 		}
 		{
 			dependencies: ["28DDBFB5911AFA2D"]
@@ -74,7 +74,7 @@
 			x: -3.0d
 			y: 3.0d
 			rewards: [{ id: "AA45FE929C4C4393" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Seared bricks scale the single-block melter into reusable infrastructure."]
+			description: ["Upgrade from single parts to seared brick structure as soon as you can. That makes metalwork repeatable instead of a one-off stunt."]
 		}
 		{
 			dependencies: ["7A5355E1E30918C4" "28DDBFB5911AFA2D"]
@@ -85,7 +85,7 @@
 			x: 0.0d
 			y: -4.5d
 			rewards: [{ id: "BBD97D65370BBD30" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Fuel storage turns melting from a stunt into a repeatable metal process."]
+			description: ["Add a fuel tank so melting can run in batches instead of one tiny job at a time. Reliable fuel storage is what makes a real work cell."]
 		}
 		{
 			dependencies: ["1E7CD8C092AE1895"]
@@ -96,7 +96,7 @@
 			x: 0.0d
 			y: -3.0d
 			rewards: [{ id: "D3A6934C8AB9A33E" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Readable fuel state keeps molten-metal work deliberate."]
+			description: ["Add a fuel gauge early and watch it. Reading your fuel level prevents wasted ore and teaches you to treat molten work like a system."]
 		}
 		{
 			dependencies: ["28DDBFB5911AFA2D"]
@@ -107,7 +107,7 @@
 			x: 0.0d
 			y: -1.5d
 			rewards: [{ id: "CBF12DD1E00F36AB" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Tables are where molten metal becomes casts and tool parts."]
+			description: ["Use the casting table for parts and casts first. This is the surface where liquid metal turns into exact tool pieces."]
 		}
 		{
 			dependencies: ["28DDBFB5911AFA2D"]
@@ -118,7 +118,7 @@
 			x: 0.0d
 			y: 1.5d
 			rewards: [{ id: "C53CA10697A9F01B" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Basins connect metal casting to blocks, casings, and larger material batches."]
+			description: ["Use the basin when you need blocks or bigger pours. It is the easy way to see the difference between part-scale casting and bulk material work."]
 		}
 		{
 			dependencies: ["28DDBFB5911AFA2D" "6E54887445AA930E" "609904A3320C55BE"]
@@ -129,7 +129,7 @@
 			x: 3.0d
 			y: -3.0d
 			rewards: [{ id: "EB402782CC535454" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["The faucet is the visible act of moving molten metal into a cast."]
+			description: ["The faucet is the first precise pour tool. Place it once and you will stop thinking of molten metal as a black box."]
 		}
 		{
 			dependencies: ["4EE5822769F6F1F1"]
@@ -140,7 +140,7 @@
 			x: 3.0d
 			y: -1.5d
 			rewards: [{ id: "9D11024D82AF0C57" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Channels make molten flow spatial instead of abstract."]
+			description: ["Channels let you route molten metal instead of hand-waving it between blocks. Use them when the casting setup starts growing wider than one basin."]
 		}
 		{
 			dependencies: ["4EE5822769F6F1F1"]
@@ -151,7 +151,7 @@
 			x: 3.0d
 			y: 0.0d
 			rewards: [{ id: "A81C1A9AC85A9B78" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Drains are the smeltery's interface between tanked metal and casting surfaces."]
+			description: ["The drain is the connection point between storage and pouring. Once you understand the drain, larger smeltery layouts become much easier to reason about."]
 		}
 		{
 			dependencies: ["0DB9BF3F6DFF3EDD"]
@@ -162,7 +162,7 @@
 			x: 3.0d
 			y: 1.5d
 			rewards: [{ id: "BF8F928FC5D7AD14" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Ducts teach controlled extraction from molten systems."]
+			description: ["Ducts are for taking material out on purpose instead of breaking and rebuilding the setup. They matter once the foundry stops fitting in one corner."]
 		}
 		{
 			dependencies: ["1A2A372A607208B1"]
@@ -173,7 +173,7 @@
 			x: 3.0d
 			y: 3.0d
 			rewards: [{ id: "ED16D7CA80AC3ACD" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Chutes turn the casting setup into real item flow."]
+			description: ["Chutes finish the jump from manual pouring to item flow. Add them when you want the casting line to feed other work instead of your inventory."]
 		}
 		{
 			dependencies: ["28DDBFB5911AFA2D"]
@@ -184,7 +184,7 @@
 			x: 0.0d
 			y: 4.5d
 			rewards: [{ id: "EA0E5F52ED5D2DAB" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Ingot-volume storage makes metal quantities legible."]
+			description: ["Store molten metal by ingot count so you can plan batches cleanly. Visible stock is what keeps the metal route predictable."]
 		}
 		{
 			dependencies: ["4FABFAF748F8880E"]
@@ -195,7 +195,7 @@
 			x: 3.0d
 			y: 4.5d
 			rewards: [{ id: "DE0AD64977FC15E6" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Gauge blocks make metal stock visible before automation."]
+			description: ["An ingot gauge tells you whether you have enough metal before you start another batch. Use it to avoid guessing and wasting setup time."]
 		}
 		{
 			dependencies: ["0FE05B3739E9E636"]
@@ -206,7 +206,7 @@
 			x: -6.0d
 			y: 3.0d
 			rewards: [{ id: "E34F351961E2A46E" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Lanterns are optional, but they reinforce that seared infrastructure is a built workspace."]
+			description: ["The lantern is optional, but it is a good reminder to turn this area into a safe work room, not just a pile of hot blocks."]
 		}
 		{
 			dependencies: ["6E54887445AA930E"]
@@ -217,7 +217,7 @@
 			x: 6.0d
 			y: -3.0d
 			rewards: [{ id: "A6CE52629C63F965" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Disposable casts are the first proof that shape matters."]
+			description: ["Start with sand casts when you need a quick shape check. They prove that metalwork is about parts and forms, not just smelting ingots."]
 		}
 		{
 			dependencies: ["036BF7C739C65CC0" "4EE5822769F6F1F1"]
@@ -228,7 +228,7 @@
 			x: 6.0d
 			y: -1.5d
 			rewards: [{ id: "9D6363A695AFA0F4" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Permanent casts turn metalworking into repeatable tool production."]
+			description: ["Upgrade to permanent casts as soon as a part matters more than once. That is when metalworking stops being experimental and starts becoming production."]
 		}
 		{
 			dependencies: ["38C6C603300A0551"]
@@ -238,7 +238,7 @@
 			tasks: [{ id: "A111000000000101" item: "minecraft:raw_copper" type: "item" }]
 			x: 9.0d
 			y: -4.5d
-			description: ["Copper proves that local metals now feed the casting line."]
+			description: ["Run copper through the line to prove your first local metal can now be processed cleanly. This is the point where mining and casting truly connect."]
 		}
 		{
 			dependencies: ["38C6C603300A0551"]
@@ -248,7 +248,7 @@
 			tasks: [{ id: "A111000000000102" item: "minecraft:raw_iron" type: "item" }]
 			x: 9.0d
 			y: -3.0d
-			description: ["Iron is the first serious metal-tool material, so it must connect to tool parts."]
+			description: ["Process iron once the casting line works. Iron is your first serious tool metal, so make sure it enters the part route instead of stopping at ingots."]
 		}
 		{
 			dependencies: ["38C6C603300A0551"]
@@ -258,7 +258,7 @@
 			tasks: [{ id: "A111000000000103" item: "tconstruct:pick_head_cast" type: "item" }]
 			x: 9.0d
 			y: -1.5d
-			description: ["Tool-part casts are the explicit bridge from metal to tools."]
+			description: ["Make part casts on purpose. They are the clearest proof that the foundry exists to build tools, not just to smelt ore differently."]
 		}
 		{
 			dependencies: ["38C6C603300A0551"]
@@ -268,7 +268,7 @@
 			tasks: [{ id: "A111000000000104" item: "tconstruct:tool_binding_cast" type: "item" }]
 			x: 9.0d
 			y: 0.0d
-			description: ["Bindings make the tool assembly legible as parts, not a black-box recipe."]
+			description: ["Bindings matter because Tinkers tools are assembled from real parts. Making one helps the whole tool route read clearly instead of feeling magical."]
 		}
 		{
 			dependencies: ["38C6C603300A0551"]
@@ -278,7 +278,7 @@
 			tasks: [{ id: "A111000000000105" item: "tconstruct:tool_handle_cast" type: "item" }]
 			x: 9.0d
 			y: 1.5d
-			description: ["Handles connect tool durability and material choice to molten-metal casting."]
+			description: ["Handles carry durability and material traits into finished tools. Craft one early so you can see how part choice changes the result."]
 		}
 		{
 			dependencies: ["0C10825F73EDBA68"]
@@ -288,7 +288,7 @@
 			tasks: [{ id: "A111000000000106" item: "tconstruct:part_builder" type: "item" }]
 			x: 9.0d
 			y: 3.0d
-			description: ["The part builder keeps non-metal and pattern work attached to the tool route."]
+			description: ["Keep the Part Builder next to the foundry tools. Not every useful part is molten, and this bench keeps the whole route in one place."]
 		}
 		{
 			dependencies: ["A111000000000003" "A111000000000004" "A111000000000005" "A111000000000006"]
@@ -299,7 +299,7 @@
 			tasks: [{ id: "A111000000000107" item: "tconstruct:tinker_station" type: "item" }]
 			x: 12.0d
 			y: -3.0d
-			description: ["The station is the assembly point where cast metal parts become tools."]
+			description: ["Use the Tinker Station to assemble, inspect, and repair tools. It is the bench that makes all the separate parts turn back into one usable item."]
 		}
 		{
 			dependencies: ["A111000000000002" "A111000000000003"]
@@ -309,7 +309,7 @@
 			tasks: [{ id: "A111000000000108" item: "tconstruct:pick_head" type: "item" }]
 			x: 12.0d
 			y: -1.5d
-			description: ["The metal pick head makes the metal-to-tool link impossible to miss."]
+			description: ["Make a metal pick head as soon as the line allows it. This is the clearest sign that your foundry now builds better tools, not just better materials."]
 		}
 		{
 			dependencies: ["A111000000000004"]
@@ -319,7 +319,7 @@
 			tasks: [{ id: "A111000000000109" item: "tconstruct:tool_binding" type: "item" }]
 			x: 12.0d
 			y: 0.0d
-			description: ["Bindings are part of the tool, not a miscellaneous component."]
+			description: ["Treat bindings as part of the tool plan, not leftover junk. A good tool route cares about every part, not only the head."]
 		}
 		{
 			dependencies: ["A111000000000005"]
@@ -329,7 +329,7 @@
 			tasks: [{ id: "A11100000000010A" item: "tconstruct:tool_handle" type: "item" }]
 			x: 12.0d
 			y: 1.5d
-			description: ["Handles carry material traits into the finished tool."]
+			description: ["Choose handles intentionally because they change the finished tool. This is where Tinkers starts rewarding part planning instead of one best recipe."]
 		}
 		{
 			dependencies: ["A111000000000007" "A111000000000008" "A111000000000009" "A11100000000000A"]
@@ -342,7 +342,7 @@
 			x: 15.0d
 			y: -1.5d
 			rewards: [{ id: "A11100000000020B" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["This is the chapter thesis: metal infrastructure must visibly culminate in metal tools."]
+			description: ["Finish the line by making a true metal pickaxe. The tool should now feel earned through parts, heat, and casting instead of a simple recipe unlock."]
 		}
 		{
 			dependencies: ["A11100000000000B"]
@@ -352,7 +352,7 @@
 			tasks: [{ id: "A11100000000010C" item: "tconstruct:repair_kit" type: "item" }]
 			x: 15.0d
 			y: 0.0d
-			description: ["Repair keeps tools in the material economy after the first craft."]
+			description: ["Make a repair kit early so your new tools stay in circulation. Repair is part of the economy here, not a side feature you learn later."]
 		}
 		{
 			dependencies: ["A11100000000000C"]
@@ -362,7 +362,7 @@
 			tasks: [{ id: "A11100000000010D" item: "tconstruct:modifier_worktable" type: "item" }]
 			x: 18.0d
 			y: -1.5d
-			description: ["Modifiers make tool growth a progression path instead of a replacement treadmill."]
+			description: ["Modifiers are how good tools improve without being thrown away. Learn them now so upgrading feels cheaper and safer than constant replacement."]
 		}
 		{
 			dependencies: ["A11100000000000B"]
@@ -373,7 +373,7 @@
 			tasks: [{ id: "A11100000000010E" item: "tconstruct:tinkers_anvil" type: "item" }]
 			x: 18.0d
 			y: 0.0d
-			description: ["The anvil is the late metal-tool bench and should remain connected to the casting route."]
+			description: ["The Tinker's Anvil is the later upgrade bench for serious tool work. It is a continuation of the foundry, not a separate system that replaces it."]
 		}
 	]
 	title: "Metals and Metal Tools"

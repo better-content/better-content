@@ -21,7 +21,7 @@
 			}]
 			x: -6.34d
 			y: 0.0d
-			description: ["Ore is local. Deposits, stone type, and Y bands matter more than flat strip-mining."]
+			description: ["Read the terrain before you mine. In this pack, ore bodies are local and geological clues matter more than blind strip-mining."]
 		}
 		{
 			dependencies: ["AD6076BBBC63B6E7"]
@@ -36,7 +36,7 @@
 			}]
 			x: -4.75d
 			y: -3.0d
-			description: ["Samples and exposed geology teach where the ore body lives before committing labor."]
+			description: ["Collect samples and watch the stone around them. That small survey step saves time by telling you whether a deposit is worth serious labor."]
 		}
 		{
 			dependencies: ["88AB3FECBB5A97EC"]
@@ -51,7 +51,7 @@
 			}]
 			x: -3.17d
 			y: -4.0d
-			description: ["Coal is fuel, chemistry input, and route planning pressure."]
+			description: ["Coal is more than furnace fuel here. Treat it as a mining cost, a chemistry input, and a reason to plan routes carefully."]
 		}
 		{
 			dependencies: ["88AB3FECBB5A97EC"]
@@ -67,7 +67,7 @@
 			x: -3.17d
 			y: -2.5d
 			rewards: [{ id: "D735DD89D7E2A8EC" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Ironstone starts the metal story without pretending every ore appears everywhere."]
+			description: ["Ironstone is your proof that metal starts in specific geology. Learn where it lives now so later mining stops feeling random."]
 		}
 		{
 			dependencies: ["88AB3FECBB5A97EC"]
@@ -82,7 +82,7 @@
 			}]
 			x: -3.17d
 			y: -1.0d
-			description: ["Copper sulfide and copper routes connect geology to coins, Create, and early power."]
+			description: ["Copper matters because it feeds coins, Create parts, and early electrical work. Bring it home through the route that preserves where it came from."]
 		}
 		{
 			dependencies: ["D1B0284719CE935D"]
@@ -97,7 +97,7 @@
 			}]
 			x: -1.58d
 			y: -4.0d
-			description: ["Tin belongs in the early deposit catalogue because alloys and electronics need distinct source identity."]
+			description: ["Tin earns a place early because later alloys and electronics need it. Keep its source identity visible so the material ladder stays understandable."]
 		}
 		{
 			dependencies: ["F3267A0525F8E508"]
@@ -112,7 +112,7 @@
 			}]
 			x: -1.58d
 			y: -2.5d
-			description: ["Zinc is the Create-era bridge toward brass and more deliberate mechanical systems."]
+			description: ["Zinc is the deposit that points straight at brass. Secure it early if you know the Create lane is going to be your next big push."]
 		}
 		{
 			dependencies: ["9FB7FAC134090CFF"]
@@ -127,7 +127,7 @@
 			}]
 			x: -1.58d
 			y: -1.0d
-			description: ["Lead-zinc deposits feed chemistry and shielding-style material identity later."]
+			description: ["Lead is mostly a future-proof material at first. Mine it when you can, because later chemistry and protection routes will want a real stockpile."]
 		}
 		{
 			dependencies: ["0976FB57A47DF8D4" "FF9487345EDB59C6"]
@@ -142,7 +142,7 @@
 			}]
 			x: 0.0d
 			y: -3.25d
-			description: ["Bauxite and aluminum should feel like named geology, not a generic dust conversion."]
+			description: ["Treat bauxite as a named deposit with its own route. Aluminum should come from real geology and chemistry, not from a vague transmutation shortcut."]
 		}
 		{
 			dependencies: ["F3267A0525F8E508"]
@@ -157,7 +157,7 @@
 			}]
 			x: 0.0d
 			y: 1.5d
-			description: ["A furnace can save a run, but it is the poor route for serious yield."]
+			description: ["A furnace is the emergency route, not the good route. Use it when a run needs saving, then move serious processing onto better machines."]
 		}
 		{
 			dependencies: ["B346673EAE19FC65"]
@@ -174,7 +174,7 @@
 			x: 1.58d
 			y: 1.5d
 			rewards: [{ id: "71DCAF5A5651586C" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Tinkers makes the first strong material interpretation layer: melting, casting, and alloy proof."]
+			description: ["The melter is your first strong interpretation tool for ore. Once you can melt and cast a deposit, you understand it much better than a furnace ever could."]
 		}
 		{
 			dependencies: ["611CC642195B7D66"]
@@ -189,7 +189,7 @@
 			}]
 			x: 3.17d
 			y: 1.5d
-			description: ["The smeltery turns deposit identity into scalable molten logistics."]
+			description: ["Scale into a smeltery when one-off melts stop being enough. That is how deposit identity turns into repeatable molten logistics."]
 		}
 		{
 			dependencies: ["5F857A4BFE9337E7"]
@@ -204,7 +204,7 @@
 			}]
 			x: 1.58d
 			y: -2.5d
-			description: ["Create crushing and washing improve bulk feedstock before sealed chemistry appears."]
+			description: ["Use crushing once you want better yield and visible byproducts. It is the first big upgrade from simple melting into bulk processing."]
 		}
 		{
 			dependencies: ["A67CDD2A30C926B0"]
@@ -219,7 +219,7 @@
 			}]
 			x: 3.17d
 			y: -2.5d
-			description: ["Fans and washing routes make byproducts visible instead of hidden in a single furnace output."]
+			description: ["Washing routes matter because they show what else the deposit contains. That extra visibility is part of why machinery beats emergency smelting."]
 		}
 		{
 			dependencies: ["D56BD0037669EF02" "8B2C868F1240B6EC"]
@@ -234,7 +234,7 @@
 			}]
 			x: 4.75d
 			y: -0.5d
-			description: ["Acids, salts, gases, and media should refine geology, not erase it."]
+			description: ["Use chemistry to refine a deposit, not to erase where it came from. If every ore starts looking interchangeable, you are losing useful information."]
 		}
 		{
 			dependencies: ["7361C081C9473BE7"]
@@ -250,7 +250,7 @@
 			}]
 			x: 6.34d
 			y: -0.5d
-			description: ["Osmiridium, uranium, and thorium are expedition materials that demand heat, gear, and return logistics."]
+			description: ["Treat lava-depth ores as expedition material from the start. They ask for heat gear, combat answers, and a way home, not just a better pick."]
 		},
 		{
 			dependencies: ["AD6076BBBC63B6E7"]
@@ -266,7 +266,7 @@
 			}]
 			x: -6.34d
 			y: -2.0d
-			description: ["Geology chapters become beautiful when they look like survey maps."]
+			description: ["Write down biome, stone, height, and samples like a survey map. Good notes save more mining time than one more blind tunnel."]
 		}
 ,
 		{
@@ -300,7 +300,7 @@
 			}]
 			x: -3.17d
 			y: -5.9d
-			description: ["Coal should anchor processing choices, not vanish into furnaces."]
+			description: ["Track coal as a real processing cost instead of dumping it thoughtlessly into furnaces. It anchors many later decisions."]
 		}
 ,
 		{
@@ -317,7 +317,7 @@
 			}]
 			x: -3.17d
 			y: 1.1d
-			description: ["Copper should visually point toward chemistry and coins."]
+			description: ["Keep copper tied to both coin work and chemistry so its route stays visible. That will help later when one stockpile is feeding several systems."]
 		}
 ,
 		{
@@ -385,7 +385,7 @@
 			}]
 			x: 1.58d
 			y: -0.5d
-			description: ["Crushing should show why machinery improves geology."]
+			description: ["Use crushed outputs and byproducts to see why machinery beats raw smelting. This is where geology starts rewarding better interpretation."]
 		}
 ,
 		{
@@ -402,7 +402,7 @@
 			}]
 			x: 4.75d
 			y: -2.5d
-			description: ["Chemistry should look like controlled assay work."]
+			description: ["Run small chemistry batches first so the process feels like assay work instead of blind consumption. Once the results make sense, scale up."]
 		}
 ,
 		{
@@ -419,7 +419,7 @@
 			}]
 			x: 6.34d
 			y: 1.5d
-			description: ["Late geology should visually feel dangerous."]
+			description: ["Build a real lava-dive kit before you chase the late ores. The gear, exits, and recovery plan are part of the resource cost."]
 		}
 	]
 	title: "Deposits and Ore Identity"

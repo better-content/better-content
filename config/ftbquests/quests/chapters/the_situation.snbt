@@ -9,6 +9,7 @@
 	quests: [
 		{
 			id: "5AFD3E9046C0E33F"
+			title: "Loose Stone"
 			tasks: [{
 				id: "6F056EE80C8B2EC4"
 				item: {
@@ -23,6 +24,7 @@
 			}]
 			x: -15.0d
 			y: -4.0d
+			description: ["Pick up gravel early. Loose stone and loose soil are your first honest materials before proper tools exist."]
 			rewards: [
 				{
 					id: "FF589B35E365469A"
@@ -35,6 +37,7 @@
 		{
 			dependencies: ["5AFD3E9046C0E33F"]
 			id: "0F3870494C55ACF1"
+			title: "Starter Head Material"
 			tasks: [{
 				id: "1EE068EE9E6B4AD7"
 				item: {
@@ -49,6 +52,7 @@
 			}]
 			x: -13.5d
 			y: -3.5d
+			description: ["Grab flint, bone, or rock for your first tool head. You are proving that early tools come from scavenging, not from punching a tree and rushing vanilla recipes."]
 			rewards: [
 				{
 					id: "AA9DD5ECE9F00954"
@@ -61,6 +65,7 @@
 		{
 			dependencies: ["5AFD3E9046C0E33F"]
 			id: "426CBCE75C2B62E3"
+			title: "Gunpowder"
 			tasks: [{
 				id: "079E7B988080F2B1"
 				item: "minecraft:gunpowder"
@@ -68,6 +73,7 @@
 			}]
 			x: -13.5d
 			y: -4.5d
+			description: ["Gunpowder is an early route item, not just combat loot. Hold onto it when you find it, because primitive blasting and demolition arrive before comfortable mining does."]
 			rewards: [
 				{
 					id: "E7C91942F98EC746"
@@ -79,6 +85,7 @@
 		}
 		{
 			id: "5AFEF9A018450CE8"
+			title: "Sand"
 			tasks: [{
 				id: "757C22602493E597"
 				item: {
@@ -93,6 +100,7 @@
 			}]
 			x: -15.0d
 			y: -6.0d
+			description: ["Collect sand alongside gravel. Early progress keeps circling back to loose surface materials, so bring them home instead of treating them as filler."]
 			rewards: [
 				{
 					id: "FF5B5C05BDE0A94D"
@@ -108,6 +116,7 @@
 				"426CBCE75C2B62E3"
 			]
 			id: "17D12AFB935DD6AE"
+			title: "TNT"
 			size: 2.0d
 			tasks: [{
 				id: "5EFDDFBAB454ACEF"
@@ -116,6 +125,7 @@
 			}]
 			x: -13.0d
 			y: -6.0d
+			description: ["TNT is a route tool, not a toy. Making one proves you can turn scavenged surface materials into deliberate terrain breaking when the pack wants force instead of speed."]
 			rewards: [
 				{
 					id: "B2748F5E36F8730B"
@@ -127,6 +137,7 @@
 		}
 		{
 			id: "0FFDBBEC71FD62F6"
+			title: "Twigs"
 			tasks: [{
 				id: "6C57B026AF929D81"
 				item: "projectvibrantjourneys:twigs"
@@ -134,6 +145,7 @@
 			}]
 			x: -15.0d
 			y: -1.5d
+			description: ["Start by gathering twigs from the ground. The first minutes are about scavenging what the world offers, not assuming full wood access immediately."]
 			rewards: [
 				{
 					id: "AA581E49D458C753"
@@ -146,6 +158,7 @@
 		{
 			dependencies: ["0FFDBBEC71FD62F6"]
 			id: "5AE459C6DF548ECF"
+			title: "Stick"
 			tasks: [{
 				id: "6F663F069A8404B4"
 				item: "minecraft:stick"
@@ -153,6 +166,7 @@
 			}]
 			x: -13.5d
 			y: -1.5d
+			description: ["Turn loose wood into a stick as soon as you can. That single handle is what lets the rest of the primitive tool route start moving."]
 			rewards: [
 				{
 					id: "FF41FC637AF12B6A"
@@ -168,6 +182,7 @@
 				"5AE459C6DF548ECF"
 			]
 			id: "066B63A7427BBAE2"
+			title: "Butcher Knife"
 			size: 1.2d
 			tasks: [{
 				id: "489166A85D3B7710"
@@ -219,6 +234,7 @@
 			}]
 			x: -12.5d
 			y: -2.5d
+			description: ["Make the primitive butcher knife first. It opens plant cutting, food prep, and several early survival materials that bare hands will not give you."]
 			rewards: [
 				{
 					id: "A3CEC602E7DE1F47"
@@ -231,6 +247,7 @@
 		{
 			dependencies: ["066B63A7427BBAE2"]
 			id: "42D24E824C64D60C"
+			title: "Straw"
 			tasks: [{
 				id: "6F7348886F1517B8"
 				item: "farmersdelight:straw"
@@ -238,6 +255,7 @@
 			}]
 			x: -11.0d
 			y: -2.5d
+			description: ["Collect straw once the knife is online. Straw is an early craft material, and it proves your first tools are already feeding the next layer of infrastructure."]
 			rewards: [
 				{
 					id: "E777EB27E9C173A9"
@@ -250,6 +268,7 @@
 		{
 			dependencies: ["42D24E824C64D60C"]
 			id: "23C82ECF7FDF2B5A"
+			title: "Hand Axe"
 			size: 1.2d
 			tasks: [{
 				id: "69921272465B8BCC"
@@ -301,6 +320,7 @@
 			}]
 			x: -9.6d
 			y: -2.4d
+			description: ["Make the primitive hand axe before you expect normal wood flow. This is the tool that turns the world from scavenging to controlled harvesting."]
 			rewards: [
 				{
 					id: "866D8B6ADA7A8EFF"
@@ -313,6 +333,7 @@
 		{
 			dependencies: ["23C82ECF7FDF2B5A"]
 			id: "66E00FBCA8C5476E"
+			title: "Logs"
 			tasks: [{
 				id: "2D4AF404F697B9A1"
 				item: {
@@ -327,6 +348,7 @@
 			}]
 			x: -8.0d
 			y: -2.5d
+			description: ["Now take real logs. Reaching this point means you have earned stable wood gathering instead of relying on dropped scraps."]
 			rewards: [
 				{
 					id: "C345AA190D60E2CB"
@@ -339,6 +361,7 @@
 		{
 			dependencies: ["42D24E824C64D60C"]
 			id: "2C6BBA4DA6B238F5"
+			title: "Canvas"
 			tasks: [{
 				id: "5322C5DD38EE7E00"
 				item: "farmersdelight:canvas"
@@ -346,6 +369,7 @@
 			}]
 			x: -9.5d
 			y: -4.0d
+			description: ["Canvas is an early fabric check. It opens storage and workstation parts, and it shows that primitive survival materials matter past the first tool craft."]
 			rewards: [
 				{
 					id: "89CE1FE803179D50"
@@ -358,6 +382,7 @@
 		{
 			dependencies: ["2C6BBA4DA6B238F5"]
 			id: "37415796F9E8231D"
+			title: "Basket"
 			tasks: [{
 				id: "0C254D5348E5B87A"
 				item: "farmersdelight:wooden_basket"
@@ -365,6 +390,7 @@
 			}]
 			x: -10.5d
 			y: -5.0d
+			description: ["Use the first basket as mobile storage, not decoration. Carrying a little more safely matters when your base, spawn, and supply routes are still fragile."]
 			rewards: [
 				{
 					id: "92E4F2335C4D86B8"
@@ -377,6 +403,7 @@
 		{
 			dependencies: ["2C6BBA4DA6B238F5"]
 			id: "67B724BED12A7BBE"
+			title: "Pattern"
 			tasks: [{
 				id: "4E6B41B768C7A6D3"
 				item: "tconstruct:pattern"
@@ -384,6 +411,7 @@
 			}]
 			x: -8.0d
 			y: -4.0d
+			description: ["Patterns mark the shift into Tinkers workstations. Once you can cut patterns, you can start building tools as parts instead of relying on one-off crafts."]
 			rewards: [
 				{
 					id: "C212811B748FDE1B"
@@ -396,6 +424,7 @@
 		{
 			dependencies: ["66E00FBCA8C5476E"]
 			id: "535E16A7456BAE19"
+			title: "Planks"
 			tasks: [{
 				id: "01855F06EB04EA2A"
 				item: {
@@ -410,6 +439,7 @@
 			}]
 			x: -6.5d
 			y: -2.5d
+			description: ["Cut planks after you secure logs. Stable wood processing is what finally lets you build stations and settle into repeatable tool work."]
 			rewards: [
 				{
 					id: "F6FBB302E0CE0BBC"
@@ -425,6 +455,7 @@
 				"535E16A7456BAE19"
 			]
 			id: "0EB806E4337DC7FA"
+			title: "Tinker Station"
 			size: 1.3d
 			tasks: [{
 				id: "1F7DF8AB62AD0DB0"
@@ -434,6 +465,7 @@
 			}]
 			x: -3.9000000000000004d
 			y: -2.6d
+			description: ["Build the Tinker Station once patterns and planks are ready. This is where your early parts become real tools and repairs stop being guesswork."]
 			rewards: [
 				{
 					id: "AB1DA34196D8625F"
@@ -449,6 +481,7 @@
 				"535E16A7456BAE19"
 			]
 			id: "1B09C8F1C2FE5053"
+			title: "Part Builder"
 			size: 1.3d
 			tasks: [{
 				id: "4A9CC2C882A9CC1D"
@@ -457,6 +490,7 @@
 			}]
 			x: -3.9000000000000004d
 			y: -3.9000000000000004d
+			description: ["The Part Builder is the first serious tool bench. Use it to make heads, handles, and bindings on purpose instead of hoping the next recipe is obvious."]
 			rewards: [
 				{
 					id: "BEAC6D54675BF5F6"
@@ -472,6 +506,7 @@
 				"535E16A7456BAE19"
 			]
 			id: "300DA0AD6EE9E507"
+			title: "Crafting Station"
 			size: 1.0d
 			tasks: [{
 				id: "01886B0AE28FED6A"
@@ -480,6 +515,7 @@
 			}]
 			x: -6.5d
 			y: -5.5d
+			description: ["Upgrade to a crafting station as soon as planks and patterns are under control. Better workstation flow saves time and cuts down on avoidable early-game friction."]
 			rewards: [
 				{
 					id: "95A80508CB4C40A2"

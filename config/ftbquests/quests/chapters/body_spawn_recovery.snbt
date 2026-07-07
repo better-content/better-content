@@ -21,7 +21,7 @@
 			}]
 			x: -6.34d
 			y: 0.0d
-			description: ["Death snaps back to the locked start. Treat beds as camps, not anchor changes."]
+			description: ["Death sends you back to your locked start point. Treat beds as temporary camps and travel support, not as a way to rewrite your home base."]
 		}
 		{
 			dependencies: ["2DF95D9A30A46A2B"]
@@ -36,7 +36,7 @@
 			}]
 			x: -4.75d
 			y: -3.0d
-			description: ["Use markers, roads, and sightlines so corpse recovery is a planned route, not a panic run."]
+			description: ["Mark the road home before you need it. A visible route turns corpse recovery into a plan instead of a blind sprint."]
 		}
 		{
 			dependencies: ["2C8F9611F5D5DD16"]
@@ -51,7 +51,7 @@
 			}]
 			x: -3.17d
 			y: -3.0d
-			description: ["Put food, blocks, torches, and spare tools along expedition routes."]
+			description: ["Leave cheap supplies along routes you expect to run again. A small cache is often the difference between a recovery trip and another death."]
 		}
 		{
 			dependencies: ["999F66BDD3EBF54E"]
@@ -68,7 +68,7 @@
 			x: -1.58d
 			y: -3.0d
 			rewards: [{ id: "6014B500804B358D" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Food variety buys working time and distance; it belongs in the same survival loop as water and climate."]
+			description: ["Carry varied food instead of one stack of filler. Better meals give you more working time, which matters when a bad trip can turn into a long walk back."]
 		}
 		{
 			dependencies: ["999F66BDD3EBF54E"]
@@ -83,7 +83,7 @@
 			}]
 			x: -1.58d
 			y: -1.5d
-			description: ["Bad water turns travel into attrition. Carry clean water or plan around purification."]
+			description: ["Secure drinkable water before longer trips. Dirty water turns every mistake into extra attrition, so purification is a travel tool, not luxury prep."]
 		}
 		{
 			dependencies: ["E454A578105E3C5D" "0CC3D3A3FF0F586A"]
@@ -98,7 +98,7 @@
 			}]
 			x: 0.0d
 			y: -2.25d
-			description: ["Cold Sweat turns biome choice, lava-depth work, and dimension travel into loadout questions."]
+			description: ["Check the temperature problem before you leave home. Climate changes what gear, fuel, and healing you need, especially for deep or dimensional trips."]
 		}
 		{
 			dependencies: ["50B2F24168118EF2"]
@@ -113,7 +113,7 @@
 			}]
 			x: 1.58d
 			y: -2.25d
-			description: ["The correct expedition inventory includes the walk back after failure, not just the first arrival."]
+			description: ["Pack for the return trip, not only for arrival. Leave room for proof items, recovery supplies, and whatever you will need if the trip goes wrong."]
 		}
 		{
 			dependencies: ["9DCD541E1DBF398C"]
@@ -128,7 +128,7 @@
 			}]
 			x: 3.17d
 			y: -2.25d
-			description: ["SWEM-style travel support is valuable because local logistics remain physical for most of the pack."]
+			description: ["Mounts matter because travel stays physical for a long time in this pack. Use animals to shorten recovery loops and move supplies, not as decoration."]
 		}
 		{
 			dependencies: ["2DF95D9A30A46A2B"]
@@ -145,7 +145,7 @@
 			x: -4.75d
 			y: 3.0d
 			rewards: [{ id: "9D225354E0351222" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["A heart records a meaningful life and opens the Blood Magic bridge. It is not a bulk currency."]
+			description: ["A still-beating heart is proof that a run mattered. Keep it safe, because it bridges survival into Blood Magic and is not meant to be spent like ordinary loot."]
 		}
 		{
 			dependencies: ["66A303C7B87687A4"]
@@ -160,7 +160,7 @@
 			}]
 			x: -3.17d
 			y: 3.0d
-			description: ["Primitive knife work connects food, plant cutting, and the body loop before machines take over."]
+			description: ["The primitive knife keeps paying for itself through food prep and plant cutting. It is part of the survival loop long before machines smooth anything out."]
 		}
 		{
 			dependencies: ["A90EEABE0BB97F1B"]
@@ -175,7 +175,7 @@
 			}]
 			x: -1.58d
 			y: 3.0d
-			description: ["RPG Stats resets and body progression make death a strategic cost, not a free teleport."]
+			description: ["Death costs you body progress, not just a walk. Respect that loss and plan safer routes once a life starts getting valuable."]
 		}
 		{
 			dependencies: ["66A303C7B87687A4"]
@@ -192,7 +192,7 @@
 			x: 0.0d
 			y: 3.0d
 			rewards: [{ id: "F0B9E4D60479AF25" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["The weak orb is the first controlled LP object after the heart proves risk."]
+			description: ["The weak orb is your first stable Blood Magic tool. It matters because it turns one dangerous proof item into a repeatable LP route."]
 		}
 		{
 			dependencies: ["56D43612CD94F3C2"]
@@ -207,7 +207,7 @@
 			}]
 			x: 1.58d
 			y: 3.0d
-			description: ["Blood Magic starts as a response to bodies, hearts, and risk rather than a generic magic bench."]
+			description: ["Build the altar once the heart and orb make sense together. Blood Magic starts as a response to risk and recovery, not as a free side craft."]
 		}
 		{
 			dependencies: ["9DCD541E1DBF398C"]
@@ -222,7 +222,7 @@
 			}]
 			x: 3.17d
 			y: 1.5d
-			description: ["Villages, walls, roads, and wares help you survive repeated expeditions."]
+			description: ["Settlements are survival infrastructure. Villages, walls, and wares help you recover, restock, and survive repeated trips through dangerous terrain."]
 		}
 		{
 			dependencies: ["DC0BBF7695937B20"]
@@ -237,7 +237,7 @@
 			}]
 			x: 4.75d
 			y: 1.5d
-			description: ["Pillager pressure makes route defense part of survival progression."]
+			description: ["Expect pillager pressure on exposed routes and weak settlements. Defending roads and approach lines is part of staying alive, not optional flavor."]
 		}
 		{
 			dependencies: ["11B6803A865589C5" "E3A44470D379F056"]
@@ -253,7 +253,7 @@
 			}]
 			x: 6.34d
 			y: 1.5d
-			description: ["This chapter should make the body loop feel like the root of the magic spine."]
+			description: ["By this point, the lesson is clear: survival mistakes, recovery planning, and body risk are what feed your first Blood Magic progress."]
 		},
 		{
 			dependencies: ["2DF95D9A30A46A2B"]
@@ -269,7 +269,7 @@
 			}]
 			x: -5.68d
 			y: 1.8d
-			description: ["The player should see recovery as an authored loop from the first screen."]
+			description: ["Mark likely death routes before you need them. Doing that once early will save more runs than any emergency item later."]
 		}
 ,
 		{
@@ -286,7 +286,7 @@
 			}]
 			x: -2.95d
 			y: -0.9d
-			description: ["Small cache nodes make the survival loop feel practical and dense."]
+			description: ["Stash torches and blocks in every route cache. Small recovery supplies solve a lot of problems faster than a heroic second expedition."]
 		}
 ,
 		{
@@ -303,7 +303,7 @@
 			}]
 			x: -1.47d
 			y: -5.0d
-			description: ["Nutrition should be visually tied to travel endurance."]
+			description: ["Spread your diet once travel starts getting longer. Better nutrition means longer working windows and fewer avoidable collapse points."]
 		}
 ,
 		{
@@ -320,7 +320,7 @@
 			}]
 			x: -1.47d
 			y: 0.5d
-			description: ["Water quality needs to be a preparation objective, not text hidden in a node."]
+			description: ["Always carry a water plan before leaving home. If you cannot explain how you will refill or purify, you are not ready for the route yet."]
 		}
 ,
 		{
@@ -337,7 +337,7 @@
 			}]
 			x: 0.0d
 			y: -4.25d
-			description: ["Climate should branch the travel kit instead of just warning the player."]
+			description: ["Pack heat or cold gear before the biome punishes you. Climate problems are cheaper to prevent than to survive in the field."]
 		}
 ,
 		{
@@ -354,7 +354,7 @@
 			}]
 			x: 1.58d
 			y: -0.25d
-			description: ["This reinforces expedition thinking without adding a new gate."]
+			description: ["Reserve inventory for the trip home. If every slot is already spoken for, the return leg will be worse than the outward trip."]
 		}
 ,
 		{
@@ -371,7 +371,7 @@
 			}]
 			x: -4.75d
 			y: 1.0d
-			description: ["The heart node should be visually important because it bridges survival and magic."]
+			description: ["Treat the heart as a run record, not pocket change. It is important because it proves a life had weight and turns that weight into magic access."]
 		}
 ,
 		{
@@ -388,7 +388,7 @@
 			}]
 			x: 1.58d
 			y: 5.0d
-			description: ["Blood Magic needs safety/proof side nodes to feel like a system."]
+			description: ["Read your LP before you cut yourself or start a craft. Blood Magic gets much safer once you stop guessing about your reserves."]
 		}
 ,
 		{
@@ -405,7 +405,7 @@
 			}]
 			x: 3.17d
 			y: -0.5d
-			description: ["Villages should visibly connect recovery, economy, and patrol pressure."]
+			description: ["Turn a village into a safehouse with storage, approach control, and supply caches. A good settlement reduces recovery pain every time you pass through it."]
 		}
 ,
 		{
@@ -422,7 +422,7 @@
 			}]
 			x: 4.75d
 			y: 3.5d
-			description: ["Surface pressure should become built space."]
+			description: ["Build alarms and fallback paths before the next raid proves you needed them. Surface pressure is easiest to survive when the terrain is already on your side."]
 		}
 	]
 	title: "Body, Spawn, and Recovery"

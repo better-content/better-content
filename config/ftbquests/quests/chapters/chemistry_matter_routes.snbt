@@ -313,7 +313,7 @@
 			}]
 			x: 7.92d
 			y: 0.0d
-			description: ["Chemistry refines source identity through costs and surfaces; it should not flatten the matter economy."]
+			description: ["Use chemistry to refine sources through real costs and machines. If it flattens the matter economy into one generic soup, you are using it wrong."]
 		},
 		{
 			dependencies: ["3A2B0FA3A95CE344"]
@@ -363,7 +363,7 @@
 			}]
 			x: -3.17d
 			y: -5.0d
-			description: ["Acids should feel controlled and costly."]
+			description: ["Store acids carefully and spend them on purpose. They are process inputs with cost, not cheap fluids you spray everywhere."]
 		}
 ,
 		{
@@ -380,7 +380,7 @@
 			}]
 			x: -1.58d
 			y: -1.0d
-			description: ["Create chemistry should be a visible station."]
+			description: ["Keep open-vat chemistry in a visible station with room to inspect recipes. That makes transformation steps easier to trust and debug."]
 		}
 ,
 		{
@@ -397,7 +397,7 @@
 			}]
 			x: 0.0d
 			y: -0.9d
-			description: ["Sealed cells should look like a threshold."]
+			description: ["Treat sealed cells as a real threshold from open mixing into dangerous reactions. Move into them only when the recipe actually needs that control."]
 		}
 ,
 		{
@@ -448,7 +448,7 @@
 			}]
 			x: -1.58d
 			y: 5.0d
-			description: ["Blood chemistry should be visible and bounded."]
+			description: ["Keep Blood-assisted chemistry visible and limited to deliberate batches. It is there to boost careful work, not to replace the whole factory."]
 		}
 ,
 		{
@@ -465,7 +465,7 @@
 			}]
 			x: 4.75d
 			y: -2.0d
-			description: ["Circuit precursors should be a convergence node."]
+			description: ["Use this node to gather wafers, substrates, capacitors, and transistors in one place. Seeing the precursors together makes the board route much easier to follow."]
 		}
 ,
 		{

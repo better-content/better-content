@@ -22,7 +22,7 @@
 			x: -6.8d
 			y: 0.0d
 			rewards: [{ id: "EFF046DF7400D0EF" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Andesite alloy is the first Create engineering language after seared metallurgy."]
+			description: ["Make andesite alloy once seared metalwork is steady. This is the part that turns simple foundry progress into real Create machines."]
 		}
 		{
 			dependencies: ["1C422F3D6A28E9E7"]
@@ -37,7 +37,7 @@
 			}]
 			x: -4.75d
 			y: -4.0d
-			description: ["Shafts make rotation tangible: every machine starts as a physical power problem."]
+			description: ["Start with shafts because rotation has to travel somehow. Every later Create machine will make more sense if you can already route power cleanly."]
 		}
 		{
 			dependencies: ["1C422F3D6A28E9E7"]
@@ -52,7 +52,7 @@
 			}]
 			x: -4.75d
 			y: -2.5d
-			description: ["Cogs and gearboxes teach local transmission before abstract power networks."]
+			description: ["Use cogs to change direction and spread power locally. This is where mechanical routing stops being theory and starts becoming a layout problem."]
 		}
 		{
 			dependencies: ["1C422F3D6A28E9E7"]
@@ -69,7 +69,7 @@
 			x: -4.7d
 			y: 0.0d
 			rewards: [{ id: "1F616987450FC867" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Recipe explorer shows andesite casing fans out into deployers, presses, mixers, drills, saws, fans, links, and Power Grid surfaces."]
+			description: ["Check andesite casing uses in EMI as soon as you craft it. It is a real fanout hub, and following those uses will tell you what Create can solve next."]
 		}
 		{
 			dependencies: ["4145E9AE6FCF2471"]
@@ -84,7 +84,7 @@
 			}]
 			x: -3.17d
 			y: -4.0d
-			description: ["Pressing creates plates and mechanical parts, including routes later used by casing and electronics."]
+			description: ["Build the press when you start needing repeated plates and compact parts. It is one of the first machines that pays back immediately in many other recipes."]
 		}
 		{
 			dependencies: ["4145E9AE6FCF2471"]
@@ -99,7 +99,7 @@
 			}]
 			x: -3.17d
 			y: -2.5d
-			description: ["Open mixing is the first bulk chemistry and alloying surface before pressure containment."]
+			description: ["Use the mixer for your first serious alloys and open-vat chemistry. It is the easy way to see that some materials now want machines, not hand crafting."]
 		}
 		{
 			dependencies: ["4145E9AE6FCF2471"]
@@ -114,7 +114,7 @@
 			}]
 			x: -3.17d
 			y: -1.0d
-			description: ["Fans connect washing, blasting, haunting, cooling, and air handling."]
+			description: ["The encased fan is a cheap multi-tool. Set one up early so washing, blasting, and other air jobs stop feeling like hidden side mechanics."]
 		}
 		{
 			dependencies: ["4145E9AE6FCF2471"]
@@ -129,7 +129,7 @@
 			}]
 			x: -3.17d
 			y: 1.05d
-			description: ["The drill is movement plus extraction, not a magic miner."]
+			description: ["Treat the drill as controlled extraction, not as a magic mining shortcut. It matters most when you can pair movement with a real material goal."]
 		}
 		{
 			dependencies: ["4145E9AE6FCF2471"]
@@ -144,7 +144,7 @@
 			}]
 			x: -3.17d
 			y: 2.0d
-			description: ["Sawing belongs in logistics and tree processing before late auto-crafting."]
+			description: ["The saw helps with wood flow and processing loops long before late automation appears. Build it when manual cutting starts wasting too much time."]
 		}
 		{
 			dependencies: ["745F897829E7FFB9" "E7C60362B9AC8F83"]
@@ -160,7 +160,7 @@
 			x: -1.58d
 			y: -3.0d
 			rewards: [{ id: "A26FAA5C60755673" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["The deployer is the first automation proof: a hand made into a machine."]
+			description: ["The deployer is your first clear automation proof. Once it works, you can start replacing repeated hand actions with stable machine loops."]
 		}
 		{
 			dependencies: ["A78DB795C876699D"]
@@ -175,7 +175,7 @@
 			}]
 			x: -1.58d
 			y: -1.0d
-			description: ["Electron tubes are the visible primitive-electronics bridge into smarter Create blocks."]
+			description: ["Electron tubes are your first visible electronics part in this lane. Make them once you are ready for smarter control blocks instead of pure motion."]
 		}
 		{
 			dependencies: ["D2D49E52D48854FE"]
@@ -190,7 +190,7 @@
 			}]
 			x: -1.58d
 			y: 1.0d
-			description: ["More Red starts primitive circuitry on terrestrial processing, not Nether shortcuts."]
+			description: ["Red alloy starts the primitive circuit route without forcing a Nether shortcut. Make it here so early logic stays tied to your local machines."]
 		}
 		{
 			dependencies: ["5C37980430C2D51F"]
@@ -205,7 +205,7 @@
 			}]
 			x: 0.0d
 			y: 1.0d
-			description: ["Wire turns bulk redstone into routable circuit material."]
+			description: ["Red alloy wire is what makes simple logic buildable. Once you have wire, redstone starts behaving like a system you can route instead of dust you sprinkle."]
 		}
 		{
 			dependencies: ["654CC900134B8FBD"]
@@ -222,7 +222,7 @@
 			x: 1.58d
 			y: 1.0d
 			rewards: [{ id: "A82440FC29C3FC2F" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["The soldering table belongs in the andesite circuit lane before PNCR final authority."]
+			description: ["Use the soldering table for early bench logic work. It belongs here so primitive circuits make sense before PNCR takes over finished board authority."]
 		}
 		{
 			dependencies: ["8F728191626B1BED"]
@@ -237,7 +237,7 @@
 			}]
 			x: 3.17d
 			y: 1.0d
-			description: ["Diodes and gates are primitive logic proof before finished circuit boards."]
+			description: ["Make a diode or gate to prove that your logic route is real. These are the parts that teach control before the full PCB era arrives."]
 		}
 		{
 			dependencies: ["447A586BFE2667F3"]
@@ -253,7 +253,7 @@
 			}]
 			x: 0.0d
 			y: -3.0d
-			description: ["Recipe explorer shows brass casing unlocks mechanical arms, display links, stockpile switches, railway casing, and Creating Space pieces."]
+			description: ["Check brass casing uses right away. Brass is where Create stops being basic machinery and starts unlocking logistics, sensing, and route control."]
 		}
 		{
 			dependencies: ["B1D2E9D9D4F77E0C"]
@@ -268,7 +268,7 @@
 			}]
 			x: 1.58d
 			y: -3.0d
-			description: ["Precision mechanisms mark the move from rotation to controlled assembly."]
+			description: ["Precision mechanisms are the signal that simple motion is no longer enough. Make them when you are ready to build repeatable assembly instead of clever contraptions."]
 		}
 		{
 			dependencies: ["E52BDE1C2071533D"]
@@ -347,7 +347,7 @@
 			}]
 			x: -4.25d
 			y: 2.7d
-			description: ["This makes the andesite cluster visibly dense."]
+			description: ["Use this node to thicken the andesite cluster into a real work area. Dense machine groups are easier to understand and easier to expand."]
 		}
 ,
 		{
@@ -364,7 +364,7 @@
 			}]
 			x: -3.17d
 			y: -5.8d
-			description: ["Pressing should become a small production lane."]
+			description: ["Turn pressing into a small production lane instead of a one-off machine. It pays back quickly once plate recipes start stacking up."]
 		}
 ,
 		{
@@ -415,7 +415,7 @@
 			}]
 			x: -0.7d
 			y: -4.25d
-			description: ["The deployer should look like an automation proof."]
+			description: ["Use this node to build a simple deployer loop on purpose. Seeing one clean automation proof matters more than owning several half-finished machines."]
 		}
 ,
 		{
@@ -432,7 +432,7 @@
 			}]
 			x: 2.55d
 			y: -1.75d
-			description: ["More Red should be a visible circuit subcluster."]
+			description: ["Keep More Red parts together as a visible circuit bench. Primitive logic is easier to trust once you can see the whole lane in one place."]
 		}
 ,
 		{
@@ -466,7 +466,7 @@
 			}]
 			x: 2.3d
 			y: -0.15d
-			description: ["Precision should bridge into serious automation."]
+			description: ["Use precision mechanisms to bridge into serious automation, not just prettier recipes. This is where your factory starts asking for repeatable assembly."]
 		}
 ,
 		{
@@ -483,7 +483,7 @@
 			}]
 			x: 6.34d
 			y: -1.0d
-			description: ["The chapter should visibly point at physical logistics."]
+			description: ["Treat this as your reminder that Create should point you toward trains and physical movement. The machines are here to support logistics, not to erase it."]
 		}
 	]
 	title: "Create and Primitive Circuits"

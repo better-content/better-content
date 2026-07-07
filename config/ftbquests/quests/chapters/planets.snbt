@@ -9,6 +9,8 @@
 	quests: [
 		{
 			id: "F9C3B76D8410A25E"
+			title: "Earth Orbit"
+			subtitle: "Reach orbit and prove your launch setup works."
 			tasks: [{
 				dimension: "creatingspace:earth_orbit"
 				id: "2B0E7C5A1FD64B3C"
@@ -16,6 +18,7 @@
 			}]
 			x: -5.5d
 			y: -2.5d
+			description: ["Your first orbital trip is a logistics check, not a sightseeing step. Bring fuel, oxygen, food, a return plan, and one clear reason for the launch."]
 			rewards: [
 				{
 					id: "5C6612C821B507FB"
@@ -27,6 +30,8 @@
 		}
 		{
 			id: "B07D8FE1C3A95426"
+			title: "Moon Orbit"
+			subtitle: "Stage the route before you commit to a landing."
 			tasks: [{
 				dimension: "creatingspace:moon_orbit"
 				id: "A36FD7C54E9182B0"
@@ -34,6 +39,7 @@
 			}]
 			x: -5.5d
 			y: -1.5d
+			description: ["Use orbit to confirm that your supply chain can support repeated flights. If the trip out feels fragile, landing only makes the recovery problem worse."]
 			rewards: [
 				{
 					id: "15D82A44660CF183"
@@ -45,6 +51,8 @@
 		}
 		{
 			id: "7E10A4BD2C658F93"
+			title: "The Moon"
+			subtitle: "Land, collect proof, and bring the run home."
 			tasks: [{
 				dimension: "creatingspace:the_moon"
 				id: "1C96E5AF30B274D8"
@@ -52,6 +60,7 @@
 			}]
 			x: -5.5d
 			y: -0.5d
+			description: ["A landing only counts if you can return with the proof item and your gear intact. Treat the Moon like an expedition route, not a one-way unlock screen."]
 			rewards: [
 				{
 					id: "DBB5011889C02A36"
@@ -63,6 +72,8 @@
 		}
 		{
 			id: "D3A1485EB97C20F1"
+			title: "Mars Orbit"
+			subtitle: "Check the route before you commit to hostile distance."
 			tasks: [{
 				dimension: "creatingspace:mars_orbit"
 				id: "4FD7B9028A61CE35"
@@ -70,6 +81,7 @@
 			}]
 			x: -5.5d
 			y: 0.5d
+			description: ["Mars is where distance starts to punish sloppy preparation. Confirm the launch stack, return supplies, and replacement plan before you drop to the surface."]
 			rewards: [
 				{
 					id: "7604EDFB1CD98554"
@@ -81,6 +93,8 @@
 		}
 		{
 			id: "89E2C7A10B4FD635"
+			title: "Mars"
+			subtitle: "Bring better logistics, better recovery, and better heat planning."
 			tasks: [{
 				dimension: "creatingspace:mars"
 				id: "C51A8DE37F0264B9"
@@ -88,6 +102,7 @@
 			}]
 			x: -5.5d
 			y: 1.5d
+			description: ["Expect a harsher expedition than the Moon. Pack for distance, hostile terrain, and the trip back before you treat Mars as a farming route."]
 			rewards: [
 				{
 					id: "2C476204AEEA7390"
@@ -99,6 +114,8 @@
 		}
 		{
 			id: "24BF67D9E81A3C50"
+			title: "Venus"
+			subtitle: "Late planets test infrastructure, not bravery alone."
 			tasks: [{
 				dimension: "creatingspace:venus"
 				id: "E0D34A6CB58F2197"
@@ -106,6 +123,7 @@
 			}]
 			x: -5.5d
 			y: 2.5d
+			description: ["By the time you reach Venus, the question is whether your systems can sustain remote work. If the launch, suit, or resupply plan is weak, fix that first and come back later."]
 			rewards: [
 				{
 					id: "811AC27C4DBF99F5"

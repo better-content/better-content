@@ -5266,7 +5266,7 @@ hash = "7ea561e710209e18c03bb98ff4a2d4861e668723365b62a9c428e7e8a0cbedc2"
 
 [[files]]
 file = "config/enhancedai/common.toml"
-hash = "05397c22877dbce7c54d43bf1f6c9ac244017fd2f4c26e4e38e58ed079b0c110"
+hash = "143aeaec85f2d19a21098bce58437fe362d586ecbbacf821f73e76557f141a00"
 
 [[files]]
 file = "config/explosionoverhaul/DestroyingBlacklist.json"
@@ -5906,11 +5906,11 @@ hash = "302bee4d32d3dc9281e965b7d5e8b31a4d1b18402307680ace692be8dde94bf4"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_sand.toml"
-hash = "2417676f44980521ab08c92d8c40950c3ed58c618975addb236ea80d5ab00a69"
+hash = "5fed38fd4ff3c23f2927d1decbf23967398ccef8a598e905508e4dca3d04d6f6"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_stone.toml"
-hash = "dfd91917b37584340734fa2ab141b810f733d6e94a73990430a2ef0bbfddcb26"
+hash = "1122aece829cdf5c728c6dd52071bb0b5a92d515832ba201a985e09c43b9dfb3"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_wood.toml"
@@ -5922,7 +5922,7 @@ hash = "b08b21f43581b3003734af33ff939cde146eb23df407ea37df045b2773f38b15"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_pack_solid_blocks.toml"
-hash = "a4fec1247ecfd7ff26f20d34498e90c8b841062119dfefa94353690a2c7a7e76"
+hash = "fec48c6b4ff16f2bc87b2e54deede9e5e41e448cbc938ddf96e8314dfce4335b"
 
 [[files]]
 file = "config/rbp/block_definitions/glass.toml"
@@ -10562,7 +10562,7 @@ hash = "2587daf89e9f7f655c43d34cb1d6164f437e1598e08ba6648f8a386c0c5f77cb"
 
 [[files]]
 file = "kubejs/server_scripts/10_tags/45_stone_surface_tool_compat.js"
-hash = "4adeab30b4a4dc86edf5559baac2297ae2f83cfb744a62eb5bd2098204d60ab9"
+hash = "4e3b9e5f0a3f286194df710fb5c25aa7601d6e623378f487dea27c0392de434d"
 
 [[files]]
 file = "kubejs/server_scripts/10_tags/50_sand_compat.js"
@@ -10894,7 +10894,7 @@ hash = "75e2d05543db8c5dac81701c327452f62b499f69a3dfd3394e4d036d4d07f469"
 
 [[files]]
 file = "kubejs/startup_scripts/20_blocks/20_realistic_hands.js"
-hash = "bff30844056991002574891293113b2b7181218b98b341ca2e0a90472f12b615"
+hash = "800f4656f3d1571708763f6127130ea94640482e089b3245b936c21f4004b8b2"
 
 [[files]]
 file = "kubejs/startup_scripts/20_globals/10_immobile_spawn.js"
@@ -10914,7 +10914,7 @@ hash = "2f877d1dcdfe376099f4fd6df097168f161caa846416332e19fe64637c45ad83"
 
 [[files]]
 file = "kubejs/startup_scripts/99_realistic_hands_assignments.js"
-hash = "5c332fb02f0fe92f8d46e2095643fabe4c1042db511b710cd070f2bfd1f35ea0"
+hash = "a3afa428f19daa839f996aec39c12939c69bbc9561432319def4de16f0f9a2e2"
 
 [[files]]
 file = "mods/advanced-loot-info.pw.toml"

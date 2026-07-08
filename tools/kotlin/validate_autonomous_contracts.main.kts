@@ -685,9 +685,9 @@ fun validatePrimitiveMiningRegressionContracts() = validateByNodeParity("validat
     val shovelSoftBlocks = listOf("minecraft:sand","minecraft:gravel","minecraft:dirt","minecraft:coarse_dirt","minecraft:rooted_dirt","minecraft:mud","minecraft:grass_block","immersive_weathering:grassy_silt")
     val missingShovelSoft = shovelSoftBlocks.filter { it !in (blockSets["hand"] ?: emptySet()) && it !in (blockSets["shovel"] ?: emptySet()) }
     if (missingShovelSoft.isEmpty()) ok("soft ground blocks remain shovel-usable through hand or shovel gates", "${shovelSoftBlocks.size} representative blocks") else fail("soft ground blocks remain shovel-usable through hand or shovel gates", missingShovelSoft.joinToString(", "))
-    val grassPickBlocks = listOf("unearthed:beige_limestone_grassy_regolith","unearthed:conglomerate_grassy_regolith","unearthed:limestone_grassy_regolith","unearthed:stone_grassy_regolith")
-    val missingGrassPick = blocksIn("pickaxe", grassPickBlocks)
-    if (missingGrassPick.isEmpty()) ok("grass-over-stone blocks remain pickaxe-mineable", "${grassPickBlocks.size} representative blocks") else fail("grass-over-stone blocks remain pickaxe-mineable", missingGrassPick.joinToString(", "))
+    val grassRegolithBlocks = listOf("unearthed:beige_limestone_grassy_regolith","unearthed:conglomerate_grassy_regolith","unearthed:limestone_grassy_regolith","unearthed:stone_grassy_regolith")
+    val missingGrassRegolith = grassRegolithBlocks.filter { it !in (blockSets["hand"] ?: emptySet()) && it !in (blockSets["shovel"] ?: emptySet()) }
+    if (missingGrassRegolith.isEmpty()) ok("grassy regolith remains hand-or-shovel usable", "${grassRegolithBlocks.size} representative blocks") else fail("grassy regolith remains hand-or-shovel usable", missingGrassRegolith.joinToString(", "))
     val butcherKnife = readJson("kubejs/data/kubejs/recipes/primitive/flint_butcher_knife.json")
     val handAxe = readJson("kubejs/data/kubejs/recipes/primitive/flint_hand_axe.json")
     val knifeProblems = mutableListOf<String>()
@@ -836,6 +836,9 @@ fun validateWorldgenStaticContractsImpl() {
     val pvjDetailPackSolidIds = generatedPackSolidIds.filter { it in pvjDetailPackSolidBlocklist }
     if (pvjDetailPackSolidIds.isEmpty()) ok("RBP generated pack-solid definition excludes exact PVJ loose detail blocks")
     else fail("RBP generated pack-solid definition excludes exact PVJ loose detail blocks", pvjDetailPackSolidIds.joinToString(", "))
+    val looseEarthIds = jsonObject(readJson("generated/runtime-dumps/realistic_hands_audit.json")["blockAssignments"])
+        .filterValues { jsonString(jsonObject(it)["origin"]) == "delegation:loose-earth" }
+        .keys
     val generatedRbpWhitelistFiles = walk("config/rbp/block_definitions") { it.substringAfterLast('/').startsWith("generated_modded_") && it.endsWith(".toml") }
     val generatedRbpWhitelistText = generatedRbpWhitelistFiles.joinToString("\n") { read(it) }
     val generatedRbpWhitelistIds = generatedRbpWhitelistText.lineSequence().map(String::trim).filter { it.startsWith('"') }.map { it.replace(Regex("""^"([^"]+)".*$"""), "$1") }.toList()
@@ -843,7 +846,11 @@ fun validateWorldgenStaticContractsImpl() {
     else fail("RBP modded whitelist covers broad explicit block surface", "${generatedRbpWhitelistIds.size} ids in ${generatedRbpWhitelistFiles.size} files")
     val forbiddenPatterns = listOf(Regex("""(^|:)bedrock$"""), Regex("""sky_stone|skystone"""), *dynamicTreesManagedRbpPatterns.toTypedArray(), Regex("""^projectvibrantjourneys:"""), Regex("""(^|[_:/])seashell($|[_:/])"""), Regex("""(^|[_:/])shell($|[_:/])"""))
     val allowedRooty = listOf(Regex("""^dynamictrees:rooty_(coarse_dirt|crimson_nylium|dirt|grass_block|moss|moss_block|mud|mycelium|podzol|rooted_dirt|soul_soil|warped_nylium)$"""), Regex("""^dtaether:rooty_(aether_dirt|aether_grass_block|enchanted_aether_grass_block|frozen_aether_grass_block)$"""), Regex("""^dtnatures_spirit:rooty_(red_moss_block|sandy_soil)$"""))
-    val forbiddenIds = generatedRbpWhitelistIds.filter { id -> allowedRooty.none { it.containsMatchIn(id) } && forbiddenPatterns.any { it.containsMatchIn(id) } }
+    val forbiddenIds = generatedRbpWhitelistIds.filter { id ->
+        allowedRooty.none { it.containsMatchIn(id) } &&
+            id !in looseEarthIds &&
+            forbiddenPatterns.any { it.containsMatchIn(id) }
+    }
     if (forbiddenIds.isEmpty()) ok("RBP generated whitelist excludes lifecycle/progression/decor-sensitive blocks") else fail("RBP generated whitelist excludes lifecycle/progression/decor-sensitive blocks", forbiddenIds.take(20).joinToString(", "))
     val tectonic = readJson("config/tectonic.json")
     val terrain = jsonObject(tectonic["global_terrain"])
@@ -935,6 +942,17 @@ fun validateWorldgenStaticContractsImpl() {
     }
     if (staleGravelShovel.isEmpty() && staleGravelPickaxe.isEmpty() && staleGravelRbp.isEmpty()) ok("stale gravel Excavated Variants ore IDs stay out of generated assignments", "${staleGravelEvOres.size} representatives")
     else fail("stale gravel Excavated Variants ore IDs stay out of generated assignments", "shovel=${staleGravelShovel.joinToString(", ")} pickaxe=${staleGravelPickaxe.joinToString(", ")} rbp=${staleGravelRbp.joinToString(", ")}")
+
+    val looseEarthMissingSandPhysics = looseEarthIds.filter { "\"$it\"" !in rbpGeneratedModdedSand }
+    val looseEarthStillStonePhysics = looseEarthIds.filter { "\"$it\"" in rbpGeneratedSolid || "\"$it\"" in read("config/rbp/block_definitions/generated_modded_stone.toml") }
+    if (looseEarthMissingSandPhysics.isEmpty() && looseEarthStillStonePhysics.isEmpty()) {
+        ok("loose-earth blocks use sand/gravel physics", "${looseEarthIds.size} ids")
+    } else {
+        fail(
+            "loose-earth blocks use sand/gravel physics",
+            "missingSand=${looseEarthMissingSandPhysics.take(20).joinToString(", ")} stoneProfile=${looseEarthStillStonePhysics.take(20).joinToString(", ")}"
+        )
+    }
 
     val lavaDepthFiles = listOf(
         "datapacks/realistic_ores_lava_depths/data/realisticores/forge/biome_modifier/add_osmiridium_lava_sulfide_ore_deepslate.json",

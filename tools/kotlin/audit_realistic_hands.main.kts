@@ -177,7 +177,7 @@ val LEGACY_TOOL_ORDER = listOf("knife", "axe", "pickaxe", "shovel", "hoe", "swor
 val HAND_EXACT_IDS = setOf("minecraft:sand", "minecraft:red_sand", "minecraft:gravel", "minecraft:dirt", "minecraft:coarse_dirt", "minecraft:grass_block", "minecraft:mycelium", "minecraft:podzol", "minecraft:rooted_dirt", "minecraft:mud", "minecraft:soul_sand", "minecraft:suspicious_gravel", "minecraft:suspicious_sand")
 val SWORD_EXACT_IDS = setOf("minecraft:cobweb", "minecraft:web", "minecraft:tripwire")
 val PICKAXE_EXACT_IDS = setOf("minecraft:bell", "minecraft:loom", "minecraft:lever", "minecraft:rail", "minecraft:redstone_torch", "minecraft:redstone_wall_torch", "minecraft:soul_torch", "minecraft:soul_wall_torch", "minecraft:torch", "minecraft:wall_torch", "ars_nouveau:rune", "fallout_wastelands_:cage", "fallout_wastelands_:oven", "fallout_wastelands_:pipe", "quark:pipe")
-val UNEARTHED_PICKAXE_IDS = setOf("unearthed:beige_limestone_grassy_regolith", "unearthed:conglomerate_grassy_regolith", "unearthed:dolomite_grassy_regolith", "unearthed:gabbro_grassy_regolith", "unearthed:granodiorite_grassy_regolith", "unearthed:grey_limestone_grassy_regolith", "unearthed:kimberlite_grassy_regolith", "unearthed:limestone_grassy_regolith", "unearthed:mudstone_grassy_regolith", "unearthed:overgrown_andesite", "unearthed:overgrown_diorite", "unearthed:overgrown_granite", "unearthed:phyllite_grassy_regolith", "unearthed:quartzite_grassy_regolith", "unearthed:rhyolite_grassy_regolith", "unearthed:sandstone_grassy_regolith", "unearthed:siltstone_grassy_regolith", "unearthed:slate_grassy_regolith", "unearthed:stone_grassy_regolith", "unearthed:white_granite_grassy_regolith")
+val UNEARTHED_PICKAXE_IDS = setOf("unearthed:overgrown_andesite", "unearthed:overgrown_diorite", "unearthed:overgrown_granite")
 val SOIL_KEYWORDS = listOf("sand", "gravel", "dirt", "mud", "regolith", "loam", "silt", "soil", "sediment", "grassy_", "grass_block", "mycelium", "podzol")
 val PLANT_KEYWORDS = listOf("flower", "sapling", "leaves", "leaf", "vine", "vines", "crop", "crops", "grass", "fern", "bush", "shrub", "reed", "cane", "root", "roots", "moss", "petal", "petals", "berry", "bloom", "blossom", "mushroom", "fungus", "fungi", "pod", "pods", "thatch", "fiber", "fibers", "fibres", "plant", "plants", "flora", "weed", "herb", "cocoon", "nipa")
 val PLANT_EXCLUSIONS = listOf("grass_block", "grassy_", "glass", "grass_path", "path", "pressure_plate", "planter", "planter_box")
@@ -223,7 +223,7 @@ fun makeAssignment(tools: List<String>, stage: String, source: String, detail: S
 fun classifyBlock(record: Map<String, Any?>, tagEvidence: Map<String, Any?>, legacyAssignments: Map<String, Any?>): Map<String, Any?> {
     val id = jsonString(record["id"]).orEmpty()
     val name = localName(id)
-    if (id in UNEARTHED_PICKAXE_IDS) return makeAssignment(listOf("pickaxe"), "override", "exact", "grass-over-stone regolith stays stone-routed")
+    if (id in UNEARTHED_PICKAXE_IDS) return makeAssignment(listOf("pickaxe"), "override", "exact", "overgrown stone stays stone-routed")
     if (id == "dynamictrees:rooty_gravel") return makeAssignment(listOf("hand"), "override", "exact", "primitive loose rooty gravel")
     if (namespace(id) == "excavated_variants" && name.startsWith("gravel_")) return makeAssignment(listOf("shovel"), "override", "gravel-ore-family", "gravel-substrate ore stays loose-earth routed")
     if (id in HAND_EXACT_IDS) return makeAssignment(listOf("hand"), "override", "exact", "primitive loose surface")
@@ -236,7 +236,7 @@ fun classifyBlock(record: Map<String, Any?>, tagEvidence: Map<String, Any?>, leg
         val outcome = if ("grass" in name || "reed" in name || "cane" in name) "knife_transform_fiber" else "knife_transform_organics"
         return makeAssignment(listOf("knife"), "delegation", "organics", "plants, leaves, vines, crops, pods, or small organics", outcome)
     }
-    if (isLooseSurface(name)) return makeAssignment(listOf("hand"), "delegation", "loose-earth", "sand, gravel, dirt, mud, regolith, or similar loose earth")
+    if (isLooseSurface(name)) return makeAssignment(listOf("hand", "shovel"), "delegation", "loose-earth", "sand, gravel, dirt, mud, regolith, or similar loose earth")
     if (isLooseShovelSurface(name)) return makeAssignment(listOf("shovel"), "delegation", "loose-worked-earth", "loose non-hand earth surface")
     for (tag in knifeBlockTags) {
         if (hasRuntimeTag(record, tag) || inTagEvidence(tagEvidence, "block", tag, id)) {

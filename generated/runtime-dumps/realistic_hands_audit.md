@@ -7,11 +7,11 @@ Runtime probe schema: `obelisks.block_hardness_probe.v3`
 
 - Breakable block records: 13942
 - Item records: 20738
-- Hand blocks: 602
+- Hand blocks: 619
 - Knife blocks: 1601
 - Axe blocks: 3144
-- Pickaxe blocks: 8236
-- Shovel blocks: 278
+- Pickaxe blocks: 8219
+- Shovel blocks: 883
 - Hoe blocks: 71
 - Sword blocks: 10
 - Unassigned breakable blocks: 0
@@ -32,18 +32,18 @@ Runtime probe schema: `obelisks.block_hardness_probe.v3`
 
 ## Largest Origins
 
-- inference:legacy:pickaxe: 7211
+- inference:legacy:pickaxe: 8144
 - delegation:wood-products: 2405
 - delegation:organics: 1241
 - inference:legacy:axe: 734
-- delegation:loose-earth: 588
-- heuristic:catchall-solid: 564
-- heuristic:solid-default: 369
+- delegation:loose-earth: 605
 - delegation:loose-worked-earth: 257
 - delegation:potted-plants: 241
 - inference:legacy:knife: 111
 - inference:block-tag:minecraft:mineable/pickaxe: 57
 - inference:legacy:hoe: 56
+- override:exact: 32
+- inference:legacy:shovel: 21
 
 ## Unassigned Breakable Block Samples
 

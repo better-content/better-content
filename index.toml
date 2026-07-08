@@ -11817,6 +11817,11 @@ hash = "fb72d8e7259e7f6b5163f1a12b49aee20bb9d90c6763000e58a3ce52812298ca"
 metafile = true
 
 [[files]]
+file = "mods/realistic-horse-genetics.pw.toml"
+hash = "c56bcec3ee959718dc87225ddc946de960a7f0c04509fdf6e1c8490853b56b24"
+metafile = true
+
+[[files]]
 file = "mods/realistic-physics.pw.toml"
 hash = "163aa7390848c4bf96c650c8730dbd7dcb175e1d34dc4531416c0005dd853f3e"
 metafile = true

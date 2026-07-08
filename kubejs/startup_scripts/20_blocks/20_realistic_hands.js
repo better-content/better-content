@@ -1,5 +1,5 @@
 // Realistic Hands runtime enforcement.
-// Primitive loose-earth surfaces stay hand-breakable; all other authored blocks require a matching first-class tool identity.
+// Primitive loose-earth surfaces stay hand-breakable and shovel-usable; all other authored blocks require a matching first-class tool identity.
 
 var BtmRealisticHandsEventResult = Java.loadClass('net.minecraftforge.eventbus.api.Event$Result')
 var BtmRealisticHandsForgeRegistries = Java.loadClass('net.minecraftforge.registries.ForgeRegistries')

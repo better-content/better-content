@@ -548,9 +548,11 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "undergarden:sediment",
       "undergarden:sediment_glass",
       "undergarden:sediment_glass_pane",
+      "unearthed:beige_limestone_grassy_regolith",
       "unearthed:beige_limestone_regolith",
       "unearthed:chiseled_mudstone",
       "unearthed:chiseled_siltstone",
+      "unearthed:conglomerate_grassy_regolith",
       "unearthed:conglomerate_regolith",
       "unearthed:cut_mudstone",
       "unearthed:cut_mudstone_slab",
@@ -560,11 +562,17 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:cut_siltstone_slab",
       "unearthed:cut_siltstone_stairs",
       "unearthed:cut_siltstone_wall",
+      "unearthed:dolomite_grassy_regolith",
       "unearthed:dolomite_regolith",
+      "unearthed:gabbro_grassy_regolith",
       "unearthed:gabbro_regolith",
+      "unearthed:granodiorite_grassy_regolith",
       "unearthed:granodiorite_regolith",
+      "unearthed:grey_limestone_grassy_regolith",
       "unearthed:grey_limestone_regolith",
+      "unearthed:kimberlite_grassy_regolith",
       "unearthed:kimberlite_regolith",
+      "unearthed:limestone_grassy_regolith",
       "unearthed:limestone_regolith",
       "unearthed:mudstone",
       "unearthed:mudstone_coal_ore",
@@ -572,6 +580,7 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:mudstone_diamond_ore",
       "unearthed:mudstone_emerald_ore",
       "unearthed:mudstone_gold_ore",
+      "unearthed:mudstone_grassy_regolith",
       "unearthed:mudstone_iron_ore",
       "unearthed:mudstone_lapis_ore",
       "unearthed:mudstone_redstone_ore",
@@ -579,14 +588,18 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:mudstone_slab",
       "unearthed:mudstone_stairs",
       "unearthed:mudstone_wall",
+      "unearthed:phyllite_grassy_regolith",
       "unearthed:phyllite_regolith",
+      "unearthed:quartzite_grassy_regolith",
       "unearthed:quartzite_regolith",
+      "unearthed:rhyolite_grassy_regolith",
       "unearthed:rhyolite_regolith",
       "unearthed:sandstone_coal_ore",
       "unearthed:sandstone_copper_ore",
       "unearthed:sandstone_diamond_ore",
       "unearthed:sandstone_emerald_ore",
       "unearthed:sandstone_gold_ore",
+      "unearthed:sandstone_grassy_regolith",
       "unearthed:sandstone_iron_ore",
       "unearthed:sandstone_lapis_ore",
       "unearthed:sandstone_redstone_ore",
@@ -597,6 +610,7 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:siltstone_diamond_ore",
       "unearthed:siltstone_emerald_ore",
       "unearthed:siltstone_gold_ore",
+      "unearthed:siltstone_grassy_regolith",
       "unearthed:siltstone_iron_ore",
       "unearthed:siltstone_lapis_ore",
       "unearthed:siltstone_redstone_ore",
@@ -604,11 +618,14 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:siltstone_slab",
       "unearthed:siltstone_stairs",
       "unearthed:siltstone_wall",
+      "unearthed:slate_grassy_regolith",
       "unearthed:slate_regolith",
       "unearthed:smooth_siltstone",
       "unearthed:smooth_siltstone_slab",
       "unearthed:smooth_siltstone_stairs",
+      "unearthed:stone_grassy_regolith",
       "unearthed:stone_regolith",
+      "unearthed:white_granite_grassy_regolith",
       "unearthed:white_granite_regolith",
       "weather2:sand_layer"
     ],
@@ -13304,7 +13321,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:beige_limestone_diamond_ore",
       "unearthed:beige_limestone_emerald_ore",
       "unearthed:beige_limestone_gold_ore",
-      "unearthed:beige_limestone_grassy_regolith",
       "unearthed:beige_limestone_iron_ore",
       "unearthed:beige_limestone_lapis_ore",
       "unearthed:beige_limestone_pillar",
@@ -13347,7 +13363,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:conglomerate_diamond_ore",
       "unearthed:conglomerate_emerald_ore",
       "unearthed:conglomerate_gold_ore",
-      "unearthed:conglomerate_grassy_regolith",
       "unearthed:conglomerate_iron_ore",
       "unearthed:conglomerate_lapis_ore",
       "unearthed:conglomerate_redstone_ore",
@@ -13366,7 +13381,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:dolerite_stairs",
       "unearthed:dolerite_wall",
       "unearthed:dolomite",
-      "unearthed:dolomite_grassy_regolith",
       "unearthed:dolomite_slab",
       "unearthed:dolomite_stairs",
       "unearthed:dolomite_wall",
@@ -13376,7 +13390,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:gabbro_diamond_ore",
       "unearthed:gabbro_emerald_ore",
       "unearthed:gabbro_gold_ore",
-      "unearthed:gabbro_grassy_regolith",
       "unearthed:gabbro_iron_ore",
       "unearthed:gabbro_lapis_ore",
       "unearthed:gabbro_pressure_plate",
@@ -13390,7 +13403,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:granodiorite_diamond_ore",
       "unearthed:granodiorite_emerald_ore",
       "unearthed:granodiorite_gold_ore",
-      "unearthed:granodiorite_grassy_regolith",
       "unearthed:granodiorite_iron_ore",
       "unearthed:granodiorite_lapis_ore",
       "unearthed:granodiorite_pressure_plate",
@@ -13408,7 +13420,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:grey_limestone_diamond_ore",
       "unearthed:grey_limestone_emerald_ore",
       "unearthed:grey_limestone_gold_ore",
-      "unearthed:grey_limestone_grassy_regolith",
       "unearthed:grey_limestone_iron_ore",
       "unearthed:grey_limestone_lapis_ore",
       "unearthed:grey_limestone_pillar",
@@ -13418,7 +13429,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:grey_limestone_wall",
       "unearthed:kimberlite",
       "unearthed:kimberlite_diamond_ore",
-      "unearthed:kimberlite_grassy_regolith",
       "unearthed:kimberlite_slab",
       "unearthed:kimberlite_stairs",
       "unearthed:kimberlite_wall",
@@ -13438,7 +13448,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:limestone_diamond_ore",
       "unearthed:limestone_emerald_ore",
       "unearthed:limestone_gold_ore",
-      "unearthed:limestone_grassy_regolith",
       "unearthed:limestone_iron_ore",
       "unearthed:limestone_lapis_ore",
       "unearthed:limestone_pillar",
@@ -13450,7 +13459,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:marble_slab",
       "unearthed:marble_stairs",
       "unearthed:marble_wall",
-      "unearthed:mudstone_grassy_regolith",
       "unearthed:overgrown_andesite",
       "unearthed:overgrown_diorite",
       "unearthed:overgrown_granite",
@@ -13464,7 +13472,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:phyllite_diamond_ore",
       "unearthed:phyllite_emerald_ore",
       "unearthed:phyllite_gold_ore",
-      "unearthed:phyllite_grassy_regolith",
       "unearthed:phyllite_iron_ore",
       "unearthed:phyllite_lapis_ore",
       "unearthed:phyllite_pressure_plate",
@@ -13523,7 +13530,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:pumice_wall",
       "unearthed:pyroxene",
       "unearthed:quartzite",
-      "unearthed:quartzite_grassy_regolith",
       "unearthed:quartzite_pressure_plate",
       "unearthed:quartzite_slab",
       "unearthed:quartzite_stairs",
@@ -13534,7 +13540,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:rhyolite_diamond_ore",
       "unearthed:rhyolite_emerald_ore",
       "unearthed:rhyolite_gold_ore",
-      "unearthed:rhyolite_grassy_regolith",
       "unearthed:rhyolite_iron_ore",
       "unearthed:rhyolite_lapis_ore",
       "unearthed:rhyolite_pressure_plate",
@@ -13542,10 +13547,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:rhyolite_slab",
       "unearthed:rhyolite_stairs",
       "unearthed:rhyolite_wall",
-      "unearthed:sandstone_grassy_regolith",
       "unearthed:schist",
       "unearthed:schist_slab",
-      "unearthed:siltstone_grassy_regolith",
       "unearthed:slate",
       "unearthed:slate_brick_slab",
       "unearthed:slate_brick_stairs",
@@ -13556,7 +13559,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:slate_diamond_ore",
       "unearthed:slate_emerald_ore",
       "unearthed:slate_gold_ore",
-      "unearthed:slate_grassy_regolith",
       "unearthed:slate_iron_ore",
       "unearthed:slate_lapis_ore",
       "unearthed:slate_pressure_plate",
@@ -13564,7 +13566,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:slate_slab",
       "unearthed:slate_stairs",
       "unearthed:slate_wall",
-      "unearthed:stone_grassy_regolith",
       "unearthed:weathered_rhyolite",
       "unearthed:weathered_rhyolite_slab",
       "unearthed:weathered_rhyolite_stairs",
@@ -13575,7 +13576,6 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "unearthed:white_granite_diamond_ore",
       "unearthed:white_granite_emerald_ore",
       "unearthed:white_granite_gold_ore",
-      "unearthed:white_granite_grassy_regolith",
       "unearthed:white_granite_iron_ore",
       "unearthed:white_granite_lapis_ore",
       "unearthed:white_granite_pressure_plate",
@@ -13601,15 +13601,94 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     ],
     "shovel": [
       "adpother:dust",
+      "aether:aether_dirt",
+      "aether:aether_dirt_path",
+      "aether:aether_grass_block",
+      "aether:enchanted_aether_grass_block",
+      "aether:quicksoil",
+      "aether:quicksoil_glass",
+      "aether:quicksoil_glass_pane",
+      "bloodmagic:nether_soil",
       "bloodmagic:obsidianbrickpath",
       "bloodmagic:obsidiantilepath",
       "bloodmagic:stonebrickpath",
       "bloodmagic:stonetilepath",
       "bloodmagic:wornstonebrickpath",
       "bloodmagic:wornstonetilepath",
+      "blue_skies:chiseled_crystal_sandstone",
+      "blue_skies:chiseled_midnight_sandstone",
+      "blue_skies:coarse_lunar_dirt",
+      "blue_skies:coarse_turquoise_dirt",
+      "blue_skies:crystal_sand",
+      "blue_skies:crystal_sandstone",
+      "blue_skies:crystal_sandstone_pillar",
+      "blue_skies:crystal_sandstone_slab",
+      "blue_skies:crystal_sandstone_stairs",
+      "blue_skies:crystal_sandstone_wall",
+      "blue_skies:cut_crystal_sandstone",
+      "blue_skies:cut_crystal_sandstone_slab",
+      "blue_skies:cut_midnight_sandstone",
+      "blue_skies:cut_midnight_sandstone_slab",
+      "blue_skies:lunar_comet_grass_block",
+      "blue_skies:lunar_dirt",
+      "blue_skies:lunar_grass_block",
+      "blue_skies:lunar_mud",
+      "blue_skies:midnight_sand",
+      "blue_skies:midnight_sandstone",
+      "blue_skies:midnight_sandstone_pillar",
+      "blue_skies:midnight_sandstone_slab",
+      "blue_skies:midnight_sandstone_stairs",
+      "blue_skies:midnight_sandstone_wall",
+      "blue_skies:smooth_crystal_sandstone",
+      "blue_skies:smooth_crystal_sandstone_slab",
+      "blue_skies:smooth_crystal_sandstone_stairs",
+      "blue_skies:smooth_midnight_sandstone",
+      "blue_skies:smooth_midnight_sandstone_slab",
+      "blue_skies:smooth_midnight_sandstone_stairs",
       "blue_skies:snowcap_oven",
       "blue_skies:snowcap_pinhead",
+      "blue_skies:turquoise_comet_grass_block",
+      "blue_skies:turquoise_dirt",
+      "blue_skies:turquoise_grass_block",
+      "btmfixes:burnt_aether_grass_block",
+      "btmfixes:burnt_beige_limestone_grassy_regolith",
+      "btmfixes:burnt_chorus_grass_block",
+      "btmfixes:burnt_conglomerate_grassy_regolith",
+      "btmfixes:burnt_dolomite_grassy_regolith",
+      "btmfixes:burnt_enchanted_aether_grass_block",
+      "btmfixes:burnt_finley_grass_block",
+      "btmfixes:burnt_gabbro_grassy_regolith",
+      "btmfixes:burnt_granodiorite_grassy_regolith",
+      "btmfixes:burnt_grassy_permafrost",
+      "btmfixes:burnt_grassy_silt",
+      "btmfixes:burnt_grey_limestone_grassy_regolith",
+      "btmfixes:burnt_kimberlite_grassy_regolith",
+      "btmfixes:burnt_limestone_grassy_regolith",
+      "btmfixes:burnt_living_grass_block",
+      "btmfixes:burnt_lunar_comet_grass_block",
+      "btmfixes:burnt_lunar_grass_block",
+      "btmfixes:burnt_mudstone_grassy_regolith",
+      "btmfixes:burnt_phyllite_grassy_regolith",
+      "btmfixes:burnt_quartzite_grassy_regolith",
+      "btmfixes:burnt_rhyolite_grassy_regolith",
+      "btmfixes:burnt_rooted_grass_block",
+      "btmfixes:burnt_rooty_aether_grass_block",
+      "btmfixes:burnt_rooty_enchanted_aether_grass_block",
+      "btmfixes:burnt_rooty_frozen_aether_grass_block",
+      "btmfixes:burnt_rooty_grass_block",
+      "btmfixes:burnt_sandstone_grassy_regolith",
+      "btmfixes:burnt_siltstone_grassy_regolith",
+      "btmfixes:burnt_slate_grassy_regolith",
+      "btmfixes:burnt_stone_grassy_regolith",
+      "btmfixes:burnt_turquoise_comet_grass_block",
+      "btmfixes:burnt_turquoise_grass_block",
+      "btmfixes:burnt_white_granite_grassy_regolith",
+      "burnt:burnt_dirt",
+      "burnt:burnt_grassy_earthen_clay",
+      "burnt:burnt_grassy_sandy_d_irt",
       "burnt:burnt_path",
+      "burnt:charred_mycelium",
+      "burnt:semi_burnt_dirt",
       "burnt:soot_block",
       "burnt:sooty_acacia_slab",
       "burnt:sooty_acacia_stairs",
@@ -13644,6 +13723,10 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "burnt:sooty_jungle_stairs",
       "burnt:sooty_mangrove_slab",
       "burnt:sooty_mangrove_stairs",
+      "burnt:sooty_mud_brick_slab",
+      "burnt:sooty_mud_brick_stairs",
+      "burnt:sooty_mud_brick_wall",
+      "burnt:sooty_mud_bricks",
       "burnt:sooty_oak_slab",
       "burnt:sooty_oak_stairs",
       "burnt:sooty_spruce_slab",
@@ -13656,6 +13739,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "burnt:sooty_stone_slab",
       "burnt:sooty_stone_stairs",
       "burnt:splash",
+      "callfromthedepth_:lostsoulssand",
+      "callfromthedepth_:lostsoulssoil",
       "cold_sweat:slush",
       "compressedcreativity:industrial_air_blower",
       "create:industrial_iron_block",
@@ -13663,6 +13748,7 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "create:industrial_iron_window_pane",
       "create:pulse_repeater",
       "createbigcannons:cannon_cast",
+      "createbigcannons:casting_sand",
       "createbigcannons:finished_cannon_cast",
       "createbigcannons:powder_charge",
       "createdeco:blue_industrial_iron_lamp",
@@ -13682,8 +13768,157 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "createdeco:industrial_iron_window_pane",
       "createdeco:red_industrial_iron_lamp",
       "createdeco:yellow_industrial_iron_lamp",
+      "creatingspace:mars_regolith",
+      "creatingspace:mars_surface_regolith",
+      "creatingspace:moon_regolith",
+      "creatingspace:moon_surface_regolith",
+      "deeperdarker:echo_soil",
       "deeperdarker:sculk_grime",
       "delightful:matcha_ice_cream_block",
+      "dtaether:rooty_aether_grass_block",
+      "dtaether:rooty_enchanted_aether_grass_block",
+      "dtaether:rooty_frozen_aether_grass_block",
+      "dynamictrees:rooty_grass_block",
+      "excavated_variants:red_sandstone_bauxite_laterite",
+      "excavated_variants:red_sandstone_brilliant_stone",
+      "excavated_variants:red_sandstone_cantazarite_ore",
+      "excavated_variants:red_sandstone_coal_measures",
+      "excavated_variants:red_sandstone_copper_sulfide",
+      "excavated_variants:red_sandstone_corundum_beryl_gem_vein",
+      "excavated_variants:red_sandstone_cthonic_gold_ore",
+      "excavated_variants:red_sandstone_cupriferous_redbed_redstone_vein",
+      "excavated_variants:red_sandstone_darkstone",
+      "excavated_variants:red_sandstone_emerald_schist_beryl_vein",
+      "excavated_variants:red_sandstone_gilded_darkstone",
+      "excavated_variants:red_sandstone_ironstone",
+      "excavated_variants:red_sandstone_jade_ore",
+      "excavated_variants:red_sandstone_kimberlite_pipe",
+      "excavated_variants:red_sandstone_lazurite_vein",
+      "excavated_variants:red_sandstone_lead_zinc_vein",
+      "excavated_variants:red_sandstone_mithril_ore",
+      "excavated_variants:red_sandstone_natural_quartz_ore",
+      "excavated_variants:red_sandstone_nickel_sulfide",
+      "excavated_variants:red_sandstone_osmiridium_lava_sulfide",
+      "excavated_variants:red_sandstone_phosphate_rock",
+      "excavated_variants:red_sandstone_quartz_vein",
+      "excavated_variants:red_sandstone_runic_stone",
+      "excavated_variants:red_sandstone_soul_bearing_black_shale_soulstone_vein",
+      "excavated_variants:red_sandstone_soulstone_ore",
+      "excavated_variants:red_sandstone_stella_arcanum",
+      "excavated_variants:red_sandstone_sulfur_bearing_pyrite",
+      "excavated_variants:red_sandstone_thorium",
+      "excavated_variants:red_sandstone_tin",
+      "excavated_variants:red_sandstone_tin_tungsten_greisen",
+      "excavated_variants:red_sandstone_titanium_iron_oxide",
+      "excavated_variants:red_sandstone_uranium",
+      "excavated_variants:red_sandstone_xpetrified_ore",
+      "excavated_variants:red_sandstone_zinc",
+      "excavated_variants:red_sandstone_zinc_ore",
+      "excavated_variants:sandstone_bauxite_laterite",
+      "excavated_variants:sandstone_brilliant_stone",
+      "excavated_variants:sandstone_cantazarite_ore",
+      "excavated_variants:sandstone_coal_measures",
+      "excavated_variants:sandstone_copper_sulfide",
+      "excavated_variants:sandstone_corundum_beryl_gem_vein",
+      "excavated_variants:sandstone_cthonic_gold_ore",
+      "excavated_variants:sandstone_cupriferous_redbed_redstone_vein",
+      "excavated_variants:sandstone_darkstone",
+      "excavated_variants:sandstone_emerald_schist_beryl_vein",
+      "excavated_variants:sandstone_gilded_darkstone",
+      "excavated_variants:sandstone_ironstone",
+      "excavated_variants:sandstone_jade_ore",
+      "excavated_variants:sandstone_kimberlite_pipe",
+      "excavated_variants:sandstone_lazurite_vein",
+      "excavated_variants:sandstone_lead_zinc_vein",
+      "excavated_variants:sandstone_mithril_ore",
+      "excavated_variants:sandstone_natural_quartz_ore",
+      "excavated_variants:sandstone_nickel_sulfide",
+      "excavated_variants:sandstone_osmiridium_lava_sulfide",
+      "excavated_variants:sandstone_phosphate_rock",
+      "excavated_variants:sandstone_quartz_vein",
+      "excavated_variants:sandstone_runic_stone",
+      "excavated_variants:sandstone_soul_bearing_black_shale_soulstone_vein",
+      "excavated_variants:sandstone_soulstone_ore",
+      "excavated_variants:sandstone_stella_arcanum",
+      "excavated_variants:sandstone_sulfur_bearing_pyrite",
+      "excavated_variants:sandstone_thorium",
+      "excavated_variants:sandstone_tin",
+      "excavated_variants:sandstone_tin_tungsten_greisen",
+      "excavated_variants:sandstone_titanium_iron_oxide",
+      "excavated_variants:sandstone_uranium",
+      "excavated_variants:sandstone_xpetrified_ore",
+      "excavated_variants:sandstone_zinc",
+      "excavated_variants:sandstone_zinc_ore",
+      "excavated_variants:unearthed_mudstone_bauxite_laterite",
+      "excavated_variants:unearthed_mudstone_brilliant_stone",
+      "excavated_variants:unearthed_mudstone_cantazarite_ore",
+      "excavated_variants:unearthed_mudstone_coal_measures",
+      "excavated_variants:unearthed_mudstone_copper_sulfide",
+      "excavated_variants:unearthed_mudstone_corundum_beryl_gem_vein",
+      "excavated_variants:unearthed_mudstone_cthonic_gold_ore",
+      "excavated_variants:unearthed_mudstone_cupriferous_redbed_redstone_vein",
+      "excavated_variants:unearthed_mudstone_darkstone",
+      "excavated_variants:unearthed_mudstone_emerald_schist_beryl_vein",
+      "excavated_variants:unearthed_mudstone_gilded_darkstone",
+      "excavated_variants:unearthed_mudstone_ironstone",
+      "excavated_variants:unearthed_mudstone_jade_ore",
+      "excavated_variants:unearthed_mudstone_kimberlite_pipe",
+      "excavated_variants:unearthed_mudstone_lazurite_vein",
+      "excavated_variants:unearthed_mudstone_lead_zinc_vein",
+      "excavated_variants:unearthed_mudstone_mithril_ore",
+      "excavated_variants:unearthed_mudstone_natural_quartz_ore",
+      "excavated_variants:unearthed_mudstone_nickel_sulfide",
+      "excavated_variants:unearthed_mudstone_osmiridium_lava_sulfide",
+      "excavated_variants:unearthed_mudstone_phosphate_rock",
+      "excavated_variants:unearthed_mudstone_quartz_vein",
+      "excavated_variants:unearthed_mudstone_runic_stone",
+      "excavated_variants:unearthed_mudstone_soul_bearing_black_shale_soulstone_vein",
+      "excavated_variants:unearthed_mudstone_soulstone_ore",
+      "excavated_variants:unearthed_mudstone_stella_arcanum",
+      "excavated_variants:unearthed_mudstone_sulfur_bearing_pyrite",
+      "excavated_variants:unearthed_mudstone_thorium",
+      "excavated_variants:unearthed_mudstone_tin",
+      "excavated_variants:unearthed_mudstone_tin_tungsten_greisen",
+      "excavated_variants:unearthed_mudstone_titanium_iron_oxide",
+      "excavated_variants:unearthed_mudstone_uranium",
+      "excavated_variants:unearthed_mudstone_xpetrified_ore",
+      "excavated_variants:unearthed_mudstone_zinc",
+      "excavated_variants:unearthed_mudstone_zinc_ore",
+      "excavated_variants:unearthed_siltstone_bauxite_laterite",
+      "excavated_variants:unearthed_siltstone_brilliant_stone",
+      "excavated_variants:unearthed_siltstone_cantazarite_ore",
+      "excavated_variants:unearthed_siltstone_coal_measures",
+      "excavated_variants:unearthed_siltstone_copper_sulfide",
+      "excavated_variants:unearthed_siltstone_corundum_beryl_gem_vein",
+      "excavated_variants:unearthed_siltstone_cthonic_gold_ore",
+      "excavated_variants:unearthed_siltstone_cupriferous_redbed_redstone_vein",
+      "excavated_variants:unearthed_siltstone_darkstone",
+      "excavated_variants:unearthed_siltstone_emerald_schist_beryl_vein",
+      "excavated_variants:unearthed_siltstone_gilded_darkstone",
+      "excavated_variants:unearthed_siltstone_ironstone",
+      "excavated_variants:unearthed_siltstone_jade_ore",
+      "excavated_variants:unearthed_siltstone_kimberlite_pipe",
+      "excavated_variants:unearthed_siltstone_lazurite_vein",
+      "excavated_variants:unearthed_siltstone_lead_zinc_vein",
+      "excavated_variants:unearthed_siltstone_mithril_ore",
+      "excavated_variants:unearthed_siltstone_natural_quartz_ore",
+      "excavated_variants:unearthed_siltstone_nickel_sulfide",
+      "excavated_variants:unearthed_siltstone_osmiridium_lava_sulfide",
+      "excavated_variants:unearthed_siltstone_phosphate_rock",
+      "excavated_variants:unearthed_siltstone_quartz_vein",
+      "excavated_variants:unearthed_siltstone_runic_stone",
+      "excavated_variants:unearthed_siltstone_soul_bearing_black_shale_soulstone_vein",
+      "excavated_variants:unearthed_siltstone_soulstone_ore",
+      "excavated_variants:unearthed_siltstone_stella_arcanum",
+      "excavated_variants:unearthed_siltstone_sulfur_bearing_pyrite",
+      "excavated_variants:unearthed_siltstone_thorium",
+      "excavated_variants:unearthed_siltstone_tin",
+      "excavated_variants:unearthed_siltstone_tin_tungsten_greisen",
+      "excavated_variants:unearthed_siltstone_titanium_iron_oxide",
+      "excavated_variants:unearthed_siltstone_uranium",
+      "excavated_variants:unearthed_siltstone_xpetrified_ore",
+      "excavated_variants:unearthed_siltstone_zinc",
+      "excavated_variants:unearthed_siltstone_zinc_ore",
       "fallout_wastelands_:blue_industrial_alloy",
       "fallout_wastelands_:blue_industrial_alloy_slab",
       "fallout_wastelands_:blue_industrial_alloy_stairs",
@@ -13720,20 +13955,132 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "fallout_wastelands_:industrial_support",
       "fallout_wastelands_:industrial_walkway",
       "fallout_wastelands_:industrial_walkwaystairs",
+      "fallout_wastelands_:rockydirt",
+      "fallout_wastelands_:sandbags",
+      "fallout_wastelands_:sandbags_slab",
+      "fallout_wastelands_:sandbagstairs",
       "fallout_wastelands_:supermutantgore",
+      "fallout_wastelands_:the_glow_dirt",
       "fallout_wastelands_:trash_bin",
+      "fallout_wastelands_:waste_sand",
+      "fallout_wastelands_:wasteland_dirt",
+      "fallout_wastelands_:wasteland_sand_stone",
+      "fallout_wastelands_:wastelanddrydirt",
+      "fallout_wastelands_:wastelandgravel",
+      "forbidden_arcanus:cut_soulless_sandstone",
+      "forbidden_arcanus:cut_soulless_sandstone_slab",
+      "forbidden_arcanus:polished_soulless_sandstone",
+      "forbidden_arcanus:polished_soulless_sandstone_slab",
+      "forbidden_arcanus:polished_soulless_sandstone_stairs",
+      "forbidden_arcanus:soulless_sand",
+      "forbidden_arcanus:soulless_sandstone",
+      "forbidden_arcanus:soulless_sandstone_slab",
+      "forbidden_arcanus:soulless_sandstone_stairs",
+      "forbidden_arcanus:soulless_sandstone_wall",
+      "goety:blue_siltstone_pillar",
+      "goety:bottom_soiled_end_basalt",
+      "goety:chiseled_siltstone",
+      "goety:chiseled_siltstone_bricks",
+      "goety:chorus_grass_block",
+      "goety:chorus_grass_block_slab",
+      "goety:cobbled_chorus_grass_block",
+      "goety:cobbled_dark_dirt",
+      "goety:cobbled_dirt",
       "goety:cobbled_ominous_stone_path",
+      "goety:cobbled_siltstone",
+      "goety:cobbled_siltstone_slab",
+      "goety:cobbled_siltstone_stairs",
+      "goety:cobbled_siltstone_wall",
+      "goety:dark_dirt",
+      "goety:dark_dirt_slab",
       "goety:detritus",
       "goety:detritus_dust",
+      "goety:dirty_chiseled_siltstone",
+      "goety:dirty_cobbled_end_stone",
+      "goety:dirty_cobbled_end_stone_heavy",
+      "goety:dirty_cobbled_siltstone",
+      "goety:dirty_end_basalt",
+      "goety:dirty_end_rock",
+      "goety:dirty_ominous_stone",
+      "goety:dirty_ominous_stone_bricks",
+      "goety:dirty_ominous_stone_bricks_heavy",
+      "goety:dirty_ominous_stone_bricks_slight",
+      "goety:dirty_ominous_stone_pavement",
+      "goety:dirty_ominous_stone_pavement_heavy",
+      "goety:dirty_ominous_stone_slight",
+      "goety:dirty_ominous_stone_tiles",
+      "goety:dirty_ominous_stone_tiles_heavy",
+      "goety:dirty_ominous_stone_tiles_slight",
+      "goety:dirty_siltstone",
+      "goety:dirty_siltstone_heavy",
+      "goety:end_dirt",
+      "goety:end_dirt_slab",
+      "goety:end_mud",
+      "goety:end_mud_cauldron",
+      "goety:end_mud_fluid",
+      "goety:end_mud_slab",
+      "goety:end_soil",
+      "goety:end_soil_debris",
+      "goety:grassy_cobbled_end_stone",
+      "goety:grassy_end_basalt",
+      "goety:grassy_end_rock",
+      "goety:grassy_end_rock_bricks",
+      "goety:grassy_end_stone_bricks",
+      "goety:grassy_end_stone_bricks_heavy",
+      "goety:grassy_end_stone_tiles",
+      "goety:grassy_purpur_block",
+      "goety:grassy_smooth_end_stone",
+      "goety:grassy_smooth_end_stone_heavy",
+      "goety:green_siltstone_pillar",
+      "goety:muddy_smooth_end_stone",
+      "goety:red_siltstone_pillar",
+      "goety:silt_highrock",
+      "goety:silt_highrock_slab",
+      "goety:silt_jade_slab",
+      "goety:silt_jade_stairs",
+      "goety:silt_jade_tiles",
+      "goety:silt_marble",
+      "goety:silt_marble_heavy",
+      "goety:silt_marble_slight",
+      "goety:silt_slate_marble",
+      "goety:silt_studded_crag_tiles",
+      "goety:siltstone",
+      "goety:siltstone_brick_slab",
+      "goety:siltstone_brick_stairs",
+      "goety:siltstone_brick_wall",
+      "goety:siltstone_bricks",
+      "goety:siltstone_pavement",
+      "goety:siltstone_pavement_slab",
+      "goety:siltstone_pavement_stairs",
+      "goety:siltstone_pavement_wall",
+      "goety:siltstone_pillar",
+      "goety:siltstone_slab",
+      "goety:siltstone_stairs",
+      "goety:siltstone_tile_slab",
+      "goety:siltstone_tile_stairs",
+      "goety:siltstone_tile_wall",
+      "goety:siltstone_tiles",
+      "goety:siltstone_wall",
+      "goety:smooth_siltstone",
+      "goety:smooth_siltstone_slab",
+      "goety:smooth_siltstone_stairs",
+      "goety:smooth_siltstone_wall",
       "goety:snow_brick_slab",
       "goety:snow_brick_stairs",
       "goety:snow_brick_wall",
       "goety:snow_bricks",
+      "goety:snowy_chiseled_siltstone",
+      "goety:snowy_cobbled_siltstone",
+      "goety:snowy_cobbled_siltstone_slab",
+      "goety:snowy_cobbled_siltstone_stairs",
+      "goety:snowy_cobbled_siltstone_wall",
       "goety:snowy_crag_brick_slab",
       "goety:snowy_crag_brick_stairs",
       "goety:snowy_crag_brick_wall",
       "goety:snowy_crag_bricks",
       "goety:snowy_crag_pavement",
+      "goety:snowy_dark_dirt",
+      "goety:snowy_dirt",
       "goety:snowy_highrock_brick_slab",
       "goety:snowy_highrock_brick_slight_slab",
       "goety:snowy_highrock_brick_slight_stairs",
@@ -13745,11 +14092,73 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "goety:snowy_jade_slab",
       "goety:snowy_jade_stairs",
       "goety:snowy_jade_tiles",
+      "goety:snowy_siltstone",
+      "goety:snowy_siltstone_brick_slab",
+      "goety:snowy_siltstone_brick_slight_slab",
+      "goety:snowy_siltstone_brick_slight_stairs",
+      "goety:snowy_siltstone_brick_slight_wall",
+      "goety:snowy_siltstone_brick_stairs",
+      "goety:snowy_siltstone_brick_wall",
+      "goety:snowy_siltstone_bricks",
+      "goety:snowy_siltstone_bricks_slight",
+      "goety:snowy_siltstone_pillar",
+      "goety:snowy_siltstone_slight",
+      "goety:soiled_cobbled_end_stone",
+      "goety:soiled_cobbled_end_stone_heavy",
+      "goety:soiled_cobbled_end_stone_slight",
+      "goety:soiled_end_basalt",
+      "goety:soiled_end_basalt_bricks",
+      "goety:soiled_end_basalt_slight",
+      "goety:soiled_end_dirt",
+      "goety:soiled_end_rock",
+      "goety:soiled_end_rock_bricks",
+      "goety:soiled_end_rock_chiseled",
+      "goety:soiled_end_stone_bricks",
+      "goety:soiled_end_stone_bricks_heavy",
+      "goety:soiled_end_stone_bricks_slight",
+      "goety:soiled_end_stone_tiles",
+      "goety:soiled_polished_ominous_stone",
+      "goety:soiled_polished_ominous_stone_heavy",
+      "goety:soiled_purpur_block",
       "goety:stash_urn",
+      "goety:top_soiled_end_basalt",
       "goety:washed_slate_marble",
       "iceandfire:ash",
+      "iceandfire:chared_dirt",
+      "iceandfire:chared_dirt_path",
+      "iceandfire:chared_gravel",
+      "iceandfire:crackled_dirt",
+      "iceandfire:crackled_dirt_path",
+      "iceandfire:crackled_gravel",
+      "iceandfire:frozen_dirt",
+      "iceandfire:frozen_dirt_path",
+      "iceandfire:frozen_gravel",
+      "iceandfire:graveyard_soil",
+      "immersive_weathering:grassy_earthen_clay",
+      "immersive_weathering:grassy_permafrost",
+      "immersive_weathering:grassy_sandy_dirt",
+      "immersive_weathering:grassy_silt",
+      "immersive_weathering:loam",
       "immersive_weathering:mulch_block",
       "immersive_weathering:nulch_block",
+      "immersive_weathering:red_sand_layer_block",
+      "immersive_weathering:rooted_grass_block",
+      "immersive_weathering:sand_layer_block",
+      "immersive_weathering:sandy_chiseled_stone_bricks",
+      "immersive_weathering:sandy_cobblestone",
+      "immersive_weathering:sandy_cobblestone_slab",
+      "immersive_weathering:sandy_cobblestone_stairs",
+      "immersive_weathering:sandy_cobblestone_wall",
+      "immersive_weathering:sandy_dirt",
+      "immersive_weathering:sandy_stone",
+      "immersive_weathering:sandy_stone_brick_slab",
+      "immersive_weathering:sandy_stone_brick_stairs",
+      "immersive_weathering:sandy_stone_brick_wall",
+      "immersive_weathering:sandy_stone_bricks",
+      "immersive_weathering:sandy_stone_slab",
+      "immersive_weathering:sandy_stone_stairs",
+      "immersive_weathering:sandy_stone_wall",
+      "immersive_weathering:silt",
       "immersive_weathering:snowy_chiseled_stone_bricks",
       "immersive_weathering:snowy_cobblestone",
       "immersive_weathering:snowy_cobblestone_slab",
@@ -13764,27 +14173,56 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "immersive_weathering:snowy_stone_stairs",
       "immersive_weathering:snowy_stone_wall",
       "immersive_weathering:soot",
+      "immersive_weathering:vitrified_sand",
       "malum:blighted_earth",
+      "malum:blighted_soil",
       "malum:block_of_hex_ash",
       "minecraft:black_concrete_powder",
       "minecraft:blue_concrete_powder",
       "minecraft:brown_concrete_powder",
+      "minecraft:chiseled_red_sandstone",
+      "minecraft:chiseled_sandstone",
+      "minecraft:cut_red_sandstone",
+      "minecraft:cut_red_sandstone_slab",
+      "minecraft:cut_sandstone",
+      "minecraft:cut_sandstone_slab",
       "minecraft:cyan_concrete_powder",
+      "minecraft:dirt_path",
       "minecraft:gray_concrete_powder",
       "minecraft:green_concrete_powder",
       "minecraft:light_blue_concrete_powder",
       "minecraft:light_gray_concrete_powder",
       "minecraft:lime_concrete_powder",
       "minecraft:magenta_concrete_powder",
+      "minecraft:mud_brick_slab",
+      "minecraft:mud_brick_stairs",
+      "minecraft:mud_brick_wall",
+      "minecraft:mud_bricks",
       "minecraft:orange_concrete_powder",
+      "minecraft:packed_mud",
       "minecraft:pink_concrete_powder",
       "minecraft:powder_snow",
       "minecraft:powder_snow_cauldron",
       "minecraft:purple_concrete_powder",
       "minecraft:red_concrete_powder",
+      "minecraft:red_sandstone",
+      "minecraft:red_sandstone_slab",
+      "minecraft:red_sandstone_stairs",
+      "minecraft:red_sandstone_wall",
       "minecraft:repeater",
+      "minecraft:sandstone",
+      "minecraft:sandstone_slab",
+      "minecraft:sandstone_stairs",
+      "minecraft:sandstone_wall",
+      "minecraft:smooth_red_sandstone",
+      "minecraft:smooth_red_sandstone_slab",
+      "minecraft:smooth_red_sandstone_stairs",
+      "minecraft:smooth_sandstone",
+      "minecraft:smooth_sandstone_slab",
+      "minecraft:smooth_sandstone_stairs",
       "minecraft:snow",
       "minecraft:snow_block",
+      "minecraft:soul_soil",
       "minecraft:white_concrete_powder",
       "minecraft:yellow_concrete_powder",
       "mynethersdelight:powdery_block",
@@ -13797,11 +14235,77 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "mynethersdelight:powdery_slab",
       "mynethersdelight:powdery_stairs",
       "mynethersdelight:powdery_torch",
+      "mynethersdelight:resurgent_soil",
       "mynethersdelight:stripped_powdery_block",
       "mynethersdelight:wall_powdery_torch",
+      "natures_spirit:chiseled_pink_sandstone",
+      "natures_spirit:cut_pink_sandstone",
+      "natures_spirit:cut_pink_sandstone_slab",
+      "natures_spirit:pink_sand",
+      "natures_spirit:pink_sandstone",
+      "natures_spirit:pink_sandstone_slab",
+      "natures_spirit:pink_sandstone_stairs",
+      "natures_spirit:pink_sandstone_wall",
+      "natures_spirit:sandy_soil",
+      "natures_spirit:smooth_pink_sandstone",
+      "natures_spirit:smooth_pink_sandstone_slab",
+      "natures_spirit:smooth_pink_sandstone_stairs",
       "oc2r:flash_memory_flasher",
+      "projectvibrantjourneys:ferrous_gravel",
+      "projectvibrantjourneys:gilded_gravel",
+      "projectvibrantjourneys:gilded_red_sand",
+      "projectvibrantjourneys:muddy_bones",
+      "projectvibrantjourneys:red_sandstone_rocks",
+      "projectvibrantjourneys:sandstone_rocks",
+      "projectvibrantjourneys:sandy_sprouts",
       "projectvibrantjourneys:seashells",
+      "quark:carved_mud_bricks",
+      "quark:chiseled_soul_sandstone",
+      "quark:cut_red_sandstone_vertical_slab",
+      "quark:cut_sandstone_vertical_slab",
+      "quark:cut_soul_sandstone",
+      "quark:cut_soul_sandstone_slab",
+      "quark:cut_soul_sandstone_vertical_slab",
+      "quark:dirt_bricks",
+      "quark:dirt_bricks_slab",
+      "quark:dirt_bricks_stairs",
+      "quark:dirt_bricks_vertical_slab",
+      "quark:dirt_bricks_wall",
+      "quark:dirty_glass",
+      "quark:dirty_glass_pane",
+      "quark:gravisand",
       "quark:gunpowder_sack",
+      "quark:mud_brick_lattice",
+      "quark:mud_brick_vertical_slab",
+      "quark:mud_pillar",
+      "quark:red_sandstone_bricks",
+      "quark:red_sandstone_bricks_slab",
+      "quark:red_sandstone_bricks_stairs",
+      "quark:red_sandstone_bricks_vertical_slab",
+      "quark:red_sandstone_bricks_wall",
+      "quark:red_sandstone_vertical_slab",
+      "quark:sandstone_bricks",
+      "quark:sandstone_bricks_slab",
+      "quark:sandstone_bricks_stairs",
+      "quark:sandstone_bricks_vertical_slab",
+      "quark:sandstone_bricks_wall",
+      "quark:sandstone_vertical_slab",
+      "quark:smooth_red_sandstone_vertical_slab",
+      "quark:smooth_sandstone_vertical_slab",
+      "quark:smooth_soul_sandstone",
+      "quark:smooth_soul_sandstone_slab",
+      "quark:smooth_soul_sandstone_stairs",
+      "quark:smooth_soul_sandstone_vertical_slab",
+      "quark:soul_sandstone",
+      "quark:soul_sandstone_bricks",
+      "quark:soul_sandstone_bricks_slab",
+      "quark:soul_sandstone_bricks_stairs",
+      "quark:soul_sandstone_bricks_vertical_slab",
+      "quark:soul_sandstone_bricks_wall",
+      "quark:soul_sandstone_slab",
+      "quark:soul_sandstone_stairs",
+      "quark:soul_sandstone_vertical_slab",
+      "quark:soul_sandstone_wall",
       "rsgauges:industrial_alarm_lamp",
       "rsgauges:industrial_alarm_siren",
       "rsgauges:industrial_block_detector",
@@ -13849,7 +14353,11 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "supplementaries:ash_bricks_stairs",
       "supplementaries:ash_bricks_wall",
       "supplementaries:ashen_basalt",
+      "supplementaries:gravel_bricks",
       "supplementaries:gunpowder",
+      "supplementaries:raked_gravel",
+      "supplementaries:suspicious_gravel_bricks",
+      "swem:soiled_shavings",
       "swem:whitewash_slab",
       "swem:whitewash_stairs",
       "swem:whitewash_stall_care",
@@ -13858,26 +14366,123 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "swem:yellow_snow_block",
       "tconstruct:cheese_block",
       "tconstruct:earth_congealed_slime",
+      "tconstruct:earth_slime_dirt",
       "tconstruct:ender_congealed_slime",
+      "tconstruct:ender_slime_dirt",
       "tconstruct:grout",
       "tconstruct:ichor_congealed_slime",
+      "tconstruct:ichor_slime_dirt",
       "tconstruct:nether_grout",
       "tconstruct:sky_congealed_slime",
+      "tconstruct:sky_slime_dirt",
       "the_finley_dimension_remastered:ashen_glass",
       "the_finley_dimension_remastered:ashen_pressure_plate",
       "the_finley_dimension_remastered:ashen_slab",
       "the_finley_dimension_remastered:ashen_stairs",
+      "the_finley_dimension_remastered:finley_dirt",
+      "the_finley_dimension_remastered:finley_grass_block",
+      "the_finley_dimension_remastered:living_dirt",
+      "the_finley_dimension_remastered:living_grass_block",
+      "the_finley_dimension_remastered:volcanic_sand",
+      "the_flesh_that_hates:flesh_sand",
+      "thirst:sand_filter",
       "twilightforest:fire_jet",
       "twilightforest:smoker",
       "twilightforest:snow_queen_trophy",
       "twilightforest:snow_queen_wall_trophy",
       "twilightforest:snowy_cloud",
+      "twilightforest:uberous_soil",
       "undergarden:ashen_deepturf",
       "undergarden:ashen_deepturf_block",
+      "undergarden:coarse_deepsoil",
+      "undergarden:deepsoil",
       "undergarden:deepturf_block",
       "undergarden:frozen_deepturf_block",
       "undergarden:goo",
-      "undergarden:goo_block"
+      "undergarden:goo_block",
+      "undergarden:sediment",
+      "undergarden:sediment_glass",
+      "undergarden:sediment_glass_pane",
+      "unearthed:beige_limestone_grassy_regolith",
+      "unearthed:beige_limestone_regolith",
+      "unearthed:chiseled_mudstone",
+      "unearthed:chiseled_siltstone",
+      "unearthed:conglomerate_grassy_regolith",
+      "unearthed:conglomerate_regolith",
+      "unearthed:cut_mudstone",
+      "unearthed:cut_mudstone_slab",
+      "unearthed:cut_mudstone_stairs",
+      "unearthed:cut_mudstone_wall",
+      "unearthed:cut_siltstone",
+      "unearthed:cut_siltstone_slab",
+      "unearthed:cut_siltstone_stairs",
+      "unearthed:cut_siltstone_wall",
+      "unearthed:dolomite_grassy_regolith",
+      "unearthed:dolomite_regolith",
+      "unearthed:gabbro_grassy_regolith",
+      "unearthed:gabbro_regolith",
+      "unearthed:granodiorite_grassy_regolith",
+      "unearthed:granodiorite_regolith",
+      "unearthed:grey_limestone_grassy_regolith",
+      "unearthed:grey_limestone_regolith",
+      "unearthed:kimberlite_grassy_regolith",
+      "unearthed:kimberlite_regolith",
+      "unearthed:limestone_grassy_regolith",
+      "unearthed:limestone_regolith",
+      "unearthed:mudstone",
+      "unearthed:mudstone_coal_ore",
+      "unearthed:mudstone_copper_ore",
+      "unearthed:mudstone_diamond_ore",
+      "unearthed:mudstone_emerald_ore",
+      "unearthed:mudstone_gold_ore",
+      "unearthed:mudstone_grassy_regolith",
+      "unearthed:mudstone_iron_ore",
+      "unearthed:mudstone_lapis_ore",
+      "unearthed:mudstone_redstone_ore",
+      "unearthed:mudstone_regolith",
+      "unearthed:mudstone_slab",
+      "unearthed:mudstone_stairs",
+      "unearthed:mudstone_wall",
+      "unearthed:phyllite_grassy_regolith",
+      "unearthed:phyllite_regolith",
+      "unearthed:quartzite_grassy_regolith",
+      "unearthed:quartzite_regolith",
+      "unearthed:rhyolite_grassy_regolith",
+      "unearthed:rhyolite_regolith",
+      "unearthed:sandstone_coal_ore",
+      "unearthed:sandstone_copper_ore",
+      "unearthed:sandstone_diamond_ore",
+      "unearthed:sandstone_emerald_ore",
+      "unearthed:sandstone_gold_ore",
+      "unearthed:sandstone_grassy_regolith",
+      "unearthed:sandstone_iron_ore",
+      "unearthed:sandstone_lapis_ore",
+      "unearthed:sandstone_redstone_ore",
+      "unearthed:sandstone_regolith",
+      "unearthed:siltstone",
+      "unearthed:siltstone_coal_ore",
+      "unearthed:siltstone_copper_ore",
+      "unearthed:siltstone_diamond_ore",
+      "unearthed:siltstone_emerald_ore",
+      "unearthed:siltstone_gold_ore",
+      "unearthed:siltstone_grassy_regolith",
+      "unearthed:siltstone_iron_ore",
+      "unearthed:siltstone_lapis_ore",
+      "unearthed:siltstone_redstone_ore",
+      "unearthed:siltstone_regolith",
+      "unearthed:siltstone_slab",
+      "unearthed:siltstone_stairs",
+      "unearthed:siltstone_wall",
+      "unearthed:slate_grassy_regolith",
+      "unearthed:slate_regolith",
+      "unearthed:smooth_siltstone",
+      "unearthed:smooth_siltstone_slab",
+      "unearthed:smooth_siltstone_stairs",
+      "unearthed:stone_grassy_regolith",
+      "unearthed:stone_regolith",
+      "unearthed:white_granite_grassy_regolith",
+      "unearthed:white_granite_regolith",
+      "weather2:sand_layer"
     ],
     "hoe": [
       "aether:aether_farmland",
@@ -15644,7 +16249,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "aether:aether_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -15652,7 +16258,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "aether:aether_dirt_path": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -15668,7 +16275,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "aether:aether_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -15844,7 +16452,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "aether:enchanted_aether_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -16212,7 +16821,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "aether:quicksoil": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -16220,7 +16830,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "aether:quicksoil_glass": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -16228,7 +16839,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "aether:quicksoil_glass_pane": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -19868,7 +20480,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "bloodmagic:nether_soil": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -20150,72 +20763,72 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:alchemy_table": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:aquatic_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:aquatic_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:aquatic_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:aquatic_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:aquite_block": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:arachnarch_trophy": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:bag_of_spoils": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:baneful_mushroom": {
@@ -20230,64 +20843,64 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:blaze_bud": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:blinding_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:blinding_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:blinding_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:blinding_stone_pillar": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:blinding_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:blue_fire": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:bluebright_bookshelf": {
@@ -20390,8 +21003,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:bluebright_sapling": {
@@ -20414,16 +21027,16 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:bluebright_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:bluebright_trapdoor": {
@@ -20502,40 +21115,40 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:brumble_block": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:brumble_lantern": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:brumble_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:brumble_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:brumble_vine": {
@@ -20558,56 +21171,56 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:camellia": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:carved_blinding_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:carved_nature_stonebrick": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:carved_poison_stonebrick": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:charoite_block": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:chilled_lily_pad": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:chillweed": {
@@ -20620,7 +21233,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:chiseled_crystal_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -20630,13 +21244,14 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:chiseled_midnight_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -20646,53 +21261,54 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:chiseled_turquoise_stonebrick": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:cinderstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:cinderstone_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:cinderstone_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:cinderstone_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:coarse_lunar_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -20700,7 +21316,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:coarse_turquoise_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -20822,8 +21439,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:comet_sapling": {
@@ -20846,16 +21463,16 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:comet_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:comet_trapdoor": {
@@ -20894,72 +21511,72 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:cracked_lunar_stonebrick_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:cracked_lunar_stonebrick_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:cracked_lunar_stonebrick_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:cracked_turquoise_stonebrick": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:cracked_turquoise_stonebrick_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:cracked_turquoise_stonebrick_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:cracked_turquoise_stonebrick_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:crescent_fruit": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:crescent_fruit_leaves": {
@@ -20998,21 +21615,22 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:crystal_glass_pane": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:crystal_sand": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -21020,7 +21638,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:crystal_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -21028,7 +21647,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:crystal_sandstone_pillar": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -21036,7 +21656,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:crystal_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -21044,7 +21665,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:crystal_sandstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -21052,7 +21674,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:crystal_sandstone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -21110,24 +21733,24 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:crystallized_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:crystallized_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:crystallized_trapdoor": {
@@ -21142,8 +21765,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:crystallized_wood": {
@@ -21156,7 +21779,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:cut_crystal_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -21164,7 +21788,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:cut_crystal_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -21172,7 +21797,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:cut_midnight_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -21180,7 +21806,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:cut_midnight_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -21190,16 +21817,16 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:diopside_block": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:dusk_bookshelf": {
@@ -21302,8 +21929,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:dusk_sapling": {
@@ -21326,16 +21953,16 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:dusk_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:dusk_trapdoor": {
@@ -21382,144 +22009,144 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:everbright_charoite_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:everbright_diopside_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:everbright_emerald_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:everbright_moonstone_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:everbright_pyrope_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:everdawn_aquite_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:everdawn_charoite_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:everdawn_diopside_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:everdawn_emerald_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:everdawn_moonstone_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:everdawn_pyrope_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:falsite_block": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:falsite_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:fiery_beans": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:flare_floret": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:food_prep_table": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:frose": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:frostbright_bookshelf": {
@@ -21622,8 +22249,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:frostbright_sapling": {
@@ -21646,16 +22273,16 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:frostbright_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:frostbright_trapdoor": {
@@ -21710,232 +22337,232 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_aquatic_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_aquatic_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_aquatic_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_blinding_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_blinding_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_blinding_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_blinding_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_life_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_life_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_life_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_life_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_nature_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_nature_stone_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_nature_stone_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_nature_stonebrick": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_nature_stonebrick_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_nature_stonebrick_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_nature_stonebrick_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_poison_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_poison_stone_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:glowing_poison_stone_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:horizonite_block": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:horizonite_forge": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:horizonite_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:life_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:life_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:life_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:life_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lucentroot": {
@@ -21974,37 +22601,38 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_cobblestone_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_cobblestone_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_cobblestone_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_comet_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -22020,7 +22648,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:lunar_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -22038,8 +22667,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_farmland": {
@@ -22076,7 +22705,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:lunar_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -22110,8 +22740,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_log": {
@@ -22124,7 +22754,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:lunar_mud": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -22142,8 +22773,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_sapling": {
@@ -22166,24 +22797,24 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_stone_button": {
@@ -22198,56 +22829,56 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_stone_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_stone_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_stonebrick": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_stonebrick_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_stonebrick_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_stonebrick_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:lunar_trapdoor": {
@@ -22390,8 +23021,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:maple_sapling": {
@@ -22414,16 +23045,16 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:maple_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:maple_trapdoor": {
@@ -22470,29 +23101,30 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:midnight_glass": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:midnight_glass_pane": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:midnight_sand": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -22500,7 +23132,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:midnight_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -22508,7 +23141,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:midnight_sandstone_pillar": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -22516,7 +23150,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:midnight_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -22524,7 +23159,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:midnight_sandstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -22532,7 +23168,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:midnight_sandstone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -22550,48 +23187,48 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:moonstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:moonstone_block": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:moonstone_crystal": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:moonstone_lantern": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:moonstone_pressure_plate": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:mossy_lunar_cobblestone": {
@@ -22734,344 +23371,344 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:nature_stone_pillar": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:nature_stone_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:nature_stone_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:nature_stonebrick": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:nature_stonebrick_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:nature_stonebrick_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:nature_stonebrick_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:nightcress": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:pine_fruits": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:poison_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:poison_stone_pillar": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:poison_stone_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:poison_stone_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:poison_stonebrick": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:poison_stonebrick_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:poison_stonebrick_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:poison_stonebrick_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polar_posy": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_brumble": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_brumble_brick_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_brumble_brick_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_brumble_brick_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_brumble_bricks": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_brumble_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_brumble_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_brumble_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_cinderstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_cinderstone_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_cinderstone_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_cinderstone_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_rimestone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_rimestone_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_rimestone_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_rimestone_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_taratite": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_taratite_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_taratite_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_taratite_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_umber": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_umber_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_umber_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:polished_umber_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:potted_baneful_mushroom": {
@@ -23294,112 +23931,112 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:raw_aquite_block": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:raw_charoite_block": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:raw_falsite_block": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:raw_horizonite_block": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:raw_ventium_block": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:rimestone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:rimestone_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:rimestone_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:rimestone_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:rough_poison_stonebrick": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:rough_poison_stonebrick_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:rough_poison_stonebrick_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:scalefruits": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:sea_moss": {
@@ -23428,7 +24065,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:smooth_crystal_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -23436,7 +24074,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:smooth_crystal_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -23444,7 +24083,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:smooth_crystal_sandstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -23452,7 +24092,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:smooth_midnight_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -23460,7 +24101,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:smooth_midnight_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -23468,7 +24110,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:smooth_midnight_sandstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -23526,16 +24169,16 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:spider_nest": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:spider_webbing": {
@@ -23550,16 +24193,16 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:star_flare": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:starlit_bookshelf": {
@@ -23598,8 +24241,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:starlit_door": {
@@ -23670,8 +24313,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:starlit_sapling": {
@@ -23694,16 +24337,16 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:starlit_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:starlit_trapdoor": {
@@ -23862,32 +24505,32 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:summoning_table": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:sunstone_block": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:sunstone_crystal": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:tall_lunar_grass": {
@@ -23910,85 +24553,86 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:taratite_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:taratite_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:taratite_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:tool_box": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:trough": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:turquoise_cobblestone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:turquoise_cobblestone_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:turquoise_cobblestone_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:turquoise_cobblestone_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:turquoise_comet_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -23996,7 +24640,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:turquoise_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24006,8 +24651,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:turquoise_farmland": {
@@ -24028,7 +24673,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "blue_skies:turquoise_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24038,16 +24684,16 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:turquoise_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:turquoise_stone_button": {
@@ -24062,144 +24708,144 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:turquoise_stone_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:turquoise_stone_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:turquoise_stonebrick": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:turquoise_stonebrick_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:turquoise_stonebrick_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:turquoise_stonebrick_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:umber": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:umber_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:umber_stairs": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:umber_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:upsidedown_black_fire": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:upsidedown_blue_fire": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:ventium_block": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:ventium_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:vitreous_moonstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:wall_warding_pearl": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:warding_pearl": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "blue_skies:winter_leaves": {
@@ -24300,7 +24946,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_aether_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24308,7 +24955,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_beige_limestone_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24324,7 +24972,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_chorus_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24332,7 +24981,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_conglomerate_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24364,7 +25014,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_dolomite_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24372,7 +25023,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_enchanted_aether_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24380,7 +25032,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_finley_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24396,7 +25049,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_gabbro_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24404,7 +25058,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_granodiorite_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24412,7 +25067,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_grassy_permafrost": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24420,7 +25076,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_grassy_silt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24428,7 +25085,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_grey_limestone_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24436,7 +25094,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_kimberlite_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24444,7 +25103,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_limestone_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24452,7 +25112,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_living_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24460,7 +25121,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_lunar_comet_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24468,7 +25130,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_lunar_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24476,7 +25139,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_mudstone_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24508,7 +25172,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_phyllite_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24516,7 +25181,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_quartzite_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24524,7 +25190,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_rhyolite_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24532,7 +25199,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_rooted_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24540,7 +25208,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_rooty_aether_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24548,7 +25217,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_rooty_enchanted_aether_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24556,7 +25226,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_rooty_frozen_aether_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24564,7 +25235,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_rooty_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24572,7 +25244,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_sandstone_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24580,7 +25253,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_siltstone_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24588,7 +25262,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_slate_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24596,7 +25271,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_stone_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24612,7 +25288,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_turquoise_comet_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24620,7 +25297,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_turquoise_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -24636,7 +25314,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "btmfixes:burnt_white_granite_grassy_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -25028,7 +25707,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "burnt:burnt_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -25108,7 +25788,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "burnt:burnt_grassy_earthen_clay": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -25116,7 +25797,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "burnt:burnt_grassy_sandy_d_irt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -25372,7 +26054,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "burnt:charred_mycelium": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -25708,7 +26391,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "burnt:semi_burnt_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -26988,7 +27672,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "burnt:sooty_mud_brick_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -26996,7 +27681,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "burnt:sooty_mud_brick_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -27004,7 +27690,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "burnt:sooty_mud_brick_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -27012,7 +27699,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "burnt:sooty_mud_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -27868,7 +28556,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "callfromthedepth_:lostsoulssand": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -27876,7 +28565,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "callfromthedepth_:lostsoulssoil": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -34860,7 +35550,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "createbigcannons:casting_sand": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -39460,7 +40151,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "creatingspace:mars_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -39476,7 +40168,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "creatingspace:mars_surface_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -39524,7 +40217,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "creatingspace:moon_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -39548,7 +40242,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "creatingspace:moon_surface_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -40068,7 +40763,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "deeperdarker:echo_soil": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -41284,7 +41980,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "dtaether:rooty_aether_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -41292,7 +41989,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "dtaether:rooty_enchanted_aether_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -41300,7 +41998,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "dtaether:rooty_frozen_aether_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -43428,7 +44127,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "dynamictrees:rooty_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -45878,280 +46578,280 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_brilliant_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_cantazarite_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_coal_measures": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_copper_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_corundum_beryl_gem_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_cthonic_gold_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_cupriferous_redbed_redstone_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_darkstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_emerald_schist_beryl_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_gilded_darkstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_ironstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_jade_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_kimberlite_pipe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_lazurite_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_lead_zinc_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_mithril_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_natural_quartz_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_nickel_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_osmiridium_lava_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_phosphate_rock": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_quartz_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_runic_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_soul_bearing_black_shale_soulstone_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_soulstone_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_stella_arcanum": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_sulfur_bearing_pyrite": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_thorium": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_tin": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_tin_tungsten_greisen": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_titanium_iron_oxide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_uranium": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_xpetrified_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_zinc": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_cinderstone_zinc_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_arcane_crystal_ore": {
@@ -46166,280 +46866,280 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_brilliant_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_cantazarite_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_coal_measures": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_copper_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_corundum_beryl_gem_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_cthonic_gold_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_cupriferous_redbed_redstone_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_darkstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_emerald_schist_beryl_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_gilded_darkstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_ironstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_jade_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_kimberlite_pipe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_lazurite_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_lead_zinc_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_mithril_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_natural_quartz_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_nickel_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_osmiridium_lava_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_phosphate_rock": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_quartz_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_runic_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_soul_bearing_black_shale_soulstone_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_soulstone_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_stella_arcanum": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_sulfur_bearing_pyrite": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_thorium": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_tin": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_tin_tungsten_greisen": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_titanium_iron_oxide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_uranium": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_xpetrified_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_zinc": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_lunar_stone_zinc_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_arcane_crystal_ore": {
@@ -46454,280 +47154,280 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_brilliant_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_cantazarite_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_coal_measures": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_copper_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_corundum_beryl_gem_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_cthonic_gold_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_cupriferous_redbed_redstone_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_darkstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_emerald_schist_beryl_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_gilded_darkstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_ironstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_jade_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_kimberlite_pipe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_lazurite_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_lead_zinc_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_mithril_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_natural_quartz_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_nickel_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_osmiridium_lava_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_phosphate_rock": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_quartz_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_runic_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_soul_bearing_black_shale_soulstone_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_soulstone_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_stella_arcanum": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_sulfur_bearing_pyrite": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_thorium": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_tin": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_tin_tungsten_greisen": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_titanium_iron_oxide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_uranium": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_xpetrified_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_zinc": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_rimestone_zinc_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_arcane_crystal_ore": {
@@ -46742,280 +47442,280 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_brilliant_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_cantazarite_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_coal_measures": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_copper_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_corundum_beryl_gem_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_cthonic_gold_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_cupriferous_redbed_redstone_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_darkstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_emerald_schist_beryl_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_gilded_darkstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_ironstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_jade_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_kimberlite_pipe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_lazurite_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_lead_zinc_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_mithril_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_natural_quartz_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_nickel_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_osmiridium_lava_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_phosphate_rock": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_quartz_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_runic_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_soul_bearing_black_shale_soulstone_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_soulstone_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_stella_arcanum": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_sulfur_bearing_pyrite": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_thorium": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_tin": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_tin_tungsten_greisen": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_titanium_iron_oxide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_uranium": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_xpetrified_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_zinc": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_taratite_zinc_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_arcane_crystal_ore": {
@@ -47030,280 +47730,280 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_brilliant_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_cantazarite_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_coal_measures": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_copper_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_corundum_beryl_gem_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_cthonic_gold_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_cupriferous_redbed_redstone_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_darkstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_emerald_schist_beryl_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_gilded_darkstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_ironstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_jade_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_kimberlite_pipe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_lazurite_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_lead_zinc_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_mithril_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_natural_quartz_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_nickel_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_osmiridium_lava_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_phosphate_rock": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_quartz_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_runic_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_soul_bearing_black_shale_soulstone_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_soulstone_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_stella_arcanum": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_sulfur_bearing_pyrite": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_thorium": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_tin": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_tin_tungsten_greisen": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_titanium_iron_oxide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_uranium": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_xpetrified_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_zinc": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_turquoise_stone_zinc_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_arcane_crystal_ore": {
@@ -47318,280 +48018,280 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_brilliant_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_cantazarite_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_coal_measures": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_copper_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_corundum_beryl_gem_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_cthonic_gold_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_cupriferous_redbed_redstone_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_darkstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_emerald_schist_beryl_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_gilded_darkstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_ironstone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_jade_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_kimberlite_pipe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_lazurite_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_lead_zinc_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_mithril_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_natural_quartz_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_nickel_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_osmiridium_lava_sulfide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_phosphate_rock": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_quartz_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_runic_stone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_soul_bearing_black_shale_soulstone_vein": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_soulstone_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_stella_arcanum": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_sulfur_bearing_pyrite": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_thorium": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_tin": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_tin_tungsten_greisen": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_titanium_iron_oxide": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_uranium": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_xpetrified_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_zinc": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:blue_skies_umber_zinc_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "excavated_variants:calcite_arcane_crystal_ore": {
@@ -52580,7 +53280,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_bauxite_laterite": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52588,7 +53289,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_brilliant_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52596,7 +53298,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_cantazarite_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52604,7 +53307,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_coal_measures": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52612,7 +53316,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_copper_sulfide": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52620,7 +53325,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_corundum_beryl_gem_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52628,7 +53334,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_cthonic_gold_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52636,7 +53343,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_cupriferous_redbed_redstone_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52644,7 +53352,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_darkstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52652,7 +53361,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_emerald_schist_beryl_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52660,7 +53370,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_gilded_darkstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52668,7 +53379,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_ironstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52676,7 +53388,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_jade_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52684,7 +53397,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_kimberlite_pipe": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52692,7 +53406,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_lazurite_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52700,7 +53415,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_lead_zinc_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52708,7 +53424,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_mithril_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52716,7 +53433,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_natural_quartz_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52724,7 +53442,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_nickel_sulfide": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52732,7 +53451,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_osmiridium_lava_sulfide": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52740,7 +53460,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_phosphate_rock": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52748,7 +53469,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_quartz_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52756,7 +53478,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_runic_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52764,7 +53487,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_soul_bearing_black_shale_soulstone_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52772,7 +53496,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_soulstone_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52780,7 +53505,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_stella_arcanum": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52788,7 +53514,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_sulfur_bearing_pyrite": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52796,7 +53523,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_thorium": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52804,7 +53532,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_tin": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52812,7 +53541,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_tin_tungsten_greisen": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52820,7 +53550,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_titanium_iron_oxide": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52828,7 +53559,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_uranium": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52836,7 +53568,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_xpetrified_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52844,7 +53577,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_zinc": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52852,7 +53586,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:red_sandstone_zinc_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52868,7 +53603,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_bauxite_laterite": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52876,7 +53612,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_brilliant_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52884,7 +53621,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_cantazarite_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52892,7 +53630,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_coal_measures": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52900,7 +53639,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_copper_sulfide": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52908,7 +53648,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_corundum_beryl_gem_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52916,7 +53657,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_cthonic_gold_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52924,7 +53666,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_cupriferous_redbed_redstone_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52932,7 +53675,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_darkstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52940,7 +53684,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_emerald_schist_beryl_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52948,7 +53693,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_gilded_darkstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52956,7 +53702,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_ironstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52964,7 +53711,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_jade_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52972,7 +53720,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_kimberlite_pipe": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52980,7 +53729,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_lazurite_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52988,7 +53738,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_lead_zinc_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -52996,7 +53747,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_mithril_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53004,7 +53756,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_natural_quartz_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53012,7 +53765,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_nickel_sulfide": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53020,7 +53774,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_osmiridium_lava_sulfide": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53028,7 +53783,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_phosphate_rock": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53036,7 +53792,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_quartz_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53044,7 +53801,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_runic_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53052,7 +53810,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_soul_bearing_black_shale_soulstone_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53060,7 +53819,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_soulstone_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53068,7 +53828,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_stella_arcanum": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53076,7 +53837,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_sulfur_bearing_pyrite": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53084,7 +53846,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_thorium": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53092,7 +53855,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_tin": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53100,7 +53864,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_tin_tungsten_greisen": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53108,7 +53873,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_titanium_iron_oxide": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53116,7 +53882,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_uranium": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53124,7 +53891,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_xpetrified_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53132,7 +53900,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_zinc": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -53140,7 +53909,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:sandstone_zinc_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57212,7 +57982,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_bauxite_laterite": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57220,7 +57991,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_brilliant_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57228,7 +58000,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_cantazarite_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57236,7 +58009,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_coal_measures": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57244,7 +58018,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_copper_sulfide": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57252,7 +58027,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_corundum_beryl_gem_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57260,7 +58036,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_cthonic_gold_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57268,7 +58045,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_cupriferous_redbed_redstone_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57276,7 +58054,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_darkstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57284,7 +58063,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_emerald_schist_beryl_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57292,7 +58072,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_gilded_darkstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57300,7 +58081,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_ironstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57308,7 +58090,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_jade_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57316,7 +58099,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_kimberlite_pipe": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57324,7 +58108,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_lazurite_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57332,7 +58117,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_lead_zinc_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57340,7 +58126,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_mithril_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57348,7 +58135,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_natural_quartz_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57356,7 +58144,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_nickel_sulfide": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57364,7 +58153,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_osmiridium_lava_sulfide": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57372,7 +58162,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_phosphate_rock": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57380,7 +58171,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_quartz_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57388,7 +58180,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_runic_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57396,7 +58189,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_soul_bearing_black_shale_soulstone_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57404,7 +58198,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_soulstone_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57412,7 +58207,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_stella_arcanum": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57420,7 +58216,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_sulfur_bearing_pyrite": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57428,7 +58225,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_thorium": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57436,7 +58234,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_tin": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57444,7 +58243,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_tin_tungsten_greisen": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57452,7 +58252,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_titanium_iron_oxide": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57460,7 +58261,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_uranium": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57468,7 +58270,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_xpetrified_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57476,7 +58279,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_zinc": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -57484,7 +58288,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_mudstone_zinc_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -58940,7 +59745,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_bauxite_laterite": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -58948,7 +59754,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_brilliant_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -58956,7 +59763,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_cantazarite_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -58964,7 +59772,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_coal_measures": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -58972,7 +59781,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_copper_sulfide": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -58980,7 +59790,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_corundum_beryl_gem_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -58988,7 +59799,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_cthonic_gold_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -58996,7 +59808,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_cupriferous_redbed_redstone_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59004,7 +59817,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_darkstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59012,7 +59826,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_emerald_schist_beryl_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59020,7 +59835,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_gilded_darkstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59028,7 +59844,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_ironstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59036,7 +59853,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_jade_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59044,7 +59862,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_kimberlite_pipe": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59052,7 +59871,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_lazurite_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59060,7 +59880,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_lead_zinc_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59068,7 +59889,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_mithril_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59076,7 +59898,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_natural_quartz_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59084,7 +59907,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_nickel_sulfide": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59092,7 +59916,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_osmiridium_lava_sulfide": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59100,7 +59925,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_phosphate_rock": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59108,7 +59934,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_quartz_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59116,7 +59943,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_runic_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59124,7 +59952,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_soul_bearing_black_shale_soulstone_vein": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59132,7 +59961,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_soulstone_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59140,7 +59970,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_stella_arcanum": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59148,7 +59979,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_sulfur_bearing_pyrite": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59156,7 +59988,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_thorium": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59164,7 +59997,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_tin": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59172,7 +60006,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_tin_tungsten_greisen": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59180,7 +60015,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_titanium_iron_oxide": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59188,7 +60024,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_uranium": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59196,7 +60033,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_xpetrified_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59204,7 +60042,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_zinc": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -59212,7 +60051,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "excavated_variants:unearthed_siltstone_zinc_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -61796,7 +62636,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "fallout_wastelands_:rockydirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -61884,7 +62725,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "fallout_wastelands_:sandbags": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -61892,7 +62734,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "fallout_wastelands_:sandbags_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -61900,7 +62743,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "fallout_wastelands_:sandbagstairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -62092,7 +62936,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "fallout_wastelands_:the_glow_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -62316,7 +63161,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "fallout_wastelands_:waste_sand": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -62436,7 +63282,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "fallout_wastelands_:wasteland_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -62516,7 +63363,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "fallout_wastelands_:wasteland_sand_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -62572,7 +63420,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "fallout_wastelands_:wastelanddrydirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -62604,7 +63453,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "fallout_wastelands_:wastelandgravel": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -64476,7 +65326,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "forbidden_arcanus:cut_soulless_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -64484,7 +65335,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "forbidden_arcanus:cut_soulless_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -65036,7 +65888,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "forbidden_arcanus:polished_soulless_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -65044,7 +65897,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "forbidden_arcanus:polished_soulless_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -65052,7 +65906,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "forbidden_arcanus:polished_soulless_sandstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -65156,7 +66011,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "forbidden_arcanus:soulless_sand": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -65164,7 +66020,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "forbidden_arcanus:soulless_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -65172,7 +66029,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "forbidden_arcanus:soulless_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -65180,7 +66038,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "forbidden_arcanus:soulless_sandstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -65188,7 +66047,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "forbidden_arcanus:soulless_sandstone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -67068,7 +67928,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:blue_siltstone_pillar": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -67076,7 +67937,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:bottom_soiled_end_basalt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -67164,7 +68026,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:chiseled_siltstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -67172,7 +68035,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:chiseled_siltstone_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -67276,7 +68140,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:chorus_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -67284,7 +68149,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:chorus_grass_block_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -67452,7 +68318,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:cobbled_chorus_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -67460,7 +68327,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:cobbled_dark_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -67468,7 +68336,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:cobbled_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -67548,7 +68417,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:cobbled_siltstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -67556,7 +68426,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:cobbled_siltstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -67564,7 +68435,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:cobbled_siltstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -67572,7 +68444,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:cobbled_siltstone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68244,7 +69117,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dark_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68252,7 +69126,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dark_dirt_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68324,7 +69199,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_chiseled_siltstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68332,7 +69208,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_cobbled_end_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68340,7 +69217,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_cobbled_end_stone_heavy": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68348,7 +69226,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_cobbled_siltstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68356,7 +69235,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_end_basalt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68364,7 +69244,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_end_rock": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68372,7 +69253,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_ominous_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68380,7 +69262,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_ominous_stone_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68388,7 +69271,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_ominous_stone_bricks_heavy": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68396,7 +69280,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_ominous_stone_bricks_slight": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68404,7 +69289,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_ominous_stone_pavement": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68412,7 +69298,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_ominous_stone_pavement_heavy": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68420,7 +69307,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_ominous_stone_slight": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68428,7 +69316,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_ominous_stone_tiles": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68436,7 +69325,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_ominous_stone_tiles_heavy": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68444,7 +69334,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_ominous_stone_tiles_slight": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68452,7 +69343,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_siltstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68460,7 +69352,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:dirty_siltstone_heavy": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68516,7 +69409,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:end_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68524,7 +69418,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:end_dirt_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68580,7 +69475,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:end_mud": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68588,7 +69484,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:end_mud_cauldron": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68596,7 +69493,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:end_mud_fluid": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68604,7 +69502,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:end_mud_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68684,7 +69583,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:end_soil": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68692,7 +69592,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:end_soil_debris": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68916,7 +69817,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:grassy_cobbled_end_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68924,7 +69826,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:grassy_end_basalt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68932,7 +69835,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:grassy_end_rock": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68940,7 +69844,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:grassy_end_rock_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68948,7 +69853,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:grassy_end_stone_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68956,7 +69862,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:grassy_end_stone_bricks_heavy": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68964,7 +69871,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:grassy_end_stone_tiles": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68972,7 +69880,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:grassy_purpur_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68980,7 +69889,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:grassy_smooth_end_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -68988,7 +69898,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:grassy_smooth_end_stone_heavy": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -69004,7 +69915,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:green_siltstone_pillar": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -69668,7 +70580,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:muddy_smooth_end_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -70468,7 +71381,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:red_siltstone_pillar": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -70988,7 +71902,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:silt_highrock": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -70996,7 +71911,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:silt_highrock_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71004,7 +71920,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:silt_jade_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71012,7 +71929,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:silt_jade_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71020,7 +71938,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:silt_jade_tiles": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71028,7 +71947,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:silt_marble": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71036,7 +71956,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:silt_marble_heavy": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71044,7 +71965,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:silt_marble_slight": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71052,7 +71974,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:silt_slate_marble": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71060,7 +71983,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:silt_studded_crag_tiles": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71068,7 +71992,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71076,7 +72001,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone_brick_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71084,7 +72010,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone_brick_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71092,7 +72019,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone_brick_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71100,7 +72028,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71108,7 +72037,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone_pavement": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71116,7 +72046,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone_pavement_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71124,7 +72055,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone_pavement_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71132,7 +72064,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone_pavement_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71140,7 +72073,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone_pillar": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71148,7 +72082,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71156,7 +72091,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71164,7 +72100,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone_tile_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71172,7 +72109,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone_tile_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71180,7 +72118,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone_tile_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71188,7 +72127,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone_tiles": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71196,7 +72136,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:siltstone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71348,7 +72289,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:smooth_siltstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71356,7 +72298,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:smooth_siltstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71364,7 +72307,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:smooth_siltstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71372,7 +72316,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:smooth_siltstone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71420,7 +72365,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_chiseled_siltstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71428,7 +72374,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_cobbled_siltstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71436,7 +72383,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_cobbled_siltstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71444,7 +72392,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_cobbled_siltstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71452,7 +72401,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_cobbled_siltstone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71500,7 +72450,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_dark_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71508,7 +72459,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71652,7 +72604,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_siltstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71660,7 +72613,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_siltstone_brick_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71668,7 +72622,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_siltstone_brick_slight_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71676,7 +72631,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_siltstone_brick_slight_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71684,7 +72640,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_siltstone_brick_slight_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71692,7 +72649,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_siltstone_brick_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71700,7 +72658,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_siltstone_brick_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71708,7 +72667,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_siltstone_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71716,7 +72676,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_siltstone_bricks_slight": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71724,7 +72685,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_siltstone_pillar": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71732,7 +72694,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:snowy_siltstone_slight": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71764,7 +72727,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_cobbled_end_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71772,7 +72736,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_cobbled_end_stone_heavy": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71780,7 +72745,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_cobbled_end_stone_slight": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71796,7 +72762,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_end_basalt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71804,7 +72771,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_end_basalt_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71812,7 +72780,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_end_basalt_slight": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71820,7 +72789,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_end_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71828,7 +72798,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_end_rock": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71836,7 +72807,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_end_rock_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71844,7 +72816,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_end_rock_chiseled": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71852,7 +72825,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_end_stone_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71860,7 +72834,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_end_stone_bricks_heavy": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71868,7 +72843,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_end_stone_bricks_slight": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71876,7 +72852,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_end_stone_tiles": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71884,7 +72861,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_polished_ominous_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71892,7 +72870,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_polished_ominous_stone_heavy": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -71900,7 +72879,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:soiled_purpur_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -72236,7 +73216,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "goety:top_soiled_end_basalt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -74732,7 +75713,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "iceandfire:chared_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -74740,7 +75722,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "iceandfire:chared_dirt_path": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -74756,7 +75739,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "iceandfire:chared_gravel": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -74788,7 +75772,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "iceandfire:crackled_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -74796,7 +75781,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "iceandfire:crackled_dirt_path": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -74812,7 +75798,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "iceandfire:crackled_gravel": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -75172,7 +76159,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "iceandfire:frozen_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -75180,7 +76168,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "iceandfire:frozen_dirt_path": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -75196,7 +76185,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "iceandfire:frozen_gravel": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -75236,7 +76226,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "iceandfire:graveyard_soil": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -76420,7 +77411,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:grassy_earthen_clay": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -76428,7 +77420,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:grassy_permafrost": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -76436,7 +77429,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:grassy_sandy_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -76444,7 +77438,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:grassy_silt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -76508,7 +77503,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:loam": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77004,7 +78000,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:red_sand_layer_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77012,7 +78009,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:rooted_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77092,7 +78090,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:sand_layer_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77100,7 +78099,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:sandy_chiseled_stone_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77108,7 +78108,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:sandy_cobblestone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77116,7 +78117,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:sandy_cobblestone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77124,7 +78126,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:sandy_cobblestone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77132,7 +78135,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:sandy_cobblestone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77140,7 +78144,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:sandy_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77156,7 +78161,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:sandy_stone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77164,7 +78170,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:sandy_stone_brick_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77172,7 +78179,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:sandy_stone_brick_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77180,7 +78188,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:sandy_stone_brick_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77188,7 +78197,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:sandy_stone_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77196,7 +78206,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:sandy_stone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77204,7 +78215,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:sandy_stone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77212,7 +78224,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:sandy_stone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77220,7 +78233,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:silt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -77532,7 +78546,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "immersive_weathering:vitrified_sand": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -78524,7 +79539,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "malum:blighted_soil": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -82100,7 +83116,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:chiseled_red_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -82108,7 +83125,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:chiseled_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -82540,7 +83558,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:cut_red_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -82548,7 +83567,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:cut_red_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -82556,7 +83576,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:cut_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -82564,7 +83585,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:cut_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -83244,7 +84266,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:dirt_path": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -85076,7 +86099,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:mud_brick_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -85084,7 +86108,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:mud_brick_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -85092,7 +86117,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:mud_brick_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -85100,7 +86126,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:mud_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -85564,7 +86591,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:packed_mud": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -86716,7 +87744,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:red_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -86724,7 +87753,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:red_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -86732,7 +87762,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:red_sandstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -86740,7 +87771,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:red_sandstone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -86900,7 +87932,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -86908,7 +87941,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -86916,7 +87950,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:sandstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -86924,7 +87959,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:sandstone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -87108,7 +88144,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:smooth_red_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -87116,7 +88153,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:smooth_red_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -87124,7 +88162,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:smooth_red_sandstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -87132,7 +88171,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:smooth_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -87140,7 +88180,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:smooth_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -87148,7 +88189,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:smooth_sandstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -87228,7 +88270,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "minecraft:soul_soil": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -89196,7 +90239,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "mynethersdelight:resurgent_soil": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -90156,7 +91200,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "natures_spirit:chiseled_pink_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -90436,7 +91481,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "natures_spirit:cut_pink_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -90444,7 +91490,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "natures_spirit:cut_pink_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -93012,7 +94059,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "natures_spirit:pink_sand": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -93020,7 +94068,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "natures_spirit:pink_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -93028,7 +94077,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "natures_spirit:pink_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -93036,7 +94086,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "natures_spirit:pink_sandstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -93044,7 +94095,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "natures_spirit:pink_sandstone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -94060,7 +95112,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "natures_spirit:sandy_soil": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -94252,7 +95305,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "natures_spirit:smooth_pink_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -94260,7 +95314,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "natures_spirit:smooth_pink_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -94268,7 +95323,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "natures_spirit:smooth_pink_sandstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -97844,7 +98900,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "projectvibrantjourneys:ferrous_gravel": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -97852,7 +98909,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "projectvibrantjourneys:gilded_gravel": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -97860,7 +98918,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "projectvibrantjourneys:gilded_red_sand": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -97940,7 +98999,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "projectvibrantjourneys:muddy_bones": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -98076,7 +99136,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "projectvibrantjourneys:red_sandstone_rocks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -98100,7 +99161,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "projectvibrantjourneys:sandstone_rocks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -98108,7 +99170,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "projectvibrantjourneys:sandy_sprouts": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -99556,7 +100619,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:carved_mud_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -99708,7 +100772,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:chiseled_soul_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -99900,7 +100965,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:cut_red_sandstone_vertical_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -99908,7 +100974,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:cut_sandstone_vertical_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -99916,7 +100983,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:cut_soul_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -99924,7 +100992,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:cut_soul_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -99932,7 +101001,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:cut_soul_sandstone_vertical_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -100156,7 +101226,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:dirt_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -100164,7 +101235,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:dirt_bricks_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -100172,7 +101244,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:dirt_bricks_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -100180,7 +101253,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:dirt_bricks_vertical_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -100188,7 +101262,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:dirt_bricks_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -100196,7 +101271,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:dirty_glass": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -100204,7 +101280,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:dirty_glass_pane": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -100556,7 +101633,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:gravisand": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -101868,7 +102946,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:mud_brick_lattice": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -101876,7 +102955,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:mud_brick_vertical_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -101884,7 +102964,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:mud_pillar": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103324,7 +104405,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:red_sandstone_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103332,7 +104414,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:red_sandstone_bricks_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103340,7 +104423,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:red_sandstone_bricks_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103348,7 +104432,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:red_sandstone_bricks_vertical_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103356,7 +104441,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:red_sandstone_bricks_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103364,7 +104450,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:red_sandstone_vertical_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103460,7 +104547,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:sandstone_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103468,7 +104556,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:sandstone_bricks_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103476,7 +104565,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:sandstone_bricks_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103484,7 +104574,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:sandstone_bricks_vertical_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103492,7 +104583,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:sandstone_bricks_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103500,7 +104592,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:sandstone_vertical_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103636,7 +104729,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:smooth_red_sandstone_vertical_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103644,7 +104738,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:smooth_sandstone_vertical_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103652,7 +104747,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:smooth_soul_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103660,7 +104756,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:smooth_soul_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103668,7 +104765,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:smooth_soul_sandstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103676,7 +104774,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:smooth_soul_sandstone_vertical_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103692,7 +104791,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:soul_sandstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103700,7 +104800,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:soul_sandstone_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103708,7 +104809,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:soul_sandstone_bricks_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103716,7 +104818,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:soul_sandstone_bricks_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103724,7 +104827,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:soul_sandstone_bricks_vertical_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103732,7 +104836,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:soul_sandstone_bricks_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103740,7 +104845,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:soul_sandstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103748,7 +104854,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:soul_sandstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103756,7 +104863,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:soul_sandstone_vertical_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -103764,7 +104872,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "quark:soul_sandstone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -107924,7 +109033,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "supplementaries:gravel_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -108244,7 +109354,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "supplementaries:raked_gravel": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -108516,7 +109627,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "supplementaries:suspicious_gravel_bricks": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -108846,48 +109958,48 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:acacia_stall_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:alaharran_banner": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:alaharran_wall_banner": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:alfalfa_bale": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:alfalfa_bale_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:alfalfa_plant": {
@@ -108902,288 +110014,288 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_birch": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_black": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_crimson": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_dark_oak": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_jungle": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_oak": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_spruce": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_warped": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bin_grain_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:birch_stall_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:birch_stall_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:black_cone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bleacher": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bleacher_wireframe": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:block_o_water": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:blue_cone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:bridle_rack": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:brown_cone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:cantazarite_anvil": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:cantazarite_block": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:cantazarite_ore": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:compost": {
@@ -109198,48 +110310,48 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:dark_friendly_bars": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:dark_oak_stall_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:dark_oak_stall_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:dark_rubber_mat": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:dark_shavings": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:english_fence": {
@@ -109270,144 +110382,144 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:grain_feeder_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:grain_feeder_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:grain_feeder_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:grain_feeder_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:grain_feeder_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:grain_feeder_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:grain_feeder_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:grain_feeder_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:grain_feeder_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:grain_feeder_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:grain_feeder_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:grain_feeder_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:grain_feeder_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:grain_feeder_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:grain_feeder_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:gray_cone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:green_cone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:half_barrel_black": {
@@ -109542,200 +110654,200 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:helmet_riding": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:hitching_ring": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:horse_armor_rack": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:horse_pee": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:invisible_glow_block": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_brush_box": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_cavaletti_black": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_cavaletti_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_cavaletti_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_cavaletti_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_cavaletti_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_cavaletti_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_cavaletti_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_cavaletti_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_cavaletti_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_cavaletti_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_cavaletti_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_cavaletti_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_cavaletti_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_cavaletti_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_cavaletti_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_cavaletti_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_controller": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_coop": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_flower_box_black": {
@@ -109870,136 +110982,136 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_ground_pole_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_ground_pole_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_ground_pole_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_ground_pole_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_ground_pole_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_ground_pole_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_ground_pole_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_ground_pole_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_ground_pole_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_ground_pole_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_ground_pole_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_ground_pole_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_ground_pole_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_ground_pole_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_ground_pole_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_hedge": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_log": {
@@ -110014,392 +111126,392 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_arrow_black": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_arrow_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_arrow_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_arrow_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_arrow_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_arrow_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_arrow_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_arrow_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_arrow_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_arrow_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_arrow_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_arrow_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_arrow_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_arrow_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_arrow_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_arrow_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_stripe_black": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_stripe_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_stripe_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_stripe_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_stripe_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_stripe_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_stripe_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_stripe_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_stripe_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_stripe_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_stripe_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_stripe_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_stripe_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_stripe_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_stripe_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_stripe_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_wave_black": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_wave_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_wave_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_wave_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_wave_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_wave_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_wave_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_wave_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_wave_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_wave_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_wave_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_wave_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_wave_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_wave_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_wave_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_panel_wave_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_plank_black": {
@@ -110662,728 +111774,728 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_large_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_large_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_large_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_large_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_large_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_large_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_large_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_large_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_large_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_large_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_large_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_large_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_large_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_large_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_large_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_small_black": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_small_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_small_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_small_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_small_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_small_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_small_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_small_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_small_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_small_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_small_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_small_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_small_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_small_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_small_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_pole_on_box_small_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_rail_black": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_rail_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_rail_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_rail_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_rail_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_rail_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_rail_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_rail_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_rail_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_rail_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_rail_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_rail_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_rail_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_rail_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_rail_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_rail_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_roll_top_black": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_roll_top_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_roll_top_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_roll_top_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_roll_top_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_roll_top_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_roll_top_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_roll_top_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_roll_top_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_roll_top_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_roll_top_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_roll_top_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_roll_top_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_roll_top_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_roll_top_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_roll_top_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_stair_drop": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_standard_none": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_standard_radial": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_standard_schooling": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_standard_vertical_slat": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_wall": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jump_wall_mini": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jungle_stall_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:jungle_stall_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:lead_anchor": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:light_blue_cone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:light_friendly_bars": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:light_gray_cone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:light_rubber_mat": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:light_shavings": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:lime_cone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:locker": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:magenta_cone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:medium_friendly_bars": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:medium_rubber_mat": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:medium_shavings": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:metal_grate": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:meter_point": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:oak_stall_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:oak_stall_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:oat_bale": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:oat_bale_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:oat_plant": {
@@ -111398,80 +112510,80 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:paddock_feeder": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_black_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_black_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_blue_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_blue_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_brown_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_brown_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_cyan_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_cyan_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_fence_acacia": {
@@ -111534,32 +112646,32 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_gray_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_green_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_green_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_hitching_post": {
@@ -111582,949 +112694,950 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_light_blue_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_light_gray_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_light_gray_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_lime_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_lime_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_magenta_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_magenta_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_orange_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_orange_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_pink_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_pink_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_purple_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_purple_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_red_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_red_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_white_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_white_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_yellow_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pasture_yellow_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:pink_cone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:plaque_bronze": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:plaque_gold": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:plaque_silver": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:purple_cone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:quality_bale": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:quality_bale_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rack_blanket_5": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rack_halter_lead": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rack_lead_3": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rack_pasture_blanket_3_short": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rack_pasture_blanket_5_long": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:red_cone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_champion": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_rchampion": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_three_black": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_three_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_three_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_three_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_three_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_three_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_three_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_three_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_three_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_three_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_three_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_three_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_three_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_three_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_three_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_three_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_two_black": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_two_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_two_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_two_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_two_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_two_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_two_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_two_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_two_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_two_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_two_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_two_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_two_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_two_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_two_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:ribbon_two_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rosette_black": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rosette_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rosette_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rosette_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rosette_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rosette_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rosette_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rosette_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rosette_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rosette_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rosette_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rosette_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rosette_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rosette_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rosette_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:rosette_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:saddle_rack": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:separator_black": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:separator_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:separator_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:separator_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:separator_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:separator_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:separator_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:separator_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:separator_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:separator_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:separator_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:separator_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:separator_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:separator_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:separator_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:separator_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:shining_amethyst_cluster": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:shop": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:slow_feeder_black": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:slow_feeder_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:slow_feeder_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:slow_feeder_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:slow_feeder_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:slow_feeder_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:slow_feeder_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:slow_feeder_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:slow_feeder_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:slow_feeder_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:slow_feeder_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:slow_feeder_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:slow_feeder_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:slow_feeder_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:slow_feeder_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:slow_feeder_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:soiled_shavings": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -112534,184 +113647,184 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:spruce_stall_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:spruce_stall_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:star_worm_cobble": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tack_box_black": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tack_box_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tack_box_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tack_box_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tack_box_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tack_box_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tack_box_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tack_box_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tack_box_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tack_box_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tack_box_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tack_box_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tack_box_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tack_box_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tack_box_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tack_box_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:tearing_magma": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:timothy_bale": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:timothy_bale_slab": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:timothy_plant": {
@@ -112726,480 +113839,480 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:toy_jolly_apple_snack": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:toy_jolly_ball": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:toy_jolly_ball_hay": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:toy_lick_salt": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:toy_scratchy_pole": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:toy_string_treats": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:trophy_bronze": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:trophy_gold": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:trophy_silver": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:solid-default",
-      "detail": "stone, glass, metal, machine, or solid utility keyword",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wall_spigot": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:water_trough": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_black_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_black_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_black_rider": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_blue_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_blue_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_blue_rider": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_brown_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_brown_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_brown_rider": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_cyan_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_cyan_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_cyan_rider": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_gray_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_gray_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_gray_rider": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_green_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_green_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_green_rider": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_light_blue_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_light_blue_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_light_blue_rider": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_light_gray_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_light_gray_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_light_gray_rider": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_lime_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_lime_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_lime_rider": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_magenta_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_magenta_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_magenta_rider": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_orange_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_orange_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_orange_rider": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_pink_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_pink_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_pink_rider": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_purple_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_purple_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_purple_rider": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_red_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_red_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_red_rider": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_white_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_white_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_white_rider": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_yellow_care": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_yellow_horse": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:web_guard_yellow_rider": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:western_barrel": {
@@ -113286,8 +114399,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wet_compost": {
@@ -113302,136 +114415,136 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wheel_barrow_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wheel_barrow_brown": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wheel_barrow_cyan": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wheel_barrow_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wheel_barrow_green": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wheel_barrow_light_blue": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wheel_barrow_light_gray": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wheel_barrow_lime": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wheel_barrow_magenta": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wheel_barrow_orange": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wheel_barrow_pink": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wheel_barrow_purple": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wheel_barrow_red": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wheel_barrow_white": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:wheel_barrow_yellow": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:white_cone": {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:whitewash_button": {
@@ -113542,8 +114655,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
       "tools": [
         "pickaxe"
       ],
-      "origin": "heuristic:catchall-solid",
-      "detail": "residual solid/default classification",
+      "origin": "inference:legacy:pickaxe",
+      "detail": "legacy assignment carried forward",
       "outcome": "default"
     },
     "swem:yellow_snow": {
@@ -114148,7 +115261,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "tconstruct:earth_slime_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -114284,7 +115398,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "tconstruct:ender_slime_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -114828,7 +115943,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "tconstruct:ichor_slime_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -116484,7 +117600,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "tconstruct:sky_slime_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -117084,7 +118201,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "the_finley_dimension_remastered:finley_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -117100,7 +118218,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "the_finley_dimension_remastered:finley_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -117236,7 +118355,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "the_finley_dimension_remastered:living_dirt": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -117252,7 +118372,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "the_finley_dimension_remastered:living_grass_block": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -117348,7 +118469,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "the_finley_dimension_remastered:volcanic_sand": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -117452,7 +118574,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "the_flesh_that_hates:flesh_sand": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -117548,7 +118671,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "thirst:sand_filter": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -120892,7 +122016,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "twilightforest:uberous_soil": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -121532,7 +122657,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "undergarden:coarse_deepsoil": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -121564,7 +122690,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "undergarden:deepsoil": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -122276,7 +123403,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "undergarden:sediment": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -122284,7 +123412,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "undergarden:sediment_glass": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -122292,7 +123421,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "undergarden:sediment_glass_pane": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -123044,10 +124174,11 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:beige_limestone_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:beige_limestone_iron_ore": {
@@ -123084,7 +124215,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:beige_limestone_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -123140,7 +124272,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:chiseled_mudstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -123188,7 +124321,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:chiseled_siltstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -123412,10 +124546,11 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:conglomerate_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:conglomerate_iron_ore": {
@@ -123444,7 +124579,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:conglomerate_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -123524,7 +124660,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:cut_mudstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -123532,7 +124669,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:cut_mudstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -123540,7 +124678,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:cut_mudstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -123548,7 +124687,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:cut_mudstone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -123556,7 +124696,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:cut_siltstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -123564,7 +124705,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:cut_siltstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -123572,7 +124714,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:cut_siltstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -123580,7 +124723,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:cut_siltstone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -123636,15 +124780,17 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:dolomite_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:dolomite_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -123732,10 +124878,11 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:gabbro_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:gabbro_iron_ore": {
@@ -123772,7 +124919,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:gabbro_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -123860,10 +125008,11 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:granodiorite_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:granodiorite_iron_ore": {
@@ -123900,7 +125049,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:granodiorite_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124012,10 +125162,11 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:grey_limestone_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:grey_limestone_iron_ore": {
@@ -124052,7 +125203,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:grey_limestone_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124100,15 +125252,17 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:kimberlite_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:kimberlite_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124268,10 +125422,11 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:limestone_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:limestone_iron_ore": {
@@ -124308,7 +125463,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:limestone_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124500,7 +125656,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:mudstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124508,7 +125665,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:mudstone_coal_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124516,7 +125674,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:mudstone_copper_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124524,7 +125683,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:mudstone_diamond_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124532,7 +125692,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:mudstone_emerald_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124540,7 +125701,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:mudstone_gold_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124548,15 +125710,17 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:mudstone_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:mudstone_iron_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124564,7 +125728,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:mudstone_lapis_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124572,7 +125737,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:mudstone_redstone_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124580,7 +125746,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:mudstone_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124588,7 +125755,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:mudstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124596,7 +125764,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:mudstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124604,7 +125773,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:mudstone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -124615,7 +125785,7 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
         "pickaxe"
       ],
       "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "detail": "overgrown stone stays stone-routed",
       "outcome": "default"
     },
     "unearthed:overgrown_diorite": {
@@ -124623,7 +125793,7 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
         "pickaxe"
       ],
       "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "detail": "overgrown stone stays stone-routed",
       "outcome": "default"
     },
     "unearthed:overgrown_granite": {
@@ -124631,7 +125801,7 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
         "pickaxe"
       ],
       "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "detail": "overgrown stone stays stone-routed",
       "outcome": "default"
     },
     "unearthed:phyllite": {
@@ -124724,10 +125894,11 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:phyllite_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:phyllite_iron_ore": {
@@ -124764,7 +125935,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:phyllite_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125212,10 +126384,11 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:quartzite_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:quartzite_pressure_plate": {
@@ -125228,7 +126401,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:quartzite_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125316,10 +126490,11 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:rhyolite_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:rhyolite_iron_ore": {
@@ -125356,7 +126531,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:rhyolite_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125388,7 +126564,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:sandstone_coal_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125396,7 +126573,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:sandstone_copper_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125404,7 +126582,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:sandstone_diamond_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125412,7 +126591,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:sandstone_emerald_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125420,7 +126600,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:sandstone_gold_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125428,15 +126609,17 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:sandstone_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:sandstone_iron_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125444,7 +126627,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:sandstone_lapis_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125452,7 +126636,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:sandstone_redstone_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125460,7 +126645,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:sandstone_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125484,7 +126670,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:siltstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125492,7 +126679,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:siltstone_coal_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125500,7 +126688,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:siltstone_copper_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125508,7 +126697,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:siltstone_diamond_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125516,7 +126706,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:siltstone_emerald_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125524,7 +126715,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:siltstone_gold_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125532,15 +126724,17 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:siltstone_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:siltstone_iron_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125548,7 +126742,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:siltstone_lapis_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125556,7 +126751,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:siltstone_redstone_ore": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125564,7 +126760,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:siltstone_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125572,7 +126769,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:siltstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125580,7 +126778,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:siltstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125588,7 +126787,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:siltstone_wall": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125684,10 +126884,11 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:slate_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:slate_iron_ore": {
@@ -125724,7 +126925,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:slate_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125756,7 +126958,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:smooth_siltstone": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125764,7 +126967,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:smooth_siltstone_slab": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125772,7 +126976,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:smooth_siltstone_stairs": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125780,15 +126985,17 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:stone_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:stone_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -125884,10 +127091,11 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:white_granite_grassy_regolith": {
       "tools": [
-        "pickaxe"
+        "hand",
+        "shovel"
       ],
-      "origin": "override:exact",
-      "detail": "grass-over-stone regolith stays stone-routed",
+      "origin": "delegation:loose-earth",
+      "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
       "outcome": "default"
     },
     "unearthed:white_granite_iron_ore": {
@@ -125924,7 +127132,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "unearthed:white_granite_regolith": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -126220,7 +127429,8 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     },
     "weather2:sand_layer": {
       "tools": [
-        "hand"
+        "hand",
+        "shovel"
       ],
       "origin": "delegation:loose-earth",
       "detail": "sand, gravel, dirt, mud, regolith, or similar loose earth",
@@ -133847,18 +135057,16 @@ global.BTM_REALISTIC_HANDS_ASSIGNMENTS = {
     ]
   },
   "originCounts": {
-    "inference:legacy:pickaxe": 7211,
+    "inference:legacy:pickaxe": 8144,
     "delegation:loose-worked-earth": 257,
     "delegation:wood-products": 2405,
-    "delegation:loose-earth": 588,
+    "delegation:loose-earth": 605,
     "delegation:cultivated-soil": 15,
     "delegation:organics": 1241,
     "inference:legacy:hoe": 56,
     "delegation:potted-plants": 241,
     "inference:legacy:axe": 734,
-    "override:exact": 49,
-    "heuristic:catchall-solid": 564,
-    "heuristic:solid-default": 369,
+    "override:exact": 32,
     "override:web-family": 5,
     "inference:legacy:knife": 111,
     "inference:legacy:shovel": 21,

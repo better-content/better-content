@@ -11008,7 +11008,7 @@ metafile = true
 
 [[files]]
 file = "mods/btmdimtrees-0.1.0.jar"
-hash = "80d8343e7a6d8481a735beacd98e266b36be589fb29078a985454bbc36ad3e7e"
+hash = "280fd7a311f49a6a2315ecb4820b806f437466f8a4c1bdda5319be3bb256cff3"
 
 [[files]]
 file = "mods/btmfixes-0.1.0-all.jar"
@@ -11414,6 +11414,11 @@ metafile = true
 [[files]]
 file = "mods/geckolib.pw.toml"
 hash = "a1dba016bfd85fbabc5ff7c78f0302d3dd5b20026842231d6422947a7bb5f6f0"
+metafile = true
+
+[[files]]
+file = "mods/genetic-animals.pw.toml"
+hash = "6620e4c841843656716df4e32d90240ad8d2e496457c4e4635f9bcde836ad23f"
 metafile = true
 
 [[files]]

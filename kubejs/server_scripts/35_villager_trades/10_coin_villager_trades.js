@@ -545,6 +545,7 @@ if (typeof MoreJSEvents !== 'undefined') {
         btmAddTrades(event, 'minecraft:fisherman', [
             [1, 'copper', 2, 'minecraft:cod', 8, 16, 2],
             [1, 'copper', 3, 'minecraft:fishing_rod', 1, 8, 2],
+            [1, 'copper', 3, 'minecraft:dark_oak_boat', 1, 8, 2],
             [1, 'copper', 2, 'starcatcher:worm', 8, 12, 2],
             [1, 'copper', 3, 'starcatcher:starcatcher_twine', 2, 8, 2],
             [2, 'iron', 3, 'starcatcher:bobber', 1, 8, 6],
@@ -592,7 +593,10 @@ if (typeof MoreJSEvents !== 'undefined') {
         btmAddTrades(event, 'minecraft:leatherworker', [
             [1, 'copper', 4, 'sophisticatedbackpacks:backpack', 1, 4, 4],
             [1, 'copper', 2, 'minecraft:leather_boots', 1, 8, 2],
+            [1, 'copper', 3, 'cold_sweat:filled_waterskin', 1, 6, 3],
             [2, 'iron', 4, 'sophisticatedbackpacks:pickup_upgrade', 1, 4, 8],
+            [2, 'iron', 3, 'farmersdelight:rope', 8, 8, 6],
+            [2, 'iron', 4, 'minecraft:lead', 2, 6, 8],
             [2, 'brass', 3, 'cold_sweat:sewing_table', 1, 4, 8],
             [3, 'brass', 4, 'cold_sweat:goat_fur', 4, 6, 10],
             [3, 'brass', 5, 'cold_sweat:hoglin_hide', 2, 4, 10],
@@ -604,9 +608,14 @@ if (typeof MoreJSEvents !== 'undefined') {
         btmAddTrades(event, 'minecraft:mason', [
             [1, 'copper', 2, 'minecraft:bricks', 8, 16, 2],
             [1, 'copper', 2, 'minecraft:terracotta', 8, 16, 2],
+            [1, 'copper', 2, 'minecraft:cobblestone_wall', 16, 16, 2],
+            [1, 'copper', 2, 'minecraft:ladder', 16, 16, 2],
             [1, 'copper', 3, 'wares:cardboard_box', 4, 12, 2],
             [2, 'iron', 3, 'tconstruct:seared_brick', 8, 12, 6],
+            [2, 'iron', 3, 'minecraft:stonecutter', 1, 6, 6],
+            [2, 'iron', 4, 'minecraft:barrel', 2, 8, 6],
             [2, 'brass', 3, 'tconstruct:scorched_brick', 8, 8, 10],
+            [3, 'brass', 4, 'minecraft:cauldron', 1, 4, 10],
             [3, 'brass', 4, 'minecraft:quartz_block', 8, 8, 10],
             [3, 'brass', 4, 'minecraft:stone_bricks', 16, 8, 10],
             [3, 'brass', 4, 'minecraft:mossy_stone_bricks', 16, 8, 10],
@@ -622,6 +631,7 @@ if (typeof MoreJSEvents !== 'undefined') {
         // Toolsmith: recovery tools and workshop consumables.
         btmAddTrades(event, 'minecraft:toolsmith', [
             [1, 'copper', 4, 'tconstruct:repair_kit', 1, 8, 3],
+            [1, 'copper', 2, 'minecraft:flint_and_steel', 1, 8, 2],
             [1, 'copper', 3, 'minecraft:stone_pickaxe', 1, 8, 2],
             [2, 'iron', 4, 'minecraft:iron_pickaxe', 1, 4, 6],
             [2, 'brass', 4, 'minecraft:shears', 1, 6, 6],
@@ -690,8 +700,14 @@ if (typeof MoreJSEvents !== 'undefined') {
         btmAddTrades(event, 'minecraft:cartographer', [
             [1, 'copper', 3, 'minecraft:map', 2, 12, 2],
             [1, 'copper', 3, 'minecraft:compass', 1, 8, 2],
+            [1, 'copper', 2, 'minecraft:oak_sign', 8, 12, 2],
             [2, 'iron', 4, 'minecraft:clock', 1, 8, 6],
+            [2, 'iron', 3, 'minecraft:item_frame', 2, 8, 6],
+            [2, 'iron', 3, 'minecraft:writable_book', 2, 8, 6],
+            [2, 'iron', 4, 'minecraft:minecart', 1, 6, 6],
             [2, 'brass', 4, 'minecraft:filled_map', 1, 6, 6],
+            [3, 'brass', 4, 'minecraft:chest_minecart', 1, 4, 10],
+            [3, 'brass', 4, 'minecraft:spyglass', 1, 4, 10],
             [3, 'brass', 5, 'minecraft:white_banner', 4, 6, 10],
             [3, 'brass', 5, 'minecraft:recovery_compass', 1, 3, 12],
             [4, 'gold', 4, 'naturescompass:naturescompass', 1, 3, 14],

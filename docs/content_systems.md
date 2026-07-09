@@ -81,7 +81,7 @@ RBP coverage should continue as explicit allowlists by profile, not broad fallba
 Hostile pressure is authored as a terrain and route problem, not a simple night-cycle timer. Normal surface spawns are reduced, but ordinary hostiles should not spawn directly under open sky day or night. Covered ground, caves, and other underground-adjacent spaces remain active hostile feeders; those mobs persist through daytime and use increased pathing range so they can leave caves and pursue nearby players on the surface. Daylight reduces direct spawn injection, not existing-threat pressure.
 
 Pillager Campaigns follows the same rule. Warbands stage away from the player and path across the world into contact, so settlement defense depends on line of sight, perimeter control, cave sealing, walls, elevation, and route management rather than on surviving a fixed night window. Difficulty should feel spatial: the world gets more dangerous when nearby terrain can deliver enemies to you, not merely because the clock advanced.
-Campaign-spawned pillagers are also an authored loot surface rather than generic attrition trash: the `pillagercampaigns` runtime now forces 100% equipment drop chance on every carried gear slot, so killing a squad or warlord always yields the exact weapons, armor, banners, and offhand items they were using.
+Campaign-spawned pillagers are also an authored loot surface rather than generic attrition trash: the `pillagercampaigns` runtime now forces 100% equipment drop chance on every carried gear slot, so killing a squad or warlord always yields the exact weapons, armor, banners, and offhand items they were using. Player-caused kills on those campaign enemies also pay Create Deco coin bundles whose count and highest unlocked tier scale from the current warband strength, with captains and warlords paying larger, rarer bundles than ordinary followers.
 
 Vertical danger is also explicit. Born in Chaos monsters are confined to the Overworld below Y 0, making the deep band a separate combat regime rather than a generic cave extension. The lava-depth ore route in `datapacks/realistic_ores_lava_depths` is therefore both a geology gate and a survival-equipment gate: uranium, thorium, and osmiridium lava sulfide recovery is intended to require prepared lava diving, with Protection Pixel Tosaki gear as the expected late solution.
 
@@ -126,8 +126,9 @@ Do not add a simple crafting recipe for a component that bypasses a cased or man
 ## Loot, Coins, Wares, And Trades
 
 Coins are defined in `global.BTM_COIN_TIERS`: copper, zinc, iron, industrial iron, brass, gold, and platinum using Create Deco coin items. `35_villager_trades/10_coin_villager_trades.js` replaces village trades with dotcoin purchases and lossy coin exchange.
+Pillager Campaigns is now part of that coin economy too: active campaign kills are a combat payout surface, not just incidental loot, and their bundles scale upward with the warband's current adaptive raid strength rather than using a flat mob table.
 
-Villager and wandering-trader markets are recovery and route-planning support, not renewable material factories. Their registration helper rejects raw/geologic/material buy results such as stone, ores/metals, redstone-class dusts, Blood/Ars matter shortcuts, AE2 sky stone/certus, and core Create material components; grown foods, fibers, animal products, and selected expedition drops can still participate in the coin lane.
+Villager and wandering-trader markets are recovery and route-planning support, not renewable material factories. The current trade pass leans early and midgame on hydration, field utility, walls, signs, minecarts, rope, boats, and similar settlement stock, while keeping deep-progression knowledge outputs like experience bottles, echo shards, and sculk catalysts out of normal buy restocks.
 
 Loot is treated as a crafting surface:
 

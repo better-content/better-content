@@ -9326,7 +9326,7 @@ hash = "46a66b6e003ba7953c9a13428fd9c1967e862a673d7fd849831defab59eb08f1"
 
 [[files]]
 file = "kubejs/config/economy_acquisition.json"
-hash = "53d340facb21646b2ce266502b1347bdede69cd5a9668e98bed4274e72351cef"
+hash = "d2126108fda59cc5dadaad0bce14bdc4541c7a16179ea666a00272a5a12a118b"
 
 [[files]]
 file = "kubejs/config/food_effect_progression_candidates.json"
@@ -11769,7 +11769,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillagercampaigns-0.2.0.jar"
-hash = "94831e23f0911551ea3169dfce0c98503709c2fd53a95eea4195570794f1eee9"
+hash = "43c6bb5ae139a7601dfd19396b7b8c3bbcb21165e4d099027c7c01cfaa79ca1e"
 
 [[files]]
 file = "mods/placebo.pw.toml"

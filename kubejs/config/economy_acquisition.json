@@ -43,6 +43,83 @@
       ]
     },
     {
+      "id": "pillager_campaigns:combat_payout:createdeco:copper_coin",
+      "source": "pillager_campaigns",
+      "output": "createdeco:copper_coin",
+      "policy": "currency_only",
+      "era_reference": null,
+      "evidence": [
+        "generated/custom-mod-sources/pillager-campaigns/src/main/kotlin/com/gerald/pillagercampaigns/PillagerCampaignsEvents.kt",
+        "generated/custom-mod-sources/pillager-campaigns/src/main/kotlin/com/gerald/pillagercampaigns/system/PillagerRuntime.kt"
+      ]
+    },
+    {
+      "id": "pillager_campaigns:combat_payout:createdeco:zinc_coin",
+      "source": "pillager_campaigns",
+      "output": "createdeco:zinc_coin",
+      "policy": "currency_only",
+      "era_reference": null,
+      "evidence": [
+        "generated/custom-mod-sources/pillager-campaigns/src/main/kotlin/com/gerald/pillagercampaigns/PillagerCampaignsEvents.kt",
+        "generated/custom-mod-sources/pillager-campaigns/src/main/kotlin/com/gerald/pillagercampaigns/system/PillagerRuntime.kt"
+      ]
+    },
+    {
+      "id": "pillager_campaigns:combat_payout:createdeco:iron_coin",
+      "source": "pillager_campaigns",
+      "output": "createdeco:iron_coin",
+      "policy": "currency_only",
+      "era_reference": null,
+      "evidence": [
+        "generated/custom-mod-sources/pillager-campaigns/src/main/kotlin/com/gerald/pillagercampaigns/PillagerCampaignsEvents.kt",
+        "generated/custom-mod-sources/pillager-campaigns/src/main/kotlin/com/gerald/pillagercampaigns/system/PillagerRuntime.kt"
+      ]
+    },
+    {
+      "id": "pillager_campaigns:combat_payout:createdeco:industrial_iron_coin",
+      "source": "pillager_campaigns",
+      "output": "createdeco:industrial_iron_coin",
+      "policy": "currency_only",
+      "era_reference": null,
+      "evidence": [
+        "generated/custom-mod-sources/pillager-campaigns/src/main/kotlin/com/gerald/pillagercampaigns/PillagerCampaignsEvents.kt",
+        "generated/custom-mod-sources/pillager-campaigns/src/main/kotlin/com/gerald/pillagercampaigns/system/PillagerRuntime.kt"
+      ]
+    },
+    {
+      "id": "pillager_campaigns:combat_payout:createdeco:brass_coin",
+      "source": "pillager_campaigns",
+      "output": "createdeco:brass_coin",
+      "policy": "currency_only",
+      "era_reference": null,
+      "evidence": [
+        "generated/custom-mod-sources/pillager-campaigns/src/main/kotlin/com/gerald/pillagercampaigns/PillagerCampaignsEvents.kt",
+        "generated/custom-mod-sources/pillager-campaigns/src/main/kotlin/com/gerald/pillagercampaigns/system/PillagerRuntime.kt"
+      ]
+    },
+    {
+      "id": "pillager_campaigns:combat_payout:createdeco:gold_coin",
+      "source": "pillager_campaigns",
+      "output": "createdeco:gold_coin",
+      "policy": "currency_only",
+      "era_reference": null,
+      "evidence": [
+        "generated/custom-mod-sources/pillager-campaigns/src/main/kotlin/com/gerald/pillagercampaigns/PillagerCampaignsEvents.kt",
+        "generated/custom-mod-sources/pillager-campaigns/src/main/kotlin/com/gerald/pillagercampaigns/system/PillagerRuntime.kt"
+      ]
+    },
+    {
+      "id": "pillager_campaigns:combat_payout:createdeco:netherite_coin",
+      "source": "pillager_campaigns",
+      "output": "createdeco:netherite_coin",
+      "policy": "currency_only",
+      "era_reference": null,
+      "evidence": [
+        "generated/custom-mod-sources/pillager-campaigns/src/main/kotlin/com/gerald/pillagercampaigns/PillagerCampaignsEvents.kt",
+        "generated/custom-mod-sources/pillager-campaigns/src/main/kotlin/com/gerald/pillagercampaigns/system/PillagerRuntime.kt"
+      ]
+    },
+    {
       "id": "loot:kubejs/data/artifacts/loot_tables/artifact.json:artifacts:anglers_hat",
       "source": "loot",
       "output": "artifacts:anglers_hat",

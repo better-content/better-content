@@ -23,15 +23,7 @@
 					title: "A-H"
 				}
 			]
-			rewards: [
-				{
-					id: "599943A7465EC31D"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["7 starter stubs."]
 		}
 		{
@@ -50,28 +42,20 @@
 					count: 1
 				}
 				{
-					id: "EE0193F615D91990"
+					id: "F6782EAA8FCBC9E1"
+					type: "item"
+					item: "mynethersdelight:enchanted_golden_egg"
+					count: 1
+				}
+				{
+					id: "3592651D4936A76D"
 					type: "item"
 					item: "minecraft:enchanted_golden_apple"
 					count: 1
 				}
-				{
-					id: "7EDA23619EB9F544"
-					type: "item"
-					item: "farmersrespite:long_apple_cider"
-					count: 1
-				}
 			]
-			rewards: [
-				{
-					id: "3BE0562431530D27"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include minecraft:golden_apple, minecraft:enchanted_golden_apple, and farmersrespite:long_apple_cider. Check EMI for the current food or brewing route."]
+			rewards: [ ]
+			description: ["Source items: minecraft:golden_apple, mynethersdelight:enchanted_golden_egg, minecraft:enchanted_golden_apple | Runtime hint: kettle_infusion"]
 		}
 		{
 			id: "02CD37C883973A18"
@@ -101,16 +85,8 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A768926D26329FBD"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include delightful:cactus_chili, mynethersdelight:spicy_curry, and mynethersdelight:hot_wings_bucket. Check EMI for the current kitchen route."]
+			rewards: [ ]
+			description: ["Source items: delightful:cactus_chili, mynethersdelight:spicy_curry, mynethersdelight:hot_wings_bucket | Runtime hint: kitchen_infrastructure"]
 		}
 		{
 			id: "F0E95704A963095F"
@@ -140,16 +116,8 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "554CF2A10CC6ACFA"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include farmersrespite:coffee_beans, farmersrespite:green_tea_leaves, and farmersrespite:long_coffee. Check EMI for the current kitchen route."]
+			rewards: [ ]
+			description: ["Source items: farmersrespite:coffee_beans, farmersrespite:green_tea_leaves, farmersrespite:long_coffee | Runtime hint: kitchen_infrastructure"]
 		}
 		{
 			id: "50A8E2A8287266AB"
@@ -173,22 +141,14 @@
 					count: 1
 				}
 				{
-					id: "6CBBF22BE4741F95"
+					id: "21D57620ED00FD38"
 					type: "item"
-					item: "mynethersdelight:spicy_noodle_soup"
+					item: "brewinandchewin:fiery_fondue"
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "F50D470D8DD7C30E"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include farmersrespite:rose_hips, farmersdelight:chicken_soup, and mynethersdelight:spicy_noodle_soup. Check EMI for the current kitchen route."]
+			rewards: [ ]
+			description: ["Source items: farmersrespite:rose_hips, farmersdelight:chicken_soup, brewinandchewin:fiery_fondue | Runtime hint: kitchen_infrastructure"]
 		}
 		{
 			id: "23CEB45A38B3C47C"
@@ -218,16 +178,8 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "866B11FF9D1661D9"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include delightful:cactus_chili, minecraft:magma_cream, and minecraft:enchanted_golden_apple. Check EMI for the current brewing route."]
+			rewards: [ ]
+			description: ["Source items: delightful:cactus_chili, minecraft:magma_cream, minecraft:enchanted_golden_apple | Runtime hint: keg_distillation"]
 		}
 		{
 			id: "36F070D64A01ABA0"
@@ -251,22 +203,14 @@
 					count: 1
 				}
 				{
-					id: "CF3E3C1CD86DCEF7"
+					id: "9965CAFC53747F52"
 					type: "item"
-					item: "undergarden:droopvine_item"
+					item: "delightful:glow_jam_jar"
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "9355D573EFA40E05"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include minecraft:glow_berries, minecraft:glow_ink_sac, and undergarden:droopvine_item. Check EMI for the current infusion route."]
+			rewards: [ ]
+			description: ["Source items: minecraft:glow_berries, minecraft:glow_ink_sac, delightful:glow_jam_jar | Runtime hint: kettle_infusion"]
 		}
 		{
 			id: "76A94BDB4D8E96A2"
@@ -296,16 +240,8 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "D30CEE7EE82B3307"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include farmersrespite:green_tea_leaves, farmersrespite:coffee_beans, and farmersrespite:long_green_tea. Check EMI for the current infusion route."]
+			rewards: [ ]
+			description: ["Source items: farmersrespite:green_tea_leaves, farmersrespite:coffee_beans, farmersrespite:long_green_tea | Runtime hint: kettle_infusion"]
 		}
 		{
 			id: "D64D5885A0DB6B1A"
@@ -322,15 +258,7 @@
 					title: "I-P"
 				}
 			]
-			rewards: [
-				{
-					id: "73E8FD20057ECEBF"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["8 starter stubs."]
 		}
 		{
@@ -361,16 +289,8 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "B4BA014C15AB87DA"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include brewinandchewin:vodka, brewinandchewin:mead, and brewinandchewin:dread_nog. Check EMI for the current brewing route."]
+			rewards: [ ]
+			description: ["Source items: brewinandchewin:vodka, brewinandchewin:mead, brewinandchewin:dread_nog | Runtime hint: keg_distillation"]
 		}
 		{
 			id: "B0074CABBF7256DE"
@@ -394,55 +314,33 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "15A2E90E1AD7F37B"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include undergarden:gloomper_leg and minecraft:rabbit_foot. Check EMI for the current infusion route."]
+			rewards: [ ]
+			description: ["Source items: undergarden:gloomper_leg, minecraft:rabbit_foot | Runtime hint: kettle_infusion"]
 		}
 		{
 			id: "B5F592CF11584031"
 			title: "All Effects: Levitation"
-			icon: "ends_delight:shulker_meat"
+			icon: "minecraft:shulker_shell"
 			shape: "rsquare"
 			size: 1.0d
 			x: 4.0d
 			y: 3.25d
 			tasks: [
 				{
-					id: "F02316A661ECCEE6"
-					type: "item"
-					item: "ends_delight:shulker_meat"
-					count: 1
-				}
-				{
-					id: "CCE683C78A8E0050"
+					id: "96743E6062B4095D"
 					type: "item"
 					item: "minecraft:shulker_shell"
 					count: 1
 				}
 				{
-					id: "9DC97C78E74F7F05"
+					id: "5D79A9D1EE2BA859"
 					type: "item"
-					item: "ends_delight:shulker_omelette"
+					item: "occultism:demons_dream_essence"
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "1050376AB4FDE594"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include ends_delight:shulker_meat, minecraft:shulker_shell, and ends_delight:shulker_omelette. Expect this effect to require dangerous End materials."]
+			rewards: [ ]
+			description: ["Source items: minecraft:shulker_shell, occultism:demons_dream_essence | Runtime hint: dangerous_extraction"]
 		}
 		{
 			id: "4A8E9D990487D13D"
@@ -472,16 +370,8 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "EF2B383CA1227498"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include occultism:otherworld_essence, minecraft:rabbit_foot, and occultism:demons_dream_essence. Check EMI for the current infusion route."]
+			rewards: [ ]
+			description: ["Source items: occultism:otherworld_essence, minecraft:rabbit_foot, occultism:demons_dream_essence | Runtime hint: kettle_infusion"]
 		}
 		{
 			id: "6B1AF497791CB750"
@@ -511,16 +401,8 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "CEBF5132DCB912F5"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include ars_nouveau:sourceberry_bush, ars_nouveau:source_berry_pie, and ars_nouveau:source_berry_roll. Expect this effect to use magic or brewing work."]
+			rewards: [ ]
+			description: ["Source items: ars_nouveau:sourceberry_bush, ars_nouveau:source_berry_pie, ars_nouveau:source_berry_roll | Runtime hint: magic_distillation"]
 		}
 		{
 			id: "9C7C3D2E90D82897"
@@ -544,22 +426,14 @@
 					count: 1
 				}
 				{
-					id: "8673A51953C7E01F"
+					id: "43F5F4ACB8B3D199"
 					type: "item"
-					item: "collectorsreap:carrot_gummy"
+					item: "creatingspace:space_food"
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "39D9988B357D8D32"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include ubesdelight:ube, minecraft:golden_carrot, and collectorsreap:carrot_gummy. Check EMI for the current infusion route."]
+			rewards: [ ]
+			description: ["Source items: ubesdelight:ube, minecraft:golden_carrot, creatingspace:space_food | Runtime hint: kettle_infusion"]
 		}
 		{
 			id: "A9219EEAE5CC1265"
@@ -589,16 +463,8 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "0C843B4F4069B7C0"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include farmersdelight:cabbage, farmersdelight:ham, and brewinandchewin:scarlet_pierogi. Check EMI for the current kitchen route."]
+			rewards: [ ]
+			description: ["Source items: farmersdelight:cabbage, farmersdelight:ham, brewinandchewin:scarlet_pierogi | Runtime hint: kitchen_infrastructure"]
 		}
 		{
 			id: "A0E84B2205554FED"
@@ -628,16 +494,8 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "054DEE87A0F0EA48"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include minecraft:spider_eye, minecraft:pufferfish, and minecraft:poisonous_potato. Handle these ingredients as hazardous food or mob drops."]
+			rewards: [ ]
+			description: ["Source items: minecraft:spider_eye, minecraft:pufferfish, minecraft:poisonous_potato | Runtime hint: dangerous_extraction"]
 		}
 		{
 			id: "88A711CAEF594C50"
@@ -654,15 +512,7 @@
 					title: "Q-Z"
 				}
 			]
-			rewards: [
-				{
-					id: "2D02B46F4AFCE9F5"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["10 starter stubs."]
 		}
 		{
@@ -681,28 +531,14 @@
 					count: 1
 				}
 				{
-					id: "94090D8DBE3BB17E"
-					type: "item"
-					item: "collectorsreap:deific_blood"
-					count: 1
-				}
-				{
-					id: "67702F080DEDEB74"
+					id: "F7F52B146D356C51"
 					type: "item"
 					item: "brewinandchewin:bloody_mary"
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "C5DD8E86A01A4C3D"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include brewinandchewin:red_rum, collectorsreap:deific_blood, and brewinandchewin:bloody_mary. Check EMI for the current brewing route."]
+			rewards: [ ]
+			description: ["Source items: brewinandchewin:red_rum, brewinandchewin:bloody_mary | Runtime hint: keg_distillation"]
 		}
 		{
 			id: "1206B4E7B495F6E6"
@@ -726,22 +562,14 @@
 					count: 1
 				}
 				{
-					id: "44BD899CE0E4669F"
+					id: "C0666FECFB61D9FD"
 					type: "item"
-					item: "ends_delight:fried_dragon_egg"
+					item: "undergarden:blood_globule"
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "B7A3114211305343"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include farmersrespite:rose_hips, minecraft:ghast_tear, and ends_delight:fried_dragon_egg. Check EMI for the current brewing route."]
+			rewards: [ ]
+			description: ["Source items: farmersrespite:rose_hips, minecraft:ghast_tear, undergarden:blood_globule | Runtime hint: keg_distillation"]
 		}
 		{
 			id: "A37800F01BBCC82B"
@@ -771,16 +599,8 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "06DDA555BE196D8E"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include farmersrespite:yellow_tea_leaves, delightful:cantaloupe, and undergarden:ink_mushroom. Check EMI for the current brewing route."]
+			rewards: [ ]
+			description: ["Source items: farmersrespite:yellow_tea_leaves, delightful:cantaloupe, undergarden:ink_mushroom | Runtime hint: keg_distillation"]
 		}
 		{
 			id: "1B72275AB9460582"
@@ -810,16 +630,8 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "BED782FF1CE3A027"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include delightful:marshmallow_stick, minecraft:phantom_membrane, and undergarden:veiled_stew. Check EMI for the current infusion route."]
+			rewards: [ ]
+			description: ["Source items: delightful:marshmallow_stick, minecraft:phantom_membrane, undergarden:veiled_stew | Runtime hint: kettle_infusion"]
 		}
 		{
 			id: "1FA1DB75C7DA9A16"
@@ -849,16 +661,8 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "BA047ED0627F3FB3"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include farmersrespite:coffee_beans, create:bar_of_chocolate, and minecraft:sugar. Check EMI for the current infusion route."]
+			rewards: [ ]
+			description: ["Source items: farmersrespite:coffee_beans, create:bar_of_chocolate, minecraft:sugar | Runtime hint: kettle_infusion"]
 		}
 		{
 			id: "29118F246A1CB75B"
@@ -876,28 +680,20 @@
 					count: 1
 				}
 				{
-					id: "0F1FF6027B18B4CC"
-					type: "item"
-					item: "collectorsreap:pomegranate"
-					count: 1
-				}
-				{
-					id: "D8555E275E1668F7"
+					id: "01D51C1D6A0A0FB0"
 					type: "item"
 					item: "minecraft:blaze_powder"
 					count: 1
 				}
-			]
-			rewards: [
 				{
-					id: "8CB42A81CFB912FE"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
+					id: "4967341D38E9EDAE"
+					type: "item"
+					item: "delightful:deluxe_cheeseburger"
+					count: 1
 				}
 			]
-
-			description: ["Possible sources include brewinandchewin:red_rum, collectorsreap:pomegranate, and minecraft:blaze_powder. Check EMI for the current brewing route."]
+			rewards: [ ]
+			description: ["Source items: brewinandchewin:red_rum, minecraft:blaze_powder, delightful:deluxe_cheeseburger | Runtime hint: keg_distillation"]
 		}
 		{
 			id: "52C4843D7A77149B"
@@ -921,55 +717,45 @@
 					count: 1
 				}
 				{
-					id: "C81C530AEBC11C92"
+					id: "7185BCF52E4C468A"
 					type: "item"
-					item: "collectorsreap:reanimators_garden"
+					item: "brewinandchewin:saccharine_rum"
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "F7612198DFD2B13E"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include brewinandchewin:mead, minecraft:honey_bottle, and collectorsreap:reanimators_garden. Check EMI for the current brewing route."]
+			rewards: [ ]
+			description: ["Source items: brewinandchewin:mead, minecraft:honey_bottle, brewinandchewin:saccharine_rum | Runtime hint: keg_distillation"]
 		}
 		{
 			id: "063D9468F2630DE3"
 			title: "All Effects: Third Eye"
-			icon: "occultism:demons_dream_essence"
+			icon: "occultism:datura"
 			shape: "rsquare"
 			size: 1.0d
 			x: 10.25d
 			y: 6.5d
 			tasks: [
 				{
-					id: "0729BE1D26E1F033"
+					id: "EBDBF27941298A44"
+					type: "item"
+					item: "occultism:datura"
+					count: 1
+				}
+				{
+					id: "DB958475881F856E"
 					type: "item"
 					item: "occultism:demons_dream_essence"
 					count: 1
 				}
 				{
-					id: "4DD314FF1163A65B"
+					id: "38FA4E6FC19AF2C9"
 					type: "item"
 					item: "occultism:otherworld_essence"
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A39831CD57C6A846"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include occultism:demons_dream_essence and occultism:otherworld_essence. Expect this effect to use magic or brewing work."]
+			rewards: [ ]
+			description: ["Source items: occultism:datura, occultism:demons_dream_essence, occultism:otherworld_essence | Runtime hint: magic_distillation"]
 		}
 		{
 			id: "A9A7B8848F32F438"
@@ -999,16 +785,8 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "0C021D212A97519D"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include delightful:salmonberries, minecraft:sea_pickle, and minecraft:pufferfish. Check EMI for the current infusion route."]
+			rewards: [ ]
+			description: ["Source items: delightful:salmonberries, minecraft:sea_pickle, minecraft:pufferfish | Runtime hint: kettle_infusion"]
 		}
 		{
 			id: "A25680D748905E2C"
@@ -1038,16 +816,8 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "07F32572ED35FB89"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["Possible sources include farmersrespite:purulent_tea, minecraft:fermented_spider_eye, and brewinandchewin:withering_dross. Handle these ingredients as dangerous late consumables."]
+			rewards: [ ]
+			description: ["Source items: farmersrespite:purulent_tea, minecraft:fermented_spider_eye, brewinandchewin:withering_dross | Runtime hint: dangerous_extraction"]
 		}
 	]
 }

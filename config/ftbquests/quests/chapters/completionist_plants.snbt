@@ -8,17 +8,31 @@
 	order_index: 14
 	quest_links: [ ]
 	quests: [
-
-
-
-
+		{
+			id: "SYNTHETIC"
+			title: "Items"
+			icon: "minecraft:oak_sapling"
+			shape: "square"
+			size: 0.8d
+			x: 0.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "SYNTHETIC"
+					type: "checkmark"
+					title: "Items"
+				}
+			]
+			rewards: [ ]
+			description: ["7 starter stubs."]
+		}
 		{
 			id: "FEF8CACDE404485A"
 			title: "All Plants: Cabbage Seeds"
 			icon: "farmersdelight:cabbage_seeds"
 			shape: "rsquare"
 			size: 1.0d
-			x: 5.25d
+			x: 1.5d
 			y: 0.0d
 			tasks: [
 				{
@@ -28,15 +42,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "5B5D6F6841A1EDFF"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "01562CB8C70566C6"
@@ -44,7 +50,7 @@
 			icon: "farmersdelight:tomato_seeds"
 			shape: "rsquare"
 			size: 1.0d
-			x: 6.5d
+			x: 2.75d
 			y: 0.0d
 			tasks: [
 				{
@@ -54,15 +60,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A4F3891D62A0C363"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "8E1EA7BAD84249EA"
@@ -70,7 +68,7 @@
 			icon: "minecraft:beetroot_seeds"
 			shape: "rsquare"
 			size: 1.0d
-			x: 7.75d
+			x: 4.0d
 			y: 0.0d
 			tasks: [
 				{
@@ -80,15 +78,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "2BBB021F7DE7EC4F"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "89F25839D9C97B14"
@@ -96,7 +86,7 @@
 			icon: "minecraft:melon_seeds"
 			shape: "rsquare"
 			size: 1.0d
-			x: 9.0d
+			x: 5.25d
 			y: 0.0d
 			tasks: [
 				{
@@ -106,15 +96,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "2C57FD9C7C6CDEB1"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "61A97AE81BC83961"
@@ -122,7 +104,7 @@
 			icon: "minecraft:pumpkin_seeds"
 			shape: "rsquare"
 			size: 1.0d
-			x: 10.25d
+			x: 6.5d
 			y: 0.0d
 			tasks: [
 				{
@@ -132,15 +114,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "C40CDF4DBE6D9CC4"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "232909A1A72C8CB5"
@@ -148,7 +122,7 @@
 			icon: "minecraft:wheat_seeds"
 			shape: "rsquare"
 			size: 1.0d
-			x: 11.5d
+			x: 7.75d
 			y: 0.0d
 			tasks: [
 				{
@@ -158,15 +132,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "868CAC0402892910"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "175D344C5B3A210D"
@@ -174,7 +140,7 @@
 			icon: "undergarden:gloomgourd_seeds"
 			shape: "rsquare"
 			size: 1.0d
-			x: 12.75d
+			x: 9.0d
 			y: 0.0d
 			tasks: [
 				{
@@ -184,145 +150,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "B2F891E9FE9F84A8"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-		}
-		{
-			id: "4C973AB2EE5522BD"
-			title: "Saplings"
-			icon: "ars_nouveau:blue_archwood_sapling"
-			shape: "square"
-			size: 0.8d
-			x: 0.0d
-			y: 3.25d
-			tasks: [
-				{
-					id: "FA97E4141735CB5E"
-					type: "checkmark"
-					title: "Saplings"
-				}
-			]
-			rewards: [
-				{
-					id: "E9329F174BF08718"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["4 starter stubs."]
-		}
-		{
-			id: "FBB71A72C6AF7C51"
-			title: "All Plants: Blue Archwood Sapling"
-			icon: "ars_nouveau:blue_archwood_sapling"
-			shape: "rsquare"
-			size: 1.0d
-			x: 1.5d
-			y: 3.25d
-			tasks: [
-				{
-					id: "8B7FE8B52D704330"
-					type: "item"
-					item: "ars_nouveau:blue_archwood_sapling"
-					count: 1
-				}
-			]
-			rewards: [
-				{
-					id: "5E12BFD7630AD9F4"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-		}
-		{
-			id: "3C0F1D73612200A4"
-			title: "All Plants: Green Archwood Sapling"
-			icon: "ars_nouveau:green_archwood_sapling"
-			shape: "rsquare"
-			size: 1.0d
-			x: 2.75d
-			y: 3.25d
-			tasks: [
-				{
-					id: "F7E0900CDBEA4288"
-					type: "item"
-					item: "ars_nouveau:green_archwood_sapling"
-					count: 1
-				}
-			]
-			rewards: [
-				{
-					id: "99AAB8D6C487A501"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-		}
-		{
-			id: "AF22ADC1E65ACED1"
-			title: "All Plants: Purple Archwood Sapling"
-			icon: "ars_nouveau:purple_archwood_sapling"
-			shape: "rsquare"
-			size: 1.0d
-			x: 4.0d
-			y: 3.25d
-			tasks: [
-				{
-					id: "D0B40A211A3C5544"
-					type: "item"
-					item: "ars_nouveau:purple_archwood_sapling"
-					count: 1
-				}
-			]
-			rewards: [
-				{
-					id: "0A87086443FF6B74"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-		}
-		{
-			id: "4A05690DFA784C65"
-			title: "All Plants: Red Archwood Sapling"
-			icon: "ars_nouveau:red_archwood_sapling"
-			shape: "rsquare"
-			size: 1.0d
-			x: 5.25d
-			y: 3.25d
-			tasks: [
-				{
-					id: "4896735730D8C4E4"
-					type: "item"
-					item: "ars_nouveau:red_archwood_sapling"
-					count: 1
-				}
-			]
-			rewards: [
-				{
-					id: "EFA0CCA85FDDE9C0"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "75991AFBEF186884"
@@ -331,7 +159,7 @@
 			shape: "square"
 			size: 0.8d
 			x: 0.0d
-			y: 6.5d
+			y: 3.25d
 			tasks: [
 				{
 					id: "15B4252ABFA4E8B5"
@@ -339,16 +167,8 @@
 					title: "Flowers"
 				}
 			]
-			rewards: [
-				{
-					id: "D03CBF5E4ABDCD21"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["25 starter stubs."]
+			rewards: [ ]
+			description: ["33 starter stubs."]
 		}
 		{
 			id: "0E4C9407A8AE0490"
@@ -357,7 +177,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 1.5d
-			y: 6.5d
+			y: 3.25d
 			tasks: [
 				{
 					id: "1D9B2B1FFBDDD92A"
@@ -366,15 +186,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "ABE931A20D0BA135"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "64A9949267A722A5"
@@ -383,7 +195,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 2.75d
-			y: 6.5d
+			y: 3.25d
 			tasks: [
 				{
 					id: "1760703C934CCFE8"
@@ -392,15 +204,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "C10C3137C2028700"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "E37181DDF9CDC865"
@@ -409,7 +213,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 4.0d
-			y: 6.5d
+			y: 3.25d
 			tasks: [
 				{
 					id: "3DA12B0D9291EFBF"
@@ -418,15 +222,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "46D424785C686DC0"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "04C3ACFBB2EC5CB3"
@@ -435,7 +231,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 5.25d
-			y: 6.5d
+			y: 3.25d
 			tasks: [
 				{
 					id: "F0531F1FCBD93A83"
@@ -444,15 +240,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A166095E1749F916"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "00E269C530E0F490"
@@ -461,7 +249,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 6.5d
-			y: 6.5d
+			y: 3.25d
 			tasks: [
 				{
 					id: "E28D6C7EB6250AED"
@@ -470,15 +258,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A547CC6095455135"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "39BC653463F87669"
@@ -487,7 +267,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 7.75d
-			y: 6.5d
+			y: 3.25d
 			tasks: [
 				{
 					id: "2B9C0A084959C896"
@@ -496,15 +276,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "9C19C091C65DD3CC"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "A0D03E7599A17D41"
@@ -513,7 +285,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 9.0d
-			y: 6.5d
+			y: 3.25d
 			tasks: [
 				{
 					id: "F0BEE4999AFB1642"
@@ -522,15 +294,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "05759BD03C04D8E4"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "B1036C4F737F9DC0"
@@ -539,7 +303,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 10.25d
-			y: 6.5d
+			y: 3.25d
 			tasks: [
 				{
 					id: "994D6AD3977A11D9"
@@ -548,15 +312,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "14A6C9EAD6DA3865"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "E51ADFA71D7FC9F3"
@@ -565,7 +321,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 11.5d
-			y: 6.5d
+			y: 3.25d
 			tasks: [
 				{
 					id: "2E26E66140D4F062"
@@ -574,15 +330,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "40BF7A02B8DA6C56"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "9754C79288C74A84"
@@ -591,7 +339,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 12.75d
-			y: 6.5d
+			y: 3.25d
 			tasks: [
 				{
 					id: "2921BE2AF9B78D32"
@@ -600,15 +348,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "32F162372D62EF21"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "4A45BFD9E8ACB3BB"
@@ -617,7 +357,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 14.0d
-			y: 6.5d
+			y: 3.25d
 			tasks: [
 				{
 					id: "BE390B6A27B8D49F"
@@ -626,15 +366,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "EFE01A7C4D09161E"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "D975A017C9C440D5"
@@ -643,7 +375,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 15.25d
-			y: 6.5d
+			y: 3.25d
 			tasks: [
 				{
 					id: "4709EC0197AE0B2A"
@@ -652,15 +384,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "7CD005B26C61E570"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "15075540FDFADEFA"
@@ -669,7 +393,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 1.5d
-			y: 7.75d
+			y: 4.5d
 			tasks: [
 				{
 					id: "68939315C55E4EAE"
@@ -678,15 +402,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "B0A2F0E5585F7B5F"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "FBC8042A8FA8400F"
@@ -695,7 +411,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 2.75d
-			y: 7.75d
+			y: 4.5d
 			tasks: [
 				{
 					id: "CCE738D19CC58B3E"
@@ -704,15 +420,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "5E6DA18F2A0DE5AA"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "BBB21E4A2A33C8DF"
@@ -721,7 +429,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 4.0d
-			y: 7.75d
+			y: 4.5d
 			tasks: [
 				{
 					id: "1A2FE6E8E1F2FFC5"
@@ -730,15 +438,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "1E17BBEF8F966D7A"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "315CAB140C85D7E2"
@@ -747,7 +447,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 5.25d
-			y: 7.75d
+			y: 4.5d
 			tasks: [
 				{
 					id: "81461A1F5FC84B0F"
@@ -756,15 +456,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "94F90EB1A9207247"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "0D911E7714721572"
@@ -773,7 +465,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 6.5d
-			y: 7.75d
+			y: 4.5d
 			tasks: [
 				{
 					id: "F011448AE11C9673"
@@ -782,15 +474,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A834BBD2B1D7B0D7"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "8CAD01048CE65A28"
@@ -799,7 +483,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 7.75d
-			y: 7.75d
+			y: 4.5d
 			tasks: [
 				{
 					id: "9D1E73E11FA6BD63"
@@ -808,15 +492,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "2908A4A12943FF8D"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "5890EDEA1887B699"
@@ -825,7 +501,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 9.0d
-			y: 7.75d
+			y: 4.5d
 			tasks: [
 				{
 					id: "23F2DA0E6B393684"
@@ -834,15 +510,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "FD35484FBD22133C"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "80C998314B2DDDB5"
@@ -851,7 +519,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 10.25d
-			y: 7.75d
+			y: 4.5d
 			tasks: [
 				{
 					id: "CED42D44036CDFE8"
@@ -860,15 +528,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "256C3D94EE887810"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "BB7283D330A670DB"
@@ -877,7 +537,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 11.5d
-			y: 7.75d
+			y: 4.5d
 			tasks: [
 				{
 					id: "2CE9319E9A807893"
@@ -886,15 +546,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "1ED726769503D57E"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "3A37D8E771E63288"
@@ -903,7 +555,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 12.75d
-			y: 7.75d
+			y: 4.5d
 			tasks: [
 				{
 					id: "2F9542A394BFC450"
@@ -912,15 +564,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "9F927D42D443972D"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "A2876133F64A2DEC"
@@ -929,7 +573,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 14.0d
-			y: 7.75d
+			y: 4.5d
 			tasks: [
 				{
 					id: "5B2CCC025A71C983"
@@ -938,15 +582,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "0722C49653EF8849"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "6BCB95822113BF62"
@@ -955,7 +591,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 15.25d
-			y: 7.75d
+			y: 4.5d
 			tasks: [
 				{
 					id: "BC20B1C810CC59FB"
@@ -964,15 +600,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "CE6E302784B61AC7"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "2E4BC5E8B57D5DDC"
@@ -981,7 +609,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 1.5d
-			y: 9.0d
+			y: 5.75d
 			tasks: [
 				{
 					id: "EC9E4436D84CDEEB"
@@ -990,25 +618,16 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "8BEE604D10D8F879"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
-
 		{
 			id: "F09AD9E657CE42C6"
 			title: "All Plants: Mushroom Rice"
 			icon: "farmersdelight:mushroom_rice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 1.5d
-			y: 12.25d
+			x: 2.75d
+			y: 5.75d
 			tasks: [
 				{
 					id: "A383C948B1FE51E5"
@@ -1017,15 +636,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "553F7C43F26BE763"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "D61B5ECFB69A3B70"
@@ -1033,8 +644,8 @@
 			icon: "minecraft:brown_mushroom"
 			shape: "rsquare"
 			size: 1.0d
-			x: 2.75d
-			y: 12.25d
+			x: 4.0d
+			y: 5.75d
 			tasks: [
 				{
 					id: "C04F3CAD08A6718A"
@@ -1043,15 +654,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "73BEFB6A133F9ED5"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "717117985B1DEC49"
@@ -1059,8 +662,8 @@
 			icon: "minecraft:crimson_fungus"
 			shape: "rsquare"
 			size: 1.0d
-			x: 4.0d
-			y: 12.25d
+			x: 5.25d
+			y: 5.75d
 			tasks: [
 				{
 					id: "39E6BF5B60CB6736"
@@ -1069,15 +672,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "D4D4B23DFEB849EC"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "9A458E741108CD27"
@@ -1085,8 +680,8 @@
 			icon: "minecraft:red_mushroom"
 			shape: "rsquare"
 			size: 1.0d
-			x: 5.25d
-			y: 12.25d
+			x: 6.5d
+			y: 5.75d
 			tasks: [
 				{
 					id: "D6BC3B7B0CC7158F"
@@ -1095,15 +690,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "3FE02BD1B4AD6882"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "8E308878B994DA66"
@@ -1111,8 +698,8 @@
 			icon: "minecraft:warped_fungus"
 			shape: "rsquare"
 			size: 1.0d
-			x: 6.5d
-			y: 12.25d
+			x: 7.75d
+			y: 5.75d
 			tasks: [
 				{
 					id: "9CF05D017AC7A9FC"
@@ -1121,15 +708,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "2B952DDD1C317FC3"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "19D1AE4E1D8A582B"
@@ -1137,8 +716,8 @@
 			icon: "minecraft:warped_fungus_on_a_stick"
 			shape: "rsquare"
 			size: 1.0d
-			x: 7.75d
-			y: 12.25d
+			x: 9.0d
+			y: 5.75d
 			tasks: [
 				{
 					id: "17AA12FAA20B9315"
@@ -1147,15 +726,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "BC740BEBB82FFD8E"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "CEE11333E49E6174"
@@ -1163,8 +734,8 @@
 			icon: "mynethersdelight:strider_with_grilled_fungus"
 			shape: "rsquare"
 			size: 1.0d
-			x: 9.0d
-			y: 12.25d
+			x: 10.25d
+			y: 5.75d
 			tasks: [
 				{
 					id: "D03AB8AB0C1B73F6"
@@ -1173,15 +744,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "6B44B696413BC4D1"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "00A871052A3D061B"
@@ -1189,8 +752,8 @@
 			icon: "veggiesdelight:garlic_stuffed_mushrooms"
 			shape: "rsquare"
 			size: 1.0d
-			x: 10.25d
-			y: 12.25d
+			x: 11.5d
+			y: 5.75d
 			tasks: [
 				{
 					id: "4883F2548E38C0A1"
@@ -1199,15 +762,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A50DD4A08F98A3BE"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "FC6F8501F13917D8"
@@ -1216,7 +771,7 @@
 			shape: "square"
 			size: 0.8d
 			x: 0.0d
-			y: 15.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "8FF1A0FCCEFF140C"
@@ -1224,16 +779,8 @@
 					title: "Roots And Vines"
 				}
 			]
-			rewards: [
-				{
-					id: "59CA20A4549CB27D"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["33 starter stubs."]
+			rewards: [ ]
+			description: ["31 starter stubs."]
 		}
 		{
 			id: "1479D4417BBC0B85"
@@ -1242,7 +789,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 1.5d
-			y: 15.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "573ED3F87F9DC675"
@@ -1251,15 +798,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "B1DC71E4DE19AE20"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "D312918085E6C836"
@@ -1268,7 +807,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 2.75d
-			y: 15.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "32AA66D37E48A7BC"
@@ -1277,15 +816,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "76B7342520436D93"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "93F691BE55FD8E58"
@@ -1294,7 +825,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 4.0d
-			y: 15.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "FA25D9EA54FF25D4"
@@ -1303,15 +834,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "3653341BF0582BFD"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "6A2EFE00BB96A233"
@@ -1320,7 +843,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 5.25d
-			y: 15.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "FD11820AB16C8CDE"
@@ -1329,15 +852,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "CF8B5BA51E330796"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "A00BD6EDDD51337F"
@@ -1346,7 +861,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 6.5d
-			y: 15.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "E27BD481541273F1"
@@ -1355,15 +870,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "05AE734878F496DA"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "9FADFC373911DBFA"
@@ -1372,7 +879,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 7.75d
-			y: 15.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "A9E5D2BE4771F8FC"
@@ -1381,15 +888,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "3A0859929CB47E5F"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "1490BD3EC7B34B7A"
@@ -1398,7 +897,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 9.0d
-			y: 15.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "D0CF2BD81B20A810"
@@ -1407,41 +906,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "B135189B6216EEDF"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-		}
-		{
-			id: "F2DA5A002C92E91A"
-			title: "All Plants: Ender Bamboo Rice"
-			icon: "ends_delight:ender_bamboo_rice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 10.25d
-			y: 15.5d
-			tasks: [
-				{
-					id: "26B7BA939A812FFB"
-					type: "item"
-					item: "ends_delight:ender_bamboo_rice"
-					count: 1
-				}
-			]
-			rewards: [
-				{
-					id: "577FFFA589374CBF"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "B825F104E26FFD73"
@@ -1449,8 +914,8 @@
 			icon: "farmersdelight:cabbage_leaf"
 			shape: "rsquare"
 			size: 1.0d
-			x: 11.5d
-			y: 15.5d
+			x: 10.25d
+			y: 9.0d
 			tasks: [
 				{
 					id: "7B294353758F0C2C"
@@ -1459,15 +924,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "1D8054A147CA58D6"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "7AFB4AD23F6A0BE4"
@@ -1475,8 +932,8 @@
 			icon: "immersive_weathering:aether/crystal_fruit_leaf_pile"
 			shape: "rsquare"
 			size: 1.0d
-			x: 12.75d
-			y: 15.5d
+			x: 11.5d
+			y: 9.0d
 			tasks: [
 				{
 					id: "50E8608C523B40A4"
@@ -1485,15 +942,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "DF5EEF779ACFAE41"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "A937A9C4008D48AB"
@@ -1501,8 +950,8 @@
 			icon: "immersive_weathering:aether/skyroot_leaf_pile"
 			shape: "rsquare"
 			size: 1.0d
-			x: 14.0d
-			y: 15.5d
+			x: 12.75d
+			y: 9.0d
 			tasks: [
 				{
 					id: "026C866E0C151E26"
@@ -1511,25 +960,16 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "0C920C61A528ED0E"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
-
 		{
 			id: "1FC30B9665933F01"
 			title: "All Plants: Golden Moss Clump"
 			icon: "immersive_weathering:golden_moss_clump"
 			shape: "rsquare"
 			size: 1.0d
-			x: 1.5d
-			y: 16.75d
+			x: 14.0d
+			y: 9.0d
 			tasks: [
 				{
 					id: "0107442978E98D39"
@@ -1538,15 +978,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "BA66AE33C0369AA4"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "F0B08CFECEF8FF7C"
@@ -1554,8 +986,8 @@
 			icon: "immersive_weathering:moss_clump"
 			shape: "rsquare"
 			size: 1.0d
-			x: 2.75d
-			y: 16.75d
+			x: 15.25d
+			y: 9.0d
 			tasks: [
 				{
 					id: "87D6FB338637FE91"
@@ -1564,15 +996,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "5515295B6B5D5AD9"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "01670E29C546203B"
@@ -1580,8 +1004,8 @@
 			icon: "immersive_weathering:twilightforest/beanstalk_leaf_pile"
 			shape: "rsquare"
 			size: 1.0d
-			x: 4.0d
-			y: 16.75d
+			x: 1.5d
+			y: 10.25d
 			tasks: [
 				{
 					id: "FAFFC782992B4CC6"
@@ -1590,15 +1014,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A4C2AB8C60E3859E"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "06FBBE6C8E030AD7"
@@ -1606,8 +1022,8 @@
 			icon: "minecraft:bamboo"
 			shape: "rsquare"
 			size: 1.0d
-			x: 5.25d
-			y: 16.75d
+			x: 2.75d
+			y: 10.25d
 			tasks: [
 				{
 					id: "96596054B8EDE6A0"
@@ -1616,15 +1032,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A35E1BC92BA6AF72"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "2864106B1085FA79"
@@ -1632,8 +1040,8 @@
 			icon: "minecraft:beetroot"
 			shape: "rsquare"
 			size: 1.0d
-			x: 6.5d
-			y: 16.75d
+			x: 4.0d
+			y: 10.25d
 			tasks: [
 				{
 					id: "D8F3282460DB8CD0"
@@ -1642,15 +1050,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "8DC1B5CEB5205FDC"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "5A230C685DB9B213"
@@ -1658,8 +1058,8 @@
 			icon: "minecraft:cactus"
 			shape: "rsquare"
 			size: 1.0d
-			x: 7.75d
-			y: 16.75d
+			x: 5.25d
+			y: 10.25d
 			tasks: [
 				{
 					id: "20CEC91F69596263"
@@ -1668,15 +1068,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "FF86A9CDF81C17B6"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "B0B730EE5C9D1938"
@@ -1684,8 +1076,8 @@
 			icon: "minecraft:dead_bush"
 			shape: "rsquare"
 			size: 1.0d
-			x: 9.0d
-			y: 16.75d
+			x: 6.5d
+			y: 10.25d
 			tasks: [
 				{
 					id: "2567C1CD2C29EAAD"
@@ -1694,15 +1086,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "1512954BF938BC9D"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "025C212842A03FF5"
@@ -1710,8 +1094,8 @@
 			icon: "minecraft:grass"
 			shape: "rsquare"
 			size: 1.0d
-			x: 10.25d
-			y: 16.75d
+			x: 7.75d
+			y: 10.25d
 			tasks: [
 				{
 					id: "C5433BAA7B4F78A3"
@@ -1720,15 +1104,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A7F9848DE7059A50"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "CFFD8BF83D5C294D"
@@ -1736,8 +1112,8 @@
 			icon: "minecraft:moss_carpet"
 			shape: "rsquare"
 			size: 1.0d
-			x: 11.5d
-			y: 16.75d
+			x: 9.0d
+			y: 10.25d
 			tasks: [
 				{
 					id: "D79B9B23DC5B75E5"
@@ -1746,15 +1122,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "6A582E5D98F98CE8"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "14CEBD311EB877B0"
@@ -1762,8 +1130,8 @@
 			icon: "minecraft:muddy_mangrove_roots"
 			shape: "rsquare"
 			size: 1.0d
-			x: 12.75d
-			y: 16.75d
+			x: 10.25d
+			y: 10.25d
 			tasks: [
 				{
 					id: "5D62BB1EDD551621"
@@ -1772,15 +1140,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "B16B1894BB1DD215"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "04B3C948F5FBDC49"
@@ -1788,8 +1148,8 @@
 			icon: "quark:bamboo_mat"
 			shape: "rsquare"
 			size: 1.0d
-			x: 14.0d
-			y: 16.75d
+			x: 11.5d
+			y: 10.25d
 			tasks: [
 				{
 					id: "F8BBE3EBEEBFFB09"
@@ -1798,15 +1158,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A1166CED505E79EC"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "487D2A8E03DB0AC3"
@@ -1814,8 +1166,8 @@
 			icon: "tconstruct:earth_enderbark_roots"
 			shape: "rsquare"
 			size: 1.0d
-			x: 15.25d
-			y: 16.75d
+			x: 12.75d
+			y: 10.25d
 			tasks: [
 				{
 					id: "F4ABCC5B78D6F4CF"
@@ -1824,15 +1176,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "EDD88F2BA67EAF66"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "40DBF4D1C8071614"
@@ -1840,8 +1184,8 @@
 			icon: "tconstruct:ender_enderbark_roots"
 			shape: "rsquare"
 			size: 1.0d
-			x: 1.5d
-			y: 18.0d
+			x: 14.0d
+			y: 10.25d
 			tasks: [
 				{
 					id: "590A7EADBB3FBCDF"
@@ -1850,15 +1194,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "E57E51746DA2B3B1"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "2DD7749CE10F8FBF"
@@ -1866,8 +1202,8 @@
 			icon: "tconstruct:ichor_enderbark_roots"
 			shape: "rsquare"
 			size: 1.0d
-			x: 2.75d
-			y: 18.0d
+			x: 15.25d
+			y: 10.25d
 			tasks: [
 				{
 					id: "3518EBCA3285049F"
@@ -1876,15 +1212,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "8872D13944AA2A1A"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "8C0861104C7A03E0"
@@ -1892,8 +1220,8 @@
 			icon: "tconstruct:sky_enderbark_roots"
 			shape: "rsquare"
 			size: 1.0d
-			x: 4.0d
-			y: 18.0d
+			x: 1.5d
+			y: 11.5d
 			tasks: [
 				{
 					id: "076998CAA8BC52CA"
@@ -1902,15 +1230,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "29ADC4B5E9DFA645"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "87F1664130416820"
@@ -1918,8 +1238,8 @@
 			icon: "twilightforest:moss_patch"
 			shape: "rsquare"
 			size: 1.0d
-			x: 5.25d
-			y: 18.0d
+			x: 2.75d
+			y: 11.5d
 			tasks: [
 				{
 					id: "2C299C5ED1175AC0"
@@ -1928,15 +1248,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "2254C3E495E4CD85"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "7850D5E4EE8195BA"
@@ -1944,8 +1256,8 @@
 			icon: "ubesdelight:lemongrass"
 			shape: "rsquare"
 			size: 1.0d
-			x: 6.5d
-			y: 18.0d
+			x: 4.0d
+			y: 11.5d
 			tasks: [
 				{
 					id: "30B0F40081C0C520"
@@ -1954,15 +1266,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "DDF570414B24301F"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "86911B8F2DAE8DBC"
@@ -1970,8 +1274,8 @@
 			icon: "undergarden:blue_mogmoss_rug"
 			shape: "rsquare"
 			size: 1.0d
-			x: 7.75d
-			y: 18.0d
+			x: 5.25d
+			y: 11.5d
 			tasks: [
 				{
 					id: "0C460E04FBA8EB14"
@@ -1980,15 +1284,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "2334BE2A880B2819"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "E37AFCCBC0D9A03D"
@@ -1996,8 +1292,8 @@
 			icon: "undergarden:droopvine_item"
 			shape: "rsquare"
 			size: 1.0d
-			x: 9.0d
-			y: 18.0d
+			x: 6.5d
+			y: 11.5d
 			tasks: [
 				{
 					id: "6DB7DB70F0F91C56"
@@ -2006,15 +1302,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "46DF596E657C0598"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "87C152512AF769B2"
@@ -2022,8 +1310,8 @@
 			icon: "undergarden:mogmoss_rug"
 			shape: "rsquare"
 			size: 1.0d
-			x: 10.25d
-			y: 18.0d
+			x: 7.75d
+			y: 11.5d
 			tasks: [
 				{
 					id: "BB218E2EC85A59E7"
@@ -2032,15 +1320,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "2264F7F48F52CC17"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "CFFC8AB6B5485A35"
@@ -2048,8 +1328,8 @@
 			icon: "veggiesdelight:beetroot_brownie"
 			shape: "rsquare"
 			size: 1.0d
-			x: 11.5d
-			y: 18.0d
+			x: 9.0d
+			y: 11.5d
 			tasks: [
 				{
 					id: "128C82C5AD967943"
@@ -2058,15 +1338,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "6A592F1310EDFF90"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "FE3313C05337AA44"
@@ -2075,7 +1347,7 @@
 			shape: "square"
 			size: 0.8d
 			x: 0.0d
-			y: 21.25d
+			y: 14.75d
 			tasks: [
 				{
 					id: "14F9A5A2413B2E89"
@@ -2083,16 +1355,8 @@
 					title: "Produce"
 				}
 			]
-			rewards: [
-				{
-					id: "5B96B665F6920FE1"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-			description: ["86 starter stubs."]
+			rewards: [ ]
+			description: ["80 starter stubs."]
 		}
 		{
 			id: "83E59AC2B42DABCC"
@@ -2101,7 +1365,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 1.5d
-			y: 21.25d
+			y: 14.75d
 			tasks: [
 				{
 					id: "50537D97D6FA0762"
@@ -2110,15 +1374,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "26403F6711880E69"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "5345A5BD618138BF"
@@ -2127,7 +1383,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 2.75d
-			y: 21.25d
+			y: 14.75d
 			tasks: [
 				{
 					id: "029EE5390ABDBCFC"
@@ -2136,15 +1392,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "F6E00018C4249D1A"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "7A3442B1FC5FA847"
@@ -2153,7 +1401,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 4.0d
-			y: 21.25d
+			y: 14.75d
 			tasks: [
 				{
 					id: "25574DE197EB56BC"
@@ -2162,15 +1410,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "DF91E71459FA0DE2"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "26446C3F17B3C25A"
@@ -2179,7 +1419,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 5.25d
-			y: 21.25d
+			y: 14.75d
 			tasks: [
 				{
 					id: "761D3B652BDB4105"
@@ -2188,27 +1428,16 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "83E1C99AB21667FF"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
-
-
-
 		{
 			id: "0B4B84AC9310BBEB"
 			title: "All Plants: Glow Berry Marmalade"
 			icon: "brewinandchewin:glow_berry_marmalade"
 			shape: "rsquare"
 			size: 1.0d
-			x: 10.25d
-			y: 21.25d
+			x: 6.5d
+			y: 14.75d
 			tasks: [
 				{
 					id: "D678A908233A015B"
@@ -2217,15 +1446,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "AEEE210936B51E4E"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "E4A01162799C25D3"
@@ -2233,8 +1454,8 @@
 			icon: "create:honeyed_apple"
 			shape: "rsquare"
 			size: 1.0d
-			x: 11.5d
-			y: 21.25d
+			x: 7.75d
+			y: 14.75d
 			tasks: [
 				{
 					id: "ACD54687B6EE83AF"
@@ -2243,15 +1464,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "4105B4C7DC398076"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "38A47538F9EA1725"
@@ -2259,8 +1472,8 @@
 			icon: "delightful:salmonberries"
 			shape: "rsquare"
 			size: 1.0d
-			x: 12.75d
-			y: 21.25d
+			x: 9.0d
+			y: 14.75d
 			tasks: [
 				{
 					id: "35B1BBE57899600F"
@@ -2269,15 +1482,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "9D01D09D5C4FB280"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "BE093354007F3CC1"
@@ -2285,8 +1490,8 @@
 			icon: "delightful:salmonberry_gummy"
 			shape: "rsquare"
 			size: 1.0d
-			x: 14.0d
-			y: 21.25d
+			x: 10.25d
+			y: 14.75d
 			tasks: [
 				{
 					id: "2C7047E81729C69F"
@@ -2295,15 +1500,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "1BAC96F1A5DA9964"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "8F2673C81E9D0936"
@@ -2311,8 +1508,8 @@
 			icon: "delightful:salmonberry_ice_cream"
 			shape: "rsquare"
 			size: 1.0d
-			x: 15.25d
-			y: 21.25d
+			x: 11.5d
+			y: 14.75d
 			tasks: [
 				{
 					id: "504E0FCDC2F7571A"
@@ -2321,15 +1518,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "2A83D66DBB38AC93"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "FBBBC99EF11E69ED"
@@ -2337,8 +1526,8 @@
 			icon: "delightful:source_berry_gummy"
 			shape: "rsquare"
 			size: 1.0d
-			x: 1.5d
-			y: 22.5d
+			x: 12.75d
+			y: 14.75d
 			tasks: [
 				{
 					id: "B8F2F792AFB304FF"
@@ -2347,15 +1536,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "5E1E6C3B54BBCC48"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "D1DC62B33BA68428"
@@ -2363,8 +1544,8 @@
 			icon: "delightful:source_berry_ice_cream"
 			shape: "rsquare"
 			size: 1.0d
-			x: 2.75d
-			y: 22.5d
+			x: 14.0d
+			y: 14.75d
 			tasks: [
 				{
 					id: "46112246C4A9A92A"
@@ -2373,67 +1554,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "7479C7169E03218D"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-		}
-		{
-			id: "3DD0860BB34E7397"
-			title: "All Plants: Chorus Fruit Grain"
-			icon: "ends_delight:chorus_fruit_grain"
-			shape: "rsquare"
-			size: 1.0d
-			x: 4.0d
-			y: 22.5d
-			tasks: [
-				{
-					id: "80B2706846650868"
-					type: "item"
-					item: "ends_delight:chorus_fruit_grain"
-					count: 1
-				}
-			]
-			rewards: [
-				{
-					id: "987523AE16EBD632"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-		}
-		{
-			id: "D2E9345F657EC52D"
-			title: "All Plants: Chorus Fruit Popsicle"
-			icon: "ends_delight:chorus_fruit_popsicle"
-			shape: "rsquare"
-			size: 1.0d
-			x: 5.25d
-			y: 22.5d
-			tasks: [
-				{
-					id: "8655BC3E5C7C437A"
-					type: "item"
-					item: "ends_delight:chorus_fruit_popsicle"
-					count: 1
-				}
-			]
-			rewards: [
-				{
-					id: "774C91FAC0DB6088"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "2E387AB07E15ABEA"
@@ -2441,8 +1562,8 @@
 			icon: "farmersdelight:cabbage"
 			shape: "rsquare"
 			size: 1.0d
-			x: 6.5d
-			y: 22.5d
+			x: 15.25d
+			y: 14.75d
 			tasks: [
 				{
 					id: "59A8FF62DE327A16"
@@ -2451,15 +1572,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "8B9DDF15DBB00E4F"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "DA46D2354D18F532"
@@ -2467,8 +1580,8 @@
 			icon: "farmersdelight:cabbage_rolls"
 			shape: "rsquare"
 			size: 1.0d
-			x: 7.75d
-			y: 22.5d
+			x: 1.5d
+			y: 16.0d
 			tasks: [
 				{
 					id: "33FF5C57AF2A6209"
@@ -2477,15 +1590,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "7FE37790E8BD5097"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "E67CC2171C92EB17"
@@ -2493,8 +1598,8 @@
 			icon: "farmersdelight:glow_berry_custard"
 			shape: "rsquare"
 			size: 1.0d
-			x: 9.0d
-			y: 22.5d
+			x: 2.75d
+			y: 16.0d
 			tasks: [
 				{
 					id: "E7807AA2691DD792"
@@ -2503,15 +1608,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "43D967B2B9374EB2"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "209AD0A2F2630829"
@@ -2519,8 +1616,8 @@
 			icon: "farmersdelight:melon_popsicle"
 			shape: "rsquare"
 			size: 1.0d
-			x: 10.25d
-			y: 22.5d
+			x: 4.0d
+			y: 16.0d
 			tasks: [
 				{
 					id: "8BCC09D54919C4CB"
@@ -2529,15 +1626,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "853F750757C6AD8C"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "026EF20EA85DB89E"
@@ -2545,8 +1634,8 @@
 			icon: "farmersdelight:onion"
 			shape: "rsquare"
 			size: 1.0d
-			x: 11.5d
-			y: 22.5d
+			x: 5.25d
+			y: 16.0d
 			tasks: [
 				{
 					id: "21E713F7DC82827B"
@@ -2555,15 +1644,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A7CB57AB0DF81D3B"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "77F6FF16DE8E11EA"
@@ -2571,8 +1652,8 @@
 			icon: "farmersdelight:pumpkin_slice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 12.75d
-			y: 22.5d
+			x: 6.5d
+			y: 16.0d
 			tasks: [
 				{
 					id: "0B650528A04CDC44"
@@ -2581,15 +1662,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "D2535AB37B2BB44F"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "037D2B2989D50BB7"
@@ -2597,8 +1670,8 @@
 			icon: "farmersdelight:rotten_tomato"
 			shape: "rsquare"
 			size: 1.0d
-			x: 14.0d
-			y: 22.5d
+			x: 7.75d
+			y: 16.0d
 			tasks: [
 				{
 					id: "AC062B5D07A418CC"
@@ -2607,15 +1680,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A6D88E8C2C70AE12"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "4160DCDE6149C484"
@@ -2623,8 +1688,8 @@
 			icon: "farmersdelight:stuffed_potato"
 			shape: "rsquare"
 			size: 1.0d
-			x: 15.25d
-			y: 22.5d
+			x: 9.0d
+			y: 16.0d
 			tasks: [
 				{
 					id: "A3484DE43FB88909"
@@ -2633,15 +1698,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "E4C5797BC4EC6121"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "E0A904E313A45408"
@@ -2649,8 +1706,8 @@
 			icon: "farmersdelight:tomato"
 			shape: "rsquare"
 			size: 1.0d
-			x: 1.5d
-			y: 23.75d
+			x: 10.25d
+			y: 16.0d
 			tasks: [
 				{
 					id: "FBB21B635C3F55AA"
@@ -2659,15 +1716,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "450CA146B601F1AD"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "82D71B3C85EE28F8"
@@ -2675,8 +1724,8 @@
 			icon: "minecraft:apple"
 			shape: "rsquare"
 			size: 1.0d
-			x: 2.75d
-			y: 23.75d
+			x: 11.5d
+			y: 16.0d
 			tasks: [
 				{
 					id: "9B2874CE86EA2005"
@@ -2685,15 +1734,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "2772BE99204B8D5D"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "53EEC28023E3E7EA"
@@ -2701,8 +1742,8 @@
 			icon: "minecraft:baked_potato"
 			shape: "rsquare"
 			size: 1.0d
-			x: 4.0d
-			y: 23.75d
+			x: 12.75d
+			y: 16.0d
 			tasks: [
 				{
 					id: "90E78BAABE608B72"
@@ -2711,15 +1752,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "F64B67258646424F"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "B5C291AD17BDB462"
@@ -2727,8 +1760,8 @@
 			icon: "minecraft:carrot"
 			shape: "rsquare"
 			size: 1.0d
-			x: 5.25d
-			y: 23.75d
+			x: 14.0d
+			y: 16.0d
 			tasks: [
 				{
 					id: "FF1E3986C70420FB"
@@ -2737,15 +1770,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "10673408B21811C7"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "77E4D643543774B1"
@@ -2753,8 +1778,8 @@
 			icon: "minecraft:carrot_on_a_stick"
 			shape: "rsquare"
 			size: 1.0d
-			x: 6.5d
-			y: 23.75d
+			x: 15.25d
+			y: 16.0d
 			tasks: [
 				{
 					id: "5AC843B301F2B2E1"
@@ -2763,15 +1788,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "D24173E6F192D114"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "F34FBF16917E70A7"
@@ -2779,8 +1796,8 @@
 			icon: "minecraft:carved_pumpkin"
 			shape: "rsquare"
 			size: 1.0d
-			x: 7.75d
-			y: 23.75d
+			x: 1.5d
+			y: 17.25d
 			tasks: [
 				{
 					id: "1D2EEDF52676E6F1"
@@ -2789,15 +1806,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "56EA1AB334DBD502"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "04FC20DC8129BFE4"
@@ -2805,8 +1814,8 @@
 			icon: "minecraft:chorus_fruit"
 			shape: "rsquare"
 			size: 1.0d
-			x: 9.0d
-			y: 23.75d
+			x: 2.75d
+			y: 17.25d
 			tasks: [
 				{
 					id: "2BAB18F90ED2FC8C"
@@ -2815,15 +1824,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A1598579248C1A41"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "A8ACF1D8BAEF13E3"
@@ -2831,8 +1832,8 @@
 			icon: "minecraft:cocoa_beans"
 			shape: "rsquare"
 			size: 1.0d
-			x: 10.25d
-			y: 23.75d
+			x: 4.0d
+			y: 17.25d
 			tasks: [
 				{
 					id: "059989E19CB314EB"
@@ -2841,15 +1842,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "0D09547D1F4AB646"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "EBAE8C7776F55E92"
@@ -2857,8 +1850,8 @@
 			icon: "minecraft:enchanted_golden_apple"
 			shape: "rsquare"
 			size: 1.0d
-			x: 11.5d
-			y: 23.75d
+			x: 5.25d
+			y: 17.25d
 			tasks: [
 				{
 					id: "C21556D257ADFD4F"
@@ -2867,15 +1860,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "4E0B29D2D350FB37"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "4A442D7D46D4097D"
@@ -2883,8 +1868,8 @@
 			icon: "minecraft:glistering_melon_slice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 12.75d
-			y: 23.75d
+			x: 6.5d
+			y: 17.25d
 			tasks: [
 				{
 					id: "632BC47F0DCCA052"
@@ -2893,15 +1878,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "EFE188D8E371ACD8"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "AC13A122F812E40C"
@@ -2909,8 +1886,8 @@
 			icon: "minecraft:glow_berries"
 			shape: "rsquare"
 			size: 1.0d
-			x: 14.0d
-			y: 23.75d
+			x: 7.75d
+			y: 17.25d
 			tasks: [
 				{
 					id: "BE95BD927CD68A3A"
@@ -2919,15 +1896,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "09B604875DB741A9"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "BBF15F17339A4D48"
@@ -2935,8 +1904,8 @@
 			icon: "minecraft:golden_apple"
 			shape: "rsquare"
 			size: 1.0d
-			x: 15.25d
-			y: 23.75d
+			x: 9.0d
+			y: 17.25d
 			tasks: [
 				{
 					id: "A0824CA6AB6AB8F9"
@@ -2945,15 +1914,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "1E54FAB2963FE8ED"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "DA340B7732F915A9"
@@ -2961,8 +1922,8 @@
 			icon: "minecraft:golden_carrot"
 			shape: "rsquare"
 			size: 1.0d
-			x: 1.5d
-			y: 25.0d
+			x: 10.25d
+			y: 17.25d
 			tasks: [
 				{
 					id: "FEE656AB16452E61"
@@ -2971,15 +1932,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "7F91AED2975CB00C"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "25000027FB67FF14"
@@ -2987,8 +1940,8 @@
 			icon: "minecraft:melon"
 			shape: "rsquare"
 			size: 1.0d
-			x: 2.75d
-			y: 25.0d
+			x: 11.5d
+			y: 17.25d
 			tasks: [
 				{
 					id: "1A01740552FAB7B6"
@@ -2997,15 +1950,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "80A5A5825EC25AB1"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "BC594A7A24B9E319"
@@ -3013,8 +1958,8 @@
 			icon: "minecraft:melon_slice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 4.0d
-			y: 25.0d
+			x: 12.75d
+			y: 17.25d
 			tasks: [
 				{
 					id: "343C9EE516E6F6BE"
@@ -3023,15 +1968,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "19FCEFDF811C46BC"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "8EAAC71EBE7FF51F"
@@ -3039,8 +1976,8 @@
 			icon: "minecraft:nether_wart"
 			shape: "rsquare"
 			size: 1.0d
-			x: 5.25d
-			y: 25.0d
+			x: 14.0d
+			y: 17.25d
 			tasks: [
 				{
 					id: "E44E0278E2185189"
@@ -3049,15 +1986,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "2B0F62BB1BDA50BA"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "99284C1B5E85C50E"
@@ -3065,8 +1994,8 @@
 			icon: "minecraft:poisonous_potato"
 			shape: "rsquare"
 			size: 1.0d
-			x: 6.5d
-			y: 25.0d
+			x: 15.25d
+			y: 17.25d
 			tasks: [
 				{
 					id: "7FDECFED664764A5"
@@ -3075,15 +2004,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "3C8DE9BEFB2060AB"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "F61B8539D3847F08"
@@ -3091,8 +2012,8 @@
 			icon: "minecraft:popped_chorus_fruit"
 			shape: "rsquare"
 			size: 1.0d
-			x: 7.75d
-			y: 25.0d
+			x: 1.5d
+			y: 18.5d
 			tasks: [
 				{
 					id: "108E2CEC046F594C"
@@ -3101,15 +2022,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "53BE209C7621DAAD"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "6908D087FFECBC6A"
@@ -3117,8 +2030,8 @@
 			icon: "minecraft:potato"
 			shape: "rsquare"
 			size: 1.0d
-			x: 9.0d
-			y: 25.0d
+			x: 2.75d
+			y: 18.5d
 			tasks: [
 				{
 					id: "C02DB37058BE0227"
@@ -3127,15 +2040,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "CCAD75225A4919CF"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "BA8D2CBF2B444748"
@@ -3143,8 +2048,8 @@
 			icon: "minecraft:pumpkin"
 			shape: "rsquare"
 			size: 1.0d
-			x: 10.25d
-			y: 25.0d
+			x: 4.0d
+			y: 18.5d
 			tasks: [
 				{
 					id: "06558B9757603ECE"
@@ -3153,15 +2058,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "1F28891A8EE1E2ED"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "DBE637E202095A96"
@@ -3169,8 +2066,8 @@
 			icon: "minecraft:sweet_berries"
 			shape: "rsquare"
 			size: 1.0d
-			x: 11.5d
-			y: 25.0d
+			x: 5.25d
+			y: 18.5d
 			tasks: [
 				{
 					id: "E04E0583D68C12AB"
@@ -3179,15 +2076,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "7E439247A7ACFF33"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "86DADBCBE83136A2"
@@ -3195,8 +2084,8 @@
 			icon: "mynethersdelight:bullet_pepper"
 			shape: "rsquare"
 			size: 1.0d
-			x: 12.75d
-			y: 25.0d
+			x: 6.5d
+			y: 18.5d
 			tasks: [
 				{
 					id: "9C9FFB4A94B013E4"
@@ -3205,15 +2094,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "237F7E6E4D949307"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "21135271BE0B8627"
@@ -3221,8 +2102,8 @@
 			icon: "mynethersdelight:sausage_and_potatoes"
 			shape: "rsquare"
 			size: 1.0d
-			x: 14.0d
-			y: 25.0d
+			x: 7.75d
+			y: 18.5d
 			tasks: [
 				{
 					id: "6E168C9175C0BD2F"
@@ -3231,15 +2112,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "84B6F7D41BAE2382"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "187A65DAC142774E"
@@ -3247,8 +2120,8 @@
 			icon: "mynethersdelight:stuffed_pepper"
 			shape: "rsquare"
 			size: 1.0d
-			x: 15.25d
-			y: 25.0d
+			x: 9.0d
+			y: 18.5d
 			tasks: [
 				{
 					id: "4841CF5ACDC7526D"
@@ -3257,15 +2130,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "BDDFC07F64E7D2EB"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "13E24A3F2AD0D67E"
@@ -3273,8 +2138,8 @@
 			icon: "natures_spirit:desert_turnip"
 			shape: "rsquare"
 			size: 1.0d
-			x: 1.5d
-			y: 26.25d
+			x: 10.25d
+			y: 18.5d
 			tasks: [
 				{
 					id: "308744DF4C22C4CE"
@@ -3283,41 +2148,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "B647EF9A8F7573DB"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
-		}
-		{
-			id: "B11ED75D58F7EAA8"
-			title: "All Plants: Cabbage Wrapped Elder Guardian"
-			icon: "oceansdelight:cabbage_wrapped_elder_guardian"
-			shape: "rsquare"
-			size: 1.0d
-			x: 2.75d
-			y: 26.25d
-			tasks: [
-				{
-					id: "C31562716A5D85BA"
-					type: "item"
-					item: "oceansdelight:cabbage_wrapped_elder_guardian"
-					count: 1
-				}
-			]
-			rewards: [
-				{
-					id: "14BB72F8FD524F0D"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "4582B95DA1242DA2"
@@ -3325,8 +2156,8 @@
 			icon: "quark:berry_sack"
 			shape: "rsquare"
 			size: 1.0d
-			x: 4.0d
-			y: 26.25d
+			x: 11.5d
+			y: 18.5d
 			tasks: [
 				{
 					id: "34612537D3323703"
@@ -3335,15 +2166,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "E0271CF804818807"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "6EF4D039689FF236"
@@ -3351,8 +2174,8 @@
 			icon: "quark:cocoa_beans_sack"
 			shape: "rsquare"
 			size: 1.0d
-			x: 5.25d
-			y: 26.25d
+			x: 12.75d
+			y: 18.5d
 			tasks: [
 				{
 					id: "A0CB913D154574B9"
@@ -3361,15 +2184,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "CB51759CCD3A5793"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "DA756E4E5E37A437"
@@ -3377,8 +2192,8 @@
 			icon: "quark:glowberry_sack"
 			shape: "rsquare"
 			size: 1.0d
-			x: 6.5d
-			y: 26.25d
+			x: 14.0d
+			y: 18.5d
 			tasks: [
 				{
 					id: "C09C5EE8589040A5"
@@ -3387,15 +2202,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "7FD0CBEBFB920192"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "F26FDA3DA0AF7393"
@@ -3403,8 +2210,8 @@
 			icon: "quark:nether_wart_sack"
 			shape: "rsquare"
 			size: 1.0d
-			x: 7.75d
-			y: 26.25d
+			x: 15.25d
+			y: 18.5d
 			tasks: [
 				{
 					id: "55F2080161DF7CDB"
@@ -3413,15 +2220,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "57CA7F98050AD636"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "4F3B3F0BD9CD8791"
@@ -3429,8 +2228,8 @@
 			icon: "rusticdelight:baked_potato_slices"
 			shape: "rsquare"
 			size: 1.0d
-			x: 9.0d
-			y: 26.25d
+			x: 1.5d
+			y: 19.75d
 			tasks: [
 				{
 					id: "DACD24F3DFF55666"
@@ -3439,15 +2238,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "EA9E9AAE7C682234"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "1D2C8506DADCF24F"
@@ -3455,8 +2246,8 @@
 			icon: "rusticdelight:bell_pepper_green"
 			shape: "rsquare"
 			size: 1.0d
-			x: 10.25d
-			y: 26.25d
+			x: 2.75d
+			y: 19.75d
 			tasks: [
 				{
 					id: "AFC4D425DC7B2ED9"
@@ -3465,15 +2256,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "B88920A37F7957EA"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "1166067AF53D44F5"
@@ -3481,8 +2264,8 @@
 			icon: "rusticdelight:bell_pepper_red"
 			shape: "rsquare"
 			size: 1.0d
-			x: 11.5d
-			y: 26.25d
+			x: 4.0d
+			y: 19.75d
 			tasks: [
 				{
 					id: "BA8CD81BFE8AB78A"
@@ -3491,15 +2274,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "B4C3A3DF5098E150"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "17B98BA6C2BD9CCC"
@@ -3507,8 +2282,8 @@
 			icon: "rusticdelight:bell_pepper_roll_green"
 			shape: "rsquare"
 			size: 1.0d
-			x: 12.75d
-			y: 26.25d
+			x: 5.25d
+			y: 19.75d
 			tasks: [
 				{
 					id: "5C34D771A7D42C2A"
@@ -3517,15 +2292,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "B21C2E0367183969"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "2D4CAAD473B5A90A"
@@ -3533,8 +2300,8 @@
 			icon: "rusticdelight:bell_pepper_roll_red"
 			shape: "rsquare"
 			size: 1.0d
-			x: 14.0d
-			y: 26.25d
+			x: 6.5d
+			y: 19.75d
 			tasks: [
 				{
 					id: "FAE8E76F2BC7CF63"
@@ -3543,15 +2310,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "88E90F71D6100CAF"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "5C7844B0C7745241"
@@ -3559,8 +2318,8 @@
 			icon: "rusticdelight:bell_pepper_roll_yellow"
 			shape: "rsquare"
 			size: 1.0d
-			x: 15.25d
-			y: 26.25d
+			x: 7.75d
+			y: 19.75d
 			tasks: [
 				{
 					id: "ED5AB8C357550E04"
@@ -3569,15 +2328,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "F9DDE11562D1F7E4"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "79975E860E27AEC6"
@@ -3585,8 +2336,8 @@
 			icon: "rusticdelight:bell_pepper_slice_green"
 			shape: "rsquare"
 			size: 1.0d
-			x: 1.5d
-			y: 27.5d
+			x: 9.0d
+			y: 19.75d
 			tasks: [
 				{
 					id: "DE65040EF8C3A1C4"
@@ -3595,15 +2346,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "DC32FB23AB820B63"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "451BF931F22AF59B"
@@ -3611,8 +2354,8 @@
 			icon: "rusticdelight:bell_pepper_slice_red"
 			shape: "rsquare"
 			size: 1.0d
-			x: 2.75d
-			y: 27.5d
+			x: 10.25d
+			y: 19.75d
 			tasks: [
 				{
 					id: "8B6B319EF3842C6E"
@@ -3621,15 +2364,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "E0BE5C94578F503E"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "22A136F53F9DDBF3"
@@ -3637,8 +2372,8 @@
 			icon: "rusticdelight:bell_pepper_slice_yellow"
 			shape: "rsquare"
 			size: 1.0d
-			x: 4.0d
-			y: 27.5d
+			x: 11.5d
+			y: 19.75d
 			tasks: [
 				{
 					id: "831416852DDCBF68"
@@ -3647,15 +2382,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "870493509A387E56"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "F1D6A0FFC3A10C9D"
@@ -3663,8 +2390,8 @@
 			icon: "rusticdelight:bell_pepper_yellow"
 			shape: "rsquare"
 			size: 1.0d
-			x: 5.25d
-			y: 27.5d
+			x: 12.75d
+			y: 19.75d
 			tasks: [
 				{
 					id: "A4325A3B29EF89E4"
@@ -3673,15 +2400,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "5473055A6604A938"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "4FEE27E099AC2908"
@@ -3689,8 +2408,8 @@
 			icon: "rusticdelight:fruit_beignet"
 			shape: "rsquare"
 			size: 1.0d
-			x: 6.5d
-			y: 27.5d
+			x: 14.0d
+			y: 19.75d
 			tasks: [
 				{
 					id: "9F0B399C2DD69FD4"
@@ -3699,15 +2418,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "EA4B82453C098CAD"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "CC586AAA096F3505"
@@ -3715,8 +2426,8 @@
 			icon: "rusticdelight:potato_slices"
 			shape: "rsquare"
 			size: 1.0d
-			x: 7.75d
-			y: 27.5d
+			x: 15.25d
+			y: 19.75d
 			tasks: [
 				{
 					id: "576741A7935510FB"
@@ -3725,15 +2436,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "69FDCF0FACCA90A0"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "100F7AAB0DBF009F"
@@ -3741,8 +2444,8 @@
 			icon: "rusticdelight:stuffed_bell_pepper_green"
 			shape: "rsquare"
 			size: 1.0d
-			x: 9.0d
-			y: 27.5d
+			x: 1.5d
+			y: 21.0d
 			tasks: [
 				{
 					id: "31424A93216F2BD2"
@@ -3751,15 +2454,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "B5AADF0EA81AA53A"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "717CF0F48E430392"
@@ -3767,8 +2462,8 @@
 			icon: "rusticdelight:stuffed_bell_pepper_red"
 			shape: "rsquare"
 			size: 1.0d
-			x: 10.25d
-			y: 27.5d
+			x: 2.75d
+			y: 21.0d
 			tasks: [
 				{
 					id: "157CBE216148E33E"
@@ -3777,15 +2472,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "D4D955512BE6A637"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "D5D98E1190FAE675"
@@ -3793,8 +2480,8 @@
 			icon: "rusticdelight:stuffed_bell_pepper_yellow"
 			shape: "rsquare"
 			size: 1.0d
-			x: 11.5d
-			y: 27.5d
+			x: 4.0d
+			y: 21.0d
 			tasks: [
 				{
 					id: "D61173F6C7FB0D36"
@@ -3803,15 +2490,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "707C2BB4355F43D0"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "B46FE1EF25B4B82C"
@@ -3819,8 +2498,8 @@
 			icon: "tconstruct:jeweled_apple"
 			shape: "rsquare"
 			size: 1.0d
-			x: 12.75d
-			y: 27.5d
+			x: 5.25d
+			y: 21.0d
 			tasks: [
 				{
 					id: "945C24A225B8D0E2"
@@ -3829,15 +2508,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "11CA444A80111D89"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "174C0EF3AD2729EF"
@@ -3845,8 +2516,8 @@
 			icon: "twilightforest:torchberries"
 			shape: "rsquare"
 			size: 1.0d
-			x: 14.0d
-			y: 27.5d
+			x: 6.5d
+			y: 21.0d
 			tasks: [
 				{
 					id: "60CC0C358A1D04B4"
@@ -3855,15 +2526,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "B2E9AB5608828C4A"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "CE138B7B9FF3ABDC"
@@ -3871,8 +2534,8 @@
 			icon: "undergarden:blisterberry"
 			shape: "rsquare"
 			size: 1.0d
-			x: 15.25d
-			y: 27.5d
+			x: 7.75d
+			y: 21.0d
 			tasks: [
 				{
 					id: "8449FD0D84EB428D"
@@ -3881,15 +2544,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "6BB62EDE3A560E79"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "C84582A992D2CE7F"
@@ -3897,8 +2552,8 @@
 			icon: "undergarden:rotten_blisterberry"
 			shape: "rsquare"
 			size: 1.0d
-			x: 1.5d
-			y: 28.75d
+			x: 9.0d
+			y: 21.0d
 			tasks: [
 				{
 					id: "F3A1BF0FF1448F19"
@@ -3907,15 +2562,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "6DE0270C37776BDA"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "D44D99649B3D0366"
@@ -3923,8 +2570,8 @@
 			icon: "undergarden:underbean_on_a_stick"
 			shape: "rsquare"
 			size: 1.0d
-			x: 2.75d
-			y: 28.75d
+			x: 10.25d
+			y: 21.0d
 			tasks: [
 				{
 					id: "FC44EDCB9FCB3CF9"
@@ -3933,15 +2580,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "71E83CC13E98A6C3"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "9A6500AAB5364ED2"
@@ -3949,8 +2588,8 @@
 			icon: "undergarden:underbeans"
 			shape: "rsquare"
 			size: 1.0d
-			x: 4.0d
-			y: 28.75d
+			x: 11.5d
+			y: 21.0d
 			tasks: [
 				{
 					id: "1C753B271C4DC64E"
@@ -3959,15 +2598,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "3FC0A50F1093EB77"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "5E432884D1A9A66F"
@@ -3975,8 +2606,8 @@
 			icon: "veggiesdelight:baked_sweet_potato"
 			shape: "rsquare"
 			size: 1.0d
-			x: 5.25d
-			y: 28.75d
+			x: 12.75d
+			y: 21.0d
 			tasks: [
 				{
 					id: "FCF4563C45164A56"
@@ -3985,15 +2616,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "FBE68D21740C03CA"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "AB0CCAA484A9F3CA"
@@ -4001,8 +2624,8 @@
 			icon: "veggiesdelight:bellpepper"
 			shape: "rsquare"
 			size: 1.0d
-			x: 6.5d
-			y: 28.75d
+			x: 14.0d
+			y: 21.0d
 			tasks: [
 				{
 					id: "B56C522CBDEEE897"
@@ -4011,15 +2634,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "0EA96F01210C566F"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "2F08E4F056D7960B"
@@ -4027,8 +2642,8 @@
 			icon: "veggiesdelight:mashed_potatoes"
 			shape: "rsquare"
 			size: 1.0d
-			x: 7.75d
-			y: 28.75d
+			x: 15.25d
+			y: 21.0d
 			tasks: [
 				{
 					id: "6FC1EAC55F03A68F"
@@ -4037,15 +2652,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "8AAD4155F37233AE"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "C654D597CEDEBC37"
@@ -4053,8 +2660,8 @@
 			icon: "veggiesdelight:potato_noodle"
 			shape: "rsquare"
 			size: 1.0d
-			x: 9.0d
-			y: 28.75d
+			x: 1.5d
+			y: 22.25d
 			tasks: [
 				{
 					id: "C7618BA5AA654972"
@@ -4063,15 +2670,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "63F170326B7B1992"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "A94C2C83CCF98F8A"
@@ -4079,8 +2678,8 @@
 			icon: "veggiesdelight:potato_noodles"
 			shape: "rsquare"
 			size: 1.0d
-			x: 10.25d
-			y: 28.75d
+			x: 2.75d
+			y: 22.25d
 			tasks: [
 				{
 					id: "470D5A6AD5A13700"
@@ -4089,15 +2688,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "0CE98926695C2A2F"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "02358B3B660A9E8A"
@@ -4105,8 +2696,8 @@
 			icon: "veggiesdelight:smoked_bellpepper"
 			shape: "rsquare"
 			size: 1.0d
-			x: 11.5d
-			y: 28.75d
+			x: 4.0d
+			y: 22.25d
 			tasks: [
 				{
 					id: "4A2BEC621D03D44B"
@@ -4115,15 +2706,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A7902E9EC3AF3B2F"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "B039D1332D706F1B"
@@ -4131,8 +2714,8 @@
 			icon: "veggiesdelight:sweet_potato"
 			shape: "rsquare"
 			size: 1.0d
-			x: 12.75d
-			y: 28.75d
+			x: 5.25d
+			y: 22.25d
 			tasks: [
 				{
 					id: "867459C69ACCDFC4"
@@ -4141,15 +2724,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "159C749688D5CABE"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "47C99A727AA42EFD"
@@ -4157,8 +2732,8 @@
 			icon: "veggiesdelight:sweet_potato_dough"
 			shape: "rsquare"
 			size: 1.0d
-			x: 14.0d
-			y: 28.75d
+			x: 6.5d
+			y: 22.25d
 			tasks: [
 				{
 					id: "F68DBC6713E907B1"
@@ -4167,15 +2742,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "E26C3FD7DF018B58"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "721D8E059A5BEE0F"
@@ -4183,8 +2750,8 @@
 			icon: "veggiesdelight:turnip"
 			shape: "rsquare"
 			size: 1.0d
-			x: 15.25d
-			y: 28.75d
+			x: 7.75d
+			y: 22.25d
 			tasks: [
 				{
 					id: "05D32F11E809582F"
@@ -4193,15 +2760,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "D7B82BA03FFE4BAA"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "08EC3209D18AA5B3"
@@ -4209,8 +2768,8 @@
 			icon: "veggiesdelight:turnip_mutton_skewer"
 			shape: "rsquare"
 			size: 1.0d
-			x: 1.5d
-			y: 30.0d
+			x: 9.0d
+			y: 22.25d
 			tasks: [
 				{
 					id: "4AE37A9F9C86BD7B"
@@ -4219,15 +2778,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "AD4997AC742F0016"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "FEB3416C5EFF8AB7"
@@ -4235,8 +2786,8 @@
 			icon: "veggiesdelight:turnip_water"
 			shape: "rsquare"
 			size: 1.0d
-			x: 2.75d
-			y: 30.0d
+			x: 10.25d
+			y: 22.25d
 			tasks: [
 				{
 					id: "F52A125880014651"
@@ -4245,15 +2796,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "5B16E4C9FB5A2F12"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "0C41D84D79B17D04"
@@ -4262,7 +2805,7 @@
 			shape: "square"
 			size: 0.8d
 			x: 0.0d
-			y: 33.25d
+			y: 25.5d
 			tasks: [
 				{
 					id: "C79E4A52953A3854"
@@ -4270,15 +2813,7 @@
 					title: "Other Plants"
 				}
 			]
-			rewards: [
-				{
-					id: "A9E47DE8DC14D8A1"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["1 starter stubs."]
 		}
 		{
@@ -4288,7 +2823,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 1.5d
-			y: 33.25d
+			y: 25.5d
 			tasks: [
 				{
 					id: "0461DAC99AFE2455"
@@ -4297,15 +2832,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "D1BEC40C563AC69A"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 	]
 }

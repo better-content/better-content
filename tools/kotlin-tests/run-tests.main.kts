@@ -368,7 +368,7 @@ test("internal player progression contracts validator runs through btm") {
 test("internal LC TFTH DH contract validator runs through btm") {
     val (exit, output) = runCommand("tools/btm", "internal", "validate-lc-tfth-dh-contracts")
     assertTrue(exit == 0, "internal validate-lc-tfth-dh-contracts should exit 0, got $exit")
-    assertContains(output, "LC/TFTH/DH contract validators:", "internal validate-lc-tfth-dh-contracts should report validator summary")
+    assertContains(output, "LC/C2ME/DH contract validators:", "internal validate-lc-tfth-dh-contracts should report validator summary")
 }
 
 test("no active python or shell source files remain under tools") {
@@ -387,6 +387,12 @@ test("headful scenario enforcement rejects client smoke on headless path") {
     val (exit, output) = runCommand("tools/btm", "test", "scenario", "client_smoke", "--profile", "quick")
     assertTrue(exit == 2, "client_smoke on headless path should exit 2, got $exit")
     assertContains(output, "scenario 'client_smoke' is headful", "client_smoke should require scenario-headful")
+}
+
+test("headless scenario enforcement rejects lc repro on headful path") {
+    val (exit, output) = runCommand("tools/btm", "test", "scenario-headful", "lc_tfth_c2me_dh", "--samples", "1", "--settle-seconds", "1")
+    assertTrue(exit == 2, "lc_tfth_c2me_dh on headful path should exit 2, got $exit")
+    assertContains(output, "scenario 'lc_tfth_c2me_dh' is headless-safe", "lc_tfth_c2me_dh should require scenario")
 }
 
 test("worldgen sampling rejects invalid profile with usage error") {

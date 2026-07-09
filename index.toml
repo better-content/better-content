@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "AGENTS.md"
-hash = "6c438537a317450eb152f13ebaac1f136b7350bbd850735f4c8eeff447054b45"
+hash = "fdcb0d660871b8884af5a8a43bbb6e848ccdee82b9148467249aa4e3b2959340"
 
 [[files]]
 file = "LICENSE"

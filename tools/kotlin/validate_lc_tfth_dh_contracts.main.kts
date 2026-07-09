@@ -55,18 +55,18 @@ fun expectTomlParses(paths: List<String>) {
     val parsed = mutableListOf<String>()
     for (path in paths) {
         if (!rel(path).isRegularFile()) {
-            fail("LC/TFTH/DH config TOML exists and parses", "missing $path")
+            fail("related config TOML exists and parses", "missing $path")
             continue
         }
         try {
             val values = parseTopLevelToml(path)
-            if (values.isEmpty()) fail("LC/TFTH/DH config TOML exists and parses", "$path has no key/value entries")
+            if (values.isEmpty()) fail("related config TOML exists and parses", "$path has no key/value entries")
             else parsed += path
         } catch (error: Exception) {
-            fail("LC/TFTH/DH config TOML exists and parses", error.message ?: "$path failed to parse")
+            fail("related config TOML exists and parses", error.message ?: "$path failed to parse")
         }
     }
-    if (parsed.size == paths.size) ok("LC/TFTH/DH config TOML exists and parses", "${parsed.size} files")
+    if (parsed.size == paths.size) ok("related config TOML exists and parses", "${parsed.size} files")
 }
 
 fun expectPackwizManifest(label: String, path: String, filenamePattern: Regex) {
@@ -165,7 +165,7 @@ fun expectLostCitiesRouting() {
 fun expectScenarioHarnessContracts() {
     val path = "tools/kotlin/lc_tfth_c2me_dh_stability.main.kts"
     if (!rel(path).isRegularFile()) {
-        fail("LC/TFTH/DH scenario harness exists", "missing $path")
+        fail("LC/C2ME/DH scenario harness exists", "missing $path")
         return
     }
     val text = read(path)
@@ -174,18 +174,22 @@ fun expectScenarioHarnessContracts() {
         "c2me_thread_guard",
         "dh_worldgen_exception",
         "lostcities_exception",
-        "tfth_exception",
-        "jvm_fatal",
         "crash_report",
+        "c2me_far_chunk_write",
     )
     val missingFatalKeys = requiredFatalKeys.filterNot { "\"$it\"" in text }
-    if (missingFatalKeys.isEmpty()) ok("LC/TFTH/DH harness keeps required fatal classifiers", "${requiredFatalKeys.size} classifiers")
-    else fail("LC/TFTH/DH harness keeps required fatal classifiers", missingFatalKeys.joinToString(", "))
+    if (missingFatalKeys.isEmpty()) ok("LC/C2ME/DH harness keeps required fatal classifiers", "${requiredFatalKeys.size} classifiers")
+    else fail("LC/C2ME/DH harness keeps required fatal classifiers", missingFatalKeys.joinToString(", "))
 
-    val activityNeedles = listOf("\"distant_horizons\"", "missing_dh_activity", "requireDhActivity = true")
-    val missingActivityNeedles = activityNeedles.filterNot(text::contains)
-    if (missingActivityNeedles.isEmpty()) ok("LC/TFTH/DH harness requires DH activity before pass")
-    else fail("LC/TFTH/DH harness requires DH activity before pass", missingActivityNeedles.joinToString(", "))
+    val requiredNeedles = listOf(
+        "serializeDhC2meFeaturePlacement",
+        "execute in lostcities:lostcity run forceload add",
+        "unguarded repro tripped targeted fatal classifier",
+        "unguarded repro was inconclusive",
+    )
+    val missingNeedles = requiredNeedles.filterNot(text::contains)
+    if (missingNeedles.isEmpty()) ok("LC/C2ME/DH harness compares guarded control against unguarded repro")
+    else fail("LC/C2ME/DH harness compares guarded control against unguarded repro", missingNeedles.joinToString(", "))
 }
 
 expectPackwizManifest("Lost Cities", "mods/the-lost-cities.pw.toml", Regex("""lostcities.*\.jar""", RegexOption.IGNORE_CASE))
@@ -198,7 +202,7 @@ expectLostCitiesRouting()
 expectScenarioHarnessContracts()
 
 println()
-println("LC/TFTH/DH contract validators: ${passes.size} pass(es), ${failures.size} hard failure(s)")
+println("LC/C2ME/DH contract validators: ${passes.size} pass(es), ${failures.size} hard failure(s)")
 if (failures.isNotEmpty()) {
     System.err.println(failures.joinToString("\n"))
 }

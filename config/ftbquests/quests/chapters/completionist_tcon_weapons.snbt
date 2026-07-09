@@ -23,15 +23,7 @@
 					title: "additionalweaponry"
 				}
 			]
-			rewards: [
-				{
-					id: "B87F61EFD150D29C"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["5 starter stubs."]
 		}
 		{
@@ -50,15 +42,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "55DF2A1DCAA1E0C2"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "81186B0A310F621F"
@@ -76,15 +60,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "24BDCEAF94AAC7BA"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "7D52F602EEBD1BEF"
@@ -102,15 +78,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "D8F753A74B18BE4A"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "3EB29801D614E517"
@@ -128,15 +96,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "9B173DA473B140B2"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "B5E4BFD8440983D5"
@@ -154,15 +114,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "10411A7DE1AC2670"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "83C69CE0D7F51F4C"
@@ -179,15 +131,7 @@
 					title: "tconstruct"
 				}
 			]
-			rewards: [
-				{
-					id: "266339457250BAE9"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["9 starter stubs."]
 		}
 		{
@@ -206,15 +150,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "966A440AA18A53A6"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "C5CD38E57B227233"
@@ -232,15 +168,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "60689D40DE87D796"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "421D05A0E74E640D"
@@ -258,15 +186,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "E7B8A00542EBC1A8"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "3FE4120DC8903C42"
@@ -284,15 +204,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "9A41B7A86D3599E7"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "0EC6FC4FD2E2741A"
@@ -310,15 +222,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "AB6359EA7747D1BF"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "86BB9777672ABAC2"
@@ -336,15 +240,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "231E32D2C28F1F67"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "9030657302A2CBBB"
@@ -362,15 +258,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "3595C0D6A7076E1E"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "F18C24A2D200EEF1"
@@ -388,15 +276,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "5429810777A54B54"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "061EA614141541E6"
@@ -414,15 +294,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A3BB03B1B1B0E443"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "4C110482CB7F7587"
@@ -439,15 +311,7 @@
 					title: "tinkers_battle_spades"
 				}
 			]
-			rewards: [
-				{
-					id: "E9B4A1276EDAD022"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["1 starter stubs."]
 		}
 		{
@@ -466,15 +330,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "45DA575D679ED377"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "EEB86A632FFEA0DE"
@@ -491,15 +347,7 @@
 					title: "tinkersweaponry"
 				}
 			]
-			rewards: [
-				{
-					id: "4B1DCFC68A5B057B"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["3 starter stubs."]
 		}
 		{
@@ -518,15 +366,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "D7177111E1BE9584"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "00E756B61F5635A3"
@@ -544,15 +384,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "A542F313BAF39006"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 		{
 			id: "A452462B5EC06D16"
@@ -570,15 +402,7 @@
 					count: 1
 				}
 			]
-			rewards: [
-				{
-					id: "01F7E38EFB65C8B3"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 		}
 	]
 }

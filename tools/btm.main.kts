@@ -235,9 +235,8 @@ val scenarioDimensionWorldgen = listOf(
 val scenarios = linkedMapOf(
     "lc_tfth_c2me_dh" to ScenarioDefinition(
         "lc_tfth_c2me_dh",
-        "Lost Cities + TFTH + C2ME + Distant Horizons stability cycle",
+        "Lost Cities/C2ME/Distant Horizons serialization-guard regression repro",
         "tools/kotlin/lc_tfth_c2me_dh_stability.main.kts",
-        headful = true,
     ),
     "dimension_worldgen" to ScenarioDefinition(
         "dimension_worldgen",
@@ -2358,13 +2357,6 @@ fun runPackFullLane(): ProcessRun = runStepSequence(
                 scriptArgs = listOf("--profile", "local", "--bootstrap-mode", "never", "--server-dir", "/tmp/btm-pack-full-smoke", "--port", "25566"),
             )
         },
-        "LC TFTH C2ME DH scenario" to {
-            if (!canRunHeadfulScenario()) return@to ProcessRun(3, "DISPLAY or xvfb-run is required")
-            runKotlinScript(
-                root.resolve("tools/kotlin/lc_tfth_c2me_dh_stability.main.kts"),
-                scriptArgs = listOf("--cycles", "1", "--idle-seconds", "30", "--tfth-seconds", "30", "--port", "25569", "--bootstrap-mode", "once"),
-            )
-        },
         "client smoke scenario" to {
             if (!canRunHeadfulScenario()) return@to ProcessRun(3, "DISPLAY or xvfb-run is required")
             runKotlinScript(
@@ -3503,7 +3495,6 @@ fun runToolDocSurfaceValidation(): ProcessRun {
 
     val expectedAgentCommands = listOf(
         "Headless scenario validation: `tools/btm test scenario opening_progression --cycles 1`",
-        "Headful scenario validation: `tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30`",
         "Runtime dump refresh: `tools/btm build dumps --server-dir /tmp/btm-dump-refresh --port 25565 --reset-runtime`",
     )
     for (line in expectedAgentCommands) {
@@ -3522,15 +3513,13 @@ fun runToolDocSurfaceValidation(): ProcessRun {
 
     val staleHeadfulCommands = listOf(
         agentsPath to listOf(
-            "tools/btm test scenario lc_tfth_c2me_dh",
             "tools/btm test scenario dimension_worldgen",
         ),
         runtimeValidationPath to listOf(
-            "tools/btm test scenario lc_tfth_c2me_dh",
             "tools/btm test scenario dimension_worldgen",
         ),
         performancePath to listOf(
-            "tools/btm test scenario lc_tfth_c2me_dh",
+            "tools/btm test scenario-headful lc_tfth_c2me_dh",
         ),
     )
     for ((path, commands) in staleHeadfulCommands) {
@@ -3550,7 +3539,7 @@ fun runToolDocSurfaceValidation(): ProcessRun {
         "tools/btm test full",
         "tools/btm test full --workspace",
         "tools/btm test scenario-headful dimension_worldgen --cycles 1 --radius 1 --samples 1 --bootstrap-mode once",
-        "tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30 --bootstrap-mode once",
+        "tools/btm test scenario lc_tfth_c2me_dh --samples 4 --settle-seconds 30 --bootstrap-mode once",
         "tools/btm test scenario opening_progression --cycles 1 --bootstrap-mode once",
         "tools/btm test scenario worldgen_sampling --profile local --bootstrap-mode once",
         "tools/btm test scenario worldgen_sampling --profile quick --bootstrap-mode once",
@@ -3574,8 +3563,19 @@ fun runToolDocSurfaceValidation(): ProcessRun {
         fail("$runtimeValidationPath must document the workspace inventory")
     }
 
-    if (!performanceText.contains("`tools/btm test scenario-headful lc_tfth_c2me_dh`")) {
-        fail("$performancePath missing headful LC/TFTH/C2ME/DH harness reference")
+    if (!performanceText.contains("`tools/btm test scenario lc_tfth_c2me_dh`")) {
+        fail("$performancePath missing headless LC/C2ME/DH guard repro harness reference")
+    }
+    if (performanceText.contains("`tools/btm test full` for pack-only validation")
+        || performanceText.contains("`tools/btm test full --workspace` for workspace-wide full fanout")
+    ) {
+        fail("$performancePath must not describe the LC/C2ME/DH repro as part of test full coverage")
+    }
+    if (!runtimeText.contains("`worldgen_sampling` is the normal worldgen confidence lane")
+        || !runtimeText.contains("`dimension_worldgen` is the explicit all-dimension stress/debug lane")
+        || !runtimeText.contains("`lc_tfth_c2me_dh` is a diagnostic-only regression repro")
+    ) {
+        fail("$runtimeValidationPath must distinguish normal worldgen coverage from stress and diagnostic-only lanes")
     }
 
     val docsList = Regex("""- `([^`]+)`:""").findAll(docsReadmeText).map { it.groupValues[1] }.toList()

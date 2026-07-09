@@ -300,7 +300,7 @@ fun stableId(key: String): String {
 }
 
 val resourceLocationPattern = Regex("""^[a-z0-9_.-]+:[a-z0-9/._-]+$""")
-const val missingIconPath = "assets/icons/missing.png"
+val missingIconPath = "assets/icons/missing.png"
 
 fun isValidResourceLocation(id: String): Boolean = resourceLocationPattern.matches(id)
 

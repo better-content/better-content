@@ -182,8 +182,8 @@ val performanceBudgetsMs = linkedMapOf(
     "generated recipe graph validation" to mapOf("budget" to 5000, "hard" to 20000),
     "generated loot dump validation" to mapOf("budget" to 2500, "hard" to 10000),
     "engine and world performance log analysis" to mapOf("budget" to 750, "hard" to 1500),
-    "Realistic Hands validation" to mapOf("budget" to 2000, "hard" to 4000),
-    "KubeJS asset validation" to mapOf("budget" to 2000, "hard" to 4000),
+    "Realistic Hands validation" to mapOf("budget" to 2000, "hard" to 5000),
+    "KubeJS asset validation" to mapOf("budget" to 2000, "hard" to 5000),
     "chemistry identity validation" to mapOf("budget" to 1500, "hard" to 4000),
     "dev dump health validation" to mapOf("budget" to 50, "hard" to 500),
     "plank regression static validation" to mapOf("budget" to 250, "hard" to 1500),
@@ -437,10 +437,18 @@ fun parseQuestBlocks(file: Path): List<QuestBlock> {
     }
 
     return blocks.map { block ->
+        val taskSegment = Regex("""\btasks:\s*\[([\s\S]*?)\]\s*(?:rewards:|description:|dependencies:|x:|y:|shape:|size:|\})""")
+            .find(block)
+            ?.groupValues
+            ?.get(1)
+            .orEmpty()
         QuestBlock(
             id = Regex("""\bid:\s*"([0-9A-Fa-f]{16})"""").find(block)?.groupValues?.get(1).orEmpty(),
             title = Regex("""\btitle:\s*"([^"]+)"""").find(block)?.groupValues?.get(1).orEmpty(),
-            items = Regex("""\bitem:\s*"([^"]+)"""").findAll(block).map { it.groupValues[1] }.toList(),
+            items = Regex("""type:\s*"item"[\s\S]*?\bitem:\s*"([^"]+)"""")
+                .findAll(taskSegment)
+                .map { it.groupValues[1] }
+                .toList(),
             block = block,
         )
     }

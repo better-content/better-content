@@ -1,5 +1,5 @@
 {
-  "parent": "unearthed:block/ore/overgrown_top_untinted_overlay_horizontal",
+  "parent": "unearthed:block/ore/overgrown_top_tinted_overlay_horizontal",
   "textures": {
     "side": "unearthed:block/side/overgrown_granite_side",
     "top": "unearthed:block/overgrown_granite_top_pebbled",

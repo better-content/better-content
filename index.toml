@@ -5798,315 +5798,315 @@ hash = "8a8bfd2137a43dbc66f9f9993dd18ce191d67786bdc7a0a72d1b913dc6a28617"
 
 [[files]]
 file = "config/rbp/block_definitions/bamboo.toml"
-hash = "7bbf8d92ec1eb408517d1929352f56a30fed67c86074fb498851bc0a11d78359"
+hash = "7302461a5ac8578c327483278216fe3c1fe6aba0fddbd66655d1f52411c59aaa"
 
 [[files]]
 file = "config/rbp/block_definitions/basic_construction.toml"
-hash = "8e969a40c1f962f2012d535ec4dd2e261d3f5a203a6362a511d8fc86c66c6c83"
+hash = "8084f91bd46080e10d39cd07eb5c4f94139fee278c97402823171713e577ba1a"
 
 [[files]]
 file = "config/rbp/block_definitions/basic_construction_slab.toml"
-hash = "00667c14083e51bba259c9bf8b80c0d02ebdcbc040186a414e00d06400b2b1ce"
+hash = "f52e0e87b5f51cd6c22712f9699ae75ca6f314ad1e1127a4f6af35ab650b82bf"
 
 [[files]]
 file = "config/rbp/block_definitions/basic_construction_stairs.toml"
-hash = "410bb16304c86d3fc7b3579d4f08c8b3bd2125d2ccfa23d13d6cca70cfd0dfd3"
+hash = "8ad8f45f1e7788ae69dd23e2627d8c007ef75de350b14b03206917e388f63f55"
 
 [[files]]
 file = "config/rbp/block_definitions/basic_construction_wall.toml"
-hash = "10970bd469fedbc7585856f9b6c94d983d1d75e8269f38ba8b498fce03ea028e"
+hash = "8a58e51a646943023279254daf3ae8d72a28d618334ee4c3c16370673aaa17e6"
 
 [[files]]
 file = "config/rbp/block_definitions/bed.toml"
-hash = "ad92de0e4eaf81eb71ef2a7c5886804c2feb4ebbbbdefa71defceb9e5130d9fb"
+hash = "280b0617ba384add938ec71c9ff39ec461eb7c09ae10dc38d5ac5c88ef1f5e37"
 
 [[files]]
 file = "config/rbp/block_definitions/beehive.toml"
-hash = "897d9eb598de441a77fad4e4ffd42d942ea5275867989c9de7606fc2d0e3f885"
+hash = "eea17ad7e74bd2067d73b6eb3b090c1511d7b31bc40984377585aa0822a396f8"
 
 [[files]]
 file = "config/rbp/block_definitions/bone_block.toml"
-hash = "50a34bb40f225bd6e2fd6a6e2255694438f2f187d4c0de87d19e40ab89b8e117"
+hash = "a37341f0c0e232903e7950d508822646cc939232b436081a27bcec01bbf94c98"
 
 [[files]]
 file = "config/rbp/block_definitions/bookshelf.toml"
-hash = "4b55d0c8a6fb059a6064c24933e6bba1c848325f4946c3f11b06bdc9c2c28cb6"
+hash = "95d92916d1db481f50e6f5130fa7bab938a43cc425d32810c099bdd45f7da92a"
 
 [[files]]
 file = "config/rbp/block_definitions/carpet.toml"
-hash = "8bccdd7bcdeb346597b8786a2a63316e9600a9629445c7f90af792cd418a087c"
+hash = "d81c140c99e49a9a0da95a1567384eaa3dcf446c043352bb9f7709bea1320e0d"
 
 [[files]]
 file = "config/rbp/block_definitions/chain.toml"
-hash = "bb8d2a3aae1fd775ef13e582369a199ef37a88afbffd3a5571799ed0b16fcca1"
+hash = "746a0fb7ca2a60246d409b2e06ad441ad9987682206218f496f11596f3a01c98"
 
 [[files]]
 file = "config/rbp/block_definitions/chest.toml"
-hash = "71300042f26b27bc5bd3dba6dc95248a706455f1d7cabdcd259c0287d91aa11c"
+hash = "dbec8bf5241f2ffe815fd907c8065e2df39cc5a0f79f3a3c257990efd12d169e"
 
 [[files]]
 file = "config/rbp/block_definitions/chorus_plant.toml"
-hash = "91bdbc4862dae4d110d1e7aebfa2ecf8c4474af5696d8f94f14cfa72a10bb78e"
+hash = "35d9c079e704d75a1c2fc19ee7fba0754e2baea258bd348280e3d331baab3c93"
 
 [[files]]
 file = "config/rbp/block_definitions/concrete.toml"
-hash = "2bf0cf8b73280cac949caaeae9be561ed0508d109398819c49801d77dced490c"
+hash = "f0b00b073c0492a1b2687050acab565c99898648fb24e906f72c99fd916df8cb"
 
 [[files]]
 file = "config/rbp/block_definitions/coral.toml"
-hash = "de0b594be816516b9ed17931048e69c0e5889c5a4af4b2d0973cd660c050ea34"
+hash = "3a62b46ea687b7f36aff638381ec39e7c86730e6279b3523a22935c57e47f20b"
 
 [[files]]
 file = "config/rbp/block_definitions/dimensional_font.toml"
-hash = "62e02e0cfa7aded40e950ae3d8f4a297e3fa3211ef8a3536f0a0dff00a3aef78"
+hash = "90edde87c4d1543cdc15594d1584a141e9efeee943e4009fa6250b2a468554d6"
 
 [[files]]
 file = "config/rbp/block_definitions/dirt.toml"
-hash = "27263d737d29344e71877cf46b3c448b2add923b0aa96e7903b68e548874f89a"
+hash = "f4c5a9790625b05e7fe942b0f87dddc3beeacc151de89faa6a2751127ff2718d"
 
 [[files]]
 file = "config/rbp/block_definitions/door.toml"
-hash = "bc4263d1b1dcfc44331bc5771ce214a95957d0de4df59a560701ff54acedbd1d"
+hash = "cd2a6283d774e09d025eb583c7e5997127f69d8d0871e7f8efdcb06b5256f07b"
 
 [[files]]
 file = "config/rbp/block_definitions/end_portal.toml"
-hash = "df347dc9cfbc72e5de4e0e4f9c67b9d54518f148465e9c3c1491a001d71f49d1"
+hash = "e68d8769fabd5685b9d77453b4af6809df081926349cc42c6f29b3a0557b7fc2"
 
 [[files]]
 file = "config/rbp/block_definitions/end_stone.toml"
-hash = "c943208b98620743d524c4012c43e2dec2743afe89f7ada9b38ef4539d6dd7fd"
+hash = "fe05934d3094f5540216f68c1891aef24bdb67d18fa755bc9ee39663f2bb55d9"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_basic_construction_slab.toml"
-hash = "8d05893b120dbfa3cffe90d4359618bb9f7f9c3a4cab5373dffe80062f4f7a53"
+hash = "9929e5c46862eab302c06634ab11c01692bb23e2445833e7d554dbdeff92a4ce"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_basic_construction_stairs.toml"
-hash = "893e17f4913bce28c4def91a0fe8e86aa49c151733592849389dd539bb553189"
+hash = "738a929f1e15d5253d6d044406737696b90faf39f7d0ed2ee6b4aa005e7a133b"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_basic_construction_wall.toml"
-hash = "e2d588fbfb5b76fe81b44f002c4c2aa1d103cd3026076ef4ccd62c164a10206b"
+hash = "a47699e1cbb92bf7e566423b6b4ac2625ae1672aa31b674afe873ea2ce977295"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_dirt.toml"
-hash = "3af9b12b09ca022f686235036eef93d5f566cc66a7d521de426ed9d460d12f0b"
+hash = "1339fca8aabaefad96de07ccd4595bf6f99b4eb005fd344d0dbefbf93daabcb5"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_glass.toml"
-hash = "0e41e05343151be2eca31aff43a3c225272a807b94b311ff886ab088a7c2c5e0"
+hash = "9986b12523fd97ad34261550a3b610e1c938855cc74af8b711c4a26f38877d13"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_glass_pane.toml"
-hash = "00e2aa1c12a32a31f421fe3d080ebd169f6448f348b77b3df17aa66be29e5369"
+hash = "432416425897619a96dbd201e8d1941dc8202c9f89b8779f1f7c77f24ecc99ed"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_refined_ore.toml"
-hash = "302bee4d32d3dc9281e965b7d5e8b31a4d1b18402307680ace692be8dde94bf4"
+hash = "3527861fac22b0ce42d7ca21aa5a7d87d096239da4b855ad852a8710ec4e1955"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_sand.toml"
-hash = "5fed38fd4ff3c23f2927d1decbf23967398ccef8a598e905508e4dca3d04d6f6"
+hash = "a5efb769105f8fe9fdae1f41c7c051a504fc04f31848028794bd5b31c3c6f94a"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_stone.toml"
-hash = "1122aece829cdf5c728c6dd52071bb0b5a92d515832ba201a985e09c43b9dfb3"
+hash = "a8a364496739e5b37ad78cf4e82fe1a0bdf8548a90f748a0f46e20f442efcee6"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_wood.toml"
-hash = "4d18ed8af13b5ad25dbbd238dbd15646812667a71f4c1cfa09800c4582ec08a7"
+hash = "6626bd08a0e7155cc4882cd556d42e9690a5bf314a4dd39fc88ff7d0eee732a3"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_wooden_fence.toml"
-hash = "b08b21f43581b3003734af33ff939cde146eb23df407ea37df045b2773f38b15"
+hash = "503f6639c4342fff784ae5f530f43c630259f36ff491fa47cc166410e58bda83"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_pack_solid_blocks.toml"
-hash = "fec48c6b4ff16f2bc87b2e54deede9e5e41e448cbc938ddf96e8314dfce4335b"
+hash = "5f076df35caf105f0ccdb906dd1fe6199bbd6cbbb5f08c2a120e74321b44fe13"
 
 [[files]]
 file = "config/rbp/block_definitions/glass.toml"
-hash = "cc0ed76ccfcd00fe194bafd2fed7cc3e0c6e700ec609b7d14720b328b7f02e67"
+hash = "621f09fe9ac36e890dc6cd5ff255c719404a15e80c52e21f9fb429593c29e511"
 
 [[files]]
 file = "config/rbp/block_definitions/glass_pane.toml"
-hash = "3a477d5c981b7afa25d2c4ad64d181a2c276eb6da00a5b6d0759b1629d1a402e"
+hash = "a9959a98975c9ff62afbf69393a0c7cc72220f50c89cb02b629c31a2e1817bcb"
 
 [[files]]
 file = "config/rbp/block_definitions/glowstone.toml"
-hash = "957413a8eee735a204aefc73a55fc54fe979c7b710ca901fbdfc4741c5da8544"
+hash = "201f6ff4c68fcce52ee9979edb3331c2eec8d690bd56339cea847ccd3d86d0ac"
 
 [[files]]
 file = "config/rbp/block_definitions/hanging_sign.toml"
-hash = "4e39eb38f66134fe872914e406dabf1af9f120e9cae51c5a42f953cca3e72821"
+hash = "ec809fce6cd781aabbdfbb578102b9ff5c06c8931d3c085db29e1fd8016d8556"
 
 [[files]]
 file = "config/rbp/block_definitions/hopper.toml"
-hash = "cc526aecd662e143f8c5620821631645a352445de2745680359d5ae16b637e59"
+hash = "4a8cbcd30bac087bda055696abc4114aea4ec4ffe1962b9102cbe7ac5be592a0"
 
 [[files]]
 file = "config/rbp/block_definitions/ice.toml"
-hash = "18a16d40d8fe8521d2f412f5edcbe9db81e39f574a75ed3c8ef5c2ba95781e49"
+hash = "82fa3a084f89c7e1bab0a5434b44d827d103c8d25d01c3470b45d6020f2439d3"
 
 [[files]]
 file = "config/rbp/block_definitions/iron_bars.toml"
-hash = "df5e635aa426b29cb2709519a6de0dc758202bfe2435253418e05a76580b94bd"
+hash = "2854e775b0d5250cdeeb4f7e8497faee8ce5a0afa1895cec2a98af6b96dbc755"
 
 [[files]]
 file = "config/rbp/block_definitions/lamp.toml"
-hash = "8fd019d20f90e71774fc13a00db665effc4a74736de431d91b1e2f8dc79ad9ed"
+hash = "5b8c5fe08ab0e68fb63161b9edc1f6d2737c519355c6dd0a861c31123f9053b5"
 
 [[files]]
 file = "config/rbp/block_definitions/lantern.toml"
-hash = "c32cd0594f5cb662e7a4d07ef5407dfec06e80fff0eab310709b5cb6405ca6eb"
+hash = "fc50f38004a7ba5c3927cc9f59a2f26027e31d3361b4470bb2227cc764374194"
 
 [[files]]
 file = "config/rbp/block_definitions/leaves.toml"
-hash = "0f20f92f97862d88f5fa59d26110bd7031b3e1af6d4decd870e72242b8f9b484"
+hash = "53fac32b3586bf762e4f3cbfa8aac827d58aa4386efd8a016c495e5696838518"
 
 [[files]]
 file = "config/rbp/block_definitions/miscellaneous.toml"
-hash = "2aaa66ff6b1c7da5e4e0f18179192a340aa0a102096896dd4acb4304105e3d53"
+hash = "f237001955cf1848c9b957a65d1d9448ce3d875ef52350aa53901fd9154a9091"
 
 [[files]]
 file = "config/rbp/block_definitions/mud_construction.toml"
-hash = "71637b2d676c5194b6c893e2df1d40b876b637ccf06c0aec0b9805720b5702ca"
+hash = "3a9bc69566026c4244924b6daac6f4cca68fdbc2d96ae9ee17e7ac19faae2e5d"
 
 [[files]]
 file = "config/rbp/block_definitions/mud_construction_slab.toml"
-hash = "48be78cd6964d7cd594c2a32905e534e787aa3b7e92433ace129b24d98eb3032"
+hash = "08ace7f1009c8aad0a1be198263010e3ea5fd6acf733857a8356f5fd7cb981ce"
 
 [[files]]
 file = "config/rbp/block_definitions/mud_construction_stairs.toml"
-hash = "890a62cee04159db9f21a39f1ff4be595a3181ec70f78456afccbb352fe11675"
+hash = "fdc8ca1212ee50787c42a9a09a3f09e90381181ba2b571fe8f2b3c860466bf08"
 
 [[files]]
 file = "config/rbp/block_definitions/mud_construction_wall.toml"
-hash = "60d31b4ac111c363f9b7bcb369d6688e820baa7f4233c15dd102288a047a69a4"
+hash = "e6d075e3a7dc984bc93bd43f30304f6fef8738bad4b42b4181aad12af2a898ad"
 
 [[files]]
 file = "config/rbp/block_definitions/mushroom.toml"
-hash = "b92d270905fca30f9701c7b815cd8449ea9f8fc67a51f53fd087a38f2f8fffa0"
+hash = "f87256c33d15ec583367290f0e848aef91a7c4ff76409fc7e805d0d1ed21c72e"
 
 [[files]]
 file = "config/rbp/block_definitions/netherrack.toml"
-hash = "a9d8643725cf6cff6ad31dfda2410e55edd722d4785900227be783674ccb66ee"
+hash = "80d9e60d879e9477458d45d9a2e70e077d72c809230b7641383d99590b1932e4"
 
 [[files]]
 file = "config/rbp/block_definitions/obsidian.toml"
-hash = "eb5950e137905182df04a7585107fe6e5a12368ffc270dd3c549731b3e686f36"
+hash = "afc7125b2eb0f4a7bfce57024797190ee188275d5fee18e87b2d20f57b8eb755"
 
 [[files]]
 file = "config/rbp/block_definitions/piston.toml"
-hash = "acd38119e90117ef47afe5a9c6878405c26c32349dcec566c892a6b72b2e401f"
+hash = "cd7d85684345a96edb120a723fbde5936dcbb2a34da58b87d5bacd7d2b0643eb"
 
 [[files]]
 file = "config/rbp/block_definitions/pointed_dripstone.toml"
-hash = "8642af41740aebc986c7e855719908d140127abec3d8c1ce8d278b1f581dcb04"
+hash = "b2ffcc3541cf34d540ff5f3c9a9ded5ed5ec8281592f1011b4e84652e542a9fc"
 
 [[files]]
 file = "config/rbp/block_definitions/powder_snow.toml"
-hash = "9b7e3644269e0832ed23759888224f25751138e815af7dfb11b4a8020dfdfe19"
+hash = "35e0c37ce739d544b74853790b5869613e482edd8ffd0d2676ad3984c73869fe"
 
 [[files]]
 file = "config/rbp/block_definitions/produce.toml"
-hash = "d86d480322ab555d97b0483e628eb8aaa43ffef3750eb8311e7515cdc80e0116"
+hash = "8a6e3df6666e74f2adbad438a89aa688db1848e1f415fc0b4d4934e5bd12ecde"
 
 [[files]]
 file = "config/rbp/block_definitions/refined_ore.toml"
-hash = "089bd3e44dc7f2db465e8c965a853c842ffa9f3f355e277b276bf6e8ee412681"
+hash = "959c9984191830b91cc012c9b4644b1c7b50255dc528bf89a68b2e1c37355fde"
 
 [[files]]
 file = "config/rbp/block_definitions/sand.toml"
-hash = "fdd9f63fb093d0e73aff6d894a4e778f993995041dfc59f9485c4c6780b95152"
+hash = "2b0ce6c0a56cf3d7b28fdbaeb396ea20ee149e63aea40a8fd36f37c28820f3d6"
 
 [[files]]
 file = "config/rbp/block_definitions/shulker_box.toml"
-hash = "f85fd3b020a65e057167cf7e6e13952d8396022356824af7c7f8bf6acc17b9ba"
+hash = "02e76cfa057fe8745a8639f8e19db6275b462e1717cf0884c807e88c829ac00c"
 
 [[files]]
 file = "config/rbp/block_definitions/slime.toml"
-hash = "18f57b2e496df8038ad33fcdcea6c3f9b7f2ceb3cd761c281d872e6c607e9fb0"
+hash = "ac997d7275e6a7a233dee07d24df4c67263620e4f3a33d18b118f47de363cb17"
 
 [[files]]
 file = "config/rbp/block_definitions/snow.toml"
-hash = "194cc9fcaf92c1b165f62b0a793d191a9f9b28c973f7482a85f0726792d60e25"
+hash = "ece7a00465b3e680dd3823c5601c0ab69260ea431221c82c1bfb0e0e4748dba8"
 
 [[files]]
 file = "config/rbp/block_definitions/sponge.toml"
-hash = "c01281ae7170672025a956ad3402e52596230a0cd00b85f49f606e54f935ccfc"
+hash = "8aff342f061d72232a8b48ce5ba42c523030b4a64e876d17a4d40b4ae0485a29"
 
 [[files]]
 file = "config/rbp/block_definitions/stone.toml"
-hash = "ddd92b711c73f380b88ffdce71dc0cb5f05368199fd6c3ee0f21d18582ee978e"
+hash = "fc9e52fb081d494b226ccc17866dabb9ac9a2f2b3dcbd087bc01b1b6f55ec0a9"
 
 [[files]]
 file = "config/rbp/block_definitions/string.toml"
-hash = "e70e772ecbab80434585fd1e8517b24bc1f655c54d62c1b344ed0c7a12348f06"
+hash = "3e6ccf8f443b239079506965f55c399ce3c15d6ab15325dd3098ecf9c46d1fd6"
 
 [[files]]
 file = "config/rbp/block_definitions/strong_construction.toml"
-hash = "eb44e22873f5b12b4ded7df18675913ba0001aeb6a5b6830377511c321d6ec14"
+hash = "d8ebff5f6689542ed74472ea3ccce236ddf391f80555c881e0bac7470a983da0"
 
 [[files]]
 file = "config/rbp/block_definitions/strong_construction_slab.toml"
-hash = "c760e8d1106fe673012cde8b4266e1028ae720b3fcb6c462f92f877ac1c076b9"
+hash = "726a5c202b5e04ba72a602a9a9b0b56d79c6e64de8eeaeff308e2edb4f4ef57c"
 
 [[files]]
 file = "config/rbp/block_definitions/strong_construction_stairs.toml"
-hash = "ad609fb81da784e00811d660163582516988589249b6c2965dd07cfa179722d5"
+hash = "c46e0770a1e722dc0c0b7d0f829a5fba608813d07ba7f2ad1a1197740d9951e0"
 
 [[files]]
 file = "config/rbp/block_definitions/strong_construction_wall.toml"
-hash = "1e78238bf8c039aed7d5769dc84c537f1e93e04b9bfdbc7c6b449b0f4bb30243"
+hash = "f540d151169360552b8df16660c24c16f929f08f87e49fc8308019345d360b84"
 
 [[files]]
 file = "config/rbp/block_definitions/terracotta.toml"
-hash = "a1f91138f6a638c88171ee963777eaab9968b80ab3af6d679d5aa4e30745f182"
+hash = "1e526e93da6620e8cf529195c4fa55edd056d50535d85f5262e8e05af1f5707d"
 
 [[files]]
 file = "config/rbp/block_definitions/tnt.toml"
-hash = "54c2d9a44d2fa8f1455c3b614a33b29104600f1fa9b836c19d2e861aefca9935"
+hash = "b09f6dcf953bc277eb4571c01b31cd22b812f38ddc4e71e84fcfa049cdc1a85e"
 
 [[files]]
 file = "config/rbp/block_definitions/trapdoor.toml"
-hash = "8beb736ae69f870e0069f9f001f4a3e00eab9e9b0412bb9bf6242cc159729bfb"
+hash = "0a482b34804fdae22390b7f771b27e36f81888fd9fb7aa160c09b47714eca75d"
 
 [[files]]
 file = "config/rbp/block_definitions/utility.toml"
-hash = "f9b992414f49ca71ea8d19e050e7f5aa6a0f1e331f5029d0dad2c39c5dc5dc93"
+hash = "47121cc833c6eeb72370aff81f4067aec86b343feefb5d5d7b95ef3d27305b05"
 
 [[files]]
 file = "config/rbp/block_definitions/utility_heavy.toml"
-hash = "7a8d2d8c6c457ed09101fb1cf08a69dad85487dd10c0312ca253c76484789859"
+hash = "ac54337a6de011ee0a2309b3858a1d876df2f279eb8ac98beefacbf3bbe6b672"
 
 [[files]]
 file = "config/rbp/block_definitions/utility_light.toml"
-hash = "eb0c9062f4b8e65e638edd499615f5640e77249a1417c9a576a3741a12628dcd"
+hash = "6d62c93cb3b86a4ec538db1f9000dc270c5374fc6596894719e80d437c355565"
 
 [[files]]
 file = "config/rbp/block_definitions/web.toml"
-hash = "69a85ca137fe2f432e21ed11ddf7faa8081cd2b75a510c385d8fc6578002317a"
+hash = "86734bba832b9ca48b8386e174e396552503dabc5464971568c005d42cf03866"
 
 [[files]]
 file = "config/rbp/block_definitions/wood.toml"
-hash = "a875efc6033d00cdc5047911dfb766b99265e718fbe397448b5440fcf024dacb"
+hash = "9dcfc3b39bffff3455f9c4fc0902a62056e91b20ab9eeb0243ec9e0879c3b104"
 
 [[files]]
 file = "config/rbp/block_definitions/wooden_fence.toml"
-hash = "16861f9e2e357e5e5784b43668e3e7818bddb138b5f4f21a303351c3b0a28745"
+hash = "f269279e645e50020bb4ae435284affe4ecc6db656570fd7eea3397561fece2a"
 
 [[files]]
 file = "config/rbp/block_definitions/wooden_slab.toml"
-hash = "97487c292003899930b63444b373cc933f97da5a42538768b83e3d6f03d983e1"
+hash = "cff397dd2ac578de9d82e23c6327da67db9e336dee4a660868f67c082a52c996"
 
 [[files]]
 file = "config/rbp/block_definitions/wooden_stairs.toml"
-hash = "ce71ef18e9d44abd2042e287743f90fe572404373a7aa579cea13083ba671e69"
+hash = "7d699dd949074863248b270f41966368826e20ccc3792e8c0de36cea66f644a4"
 
 [[files]]
 file = "config/rbp/block_definitions/wool.toml"
-hash = "ff08d67b7a78aa65a66205063d465196afcae4a0141027b5f49f9a5b5468d54b"
+hash = "c23f24eaee6a00e003e2cfabf0bb03d97c2474019411accee44def831736adb6"
 
 [[files]]
 file = "config/rbp/rbp-common.toml"
@@ -9286,15 +9286,15 @@ hash = "58fb7096e53dfc4a06e7a9c874773010ce28cc2b6e7472b0daf6f0645cba8d91"
 
 [[files]]
 file = "kubejs/assets/unearthed/models/block/overgrown_andesite.json"
-hash = "2065d8a5113147c88b80ad00ec929bdfc7b21a38980db72a63eb0463655ea069"
+hash = "5bac309660a861762efb8d41d241c559dda0dec78352b2adb3cf076f4cef2451"
 
 [[files]]
 file = "kubejs/assets/unearthed/models/block/overgrown_diorite.json"
-hash = "b6b37d65313d7c8367799c614815bf95852f557d23c5c9675450841b129141f0"
+hash = "70c115779809a8b38e324ae9d6619621f3c1e3a56ad13eab8e8c78e42cae37bc"
 
 [[files]]
 file = "kubejs/assets/unearthed/models/block/overgrown_granite.json"
-hash = "5ea108007608715ab6864513951891426baa414c6b7189b3968cdf9e5590ade1"
+hash = "98a01bc0f7ae348b4ca0d000bb20ad1262ba50277b90acf1df082cf7d5152326"
 
 [[files]]
 file = "kubejs/assets/unearthed/textures/block/overgrown_andesite_top_pebbled.png"

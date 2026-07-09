@@ -9277,20 +9277,24 @@ file = "kubejs/assets/kubejs/textures/item/titanium_grinding_ball.png"
 hash = "27d55921b31e8eeb2bf0921a896155ce66600bb870af746c50ede52d8c8b5bee"
 
 [[files]]
+file = "kubejs/assets/unearthed/models/block/ore/overgrown_top_tinted_overlay_horizontal.json"
+hash = "fd79d9d8ab6b640d58f8f4acf5778f75d8f41d9dbe0f6936350ede972e547e95"
+
+[[files]]
 file = "kubejs/assets/unearthed/models/block/ore/overgrown_top_untinted_overlay_horizontal.json"
 hash = "58fb7096e53dfc4a06e7a9c874773010ce28cc2b6e7472b0daf6f0645cba8d91"
 
 [[files]]
 file = "kubejs/assets/unearthed/models/block/overgrown_andesite.json"
-hash = "5bac309660a861762efb8d41d241c559dda0dec78352b2adb3cf076f4cef2451"
+hash = "2065d8a5113147c88b80ad00ec929bdfc7b21a38980db72a63eb0463655ea069"
 
 [[files]]
 file = "kubejs/assets/unearthed/models/block/overgrown_diorite.json"
-hash = "70c115779809a8b38e324ae9d6619621f3c1e3a56ad13eab8e8c78e42cae37bc"
+hash = "b6b37d65313d7c8367799c614815bf95852f557d23c5c9675450841b129141f0"
 
 [[files]]
 file = "kubejs/assets/unearthed/models/block/overgrown_granite.json"
-hash = "98a01bc0f7ae348b4ca0d000bb20ad1262ba50277b90acf1df082cf7d5152326"
+hash = "5ea108007608715ab6864513951891426baa414c6b7189b3968cdf9e5590ade1"
 
 [[files]]
 file = "kubejs/assets/unearthed/textures/block/overgrown_andesite_top_pebbled.png"
@@ -11076,7 +11080,7 @@ hash = "280fd7a311f49a6a2315ecb4820b806f437466f8a4c1bdda5319be3bb256cff3"
 
 [[files]]
 file = "mods/btmfixes-0.1.0.jar"
-hash = "c0b5f489031d7bbe8d3993380bef00fee3e9a8e7e8874f0a3a9e1020bb77d905"
+hash = "4a521e7f4522c858486d825e0943012373a59547c21317152dae295394e2e6e7"
 
 [[files]]
 file = "mods/building-gadgets.pw.toml"

@@ -6305,6 +6305,42 @@ file = "config/zombieawareness/PlayerRulesAndLists.toml"
 hash = "0c9cb7ce493414f2a4b846417db297b8c24ec9950e5e2630d1cfff387568f5ae"
 
 [[files]]
+file = "datapacks/callfromthedepth_music_fix/data/callfromthedepth_/worldgen/biome/deepamethistforest.json"
+hash = "73712f4e5c25589d7dc4fab4ab149c103ad945ef9407836ebc59a92dc974cf6c"
+
+[[files]]
+file = "datapacks/callfromthedepth_music_fix/data/callfromthedepth_/worldgen/biome/deepdepth.json"
+hash = "d47542907c46a0b6462ecf79890a06f96a2b864ea11c830ae7b72ed25e6d3b59"
+
+[[files]]
+file = "datapacks/callfromthedepth_music_fix/data/callfromthedepth_/worldgen/biome/deepforest.json"
+hash = "941235e3b848833f1c908cb17a9c5469eafcebfcdae65963e994732872e5ab4a"
+
+[[files]]
+file = "datapacks/callfromthedepth_music_fix/data/callfromthedepth_/worldgen/biome/deepmagma.json"
+hash = "46b56d1c9a1a04ac96aee90e606ba34e7e92365f17afad8f22512fd016f24127"
+
+[[files]]
+file = "datapacks/callfromthedepth_music_fix/data/callfromthedepth_/worldgen/biome/deeprot.json"
+hash = "c886b17d2c0391b7d9ccff527e66702fad3b147250d7fc6c3049f28e16e5bcfe"
+
+[[files]]
+file = "datapacks/callfromthedepth_music_fix/data/callfromthedepth_/worldgen/biome/forgottenforest.json"
+hash = "d8052132e02a0fe629d5d2d7b4dcb89b6d75dbbbf63b69151f9fc98378cea341"
+
+[[files]]
+file = "datapacks/callfromthedepth_music_fix/data/callfromthedepth_/worldgen/biome/lostsoulsbiome.json"
+hash = "d9542490f84d2bed5b7f4796f3667741b13911e92bb3d5648bf125a4f77ee03e"
+
+[[files]]
+file = "datapacks/callfromthedepth_music_fix/data/callfromthedepth_/worldgen/biome/strongsculkswamp.json"
+hash = "7ff3e28fb6506cf9ed94e0cff8978fe348c2e272ff70af69c660b3fa771679dd"
+
+[[files]]
+file = "datapacks/callfromthedepth_music_fix/pack.mcmeta"
+hash = "4c999dcf1522c8556030ed63998cc048c5780d8560c9f53c20502f9a030707ff"
+
+[[files]]
 file = "datapacks/datapack_foraging_everywhere/data/ars_nouveau/forge/biome_modifier/common_source_berry.json"
 hash = "20b362951b6790f4890fb2711cf3283dba29f9dc122df84ed44cec03051743f2"
 
@@ -10006,27 +10042,27 @@ hash = "c181c53d4b542afe051dc612d8b4979375327ee2a93a407a0d957e5421f4d4d7"
 
 [[files]]
 file = "kubejs/data/kubejs/recipes/primitive/bone_butcher_knife.json"
-hash = "9fd5c57d82fbc4ebc96e526e3c1b907e0f25e65ea624d589a05cb3ca2f6658a8"
+hash = "8fc15c1d7023ef8ff545e48c6e288d087b6e68f58cdd51b4a3b471c340997d0d"
 
 [[files]]
 file = "kubejs/data/kubejs/recipes/primitive/bone_hand_axe.json"
-hash = "5e1c5a094730668ec221736981994d5d3091c4b14b21747113915f979c5199b3"
+hash = "2186d09b6e2ea4d32dee3a393e02a1573773ce57e9a24eaef6d1b2ddf1d4489b"
 
 [[files]]
 file = "kubejs/data/kubejs/recipes/primitive/flint_butcher_knife.json"
-hash = "258d35775b4ecb72588a92cd98562587a0730a4648b46d9d3c02fc87c25f1df6"
+hash = "44353e30da4ffea185118522816c1e10e51154fc3a1e41815ce21bcff7890d27"
 
 [[files]]
 file = "kubejs/data/kubejs/recipes/primitive/flint_hand_axe.json"
-hash = "b18c7ac3f926b45821039c4202e56ee4400222230c372859b870a2ec0c90c322"
+hash = "b42beab2e204def2e7c9af914d3e5e20f91ab957e41772c0c4987c618b4a86c4"
 
 [[files]]
 file = "kubejs/data/kubejs/recipes/primitive/rock_butcher_knife.json"
-hash = "202de7d330edb00ac920421a1ff1d2f6fe0533a4945bd3f94eb80d1d593ffbfb"
+hash = "9d464fd907f0b28f0a7e312f2a155aaf37f593df363e666a820e7be2c6237258"
 
 [[files]]
 file = "kubejs/data/kubejs/recipes/primitive/rock_hand_axe.json"
-hash = "c2176564089ae2ae0b12e30231fb9617c11bac6d0f3f2de2eb89b290230076ef"
+hash = "6b2af34e87c65d45a3fa893bebdab89f008770b66f6dc42ffde690d85288cefb"
 
 [[files]]
 file = "kubejs/data/kubejs/tags/blocks/dirt_like.json"
@@ -10786,7 +10822,7 @@ hash = "601086a5bbbb0c6e13321f37ed5905cd3fe0deb4b637e858aca85735ade32f5f"
 
 [[files]]
 file = "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js"
-hash = "0657ba1c4682c5699e392fd177362a0a4276835b5fb7d099ff220082f0dd683d"
+hash = "33b2651def2e198d2e85a9b60453c49bdcda332c9770f8df4fb63c7b8514be92"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/10_campfire_recipe.js"

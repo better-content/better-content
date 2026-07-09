@@ -13,7 +13,7 @@ Blocks = ["minecraft:acacia_fence", "minecraft:acacia_fence_gate", "minecraft:bi
 	#Additional support strength to apply to the amount of weight the block(s) can support above when acting as a beam.
 	#A value of 1.0 will allow the block(s) to support an infinite amount of weight, whereas a value of 0.0 will not apply any additional strengthening.
 	#Range: 0.0 ~ 1.0
-	BeamStrength = 0.6
+	BeamStrength = 0.9
 
 	#The mass of the block(s), in kilograms.
 	#Range: 1.0 ~ 50000.0
@@ -26,7 +26,7 @@ Blocks = ["minecraft:acacia_fence", "minecraft:acacia_fence_gate", "minecraft:bi
 	CanAttach = true
 
 	#Whether the block(s) can diagonally attach to other blocks for support.
-	CanAttachDiagonally = false
+	CanAttachDiagonally = true
 
 	#The chance the block(s) will slide after falling and landing.
 	#Range: 0.0 ~ 1.0

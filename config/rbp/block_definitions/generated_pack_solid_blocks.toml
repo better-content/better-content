@@ -9086,11 +9086,11 @@ Blocks = [
 
 [Physics]
 	SupportStrength = 88020
-	BeamStrength = 0.45
+	BeamStrength = 0.9
 	Mass = 1200.0
 	CanHang = true
 	CanAttach = true
-	CanAttachDiagonally = false
+	CanAttachDiagonally = true
 	SlideChance = 0.45
 	PlacementSlideModifier = 0.0
 	EntityDamageScale = 1.0

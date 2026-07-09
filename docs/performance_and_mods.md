@@ -46,7 +46,7 @@ Current full-pack work should assume a higher memory budget unless the user expl
 
 ## C2ME, DH, LC, And TFTH
 
-Current source state keeps C2ME, Distant Horizons, Lost Cities, and The Flesh That Hates active. The focused stability harness entrypoint is `tools/btm test scenario-headful lc_tfth_c2me_dh`. For reusable prepared runtimes, prefer `tools/btm test scenario-headful lc_tfth_c2me_dh --bootstrap-mode once`; the root release-confidence lanes now reach it through `tools/btm test full` for pack-only validation and `tools/btm test full --workspace` for workspace-wide full fanout.
+Current source state keeps C2ME, Distant Horizons, Lost Cities, and The Flesh That Hates active. The focused Lost Cities regression harness entrypoint is `tools/btm test scenario lc_tfth_c2me_dh`. For reusable prepared runtimes, prefer `tools/btm test scenario lc_tfth_c2me_dh --samples 4 --settle-seconds 30 --bootstrap-mode once`. This is a targeted diagnostic repro, not part of the default `tools/btm test full` or `tools/btm test full --workspace` coverage.
 
 Historical conclusions to preserve:
 
@@ -57,7 +57,7 @@ Historical conclusions to preserve:
 - Lost Cities, Twilight Forest, Fallout Wastelands, Finley, and Call From The Depths are routed through Creating Space datapack entries under `kubejs/data/*/creatingspace/rocket_accessible_dimension/`.
 - TFTH now has an active manifest/config state; any older claim that no TFTH mod was identified is stale.
 
-Revalidate with the current harness after touching `config/c2me.toml`, `config/DistantHorizons.toml`, Creating Space dimension routes, TFTH config, custom worldgen mods, or portable harness logic.
+Revalidate with the current harness after touching `config/c2me.toml`, `config/DistantHorizons.toml`, `config/btmfixes-common.toml`, Creating Space dimension routes, Lost Cities worldgen, custom worldgen mods, or portable harness logic.
 
 ## Custom Mod Notes
 

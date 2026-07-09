@@ -56,7 +56,7 @@ Do not sync or delete player/runtime state by default. Use explicit reset flags 
 - Existing runtime validation: `tools/btm test runtime --instance /path/to/fresh/runtime`
 - Fresh smoke validation: `tools/btm test smoke --server-dir /tmp/btm-agent-validate-smoke --port 25565 --reset-runtime`
 - Headless scenario validation: `tools/btm test scenario opening_progression --cycles 1`
-- Headful scenario validation: `tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30`
+- Headful scenario validation: `tools/btm test scenario-headful client_smoke --profile quick --bootstrap-mode once`
 - Kotlin test runner: `tools/btm test kotlin`
 - Graph adjacency query: `tools/btm graph item ITEM_ID [--producers|--consumers|--all] [--limit N] [--type RECIPE_TYPE] [--graph PATH]`
 - Graph route query: `tools/btm graph route ITEM_ID [--graph PATH] [--sources PATH] [--spine PATH]`
@@ -117,9 +117,10 @@ Use the portable harness layer for repeatable runtime tests instead of hand-buil
 - On stalls, timeouts, watchdogs, JVM exits, or crash reports, capture diagnostics through the harness before stopping processes.
 
 Current LC/DH scenario:
-- Run: `tools/btm test scenario-headful lc_tfth_c2me_dh`
-- Short smoke: `tools/btm test scenario-headful lc_tfth_c2me_dh --cycles 1 --idle-seconds 30 --tfth-seconds 30`
-- Full validation expectation: 3 clean boot/join/LC teleport/DH generation/TFTH pressure cycles, required jars present on server and client, no crash reports, no ModernFix watchdog, no C2ME thread-guard failures, and DH activity observed.
+- Run: `tools/btm test scenario lc_tfth_c2me_dh`
+- Short smoke: `tools/btm test scenario lc_tfth_c2me_dh --samples 4 --settle-seconds 30 --bootstrap-mode once`
+- Full validation expectation: a guarded Lost Cities-only control runtime passes, an otherwise identical unguarded runtime fails with a targeted Lost Cities/C2ME/DH classifier, and the scenario fails as inconclusive if the unguarded repro does not trigger within its fixed workload budget.
+This scenario is diagnostic-only. Do not treat it as part of the normal `tools/btm test full` coverage.
 
 ## Core Rules
 - Prototype freeze policy: until the user explicitly says the freeze is released, do not add new features, new progression branches, new content systems, or broad UX/theme expansions. Balance tuning is allowed, but keep it scoped to the existing systems and avoid feature drift. Limit work to stabilization, crash fixes, progression deadlock fixes, balance changes, validation/tooling fixes, packaging, questbook authoring/revision, menu clarity, and other changes required to ship or playtest the frozen prototype.
@@ -142,7 +143,7 @@ Recommended validation ladder:
 1. Static checks: `tools/btm test static`.
 2. Existing fresh runtime: `tools/btm test runtime --instance /path/to/fresh/runtime`.
 3. Fresh server smoke for recipe/config/content changes: `tools/btm test smoke --server-dir /tmp/btm-content-smoke --port 25565 --reset-runtime`.
-4. Client/server scenario harnesses for stability, rendering, login, LC/DH/TFTH, or client-only work: `tools/btm test scenario ...`.
+4. Client/server scenario harnesses for stability, rendering, login, Lost Cities regression repro, or client-only work: `tools/btm test scenario ...`.
 
 Treat runtime validation as authoritative only when it reads logs and KubeJS audit dumps from a fresh or intentionally reused current runtime. `tools/btm test runtime` and `tools/btm test smoke` run the pack suite in strict runtime mode. Add `--strict-data-dumps` only when vanilla `/dump` output such as `dump/data_raw/loot_tables` was intentionally generated; this is separate from KubeJS audit dumps under `kubejs/config`.
 

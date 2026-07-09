@@ -23,15 +23,7 @@
 					title: "Ars Nouveau"
 				}
 			]
-			rewards: [
-				{
-					id: "5D40FB7CEE698BF3"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["3 starter stubs."]
 		}
 		{
@@ -49,15 +41,7 @@
 					title: "Mana Boost"
 				}
 			]
-			rewards: [
-				{
-					id: "D4B156CF8134B3D3"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:sourceberry_bush, forge:storage_blocks/source, forge:gems/diamond, forge:storage_blocks/lapis | Source cost: 2000-5000"]
 		}
 		{
@@ -75,15 +59,7 @@
 					title: "Mana Regen"
 				}
 			]
-			rewards: [
-				{
-					id: "4477E674B78F4B51"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:sourceberry_bush, ars_nouveau:abjuration_essence, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-5000"]
 		}
 		{
@@ -101,15 +77,7 @@
 					title: "Reactive"
 				}
 			]
-			rewards: [
-				{
-					id: "24EA53DF0B399954"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via forge:gems/diamond, forge:ender_pearls, ars_nouveau:wilden_tribute, minecraft:blaze_powder | Source cost: 6000-9000"]
 		}
 		{
@@ -127,15 +95,7 @@
 					title: "Minecraft"
 				}
 			]
-			rewards: [
-				{
-					id: "13E512F31A93207D"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["27 starter stubs."]
 		}
 		{
@@ -153,15 +113,7 @@
 					title: "Aqua Affinity"
 				}
 			]
-			rewards: [
-				{
-					id: "7997D49A4AEB555C"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via minecraft:fishes, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 5000-5000"]
 		}
 		{
@@ -179,15 +131,7 @@
 					title: "Bane Of Arthropods"
 				}
 			]
-			rewards: [
-				{
-					id: "878C85622C864114"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via minecraft:spider_eye, forge:storage_blocks/source, forge:storage_blocks/lapis, minecraft:fermented_spider_eye | Source cost: 2000-8000"]
 		}
 		{
@@ -205,15 +149,7 @@
 					title: "Blast Protection"
 				}
 			]
-			rewards: [
-				{
-					id: "5BF0693E048AF6B6"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via forge:gems/diamond, forge:storage_blocks/source, forge:storage_blocks/gold, forge:obsidian | Source cost: 2000-8000"]
 		}
 		{
@@ -231,15 +167,7 @@
 					title: "Depth Strider"
 				}
 			]
-			rewards: [
-				{
-					id: "5235EC10931BDC00"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:water_essence, forge:storage_blocks/source, minecraft:prismarine_shard, minecraft:nautilus_shell | Source cost: 3000-9000"]
 		}
 		{
@@ -257,15 +185,7 @@
 					title: "Efficiency"
 				}
 			]
-			rewards: [
-				{
-					id: "6C4F8F9D4D27801F"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via forge:storage_blocks/redstone, minecraft:diamond_pickaxe, minecraft:diamond_shovel, forge:storage_blocks/source | Source cost: 2000-8000"]
 		}
 		{
@@ -283,15 +203,7 @@
 					title: "Feather Falling"
 				}
 			]
-			rewards: [
-				{
-					id: "505B698A84AE6425"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:air_essence, forge:slimeballs, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-6500"]
 		}
 		{
@@ -309,15 +221,7 @@
 					title: "Fire Aspect"
 				}
 			]
-			rewards: [
-				{
-					id: "D20326DB8671AD02"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:fire_essence, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-4000"]
 		}
 		{
@@ -335,15 +239,7 @@
 					title: "Fire Protection"
 				}
 			]
-			rewards: [
-				{
-					id: "148DBF419EBAC625"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:fire_essence, ars_nouveau:abjuration_essence, forge:storage_blocks/source, forge:rods/blaze | Source cost: 2000-8000"]
 		}
 		{
@@ -361,15 +257,7 @@
 					title: "Flame"
 				}
 			]
-			rewards: [
-				{
-					id: "D0CC9046A59F7146"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:fire_essence, ars_nouveau:air_essence, forge:rods/blaze | Source cost: 5000-5000"]
 		}
 		{
@@ -387,15 +275,7 @@
 					title: "Fortune"
 				}
 			]
-			rewards: [
-				{
-					id: "E09590D55D86A79E"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:earth_essence, forge:storage_blocks/diamond, forge:storage_blocks/lapis, forge:storage_blocks/source | Source cost: 6000-9000"]
 		}
 		{
@@ -413,15 +293,7 @@
 					title: "Infinity"
 				}
 			]
-			rewards: [
-				{
-					id: "E92C1D053E619569"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:air_essence, forge:storage_blocks/diamond | Source cost: 9000-9000"]
 		}
 		{
@@ -439,15 +311,7 @@
 					title: "Knockback"
 				}
 			]
-			rewards: [
-				{
-					id: "FA52DAF8CFE74309"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:manipulation_essence, ars_nouveau:air_essence, forge:storage_blocks/source | Source cost: 2000-4000"]
 		}
 		{
@@ -465,15 +329,7 @@
 					title: "Looting"
 				}
 			]
-			rewards: [
-				{
-					id: "92E21D3471E5B8E8"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:earth_essence, forge:storage_blocks/emerald, forge:storage_blocks/lapis, forge:storage_blocks/source | Source cost: 6000-9000"]
 		}
 		{
@@ -491,15 +347,7 @@
 					title: "Multishot"
 				}
 			]
-			rewards: [
-				{
-					id: "7FF36B34933286BA"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:manipulation_essence, forge:storage_blocks/source | Source cost: 9000-9000"]
 		}
 		{
@@ -517,15 +365,7 @@
 					title: "Piercing"
 				}
 			]
-			rewards: [
-				{
-					id: "6A8672B382DDBE1D"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:manipulation_essence, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2500-9000"]
 		}
 		{
@@ -543,15 +383,7 @@
 					title: "Power"
 				}
 			]
-			rewards: [
-				{
-					id: "6B0C7C46E4BC584F"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via forge:gems/diamond, ars_nouveau:air_essence, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-9000"]
 		}
 		{
@@ -569,15 +401,7 @@
 					title: "Projectile Protection"
 				}
 			]
-			rewards: [
-				{
-					id: "E156D53AC7870CA5"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via minecraft:arrow, ars_nouveau:air_essence, ars_nouveau:abjuration_essence, forge:storage_blocks/source | Source cost: 2000-8000"]
 		}
 		{
@@ -595,15 +419,7 @@
 					title: "Protection"
 				}
 			]
-			rewards: [
-				{
-					id: "F44128D7AE489721"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:manipulation_essence, ars_nouveau:abjuration_essence, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-8000"]
 		}
 		{
@@ -621,15 +437,7 @@
 					title: "Punch"
 				}
 			]
-			rewards: [
-				{
-					id: "7C7A0043ECE709A3"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:air_essence, forge:storage_blocks/source | Source cost: 2000-4000"]
 		}
 		{
@@ -647,15 +455,7 @@
 					title: "Quick Charge"
 				}
 			]
-			rewards: [
-				{
-					id: "095AA21B23F09F81"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:air_essence, ars_nouveau:abjuration_essence, forge:storage_blocks/source | Source cost: 2000-6000"]
 		}
 		{
@@ -673,15 +473,7 @@
 					title: "Respiration"
 				}
 			]
-			rewards: [
-				{
-					id: "4EBE364D2459AE7F"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:water_essence, forge:storage_blocks/source | Source cost: 3000-9000"]
 		}
 		{
@@ -699,15 +491,7 @@
 					title: "Sharpness"
 				}
 			]
-			rewards: [
-				{
-					id: "92ADB2E99D8F2BC2"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via forge:storage_blocks/quartz, forge:gems/diamond, forge:storage_blocks/lapis, forge:storage_blocks/source | Source cost: 2000-8000"]
 		}
 		{
@@ -725,15 +509,7 @@
 					title: "Silk Touch"
 				}
 			]
-			rewards: [
-				{
-					id: "CCA6CBAB4BF04DC7"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via forge:gems/emerald, forge:gems/diamond, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 9000-9000"]
 		}
 		{
@@ -751,15 +527,7 @@
 					title: "Smite"
 				}
 			]
-			rewards: [
-				{
-					id: "2F620E471C2D757B"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via minecraft:bone_block, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-8000"]
 		}
 		{
@@ -777,15 +545,7 @@
 					title: "Sweeping"
 				}
 			]
-			rewards: [
-				{
-					id: "20BA1F15B2D24264"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:manipulation_essence, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-5000"]
 		}
 		{
@@ -803,15 +563,7 @@
 					title: "Thorns"
 				}
 			]
-			rewards: [
-				{
-					id: "605F79E9B18FA5C0"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:wilden_spike, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-5000"]
 		}
 		{
@@ -829,15 +581,7 @@
 					title: "Unbreaking"
 				}
 			]
-			rewards: [
-				{
-					id: "2ED019D91D4E86E5"
-					type: "ftbquests:item"
-					item: "createdeco:copper_coin"
-					count: 4
-				}
-			]
-
+			rewards: [ ]
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:abjuration_essence, forge:gems/diamond, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-5000"]
 		}
 	]

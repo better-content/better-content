@@ -1,0 +1,9 @@
+{
+  "parent": "unearthed:block/ore/overgrown_top_tinted_overlay_horizontal",
+  "textures": {
+    "side": "unearthed:block/side/overgrown_diorite_side",
+    "top": "unearthed:block/overgrown_diorite_top_pebbled",
+    "bottom": "minecraft:block/diorite",
+    "overlay": "minecraft:block/grass_block_side_overlay"
+  }
+}

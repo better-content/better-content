@@ -1,0 +1,472 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "dirty_magic_spines"
+	group: "2DFE3653F3B634B9"
+	icon: "minecraft:book"
+	id: "236ECAC850ADF7A8"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			id: "CCE823C794059335"
+			title: "Fonts"
+			icon: "minecraft:book"
+			shape: "hexagon"
+			size: 1.15d
+			tasks: [{
+				id: "C1852B81147A544A"
+				title: "Treat dimension fonts as route surfaces"
+				type: "checkmark"
+			}]
+			x: -6.34d
+			y: 0.0d
+			description: ["Treat dimension fonts as route gates tied to place. Dirty magic starts by sending you somewhere with a cost, not by handing you a free bench."]
+		}
+		{
+			dependencies: ["CCE823C794059335"]
+			id: "4F6E07C014B384B6"
+			title: "Hexerei"
+			icon: "hexerei:mixing_cauldron"
+			shape: "rsquare"
+			tasks: [{
+				id: "A8FBEB192C3D9B83"
+				item: "hexerei:mixing_cauldron"
+				type: "item"
+			}]
+			x: -4.75d
+			y: -4.0d
+			description: ["Hexerei begins with a cauldron and local materials. Use it as practical folk alchemy, not as a generic replacement for every other magic system."]
+		}
+		{
+			dependencies: ["4F6E07C014B384B6"]
+			id: "89BF23FEC51643A5"
+			title: "Mahogany"
+			icon: "hexerei:mahogany_sapling"
+			shape: "rsquare"
+			tasks: [{
+				id: "C9CF179A7B73EB7D"
+				item: "hexerei:mahogany_sapling"
+				type: "item"
+			}]
+			x: -3.17d
+			y: -4.0d
+			description: ["Mahogany matters because wood identity feeds specific magic crafts here. Bring it back on purpose so the material route stays readable."]
+		}
+		{
+			dependencies: ["89BF23FEC51643A5"]
+			id: "F58727CBAA57D84C"
+			title: "Broom"
+			icon: "hexerei:mahogany_broom"
+			shape: "rsquare"
+			tasks: [{
+				id: "2C0D0D914F054EFA"
+				item: "hexerei:mahogany_broom"
+				type: "item"
+			}]
+			x: -1.58d
+			y: -4.0d
+			description: ["Brooms are earned mobility, not free flight. Build one when your ritual materials and route prep can support it."]
+		}
+		{
+			dependencies: ["CCE823C794059335"]
+			id: "3A14D437A1D38C02"
+			title: "Pact"
+			icon: "occultism:dictionary_of_spirits"
+			shape: "rsquare"
+			tasks: [{
+				id: "9D73D883C258D646"
+				item: "occultism:dictionary_of_spirits"
+				type: "item"
+			}]
+			x: -4.75d
+			y: -1.5d
+			description: ["Occultism is about attunement, circles, and entity bargains. If it starts looking like a passive miner shortcut, you are using it too loosely."]
+		}
+		{
+			dependencies: ["3A14D437A1D38C02"]
+			id: "ED595E4C505AB4C5"
+			title: "Chalk"
+			icon: "occultism:chalk_white"
+			shape: "rsquare"
+			tasks: [{
+				id: "4DE7C6962C8FDBDE"
+				item: "occultism:chalk_white"
+				type: "item"
+			}]
+			x: -3.17d
+			y: -1.5d
+			description: ["Chalk is what makes rituals take up real space. Use it early so the branch feels planned instead of abstract."]
+		}
+		{
+			dependencies: ["ED595E4C505AB4C5"]
+			id: "7EE05287206646BF"
+			title: "Bowl"
+			icon: "occultism:golden_sacrificial_bowl"
+			shape: "rsquare"
+			tasks: [{
+				id: "50600F1422B5BA9C"
+				item: "occultism:golden_sacrificial_bowl"
+				type: "item"
+			}]
+			x: -1.58d
+			y: -1.5d
+			description: ["The sacrificial bowl is a reminder that spirit work needs preparation. Set the area up before you summon anything expensive or dangerous."]
+		}
+		{
+			dependencies: ["CCE823C794059335"]
+			id: "711805EB7FB3B97D"
+			title: "Malum"
+			icon: "malum:spirit_altar"
+			shape: "rsquare"
+			tasks: [{
+				id: "CE33DB867C858C81"
+				item: "malum:spirit_altar"
+				type: "item"
+			}]
+			x: -4.75d
+			y: 2.0d
+			description: ["Malum is the spirit-heavy branch on the Blood side. Expect soul materials and slates to become required ingredients, not generic filler."]
+		}
+		{
+			dependencies: ["711805EB7FB3B97D"]
+			id: "C651E31C8857F83A"
+			title: "Spirit"
+			icon: "malum:spirit_jar"
+			shape: "rsquare"
+			tasks: [{
+				id: "E8D2A592CD8F308A"
+				item: "malum:spirit_jar"
+				type: "item"
+			}]
+			x: -3.17d
+			y: 2.0d
+			description: ["Spirit jars matter because they let you handle essence deliberately. Once you have them, souls stop feeling like flavor and start becoming a resource."]
+		}
+		{
+			dependencies: ["C651E31C8857F83A"]
+			id: "095D6A4C4C57ABA5"
+			title: "Scythe"
+			icon: "malum:soul_stained_steel_scythe"
+			shape: "rsquare"
+			tasks: [{
+				id: "5F9326EE350FFC2F"
+				item: "malum:soul_stained_steel_scythe"
+				type: "item"
+			}]
+			x: -1.58d
+			y: 2.0d
+			description: ["A soul-stained tool is a real threshold item. Make one when you want proof that the branch has become material, not just thematic."]
+		}
+		{
+			dependencies: ["711805EB7FB3B97D"]
+			id: "42C10D6629B6D28A"
+			title: "Goety"
+			icon: "goety:dark_altar"
+			shape: "rsquare"
+			tasks: [{
+				id: "D561AED3E4C2EC84"
+				item: "goety:dark_altar"
+				type: "item"
+			}]
+			x: -4.75d
+			y: 5.0d
+			description: ["Goety is dangerous command magic and belongs later for a reason. Do not rush it until containment and supply are better than the spells themselves."]
+		}
+		{
+			dependencies: ["42C10D6629B6D28A"]
+			id: "CB17C8EE341E7C49"
+			title: "Focus"
+			icon: "goety:empty_focus"
+			shape: "rsquare"
+			tasks: [{
+				id: "B99D07410BB61C89"
+				item: "goety:empty_focus"
+				type: "item"
+			}]
+			x: -3.17d
+			y: 5.0d
+			description: ["Use foci to specialize command magic once the base route is stable. They are for deliberate capability choices, not for random power sampling."]
+		}
+		{
+			dependencies: ["CCE823C794059335"]
+			id: "61DF7A5803F5A8CF"
+			title: "Ars"
+			icon: "ars_nouveau:worn_notebook"
+			shape: "diamond"
+			size: 1.05d
+			tasks: [{
+				id: "E0918E0D2D817441"
+				item: "ars_nouveau:worn_notebook"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+			rewards: [{ id: "1B0AF4A9C4C0114C" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+			description: ["Ars can tease you early, but real glyph access is still gated by manuscripts and cross-branch proof. Read the book, then go earn the actual magic."]
+		}
+		{
+			dependencies: ["61DF7A5803F5A8CF"]
+			id: "C43AA03C2209FA3E"
+			title: "Source"
+			icon: "ars_nouveau:source_jar"
+			shape: "rsquare"
+			tasks: [{
+				id: "B31BFFAD46FE8504"
+				item: "ars_nouveau:source_jar"
+				type: "item"
+			}]
+			x: 1.58d
+			y: 0.0d
+			description: ["Build source jars once Ars recipes start asking for stored source. Keep them near the notebook and glyph work so source is easy to refill."]
+		}
+		{
+			dependencies: ["F58727CBAA57D84C" "7EE05287206646BF" "095D6A4C4C57ABA5" "CB17C8EE341E7C49" "C43AA03C2209FA3E"]
+			id: "EF3FCCBEA1B19672"
+			title: "Script"
+			icon: "minecraft:paper"
+			shape: "octagon"
+			size: 1.2d
+			tasks: [{
+				id: "AF15C0574177CFC8"
+				title: "Craft glyph access from mixed magic"
+				type: "checkmark"
+			}]
+			x: 3.17d
+			y: 0.0d
+			description: ["Use manuscripts to connect Ars with the other magic paths. Spell knowledge should come from crafted materials, not from opening a book once."]
+		}
+		{
+			dependencies: ["EF3FCCBEA1B19672"]
+			id: "65BF28B6840B359C"
+			title: "Spell"
+			icon: "irons_spellbooks:iron_spell_book"
+			shape: "hexagon"
+			size: 1.15d
+			tasks: [{
+				id: "0F7CE4DA079111A5"
+				item: "irons_spellbooks:iron_spell_book"
+				type: "item"
+			}]
+			x: 4.75d
+			y: 0.0d
+			description: ["Iron's spellbooks are where the branches pay into a shared spell route. If the ingredients feel mixed, that is because the book is meant to prove cross-magic mastery."]
+		}
+		{
+			dependencies: ["65BF28B6840B359C"]
+			id: "885E88450D25E2DC"
+			title: "Ink"
+			icon: "irons_spellbooks:common_ink"
+			shape: "rsquare"
+			tasks: [{
+				id: "1E771BF735D4FA0C"
+				item: "irons_spellbooks:common_ink"
+				type: "item"
+			}]
+			x: 6.34d
+			y: -2.0d
+			description: ["Keep common ink stocked near your spellbooks. Running out of ink is the usual sign that spell upgrades need a dedicated supply shelf."]
+		}
+		{
+			dependencies: ["65BF28B6840B359C"]
+			id: "04D31A9636DC517C"
+			title: "Scroll"
+			icon: "irons_spellbooks:scroll"
+			shape: "rsquare"
+			tasks: [{
+				id: "5E1829691AE5DFC8"
+				item: "irons_spellbooks:scroll"
+				type: "item"
+			}]
+			x: 6.34d
+			y: 2.0d
+			description: ["Scrolls belong after the manuscript gate because portable magic still needs to cost real materials. Treat them as earned tools, not disposable freebies."]
+		}
+		{
+			dependencies: ["885E88450D25E2DC" "04D31A9636DC517C"]
+			id: "549CB984F5C3F088"
+			title: "Hybrid"
+			icon: "minecraft:enchanted_book"
+			shape: "octagon"
+			size: 1.15d
+			tasks: [{
+				id: "886519E54EEB38BD"
+				title: "Keep magic branches cross-fed"
+				type: "checkmark"
+			}]
+			x: 7.92d
+			y: 0.0d
+			description: ["Check the ingredients on mixed magic crafts before moving on. If one magic path seems to solve everything alone, look for the missing material from another branch."]
+		},
+		{
+			dependencies: ["CCE823C794059335"]
+			id: "297284C211C0A322"
+			title: "Place Memory"
+			icon: "minecraft:lodestone"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "8EA893319778544D"
+				title: "Bind magic to places and routes"
+				type: "checkmark"
+			}]
+			x: -6.95d
+			y: -2.75d
+			description: ["Mark where each font or ritual site belongs on your route. Place-bound magic is easier to use when you know which location each craft sends you back to."]
+		}
+,
+		{
+			dependencies: ["4F6E07C014B384B6"]
+			id: "3202FB47AA616C53"
+			title: "Cauldron Shelf"
+			icon: "hexerei:candle"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "48465ED159102526"
+				title: "Stage herbs, bottles, candles, and wood"
+				type: "checkmark"
+			}]
+			x: -4.55d
+			y: -2.95d
+			description: ["Keep herbs, bottles, candles, and mahogany near the cauldron. A prepared shelf makes Hexerei crafts easier to repeat without searching through storage."]
+		}
+,
+		{
+			dependencies: ["F58727CBAA57D84C"]
+			id: "98372AFB994FD50C"
+			title: "Flight Tax"
+			icon: "minecraft:phantom_membrane"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "312F96A3F58BC8DF"
+				title: "Keep mobility tied to ritual materials"
+				type: "checkmark"
+			}]
+			x: -0.15d
+			y: -5.15d
+			description: ["Brooms are earned movement, not free flight."]
+		}
+,
+		{
+			dependencies: ["3A14D437A1D38C02"]
+			id: "C3FC1C5B2A447D96"
+			title: "Spirit Risk"
+			icon: "occultism:spirit_attuned_gem"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "AFBE96462E777965"
+				title: "Keep spirit work risky"
+				type: "checkmark"
+			}]
+			x: -5.55d
+			y: 0.95d
+			description: ["Build spirit work in a visible ritual area with room for circles and mistakes. Do not hide summons inside your main storage room."]
+		}
+,
+		{
+			dependencies: ["7EE05287206646BF"]
+			id: "4BDEF7FF2B8DF4FB"
+			title: "Circle Prep"
+			icon: "occultism:chalk_gold"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "B4B799B30C4143FB"
+				title: "Prepare circles before binding"
+				type: "checkmark"
+			}]
+			x: -2.35d
+			y: -2.85d
+			description: ["Draw and check the circle before you begin a binding. Fix missing chalk, bowls, and space problems before the summon starts."]
+		}
+,
+		{
+			dependencies: ["711805EB7FB3B97D"]
+			id: "255996C6BFFFAF3A"
+			title: "Soul Fuel"
+			icon: "malum:processed_soulstone"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "AD60AF227AC217B6"
+				title: "Route soulstone and spirits into materials"
+				type: "checkmark"
+			}]
+			x: -3.75d
+			y: 0.65d
+			description: ["Use Malum outputs to feed later material magic directly so the branch keeps paying into the rest of the tree."]
+		}
+,
+		{
+			dependencies: ["42C10D6629B6D28A"]
+			id: "CED5FCB0882B89EB"
+			title: "Command Cost"
+			icon: "goety:cursed_cage"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "D33A9BF75281BEB2"
+				title: "Bind command magic to containment"
+				type: "checkmark"
+			}]
+			x: -4.75d
+			y: 3.0d
+			description: ["Prepare cages, walls, or a separate room before you lean on command magic. Treat hostile summons as a base hazard, not as ordinary crafting."]
+		}
+,
+		{
+			dependencies: ["61DF7A5803F5A8CF"]
+			id: "4BC2BED60256ACEB"
+			title: "Manuscript Gate"
+			icon: "ars_nouveau:blank_parchment"
+			shape: "diamond"
+			size: 0.9d
+			tasks: [{
+				id: "B85FCC063AB96372"
+				title: "Earn glyphs through manuscripts"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -2.75d
+			description: ["Treat Ars as converging with the dirty branches instead of floating above them. That keeps manuscripts and glyphs tied to real proof."]
+		}
+,
+		{
+			dependencies: ["65BF28B6840B359C"]
+			id: "1EDA0E885EBC6024"
+			title: "Ink Economy"
+			icon: "irons_spellbooks:arcane_essence"
+			shape: "rsquare"
+			size: 0.9d
+			tasks: [{
+				id: "0317548C6A2A643E"
+				title: "Spend ink and essence on spell growth"
+				type: "checkmark"
+			}]
+			x: 5.55d
+			y: -3.15d
+			description: ["Store ink, scrolls, and arcane essence together. Spell upgrades are easier to plan when the writing materials live beside the spellbook work area."]
+		}
+,
+		{
+			dependencies: ["549CB984F5C3F088"]
+			id: "FE4D8461184D9C2F"
+			title: "Cross-Magic Proof"
+			icon: "minecraft:nether_star"
+			shape: "octagon"
+			size: 0.9d
+			tasks: [{
+				id: "FE3E5C3BD5DE44B2"
+				title: "Require each branch to pay into the others"
+				type: "checkmark"
+			}]
+			x: 7.92d
+			y: 3.15d
+			description: ["Before pushing deeper, check that your magic rooms are connected: fonts for travel, spirit tools for materials, slates for cost, and spellbooks for use."]
+		}
+	]
+	title: "Fonts and Dirty Magic"
+}

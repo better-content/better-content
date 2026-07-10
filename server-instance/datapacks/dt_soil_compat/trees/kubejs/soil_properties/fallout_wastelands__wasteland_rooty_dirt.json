@@ -1,8 +1,0 @@
-{
-  "primitive_soil": "fallout_wastelands_:wasteland_rooty_dirt",
-  "acceptable_soils": [
-    "dirt_like"
-  ],
-  "substitute_soil": "dynamictrees:rooted_dirt",
-  "only_if_loaded": "fallout_wastelands_"
-}

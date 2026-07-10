@@ -267,6 +267,7 @@ for (cycle in 1..cycles) {
 """)
     results += CycleResult(cycle, status, classifier, serverDir.toString(), phases, physicsWarnings)
     println("cycle $cycle: $status classifier=${classifier ?: "none"} physics_queue_warnings=$physicsWarnings")
+    if (status == "passed" && !keepRuns && profile != "brutal") deleteTree(serverDir)
     if (failure != null) break
 }
 

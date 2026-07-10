@@ -103,6 +103,7 @@ val scriptChecks = mapOf(
         "reload_verification",
         "removal_unload",
         "save-all flush",
+        "status == \"passed\" && !keepRuns",
         "vs_eureka:oak_ship_helm",
         "vs_clockwork:phys_bearing",
         "trackwork:phys_track",
@@ -132,6 +133,8 @@ val scriptChecks = mapOf(
         "physics_queue_warnings",
         "timedOut && !ready && physicsWarnings > 0",
         "exitProcess(if (finalStatus == \"passed\") 0 else 1)",
+        "status == \"passed\" && !keepRuns",
+        "cycle-\$cycle-base",
     ),
     "tools/kotlin/vs_ships_client.main.kts" to listOf(
         "client_render_failure",
@@ -153,6 +156,7 @@ val scriptChecks = mapOf(
         "observer_join",
         "xvfb-run",
         "pilot-after-server-restart.png",
+        "status == \"passed\" && !keepRuns",
     ),
     "tools/kotlin/vs_ships_observer.main.kts" to listOf(
         "Robot()",

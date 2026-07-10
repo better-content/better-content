@@ -2371,11 +2371,20 @@ fun bootstrapServerRuntime(serverDir: Path, port: Int, reset: Boolean): ProcessR
         deleteTree(serverDir)
     }
     val bundle = buildServerBundle(exportsDir, serverTreeDir, serverZip, clean = true)
-    if (bundle.exitCode != 0) return bundle
+    if (bundle.exitCode != 0) {
+        deleteTree(bundleWorkRoot)
+        return bundle
+    }
     val extracted = extractArchive(serverZip, extractRoot)
-    if (extracted.exitCode != 0) return extracted
+    if (extracted.exitCode != 0) {
+        deleteTree(bundleWorkRoot)
+        return extracted
+    }
     val extractedServerDir = extractRoot.resolve(serverTreeDir.fileName.toString())
-    if (!extractedServerDir.exists()) return ProcessRun(1, "server bundle zip did not contain ${serverTreeDir.fileName}")
+    if (!extractedServerDir.exists()) {
+        deleteTree(bundleWorkRoot)
+        return ProcessRun(1, "server bundle zip did not contain ${serverTreeDir.fileName}")
+    }
     moveReplace(extractedServerDir, serverDir)
     val runSh = serverDir.resolve("run.sh")
     if (runSh.exists()) {
@@ -2389,6 +2398,7 @@ fun bootstrapServerRuntime(serverDir: Path, port: Int, reset: Boolean): ProcessR
     if (!userJvm.exists()) {
         Files.writeString(userJvm, "-Xms2G\n-Xmx6G\n-XX:+UseG1GC\n-Dfile.encoding=UTF-8\n")
     }
+    deleteTree(bundleWorkRoot)
     return ProcessRun(0, "Bootstrapped server runtime: $serverDir")
 }
 

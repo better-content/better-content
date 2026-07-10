@@ -524,4 +524,9 @@ Files.writeString(runRoot.resolve("summary.json"), """{
 """)
 println("vs_ships_client: $status classifier=${classifier ?: "none"}")
 failure?.message?.let { System.err.println(it) }
+if (status == "passed" && !keepRuns) {
+    deleteTree(serverDir)
+    deleteTree(pilotDir)
+    deleteTree(observerDir)
+}
 exitProcess(if (status == "passed") 0 else 1)

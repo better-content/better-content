@@ -250,9 +250,14 @@ cycleLoop@ for (cycle in 1..cycles) {
 """)
         results += VariantResult(cycle, variant.name, status, classifier, dir.toString(), run.exitCode, run.durationMs, ready, physicsWarnings, removed)
         println("cycle $cycle ${variant.name}: $status classifier=${classifier ?: "none"} physics_queue_warnings=$physicsWarnings")
+        if (status == "passed" && !keepRuns && profile != "brutal") deleteTree(dir)
         nextPort++
         if (status != "passed" && !keepGoing) break@cycleLoop
     }
+}
+
+if (!keepRuns && profile != "brutal") {
+    for (cycle in 1..cycles) deleteTree(runRoot.resolve("cycle-$cycle-base"))
 }
 
 Files.writeString(runRoot.resolve("commands.log"), commandsLog.toString())

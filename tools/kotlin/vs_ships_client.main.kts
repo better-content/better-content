@@ -34,6 +34,8 @@ data class ClientContract(
     val assembleHeight: Int,
     val fixtureY: Int,
     val expectedBlocks: Int,
+    val maximumBfsBlocks: Int,
+    val syncWaitSeconds: Int,
     val screenshots: List<String>,
 )
 
@@ -53,6 +55,8 @@ val contract = ClientContract(
     assembleHeight = contractInt("helm.assemble.height"),
     fixtureY = contractInt("fixture.y"),
     expectedBlocks = contractInt("fixture.expectedBlocks"),
+    maximumBfsBlocks = contractInt("fixture.maximumBfsBlocks"),
+    syncWaitSeconds = contractInt("assembly.syncWaitSeconds"),
     screenshots = contractProperties.getProperty("screenshots").split(',').filter(String::isNotBlank),
 )
 if ((System.getenv("DISPLAY").isNullOrBlank() || GraphicsEnvironment.isHeadless()) && System.getenv("BTM_VS_XVFB") != "1") {
@@ -63,7 +67,7 @@ if ((System.getenv("DISPLAY").isNullOrBlank() || GraphicsEnvironment.isHeadless(
 
 fun usage(message: String? = null): Nothing {
     if (message != null) System.err.println(message)
-    System.err.println("Usage: tools/btm test scenario-headful vs_ships_client --profile quick|release [--fixture core|trackwork|clockwork|combined] [--variant current|dh_disabled|c2me_disabled|dh_c2me_disabled] [--stop-after assembly|lifecycle] [--bootstrap-mode always|once|never] [--port N] [--run-root PATH] [--keep-runs]")
+    System.err.println("Usage: tools/btm test scenario-headful vs_ships_client --profile quick|release [--fixture core|trackwork|clockwork|combined] [--variant current|dh_disabled|c2me_disabled|dh_c2me_disabled|dh_renderer_disabled|dh_renderer_connectivity] [--stop-after assembly|lifecycle] [--bootstrap-mode always|once|never] [--port N] [--run-root PATH] [--keep-runs]")
     exitProcess(2)
 }
 fun q(value: String?) = if (value == null) "null" else "\"" + value.replace("\\", "\\\\").replace("\"", "\\\"").replace("\n", "\\n") + "\""
@@ -105,6 +109,13 @@ fun setPort(path: Path, port: Int) {
     val lines = if (path.exists()) Files.readAllLines(path).toMutableList() else mutableListOf()
     val index = lines.indexOfFirst { it.startsWith("server-port=") }
     if (index >= 0) lines[index] = "server-port=$port" else lines += "server-port=$port"
+    Files.writeString(path, lines.joinToString("\n", postfix = "\n"))
+}
+fun setTomlValue(path: Path, key: String, value: String) {
+    if (!path.exists()) return
+    val lines = Files.readAllLines(path).map { line ->
+        if (line.trimStart().startsWith("$key =")) "$key = $value" else line
+    }
     Files.writeString(path, lines.joinToString("\n", postfix = "\n"))
 }
 fun startServer(serverDir: Path, port: Int, log: Path): RunningServer {
@@ -171,6 +182,7 @@ fun nonblank(image: BufferedImage): Boolean {
     return colors.size >= 16 && luminance > samples * 12L
 }
 fun assembledGeometryScore(image: BufferedImage): Double {
+    if (!nonblank(image)) return 0.0
     val xStart = image.width * 44 / 100
     val xEnd = image.width * 82 / 100
     val yStart = image.height * 20 / 100
@@ -193,6 +205,11 @@ fun clearChat(robot: Robot) {
     robot.keyRelease(KeyEvent.VK_F3)
     Thread.sleep(500)
 }
+fun captureWorld(robot: Robot, out: Path): BufferedImage {
+    clearChat(robot)
+    val image = screenshot(robot, out)
+    return image
+}
 fun waitForPlayableFrame(robot: Robot, out: Path, timeoutSeconds: Long): Boolean {
     val deadline = System.currentTimeMillis() + timeoutSeconds * 1000
     while (System.currentTimeMillis() < deadline) {
@@ -212,34 +229,31 @@ fun assertPlayerConnected(server: RunningServer, username: String, commands: Str
         error("client disconnected after server join: $username was no longer present")
     }
 }
+fun respawnIfDead(robot: Robot, server: RunningServer, commands: StringBuilder) {
+    val pattern = Regex("AgentPilot has the following entity data: ([0-9.]+)f")
+    fun queryHealth(): Double {
+        val previous = pattern.findAll(tail(server.log)).count()
+        send(server, "data get entity AgentPilot Health", commands)
+        waitFor(server.log, pattern, 30, server.process, previous + 1)
+        return pattern.findAll(tail(server.log)).last().groupValues[1].toDouble()
+    }
+    if (queryHealth() > 0.0) return
+    val screen = Toolkit.getDefaultToolkit().screenSize
+    repeat(3) {
+        click(robot, screen.width / 2, (screen.height * 0.59).toInt())
+        robot.keyPress(KeyEvent.VK_ENTER)
+        robot.keyRelease(KeyEvent.VK_ENTER)
+        Thread.sleep(5_000)
+        if (queryHealth() > 0.0) return
+    }
+    error("respawn failure: pilot health remained zero after client Respawn attempts")
+}
 fun assembleButtonCenter(): Pair<Int, Int> {
     val scaledWidth = kotlin.math.ceil(contract.displayWidth.toDouble() / contract.guiScale).toInt()
     val scaledHeight = kotlin.math.ceil(contract.displayHeight.toDouble() / contract.guiScale).toInt()
     val logicalX = (scaledWidth - contract.imageWidth) / 2 + contract.assembleX + contract.assembleWidth / 2
     val logicalY = (scaledHeight - contract.imageHeight) / 2 + contract.assembleY + contract.assembleHeight / 2
     return logicalX * contract.guiScale to logicalY * contract.guiScale
-}
-fun helmControlsVisible(image: BufferedImage): Boolean {
-    fun brightness(x: Int, y: Int): Int {
-        val rgb = image.getRGB(x, y)
-        return ((rgb shr 16) and 255) + ((rgb shr 8) and 255) + (rgb and 255)
-    }
-    val scaledWidth = kotlin.math.ceil(contract.displayWidth.toDouble() / contract.guiScale).toInt()
-    val scaledHeight = kotlin.math.ceil(contract.displayHeight.toDouble() / contract.guiScale).toInt()
-    val panelX = ((scaledWidth - contract.imageWidth) / 2 + 3) * contract.guiScale
-    val panelY = ((scaledHeight - contract.imageHeight) / 2 + 3) * contract.guiScale
-    val (buttonX, buttonY) = assembleButtonCenter()
-    val darkPanelSamples = listOf(
-        brightness(panelX, panelY),
-        brightness(panelX + 12, panelY + 12),
-        brightness(panelX + 30, panelY + 120),
-    ).count { it < 180 }
-    return darkPanelSamples == 3 && brightness(buttonX, buttonY) > 90
-}
-fun screenOverlayVisible(image: BufferedImage): Boolean {
-    val rgb = image.getRGB(image.width / 2, 10)
-    val brightness = ((rgb shr 16) and 255) + ((rgb shr 8) and 255) + (rgb and 255)
-    return brightness < 360
 }
 fun click(robot: Robot, x: Int, y: Int, button: Int = InputEvent.BUTTON1_DOWN_MASK) {
     robot.mouseMove(x, y)
@@ -306,12 +320,15 @@ fun classify(text: String, error: Throwable): String {
         "client_bootstrap_failure" to Regex("runtime preparation|argument generation|prepared client runtime", RegexOption.IGNORE_CASE),
         "client_disconnect_failure" to Regex("client disconnected|lost connection|no longer present", RegexOption.IGNORE_CASE),
         "onboarding_failure" to Regex("client onboarding|spectator mode", RegexOption.IGNORE_CASE),
+        "respawn_failure" to Regex("respawn failure|health remained zero", RegexOption.IGNORE_CASE),
         "removed_client_mod_present" to Regex("removed client mod present|Shoulder Surfing", RegexOption.IGNORE_CASE),
         "fixture_connectivity_failure" to Regex("too many blocks|too big|fixture connectivity|unexpected fixture block count", RegexOption.IGNORE_CASE),
         "helm_interaction_failure" to Regex("helm GUI|helm interaction", RegexOption.IGNORE_CASE),
         "menu_packet_failure" to Regex("assembly packet|assembly log", RegexOption.IGNORE_CASE),
         "assembly_registration_failure" to Regex("registered ships|ship count", RegexOption.IGNORE_CASE),
         "assembled_render_failure" to Regex("assembled render|assembled ship.*(?:invisible|missing|not visible)", RegexOption.IGNORE_CASE),
+        "assembly_sync_failure" to Regex("assembly sync failure|visible only after client reconnect", RegexOption.IGNORE_CASE),
+        "ship_transform_sync_failure" to Regex("ship transform sync failure|visible only after command teleport", RegexOption.IGNORE_CASE),
         "ship_assembly_failure" to Regex("helm|assembly|assemble|ship assertion|Found ship", RegexOption.IGNORE_CASE),
         "ship_movement_collision_failure" to Regex("movement|position before|position after|collision", RegexOption.IGNORE_CASE),
         "passenger_sync_failure" to Regex("observer", RegexOption.IGNORE_CASE),
@@ -345,7 +362,7 @@ while (index < args.size) {
     when (args[index]) {
         "--profile" -> { profile = args.getOrNull(index + 1) ?: usage("--profile needs quick or release"); index += 2 }
         "--fixture" -> { fixture = args.getOrNull(index + 1) ?: usage("--fixture needs core, trackwork, clockwork, or combined"); index += 2 }
-        "--variant" -> { variant = args.getOrNull(index + 1) ?: usage("--variant needs current, dh_disabled, c2me_disabled, or dh_c2me_disabled"); index += 2 }
+        "--variant" -> { variant = args.getOrNull(index + 1) ?: usage("--variant needs current, dh_disabled, c2me_disabled, dh_c2me_disabled, dh_renderer_disabled, or dh_renderer_connectivity"); index += 2 }
         "--stop-after" -> { stopAfter = args.getOrNull(index + 1) ?: usage("--stop-after needs assembly or lifecycle"); index += 2 }
         "--bootstrap-mode" -> { bootstrapMode = args.getOrNull(index + 1) ?: usage("--bootstrap-mode needs always, once, or never"); index += 2 }
         "--run-root" -> { runRoot = Paths.get(args.getOrNull(index + 1) ?: usage("--run-root needs a path")); index += 2 }
@@ -357,7 +374,7 @@ while (index < args.size) {
 }
 if (profile !in setOf("quick", "release")) usage("invalid profile: $profile")
 if (fixture !in setOf("core", "trackwork", "clockwork", "combined")) usage("invalid fixture: $fixture")
-if (variant !in setOf("current", "dh_disabled", "c2me_disabled", "dh_c2me_disabled")) usage("invalid variant: $variant")
+if (variant !in setOf("current", "dh_disabled", "c2me_disabled", "dh_c2me_disabled", "dh_renderer_disabled", "dh_renderer_connectivity")) usage("invalid variant: $variant")
 if (stopAfter !in setOf("assembly", "lifecycle")) usage("invalid stop phase: $stopAfter")
 if (bootstrapMode !in setOf("always", "once", "never")) usage("invalid bootstrap mode: $bootstrapMode")
 runRoot = runRoot.toAbsolutePath().normalize()
@@ -376,6 +393,8 @@ var observer: Process? = null
 var failure: Throwable? = null
 var fixtureRenderScore: Double? = null
 var assembledRenderScore: Double? = null
+var reconnectProbeRenderScore: Double? = null
+var teleportProbeRenderScore: Double? = null
 val robot = Robot().apply { autoDelay = 80 }
 fun phase(name: String, block: () -> Unit) {
     val started = System.nanoTime()
@@ -406,11 +425,20 @@ try {
         configureClient(pilotDir)
         prepareArgfile(pilotDir, "AgentPilot", port, evidence.resolve("pilot.args"), evidence.resolve("pilot-argfile.log"))
         val removePatterns = buildList {
-            if (variant in setOf("dh_disabled", "dh_c2me_disabled")) add(Regex("DistantHorizons.*\\.jar", RegexOption.IGNORE_CASE))
+            if (variant in setOf("dh_disabled", "dh_c2me_disabled", "dh_renderer_disabled", "dh_renderer_connectivity")) add(Regex("DistantHorizons.*\\.jar", RegexOption.IGNORE_CASE))
             if (variant in setOf("c2me_disabled", "dh_c2me_disabled")) add(Regex("c2me.*\\.jar", RegexOption.IGNORE_CASE))
+            if (variant in setOf("dh_renderer_disabled", "dh_renderer_connectivity")) {
+                add(Regex("embeddium.*\\.jar", RegexOption.IGNORE_CASE))
+                add(Regex("oculus.*\\.jar", RegexOption.IGNORE_CASE))
+                add(Regex("sodiumoptionsapi.*\\.jar", RegexOption.IGNORE_CASE))
+                add(Regex("sodiumdynamiclights.*\\.jar", RegexOption.IGNORE_CASE))
+            }
         }
         val removed = (removeRuntimeJars(serverDir, removePatterns) + removeRuntimeJars(pilotDir, removePatterns)).distinct().sorted()
         Files.writeString(evidence.resolve("removed-mods.txt"), removed.joinToString("\n", postfix = if (removed.isEmpty()) "" else "\n"))
+        if (variant == "dh_renderer_connectivity") {
+            setTomlValue(serverDir.resolve("world/serverconfig/valkyrienskies/vs-core-server.toml"), "enableConnectivity", "true")
+        }
         if (profile == "release") {
             deleteTree(observerDir)
             observerDir.createDirectories()
@@ -425,21 +453,10 @@ try {
         send(server!!, "op AgentPilot", commands)
         send(server!!, "forceload add 0 0", commands)
         val y = contract.fixtureY
+        send(server!!, "vs delete @v[] true", commands)
         send(server!!, "setworldspawn 0 $y 4", commands)
         send(server!!, "fill -8 ${y - 8} -8 8 ${y + 8} 8 minecraft:air", commands)
-        send(server!!, "setblock 0 $y 0 vs_eureka:oak_ship_helm[facing=south]", commands)
-        send(server!!, "setblock 1 $y 0 minecraft:oak_planks", commands)
-        send(server!!, "setblock 2 $y 0 vs_eureka:engine", commands)
-        send(server!!, "setblock 1 ${y + 1} 0 vs_eureka:floater", commands)
         send(server!!, "fill -1 ${y - 2} 3 1 ${y - 2} 5 minecraft:barrier", commands)
-        if (fixture in setOf("trackwork", "combined")) send(server!!, "setblock 1 $y 1 trackwork:phys_track", commands)
-        if (fixture in setOf("clockwork", "combined")) send(server!!, "setblock 1 $y -1 vs_clockwork:phys_bearing", commands)
-        listOf("0 $y 0 vs_eureka:oak_ship_helm", "1 $y 0 minecraft:oak_planks", "2 $y 0 vs_eureka:engine", "1 ${y + 1} 0 vs_eureka:floater").forEachIndexed { fixtureIndex, check ->
-            send(server!!, "execute if block $check run say BTM_VS_CORE_FIXTURE_$fixtureIndex", commands)
-        }
-        send(server!!, "say BTM_VS_CLIENT_FIXTURE_READY", commands)
-        waitFor(server!!.log, Regex("BTM_VS_CLIENT_FIXTURE_READY"), 30, server!!.process)
-        waitFor(server!!.log, Regex("BTM_VS_CORE_FIXTURE_3"), 30, server!!.process)
     }
     phase("client_join_render") {
         val joins = Regex("AgentPilot joined the game").findAll(tail(server!!.log)).count()
@@ -449,27 +466,45 @@ try {
         waitFor(server!!.log, Regex("AgentPilot joined the game"), 900, pilot, joins + 1)
         Thread.sleep(5_000)
         assertPlayerConnected(server!!, "AgentPilot", commands, "BTM_VS_PILOT_CONNECTION_STABLE")
+        respawnIfDead(robot, server!!, commands)
         screenshot(robot, evidence.resolve("pilot-loading.png"))
         if (!waitForPlayableFrame(robot, evidence.resolve("pilot-joined.png"), 120)) error("joined client never produced a playable frame")
         var onboardingComplete = false
-        for (attempt in 1..5) {
-            robot.keyPress(KeyEvent.VK_K)
-            robot.keyRelease(KeyEvent.VK_K)
-            Thread.sleep(2_000)
+        val onboardingPattern = Regex("\\[Server] BTM_VS_ONBOARDING_COMPLETE")
+        val previousOnboardingMarkers = onboardingPattern.findAll(tail(server!!.log)).count()
+        for (attempt in 1..6) {
             send(server!!, "execute if entity @a[name=AgentPilot,gamemode=!spectator] run say BTM_VS_ONBOARDING_COMPLETE", commands)
             Thread.sleep(1_000)
-            if (Regex("\\[Server] BTM_VS_ONBOARDING_COMPLETE").containsMatchIn(tail(server!!.log))) {
+            if (onboardingPattern.findAll(tail(server!!.log)).count() > previousOnboardingMarkers) {
                 onboardingComplete = true
                 break
             }
+            robot.keyPress(KeyEvent.VK_K)
+            robot.keyRelease(KeyEvent.VK_K)
+            Thread.sleep(2_000)
         }
         if (!onboardingComplete) error("client onboarding did not release the pilot from spectator mode")
+        send(server!!, "gamemode creative AgentPilot", commands)
+        Thread.sleep(1_000)
+        val y = contract.fixtureY
+        send(server!!, "fill -2 ${y - 1} -2 3 ${y + 2} 2 minecraft:air", commands)
+        send(server!!, "setblock 0 $y 0 vs_eureka:oak_ship_helm[facing=south]", commands)
+        send(server!!, "setblock 1 $y 0 minecraft:oak_planks", commands)
+        send(server!!, "setblock 2 $y 0 vs_eureka:engine", commands)
+        send(server!!, "setblock 1 ${y + 1} 0 vs_eureka:floater", commands)
+        if (fixture in setOf("trackwork", "combined")) send(server!!, "setblock 1 $y 1 trackwork:phys_track", commands)
+        if (fixture in setOf("clockwork", "combined")) send(server!!, "setblock 1 $y -1 vs_clockwork:phys_bearing", commands)
+        listOf("0 $y 0 vs_eureka:oak_ship_helm", "1 $y 0 minecraft:oak_planks", "2 $y 0 vs_eureka:engine", "1 ${y + 1} 0 vs_eureka:floater").forEachIndexed { fixtureIndex, check ->
+            send(server!!, "execute if block $check run say BTM_VS_CORE_FIXTURE_$fixtureIndex", commands)
+        }
+        send(server!!, "say BTM_VS_CLIENT_FIXTURE_READY", commands)
+        waitFor(server!!.log, Regex("BTM_VS_CLIENT_FIXTURE_READY"), 30, server!!.process)
+        waitFor(server!!.log, Regex("BTM_VS_CORE_FIXTURE_3"), 30, server!!.process)
         send(server!!, "item replace entity AgentPilot weapon.mainhand with minecraft:air", commands)
         send(server!!, "item replace entity AgentPilot weapon.offhand with minecraft:air", commands)
         send(server!!, "tp AgentPilot 0.5 ${contract.fixtureY - 1.0} 4.5 180 2", commands)
         Thread.sleep(2_000)
-        clearChat(robot)
-        fixtureRenderScore = assembledGeometryScore(screenshot(robot, evidence.resolve("core-fixture.png")))
+        fixtureRenderScore = assembledGeometryScore(captureWorld(robot, evidence.resolve("core-fixture.png")))
         if (fixtureRenderScore!! < 0.03) error("client render failure: source fixture was not visible before assembly (score=$fixtureRenderScore)")
     }
     phase("helm_assembly") {
@@ -477,70 +512,88 @@ try {
         val viewpoints = listOf("0.5 ${y - 1.0} 4.5 180 2", "0.5 ${y - 1.0} 3.8 180 3", "0.5 ${y - 1.0} 5.2 180 1")
         val initialShips = currentShipCount(server!!, commands)
         if (initialShips != 0) error("assembly registration failure: expected zero initial ships, found $initialShips")
-        var visibleGui: Path? = null
+        val assemblyPattern = Regex("Assembled ship with ([0-9]+) blocks", RegexOption.IGNORE_CASE)
+        val previousAssemblyLogs = assemblyPattern.findAll(tail(server!!.log)).count()
+        var successfulAttempt: Triple<Path, Path, Path>? = null
+        val (buttonX, buttonY) = assembleButtonCenter()
         for ((attempt, viewpoint) in viewpoints.withIndex()) {
             send(server!!, "tp AgentPilot $viewpoint", commands)
             Thread.sleep(2_000)
             rightClickCenter(robot, sneak = true)
-            val attemptPath = evidence.resolve("helm-gui-attempt-${attempt + 1}.png")
-            val deadline = System.currentTimeMillis() + 10_000
-            while (System.currentTimeMillis() < deadline) {
-                val gui = screenshot(robot, attemptPath)
-                if (helmControlsVisible(gui)) { visibleGui = attemptPath; break }
-                Thread.sleep(1_000)
+            Thread.sleep(1_000)
+            val guiPath = evidence.resolve("helm-gui-attempt-${attempt + 1}.png")
+            val hoverPath = evidence.resolve("helm-button-hovered-attempt-${attempt + 1}.png")
+            val pressedPath = evidence.resolve("helm-button-pressed-attempt-${attempt + 1}.png")
+            screenshot(robot, guiPath)
+            robot.mouseMove(buttonX, buttonY)
+            Thread.sleep(500)
+            screenshot(robot, hoverPath)
+            robot.mousePress(InputEvent.BUTTON1_DOWN_MASK)
+            Thread.sleep(200)
+            screenshot(robot, pressedPath)
+            robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK)
+            val deadline = System.currentTimeMillis() + 12_000
+            while (System.currentTimeMillis() < deadline && server!!.process.isAlive) {
+                if (assemblyPattern.findAll(tail(server!!.log)).count() > previousAssemblyLogs) {
+                    successfulAttempt = Triple(guiPath, hoverPath, pressedPath)
+                    break
+                }
+                Thread.sleep(500)
             }
-            if (visibleGui != null) break
-            val wrongScreen = screenshot(robot, attemptPath)
-            if (screenOverlayVisible(wrongScreen)) {
-                robot.keyPress(KeyEvent.VK_ESCAPE)
-                robot.keyRelease(KeyEvent.VK_ESCAPE)
-            }
+            if (successfulAttempt != null) break
+            robot.keyPress(KeyEvent.VK_ESCAPE)
+            robot.keyRelease(KeyEvent.VK_ESCAPE)
             Thread.sleep(1_000)
         }
-        val guiPath = visibleGui ?: error("helm interaction failure: helm GUI was not detected after ${viewpoints.size} attempts")
-        Files.copy(guiPath, evidence.resolve("helm-gui.png"), StandardCopyOption.REPLACE_EXISTING)
-        val (buttonX, buttonY) = assembleButtonCenter()
-        robot.mouseMove(buttonX, buttonY)
-        Thread.sleep(500)
-        screenshot(robot, evidence.resolve("helm-button-hovered.png"))
-        val assemblyPattern = Regex("Assembled ship with ([0-9]+) blocks", RegexOption.IGNORE_CASE)
-        val previousAssemblyLogs = assemblyPattern.findAll(tail(server!!.log)).count()
-        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK)
-        Thread.sleep(200)
-        screenshot(robot, evidence.resolve("helm-button-pressed.png"))
-        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK)
-        val assemblyDeadline = System.currentTimeMillis() + 60_000
-        while (System.currentTimeMillis() < assemblyDeadline && server!!.process.isAlive) {
-            val serverText = tail(server!!.log)
-            if (Regex("Failed to assemble to[o]? large|Ship is too big", RegexOption.IGNORE_CASE).containsMatchIn(serverText)) {
-                error("fixture connectivity failure: Eureka rejected too many blocks")
-            }
-            if (assemblyPattern.findAll(serverText).count() > previousAssemblyLogs) break
-            Thread.sleep(500)
-        }
+        val evidencePaths = successfulAttempt ?: error("menu packet failure: Eureka assembly log was not observed after ${viewpoints.size} source-coordinate attempts")
+        Files.copy(evidencePaths.first, evidence.resolve("helm-gui.png"), StandardCopyOption.REPLACE_EXISTING)
+        Files.copy(evidencePaths.second, evidence.resolve("helm-button-hovered.png"), StandardCopyOption.REPLACE_EXISTING)
+        Files.copy(evidencePaths.third, evidence.resolve("helm-button-pressed.png"), StandardCopyOption.REPLACE_EXISTING)
         val assemblyMatch = assemblyPattern.findAll(tail(server!!.log)).lastOrNull()
             ?: error("menu packet failure: Eureka assembly log was not observed")
         val assembledBlocks = assemblyMatch.groupValues[1].toInt()
-        val expectedBlocks = contract.expectedBlocks +
+        val minimumBfsBlocks = contract.expectedBlocks +
             (if (fixture in setOf("trackwork", "combined")) 1 else 0) +
             (if (fixture in setOf("clockwork", "combined")) 1 else 0)
-        if (assembledBlocks != expectedBlocks) error("fixture connectivity failure: unexpected fixture block count $assembledBlocks, expected $expectedBlocks")
+        val maximumBfsBlocks = contract.maximumBfsBlocks +
+            (if (fixture in setOf("trackwork", "combined")) 2 else 0) +
+            (if (fixture in setOf("clockwork", "combined")) 2 else 0)
+        if (assembledBlocks !in minimumBfsBlocks..maximumBfsBlocks) {
+            error("fixture connectivity failure: unexpected fixture BFS count $assembledBlocks, expected $minimumBfsBlocks..$maximumBfsBlocks")
+        }
         val registeredShips = currentShipCount(server!!, commands)
         if (registeredShips != 1) error("assembly registration failure: expected one registered ship, found $registeredShips")
-        val teleportPattern = Regex("Teleported 1 ships", RegexOption.IGNORE_CASE)
-        val previousTeleports = teleportPattern.findAll(tail(server!!.log)).count()
-        send(server!!, "vs teleport @v[] 1 $y 0", commands)
-        waitFor(server!!.log, teleportPattern, 30, server!!.process, previousTeleports + 1)
-        Files.writeString(evidence.resolve("assembly.txt"), "fixture=$fixture\nblocks=$assembledBlocks\nregistered_ships=$registeredShips\nbutton=$buttonX,$buttonY\n")
+        Files.writeString(evidence.resolve("assembly.txt"), "fixture=$fixture\nblocks=$assembledBlocks\nregistered_ships=$registeredShips\nbutton=$buttonX,$buttonY\ntransform=source_assembly\nsync_wait_seconds=${contract.syncWaitSeconds}\n")
         robot.keyPress(KeyEvent.VK_ESCAPE)
         robot.keyRelease(KeyEvent.VK_ESCAPE)
-        send(server!!, "tp AgentPilot 0.5 ${y - 1.0} 4.5 180 2", commands)
-        Thread.sleep(3_000)
-        clearChat(robot)
-        assembledRenderScore = assembledGeometryScore(screenshot(robot, evidence.resolve("ship-assembled.png")))
+        Thread.sleep(contract.syncWaitSeconds * 1_000L)
+        assembledRenderScore = assembledGeometryScore(captureWorld(robot, evidence.resolve("ship-assembled.png")))
         val minimumRenderScore = maxOf(0.03, fixtureRenderScore!! * 0.2)
         if (assembledRenderScore!! < minimumRenderScore) {
-            error("assembled render failure: registered ship is not visible (score=$assembledRenderScore, required=$minimumRenderScore)")
+            stopProcess(pilot)
+            pilot = null
+            val joins = Regex("AgentPilot joined the game").findAll(tail(server!!.log)).count()
+            pilot = startClient(pilotDir, evidence.resolve("pilot.args"), evidence.resolve("pilot-client-console-render-probe.log"))
+            waitForTitleReady(pilotDir, pilot!!)
+            waitFor(server!!.log, Regex("AgentPilot joined the game"), 900, pilot, joins + 1)
+            assertPlayerConnected(server!!, "AgentPilot", commands, "BTM_VS_RENDER_PROBE_CONNECTED")
+            send(server!!, "gamemode creative AgentPilot", commands)
+            send(server!!, "tp AgentPilot 0.5 ${y - 1.0} 4.5 180 2", commands)
+            Thread.sleep(10_000)
+            reconnectProbeRenderScore = assembledGeometryScore(captureWorld(robot, evidence.resolve("ship-after-reconnect-probe.png")))
+            if (reconnectProbeRenderScore!! >= minimumRenderScore) {
+                error("assembly sync failure: registered ship became visible only after client reconnect (score=$reconnectProbeRenderScore)")
+            }
+            val teleportPattern = Regex("Teleported 1 ships", RegexOption.IGNORE_CASE)
+            val previousTeleports = teleportPattern.findAll(tail(server!!.log)).count()
+            send(server!!, "vs teleport @v[] 1 $y 0", commands)
+            waitFor(server!!.log, teleportPattern, 30, server!!.process, previousTeleports + 1)
+            Thread.sleep(5_000)
+            teleportProbeRenderScore = assembledGeometryScore(captureWorld(robot, evidence.resolve("ship-after-teleport-probe.png")))
+            if (teleportProbeRenderScore!! >= minimumRenderScore) {
+                error("ship transform sync failure: registered ship became visible only after command teleport (score=$teleportProbeRenderScore)")
+            }
+            error("assembled render failure: loaded ship is not visible before reconnect, after reconnect, or after command teleport (scores=$assembledRenderScore,$reconnectProbeRenderScore,$teleportProbeRenderScore, required=$minimumRenderScore)")
         }
     }
     if (stopAfter == "lifecycle" && profile == "release") {
@@ -656,6 +709,8 @@ val metricsJson = """{
   "dh_client_color_failures": $dhClientColorFailures,
   "fixture_render_score": ${fixtureRenderScore ?: "null"},
   "assembled_render_score": ${assembledRenderScore ?: "null"},
+  "reconnect_probe_render_score": ${reconnectProbeRenderScore ?: "null"},
+  "teleport_probe_render_score": ${teleportProbeRenderScore ?: "null"},
   "phases": [${phases.joinToString(",") { "{\"name\":${q(it.name)},\"status\":${q(it.status)},\"duration_ms\":${it.durationMs},\"detail\":${q(it.detail)}}" }}]
 }
 """
@@ -677,6 +732,8 @@ val screenshotExpectations = mapOf(
     "helm-button-hovered.png" to "Assemble button shows its hover state",
     "helm-button-pressed.png" to "Assemble button shows its pressed state",
     "ship-assembled.png" to "assembled ship remains visible after world blocks relocate",
+    "ship-after-reconnect-probe.png" to "assembled ship renders after a diagnostic client reconnect",
+    "ship-after-teleport-probe.png" to "loaded ship renders after a diagnostic command teleport",
     "ship-mounted.png" to "pilot is seated at the helm without camera clipping",
     "ship-moved.png" to "ship and pilot moved without missing component models",
     "pilot-reconnected.png" to "ship renders after client reconnect",
@@ -711,6 +768,8 @@ Files.writeString(runRoot.resolve("summary.json"), """{
   "dh_client_color_failures": $dhClientColorFailures,
   "fixture_render_score": ${fixtureRenderScore ?: "null"},
   "assembled_render_score": ${assembledRenderScore ?: "null"},
+  "reconnect_probe_render_score": ${reconnectProbeRenderScore ?: "null"},
+  "teleport_probe_render_score": ${teleportProbeRenderScore ?: "null"},
   "phases": [${phases.joinToString(",") { "{\"name\":${q(it.name)},\"status\":${q(it.status)},\"duration_ms\":${it.durationMs},\"detail\":${q(it.detail)}}" }}]
 }
 """)

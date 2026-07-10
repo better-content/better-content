@@ -132,6 +132,8 @@ Current smoke evidence: `/tmp/btm-pc-coin-smoke` passed `tools/btm test smoke --
 
 `tools/btm test scenario` and `tools/btm test scenario-headful` are the supported front doors for portable harness scenarios. Use `scenario` for headless-safe lanes and `scenario-headful` for headful lanes. Scenario runs should create disposable server/client runtimes under `/tmp` and keep raw evidence there.
 
+VS quick/release lanes delete successful copied runtimes by default after preserving summaries, metrics, logs, screenshots, and registry evidence. Failed runs and brutal profiles retain their runtime/world for diagnosis; use `--keep-runs` to retain successful runtimes explicitly. Server bootstrap also removes its temporary `.bundle-work` export and extraction tree after completion.
+
 Older Prism/server-instance profiling tools that mutate live mod directories or kill broad launcher/java processes are guarded by `BTM_ALLOW_LEGACY_LIVE_MUTATION=1`. Use them only for intentional archival profiling; current validation should use disposable runtimes and the portable harness layer.
 
 The supported public tool surface is `tools/btm`. Kotlin-backed `btm test`, `btm build`, `btm doctor`, and `btm internal` flows are the front door. Active repo tooling under `tools/` is Kotlin-first; Python and shell sources live only under `tools/quarantine/original-tools/` as archival compatibility backends while migration remains in progress.

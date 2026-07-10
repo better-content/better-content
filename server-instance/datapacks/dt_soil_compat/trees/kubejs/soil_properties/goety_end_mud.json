@@ -1,9 +1,0 @@
-{
-  "primitive_soil": "goety:end_mud",
-  "acceptable_soils": [
-    "dirt_like",
-    "mud_like"
-  ],
-  "substitute_soil": "dynamictrees:mud",
-  "only_if_loaded": "goety"
-}

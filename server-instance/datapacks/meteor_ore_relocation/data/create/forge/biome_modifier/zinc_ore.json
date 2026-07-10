@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#kubejs:no_biomes",
-  "features": "create:zinc_ore",
-  "step": "underground_ores"
-}

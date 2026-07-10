@@ -1,8 +1,0 @@
-{
-  "primitive_soil": "tconstruct:sky_ichor_slime_grass",
-  "acceptable_soils": [
-    "dirt_like"
-  ],
-  "substitute_soil": "dynamictrees:grass_block",
-  "only_if_loaded": "tconstruct"
-}

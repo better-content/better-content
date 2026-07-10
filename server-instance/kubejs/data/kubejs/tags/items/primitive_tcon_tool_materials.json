@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:flint",
-    "#kubejs:primitive_tcon_bones",
-    "#kubejs:primitive_tcon_rocks"
-  ]
-}

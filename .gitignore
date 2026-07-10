@@ -3,6 +3,7 @@
 __pycache__/
 **/__pycache__/
 *.pyc
+server-instance/
 server-template/
 generated/exports/
 generated/custom-mod-sources/

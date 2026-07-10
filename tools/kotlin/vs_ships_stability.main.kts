@@ -1,169 +1,304 @@
 #!/usr/bin/env kotlin
 
+import java.io.BufferedWriter
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
+import java.nio.file.StandardCopyOption
 import java.time.Instant
+import java.util.concurrent.TimeUnit
 import kotlin.io.path.createDirectories
 import kotlin.io.path.exists
 import kotlin.system.exitProcess
 
-data class Classifier(val key: String, val pattern: Regex)
-data class CycleResult(val cycle: Int, val status: String, val classifier: String?, val serverDir: String, val exitCode: Int)
+data class RunningServer(val process: Process, val stdin: BufferedWriter, val log: Path)
+data class PhaseResult(val name: String, val status: String, val durationMs: Long, val detail: String? = null)
+data class CycleResult(val cycle: Int, val status: String, val classifier: String?, val serverDir: String, val phases: List<PhaseResult>, val physicsWarnings: Int)
 
 val root: Path = Paths.get("").toAbsolutePath().normalize()
-val classifiers = listOf(
-    Classifier("dependency_mixin_failure", Regex("Missing or unsupported mandatory dependencies|Mixin apply failed|MixinTransformerError|NoClassDefFoundError|ClassNotFoundException|NoSuchMethodError|NoSuchFieldError", RegexOption.IGNORE_CASE)),
-    Classifier("vs_init_failure", Regex("valkyrienskies|org\\.valkyrienskies|VS2|Valkyrien", RegexOption.IGNORE_CASE)),
-    Classifier("eureka_init_failure", Regex("eureka", RegexOption.IGNORE_CASE)),
-    Classifier("clockwork_init_failure", Regex("clockwork|vs_clockwork", RegexOption.IGNORE_CASE)),
-    Classifier("trackwork_init_failure", Regex("trackwork", RegexOption.IGNORE_CASE)),
-    Classifier("ship_assembly_failure", Regex("assemble|shipyard|ship assembly|create ship|contraption.*ship", RegexOption.IGNORE_CASE)),
-    Classifier("ship_movement_collision_failure", Regex("collision|teleporting ship|physics tick|rigid body|ship movement", RegexOption.IGNORE_CASE)),
-    Classifier("ship_save_reload_failure", Regex("failed to save ship|failed to load ship|ShipData|ship object|dimension shipyard", RegexOption.IGNORE_CASE)),
-    Classifier("dimension_conflict", Regex("dimension|level stem|worldgen|forceload|chunk ticket", RegexOption.IGNORE_CASE)),
-    Classifier("c2me_dh_threading_failure", Regex("C2ME|DistantHorizons|ThreadingDetector|CheckedThreadLocalRandom|PalettedContainer|far chunk|DH", RegexOption.IGNORE_CASE)),
-    Classifier("suspected_ship_object_leak", Regex("ship.*leak|orphan.*ship|ship.*not unloaded|Object2Object|Long2Object|memory leak", RegexOption.IGNORE_CASE)),
-    Classifier("crash_report", Regex("Preparing crash report|This crash report has been saved|Crash Report", RegexOption.IGNORE_CASE)),
+val requiredIds = listOf(
+    "valkyrienskies:ship_creator",
+    "valkyrienskies:ship_assembler",
+    "vs_eureka:oak_ship_helm",
+    "vs_eureka:engine",
+    "vs_clockwork:phys_bearing",
+    "trackwork:phys_track",
+)
+val fixtureBlocks = listOf(
+    Triple(0, 0, "vs_eureka:oak_ship_helm"),
+    Triple(1, 0, "vs_eureka:engine"),
+    Triple(2, 0, "vs_clockwork:phys_bearing"),
+    Triple(3, 0, "trackwork:phys_track"),
 )
 
 fun usage(message: String? = null): Nothing {
     if (message != null) System.err.println(message)
-    System.err.println("Usage: tools/btm test scenario vs_ships_stability --profile quick|release|brutal [--cycles N] [--port N] [--bootstrap-mode always|once|never] [--run-root PATH] [--keep-runs]")
+    System.err.println("Usage: tools/btm test scenario vs_ships_stability --profile quick|release|brutal [--cycles N] [--port N] [--timeout-seconds N] [--bootstrap-mode always|once|never] [--run-root PATH] [--keep-runs]")
     exitProcess(2)
 }
-
+fun q(value: String?) = if (value == null) "null" else "\"" + value.replace("\\", "\\\\").replace("\"", "\\\"").replace("\n", "\\n") + "\""
 fun deleteTree(path: Path) {
-    if (!Files.exists(path)) return
-    Files.walk(path).use { stream ->
-        stream.sorted(java.util.Comparator.reverseOrder()).forEach { Files.deleteIfExists(it) }
+    if (!path.exists()) return
+    Files.walk(path).use { it.sorted(java.util.Comparator.reverseOrder()).forEach(Files::deleteIfExists) }
+}
+fun tail(path: Path, limit: Long = 1_000_000): String {
+    if (!path.exists()) return ""
+    path.toFile().inputStream().use { input ->
+        input.skip((path.toFile().length() - limit).coerceAtLeast(0))
+        return input.readBytes().toString(Charsets.UTF_8)
     }
 }
-
-fun jsonEscape(value: String): String = value.replace("\\", "\\\\").replace("\"", "\\\"").replace("\n", "\\n")
-fun writeJson(path: Path, pairs: List<Pair<String, String>>) {
-    Files.writeString(path, pairs.joinToString(prefix = "{\n", postfix = "\n}\n", separator = ",\n") { (k, v) -> "  \"${jsonEscape(k)}\": $v" })
-}
-fun q(value: String?) = if (value == null) "null" else "\"${jsonEscape(value)}\""
-
-fun collectText(dir: Path): String {
-    val files = listOf(
-        dir.resolve("server-console.log"),
-        dir.resolve("logs/latest.log"),
-    ) + listOf(dir.resolve("crash-reports")).filter { it.exists() }.flatMap { crashDir ->
-        Files.list(crashDir).use { stream -> stream.filter { Files.isRegularFile(it) }.toList() }
+fun run(command: List<String>, timeoutSeconds: Long, output: Path? = null): Int {
+    val builder = ProcessBuilder(command).directory(root.toFile()).redirectErrorStream(true)
+    if (output != null) builder.redirectOutput(output.toFile()) else builder.inheritIO()
+    val process = builder.start()
+    if (!process.waitFor(timeoutSeconds, TimeUnit.SECONDS)) {
+        process.destroy()
+        if (!process.waitFor(10, TimeUnit.SECONDS)) process.destroyForcibly()
+        return 124
     }
-    return files.filter { it.exists() }.joinToString("\n") { Files.readString(it).takeLast(512_000) }
+    return process.exitValue()
 }
-
-fun classify(text: String): String? {
-    val hard = Regex("Encountered an unexpected exception|Mod Loading has failed|Failed to start the minecraft server|Preparing crash report|This crash report has been saved|ERROR|FATAL", RegexOption.IGNORE_CASE)
-    if (!hard.containsMatchIn(text)) return null
-    return classifiers.firstOrNull { it.pattern.containsMatchIn(text) }?.key ?: "unclassified_vs_ships_failure"
+fun setPort(path: Path, port: Int) {
+    val lines = if (path.exists()) Files.readAllLines(path).toMutableList() else mutableListOf()
+    val index = lines.indexOfFirst { it.startsWith("server-port=") }
+    if (index >= 0) lines[index] = "server-port=$port" else lines += "server-port=$port"
+    Files.writeString(path, lines.joinToString("\n", postfix = "\n"))
 }
-
-fun snapshotRegistries(serverDir: Path, out: Path) {
+fun startServer(serverDir: Path, port: Int, log: Path): RunningServer {
+    setPort(serverDir.resolve("server.properties"), port)
+    val process = ProcessBuilder("./run.sh", "nogui")
+        .directory(serverDir.toFile())
+        .redirectErrorStream(true)
+        .redirectOutput(log.toFile())
+        .start()
+    return RunningServer(process, process.outputStream.bufferedWriter(), log)
+}
+fun send(server: RunningServer, command: String, commands: StringBuilder) {
+    commands.appendLine(command)
+    server.stdin.write(command)
+    server.stdin.newLine()
+    server.stdin.flush()
+}
+fun waitFor(server: RunningServer, pattern: Regex, timeoutSeconds: Long, phase: String) {
+    val deadline = System.currentTimeMillis() + timeoutSeconds * 1000
+    while (System.currentTimeMillis() < deadline) {
+        if (!server.process.isAlive) error("$phase: server exited with ${server.process.exitValue()}")
+        if (pattern.containsMatchIn(tail(server.log))) return
+        Thread.sleep(500)
+    }
+    error("$phase timed out after ${timeoutSeconds}s")
+}
+fun stop(server: RunningServer?, commands: StringBuilder) {
+    if (server == null || !server.process.isAlive) return
+    runCatching { send(server, "stop", commands) }
+    if (!server.process.waitFor(60, TimeUnit.SECONDS)) {
+        server.process.destroy()
+        if (!server.process.waitFor(10, TimeUnit.SECONDS)) server.process.destroyForcibly()
+    }
+}
+fun classify(text: String, failure: Throwable): String {
+    val checks = listOf(
+        "registry_contract_failure" to Regex("missing runtime ids", RegexOption.IGNORE_CASE),
+        "dependency_mixin_failure" to Regex("Mixin apply failed|NoClassDefFoundError|ClassNotFoundException|NoSuchMethodError|NoSuchFieldError", RegexOption.IGNORE_CASE),
+        "eureka_init_failure" to Regex("(?:ERROR|FATAL|Exception).{0,200}(?:eureka|vs_eureka)|(?:eureka|vs_eureka).{0,200}(?:ERROR|FATAL|Exception)", setOf(RegexOption.IGNORE_CASE, RegexOption.DOT_MATCHES_ALL)),
+        "clockwork_init_failure" to Regex("(?:ERROR|FATAL|Exception).{0,200}(?:clockwork|vs_clockwork)|(?:clockwork|vs_clockwork).{0,200}(?:ERROR|FATAL|Exception)", setOf(RegexOption.IGNORE_CASE, RegexOption.DOT_MATCHES_ALL)),
+        "trackwork_init_failure" to Regex("(?:ERROR|FATAL|Exception).{0,200}trackwork|trackwork.{0,200}(?:ERROR|FATAL|Exception)", setOf(RegexOption.IGNORE_CASE, RegexOption.DOT_MATCHES_ALL)),
+        "vs_init_failure" to Regex("(?:ERROR|FATAL|Exception).{0,200}(?:valkyrienskies|org\\.valkyrienskies)|(?:valkyrienskies|org\\.valkyrienskies).{0,200}(?:ERROR|FATAL|Exception)", setOf(RegexOption.IGNORE_CASE, RegexOption.DOT_MATCHES_ALL)),
+        "ship_save_reload_failure" to Regex("reload verification|Failed to save ship|Failed to load ship|ShipData|dimension shipyard", RegexOption.IGNORE_CASE),
+        "dimension_conflict" to Regex("Unknown dimension|dimension fixture|level stem|worldgen", RegexOption.IGNORE_CASE),
+        "c2me_dh_threading_failure" to Regex("ThreadingDetector|CheckedThreadLocalRandom|PalettedContainer|Detected setBlock in a far chunk", RegexOption.IGNORE_CASE),
+        "component_fixture_failure" to Regex("fixture|Could not set the block|Unknown block", RegexOption.IGNORE_CASE),
+        "suspected_ship_object_leak" to Regex("ship.*(?:leak|not unloaded)|orphan.*ship", RegexOption.IGNORE_CASE),
+        "vs_physics_startup_stall" to Regex("Too many physics frames in the physics frame queue", RegexOption.IGNORE_CASE),
+        "crash_report" to Regex("Preparing crash report|This crash report has been saved|Crash Report", RegexOption.IGNORE_CASE),
+    )
+    val combined = failure.message.orEmpty() + "\n" + text
+    return checks.firstOrNull { it.second.containsMatchIn(combined) }?.first ?: "unclassified_vs_ships_failure"
+}
+fun registrySnapshot(serverDir: Path, out: Path) {
     val registries = serverDir.resolve("generated/runtime-dumps/registries.json")
     val text = if (registries.exists()) Files.readString(registries) else ""
-    val ids = listOf("valkyrienskies", "vs_eureka", "eureka", "vs_clockwork", "trackwork").associateWith { namespace ->
-        Regex(""""$namespace:[^"]+"""").findAll(text).map { it.value.trim('"') }.take(40).toList()
+    val missing = requiredIds.filterNot(text::contains)
+    Files.writeString(out, """{
+  "source": ${q(registries.toString())},
+  "required_ids": [${requiredIds.joinToString(",") { q(it) }}],
+  "missing_ids": [${missing.joinToString(",") { q(it) }}]
+}
+""")
+    if (missing.isNotEmpty()) error("missing runtime ids: ${missing.joinToString()}")
+}
+fun fixtureDimensions(profile: String): List<String> = when (profile) {
+    "quick" -> listOf("minecraft:overworld")
+    else -> listOf("minecraft:overworld", "lostcities:lostcity", "creatingspace:earth_orbit")
+}
+fun verifyFixture(server: RunningServer, dimensions: List<String>, commands: StringBuilder, prefix: String) {
+    dimensions.forEachIndexed { dimensionIndex, dimension ->
+        val z = dimensionIndex * 16
+        fixtureBlocks.forEachIndexed { blockIndex, (x, dz, id) ->
+            send(server, "execute in $dimension if block $x 200 ${z + dz} $id run say ${prefix}_${dimensionIndex}_$blockIndex", commands)
+        }
     }
-    val unknown = ids.filterValues { it.isEmpty() }.keys.toList()
-    Files.writeString(out, buildString {
-        appendLine("{")
-        appendLine("  \"source\": ${q(registries.toString())},")
-        appendLine("  \"unknown_gaps\": [${unknown.joinToString(",") { q(it) }}],")
-        appendLine("  \"ids\": {")
-        appendLine(ids.entries.joinToString(",\n") { (key, values) ->
-            "    ${q(key)}: [${values.joinToString(",") { q(it) }}]"
-        })
-        appendLine("  }")
-        appendLine("}")
-    })
+    fixtureBlocks.indices.forEach { blockIndex ->
+        waitFor(server, Regex("${Regex.escape(prefix)}_0_$blockIndex"), 30, "fixture verification")
+    }
+    if (dimensions.size > 1) waitFor(server, Regex("${Regex.escape(prefix)}_${dimensions.lastIndex}_${fixtureBlocks.lastIndex}"), 60, "dimension fixture verification")
+}
+fun placeAndVerify(server: RunningServer, dimensions: List<String>, commands: StringBuilder, prefix: String) {
+    dimensions.forEachIndexed { dimensionIndex, dimension ->
+        val z = dimensionIndex * 16
+        send(server, "execute in $dimension run forceload add 0 $z 0 $z", commands)
+        send(server, "execute in $dimension run fill 0 199 $z 4 199 $z minecraft:stone", commands)
+        fixtureBlocks.forEach { (x, dz, id) -> send(server, "execute in $dimension run setblock $x 200 ${z + dz} $id", commands) }
+    }
+    verifyFixture(server, dimensions, commands, prefix)
+}
+fun removeAndVerify(server: RunningServer, dimensions: List<String>, commands: StringBuilder) {
+    dimensions.forEachIndexed { dimensionIndex, dimension ->
+        val z = dimensionIndex * 16
+        fixtureBlocks.forEachIndexed { blockIndex, (x, dz, id) ->
+            send(server, "execute in $dimension run setblock $x 200 ${z + dz} minecraft:air", commands)
+            send(server, "execute in $dimension unless block $x 200 ${z + dz} $id run say BTM_VS_REMOVED_${dimensionIndex}_$blockIndex", commands)
+        }
+        send(server, "execute in $dimension run forceload remove all", commands)
+    }
+    waitFor(server, Regex("BTM_VS_REMOVED_${dimensions.lastIndex}_${fixtureBlocks.lastIndex}"), 60, "fixture removal")
 }
 
 var profile = "quick"
 var cycles = 1
 var bootstrapMode = "always"
 var keepRuns = false
-var runRoot = System.getenv("BTM_HARNESS_RUN_ROOT")?.takeIf { it.isNotBlank() }?.let { Paths.get(it) } ?: Paths.get("/tmp/btm-vs-ships-stability")
-var port = System.getenv("BTM_HARNESS_ACTUAL_PORT")?.takeIf { it.isNotBlank() } ?: "25565"
-
+var timeoutSeconds = 900L
+var runRoot = System.getenv("BTM_HARNESS_RUN_ROOT")?.takeIf(String::isNotBlank)?.let(Paths::get) ?: Paths.get("/tmp/btm-vs-ships-stability")
+var port = System.getenv("BTM_HARNESS_ACTUAL_PORT")?.toIntOrNull() ?: 25565
 var index = 0
 while (index < args.size) {
     when (args[index]) {
         "--profile" -> { profile = args.getOrNull(index + 1) ?: usage("--profile needs quick, release, or brutal"); index += 2 }
         "--cycles" -> { cycles = args.getOrNull(index + 1)?.toIntOrNull() ?: usage("--cycles needs a number"); index += 2 }
-        "--bootstrap-mode" -> {
-            bootstrapMode = args.getOrNull(index + 1) ?: usage("--bootstrap-mode needs always, once, or never")
-            if (bootstrapMode !in setOf("always", "once", "never")) usage("invalid bootstrap mode: $bootstrapMode")
-            index += 2
-        }
+        "--bootstrap-mode" -> { bootstrapMode = args.getOrNull(index + 1) ?: usage("--bootstrap-mode needs always, once, or never"); index += 2 }
+        "--timeout-seconds" -> { timeoutSeconds = args.getOrNull(index + 1)?.toLongOrNull() ?: usage("--timeout-seconds needs a number"); index += 2 }
         "--run-root" -> { runRoot = Paths.get(args.getOrNull(index + 1) ?: usage("--run-root needs a path")); index += 2 }
-        "--port" -> { port = args.getOrNull(index + 1) ?: usage("--port needs a number"); if (!port.all(Char::isDigit)) usage("--port needs a number"); index += 2 }
-        "--keep-runs" -> { keepRuns = true; index += 1 }
+        "--port" -> { port = args.getOrNull(index + 1)?.toIntOrNull() ?: usage("--port needs a number"); index += 2 }
+        "--keep-runs" -> { keepRuns = true; index++ }
         "--help" -> usage()
         else -> usage("unknown argument: ${args[index]}")
     }
 }
 if (profile !in setOf("quick", "release", "brutal")) usage("invalid profile: $profile")
+if (bootstrapMode !in setOf("always", "once", "never")) usage("invalid bootstrap mode: $bootstrapMode")
+if (cycles < 1) usage("--cycles must be positive")
 if (profile == "brutal" && cycles < 3) cycles = 3
 runRoot = runRoot.toAbsolutePath().normalize()
+if (!keepRuns && bootstrapMode != "never") deleteTree(runRoot)
 runRoot.createDirectories()
 
+val commands = StringBuilder("# vs_ships_stability commands\n")
 val results = mutableListOf<CycleResult>()
-val commandsLog = StringBuilder()
-commandsLog.appendLine("# vs_ships_stability commands")
-commandsLog.appendLine("# intended probes: registry discovery, minimal placement if runtime commands expose VS ids, save/reload, removal/unload, dimension matrix, C2ME/DH pressure")
-
 for (cycle in 1..cycles) {
     val serverDir = runRoot.resolve("cycle-$cycle")
-    val evidenceDir = runRoot.resolve("evidence-cycle-$cycle")
-    evidenceDir.createDirectories()
-    if (!keepRuns && bootstrapMode != "never" && serverDir.exists()) deleteTree(serverDir)
-    val command = mutableListOf(
-        root.resolve("tools/btm").toString(),
-        "test", "smoke",
-        "--server-dir", serverDir.toString(),
-        "--port", port,
-        "--bootstrap-mode", if (bootstrapMode == "once" && cycle > 1) "never" else bootstrapMode,
-    )
-    val effectiveBootstrapMode = command[command.indexOf("--bootstrap-mode") + 1]
-    if (effectiveBootstrapMode != "never" && !(keepRuns && serverDir.exists())) command += "--reset-runtime"
-    commandsLog.appendLine(command.joinToString(" "))
-    val process = ProcessBuilder(command).directory(root.toFile()).redirectErrorStream(true).start()
-    val output = process.inputStream.bufferedReader().readText()
-    val exit = process.waitFor()
-    Files.writeString(evidenceDir.resolve("server-console.log"), output)
-    if (serverDir.resolve("logs/latest.log").exists()) Files.copy(serverDir.resolve("logs/latest.log"), evidenceDir.resolve("latest.log"), java.nio.file.StandardCopyOption.REPLACE_EXISTING)
-    snapshotRegistries(serverDir, evidenceDir.resolve("registry-snapshot.json"))
-    val classifier = if (exit == 0) null else classify(output + "\n" + collectText(serverDir))
-    val status = when {
-        exit == 0 -> "passed"
-        classifier != null && classifier != "unclassified_vs_ships_failure" -> "classified_failure"
-        else -> "failed"
+    val evidence = runRoot.resolve("evidence-cycle-$cycle").apply { createDirectories() }
+    val phases = mutableListOf<PhaseResult>()
+    var active: RunningServer? = null
+    var failure: Throwable? = null
+    fun phase(name: String, block: () -> Unit) {
+        val started = System.nanoTime()
+        try {
+            block()
+            phases += PhaseResult(name, "passed", (System.nanoTime() - started) / 1_000_000)
+        } catch (error: Throwable) {
+            phases += PhaseResult(name, "failed", (System.nanoTime() - started) / 1_000_000, error.message)
+            throw error
+        }
     }
-    Files.writeString(evidenceDir.resolve("metrics.json"), "{\n  \"cycle\": $cycle,\n  \"exit_code\": $exit,\n  \"profile\": ${q(profile)},\n  \"classifier\": ${q(classifier)}\n}\n")
-    results += CycleResult(cycle, status, classifier, serverDir.toString(), exit)
-    println("cycle $cycle: $status classifier=${classifier ?: "none"}")
+    try {
+        phase("prepare_runtime") {
+            val shouldPrepare = bootstrapMode == "always" || (bootstrapMode == "once" && !serverDir.resolve("run.sh").exists())
+            if (shouldPrepare) {
+                val command = listOf(root.resolve("tools/btm").toString(), "internal", "prepare-server-runtime", "--server-dir", serverDir.toString(), "--port", port.toString(), "--reset-runtime")
+                commands.appendLine(command.joinToString(" "))
+                val exit = run(command, timeoutSeconds, evidence.resolve("prepare.log"))
+                if (exit != 0) error("runtime preparation failed with exit $exit")
+            } else if (!serverDir.resolve("run.sh").exists()) error("prepared runtime missing for --bootstrap-mode $bootstrapMode: $serverDir")
+        }
+        val dimensions = fixtureDimensions(profile)
+        phase("boot_ready") {
+            active = startServer(serverDir, port, evidence.resolve("server-console-boot-1.log"))
+            waitFor(active!!, Regex("Done \\([0-9.]+s\\)!"), timeoutSeconds, "initial server boot")
+        }
+        phase("registry_contract") { registrySnapshot(serverDir, evidence.resolve("registry-snapshot.json")) }
+        phase("component_fixture") { placeAndVerify(active!!, dimensions, commands, "BTM_VS_PLACED") }
+        phase("save_shutdown") {
+            send(active!!, "save-all flush", commands)
+            send(active!!, "say BTM_VS_SAVED", commands)
+            waitFor(active!!, Regex("BTM_VS_SAVED"), 30, "save marker")
+            stop(active, commands)
+            active = null
+        }
+        phase("reload_ready") {
+            active = startServer(serverDir, port, evidence.resolve("server-console-boot-2.log"))
+            waitFor(active!!, Regex("Done \\([0-9.]+s\\)!"), timeoutSeconds, "reload server boot")
+        }
+        phase("reload_verification") { verifyFixture(active!!, dimensions, commands, "BTM_VS_RELOADED") }
+        phase("removal_unload") { removeAndVerify(active!!, dimensions, commands) }
+        phase("clean_shutdown") { stop(active, commands); active = null }
+        phases += PhaseResult("ship_assembly", "not_automatable_headless", 0, "VS 2.4.11 exposes no server-side assembly command")
+    } catch (error: Throwable) {
+        failure = error
+        stop(active, commands)
+        active = null
+    }
+    val consoleText = listOf(evidence.resolve("server-console-boot-1.log"), evidence.resolve("server-console-boot-2.log"))
+        .filter(Path::exists).joinToString("\n") { tail(it) }
+    val allText = consoleText + "\n" + tail(serverDir.resolve("logs/latest.log"))
+    val physicsWarnings = Regex("Too many physics frames in the physics frame queue", RegexOption.IGNORE_CASE).findAll(consoleText).count()
+    val classifier = failure?.let { classify(allText, it) }
+    val status = if (failure == null) "passed" else "failed"
+    val latest = serverDir.resolve("logs/latest.log")
+    if (latest.exists()) Files.copy(latest, evidence.resolve("latest.log"), StandardCopyOption.REPLACE_EXISTING)
+    Files.writeString(evidence.resolve("metrics.json"), """{
+  "cycle": $cycle,
+  "status": ${q(status)},
+  "classifier": ${q(classifier)},
+  "physics_queue_warnings": $physicsWarnings,
+  "phases": [${phases.joinToString(",") { "{\"name\":${q(it.name)},\"status\":${q(it.status)},\"duration_ms\":${it.durationMs},\"detail\":${q(it.detail)}}" }}]
+}
+""")
+    results += CycleResult(cycle, status, classifier, serverDir.toString(), phases, physicsWarnings)
+    println("cycle $cycle: $status classifier=${classifier ?: "none"} physics_queue_warnings=$physicsWarnings")
+    if (failure != null) break
 }
 
-Files.writeString(runRoot.resolve("commands.log"), commandsLog.toString())
-val finalStatus = when {
-    results.all { it.status == "passed" } -> "passed"
-    results.all { it.status in setOf("passed", "classified_failure") } -> "classified_failure"
-    else -> "failed"
-}
-Files.writeString(runRoot.resolve("summary.txt"), "vs_ships_stability $finalStatus at ${Instant.now()}\n${results.joinToString("\n") { "cycle ${it.cycle}: ${it.status} classifier=${it.classifier ?: "none"} server=${it.serverDir}" }}\n")
+Files.writeString(runRoot.resolve("commands.log"), commands.toString())
+val finalStatus = if (results.size == cycles && results.all { it.status == "passed" }) "passed" else "failed"
+Files.writeString(runRoot.resolve("summary.txt"), buildString {
+    appendLine("vs_ships_stability $finalStatus at ${Instant.now()}")
+    results.forEach { result ->
+        appendLine("cycle ${result.cycle}: ${result.status} classifier=${result.classifier ?: "none"} physics_queue_warnings=${result.physicsWarnings} server=${result.serverDir}")
+        result.phases.forEach { appendLine("  ${it.name}: ${it.status}${it.detail?.let { detail -> " ($detail)" }.orEmpty()}") }
+    }
+})
 Files.writeString(runRoot.resolve("summary.json"), buildString {
     appendLine("{")
     appendLine("  \"scenario\": \"vs_ships_stability\",")
     appendLine("  \"status\": ${q(finalStatus)},")
     appendLine("  \"profile\": ${q(profile)},")
     appendLine("  \"cycles\": [")
-    appendLine(results.joinToString(",\n") { "    {\"cycle\": ${it.cycle}, \"status\": ${q(it.status)}, \"classifier\": ${q(it.classifier)}, \"server_dir\": ${q(it.serverDir)}, \"exit_code\": ${it.exitCode}}" })
+    appendLine(results.joinToString(",\n") { result -> "    {\"cycle\":${result.cycle},\"status\":${q(result.status)},\"classifier\":${q(result.classifier)},\"physics_queue_warnings\":${result.physicsWarnings},\"server_dir\":${q(result.serverDir)},\"phases\":[${result.phases.joinToString(",") { "{\"name\":${q(it.name)},\"status\":${q(it.status)},\"duration_ms\":${it.durationMs},\"detail\":${q(it.detail)}}" }}]}" })
     appendLine("  ]")
     appendLine("}")
 })
-
-exitProcess(if (finalStatus == "failed") 1 else 0)
+Files.writeString(runRoot.resolve("metrics.json"), buildString {
+    appendLine("{")
+    appendLine("  \"status\": ${q(finalStatus)},")
+    appendLine("  \"requested_cycles\": $cycles,")
+    appendLine("  \"completed_cycles\": ${results.size},")
+    appendLine("  \"physics_queue_warnings\": ${results.sumOf(CycleResult::physicsWarnings)}")
+    appendLine("}")
+})
+results.firstOrNull()?.let { first ->
+    val snapshot = runRoot.resolve("evidence-cycle-${first.cycle}/registry-snapshot.json")
+    if (snapshot.exists()) Files.copy(snapshot, runRoot.resolve("registry-snapshot.json"), StandardCopyOption.REPLACE_EXISTING)
+}
+exitProcess(if (finalStatus == "passed") 0 else 1)

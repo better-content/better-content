@@ -422,7 +422,7 @@ Commands:
 """.trimIndent()
 
 fun internalHelp(): String = """
-Usage: tools/btm internal <resolve-packwiz-downloads|prune-runtime-mods|log-hard-failure-scan|minecraft-client-argfile|sync-burnt-coverage-tags|generate-completionist-quests|audit-ftbq-layout|check-js-syntax|check-json-surface|validate-pack-contract|contract-completeness-report|validate-kubejs-assets|validate-autonomous-contracts|validate-realistic-hands|validate-chemistry-identity|validate-synthesis-pipeline|validate-player-progression-contracts|validate-progression-reachability|validate-burnt-coverage|validate-lc-tfth-dh-contracts|validate-kotlin-tool-surface|validate-tool-doc-surface|validate-worldgen-sampling-contracts|validate-client-smoke-contracts|verify-pack-fast|verify-pack-full> ...
+Usage: tools/btm internal <resolve-packwiz-downloads|prune-runtime-mods|log-hard-failure-scan|prepare-server-runtime|prepare-client-runtime|minecraft-client-argfile|sync-burnt-coverage-tags|generate-completionist-quests|audit-ftbq-layout|check-js-syntax|check-json-surface|validate-pack-contract|contract-completeness-report|validate-kubejs-assets|validate-autonomous-contracts|validate-realistic-hands|validate-chemistry-identity|validate-synthesis-pipeline|validate-player-progression-contracts|validate-progression-reachability|validate-burnt-coverage|validate-lc-tfth-dh-contracts|validate-kotlin-tool-surface|validate-tool-doc-surface|validate-worldgen-sampling-contracts|validate-client-smoke-contracts|verify-pack-fast|verify-pack-full> ...
 """.trimIndent()
 
 fun usageError(message: String, help: String = mainHelp()): CommandResult =
@@ -2409,6 +2409,21 @@ fun bootstrapClientRuntime(clientDir: Path): ProcessRun {
         dest.parent.createDirectories()
         Files.copy(vanillaMeta, dest, StandardCopyOption.REPLACE_EXISTING)
     }
+    val vanillaVersionJson = clientDir.resolve("versions/$mcVersion/$mcVersion.json")
+    if (!vanillaVersionJson.exists()) {
+        val manifest = clientDir.resolve("versions/version_manifest_v2.json")
+        val manifestDownload = downloadTo("https://piston-meta.mojang.com/mc/game/version_manifest_v2.json", manifest)
+        if (manifestDownload.exitCode != 0) return manifestDownload
+        val versionEntry = jsonArray(jsonObject(parseJson(Files.readString(manifest)))["versions"])
+            .map(::jsonObject)
+            .firstOrNull { jsonString(it["id"]) == mcVersion }
+            ?: return ProcessRun(1, "Minecraft $mcVersion is missing from Mojang version manifest")
+        val versionUrl = jsonString(versionEntry["url"])
+            ?: return ProcessRun(1, "Minecraft $mcVersion version entry has no metadata URL")
+        vanillaVersionJson.parent.createDirectories()
+        val versionDownload = downloadTo(versionUrl, vanillaVersionJson)
+        if (versionDownload.exitCode != 0) return versionDownload
+    }
     val vanillaJar = prismRoot.resolve("libraries/com/mojang/minecraft/$mcVersion/minecraft-$mcVersion-client.jar")
     if (vanillaJar.exists()) {
         val dest = clientDir.resolve("versions/$mcVersion/$mcVersion.jar")
@@ -4382,6 +4397,36 @@ fun handleInternal(subArgs: List<String>): CommandResult {
                 }
             }.trim()
             CommandResult("internal log-hard-failure-scan", if (scan.ok) "success" else "failure", output, exitCode = if (scan.ok) 0 else 1)
+        }
+        "prepare-server-runtime" -> {
+            var serverDir: String? = null
+            var port = defaultServerPort
+            var reset = false
+            var index = 1
+            while (index < subArgs.size) {
+                when (subArgs[index]) {
+                    "--server-dir" -> { serverDir = subArgs.getOrNull(index + 1) ?: return usageError("--server-dir is required", internalHelp()); index += 2 }
+                    "--port" -> { port = subArgs.getOrNull(index + 1)?.toIntOrNull() ?: return usageError("--port needs a number", internalHelp()); index += 2 }
+                    "--reset-runtime" -> { reset = true; index += 1 }
+                    else -> return usageError("unknown argument: ${subArgs[index]}", internalHelp())
+                }
+            }
+            val path = resolveUserPath(serverDir ?: return usageError("--server-dir is required", internalHelp()))
+            val run = bootstrapServerRuntime(path, port, reset)
+            CommandResult("internal prepare-server-runtime", if (run.exitCode == 0) "success" else "failure", run.output, artifacts = listOf(ArtifactRef(path.toString(), "directory")), exitCode = if (run.exitCode == 0) 0 else 1, mutated = true)
+        }
+        "prepare-client-runtime" -> {
+            var clientDir: String? = null
+            var index = 1
+            while (index < subArgs.size) {
+                when (subArgs[index]) {
+                    "--client-dir" -> { clientDir = subArgs.getOrNull(index + 1) ?: return usageError("--client-dir is required", internalHelp()); index += 2 }
+                    else -> return usageError("unknown argument: ${subArgs[index]}", internalHelp())
+                }
+            }
+            val path = resolveUserPath(clientDir ?: return usageError("--client-dir is required", internalHelp()))
+            val run = bootstrapClientRuntime(path)
+            CommandResult("internal prepare-client-runtime", if (run.exitCode == 0) "success" else "failure", run.output, artifacts = listOf(ArtifactRef(path.toString(), "directory")), exitCode = if (run.exitCode == 0) 0 else 1, mutated = true)
         }
         "minecraft-client-argfile" -> {
             var clientDir: String? = null

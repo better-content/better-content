@@ -81,20 +81,31 @@ for (scenario in listOf("vs_ships_stability", "vs_ships_matrix", "vs_ships_clien
     if (""""$scenario" to ScenarioDefinition(""" in btmText) ok("$scenario is registered")
     else fail("$scenario is registered", "missing ScenarioDefinition")
 }
+for (internalCommand in listOf("prepare-server-runtime", "prepare-client-runtime", "minecraft-client-argfile")) {
+    if (btmText.contains("\"$internalCommand\" ->")) ok("$internalCommand internal hook is registered")
+    else fail("$internalCommand internal hook is registered", "missing internal command")
+}
 
 val scriptChecks = mapOf(
     "tools/kotlin/vs_ships_stability.main.kts" to listOf(
-        "dependency_mixin_failure",
+        "registry_contract_failure",
+        "component_fixture_failure",
+        "ship_save_reload_failure",
+        "dimension_conflict",
+        "c2me_dh_threading_failure",
         "vs_init_failure",
         "eureka_init_failure",
         "clockwork_init_failure",
         "trackwork_init_failure",
-        "ship_assembly_failure",
-        "ship_movement_collision_failure",
-        "ship_save_reload_failure",
-        "dimension_conflict",
-        "c2me_dh_threading_failure",
         "suspected_ship_object_leak",
+        "ship_assembly\", \"not_automatable_headless",
+        "component_fixture",
+        "reload_verification",
+        "removal_unload",
+        "save-all flush",
+        "vs_eureka:oak_ship_helm",
+        "vs_clockwork:phys_bearing",
+        "trackwork:phys_track",
     ),
     "tools/kotlin/vs_ships_matrix.main.kts" to listOf(
         "current_config",
@@ -109,12 +120,46 @@ val scriptChecks = mapOf(
         "full_vs_family_current_dh_c2me",
         "addon_removal_boot_failure",
         "partial_save_corruption",
+        "vs_init_failure",
+        "eureka_init_failure",
+        "clockwork_init_failure",
+        "trackwork_init_failure",
+        "suspected_ship_object_leak",
+        "--variants",
+        "--cycles",
+        "cloneRuntime",
+        "--reflink=auto",
+        "physics_queue_warnings",
+        "timedOut && !ready && physicsWarnings > 0",
+        "exitProcess(if (finalStatus == \"passed\") 0 else 1)",
     ),
     "tools/kotlin/vs_ships_client.main.kts" to listOf(
         "client_render_failure",
         "flywheel_visual_failure",
         "mount_camera_failure",
         "passenger_sync_failure",
+        "vs_init_failure",
+        "eureka_init_failure",
+        "clockwork_init_failure",
+        "trackwork_init_failure",
+        "prepare-client-runtime",
+        "minecraft-client-argfile",
+        "startClient",
+        "helm_assembly",
+        "vs set-static @v[]",
+        "mount_movement",
+        "client_reconnect",
+        "server_restart_reload",
+        "observer_join",
+        "xvfb-run",
+        "pilot-after-server-restart.png",
+    ),
+    "tools/kotlin/vs_ships_observer.main.kts" to listOf(
+        "Robot()",
+        "observer-sync.png",
+        "observer-pixels.txt",
+        "capture-signal",
+        "stop-signal",
     ),
 )
 for ((path, needles) in scriptChecks) {
@@ -127,6 +172,9 @@ for ((path, needles) in scriptChecks) {
     if (missing.isEmpty()) ok("$path keeps required VS classifiers/contracts", "${needles.size} checks")
     else fail("$path keeps required VS classifiers/contracts", missing.joinToString(", "))
 }
+val matrixText = read("tools/kotlin/vs_ships_matrix.main.kts")
+if (!matrixText.contains("\"test\", \"smoke\"")) ok("VS isolation variants bypass smoke manifest preflight")
+else fail("VS isolation variants bypass smoke manifest preflight", "matrix still boots mutated runtimes through test smoke")
 
 val docs = mapOf(
     "AGENTS.md" to listOf("vs_ships_stability", "vs_ships_matrix", "vs_ships_client"),

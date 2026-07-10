@@ -9281,28 +9281,44 @@ file = "kubejs/assets/unearthed/models/block/ore/overgrown_top_tinted_overlay_ho
 hash = "fd79d9d8ab6b640d58f8f4acf5778f75d8f41d9dbe0f6936350ede972e547e95"
 
 [[files]]
+file = "kubejs/assets/unearthed/models/block/ore/overgrown_top_split_overlay_horizontal.json"
+hash = "60b4607d77e52ed7cc455215d589862c2619bf4db42cd0a1fae84d0195634280"
+
+[[files]]
 file = "kubejs/assets/unearthed/models/block/ore/overgrown_top_untinted_overlay_horizontal.json"
 hash = "58fb7096e53dfc4a06e7a9c874773010ce28cc2b6e7472b0daf6f0645cba8d91"
 
 [[files]]
 file = "kubejs/assets/unearthed/models/block/overgrown_andesite.json"
-hash = "5bac309660a861762efb8d41d241c559dda0dec78352b2adb3cf076f4cef2451"
+hash = "616f8cd52bd457e64bac47ddf25b8e603eb415709b20bbb09ec4187fa0a967f1"
 
 [[files]]
 file = "kubejs/assets/unearthed/models/block/overgrown_diorite.json"
-hash = "70c115779809a8b38e324ae9d6619621f3c1e3a56ad13eab8e8c78e42cae37bc"
+hash = "97d96178b71ba42f60bea655bf6b355e0c9d5a740d8766673741553fb727b563"
 
 [[files]]
 file = "kubejs/assets/unearthed/models/block/overgrown_granite.json"
-hash = "98a01bc0f7ae348b4ca0d000bb20ad1262ba50277b90acf1df082cf7d5152326"
+hash = "564c796f2ab2942d543807be237dbe9bbb20bede98fbee2d4e9a4ca27f5753f3"
+
+[[files]]
+file = "kubejs/assets/unearthed/textures/block/overgrown_andesite_top_grass_mask.png"
+hash = "04d9bc47a09c4ccb02e960a4cb625696056d12d3339424f7febaf558450f8c1d"
 
 [[files]]
 file = "kubejs/assets/unearthed/textures/block/overgrown_andesite_top_pebbled.png"
 hash = "c0ad2988bb694531f45beec684a839d70945e163097d045d3f5b9970a98e0553"
 
 [[files]]
+file = "kubejs/assets/unearthed/textures/block/overgrown_diorite_top_grass_mask.png"
+hash = "78976a93e4edc9bb6622349cd38ec15f090ffd334cf3429cbc0d9907358d1954"
+
+[[files]]
 file = "kubejs/assets/unearthed/textures/block/overgrown_diorite_top_pebbled.png"
 hash = "a8e0a94006df3d977654b7ee74459a0cc1e78b95e521ca938cb869e0b7738981"
+
+[[files]]
+file = "kubejs/assets/unearthed/textures/block/overgrown_granite_top_grass_mask.png"
+hash = "baf4313c9b954abea593dda9d75bc7c5bd8c4210b34eedda6adc226341f98e42"
 
 [[files]]
 file = "kubejs/assets/unearthed/textures/block/overgrown_granite_top_pebbled.png"

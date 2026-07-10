@@ -128,7 +128,8 @@ for (cycle in 1..cycles) {
         "--port", port,
         "--bootstrap-mode", if (bootstrapMode == "once" && cycle > 1) "never" else bootstrapMode,
     )
-    if (bootstrapMode != "never" && !(keepRuns && serverDir.exists())) command += "--reset-runtime"
+    val effectiveBootstrapMode = command[command.indexOf("--bootstrap-mode") + 1]
+    if (effectiveBootstrapMode != "never" && !(keepRuns && serverDir.exists())) command += "--reset-runtime"
     commandsLog.appendLine(command.joinToString(" "))
     val process = ProcessBuilder(command).directory(root.toFile()).redirectErrorStream(true).start()
     val output = process.inputStream.bufferedReader().readText()

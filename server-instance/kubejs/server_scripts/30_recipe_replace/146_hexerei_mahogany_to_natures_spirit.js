@@ -1,3 +1,8 @@
+function btmReplaceHexereiMahoganyInput(event, oldInput, newInput) {
+    event.replaceInput({ mod: 'hexerei' }, oldInput, newInput)
+    event.replaceInput({ output: /hexerei:.*/ }, oldInput, newInput)
+}
+
 ServerEvents.recipes(function (event) {
     var mappings = [
         ['hexerei:mahogany_log', 'natures_spirit:mahogany_log'],
@@ -54,6 +59,6 @@ ServerEvents.recipes(function (event) {
     ]
 
     for (var i = 0; i < mappings.length; i++) {
-        event.replaceInput({}, mappings[i][0], mappings[i][1])
+        btmReplaceHexereiMahoganyInput(event, mappings[i][0], mappings[i][1])
     }
 })

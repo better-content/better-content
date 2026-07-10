@@ -1,0 +1,408 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "completionist_tcon_weapons"
+	group: "0D8C0A1E9F5B4C72"
+	icon: "tconstruct:dagger"
+	id: "D41BE7A90C2F5E63"
+	order_index: 13
+	quest_links: [ ]
+	quests: [
+		{
+			id: "1DDAC44A74F57739"
+			title: "additionalweaponry"
+			icon: "additionalweaponry:butcher_knife"
+			shape: "square"
+			size: 0.8d
+			x: 0.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "E67333FD10843F2B"
+					type: "checkmark"
+					title: "additionalweaponry"
+				}
+			]
+			rewards: [ ]
+			description: ["5 starter stubs."]
+		}
+		{
+			id: "F07A8FB86F044567"
+			title: "All TCon Weapons: Butcher Knife"
+			icon: "additionalweaponry:butcher_knife"
+			shape: "rsquare"
+			size: 1.0d
+			x: 1.5d
+			y: 0.0d
+			tasks: [
+				{
+					id: "450066A6A992A3C3"
+					type: "item"
+					item: "additionalweaponry:butcher_knife"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "81186B0A310F621F"
+			title: "All TCon Weapons: Cutlass"
+			icon: "additionalweaponry:cutlass"
+			shape: "rsquare"
+			size: 1.0d
+			x: 2.75d
+			y: 0.0d
+			tasks: [
+				{
+					id: "B5F97D259AFAE7F7"
+					type: "item"
+					item: "additionalweaponry:cutlass"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "7D52F602EEBD1BEF"
+			title: "All TCon Weapons: Pitchfork"
+			icon: "additionalweaponry:pitchfork"
+			shape: "rsquare"
+			size: 1.0d
+			x: 4.0d
+			y: 0.0d
+			tasks: [
+				{
+					id: "CDE76185DCDA84AB"
+					type: "item"
+					item: "additionalweaponry:pitchfork"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "3EB29801D614E517"
+			title: "All TCon Weapons: Scepter"
+			icon: "additionalweaponry:scepter"
+			shape: "rsquare"
+			size: 1.0d
+			x: 5.25d
+			y: 0.0d
+			tasks: [
+				{
+					id: "5F90C19157BF9ABA"
+					type: "item"
+					item: "additionalweaponry:scepter"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "B5E4BFD8440983D5"
+			title: "All TCon Weapons: Wrench"
+			icon: "additionalweaponry:wrench"
+			shape: "rsquare"
+			size: 1.0d
+			x: 6.5d
+			y: 0.0d
+			tasks: [
+				{
+					id: "64E67FD1A0C1B83A"
+					type: "item"
+					item: "additionalweaponry:wrench"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "83C69CE0D7F51F4C"
+			title: "tconstruct"
+			icon: "tconstruct:dagger"
+			shape: "square"
+			size: 0.8d
+			x: 0.0d
+			y: 3.25d
+			tasks: [
+				{
+					id: "11E72D700FB9DC93"
+					type: "checkmark"
+					title: "tconstruct"
+				}
+			]
+			rewards: [ ]
+			description: ["9 starter stubs."]
+		}
+		{
+			id: "33CFE1AF042FF603"
+			title: "All TCon Weapons: Dagger"
+			icon: "tconstruct:dagger"
+			shape: "rsquare"
+			size: 1.0d
+			x: 1.5d
+			y: 3.25d
+			tasks: [
+				{
+					id: "B356E8095C05268C"
+					type: "item"
+					item: "tconstruct:dagger"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "C5CD38E57B227233"
+			title: "All TCon Weapons: Earth Staff"
+			icon: "tconstruct:earth_staff"
+			shape: "rsquare"
+			size: 1.0d
+			x: 2.75d
+			y: 3.25d
+			tasks: [
+				{
+					id: "9E973E5A76C12881"
+					type: "item"
+					item: "tconstruct:earth_staff"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "421D05A0E74E640D"
+			title: "All TCon Weapons: Ender Staff"
+			icon: "tconstruct:ender_staff"
+			shape: "rsquare"
+			size: 1.0d
+			x: 4.0d
+			y: 3.25d
+			tasks: [
+				{
+					id: "7656F6DAF288DA4F"
+					type: "item"
+					item: "tconstruct:ender_staff"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "3FE4120DC8903C42"
+			title: "All TCon Weapons: Ichor Staff"
+			icon: "tconstruct:ichor_staff"
+			shape: "rsquare"
+			size: 1.0d
+			x: 5.25d
+			y: 3.25d
+			tasks: [
+				{
+					id: "1EA00A2E98DD786B"
+					type: "item"
+					item: "tconstruct:ichor_staff"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "0EC6FC4FD2E2741A"
+			title: "All TCon Weapons: Plate Shield"
+			icon: "tconstruct:plate_shield"
+			shape: "rsquare"
+			size: 1.0d
+			x: 6.5d
+			y: 3.25d
+			tasks: [
+				{
+					id: "CDEB352B8F5927F9"
+					type: "item"
+					item: "tconstruct:plate_shield"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "86BB9777672ABAC2"
+			title: "All TCon Weapons: Shuriken"
+			icon: "tconstruct:shuriken"
+			shape: "rsquare"
+			size: 1.0d
+			x: 7.75d
+			y: 3.25d
+			tasks: [
+				{
+					id: "AEBD4B3D5A31C009"
+					type: "item"
+					item: "tconstruct:shuriken"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "9030657302A2CBBB"
+			title: "All TCon Weapons: Sky Staff"
+			icon: "tconstruct:sky_staff"
+			shape: "rsquare"
+			size: 1.0d
+			x: 9.0d
+			y: 3.25d
+			tasks: [
+				{
+					id: "546F6FC5444BB061"
+					type: "item"
+					item: "tconstruct:sky_staff"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "F18C24A2D200EEF1"
+			title: "All TCon Weapons: Throwing Axe"
+			icon: "tconstruct:throwing_axe"
+			shape: "rsquare"
+			size: 1.0d
+			x: 10.25d
+			y: 3.25d
+			tasks: [
+				{
+					id: "B86DCC88A105F5A9"
+					type: "item"
+					item: "tconstruct:throwing_axe"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "061EA614141541E6"
+			title: "All TCon Weapons: Travelers Shield"
+			icon: "tconstruct:travelers_shield"
+			shape: "rsquare"
+			size: 1.0d
+			x: 11.5d
+			y: 3.25d
+			tasks: [
+				{
+					id: "BEDB794F1BC20D65"
+					type: "item"
+					item: "tconstruct:travelers_shield"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "4C110482CB7F7587"
+			title: "tinkers_battle_spades"
+			icon: "tinkers_battle_spades:battle_spade"
+			shape: "square"
+			size: 0.8d
+			x: 0.0d
+			y: 6.5d
+			tasks: [
+				{
+					id: "FCDCF6E64570F104"
+					type: "checkmark"
+					title: "tinkers_battle_spades"
+				}
+			]
+			rewards: [ ]
+			description: ["1 starter stubs."]
+		}
+		{
+			id: "E07FF2F8C23B76D2"
+			title: "All TCon Weapons: Battle Spade"
+			icon: "tinkers_battle_spades:battle_spade"
+			shape: "rsquare"
+			size: 1.0d
+			x: 1.5d
+			y: 6.5d
+			tasks: [
+				{
+					id: "963A49FDFBBDE963"
+					type: "item"
+					item: "tinkers_battle_spades:battle_spade"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "EEB86A632FFEA0DE"
+			title: "tinkersweaponry"
+			icon: "tinkersweaponry:greatsword"
+			shape: "square"
+			size: 0.8d
+			x: 0.0d
+			y: 9.75d
+			tasks: [
+				{
+					id: "118CDD2EDC78DDAB"
+					type: "checkmark"
+					title: "tinkersweaponry"
+				}
+			]
+			rewards: [ ]
+			description: ["3 starter stubs."]
+		}
+		{
+			id: "72B2D4B4441B3021"
+			title: "All TCon Weapons: Greatsword"
+			icon: "tinkersweaponry:greatsword"
+			shape: "rsquare"
+			size: 1.0d
+			x: 1.5d
+			y: 9.75d
+			tasks: [
+				{
+					id: "5326E4637F8882F6"
+					type: "item"
+					item: "tinkersweaponry:greatsword"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "00E756B61F5635A3"
+			title: "All TCon Weapons: Lance"
+			icon: "tinkersweaponry:lance"
+			shape: "rsquare"
+			size: 1.0d
+			x: 2.75d
+			y: 9.75d
+			tasks: [
+				{
+					id: "188F17A7D6764231"
+					type: "item"
+					item: "tinkersweaponry:lance"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+		{
+			id: "A452462B5EC06D16"
+			title: "All TCon Weapons: Pike"
+			icon: "tinkersweaponry:pike"
+			shape: "rsquare"
+			size: 1.0d
+			x: 4.0d
+			y: 9.75d
+			tasks: [
+				{
+					id: "0E90A4C246D6BFD0"
+					type: "item"
+					item: "tinkersweaponry:pike"
+					count: 1
+				}
+			]
+			rewards: [ ]
+		}
+	]
+}

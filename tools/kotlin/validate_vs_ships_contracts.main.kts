@@ -51,6 +51,8 @@ data class RequiredManifest(
 val manifests = listOf(
     RequiredManifest("Valkyrien Skies", "mods/valkyrien-skies.pw.toml", "valkyrienskies-120-2.4.11.jar", "258371", "7906689"),
     RequiredManifest("Eureka", "mods/eureka-ships.pw.toml", "eureka-1201-1.6.3.jar", "654384", "7979379"),
+    RequiredManifest("VS: Clockwork", "mods/create-clockwork.pw.toml", "clockwork-0.5.6.jar", "807792", "8017005"),
+    RequiredManifest("Trackwork", "mods/trackwork.pw.toml", "trackwork-1.20.1-1.2.4.jar", "1057662", "7760330"),
 )
 
 for (manifest in manifests) {
@@ -74,7 +76,7 @@ for (manifest in manifests) {
     else fail("${manifest.label} manifest is pinned", problems.joinToString(", "))
 }
 
-for (path in listOf("mods/create-clockwork.pw.toml", "mods/trackwork.pw.toml", "mods/shoulder-surfing-reloaded.pw.toml", "config/shouldersurfing-client.toml")) {
+for (path in listOf("mods/shoulder-surfing-reloaded.pw.toml", "config/shouldersurfing-client.toml")) {
     if (!rel(path).isRegularFile()) ok("deferred or incompatible pack surface is absent", path)
     else fail("deferred or incompatible pack surface is absent", path)
 }
@@ -105,7 +107,7 @@ if (!clientContractPath.isRegularFile()) {
 }
 
 val btmText = read("tools/btm.main.kts")
-for (scenario in listOf("vs_ships_stability", "vs_ships_matrix", "vs_ships_client")) {
+for (scenario in listOf("vs_ships_stability", "vs_ships_matrix", "vs_ships_client", "vs_ships_release")) {
     if (""""$scenario" to ScenarioDefinition(""" in btmText) ok("$scenario is registered")
     else fail("$scenario is registered", "missing ScenarioDefinition")
 }
@@ -180,6 +182,7 @@ val scriptChecks = mapOf(
         "eureka_init_failure",
         "clockwork_init_failure",
         "trackwork_init_failure",
+        "c2me_dh_threading_failure",
         "prepare-client-runtime",
         "minecraft-client-argfile",
         "startClient",
@@ -221,6 +224,16 @@ val scriptChecks = mapOf(
         "capture-signal",
         "stop-signal",
     ),
+    "tools/kotlin/vs_ships_release.main.kts" to listOf(
+        "vs_ships_stability",
+        "vs_ships_matrix",
+        "listOf(\"core\", \"clockwork\", \"trackwork\", \"combined\")",
+        "dh_disabled",
+        "c2me_disabled",
+        "dh_c2me_disabled",
+        "--keep-going",
+        "summary.json",
+    ),
 )
 for ((path, needles) in scriptChecks) {
     if (!rel(path).isRegularFile()) {
@@ -242,6 +255,7 @@ val docs = mapOf(
         "tools/btm test scenario vs_ships_stability --profile quick --cycles 1 --bootstrap-mode once",
         "tools/btm test scenario vs_ships_matrix --profile quick --bootstrap-mode once",
         "tools/btm test scenario-headful vs_ships_client --profile quick --bootstrap-mode once",
+        "tools/btm test scenario-headful vs_ships_release --bootstrap-mode once",
     ),
     "docs/performance_and_mods.md" to listOf("Valkyrien Skies", "Eureka", "Clockwork", "Trackwork", "vs_ships_stability"),
 )

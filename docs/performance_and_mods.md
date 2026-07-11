@@ -4,12 +4,14 @@
 
 Active downloaded mods are the current `mods/*.pw.toml` files. Active custom bundled jars in `mods/` include:
 
-Pinned Valkyrien Skies diagnostic manifests are active and side `both`:
+Pinned Valkyrien Skies family diagnostic manifests are active and side `both`:
 
 - Valkyrien Skies `valkyrienskies-120-2.4.11.jar`
 - Eureka `eureka-1201-1.6.3.jar`
+- VS: Clockwork `clockwork-0.5.6.jar`
+- Trackwork `trackwork-1.20.1-1.2.4.jar`
 
-VS: Clockwork and Trackwork are deferred until the core VS/Eureka client-render gate passes. Shoulder Surfing was removed because its own compatibility warning identifies Valkyrien Skies as incompatible.
+All four mods ship as diagnostic-active surfaces. They do not yet have pack recipes, quests, progression gates, or balance integration. Shoulder Surfing remains removed because its own compatibility warning identifies Valkyrien Skies as incompatible.
 
 - `btmfixes-0.1.0.jar`
 - `classselector-1.0.0.jar`
@@ -67,19 +69,22 @@ Revalidate with the current harness after touching `config/c2me.toml`, `config/D
 
 ## Valkyrien Skies Family
 
-Valkyrien Skies and Eureka are active as pinned diagnostic surfaces, not integrated progression content. VS: Clockwork and Trackwork remain deferred. Current entry points:
+Valkyrien Skies, Eureka, VS: Clockwork, and Trackwork are active as pinned diagnostic surfaces, not integrated progression content. Current entry points:
 
 ```bash
 tools/btm test scenario vs_ships_stability --profile quick --cycles 1 --bootstrap-mode once
 tools/btm test scenario vs_ships_matrix --profile quick --bootstrap-mode once
 tools/btm test scenario-headful vs_ships_client --profile quick --bootstrap-mode once
+tools/btm test scenario-headful vs_ships_release --bootstrap-mode once
 ```
 
 Use these to classify boot, dependency/mixin, ship assembly, movement/collision, save/reload, dimension, C2ME/DH/threading, Flywheel/render, mount/camera, passenger sync, add-on removal, partial-save corruption, and suspected ship object leak failures. They write raw evidence under `/tmp/btm-vs-*`; keep durable conclusions here only after a fresh run. Do not add quests, balance hooks, or progression gates around this family until the stability failure surface is understood.
 
 Current evidence from 2026-07-10: `/tmp/btm-vs-stability-expanded-3cycle` passed three fresh DH-enabled quick lifecycle cycles, and `/tmp/btm-vs-matrix-expanded-direct` passed three paired current-config/DH-disabled boots cloned from identical disposable baselines. The old DH-disabled startup stall did not reproduce with the corrected matrix launcher, so it is not current evidence of a DH-off-only defect.
 
-The source-guided Xvfb lane now drives Eureka's exact 176x166 helm menu and Assemble packet, rebuilds the fixture after onboarding, recovers dead reusable pilots, and requires one registered VS ship. Eureka's BFS log is accepted as `5..8` for the four unique fixture blocks because its initial neighbor stack is not marked visited and can process connected initial neighbors twice. The old screenshot assertion was removed: assembly preserves the source transform, so visual sameness is expected. The focused lane now records server-confirmed assembly and an explicit ship translation; screenshots are supplemental. The container uses Xvfb/llvmpipe and reports unsupported GLSL capability, so this environment is `render_environment_inconclusive`, not evidence of a VS rendering defect. A hardware-rendered client is required before claiming playable visual stability. Movement, mount/camera, save/reload, observer sync, Clockwork, and Trackwork remain gated.
+The source-guided Xvfb lane drives Eureka's exact helm menu and Assemble packet, records server-confirmed assembly and explicit ship translation, and supports core, Clockwork, Trackwork, and combined fixtures. The `vs_ships_release` orchestrator runs the headless lifecycle and isolation matrices, all four current-config client fixtures, and combined DH/C2ME isolation variants. Server state, transforms, lifecycle, and observer sync are authoritative; screenshots and hardware rendering are supplemental, so Xvfb/llvmpipe may remain `render_environment_inconclusive` without masking a mechanics or lifecycle failure. Do not claim the family playable-stable until this release lane passes with fresh evidence.
+
+Current full-family activation evidence from 2026-07-11: `/tmp/btm-vs-full-family-activation` passed a fresh quick server lifecycle with Clockwork and Trackwork registry/component checks, save/restart persistence, removal/unload, and clean shutdown; 37 physics-queue warnings remained non-fatal. `/tmp/btm-vs-combined-activation` then passed combined client preparation, join/render, six-component Eureka assembly, one-ship registration, reconnect visibility, and explicit translation, but failed `mount_movement` because the pilot could not mount the assembled helm. That run is classified `mount_camera_failure`; it also retained Dimensional Fonts/C2ME far-chunk-write errors for compatibility follow-up. Clockwork bearing actuation and Trackwork propulsion are therefore not yet proven, and `vs_ships_release` remains a blocking gate rather than passing evidence.
 
 ## Custom Mod Notes
 

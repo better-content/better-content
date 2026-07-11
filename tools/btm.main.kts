@@ -307,6 +307,12 @@ val scenarios = linkedMapOf(
         "tools/kotlin/vs_ships_client.main.kts",
         headful = true,
     ),
+    "vs_ships_release" to ScenarioDefinition(
+        "vs_ships_release",
+        "Full Valkyrien Skies family release-grade lifecycle and compatibility gate",
+        "tools/kotlin/vs_ships_release.main.kts",
+        headful = true,
+    ),
 )
 
 val rawArgs = args.toList()
@@ -4860,6 +4866,7 @@ fun scenarioDefaultRunRoot(name: String, args: List<String>): Path {
             val profile = argValue(args, "--profile") ?: "quick"
             Paths.get("/tmp", if (profile == "release") "btm-vs-ships-client-release" else "btm-vs-ships-client-quick")
         }
+        "vs_ships_release" -> Paths.get("/tmp/btm-vs-ships-release")
         else -> Paths.get("/tmp/btm-$name")
     }.toAbsolutePath().normalize()
 }
@@ -4874,6 +4881,7 @@ fun scenarioRequestedPort(name: String, args: List<String>): Int? =
             "release" -> 25570
             else -> 25569
         }
+        "vs_ships_release" -> 25570
         "pillager_campaigns" -> null
         else -> defaultServerPort
     }

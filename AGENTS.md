@@ -105,6 +105,7 @@ Use the portable harness layer for repeatable runtime tests instead of hand-buil
   - `vs_ships_matrix`
   - `client_smoke`
   - `vs_ships_client`
+  - `vs_ships_release`
 - Internal harness/scenario implementation should define only:
   - scenario metadata and default run/docs paths
   - required mod jar patterns
@@ -129,6 +130,7 @@ Current VS ships diagnostic scenarios:
 - Headless stability: `tools/btm test scenario vs_ships_stability --profile quick --cycles 1 --bootstrap-mode once`
 - Isolation matrix: `tools/btm test scenario vs_ships_matrix --profile quick --bootstrap-mode once`
 - Headful client/render lane: `tools/btm test scenario-headful vs_ships_client --profile quick --bootstrap-mode once`
+- Full-family release gate: `tools/btm test scenario-headful vs_ships_release --bootstrap-mode once`
 
 These scenarios are failure-surface discovery lanes for Valkyrien Skies, Eureka, VS: Clockwork, Trackwork, DH, and C2ME interactions. Keep them diagnostic-only: do not add progression integration, quests, balance hooks, or UX expansion as part of this lane.
 

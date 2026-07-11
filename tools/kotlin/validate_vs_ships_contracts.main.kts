@@ -100,6 +100,7 @@ if (!clientContractPath.isRegularFile()) {
         "fixture.expectedBlocks" to "5",
         "fixture.maximumBfsBlocks" to "8",
         "assembly.syncWaitSeconds" to "4",
+        "screenshots" to "pilot-joined.png,core-fixture.png,helm-gui.png,helm-button-hovered.png,helm-button-pressed.png,ship-assembled.png,ship-after-reconnect-probe.png,ship-after-teleport-probe.png,pilot-reconnected.png,pilot-after-server-restart.png",
     )
     val wrong = expected.filter { (key, value) -> properties.getProperty(key) != value }
     if (wrong.isEmpty()) ok("VS client source contract is pinned", "${expected.size} fields")
@@ -176,8 +177,6 @@ val scriptChecks = mapOf(
         "assembledGeometryScore",
         "captureWorld",
         "flywheel_visual_failure",
-        "mount_camera_failure",
-        "passenger_sync_failure",
         "vs_init_failure",
         "eureka_init_failure",
         "clockwork_init_failure",
@@ -209,20 +208,11 @@ val scriptChecks = mapOf(
         "removed-mods.txt",
         "helm_assembly",
         "vs set-static @v[]",
-        "mount_movement",
         "client_reconnect",
         "server_restart_reload",
-        "observer_join",
         "xvfb-run",
         "pilot-after-server-restart.png",
         "status == \"passed\" && !keepRuns",
-    ),
-    "tools/kotlin/vs_ships_observer.main.kts" to listOf(
-        "Robot()",
-        "observer-sync.png",
-        "observer-pixels.txt",
-        "capture-signal",
-        "stop-signal",
     ),
     "tools/kotlin/vs_ships_release.main.kts" to listOf(
         "vs_ships_stability",

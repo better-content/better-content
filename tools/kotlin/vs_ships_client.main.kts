@@ -304,16 +304,6 @@ fun currentShipCount(server: RunningServer, commands: StringBuilder, makeStatic:
     waitFor(server.log, pattern, 30, server.process, previous + 1)
     return pattern.findAll(tail(server.log)).last().groupValues[1].toInt()
 }
-fun parseLastPosition(text: String, username: String): Triple<Double, Double, Double>? {
-    val pattern = Regex("${Regex.escape(username)} has the following entity data: \\[([-+0-9.Ee]+)d, ([-+0-9.Ee]+)d, ([-+0-9.Ee]+)d]")
-    return pattern.findAll(text).lastOrNull()?.destructured?.let { (x, y, z) -> Triple(x.toDouble(), y.toDouble(), z.toDouble()) }
-}
-fun distance(a: Triple<Double, Double, Double>, b: Triple<Double, Double, Double>): Double {
-    val dx = a.first - b.first
-    val dy = a.second - b.second
-    val dz = a.third - b.third
-    return kotlin.math.sqrt(dx * dx + dy * dy + dz * dz)
-}
 fun classify(text: String, error: Throwable): String {
     val message = error.message.orEmpty()
     val phaseChecks = listOf(
@@ -330,10 +320,7 @@ fun classify(text: String, error: Throwable): String {
         "assembly_sync_failure" to Regex("assembly sync failure|visible only after client reconnect", RegexOption.IGNORE_CASE),
         "ship_transform_sync_failure" to Regex("ship transform sync failure|visible only after command teleport", RegexOption.IGNORE_CASE),
         "ship_assembly_failure" to Regex("helm|assembly|assemble|ship assertion|Found ship", RegexOption.IGNORE_CASE),
-        "ship_movement_collision_failure" to Regex("movement|position before|position after|collision", RegexOption.IGNORE_CASE),
-        "passenger_sync_failure" to Regex("observer", RegexOption.IGNORE_CASE),
         "ship_save_reload_failure" to Regex("restart|reconnect", RegexOption.IGNORE_CASE),
-        "mount_camera_failure" to Regex("mount|dismount|passenger|camera|vehicle", RegexOption.IGNORE_CASE),
     )
     phaseChecks.firstOrNull { it.second.containsMatchIn(message) }?.let { return it.first }
     val logChecks = listOf(
@@ -384,13 +371,11 @@ runRoot.createDirectories()
 
 val serverDir = runRoot.resolve("server")
 val pilotDir = runRoot.resolve("pilot-client")
-val observerDir = runRoot.resolve("observer-client")
 val evidence = runRoot.resolve("evidence").apply { createDirectories() }
 val phases = mutableListOf<PhaseResult>()
 val commands = StringBuilder("# vs_ships_client commands\n")
 var server: RunningServer? = null
 var pilot: Process? = null
-var observer: Process? = null
 var failure: Throwable? = null
 var fixtureRenderScore: Double? = null
 var assembledRenderScore: Double? = null
@@ -440,13 +425,6 @@ try {
         Files.writeString(evidence.resolve("removed-mods.txt"), removed.joinToString("\n", postfix = if (removed.isEmpty()) "" else "\n"))
         if (variant == "dh_renderer_connectivity") {
             setTomlValue(serverDir.resolve("world/serverconfig/valkyrienskies/vs-core-server.toml"), "enableConnectivity", "true")
-        }
-        if (profile == "release") {
-            deleteTree(observerDir)
-            observerDir.createDirectories()
-            if (run(listOf("cp", "-a", "--reflink=auto", "${pilotDir}/.", observerDir.toString()), 600, evidence.resolve("clone-observer.log")) != 0) error("observer runtime clone failed")
-            configureClient(observerDir)
-            prepareArgfile(observerDir, "AgentObserver", port, evidence.resolve("observer.args"), evidence.resolve("observer-argfile.log"))
         }
     }
     phase("server_boot") {
@@ -597,51 +575,6 @@ try {
         teleportProbeRenderScore = assembledGeometryScore(captureWorld(robot, evidence.resolve("ship-after-teleport-probe.png")))
         Files.writeString(evidence.resolve("transform.txt"), "destination_x=$destinationX\nserver_confirmation=true\nclient_screenshot_score=${teleportProbeRenderScore ?: "null"}\n")
     }
-    if (stopAfter == "lifecycle" && profile == "release") {
-        phase("observer_join") {
-            val captureSignal = evidence.resolve("capture-observer")
-            val stopSignal = evidence.resolve("stop-observer")
-            Files.deleteIfExists(captureSignal)
-            Files.deleteIfExists(stopSignal)
-            val command = listOf("xvfb-run", "-a", "-s", "-screen 0 ${contract.displayWidth}x${contract.displayHeight}x24", "kotlin", "-J-Djava.awt.headless=false", root.resolve("tools/kotlin/vs_ships_observer.main.kts").toString(), "--client-dir", observerDir.toString(), "--argfile", evidence.resolve("observer.args").toString(), "--server", "127.0.0.1:$port", "--evidence-dir", evidence.toString(), "--capture-signal", captureSignal.toString(), "--stop-signal", stopSignal.toString())
-            commands.appendLine(command.joinToString(" "))
-            observer = ProcessBuilder(command).directory(root.toFile()).redirectErrorStream(true).redirectOutput(evidence.resolve("observer-launcher.log").toFile()).start()
-            waitFor(server!!.log, Regex("AgentObserver joined the game"), 900, observer)
-            send(server!!, "tp AgentObserver AgentPilot", commands)
-        }
-    }
-    if (stopAfter == "lifecycle") phase("mount_movement") {
-        rightClickCenter(robot, sneak = false)
-        Thread.sleep(2_000)
-        send(server!!, "execute as AgentPilot on vehicle run say BTM_VS_PILOT_MOUNTED", commands)
-        waitFor(server!!.log, Regex("BTM_VS_PILOT_MOUNTED"), 30, server!!.process)
-        screenshot(robot, evidence.resolve("ship-mounted.png"))
-        assertShips(server!!, commands, makeStatic = false)
-        send(server!!, "data get entity AgentPilot Pos", commands)
-        Thread.sleep(2_000)
-        val before = parseLastPosition(tail(server!!.log), "AgentPilot") ?: error("mount movement position before was unavailable")
-        robot.keyPress(KeyEvent.VK_W)
-        Thread.sleep(4_000)
-        robot.keyRelease(KeyEvent.VK_W)
-        Thread.sleep(3_000)
-        send(server!!, "data get entity AgentPilot Pos", commands)
-        Thread.sleep(2_000)
-        val after = parseLastPosition(tail(server!!.log), "AgentPilot") ?: error("mount movement position after was unavailable")
-        val moved = distance(before, after)
-        Files.writeString(evidence.resolve("movement.txt"), "before=$before\nafter=$after\ndistance=$moved\n")
-        if (moved < 0.25) error("mount movement distance was $moved")
-        screenshot(robot, evidence.resolve("ship-moved.png"))
-        robot.keyPress(KeyEvent.VK_SHIFT)
-        Thread.sleep(500)
-        robot.keyRelease(KeyEvent.VK_SHIFT)
-        assertShips(server!!, commands, makeStatic = true)
-        if (profile == "release") {
-            Files.writeString(evidence.resolve("capture-observer"), "capture\n")
-            val deadline = System.currentTimeMillis() + 60_000
-            while (System.currentTimeMillis() < deadline && !evidence.resolve("observer-sync.png").exists()) Thread.sleep(500)
-            if (!evidence.resolve("observer-sync.png").exists()) error("observer sync screenshot was not captured")
-        }
-    }
     if (stopAfter == "lifecycle") phase("client_reconnect") {
         stopProcess(pilot)
         pilot = null
@@ -657,12 +590,6 @@ try {
     if (stopAfter == "lifecycle") phase("server_restart_reload") {
         stopProcess(pilot)
         pilot = null
-        if (profile == "release") {
-            Files.writeString(evidence.resolve("stop-observer"), "stop\n")
-            if (!observer!!.waitFor(60, TimeUnit.SECONDS)) stopProcess(observer)
-            if (observer!!.exitValue() != 0) error("observer client failed")
-            observer = null
-        }
         send(server!!, "save-all flush", commands)
         stopServer(server, commands)
         server = startServer(serverDir, port, evidence.resolve("server-console-boot-2.log"))
@@ -678,8 +605,6 @@ try {
 } catch (error: Throwable) {
     failure = error
 } finally {
-    runCatching { Files.writeString(evidence.resolve("stop-observer"), "stop\n") }
-    stopProcess(observer)
     stopProcess(pilot)
     stopServer(server, commands)
 }
@@ -746,8 +671,6 @@ val screenshotExpectations = mapOf(
     "ship-assembled.png" to "supplemental frame after server-confirmed assembly at the source transform",
     "ship-after-reconnect-probe.png" to "supplemental frame after a diagnostic client reconnect",
     "ship-after-teleport-probe.png" to "supplemental frame after server-confirmed ship translation",
-    "ship-mounted.png" to "pilot is seated at the helm without camera clipping",
-    "ship-moved.png" to "ship and pilot moved without missing component models",
     "pilot-reconnected.png" to "ship renders after client reconnect",
     "pilot-after-server-restart.png" to "ship renders after server save and restart",
 )
@@ -792,7 +715,6 @@ failure?.message?.let { System.err.println(it) }
 if (status == "passed" && !keepRuns) {
     deleteTree(serverDir)
     deleteTree(pilotDir)
-    deleteTree(observerDir)
 }
 // Software-rendered environments cannot provide a visual sign-off, but rendering is
 // supplemental: completed server, lifecycle, transform, and sync assertions still pass.

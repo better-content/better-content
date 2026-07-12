@@ -300,8 +300,6 @@ fun stableId(key: String): String {
 }
 
 val resourceLocationPattern = Regex("""^[a-z0-9_.-]+:[a-z0-9/._-]+$""")
-val missingIconPath = "assets/icons/missing.png"
-
 fun isValidResourceLocation(id: String): Boolean = resourceLocationPattern.matches(id)
 
 fun loadValidItemIds(): Set<String> {
@@ -316,18 +314,6 @@ fun loadValidItemIds(): Set<String> {
                 .filter(::isValidResourceLocation)
                 .forEach(ids::add)
         }
-    }
-    val iconManifestPath = root.resolve("generated/pack-site/assets/icon-manifest.json")
-    if (iconManifestPath.exists()) {
-        val json = parseJson(read(iconManifestPath)) as? Map<*, *>
-        json?.entries
-            ?.asSequence()
-            ?.mapNotNull { (key, value) ->
-                val itemId = key as? String ?: return@mapNotNull null
-                val iconPath = value as? String ?: return@mapNotNull null
-                itemId.takeIf { isValidResourceLocation(it) && iconPath != missingIconPath }
-            }
-            ?.forEach(ids::add)
     }
     return ids
 }
@@ -807,7 +793,7 @@ fun rebuildEffectsChapter(path: Path, validItems: Set<String>) {
 
 val validItems = loadValidItemIds()
 if (validItems.isEmpty()) {
-    fail("no valid item ids found in generated/runtime-dumps/registries.json or generated/pack-site/assets/icon-manifest.json")
+    fail("no valid item ids found in generated/runtime-dumps/registries.json")
 }
 
 val targetFiles = listOf(

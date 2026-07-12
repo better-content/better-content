@@ -663,7 +663,7 @@ fun testQuestBook() {
     if (tierTitleLabels.isEmpty()) ok("chapter titles do not duplicate chapter group labels") else fail("chapter titles do not duplicate chapter group labels", tierTitleLabels.joinToString("\n"))
     val validDumpItems = loadQuestDumpItemIds()
     if (validDumpItems == null) {
-        missingRuntimeEvidence("completionist quest item validity", repo.resolve("generated/pack-site/assets/icon-manifest.json").toString())
+        missingRuntimeEvidence("completionist quest item validity", repo.resolve("generated/runtime-dumps/registries.json").toString())
         return
     }
     val validDumpEnchantments = loadQuestDumpEnchantments()
@@ -730,7 +730,6 @@ fun testQuestBook() {
 
 fun loadQuestDumpItemIds(): Set<String>? {
     val resourceLocationPattern = Regex("""^[a-z0-9_.-]+:[a-z0-9/._-]+$""")
-    val missingIconPath = "assets/icons/missing.png"
     fun isValidResourceLocation(id: String): Boolean = resourceLocationPattern.matches(id)
     val registriesPath = repo.resolve("generated/runtime-dumps/registries.json")
     if (exists(registriesPath)) {
@@ -738,16 +737,7 @@ fun loadQuestDumpItemIds(): Set<String>? {
         val items = jsonObject(registries["items"]).keys.filter(::isValidResourceLocation).toSet()
         if (items.isNotEmpty()) return items
     }
-    val iconManifestPath = repo.resolve("generated/pack-site/assets/icon-manifest.json")
-    if (!exists(iconManifestPath)) return null
-    val items = jsonObject(readJson(iconManifestPath)).entries
-        .mapNotNull { (key, value) ->
-            val itemId = key as? String ?: return@mapNotNull null
-            val iconPath = value as? String ?: return@mapNotNull null
-            itemId.takeIf { isValidResourceLocation(it) && iconPath != missingIconPath }
-        }
-        .toSet()
-    return items.ifEmpty { null }
+    return null
 }
 
 fun loadQuestDumpEnchantments(): Map<String, String>? {

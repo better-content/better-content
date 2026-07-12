@@ -7,6 +7,7 @@ server-instance/
 server-template/
 generated/exports/
 generated/custom-mod-sources/
+generated/pack-site/
 
 kubejs/recipe_dumps/
 kubejs/config/recipe_audit_summary.json

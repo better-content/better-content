@@ -31,7 +31,7 @@ Treat these as generated or runtime state:
 - `server-instance/`
 - `server-template/`
 - local client game directories
-- `generated/pack-site/`, `generated/runtime-dumps/`, `generated/mod-sync-backup/`, `generated/ftbquests/`
+- `generated/runtime-dumps/`, `generated/mod-sync-backup/`, `generated/ftbquests/`
 - worlds, saves, logs, crash reports, screenshots, profiler dumps, launcher account/cache files, and `options.txt`
 
 Do not sync or delete player/runtime state by default. Use explicit reset flags only when the user asks for a disposable runtime.

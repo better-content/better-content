@@ -1,4 +1,4 @@
-// Dev-only runtime graph dumps for the pack site.
+// Dev-only runtime graph dumps for validation and graph tooling.
 //
 // Enable with kubejs/config/runtime_graph_dumps.json, then restart or /reload.
 // This script is intentionally conservative: unknown recipe serializers are kept

@@ -224,6 +224,8 @@ fun patchTomlValue(path: Path, key: String, value: String) {
     Files.write(path, lines)
 }
 fun configureClient(clientDir: Path) {
+    deleteTree(clientDir.resolve("Distant_Horizons_server_data"))
+    deleteTree(clientDir.resolve("saves/New World/data"))
     Files.copy(root.resolve("options.txt"), clientDir.resolve("options.txt"), StandardCopyOption.REPLACE_EXISTING)
     patchColonFile(
         clientDir.resolve("options.txt"),
@@ -435,6 +437,8 @@ try {
         prepareArgfile(clientDir, "AgentShot", evidence.resolve("client.args"), evidence.resolve("client-argfile.log"))
     }
     phase("server_boot") {
+        deleteTree(serverDir.resolve("world/data"))
+        deleteTree(serverDir.resolve("world/dimensions"))
         server = startServer(serverDir, evidence.resolve("server-console.log"))
         waitFor(server!!.log, Regex("Done \\([0-9.]+s\\)!"), 900, server!!.process)
         send(server!!, "op AgentShot", commands)

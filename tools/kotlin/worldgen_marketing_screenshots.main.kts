@@ -862,12 +862,17 @@ fun scoreCandidateFrame(image: BufferedImage, frame: FrameAssessment, shot: Shot
     val centerBiomeGreenFraction = centerBiomeGreen.toDouble() / samples.coerceAtLeast(1)
     val foregroundBiomeGreenFraction = foregroundBiomeGreen.toDouble() / samples.coerceAtLeast(1)
     val isJungleShot = shot?.biome == "minecraft:jungle"
+    val nearTerrainWallRisk = frame.edgeDensity > 0.19 &&
+        topBlankFraction > 0.70 &&
+        maxHorizontalBlank > 0.70 &&
+        depthLayerCount < 3
     val bandBalancePenalty = thirdsVertical.map { kotlin.math.abs((it / total) - (1.0 / 3.0)) }.sum() +
         thirdsHorizontal.map { kotlin.math.abs((it / total) - (1.0 / 3.0)) }.sum()
     val rejectionReason = when {
         topBlankFraction > 0.92 && bottomBlankFraction > 0.72 -> "too little visible terrain"
         topBlankFraction > 0.985 && bottomBlankFraction > 0.48 -> "too much blank sky or fog"
         maxHorizontalBlank > 0.82 -> "too much one-sided blank sky or fog"
+        nearTerrainWallRisk -> "camera too close to vertical terrain wall"
         bottomBlankFraction > 0.82 -> "too much flat foreground"
         depthLayerCount < 2 -> "insufficient foreground/midground/background layering"
         colorfulness < 0.045 -> "too little color separation"
@@ -891,8 +896,9 @@ fun scoreCandidateFrame(image: BufferedImage, frame: FrameAssessment, shot: Shot
         saturationBalance * 8.0 +
         luminanceStdDev * 0.22 -
         maxHorizontalBlank * 42.0 +
+        (if (nearTerrainWallRisk) -160.0 else 0.0) +
         (if (isJungleShot) biomeGreenFraction * 260.0 + centerBiomeGreenFraction * 900.0 + foregroundBiomeGreenFraction * 180.0 else 0.0)
-    val detail = "entropy=${"%.2f".format(java.util.Locale.US, frame.entropy)} edge=${"%.4f".format(java.util.Locale.US, frame.edgeDensity)} range=${frame.luminanceRange} vcov=$verticalCoverage hcov=$horizontalCoverage center=${"%.2f".format(java.util.Locale.US, centerFraction)} thirds=${"%.2f".format(java.util.Locale.US, thirdLineFraction)} topBlank=${"%.2f".format(java.util.Locale.US, topBlankFraction)} bottomBlank=${"%.2f".format(java.util.Locale.US, bottomBlankFraction)} sideBlank=${"%.2f".format(java.util.Locale.US, maxHorizontalBlank)} layers=$depthLayerCount color=${"%.3f".format(java.util.Locale.US, colorfulness)} green=${"%.3f".format(java.util.Locale.US, biomeGreenFraction)} centerGreen=${"%.3f".format(java.util.Locale.US, centerBiomeGreenFraction)} foregroundGreen=${"%.3f".format(java.util.Locale.US, foregroundBiomeGreenFraction)} satBalance=${"%.2f".format(java.util.Locale.US, saturationBalance)} lumStd=${"%.1f".format(java.util.Locale.US, luminanceStdDev)}"
+    val detail = "entropy=${"%.2f".format(java.util.Locale.US, frame.entropy)} edge=${"%.4f".format(java.util.Locale.US, frame.edgeDensity)} range=${frame.luminanceRange} vcov=$verticalCoverage hcov=$horizontalCoverage center=${"%.2f".format(java.util.Locale.US, centerFraction)} thirds=${"%.2f".format(java.util.Locale.US, thirdLineFraction)} topBlank=${"%.2f".format(java.util.Locale.US, topBlankFraction)} bottomBlank=${"%.2f".format(java.util.Locale.US, bottomBlankFraction)} sideBlank=${"%.2f".format(java.util.Locale.US, maxHorizontalBlank)} layers=$depthLayerCount wallRisk=$nearTerrainWallRisk color=${"%.3f".format(java.util.Locale.US, colorfulness)} green=${"%.3f".format(java.util.Locale.US, biomeGreenFraction)} centerGreen=${"%.3f".format(java.util.Locale.US, centerBiomeGreenFraction)} foregroundGreen=${"%.3f".format(java.util.Locale.US, foregroundBiomeGreenFraction)} satBalance=${"%.2f".format(java.util.Locale.US, saturationBalance)} lumStd=${"%.1f".format(java.util.Locale.US, luminanceStdDev)}"
     return CompositionScore(rejectionReason == null, score, detail, rejectionReason)
 }
 fun waitForPlayableFrame(robot: Robot, out: Path, timeoutSeconds: Long): Boolean {

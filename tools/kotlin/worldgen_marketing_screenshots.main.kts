@@ -356,7 +356,7 @@ fun waitForDhStable(clientDir: Path): DhGateResult {
     var lastChange = System.currentTimeMillis()
     var stableSamples = 0
     var tailChunksLeft: Int? = null
-    var tailSince: Long? = null
+    var lowTailSince: Long? = null
     val progressPattern = Regex("""DH is generating chunks\. ([0-9]+) left""")
     Thread.sleep(dhMinSettle * 1000L)
     while (System.currentTimeMillis() < deadline) {
@@ -372,25 +372,26 @@ fun waitForDhStable(clientDir: Path): DhGateResult {
         val logTextSinceGateStart = readFrom(log, logStart)
         val currentTail = progressPattern.findAll(logTextSinceGateStart).lastOrNull()?.groupValues?.getOrNull(1)?.toIntOrNull()
         if (currentTail != null && currentTail <= dhLowTailMax) {
-            if (currentTail != tailChunksLeft) {
-                tailChunksLeft = currentTail
-                tailSince = System.currentTimeMillis()
-            }
-            val lowTailFor = (System.currentTimeMillis() - (tailSince ?: System.currentTimeMillis())) / 1000
+            tailChunksLeft = currentTail
+            if (lowTailSince == null) lowTailSince = System.currentTimeMillis()
+            val lowTailFor = (System.currentTimeMillis() - lowTailSince!!) / 1000
             if (lowTailFor >= dhLowTailSeconds) {
                 val logText = tail(log, 2_000_000)
                 return DhGateResult("low-tail-stable", dhMinSettle, dhQuiet, dhTimeout, (System.currentTimeMillis() - started) / 1000, Regex("Distant Horizons|DistantHorizons|world gen|generation", RegexOption.IGNORE_CASE).containsMatchIn(logText), stableSamples, dhLowTailMax, dhLowTailSeconds, tailChunksLeft, lowTailFor)
             }
+        } else if (currentTail != null) {
+            tailChunksLeft = currentTail
+            lowTailSince = null
         }
         if (quietFor >= dhQuiet) {
             val logText = tail(log, 2_000_000)
-            val tailStableSeconds = if (tailSince == null) 0 else (System.currentTimeMillis() - tailSince!!) / 1000
+            val tailStableSeconds = if (lowTailSince == null) 0 else (System.currentTimeMillis() - lowTailSince!!) / 1000
             return DhGateResult("stable", dhMinSettle, dhQuiet, dhTimeout, (System.currentTimeMillis() - started) / 1000, Regex("Distant Horizons|DistantHorizons|world gen|generation", RegexOption.IGNORE_CASE).containsMatchIn(logText), stableSamples, dhLowTailMax, dhLowTailSeconds, tailChunksLeft, tailStableSeconds)
         }
         Thread.sleep(2_000)
     }
     val logText = tail(log, 2_000_000)
-    val tailStableSeconds = if (tailSince == null) 0 else (System.currentTimeMillis() - tailSince!!) / 1000
+    val tailStableSeconds = if (lowTailSince == null) 0 else (System.currentTimeMillis() - lowTailSince!!) / 1000
     return DhGateResult("timeout", dhMinSettle, dhQuiet, dhTimeout, (System.currentTimeMillis() - started) / 1000, Regex("Distant Horizons|DistantHorizons|world gen|generation", RegexOption.IGNORE_CASE).containsMatchIn(logText), stableSamples, dhLowTailMax, dhLowTailSeconds, tailChunksLeft, tailStableSeconds)
 }
 fun writeReview(path: Path, shot: Shot, dh: DhGateResult) {

@@ -94,10 +94,10 @@ works.
   sidecar.
 - DH can pin a small nonzero tail such as `DH is generating chunks. 32 left`
   indefinitely while still rendering a usable still frame. The screenshot lane may
-  accept this only as an explicit `low-tail-stable` DH gate: the repeated tail
-  count must be at or below the configured low-tail threshold for the configured
-  duration, and the sidecar must record the threshold, tail count, and stable-tail
-  duration. Do not collapse this into the normal `stable` status.
+  accept this only as an explicit `low-tail-stable` DH gate: the observed tail
+  must remain at or below the configured low-tail threshold for the configured
+  duration, and the sidecar must record the threshold, latest tail count, and
+  bounded-tail duration. Do not collapse this into the normal `stable` status.
 - If the DH quiet-window and bounded low-tail gates both time out, reject the
   frame. A fixed sleep alone is not enough for publishable marketing captures.
 - Keep the full-resolution clean master before cropping or color adjustment. Do

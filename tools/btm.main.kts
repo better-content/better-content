@@ -285,6 +285,12 @@ val scenarios = linkedMapOf(
         "Seeded worldgen sampling lane with local/quick/release profiles",
         "tools/kotlin/worldgen_sampling.main.kts",
     ),
+    "worldgen_marketing_screenshots" to ScenarioDefinition(
+        "worldgen_marketing_screenshots",
+        "Deterministic shader/DH worldgen marketing screenshot capture lane",
+        "tools/kotlin/worldgen_marketing_screenshots.main.kts",
+        headful = true,
+    ),
     "vs_ships_stability" to ScenarioDefinition(
         "vs_ships_stability",
         "Valkyrien Skies family headless server stability diagnostics",

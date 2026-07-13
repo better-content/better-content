@@ -77,8 +77,22 @@ works.
 
 - Hide the HUD, crosshair, hand, chat, prompts, menus, debug overlays, selection
   outlines, notifications, and onboarding UI.
-- Record dimension, coordinates, camera facing, field of view, time, weather,
-  shader pack, shader preset, and whether the terrain was altered.
+- Marketing captures must be recapturable from a deterministic shot manifest.
+  Record the world seed or server world identity, dimension, biome, coordinates,
+  camera facing, field of view, time, weather, shader pack, shader preset,
+  Minecraft `options.txt` source, Distant Horizons config source, and whether the
+  terrain was altered.
+- Use the corrected client graphics profile for polished captures. The
+  disposable client must receive the intended `options.txt`, shader options file,
+  current Oculus shader selection, and Distant Horizons config before launch; do
+  not rely on launcher defaults or freshly generated options.
+- Distant Horizons must finish the shot's LOD work before capture. Enable DH
+  generation progress logging for screenshot runtimes, wait through a minimum
+  settle period, and require a quiet window where DH logs and DH LOD storage stop
+  changing. Record the settle duration, quiet-window duration, timeout, and
+  observed DH evidence in the sidecar.
+- If the DH quiet-window gate times out, reject the frame. A fixed sleep alone is
+  not enough for publishable marketing captures.
 - Keep the full-resolution clean master before cropping or color adjustment. Do
   not stretch, generatively extend, or materially repaint world geometry.
 - Store runtime captures under `generated/` or `/tmp`. Separate raw masters,

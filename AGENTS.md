@@ -53,7 +53,8 @@ Do not sync or delete player/runtime state by default. Use explicit reset flags 
 ## Screenshot Composition
 - Follow `tools/screenshot_composition.md` for polished Minecraft screenshots.
 - Keep diagnostic captures distinct from marketing candidates.
-- Worldgen marketing screenshots require active shaders and the selected shader pack, clean reproducible capture metadata, and mandatory vision-capable AI review.
+- Worldgen marketing screenshots require active shaders and the selected shader pack, corrected client graphics settings, deterministic shot metadata, completed Distant Horizons LOD-settle evidence, and mandatory vision-capable AI review.
+- Use `tools/btm test scenario-headful worldgen_marketing_screenshots` for deterministic recapture unless the user explicitly asks for an exploratory/manual capture.
 - A screenshot is not publishable until its final export and target crops pass the AI gate and have machine-readable review sidecars.
 
 ## Supported Tool Surface
@@ -107,6 +108,7 @@ Use the portable harness layer for repeatable runtime tests instead of hand-buil
   - `opening_progression`
   - `pillager_campaigns`
   - `worldgen_sampling`
+  - `worldgen_marketing_screenshots`
   - `vs_ships_stability`
   - `vs_ships_matrix`
   - `client_smoke`

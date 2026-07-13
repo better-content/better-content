@@ -48,6 +48,8 @@ val width = 1920
 val height = 1080
 val shaderPack = "ComplementaryReimagined_r5.8.1.zip"
 val seed = "btm-worldgen-marketing-v1"
+val dhCaptureRadiusChunks = 32
+val serverForceloadRadiusChunks = 7
 
 fun usage(message: String? = null): Nothing {
     if (message != null) System.err.println(message)
@@ -254,11 +256,12 @@ enableShaders=true
     patchTomlValue(dh, "generationProgressDisableMessageDisplayTimeInSeconds", "0")
     patchTomlValue(dh, "generationProgressDisplayIntervalInSeconds", "2")
     patchTomlValue(dh, "generationProgressIncludeChunksPerSecond", "true")
-    patchTomlValue(dh, "maxGenerationRequestDistance", "64")
-    patchTomlValue(dh, "maxSyncOnLoadRequestDistance", "96")
+    patchTomlValue(dh, "maxGenerationRequestDistance", "16")
+    patchTomlValue(dh, "maxSyncOnLoadRequestDistance", "24")
     patchTomlValue(dh, "generationRequestRateLimit", "200")
     patchTomlValue(dh, "syncOnLoadRateLimit", "200")
     patchTomlValue(dh, "playerBandwidthLimit", "0")
+    patchTomlValue(dh, "lodChunkRenderDistanceRadius", dhCaptureRadiusChunks.toString())
     patchTomlValue(dh, "threadRunTimeRatio", "\"1.0\"")
     patchTomlValue(dh, "numberOfThreads", max(3, Runtime.getRuntime().availableProcessors() - 2).coerceAtMost(8).toString())
 }
@@ -368,6 +371,7 @@ fun writeReview(path: Path, shot: Shot, dh: DhGateResult) {
     "shaderPack": ${q(shaderPack)},
     "shaderPreset": ${q("shaderpacks/$shaderPack.txt")},
     "optionsSource": "options.txt",
+    "dhCaptureRadiusChunks": $dhCaptureRadiusChunks,
     "dhGate": {"status": ${q(dh.status)}, "elapsedSeconds": ${dh.elapsedSeconds}, "minSettleSeconds": ${dh.minSettleSeconds}, "quietSeconds": ${dh.quietSeconds}, "timeoutSeconds": ${dh.timeoutSeconds}, "dhLogObserved": ${dh.dhLogObserved}, "stableSamples": ${dh.stableSamples}}
   },
   "rubricVersion": "1",
@@ -461,7 +465,11 @@ try {
             send(server!!, "tp AgentShot ${shot.x} ${shot.y} ${shot.z} ${shot.yaw} ${shot.pitch}", commands)
             val chunkX = Math.floor(shot.x / 16.0).toInt()
             val chunkZ = Math.floor(shot.z / 16.0).toInt()
-            send(server!!, "forceload add ${chunkX - 8} ${chunkZ - 8} ${chunkX + 8} ${chunkZ + 8}", commands)
+            val fromBlockX = (chunkX - serverForceloadRadiusChunks) * 16
+            val fromBlockZ = (chunkZ - serverForceloadRadiusChunks) * 16
+            val toBlockX = (chunkX + serverForceloadRadiusChunks) * 16
+            val toBlockZ = (chunkZ + serverForceloadRadiusChunks) * 16
+            send(server!!, "forceload add $fromBlockX $fromBlockZ $toBlockX $toBlockZ", commands)
             Thread.sleep(8_000)
             val dh = waitForDhStable(clientDir)
             if (dh.status != "stable") error("DH did not reach a stable quiet window for ${shot.id}")

@@ -94,6 +94,15 @@ data class CandidateReport(
     val frame: FrameAssessment,
     val composition: CompositionScore?,
 )
+data class AnchorCandidateReport(
+    val label: String,
+    val locatedX: Int,
+    val locatedZ: Int,
+    val pose: CameraPose,
+    val path: Path,
+    val frame: FrameAssessment,
+    val composition: CompositionScore?,
+)
 data class ShotResult(
     val shot: Shot,
     val status: String,
@@ -122,7 +131,33 @@ val screenshotClientDhThreads = max(3, availableProcessors - 2).coerceAtMost(8)
 val screenshotServerDhThreads = availableProcessors
 val cameraSweepFocusDistance = 48.0
 val maxFeatureAnchorDistanceBlocks = 768.0
+val anchorSweepEarlyAcceptScore = 650.0
 val screenshotDisabledTemperatureModifiers = listOf("cold_sweat:biomes")
+val safeAnchorProbeLabels = setOf(
+    "base",
+    "back-high",
+    "left-back-high",
+    "right-back-high",
+    "high-pullback",
+    "wide-left",
+    "wide-right",
+    "very-high-pullback",
+    "high-forward",
+    "look-low",
+    "left-look-low",
+    "right-look-low",
+)
+val anchorSweepOffsets = listOf(
+    0.0 to 0.0,
+    512.0 to 0.0,
+    -512.0 to 0.0,
+    0.0 to 512.0,
+    0.0 to -512.0,
+    768.0 to 768.0,
+    -768.0 to 768.0,
+    768.0 to -768.0,
+    -768.0 to -768.0,
+)
 // Vanilla's FOV option is normalized across the 30-110 degree range.
 val captureFovOptionValue = (captureFovDegrees - 30.0) / 80.0
 val knownBadFrameMarkers = listOf(
@@ -138,7 +173,7 @@ val knownBadFrameMarkers = listOf(
 
 fun usage(message: String? = null): Nothing {
     if (message != null) System.err.println(message)
-    System.err.println("Usage: tools/btm test scenario-headful worldgen_marketing_screenshots [--bootstrap-mode always|once|never] [--port N] [--run-root PATH] [--output-dir PATH] [--keep-runs] [--batch-mode bounded|session] [--start-shot N|SHOT_ID] [--end-shot N|SHOT_ID] [--dh-capture-radius CHUNKS] [--server-forceload-radius CHUNKS] [--dh-min-settle SECONDS] [--dh-quiet SECONDS] [--dh-timeout SECONDS] [--dh-low-tail-max CHUNKS] [--dh-low-tail-seconds SECONDS] [--allow-low-tail-dh] [--camera-search off|local-sweep] [--anchor-search off|locate-biome|locate-feature]")
+    System.err.println("Usage: tools/btm test scenario-headful worldgen_marketing_screenshots [--bootstrap-mode always|once|never] [--port N] [--run-root PATH] [--output-dir PATH] [--keep-runs] [--batch-mode bounded|session] [--start-shot N|SHOT_ID] [--end-shot N|SHOT_ID] [--dh-capture-radius CHUNKS] [--server-forceload-radius CHUNKS] [--dh-min-settle SECONDS] [--dh-quiet SECONDS] [--dh-timeout SECONDS] [--dh-low-tail-max CHUNKS] [--dh-low-tail-seconds SECONDS] [--allow-low-tail-dh] [--camera-search off|local-sweep] [--anchor-search off|locate-biome|locate-biome-sweep|locate-feature]")
     exitProcess(2)
 }
 
@@ -253,8 +288,8 @@ while (index < args.size) {
             index += 2
         }
         "--anchor-search" -> {
-            anchorSearchMode = args.getOrNull(index + 1) ?: usage("--anchor-search needs off, locate-biome, or locate-feature")
-            if (anchorSearchMode !in setOf("off", "locate-biome", "locate-feature")) usage("invalid anchor search mode: $anchorSearchMode")
+            anchorSearchMode = args.getOrNull(index + 1) ?: usage("--anchor-search needs off, locate-biome, locate-biome-sweep, or locate-feature")
+            if (anchorSearchMode !in setOf("off", "locate-biome", "locate-biome-sweep", "locate-feature")) usage("invalid anchor search mode: $anchorSearchMode")
             index += 2
         }
         "--help" -> usage()
@@ -310,6 +345,8 @@ if (batchMode == "bounded" && selectedShots.size > 1) {
             "--start-shot", shot.id,
             "--end-shot", shot.id,
             "--dh-min-settle", dhMinSettle.toString(),
+            "--dh-capture-radius", dhCaptureRadiusChunks.toString(),
+            "--server-forceload-radius", serverForceloadRadiusChunks.toString(),
             "--dh-quiet", dhQuiet.toString(),
             "--dh-timeout", dhTimeout.toString(),
             "--dh-low-tail-max", dhLowTailMax.toString(),
@@ -467,6 +504,45 @@ fun patchTomlValue(path: Path, key: String, value: String) {
     }
     Files.write(path, lines)
 }
+fun patchTomlListValue(path: Path, key: String, values: List<String>) {
+    val source = Files.readAllLines(path)
+    val patched = mutableListOf<String>()
+    val keyPattern = Regex("""^\s*${Regex.escape(key)}\s*=""")
+    var index = 0
+    var replaced = false
+    while (index < source.size) {
+        val line = source[index]
+        if (!keyPattern.containsMatchIn(line)) {
+            patched += line
+            index++
+            continue
+        }
+        val indent = line.takeWhile { it == ' ' || it == '\t' }
+        patched += "$indent$key = [${values.joinToString(", ") { q(it) }}]"
+        replaced = true
+        index++
+
+        // Remove the old TOML array body. This also repairs a previous bad
+        // one-line rewrite that left the original multiline entries behind.
+        var sawClosingBracket = "]" in line.substringAfter("=")
+        while (index < source.size) {
+            val next = source[index].trim()
+            if (!sawClosingBracket) {
+                if (next == "]" || next.endsWith("]")) sawClosingBracket = true
+                index++
+                if (sawClosingBracket) break
+                continue
+            }
+            if (next.startsWith("\"") || next == "]") {
+                index++
+                continue
+            }
+            break
+        }
+    }
+    if (!replaced) patched += "$key = [${values.joinToString(", ") { q(it) }}]"
+    Files.write(path, patched)
+}
 fun patchJsonBooleans(path: Path, keys: Collection<String>, value: Boolean) {
     if (!path.exists()) return
     var text = Files.readString(path)
@@ -548,10 +624,10 @@ fun configureServer(serverDir: Path) {
     // distant screenshot joins; disable only the visual-irrelevant modifier here.
     val coldSweatMain = serverDir.resolve("config/coldsweat/main.toml")
     if (coldSweatMain.exists()) {
-        patchTomlValue(
+        patchTomlListValue(
             coldSweatMain,
             "\"Disabled Temperature Modifiers\"",
-            "[${screenshotDisabledTemperatureModifiers.joinToString(", ") { q(it) }}]",
+            screenshotDisabledTemperatureModifiers,
         )
     }
 }
@@ -649,6 +725,7 @@ fun assessFrame(image: BufferedImage): FrameAssessment {
     var comparisons = 0
     var nearBlack = 0
     var nearWhite = 0
+    var skyHole = 0
     for (y in 0 until image.height step 8) for (x in 0 until image.width step 8) {
         val rgb = image.getRGB(x, y)
         val red = (rgb shr 16) and 255
@@ -656,6 +733,7 @@ fun assessFrame(image: BufferedImage): FrameAssessment {
         val blue = rgb and 255
         if (red < 12 && green < 12 && blue < 12) nearBlack++
         if (red > 235 && green > 235 && blue > 235) nearWhite++
+        if (blue > 140 && green > 115 && red < 220 && blue >= red + 10) skyHole++
         bins[(red shr 4) * 256 + (green shr 4) * 16 + (blue shr 4)]++
         val luminance = (red * 54 + green * 183 + blue * 19) / 256
         minLuminance = minOf(minLuminance, luminance)
@@ -676,18 +754,21 @@ fun assessFrame(image: BufferedImage): FrameAssessment {
     val luminanceRange = maxLuminance - minLuminance
     val blackFraction = nearBlack.toDouble() / samples
     val whiteFraction = nearWhite.toDouble() / samples
+    val skyHoleFraction = skyHole.toDouble() / samples
     if (entropy < 1.35 || luminanceRange < 18 || edgeDensity < 0.004) {
         return FrameAssessment(false, "low-entropy or flat non-world frame", entropy, edgeDensity, luminanceRange)
     }
-    if (blackFraction > 0.42 && whiteFraction > 0.12) {
+    if (blackFraction > 0.58 || (blackFraction > 0.30 && (whiteFraction > 0.12 || skyHoleFraction > 0.18))) {
         return FrameAssessment(false, "xray-like geometry corruption signature", entropy, edgeDensity, luminanceRange)
     }
     return FrameAssessment(true, entropy = entropy, edgeDensity = edgeDensity, luminanceRange = luminanceRange)
 }
-fun scoreCandidateFrame(image: BufferedImage, frame: FrameAssessment): CompositionScore {
+fun scoreCandidateFrame(image: BufferedImage, frame: FrameAssessment, shot: Shot? = null): CompositionScore {
     val thirdsVertical = DoubleArray(3)
     val thirdsHorizontal = DoubleArray(3)
     val edgeBands = DoubleArray(6)
+    val horizontalBlankBands = DoubleArray(3)
+    val horizontalBandSamples = IntArray(3)
     val saturationBands = DoubleArray(3)
     var centerEdges = 0
     var thirdLineEdges = 0
@@ -699,6 +780,9 @@ fun scoreCandidateFrame(image: BufferedImage, frame: FrameAssessment): Compositi
     var colorfulnessTotal = 0.0
     var luminanceTotal = 0.0
     var luminanceSquaredTotal = 0.0
+    var biomeGreen = 0
+    var centerBiomeGreen = 0
+    var foregroundBiomeGreen = 0
     var samples = 0
     for (y in 8 until image.height step 8) for (x in 8 until image.width step 8) {
         val rgb = image.getRGB(x, y)
@@ -719,6 +803,17 @@ fun scoreCandidateFrame(image: BufferedImage, frame: FrameAssessment): Compositi
         luminanceTotal += luminance
         luminanceSquaredTotal += luminance * luminance
         saturationBands[(y * 3) / image.height] += saturation
+        val horizontalBand = (x * 3) / image.width
+        horizontalBandSamples[horizontalBand]++
+        if (difference <= 12) horizontalBlankBands[horizontalBand]++
+        val isBiomeGreen = green > 72 && green > red * 1.16 && green > blue * 1.04 && saturation > 0.22
+        if (isBiomeGreen) {
+            biomeGreen++
+            if (x in (image.width * 27 / 100)..(image.width * 73 / 100) && y in (image.height * 18 / 100)..(image.height * 86 / 100)) {
+                centerBiomeGreen++
+            }
+            if (y > image.height * 55 / 100) foregroundBiomeGreen++
+        }
         samples++
         if (difference > 60) {
             val v = (y * 3) / image.height
@@ -758,15 +853,25 @@ fun scoreCandidateFrame(image: BufferedImage, frame: FrameAssessment): Compositi
     val saturationBalance = saturationBands.map { it / (samples / 3.0).coerceAtLeast(1.0) }.let { bands ->
         1.0 - (bands.maxOrNull()!! - bands.minOrNull()!!).coerceIn(0.0, 1.0)
     }
+    val maxHorizontalBlank = horizontalBlankBands.zip(horizontalBandSamples.asIterable()).maxOf { (blank, bandSamples) ->
+        blank / bandSamples.coerceAtLeast(1)
+    }
+    val biomeGreenFraction = biomeGreen.toDouble() / samples.coerceAtLeast(1)
+    val centerBiomeGreenFraction = centerBiomeGreen.toDouble() / samples.coerceAtLeast(1)
+    val foregroundBiomeGreenFraction = foregroundBiomeGreen.toDouble() / samples.coerceAtLeast(1)
+    val isJungleShot = shot?.biome == "minecraft:jungle"
     val bandBalancePenalty = thirdsVertical.map { kotlin.math.abs((it / total) - (1.0 / 3.0)) }.sum() +
         thirdsHorizontal.map { kotlin.math.abs((it / total) - (1.0 / 3.0)) }.sum()
     val rejectionReason = when {
         topBlankFraction > 0.92 && bottomBlankFraction > 0.72 -> "too little visible terrain"
         topBlankFraction > 0.985 && bottomBlankFraction > 0.48 -> "too much blank sky or fog"
+        maxHorizontalBlank > 0.82 -> "too much one-sided blank sky or fog"
         bottomBlankFraction > 0.82 -> "too much flat foreground"
         depthLayerCount < 2 -> "insufficient foreground/midground/background layering"
         colorfulness < 0.045 -> "too little color separation"
         luminanceStdDev < 18.0 -> "too little tonal structure"
+        isJungleShot && biomeGreenFraction < 0.09 -> "too little jungle biome coverage"
+        isJungleShot && centerBiomeGreenFraction < 0.018 && foregroundBiomeGreenFraction < 0.055 -> "jungle biome too peripheral"
         else -> null
     }
     val score = frame.entropy * 18.0 +
@@ -782,8 +887,10 @@ fun scoreCandidateFrame(image: BufferedImage, frame: FrameAssessment): Compositi
         depthLayerCount * 10.0 +
         colorfulness * 70.0 +
         saturationBalance * 8.0 +
-        luminanceStdDev * 0.22
-    val detail = "entropy=${"%.2f".format(java.util.Locale.US, frame.entropy)} edge=${"%.4f".format(java.util.Locale.US, frame.edgeDensity)} range=${frame.luminanceRange} vcov=$verticalCoverage hcov=$horizontalCoverage center=${"%.2f".format(java.util.Locale.US, centerFraction)} thirds=${"%.2f".format(java.util.Locale.US, thirdLineFraction)} topBlank=${"%.2f".format(java.util.Locale.US, topBlankFraction)} bottomBlank=${"%.2f".format(java.util.Locale.US, bottomBlankFraction)} layers=$depthLayerCount color=${"%.3f".format(java.util.Locale.US, colorfulness)} satBalance=${"%.2f".format(java.util.Locale.US, saturationBalance)} lumStd=${"%.1f".format(java.util.Locale.US, luminanceStdDev)}"
+        luminanceStdDev * 0.22 -
+        maxHorizontalBlank * 42.0 +
+        (if (isJungleShot) biomeGreenFraction * 260.0 + centerBiomeGreenFraction * 900.0 + foregroundBiomeGreenFraction * 180.0 else 0.0)
+    val detail = "entropy=${"%.2f".format(java.util.Locale.US, frame.entropy)} edge=${"%.4f".format(java.util.Locale.US, frame.edgeDensity)} range=${frame.luminanceRange} vcov=$verticalCoverage hcov=$horizontalCoverage center=${"%.2f".format(java.util.Locale.US, centerFraction)} thirds=${"%.2f".format(java.util.Locale.US, thirdLineFraction)} topBlank=${"%.2f".format(java.util.Locale.US, topBlankFraction)} bottomBlank=${"%.2f".format(java.util.Locale.US, bottomBlankFraction)} sideBlank=${"%.2f".format(java.util.Locale.US, maxHorizontalBlank)} layers=$depthLayerCount color=${"%.3f".format(java.util.Locale.US, colorfulness)} green=${"%.3f".format(java.util.Locale.US, biomeGreenFraction)} centerGreen=${"%.3f".format(java.util.Locale.US, centerBiomeGreenFraction)} foregroundGreen=${"%.3f".format(java.util.Locale.US, foregroundBiomeGreenFraction)} satBalance=${"%.2f".format(java.util.Locale.US, saturationBalance)} lumStd=${"%.1f".format(java.util.Locale.US, luminanceStdDev)}"
     return CompositionScore(rejectionReason == null, score, detail, rejectionReason)
 }
 fun waitForPlayableFrame(robot: Robot, out: Path, timeoutSeconds: Long): Boolean {
@@ -1036,6 +1143,25 @@ fun writeCandidateReport(path: Path, shot: Shot, reports: List<CandidateReport>,
     }
     Files.writeString(path, json)
 }
+fun writeAnchorSweepReport(path: Path, shot: Shot, reports: List<AnchorCandidateReport>, selected: AnchorCandidateReport?) {
+    path.parent?.createDirectories()
+    val json = buildString {
+        appendLine("{")
+        appendLine("  \"schema\": \"btm.screenshot_anchor_sweep.v1\",")
+        appendLine("  \"shot\": ${q(shot.id)},")
+        appendLine("  \"biome\": ${q(shot.biome)},")
+        appendLine("  \"selected\": ${q(selected?.label)},")
+        appendLine("  \"selectedScore\": ${selected?.composition?.score ?: "null"},")
+        appendLine("  \"anchors\": [")
+        appendLine(reports.joinToString(",\n") { report ->
+            val composition = report.composition
+            "    {\"label\":${q(report.label)},\"locatedX\":${report.locatedX},\"locatedZ\":${report.locatedZ},\"path\":${q(report.path.toString())},\"camera\":${cameraJson(report.pose)},\"accepted\":${report.frame.accepted && composition?.accepted != false},\"frameAccepted\":${report.frame.accepted},\"frameReason\":${q(report.frame.reason)},\"compositionAccepted\":${composition?.accepted ?: "null"},\"compositionReason\":${q(composition?.rejectionReason)},\"score\":${composition?.score ?: "null"},\"detail\":${q(composition?.detail)}}"
+        })
+        appendLine("  ]")
+        appendLine("}")
+    }
+    Files.writeString(path, json)
+}
 fun chooseCameraCandidate(shot: Shot, previewRoot: Path): CandidateFrame {
     if (cameraSearchMode == "off") {
         val base = shot.basePose()
@@ -1058,7 +1184,7 @@ fun chooseCameraCandidate(shot: Shot, previewRoot: Path): CandidateFrame {
             appendProgress("candidate_rejected", shot, "$label ${frame.reason}")
             continue
         }
-        val composition = scoreCandidateFrame(image, frame)
+        val composition = scoreCandidateFrame(image, frame, shot)
         reports += CandidateReport(label, pose, previewPath, frame, composition)
         if (!composition.accepted) {
             rejected += "$label:${composition.rejectionReason}"
@@ -1104,8 +1230,70 @@ fun locateFromCurrentPosition(targetType: String, targetId: String, timeoutMilli
     return null
 }
 fun distance2d(aX: Double, aZ: Double, bX: Double, bZ: Double): Double = hypot(aX - bX, aZ - bZ)
+fun chooseBiomeSweepAnchor(shot: Shot): LocatedAnchor {
+    val previewRoot = outputDir.resolve("anchor-previews").resolve(shot.id)
+    previewRoot.createDirectories()
+    val seen = mutableSetOf<Pair<Int, Int>>()
+    val reports = mutableListOf<AnchorCandidateReport>()
+    var best: AnchorCandidateReport? = null
+    for ((index, offset) in anchorSweepOffsets.withIndex()) {
+        val scout = shot.copy(x = shot.x + offset.first, z = shot.z + offset.second)
+        teleportCamera(scout.basePose())
+        Thread.sleep(500)
+        val located = locateFromCurrentPosition("biome", shot.biome, timeoutMillis = 20_000)
+        if (located == null) {
+            appendProgress("anchor_probe_failed", shot, "probe=${index} offset=${offset.first.format1()},${offset.second.format1()} locate timed out")
+            continue
+        }
+        if (!seen.add(located)) {
+            appendProgress("anchor_probe_duplicate", shot, "probe=${index} located=${located.first},${located.second}")
+            continue
+        }
+        val anchorShot = shot.copy(x = located.first + 0.5, z = located.second + 0.5)
+        val probePoses = candidatePoses(anchorShot)
+            .filter { it.first in safeAnchorProbeLabels }
+        for (candidate in probePoses) {
+            val (poseLabel, pose) = candidate
+            teleportCamera(pose)
+            Thread.sleep(1_000)
+            val label = "probe${index.toString().padStart(2, '0')}-${located.first}-${located.second}-$poseLabel"
+            val previewPath = previewRoot.resolve("${reports.size.toString().padStart(2, '0')}-$label.png")
+            val image = screenshot(robot, previewPath)
+            val frame = assessFrame(image)
+            val composition = if (frame.accepted) scoreCandidateFrame(image, frame, shot) else null
+            val report = AnchorCandidateReport(label, located.first, located.second, pose, previewPath, frame, composition)
+            reports += report
+            val score = composition?.score ?: Double.NEGATIVE_INFINITY
+            val accepted = frame.accepted && composition?.accepted != false
+            val detail = composition?.detail ?: frame.reason ?: "unscored"
+            if (accepted) appendProgress("anchor_probe_scored", shot, "$label score=${"%.2f".format(java.util.Locale.US, score)} $detail")
+            else appendProgress("anchor_probe_rejected", shot, "$label ${composition?.rejectionReason ?: frame.reason} $detail")
+            if (accepted && (best == null || score > (best!!.composition?.score ?: Double.NEGATIVE_INFINITY))) {
+                best = report
+            }
+        }
+        if ((best?.composition?.score ?: Double.NEGATIVE_INFINITY) >= anchorSweepEarlyAcceptScore) {
+            appendProgress(
+                "anchor_probe_early_accept",
+                shot,
+                "score=${"%.2f".format(java.util.Locale.US, best!!.composition!!.score)} threshold=${anchorSweepEarlyAcceptScore.format1()} label=${best!!.label}",
+            )
+            break
+        }
+    }
+    writeAnchorSweepReport(previewRoot.resolve("anchor-sweep-report.json"), shot, reports, best)
+    val selected = best
+        ?: return LocatedAnchor(shot, "locate-biome-sweep-fallback", "no acceptable sweep anchors; using authored ${shot.x.format1()},${shot.z.format1()}")
+    val relocated = shot.copy(x = selected.pose.x, y = selected.pose.y, z = selected.pose.z, yaw = selected.pose.yaw, pitch = selected.pose.pitch)
+    return LocatedAnchor(
+        relocated,
+        "locate-biome-sweep",
+        "selected ${shot.biome} at ${selected.locatedX},${selected.locatedZ} via ${selected.label} score=${"%.2f".format(java.util.Locale.US, selected.composition?.score ?: 0.0)}",
+    )
+}
 fun resolveShotAnchor(shot: Shot): LocatedAnchor {
     if (anchorSearchMode == "off") return LocatedAnchor(shot, "authored", "anchor search disabled")
+    if (anchorSearchMode == "locate-biome-sweep") return chooseBiomeSweepAnchor(shot)
     teleportCamera(shot.basePose())
     Thread.sleep(500)
     val locatedBiome = locateFromCurrentPosition("biome", shot.biome)

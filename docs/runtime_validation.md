@@ -197,6 +197,14 @@ tools/btm test scenario-headful client_smoke --profile release --bootstrap-mode 
 
 `client_smoke` is a headful-only lane. Its checked-in contract lives at `tools/client_smoke_contract.json`; run it through `scenario-headful` only.
 
+Worldgen marketing screenshots:
+
+```bash
+tools/btm test scenario-headful worldgen_marketing_screenshots --start-shot 02-overworld-jungle --end-shot 02-overworld-jungle --anchor-search locate-biome-sweep --run-root /home/dev/.cache/btm/worldgen-marketing-experiment --output-dir generated/cache/worldgen-marketing-experiment --dh-capture-radius 16 --server-forceload-radius 3 --dh-min-settle 60 --dh-quiet 20 --dh-timeout 240 --dh-low-tail-max 48 --dh-low-tail-seconds 30 --allow-low-tail-dh
+```
+
+Fresh evidence from 2026-07-13: the jungle rerun produced an accepted current candidate at `generated/cache/worldgen-marketing-experiment/final-corrected/02-overworld-jungle.png` with prompt suppression clean, shader pack active, fixed FOV 80, low-tail-stable DH evidence (`tailChunksLeft=32` for 30 seconds after 90 seconds), and a passing visual sidecar. The lane now supports `--anchor-search locate-biome-sweep`, writes anchor-preview reports, rejects one-sided blank/fog and xray-like frames more aggressively, uses safe elevated anchor probe poses, carries DH/forceload radius through bounded runs, and patches Cold Sweat screenshot overrides idempotently. Earlier failed captures remain debugging evidence, including xray/translucent geometry from unsafe low valley-dive anchors.
+
 VS ships diagnostics:
 
 ```bash

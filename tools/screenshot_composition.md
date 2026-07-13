@@ -59,7 +59,9 @@ works.
 ## Camera, Light, And Shaders
 
 - Use a moderate 55-70 degree field of view. Use wider or narrower framing only
-  when the subject requires it and distortion does not become distracting.
+  when the subject requires it and distortion does not become distracting. The
+  deterministic `worldgen_marketing_screenshots` lane is an intentional fixed
+  80-degree exception; record that value and reject any capture that deviates.
 - Keep the horizon level unless a deliberate dramatic angle clearly improves the
   image.
 - Use side-lit sunrise or sunset for terrain relief and clear daylight for colorful
@@ -77,6 +79,9 @@ works.
 
 - Hide the HUD, crosshair, hand, chat, prompts, menus, debug overlays, selection
   outlines, notifications, and onboarding UI.
+- Treat disconnect screens, main/pause/loading menus, onboarding prompts, and
+  low-entropy non-world frames as capture failures. Keep their raw image and
+  rejection sidecar as evidence; never promote them to a final candidate.
 - Marketing captures must be recapturable from a deterministic shot manifest.
   Record the world seed or server world identity, dimension, biome, coordinates,
   camera facing, field of view, time, weather, shader pack, shader preset,

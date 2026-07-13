@@ -19,6 +19,7 @@ import java.util.concurrent.TimeUnit
 import javax.imageio.ImageIO
 import kotlin.io.path.createDirectories
 import kotlin.io.path.exists
+import kotlin.math.ln
 import kotlin.math.max
 import kotlin.system.exitProcess
 
@@ -48,6 +49,22 @@ data class DhGateResult(
     val tailChunksLeft: Int?,
     val tailStableSeconds: Long,
 )
+data class FrameAssessment(
+    val accepted: Boolean,
+    val reason: String? = null,
+    val entropy: Double = 0.0,
+    val edgeDensity: Double = 0.0,
+    val luminanceRange: Int = 0,
+)
+data class ShotResult(
+    val shot: Shot,
+    val status: String,
+    val path: Path,
+    val review: Path,
+    val failureReason: String? = null,
+    val promptHandling: String = "not-run",
+    val dh: DhGateResult? = null,
+)
 
 val root = Paths.get("").toAbsolutePath().normalize()
 val width = 1920
@@ -56,10 +73,23 @@ val shaderPack = "ComplementaryReimagined_r5.8.1.zip"
 val seed = "btm-worldgen-marketing-v1"
 val dhCaptureRadiusChunks = 32
 val serverForceloadRadiusChunks = 7
+val captureFovDegrees = 80
+// Vanilla's FOV option is normalized across the 30-110 degree range.
+val captureFovOptionValue = (captureFovDegrees - 30.0) / 80.0
+val knownBadFrameMarkers = listOf(
+    "start chunk scanning",
+    "press k to set your starting spawn and begin",
+    "connection lost",
+    "disconnected",
+    "multiplayer game",
+    "saving world",
+    "pause menu",
+    "game menu",
+)
 
 fun usage(message: String? = null): Nothing {
     if (message != null) System.err.println(message)
-    System.err.println("Usage: tools/btm test scenario-headful worldgen_marketing_screenshots [--bootstrap-mode always|once|never] [--port N] [--run-root PATH] [--output-dir PATH] [--keep-runs] [--start-shot N|SHOT_ID] [--end-shot N|SHOT_ID] [--dh-min-settle SECONDS] [--dh-quiet SECONDS] [--dh-timeout SECONDS] [--dh-low-tail-max CHUNKS] [--dh-low-tail-seconds SECONDS]")
+    System.err.println("Usage: tools/btm test scenario-headful worldgen_marketing_screenshots [--bootstrap-mode always|once|never] [--port N] [--run-root PATH] [--output-dir PATH] [--keep-runs] [--batch-mode bounded|session] [--start-shot N|SHOT_ID] [--end-shot N|SHOT_ID] [--dh-min-settle SECONDS] [--dh-quiet SECONDS] [--dh-timeout SECONDS] [--dh-low-tail-max CHUNKS] [--dh-low-tail-seconds SECONDS]")
     exitProcess(2)
 }
 
@@ -89,6 +119,7 @@ var dhQuiet = 30
 var dhTimeout = 420
 var dhLowTailMax = 32
 var dhLowTailSeconds = 60
+var batchMode = "bounded"
 var index = 0
 while (index < args.size) {
     when (args[index]) {
@@ -100,6 +131,11 @@ while (index < args.size) {
         "--keep-runs" -> {
             keepRuns = true
             index += 1
+        }
+        "--batch-mode" -> {
+            batchMode = args.getOrNull(index + 1) ?: usage("--batch-mode needs bounded or session")
+            if (batchMode !in setOf("bounded", "session")) usage("invalid batch mode: $batchMode")
+            index += 2
         }
         "--port" -> {
             port = args.getOrNull(index + 1)?.toIntOrNull() ?: usage("--port needs a number")
@@ -171,6 +207,60 @@ if (endShotIndex < startShotIndex) usage("--end-shot must be at or after --start
 val selectedShots = shots.subList(startShotIndex, endShotIndex + 1)
 
 fun q(value: String?) = if (value == null) "null" else "\"" + value.replace("\\", "\\\\").replace("\"", "\\\"").replace("\n", "\\n") + "\""
+
+// A batch is intentionally a sequence of independent one-shot runtimes. This
+// keeps a single stalled client or disconnected server from invalidating later shots.
+if (batchMode == "bounded" && selectedShots.size > 1) {
+    val batchRoot = runRoot.toAbsolutePath().normalize()
+    val segments = batchRoot.resolve("segments")
+    val summaries = mutableListOf<Pair<Shot, Path>>()
+    var failedSegments = 0
+    for (shot in selectedShots) {
+        val segmentRoot = segments.resolve(shot.id)
+        val command = listOf(
+            "kotlin", "-J-Djava.awt.headless=false", root.resolve("tools/kotlin/worldgen_marketing_screenshots.main.kts").toString(),
+            "--bootstrap-mode", bootstrapMode,
+            "--port", port.toString(),
+            "--run-root", segmentRoot.toString(),
+            "--output-dir", outputDir.toAbsolutePath().normalize().toString(),
+            "--batch-mode", "session",
+            "--start-shot", shot.id,
+            "--end-shot", shot.id,
+            "--dh-min-settle", dhMinSettle.toString(),
+            "--dh-quiet", dhQuiet.toString(),
+            "--dh-timeout", dhTimeout.toString(),
+            "--dh-low-tail-max", dhLowTailMax.toString(),
+            "--dh-low-tail-seconds", dhLowTailSeconds.toString(),
+        ) + if (keepRuns) listOf("--keep-runs") else emptyList()
+        val process = ProcessBuilder(command).directory(root.toFile()).inheritIO().start()
+        if (process.waitFor() != 0) failedSegments++
+        summaries += shot to segmentRoot.resolve("latest-summary.json")
+    }
+    val aggregate = buildString {
+        appendLine("{")
+        appendLine("  \"schema\": \"btm.worldgen_marketing_screenshots.v1\",")
+        appendLine("  \"status\": ${q(if (failedSegments == 0) "technical-pass-pending-ai-review" else "failed")},")
+        appendLine("  \"batchMode\": \"bounded\",")
+        appendLine("  \"fov\": $captureFovDegrees,")
+        appendLine("  \"seed\": ${q(seed)},")
+        appendLine("  \"shaderPack\": ${q(shaderPack)},")
+        appendLine("  \"shots\": [")
+        appendLine(summaries.joinToString(",\n") { (shot, summary) ->
+            val summaryText = if (summary.exists()) Files.readString(summary) else ""
+            val status = if ("\"status\": \"technical-pass-pending-ai-review\"" in summaryText) "technical-pass-pending-ai-review" else "failed"
+            "    {\"id\":${q(shot.id)},\"status\":${q(status)},\"summary\":${q(summary.toString())}}"
+        })
+        appendLine("  ]")
+        appendLine("}")
+    }
+    batchRoot.createDirectories()
+    outputDir.toAbsolutePath().normalize().createDirectories()
+    Files.writeString(batchRoot.resolve("latest-summary.json"), aggregate)
+    Files.writeString(outputDir.toAbsolutePath().normalize().resolve("latest-corrected-manifest.json"), aggregate)
+    if (failedSegments != 0) exitProcess(1)
+    println("worldgen marketing screenshot batch completed: ${outputDir.resolve("final-corrected")}")
+    exitProcess(0)
+}
 fun deleteTree(path: Path) {
     if (!path.exists()) return
     Files.walk(path).use { stream -> stream.sorted(java.util.Comparator.reverseOrder()).forEach(Files::deleteIfExists) }
@@ -273,6 +363,15 @@ fun patchTomlValue(path: Path, key: String, value: String) {
     }
     Files.write(path, lines)
 }
+fun patchJsonBooleans(path: Path, keys: Collection<String>, value: Boolean) {
+    if (!path.exists()) return
+    var text = Files.readString(path)
+    for (key in keys) {
+        val pattern = Regex("(\\\"${Regex.escape(key)}\\\"\\s*:\\s*)(true|false)")
+        text = text.replace(pattern) { match -> match.groupValues[1] + value }
+    }
+    Files.writeString(path, text)
+}
 fun configureClient(clientDir: Path) {
     deleteTree(clientDir.resolve("Distant_Horizons_server_data"))
     deleteTree(clientDir.resolve("saves/New World/data"))
@@ -289,8 +388,22 @@ fun configureClient(clientDir: Path) {
             "skipMultiplayerWarning" to "true",
             "joinedFirstServer" to "true",
             "onboardAccessibility" to "false",
+            "fov" to captureFovOptionValue.toString(),
         ),
     )
+    patchJsonBooleans(
+        clientDir.resolve("config/no-more-popups.json"),
+        listOf(
+            "advancements.messages", "advancements.toasts", "experimental_warning",
+            "multiplayer_warning", "recipes_toasts", "resource_pack_warnings",
+            "system_toasts", "tutorials",
+        ),
+        false,
+    )
+    // Block indexing is not relevant to a still capture and can open a modal prompt.
+    val explosionOverhaul = clientDir.resolve("config/explosionoverhaul/explosionoverhaul-common.toml")
+    patchTomlValue(explosionOverhaul, "enableBlockIndexing", "false")
+    patchTomlValue(explosionOverhaul, "showScanProgressHUD", "false")
     Files.writeString(
         clientDir.resolve("config/oculus.properties"),
         """
@@ -339,23 +452,49 @@ fun screenshot(robot: Robot, out: Path): BufferedImage {
     ImageIO.write(image, "png", out.toFile())
     return image
 }
-fun nonblank(image: BufferedImage): Boolean {
-    val colors = mutableSetOf<Int>()
-    var luminance = 0L
+fun assessFrame(image: BufferedImage): FrameAssessment {
+    if (image.width != width || image.height != height) {
+        return FrameAssessment(false, "unexpected frame size ${image.width}x${image.height}")
+    }
+    val bins = IntArray(4096)
     var samples = 0
-    for (y in 0 until image.height step 24) for (x in 0 until image.width step 24) {
+    var minLuminance = 255
+    var maxLuminance = 0
+    var edges = 0
+    var comparisons = 0
+    for (y in 0 until image.height step 8) for (x in 0 until image.width step 8) {
         val rgb = image.getRGB(x, y)
-        colors += rgb
-        luminance += ((rgb shr 16) and 255) + ((rgb shr 8) and 255) + (rgb and 255)
+        val red = (rgb shr 16) and 255
+        val green = (rgb shr 8) and 255
+        val blue = rgb and 255
+        bins[(red shr 4) shl 8 or (green shr 4) shl 4 or (blue shr 4)]++
+        val luminance = (red * 54 + green * 183 + blue * 19) / 256
+        minLuminance = minOf(minLuminance, luminance)
+        maxLuminance = maxOf(maxLuminance, luminance)
+        if (x >= 8) {
+            val previous = image.getRGB(x - 8, y)
+            val difference = kotlin.math.abs(red - ((previous shr 16) and 255)) + kotlin.math.abs(green - ((previous shr 8) and 255)) + kotlin.math.abs(blue - (previous and 255))
+            if (difference > 60) edges++
+            comparisons++
+        }
         samples++
     }
-    return colors.size >= 16 && luminance > samples * 12L
+    val entropy = bins.filter { it > 0 }.sumOf { count ->
+        val probability = count.toDouble() / samples
+        -probability * ln(probability)
+    }
+    val edgeDensity = edges.toDouble() / comparisons.coerceAtLeast(1)
+    val luminanceRange = maxLuminance - minLuminance
+    if (entropy < 1.35 || luminanceRange < 18 || edgeDensity < 0.004) {
+        return FrameAssessment(false, "low-entropy or flat non-world frame", entropy, edgeDensity, luminanceRange)
+    }
+    return FrameAssessment(true, entropy = entropy, edgeDensity = edgeDensity, luminanceRange = luminanceRange)
 }
 fun waitForPlayableFrame(robot: Robot, out: Path, timeoutSeconds: Long): Boolean {
     val deadline = System.currentTimeMillis() + timeoutSeconds * 1000
     while (System.currentTimeMillis() < deadline) {
         val image = screenshot(robot, out)
-        if (nonblank(image)) return true
+        if (assessFrame(image).accepted) return true
         Thread.sleep(1_000)
     }
     return false
@@ -421,7 +560,7 @@ fun waitForDhStable(clientDir: Path): DhGateResult {
     val tailStableSeconds = if (lowTailSince == null) 0 else (System.currentTimeMillis() - lowTailSince!!) / 1000
     return DhGateResult("timeout", dhMinSettle, dhQuiet, dhTimeout, (System.currentTimeMillis() - started) / 1000, Regex("Distant Horizons|DistantHorizons|world gen|generation", RegexOption.IGNORE_CASE).containsMatchIn(logText), stableSamples, dhLowTailMax, dhLowTailSeconds, tailChunksLeft, tailStableSeconds)
 }
-fun writeReview(path: Path, shot: Shot, dh: DhGateResult) {
+fun writeReview(path: Path, shot: Shot, dh: DhGateResult?, technicalStatus: String, failureReason: String?, promptHandling: String, frame: FrameAssessment?) {
     val review = """
 {
   "schema": "btm.screenshot_review.v1",
@@ -436,7 +575,7 @@ fun writeReview(path: Path, shot: Shot, dh: DhGateResult) {
     "dimension": "minecraft:overworld",
     "biome": ${q(shot.biome)},
     "camera": {"x": ${shot.x}, "y": ${shot.y}, "z": ${shot.z}, "yaw": ${shot.yaw}, "pitch": ${shot.pitch}},
-    "fov": 70,
+    "fov": $captureFovDegrees,
     "weather": "clear",
     "time": "morning",
     "terrainAltered": false,
@@ -445,7 +584,8 @@ fun writeReview(path: Path, shot: Shot, dh: DhGateResult) {
     "shaderPreset": ${q("shaderpacks/$shaderPack.txt")},
     "optionsSource": "options.txt",
     "dhCaptureRadiusChunks": $dhCaptureRadiusChunks,
-    "dhGate": {"status": ${q(dh.status)}, "elapsedSeconds": ${dh.elapsedSeconds}, "minSettleSeconds": ${dh.minSettleSeconds}, "quietSeconds": ${dh.quietSeconds}, "timeoutSeconds": ${dh.timeoutSeconds}, "dhLogObserved": ${dh.dhLogObserved}, "stableSamples": ${dh.stableSamples}, "lowTailThresholdChunks": ${dh.lowTailThresholdChunks}, "lowTailSeconds": ${dh.lowTailSeconds}, "tailChunksLeft": ${dh.tailChunksLeft ?: "null"}, "tailStableSeconds": ${dh.tailStableSeconds}}
+    "dhGate": ${if (dh == null) "null" else "{\"status\": ${q(dh.status)}, \"elapsedSeconds\": ${dh.elapsedSeconds}, \"minSettleSeconds\": ${dh.minSettleSeconds}, \"quietSeconds\": ${dh.quietSeconds}, \"timeoutSeconds\": ${dh.timeoutSeconds}, \"dhLogObserved\": ${dh.dhLogObserved}, \"stableSamples\": ${dh.stableSamples}, \"lowTailThresholdChunks\": ${dh.lowTailThresholdChunks}, \"lowTailSeconds\": ${dh.lowTailSeconds}, \"tailChunksLeft\": ${dh.tailChunksLeft ?: "null"}, \"tailStableSeconds\": ${dh.tailStableSeconds}}"},
+    "technicalGate": {"status": ${q(technicalStatus)}, "failureReason": ${q(failureReason)}, "promptHandling": ${q(promptHandling)}, "frameEntropy": ${frame?.entropy ?: "null"}, "frameEdgeDensity": ${frame?.edgeDensity ?: "null"}, "frameLuminanceRange": ${frame?.luminanceRange ?: "null"}}
   },
   "rubricVersion": "1",
   "reviewer": "pending vision review",
@@ -453,8 +593,8 @@ fun writeReview(path: Path, shot: Shot, dh: DhGateResult) {
   "reviewedAt": ${q(Instant.now().toString())},
   "scores": {},
   "findings": [],
-  "advice": "Vision AI review required before publication.",
-  "decision": "pending"
+  "advice": ${q(if (technicalStatus == "passed") "Vision AI review required before publication." else "Rejected capture evidence. Recapture only after resolving the technical gate failure.")},
+  "decision": ${q(if (technicalStatus == "passed") "pending" else "failed")}
 }
 """.trimIndent() + "\n"
     Files.writeString(path.resolveSibling(path.fileName.toString().removeSuffix(".png") + ".review.json"), review)
@@ -479,6 +619,8 @@ final.createDirectories()
 val robot = Robot()
 val progressLog = evidence.resolve("capture-progress.jsonl")
 val capturedFilesLog = evidence.resolve("captured-files.txt")
+val shotResults = mutableListOf<ShotResult>()
+var hudHidden = false
 
 fun appendProgress(event: String, shot: Shot? = null, detail: String? = null) {
     val line = buildString {
@@ -511,6 +653,54 @@ fun writeFailureTrace(error: Throwable) {
         append(buffer.toString())
     }
     Files.writeString(evidence.resolve("capture-error.txt"), trace)
+}
+
+fun pressKey(key: Int) {
+    robot.keyPress(key)
+    robot.keyRelease(key)
+}
+fun badMarkersSince(clientDir: Path, offset: Long): List<String> {
+    val text = readFrom(clientDir.resolve("logs/latest.log"), offset).lowercase()
+    return knownBadFrameMarkers.filter { it in text }
+}
+fun verifyPlayerInWorld(): Boolean {
+    val marker = "BTM_CAPTURE_IN_WORLD"
+    val before = Regex(marker).findAll(tail(server!!.log)).count()
+    send(server!!, "execute if entity @a[name=AgentShot,gamemode=spectator] run say $marker", commands)
+    val deadline = System.currentTimeMillis() + 10_000
+    while (System.currentTimeMillis() < deadline) {
+        if (!server!!.process.isAlive) return false
+        if (Regex(marker).findAll(tail(server!!.log)).count() > before) return true
+        Thread.sleep(250)
+    }
+    return false
+}
+fun verifyCaptureConfiguration() {
+    val options = Files.readString(clientDir.resolve("options.txt"))
+    check("fov:$captureFovOptionValue" in options) { "screenshot runtime did not retain fixed ${captureFovDegrees}-degree FOV" }
+    val oculus = Files.readString(clientDir.resolve("config/oculus.properties"))
+    check("enableShaders=true" in oculus && "shaderPack=$shaderPack" in oculus) { "screenshot runtime shader configuration is not active" }
+}
+fun prepareCleanFrame(stage: String): String {
+    val log = clientDir.resolve("logs/latest.log")
+    val before = if (log.exists()) Files.size(log) else 0L
+    if (!hudHidden) {
+        pressKey(KeyEvent.VK_F1)
+        hudHidden = true
+        appendProgress("hud_hidden", detail = "stage=$stage")
+    }
+    // This disposable username always begins in class-selector's spawn-only flow.
+    // Completing it prevents repeated action-bar prompts during the capture session.
+    pressKey(KeyEvent.VK_K)
+    Thread.sleep(2_000)
+    val observed = badMarkersSince(clientDir, before)
+    if (observed.isNotEmpty() && observed.any { it != "press k to set your starting spawn and begin" }) {
+        error("known blocking prompt remained during $stage: ${observed.joinToString()}")
+    }
+    if (!verifyPlayerInWorld()) error("client is no longer in-world during $stage")
+    val handling = if ("press k to set your starting spawn and begin" in observed) "fallback-dismissed-spawn-onboarding" else "suppression-clean"
+    appendProgress("prompt_prepared", detail = "stage=$stage handling=$handling")
+    return handling
 }
 
 fun phase(name: String, block: () -> Unit) {
@@ -559,13 +749,12 @@ try {
         client = startClient(clientDir, evidence.resolve("client.args"), evidence.resolve("client-console.log"))
         waitFor(server!!.log, Regex("AgentShot joined the game"), 900, client, joins + 1)
         Thread.sleep(8_000)
-        robot.keyPress(KeyEvent.VK_ESCAPE)
-        robot.keyRelease(KeyEvent.VK_ESCAPE)
+        pressKey(KeyEvent.VK_ESCAPE)
         Thread.sleep(500)
-        robot.keyPress(KeyEvent.VK_F1)
-        robot.keyRelease(KeyEvent.VK_F1)
         send(server!!, "gamemode spectator AgentShot", commands)
         send(server!!, "effect clear AgentShot", commands)
+        verifyCaptureConfiguration()
+        prepareCleanFrame("client_join")
         if (!waitForPlayableFrame(robot, evidence.resolve("joined-playable.png"), 180)) error("client never produced a playable frame")
     }
     phase("capture_shots") {
@@ -590,14 +779,33 @@ try {
             appendProgress("shot_dh_gate", shot, "status=${dh.status} elapsed=${dh.elapsedSeconds}s tail=${dh.tailChunksLeft ?: "none"} tailStable=${dh.tailStableSeconds}s")
             if (dh.status !in setOf("stable", "low-tail-stable")) error("DH did not reach a stable quiet window or bounded low-tail state for ${shot.id}")
             Thread.sleep(15_000)
+            val promptHandling = prepareCleanFrame("shot:${shot.id}")
+            val log = clientDir.resolve("logs/latest.log")
+            val logOffset = if (log.exists()) Files.size(log) else 0L
             val rawPath = raw.resolve(shot.file)
             val finalPath = final.resolve(shot.file)
-            screenshot(robot, rawPath)
+            val image = screenshot(robot, rawPath)
+            val markers = badMarkersSince(clientDir, logOffset)
+            val frame = assessFrame(image)
+            val failureReason = when {
+                !verifyPlayerInWorld() -> "client is no longer in-world at capture time"
+                markers.isNotEmpty() -> "known prompt/menu marker in capture evidence: ${markers.joinToString()}"
+                !frame.accepted -> frame.reason
+                else -> null
+            }
+            if (failureReason != null) {
+                val rejectedReview = rawPath.resolveSibling(rawPath.fileName.toString().removeSuffix(".png") + ".review.json")
+                writeReview(rawPath, shot, dh, "failed", failureReason, promptHandling, frame)
+                shotResults += ShotResult(shot, "failed", rawPath, rejectedReview, failureReason, promptHandling, dh)
+                appendProgress("shot_rejected", shot, failureReason)
+                error("rejected ${shot.id}: $failureReason")
+            }
             Files.copy(rawPath, finalPath, StandardCopyOption.REPLACE_EXISTING)
-            writeReview(finalPath, shot, dh)
+            writeReview(finalPath, shot, dh, "passed", null, promptHandling, frame)
             captured += finalPath.toString()
+            shotResults += ShotResult(shot, "technical-pass-pending-ai-review", finalPath, finalPath.resolveSibling(finalPath.fileName.toString().removeSuffix(".png") + ".review.json"), promptHandling = promptHandling, dh = dh)
             Files.writeString(capturedFilesLog, captured.joinToString("\n", postfix = "\n"))
-            appendProgress("shot_captured", shot, finalPath.toString())
+            appendProgress("shot_captured", shot, "path=$finalPath fov=$captureFovDegrees promptHandling=$promptHandling")
         }
         activeShot = null
         appendProgress("capture_complete", detail = "captured ${captured.size} shot(s)")
@@ -605,6 +813,12 @@ try {
     }
 } catch (error: Throwable) {
     failure = error
+    if (activeShot != null && shotResults.none { it.shot.id == activeShot!!.id }) {
+        val rejectedPath = raw.resolve(activeShot!!.file)
+        val reviewPath = rejectedPath.resolveSibling(rejectedPath.fileName.toString().removeSuffix(".png") + ".review.json")
+        if (rejectedPath.exists()) writeReview(rejectedPath, activeShot!!, null, "failed", error.message, "failed-before-clean-frame", null)
+        shotResults += ShotResult(activeShot!!, "failed", rejectedPath, reviewPath, error.message, "failed-before-clean-frame")
+    }
     appendProgress("capture_failed", activeShot, error.message)
     writeFailureTrace(error)
 } finally {
@@ -616,10 +830,12 @@ try {
 val manifest = buildString {
     appendLine("{")
     appendLine("  \"schema\": \"btm.worldgen_marketing_screenshots.v1\",")
-    appendLine("  \"status\": ${q(if (failure == null) "passed" else "failed")},")
+    appendLine("  \"status\": ${q(if (failure == null) "technical-pass-pending-ai-review" else "failed")},")
     appendLine("  \"error\": ${q(failure?.message)},")
     appendLine("  \"seed\": ${q(seed)},")
     appendLine("  \"shaderPack\": ${q(shaderPack)},")
+    appendLine("  \"fov\": $captureFovDegrees,")
+    appendLine("  \"batchMode\": ${q(batchMode)},")
     appendLine("  \"resolution\": \"${width}x${height}\",")
     appendLine("  \"runRoot\": ${q(runRoot.toString())},")
     appendLine("  \"outputDir\": ${q(outputDir.toString())},")
@@ -629,8 +845,9 @@ val manifest = buildString {
     })
     appendLine("  ],")
     appendLine("  \"shots\": [")
-    appendLine(shots.joinToString(",\n") { shot ->
-        "    {\"id\":${q(shot.id)},\"path\":${q(final.resolve(shot.file).toString())},\"review\":${q(final.resolve(shot.file.removeSuffix(".png") + ".review.json").toString())},\"biome\":${q(shot.biome)},\"subject\":${q(shot.subject)},\"camera\":{\"x\":${shot.x},\"y\":${shot.y},\"z\":${shot.z},\"yaw\":${shot.yaw},\"pitch\":${shot.pitch}}}"
+    appendLine(selectedShots.joinToString(",\n") { shot ->
+        val result = shotResults.lastOrNull { it.shot.id == shot.id }
+        "    {\"id\":${q(shot.id)},\"status\":${q(result?.status ?: "not-run")},\"failureReason\":${q(result?.failureReason)},\"path\":${q((result?.path ?: final.resolve(shot.file)).toString())},\"review\":${q((result?.review ?: final.resolve(shot.file.removeSuffix(".png") + ".review.json")).toString())},\"promptHandling\":${q(result?.promptHandling)},\"biome\":${q(shot.biome)},\"subject\":${q(shot.subject)},\"camera\":{\"x\":${shot.x},\"y\":${shot.y},\"z\":${shot.z},\"yaw\":${shot.yaw},\"pitch\":${shot.pitch}}}"
     })
     appendLine("  ]")
     appendLine("}")

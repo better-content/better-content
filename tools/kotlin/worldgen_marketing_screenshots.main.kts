@@ -56,8 +56,15 @@ fun usage(message: String? = null): Nothing {
 }
 
 if (args.contains("--help")) usage()
-if ((System.getenv("DISPLAY").isNullOrBlank() || GraphicsEnvironment.isHeadless()) && System.getenv("BTM_WORLDGEN_SHOTS_XVFB") != "1") {
-    val command = listOf("xvfb-run", "-a", "-s", "-screen 0 ${width}x${height}x24", "kotlin", "-J-Djava.awt.headless=false", root.resolve("tools/kotlin/worldgen_marketing_screenshots.main.kts").toString()) + args
+val forceXvfb = System.getenv("BTM_FORCE_XVFB") == "1"
+if ((forceXvfb || System.getenv("DISPLAY").isNullOrBlank() || GraphicsEnvironment.isHeadless()) && System.getenv("BTM_WORLDGEN_SHOTS_XVFB") != "1") {
+    val xvfbRun = listOfNotNull(
+        System.getenv("XVFB_RUN")?.takeIf { it.isNotBlank() },
+        System.getenv("BTM_XVFB_RUN")?.takeIf { it.isNotBlank() },
+        Paths.get(System.getProperty("user.home"), ".local", "bin", "xvfb-run").takeIf { Files.isExecutable(it) }?.toString(),
+        "xvfb-run",
+    ).first()
+    val command = listOf(xvfbRun, "-a", "-s", "-screen 0 ${width}x${height}x24", "kotlin", "-J-Djava.awt.headless=false", root.resolve("tools/kotlin/worldgen_marketing_screenshots.main.kts").toString()) + args
     val process = ProcessBuilder(command).directory(root.toFile()).inheritIO().apply { environment()["BTM_WORLDGEN_SHOTS_XVFB"] = "1" }.start()
     exitProcess(process.waitFor())
 }
@@ -262,7 +269,13 @@ fun prepareArgfile(clientDir: Path, username: String, out: Path, log: Path) {
 }
 fun startClient(clientDir: Path, argfile: Path, console: Path): Process {
     Files.deleteIfExists(clientDir.resolve("logs/latest.log"))
-    return ProcessBuilder("java", "-Xms2G", "-Xmx6G", "@${argfile}")
+    val java17 = listOfNotNull(
+        System.getenv("JAVA17")?.takeIf { it.isNotBlank() },
+        System.getenv("JAVA_HOME")?.takeIf { it.isNotBlank() }?.let { Paths.get(it).resolve("bin/java").toString() },
+        Paths.get(System.getProperty("user.home"), ".local", "opt", "temurin-17", "bin", "java").takeIf { Files.isExecutable(it) }?.toString(),
+        "java",
+    ).first()
+    return ProcessBuilder(java17, "-Xms2G", "-Xmx6G", "@${argfile}")
         .directory(clientDir.toFile()).redirectErrorStream(true).redirectOutput(console.toFile()).start()
 }
 fun screenshot(robot: Robot, out: Path): BufferedImage {

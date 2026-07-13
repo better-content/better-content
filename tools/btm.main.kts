@@ -409,8 +409,9 @@ ${scenarios.values.filter { it.headful }.joinToString("\n") { "  ${it.name.padEn
 """.trimIndent()
 
 fun canRunHeadfulScenario(): Boolean {
+    if (System.getenv("BTM_FORCE_XVFB") == "1") return findXvfbRunPath() != null
     if (!System.getenv("DISPLAY").isNullOrBlank()) return true
-    return commandExists("xvfb-run")
+    return findXvfbRunPath() != null
 }
 
 fun buildHelp(): String = """
@@ -506,6 +507,39 @@ fun findCommandPath(command: String): String? {
 
 fun commandExists(command: String): Boolean = findCommandPath(command) != null
 
+fun userLocalExecutable(vararg parts: String): String? {
+    val home = System.getProperty("user.home") ?: return null
+    val candidate = Paths.get(home, *parts)
+    return if (Files.isExecutable(candidate) && !Files.isDirectory(candidate)) candidate.toAbsolutePath().normalize().toString() else null
+}
+
+fun findJava17Path(): String? {
+    val candidates = buildList {
+        System.getenv("JAVA17")?.takeIf { it.isNotBlank() }?.let { add(Paths.get(it)) }
+        System.getenv("JAVA_HOME")?.takeIf { it.isNotBlank() }?.let { add(Paths.get(it).resolve("bin/java")) }
+        userLocalExecutable(".local", "opt", "temurin-17", "bin", "java")?.let { add(Paths.get(it)) }
+        findCommandPath("java")?.let { add(Paths.get(it)) }
+    }.distinct()
+    for (candidate in candidates) {
+        if (!Files.isExecutable(candidate)) continue
+        val version = readCommand(listOf(candidate.toString(), "-version"))
+        if (Regex("""version "17\.|openjdk version "17\.""" ).containsMatchIn(version)) {
+            return candidate.toAbsolutePath().normalize().toString()
+        }
+    }
+    return null
+}
+
+fun findXvfbRunPath(): String? {
+    val candidates = listOfNotNull(
+        System.getenv("XVFB_RUN")?.takeIf { it.isNotBlank() },
+        System.getenv("BTM_XVFB_RUN")?.takeIf { it.isNotBlank() },
+        userLocalExecutable(".local", "bin", "xvfb-run"),
+        findCommandPath("xvfb-run"),
+    )
+    return candidates.firstOrNull { Files.isExecutable(Paths.get(it)) }
+}
+
 fun readCommand(command: List<String>): String =
     try {
         val process = ProcessBuilder(command).redirectErrorStream(true).start()
@@ -517,13 +551,7 @@ fun readCommand(command: List<String>): String =
     }
 
 fun detectJava17(): Boolean {
-    if (!commandExists("java")) {
-        return false
-    }
-    val process = ProcessBuilder("java", "-version").redirectErrorStream(true).start()
-    val text = process.inputStream.bufferedReader().readText()
-    process.waitFor()
-    return Regex("""version "17\.|openjdk version "17\.""").containsMatchIn(text)
+    return findJava17Path() != null
 }
 
 fun ensureCommands(vararg commands: String): List<ValidationFinding> =
@@ -974,27 +1002,7 @@ fun extractZipEntry(archive: Path, entryName: String, destination: Path): Proces
 }
 
 fun requireJava17Path(): String {
-    val envJava17 = System.getenv("JAVA17")
-    if (!envJava17.isNullOrBlank() && Files.isExecutable(Paths.get(envJava17))) {
-        return Paths.get(envJava17).toAbsolutePath().normalize().toString()
-    }
-    val javaHome = System.getenv("JAVA_HOME")
-    if (!javaHome.isNullOrBlank()) {
-        val candidate = Paths.get(javaHome).resolve("bin/java")
-        if (Files.isExecutable(candidate)) {
-            val version = readCommand(listOf(candidate.toString(), "-version"))
-            if (Regex("""version "17\.|openjdk version "17\.""" ).containsMatchIn(version)) {
-                return candidate.toString()
-            }
-        }
-    }
-    if (commandExists("java")) {
-        val version = readCommand(listOf(findCommandPath("java") ?: "java", "-version"))
-        if (Regex("""version "17\.|openjdk version "17\.""" ).containsMatchIn(version)) {
-            return findCommandPath("java") ?: "java"
-        }
-    }
-    throw IllegalStateException("Java 17 was not found")
+    return findJava17Path() ?: throw IllegalStateException("Java 17 was not found")
 }
 
 fun findForgeInstaller(): Path {
@@ -4233,7 +4241,9 @@ fun handleDoctor(subArgs: List<String>): CommandResult {
             val details = linkedMapOf<String, Any?>(
                 "repoRoot" to root.toString(),
                 "kotlin" to readCommand(listOf("kotlin", "-version")).ifBlank { null },
-                "java" to readCommand(listOf(findCommandPath("java") ?: "java", "-version")).lineSequence().firstOrNull()?.ifBlank { null },
+                "java" to findJava17Path()?.let { readCommand(listOf(it, "-version")).lineSequence().firstOrNull()?.ifBlank { null } },
+                "java17" to findJava17Path(),
+                "xvfbRun" to findXvfbRunPath(),
                 "rg" to findCommandPath("rg"),
                 "packwiz" to findCommandPath("packwiz"),
             )

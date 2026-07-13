@@ -7,6 +7,8 @@ import java.awt.Toolkit
 import java.awt.event.KeyEvent
 import java.awt.image.BufferedImage
 import java.io.BufferedWriter
+import java.io.PrintWriter
+import java.io.StringWriter
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
@@ -57,7 +59,7 @@ val serverForceloadRadiusChunks = 7
 
 fun usage(message: String? = null): Nothing {
     if (message != null) System.err.println(message)
-    System.err.println("Usage: tools/btm test scenario-headful worldgen_marketing_screenshots [--bootstrap-mode always|once|never] [--port N] [--run-root PATH] [--output-dir PATH] [--keep-runs] [--dh-min-settle SECONDS] [--dh-quiet SECONDS] [--dh-timeout SECONDS] [--dh-low-tail-max CHUNKS] [--dh-low-tail-seconds SECONDS]")
+    System.err.println("Usage: tools/btm test scenario-headful worldgen_marketing_screenshots [--bootstrap-mode always|once|never] [--port N] [--run-root PATH] [--output-dir PATH] [--keep-runs] [--start-shot N|SHOT_ID] [--dh-min-settle SECONDS] [--dh-quiet SECONDS] [--dh-timeout SECONDS] [--dh-low-tail-max CHUNKS] [--dh-low-tail-seconds SECONDS]")
     exitProcess(2)
 }
 
@@ -80,6 +82,7 @@ var keepRuns = false
 var port = System.getenv("BTM_HARNESS_ACTUAL_PORT")?.takeIf { it.isNotBlank() }?.toIntOrNull() ?: 25569
 var runRoot = Paths.get(System.getenv("BTM_HARNESS_RUN_ROOT")?.takeIf { it.isNotBlank() } ?: "/tmp/btm-worldgen-marketing-screenshots")
 var outputDir = root.resolve("generated/cache/worldgen-marketing")
+var startShotArg: String? = null
 var dhMinSettle = 120
 var dhQuiet = 30
 var dhTimeout = 420
@@ -107,6 +110,10 @@ while (index < args.size) {
         }
         "--output-dir" -> {
             outputDir = Paths.get(args.getOrNull(index + 1) ?: usage("--output-dir needs a path"))
+            index += 2
+        }
+        "--start-shot" -> {
+            startShotArg = args.getOrNull(index + 1) ?: usage("--start-shot needs a shot index or id")
             index += 2
         }
         "--dh-min-settle" -> {
@@ -142,6 +149,18 @@ val shots = listOf(
     Shot("05-overworld-snowy-plains", "05-overworld-snowy-plains.png", "minecraft:snowy_plains", "snowy plains and ice formations", 32.5, 100.0, -1535.5, 45.0, 18.0),
     Shot("06-overworld-cherry-grove", "06-overworld-cherry-grove.png", "minecraft:cherry_grove", "cherry grove in a mountain amphitheater", 4384.5, 250.0, -543.5, 45.0, 35.0),
 )
+val startShotIndex = when (val start = startShotArg) {
+    null -> 0
+    else -> {
+        val numeric = start.toIntOrNull()
+        when {
+            numeric != null && numeric in 1..shots.size -> numeric - 1
+            else -> shots.indexOfFirst { it.id == start || it.file == start }.takeIf { it >= 0 }
+                ?: usage("unknown --start-shot value: $start")
+        }
+    }
+}
+val selectedShots = shots.drop(startShotIndex)
 
 fun q(value: String?) = if (value == null) "null" else "\"" + value.replace("\\", "\\\\").replace("\"", "\\\"").replace("\n", "\\n") + "\""
 fun deleteTree(path: Path) {
@@ -445,10 +464,46 @@ val phases = mutableListOf<PhaseResult>()
 var server: RunningServer? = null
 var client: Process? = null
 var failure: Throwable? = null
+var activeShot: Shot? = null
 evidence.createDirectories()
 raw.createDirectories()
 final.createDirectories()
 val robot = Robot()
+val progressLog = evidence.resolve("capture-progress.jsonl")
+val capturedFilesLog = evidence.resolve("captured-files.txt")
+
+fun appendProgress(event: String, shot: Shot? = null, detail: String? = null) {
+    val line = buildString {
+        append("{")
+        append("\"time\":")
+        append(q(Instant.now().toString()))
+        append(",\"event\":")
+        append(q(event))
+        if (shot != null) {
+            append(",\"shot\":")
+            append(q(shot.id))
+        }
+        if (detail != null) {
+            append(",\"detail\":")
+            append(q(detail))
+        }
+        append("}")
+    }
+    Files.writeString(progressLog, line + "\n", java.nio.file.StandardOpenOption.CREATE, java.nio.file.StandardOpenOption.APPEND)
+}
+
+fun writeFailureTrace(error: Throwable) {
+    val buffer = StringWriter()
+    error.printStackTrace(PrintWriter(buffer))
+    val trace = buildString {
+        appendLine("time=${Instant.now()}")
+        appendLine("active_shot=${activeShot?.id ?: "none"}")
+        appendLine("message=${error.message}")
+        appendLine()
+        append(buffer.toString())
+    }
+    Files.writeString(evidence.resolve("capture-error.txt"), trace)
+}
 
 fun phase(name: String, block: () -> Unit) {
     val started = System.nanoTime()
@@ -507,7 +562,10 @@ try {
     }
     phase("capture_shots") {
         val captured = mutableListOf<String>()
-        for (shot in shots) {
+        appendProgress("capture_begin", detail = "starting at shot ${selectedShots.firstOrNull()?.id ?: "none"}")
+        for (shot in selectedShots) {
+            activeShot = shot
+            appendProgress("shot_begin", shot)
             send(server!!, "weather clear", commands)
             send(server!!, "time set 1000", commands)
             send(server!!, "tp AgentShot ${shot.x} ${shot.y} ${shot.z} ${shot.yaw} ${shot.pitch}", commands)
@@ -519,7 +577,9 @@ try {
             val toBlockZ = (chunkZ + serverForceloadRadiusChunks) * 16
             send(server!!, "forceload add $fromBlockX $fromBlockZ $toBlockX $toBlockZ", commands)
             Thread.sleep(8_000)
+            appendProgress("shot_wait_dh", shot)
             val dh = waitForDhStable(clientDir)
+            appendProgress("shot_dh_gate", shot, "status=${dh.status} elapsed=${dh.elapsedSeconds}s tail=${dh.tailChunksLeft ?: "none"} tailStable=${dh.tailStableSeconds}s")
             if (dh.status !in setOf("stable", "low-tail-stable")) error("DH did not reach a stable quiet window or bounded low-tail state for ${shot.id}")
             Thread.sleep(15_000)
             val rawPath = raw.resolve(shot.file)
@@ -528,11 +588,17 @@ try {
             Files.copy(rawPath, finalPath, StandardCopyOption.REPLACE_EXISTING)
             writeReview(finalPath, shot, dh)
             captured += finalPath.toString()
+            Files.writeString(capturedFilesLog, captured.joinToString("\n", postfix = "\n"))
+            appendProgress("shot_captured", shot, finalPath.toString())
         }
-        Files.writeString(evidence.resolve("captured-files.txt"), captured.joinToString("\n", postfix = "\n"))
+        activeShot = null
+        appendProgress("capture_complete", detail = "captured ${captured.size} shot(s)")
+        Files.writeString(capturedFilesLog, captured.joinToString("\n", postfix = "\n"))
     }
 } catch (error: Throwable) {
     failure = error
+    appendProgress("capture_failed", activeShot, error.message)
+    writeFailureTrace(error)
 } finally {
     stopProcess(client)
     stopServer(server, commands)

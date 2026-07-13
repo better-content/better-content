@@ -122,6 +122,7 @@ val screenshotClientDhThreads = max(3, availableProcessors - 2).coerceAtMost(8)
 val screenshotServerDhThreads = availableProcessors
 val cameraSweepFocusDistance = 48.0
 val maxFeatureAnchorDistanceBlocks = 768.0
+val screenshotDisabledTemperatureModifiers = listOf("cold_sweat:biomes")
 // Vanilla's FOV option is normalized across the 30-110 degree range.
 val captureFovOptionValue = (captureFovDegrees - 30.0) / 80.0
 val knownBadFrameMarkers = listOf(
@@ -543,6 +544,16 @@ fun configureServer(serverDir: Path) {
     val dh = serverDir.resolve("config/DistantHorizons.toml")
     patchTomlValue(dh, "threadRunTimeRatio", "\"1.0\"")
     patchTomlValue(dh, "numberOfThreads", screenshotServerDhThreads.toString())
+    // Body-temperature structure checks can synchronously request chunks during
+    // distant screenshot joins; disable only the visual-irrelevant modifier here.
+    val coldSweatMain = serverDir.resolve("config/coldsweat/main.toml")
+    if (coldSweatMain.exists()) {
+        patchTomlValue(
+            coldSweatMain,
+            "\"Disabled Temperature Modifiers\"",
+            "[${screenshotDisabledTemperatureModifiers.joinToString(", ") { q(it) }}]",
+        )
+    }
 }
 fun prepareArgfile(clientDir: Path, username: String, out: Path, log: Path) {
     val command = listOf(root.resolve("tools/btm").toString(), "internal", "minecraft-client-argfile", "--client-dir", clientDir.toString(), "--version-id", "1.20.1-forge-47.4.13", "--username", username, "--server", "127.0.0.1:$port", "--out", out.toString())
@@ -925,6 +936,7 @@ fun writeReview(path: Path, shot: Shot, camera: CameraPose, dh: DhGateResult?, t
     "candidateScore": ${candidateScore ?: "null"},
     "dhCaptureRadiusChunks": $dhCaptureRadiusChunks,
     "serverForceloadRadiusChunks": $serverForceloadRadiusChunks,
+    "disabledTemperatureModifiers": [${screenshotDisabledTemperatureModifiers.joinToString(", ") { q(it) }}],
     "dhLowTailAllowed": $allowLowTailDh,
     "dhGate": ${if (dh == null) "null" else "{\"status\": ${q(dh.status)}, \"elapsedSeconds\": ${dh.elapsedSeconds}, \"minSettleSeconds\": ${dh.minSettleSeconds}, \"quietSeconds\": ${dh.quietSeconds}, \"timeoutSeconds\": ${dh.timeoutSeconds}, \"dhLogObserved\": ${dh.dhLogObserved}, \"stableSamples\": ${dh.stableSamples}, \"lowTailThresholdChunks\": ${dh.lowTailThresholdChunks}, \"lowTailSeconds\": ${dh.lowTailSeconds}, \"tailChunksLeft\": ${dh.tailChunksLeft ?: "null"}, \"tailStableSeconds\": ${dh.tailStableSeconds}}"},
     "technicalGate": {"status": ${q(technicalStatus)}, "failureReason": ${q(failureReason)}, "promptHandling": ${q(promptHandling)}, "frameEntropy": ${frame?.entropy ?: "null"}, "frameEdgeDensity": ${frame?.edgeDensity ?: "null"}, "frameLuminanceRange": ${frame?.luminanceRange ?: "null"}}
@@ -1345,6 +1357,7 @@ val manifest = buildString {
     appendLine("  \"fov\": $captureFovDegrees,")
     appendLine("  \"dhCaptureRadiusChunks\": $dhCaptureRadiusChunks,")
     appendLine("  \"serverForceloadRadiusChunks\": $serverForceloadRadiusChunks,")
+    appendLine("  \"disabledTemperatureModifiers\": [${screenshotDisabledTemperatureModifiers.joinToString(", ") { q(it) }}],")
     appendLine("  \"batchMode\": ${q(batchMode)},")
     appendLine("  \"resolution\": \"${width}x${height}\",")
     appendLine("  \"runRoot\": ${q(runRoot.toString())},")

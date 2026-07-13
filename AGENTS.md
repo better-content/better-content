@@ -50,6 +50,12 @@ Do not sync or delete player/runtime state by default. Use explicit reset flags 
 - `tools/`: test/profiling/worldgen harness scripts
 - `server-instance/`: generated dedicated server runtime; sync from source before launching
 
+## Screenshot Composition
+- Follow `tools/screenshot_composition.md` for polished Minecraft screenshots.
+- Keep diagnostic captures distinct from marketing candidates.
+- Worldgen marketing screenshots require active shaders and the selected shader pack, clean reproducible capture metadata, and mandatory vision-capable AI review.
+- A screenshot is not publishable until its final export and target crops pass the AI gate and have machine-readable review sidecars.
+
 ## Supported Tool Surface
 - Launcher: `tools/btm`
 - Validation: `tools/btm test static`

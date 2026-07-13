@@ -59,7 +59,7 @@ val serverForceloadRadiusChunks = 7
 
 fun usage(message: String? = null): Nothing {
     if (message != null) System.err.println(message)
-    System.err.println("Usage: tools/btm test scenario-headful worldgen_marketing_screenshots [--bootstrap-mode always|once|never] [--port N] [--run-root PATH] [--output-dir PATH] [--keep-runs] [--start-shot N|SHOT_ID] [--dh-min-settle SECONDS] [--dh-quiet SECONDS] [--dh-timeout SECONDS] [--dh-low-tail-max CHUNKS] [--dh-low-tail-seconds SECONDS]")
+    System.err.println("Usage: tools/btm test scenario-headful worldgen_marketing_screenshots [--bootstrap-mode always|once|never] [--port N] [--run-root PATH] [--output-dir PATH] [--keep-runs] [--start-shot N|SHOT_ID] [--end-shot N|SHOT_ID] [--dh-min-settle SECONDS] [--dh-quiet SECONDS] [--dh-timeout SECONDS] [--dh-low-tail-max CHUNKS] [--dh-low-tail-seconds SECONDS]")
     exitProcess(2)
 }
 
@@ -83,6 +83,7 @@ var port = System.getenv("BTM_HARNESS_ACTUAL_PORT")?.takeIf { it.isNotBlank() }?
 var runRoot = Paths.get(System.getenv("BTM_HARNESS_RUN_ROOT")?.takeIf { it.isNotBlank() } ?: "/tmp/btm-worldgen-marketing-screenshots")
 var outputDir = root.resolve("generated/cache/worldgen-marketing")
 var startShotArg: String? = null
+var endShotArg: String? = null
 var dhMinSettle = 120
 var dhQuiet = 30
 var dhTimeout = 420
@@ -114,6 +115,10 @@ while (index < args.size) {
         }
         "--start-shot" -> {
             startShotArg = args.getOrNull(index + 1) ?: usage("--start-shot needs a shot index or id")
+            index += 2
+        }
+        "--end-shot" -> {
+            endShotArg = args.getOrNull(index + 1) ?: usage("--end-shot needs a shot index or id")
             index += 2
         }
         "--dh-min-settle" -> {
@@ -149,18 +154,21 @@ val shots = listOf(
     Shot("05-overworld-snowy-plains", "05-overworld-snowy-plains.png", "minecraft:snowy_plains", "snowy plains and ice formations", 32.5, 100.0, -1535.5, 45.0, 18.0),
     Shot("06-overworld-cherry-grove", "06-overworld-cherry-grove.png", "minecraft:cherry_grove", "cherry grove in a mountain amphitheater", 4384.5, 250.0, -543.5, 45.0, 35.0),
 )
-val startShotIndex = when (val start = startShotArg) {
-    null -> 0
+fun resolveShotIndex(arg: String?, flag: String, defaultIndex: Int): Int = when (arg) {
+    null -> defaultIndex
     else -> {
-        val numeric = start.toIntOrNull()
+        val numeric = arg.toIntOrNull()
         when {
             numeric != null && numeric in 1..shots.size -> numeric - 1
-            else -> shots.indexOfFirst { it.id == start || it.file == start }.takeIf { it >= 0 }
-                ?: usage("unknown --start-shot value: $start")
+            else -> shots.indexOfFirst { it.id == arg || it.file == arg }.takeIf { it >= 0 }
+                ?: usage("unknown $flag value: $arg")
         }
     }
 }
-val selectedShots = shots.drop(startShotIndex)
+val startShotIndex = resolveShotIndex(startShotArg, "--start-shot", 0)
+val endShotIndex = resolveShotIndex(endShotArg, "--end-shot", shots.lastIndex)
+if (endShotIndex < startShotIndex) usage("--end-shot must be at or after --start-shot")
+val selectedShots = shots.subList(startShotIndex, endShotIndex + 1)
 
 fun q(value: String?) = if (value == null) "null" else "\"" + value.replace("\\", "\\\\").replace("\"", "\\\"").replace("\n", "\\n") + "\""
 fun deleteTree(path: Path) {

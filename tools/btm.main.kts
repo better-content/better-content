@@ -582,6 +582,14 @@ fun runProcess(
     return ProcessRun(exitCode, output.trim())
 }
 
+fun javaTempEnvironment(runtimeDir: Path): Map<String, String> {
+    val tempDir = runtimeDir.resolve(".java-tmp").toAbsolutePath().normalize()
+    tempDir.createDirectories()
+    val option = "-Djava.io.tmpdir=$tempDir"
+    val existing = System.getenv("JAVA_TOOL_OPTIONS")?.trim().orEmpty()
+    return mapOf("JAVA_TOOL_OPTIONS" to if (existing.isBlank()) option else "$existing $option")
+}
+
 fun outputSnippet(output: String): String? {
     if (output.isBlank()) return null
     val lines = output.lines().filter { it.isNotBlank() }
@@ -2510,7 +2518,10 @@ fun bootstrapClientRuntime(clientDir: Path): ProcessRun {
         }
         val forgeClientJar = clientDir.resolve("libraries/net/minecraftforge/forge/$forgeCoord/forge-$forgeCoord-client.jar")
         if (!forgeClientJar.exists()) {
-            val install = runProcess(listOf(javaBin, "-jar", clientDir.resolve("forge-$forgeCoord-installer.jar").toString(), "--installClient", clientDir.toString()))
+            val install = runProcess(
+                listOf(javaBin, "-jar", clientDir.resolve("forge-$forgeCoord-installer.jar").toString(), "--installClient", clientDir.toString()),
+                extraEnv = javaTempEnvironment(clientDir),
+            )
             if (install.exitCode != 0) return install
         }
     }
@@ -4174,6 +4185,7 @@ fun buildServerBundle(exportsDir: Path, serverTreeDir: Path, serverZip: Path, cl
     if (!serverTreeDir.resolve("run.sh").exists() || !serverTreeDir.resolve("libraries/net/minecraftforge/forge/$forgeCoord").exists()) {
         val install = runProcess(
             listOf(javaBin, "-jar", serverTreeDir.resolve("forge-$forgeCoord-installer.jar").toString(), "--installServer"),
+            extraEnv = javaTempEnvironment(serverTreeDir),
             stream = !jsonOutput && !quiet,
             workDir = serverTreeDir,
         )
@@ -4215,6 +4227,7 @@ This bundle is generated from the repository source plus server-side packwiz dow
             serverTreeDir.parent.toString(),
             serverTreeDir.fileName.toString(),
         ),
+        extraEnv = javaTempEnvironment(exportsDir.parent),
     )
     return if (jar.exitCode == 0) ProcessRun(0, "Complete server tree exported to $serverZip") else jar
 }
@@ -4883,6 +4896,7 @@ fun scenarioDefaultRunRoot(name: String, args: List<String>): Path {
             Paths.get("/tmp", if (profile == "release") "btm-vs-ships-client-release" else "btm-vs-ships-client-quick")
         }
         "vs_ships_release" -> Paths.get("/tmp/btm-vs-ships-release")
+        "worldgen_marketing_screenshots" -> Paths.get(System.getProperty("user.home"), ".cache", "btm", "worldgen-marketing-screenshots")
         else -> Paths.get("/tmp/btm-$name")
     }.toAbsolutePath().normalize()
 }

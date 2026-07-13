@@ -110,7 +110,11 @@ if ((forceXvfb || System.getenv("DISPLAY").isNullOrBlank() || GraphicsEnvironmen
 var bootstrapMode = "always"
 var keepRuns = false
 var port = System.getenv("BTM_HARNESS_ACTUAL_PORT")?.takeIf { it.isNotBlank() }?.toIntOrNull() ?: 25569
-var runRoot = Paths.get(System.getenv("BTM_HARNESS_RUN_ROOT")?.takeIf { it.isNotBlank() } ?: "/tmp/btm-worldgen-marketing-screenshots")
+var runRoot = Paths.get(
+    System.getenv("BTM_HARNESS_RUN_ROOT")?.takeIf { it.isNotBlank() }
+        ?: System.getenv("BTM_WORLDGEN_SHOTS_RUN_ROOT")?.takeIf { it.isNotBlank() }
+        ?: Paths.get(System.getProperty("user.home"), ".cache", "btm", "worldgen-marketing-screenshots").toString(),
+)
 var outputDir = root.resolve("generated/cache/worldgen-marketing")
 var startShotArg: String? = null
 var endShotArg: String? = null
@@ -308,7 +312,9 @@ fun setServerPort(properties: Path, port: Int) {
 }
 fun startServer(serverDir: Path, log: Path): RunningServer {
     setServerPort(serverDir.resolve("server.properties"), port)
-    val process = ProcessBuilder("./run.sh", "nogui").directory(serverDir.toFile()).redirectErrorStream(true).redirectOutput(log.toFile()).start()
+    val process = ProcessBuilder("./run.sh", "nogui").directory(serverDir.toFile()).redirectErrorStream(true).redirectOutput(log.toFile()).apply {
+        environment()["JAVA_TOOL_OPTIONS"] = "-Djava.io.tmpdir=${serverDir.resolve(".java-tmp").toAbsolutePath()}"
+    }.start()
     return RunningServer(process, process.outputStream.bufferedWriter(), log)
 }
 fun send(server: RunningServer, command: String, commands: StringBuilder) {
@@ -430,6 +436,13 @@ enableShaders=true
     patchTomlValue(dh, "threadRunTimeRatio", "\"1.0\"")
     patchTomlValue(dh, "numberOfThreads", max(3, Runtime.getRuntime().availableProcessors() - 2).coerceAtMost(8).toString())
 }
+fun configureServer(serverDir: Path) {
+    // Explosion Overhaul's scan-decision modal is initiated by the server, so
+    // this must be disabled on both disposable sides of the screenshot lane.
+    val explosionOverhaul = serverDir.resolve("config/explosionoverhaul/explosionoverhaul-common.toml")
+    patchTomlValue(explosionOverhaul, "enableBlockIndexing", "false")
+    patchTomlValue(explosionOverhaul, "showScanProgressHUD", "false")
+}
 fun prepareArgfile(clientDir: Path, username: String, out: Path, log: Path) {
     val command = listOf(root.resolve("tools/btm").toString(), "internal", "minecraft-client-argfile", "--client-dir", clientDir.toString(), "--version-id", "1.20.1-forge-47.4.13", "--username", username, "--server", "127.0.0.1:$port", "--out", out.toString())
     if (run(command, 600, log) != 0) error("client argument generation failed; see $log")
@@ -443,7 +456,7 @@ fun startClient(clientDir: Path, argfile: Path, console: Path): Process {
         Paths.get(System.getProperty("user.home"), ".local", "opt", "temurin-17", "bin", "java").takeIf { Files.isExecutable(it) }?.toString(),
         "java",
     ).first()
-    return ProcessBuilder(java17, "-Xms2G", "-Xmx6G", "@${argfile}")
+    return ProcessBuilder(java17, "-Djava.io.tmpdir=${clientDir.resolve(".java-tmp").toAbsolutePath()}", "-Xms2G", "-Xmx6G", "@${argfile}")
         .directory(clientDir.toFile()).redirectErrorStream(true).redirectOutput(console.toFile()).start()
 }
 fun screenshot(robot: Robot, out: Path): BufferedImage {
@@ -462,12 +475,16 @@ fun assessFrame(image: BufferedImage): FrameAssessment {
     var maxLuminance = 0
     var edges = 0
     var comparisons = 0
+    var nearBlack = 0
+    var nearWhite = 0
     for (y in 0 until image.height step 8) for (x in 0 until image.width step 8) {
         val rgb = image.getRGB(x, y)
         val red = (rgb shr 16) and 255
         val green = (rgb shr 8) and 255
         val blue = rgb and 255
-        bins[(red shr 4) shl 8 or (green shr 4) shl 4 or (blue shr 4)]++
+        if (red < 12 && green < 12 && blue < 12) nearBlack++
+        if (red > 235 && green > 235 && blue > 235) nearWhite++
+        bins[(red shr 4) * 256 + (green shr 4) * 16 + (blue shr 4)]++
         val luminance = (red * 54 + green * 183 + blue * 19) / 256
         minLuminance = minOf(minLuminance, luminance)
         maxLuminance = maxOf(maxLuminance, luminance)
@@ -485,8 +502,13 @@ fun assessFrame(image: BufferedImage): FrameAssessment {
     }
     val edgeDensity = edges.toDouble() / comparisons.coerceAtLeast(1)
     val luminanceRange = maxLuminance - minLuminance
+    val blackFraction = nearBlack.toDouble() / samples
+    val whiteFraction = nearWhite.toDouble() / samples
     if (entropy < 1.35 || luminanceRange < 18 || edgeDensity < 0.004) {
         return FrameAssessment(false, "low-entropy or flat non-world frame", entropy, edgeDensity, luminanceRange)
+    }
+    if (blackFraction > 0.42 && whiteFraction > 0.12) {
+        return FrameAssessment(false, "xray-like geometry corruption signature", entropy, edgeDensity, luminanceRange)
     }
     return FrameAssessment(true, entropy = entropy, edgeDensity = edgeDensity, luminanceRange = luminanceRange)
 }
@@ -666,7 +688,7 @@ fun badMarkersSince(clientDir: Path, offset: Long): List<String> {
 fun verifyPlayerInWorld(): Boolean {
     val marker = "BTM_CAPTURE_IN_WORLD"
     val before = Regex(marker).findAll(tail(server!!.log)).count()
-    send(server!!, "execute if entity @a[name=AgentShot,gamemode=spectator] run say $marker", commands)
+    send(server!!, "execute if entity @a[name=AgentShot] run say $marker", commands)
     val deadline = System.currentTimeMillis() + 10_000
     while (System.currentTimeMillis() < deadline) {
         if (!server!!.process.isAlive) return false
@@ -689,9 +711,9 @@ fun prepareCleanFrame(stage: String): String {
         hudHidden = true
         appendProgress("hud_hidden", detail = "stage=$stage")
     }
-    // This disposable username always begins in class-selector's spawn-only flow.
-    // Completing it prevents repeated action-bar prompts during the capture session.
-    pressKey(KeyEvent.VK_K)
+    // This disposable username begins in class-selector's spawn-only flow.
+    // Complete it once at join; later shots must not manufacture fresh UI input.
+    if (stage == "client_join") pressKey(KeyEvent.VK_K)
     Thread.sleep(2_000)
     val observed = badMarkersSince(clientDir, before)
     if (observed.isNotEmpty() && observed.any { it != "press k to set your starting spawn and begin" }) {
@@ -730,6 +752,7 @@ try {
             commands.appendLine(command.joinToString(" "))
             if (run(command, 1_800, evidence.resolve("prepare-client.log")) != 0) error("client runtime preparation failed")
         }
+        configureServer(serverDir)
         configureClient(clientDir)
         prepareArgfile(clientDir, "AgentShot", evidence.resolve("client.args"), evidence.resolve("client-argfile.log"))
     }

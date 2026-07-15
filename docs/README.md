@@ -16,7 +16,7 @@ Better Content is a Forge 1.20.1 expert-pack content layer built around bounded 
 
 The main source trees are `kubejs/`, `config/`, `defaultconfigs/`, `datapacks/`, `globalresources/`, `resourcepacks/`, `shaderpacks/`, active `mods/*.pw.toml`, bundled custom jars in `mods/`, and `tools/`.
 
-Runtime directories, raw logs, crash reports, screenshots, profiler dumps, generated quest/site/runtime dumps, and local launcher state are not documentation. Keep them under `/tmp`, `server-instance/`, `server-template/`, or `generated/` unless explicitly requested otherwise.
+Runtime directories, raw logs, crash reports, screenshots, profiler dumps, generated quest/site/runtime dumps, and local launcher state are not documentation. Keep them under `~/.cache/bc`, `server-instance/`, `server-template/`, or `generated/` unless explicitly requested otherwise.
 
 ## Doc Policy
 

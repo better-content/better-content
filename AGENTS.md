@@ -61,14 +61,14 @@ Do not sync or delete player/runtime state by default. Use explicit reset flags 
 - Launcher: `tools/bc`
 - Validation: `tools/bc test static`
 - Existing runtime validation: `tools/bc test runtime --instance /path/to/fresh/runtime`
-- Fresh smoke validation: `tools/bc test smoke --server-dir /tmp/bc-agent-validate-smoke --port 25565 --reset-runtime`
+- Fresh smoke validation: `tools/bc test smoke --server-dir ~/.cache/bc/agent-validate-smoke --port 25565 --reset-runtime`
 - Headless scenario validation: `tools/bc test scenario opening_progression --cycles 1`
 - Headful scenario validation: `tools/bc test scenario-headful client_smoke --profile quick --bootstrap-mode once`
 - Kotlin test runner: `tools/bc test kotlin`
 - Graph adjacency query: `tools/bc graph item ITEM_ID [--producers|--consumers|--all] [--limit N] [--type RECIPE_TYPE] [--graph PATH]`
 - Graph route query: `tools/bc graph route ITEM_ID [--graph PATH] [--sources PATH] [--spine PATH]`
 - Graph blocker query: `tools/bc graph blockers ITEM_ID [--graph PATH] [--sources PATH] [--spine PATH] [--limit N]`
-- Runtime dump refresh: `tools/bc build dumps --server-dir /tmp/bc-dump-refresh --port 25565 --reset-runtime`
+- Runtime dump refresh: `tools/bc build dumps --server-dir ~/.cache/bc/dump-refresh --port 25565 --reset-runtime`
 - Server sync dry run: `tools/bc build sync server --dir server-instance --dry-run`
 - Server sync apply: `tools/bc build sync server --dir server-instance --apply`
 - Client sync dry run: `tools/bc build sync client --dir /path/to/client --dry-run`
@@ -121,12 +121,12 @@ Use the portable harness layer for repeatable runtime tests instead of hand-buil
   - fatal log classifiers
   - activity signatures
   - scenario phases and console commands
-- Keep scenario scripts deterministic and disposable. They should create fresh server/client runtimes under `/tmp`, use direct launchers only, and write machine summaries under the disposable run root.
-- Keep raw logs, crash reports, thread dumps, heap info, generated worlds, and per-run summaries under the `/tmp` run root. Commit only concise conclusions in `docs/runtime_validation.md` or `docs/performance_and_mods.md` when useful.
+- Keep scenario scripts deterministic and disposable. They should create fresh server/client runtimes under `~/.cache/bc/` or an explicit cache-backed `--run-root`, use direct launchers only, and write machine summaries under the disposable run root.
+- Keep raw logs, crash reports, thread dumps, heap info, generated worlds, and per-run summaries under the disposable cache-backed run root. Commit only concise conclusions in `docs/runtime_validation.md` or `docs/performance_and_mods.md` when useful.
 - Harness scripts are repo tooling, not pack content. `tools/` must stay excluded from packwiz via `.packwizignore`; verify with `rg '^file = "tools/' index.toml` after `packwiz refresh`.
 - Do not make a stability harness pass by disabling the feature being tested. Required mods and features must stay enabled unless the user explicitly asks for an exclusion experiment.
 - Prefer adding a new scenario wrapper over copying launcher/process code. Keep shared harness behavior internal and expose new cases through `tools/bc test scenario`.
-- Use `--cycles`, `--idle-seconds`, `--keep-going`, `--keep-runs`, `--min-free-gb`, and `--max-old-runs` to tune validation runs. Default behavior should prune old `/tmp` runs and fail early if free space is low.
+- Use `--cycles`, `--idle-seconds`, `--keep-going`, `--keep-runs`, `--min-free-gb`, and `--max-old-runs` to tune validation runs. Default behavior should prune old cache-backed runs and fail early if free space is low.
 - On stalls, timeouts, watchdogs, JVM exits, or crash reports, capture diagnostics through the harness before stopping processes.
 
 Current LC/DH scenario:
@@ -138,7 +138,7 @@ This scenario is diagnostic-only. Do not treat it as part of the normal `tools/b
 Current server RAM partition scenario:
 - Run: `tools/bc test scenario mod_ram_partition --bootstrap-mode once`
 - Bounded dry run: `tools/bc test scenario mod_ram_partition --bootstrap-mode once --max-depth 2 --settle-seconds 20 --sample-count 3 --keep-runs`
-- Low-space override: add `--run-root ~/.cache/bc-mod-ram-partition` when `/tmp` is too small for Forge bootstrap
+- Run-root override: add `--run-root ~/.cache/bc/mod-ram-partition` when you need a dedicated disposable location for Forge bootstrap
 - Expectation: the lane prepares one disposable dedicated-server runtime, recursively removes dependency-closed halves of the current mod pool, captures `/proc` RSS/HWM plus `jcmd` heap/native-memory evidence, persists resumable queue/results state under its run root, refreshes its baseline periodically, and switches to rescue-mode culprit search if the full-pack baseline cannot boot within the current heap envelope.
 
 Current VS ships diagnostic scenarios:
@@ -169,7 +169,7 @@ These scenarios are failure-surface discovery lanes for Valkyrien Skies, Eureka,
 Recommended validation ladder:
 1. Static checks: `tools/bc test static`.
 2. Existing fresh runtime: `tools/bc test runtime --instance /path/to/fresh/runtime`.
-3. Fresh server smoke for recipe/config/content changes: `tools/bc test smoke --server-dir /tmp/bc-content-smoke --port 25565 --reset-runtime`.
+3. Fresh server smoke for recipe/config/content changes: `tools/bc test smoke --server-dir ~/.cache/bc/content-smoke --port 25565 --reset-runtime`.
 4. Client/server scenario harnesses for stability, rendering, login, Lost Cities regression repro, or client-only work: `tools/bc test scenario ...`.
 
 Treat runtime validation as authoritative only when it reads logs and KubeJS audit dumps from a fresh or intentionally reused current runtime. `tools/bc test runtime` and `tools/bc test smoke` run the pack suite in strict runtime mode. Add `--strict-data-dumps` only when vanilla `/dump` output such as `dump/data_raw/loot_tables` was intentionally generated; this is separate from KubeJS audit dumps under `kubejs/config`.
@@ -178,10 +178,10 @@ After changing the validation surface or evidence claims, verify `tools/bc test 
 
 For runtime/tooling changes, also run:
 1. `tools/bc doctor env`
-2. `tools/bc build sync server --dir /tmp/bc-sync-server --dry-run`
-3. `tools/bc build sync server --dir /tmp/bc-sync-server --apply`
-4. `tools/bc build sync client --dir /tmp/bc-sync-client --dry-run`
-5. `tools/bc build sync client --dir /tmp/bc-sync-client --apply`
+2. `tools/bc build sync server --dir ~/.cache/bc/sync-server --dry-run`
+3. `tools/bc build sync server --dir ~/.cache/bc/sync-server --apply`
+4. `tools/bc build sync client --dir ~/.cache/bc/sync-client --dry-run`
+5. `tools/bc build sync client --dir ~/.cache/bc/sync-client --apply`
 6. `tools/bc test kotlin`
 
 If `tools/bc doctor env` reports missing prerequisites, do not claim validation parity for commands that depend on them.

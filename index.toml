@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "AGENTS.md"
-hash = "73ac73964754a349ebc142b150e3ea2790c9369b1f09871d2f291b46a9b6ae52"
+hash = "eb105fd8e5080698befdfbe21d67c4789e7bf4a583dd9430ee843ef78bfe83f9"
 
 [[files]]
 file = "LICENSE"
@@ -10957,7 +10957,7 @@ hash = "f8cf149a60d811faec6c0fcd0b39b8fcad5a8c1d6af3479f867b8dd6c2576d5e"
 
 [[files]]
 file = "mods/bcfixes-0.1.0.jar"
-hash = "fb1d4617fe184ff07b22a681c7c8745c9b84bc5d888324aae9457d1fe88389fe"
+hash = "17461695216edc1eb37cb41d4a7f15df2c0d191009dbe40fe1b36ba536b5b81a"
 
 [[files]]
 file = "mods/better-combat-by-daedelus.pw.toml"
@@ -11706,7 +11706,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillagercampaigns-0.2.0.jar"
-hash = "43c6bb5ae139a7601dfd19396b7b8c3bbcb21165e4d099027c7c01cfaa79ca1e"
+hash = "24fde063b79a306cfd50538ccfd37be4814ab73e2fc396d75181d65e796ecb7a"
 
 [[files]]
 file = "mods/placebo.pw.toml"

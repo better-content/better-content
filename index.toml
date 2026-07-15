@@ -5145,6 +5145,10 @@ file = "config/bettercombat/client.json5"
 hash = "744d7a62f2b493bc45feb87a6a09a5ca1663d4439999dc07b05278e353b35fcb"
 
 [[files]]
+file = "config/bettergrass.json5"
+hash = "2d6633312cdf6f1ffb39de621f9fcab21874f44fcdc736db89b5c52c40abe18d"
+
+[[files]]
 file = "config/biome_replacer.properties"
 hash = "8cf121bf207b832ab87e04be0859c9a42fee5894620decf14aee2fb29e27f957"
 

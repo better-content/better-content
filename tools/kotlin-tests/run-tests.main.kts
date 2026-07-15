@@ -269,7 +269,15 @@ fun startBackground(
 
 fun ephemeralPort(): Int = java.net.ServerSocket(0).use { it.localPort }
 
-fun firstHarnessRunDir(harnessRoot: Path): Path = Files.list(harnessRoot).use { it.findFirst().orElseThrow() }
+fun firstHarnessRunDir(harnessRoot: Path): Path =
+    Files.list(harnessRoot).use { entries ->
+        entries
+            .filter { Files.isDirectory(it) }
+            .filter { it.fileName.toString() != "port-reservations" }
+            .filter { Files.exists(it.resolve("status.json")) || Files.exists(it.resolve("lock.json")) }
+            .findFirst()
+            .orElseThrow { IllegalStateException("missing harness run directory under $harnessRoot") }
+    }
 
 fun harnessOwnerPid(harnessRoot: Path): Long =
     jsonNumber(readJson(firstHarnessRunDir(harnessRoot).resolve("lock.json"))["pid"])?.toLong()

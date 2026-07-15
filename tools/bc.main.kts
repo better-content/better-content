@@ -123,6 +123,7 @@ data class HarnessSpec(
     val workDirOrRunRoot: String,
     val requestedPort: Int? = null,
     val actualPort: Int? = null,
+    val reservedPortPath: Path? = null,
     val phase: String = "starting",
     val evidencePaths: List<String> = emptyList(),
     val latestStatusPath: Path? = null,
@@ -659,8 +660,16 @@ fun isoTimestamp(): String = Instant.now().toString()
 
 fun currentPid(): Long = ProcessHandle.current().pid()
 
+fun isZombiePid(pid: Long): Boolean {
+    val statusPath = Path.of("/proc", pid.toString(), "status")
+    if (!statusPath.exists()) return false
+    return runCatching {
+        Files.readAllLines(statusPath).firstOrNull { it.startsWith("State:") }?.contains("\tZ") == true
+    }.getOrDefault(false)
+}
+
 fun isPidAlive(pid: Long?): Boolean =
-    pid != null && pid > 0 && ProcessHandle.of(pid).map { it.isAlive }.orElse(false)
+    pid != null && pid > 0 && ProcessHandle.of(pid).map { it.isAlive }.orElse(false) && !isZombiePid(pid)
 
 fun stableHash(text: String): String {
     val digest = MessageDigest.getInstance("SHA-256")
@@ -690,11 +699,61 @@ fun syncLatestPointer(target: Path?, source: Path) {
     Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING)
 }
 
-fun resolveAvailablePort(requestedPort: Int, maxOffset: Int = 50): Int? {
+data class ReservedPort(
+    val port: Int,
+    val path: Path?,
+)
+
+fun tryReleaseStalePortReservation(path: Path): Boolean {
+    val lockFile = path.resolve("owner.json")
+    val pid = jsonNumber(readJsonFile(lockFile)["pid"])?.toLong()
+    if (pid != null && isPidAlive(pid)) return false
+    return runCatching {
+        Files.deleteIfExists(lockFile)
+        Files.deleteIfExists(path)
+        true
+    }.getOrDefault(false)
+}
+
+fun releasePortReservation(path: Path?) {
+    if (path == null) return
+    runCatching {
+        Files.deleteIfExists(path.resolve("owner.json"))
+        Files.deleteIfExists(path)
+    }
+}
+
+fun reserveAvailablePort(requestedPort: Int, maxOffset: Int = 50): ReservedPort? {
+    val reservationRoot = harnessRoot.resolve("port-reservations")
+    reservationRoot.createDirectories()
     for (candidate in requestedPort..(requestedPort + maxOffset)) {
+        val reservationPath = reservationRoot.resolve(candidate.toString())
+        val reserved = runCatching {
+            Files.createDirectory(reservationPath)
+            writeJsonFile(
+                reservationPath.resolve("owner.json"),
+                mapOf("pid" to currentPid(), "port" to candidate, "reserved_at" to isoTimestamp()),
+            )
+            true
+        }.getOrElse { error ->
+            if (error is FileAlreadyExistsException && tryReleaseStalePortReservation(reservationPath)) {
+                runCatching {
+                    Files.createDirectory(reservationPath)
+                    writeJsonFile(
+                        reservationPath.resolve("owner.json"),
+                        mapOf("pid" to currentPid(), "port" to candidate, "reserved_at" to isoTimestamp()),
+                    )
+                    true
+                }.getOrDefault(false)
+            } else {
+                false
+            }
+        }
+        if (!reserved) continue
         try {
-            ServerSocket(candidate).use { return candidate }
+            ServerSocket(candidate).use { return ReservedPort(candidate, reservationPath) }
         } catch (_: Exception) {
+            releasePortReservation(reservationPath)
         }
     }
     return null
@@ -822,6 +881,7 @@ class HarnessRun(
         for ((key, value) in summaryExtra) baseSummary[key] = value
         writeJsonFile(paths.summary, baseSummary)
         syncPointers()
+        releasePortReservation(spec.reservedPortPath)
         clearLock()
         runCatching { Runtime.getRuntime().removeShutdownHook(shutdownHook) }
     }
@@ -829,7 +889,7 @@ class HarnessRun(
     private fun clearLock() {
         val lock = readJsonFile(paths.lock)
         val lockPid = jsonNumber(lock["pid"])?.toLong()
-        val lockOwnerAlive = lockPid?.let { ProcessHandle.of(it).map(ProcessHandle::isAlive).orElse(false) } ?: false
+        val lockOwnerAlive = isPidAlive(lockPid)
         if (lockPid == null || lockPid == ownerPid || !lockOwnerAlive) {
             Files.deleteIfExists(paths.lock)
         }
@@ -5084,7 +5144,8 @@ fun handleTest(subArgs: List<String>): CommandResult {
             }
             val serverPath = resolveUserPath(serverDir)
             val requestedPort = port.toInt()
-            val actualPort = resolveAvailablePort(requestedPort)
+            val inheritedPort = System.getenv("BC_HARNESS_ALLOW_PORT")?.toIntOrNull()
+            val reservedPort = (if (inheritedPort == requestedPort) ReservedPort(requestedPort, null) else reserveAvailablePort(requestedPort))
                 ?: return CommandResult(
                     command = "test smoke",
                     status = "failure",
@@ -5102,10 +5163,12 @@ fun handleTest(subArgs: List<String>): CommandResult {
                     repoOrScenario = "smoke",
                     workDirOrRunRoot = serverPath.toString(),
                     requestedPort = requestedPort,
-                    actualPort = actualPort,
+                    actualPort = reservedPort.port,
+                    reservedPortPath = reservedPort.path,
                 ),
             )
             if (conflict != null) {
+                releasePortReservation(reservedPort.path)
                 return CommandResult(
                     command = "test smoke",
                     status = "failure",
@@ -5118,18 +5181,18 @@ fun handleTest(subArgs: List<String>): CommandResult {
                 )
             }
             harness!!
-            harness.announce(remapped = actualPort != requestedPort)
-            if (actualPort != requestedPort && !jsonOutput && !quiet) {
-                println("note: requested port $requestedPort was busy; using $actualPort")
+            harness.announce(remapped = reservedPort.port != requestedPort)
+            if (reservedPort.port != requestedPort && !jsonOutput && !quiet) {
+                println("note: requested port $requestedPort was busy; using ${reservedPort.port}")
             }
             harness.updateStatus(
                 status = "running",
                 phase = "bootstrap",
-                lastError = if (actualPort != requestedPort) "requested port $requestedPort remapped to $actualPort" else null,
-                extra = mapOf("port_note" to if (actualPort != requestedPort) "remapped" else "requested"),
+                lastError = if (reservedPort.port != requestedPort) "requested port $requestedPort remapped to ${reservedPort.port}" else null,
+                extra = mapOf("port_note" to if (reservedPort.port != requestedPort) "remapped" else "requested"),
             )
             val run = try {
-                runSmokeValidation(serverPath, actualPort, reset, bootstrapMode, harness)
+                runSmokeValidation(serverPath, reservedPort.port, reset, bootstrapMode, harness)
             } catch (error: Throwable) {
                 harness.finalizeState("failed", lastError = error.message ?: error::class.java.simpleName, preserveSummary = true)
                 throw error
@@ -5139,7 +5202,7 @@ fun handleTest(subArgs: List<String>): CommandResult {
                 command = "test smoke",
                 summary = "smoke validation passed",
                 artifacts = listOf(ArtifactRef(serverPath.toString(), "directory"), ArtifactRef(harness.paths.status.toString()), ArtifactRef(harness.paths.summary.toString())),
-                details = mapOf("serverDir" to serverPath.toString(), "requestedPort" to requestedPort, "actualPort" to actualPort, "resetRuntime" to reset, "bootstrapMode" to bootstrapMode),
+                details = mapOf("serverDir" to serverPath.toString(), "requestedPort" to requestedPort, "actualPort" to reservedPort.port, "resetRuntime" to reset, "bootstrapMode" to bootstrapMode),
                 mutated = true,
                 evidenceLevel = "fresh-runtime",
             ).also {
@@ -5149,7 +5212,7 @@ fun handleTest(subArgs: List<String>): CommandResult {
                 status = "failure",
                 summary = "test smoke failed with exit $exitCode",
                 findings = listOf(ValidationFinding("error", "test smoke failed with exit $exitCode")),
-                details = mapOf("serverDir" to serverPath.toString(), "requestedPort" to requestedPort, "actualPort" to actualPort, "resetRuntime" to reset, "bootstrapMode" to bootstrapMode) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
+                details = mapOf("serverDir" to serverPath.toString(), "requestedPort" to requestedPort, "actualPort" to reservedPort.port, "resetRuntime" to reset, "bootstrapMode" to bootstrapMode) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
                 artifacts = listOf(ArtifactRef(harness.paths.status.toString()), ArtifactRef(harness.paths.summary.toString())),
                 exitCode = exitCode,
                 evidenceLevel = "fresh-runtime",
@@ -5180,8 +5243,8 @@ fun handleTest(subArgs: List<String>): CommandResult {
             var passthroughArgs = subArgs.drop(2)
             val runRoot = scenarioDefaultRunRoot(name, passthroughArgs)
             val requestedPort = scenarioRequestedPort(name, passthroughArgs)
-            val actualPort = requestedPort?.let {
-                resolveAvailablePort(it) ?: return CommandResult(
+            val reservedPort = requestedPort?.let {
+                reserveAvailablePort(it) ?: return CommandResult(
                     command = if (scenario.headful) "test scenario-headful $name" else "test scenario $name",
                     status = "failure",
                     summary = "no free port found in ${it}..${it + 50}",
@@ -5191,8 +5254,8 @@ fun handleTest(subArgs: List<String>): CommandResult {
                     evidenceLevel = "scenario-runtime",
                 )
             }
-            if (actualPort != null) {
-                passthroughArgs = replaceFlagValue(passthroughArgs, "--port", actualPort.toString())
+            if (reservedPort != null) {
+                passthroughArgs = replaceFlagValue(passthroughArgs, "--port", reservedPort.port.toString())
             }
             val latestStatus = runRoot.resolve("latest-status.json")
             val latestSummary = runRoot.resolve("latest-summary.json")
@@ -5206,12 +5269,14 @@ fun handleTest(subArgs: List<String>): CommandResult {
                     repoOrScenario = scenario.name,
                     workDirOrRunRoot = runRoot.toString(),
                     requestedPort = requestedPort,
-                    actualPort = actualPort,
+                    actualPort = reservedPort?.port,
+                    reservedPortPath = reservedPort?.path,
                     latestStatusPath = latestStatus,
                     latestSummaryPath = latestSummary,
                 ),
             )
             if (conflict != null) {
+                releasePortReservation(reservedPort?.path)
                 return CommandResult(
                     command = commandName,
                     status = "failure",
@@ -5225,9 +5290,9 @@ fun handleTest(subArgs: List<String>): CommandResult {
                 )
             }
             harness!!
-            harness.announce(remapped = requestedPort != null && actualPort != requestedPort)
-            if (requestedPort != null && actualPort != null && actualPort != requestedPort && !jsonOutput && !quiet) {
-                println("note: requested port $requestedPort was busy; using $actualPort")
+            harness.announce(remapped = requestedPort != null && reservedPort?.port != requestedPort)
+            if (requestedPort != null && reservedPort != null && reservedPort.port != requestedPort && !jsonOutput && !quiet) {
+                println("note: requested port $requestedPort was busy; using ${reservedPort.port}")
             }
             harness.updateStatus(status = "running", phase = "bootstrap")
             val processCommand = listOf("kotlin", scenario.script) + passthroughArgs
@@ -5239,7 +5304,8 @@ fun handleTest(subArgs: List<String>): CommandResult {
                 put("BC_HARNESS_LATEST_STATUS_PATH", latestStatus.toString())
                 put("BC_HARNESS_LATEST_SUMMARY_PATH", latestSummary.toString())
                 put("BC_HARNESS_REQUESTED_PORT", requestedPort?.toString() ?: "")
-                put("BC_HARNESS_ACTUAL_PORT", actualPort?.toString() ?: "")
+                put("BC_HARNESS_ACTUAL_PORT", reservedPort?.port?.toString() ?: "")
+                put("BC_HARNESS_ALLOW_PORT", reservedPort?.port?.toString() ?: "")
                 put("BC_HARNESS_RUN_ROOT", runRoot.toString())
                 put("BC_HARNESS_SCENARIO", name)
             }
@@ -5250,7 +5316,7 @@ fun handleTest(subArgs: List<String>): CommandResult {
                 success(
                     command = commandName,
                     summary = "scenario $name passed",
-                    details = mapOf("scenario" to scenario.name, "script" to scenario.script, "args" to passthroughArgs, "headful" to scenario.headful, "requestedPort" to requestedPort, "actualPort" to actualPort, "runRoot" to runRoot.toString()),
+                    details = mapOf("scenario" to scenario.name, "script" to scenario.script, "args" to passthroughArgs, "headful" to scenario.headful, "requestedPort" to requestedPort, "actualPort" to reservedPort?.port, "runRoot" to runRoot.toString()),
                     artifacts = listOf(ArtifactRef(harness.paths.status.toString()), ArtifactRef(harness.paths.summary.toString()), ArtifactRef(latestStatus.toString()), ArtifactRef(latestSummary.toString())),
                     evidenceLevel = "scenario-runtime",
                     mutated = true,
@@ -5261,7 +5327,7 @@ fun handleTest(subArgs: List<String>): CommandResult {
                     command = commandName,
                     status = "failure",
                     summary = "$commandName failed with exit $mappedExit",
-                    details = mapOf("scenario" to scenario.name, "script" to scenario.script, "args" to passthroughArgs, "headful" to scenario.headful, "requestedPort" to requestedPort, "actualPort" to actualPort, "runRoot" to runRoot.toString()) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
+                    details = mapOf("scenario" to scenario.name, "script" to scenario.script, "args" to passthroughArgs, "headful" to scenario.headful, "requestedPort" to requestedPort, "actualPort" to reservedPort?.port, "runRoot" to runRoot.toString()) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
                     findings = listOf(ValidationFinding("error", "$commandName failed with exit $mappedExit")),
                     artifacts = listOf(ArtifactRef(harness.paths.status.toString()), ArtifactRef(harness.paths.summary.toString()), ArtifactRef(latestStatus.toString()), ArtifactRef(latestSummary.toString())),
                     exitCode = mappedExit,

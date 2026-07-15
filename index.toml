@@ -11001,11 +11001,11 @@ metafile = true
 
 [[files]]
 file = "mods/bcdimtrees-0.1.0.jar"
-hash = "f8cf149a60d811faec6c0fcd0b39b8fcad5a8c1d6af3479f867b8dd6c2576d5e"
+hash = "07059dcb88124441e96ba9867d0c67770632c62a0f6e6b0d72ce9704480ffd89"
 
 [[files]]
 file = "mods/bcfixes-0.1.0.jar"
-hash = "17461695216edc1eb37cb41d4a7f15df2c0d191009dbe40fe1b36ba536b5b81a"
+hash = "bd56b1ebbe5e2b75093347042929f7b8e54563a64e0f6eebdca0b3d8d3bb91dd"
 
 [[files]]
 file = "mods/better-combat-by-daedelus.pw.toml"
@@ -11069,7 +11069,7 @@ metafile = true
 
 [[files]]
 file = "mods/classselector-1.0.0.jar"
-hash = "4c79f842299e118366756eb643988b0d75f114da1e0f2b99e872d0353d1702d0"
+hash = "5d474546889aa4a20ee547f2bb5d7223106f85f894abcabe5850ad05803e7f71"
 
 [[files]]
 file = "mods/cloth-config.pw.toml"
@@ -11093,7 +11093,7 @@ metafile = true
 
 [[files]]
 file = "mods/computerbridge-0.1.0.jar"
-hash = "6a3a2b7c610400dc17ba0829791f281ec9b5ded3aef8d63c97f954e06c9928f3"
+hash = "af9e0f93042e89079b6fabd0633a384b73abf9a3fd9acb3bb936ac258abd1cc6"
 
 [[files]]
 file = "mods/concurrent-chunk-management-engine-for-forge-the.pw.toml"
@@ -11157,11 +11157,11 @@ metafile = true
 
 [[files]]
 file = "mods/create-train-fuel-scaling-0.1.0.jar"
-hash = "37f145f2c80285ed60bc55febac018d28c72fbe3eccb4089ca15d4a8fa9eaf78"
+hash = "116ffe2ff10d165400df86bf26d10094b27a0feae43b17eea5a12fd02462b0cc"
 
 [[files]]
 file = "mods/create-transmission-loss-0.1.0.jar"
-hash = "9b9062ebbd3314da1fb4d582d7043955276f443702b4b6ec94928a763ee7f0fa"
+hash = "4c8b313f5757dfa794bb06ddbad18bb55d9d1b74e4df58388871e8aee54cff31"
 
 [[files]]
 file = "mods/create.pw.toml"
@@ -11205,7 +11205,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimensiondrink-1.0.0.jar"
-hash = "495305c53d340b2d8f568e7bdd4907232f2a464ae12e44e156a75f20ab03eb79"
+hash = "2f998252f150d1eee7de912e5a1fd7025d935a94482af4388926db37f518f916"
 
 [[files]]
 file = "mods/ding.pw.toml"
@@ -11219,11 +11219,11 @@ metafile = true
 
 [[files]]
 file = "mods/dthexerei-1.0.0.jar"
-hash = "8bbe1b47fe09900c6a321a57db358123cda74ce1b43454eaac7d298564653805"
+hash = "52cc0946c0055e1aaa84b18c6baa052cc69b3110d7e1ebbb277c1a03b6833c76"
 
 [[files]]
 file = "mods/dtmalum-1.0.0.jar"
-hash = "9809c640d8ff7e0fd79ed0c5d35310c1b52d60f727462ff2b29eae1d5b6005a0"
+hash = "74eefd51a09821048072b4bbb7918a669e209228406629c407e496c9243be261"
 
 [[files]]
 file = "mods/dungeon-crawl.pw.toml"
@@ -11487,7 +11487,7 @@ metafile = true
 
 [[files]]
 file = "mods/heatsync-0.1.0.jar"
-hash = "6745a5cfc6b7a3870e3aa5cb134fc09a451e6aaf9c13e23249412bb072cb773e"
+hash = "1d9baee73d3acf9140c953ce5ed8d9e7bf0a850e0ed1164e17701c46566beb31"
 
 [[files]]
 file = "mods/hexerei.pw.toml"
@@ -11601,7 +11601,7 @@ metafile = true
 
 [[files]]
 file = "mods/latent_chemlib-0.1.0.jar"
-hash = "af748215f9ba5d00e49357ede40aa03c93eacfbef0b9fe214fbec032e8ac4bad"
+hash = "a2b1720267499cd6c4b27e1083d64499c5a288a600e33c7b8d3e3cadc6af12e7"
 
 [[files]]
 file = "mods/lithostitched.pw.toml"
@@ -11730,7 +11730,7 @@ metafile = true
 
 [[files]]
 file = "mods/oc2rwireless-1.0.0.jar"
-hash = "73bb37a9fc766d78a689dfb52e45cee3af22c4c3e854353f8c31cd81b4b35f31"
+hash = "c082b7437dd3d4920f1960e8f28044c86857b696b007fe10c349905c82c54772"
 
 [[files]]
 file = "mods/occultism.pw.toml"
@@ -11754,7 +11754,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillagercampaigns-0.2.0.jar"
-hash = "32ac8d64bda1de5f27970420e7a262acc66df419eeb0be32b44505b3cb992063"
+hash = "b66e9089817abbed9cd8a5d6d42cdb4ea19696ceee4a458c646a642dbd43fb66"
 
 [[files]]
 file = "mods/placebo.pw.toml"
@@ -11798,7 +11798,7 @@ metafile = true
 
 [[files]]
 file = "mods/procedural_bouquets-0.1.0.jar"
-hash = "cecd98e0adc7479393aef9cfe7e70dbf107cdcf127360026115fc8df8e4fd223"
+hash = "5197e4dac494c8f1122dcb2960a633c6b1225440cd63d26a6e235ee604c8e980"
 
 [[files]]
 file = "mods/project-vibrant-journeys.pw.toml"
@@ -11837,7 +11837,7 @@ metafile = true
 
 [[files]]
 file = "mods/realisticores-0.1.0.jar"
-hash = "9920d52082a4e0c7d01b98e763537e3dd79b3a72a1aa7908899e0d930e323015"
+hash = "9f7415411273fb7d8f541d2fb0727e7d0242dcfa52c9c488ead56976b90af893"
 
 [[files]]
 file = "mods/rehooked.pw.toml"
@@ -11876,7 +11876,7 @@ metafile = true
 
 [[files]]
 file = "mods/rpgstats-1.0.0.jar"
-hash = "739b0e6b9ceba94664e61172b5e3c72e0a9b0fa690d3f97d8d33f0141ec3d74d"
+hash = "c32006f6a6a4d78f50ee78fa7fe4e8a82eec7e4c6f63e446beeb24acb3252ed4"
 
 [[files]]
 file = "mods/rustic-delight.pw.toml"
@@ -11910,7 +11910,7 @@ metafile = true
 
 [[files]]
 file = "mods/settlementroads-0.1.0.jar"
-hash = "3d6564e61aa9ce8b1a3a88ee93b7e6e1b33395dddb41a2d71f5194161e12641b"
+hash = "51367379d34c315440139d1c957cae0cc4f0af08e7bcf3880f4916dbd906abc2"
 
 [[files]]
 file = "mods/shatterbyte-lib.pw.toml"
@@ -12004,7 +12004,7 @@ metafile = true
 
 [[files]]
 file = "mods/tconaffixes-1.0.0.jar"
-hash = "196344885bf9bf7babf344c0b93e5030e84057aaec0afb3871c0a0db8995980e"
+hash = "a76df4fe437b782bb5b59b0614a0f4720f5bf6ccd67a79b647f3f57ca65e955e"
 
 [[files]]
 file = "mods/tconjei.pw.toml"
@@ -12173,7 +12173,7 @@ metafile = true
 
 [[files]]
 file = "mods/villagewalls-1.0.0.jar"
-hash = "49687ead657f22c14be19beeee18e37d73b04563331b4a015002e22455bd0f11"
+hash = "1e2c4486d70af32265d37ec234116701ef937ca56da991444d13f1ecb90a7cd4"
 
 [[files]]
 file = "mods/wares.pw.toml"

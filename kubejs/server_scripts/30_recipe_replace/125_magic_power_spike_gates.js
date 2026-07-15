@@ -175,8 +175,7 @@ ServerEvents.recipes(function (event) {
         'arseng:source_acceptor',
         'arseng:source_cell_housing',
         'arseng:portable_source_cell_64k',
-        'arseng:portable_source_cell_256k',
-        'ars_nouveau:archmage_spell_book_upgrade'
+        'arseng:portable_source_cell_256k'
     ], commonVanillaValuables.concat([
         '#forge:ingots/iron', 'minecraft:book', 'minecraft:paper', 'mna:vinteum_dust',
         'minecraft:water_bucket', 'ars_nouveau:manipulation_essence', 'ars_nouveau:source_gem_block',

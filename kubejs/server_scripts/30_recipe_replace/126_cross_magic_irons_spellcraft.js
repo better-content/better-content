@@ -1,9 +1,7 @@
-// Iron's Spells craft surface integration.
-//
-// Direct Iron's spellcraft recipes are replaced with processes from the
-// pack's magic graph. Blood Magic still sets the tier, while Ars, Hexerei,
-// Goety, Malum, Occultism, Forbidden Arcanus, and Reliquary provide the
-// working surfaces and reagents.
+// Iron's is the fixed-spell formal system. Its authoring stations are early shells;
+// the shared ink ladder sets depth and school-focus tags set magical breadth.
+
+var BC_IRONS_FORMAL_MAGIC = JsonIO.read('kubejs/config/formal_magic_domains.json') || { ink_tiers: [] }
 
 var BC_IRONS_T1 = 'bloodmagic:blankslate'
 var BC_IRONS_T2 = 'bloodmagic:reinforcedslate'
@@ -217,6 +215,21 @@ ServerEvents.recipes(function (event) {
          bcIronsRemoveOutput(event, 'irons_spellbooks:' + BC_IRONS_RUNES[i].id + '_upgrade_orb')
     }
 
+    var inkTiers = BC_IRONS_FORMAL_MAGIC.ink_tiers || []
+    for (var inkIndex = 0; inkIndex < inkTiers.length; inkIndex++) {
+        var inkTier = inkTiers[inkIndex]
+        event.remove({ id: 'irons_spellbooks:alchemist_cauldron/brew_' + inkTier.id + '_ink' })
+        event.custom({
+            type: 'irons_spellbooks:alchemist_cauldron_brew',
+            base_fluid: {
+                Amount: 1000,
+                FluidName: inkIndex === 0 ? 'minecraft:water' : inkTiers[inkIndex - 1].item
+            },
+            input: { tag: inkTier.proof_tag },
+            results: [{ Amount: 250, FluidName: inkTier.item }]
+        }).id('kubejs:formal_magic/irons/ink/' + inkTier.id)
+    }
+
      bcIronsHexereiCauldron(event, 'magic_cloth', 'irons_spellbooks:magic_cloth', 4, [
         'hexerei:wax_blend',
         'hexerei:tallow_bottle',
@@ -268,40 +281,46 @@ ServerEvents.recipes(function (event) {
         BC_IRONS_T3
     ], [bcIronsSpirit('arcane', 8), bcIronsSpirit('eldritch', 2)])
 
-     bcIronsArsApparatus(event, 'scroll_forge', 'irons_spellbooks:scroll_forge', 1, 'minecraft:crying_obsidian', [
-        'irons_spellbooks:arcane_ingot',
-        'ars_nouveau:source_gem',
-        'hexerei:blood_bottle',
-        BC_IRONS_OS_T2,
-        BC_IRONS_T2
-    ], 3000)
+    event.shaped('irons_spellbooks:scroll_forge', [
+        'DDD',
+        'COC',
+        'OOO'
+    ], {
+        D: 'minecraft:polished_deepslate',
+        C: 'create:copper_sheet',
+        O: 'minecraft:crying_obsidian'
+    }).id('kubejs:formal_magic/irons/scroll_forge')
 
-     bcIronsArsApparatus(event, 'inscription_table', 'irons_spellbooks:inscription_table', 1, 'minecraft:lectern', [
-        'irons_spellbooks:arcane_ingot',
-        'malum:runewood_tablet',
-        'forbidden_arcanus:arcane_crystal',
-        BC_IRONS_OS_T3,
-        BC_IRONS_T3
-    ], 4500)
+    event.shaped('irons_spellbooks:inscription_table', [
+        'PBP',
+        'CLC',
+        'W W'
+    ], {
+        P: 'minecraft:paper',
+        B: 'minecraft:bookshelf',
+        C: 'create:copper_sheet',
+        L: 'minecraft:lectern',
+        W: '#minecraft:planks'
+    }).id('kubejs:formal_magic/irons/inscription_table')
 
-     bcIronsGoetyRitual(event, 'arcane_anvil', 'irons_spellbooks:arcane_anvil', 1, 'minecraft:anvil', [
-        'goety:cursed_bars',
-        'goety:magic_emerald',
-        'irons_spellbooks:arcane_ingot',
-        'malum:processed_soulstone',
-        BC_IRONS_OS_T3,
-        BC_IRONS_T3
-    ], 'forge', 300, 120)
+    event.shaped('irons_spellbooks:arcane_anvil', [
+        'CAC',
+        ' O ',
+        'O O'
+    ], {
+        C: 'create:copper_sheet',
+        A: 'minecraft:anvil',
+        O: 'minecraft:crying_obsidian'
+    }).id('kubejs:formal_magic/irons/arcane_anvil')
 
-     bcIronsHexereiCauldron(event, 'alchemist_cauldron', 'irons_spellbooks:alchemist_cauldron', 1, [
-        'minecraft:cauldron',
-        'hexerei:blood_bottle',
-        'hexerei:mandrake_root',
-        'reliquary:catalyzing_gland',
-        'malum:aqueous_spirit',
-        BC_IRONS_OS_T2,
-        BC_IRONS_T2
-    ], 'minecraft:water', 'heated')
+    event.shaped('irons_spellbooks:alchemist_cauldron', [
+        'C C',
+        'CBC',
+        ' C '
+    ], {
+        C: 'create:copper_sheet',
+        B: 'minecraft:cauldron'
+    }).id('kubejs:formal_magic/irons/alchemist_cauldron')
 
      bcIronsBloodAlchemy(event, 'lesser_spell_slot_upgrade', 'irons_spellbooks:lesser_spell_slot_upgrade', 1, [bcIronsIngredient('irons_spellbooks:arcane_rune'), bcIronsIngredient('irons_spellbooks:magic_cloth'), bcIronsIngredient('ars_nouveau:source_gem'), bcIronsIngredient('malum:arcane_spirit'), bcIronsIngredient(BC_IRONS_OS_T3), bcIronsIngredient(BC_IRONS_T3)
     ], 12000, 220, 3)
@@ -329,33 +348,21 @@ ServerEvents.recipes(function (event) {
      bcIronsBloodAlchemy(event, 'shriving_stone', 'irons_spellbooks:shriving_stone', 1, [bcIronsIngredient('forbidden_arcanus:arcane_crystal'), bcIronsIngredient('malum:sacred_spirit'), bcIronsIngredient('occultism:spirit_attuned_gem'), bcIronsIngredient(BC_IRONS_OS_T3), bcIronsIngredient(BC_IRONS_T3)
     ], 9000, 180, 3)
 
-     bcIronsArsApparatus(event, 'copper_spell_book', 'irons_spellbooks:copper_spell_book', 1, 'minecraft:book', [
-        'irons_spellbooks:magic_cloth',
-        'ars_nouveau:source_gem',
-        BC_IRONS_T2
-    ], 1500)
-     bcIronsArsApparatus(event, 'iron_spell_book', 'irons_spellbooks:iron_spell_book', 1, 'irons_spellbooks:copper_spell_book', [
-        'irons_spellbooks:arcane_ingot',
-        'malum:arcane_spirit',
-        BC_IRONS_T3
-    ], 3000)
-     bcIronsArsApparatus(event, 'gold_spell_book', 'irons_spellbooks:gold_spell_book', 1, 'irons_spellbooks:iron_spell_book', [
-        'ars_nouveau:source_gem',
-        'forbidden_arcanus:arcane_crystal',
-        BC_IRONS_T3
-    ], 4500)
-     bcIronsArsApparatus(event, 'diamond_spell_book', 'irons_spellbooks:diamond_spell_book', 1, 'irons_spellbooks:gold_spell_book', [
-        'occultism:spirit_attuned_gem',
-        'irons_spellbooks:mithril_weave',
-        'occultism:spirit_attuned_gem',
-        BC_IRONS_T4
-    ], 7000)
-     bcIronsArsApparatus(event, 'netherite_spell_book', 'irons_spellbooks:netherite_spell_book', 1, 'irons_spellbooks:diamond_spell_book', [
-        'minecraft:netherite_ingot',
-        'malum:eldritch_spirit',
-        'forbidden_arcanus:stellarite_piece',
-        BC_IRONS_T5
-    ], 11000)
+    event.shapeless('irons_spellbooks:copper_spell_book', [
+        'minecraft:book', 'create:copper_sheet', 'minecraft:string'
+    ]).id('kubejs:formal_magic/irons/book/copper')
+    event.shapeless('irons_spellbooks:iron_spell_book', [
+        'irons_spellbooks:copper_spell_book', 'irons_spellbooks:common_ink', 'minecraft:iron_ingot'
+    ]).id('kubejs:formal_magic/irons/book/iron')
+    event.shapeless('irons_spellbooks:gold_spell_book', [
+        'irons_spellbooks:iron_spell_book', 'irons_spellbooks:uncommon_ink', 'minecraft:gold_ingot'
+    ]).id('kubejs:formal_magic/irons/book/gold')
+    event.shapeless('irons_spellbooks:diamond_spell_book', [
+        'irons_spellbooks:gold_spell_book', 'irons_spellbooks:rare_ink', 'minecraft:diamond'
+    ]).id('kubejs:formal_magic/irons/book/diamond')
+    event.shapeless('irons_spellbooks:netherite_spell_book', [
+        'irons_spellbooks:diamond_spell_book', 'irons_spellbooks:legendary_ink', 'minecraft:netherite_ingot'
+    ]).id('kubejs:formal_magic/irons/book/netherite')
 
      bcIronsArsApparatus(event, 'ice_spell_book', 'irons_spellbooks:ice_spell_book', 1, 'irons_spellbooks:iron_spell_book', [
         'irons_spellbooks:ice_rune',

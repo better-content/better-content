@@ -2,11 +2,11 @@
 
 ## Spine
 
-The pack has two primary crafting spines, one independent magic lane, and one pressure spine:
+The pack has two primary crafting spines, two formal magic systems, and one pressure spine:
 
 - Tech spine: Tinkers seared/scorched metallurgy into Create andesite/brass automation, then Power Grid, OC2R, Creating Space, and AE2-local intelligence.
 - Magic spines: `Dimension Drink -> Hexerei -> Occultism` and `Blood Magic -> Malum -> Goety`, with Blood Magic still supplying shared slate proofs where recipes need explicit authority.
-- Independent magic lane: Ars Nouveau opens as an early teaser book, but real spell power comes from manuscript-authored glyph unlocks fed by both dirty spines plus control/electrical precision.
+- Formal magic: Ars Nouveau provides programmable glyph composition and Iron's Spellbooks provides fixed schools, scrolls, and books. Their empty infrastructure opens early; shared inks set depth and native dirty-magic proofs set breadth.
 - Adventure spine: dimension_drink, dimensions, combat, villages, wares, and coins provide route pressure and recovery options without replacing production.
 
 Local logistics stays first. Create trains and physical routes should matter before AE2 dominates a site, and OC2R is the intended intersite information bridge.
@@ -19,7 +19,7 @@ Pillager campaign pressure is adaptive by warband rather than global time scalin
 
 Tier design should feel like conquest rather than checklisting: each new tier needs a new resource domain plus a signature transformation, not just a renamed ingredient. Matter should keep memory of where it came from, so geology, death, heat, pressure, distance, and biological growth remain visible in downstream recipes instead of collapsing into generic dusts.
 
-Magic should now read as two dirty parent traditions feeding one later clean formalism. Fonts leads into Hexerei and then Occultism's attunement and entity bargaining. Blood Magic leads into Malum and then Goety's dangerous command work. Ars Nouveau is no longer a separate light-ritual branch; the novice book appears early, but meaningful glyph access is spread across authored manuscripts crafted throughout the pack.
+Magic reads as two dirty parent traditions feeding two clean formalisms. Fonts leads into Hexerei and then Occultism's attunement and entity bargaining. Blood Magic leads into Malum and then Goety's dangerous command work. Ars Nouveau and Iron's Spellbooks both expose empty books and authoring infrastructure early, but neither can produce usable spells until a dirty tradition supplies proof for ink and a thematic domain. Ars composes programmable glyphs; Iron's records fixed spells by school.
 
 ## Death Loop
 
@@ -115,17 +115,18 @@ Chemical alternatives can offer higher yield, earlier access with more setup, or
 
 Blood Magic slates are the side-magic authority where a recipe needs hard proof, and Otherside matter is now the shared raw substrate for non-Hexerei magic infrastructure:
 
-- Blank Slate: first Blood work, Malum, common cobbled sculk stone, and the earliest Ars teaser/manuscript proofs.
+- Blank Slate: first Blood work, Malum, common cobbled sculk stone, and an entry proof for common formal ink.
 - Reinforced Slate: Hexerei and low-tier cross-magic utility, usually paired with gloomslate or echo wood outside Hexerei's core folk identity.
-- Infused Slate: Occultism bridge content, Ars source handling, stronger manuscript conversion, and sculk sensor/catalyst/shrieker or echo-shard matter.
-- Demonic Slate: Goety operations, heavier Ars apparatus/glyph manuscripts, Forbidden and Arcanus, and soul dust or sculk bone matter.
-- Ethereal Slate: late programmable or endgame magic using soul crystal, resonarium, or reinforced echo shard matter where installed and confirmed.
+- Infused Slate: Occultism bridge content, Ars source handling, rare formal ink, and sculk sensor/catalyst/shrieker or echo-shard matter.
+- Demonic Slate: Goety operations, epic formal ink, heavier Ars apparatus, Forbidden and Arcanus, and soul dust or sculk bone matter.
+- Ethereal Slate: legendary formal ink and endgame magic using soul crystal, resonarium, or reinforced echo shard matter where installed and confirmed.
 
 This keeps the agreed graph explicit:
 
 - Fonts spine: Dimension Drink -> Hexerei -> Occultism
 - Blood spine: Blood Magic -> Malum -> Goety
-- Ars lane: early novice book, then manuscript-authored glyph unlocks fed by both dirty spines plus Create/control precision
+- Ars formalism: early empty book and Scribe's Table, then all 77 retained glyphs divided among shared grammar and dirty-tradition domains
+- Iron's formalism: early empty book and authoring stations, then fixed spells whose rarity follows ink and whose school follows a native focus
 - Otherside: common origin for Blood-refined magic matter, not a standalone magic workstation spine.
 
 Cross-mod material standardization stays moderate:
@@ -134,9 +135,9 @@ Cross-mod material standardization stays moderate:
 - Shared feedstocks such as planks, logs, generic glass, silica-bearing inputs, and plate/sheet tags should standardize through tags and common substrates.
 - Mod-native proof reagents stay distinct. Do not flatten Blood Magic slates, Ars source items, Malum spirits, Occultism attunement matter, Goety cursed matter, AE2 certus/fluix/sky stone, PNCR PCB stages, or OC2R wafers into interchangeable "magic parts."
 
-Do not gate guidebooks when a workstation/core item can be gated. Do not use hearts in side-magic recipe spam; use slates and authored intermediates.
+Do not mistake infrastructure for power. Formal books and writing stations may be early because scrolls, glyphs, inks, and school focuses carry the progression gates. Do not use hearts in side-magic recipe spam; use slates and native proof materials.
 
-Iron's Spells is integrated as a cross-magic spellcraft branch, not as an independent vanilla-crafting branch. `126_cross_magic_irons_spellcraft.js` removes the direct Iron's spellcraft outputs and rebuilds them through Blood Magic tier costs plus Ars apparatus, Hexerei cauldron, Malum spirit infusion, and Goety ritual work. Malum spirits are the shared reagent language for schools and upgrades; Occultism, Forbidden and Arcanus, Hexerei, Goety, Reliquary, and Ars reagents provide theme and tier identity. Low-tier scroll discovery may remain loot-based, but high-tier spell books, upgrade orbs, high inks, and high-tier scroll tables are scrubbed as progression bypasses.
+`formal_magic_domains.json` is the authored spell-access contract. Common through legendary Iron's inks form one global depth ladder: proof from any sufficiently developed dirty route can advance it. Breadth remains non-interchangeable. Hexerei owns Nature and Ice, Occultism owns Ender, Blood Magic owns Blood, Malum owns Fire/Holy/Lightning, and Goety owns Evocation/Eldritch; the same domains partition Ars effects while a shared core supplies forms and modifiers. Random scrolls, inks, and pre-inscribed books are scrubbed from loot, so early empty infrastructure cannot become useful without crafted magical proof. Full formal completion is a quest breadth capstone after both dirty spines, not an all-mod ingredient tax on every high-tier spell.
 
 ## Late And Post-AE2
 

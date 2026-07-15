@@ -105,15 +105,15 @@ Non-village natural crop and edible-plant diversity is relocated into Undergarde
 
 Starting loadouts are owned by the fixed class selector in `config/classselector/kits.json`; `config/classselector/embark.json` is set to class mode and remains inactive point-buy fallback data. If embark mode is re-enabled later, its support pool should stay narrow: hydration, climate scouting, light, route marking, rope, a small vanilla rail start, and basic rations. Starting choices must not include starter tools, armor, logs/planks, functional crafting blocks, generic storage, coins, scuba gear, gliders, recovery compass routes, renewable specialty crop starts, ready-made TNT or TNT inputs, Protection Pixel gear, AE2, PNCR pressure items, Blood Magic LP/orbs, Create trains, Wares routes, or other missing-logistics progression before those systems provide power.
 
-`126_cross_magic_irons_spellcraft.js` is the current Iron's Spells integration surface. It treats Iron's spellcraft as an authored cross-magic branch: Blood Magic slates set tier, Otherside matter supplies the common sculk/echo/soul/resonance substrate, Ars apparatus handles source stabilization, Hexerei cauldron handles folk/alchemical setup, Malum spirit infusion upgrades school power, and Goety rituals handle cursed/high-danger artifacts. Occultism, Forbidden and Arcanus, Reliquary, Hexerei, Goety, Ars, and Malum reagents are intentionally mixed into the recipes so Iron's spell outputs cannot be mass-crafted from only vanilla valuables and Iron's own drops.
+`formal_magic_domains.json`, `126_cross_magic_irons_spellcraft.js`, and `127_ars_manuscript_progression.js` are the formal spell-access surface. Ars and Iron's are separate systems with shared infrastructure and inks: Ars composes glyphs while Iron's writes fixed school spells. Empty books and authoring stations are intentionally early. Common through legendary ink requires progressively stronger proof from any dirty route, while native domain reagents prevent one route from exposing every glyph family or Iron's school.
 
 The current slate order is deliberate and should stay easy to audit in recipes and docs:
 
-- Blank Slate: first Blood work, Malum, and the earliest Ars teaser/manuscript proofs
+- Blank Slate: first Blood work, Malum, and common formal-ink proof
 - Reinforced Slate: Hexerei and low-tier cross-magic utility
-- Infused Slate: Occultism bridge content, Ars source handling, and stronger manuscript conversion
-- Demonic Slate: Goety operations, heavier Ars apparatus/glyph manuscripts, and stronger hybrid magic
-- Ethereal Slate: programmable, networked, or post-AE2 hybrid magic
+- Infused Slate: Occultism bridge content, Ars source handling, and rare formal-ink proof
+- Demonic Slate: Goety operations, epic formal-ink proof, and stronger hybrid magic
+- Ethereal Slate: legendary formal-ink proof plus programmable, networked, or post-AE2 hybrid magic
 
 ## Casings And Manufactured Parts
 
@@ -131,7 +131,7 @@ Villager and wandering-trader markets are recovery and route-planning support, n
 Loot is treated as a crafting surface:
 
 - `20_world_chest_coin_tiers.js` injects tiered coin rewards into world chests.
-- `30_global_loot_progression_scrub.js` removes creative, netherite, flight, global-bypass items, and high-tier Iron's Spells books/orbs/inks from random loot; selected high-tier Iron's scroll tables also have scrolls removed while low-tier discovery remains possible.
+- `30_global_loot_progression_scrub.js` removes creative, netherite, flight, global-bypass items, and usable Iron's scrolls, inks, or spellbooks from random loot so formal spellcraft begins through authored reagents.
 - `40_emerald_loot_coin_replacement.js` replaces emerald currency loot with coins in chest, entity, package, and wares tables while excluding block ore drops.
 - `kubejs/data/wares/` contains current Wares package and agreement loot tables.
 

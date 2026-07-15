@@ -26,8 +26,6 @@ ServerEvents.recipes(function (event) {
     // Altar II: Hexerei is the first authored folk branch off fonts. Ars gets an
     // early teaser book separately, but real source work still waits for later proof.
     gate(event, { id: 'hexerei:mixing_cauldron' }, 'minecraft:torch', BM_SLATE_T2)
-    gate(event, { id: 'irons_spellbooks:scroll_forge' }, 'minecraft:polished_deepslate', BM_SLATE_T2)
-    gate(event, { id: 'irons_spellbooks:scroll_forge' }, 'minecraft:copper_ingot', BC_OTHERSIDE_T2)
 
     // Altar III: Occultism completes the Fonts -> Hexerei -> Occultism spine.
     gate(event, { id: 'occultism:crafting/chalk_white_impure' }, 'occultism:burnt_otherstone', BM_SLATE_T3)
@@ -48,8 +46,6 @@ ServerEvents.recipes(function (event) {
     // Altar IV: heavier Ars apparatus and Goety operations.
     gate(event, { id: 'ars_nouveau:enchanting_apparatus' }, '#forge:ingots/gold', BM_SLATE_T4)
     gate(event, { id: 'ars_nouveau:enchanting_apparatus' }, 'minecraft:diamond', BC_OTHERSIDE_T4)
-    gate(event, { id: 'ars_nouveau:apprentice_spell_book_upgrade' }, 'minecraft:diamond', BM_SLATE_T4)
-    gate(event, { id: 'ars_nouveau:apprentice_spell_book_upgrade' }, 'minecraft:blaze_rod', BC_OTHERSIDE_T4)
     gate(event, { id: 'ars_additions:apparatus/advanced_dominion_wand' }, 'minecraft:gold_ingot', BM_SLATE_T4)
     gate(event, { id: 'ars_instrumentum:apparatus/numeric_mana_charm' }, '#forge:ingots/gold', BM_SLATE_T4)
     gate(event, { id: 'ars_elemental:imbuement_lesser_air_focus' }, 'minecraft:gold_ingot', BM_SLATE_T4)
@@ -90,8 +86,6 @@ ServerEvents.recipes(function (event) {
     gate(event, { id: 'arseng:me_source_jar' }, 'ars_nouveau:manipulation_essence', BM_SLATE_T5)
     gate(event, { id: 'arseng:source_acceptor' }, 'ars_nouveau:source_gem_block', BM_SLATE_T5)
     gate(event, { id: 'arseng:source_cell_housing' }, 'ars_nouveau:manipulation_essence', BM_SLATE_T5)
-    gate(event, { id: 'ars_nouveau:archmage_spell_book_upgrade' }, 'minecraft:emerald', BM_SLATE_T5)
-    gate(event, { id: 'ars_nouveau:archmage_spell_book_upgrade' }, 'minecraft:nether_star', BC_OTHERSIDE_T5)
     gate(event, { id: 'reliquary:alkahestry_tome' }, 'minecraft:book', BM_SLATE_T5)
     gate(event, { id: 'reliquary:alkahestry_tome' }, 'minecraft:nether_star', BC_OTHERSIDE_T5)
 })

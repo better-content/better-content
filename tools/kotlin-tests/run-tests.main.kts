@@ -615,6 +615,18 @@ test("opening progression rejects invalid bootstrap mode with usage error") {
     assertContains(output, "invalid bootstrap mode: bad", "opening_progression should reject invalid bootstrap mode")
 }
 
+test("mod_ram_partition rejects invalid seed strategy with usage error") {
+    val (exit, output) = runCommand("tools/bc", "test", "scenario", "mod_ram_partition", "--seed-strategy", "bad")
+    assertTrue(exit == 2, "mod_ram_partition with invalid seed strategy should exit 2, got $exit")
+    assertContains(output, "invalid seed strategy: bad", "mod_ram_partition should reject invalid seed strategy")
+}
+
+test("mod_ram_partition help advertises smallest_islands seed strategy") {
+    val (exit, output) = runCommand("kotlin", "tools/kotlin/mod_ram_partition.main.kts", "--help")
+    assertTrue(exit == 2, "mod_ram_partition --help should exit 2, got $exit")
+    assertContains(output, "--seed-strategy bisect|smallest_islands", "mod_ram_partition help should advertise smallest_islands strategy")
+}
+
 test("fast duplicate invocation fails immediately with harness diagnostics") {
     val harnessRoot = createTestTempDirectory("bc-kotlin-test-harness-fast-dup")
     val process = startBackground(

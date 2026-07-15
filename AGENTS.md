@@ -137,9 +137,10 @@ This scenario is diagnostic-only. Do not treat it as part of the normal `tools/b
 
 Current server RAM partition scenario:
 - Run: `tools/bc test scenario mod_ram_partition --bootstrap-mode once`
+- Dependency-island A/B walk: `tools/bc test scenario mod_ram_partition --bootstrap-mode once --seed-strategy smallest_islands`
 - Bounded dry run: `tools/bc test scenario mod_ram_partition --bootstrap-mode once --max-depth 2 --settle-seconds 20 --sample-count 3 --keep-runs`
 - Run-root override: add `--run-root ~/.cache/bc/mod-ram-partition` when you need a dedicated disposable location for Forge bootstrap
-- Expectation: the lane prepares one disposable dedicated-server runtime, recursively removes dependency-closed halves of the current mod pool, captures `/proc` RSS/HWM plus `jcmd` heap/native-memory evidence, persists resumable queue/results state under its run root, refreshes its baseline periodically, and switches to rescue-mode culprit search if the full-pack baseline cannot boot within the current heap envelope.
+- Expectation: the lane prepares one disposable dedicated-server runtime, then either recursively removes dependency-closed halves of the current mod pool or walks the smallest removable dependency islands first when `--seed-strategy smallest_islands` is selected. It captures `/proc` RSS/HWM plus `jcmd` heap/native-memory evidence, persists resumable queue/results state under its run root, refreshes its baseline periodically, and switches to rescue-mode culprit search if the full-pack baseline cannot boot within the current heap envelope.
 
 Current VS ships diagnostic scenarios:
 - Headless stability: `tools/bc test scenario vs_ships_stability --profile quick --cycles 1 --bootstrap-mode once`

@@ -20,6 +20,7 @@ data class Config(
     val basePort: Int,
     val runRoot: Path,
     val bootstrapMode: String,
+    val seedStrategy: String,
     val settleSeconds: Int,
     val sampleCount: Int,
     val maxDepth: Int,
@@ -106,7 +107,7 @@ val platformDependencyModIds = setOf("forge", "minecraft")
 fun usage(message: String? = null): Nothing {
     if (message != null) System.err.println(message)
     System.err.println(
-        "Usage: tools/bc test scenario mod_ram_partition [--port N] [--run-root PATH] [--bootstrap-mode always|once|never] [--settle-seconds N] [--sample-count N] [--max-depth N] [--min-delta-mib N] [--min-free-gb N] [--keep-runs] [--resume]",
+        "Usage: tools/bc test scenario mod_ram_partition [--port N] [--run-root PATH] [--bootstrap-mode always|once|never] [--seed-strategy bisect|smallest_islands] [--settle-seconds N] [--sample-count N] [--max-depth N] [--min-delta-mib N] [--min-free-gb N] [--keep-runs] [--resume]",
     )
     exitProcess(2)
 }
@@ -116,6 +117,7 @@ fun parseConfig(args: Array<String>): Config {
     var runRoot = System.getenv("BC_HARNESS_RUN_ROOT")?.takeIf(String::isNotBlank)?.let(Paths::get)
         ?: Paths.get(System.getProperty("user.home"), ".cache", "bc", "mod-ram-partition")
     var bootstrapMode = "once"
+    var seedStrategy = "bisect"
     var settleSeconds = 60
     var sampleCount = 5
     var maxDepth = 6
@@ -137,6 +139,11 @@ fun parseConfig(args: Array<String>): Config {
             "--bootstrap-mode" -> {
                 bootstrapMode = args.getOrNull(index + 1) ?: usage("--bootstrap-mode needs always, once, or never")
                 if (bootstrapMode !in setOf("always", "once", "never")) usage("invalid bootstrap mode: $bootstrapMode")
+                index += 2
+            }
+            "--seed-strategy" -> {
+                seedStrategy = args.getOrNull(index + 1) ?: usage("--seed-strategy needs bisect or smallest_islands")
+                if (seedStrategy !in setOf("bisect", "smallest_islands")) usage("invalid seed strategy: $seedStrategy")
                 index += 2
             }
             "--settle-seconds" -> {
@@ -176,6 +183,7 @@ fun parseConfig(args: Array<String>): Config {
         basePort = basePort,
         runRoot = runRoot.toAbsolutePath().normalize(),
         bootstrapMode = bootstrapMode,
+        seedStrategy = seedStrategy,
         settleSeconds = settleSeconds,
         sampleCount = sampleCount,
         maxDepth = maxDepth,
@@ -184,6 +192,23 @@ fun parseConfig(args: Array<String>): Config {
         keepRuns = keepRuns,
         resume = resume,
     )
+}
+
+fun islandWeight(island: Set<String>, weightsByJar: Map<String, Double>): Double = island.sumOf { weightsByJar[it] ?: 0.0 }
+
+fun removableIslandsForStrategy(
+    inventory: List<JarInfo>,
+    retainedFoundationJarNames: Set<String>,
+    adjacency: Map<String, Set<String>>,
+    weightsByJar: Map<String, Double>,
+    seedStrategy: String,
+): List<Set<String>> {
+    val removableSeeds = inventory.map { it.fileName }.filterNot { it in retainedFoundationJarNames }.ifEmpty { inventory.map { it.fileName } }
+    val islands = connectedSeedGroups(removableSeeds.toSet(), adjacency)
+    return when (seedStrategy) {
+        "smallest_islands" -> islands.sortedWith(compareBy<Set<String>>({ it.size }, { islandWeight(it, weightsByJar) }, { it.sorted().joinToString(",") }))
+        else -> islands.sortedByDescending { islandWeight(it, weightsByJar) }
+    }
 }
 
 fun deleteTree(path: Path) {
@@ -1091,6 +1116,7 @@ fun summaryMap(
         "config" to mapOf(
             "run_root" to config.runRoot.toString(),
             "bootstrap_mode" to config.bootstrapMode,
+            "seed_strategy" to config.seedStrategy,
             "settle_seconds" to config.settleSeconds,
             "sample_count" to config.sampleCount,
             "max_depth" to config.maxDepth,
@@ -1203,16 +1229,20 @@ fun main() {
         },
     )
 
-    val removableSeeds = inventory.map { it.fileName }.filterNot { it in retainedFoundationJarNames }.ifEmpty { inventory.map { it.fileName } }
-    val removableIslands = connectedSeedGroups(removableSeeds.toSet(), jarDependencyAdjacency)
-        .sortedByDescending { island -> island.sumOf { weightsByJar[it] ?: 0.0 } }
+    val removableIslands = removableIslandsForStrategy(
+        inventory = inventory,
+        retainedFoundationJarNames = retainedFoundationJarNames,
+        adjacency = jarDependencyAdjacency,
+        weightsByJar = weightsByJar,
+        seedStrategy = config.seedStrategy,
+    )
     writeJson(
         dependencyIslandsPath,
         removableIslands.mapIndexed { index, island ->
             mapOf(
                 "island_id" to "island-${index + 1}",
                 "jar_count" to island.size,
-                "total_weight" to island.sumOf { weightsByJar[it] ?: 0.0 },
+                "total_weight" to islandWeight(island, weightsByJar),
                 "jar_names" to island.sorted(),
             )
         },
@@ -1331,6 +1361,7 @@ fun main() {
 
     fun enqueueChildren(node: PendingNode) {
         if (node.depth >= config.maxDepth || node.seedJarNames.size <= 1) return
+        if (config.seedStrategy == "smallest_islands") return
         val (left, right) = splitSeeds(node.seedJarNames, weightsByJar, jarDependencyAdjacency)
         if (left.isNotEmpty()) pending += PendingNode("${node.mode}-${node.id}-l", node.mode, node.depth + 1, left)
         if (right.isNotEmpty()) pending += PendingNode("${node.mode}-${node.id}-r", node.mode, node.depth + 1, right)

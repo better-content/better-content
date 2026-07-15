@@ -11001,7 +11001,7 @@ hash = "f8cf149a60d811faec6c0fcd0b39b8fcad5a8c1d6af3479f867b8dd6c2576d5e"
 
 [[files]]
 file = "mods/bcfixes-0.1.0.jar"
-hash = "f6ab6479d584b8792dfd838fdcd9dfa57d98e9659e23c58c65822100255a4df6"
+hash = "17461695216edc1eb37cb41d4a7f15df2c0d191009dbe40fe1b36ba536b5b81a"
 
 [[files]]
 file = "mods/better-combat-by-daedelus.pw.toml"
@@ -11750,7 +11750,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillagercampaigns-0.2.0.jar"
-hash = "24fde063b79a306cfd50538ccfd37be4814ab73e2fc396d75181d65e796ecb7a"
+hash = "2ddc3f704e5ce4f0d7fd81e032d752571e4d3ffaac7f52c33bf7dfe91f68c3fc"
 
 [[files]]
 file = "mods/placebo.pw.toml"

@@ -171,7 +171,7 @@ var cycles = 1
 var bootstrapMode = "always"
 var keepRuns = false
 var timeoutSeconds = 900L
-var runRoot = System.getenv("BC_HARNESS_RUN_ROOT")?.takeIf(String::isNotBlank)?.let(Paths::get) ?: Paths.get("/tmp/bc-vs-ships-stability")
+var runRoot = System.getenv("BC_HARNESS_RUN_ROOT")?.takeIf(String::isNotBlank)?.let(Paths::get) ?: Paths.get(System.getProperty("user.home"), ".cache", "bc", "vs-ships-stability")
 var port = System.getenv("BC_HARNESS_ACTUAL_PORT")?.toIntOrNull() ?: 25565
 var index = 0
 while (index < args.size) {

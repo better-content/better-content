@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-BTM_MC_VERSION="${BTM_MC_VERSION:-1.20.1}"
-BTM_FORGE_VERSION="${BTM_FORGE_VERSION:-47.4.13}"
-BTM_FORGE_COORD="${BTM_MC_VERSION}-${BTM_FORGE_VERSION}"
-BTM_SERVER_PORT="${BTM_SERVER_PORT:-25565}"
-BTM_DEFAULT_CLIENT_DIR="${BTM_DEFAULT_CLIENT_DIR:-$PWD/.runtime/client}"
-BTM_DEFAULT_SERVER_DIR="${BTM_DEFAULT_SERVER_DIR:-$PWD/server-instance}"
+BC_MC_VERSION="${BC_MC_VERSION:-1.20.1}"
+BC_FORGE_VERSION="${BC_FORGE_VERSION:-47.4.13}"
+BC_FORGE_COORD="${BC_MC_VERSION}-${BC_FORGE_VERSION}"
+BC_SERVER_PORT="${BC_SERVER_PORT:-25565}"
+BC_DEFAULT_CLIENT_DIR="${BC_DEFAULT_CLIENT_DIR:-$PWD/.runtime/client}"
+BC_DEFAULT_SERVER_DIR="${BC_DEFAULT_SERVER_DIR:-$PWD/server-instance}"
 
 btm_repo_root() {
   local script_dir
@@ -46,12 +46,12 @@ btm_java17() {
     echo "$candidate"
     return 0
   done
-  if [[ "${BTM_ALLOW_NON17_JAVA:-0}" == "1" ]] && command -v java >/dev/null 2>&1; then
-    echo "WARN: Java 17 was not found; using $(command -v java) because BTM_ALLOW_NON17_JAVA=1." >&2
+  if [[ "${BC_ALLOW_NON17_JAVA:-0}" == "1" ]] && command -v java >/dev/null 2>&1; then
+    echo "WARN: Java 17 was not found; using $(command -v java) because BC_ALLOW_NON17_JAVA=1." >&2
     command -v java
     return 0
   fi
-  echo "ERROR: Java 17 was not found. Set JAVA17=/path/to/java or JAVA_HOME, or set BTM_ALLOW_NON17_JAVA=1 for a non-parity local smoke test." >&2
+  echo "ERROR: Java 17 was not found. Set JAVA17=/path/to/java or JAVA_HOME, or set BC_ALLOW_NON17_JAVA=1 for a non-parity local smoke test." >&2
   return 1
 }
 
@@ -158,20 +158,20 @@ btm_find_forge_installer() {
   local root="$1"
   local candidate
   for candidate in \
-    "$root/server-instance/forge-${BTM_FORGE_COORD}-installer.jar" \
-    "$root/server-template/forge-${BTM_FORGE_COORD}-installer.jar" \
-    "$root/forge-${BTM_FORGE_COORD}-installer.jar"
+    "$root/server-instance/forge-${BC_FORGE_COORD}-installer.jar" \
+    "$root/server-template/forge-${BC_FORGE_COORD}-installer.jar" \
+    "$root/forge-${BC_FORGE_COORD}-installer.jar"
   do
     [[ -f "$candidate" ]] && {
       echo "$candidate"
       return 0
     }
   done
-  find "$root" -maxdepth 3 -type f -name "forge-${BTM_FORGE_COORD}-installer.jar" -print -quit 2>/dev/null
+  find "$root" -maxdepth 3 -type f -name "forge-${BC_FORGE_COORD}-installer.jar" -print -quit 2>/dev/null
 }
 
 btm_write_local_server_properties() {
-  local path="$1" port="${2:-$BTM_SERVER_PORT}"
+  local path="$1" port="${2:-$BC_SERVER_PORT}"
   if [[ -f "$path" ]]; then
     cp "$path" "$path.bak.$(date +%Y%m%d-%H%M%S)"
   fi
@@ -185,7 +185,7 @@ enforce-secure-profile=false
 gamemode=survival
 level-name=world
 max-players=8
-motd=Bound to Matter local agent runtime
+motd=Better Content local agent runtime
 online-mode=false
 pvp=true
 server-ip=

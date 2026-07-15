@@ -8,14 +8,14 @@ source "$TOOLS_COMPAT_DIR/_runtime_common.sh"
 
 client_dir="${CLIENT_DIR:-}"
 username="${CLIENT_USERNAME:-AgentClient}"
-server="${SERVER_HOST:-127.0.0.1}:${SERVER_PORT:-$BTM_SERVER_PORT}"
+server="${SERVER_HOST:-127.0.0.1}:${SERVER_PORT:-$BC_SERVER_PORT}"
 extra_jvm="${EXTRA_JVM_ARGS:-}"
 
 usage() {
   cat <<USAGE
 Usage: $(basename "$0") --client-dir PATH [--username NAME] [--server HOST:PORT]
 
-Launches the Forge ${BTM_FORGE_COORD} client from a repo-managed game directory with
+Launches the Forge ${BC_FORGE_COORD} client from a repo-managed game directory with
 an offline local username and --server HOST:PORT.
 
 The script intentionally does not use Prism. Run tools/quarantine/original-tools/bootstrap_client_runtime.sh
@@ -35,11 +35,11 @@ done
 
 [[ -n "$client_dir" ]] || btm_usage_error "--client-dir is required"
 java_bin="$(btm_java17)"
-version_id="${BTM_MC_VERSION}-forge-${BTM_FORGE_VERSION}"
+version_id="${BC_MC_VERSION}-forge-${BC_FORGE_VERSION}"
 version_json=""
 for candidate in \
   "$client_dir/versions/$version_id/$version_id.json" \
-  "$client_dir/versions/${BTM_FORGE_COORD}/${BTM_FORGE_COORD}.json"
+  "$client_dir/versions/${BC_FORGE_COORD}/${BC_FORGE_COORD}.json"
 do
   [[ -f "$candidate" ]] && {
     version_json="$candidate"
@@ -55,7 +55,7 @@ done
 
 argfile="$client_dir/.runtime/launch-${version_id}.args"
 mkdir -p "$client_dir/logs" "$client_dir/.runtime"
-"$ROOT/tools/btm" internal minecraft-client-argfile --client-dir "$client_dir" --version-id "$version_id" --username "$username" --server "$server" --out "$argfile" >/dev/null
+"$ROOT/tools/bc" internal minecraft-client-argfile --client-dir "$client_dir" --version-id "$version_id" --username "$username" --server "$server" --out "$argfile" >/dev/null
 
 cd "$client_dir"
 

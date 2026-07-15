@@ -21,14 +21,14 @@ CONFIG = HarnessConfig(
     slug="lc_tfth_c2me_dh",
     description="Portable server/client runtime scenario for Lost Cities, The Flesh That Hates, C2ME, and Distant Horizons.",
     docs_subdir="lc_tfth_c2me_dh_stability",
-    default_run_parent=Path("/tmp/btm-lc-tfth-c2me-dh"),
+    default_run_parent=Path("/tmp/bc-lc-tfth-c2me-dh"),
     default_cycles=3,
     required_jars={
         "lostcities": re.compile(r"lostcities.*\.jar$", re.I),
         "the_flesh_that_hates": re.compile(r"(tfth|flesh.*hates).*\.jar$", re.I),
         "c2me": re.compile(r"c2me.*\.jar$", re.I),
         "DistantHorizons": re.compile(r"distanthorizons.*\.jar$", re.I),
-        "btmfixes": re.compile(r"btmfixes.*\.jar$", re.I),
+        "bcfixes": re.compile(r"bcfixes.*\.jar$", re.I),
     },
     fatal_patterns={
         "modernfix_watchdog": re.compile(r"modernfix.*watchdog|watchdog.*modernfix|server thread dump", re.I),

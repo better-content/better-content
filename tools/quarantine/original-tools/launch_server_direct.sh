@@ -6,7 +6,7 @@ TOOLS_COMPAT_DIR="$ROOT/tools/quarantine/original-tools"
 # shellcheck source=tools/quarantine/original-tools/_runtime_common.sh
 source "$TOOLS_COMPAT_DIR/_runtime_common.sh"
 
-server_dir="${SERVER_DIR:-$BTM_DEFAULT_SERVER_DIR}"
+server_dir="${SERVER_DIR:-$BC_DEFAULT_SERVER_DIR}"
 
 usage() {
   cat <<USAGE

@@ -52,7 +52,7 @@ fun parseConfig(args: Array<String>): Config {
     var settleSeconds = 30
     var bootstrapMode = "always"
     var keepRuns = false
-    var runRoot = Paths.get("/tmp/bc-lc-c2me-dh-repro")
+    var runRoot = Paths.get(System.getProperty("user.home"), ".cache", "bc", "lc-c2me-dh-repro")
     var index = 0
     while (index < args.size) {
         when (args[index]) {

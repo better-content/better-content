@@ -15,8 +15,14 @@ import kotlin.system.exitProcess
 data class TestCase(val name: String, val run: () -> Unit)
 
 val root = Paths.get("").toAbsolutePath().normalize()
+val testTempRoot = Paths.get(System.getProperty("user.home"), ".cache", "bc", "test-temp").toAbsolutePath().normalize()
 val tests = mutableListOf<TestCase>()
 val activeFilter = System.getenv("BC_KOTLIN_TEST_FILTER")?.trim()?.takeIf { it.isNotEmpty() }
+
+fun createTestTempDirectory(prefix: String): Path {
+    testTempRoot.createDirectories()
+    return Files.createTempDirectory(testTempRoot, prefix)
+}
 
 fun test(name: String, block: () -> Unit) {
     if (activeFilter != null && !name.contains(activeFilter, ignoreCase = true)) return
@@ -385,7 +391,7 @@ test("doctor repo succeeds") {
 }
 
 test("build sync server dry-run works") {
-    val temp = Files.createTempDirectory("bc-kotlin-test-sync-server")
+    val temp = createTestTempDirectory("bc-kotlin-test-sync-server")
     try {
         val (exit, output) = runCommand("tools/bc", "--json", "build", "sync", "server", "--dir", temp.toString(), "--dry-run")
         assertTrue(exit == 0, "server sync dry-run should exit 0, got $exit")
@@ -397,7 +403,7 @@ test("build sync server dry-run works") {
 }
 
 test("build sync client dry-run works") {
-    val temp = Files.createTempDirectory("bc-kotlin-test-sync-client")
+    val temp = createTestTempDirectory("bc-kotlin-test-sync-client")
     try {
         val (exit, output) = runCommand("tools/bc", "--json", "build", "sync", "client", "--dir", temp.toString(), "--dry-run")
         assertTrue(exit == 0, "client sync dry-run should exit 0, got $exit")
@@ -440,7 +446,7 @@ test("doctor runtime without instance is usage error") {
 }
 
 test("doctor runtime accepts a minimal runtime shape") {
-    val temp = Files.createTempDirectory("bc-kotlin-test-runtime-doctor")
+    val temp = createTestTempDirectory("bc-kotlin-test-runtime-doctor")
     try {
         temp.resolve("mods").createDirectories()
         temp.resolve("logs").createDirectories()
@@ -462,7 +468,7 @@ test("smoke rejects non-numeric port") {
 }
 
 test("runtime mod prune removes source jars") {
-    val temp = Files.createTempDirectory("bc-kotlin-test-prune-runtime-mods")
+    val temp = createTestTempDirectory("bc-kotlin-test-prune-runtime-mods")
     val dest = temp.resolve("mods/synthetic-fixture-sources.jar")
     try {
         Files.createDirectories(dest.parent)
@@ -610,7 +616,7 @@ test("opening progression rejects invalid bootstrap mode with usage error") {
 }
 
 test("fast duplicate invocation fails immediately with harness diagnostics") {
-    val harnessRoot = Files.createTempDirectory("bc-kotlin-test-harness-fast-dup")
+    val harnessRoot = createTestTempDirectory("bc-kotlin-test-harness-fast-dup")
     val process = startBackground(
         listOf("tools/bc", "test", "fast", "--repo", "pack"),
         extraEnv = mapOf(
@@ -650,7 +656,7 @@ test("fast duplicate invocation fails immediately with harness diagnostics") {
 }
 
 test("full workspace writes repo progress into status and summary") {
-    val harnessRoot = Files.createTempDirectory("bc-kotlin-test-harness-full-progress")
+    val harnessRoot = createTestTempDirectory("bc-kotlin-test-harness-full-progress")
     try {
         val (exit, output) = runCommand(
             "tools/bc",
@@ -681,8 +687,8 @@ test("full workspace writes repo progress into status and summary") {
 }
 
 test("smoke auto-remaps occupied ports and records requested and actual port") {
-    val harnessRoot = Files.createTempDirectory("bc-kotlin-test-harness-smoke-port")
-    val runtimeDir = Files.createTempDirectory("bc-kotlin-test-smoke-runtime")
+    val harnessRoot = createTestTempDirectory("bc-kotlin-test-harness-smoke-port")
+    val runtimeDir = createTestTempDirectory("bc-kotlin-test-smoke-runtime")
     val requestedPort = ephemeralPort()
     java.net.ServerSocket(requestedPort).use { _ ->
         val (exit, output) = runCommand(
@@ -716,8 +722,8 @@ test("smoke auto-remaps occupied ports and records requested and actual port") {
 }
 
 test("opening progression remaps occupied ports and refreshes latest status artifacts") {
-    val harnessRoot = Files.createTempDirectory("bc-kotlin-test-harness-opening-pass")
-    val runRoot = Files.createTempDirectory("bc-kotlin-test-opening-pass")
+    val harnessRoot = createTestTempDirectory("bc-kotlin-test-harness-opening-pass")
+    val runRoot = createTestTempDirectory("bc-kotlin-test-opening-pass")
     val requestedPort = ephemeralPort()
     java.net.ServerSocket(requestedPort).use { _ ->
         val (exit, output) = runCommand(
@@ -756,7 +762,7 @@ test("opening progression remaps occupied ports and refreshes latest status arti
 }
 
 test("stale lock with dead pid is reclaimed automatically") {
-    val harnessRoot = Files.createTempDirectory("bc-kotlin-test-harness-stale-lock")
+    val harnessRoot = createTestTempDirectory("bc-kotlin-test-harness-stale-lock")
     val process = startBackground(
         listOf("tools/bc", "test", "fast", "--repo", "pack"),
         extraEnv = mapOf(
@@ -793,8 +799,8 @@ test("stale lock with dead pid is reclaimed automatically") {
 }
 
 test("opening progression failure writes final summary with phase reason and evidence path") {
-    val harnessRoot = Files.createTempDirectory("bc-kotlin-test-harness-opening-fail")
-    val runRoot = Files.createTempDirectory("bc-kotlin-test-opening-fail")
+    val harnessRoot = createTestTempDirectory("bc-kotlin-test-harness-opening-fail")
+    val runRoot = createTestTempDirectory("bc-kotlin-test-opening-fail")
     try {
         val (exit, _) = runCommand(
             "tools/bc",
@@ -826,7 +832,7 @@ test("opening progression failure writes final summary with phase reason and evi
 }
 
 test("interrupt clears lock ownership and leaves final aborted status") {
-    val harnessRoot = Files.createTempDirectory("bc-kotlin-test-harness-interrupt")
+    val harnessRoot = createTestTempDirectory("bc-kotlin-test-harness-interrupt")
     val process = startBackground(
         listOf("tools/bc", "test", "fast", "--repo", "pack"),
         extraEnv = mapOf(

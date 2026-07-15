@@ -74,7 +74,7 @@ fun parseConfig(args: Array<String>): Config {
     var bootstrapMode = "always"
     var keepGoing = false
     var keepRuns = false
-    var runRoot = Paths.get("/tmp/bc-dimension-worldgen")
+    var runRoot = Paths.get(System.getProperty("user.home"), ".cache", "bc", "dimension-worldgen")
     var serverDirOverride: Path? = null
     var index = 0
     while (index < args.size) {

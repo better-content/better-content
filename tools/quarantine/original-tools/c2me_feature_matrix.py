@@ -14,13 +14,13 @@ from pack_mod_source import bundled_mod_jar_patterns
 
 require_legacy_live_tool_opt_in()
 
-ROOT = Path(os.environ.get("ROOT", "/home/gerald/obelisks"))
+ROOT = Path(os.environ.get("ROOT", "/home/gerald/dimension_drink"))
 SERVER_DIR = ROOT / "server-instance"
 LIVE_MC = Path(os.environ.get(
     "LIVE_MC",
-    "/home/gerald/.local/share/PrismLauncher/instances/Bound to Matter-Playtest 4 - v1/minecraft",
+    "/home/gerald/.local/share/PrismLauncher/instances/Better Content-Playtest 4 - v1/minecraft",
 ))
-OUT_ROOT = Path(os.environ.get("OUT_ROOT", "/tmp/btm-c2me-feature-matrix"))
+OUT_ROOT = Path(os.environ.get("OUT_ROOT", "/tmp/bc-c2me-feature-matrix"))
 PORT = int(os.environ.get("SERVER_PORT", "25565"))
 
 BASE_VALUES = {

@@ -883,7 +883,7 @@ def parse_authored_kubejs_surfaces():
                 )
 
         if path.name == "126_cross_magic_irons_spellcraft.js":
-            for output in parse_js_string_arrays(text, "BTM_IRONS_SPELLCRAFT_OUTPUTS"):
+            for output in parse_js_string_arrays(text, "BC_IRONS_SPELLCRAFT_OUTPUTS"):
                 rows_by_key[("kubejs:authored_recipe", output)] = authored_row(
                     output, "kubejs:authored_recipe", [rel]
                 )
@@ -1023,11 +1023,11 @@ def parse_villager_trade_items():
     path = ROOT / "kubejs" / "server_scripts" / "35_villager_trades" / "10_coin_villager_trades.js"
     text = path.read_text(encoding="utf-8")
     sections = {
-        "BTM_30_ITEMS": ("villager_trade", "survival"),
-        "BTM_INDUSTRIAL_IRON_MARKET": ("villager_trade", "andesite"),
-        "BTM_GOLD_MARKET": ("villager_trade", "brass"),
-        "BTM_PLATINUM_MARKET": ("villager_trade", "impossible"),
-        "BTM_WANDERER_MARKET": ("wanderer_trade", "survival"),
+        "BC_30_ITEMS": ("villager_trade", "survival"),
+        "BC_INDUSTRIAL_IRON_MARKET": ("villager_trade", "andesite"),
+        "BC_GOLD_MARKET": ("villager_trade", "brass"),
+        "BC_PLATINUM_MARKET": ("villager_trade", "impossible"),
+        "BC_WANDERER_MARKET": ("wanderer_trade", "survival"),
     }
     coin_stage = {
         "copper": "survival",
@@ -1047,7 +1047,7 @@ def parse_villager_trade_items():
         base_line = text[: match.start(1)].count("\n") + 1
         for offset, line in enumerate(body.splitlines(), start=0):
             line_no = base_line + offset
-            if section == "BTM_30_ITEMS":
+            if section == "BC_30_ITEMS":
                 m = re.search(r"\[\s*'([a-z0-9_.-]+:[a-z0-9_./-]+)'\s*,", line)
             else:
                 m = re.search(r"\[[^\]]*'([a-z0-9_.-]+:[a-z0-9_./-]+)'\s*,\s*\d+\s*,\s*\d+\s*\]?\s*,?\s*$", line)
@@ -1135,7 +1135,7 @@ def parse_quest_rewards():
 
 def parse_font_rewards():
     entries = []
-    rewards_root = ROOT / "generated" / "custom-mod-sources" / "dimensional-fonts" / "src" / "main" / "resources" / "defaults" / "rewards"
+    rewards_root = ROOT / "generated" / "custom-mod-sources" / "dimension-drink" / "src" / "main" / "resources" / "defaults" / "rewards"
     if not rewards_root.exists():
         return entries
     for path in sorted(rewards_root.glob("*.json")):
@@ -1168,7 +1168,7 @@ def parse_font_rewards():
 
 def parse_dimension_access():
     entries = []
-    for path_str in sorted(glob.glob(str(ROOT / "config" / "obelisks" / "obelisks" / "*.json"))):
+    for path_str in sorted(glob.glob(str(ROOT / "config" / "dimension_drink" / "dimension_drink" / "*.json"))):
         path = Path(path_str)
         rel = path.relative_to(ROOT).as_posix()
         data = load_json(path)
@@ -1286,7 +1286,7 @@ def build_contracts():
         )
 
     surface_registry = {
-        "schema": "btm.surface_registry.v1",
+        "schema": "bc.surface_registry.v1",
         "description": "Authoritative registry of sanctioned crafting and acquisition surfaces.",
         "recipe_surface_types": sorted(
             surface_types + ["dimension_access", "event.custom(kubejs)", "kubejs:authored_recipe", "kubejs:replace_input_gate"]
@@ -1336,17 +1336,17 @@ def build_contracts():
     }
 
     tech_contract = {
-        "schema": "btm.tech_parenting.v1",
+        "schema": "bc.tech_parenting.v1",
         "description": "Authoritative tech-era parenting for non-magic craftables and route surfaces.",
         "entries": sorted(tech_entries, key=lambda entry: (entry["output"], entry["surface_type"], entry["kind"])),
     }
     magic_contract = {
-        "schema": "btm.magic_parenting.v1",
+        "schema": "bc.magic_parenting.v1",
         "description": "Authoritative Blood-parented magic progression for magic craftables and route surfaces.",
         "entries": sorted(magic_entries, key=lambda entry: (entry["output"], entry["surface_type"], entry["kind"])),
     }
     economy_contract = {
-        "schema": "btm.economy_acquisition.v1",
+        "schema": "bc.economy_acquisition.v1",
         "description": "Authoritative economy and reward-surface acquisition policy.",
         "entries": sorted(economy_entries, key=lambda entry: (entry["source"], entry["output"], entry["id"])),
     }
@@ -1433,7 +1433,7 @@ def validate():
     if not any(entry["weight_class"] == "decor_theme" for entry in tech_entries if entry["output"].startswith("tconstruct:seared_")):
         failures.append("representative seared decor surfaces are not tagged decor_theme")
 
-    reward_root = ROOT / "generated" / "custom-mod-sources" / "dimensional-fonts" / "src" / "main" / "resources" / "defaults" / "rewards"
+    reward_root = ROOT / "generated" / "custom-mod-sources" / "dimension-drink" / "src" / "main" / "resources" / "defaults" / "rewards"
     for path in sorted(reward_root.glob("*.json")):
         data = load_json(path)
         kill_currency = (data.get("killCurrency") or {}).get("item")

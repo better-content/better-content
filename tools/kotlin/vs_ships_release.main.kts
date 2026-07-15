@@ -11,7 +11,7 @@ import kotlin.system.exitProcess
 data class ReleaseRun(val name: String, val command: List<String>, val runRoot: Path, val exitCode: Int, val durationMs: Long)
 
 val root = Paths.get("").toAbsolutePath().normalize()
-var runRoot = Paths.get("/tmp/bc-vs-ships-release")
+var runRoot = Paths.get(System.getProperty("user.home"), ".cache", "bc", "vs-ships-release")
 var bootstrapMode = "once"
 var keepGoing = false
 var keepRuns = false

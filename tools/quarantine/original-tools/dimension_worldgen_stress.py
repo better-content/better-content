@@ -36,16 +36,16 @@ DIMENSIONS = [
 CONFIG = HarnessConfig(
     name="All Dimension Worldgen Stress",
     slug="all_dimension_worldgen",
-    description="Generates chunk squares in every authored pack dimension with C2ME, Distant Horizons, and btmfixes enabled.",
+    description="Generates chunk squares in every authored pack dimension with C2ME, Distant Horizons, and bcfixes enabled.",
     docs_subdir="dimension_worldgen_stress",
-    default_run_parent=Path("/tmp/btm-dimension-worldgen"),
+    default_run_parent=Path("/tmp/bc-dimension-worldgen"),
     default_cycles=1,
     default_boot_timeout=900,
     default_join_timeout=900,
     required_jars={
         "c2me": re.compile(r"c2me.*\.jar$", re.I),
         "DistantHorizons": re.compile(r"distanthorizons.*\.jar$", re.I),
-        "btmfixes": re.compile(r"btmfixes.*\.jar$", re.I),
+        "bcfixes": re.compile(r"bcfixes.*\.jar$", re.I),
     },
     fatal_patterns={
         "invalid_dimension": re.compile(r"argument\.dimension\.invalid|Unknown dimension|Can't find dimension", re.I),

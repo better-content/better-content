@@ -437,7 +437,7 @@ def stop_process(proc: subprocess.Popen[str] | None, command: str | None = None)
 
 def env_for_port(port: int) -> dict[str, str]:
     env = os.environ.copy()
-    env["BTM_SERVER_PORT"] = str(port)
+    env["BC_SERVER_PORT"] = str(port)
     return env
 
 

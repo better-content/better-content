@@ -6,7 +6,7 @@ ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 source "$ROOT/tools/_runtime_common.sh"
 
 mode=""
-server_dir="${SERVER_DIR:-$BTM_DEFAULT_SERVER_DIR}"
+server_dir="${SERVER_DIR:-$BC_DEFAULT_SERVER_DIR}"
 
 usage() {
   cat <<USAGE

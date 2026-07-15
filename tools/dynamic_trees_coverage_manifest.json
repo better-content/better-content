@@ -1,0 +1,35 @@
+{
+  "schema": "bc:dynamic_trees_coverage_manifest:v1",
+  "coverage_policy": "accounted_for",
+  "default_unlisted_classification": "static_intentional_pending_review",
+  "native_dt_source_namespaces": [
+    "aether",
+    "ars_nouveau",
+    "minecraft",
+    "natures_spirit",
+    "quark",
+    "twilightforest"
+  ],
+  "custom_dt_source_namespaces": {
+    "hexerei": "dthexerei",
+    "malum": "dtmalum",
+    "undergarden": "bcdimtrees"
+  },
+  "intentionally_static_namespaces": [
+    "blue_skies",
+    "burnt",
+    "deeperdarker",
+    "forbidden_arcanus",
+    "goety",
+    "occultism",
+    "tconstruct"
+  ],
+  "known_external_species": [
+    "dynamictreesplus:brown_mushroom",
+    "dynamictreesplus:red_mushroom"
+  ],
+  "notes": [
+    "This manifest accounts for pack tree coverage; it is not permission to cancel static worldgen without a verified Dynamic Trees replacement.",
+    "Unlisted tree families are reported as static_intentional_pending_review until a focused DT conversion proves visually acceptable."
+  ]
+}

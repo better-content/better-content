@@ -13,13 +13,14 @@ fun deleteTree(path: java.nio.file.Path) {
 
 fun usage(message: String? = null): Nothing {
     if (message != null) System.err.println(message)
-    System.err.println("Usage: tools/bc test scenario-headful client_smoke --profile quick|release [--bootstrap-mode always|once|never] [--keep-runs]")
+    System.err.println("Usage: tools/bc test scenario-headful client_smoke --profile quick|release [--bootstrap-mode always|once|never] [--run-root PATH] [--keep-runs]")
     exitProcess(2)
 }
 
 var profile: String? = null
 var bootstrapMode = "always"
 var keepRuns = false
+var runRoot: String? = null
 var port: String? = System.getenv("BC_HARNESS_ACTUAL_PORT")?.takeIf { it.isNotBlank() }
 var index = 0
 while (index < args.size) {
@@ -36,6 +37,10 @@ while (index < args.size) {
         "--keep-runs" -> {
             keepRuns = true
             index += 1
+        }
+        "--run-root" -> {
+            runRoot = args.getOrNull(index + 1) ?: usage("--run-root needs a path")
+            index += 2
         }
         "--port" -> {
             port = args.getOrNull(index + 1) ?: usage("--port needs a number")
@@ -57,7 +62,8 @@ val contract = ProcessBuilder("tools/bc", "internal", "validate-client-smoke-con
 val contractExit = contract.waitFor()
 if (contractExit != 0) exitProcess(contractExit)
 
-val runtimeDir = Paths.get("/tmp", if (selected == "quick") "bc-client-smoke-quick" else "bc-client-smoke-release")
+val runtimeDir = runRoot?.let { Paths.get(it) }
+    ?: Paths.get(System.getProperty("user.home"), ".cache", "bc", if (selected == "quick") "client-smoke-quick" else "client-smoke-release")
 val smokePort = port ?: if (selected == "quick") "25567" else "25568"
 if (!keepRuns && bootstrapMode != "never" && Files.exists(runtimeDir)) {
     deleteTree(runtimeDir)

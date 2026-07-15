@@ -344,7 +344,7 @@ var variant = "current"
 var stopAfter = "lifecycle"
 var bootstrapMode = "always"
 var keepRuns = false
-var runRoot = System.getenv("BC_HARNESS_RUN_ROOT")?.takeIf(String::isNotBlank)?.let(Paths::get) ?: Paths.get("/tmp/bc-vs-ships-client-quick")
+var runRoot = System.getenv("BC_HARNESS_RUN_ROOT")?.takeIf(String::isNotBlank)?.let(Paths::get) ?: Paths.get(System.getProperty("user.home"), ".cache", "bc", "vs-ships-client-quick")
 var port = System.getenv("BC_HARNESS_ACTUAL_PORT")?.toIntOrNull() ?: 25569
 var index = 0
 while (index < args.size) {

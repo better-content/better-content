@@ -164,14 +164,19 @@ val  bcMainPath: Path = toolsDir.resolve("bc.main.kts")
 val workspaceInventoryPath: Path = toolsDir.resolve("workspace_test_inventory.json")
 val migrationMatrixPath: Path = root.resolve("TOOL_MIGRATION_MATRIX.md")
 
+fun cachePath(vararg parts: String): Path =
+    parts.fold(Paths.get(System.getProperty("user.home"), ".cache", "bc")) { path, part -> path.resolve(part) }
+        .toAbsolutePath()
+        .normalize()
+
 val defaultServerDir = root.resolve("server-instance").toString()
-val defaultDumpRefreshServerDir = "/tmp/bc-dump-refresh"
+val defaultDumpRefreshServerDir = cachePath("dump-refresh").toString()
 val defaultExportsDir = root.resolve("generated/exports").toString()
 val mcVersion = "1.20.1"
 val forgeVersion = "47.4.13"
 val forgeCoord = "$mcVersion-$forgeVersion"
 val defaultServerPort = 25565
-val harnessRoot: Path = Paths.get(System.getenv("BC_HARNESS_ROOT") ?: "/tmp/bc-harness")
+val harnessRoot: Path = System.getenv("BC_HARNESS_ROOT")?.takeIf { it.isNotBlank() }?.let(::resolveUserPath) ?: cachePath("harness")
 
 val managedPaths = listOf(
     "LICENSE",
@@ -823,7 +828,8 @@ class HarnessRun(
     private fun clearLock() {
         val lock = readJsonFile(paths.lock)
         val lockPid = jsonNumber(lock["pid"])?.toLong()
-        if (lockPid == null || lockPid == ownerPid) {
+        val lockOwnerAlive = lockPid?.let { ProcessHandle.of(it).map(ProcessHandle::isAlive).orElse(false) } ?: false
+        if (lockPid == null || lockPid == ownerPid || !lockOwnerAlive) {
             Files.deleteIfExists(paths.lock)
         }
     }
@@ -2669,30 +2675,39 @@ fun runPackFastLane(): ProcessRun = runStepSequence(
     },
 )
 
+fun packFullServerDir(): Path =
+    System.getenv("BC_PACK_FULL_SERVER_DIR")
+        ?.takeIf { it.isNotBlank() }
+        ?.let(::resolveUserPath)
+        ?: cachePath("pack-full-smoke")
+
 fun runPackFullLane(): ProcessRun = runStepSequence(
-    listOf(
-        "pack fast" to { runPackFastLane() },
-        "runtime smoke" to { runSmokeValidation(resolveUserPath("/tmp/bc-pack-full-smoke"), 25570, reset = true, bootstrapMode = "always") },
-        "opening progression scenario" to {
+    buildList {
+        val serverDir = packFullServerDir()
+        val openingRunRoot = cachePath("opening-progression")
+        val clientSmokeRunRoot = cachePath("client-smoke-quick")
+        add("pack fast" to { runPackFastLane() })
+        add("runtime smoke" to { runSmokeValidation(serverDir, 25570, reset = true, bootstrapMode = "always") })
+        add("opening progression scenario" to {
             runKotlinScript(
                 root.resolve("tools/kotlin/opening_progression_runtime_validation.main.kts"),
-                scriptArgs = listOf("--cycles", "1", "--port", "25568", "--bootstrap-mode", "once"),
+                scriptArgs = listOf("--cycles", "1", "--port", "25568", "--bootstrap-mode", "once", "--run-root", openingRunRoot.toString()),
             )
-        },
-        "worldgen sampling scenario" to {
+        })
+        add("worldgen sampling scenario" to {
             runKotlinScript(
                 root.resolve("tools/kotlin/worldgen_sampling.main.kts"),
-                scriptArgs = listOf("--profile", "local", "--bootstrap-mode", "never", "--server-dir", "/tmp/bc-pack-full-smoke", "--port", "25566"),
+                scriptArgs = listOf("--profile", "local", "--bootstrap-mode", "never", "--server-dir", serverDir.toString(), "--port", "25566"),
             )
-        },
-        "client smoke scenario" to {
+        })
+        add("client smoke scenario" to {
             if (!canRunHeadfulScenario()) return@to ProcessRun(3, "DISPLAY or xvfb-run is required")
             runKotlinScript(
                 root.resolve("tools/kotlin/client_smoke.main.kts"),
-                scriptArgs = listOf("--profile", "quick", "--bootstrap-mode", "once"),
+                scriptArgs = listOf("--profile", "quick", "--bootstrap-mode", "once", "--run-root", clientSmokeRunRoot.toString()),
             )
-        },
-    ),
+        })
+    },
 )
 
 fun runChemistryIdentityValidation(): ProcessRun {
@@ -3823,7 +3838,7 @@ fun runToolDocSurfaceValidation(): ProcessRun {
 
     val expectedAgentCommands = listOf(
         "Headless scenario validation: `tools/bc test scenario opening_progression --cycles 1`",
-        "Runtime dump refresh: `tools/bc build dumps --server-dir /tmp/bc-dump-refresh --port 25565 --reset-runtime`",
+        "Runtime dump refresh: `tools/bc build dumps --server-dir ~/.cache/bc/dump-refresh --port 25565 --reset-runtime`",
     )
     for (line in expectedAgentCommands) {
         if (!agentsText.contains(line)) fail("$agentsPath missing documented command: $line")
@@ -4900,28 +4915,28 @@ fun scenarioDefaultRunRoot(name: String, args: List<String>): Path {
     val explicit = argValue(args, "--run-root")
     if (explicit != null) return resolveUserPath(explicit)
     return when (name) {
-        "opening_progression" -> Paths.get("/tmp/bc-opening-progression")
-        "lc_tfth_c2me_dh" -> Paths.get("/tmp/bc-lc-c2me-dh-repro")
-        "mod_ram_partition" -> Paths.get("/tmp/bc-mod-ram-partition")
-        "dimension_worldgen", "worldgen_sampling" -> Paths.get("/tmp/bc-dimension-worldgen")
-        "pillager_campaigns" -> Paths.get("/tmp/bc-pillager-campaigns")
-        "vs_ships_stability" -> Paths.get("/tmp/bc-vs-ships-stability")
-        "vs_ships_matrix" -> Paths.get("/tmp/bc-vs-ships-matrix")
+        "opening_progression" -> cachePath("opening-progression")
+        "lc_tfth_c2me_dh" -> cachePath("lc-c2me-dh-repro")
+        "mod_ram_partition" -> cachePath("mod-ram-partition")
+        "dimension_worldgen", "worldgen_sampling" -> cachePath("dimension-worldgen")
+        "pillager_campaigns" -> cachePath("pillager-campaigns")
+        "vs_ships_stability" -> cachePath("vs-ships-stability")
+        "vs_ships_matrix" -> cachePath("vs-ships-matrix")
         "client_smoke" -> {
             val profile = argValue(args, "--profile") ?: "quick"
-            Paths.get("/tmp", if (profile == "release") "bc-client-smoke-release" else "bc-client-smoke-quick")
+            cachePath(if (profile == "release") "client-smoke-release" else "client-smoke-quick")
         }
         "vs_ships_client" -> {
             val profile = argValue(args, "--profile") ?: "quick"
-            Paths.get("/tmp", when (profile) {
-                "release" -> "bc-vs-ships-client-release"
-                "stress" -> "bc-vs-ships-client-stress"
-                else -> "bc-vs-ships-client-quick"
+            cachePath(when (profile) {
+                "release" -> "vs-ships-client-release"
+                "stress" -> "vs-ships-client-stress"
+                else -> "vs-ships-client-quick"
             })
         }
-        "vs_ships_release" -> Paths.get("/tmp/bc-vs-ships-release")
-        "worldgen_marketing_screenshots" -> Paths.get(System.getProperty("user.home"), ".cache", "bc", "worldgen-marketing-screenshots")
-        else -> Paths.get("/tmp/bc-$name")
+        "vs_ships_release" -> cachePath("vs-ships-release")
+        "worldgen_marketing_screenshots" -> cachePath("worldgen-marketing-screenshots")
+        else -> cachePath("scenario-$name")
     }.toAbsolutePath().normalize()
 }
 
@@ -5022,7 +5037,7 @@ fun handleTest(subArgs: List<String>): CommandResult {
         "smoke" -> {
             val missing = ensureCommands("kotlin", "java")
             if (missing.isNotEmpty()) return prereqFailure("smoke validation prerequisites missing", missing)
-            var serverDir = "/tmp/bc-agent-validate-smoke"
+            var serverDir = cachePath("agent-validate-smoke").toString()
             var port = "25565"
             var reset = false
             var bootstrapMode = "always"

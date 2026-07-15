@@ -45,7 +45,7 @@ fun parseConfig(args: Array<String>): ScenarioConfig {
     var bootstrapMode = "always"
     var keepGoing = false
     var keepRuns = false
-    var runRoot = envPath("BC_HARNESS_RUN_ROOT") ?: Paths.get("/tmp/bc-opening-progression")
+    var runRoot = envPath("BC_HARNESS_RUN_ROOT") ?: Paths.get(System.getProperty("user.home"), ".cache", "bc", "opening-progression")
     var statusPath = envPath("BC_HARNESS_STATUS_PATH")
     var summaryPath = envPath("BC_HARNESS_SUMMARY_PATH")
     var latestStatusPath = envPath("BC_HARNESS_LATEST_STATUS_PATH")

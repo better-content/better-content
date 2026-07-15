@@ -44,7 +44,7 @@ val steps = listOf(
     StaticStep(
         "audit indirect casing economy",
         listOf("kotlin", repo.resolve("tools/kotlin/audit_indirect_casing_economy.main.kts").toString(), "--check"),
-        extraEnv = mapOf("OUT_DIR" to "/tmp/bc-indirect-casing-audit"),
+        extraEnv = mapOf("OUT_DIR" to repo.resolve("generated/validation/indirect_casing_audit").toString()),
     ),
     StaticStep("validate KubeJS assets", listOf("tools/bc", "internal", "validate-kubejs-assets")),
     StaticStep("validate Dynamic Trees coverage", listOf("tools/bc", "internal", "validate-dynamic-trees-coverage")),

@@ -6,8 +6,8 @@ TOOLS_COMPAT_DIR="$ROOT/tools/quarantine/original-tools"
 # shellcheck source=tools/quarantine/original-tools/_runtime_common.sh
 source "$TOOLS_COMPAT_DIR/_runtime_common.sh"
 
-server_dir="${SERVER_DIR:-$BTM_DEFAULT_SERVER_DIR}"
-port="$BTM_SERVER_PORT"
+server_dir="${SERVER_DIR:-$BC_DEFAULT_SERVER_DIR}"
+port="$BC_SERVER_PORT"
 reset=0
 
 usage() {
@@ -15,7 +15,7 @@ usage() {
 Usage: $(basename "$0") [--server-dir PATH] [--port PORT] [--reset-runtime]
 
 Bootstraps a portable Forge dedicated server root for local agent testing.
-Installs Forge ${BTM_FORGE_COORD} when run.sh/libraries are missing, syncs managed pack
+Installs Forge ${BC_FORGE_COORD} when run.sh/libraries are missing, syncs managed pack
 source, accepts the EULA for local testing, and writes local offline server.properties.
 
 Runtime/world state is preserved unless --reset-runtime is passed.
@@ -35,7 +35,7 @@ done
 java_bin="$(btm_java17)"
 installer="$(btm_find_forge_installer "$ROOT")"
 [[ -n "$installer" && -f "$installer" ]] || {
-  echo "ERROR: forge-${BTM_FORGE_COORD}-installer.jar not found under repo/server roots" >&2
+  echo "ERROR: forge-${BC_FORGE_COORD}-installer.jar not found under repo/server roots" >&2
   exit 1
 }
 
@@ -45,15 +45,15 @@ if [[ "$reset" == "1" ]]; then
   rm -rf "$server_dir/world" "$server_dir/logs" "$server_dir/crash-reports"
 fi
 
-cp "$installer" "$server_dir/forge-${BTM_FORGE_COORD}-installer.jar"
-"$ROOT/tools/btm" build sync server --dir "$server_dir" --apply
-if [[ "${BTM_SKIP_PACKWIZ_DOWNLOADS:-0}" != "1" ]]; then
-  "$ROOT/tools/btm" internal resolve-packwiz-downloads --target-dir "$server_dir" --side server --apply
+cp "$installer" "$server_dir/forge-${BC_FORGE_COORD}-installer.jar"
+"$ROOT/tools/bc" build sync server --dir "$server_dir" --apply
+if [[ "${BC_SKIP_PACKWIZ_DOWNLOADS:-0}" != "1" ]]; then
+  "$ROOT/tools/bc" internal resolve-packwiz-downloads --target-dir "$server_dir" --side server --apply
 fi
-"$ROOT/tools/btm" internal prune-runtime-mods --target-dir "$server_dir" --side server --apply
+"$ROOT/tools/bc" internal prune-runtime-mods --target-dir "$server_dir" --side server --apply
 
-if [[ ! -f "$server_dir/run.sh" || ! -d "$server_dir/libraries/net/minecraftforge/forge/${BTM_FORGE_COORD}" ]]; then
-  (cd "$server_dir" && "$java_bin" -jar "forge-${BTM_FORGE_COORD}-installer.jar" --installServer)
+if [[ ! -f "$server_dir/run.sh" || ! -d "$server_dir/libraries/net/minecraftforge/forge/${BC_FORGE_COORD}" ]]; then
+  (cd "$server_dir" && "$java_bin" -jar "forge-${BC_FORGE_COORD}-installer.jar" --installServer)
 fi
 
 printf 'eula=true\n' > "$server_dir/eula.txt"

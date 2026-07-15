@@ -55,7 +55,7 @@ fun usage(message: String? = null): Nothing {
 
 fun parseConfig(args: Array<String>): ScenarioConfig {
     var lane = "nemesis_cycle"
-    var runRoot = Paths.get("/tmp/bc-pillager-campaigns")
+    var runRoot = Paths.get(System.getProperty("user.home"), ".cache", "bc", "pillager-campaigns")
     var index = 0
     while (index < args.size) {
         when (args[index]) {

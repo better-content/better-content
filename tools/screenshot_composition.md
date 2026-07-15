@@ -106,7 +106,7 @@ works.
   frame. A fixed sleep alone is not enough for publishable marketing captures.
 - Keep the full-resolution clean master before cropping or color adjustment. Do
   not stretch, generatively extend, or materially repaint world geometry.
-- Store runtime captures under `generated/` or `/tmp`. Separate raw masters,
+- Store runtime captures under `generated/` or `~/.cache/bc`. Separate raw masters,
   shortlist candidates, AI reviews, and final exports.
 - Image directories may contain images and their review sidecars only. Never put
   helper source, `.class` files, logs, crash reports, or other runtime debris in

@@ -132997,19 +132997,6 @@
       "weight_class": "structural_progression"
     },
     {
-      "id": "crafted:kubejs:replace_input_gate:rootsclassic:altar",
-      "kind": "crafted",
-      "mod": "rootsclassic",
-      "output": "rootsclassic:altar",
-      "authority": "default:rootsclassic",
-      "surface_type": "kubejs:replace_input_gate",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:17"
-      ],
-      "era": "survival",
-      "weight_class": "structural_progression"
-    },
-    {
       "id": "crafted:minecraft:crafting_shaped:rpgstats:bone_ritual_dagger",
       "kind": "crafted",
       "mod": "rpgstats",

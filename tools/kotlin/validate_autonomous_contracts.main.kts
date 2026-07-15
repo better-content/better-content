@@ -974,6 +974,7 @@ fun validateWorldgenStaticContractsImpl() {
         "datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/placed_feature/osmiridium_lava_sulfide_ore_deepslate.json",
         "datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/placed_feature/thorium_ore_deepslate.json",
         "datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/placed_feature/uranium_ore_deepslate.json",
+        "datapacks/hyle_deep/data/hyle/worldgen/configured_feature/stone_replacer.json",
         "datapacks/hyle_deep/data/hyle/worldgen/placed_feature/stone_replacer.json"
     )
     val missingLava = lavaDepthFiles.filterNot(::exists)
@@ -985,6 +986,27 @@ fun validateWorldgenStaticContractsImpl() {
     val hyleStoneReplacerY = jsonNumber(jsonObject(jsonObject(hylePlacement.firstOrNull())["height"])["value"]?.let(::jsonObject)?.get("absolute"))?.toInt()
     if (hyleStoneReplacerY == -64) ok("Hyle stone replacement starts at world bottom", "y=$hyleStoneReplacerY")
     else fail("Hyle stone replacement starts at world bottom", "y=$hyleStoneReplacerY")
+
+    val hyleConfigured = readJson("datapacks/hyle_deep/data/hyle/worldgen/configured_feature/stone_replacer.json")
+    val hyleConfig = jsonObject(hyleConfigured["config"])
+    val hyleRegions = jsonArray(hyleConfig["regions"]).mapNotNull(::jsonString)
+    val requiredHyleRegions = listOf("unearthed:default", "unearthed:limestone", "unearthed:sedimentary", "unearthed:vanilla")
+    val missingHyleRegions = requiredHyleRegions.filterNot(hyleRegions::contains)
+    if (missingHyleRegions.isEmpty()) ok("Hyle stone replacement has active Unearthed regions", hyleRegions.joinToString(", "))
+    else fail("Hyle stone replacement has active Unearthed regions", missingHyleRegions.joinToString(", "))
+
+    val hyleOverrideFiles = walk("datapacks/hyle_deep/data/unearthed/hyledata") { it.endsWith(".json") }
+    val hyleOverrideText = hyleOverrideFiles.joinToString("\n") { read(it) }
+    val deadUnearthedHyleRefs = listOf(
+        "unearthed:dacite",
+        "unearthed:dolerite",
+        "unearthed:grassy_sandstone_regolith",
+        "unearthed:andesite_iron_ore",
+        "unearthed:diorite_iron_ore",
+        "unearthed:granite_iron_ore"
+    ).filter { "\"$it\"" in hyleOverrideText }
+    if (deadUnearthedHyleRefs.isEmpty()) ok("Hyle Unearthed overrides avoid known unregistered outputs")
+    else fail("Hyle Unearthed overrides avoid known unregistered outputs", deadUnearthedHyleRefs.joinToString(", "))
 
     val misplacedHyleData = if (exists("datapacks/hyle_deep/data/hyledata")) walk("datapacks/hyle_deep/data/hyledata") { it.endsWith(".json") } else emptyList()
     if (misplacedHyleData.isEmpty()) ok("Hyle datapack data uses namespaced loader paths") else fail("Hyle datapack data uses namespaced loader paths", misplacedHyleData.joinToString(", "))

@@ -1,0 +1,6 @@
+{
+  "base": "minecraft:diorite",
+  "dirt": "minecraft:diorite",
+  "grass": "unearthed:overgrown_diorite",
+  "ores": {}
+}

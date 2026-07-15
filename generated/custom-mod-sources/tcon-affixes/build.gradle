@@ -10,7 +10,7 @@ ext {
     modDescription = 'Affixed Tinkers parts found throughout the world.'
 }
 
-apply from: file('../dimension-drink/gradle/forge-module.gradle')
+apply from: file('gradle/forge-module.gradle')
 
 dependencies {
     def mantleDep = 'curse.maven:mantle-74924:7563777'

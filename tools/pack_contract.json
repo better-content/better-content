@@ -858,6 +858,13 @@
         "minTestFiles": 5
       },
       {
+        "id": "tconaffixes",
+        "repo": "tcon-affixes",
+        "jar": "mods/tconaffixes-1.0.0.jar",
+        "minCodeFiles": 4,
+        "minTestFiles": 1
+      },
+      {
         "id": "computerbridge",
         "repo": "oc2r-create-bridge",
         "jar": "mods/computerbridge-0.1.0.jar",

@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "AGENTS.md"
-hash = "e1d515e5236f7d8b5160f374370032b7b9ddeccfb656d4d9e939abffc1713e43"
+hash = "59fcc7f289ddf8bcf50035d611dfc5078e0bea0bfe59b86a60932167faf2c1b3"
 
 [[files]]
 file = "LICENSE"
@@ -11201,7 +11201,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimensiondrink-1.0.0.jar"
-hash = "c6dc3d3179a933b41b2af2956065e8f53903c0c9c54b7822b001de06d604aa64"
+hash = "495305c53d340b2d8f568e7bdd4907232f2a464ae12e44e156a75f20ab03eb79"
 
 [[files]]
 file = "mods/ding.pw.toml"
@@ -11997,6 +11997,10 @@ metafile = true
 file = "mods/sushigocrafting.pw.toml"
 hash = "81158e150587d8c9e3218d2f64455f24c8129b00f0008410eba0667a5240cc6a"
 metafile = true
+
+[[files]]
+file = "mods/tconaffixes-1.0.0.jar"
+hash = "196344885bf9bf7babf344c0b93e5030e84057aaec0afb3871c0a0db8995980e"
 
 [[files]]
 file = "mods/tconjei.pw.toml"

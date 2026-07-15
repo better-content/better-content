@@ -39,6 +39,8 @@ Current graph-start recipe gates are in `kubejs/server_scripts/30_recipe_replace
 
 Dimension travel has two authored surfaces only: Dimension Drink from `dimensiondrink-1.0.0.jar` plus `config/dimension_drink/`, and Creating Space rocket graph entries under `kubejs/data/*/creatingspace/rocket_accessible_dimension/`. Direct portal/key routes are removed or hidden by `170_space_dimension_access_gates.js`, `40_hide_quarantined_systems.js`, `config/twilightforest-common.toml`, and `config/structurify.json`. The authored early font set is Nether, Aether, Undergarden, and Otherside; End font access is removed while strongholds remain disabled. Font shrine structure-set spacing is now 30 with separation 9, making shrines roughly twice as common as the earlier 42/12 spread. Lost Cities, Twilight Forest, and Fallout Wastelands are space-routed adventure dimensions.
 
+Affixed Tinkers parts are no longer Font rewards. The standalone `tconaffixes-1.0.0.jar` distributes rare rolled parts through hostile drops and chest-loot Affixed Part Caches; opening a cache yields one affixed Tinkers part. Font completion remains its own expedition-reward surface.
+
 | Dimension | Graph Start Opened | Proof Route |
 | --- | --- | --- |
 | Nether | TConstruct metallurgy proof edge | Netherrack grout and Nether heat/material recipes prove the first serious molten-material route. This keeps TCon rooted in the tech spine while letting Nether travel supply its first hard proof. |

@@ -205,6 +205,7 @@ Active pack-critical sources:
 - `realistic-ores` (`realisticores`)
 - `rpg-stats` (`rpgstats`)
 - `settlement-roads` (`settlementroads`)
+- `tcon-affixes` (`tconaffixes`)
 - `village-walls` (`villagewalls`)
 
 Note: `settlementroads` appears in multiple dirs; use `generated/custom-mod-sources/settlement-roads` as canonical unless explicitly told otherwise.

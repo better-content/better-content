@@ -50,6 +50,7 @@ val steps = listOf(
     StaticStep("validate Dynamic Trees coverage", listOf("tools/bc", "internal", "validate-dynamic-trees-coverage")),
     StaticStep("validate chemistry identity", listOf("tools/bc", "internal", "validate-chemistry-identity")),
     StaticStep("validate synthesis pipeline", listOf("tools/bc", "internal", "validate-synthesis-pipeline")),
+    StaticStep("validate progression contracts", listOf("kotlin", repo.resolve("tools/kotlin/validate_progression_contracts.main.kts").toString())),
     StaticStep("validate player progression contracts", listOf("tools/bc", "internal", "validate-player-progression-contracts")),
     StaticStep("validate progression reachability", listOf("tools/bc", "internal", "validate-progression-reachability")),
     StaticStep("validate Burnt coverage", listOf("tools/bc", "internal", "validate-burnt-coverage")),

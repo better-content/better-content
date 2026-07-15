@@ -24,7 +24,7 @@
 			description: ["Treat dimension fonts as route gates tied to place. Dirty magic starts by sending you somewhere with a cost, not by handing you a free bench."]
 		}
 		{
-			dependencies: ["CCE823C794059335"]
+			dependencies: ["F58727CBAA57D84C"]
 			id: "4F6E07C014B384B6"
 			title: "Hexerei"
 			icon: "hexerei:mixing_cauldron"
@@ -129,7 +129,7 @@
 			description: ["Malum is the spirit-heavy branch on the Blood side. Expect soul materials and slates to become required ingredients, not generic filler."]
 		}
 		{
-			dependencies: ["711805EB7FB3B97D"]
+			dependencies: ["095D6A4C4C57ABA5"]
 			id: "C651E31C8857F83A"
 			title: "Spirit"
 			icon: "malum:spirit_jar"
@@ -189,68 +189,66 @@
 			description: ["Use foci to specialize command magic once the base route is stable. They are for deliberate capability choices, not for random power sampling."]
 		}
 		{
-			dependencies: ["CCE823C794059335"]
 			id: "61DF7A5803F5A8CF"
-			title: "Ars"
-			icon: "ars_nouveau:worn_notebook"
+			title: "Programmable Magic"
+			icon: "ars_nouveau:novice_spell_book"
 			shape: "diamond"
 			size: 1.05d
 			tasks: [{
 				id: "E0918E0D2D817441"
-				item: "ars_nouveau:worn_notebook"
+				item: "ars_nouveau:novice_spell_book"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 0.0d
 			rewards: [{ id: "1B0AF4A9C4C0114C" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
-			description: ["Ars can tease you early, but real glyph access is still gated by manuscripts and cross-branch proof. Read the book, then go earn the actual magic."]
+			description: ["Build the novice book early. It is only an empty language until ink and a native magical proof give the Scribe's Table an effect to formalize."]
 		}
 		{
 			dependencies: ["61DF7A5803F5A8CF"]
 			id: "C43AA03C2209FA3E"
-			title: "Source"
-			icon: "ars_nouveau:source_jar"
+			title: "Scribe"
+			icon: "ars_nouveau:scribes_table"
 			shape: "rsquare"
 			tasks: [{
 				id: "B31BFFAD46FE8504"
-				item: "ars_nouveau:source_jar"
+				item: "ars_nouveau:scribes_table"
 				type: "item"
 			}]
 			x: 1.58d
 			y: 0.0d
-			description: ["Build source jars once Ars recipes start asking for stored source. Keep them near the notebook and glyph work so source is easy to refill."]
+			description: ["Build the writing desk before chasing power. The table is cheap; every usable glyph still consumes ink, a tradition's proof, and a thematic catalyst."]
 		}
 		{
-			dependencies: ["F58727CBAA57D84C" "7EE05287206646BF" "095D6A4C4C57ABA5" "CB17C8EE341E7C49" "C43AA03C2209FA3E"]
+			dependencies: ["C43AA03C2209FA3E"]
 			id: "EF3FCCBEA1B19672"
-			title: "Script"
-			icon: "minecraft:paper"
+			title: "First Glyph"
+			icon: "ars_nouveau:glyph_projectile"
 			shape: "octagon"
 			size: 1.2d
 			tasks: [{
 				id: "AF15C0574177CFC8"
-				title: "Craft glyph access from mixed magic"
+				title: "Author one ink-bound glyph"
 				type: "checkmark"
 			}]
 			x: 3.17d
 			y: 0.0d
-			description: ["Use manuscripts to connect Ars with the other magic paths. Spell knowledge should come from crafted materials, not from opening a book once."]
+			description: ["Use common ink plus proof from any dirty tradition to author a first effect. Forms and modifiers are shared grammar; effect domains come from the tradition that understands them."]
 		}
 		{
-			dependencies: ["EF3FCCBEA1B19672"]
 			id: "65BF28B6840B359C"
-			title: "Spell"
-			icon: "irons_spellbooks:iron_spell_book"
+			title: "Fixed Magic"
+			icon: "irons_spellbooks:copper_spell_book"
 			shape: "hexagon"
 			size: 1.15d
 			tasks: [{
 				id: "0F7CE4DA079111A5"
-				item: "irons_spellbooks:iron_spell_book"
+				item: "irons_spellbooks:copper_spell_book"
 				type: "item"
 			}]
 			x: 4.75d
 			y: 0.0d
-			description: ["Iron's spellbooks are where the branches pay into a shared spell route. If the ingredients feel mixed, that is because the book is meant to prove cross-magic mastery."]
+			description: ["Iron's is a separate formal system for fixed spells. The empty copper book is early, but it needs ink, a school focus, a forged scroll, and inscription before it can cast anything."]
 		}
 		{
 			dependencies: ["65BF28B6840B359C"]
@@ -265,7 +263,7 @@
 			}]
 			x: 6.34d
 			y: -2.0d
-			description: ["Keep common ink stocked near your spellbooks. Running out of ink is the usual sign that spell upgrades need a dedicated supply shelf."]
+			description: ["Brew common ink from water and an entry proof from any dirty tradition. Stronger proof raises the shared ink tier globally, so one deeply developed route can support stronger formal writing."]
 		}
 		{
 			dependencies: ["65BF28B6840B359C"]
@@ -280,23 +278,23 @@
 			}]
 			x: 6.34d
 			y: 2.0d
-			description: ["Scrolls belong after the manuscript gate because portable magic still needs to cost real materials. Treat them as earned tools, not disposable freebies."]
+			description: ["Forge a scroll with ink and a native school focus. Blood, folk, spirit, pact, and command reagents each expose different schools instead of becoming interchangeable flavor."]
 		}
 		{
 			dependencies: ["885E88450D25E2DC" "04D31A9636DC517C"]
 			id: "549CB984F5C3F088"
-			title: "Hybrid"
+			title: "Two Formalisms"
 			icon: "minecraft:enchanted_book"
 			shape: "octagon"
 			size: 1.15d
 			tasks: [{
 				id: "886519E54EEB38BD"
-				title: "Keep magic branches cross-fed"
+				title: "Use programmable and fixed spellcraft"
 				type: "checkmark"
 			}]
 			x: 7.92d
 			y: 0.0d
-			description: ["Check the ingredients on mixed magic crafts before moving on. If one magic path seems to solve everything alone, look for the missing material from another branch."]
+			description: ["Ars composes effects from glyphs; Iron's records fixed spells in scrolls and books. They share inks and selected stations without collapsing into the same spell system."]
 		},
 		{
 			dependencies: ["CCE823C794059335"]
@@ -420,53 +418,53 @@
 		{
 			dependencies: ["61DF7A5803F5A8CF"]
 			id: "4BC2BED60256ACEB"
-			title: "Manuscript Gate"
+			title: "Programmable Breadth"
 			icon: "ars_nouveau:blank_parchment"
 			shape: "diamond"
 			size: 0.9d
 			tasks: [{
 				id: "B85FCC063AB96372"
-				title: "Earn glyphs through manuscripts"
+				title: "Expand glyph domains through traditions"
 				type: "checkmark"
 			}]
 			x: 0.0d
 			y: -2.75d
-			description: ["Treat Ars as converging with the dirty branches instead of floating above them. That keeps manuscripts and glyphs tied to real proof."]
+			description: ["Core forms accept proof from any tradition. Hexerei, Occultism, Blood Magic, Malum, and Goety each own a distinct family of effects, so the full glyph catalog requires broad magical study."]
 		}
 ,
 		{
 			dependencies: ["65BF28B6840B359C"]
 			id: "1EDA0E885EBC6024"
-			title: "Ink Economy"
+			title: "Fixed-Spell Breadth"
 			icon: "irons_spellbooks:arcane_essence"
 			shape: "rsquare"
 			size: 0.9d
 			tasks: [{
 				id: "0317548C6A2A643E"
-				title: "Spend ink and essence on spell growth"
+				title: "Open schools with native focuses"
 				type: "checkmark"
 			}]
 			x: 5.55d
 			y: -3.15d
-			description: ["Store ink, scrolls, and arcane essence together. Spell upgrades are easier to plan when the writing materials live beside the spellbook work area."]
+			description: ["Each Iron's school consumes a focus from its parent tradition. Ink rarity controls depth while school focuses control breadth."]
 		}
 ,
 		{
-			dependencies: ["549CB984F5C3F088"]
+			dependencies: ["549CB984F5C3F088" "F58727CBAA57D84C" "7EE05287206646BF" "7537B1C6F801B0BA" "095D6A4C4C57ABA5" "CB17C8EE341E7C49"]
 			id: "FE4D8461184D9C2F"
-			title: "Cross-Magic Proof"
+			title: "Formal Concordance"
 			icon: "minecraft:nether_star"
 			shape: "octagon"
 			size: 0.9d
 			tasks: [{
 				id: "FE3E5C3BD5DE44B2"
-				title: "Require each branch to pay into the others"
+				title: "Open every formal spell domain"
 				type: "checkmark"
 			}]
 			x: 7.92d
 			y: 3.15d
-			description: ["Before pushing deeper, check that your magic rooms are connected: fonts for travel, spirit tools for materials, slates for cost, and spellbooks for use."]
+			description: ["Complete Hexerei, Occultism, Blood Magic, Malum, and Goety, then confirm that both formal systems can express every domain. This marks breadth completion; it is not a universal ingredient tax on every high-tier spell."]
 		}
 	]
-	title: "Fonts and Dirty Magic"
+	title: "Dirty and Formal Magic"
 }

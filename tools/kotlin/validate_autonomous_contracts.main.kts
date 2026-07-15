@@ -1011,6 +1011,23 @@ fun validateWorldgenStaticContractsImpl() {
     val misplacedHyleData = if (exists("datapacks/hyle_deep/data/hyledata")) walk("datapacks/hyle_deep/data/hyledata") { it.endsWith(".json") } else emptyList()
     if (misplacedHyleData.isEmpty()) ok("Hyle datapack data uses namespaced loader paths") else fail("Hyle datapack data uses namespaced loader paths", misplacedHyleData.joinToString(", "))
 
+    val sgiMixinConfig = readJson("generated/custom-mod-sources/better-content-fixes/src/main/resources/bcfixes.mixins.json")
+    val sgiMixinNames = jsonArray(sgiMixinConfig["mixins"]).mapNotNull(::jsonString)
+    val sgiDeferredMixinPath = "generated/custom-mod-sources/better-content-fixes/src/main/java/io/github/bcfixes/mixin/sgi/ChunkGeneratorMixin.java"
+    val sgiDeferredMixin = if (exists(sgiDeferredMixinPath)) read(sgiDeferredMixinPath) else ""
+    val sgiDefersSurfaceConform = "sgi.ChunkGeneratorMixin" in sgiMixinNames &&
+        "sgi.TerrainConformUtilMixin" in sgiMixinNames &&
+        "TerrainConformUtil;applyDuringSurface" in sgiDeferredMixin &&
+        "@At(\"TAIL\")" in sgiDeferredMixin &&
+        "applyDuringSurface.invoke(null, level, structureManager, chunk)" in sgiDeferredMixin
+    if (sgiDefersSurfaceConform) ok(
+        "SGI support terrain samples the final Hyle/Unearthed palette",
+        "surface conform is deferred to decoration tail with a post-conform Hyle safety pass"
+    ) else fail(
+        "SGI support terrain samples the final Hyle/Unearthed palette",
+        "missing SGI defer mixin, tail invocation, or Hyle safety mixin"
+    )
+
     val lavaConfigured = walk("datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/configured_feature") { it.endsWith(".json") }
     val nonLavaFeatureConfigured = lavaConfigured.filter { jsonString(readJson(it)["type"]) != "realisticores:lava_exposed_ore" }
     if (nonLavaFeatureConfigured.isEmpty()) ok("lava-depth configured features use the Realistic Ores lava-exposed feature", "${lavaConfigured.size} configured features")

@@ -1,0 +1,6 @@
+{
+  "base": "minecraft:andesite",
+  "dirt": "minecraft:andesite",
+  "grass": "unearthed:overgrown_andesite",
+  "ores": {}
+}

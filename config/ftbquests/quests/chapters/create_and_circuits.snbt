@@ -485,6 +485,29 @@
 			y: -1.0d
 			description: ["Treat this as your reminder that Create should point you toward trains and physical movement. The machines are here to support logistics, not to erase it."]
 		}
+		{
+			dependencies: ["43E30496929C8519"]
+			id: "F03751B9DE64058A"
+			title: "Tracked Mobility"
+			icon: "trackwork:phys_track"
+			shape: "octagon"
+			size: 1.0d
+			tasks: [
+				{
+					id: "014862CAEF75169B"
+					item: "trackwork:phys_track"
+					type: "item"
+				}
+				{
+					id: "125973DBF08627AC"
+					item: "trackwork:track_tool_kit"
+					type: "item"
+				}
+			]
+			x: 7.95d
+			y: -3.0d
+			description: ["Use Trackwork when a fixed rail line is the wrong answer. Its wheels and tracks consume railway casing and precision mechanisms, so rough-terrain vehicles arrive beside trains instead of bypassing them."]
+		}
 	]
 	title: "Create and Primitive Circuits"
 }

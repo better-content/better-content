@@ -477,6 +477,45 @@
 		}
 		{
 			dependencies: [
+				"0EB806E4337DC7FA"
+				"1B09C8F1C2FE5053"
+			]
+			id: "A7E2C4D68F109B35"
+			title: "Build a Real Boat"
+			icon: "vs_eureka:oak_ship_helm"
+			shape: "hexagon"
+			size: 1.3d
+			tasks: [
+				{
+					id: "B8F31D759A20C146"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(vs_eureka:ship_helms)"
+						}
+					}
+					title: "Any #vs_eureka:ship_helms"
+					type: "item"
+				}
+				{
+					id: "C9042E86AB31D257"
+					item: "vs_eureka:engine"
+					type: "item"
+				}
+				{
+					id: "DA153F97BC42E368"
+					item: "vs_eureka:floater"
+					type: "item"
+				}
+			]
+			x: -1.3d
+			y: -3.25d
+			description: ["Turn Part Builder handles, blades, and repair kits into a working wooden ship. Vanilla boats are absent: build a helm, primitive fuel engine, floaters, and a hull so rivers and coasts become your first serious resource routes."]
+			rewards: [{ id: "EB2640A8CD53F479" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+		}
+		{
+			dependencies: [
 				"67B724BED12A7BBE"
 				"535E16A7456BAE19"
 			]

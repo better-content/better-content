@@ -5438,7 +5438,7 @@ hash = "3fbe8b721a46e2f45425ae6b5da8bb9a80bde5f35197d6759062f21045077afd"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/create_and_circuits.snbt"
-hash = "b00c9a3c65e356da749d15cd8d77acc369da729732caff2cf1bb3acfeb778fad"
+hash = "15ef3819cdeb4f7d32c9abdbf5df3f4d7579406278ee892035183e14188718ea"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/deposits_ore_identity.snbt"
@@ -5446,7 +5446,7 @@ hash = "fcd826ff15d843083ad03d3d1e9da327bcc8a360dde96fdaf4d6d3215e529201"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/dimensions.snbt"
-hash = "ed23e547cc22088557f9375323e7109e34337c6d9020d6149346e3b285b32862"
+hash = "93940db027912022ff698ec39e46d72a6b75c1382ee75cef70589681da6d5556"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/dirty_magic_spines.snbt"
@@ -5470,7 +5470,7 @@ hash = "0c18f3f75200a579b0da10234668b330ce3e3fb779a0a72d645549ed0c706b79"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/the_situation.snbt"
-hash = "e6d25bbe8542eff7106fcf3f40f69317d43d044f8ad000b37422f894bf539f5b"
+hash = "c911110da391b528d8c5ed3d0c3a62c3a16d24a9c2b5a305d58b17e106c36b99"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"

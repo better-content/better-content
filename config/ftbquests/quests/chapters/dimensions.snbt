@@ -48,6 +48,34 @@
 			]
 		}
 		{
+			dependencies: [
+				"14F60973DD91B6F2"
+				"E767D2D9AD86FB78"
+			]
+			id: "236A84EC019738BD"
+			title: "Powered Aeronautics"
+			subtitle: "Aether buoyancy plus Airtight manufacture opens powered flight."
+			icon: "vs_eureka:balloon"
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [
+				{
+					id: "347B95FD12A849CE"
+					item: "vs_eureka:balloon"
+					type: "item"
+				}
+				{
+					id: "458CA60E23B95ADF"
+					item: "vs_clockwork:blade_controller"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: -0.5d
+			description: ["Gliders prove Aether mobility at brass. Powered ships wait for sealed Airtight manufacture: aercloud, aerogel, and ambrosium identify every flight route while Clockwork controllers provide the machinery."]
+			rewards: [{ id: "569DB71F34CA6BE0" type: "ftbquests:item" item: "createdeco:copper_coin" count: 4 }]
+		}
+		{
 			id: "29DD7BCEDC44AEF3"
 			title: "Undergarden: Pantry"
 			subtitle: "Food, forage, and body-survival materials live below."

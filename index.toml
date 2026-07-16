@@ -8029,6 +8029,30 @@ file = "datapacks/worldgen_compat_fixes/data/realisticores/worldgen/configured_f
 hash = "01af1b329a1d0575041cae60ac989c959da83d477e9d58346061f5e507704103"
 
 [[files]]
+file = "datapacks/worldgen_compat_fixes/data/the_flesh_that_hates/worldgen/structure/house1.json"
+hash = "f53b9ea765939de719c021fe16a4efc5f962bc16b4b4e986972324de194a12f4"
+
+[[files]]
+file = "datapacks/worldgen_compat_fixes/data/the_flesh_that_hates/worldgen/structure/mouth1.json"
+hash = "1f5d06d5d4106e745eda9be4d5b046f0498016e8c0fbdbc69716bea7a2f2a782"
+
+[[files]]
+file = "datapacks/worldgen_compat_fixes/data/the_flesh_that_hates/worldgen/structure/pus.json"
+hash = "a4b3b7f786d9c659be8e70966ea8e4df8d5958b9136249c4186725f2ee95fa85"
+
+[[files]]
+file = "datapacks/worldgen_compat_fixes/data/the_flesh_that_hates/worldgen/structure/spawnmouth.json"
+hash = "fce0f4a5c2774b9e71187390f7bce59826aa30588ceb7520c0b2b1a8c4861c8e"
+
+[[files]]
+file = "datapacks/worldgen_compat_fixes/data/the_flesh_that_hates/worldgen/structure/spine1.json"
+hash = "feaae6a53becba666078834f2fbf0b340e5221d49eba58196f3820a594cf019a"
+
+[[files]]
+file = "datapacks/worldgen_compat_fixes/data/the_flesh_that_hates/worldgen/structure/tree.json"
+hash = "5cdffe35aaa769ef8bb7e439fe4785300e1cae5ceb2d684caf7a0cda5a8d6e0e"
+
+[[files]]
 file = "datapacks/worldgen_compat_fixes/pack.mcmeta"
 hash = "510b26be752bf1c917063b9042af1e90bd20e8f107d719595ed1c25ddbcfdfef"
 

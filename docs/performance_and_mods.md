@@ -66,6 +66,7 @@ Historical conclusions to preserve:
 - DH server generation request radii must stay constrained. A fresh dedicated runtime with `maxSyncOnLoadRequestDistance = 512` and `maxGenerationRequestDistance = 512` produced a C2ME chunk-read stall during DH `PRE_EXISTING_ONLY` import. Current source state keeps `maxGenerationRequestDistance = 16`, trims `maxSyncOnLoadRequestDistance` to `32`, caps DH per-player upload to `256` KB/s, and enables adaptive transfer speed to reduce client movement rubberbanding while flying on dedicated servers.
 - Lost Cities, Twilight Forest, and Fallout Wastelands are routed through Creating Space datapack entries under `kubejs/data/*/creatingspace/rocket_accessible_dimension/`.
 - TFTH now has an active manifest/config state; any older claim that no TFTH mod was identified is stale.
+- TFTH's six bundled structures are disabled by `datapacks/worldgen_compat_fixes`: upstream restricts them to Mushroom Fields and gives them a `flesh_human` creature spawn override, which violates the biome's intended sanctuary behavior.
 
 Revalidate with the current harness after touching `config/c2me.toml`, `config/DistantHorizons.toml`, `config/bcfixes-common.toml`, Creating Space dimension routes, Lost Cities worldgen, custom worldgen mods, or portable harness logic.
 

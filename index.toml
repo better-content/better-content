@@ -9273,6 +9273,18 @@ file = "kubejs/assets/kubejs/textures/item/titanium_grinding_ball.png"
 hash = "27d55921b31e8eeb2bf0921a896155ce66600bb870af746c50ede52d8c8b5bee"
 
 [[files]]
+file = "kubejs/assets/unearthed/blockstates/overgrown_andesite.json"
+hash = "dffaa93ec64ba0defe53c9b01ec4e9dd1a73c84c7524b56a4a340b922daf2fab"
+
+[[files]]
+file = "kubejs/assets/unearthed/blockstates/overgrown_diorite.json"
+hash = "3d7443f3860603be0332026c5fc3945df339495e7d85bd5efdbde958325c1151"
+
+[[files]]
+file = "kubejs/assets/unearthed/blockstates/overgrown_granite.json"
+hash = "c7c2632cdb8a9b00ec870ff6d91d45d3a1c3167600e5a67a86c6a9058d92985d"
+
+[[files]]
 file = "kubejs/assets/unearthed/models/block/ore/overgrown_top_split_overlay_horizontal.json"
 hash = "60b4607d77e52ed7cc455215d589862c2619bf4db42cd0a1fae84d0195634280"
 
@@ -9289,16 +9301,64 @@ file = "kubejs/assets/unearthed/models/block/overgrown_andesite.json"
 hash = "616f8cd52bd457e64bac47ddf25b8e603eb415709b20bbb09ec4187fa0a967f1"
 
 [[files]]
+file = "kubejs/assets/unearthed/models/block/overgrown_andesite_variant_2.json"
+hash = "7e6df667f239b55ab527c37e5347f0b47d30e1979011bdce1177c76c21fffd72"
+
+[[files]]
+file = "kubejs/assets/unearthed/models/block/overgrown_andesite_variant_3.json"
+hash = "d5864c14fde99e10ce065b0a6781eed3801b9bd73d117f8062e8fa3cddb566af"
+
+[[files]]
+file = "kubejs/assets/unearthed/models/block/overgrown_andesite_variant_4.json"
+hash = "456a599622158f8ca8e0edad3cbb113b142d7649f125069ee0e22c7d8f650ff1"
+
+[[files]]
 file = "kubejs/assets/unearthed/models/block/overgrown_diorite.json"
 hash = "97d96178b71ba42f60bea655bf6b355e0c9d5a740d8766673741553fb727b563"
+
+[[files]]
+file = "kubejs/assets/unearthed/models/block/overgrown_diorite_variant_2.json"
+hash = "76586accf779c876f432cc8710e8a713cfc0be6771ae71bd46579dedd38b3222"
+
+[[files]]
+file = "kubejs/assets/unearthed/models/block/overgrown_diorite_variant_3.json"
+hash = "f5ce984889c43036bdf2d119db18034a6bec9f28c5caa6ecb10c163ca5d824b5"
+
+[[files]]
+file = "kubejs/assets/unearthed/models/block/overgrown_diorite_variant_4.json"
+hash = "af3ea8eed8fd55e283c0171c7487f5809225efd2baa1d11cf9a62af778303140"
 
 [[files]]
 file = "kubejs/assets/unearthed/models/block/overgrown_granite.json"
 hash = "564c796f2ab2942d543807be237dbe9bbb20bede98fbee2d4e9a4ca27f5753f3"
 
 [[files]]
+file = "kubejs/assets/unearthed/models/block/overgrown_granite_variant_2.json"
+hash = "ed293f185b3ee00e2ff275815818bbf88e04d4cb799b009a7cf6b3f5f79f18fd"
+
+[[files]]
+file = "kubejs/assets/unearthed/models/block/overgrown_granite_variant_3.json"
+hash = "8232b93b7c06e9c753b1f0d4d5b96b365506824fcf11b43a47f8f76892c0c571"
+
+[[files]]
+file = "kubejs/assets/unearthed/models/block/overgrown_granite_variant_4.json"
+hash = "b9c3bba513a3af3a785e431a0a826678a09c3431f8b637876e9554b329fb8a5f"
+
+[[files]]
 file = "kubejs/assets/unearthed/textures/block/overgrown_andesite_top_grass_mask.png"
-hash = "04d9bc47a09c4ccb02e960a4cb625696056d12d3339424f7febaf558450f8c1d"
+hash = "9459432dd5d7269be50ec80b7f933a1c56e3a5f43520d8206d92a8af62b9dd05"
+
+[[files]]
+file = "kubejs/assets/unearthed/textures/block/overgrown_andesite_top_grass_mask_2.png"
+hash = "7bca2e43b031e34b489008c7a7c8dea953e61297edd9862b544942b8c9919832"
+
+[[files]]
+file = "kubejs/assets/unearthed/textures/block/overgrown_andesite_top_grass_mask_3.png"
+hash = "f9759d317aee3342ea3eeb385894175b725bbcd4fe2768c7aa84dffba2221e2e"
+
+[[files]]
+file = "kubejs/assets/unearthed/textures/block/overgrown_andesite_top_grass_mask_4.png"
+hash = "b07cef6cadf88186632bcf69626173dfdf22675814cdffeca062b2419b14b375"
 
 [[files]]
 file = "kubejs/assets/unearthed/textures/block/overgrown_andesite_top_pebbled.png"
@@ -9306,7 +9366,19 @@ hash = "c0ad2988bb694531f45beec684a839d70945e163097d045d3f5b9970a98e0553"
 
 [[files]]
 file = "kubejs/assets/unearthed/textures/block/overgrown_diorite_top_grass_mask.png"
-hash = "78976a93e4edc9bb6622349cd38ec15f090ffd334cf3429cbc0d9907358d1954"
+hash = "f6bd1ffa921049694ff72b1bedda90c1b9aa7e738a7c203f0bc3e4f0c68c833a"
+
+[[files]]
+file = "kubejs/assets/unearthed/textures/block/overgrown_diorite_top_grass_mask_2.png"
+hash = "5508f4e23bb4edc281953481a2e2017686c393772867b1f6bc35e2a6fbac5678"
+
+[[files]]
+file = "kubejs/assets/unearthed/textures/block/overgrown_diorite_top_grass_mask_3.png"
+hash = "e639f4f466dc15a54609737159ae6119994c3f7d9184e08ef5b51033b8d37b8a"
+
+[[files]]
+file = "kubejs/assets/unearthed/textures/block/overgrown_diorite_top_grass_mask_4.png"
+hash = "5ca2e91008fe228822c3bcf1c0621ac66c3675eb1a203ea5af6ddc84d7bbdd59"
 
 [[files]]
 file = "kubejs/assets/unearthed/textures/block/overgrown_diorite_top_pebbled.png"
@@ -9314,7 +9386,19 @@ hash = "a8e0a94006df3d977654b7ee74459a0cc1e78b95e521ca938cb869e0b7738981"
 
 [[files]]
 file = "kubejs/assets/unearthed/textures/block/overgrown_granite_top_grass_mask.png"
-hash = "baf4313c9b954abea593dda9d75bc7c5bd8c4210b34eedda6adc226341f98e42"
+hash = "40a0fc5782445466b85fa20c60ce3dd919216af556715b986eea0d1fce70cd5a"
+
+[[files]]
+file = "kubejs/assets/unearthed/textures/block/overgrown_granite_top_grass_mask_2.png"
+hash = "4efabdad84140988584848fee6ea8bc0d55d97d4590e0514ab3eda7128523c4b"
+
+[[files]]
+file = "kubejs/assets/unearthed/textures/block/overgrown_granite_top_grass_mask_3.png"
+hash = "f68cda6310be146f394e51aab4d7fe50778b19ff420f0523216b8647827b69e4"
+
+[[files]]
+file = "kubejs/assets/unearthed/textures/block/overgrown_granite_top_grass_mask_4.png"
+hash = "95a9c7d89ed648aa4d4d08f21a50dd01b2d9dbd5776f49a3fe48b5b5a07c61af"
 
 [[files]]
 file = "kubejs/assets/unearthed/textures/block/overgrown_granite_top_pebbled.png"

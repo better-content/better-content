@@ -24,7 +24,7 @@
 				}
 			]
 			rewards: [ ]
-			description: ["7 starter stubs."]
+			description: ["6 starter stubs."]
 		}
 		{
 			id: "9E45F38194F6A882"
@@ -42,51 +42,20 @@
 					count: 1
 				}
 				{
-					id: "F6782EAA8FCBC9E1"
-					type: "item"
-					item: "mynethersdelight:enchanted_golden_egg"
-					count: 1
-				}
-				{
-					id: "3592651D4936A76D"
+					id: "EE0193F615D91990"
 					type: "item"
 					item: "minecraft:enchanted_golden_apple"
 					count: 1
 				}
-			]
-			rewards: [ ]
-			description: ["Source items: minecraft:golden_apple, mynethersdelight:enchanted_golden_egg, minecraft:enchanted_golden_apple | Runtime hint: kettle_infusion"]
-		}
-		{
-			id: "02CD37C883973A18"
-			title: "All Effects: B Pungent"
-			icon: "delightful:cactus_chili"
-			shape: "rsquare"
-			size: 1.0d
-			x: 2.75d
-			y: 0.0d
-			tasks: [
 				{
-					id: "45B8F2ADF55BD663"
+					id: "11F78130CA8D45F8"
 					type: "item"
-					item: "delightful:cactus_chili"
-					count: 1
-				}
-				{
-					id: "FD51F9B131224541"
-					type: "item"
-					item: "mynethersdelight:spicy_curry"
-					count: 1
-				}
-				{
-					id: "1DE0A791B9557CF9"
-					type: "item"
-					item: "mynethersdelight:hot_wings_bucket"
+					item: "immersive_weathering:enchanted_golden_moss_clump"
 					count: 1
 				}
 			]
 			rewards: [ ]
-			description: ["Source items: delightful:cactus_chili, mynethersdelight:spicy_curry, mynethersdelight:hot_wings_bucket | Runtime hint: kitchen_infrastructure"]
+			description: ["Source items: minecraft:golden_apple, minecraft:enchanted_golden_apple, immersive_weathering:enchanted_golden_moss_clump | Runtime hint: kettle_infusion"]
 		}
 		{
 			id: "F0E95704A963095F"
@@ -94,7 +63,7 @@
 			icon: "farmersrespite:coffee_beans"
 			shape: "rsquare"
 			size: 1.0d
-			x: 4.0d
+			x: 2.75d
 			y: 0.0d
 			tasks: [
 				{
@@ -125,7 +94,7 @@
 			icon: "farmersrespite:rose_hips"
 			shape: "rsquare"
 			size: 1.0d
-			x: 5.25d
+			x: 4.0d
 			y: 0.0d
 			tasks: [
 				{
@@ -153,33 +122,27 @@
 		{
 			id: "23CEB45A38B3C47C"
 			title: "All Effects: Fire Resistance"
-			icon: "delightful:cactus_chili"
+			icon: "minecraft:magma_cream"
 			shape: "rsquare"
 			size: 1.0d
-			x: 6.5d
+			x: 5.25d
 			y: 0.0d
 			tasks: [
 				{
-					id: "F9752C911BF5C32E"
-					type: "item"
-					item: "delightful:cactus_chili"
-					count: 1
-				}
-				{
-					id: "E42DFF91E5124D91"
+					id: "15780F149E4B8BA5"
 					type: "item"
 					item: "minecraft:magma_cream"
 					count: 1
 				}
 				{
-					id: "95CEF3D6E0C1279D"
+					id: "CE627E5F8DC8A80C"
 					type: "item"
 					item: "minecraft:enchanted_golden_apple"
 					count: 1
 				}
 			]
 			rewards: [ ]
-			description: ["Source items: delightful:cactus_chili, minecraft:magma_cream, minecraft:enchanted_golden_apple | Runtime hint: keg_distillation"]
+			description: ["Source items: minecraft:magma_cream, minecraft:enchanted_golden_apple | Runtime hint: keg_distillation"]
 		}
 		{
 			id: "36F070D64A01ABA0"
@@ -187,7 +150,7 @@
 			icon: "minecraft:glow_berries"
 			shape: "rsquare"
 			size: 1.0d
-			x: 7.75d
+			x: 6.5d
 			y: 0.0d
 			tasks: [
 				{
@@ -203,14 +166,14 @@
 					count: 1
 				}
 				{
-					id: "9965CAFC53747F52"
+					id: "CF3E3C1CD86DCEF7"
 					type: "item"
-					item: "delightful:glow_jam_jar"
+					item: "undergarden:droopvine_item"
 					count: 1
 				}
 			]
 			rewards: [ ]
-			description: ["Source items: minecraft:glow_berries, minecraft:glow_ink_sac, delightful:glow_jam_jar | Runtime hint: kettle_infusion"]
+			description: ["Source items: minecraft:glow_berries, minecraft:glow_ink_sac, undergarden:droopvine_item | Runtime hint: kettle_infusion"]
 		}
 		{
 			id: "76A94BDB4D8E96A2"
@@ -218,7 +181,7 @@
 			icon: "farmersrespite:green_tea_leaves"
 			shape: "rsquare"
 			size: 1.0d
-			x: 9.0d
+			x: 7.75d
 			y: 0.0d
 			tasks: [
 				{
@@ -587,51 +550,45 @@
 					count: 1
 				}
 				{
-					id: "CB65A21F59198D22"
-					type: "item"
-					item: "delightful:cantaloupe"
-					count: 1
-				}
-				{
-					id: "DD9B9BC75C235434"
+					id: "2D7A65AE8F63088C"
 					type: "item"
 					item: "undergarden:ink_mushroom"
 					count: 1
 				}
+				{
+					id: "CB96438889145FD1"
+					type: "item"
+					item: "minecraft:enchanted_golden_apple"
+					count: 1
+				}
 			]
 			rewards: [ ]
-			description: ["Source items: farmersrespite:yellow_tea_leaves, delightful:cantaloupe, undergarden:ink_mushroom | Runtime hint: keg_distillation"]
+			description: ["Source items: farmersrespite:yellow_tea_leaves, undergarden:ink_mushroom, minecraft:enchanted_golden_apple | Runtime hint: keg_distillation"]
 		}
 		{
 			id: "1B72275AB9460582"
 			title: "All Effects: Slow Falling"
-			icon: "delightful:marshmallow_stick"
+			icon: "minecraft:phantom_membrane"
 			shape: "rsquare"
 			size: 1.0d
 			x: 5.25d
 			y: 6.5d
 			tasks: [
 				{
-					id: "444439E83DF6551B"
-					type: "item"
-					item: "delightful:marshmallow_stick"
-					count: 1
-				}
-				{
-					id: "E7CBDC86751283C9"
+					id: "82FCE02164542763"
 					type: "item"
 					item: "minecraft:phantom_membrane"
 					count: 1
 				}
 				{
-					id: "8D1E6F85CA03F457"
+					id: "48E12A7D4DE0C5BD"
 					type: "item"
 					item: "undergarden:veiled_stew"
 					count: 1
 				}
 			]
 			rewards: [ ]
-			description: ["Source items: delightful:marshmallow_stick, minecraft:phantom_membrane, undergarden:veiled_stew | Runtime hint: kettle_infusion"]
+			description: ["Source items: minecraft:phantom_membrane, undergarden:veiled_stew | Runtime hint: kettle_infusion"]
 		}
 		{
 			id: "1FA1DB75C7DA9A16"
@@ -685,15 +642,9 @@
 					item: "minecraft:blaze_powder"
 					count: 1
 				}
-				{
-					id: "4967341D38E9EDAE"
-					type: "item"
-					item: "delightful:deluxe_cheeseburger"
-					count: 1
-				}
 			]
 			rewards: [ ]
-			description: ["Source items: brewinandchewin:red_rum, minecraft:blaze_powder, delightful:deluxe_cheeseburger | Runtime hint: keg_distillation"]
+			description: ["Source items: brewinandchewin:red_rum, minecraft:blaze_powder | Runtime hint: keg_distillation"]
 		}
 		{
 			id: "52C4843D7A77149B"
@@ -760,33 +711,33 @@
 		{
 			id: "A9A7B8848F32F438"
 			title: "All Effects: Water Breathing"
-			icon: "delightful:salmonberries"
+			icon: "minecraft:sea_pickle"
 			shape: "rsquare"
 			size: 1.0d
 			x: 11.5d
 			y: 6.5d
 			tasks: [
 				{
-					id: "C63F56C9F431B765"
-					type: "item"
-					item: "delightful:salmonberries"
-					count: 1
-				}
-				{
-					id: "92FFA66DE1BD4090"
+					id: "E9FBB51CF799EB85"
 					type: "item"
 					item: "minecraft:sea_pickle"
 					count: 1
 				}
 				{
-					id: "5B5B41F27487FDC4"
+					id: "F909FF8965DFB01D"
 					type: "item"
 					item: "minecraft:pufferfish"
 					count: 1
 				}
+				{
+					id: "E8449F21617B6B9A"
+					type: "item"
+					item: "immersive_weathering:enchanted_golden_moss_clump"
+					count: 1
+				}
 			]
 			rewards: [ ]
-			description: ["Source items: delightful:salmonberries, minecraft:sea_pickle, minecraft:pufferfish | Runtime hint: kettle_infusion"]
+			description: ["Source items: minecraft:sea_pickle, minecraft:pufferfish, immersive_weathering:enchanted_golden_moss_clump | Runtime hint: kettle_infusion"]
 		}
 		{
 			id: "A25680D748905E2C"

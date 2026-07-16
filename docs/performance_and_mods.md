@@ -31,7 +31,7 @@ All four mods ship as integrated transport surfaces. Eureka owns primitive woode
 - `settlementroads-0.1.0.jar`
 - `villagewalls-1.0.0.jar`
 
-Do not infer active state from old RAM cuts or runtime caches. In the current repo, Hexerei, Iron's Spells, Malum, Occultism, Goety, Forbidden and Arcanus, and Reliquary have active manifests. Roots Classic, Mahoutsukai, Eidolon, Theurgy, Psi, and Hex Casting do not have active `mods/*.pw.toml` entries and should be treated as inactive/future unless re-added.
+Do not infer active state from old RAM cuts or runtime caches. In the current repo, Hexerei, Iron's Spells, Malum, Occultism, Goety, and Forbidden and Arcanus have active manifests. The July 2026 breadth cut retired Ice and Fire, Dungeon Crawl, Create Big Cannons, Reliquary, Supplementaries, the secondary Delight food families, and their now-orphaned libraries. Markdown Manual remains solely because essential OC2R requires it at mod construction. Roots Classic, Mahoutsukai, Eidolon, Theurgy, Psi, and Hex Casting do not have active `mods/*.pw.toml` entries and should be treated as inactive/future unless re-added.
 
 ## Runtime Pruning
 

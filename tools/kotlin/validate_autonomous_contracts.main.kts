@@ -636,7 +636,7 @@ fun validateClientQuestIntent() {
 fun validateVanillaStyleToolSuppression() {
     val server = read("kubejs/server_scripts/30_recipe_replace/60_vanilla_tools_to_tcon_heads.js")
     val client = read("kubejs/client_scripts/20_hide_vanilla_tools.js")
-    val requiredToolMarkers = listOf("minecraft:", "ae2", "aether", "deeperdarker", "everythingcopper", "forbidden_arcanus", "goety", "iceandfire", "malum", "occultism:iesnium_pickaxe", "undergarden", "twilightforest:ironwood_pickaxe", "ars_nouveau:enchanters_sword", "create:cardboard_sword", "farmersdelight:flint_knife", "notreepunching:flint_pickaxe", "notreepunching:iron_saw", "rpgstats:iron_ritual_dagger", "undergarden:forgotten_battleaxe")
+    val requiredToolMarkers = listOf("minecraft:", "ae2", "aether", "deeperdarker", "everythingcopper", "forbidden_arcanus", "goety", "malum", "occultism:iesnium_pickaxe", "undergarden", "twilightforest:ironwood_pickaxe", "ars_nouveau:enchanters_sword", "create:cardboard_sword", "farmersdelight:flint_knife", "notreepunching:flint_pickaxe", "notreepunching:iron_saw", "rpgstats:iron_ritual_dagger", "undergarden:forgotten_battleaxe")
     val missingToolMarkers = requiredToolMarkers.filter { it !in server || it !in client }
     if (missingToolMarkers.isEmpty()) ok("vanilla-style tool suppression covers audited mod families", "${requiredToolMarkers.size} markers")
     else fail("vanilla-style tool suppression covers audited mod families", missingToolMarkers.joinToString(", "))
@@ -753,7 +753,7 @@ fun validatePrimitiveMiningRegressionContracts() = validateByNodeParity("validat
 fun validateVanillishExpertRecipePass() = validateSimpleRecipePass(
     "kubejs/server_scripts/30_recipe_replace/145_vanillish_recipe_expert_pass.js",
     listOf("event.shaped(", "event.shapeless(", "event.smelting(", "event.blasting("),
-    listOf("create:deploying","create:compacting","minecraft:piston","minecraft:hopper","minecraft:observer","minecraft:rail","minecraft:minecart","createbigcannons:cannon_builder","everythingcopper:copper_hopper","chemlibDustIngots","bcVanRemoveCooking(event, 'minecraft:iron_ingot')","ae2:silicon"),
+    listOf("create:deploying","create:compacting","minecraft:piston","minecraft:hopper","minecraft:observer","minecraft:rail","minecraft:minecart","everythingcopper:copper_hopper","chemlibDustIngots","bcVanRemoveCooking(event, 'minecraft:iron_ingot')","ae2:silicon"),
     listOf("bloodmagic:alchemytable","minecraft:brewing_stand","minecraft:enchanting_table","minecraft:beacon","bloodmagic:ingot_hellforged","ars_nouveau:scribes_table","ars_nouveau:imbuement_chamber","ars_nouveau:enchanting_apparatus","bloodmagic:reinforcedslate","bloodmagic:infusedslate","bloodmagic:etherealslate"),
 )
 
@@ -813,7 +813,7 @@ fun validateWorldgenStaticContractsImpl() {
     val generatedPackSolid = read("config/rbp/block_definitions/generated_pack_solid_blocks.toml")
     val generatedPackSolidIds = Regex(""""([a-z0-9_.-]+:[a-z0-9_/.-]+)"""").findAll(generatedPackSolid).map { it.groupValues[1] }.toList()
     val generatedPackSolidSet = generatedPackSolidIds.toSet()
-    if (generatedPackSolidIds.size >= 8900 && "minecraft:bedrock" !in generatedPackSolidSet) ok("RBP generated pack-solid definition covers broad solid block surface", "${generatedPackSolidIds.size} explicit ids")
+    if (generatedPackSolidIds.size >= 8500 && "minecraft:bedrock" !in generatedPackSolidSet) ok("RBP generated pack-solid definition covers broad solid block surface", "${generatedPackSolidIds.size} explicit ids")
     else fail("RBP generated pack-solid definition covers broad solid block surface", "${generatedPackSolidIds.size} explicit ids; bedrock included=${"minecraft:bedrock" in generatedPackSolidSet}")
     val dynamicTreesManagedRbpPatterns = listOf(Regex("""^dynamictrees:"""), Regex("""^dynamictreesplus:"""), Regex("""^bcdimtrees:"""), Regex("""^dt[a-z0-9_]*:"""))
     val dynamicTreesManagedPackSolidIds = generatedPackSolidIds.filter { id -> dynamicTreesManagedRbpPatterns.any { it.containsMatchIn(id) } }
@@ -838,7 +838,7 @@ fun validateWorldgenStaticContractsImpl() {
     val pvjDetailPackSolidIds = generatedPackSolidIds.filter { it in pvjDetailPackSolidBlocklist }
     if (pvjDetailPackSolidIds.isEmpty()) ok("RBP generated pack-solid definition excludes exact PVJ loose detail blocks")
     else fail("RBP generated pack-solid definition excludes exact PVJ loose detail blocks", pvjDetailPackSolidIds.joinToString(", "))
-    val removedNamespacePrefixes = listOf("alekiships:", "immersive_aircraft:", "inventorysorter:", "man_of_many_planes:", "the_finley_dimension_remastered:", "callfromthedepth_:")
+    val removedNamespacePrefixes = listOf("alekiships:", "immersive_aircraft:", "inventorysorter:", "man_of_many_planes:", "the_finley_dimension_remastered:", "callfromthedepth_:", "createbigcannons:", "iceandfire:", "mynethersdelight:", "supplementaries:")
     val looseEarthIds = jsonArray(readJson("generated/runtime-dumps/realistic_hands_audit.json")["looseSurfaceIds"])
         .mapNotNull(::jsonString)
         .filter { id -> removedNamespacePrefixes.none(id::startsWith) }
@@ -956,7 +956,7 @@ fun validateWorldgenStaticContractsImpl() {
     forageFailures += placedWithoutUndergardenFilter.map { "$it: missing-undergarden-placement-filter" }
     forageFailures += modifiersWithoutUndergardenTarget.map { "$it: missing-undergarden-biome-modifier-target" }
     forageFailures += tagsOutsideUndergarden.map { "$it: tag-outside-undergarden" }
-    if (foragePlacedFeatures.size >= 40 && forageBiomeModifiers.size >= 20 && forageBiomeTags.size >= 7 && forageFailures.isEmpty()) ok("foraging datapack is Undergarden-only", "${foragePlacedFeatures.size} placed features, ${forageBiomeModifiers.size} biome modifiers, ${forageBiomeTags.size} biome tags")
+    if (foragePlacedFeatures.size >= 30 && forageBiomeModifiers.size >= 20 && forageBiomeTags.size >= 7 && forageFailures.isEmpty()) ok("foraging datapack is Undergarden-only", "${foragePlacedFeatures.size} placed features, ${forageBiomeModifiers.size} biome modifiers, ${forageBiomeTags.size} biome tags")
     else fail("foraging datapack is Undergarden-only", "placed=${foragePlacedFeatures.size} modifiers=${forageBiomeModifiers.size} tags=${forageBiomeTags.size} bad=${forageFailures.joinToString(", ")}")
 
     val dimension_drinkEvVariants = read("globalresources/dimension_drink/excavated_variants/dimension_drink/variants/dimension_drink_modded_ores.json5")

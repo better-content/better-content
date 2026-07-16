@@ -945,1219 +945,13 @@
 			rewards: [ ]
 		}
 		{
-			id: "9843AA403DAD8862"
-			title: "iceandfire"
-			icon: "iceandfire:armor_amythest_boots"
-			shape: "square"
-			size: 0.8d
-			x: 0.0d
-			y: 26.0d
-			tasks: [
-				{
-					id: "A9EDB7D3AF5BB724"
-					type: "checkmark"
-					title: "iceandfire"
-				}
-			]
-			rewards: [ ]
-			description: ["33 starter stubs."]
-		}
-		{
-			id: "0C05E80FAE6D491E"
-			title: "All Armour Sets: Armor Amythest"
-			icon: "iceandfire:armor_amythest_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 1.5d
-			y: 26.0d
-			tasks: [
-				{
-					id: "AECB8256BC575E0C"
-					type: "item"
-					item: "iceandfire:armor_amythest_boots"
-					count: 1
-				}
-				{
-					id: "956EC226256F3F6F"
-					type: "item"
-					item: "iceandfire:armor_amythest_chestplate"
-					count: 1
-				}
-				{
-					id: "82DAAD67B167CD31"
-					type: "item"
-					item: "iceandfire:armor_amythest_helmet"
-					count: 1
-				}
-				{
-					id: "98F31B630A886083"
-					type: "item"
-					item: "iceandfire:armor_amythest_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "2F22FD34F098D532"
-			title: "All Armour Sets: Armor Black"
-			icon: "iceandfire:armor_black_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 2.75d
-			y: 26.0d
-			tasks: [
-				{
-					id: "E8A61FC42ED9227B"
-					type: "item"
-					item: "iceandfire:armor_black_boots"
-					count: 1
-				}
-				{
-					id: "EC0DFF754014EC14"
-					type: "item"
-					item: "iceandfire:armor_black_chestplate"
-					count: 1
-				}
-				{
-					id: "71E7828A3B0829D7"
-					type: "item"
-					item: "iceandfire:armor_black_helmet"
-					count: 1
-				}
-				{
-					id: "DAA593AF32FFB917"
-					type: "item"
-					item: "iceandfire:armor_black_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "55C5EC1506D4388E"
-			title: "All Armour Sets: Armor Blue"
-			icon: "iceandfire:armor_blue_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 4.0d
-			y: 26.0d
-			tasks: [
-				{
-					id: "9016FB5FDCFABF1E"
-					type: "item"
-					item: "iceandfire:armor_blue_boots"
-					count: 1
-				}
-				{
-					id: "E04D40891667500E"
-					type: "item"
-					item: "iceandfire:armor_blue_chestplate"
-					count: 1
-				}
-				{
-					id: "E446A60D68789ADC"
-					type: "item"
-					item: "iceandfire:armor_blue_helmet"
-					count: 1
-				}
-				{
-					id: "7B1C8BFD04DF9373"
-					type: "item"
-					item: "iceandfire:armor_blue_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "1251F3016018474C"
-			title: "All Armour Sets: Armor Bronze"
-			icon: "iceandfire:armor_bronze_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 5.25d
-			y: 26.0d
-			tasks: [
-				{
-					id: "523487B76B986342"
-					type: "item"
-					item: "iceandfire:armor_bronze_boots"
-					count: 1
-				}
-				{
-					id: "F0ED687ECEF75F8C"
-					type: "item"
-					item: "iceandfire:armor_bronze_chestplate"
-					count: 1
-				}
-				{
-					id: "E24A704B888391A8"
-					type: "item"
-					item: "iceandfire:armor_bronze_helmet"
-					count: 1
-				}
-				{
-					id: "F891D72DB58DED64"
-					type: "item"
-					item: "iceandfire:armor_bronze_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "776B0AC7CF19FEA0"
-			title: "All Armour Sets: Armor Copper"
-			icon: "iceandfire:armor_copper_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 6.5d
-			y: 26.0d
-			tasks: [
-				{
-					id: "4CD42BBC24CBE928"
-					type: "item"
-					item: "iceandfire:armor_copper_boots"
-					count: 1
-				}
-				{
-					id: "8A8AC0C57DA94744"
-					type: "item"
-					item: "iceandfire:armor_copper_chestplate"
-					count: 1
-				}
-				{
-					id: "013E9F2D955A01FA"
-					type: "item"
-					item: "iceandfire:armor_copper_helmet"
-					count: 1
-				}
-				{
-					id: "2388AF1242FE6C95"
-					type: "item"
-					item: "iceandfire:armor_copper_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "723F9DAEF0C757FF"
-			title: "All Armour Sets: Armor Copper Metal"
-			icon: "iceandfire:armor_copper_metal_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 7.75d
-			y: 26.0d
-			tasks: [
-				{
-					id: "D05E4EBCCC105C5C"
-					type: "item"
-					item: "iceandfire:armor_copper_metal_boots"
-					count: 1
-				}
-				{
-					id: "66DC2BF31C3E5D21"
-					type: "item"
-					item: "iceandfire:armor_copper_metal_chestplate"
-					count: 1
-				}
-				{
-					id: "D3046AC63EE0E410"
-					type: "item"
-					item: "iceandfire:armor_copper_metal_helmet"
-					count: 1
-				}
-				{
-					id: "E5E1714FA2A35605"
-					type: "item"
-					item: "iceandfire:armor_copper_metal_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "86912B81F42BAB0D"
-			title: "All Armour Sets: Armor Electric"
-			icon: "iceandfire:armor_electric_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 9.0d
-			y: 26.0d
-			tasks: [
-				{
-					id: "24DB5F511A3E7EF6"
-					type: "item"
-					item: "iceandfire:armor_electric_boots"
-					count: 1
-				}
-				{
-					id: "9EC9998F7A8C8953"
-					type: "item"
-					item: "iceandfire:armor_electric_chestplate"
-					count: 1
-				}
-				{
-					id: "6B32AA4BD500DF47"
-					type: "item"
-					item: "iceandfire:armor_electric_helmet"
-					count: 1
-				}
-				{
-					id: "53136960EBC9BD98"
-					type: "item"
-					item: "iceandfire:armor_electric_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "CD64C451D5F6E4C2"
-			title: "All Armour Sets: Armor Gray"
-			icon: "iceandfire:armor_gray_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 10.25d
-			y: 26.0d
-			tasks: [
-				{
-					id: "BFA8A0FAEC6ABC1C"
-					type: "item"
-					item: "iceandfire:armor_gray_boots"
-					count: 1
-				}
-				{
-					id: "822B9B1F4585B427"
-					type: "item"
-					item: "iceandfire:armor_gray_chestplate"
-					count: 1
-				}
-				{
-					id: "E1093282C4779C78"
-					type: "item"
-					item: "iceandfire:armor_gray_helmet"
-					count: 1
-				}
-				{
-					id: "B2F8BACD3F223D84"
-					type: "item"
-					item: "iceandfire:armor_gray_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "A000E1C4930A85EB"
-			title: "All Armour Sets: Armor Green"
-			icon: "iceandfire:armor_green_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 11.5d
-			y: 26.0d
-			tasks: [
-				{
-					id: "F0E1D7F661577182"
-					type: "item"
-					item: "iceandfire:armor_green_boots"
-					count: 1
-				}
-				{
-					id: "9CEEF280B2B91CC8"
-					type: "item"
-					item: "iceandfire:armor_green_chestplate"
-					count: 1
-				}
-				{
-					id: "2152EF63AE0E6361"
-					type: "item"
-					item: "iceandfire:armor_green_helmet"
-					count: 1
-				}
-				{
-					id: "B50AC001645F7FCA"
-					type: "item"
-					item: "iceandfire:armor_green_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "81D1B12C84CDADDE"
-			title: "All Armour Sets: Armor Red"
-			icon: "iceandfire:armor_red_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 12.75d
-			y: 26.0d
-			tasks: [
-				{
-					id: "B33749EABB6002DE"
-					type: "item"
-					item: "iceandfire:armor_red_boots"
-					count: 1
-				}
-				{
-					id: "3436DE020E3BBBE5"
-					type: "item"
-					item: "iceandfire:armor_red_chestplate"
-					count: 1
-				}
-				{
-					id: "C427CD3D5A1C42F5"
-					type: "item"
-					item: "iceandfire:armor_red_helmet"
-					count: 1
-				}
-				{
-					id: "9E03A394B38024DC"
-					type: "item"
-					item: "iceandfire:armor_red_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "695343CCD356FCDA"
-			title: "All Armour Sets: Armor Sapphire"
-			icon: "iceandfire:armor_sapphire_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 14.0d
-			y: 26.0d
-			tasks: [
-				{
-					id: "2DC96A1C10103362"
-					type: "item"
-					item: "iceandfire:armor_sapphire_boots"
-					count: 1
-				}
-				{
-					id: "DCAF7CE61A0CE983"
-					type: "item"
-					item: "iceandfire:armor_sapphire_chestplate"
-					count: 1
-				}
-				{
-					id: "DD02A19EBE53AAB5"
-					type: "item"
-					item: "iceandfire:armor_sapphire_helmet"
-					count: 1
-				}
-				{
-					id: "3FE87EF530E7B736"
-					type: "item"
-					item: "iceandfire:armor_sapphire_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "555E58481380080A"
-			title: "All Armour Sets: Armor Silver"
-			icon: "iceandfire:armor_silver_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 15.25d
-			y: 26.0d
-			tasks: [
-				{
-					id: "906528D179C623F3"
-					type: "item"
-					item: "iceandfire:armor_silver_boots"
-					count: 1
-				}
-				{
-					id: "858C0AC390FACCC3"
-					type: "item"
-					item: "iceandfire:armor_silver_chestplate"
-					count: 1
-				}
-				{
-					id: "96ECF388DCE1ABFD"
-					type: "item"
-					item: "iceandfire:armor_silver_helmet"
-					count: 1
-				}
-				{
-					id: "FF19B0C3EAFB5404"
-					type: "item"
-					item: "iceandfire:armor_silver_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "E15F0F02C569962C"
-			title: "All Armour Sets: Armor Silver Metal"
-			icon: "iceandfire:armor_silver_metal_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 1.5d
-			y: 27.25d
-			tasks: [
-				{
-					id: "FA88901BF19BB744"
-					type: "item"
-					item: "iceandfire:armor_silver_metal_boots"
-					count: 1
-				}
-				{
-					id: "AC18DDC7D2E82C0F"
-					type: "item"
-					item: "iceandfire:armor_silver_metal_chestplate"
-					count: 1
-				}
-				{
-					id: "2A75B57C12A7EDFB"
-					type: "item"
-					item: "iceandfire:armor_silver_metal_helmet"
-					count: 1
-				}
-				{
-					id: "DE0D871FA7EA8D20"
-					type: "item"
-					item: "iceandfire:armor_silver_metal_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "A52C89306BEED33E"
-			title: "All Armour Sets: Armor White"
-			icon: "iceandfire:armor_white_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 2.75d
-			y: 27.25d
-			tasks: [
-				{
-					id: "1819456F0CDB3E6C"
-					type: "item"
-					item: "iceandfire:armor_white_boots"
-					count: 1
-				}
-				{
-					id: "98AA5F25959B3049"
-					type: "item"
-					item: "iceandfire:armor_white_chestplate"
-					count: 1
-				}
-				{
-					id: "1132AB1301347080"
-					type: "item"
-					item: "iceandfire:armor_white_helmet"
-					count: 1
-				}
-				{
-					id: "E0A8F5AA1650A45B"
-					type: "item"
-					item: "iceandfire:armor_white_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "7315ADAB298BF86B"
-			title: "All Armour Sets: Deathworm Red"
-			icon: "iceandfire:deathworm_red_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 4.0d
-			y: 27.25d
-			tasks: [
-				{
-					id: "580084ECBD7CC72C"
-					type: "item"
-					item: "iceandfire:deathworm_red_boots"
-					count: 1
-				}
-				{
-					id: "82FF017B306E7FC8"
-					type: "item"
-					item: "iceandfire:deathworm_red_chestplate"
-					count: 1
-				}
-				{
-					id: "D20F5346AC2B918C"
-					type: "item"
-					item: "iceandfire:deathworm_red_helmet"
-					count: 1
-				}
-				{
-					id: "1463F118457F812F"
-					type: "item"
-					item: "iceandfire:deathworm_red_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "79E69870AE61D158"
-			title: "All Armour Sets: Deathworm White"
-			icon: "iceandfire:deathworm_white_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 5.25d
-			y: 27.25d
-			tasks: [
-				{
-					id: "027A6A246194C872"
-					type: "item"
-					item: "iceandfire:deathworm_white_boots"
-					count: 1
-				}
-				{
-					id: "FFE94F99AF256D3B"
-					type: "item"
-					item: "iceandfire:deathworm_white_chestplate"
-					count: 1
-				}
-				{
-					id: "15C21A3487A9937F"
-					type: "item"
-					item: "iceandfire:deathworm_white_helmet"
-					count: 1
-				}
-				{
-					id: "49F98BC91C1ADED8"
-					type: "item"
-					item: "iceandfire:deathworm_white_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "FEF1915121A8662D"
-			title: "All Armour Sets: Deathworm Yellow"
-			icon: "iceandfire:deathworm_yellow_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 6.5d
-			y: 27.25d
-			tasks: [
-				{
-					id: "67032537D673E112"
-					type: "item"
-					item: "iceandfire:deathworm_yellow_boots"
-					count: 1
-				}
-				{
-					id: "B9A102FE8A756369"
-					type: "item"
-					item: "iceandfire:deathworm_yellow_chestplate"
-					count: 1
-				}
-				{
-					id: "D2AA9B3A6115392F"
-					type: "item"
-					item: "iceandfire:deathworm_yellow_helmet"
-					count: 1
-				}
-				{
-					id: "A8669CB690D52989"
-					type: "item"
-					item: "iceandfire:deathworm_yellow_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "5B5021B9060634DE"
-			title: "All Armour Sets: Dragonsteel Fire"
-			icon: "iceandfire:dragonsteel_fire_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 7.75d
-			y: 27.25d
-			tasks: [
-				{
-					id: "5957BEB2A4696668"
-					type: "item"
-					item: "iceandfire:dragonsteel_fire_boots"
-					count: 1
-				}
-				{
-					id: "E4B002BCC36FD6AF"
-					type: "item"
-					item: "iceandfire:dragonsteel_fire_chestplate"
-					count: 1
-				}
-				{
-					id: "B24DD51FD8D96AD7"
-					type: "item"
-					item: "iceandfire:dragonsteel_fire_helmet"
-					count: 1
-				}
-				{
-					id: "172813FF26EFE0C9"
-					type: "item"
-					item: "iceandfire:dragonsteel_fire_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "B2AC0B290BBB4098"
-			title: "All Armour Sets: Dragonsteel Ice"
-			icon: "iceandfire:dragonsteel_ice_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 9.0d
-			y: 27.25d
-			tasks: [
-				{
-					id: "79324C3234C4F1EA"
-					type: "item"
-					item: "iceandfire:dragonsteel_ice_boots"
-					count: 1
-				}
-				{
-					id: "67DEE48642BACD47"
-					type: "item"
-					item: "iceandfire:dragonsteel_ice_chestplate"
-					count: 1
-				}
-				{
-					id: "437433161FC4E0D6"
-					type: "item"
-					item: "iceandfire:dragonsteel_ice_helmet"
-					count: 1
-				}
-				{
-					id: "F7048A5637C71D6E"
-					type: "item"
-					item: "iceandfire:dragonsteel_ice_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "9BC7129C86CB3068"
-			title: "All Armour Sets: Dragonsteel Lightning"
-			icon: "iceandfire:dragonsteel_lightning_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 10.25d
-			y: 27.25d
-			tasks: [
-				{
-					id: "FCB0D0D68A8C856D"
-					type: "item"
-					item: "iceandfire:dragonsteel_lightning_boots"
-					count: 1
-				}
-				{
-					id: "2A7A8A72DD150EFE"
-					type: "item"
-					item: "iceandfire:dragonsteel_lightning_chestplate"
-					count: 1
-				}
-				{
-					id: "96F5FB17E1AF63C7"
-					type: "item"
-					item: "iceandfire:dragonsteel_lightning_helmet"
-					count: 1
-				}
-				{
-					id: "916F5321027E546B"
-					type: "item"
-					item: "iceandfire:dragonsteel_lightning_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "FBA0D54373DECFA9"
-			title: "All Armour Sets: Forest Troll Leather"
-			icon: "iceandfire:forest_troll_leather_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 11.5d
-			y: 27.25d
-			tasks: [
-				{
-					id: "6E143E4EF7143B33"
-					type: "item"
-					item: "iceandfire:forest_troll_leather_boots"
-					count: 1
-				}
-				{
-					id: "5C97F05DD12C62B3"
-					type: "item"
-					item: "iceandfire:forest_troll_leather_chestplate"
-					count: 1
-				}
-				{
-					id: "60988CB1688526E3"
-					type: "item"
-					item: "iceandfire:forest_troll_leather_helmet"
-					count: 1
-				}
-				{
-					id: "F55A203F767B3707"
-					type: "item"
-					item: "iceandfire:forest_troll_leather_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "D5F282F28967355F"
-			title: "All Armour Sets: Frost Troll Leather"
-			icon: "iceandfire:frost_troll_leather_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 12.75d
-			y: 27.25d
-			tasks: [
-				{
-					id: "A383495B928CCB5D"
-					type: "item"
-					item: "iceandfire:frost_troll_leather_boots"
-					count: 1
-				}
-				{
-					id: "1E92F043EF655DBE"
-					type: "item"
-					item: "iceandfire:frost_troll_leather_chestplate"
-					count: 1
-				}
-				{
-					id: "9279058377D1E8EC"
-					type: "item"
-					item: "iceandfire:frost_troll_leather_helmet"
-					count: 1
-				}
-				{
-					id: "F0CA6A9E9BFD7B10"
-					type: "item"
-					item: "iceandfire:frost_troll_leather_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "E5FA8763210BAD42"
-			title: "All Armour Sets: Mountain Troll Leather"
-			icon: "iceandfire:mountain_troll_leather_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 14.0d
-			y: 27.25d
-			tasks: [
-				{
-					id: "BDB6D682F9B3DFE5"
-					type: "item"
-					item: "iceandfire:mountain_troll_leather_boots"
-					count: 1
-				}
-				{
-					id: "B1B4D8055AF53661"
-					type: "item"
-					item: "iceandfire:mountain_troll_leather_chestplate"
-					count: 1
-				}
-				{
-					id: "A5F6CB8FB58B4325"
-					type: "item"
-					item: "iceandfire:mountain_troll_leather_helmet"
-					count: 1
-				}
-				{
-					id: "EFF9C10A3F7C953E"
-					type: "item"
-					item: "iceandfire:mountain_troll_leather_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "603C20472C9FCB74"
-			title: "All Armour Sets: Myrmex Desert"
-			icon: "iceandfire:myrmex_desert_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 15.25d
-			y: 27.25d
-			tasks: [
-				{
-					id: "C8572E9542D2A541"
-					type: "item"
-					item: "iceandfire:myrmex_desert_boots"
-					count: 1
-				}
-				{
-					id: "41B8F2D117C5EE1C"
-					type: "item"
-					item: "iceandfire:myrmex_desert_chestplate"
-					count: 1
-				}
-				{
-					id: "3B110FC0A8E2394E"
-					type: "item"
-					item: "iceandfire:myrmex_desert_helmet"
-					count: 1
-				}
-				{
-					id: "D42E3FA0A7360DC3"
-					type: "item"
-					item: "iceandfire:myrmex_desert_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "4AD5C5F2FF90C248"
-			title: "All Armour Sets: Myrmex Jungle"
-			icon: "iceandfire:myrmex_jungle_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 1.5d
-			y: 28.5d
-			tasks: [
-				{
-					id: "4F78D2E3D2AC55AF"
-					type: "item"
-					item: "iceandfire:myrmex_jungle_boots"
-					count: 1
-				}
-				{
-					id: "C8ECD0A06F680494"
-					type: "item"
-					item: "iceandfire:myrmex_jungle_chestplate"
-					count: 1
-				}
-				{
-					id: "3A92BB3626BD9BDE"
-					type: "item"
-					item: "iceandfire:myrmex_jungle_helmet"
-					count: 1
-				}
-				{
-					id: "4B5B0B047B5A56CE"
-					type: "item"
-					item: "iceandfire:myrmex_jungle_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "6B56BF11211F3480"
-			title: "All Armour Sets: Sheep"
-			icon: "iceandfire:sheep_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 2.75d
-			y: 28.5d
-			tasks: [
-				{
-					id: "C3DB01797F9BC60D"
-					type: "item"
-					item: "iceandfire:sheep_boots"
-					count: 1
-				}
-				{
-					id: "FC15DEC0A4C82325"
-					type: "item"
-					item: "iceandfire:sheep_chestplate"
-					count: 1
-				}
-				{
-					id: "88F93D65E3906429"
-					type: "item"
-					item: "iceandfire:sheep_helmet"
-					count: 1
-				}
-				{
-					id: "6DC4B46A75DBC117"
-					type: "item"
-					item: "iceandfire:sheep_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "E7FDE28F8C1154F7"
-			title: "All Armour Sets: Tide Blue"
-			icon: "iceandfire:tide_blue_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 4.0d
-			y: 28.5d
-			tasks: [
-				{
-					id: "E2D8C85308808242"
-					type: "item"
-					item: "iceandfire:tide_blue_boots"
-					count: 1
-				}
-				{
-					id: "A025ED74D6A01E6D"
-					type: "item"
-					item: "iceandfire:tide_blue_chestplate"
-					count: 1
-				}
-				{
-					id: "8AD9D3B55E8F676C"
-					type: "item"
-					item: "iceandfire:tide_blue_helmet"
-					count: 1
-				}
-				{
-					id: "BF0A48006DF94B8D"
-					type: "item"
-					item: "iceandfire:tide_blue_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "E4A1BD2C0429E209"
-			title: "All Armour Sets: Tide Bronze"
-			icon: "iceandfire:tide_bronze_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 5.25d
-			y: 28.5d
-			tasks: [
-				{
-					id: "E659C4474EB3101B"
-					type: "item"
-					item: "iceandfire:tide_bronze_boots"
-					count: 1
-				}
-				{
-					id: "083D73CFDDD3AEAB"
-					type: "item"
-					item: "iceandfire:tide_bronze_chestplate"
-					count: 1
-				}
-				{
-					id: "9E0B065AC6F8AD00"
-					type: "item"
-					item: "iceandfire:tide_bronze_helmet"
-					count: 1
-				}
-				{
-					id: "B492D64206CF8732"
-					type: "item"
-					item: "iceandfire:tide_bronze_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "17D82FD6ED14DE97"
-			title: "All Armour Sets: Tide Deepblue"
-			icon: "iceandfire:tide_deepblue_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 6.5d
-			y: 28.5d
-			tasks: [
-				{
-					id: "34C5AF6F03A475B1"
-					type: "item"
-					item: "iceandfire:tide_deepblue_boots"
-					count: 1
-				}
-				{
-					id: "A0C507DB50205A43"
-					type: "item"
-					item: "iceandfire:tide_deepblue_chestplate"
-					count: 1
-				}
-				{
-					id: "2EA6F37ED0435BEC"
-					type: "item"
-					item: "iceandfire:tide_deepblue_helmet"
-					count: 1
-				}
-				{
-					id: "28DE29BF3A1C1E7E"
-					type: "item"
-					item: "iceandfire:tide_deepblue_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "C9E87D231FCD9716"
-			title: "All Armour Sets: Tide Green"
-			icon: "iceandfire:tide_green_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 7.75d
-			y: 28.5d
-			tasks: [
-				{
-					id: "6095924A729FF183"
-					type: "item"
-					item: "iceandfire:tide_green_boots"
-					count: 1
-				}
-				{
-					id: "CEDF09DFEDEE7FB6"
-					type: "item"
-					item: "iceandfire:tide_green_chestplate"
-					count: 1
-				}
-				{
-					id: "78A99EDA5EE7DF61"
-					type: "item"
-					item: "iceandfire:tide_green_helmet"
-					count: 1
-				}
-				{
-					id: "FFA63F4B229B0388"
-					type: "item"
-					item: "iceandfire:tide_green_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "802DA8B40E2643E0"
-			title: "All Armour Sets: Tide Purple"
-			icon: "iceandfire:tide_purple_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 9.0d
-			y: 28.5d
-			tasks: [
-				{
-					id: "055254165C56BAE3"
-					type: "item"
-					item: "iceandfire:tide_purple_boots"
-					count: 1
-				}
-				{
-					id: "3D9D9DAA63108BE2"
-					type: "item"
-					item: "iceandfire:tide_purple_chestplate"
-					count: 1
-				}
-				{
-					id: "AF4BE285F2309AC4"
-					type: "item"
-					item: "iceandfire:tide_purple_helmet"
-					count: 1
-				}
-				{
-					id: "A96C63D8953F5B1D"
-					type: "item"
-					item: "iceandfire:tide_purple_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "22EB9C16C2AA3AC5"
-			title: "All Armour Sets: Tide Red"
-			icon: "iceandfire:tide_red_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 10.25d
-			y: 28.5d
-			tasks: [
-				{
-					id: "6BAC8B229CA20CC6"
-					type: "item"
-					item: "iceandfire:tide_red_boots"
-					count: 1
-				}
-				{
-					id: "BA3B917AFE0EF26A"
-					type: "item"
-					item: "iceandfire:tide_red_chestplate"
-					count: 1
-				}
-				{
-					id: "33F36AE15023BB5B"
-					type: "item"
-					item: "iceandfire:tide_red_helmet"
-					count: 1
-				}
-				{
-					id: "BF15ADC83D0BCBA3"
-					type: "item"
-					item: "iceandfire:tide_red_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "B0237A40C43C6A9E"
-			title: "All Armour Sets: Tide Teal"
-			icon: "iceandfire:tide_teal_chestplate"
-			shape: "rsquare"
-			size: 1.0d
-			x: 11.5d
-			y: 28.5d
-			tasks: [
-				{
-					id: "C31404EB02E7C516"
-					type: "item"
-					item: "iceandfire:tide_teal_boots"
-					count: 1
-				}
-				{
-					id: "DC5DA03AF9279978"
-					type: "item"
-					item: "iceandfire:tide_teal_chestplate"
-					count: 1
-				}
-				{
-					id: "373A6B03AD4210B3"
-					type: "item"
-					item: "iceandfire:tide_teal_helmet"
-					count: 1
-				}
-				{
-					id: "ECD2A7E96FAF4280"
-					type: "item"
-					item: "iceandfire:tide_teal_leggings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
 			id: "2B7430243A384F8A"
 			title: "minecraft"
 			icon: "minecraft:chainmail_boots"
 			shape: "square"
 			size: 0.8d
 			x: 0.0d
-			y: 31.75d
+			y: 26.0d
 			tasks: [
 				{
 					id: "08EEAE2B534A6BC8"
@@ -2175,7 +969,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 1.5d
-			y: 31.75d
+			y: 26.0d
 			tasks: [
 				{
 					id: "BD1D6F8A87B4DB42"
@@ -2211,7 +1005,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 2.75d
-			y: 31.75d
+			y: 26.0d
 			tasks: [
 				{
 					id: "421E5CB37ACB67C0"
@@ -2247,7 +1041,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 4.0d
-			y: 31.75d
+			y: 26.0d
 			tasks: [
 				{
 					id: "9258DBF485153826"
@@ -2283,7 +1077,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 5.25d
-			y: 31.75d
+			y: 26.0d
 			tasks: [
 				{
 					id: "8BEE558B667D2C1E"
@@ -2319,7 +1113,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 6.5d
-			y: 31.75d
+			y: 26.0d
 			tasks: [
 				{
 					id: "49634A94B95677AD"
@@ -2355,7 +1149,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 7.75d
-			y: 31.75d
+			y: 26.0d
 			tasks: [
 				{
 					id: "DBF656138D5DB43A"
@@ -2391,7 +1185,7 @@
 			shape: "square"
 			size: 0.8d
 			x: 0.0d
-			y: 35.0d
+			y: 29.25d
 			tasks: [
 				{
 					id: "D377BE399532CC26"
@@ -2409,7 +1203,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 1.5d
-			y: 35.0d
+			y: 29.25d
 			tasks: [
 				{
 					id: "35258DE0E87B6A18"
@@ -2445,7 +1239,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 2.75d
-			y: 35.0d
+			y: 29.25d
 			tasks: [
 				{
 					id: "14D4381AECCC549B"
@@ -2481,7 +1275,7 @@
 			shape: "square"
 			size: 0.8d
 			x: 0.0d
-			y: 38.25d
+			y: 32.5d
 			tasks: [
 				{
 					id: "0866AA16D7B99FE4"
@@ -2499,7 +1293,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 1.5d
-			y: 38.25d
+			y: 32.5d
 			tasks: [
 				{
 					id: "780E848D6B8389D8"
@@ -2529,7 +1323,7 @@
 			shape: "square"
 			size: 0.8d
 			x: 0.0d
-			y: 41.5d
+			y: 35.75d
 			tasks: [
 				{
 					id: "5598B23D143AE0FB"
@@ -2547,7 +1341,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 1.5d
-			y: 41.5d
+			y: 35.75d
 			tasks: [
 				{
 					id: "F9BF48F9B5E92F73"
@@ -2583,7 +1377,7 @@
 			shape: "square"
 			size: 0.8d
 			x: 0.0d
-			y: 44.75d
+			y: 39.0d
 			tasks: [
 				{
 					id: "5F834C1B3F5FCD5C"
@@ -2601,7 +1395,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 1.5d
-			y: 44.75d
+			y: 39.0d
 			tasks: [
 				{
 					id: "EB0D514AC9A5D8C6"
@@ -2637,7 +1431,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 2.75d
-			y: 44.75d
+			y: 39.0d
 			tasks: [
 				{
 					id: "B7FA5B7EAA79BDFA"
@@ -2673,7 +1467,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 4.0d
-			y: 44.75d
+			y: 39.0d
 			tasks: [
 				{
 					id: "CB93D20DFE5BC7C5"
@@ -2709,7 +1503,7 @@
 			shape: "square"
 			size: 0.8d
 			x: 0.0d
-			y: 51.25d
+			y: 42.25d
 			tasks: [
 				{
 					id: "9E0447435D3488FA"
@@ -2727,7 +1521,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 1.5d
-			y: 51.25d
+			y: 42.25d
 			tasks: [
 				{
 					id: "804297B54CA6643B"
@@ -2763,7 +1557,7 @@
 			shape: "square"
 			size: 0.8d
 			x: 0.0d
-			y: 54.5d
+			y: 45.5d
 			tasks: [
 				{
 					id: "5F6EF4C155D69567"
@@ -2781,7 +1575,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 1.5d
-			y: 54.5d
+			y: 45.5d
 			tasks: [
 				{
 					id: "DA2B888C532057C5"
@@ -2817,7 +1611,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 2.75d
-			y: 54.5d
+			y: 45.5d
 			tasks: [
 				{
 					id: "70D2F1F1CFD2AADA"
@@ -2853,7 +1647,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 4.0d
-			y: 54.5d
+			y: 45.5d
 			tasks: [
 				{
 					id: "FD6A8E52622D0D13"
@@ -2889,7 +1683,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 5.25d
-			y: 54.5d
+			y: 45.5d
 			tasks: [
 				{
 					id: "2CE78393AEC7EA48"
@@ -2925,7 +1719,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 6.5d
-			y: 54.5d
+			y: 45.5d
 			tasks: [
 				{
 					id: "01E99535BA2A15EE"
@@ -2949,7 +1743,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 7.75d
-			y: 54.5d
+			y: 45.5d
 			tasks: [
 				{
 					id: "304DF12F2A1E80AF"
@@ -2985,7 +1779,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 9.0d
-			y: 54.5d
+			y: 45.5d
 			tasks: [
 				{
 					id: "A4D9E142C8A93A63"
@@ -3021,7 +1815,7 @@
 			shape: "square"
 			size: 0.8d
 			x: 0.0d
-			y: 57.75d
+			y: 48.75d
 			tasks: [
 				{
 					id: "11FB3055370F963E"
@@ -3039,7 +1833,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 1.5d
-			y: 57.75d
+			y: 48.75d
 			tasks: [
 				{
 					id: "ABBF6AD4A9739866"
@@ -3075,7 +1869,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 2.75d
-			y: 57.75d
+			y: 48.75d
 			tasks: [
 				{
 					id: "17FAE45738C3B261"
@@ -3111,7 +1905,7 @@
 			shape: "rsquare"
 			size: 1.0d
 			x: 4.0d
-			y: 57.75d
+			y: 48.75d
 			tasks: [
 				{
 					id: "8F9C253672A05D7A"

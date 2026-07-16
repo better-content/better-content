@@ -964,7 +964,6 @@ fun testRuntimeCoreTagRegressions() {
     val genericRuntimeChecks = listOf(
         Triple("minecraft:crafting_table", listOf(""""tag": "minecraft:planks""""), "crafting table still accepts #minecraft:planks"),
         Triple("create:crafting/appliances/linked_controller", listOf(""""tag": "minecraft:wooden_buttons""""), "linked controller still consumes #minecraft:wooden_buttons"),
-        Triple("createbigcannons:log_cannon_end", listOf(""""tag": "minecraft:logs""""), "runtime generic log consumer still exists"),
         Triple("procedural_bouquets:bouquet_grid", listOf(""""tag": "minecraft:wooden_slabs""""), "runtime generic slab consumer still exists"),
     )
     val missingGenericRuntime = genericRuntimeChecks.mapNotNull { (id, needles, label) ->

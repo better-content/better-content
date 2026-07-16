@@ -31,7 +31,7 @@ Runtime probe schema: `bc.block_hardness_probe.v3`
 
 ## Force Harvest Coverage
 
-- Required: 58
+- Required: 55
 - Missing: 0
 
 ## Outcome Families

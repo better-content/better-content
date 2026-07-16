@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-16T09:51:12.016070656Z",
+  "generatedAt": "2026-07-16T11:29:28.249026989Z",
   "note": "Hybrid audit. KubeJS source is used for authored recipes/removes; runtime recipe dumps are used for base mod machine-surface outputs and simple recipe bypass candidates. Current dumps still lack KubeJS recipes.",
-  "sourceRecipeCount": 5569,
-  "dumpRecipeCount": 24518,
-  "dumpMachineSurfaceRecipeCount": 3379,
-  "casedSurfaceRecipeCount": 7680,
-  "indirectOutputCount": 1190,
+  "sourceRecipeCount": 5555,
+  "dumpRecipeCount": 22528,
+  "dumpMachineSurfaceRecipeCount": 3277,
+  "casedSurfaceRecipeCount": 7582,
+  "indirectOutputCount": 1181,
   "directCasingOutputCount": 13,
   "directCasingConsumerCount": 17,
   "aestheticDirectCasingConsumerCount": 0,
@@ -1176,13 +1176,6 @@
       "create:industrial_iron_block",
       "create:precision_mechanism",
       "create_more_additions:electrum_ingot",
-      "createbigcannons:autocannon_cartridge_sheet",
-      "createbigcannons:autocannon_recoil_spring_cast_mould",
-      "createbigcannons:bronze_ingot",
-      "createbigcannons:cast_iron_ingot",
-      "createbigcannons:nethersteel_ingot",
-      "createbigcannons:spring_wire",
-      "createbigcannons:steel_ingot",
       "createdeco:andesite_sheet",
       "createdeco:industrial_iron_ingot",
       "createdeco:industrial_iron_sheet",
@@ -1253,7 +1246,6 @@
       "morered:red_alloy_ingot",
       "morered:red_alloy_wire",
       "morered:stone_plate",
-      "mynethersdelight:powdery_pressure_plate",
       "natures_spirit:aspen_pressure_plate",
       "natures_spirit:cedar_pressure_plate",
       "natures_spirit:coconut_pressure_plate",
@@ -2239,7 +2231,6 @@
       "create:andesite_alloy",
       "create:precision_mechanism",
       "create:sturdy_sheet",
-      "createbigcannons:recoil_spring",
       "kubejs:brass_control_assembly",
       "kubejs:rotational_compressor_core",
       "minecraft:iron_ingot",
@@ -2974,13 +2965,6 @@
         {
           "id": "pneumaticcraft:copper_ingot_from_nugget",
           "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        },
-        {
-          "id": "iceandfire:copper_nuggets_to_ingot",
-          "type": "minecraft:crafting_shapeless",
           "inputs": [
 
           ]
@@ -6549,13 +6533,6 @@
           "inputs": [
             "projectvibrantjourneys:glowcap"
           ]
-        },
-        {
-          "id": "reliquary:uncrafting/glowstone_dust",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
         }
       ],
       "authoredSimpleProducers": [
@@ -6956,54 +6933,6 @@
       ]
     },
     {
-      "output": "createbigcannons:cast_iron_ingot",
-      "casedProducers": [
-        {
-          "output": "createbigcannons:cast_iron_ingot",
-          "type": "create:compacting",
-          "id": "createbigcannons:compacting/iron_to_cast_iron_ingot",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        },
-        {
-          "output": "createbigcannons:cast_iron_ingot",
-          "type": "create:compacting",
-          "id": "createbigcannons:compacting/forge_cast_iron_ingot",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "simpleDumpProducers": [
-        {
-          "id": "createbigcannons:cast_iron_ingot_from_block",
-          "type": "minecraft:crafting_shapeless",
-          "inputs": [
-            "createbigcannons:cast_iron_block"
-          ]
-        },
-        {
-          "id": "createbigcannons:cast_iron_ingot_from_nuggets",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "authoredSimpleProducers": [
-
-      ]
-    },
-    {
       "output": "chemlib:nickel_nugget",
       "casedProducers": [
         {
@@ -7158,78 +7087,6 @@
       ]
     },
     {
-      "output": "createbigcannons:bronze_ingot",
-      "casedProducers": [
-        {
-          "output": "createbigcannons:bronze_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_bronze_tin",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        },
-        {
-          "output": "createbigcannons:bronze_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_bronze_tinless",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "create:cinder_flour"
-          ]
-        },
-        {
-          "output": "createbigcannons:bronze_ingot",
-          "type": "create:compacting",
-          "id": "createbigcannons:compacting/forge_bronze_ingot",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        },
-        {
-          "output": "createbigcannons:bronze_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_bronze_brass",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "create:cinder_flour"
-          ]
-        }
-      ],
-      "simpleDumpProducers": [
-        {
-          "id": "createbigcannons:bronze_ingot_from_nuggets",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        },
-        {
-          "id": "createbigcannons:bronze_ingot_from_block",
-          "type": "minecraft:crafting_shapeless",
-          "inputs": [
-            "createbigcannons:bronze_block"
-          ]
-        }
-      ],
-      "authoredSimpleProducers": [
-
-      ]
-    },
-    {
       "output": "chemlib:osmium_metal_block",
       "casedProducers": [
         {
@@ -7306,54 +7163,6 @@
       "simpleDumpProducers": [
         {
           "id": "ars_nouveau:archwood_pressure_plate",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "authoredSimpleProducers": [
-
-      ]
-    },
-    {
-      "output": "createbigcannons:steel_ingot",
-      "casedProducers": [
-        {
-          "output": "createbigcannons:steel_ingot",
-          "type": "create:compacting",
-          "id": "createbigcannons:compacting/forge_steel_ingot",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        },
-        {
-          "output": "createbigcannons:steel_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_steel",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "simpleDumpProducers": [
-        {
-          "id": "createbigcannons:steel_ingot_from_block",
-          "type": "minecraft:crafting_shapeless",
-          "inputs": [
-
-          ]
-        },
-        {
-          "id": "createbigcannons:steel_ingot_from_nuggets",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -7540,20 +7349,6 @@
           "type": "minecraft:crafting_shapeless",
           "inputs": [
 
-          ]
-        },
-        {
-          "id": "delightful:knives/blasting/zinc_create",
-          "type": "minecraft:blasting",
-          "inputs": [
-            "delightful:zinc_knife"
-          ]
-        },
-        {
-          "id": "delightful:knives/smelting/zinc_create",
-          "type": "minecraft:smelting",
-          "inputs": [
-            "delightful:zinc_knife"
           ]
         }
       ],
@@ -8244,18 +8039,6 @@
         },
         {
           "output": "chemlib:silver_nugget",
-          "type": "create:splashing",
-          "id": "create:splashing/iceandfire/crushed_raw_silver",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "create:crushed_raw_silver"
-          ]
-        },
-        {
-          "output": "chemlib:silver_nugget",
           "type": "tconstruct:casting_table",
           "id": "tconstruct:smeltery/casting/metal/silver/nugget_sand_cast",
           "file": "generated/runtime-dumps/kubejs-config",
@@ -8268,36 +8051,6 @@
         }
       ],
       "simpleDumpProducers": [
-        {
-          "id": "iceandfire:furnace/silver_nugget",
-          "type": "minecraft:smelting",
-          "inputs": [
-            "iceandfire:silver_pickaxe",
-            "iceandfire:silver_shovel",
-            "iceandfire:silver_axe",
-            "iceandfire:silver_hoe",
-            "iceandfire:silver_sword",
-            "iceandfire:armor_silver_metal_helmet",
-            "iceandfire:armor_silver_metal_chestplate",
-            "iceandfire:armor_silver_metal_leggings",
-            "iceandfire:armor_silver_metal_boots"
-          ]
-        },
-        {
-          "id": "iceandfire:furnace/silver_nugget_blasting",
-          "type": "minecraft:blasting",
-          "inputs": [
-            "iceandfire:silver_pickaxe",
-            "iceandfire:silver_shovel",
-            "iceandfire:silver_axe",
-            "iceandfire:silver_hoe",
-            "iceandfire:silver_sword",
-            "iceandfire:armor_silver_metal_helmet",
-            "iceandfire:armor_silver_metal_chestplate",
-            "iceandfire:armor_silver_metal_leggings",
-            "iceandfire:armor_silver_metal_boots"
-          ]
-        },
         {
           "id": "chemlib:silver_ingot_to_nugget",
           "type": "minecraft:crafting_shapeless",
@@ -9116,66 +8869,6 @@
       ]
     },
     {
-      "output": "createbigcannons:nethersteel_ingot",
-      "casedProducers": [
-        {
-          "output": "createbigcannons:nethersteel_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_nethersteel_cast_iron",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "minecraft:netherite_scrap"
-          ]
-        },
-        {
-          "output": "createbigcannons:nethersteel_ingot",
-          "type": "create:compacting",
-          "id": "createbigcannons:compacting/forge_nethersteel_ingot",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        },
-        {
-          "output": "createbigcannons:nethersteel_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_nethersteel_steel",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "minecraft:netherite_scrap"
-          ]
-        }
-      ],
-      "simpleDumpProducers": [
-        {
-          "id": "createbigcannons:nethersteel_ingot_from_block",
-          "type": "minecraft:crafting_shapeless",
-          "inputs": [
-            "createbigcannons:nethersteel_block"
-          ]
-        },
-        {
-          "id": "createbigcannons:nethersteel_ingot_from_nuggets",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "authoredSimpleProducers": [
-
-      ]
-    },
-    {
       "output": "powergrid:generator_commutator",
       "casedProducers": [
         {
@@ -9612,35 +9305,6 @@
       "simpleDumpProducers": [
         {
           "id": "chemlib:tin_ingot_to_block",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "authoredSimpleProducers": [
-
-      ]
-    },
-    {
-      "output": "mynethersdelight:powdery_pressure_plate",
-      "casedProducers": [
-        {
-          "output": "mynethersdelight:powdery_pressure_plate",
-          "type": "create:cutting",
-          "id": "create:cutting/runtime_generated/compat/mynethersdelight/powdery_planks_to_powdery_pressure_plate",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "mynethersdelight:powdery_planks"
-          ]
-        }
-      ],
-      "simpleDumpProducers": [
-        {
-          "id": "mynethersdelight:crafting/powdery_pressure_plate",
           "type": "minecraft:crafting_shaped",
           "inputs": [
 
@@ -10820,13 +10484,6 @@
           "inputs": [
 
           ]
-        },
-        {
-          "id": "iceandfire:copper_nuggets_to_ingot",
-          "type": "minecraft:crafting_shapeless",
-          "inputs": [
-
-          ]
         }
       ],
       "authoredSimpleProducers": [
@@ -14522,13 +14179,6 @@
           "inputs": [
             "projectvibrantjourneys:glowcap"
           ]
-        },
-        {
-          "id": "reliquary:uncrafting/glowstone_dust",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
         }
       ],
       "authoredSimpleProducers": [
@@ -14949,56 +14599,6 @@
       "reason": "raw metal form"
     },
     {
-      "output": "createbigcannons:cast_iron_ingot",
-      "casedProducers": [
-        {
-          "output": "createbigcannons:cast_iron_ingot",
-          "type": "create:compacting",
-          "id": "createbigcannons:compacting/iron_to_cast_iron_ingot",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        },
-        {
-          "output": "createbigcannons:cast_iron_ingot",
-          "type": "create:compacting",
-          "id": "createbigcannons:compacting/forge_cast_iron_ingot",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "simpleDumpProducers": [
-        {
-          "id": "createbigcannons:cast_iron_ingot_from_block",
-          "type": "minecraft:crafting_shapeless",
-          "inputs": [
-            "createbigcannons:cast_iron_block"
-          ]
-        },
-        {
-          "id": "createbigcannons:cast_iron_ingot_from_nuggets",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "authoredSimpleProducers": [
-
-      ],
-      "benign": true,
-      "reason": "raw metal form"
-    },
-    {
       "output": "chemlib:nickel_nugget",
       "casedProducers": [
         {
@@ -15159,80 +14759,6 @@
       "reason": "raw metal form"
     },
     {
-      "output": "createbigcannons:bronze_ingot",
-      "casedProducers": [
-        {
-          "output": "createbigcannons:bronze_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_bronze_tin",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        },
-        {
-          "output": "createbigcannons:bronze_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_bronze_tinless",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "create:cinder_flour"
-          ]
-        },
-        {
-          "output": "createbigcannons:bronze_ingot",
-          "type": "create:compacting",
-          "id": "createbigcannons:compacting/forge_bronze_ingot",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        },
-        {
-          "output": "createbigcannons:bronze_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_bronze_brass",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "create:cinder_flour"
-          ]
-        }
-      ],
-      "simpleDumpProducers": [
-        {
-          "id": "createbigcannons:bronze_ingot_from_nuggets",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        },
-        {
-          "id": "createbigcannons:bronze_ingot_from_block",
-          "type": "minecraft:crafting_shapeless",
-          "inputs": [
-            "createbigcannons:bronze_block"
-          ]
-        }
-      ],
-      "authoredSimpleProducers": [
-
-      ],
-      "benign": true,
-      "reason": "raw metal form"
-    },
-    {
       "output": "chemlib:osmium_metal_block",
       "casedProducers": [
         {
@@ -15324,56 +14850,6 @@
       ],
       "benign": true,
       "reason": "decorative pressure plate"
-    },
-    {
-      "output": "createbigcannons:steel_ingot",
-      "casedProducers": [
-        {
-          "output": "createbigcannons:steel_ingot",
-          "type": "create:compacting",
-          "id": "createbigcannons:compacting/forge_steel_ingot",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        },
-        {
-          "output": "createbigcannons:steel_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_steel",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "simpleDumpProducers": [
-        {
-          "id": "createbigcannons:steel_ingot_from_block",
-          "type": "minecraft:crafting_shapeless",
-          "inputs": [
-
-          ]
-        },
-        {
-          "id": "createbigcannons:steel_ingot_from_nuggets",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "authoredSimpleProducers": [
-
-      ],
-      "benign": true,
-      "reason": "raw metal form"
     },
     {
       "output": "minecraft:warped_pressure_plate",
@@ -15555,20 +15031,6 @@
           "type": "minecraft:crafting_shapeless",
           "inputs": [
 
-          ]
-        },
-        {
-          "id": "delightful:knives/blasting/zinc_create",
-          "type": "minecraft:blasting",
-          "inputs": [
-            "delightful:zinc_knife"
-          ]
-        },
-        {
-          "id": "delightful:knives/smelting/zinc_create",
-          "type": "minecraft:smelting",
-          "inputs": [
-            "delightful:zinc_knife"
           ]
         }
       ],
@@ -16303,18 +15765,6 @@
         },
         {
           "output": "chemlib:silver_nugget",
-          "type": "create:splashing",
-          "id": "create:splashing/iceandfire/crushed_raw_silver",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "create:crushed_raw_silver"
-          ]
-        },
-        {
-          "output": "chemlib:silver_nugget",
           "type": "tconstruct:casting_table",
           "id": "tconstruct:smeltery/casting/metal/silver/nugget_sand_cast",
           "file": "generated/runtime-dumps/kubejs-config",
@@ -16327,36 +15777,6 @@
         }
       ],
       "simpleDumpProducers": [
-        {
-          "id": "iceandfire:furnace/silver_nugget",
-          "type": "minecraft:smelting",
-          "inputs": [
-            "iceandfire:silver_pickaxe",
-            "iceandfire:silver_shovel",
-            "iceandfire:silver_axe",
-            "iceandfire:silver_hoe",
-            "iceandfire:silver_sword",
-            "iceandfire:armor_silver_metal_helmet",
-            "iceandfire:armor_silver_metal_chestplate",
-            "iceandfire:armor_silver_metal_leggings",
-            "iceandfire:armor_silver_metal_boots"
-          ]
-        },
-        {
-          "id": "iceandfire:furnace/silver_nugget_blasting",
-          "type": "minecraft:blasting",
-          "inputs": [
-            "iceandfire:silver_pickaxe",
-            "iceandfire:silver_shovel",
-            "iceandfire:silver_axe",
-            "iceandfire:silver_hoe",
-            "iceandfire:silver_sword",
-            "iceandfire:armor_silver_metal_helmet",
-            "iceandfire:armor_silver_metal_chestplate",
-            "iceandfire:armor_silver_metal_leggings",
-            "iceandfire:armor_silver_metal_boots"
-          ]
-        },
         {
           "id": "chemlib:silver_ingot_to_nugget",
           "type": "minecraft:crafting_shapeless",
@@ -17229,68 +16649,6 @@
       "reason": "raw metal form"
     },
     {
-      "output": "createbigcannons:nethersteel_ingot",
-      "casedProducers": [
-        {
-          "output": "createbigcannons:nethersteel_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_nethersteel_cast_iron",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "minecraft:netherite_scrap"
-          ]
-        },
-        {
-          "output": "createbigcannons:nethersteel_ingot",
-          "type": "create:compacting",
-          "id": "createbigcannons:compacting/forge_nethersteel_ingot",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        },
-        {
-          "output": "createbigcannons:nethersteel_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_nethersteel_steel",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "minecraft:netherite_scrap"
-          ]
-        }
-      ],
-      "simpleDumpProducers": [
-        {
-          "id": "createbigcannons:nethersteel_ingot_from_block",
-          "type": "minecraft:crafting_shapeless",
-          "inputs": [
-            "createbigcannons:nethersteel_block"
-          ]
-        },
-        {
-          "id": "createbigcannons:nethersteel_ingot_from_nuggets",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "authoredSimpleProducers": [
-
-      ],
-      "benign": true,
-      "reason": "raw metal form"
-    },
-    {
       "output": "powergrid:generator_commutator",
       "casedProducers": [
         {
@@ -17766,37 +17124,6 @@
       ],
       "benign": true,
       "reason": "raw metal form"
-    },
-    {
-      "output": "mynethersdelight:powdery_pressure_plate",
-      "casedProducers": [
-        {
-          "output": "mynethersdelight:powdery_pressure_plate",
-          "type": "create:cutting",
-          "id": "create:cutting/runtime_generated/compat/mynethersdelight/powdery_planks_to_powdery_pressure_plate",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "mynethersdelight:powdery_planks"
-          ]
-        }
-      ],
-      "simpleDumpProducers": [
-        {
-          "id": "mynethersdelight:crafting/powdery_pressure_plate",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "authoredSimpleProducers": [
-
-      ],
-      "benign": true,
-      "reason": "decorative pressure plate"
     },
     {
       "output": "minecraft:crimson_pressure_plate",
@@ -18492,13 +17819,6 @@
         {
           "id": "pneumaticcraft:copper_ingot_from_nugget",
           "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        },
-        {
-          "id": "iceandfire:copper_nuggets_to_ingot",
-          "type": "minecraft:crafting_shapeless",
           "inputs": [
 
           ]
@@ -21683,56 +21003,6 @@
       "reason": "raw metal form"
     },
     {
-      "output": "createbigcannons:cast_iron_ingot",
-      "casedProducers": [
-        {
-          "output": "createbigcannons:cast_iron_ingot",
-          "type": "create:compacting",
-          "id": "createbigcannons:compacting/iron_to_cast_iron_ingot",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        },
-        {
-          "output": "createbigcannons:cast_iron_ingot",
-          "type": "create:compacting",
-          "id": "createbigcannons:compacting/forge_cast_iron_ingot",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "simpleDumpProducers": [
-        {
-          "id": "createbigcannons:cast_iron_ingot_from_block",
-          "type": "minecraft:crafting_shapeless",
-          "inputs": [
-            "createbigcannons:cast_iron_block"
-          ]
-        },
-        {
-          "id": "createbigcannons:cast_iron_ingot_from_nuggets",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "authoredSimpleProducers": [
-
-      ],
-      "benign": true,
-      "reason": "raw metal form"
-    },
-    {
       "output": "chemlib:nickel_nugget",
       "casedProducers": [
         {
@@ -21893,80 +21163,6 @@
       "reason": "raw metal form"
     },
     {
-      "output": "createbigcannons:bronze_ingot",
-      "casedProducers": [
-        {
-          "output": "createbigcannons:bronze_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_bronze_tin",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        },
-        {
-          "output": "createbigcannons:bronze_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_bronze_tinless",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "create:cinder_flour"
-          ]
-        },
-        {
-          "output": "createbigcannons:bronze_ingot",
-          "type": "create:compacting",
-          "id": "createbigcannons:compacting/forge_bronze_ingot",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        },
-        {
-          "output": "createbigcannons:bronze_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_bronze_brass",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "create:cinder_flour"
-          ]
-        }
-      ],
-      "simpleDumpProducers": [
-        {
-          "id": "createbigcannons:bronze_ingot_from_nuggets",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        },
-        {
-          "id": "createbigcannons:bronze_ingot_from_block",
-          "type": "minecraft:crafting_shapeless",
-          "inputs": [
-            "createbigcannons:bronze_block"
-          ]
-        }
-      ],
-      "authoredSimpleProducers": [
-
-      ],
-      "benign": true,
-      "reason": "raw metal form"
-    },
-    {
       "output": "chemlib:osmium_metal_block",
       "casedProducers": [
         {
@@ -22058,56 +21254,6 @@
       ],
       "benign": true,
       "reason": "decorative pressure plate"
-    },
-    {
-      "output": "createbigcannons:steel_ingot",
-      "casedProducers": [
-        {
-          "output": "createbigcannons:steel_ingot",
-          "type": "create:compacting",
-          "id": "createbigcannons:compacting/forge_steel_ingot",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        },
-        {
-          "output": "createbigcannons:steel_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_steel",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "simpleDumpProducers": [
-        {
-          "id": "createbigcannons:steel_ingot_from_block",
-          "type": "minecraft:crafting_shapeless",
-          "inputs": [
-
-          ]
-        },
-        {
-          "id": "createbigcannons:steel_ingot_from_nuggets",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "authoredSimpleProducers": [
-
-      ],
-      "benign": true,
-      "reason": "raw metal form"
     },
     {
       "output": "minecraft:warped_pressure_plate",
@@ -22289,20 +21435,6 @@
           "type": "minecraft:crafting_shapeless",
           "inputs": [
 
-          ]
-        },
-        {
-          "id": "delightful:knives/blasting/zinc_create",
-          "type": "minecraft:blasting",
-          "inputs": [
-            "delightful:zinc_knife"
-          ]
-        },
-        {
-          "id": "delightful:knives/smelting/zinc_create",
-          "type": "minecraft:smelting",
-          "inputs": [
-            "delightful:zinc_knife"
           ]
         }
       ],
@@ -23037,18 +22169,6 @@
         },
         {
           "output": "chemlib:silver_nugget",
-          "type": "create:splashing",
-          "id": "create:splashing/iceandfire/crushed_raw_silver",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "create:crushed_raw_silver"
-          ]
-        },
-        {
-          "output": "chemlib:silver_nugget",
           "type": "tconstruct:casting_table",
           "id": "tconstruct:smeltery/casting/metal/silver/nugget_sand_cast",
           "file": "generated/runtime-dumps/kubejs-config",
@@ -23061,36 +22181,6 @@
         }
       ],
       "simpleDumpProducers": [
-        {
-          "id": "iceandfire:furnace/silver_nugget",
-          "type": "minecraft:smelting",
-          "inputs": [
-            "iceandfire:silver_pickaxe",
-            "iceandfire:silver_shovel",
-            "iceandfire:silver_axe",
-            "iceandfire:silver_hoe",
-            "iceandfire:silver_sword",
-            "iceandfire:armor_silver_metal_helmet",
-            "iceandfire:armor_silver_metal_chestplate",
-            "iceandfire:armor_silver_metal_leggings",
-            "iceandfire:armor_silver_metal_boots"
-          ]
-        },
-        {
-          "id": "iceandfire:furnace/silver_nugget_blasting",
-          "type": "minecraft:blasting",
-          "inputs": [
-            "iceandfire:silver_pickaxe",
-            "iceandfire:silver_shovel",
-            "iceandfire:silver_axe",
-            "iceandfire:silver_hoe",
-            "iceandfire:silver_sword",
-            "iceandfire:armor_silver_metal_helmet",
-            "iceandfire:armor_silver_metal_chestplate",
-            "iceandfire:armor_silver_metal_leggings",
-            "iceandfire:armor_silver_metal_boots"
-          ]
-        },
         {
           "id": "chemlib:silver_ingot_to_nugget",
           "type": "minecraft:crafting_shapeless",
@@ -23963,68 +23053,6 @@
       "reason": "raw metal form"
     },
     {
-      "output": "createbigcannons:nethersteel_ingot",
-      "casedProducers": [
-        {
-          "output": "createbigcannons:nethersteel_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_nethersteel_cast_iron",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "minecraft:netherite_scrap"
-          ]
-        },
-        {
-          "output": "createbigcannons:nethersteel_ingot",
-          "type": "create:compacting",
-          "id": "createbigcannons:compacting/forge_nethersteel_ingot",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-
-          ]
-        },
-        {
-          "output": "createbigcannons:nethersteel_ingot",
-          "type": "create:mixing",
-          "id": "createbigcannons:mixing/alloy_nethersteel_steel",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "minecraft:netherite_scrap"
-          ]
-        }
-      ],
-      "simpleDumpProducers": [
-        {
-          "id": "createbigcannons:nethersteel_ingot_from_block",
-          "type": "minecraft:crafting_shapeless",
-          "inputs": [
-            "createbigcannons:nethersteel_block"
-          ]
-        },
-        {
-          "id": "createbigcannons:nethersteel_ingot_from_nuggets",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "authoredSimpleProducers": [
-
-      ],
-      "benign": true,
-      "reason": "raw metal form"
-    },
-    {
       "output": "powergrid:generator_commutator",
       "casedProducers": [
         {
@@ -24500,37 +23528,6 @@
       ],
       "benign": true,
       "reason": "raw metal form"
-    },
-    {
-      "output": "mynethersdelight:powdery_pressure_plate",
-      "casedProducers": [
-        {
-          "output": "mynethersdelight:powdery_pressure_plate",
-          "type": "create:cutting",
-          "id": "create:cutting/runtime_generated/compat/mynethersdelight/powdery_planks_to_powdery_pressure_plate",
-          "file": "generated/runtime-dumps/kubejs-config",
-          "origin": "runtime-dump",
-          "surface": "create andesite machine surfaces",
-          "gate": "kubejs:andesite_machine_casing",
-          "inputs": [
-            "mynethersdelight:powdery_planks"
-          ]
-        }
-      ],
-      "simpleDumpProducers": [
-        {
-          "id": "mynethersdelight:crafting/powdery_pressure_plate",
-          "type": "minecraft:crafting_shaped",
-          "inputs": [
-
-          ]
-        }
-      ],
-      "authoredSimpleProducers": [
-
-      ],
-      "benign": true,
-      "reason": "decorative pressure plate"
     },
     {
       "output": "minecraft:crimson_pressure_plate",
@@ -25069,9 +24066,9 @@
   ],
   "bypassReasonCounts": {
     "component-like simple recipe": 17,
-    "decorative pressure plate": 65,
+    "decorative pressure plate": 64,
     "decorative weathered plate": 1,
-    "raw metal form": 101,
+    "raw metal form": 97,
     "reversible orientation conversion": 1
   },
   "actionableBypasses": [

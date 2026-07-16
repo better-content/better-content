@@ -24,7 +24,7 @@
 				}
 			]
 			rewards: [ ]
-			description: ["424 starter stubs."]
+			description: ["228 starter stubs."]
 		}
 		{
 			id: "C3B35E7F77049DDB"
@@ -621,769 +621,13 @@
 			rewards: [ ]
 		}
 		{
-			id: "B9599BF25B3318AD"
-			title: "All Foods: Acorn"
-			icon: "delightful:acorn"
-			shape: "rsquare"
-			size: 1.0d
-			x: 2.75d
-			y: 2.5d
-			tasks: [
-				{
-					id: "E1DB37724CE7E298"
-					type: "item"
-					item: "delightful:acorn"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "A24D400320A96DEF"
-			title: "All Foods: Animal Fat"
-			icon: "delightful:animal_fat"
-			shape: "rsquare"
-			size: 1.0d
-			x: 4.0d
-			y: 2.5d
-			tasks: [
-				{
-					id: "CD60EB20D2C4019A"
-					type: "item"
-					item: "delightful:animal_fat"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "ADA0D51777F90180"
-			title: "All Foods: Baklava Slice"
-			icon: "delightful:baklava_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 5.25d
-			y: 2.5d
-			tasks: [
-				{
-					id: "9F8422DA53DE12CE"
-					type: "item"
-					item: "delightful:baklava_slice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "43245C8EA2419225"
-			title: "All Foods: Cactus Chili"
-			icon: "delightful:cactus_chili"
-			shape: "rsquare"
-			size: 1.0d
-			x: 6.5d
-			y: 2.5d
-			tasks: [
-				{
-					id: "516ACBA36B4BD97F"
-					type: "item"
-					item: "delightful:cactus_chili"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "40749E2CDCF89F48"
-			title: "All Foods: Cactus Flesh"
-			icon: "delightful:cactus_flesh"
-			shape: "rsquare"
-			size: 1.0d
-			x: 7.75d
-			y: 2.5d
-			tasks: [
-				{
-					id: "5525BFDA1087B0F5"
-					type: "item"
-					item: "delightful:cactus_flesh"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "E9156A59C6BFCA1C"
-			title: "All Foods: Cantaloupe Bread"
-			icon: "delightful:cantaloupe_bread"
-			shape: "rsquare"
-			size: 1.0d
-			x: 9.0d
-			y: 2.5d
-			tasks: [
-				{
-					id: "1D2A7BB45081A7AB"
-					type: "item"
-					item: "delightful:cantaloupe_bread"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "781CD86D5B1192BA"
-			title: "All Foods: Cantaloupe Gummy"
-			icon: "delightful:cantaloupe_gummy"
-			shape: "rsquare"
-			size: 1.0d
-			x: 10.25d
-			y: 2.5d
-			tasks: [
-				{
-					id: "1277553C51B02C77"
-					type: "item"
-					item: "delightful:cantaloupe_gummy"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "143B7F8FE5949D93"
-			title: "All Foods: Cantaloupe Popsicle"
-			icon: "delightful:cantaloupe_popsicle"
-			shape: "rsquare"
-			size: 1.0d
-			x: 11.5d
-			y: 2.5d
-			tasks: [
-				{
-					id: "34200BA9934A5BAC"
-					type: "item"
-					item: "delightful:cantaloupe_popsicle"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "E8CE320A5D57A3B4"
-			title: "All Foods: Cantaloupe Slice"
-			icon: "delightful:cantaloupe_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 12.75d
-			y: 2.5d
-			tasks: [
-				{
-					id: "61F3D0C1232DDC92"
-					type: "item"
-					item: "delightful:cantaloupe_slice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "83C20DABCF67D177"
-			title: "All Foods: Cheeseburger"
-			icon: "delightful:cheeseburger"
-			shape: "rsquare"
-			size: 1.0d
-			x: 14.0d
-			y: 2.5d
-			tasks: [
-				{
-					id: "6D5687B1439DF37C"
-					type: "item"
-					item: "delightful:cheeseburger"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "C74B04A270EF1654"
-			title: "All Foods: Chopped Clover"
-			icon: "delightful:chopped_clover"
-			shape: "rsquare"
-			size: 1.0d
-			x: 15.25d
-			y: 2.5d
-			tasks: [
-				{
-					id: "FD5AB9BBB35D68FD"
-					type: "item"
-					item: "delightful:chopped_clover"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "100A4E0D0384000B"
-			title: "All Foods: Cooked Goat"
-			icon: "delightful:cooked_goat"
-			shape: "rsquare"
-			size: 1.0d
-			x: 16.5d
-			y: 2.5d
-			tasks: [
-				{
-					id: "CD6DA3D83750DC53"
-					type: "item"
-					item: "delightful:cooked_goat"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "13F20093379B9BB0"
-			title: "All Foods: Cooked Marshmallow Stick"
-			icon: "delightful:cooked_marshmallow_stick"
-			shape: "rsquare"
-			size: 1.0d
-			x: 17.75d
-			y: 2.5d
-			tasks: [
-				{
-					id: "2BBAFA1612EE8299"
-					type: "item"
-					item: "delightful:cooked_marshmallow_stick"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "B6C192FD32CAC8C4"
-			title: "All Foods: Cooked Venison Chops"
-			icon: "delightful:cooked_venison_chops"
-			shape: "rsquare"
-			size: 1.0d
-			x: 19.0d
-			y: 2.5d
-			tasks: [
-				{
-					id: "04506326BA40C6C0"
-					type: "item"
-					item: "delightful:cooked_venison_chops"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "D269A459A8D5CA98"
-			title: "All Foods: Crab Rangoon"
-			icon: "delightful:crab_rangoon"
-			shape: "rsquare"
-			size: 1.0d
-			x: 20.25d
-			y: 2.5d
-			tasks: [
-				{
-					id: "61A624654F840E37"
-					type: "item"
-					item: "delightful:crab_rangoon"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "70DEC8D3806C1908"
-			title: "All Foods: Deluxe Cheeseburger"
-			icon: "delightful:deluxe_cheeseburger"
-			shape: "rsquare"
-			size: 1.0d
-			x: 1.5d
-			y: 3.75d
-			tasks: [
-				{
-					id: "A593F3692E675EBB"
-					type: "item"
-					item: "delightful:deluxe_cheeseburger"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "6ADD09F2DE2FD8C3"
-			title: "All Foods: Ender Nectar"
-			icon: "delightful:ender_nectar"
-			shape: "rsquare"
-			size: 1.0d
-			x: 2.75d
-			y: 3.75d
-			tasks: [
-				{
-					id: "8809EDB21D6B00AB"
-					type: "item"
-					item: "delightful:ender_nectar"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "0A2C15CF6D5F04B8"
-			title: "All Foods: Field Salad"
-			icon: "delightful:field_salad"
-			shape: "rsquare"
-			size: 1.0d
-			x: 4.0d
-			y: 3.75d
-			tasks: [
-				{
-					id: "46F300897E893C59"
-					type: "item"
-					item: "delightful:field_salad"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "0D7CB81CF0EB3D9D"
-			title: "All Foods: Gloomgourd Pie Slice"
-			icon: "delightful:gloomgourd_pie_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 5.25d
-			y: 3.75d
-			tasks: [
-				{
-					id: "5D193B67C3718AEC"
-					type: "item"
-					item: "delightful:gloomgourd_pie_slice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "B4DB0BE1DE4A8041"
-			title: "All Foods: Glow Jam Cookie"
-			icon: "delightful:glow_jam_cookie"
-			shape: "rsquare"
-			size: 1.0d
-			x: 6.5d
-			y: 3.75d
-			tasks: [
-				{
-					id: "1D5AC826C988DD0E"
-					type: "item"
-					item: "delightful:glow_jam_cookie"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "5CFC8564E6CBF36D"
-			title: "All Foods: Marshmallow Stick"
-			icon: "delightful:marshmallow_stick"
-			shape: "rsquare"
-			size: 1.0d
-			x: 7.75d
-			y: 3.75d
-			tasks: [
-				{
-					id: "7E2C8D97C5485398"
-					type: "item"
-					item: "delightful:marshmallow_stick"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "2D6D4ED0AB97C162"
-			title: "All Foods: Matcha Gummy"
-			icon: "delightful:matcha_gummy"
-			shape: "rsquare"
-			size: 1.0d
-			x: 9.0d
-			y: 3.75d
-			tasks: [
-				{
-					id: "24ACB0688E08D1BD"
-					type: "item"
-					item: "delightful:matcha_gummy"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "92E770F0E5AA776B"
-			title: "All Foods: Matcha Ice Cream"
-			icon: "delightful:matcha_ice_cream"
-			shape: "rsquare"
-			size: 1.0d
-			x: 10.25d
-			y: 3.75d
-			tasks: [
-				{
-					id: "113DE1F0AFC29401"
-					type: "item"
-					item: "delightful:matcha_ice_cream"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "B6F92336805A18D5"
-			title: "All Foods: Nut Butter And Jam Sandwich"
-			icon: "delightful:nut_butter_and_jam_sandwich"
-			shape: "rsquare"
-			size: 1.0d
-			x: 11.5d
-			y: 3.75d
-			tasks: [
-				{
-					id: "34968964ED73F481"
-					type: "item"
-					item: "delightful:nut_butter_and_jam_sandwich"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "527AFB042759C67E"
-			title: "All Foods: Nut Butter Bottle"
-			icon: "delightful:nut_butter_bottle"
-			shape: "rsquare"
-			size: 1.0d
-			x: 12.75d
-			y: 3.75d
-			tasks: [
-				{
-					id: "7B98D35F33B724BD"
-					type: "item"
-					item: "delightful:nut_butter_bottle"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "BD74AAB74ED7CCC5"
-			title: "All Foods: Nut Dough"
-			icon: "delightful:nut_dough"
-			shape: "rsquare"
-			size: 1.0d
-			x: 14.0d
-			y: 3.75d
-			tasks: [
-				{
-					id: "06CEDBD62ACFBA24"
-					type: "item"
-					item: "delightful:nut_dough"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "0F58E6416EFF0C76"
-			title: "All Foods: Pumpkin Pie Slice"
-			icon: "delightful:pumpkin_pie_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 15.25d
-			y: 3.75d
-			tasks: [
-				{
-					id: "857634F4ED5A16CC"
-					type: "item"
-					item: "delightful:pumpkin_pie_slice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "5BDB60F12290CF37"
-			title: "All Foods: Raw Goat"
-			icon: "delightful:raw_goat"
-			shape: "rsquare"
-			size: 1.0d
-			x: 16.5d
-			y: 3.75d
-			tasks: [
-				{
-					id: "0F945F183AFFE03A"
-					type: "item"
-					item: "delightful:raw_goat"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "0853D744FF946AA3"
-			title: "All Foods: Roasted Acorn"
-			icon: "delightful:roasted_acorn"
-			shape: "rsquare"
-			size: 1.0d
-			x: 17.75d
-			y: 3.75d
-			tasks: [
-				{
-					id: "83DF5F36414BFDBE"
-					type: "item"
-					item: "delightful:roasted_acorn"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "7A77F3BA2CCFE1EF"
-			title: "All Foods: Rock Candy"
-			icon: "delightful:rock_candy"
-			shape: "rsquare"
-			size: 1.0d
-			x: 19.0d
-			y: 3.75d
-			tasks: [
-				{
-					id: "F573BB4C5B78C68F"
-					type: "item"
-					item: "delightful:rock_candy"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "788824FC5EFD7BF8"
-			title: "All Foods: Salmonberries"
-			icon: "delightful:salmonberries"
-			shape: "rsquare"
-			size: 1.0d
-			x: 20.25d
-			y: 3.75d
-			tasks: [
-				{
-					id: "E50E67A9124D05F9"
-					type: "item"
-					item: "delightful:salmonberries"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "91DF04395B0796E8"
-			title: "All Foods: Salmonberry Gummy"
-			icon: "delightful:salmonberry_gummy"
-			shape: "rsquare"
-			size: 1.0d
-			x: 1.5d
-			y: 5.0d
-			tasks: [
-				{
-					id: "09B5CA96720D84F4"
-					type: "item"
-					item: "delightful:salmonberry_gummy"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "3B501AEA60D19EBD"
-			title: "All Foods: Salmonberry Ice Cream"
-			icon: "delightful:salmonberry_ice_cream"
-			shape: "rsquare"
-			size: 1.0d
-			x: 2.75d
-			y: 5.0d
-			tasks: [
-				{
-					id: "58B5FC5D7EAD96FF"
-					type: "item"
-					item: "delightful:salmonberry_ice_cream"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "7AE998DAF2267ED1"
-			title: "All Foods: Salmonberry Pie Slice"
-			icon: "delightful:salmonberry_pie_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 4.0d
-			y: 5.0d
-			tasks: [
-				{
-					id: "B24E4C919D06BA05"
-					type: "item"
-					item: "delightful:salmonberry_pie_slice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "F30D02E0D3340AFA"
-			title: "All Foods: Sinigang"
-			icon: "delightful:sinigang"
-			shape: "rsquare"
-			size: 1.0d
-			x: 5.25d
-			y: 5.0d
-			tasks: [
-				{
-					id: "89BF1A5AC0DC4091"
-					type: "item"
-					item: "delightful:sinigang"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "11E97DFE83A3A551"
-			title: "All Foods: Smore"
-			icon: "delightful:smore"
-			shape: "rsquare"
-			size: 1.0d
-			x: 6.5d
-			y: 5.0d
-			tasks: [
-				{
-					id: "E13665350F69B76B"
-					type: "item"
-					item: "delightful:smore"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "1077DC40201C9DC0"
-			title: "All Foods: Source Berry Cookie"
-			icon: "delightful:source_berry_cookie"
-			shape: "rsquare"
-			size: 1.0d
-			x: 7.75d
-			y: 5.0d
-			tasks: [
-				{
-					id: "72C5BBEE4F4BF186"
-					type: "item"
-					item: "delightful:source_berry_cookie"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "532409557FF298EF"
-			title: "All Foods: Source Berry Gummy"
-			icon: "delightful:source_berry_gummy"
-			shape: "rsquare"
-			size: 1.0d
-			x: 9.0d
-			y: 5.0d
-			tasks: [
-				{
-					id: "B7F989FFEFBA0C6B"
-					type: "item"
-					item: "delightful:source_berry_gummy"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "430C812B418A41C7"
-			title: "All Foods: Source Berry Ice Cream"
-			icon: "delightful:source_berry_ice_cream"
-			shape: "rsquare"
-			size: 1.0d
-			x: 10.25d
-			y: 5.0d
-			tasks: [
-				{
-					id: "A8F887DD17598CE2"
-					type: "item"
-					item: "delightful:source_berry_ice_cream"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "209599BF6B979B14"
-			title: "All Foods: Source Berry Pie Slice"
-			icon: "delightful:source_berry_pie_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 11.5d
-			y: 5.0d
-			tasks: [
-				{
-					id: "B0B98BAE77494A3A"
-					type: "item"
-					item: "delightful:source_berry_pie_slice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "C79D0B19FD0D3022"
-			title: "All Foods: Venison Chops"
-			icon: "delightful:venison_chops"
-			shape: "rsquare"
-			size: 1.0d
-			x: 12.75d
-			y: 5.0d
-			tasks: [
-				{
-					id: "DEEB59F09AF55046"
-					type: "item"
-					item: "delightful:venison_chops"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "1FD48B9E42DB7575"
-			title: "All Foods: Wrapped Cantaloupe"
-			icon: "delightful:wrapped_cantaloupe"
-			shape: "rsquare"
-			size: 1.0d
-			x: 14.0d
-			y: 5.0d
-			tasks: [
-				{
-					id: "932CA58D467152EC"
-					type: "item"
-					item: "delightful:wrapped_cantaloupe"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
 			id: "00927D2D69328370"
 			title: "All Foods: Canned Beef"
 			icon: "fallout_wastelands_:canned_beef"
 			shape: "rsquare"
 			size: 1.0d
-			x: 15.25d
-			y: 5.0d
+			x: 2.75d
+			y: 2.5d
 			tasks: [
 				{
 					id: "7AD5F317722CF6B1"
@@ -1400,8 +644,8 @@
 			icon: "fallout_wastelands_:gecko_coocked_egg"
 			shape: "rsquare"
 			size: 1.0d
-			x: 16.5d
-			y: 5.0d
+			x: 4.0d
+			y: 2.5d
 			tasks: [
 				{
 					id: "BB48EBD98BB98B6C"
@@ -1418,8 +662,8 @@
 			icon: "fallout_wastelands_:gecko_egg"
 			shape: "rsquare"
 			size: 1.0d
-			x: 17.75d
-			y: 5.0d
+			x: 5.25d
+			y: 2.5d
 			tasks: [
 				{
 					id: "600A9DEC72F33C46"
@@ -1436,8 +680,8 @@
 			icon: "fallout_wastelands_:mirelurk_cake"
 			shape: "rsquare"
 			size: 1.0d
-			x: 19.0d
-			y: 5.0d
+			x: 6.5d
+			y: 2.5d
 			tasks: [
 				{
 					id: "7C6C4920C386CA27"
@@ -1454,8 +698,8 @@
 			icon: "fallout_wastelands_:mirelurkmeat"
 			shape: "rsquare"
 			size: 1.0d
-			x: 20.25d
-			y: 5.0d
+			x: 7.75d
+			y: 2.5d
 			tasks: [
 				{
 					id: "1A1ACDA1E8B94552"
@@ -1472,8 +716,8 @@
 			icon: "fallout_wastelands_:mutlemon"
 			shape: "rsquare"
 			size: 1.0d
-			x: 1.5d
-			y: 6.25d
+			x: 9.0d
+			y: 2.5d
 			tasks: [
 				{
 					id: "551DA76D299E0518"
@@ -1490,8 +734,8 @@
 			icon: "fallout_wastelands_:ripper"
 			shape: "rsquare"
 			size: 1.0d
-			x: 2.75d
-			y: 6.25d
+			x: 10.25d
+			y: 2.5d
 			tasks: [
 				{
 					id: "308CD25895679969"
@@ -1508,8 +752,8 @@
 			icon: "fallout_wastelands_:strange_meat_patty"
 			shape: "rsquare"
 			size: 1.0d
-			x: 4.0d
-			y: 6.25d
+			x: 11.5d
+			y: 2.5d
 			tasks: [
 				{
 					id: "8F6222DA05FF7367"
@@ -1526,8 +770,8 @@
 			icon: "fallout_wastelands_:tato"
 			shape: "rsquare"
 			size: 1.0d
-			x: 5.25d
-			y: 6.25d
+			x: 12.75d
+			y: 2.5d
 			tasks: [
 				{
 					id: "8E457268BF3DE5E9"
@@ -1544,8 +788,8 @@
 			icon: "farmersdelight:apple_pie_slice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 6.5d
-			y: 6.25d
+			x: 14.0d
+			y: 2.5d
 			tasks: [
 				{
 					id: "8404BE3AF59026FD"
@@ -1562,8 +806,8 @@
 			icon: "farmersdelight:bacon"
 			shape: "rsquare"
 			size: 1.0d
-			x: 7.75d
-			y: 6.25d
+			x: 15.25d
+			y: 2.5d
 			tasks: [
 				{
 					id: "80CCB913838A01BD"
@@ -1580,8 +824,8 @@
 			icon: "farmersdelight:bacon_and_eggs"
 			shape: "rsquare"
 			size: 1.0d
-			x: 9.0d
-			y: 6.25d
+			x: 16.5d
+			y: 2.5d
 			tasks: [
 				{
 					id: "53FD4845293F37F5"
@@ -1598,8 +842,8 @@
 			icon: "farmersdelight:bacon_sandwich"
 			shape: "rsquare"
 			size: 1.0d
-			x: 10.25d
-			y: 6.25d
+			x: 17.75d
+			y: 2.5d
 			tasks: [
 				{
 					id: "5E089115620DE8AC"
@@ -1616,8 +860,8 @@
 			icon: "farmersdelight:barbecue_stick"
 			shape: "rsquare"
 			size: 1.0d
-			x: 11.5d
-			y: 6.25d
+			x: 19.0d
+			y: 2.5d
 			tasks: [
 				{
 					id: "84FFC160C78C01FA"
@@ -1634,8 +878,8 @@
 			icon: "farmersdelight:beef_patty"
 			shape: "rsquare"
 			size: 1.0d
-			x: 12.75d
-			y: 6.25d
+			x: 20.25d
+			y: 2.5d
 			tasks: [
 				{
 					id: "BE28D94B6EC000B4"
@@ -1652,8 +896,8 @@
 			icon: "farmersdelight:cabbage"
 			shape: "rsquare"
 			size: 1.0d
-			x: 14.0d
-			y: 6.25d
+			x: 1.5d
+			y: 3.75d
 			tasks: [
 				{
 					id: "847003E847A3EF6C"
@@ -1670,8 +914,8 @@
 			icon: "farmersdelight:cabbage_leaf"
 			shape: "rsquare"
 			size: 1.0d
-			x: 15.25d
-			y: 6.25d
+			x: 2.75d
+			y: 3.75d
 			tasks: [
 				{
 					id: "7AFBE02C7665C7B5"
@@ -1688,8 +932,8 @@
 			icon: "farmersdelight:cabbage_rolls"
 			shape: "rsquare"
 			size: 1.0d
-			x: 16.5d
-			y: 6.25d
+			x: 4.0d
+			y: 3.75d
 			tasks: [
 				{
 					id: "8947265BC68B981B"
@@ -1706,8 +950,8 @@
 			icon: "farmersdelight:cake_slice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 17.75d
-			y: 6.25d
+			x: 5.25d
+			y: 3.75d
 			tasks: [
 				{
 					id: "098CF7FEEFF1B0B3"
@@ -1724,8 +968,8 @@
 			icon: "farmersdelight:chicken_cuts"
 			shape: "rsquare"
 			size: 1.0d
-			x: 19.0d
-			y: 6.25d
+			x: 6.5d
+			y: 3.75d
 			tasks: [
 				{
 					id: "87DFBC348F687765"
@@ -1742,8 +986,8 @@
 			icon: "farmersdelight:chicken_sandwich"
 			shape: "rsquare"
 			size: 1.0d
-			x: 20.25d
-			y: 6.25d
+			x: 7.75d
+			y: 3.75d
 			tasks: [
 				{
 					id: "B51CB0114E4A9CDC"
@@ -1760,8 +1004,8 @@
 			icon: "farmersdelight:cod_roll"
 			shape: "rsquare"
 			size: 1.0d
-			x: 1.5d
-			y: 7.5d
+			x: 9.0d
+			y: 3.75d
 			tasks: [
 				{
 					id: "FD1219095168B0E3"
@@ -1778,8 +1022,8 @@
 			icon: "farmersdelight:cod_slice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 2.75d
-			y: 7.5d
+			x: 10.25d
+			y: 3.75d
 			tasks: [
 				{
 					id: "BE73C8FEDBE1FDC4"
@@ -1796,8 +1040,8 @@
 			icon: "farmersdelight:cooked_bacon"
 			shape: "rsquare"
 			size: 1.0d
-			x: 4.0d
-			y: 7.5d
+			x: 11.5d
+			y: 3.75d
 			tasks: [
 				{
 					id: "6CF2E53C97FDA238"
@@ -1814,8 +1058,8 @@
 			icon: "farmersdelight:cooked_chicken_cuts"
 			shape: "rsquare"
 			size: 1.0d
-			x: 5.25d
-			y: 7.5d
+			x: 12.75d
+			y: 3.75d
 			tasks: [
 				{
 					id: "12E0A3AABF47B2AE"
@@ -1832,8 +1076,8 @@
 			icon: "farmersdelight:cooked_cod_slice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 6.5d
-			y: 7.5d
+			x: 14.0d
+			y: 3.75d
 			tasks: [
 				{
 					id: "094EA15AA728745A"
@@ -1850,8 +1094,8 @@
 			icon: "farmersdelight:cooked_mutton_chops"
 			shape: "rsquare"
 			size: 1.0d
-			x: 7.75d
-			y: 7.5d
+			x: 15.25d
+			y: 3.75d
 			tasks: [
 				{
 					id: "0EE769CEAEBA7B1F"
@@ -1868,8 +1112,8 @@
 			icon: "farmersdelight:cooked_rice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 9.0d
-			y: 7.5d
+			x: 16.5d
+			y: 3.75d
 			tasks: [
 				{
 					id: "BA1595AD6720ECD2"
@@ -1886,8 +1130,8 @@
 			icon: "farmersdelight:cooked_salmon_slice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 10.25d
-			y: 7.5d
+			x: 17.75d
+			y: 3.75d
 			tasks: [
 				{
 					id: "2CA2EB8416703102"
@@ -1904,8 +1148,8 @@
 			icon: "farmersdelight:dog_food"
 			shape: "rsquare"
 			size: 1.0d
-			x: 11.5d
-			y: 7.5d
+			x: 19.0d
+			y: 3.75d
 			tasks: [
 				{
 					id: "500D2FAF1773E004"
@@ -1922,8 +1166,8 @@
 			icon: "farmersdelight:dumplings"
 			shape: "rsquare"
 			size: 1.0d
-			x: 12.75d
-			y: 7.5d
+			x: 20.25d
+			y: 3.75d
 			tasks: [
 				{
 					id: "E80F7D09D48CCDF7"
@@ -1940,8 +1184,8 @@
 			icon: "farmersdelight:egg_sandwich"
 			shape: "rsquare"
 			size: 1.0d
-			x: 14.0d
-			y: 7.5d
+			x: 1.5d
+			y: 5.0d
 			tasks: [
 				{
 					id: "0EA8B82325EB3965"
@@ -1958,8 +1202,8 @@
 			icon: "farmersdelight:fried_egg"
 			shape: "rsquare"
 			size: 1.0d
-			x: 15.25d
-			y: 7.5d
+			x: 2.75d
+			y: 5.0d
 			tasks: [
 				{
 					id: "07DF074F8ECAD1F2"
@@ -1976,8 +1220,8 @@
 			icon: "farmersdelight:fried_rice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 16.5d
-			y: 7.5d
+			x: 4.0d
+			y: 5.0d
 			tasks: [
 				{
 					id: "8ECE5535E01403E7"
@@ -1994,8 +1238,8 @@
 			icon: "farmersdelight:fruit_salad"
 			shape: "rsquare"
 			size: 1.0d
-			x: 17.75d
-			y: 7.5d
+			x: 5.25d
+			y: 5.0d
 			tasks: [
 				{
 					id: "699CAD1F7A13C5B6"
@@ -2012,8 +1256,8 @@
 			icon: "farmersdelight:glow_berry_custard"
 			shape: "rsquare"
 			size: 1.0d
-			x: 19.0d
-			y: 7.5d
+			x: 6.5d
+			y: 5.0d
 			tasks: [
 				{
 					id: "24893CBAED8BC8BF"
@@ -2030,8 +1274,8 @@
 			icon: "farmersdelight:grilled_salmon"
 			shape: "rsquare"
 			size: 1.0d
-			x: 20.25d
-			y: 7.5d
+			x: 7.75d
+			y: 5.0d
 			tasks: [
 				{
 					id: "AF763236D239F29C"
@@ -2048,8 +1292,8 @@
 			icon: "farmersdelight:ham"
 			shape: "rsquare"
 			size: 1.0d
-			x: 1.5d
-			y: 8.75d
+			x: 9.0d
+			y: 5.0d
 			tasks: [
 				{
 					id: "E3493C14F1E35CD7"
@@ -2066,8 +1310,8 @@
 			icon: "farmersdelight:hamburger"
 			shape: "rsquare"
 			size: 1.0d
-			x: 2.75d
-			y: 8.75d
+			x: 10.25d
+			y: 5.0d
 			tasks: [
 				{
 					id: "E76864711259EE56"
@@ -2084,8 +1328,8 @@
 			icon: "farmersdelight:honey_cookie"
 			shape: "rsquare"
 			size: 1.0d
-			x: 4.0d
-			y: 8.75d
+			x: 11.5d
+			y: 5.0d
 			tasks: [
 				{
 					id: "46DB440C81AB348C"
@@ -2102,8 +1346,8 @@
 			icon: "farmersdelight:kelp_roll"
 			shape: "rsquare"
 			size: 1.0d
-			x: 5.25d
-			y: 8.75d
+			x: 12.75d
+			y: 5.0d
 			tasks: [
 				{
 					id: "9A4F4826A04D4A2F"
@@ -2120,8 +1364,8 @@
 			icon: "farmersdelight:kelp_roll_slice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 6.5d
-			y: 8.75d
+			x: 14.0d
+			y: 5.0d
 			tasks: [
 				{
 					id: "1F6A78C5176470B8"
@@ -2138,8 +1382,8 @@
 			icon: "farmersdelight:melon_popsicle"
 			shape: "rsquare"
 			size: 1.0d
-			x: 7.75d
-			y: 8.75d
+			x: 15.25d
+			y: 5.0d
 			tasks: [
 				{
 					id: "63AB99694285FA77"
@@ -2156,8 +1400,8 @@
 			icon: "farmersdelight:minced_beef"
 			shape: "rsquare"
 			size: 1.0d
-			x: 9.0d
-			y: 8.75d
+			x: 16.5d
+			y: 5.0d
 			tasks: [
 				{
 					id: "EB83AD7D5E4EFD56"
@@ -2174,8 +1418,8 @@
 			icon: "farmersdelight:mixed_salad"
 			shape: "rsquare"
 			size: 1.0d
-			x: 10.25d
-			y: 8.75d
+			x: 17.75d
+			y: 5.0d
 			tasks: [
 				{
 					id: "3E961337ED86C4A8"
@@ -2192,8 +1436,8 @@
 			icon: "farmersdelight:mushroom_rice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 11.5d
-			y: 8.75d
+			x: 19.0d
+			y: 5.0d
 			tasks: [
 				{
 					id: "20D9ED1F7464A8CC"
@@ -2210,8 +1454,8 @@
 			icon: "farmersdelight:mutton_chops"
 			shape: "rsquare"
 			size: 1.0d
-			x: 12.75d
-			y: 8.75d
+			x: 20.25d
+			y: 5.0d
 			tasks: [
 				{
 					id: "63E354F1009919B9"
@@ -2228,8 +1472,8 @@
 			icon: "farmersdelight:mutton_wrap"
 			shape: "rsquare"
 			size: 1.0d
-			x: 14.0d
-			y: 8.75d
+			x: 1.5d
+			y: 6.25d
 			tasks: [
 				{
 					id: "32EA1CC6ACA41CBA"
@@ -2246,8 +1490,8 @@
 			icon: "farmersdelight:nether_salad"
 			shape: "rsquare"
 			size: 1.0d
-			x: 15.25d
-			y: 8.75d
+			x: 2.75d
+			y: 6.25d
 			tasks: [
 				{
 					id: "3263626D5D881889"
@@ -2264,8 +1508,8 @@
 			icon: "farmersdelight:onion"
 			shape: "rsquare"
 			size: 1.0d
-			x: 16.5d
-			y: 8.75d
+			x: 4.0d
+			y: 6.25d
 			tasks: [
 				{
 					id: "9B19B4A96CC9F3AA"
@@ -2282,8 +1526,8 @@
 			icon: "farmersdelight:pasta_with_meatballs"
 			shape: "rsquare"
 			size: 1.0d
-			x: 17.75d
-			y: 8.75d
+			x: 5.25d
+			y: 6.25d
 			tasks: [
 				{
 					id: "91D76EC8CD1466B0"
@@ -2300,8 +1544,8 @@
 			icon: "farmersdelight:pasta_with_mutton_chop"
 			shape: "rsquare"
 			size: 1.0d
-			x: 19.0d
-			y: 8.75d
+			x: 6.5d
+			y: 6.25d
 			tasks: [
 				{
 					id: "D75C4B8F3520A136"
@@ -2318,8 +1562,8 @@
 			icon: "farmersdelight:pie_crust"
 			shape: "rsquare"
 			size: 1.0d
-			x: 20.25d
-			y: 8.75d
+			x: 7.75d
+			y: 6.25d
 			tasks: [
 				{
 					id: "2617F0F38277D313"
@@ -2336,8 +1580,8 @@
 			icon: "farmersdelight:pumpkin_pie_slice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 1.5d
-			y: 10.0d
+			x: 9.0d
+			y: 6.25d
 			tasks: [
 				{
 					id: "607F1F62B41F223F"
@@ -2354,8 +1598,8 @@
 			icon: "farmersdelight:pumpkin_slice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 2.75d
-			y: 10.0d
+			x: 10.25d
+			y: 6.25d
 			tasks: [
 				{
 					id: "3319A90F71023691"
@@ -2372,8 +1616,8 @@
 			icon: "farmersdelight:ratatouille"
 			shape: "rsquare"
 			size: 1.0d
-			x: 4.0d
-			y: 10.0d
+			x: 11.5d
+			y: 6.25d
 			tasks: [
 				{
 					id: "4513B06918D21241"
@@ -2390,8 +1634,8 @@
 			icon: "farmersdelight:raw_pasta"
 			shape: "rsquare"
 			size: 1.0d
-			x: 5.25d
-			y: 10.0d
+			x: 12.75d
+			y: 6.25d
 			tasks: [
 				{
 					id: "917897F051B1CE1C"
@@ -2408,8 +1652,8 @@
 			icon: "farmersdelight:roasted_mutton_chops"
 			shape: "rsquare"
 			size: 1.0d
-			x: 6.5d
-			y: 10.0d
+			x: 14.0d
+			y: 6.25d
 			tasks: [
 				{
 					id: "013C0B96B52803CA"
@@ -2426,8 +1670,8 @@
 			icon: "farmersdelight:salmon_roll"
 			shape: "rsquare"
 			size: 1.0d
-			x: 7.75d
-			y: 10.0d
+			x: 15.25d
+			y: 6.25d
 			tasks: [
 				{
 					id: "9F8F77DD1B9582B0"
@@ -2444,8 +1688,8 @@
 			icon: "farmersdelight:salmon_slice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 9.0d
-			y: 10.0d
+			x: 16.5d
+			y: 6.25d
 			tasks: [
 				{
 					id: "FE99EA5CF2599048"
@@ -2462,8 +1706,8 @@
 			icon: "farmersdelight:smoked_ham"
 			shape: "rsquare"
 			size: 1.0d
-			x: 10.25d
-			y: 10.0d
+			x: 17.75d
+			y: 6.25d
 			tasks: [
 				{
 					id: "4F2B6548C07A3BA3"
@@ -2480,8 +1724,8 @@
 			icon: "farmersdelight:squid_ink_pasta"
 			shape: "rsquare"
 			size: 1.0d
-			x: 11.5d
-			y: 10.0d
+			x: 19.0d
+			y: 6.25d
 			tasks: [
 				{
 					id: "EBFEB5CB20B886D7"
@@ -2498,8 +1742,8 @@
 			icon: "farmersdelight:stuffed_potato"
 			shape: "rsquare"
 			size: 1.0d
-			x: 12.75d
-			y: 10.0d
+			x: 20.25d
+			y: 6.25d
 			tasks: [
 				{
 					id: "A7425E2C8D52E485"
@@ -2516,8 +1760,8 @@
 			icon: "farmersdelight:sweet_berry_cheesecake_slice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 14.0d
-			y: 10.0d
+			x: 1.5d
+			y: 7.5d
 			tasks: [
 				{
 					id: "011703BCF986D8E6"
@@ -2534,8 +1778,8 @@
 			icon: "farmersdelight:sweet_berry_cookie"
 			shape: "rsquare"
 			size: 1.0d
-			x: 15.25d
-			y: 10.0d
+			x: 2.75d
+			y: 7.5d
 			tasks: [
 				{
 					id: "5E78CA5EEB8E5CAE"
@@ -2552,8 +1796,8 @@
 			icon: "farmersdelight:tomato"
 			shape: "rsquare"
 			size: 1.0d
-			x: 16.5d
-			y: 10.0d
+			x: 4.0d
+			y: 7.5d
 			tasks: [
 				{
 					id: "428C70B5CF0EA8B8"
@@ -2570,8 +1814,8 @@
 			icon: "farmersdelight:tomato_sauce"
 			shape: "rsquare"
 			size: 1.0d
-			x: 17.75d
-			y: 10.0d
+			x: 5.25d
+			y: 7.5d
 			tasks: [
 				{
 					id: "65AEE017681546ED"
@@ -2588,8 +1832,8 @@
 			icon: "farmersdelight:vegetable_noodles"
 			shape: "rsquare"
 			size: 1.0d
-			x: 19.0d
-			y: 10.0d
+			x: 6.5d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D279319C69D48B0A"
@@ -2606,8 +1850,8 @@
 			icon: "farmersdelight:wheat_dough"
 			shape: "rsquare"
 			size: 1.0d
-			x: 20.25d
-			y: 10.0d
+			x: 7.75d
+			y: 7.5d
 			tasks: [
 				{
 					id: "09723CBCB80D2EF9"
@@ -2619,49 +1863,13 @@
 			rewards: [ ]
 		}
 		{
-			id: "B5E62654744C042F"
-			title: "All Foods: Ambrosia"
-			icon: "iceandfire:ambrosia"
-			shape: "rsquare"
-			size: 1.0d
-			x: 24.5d
-			y: 0.0d
-			tasks: [
-				{
-					id: "25EF0B10CE374BCA"
-					type: "item"
-					item: "iceandfire:ambrosia"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "4E77B70E4E3264EA"
-			title: "All Foods: Pixie Dust"
-			icon: "iceandfire:pixie_dust"
-			shape: "rsquare"
-			size: 1.0d
-			x: 25.75d
-			y: 0.0d
-			tasks: [
-				{
-					id: "12462F207889C78C"
-					type: "item"
-					item: "iceandfire:pixie_dust"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
 			id: "11C8329DEA1A58A8"
 			title: "All Foods: Golden Moss Clump"
 			icon: "immersive_weathering:golden_moss_clump"
 			shape: "rsquare"
 			size: 1.0d
-			x: 27.0d
-			y: 0.0d
+			x: 9.0d
+			y: 7.5d
 			tasks: [
 				{
 					id: "BA5FDAC7BEA7D46B"
@@ -2678,8 +1886,8 @@
 			icon: "immersive_weathering:ice_sickle"
 			shape: "rsquare"
 			size: 1.0d
-			x: 28.25d
-			y: 0.0d
+			x: 10.25d
+			y: 7.5d
 			tasks: [
 				{
 					id: "21067737DF629E79"
@@ -2696,8 +1904,8 @@
 			icon: "immersive_weathering:icicle"
 			shape: "rsquare"
 			size: 1.0d
-			x: 29.5d
-			y: 0.0d
+			x: 11.5d
+			y: 7.5d
 			tasks: [
 				{
 					id: "275947811E168A64"
@@ -2714,8 +1922,8 @@
 			icon: "immersive_weathering:moss_clump"
 			shape: "rsquare"
 			size: 1.0d
-			x: 30.75d
-			y: 0.0d
+			x: 12.75d
+			y: 7.5d
 			tasks: [
 				{
 					id: "C2CF292CB266F660"
@@ -2732,8 +1940,8 @@
 			icon: "malum:chunk_of_brilliance"
 			shape: "rsquare"
 			size: 1.0d
-			x: 32.0d
-			y: 0.0d
+			x: 14.0d
+			y: 7.5d
 			tasks: [
 				{
 					id: "0045FAA773304F59"
@@ -2750,8 +1958,8 @@
 			icon: "malum:concentrated_gluttony"
 			shape: "rsquare"
 			size: 1.0d
-			x: 33.25d
-			y: 0.0d
+			x: 15.25d
+			y: 7.5d
 			tasks: [
 				{
 					id: "D5460F9E7D9978D4"
@@ -2768,8 +1976,8 @@
 			icon: "malum:cursed_sap"
 			shape: "rsquare"
 			size: 1.0d
-			x: 34.5d
-			y: 0.0d
+			x: 16.5d
+			y: 7.5d
 			tasks: [
 				{
 					id: "1F902EBEAED5FC9A"
@@ -2786,8 +1994,8 @@
 			icon: "malum:rotting_essence"
 			shape: "rsquare"
 			size: 1.0d
-			x: 35.75d
-			y: 0.0d
+			x: 17.75d
+			y: 7.5d
 			tasks: [
 				{
 					id: "CCCB8AAF5753455E"
@@ -2804,8 +2012,8 @@
 			icon: "malum:runic_sap"
 			shape: "rsquare"
 			size: 1.0d
-			x: 37.0d
-			y: 0.0d
+			x: 19.0d
+			y: 7.5d
 			tasks: [
 				{
 					id: "93CBA90E7AB370B7"
@@ -2822,8 +2030,8 @@
 			icon: "minecraft:apple"
 			shape: "rsquare"
 			size: 1.0d
-			x: 38.25d
-			y: 0.0d
+			x: 20.25d
+			y: 7.5d
 			tasks: [
 				{
 					id: "14ED956D75BB363F"
@@ -2840,8 +2048,8 @@
 			icon: "minecraft:baked_potato"
 			shape: "rsquare"
 			size: 1.0d
-			x: 39.5d
-			y: 0.0d
+			x: 1.5d
+			y: 8.75d
 			tasks: [
 				{
 					id: "C8A4AEDB58558666"
@@ -2858,8 +2066,8 @@
 			icon: "minecraft:beef"
 			shape: "rsquare"
 			size: 1.0d
-			x: 40.75d
-			y: 0.0d
+			x: 2.75d
+			y: 8.75d
 			tasks: [
 				{
 					id: "BFD3D4604637B320"
@@ -2876,8 +2084,8 @@
 			icon: "minecraft:beetroot"
 			shape: "rsquare"
 			size: 1.0d
-			x: 42.0d
-			y: 0.0d
+			x: 4.0d
+			y: 8.75d
 			tasks: [
 				{
 					id: "0848CBB22BB031F0"
@@ -2894,8 +2102,8 @@
 			icon: "minecraft:bread"
 			shape: "rsquare"
 			size: 1.0d
-			x: 43.25d
-			y: 0.0d
+			x: 5.25d
+			y: 8.75d
 			tasks: [
 				{
 					id: "DA6DDC19F4BB9815"
@@ -2912,8 +2120,8 @@
 			icon: "minecraft:carrot"
 			shape: "rsquare"
 			size: 1.0d
-			x: 24.5d
-			y: 1.25d
+			x: 6.5d
+			y: 8.75d
 			tasks: [
 				{
 					id: "D0444AA2303E167B"
@@ -2930,8 +2138,8 @@
 			icon: "minecraft:chicken"
 			shape: "rsquare"
 			size: 1.0d
-			x: 25.75d
-			y: 1.25d
+			x: 7.75d
+			y: 8.75d
 			tasks: [
 				{
 					id: "FB5189215C96BFC6"
@@ -2948,8 +2156,8 @@
 			icon: "minecraft:chorus_fruit"
 			shape: "rsquare"
 			size: 1.0d
-			x: 27.0d
-			y: 1.25d
+			x: 9.0d
+			y: 8.75d
 			tasks: [
 				{
 					id: "5832215EF366EE24"
@@ -2966,8 +2174,8 @@
 			icon: "minecraft:cod"
 			shape: "rsquare"
 			size: 1.0d
-			x: 28.25d
-			y: 1.25d
+			x: 10.25d
+			y: 8.75d
 			tasks: [
 				{
 					id: "689386B74380666C"
@@ -2984,8 +2192,8 @@
 			icon: "minecraft:cooked_beef"
 			shape: "rsquare"
 			size: 1.0d
-			x: 29.5d
-			y: 1.25d
+			x: 11.5d
+			y: 8.75d
 			tasks: [
 				{
 					id: "C36F938C52B540B0"
@@ -3002,8 +2210,8 @@
 			icon: "minecraft:cooked_chicken"
 			shape: "rsquare"
 			size: 1.0d
-			x: 30.75d
-			y: 1.25d
+			x: 12.75d
+			y: 8.75d
 			tasks: [
 				{
 					id: "A93A735BE043EB53"
@@ -3020,8 +2228,8 @@
 			icon: "minecraft:cooked_cod"
 			shape: "rsquare"
 			size: 1.0d
-			x: 32.0d
-			y: 1.25d
+			x: 14.0d
+			y: 8.75d
 			tasks: [
 				{
 					id: "2FD2F7306011B813"
@@ -3038,8 +2246,8 @@
 			icon: "minecraft:cooked_mutton"
 			shape: "rsquare"
 			size: 1.0d
-			x: 33.25d
-			y: 1.25d
+			x: 15.25d
+			y: 8.75d
 			tasks: [
 				{
 					id: "750C420B2FC13146"
@@ -3056,8 +2264,8 @@
 			icon: "minecraft:cooked_porkchop"
 			shape: "rsquare"
 			size: 1.0d
-			x: 34.5d
-			y: 1.25d
+			x: 16.5d
+			y: 8.75d
 			tasks: [
 				{
 					id: "5BB8DCEC086DFB3B"
@@ -3074,8 +2282,8 @@
 			icon: "minecraft:cooked_rabbit"
 			shape: "rsquare"
 			size: 1.0d
-			x: 35.75d
-			y: 1.25d
+			x: 17.75d
+			y: 8.75d
 			tasks: [
 				{
 					id: "E4C21183B9D99561"
@@ -3092,8 +2300,8 @@
 			icon: "minecraft:cooked_salmon"
 			shape: "rsquare"
 			size: 1.0d
-			x: 37.0d
-			y: 1.25d
+			x: 19.0d
+			y: 8.75d
 			tasks: [
 				{
 					id: "31A6A480B97280B6"
@@ -3110,8 +2318,8 @@
 			icon: "minecraft:cookie"
 			shape: "rsquare"
 			size: 1.0d
-			x: 38.25d
-			y: 1.25d
+			x: 20.25d
+			y: 8.75d
 			tasks: [
 				{
 					id: "B5C61A44E49C0439"
@@ -3128,8 +2336,8 @@
 			icon: "minecraft:dried_kelp"
 			shape: "rsquare"
 			size: 1.0d
-			x: 39.5d
-			y: 1.25d
+			x: 1.5d
+			y: 10.0d
 			tasks: [
 				{
 					id: "76CBE7C8176DD5AA"
@@ -3146,8 +2354,8 @@
 			icon: "minecraft:enchanted_golden_apple"
 			shape: "rsquare"
 			size: 1.0d
-			x: 40.75d
-			y: 1.25d
+			x: 2.75d
+			y: 10.0d
 			tasks: [
 				{
 					id: "287014FD0C1E4E81"
@@ -3164,8 +2372,8 @@
 			icon: "minecraft:glow_berries"
 			shape: "rsquare"
 			size: 1.0d
-			x: 42.0d
-			y: 1.25d
+			x: 4.0d
+			y: 10.0d
 			tasks: [
 				{
 					id: "D2FE95494AAECC0E"
@@ -3182,8 +2390,8 @@
 			icon: "minecraft:golden_apple"
 			shape: "rsquare"
 			size: 1.0d
-			x: 43.25d
-			y: 1.25d
+			x: 5.25d
+			y: 10.0d
 			tasks: [
 				{
 					id: "9A78557435A9EB91"
@@ -3200,8 +2408,8 @@
 			icon: "minecraft:golden_carrot"
 			shape: "rsquare"
 			size: 1.0d
-			x: 24.5d
-			y: 2.5d
+			x: 6.5d
+			y: 10.0d
 			tasks: [
 				{
 					id: "6046F7AD7EF7787F"
@@ -3218,8 +2426,8 @@
 			icon: "minecraft:honey_bottle"
 			shape: "rsquare"
 			size: 1.0d
-			x: 25.75d
-			y: 2.5d
+			x: 7.75d
+			y: 10.0d
 			tasks: [
 				{
 					id: "70B1ECE5FEF28F8F"
@@ -3236,8 +2444,8 @@
 			icon: "minecraft:melon_slice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 27.0d
-			y: 2.5d
+			x: 9.0d
+			y: 10.0d
 			tasks: [
 				{
 					id: "D2418ABE1C7F1C10"
@@ -3254,8 +2462,8 @@
 			icon: "minecraft:mutton"
 			shape: "rsquare"
 			size: 1.0d
-			x: 28.25d
-			y: 2.5d
+			x: 10.25d
+			y: 10.0d
 			tasks: [
 				{
 					id: "F22B3A7576EAFA0D"
@@ -3272,8 +2480,8 @@
 			icon: "minecraft:poisonous_potato"
 			shape: "rsquare"
 			size: 1.0d
-			x: 29.5d
-			y: 2.5d
+			x: 11.5d
+			y: 10.0d
 			tasks: [
 				{
 					id: "6B42BD4557874192"
@@ -3290,8 +2498,8 @@
 			icon: "minecraft:porkchop"
 			shape: "rsquare"
 			size: 1.0d
-			x: 30.75d
-			y: 2.5d
+			x: 12.75d
+			y: 10.0d
 			tasks: [
 				{
 					id: "207F7A24861406B0"
@@ -3308,8 +2516,8 @@
 			icon: "minecraft:potato"
 			shape: "rsquare"
 			size: 1.0d
-			x: 32.0d
-			y: 2.5d
+			x: 14.0d
+			y: 10.0d
 			tasks: [
 				{
 					id: "6292C04FAAC22B2D"
@@ -3326,8 +2534,8 @@
 			icon: "minecraft:pufferfish"
 			shape: "rsquare"
 			size: 1.0d
-			x: 33.25d
-			y: 2.5d
+			x: 15.25d
+			y: 10.0d
 			tasks: [
 				{
 					id: "1C6C16392BB9606B"
@@ -3344,8 +2552,8 @@
 			icon: "minecraft:pumpkin_pie"
 			shape: "rsquare"
 			size: 1.0d
-			x: 34.5d
-			y: 2.5d
+			x: 16.5d
+			y: 10.0d
 			tasks: [
 				{
 					id: "E44F98498BCD4C14"
@@ -3362,8 +2570,8 @@
 			icon: "minecraft:rabbit"
 			shape: "rsquare"
 			size: 1.0d
-			x: 35.75d
-			y: 2.5d
+			x: 17.75d
+			y: 10.0d
 			tasks: [
 				{
 					id: "101DDD723EC4C92F"
@@ -3380,8 +2588,8 @@
 			icon: "minecraft:rotten_flesh"
 			shape: "rsquare"
 			size: 1.0d
-			x: 37.0d
-			y: 2.5d
+			x: 19.0d
+			y: 10.0d
 			tasks: [
 				{
 					id: "421BBE53DDA27B04"
@@ -3398,8 +2606,8 @@
 			icon: "minecraft:salmon"
 			shape: "rsquare"
 			size: 1.0d
-			x: 38.25d
-			y: 2.5d
+			x: 20.25d
+			y: 10.0d
 			tasks: [
 				{
 					id: "49B18E7ACD60F0C1"
@@ -3416,8 +2624,8 @@
 			icon: "minecraft:spider_eye"
 			shape: "rsquare"
 			size: 1.0d
-			x: 39.5d
-			y: 2.5d
+			x: 24.5d
+			y: 0.0d
 			tasks: [
 				{
 					id: "5EAD478FA978CF7F"
@@ -3434,8 +2642,8 @@
 			icon: "minecraft:sweet_berries"
 			shape: "rsquare"
 			size: 1.0d
-			x: 40.75d
-			y: 2.5d
+			x: 25.75d
+			y: 0.0d
 			tasks: [
 				{
 					id: "EE902C2BE15838A6"
@@ -3452,8 +2660,8 @@
 			icon: "minecraft:tropical_fish"
 			shape: "rsquare"
 			size: 1.0d
-			x: 42.0d
-			y: 2.5d
+			x: 27.0d
+			y: 0.0d
 			tasks: [
 				{
 					id: "2714CCFA58E29984"
@@ -3465,841 +2673,13 @@
 			rewards: [ ]
 		}
 		{
-			id: "6A919E0313287A9C"
-			title: "All Foods: Bacon-wrapped Sausage On A Stick"
-			icon: "mynethersdelight:bacon-wrapped_sausage_on_a_stick"
-			shape: "rsquare"
-			size: 1.0d
-			x: 43.25d
-			y: 2.5d
-			tasks: [
-				{
-					id: "F94DDD6AE7F372E4"
-					type: "item"
-					item: "mynethersdelight:bacon-wrapped_sausage_on_a_stick"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "DA287BFEA96D307C"
-			title: "All Foods: Bleeding Tartar"
-			icon: "mynethersdelight:bleeding_tartar"
-			shape: "rsquare"
-			size: 1.0d
-			x: 24.5d
-			y: 3.75d
-			tasks: [
-				{
-					id: "5DCA952E0D95174F"
-					type: "item"
-					item: "mynethersdelight:bleeding_tartar"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "7658E4D30352D00E"
-			title: "All Foods: Boiled Egg"
-			icon: "mynethersdelight:boiled_egg"
-			shape: "rsquare"
-			size: 1.0d
-			x: 25.75d
-			y: 3.75d
-			tasks: [
-				{
-					id: "6BE00F8F0DEC4017"
-					type: "item"
-					item: "mynethersdelight:boiled_egg"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "3D5CEB3480DDDEC4"
-			title: "All Foods: Breakfast Sampler"
-			icon: "mynethersdelight:breakfast_sampler"
-			shape: "rsquare"
-			size: 1.0d
-			x: 27.0d
-			y: 3.75d
-			tasks: [
-				{
-					id: "EA58C041B8FF7B15"
-					type: "item"
-					item: "mynethersdelight:breakfast_sampler"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "C200BA50A9FC34FF"
-			title: "All Foods: Bullet Pepper"
-			icon: "mynethersdelight:bullet_pepper"
-			shape: "rsquare"
-			size: 1.0d
-			x: 28.25d
-			y: 3.75d
-			tasks: [
-				{
-					id: "EE0FA25845A26299"
-					type: "item"
-					item: "mynethersdelight:bullet_pepper"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "EC93C3DEB5984166"
-			title: "All Foods: Burnt Roll"
-			icon: "mynethersdelight:burnt_roll"
-			shape: "rsquare"
-			size: 1.0d
-			x: 29.5d
-			y: 3.75d
-			tasks: [
-				{
-					id: "CFC6F1C5A1067CDB"
-					type: "item"
-					item: "mynethersdelight:burnt_roll"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "4C7724DEF58B0678"
-			title: "All Foods: Chilidog"
-			icon: "mynethersdelight:chilidog"
-			shape: "rsquare"
-			size: 1.0d
-			x: 30.75d
-			y: 3.75d
-			tasks: [
-				{
-					id: "0D225F163C9926C8"
-					type: "item"
-					item: "mynethersdelight:chilidog"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "961A1840246A397C"
-			title: "All Foods: Cooked Loin"
-			icon: "mynethersdelight:cooked_loin"
-			shape: "rsquare"
-			size: 1.0d
-			x: 32.0d
-			y: 3.75d
-			tasks: [
-				{
-					id: "B2BA76525DE2260A"
-					type: "item"
-					item: "mynethersdelight:cooked_loin"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "B5A290EF5391D863"
-			title: "All Foods: Crimson Stroganoff"
-			icon: "mynethersdelight:crimson_stroganoff"
-			shape: "rsquare"
-			size: 1.0d
-			x: 33.25d
-			y: 3.75d
-			tasks: [
-				{
-					id: "E6E5DBA8B2643B51"
-					type: "item"
-					item: "mynethersdelight:crimson_stroganoff"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "B1C1284AF3AA6061"
-			title: "All Foods: Deviled Egg"
-			icon: "mynethersdelight:deviled_egg"
-			shape: "rsquare"
-			size: 1.0d
-			x: 34.5d
-			y: 3.75d
-			tasks: [
-				{
-					id: "EFAA93456F3D5AA0"
-					type: "item"
-					item: "mynethersdelight:deviled_egg"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "C48889F2D92B6FC6"
-			title: "All Foods: Dried Ghast With Milk"
-			icon: "mynethersdelight:dried_ghast_with_milk"
-			shape: "rsquare"
-			size: 1.0d
-			x: 35.75d
-			y: 3.75d
-			tasks: [
-				{
-					id: "8624992C2CED0055"
-					type: "item"
-					item: "mynethersdelight:dried_ghast_with_milk"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "6E27A1FB3ACE6B5B"
-			title: "All Foods: Fried Hoglin Chop"
-			icon: "mynethersdelight:fried_hoglin_chop"
-			shape: "rsquare"
-			size: 1.0d
-			x: 37.0d
-			y: 3.75d
-			tasks: [
-				{
-					id: "928CBB3D30123F82"
-					type: "item"
-					item: "mynethersdelight:fried_hoglin_chop"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "358B006070DBAF1B"
-			title: "All Foods: Fries Ghasta"
-			icon: "mynethersdelight:fries_ghasta"
-			shape: "rsquare"
-			size: 1.0d
-			x: 38.25d
-			y: 3.75d
-			tasks: [
-				{
-					id: "42FD948044FBDE8B"
-					type: "item"
-					item: "mynethersdelight:fries_ghasta"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "F50CBF7842AFE0A0"
-			title: "All Foods: Ghast Dough"
-			icon: "mynethersdelight:ghast_dough"
-			shape: "rsquare"
-			size: 1.0d
-			x: 39.5d
-			y: 3.75d
-			tasks: [
-				{
-					id: "2187814FD407B290"
-					type: "item"
-					item: "mynethersdelight:ghast_dough"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "8366150B06C5B4E8"
-			title: "All Foods: Ghast Salad"
-			icon: "mynethersdelight:ghast_salad"
-			shape: "rsquare"
-			size: 1.0d
-			x: 40.75d
-			y: 3.75d
-			tasks: [
-				{
-					id: "8FEE8DB6720D3600"
-					type: "item"
-					item: "mynethersdelight:ghast_salad"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "612B6DDF6851DCF1"
-			title: "All Foods: Ghast Sourdough"
-			icon: "mynethersdelight:ghast_sourdough"
-			shape: "rsquare"
-			size: 1.0d
-			x: 42.0d
-			y: 3.75d
-			tasks: [
-				{
-					id: "7D7D4412F35D8DE9"
-					type: "item"
-					item: "mynethersdelight:ghast_sourdough"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "44949BA325EE3D4F"
-			title: "All Foods: Ghasta"
-			icon: "mynethersdelight:ghasta"
-			shape: "rsquare"
-			size: 1.0d
-			x: 43.25d
-			y: 3.75d
-			tasks: [
-				{
-					id: "AF7B5715DC13B26A"
-					type: "item"
-					item: "mynethersdelight:ghasta"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "FC5608CBD89BC438"
-			title: "All Foods: Giant Takoyaki"
-			icon: "mynethersdelight:giant_takoyaki"
-			shape: "rsquare"
-			size: 1.0d
-			x: 24.5d
-			y: 5.0d
-			tasks: [
-				{
-					id: "0936226B02C6B264"
-					type: "item"
-					item: "mynethersdelight:giant_takoyaki"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "115E848B3526CFFA"
-			title: "All Foods: Golden Egg"
-			icon: "mynethersdelight:golden_egg"
-			shape: "rsquare"
-			size: 1.0d
-			x: 25.75d
-			y: 5.0d
-			tasks: [
-				{
-					id: "05050E245A982573"
-					type: "item"
-					item: "mynethersdelight:golden_egg"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "AE913AB4A0F197BB"
-			title: "All Foods: Hoglin Loin"
-			icon: "mynethersdelight:hoglin_loin"
-			shape: "rsquare"
-			size: 1.0d
-			x: 27.0d
-			y: 5.0d
-			tasks: [
-				{
-					id: "A23C957450FC4FAE"
-					type: "item"
-					item: "mynethersdelight:hoglin_loin"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "D811380273DB263E"
-			title: "All Foods: Hoglin Sausage"
-			icon: "mynethersdelight:hoglin_sausage"
-			shape: "rsquare"
-			size: 1.0d
-			x: 28.25d
-			y: 5.0d
-			tasks: [
-				{
-					id: "E78A7F355A03E2D2"
-					type: "item"
-					item: "mynethersdelight:hoglin_sausage"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "0F4F7B86EF17CEA8"
-			title: "All Foods: Hot Cream"
-			icon: "mynethersdelight:hot_cream"
-			shape: "rsquare"
-			size: 1.0d
-			x: 29.5d
-			y: 5.0d
-			tasks: [
-				{
-					id: "5DBE071607E32308"
-					type: "item"
-					item: "mynethersdelight:hot_cream"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "F916A26301455736"
-			title: "All Foods: Hot Cream Cone"
-			icon: "mynethersdelight:hot_cream_cone"
-			shape: "rsquare"
-			size: 1.0d
-			x: 30.75d
-			y: 5.0d
-			tasks: [
-				{
-					id: "C302244C1567695A"
-					type: "item"
-					item: "mynethersdelight:hot_cream_cone"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "CFE1D017B8DADC9F"
-			title: "All Foods: Hot Wings"
-			icon: "mynethersdelight:hot_wings"
-			shape: "rsquare"
-			size: 1.0d
-			x: 32.0d
-			y: 5.0d
-			tasks: [
-				{
-					id: "335078EDDA7BC3E9"
-					type: "item"
-					item: "mynethersdelight:hot_wings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "1B30B1AF141565BD"
-			title: "All Foods: Hot Wings Bucket"
-			icon: "mynethersdelight:hot_wings_bucket"
-			shape: "rsquare"
-			size: 1.0d
-			x: 33.25d
-			y: 5.0d
-			tasks: [
-				{
-					id: "5BA676349C22C816"
-					type: "item"
-					item: "mynethersdelight:hot_wings_bucket"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "A13173BE37B4030F"
-			title: "All Foods: Hotdog"
-			icon: "mynethersdelight:hotdog"
-			shape: "rsquare"
-			size: 1.0d
-			x: 34.5d
-			y: 5.0d
-			tasks: [
-				{
-					id: "884265DE4FF45538"
-					type: "item"
-					item: "mynethersdelight:hotdog"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "8D5F21F9BFB426DB"
-			title: "All Foods: Hotdog With Mixed Salad"
-			icon: "mynethersdelight:hotdog_with_mixed_salad"
-			shape: "rsquare"
-			size: 1.0d
-			x: 35.75d
-			y: 5.0d
-			tasks: [
-				{
-					id: "A1F06F4761CF5FAC"
-					type: "item"
-					item: "mynethersdelight:hotdog_with_mixed_salad"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "E7497301DB054F36"
-			title: "All Foods: Hotdog With Nether Salad"
-			icon: "mynethersdelight:hotdog_with_nether_salad"
-			shape: "rsquare"
-			size: 1.0d
-			x: 37.0d
-			y: 5.0d
-			tasks: [
-				{
-					id: "B62634ADD6D47AEE"
-					type: "item"
-					item: "mynethersdelight:hotdog_with_nether_salad"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "74B6CB76D25C0B08"
-			title: "All Foods: Magma Cake Slice"
-			icon: "mynethersdelight:magma_cake_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 38.25d
-			y: 5.0d
-			tasks: [
-				{
-					id: "AB6C20DFFC4F20A0"
-					type: "item"
-					item: "mynethersdelight:magma_cake_slice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "ADCBC5C62E6A96E3"
-			title: "All Foods: Minced Strider"
-			icon: "mynethersdelight:minced_strider"
-			shape: "rsquare"
-			size: 1.0d
-			x: 39.5d
-			y: 5.0d
-			tasks: [
-				{
-					id: "CD9B4CA342FAF0EE"
-					type: "item"
-					item: "mynethersdelight:minced_strider"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "B9A66B9AE9EE3DE6"
-			title: "All Foods: Nether Burger"
-			icon: "mynethersdelight:nether_burger"
-			shape: "rsquare"
-			size: 1.0d
-			x: 40.75d
-			y: 5.0d
-			tasks: [
-				{
-					id: "D8F0FDB16D4A3756"
-					type: "item"
-					item: "mynethersdelight:nether_burger"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "C24D0146AD6D37FC"
-			title: "All Foods: Red Loin On A Stick"
-			icon: "mynethersdelight:red_loin_on_a_stick"
-			shape: "rsquare"
-			size: 1.0d
-			x: 42.0d
-			y: 5.0d
-			tasks: [
-				{
-					id: "B41CA90934182495"
-					type: "item"
-					item: "mynethersdelight:red_loin_on_a_stick"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "CE1A9C97E9D874A1"
-			title: "All Foods: Roasted Sausage"
-			icon: "mynethersdelight:roasted_sausage"
-			shape: "rsquare"
-			size: 1.0d
-			x: 43.25d
-			y: 5.0d
-			tasks: [
-				{
-					id: "BD960EE73EEE16C2"
-					type: "item"
-					item: "mynethersdelight:roasted_sausage"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "7F58BD41B248191F"
-			title: "All Foods: Sausage And Potatoes"
-			icon: "mynethersdelight:sausage_and_potatoes"
-			shape: "rsquare"
-			size: 1.0d
-			x: 24.5d
-			y: 6.25d
-			tasks: [
-				{
-					id: "7510DDDA45A42252"
-					type: "item"
-					item: "mynethersdelight:sausage_and_potatoes"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "C9A5BAE6A0C73992"
-			title: "All Foods: Scotch Eggs"
-			icon: "mynethersdelight:scotch_eggs"
-			shape: "rsquare"
-			size: 1.0d
-			x: 25.75d
-			y: 6.25d
-			tasks: [
-				{
-					id: "13F6C8A4A8BC520D"
-					type: "item"
-					item: "mynethersdelight:scotch_eggs"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "1EC096DE149095C2"
-			title: "All Foods: Sizzling Pudding"
-			icon: "mynethersdelight:sizzling_pudding"
-			shape: "rsquare"
-			size: 1.0d
-			x: 27.0d
-			y: 6.25d
-			tasks: [
-				{
-					id: "E7D23251279B0540"
-					type: "item"
-					item: "mynethersdelight:sizzling_pudding"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "F15642D46C3883AF"
-			title: "All Foods: Slices Of Bread"
-			icon: "mynethersdelight:slices_of_bread"
-			shape: "rsquare"
-			size: 1.0d
-			x: 28.25d
-			y: 6.25d
-			tasks: [
-				{
-					id: "DB0ED2203142DC4A"
-					type: "item"
-					item: "mynethersdelight:slices_of_bread"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "5764A9B45ACD800F"
-			title: "All Foods: Spicy Cotton"
-			icon: "mynethersdelight:spicy_cotton"
-			shape: "rsquare"
-			size: 1.0d
-			x: 29.5d
-			y: 6.25d
-			tasks: [
-				{
-					id: "7BFC20E597CC4CAD"
-					type: "item"
-					item: "mynethersdelight:spicy_cotton"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "AC0D9BF81734EED9"
-			title: "All Foods: Spicy Curry"
-			icon: "mynethersdelight:spicy_curry"
-			shape: "rsquare"
-			size: 1.0d
-			x: 30.75d
-			y: 6.25d
-			tasks: [
-				{
-					id: "B3C19E2FC004ADE2"
-					type: "item"
-					item: "mynethersdelight:spicy_curry"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "801DC6ED840061FB"
-			title: "All Foods: Spicy Skewer"
-			icon: "mynethersdelight:spicy_skewer"
-			shape: "rsquare"
-			size: 1.0d
-			x: 32.0d
-			y: 6.25d
-			tasks: [
-				{
-					id: "F5150AFC7585FF40"
-					type: "item"
-					item: "mynethersdelight:spicy_skewer"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "5FD383F818DF380B"
-			title: "All Foods: Strider Egg"
-			icon: "mynethersdelight:strider_egg"
-			shape: "rsquare"
-			size: 1.0d
-			x: 33.25d
-			y: 6.25d
-			tasks: [
-				{
-					id: "52F8A45D38BCE007"
-					type: "item"
-					item: "mynethersdelight:strider_egg"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "6FB3856816119AE8"
-			title: "All Foods: Strider Slice"
-			icon: "mynethersdelight:strider_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 34.5d
-			y: 6.25d
-			tasks: [
-				{
-					id: "BA92CF4F41AD109E"
-					type: "item"
-					item: "mynethersdelight:strider_slice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "DA7236EBCE5C0261"
-			title: "All Foods: Strider With Grilled Fungus"
-			icon: "mynethersdelight:strider_with_grilled_fungus"
-			shape: "rsquare"
-			size: 1.0d
-			x: 35.75d
-			y: 6.25d
-			tasks: [
-				{
-					id: "66B821086457B0C0"
-					type: "item"
-					item: "mynethersdelight:strider_with_grilled_fungus"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "5A20A6740DF42190"
-			title: "All Foods: Stuffed Pepper"
-			icon: "mynethersdelight:stuffed_pepper"
-			shape: "rsquare"
-			size: 1.0d
-			x: 37.0d
-			y: 6.25d
-			tasks: [
-				{
-					id: "CAD305BE77073FCE"
-					type: "item"
-					item: "mynethersdelight:stuffed_pepper"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "94D9A6AA16E7388B"
-			title: "All Foods: Toasts"
-			icon: "mynethersdelight:toasts"
-			shape: "rsquare"
-			size: 1.0d
-			x: 38.25d
-			y: 6.25d
-			tasks: [
-				{
-					id: "2C189A30C1728529"
-					type: "item"
-					item: "mynethersdelight:toasts"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "22B00B2F8D735E25"
-			title: "All Foods: Twisted Ghasta"
-			icon: "mynethersdelight:twisted_ghasta"
-			shape: "rsquare"
-			size: 1.0d
-			x: 39.5d
-			y: 6.25d
-			tasks: [
-				{
-					id: "C3ACB66653F28A61"
-					type: "item"
-					item: "mynethersdelight:twisted_ghasta"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
 			id: "AA27ED1B7C224E51"
 			title: "All Foods: Coconut Half"
 			icon: "natures_spirit:coconut_half"
 			shape: "rsquare"
 			size: 1.0d
-			x: 40.75d
-			y: 6.25d
+			x: 28.25d
+			y: 0.0d
 			tasks: [
 				{
 					id: "EF4A9424E838376C"
@@ -4316,8 +2696,8 @@
 			icon: "natures_spirit:desert_turnip"
 			shape: "rsquare"
 			size: 1.0d
-			x: 42.0d
-			y: 6.25d
+			x: 29.5d
+			y: 0.0d
 			tasks: [
 				{
 					id: "F432EF482970BF3E"
@@ -4334,8 +2714,8 @@
 			icon: "natures_spirit:whole_pizza"
 			shape: "rsquare"
 			size: 1.0d
-			x: 43.25d
-			y: 6.25d
+			x: 30.75d
+			y: 0.0d
 			tasks: [
 				{
 					id: "E5591B74982F4897"
@@ -4352,8 +2732,8 @@
 			icon: "occultism:demons_dream_essence"
 			shape: "rsquare"
 			size: 1.0d
-			x: 24.5d
-			y: 7.5d
+			x: 32.0d
+			y: 0.0d
 			tasks: [
 				{
 					id: "9E28CAE8F08E6608"
@@ -4370,8 +2750,8 @@
 			icon: "occultism:otherworld_essence"
 			shape: "rsquare"
 			size: 1.0d
-			x: 25.75d
-			y: 7.5d
+			x: 33.25d
+			y: 0.0d
 			tasks: [
 				{
 					id: "445164EB60B46F42"
@@ -4388,8 +2768,8 @@
 			icon: "pneumaticcraft:chips"
 			shape: "rsquare"
 			size: 1.0d
-			x: 27.0d
-			y: 7.5d
+			x: 34.5d
+			y: 0.0d
 			tasks: [
 				{
 					id: "7053BB5ED707F49D"
@@ -4406,8 +2786,8 @@
 			icon: "pneumaticcraft:cod_n_chips"
 			shape: "rsquare"
 			size: 1.0d
-			x: 28.25d
-			y: 7.5d
+			x: 35.75d
+			y: 0.0d
 			tasks: [
 				{
 					id: "06189CA65B5CCE84"
@@ -4424,8 +2804,8 @@
 			icon: "pneumaticcraft:sourdough_bread"
 			shape: "rsquare"
 			size: 1.0d
-			x: 29.5d
-			y: 7.5d
+			x: 37.0d
+			y: 0.0d
 			tasks: [
 				{
 					id: "8054AD57FC48C691"
@@ -4442,8 +2822,8 @@
 			icon: "quark:cooked_crab_leg"
 			shape: "rsquare"
 			size: 1.0d
-			x: 30.75d
-			y: 7.5d
+			x: 38.25d
+			y: 0.0d
 			tasks: [
 				{
 					id: "CCDC7E89C3415F6C"
@@ -4460,8 +2840,8 @@
 			icon: "quark:crab_leg"
 			shape: "rsquare"
 			size: 1.0d
-			x: 32.0d
-			y: 7.5d
+			x: 39.5d
+			y: 0.0d
 			tasks: [
 				{
 					id: "C02E341AFE8C15E1"
@@ -4473,912 +2853,12 @@
 			rewards: [ ]
 		}
 		{
-			id: "6C27B70EB538344E"
-			title: "All Foods: Glowing Bread"
-			icon: "reliquary:glowing_bread"
-			shape: "rsquare"
-			size: 1.0d
-			x: 33.25d
-			y: 7.5d
-			tasks: [
-				{
-					id: "143AFB208084DF32"
-					type: "item"
-					item: "reliquary:glowing_bread"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "8B8FC4C62F8F35D7"
-			title: "All Foods: Baked Potato Slices"
-			icon: "rusticdelight:baked_potato_slices"
-			shape: "rsquare"
-			size: 1.0d
-			x: 34.5d
-			y: 7.5d
-			tasks: [
-				{
-					id: "95D31752637E16FD"
-					type: "item"
-					item: "rusticdelight:baked_potato_slices"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "3E5A11F5A31129C2"
-			title: "All Foods: Batter"
-			icon: "rusticdelight:batter"
-			shape: "rsquare"
-			size: 1.0d
-			x: 35.75d
-			y: 7.5d
-			tasks: [
-				{
-					id: "1618607AADD74DA3"
-					type: "item"
-					item: "rusticdelight:batter"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "E66FDA23EF3725E9"
-			title: "All Foods: Bell Pepper Green"
-			icon: "rusticdelight:bell_pepper_green"
-			shape: "rsquare"
-			size: 1.0d
-			x: 37.0d
-			y: 7.5d
-			tasks: [
-				{
-					id: "800B5FAC9BFC5531"
-					type: "item"
-					item: "rusticdelight:bell_pepper_green"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "B8F3FE6E09E79BDF"
-			title: "All Foods: Bell Pepper Pasta"
-			icon: "rusticdelight:bell_pepper_pasta"
-			shape: "rsquare"
-			size: 1.0d
-			x: 38.25d
-			y: 7.5d
-			tasks: [
-				{
-					id: "EBF52C658F82A0B8"
-					type: "item"
-					item: "rusticdelight:bell_pepper_pasta"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "88559E8FFE7A2D28"
-			title: "All Foods: Bell Pepper Red"
-			icon: "rusticdelight:bell_pepper_red"
-			shape: "rsquare"
-			size: 1.0d
-			x: 39.5d
-			y: 7.5d
-			tasks: [
-				{
-					id: "3A1E06387034EAE0"
-					type: "item"
-					item: "rusticdelight:bell_pepper_red"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "25C0860D90A0CE72"
-			title: "All Foods: Bell Pepper Roll Green"
-			icon: "rusticdelight:bell_pepper_roll_green"
-			shape: "rsquare"
-			size: 1.0d
-			x: 40.75d
-			y: 7.5d
-			tasks: [
-				{
-					id: "E8A5B28A313D34D4"
-					type: "item"
-					item: "rusticdelight:bell_pepper_roll_green"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "395E944FDFABCA96"
-			title: "All Foods: Bell Pepper Roll Red"
-			icon: "rusticdelight:bell_pepper_roll_red"
-			shape: "rsquare"
-			size: 1.0d
-			x: 42.0d
-			y: 7.5d
-			tasks: [
-				{
-					id: "B6D7286C4BFF00FE"
-					type: "item"
-					item: "rusticdelight:bell_pepper_roll_red"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "3F071576E5476AE0"
-			title: "All Foods: Bell Pepper Roll Yellow"
-			icon: "rusticdelight:bell_pepper_roll_yellow"
-			shape: "rsquare"
-			size: 1.0d
-			x: 43.25d
-			y: 7.5d
-			tasks: [
-				{
-					id: "9B84ED886528104B"
-					type: "item"
-					item: "rusticdelight:bell_pepper_roll_yellow"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "F13A00FAF598A73A"
-			title: "All Foods: Bell Pepper Slice Green"
-			icon: "rusticdelight:bell_pepper_slice_green"
-			shape: "rsquare"
-			size: 1.0d
-			x: 24.5d
-			y: 8.75d
-			tasks: [
-				{
-					id: "24511C06DB0A00F5"
-					type: "item"
-					item: "rusticdelight:bell_pepper_slice_green"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "A099B2CD3F1F2D7C"
-			title: "All Foods: Bell Pepper Slice Red"
-			icon: "rusticdelight:bell_pepper_slice_red"
-			shape: "rsquare"
-			size: 1.0d
-			x: 25.75d
-			y: 8.75d
-			tasks: [
-				{
-					id: "C5073929897F3BC8"
-					type: "item"
-					item: "rusticdelight:bell_pepper_slice_red"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "CC64B54F68CC1A35"
-			title: "All Foods: Bell Pepper Slice Yellow"
-			icon: "rusticdelight:bell_pepper_slice_yellow"
-			shape: "rsquare"
-			size: 1.0d
-			x: 27.0d
-			y: 8.75d
-			tasks: [
-				{
-					id: "9C14DBB01C19AA33"
-					type: "item"
-					item: "rusticdelight:bell_pepper_slice_yellow"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "0320AEEBAE53BB35"
-			title: "All Foods: Bell Pepper Yellow"
-			icon: "rusticdelight:bell_pepper_yellow"
-			shape: "rsquare"
-			size: 1.0d
-			x: 28.25d
-			y: 8.75d
-			tasks: [
-				{
-					id: "E43065C30C71B496"
-					type: "item"
-					item: "rusticdelight:bell_pepper_yellow"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "DB51D38760204305"
-			title: "All Foods: Calamari"
-			icon: "rusticdelight:calamari"
-			shape: "rsquare"
-			size: 1.0d
-			x: 29.5d
-			y: 8.75d
-			tasks: [
-				{
-					id: "58944F4F58215AD2"
-					type: "item"
-					item: "rusticdelight:calamari"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "075B3238CCC12442"
-			title: "All Foods: Calamari Roll"
-			icon: "rusticdelight:calamari_roll"
-			shape: "rsquare"
-			size: 1.0d
-			x: 30.75d
-			y: 8.75d
-			tasks: [
-				{
-					id: "A3421E95E59D6541"
-					type: "item"
-					item: "rusticdelight:calamari_roll"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "D4EF327A123A1FAC"
-			title: "All Foods: Calamari Slice"
-			icon: "rusticdelight:calamari_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 32.0d
-			y: 8.75d
-			tasks: [
-				{
-					id: "CF4CC2F1767B0B35"
-					type: "item"
-					item: "rusticdelight:calamari_slice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "FAFEB77E5A2BF021"
-			title: "All Foods: Cherry Blossom Cheesecake Slice"
-			icon: "rusticdelight:cherry_blossom_cheesecake_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 33.25d
-			y: 8.75d
-			tasks: [
-				{
-					id: "4F8A0DD6D1AF9F7A"
-					type: "item"
-					item: "rusticdelight:cherry_blossom_cheesecake_slice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "BF6B39DE0BFA22E9"
-			title: "All Foods: Cherry Blossom Cookie"
-			icon: "rusticdelight:cherry_blossom_cookie"
-			shape: "rsquare"
-			size: 1.0d
-			x: 34.5d
-			y: 8.75d
-			tasks: [
-				{
-					id: "4881B6039F01F19E"
-					type: "item"
-					item: "rusticdelight:cherry_blossom_cookie"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "59290A70E5979769"
-			title: "All Foods: Cherry Blossom Pancake"
-			icon: "rusticdelight:cherry_blossom_pancake"
-			shape: "rsquare"
-			size: 1.0d
-			x: 35.75d
-			y: 8.75d
-			tasks: [
-				{
-					id: "C27007FECCE750F9"
-					type: "item"
-					item: "rusticdelight:cherry_blossom_pancake"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "BD7C93679B07A57A"
-			title: "All Foods: Cherry Blossom Roll"
-			icon: "rusticdelight:cherry_blossom_roll"
-			shape: "rsquare"
-			size: 1.0d
-			x: 37.0d
-			y: 8.75d
-			tasks: [
-				{
-					id: "985E5B800D5116D8"
-					type: "item"
-					item: "rusticdelight:cherry_blossom_roll"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "67235E6E323E7E70"
-			title: "All Foods: Cooked Calamari"
-			icon: "rusticdelight:cooked_calamari"
-			shape: "rsquare"
-			size: 1.0d
-			x: 38.25d
-			y: 8.75d
-			tasks: [
-				{
-					id: "C50BF2173C519C54"
-					type: "item"
-					item: "rusticdelight:cooked_calamari"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "23DA4935226BD32B"
-			title: "All Foods: Cooked Calamari Slice"
-			icon: "rusticdelight:cooked_calamari_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 39.5d
-			y: 8.75d
-			tasks: [
-				{
-					id: "37D2880C28245982"
-					type: "item"
-					item: "rusticdelight:cooked_calamari_slice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "F0A77340236044EC"
-			title: "All Foods: Cooking Oil"
-			icon: "rusticdelight:cooking_oil"
-			shape: "rsquare"
-			size: 1.0d
-			x: 40.75d
-			y: 8.75d
-			tasks: [
-				{
-					id: "419059FA0C8C43F0"
-					type: "item"
-					item: "rusticdelight:cooking_oil"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "E48CB95C85B3AF3B"
-			title: "All Foods: Fried Calamari"
-			icon: "rusticdelight:fried_calamari"
-			shape: "rsquare"
-			size: 1.0d
-			x: 42.0d
-			y: 8.75d
-			tasks: [
-				{
-					id: "AD1094AFCEC677F4"
-					type: "item"
-					item: "rusticdelight:fried_calamari"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "3DF3BDD321512B8A"
-			title: "All Foods: Fried Chicken"
-			icon: "rusticdelight:fried_chicken"
-			shape: "rsquare"
-			size: 1.0d
-			x: 43.25d
-			y: 8.75d
-			tasks: [
-				{
-					id: "A37737FD9C1869AE"
-					type: "item"
-					item: "rusticdelight:fried_chicken"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "CDF3B4450D2DE727"
-			title: "All Foods: Fried Dough"
-			icon: "rusticdelight:fried_dough"
-			shape: "rsquare"
-			size: 1.0d
-			x: 24.5d
-			y: 10.0d
-			tasks: [
-				{
-					id: "080E96179A91AD55"
-					type: "item"
-					item: "rusticdelight:fried_dough"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "BEB46BE9D601CEBA"
-			title: "All Foods: Fried Dumplings"
-			icon: "rusticdelight:fried_dumplings"
-			shape: "rsquare"
-			size: 1.0d
-			x: 25.75d
-			y: 10.0d
-			tasks: [
-				{
-					id: "2619F09E4452CB06"
-					type: "item"
-					item: "rusticdelight:fried_dumplings"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "E6A924CE66C2CE28"
-			title: "All Foods: Fried Mushrooms"
-			icon: "rusticdelight:fried_mushrooms"
-			shape: "rsquare"
-			size: 1.0d
-			x: 27.0d
-			y: 10.0d
-			tasks: [
-				{
-					id: "9942B2C99174EB18"
-					type: "item"
-					item: "rusticdelight:fried_mushrooms"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "3071A8C9BFE9D3A8"
-			title: "All Foods: Fruit Beignet"
-			icon: "rusticdelight:fruit_beignet"
-			shape: "rsquare"
-			size: 1.0d
-			x: 28.25d
-			y: 10.0d
-			tasks: [
-				{
-					id: "CB5BE66C5BD6E25F"
-					type: "item"
-					item: "rusticdelight:fruit_beignet"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "B1872A0B2CE49FB7"
-			title: "All Foods: Honey Pancake"
-			icon: "rusticdelight:honey_pancake"
-			shape: "rsquare"
-			size: 1.0d
-			x: 29.5d
-			y: 10.0d
-			tasks: [
-				{
-					id: "766E7A01128A52F1"
-					type: "item"
-					item: "rusticdelight:honey_pancake"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "54A32C4D5D93C19E"
-			title: "All Foods: Pancake"
-			icon: "rusticdelight:pancake"
-			shape: "rsquare"
-			size: 1.0d
-			x: 30.75d
-			y: 10.0d
-			tasks: [
-				{
-					id: "3737B3239A287BD7"
-					type: "item"
-					item: "rusticdelight:pancake"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "7E1793522545E078"
-			title: "All Foods: Potato Salad"
-			icon: "rusticdelight:potato_salad"
-			shape: "rsquare"
-			size: 1.0d
-			x: 32.0d
-			y: 10.0d
-			tasks: [
-				{
-					id: "592265E1FEDFD8D9"
-					type: "item"
-					item: "rusticdelight:potato_salad"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "4C2E52E6B3C5A367"
-			title: "All Foods: Potato Slices"
-			icon: "rusticdelight:potato_slices"
-			shape: "rsquare"
-			size: 1.0d
-			x: 33.25d
-			y: 10.0d
-			tasks: [
-				{
-					id: "3D3379DBC1025C5B"
-					type: "item"
-					item: "rusticdelight:potato_slices"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "3E02100493C3AEA7"
-			title: "All Foods: Pumpkin Pancake"
-			icon: "rusticdelight:pumpkin_pancake"
-			shape: "rsquare"
-			size: 1.0d
-			x: 34.5d
-			y: 10.0d
-			tasks: [
-				{
-					id: "2AAA305C6B534EB8"
-					type: "item"
-					item: "rusticdelight:pumpkin_pancake"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "162C8FD8A4E4AD00"
-			title: "All Foods: Roasted Bell Pepper Green"
-			icon: "rusticdelight:roasted_bell_pepper_green"
-			shape: "rsquare"
-			size: 1.0d
-			x: 35.75d
-			y: 10.0d
-			tasks: [
-				{
-					id: "F329689721265440"
-					type: "item"
-					item: "rusticdelight:roasted_bell_pepper_green"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "6CDCCD07FA30E755"
-			title: "All Foods: Roasted Bell Pepper Red"
-			icon: "rusticdelight:roasted_bell_pepper_red"
-			shape: "rsquare"
-			size: 1.0d
-			x: 37.0d
-			y: 10.0d
-			tasks: [
-				{
-					id: "BF1203D2358A66F2"
-					type: "item"
-					item: "rusticdelight:roasted_bell_pepper_red"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "A7159687032977BF"
-			title: "All Foods: Roasted Bell Pepper Slice Green"
-			icon: "rusticdelight:roasted_bell_pepper_slice_green"
-			shape: "rsquare"
-			size: 1.0d
-			x: 38.25d
-			y: 10.0d
-			tasks: [
-				{
-					id: "7D181C9655B90E07"
-					type: "item"
-					item: "rusticdelight:roasted_bell_pepper_slice_green"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "6F97FF078EE8EB9C"
-			title: "All Foods: Roasted Bell Pepper Slice Red"
-			icon: "rusticdelight:roasted_bell_pepper_slice_red"
-			shape: "rsquare"
-			size: 1.0d
-			x: 39.5d
-			y: 10.0d
-			tasks: [
-				{
-					id: "4950E28B5986A062"
-					type: "item"
-					item: "rusticdelight:roasted_bell_pepper_slice_red"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "D1F72BBDD8A2E2CA"
-			title: "All Foods: Roasted Bell Pepper Slice Yellow"
-			icon: "rusticdelight:roasted_bell_pepper_slice_yellow"
-			shape: "rsquare"
-			size: 1.0d
-			x: 40.75d
-			y: 10.0d
-			tasks: [
-				{
-					id: "EC12796AC004D558"
-					type: "item"
-					item: "rusticdelight:roasted_bell_pepper_slice_yellow"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "5BB2995D07811601"
-			title: "All Foods: Roasted Bell Pepper Yellow"
-			icon: "rusticdelight:roasted_bell_pepper_yellow"
-			shape: "rsquare"
-			size: 1.0d
-			x: 42.0d
-			y: 10.0d
-			tasks: [
-				{
-					id: "FEB3E8B8B0521CE4"
-					type: "item"
-					item: "rusticdelight:roasted_bell_pepper_yellow"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "D38B05AD4959B337"
-			title: "All Foods: Spring Rolls"
-			icon: "rusticdelight:spring_rolls"
-			shape: "rsquare"
-			size: 1.0d
-			x: 43.25d
-			y: 10.0d
-			tasks: [
-				{
-					id: "95E2D6DEBAED413B"
-					type: "item"
-					item: "rusticdelight:spring_rolls"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "09BC3D6D008AF05B"
-			title: "All Foods: Stuffed Bell Pepper Green"
-			icon: "rusticdelight:stuffed_bell_pepper_green"
-			shape: "rsquare"
-			size: 1.0d
-			x: 47.5d
-			y: 0.0d
-			tasks: [
-				{
-					id: "9C17B7B7A054650C"
-					type: "item"
-					item: "rusticdelight:stuffed_bell_pepper_green"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "C397C3EE7582D19D"
-			title: "All Foods: Stuffed Bell Pepper Red"
-			icon: "rusticdelight:stuffed_bell_pepper_red"
-			shape: "rsquare"
-			size: 1.0d
-			x: 48.75d
-			y: 0.0d
-			tasks: [
-				{
-					id: "1050D121B27DCC8E"
-					type: "item"
-					item: "rusticdelight:stuffed_bell_pepper_red"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "12EFF79642FCAAFE"
-			title: "All Foods: Stuffed Bell Pepper Yellow"
-			icon: "rusticdelight:stuffed_bell_pepper_yellow"
-			shape: "rsquare"
-			size: 1.0d
-			x: 50.0d
-			y: 0.0d
-			tasks: [
-				{
-					id: "00E5228B1A484218"
-					type: "item"
-					item: "rusticdelight:stuffed_bell_pepper_yellow"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "05A4D403EE7754FF"
-			title: "All Foods: Sweet Salad"
-			icon: "rusticdelight:sweet_salad"
-			shape: "rsquare"
-			size: 1.0d
-			x: 51.25d
-			y: 0.0d
-			tasks: [
-				{
-					id: "146239189D70ECF5"
-					type: "item"
-					item: "rusticdelight:sweet_salad"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "146CC73D39EED2F8"
-			title: "All Foods: Syrup"
-			icon: "rusticdelight:syrup"
-			shape: "rsquare"
-			size: 1.0d
-			x: 52.5d
-			y: 0.0d
-			tasks: [
-				{
-					id: "05AE109E86957B58"
-					type: "item"
-					item: "rusticdelight:syrup"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "F6AA4A159602566F"
-			title: "All Foods: Syrup Cheesecake Slice"
-			icon: "rusticdelight:syrup_cheesecake_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 53.75d
-			y: 0.0d
-			tasks: [
-				{
-					id: "9AC6C6826EE60B46"
-					type: "item"
-					item: "rusticdelight:syrup_cheesecake_slice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "C714DB4A47842D83"
-			title: "All Foods: Syrup Cookie"
-			icon: "rusticdelight:syrup_cookie"
-			shape: "rsquare"
-			size: 1.0d
-			x: 55.0d
-			y: 0.0d
-			tasks: [
-				{
-					id: "66AB6B8551303344"
-					type: "item"
-					item: "rusticdelight:syrup_cookie"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "B14385F22AF633A5"
-			title: "All Foods: Syrup Sandwich"
-			icon: "rusticdelight:syrup_sandwich"
-			shape: "rsquare"
-			size: 1.0d
-			x: 56.25d
-			y: 0.0d
-			tasks: [
-				{
-					id: "CE7E5BCCB2D6D0D7"
-					type: "item"
-					item: "rusticdelight:syrup_sandwich"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "E173072228A79B29"
-			title: "All Foods: Vegetable Pancake"
-			icon: "rusticdelight:vegetable_pancake"
-			shape: "rsquare"
-			size: 1.0d
-			x: 57.5d
-			y: 0.0d
-			tasks: [
-				{
-					id: "276E96A43F7DA284"
-					type: "item"
-					item: "rusticdelight:vegetable_pancake"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
 			id: "76EC03AD2A373702"
 			title: "All Foods: Cooked Starcaught Fish"
 			icon: "starcatcher:cooked_starcaught_fish"
 			shape: "rsquare"
 			size: 1.0d
-			x: 58.75d
+			x: 40.75d
 			y: 0.0d
 			tasks: [
 				{
@@ -5396,7 +2876,7 @@
 			icon: "tconstruct:bacon"
 			shape: "rsquare"
 			size: 1.0d
-			x: 60.0d
+			x: 42.0d
 			y: 0.0d
 			tasks: [
 				{
@@ -5414,7 +2894,7 @@
 			icon: "tconstruct:cheese_block"
 			shape: "rsquare"
 			size: 1.0d
-			x: 61.25d
+			x: 43.25d
 			y: 0.0d
 			tasks: [
 				{
@@ -5432,8 +2912,8 @@
 			icon: "tconstruct:cheese_ingot"
 			shape: "rsquare"
 			size: 1.0d
-			x: 62.5d
-			y: 0.0d
+			x: 24.5d
+			y: 1.25d
 			tasks: [
 				{
 					id: "A94E108638C32365"
@@ -5450,8 +2930,8 @@
 			icon: "tconstruct:earth_slime_bottle"
 			shape: "rsquare"
 			size: 1.0d
-			x: 63.75d
-			y: 0.0d
+			x: 25.75d
+			y: 1.25d
 			tasks: [
 				{
 					id: "CE81C1C89F0207F4"
@@ -5468,8 +2948,8 @@
 			icon: "tconstruct:ender_slime_bottle"
 			shape: "rsquare"
 			size: 1.0d
-			x: 65.0d
-			y: 0.0d
+			x: 27.0d
+			y: 1.25d
 			tasks: [
 				{
 					id: "AA66274DA423410A"
@@ -5486,8 +2966,8 @@
 			icon: "tconstruct:ichor_slime_bottle"
 			shape: "rsquare"
 			size: 1.0d
-			x: 66.25d
-			y: 0.0d
+			x: 28.25d
+			y: 1.25d
 			tasks: [
 				{
 					id: "BD37E22312D5408C"
@@ -5504,7 +2984,7 @@
 			icon: "tconstruct:jeweled_apple"
 			shape: "rsquare"
 			size: 1.0d
-			x: 47.5d
+			x: 29.5d
 			y: 1.25d
 			tasks: [
 				{
@@ -5522,7 +3002,7 @@
 			icon: "tconstruct:sky_slime_bottle"
 			shape: "rsquare"
 			size: 1.0d
-			x: 48.75d
+			x: 30.75d
 			y: 1.25d
 			tasks: [
 				{
@@ -5540,7 +3020,7 @@
 			icon: "tconstruct:venom_bottle"
 			shape: "rsquare"
 			size: 1.0d
-			x: 50.0d
+			x: 32.0d
 			y: 1.25d
 			tasks: [
 				{
@@ -5558,7 +3038,7 @@
 			icon: "twilightforest:cooked_meef"
 			shape: "rsquare"
 			size: 1.0d
-			x: 51.25d
+			x: 33.25d
 			y: 1.25d
 			tasks: [
 				{
@@ -5576,7 +3056,7 @@
 			icon: "twilightforest:cooked_venison"
 			shape: "rsquare"
 			size: 1.0d
-			x: 52.5d
+			x: 34.5d
 			y: 1.25d
 			tasks: [
 				{
@@ -5594,7 +3074,7 @@
 			icon: "twilightforest:hydra_chop"
 			shape: "rsquare"
 			size: 1.0d
-			x: 53.75d
+			x: 35.75d
 			y: 1.25d
 			tasks: [
 				{
@@ -5612,7 +3092,7 @@
 			icon: "twilightforest:raw_meef"
 			shape: "rsquare"
 			size: 1.0d
-			x: 55.0d
+			x: 37.0d
 			y: 1.25d
 			tasks: [
 				{
@@ -5630,7 +3110,7 @@
 			icon: "twilightforest:raw_venison"
 			shape: "rsquare"
 			size: 1.0d
-			x: 56.25d
+			x: 38.25d
 			y: 1.25d
 			tasks: [
 				{
@@ -5648,7 +3128,7 @@
 			icon: "twilightforest:torchberries"
 			shape: "rsquare"
 			size: 1.0d
-			x: 57.5d
+			x: 39.5d
 			y: 1.25d
 			tasks: [
 				{
@@ -5666,7 +3146,7 @@
 			icon: "ubesdelight:arroz_caldo"
 			shape: "rsquare"
 			size: 1.0d
-			x: 58.75d
+			x: 40.75d
 			y: 1.25d
 			tasks: [
 				{
@@ -5684,7 +3164,7 @@
 			icon: "ubesdelight:bangsilog"
 			shape: "rsquare"
 			size: 1.0d
-			x: 60.0d
+			x: 42.0d
 			y: 1.25d
 			tasks: [
 				{
@@ -5702,7 +3182,7 @@
 			icon: "ubesdelight:bulalo"
 			shape: "rsquare"
 			size: 1.0d
-			x: 61.25d
+			x: 43.25d
 			y: 1.25d
 			tasks: [
 				{
@@ -5720,8 +3200,8 @@
 			icon: "ubesdelight:chicken_inasal"
 			shape: "rsquare"
 			size: 1.0d
-			x: 62.5d
-			y: 1.25d
+			x: 24.5d
+			y: 2.5d
 			tasks: [
 				{
 					id: "D7EF400BC223E5F8"
@@ -5738,8 +3218,8 @@
 			icon: "ubesdelight:chicken_inasal_rice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 63.75d
-			y: 1.25d
+			x: 25.75d
+			y: 2.5d
 			tasks: [
 				{
 					id: "9DF322B295A12B32"
@@ -5756,8 +3236,8 @@
 			icon: "ubesdelight:condensed_milk_bottle"
 			shape: "rsquare"
 			size: 1.0d
-			x: 65.0d
-			y: 1.25d
+			x: 27.0d
+			y: 2.5d
 			tasks: [
 				{
 					id: "E63D18CC87E9AC5B"
@@ -5774,8 +3254,8 @@
 			icon: "ubesdelight:cookie_ginger"
 			shape: "rsquare"
 			size: 1.0d
-			x: 66.25d
-			y: 1.25d
+			x: 28.25d
+			y: 2.5d
 			tasks: [
 				{
 					id: "86FB88D156E98223"
@@ -5792,7 +3272,7 @@
 			icon: "ubesdelight:cookie_ube"
 			shape: "rsquare"
 			size: 1.0d
-			x: 47.5d
+			x: 29.5d
 			y: 2.5d
 			tasks: [
 				{
@@ -5810,7 +3290,7 @@
 			icon: "ubesdelight:ensaymada"
 			shape: "rsquare"
 			size: 1.0d
-			x: 48.75d
+			x: 30.75d
 			y: 2.5d
 			tasks: [
 				{
@@ -5828,7 +3308,7 @@
 			icon: "ubesdelight:ensaymada_raw"
 			shape: "rsquare"
 			size: 1.0d
-			x: 50.0d
+			x: 32.0d
 			y: 2.5d
 			tasks: [
 				{
@@ -5846,7 +3326,7 @@
 			icon: "ubesdelight:ensaymada_ube"
 			shape: "rsquare"
 			size: 1.0d
-			x: 51.25d
+			x: 33.25d
 			y: 2.5d
 			tasks: [
 				{
@@ -5864,7 +3344,7 @@
 			icon: "ubesdelight:ensaymada_ube_raw"
 			shape: "rsquare"
 			size: 1.0d
-			x: 52.5d
+			x: 34.5d
 			y: 2.5d
 			tasks: [
 				{
@@ -5882,7 +3362,7 @@
 			icon: "ubesdelight:fish_sauce_bottle"
 			shape: "rsquare"
 			size: 1.0d
-			x: 53.75d
+			x: 35.75d
 			y: 2.5d
 			tasks: [
 				{
@@ -5900,7 +3380,7 @@
 			icon: "ubesdelight:garlic"
 			shape: "rsquare"
 			size: 1.0d
-			x: 55.0d
+			x: 37.0d
 			y: 2.5d
 			tasks: [
 				{
@@ -5918,7 +3398,7 @@
 			icon: "ubesdelight:garlic_chop"
 			shape: "rsquare"
 			size: 1.0d
-			x: 56.25d
+			x: 38.25d
 			y: 2.5d
 			tasks: [
 				{
@@ -5936,7 +3416,7 @@
 			icon: "ubesdelight:ginger"
 			shape: "rsquare"
 			size: 1.0d
-			x: 57.5d
+			x: 39.5d
 			y: 2.5d
 			tasks: [
 				{
@@ -5954,7 +3434,7 @@
 			icon: "ubesdelight:ginger_chop"
 			shape: "rsquare"
 			size: 1.0d
-			x: 58.75d
+			x: 40.75d
 			y: 2.5d
 			tasks: [
 				{
@@ -5972,7 +3452,7 @@
 			icon: "ubesdelight:halo_halo"
 			shape: "rsquare"
 			size: 1.0d
-			x: 60.0d
+			x: 42.0d
 			y: 2.5d
 			tasks: [
 				{
@@ -5990,7 +3470,7 @@
 			icon: "ubesdelight:hopia_munggo"
 			shape: "rsquare"
 			size: 1.0d
-			x: 61.25d
+			x: 43.25d
 			y: 2.5d
 			tasks: [
 				{
@@ -6008,8 +3488,8 @@
 			icon: "ubesdelight:hopia_munggo_raw"
 			shape: "rsquare"
 			size: 1.0d
-			x: 62.5d
-			y: 2.5d
+			x: 24.5d
+			y: 3.75d
 			tasks: [
 				{
 					id: "1CD4934D446ED596"
@@ -6026,8 +3506,8 @@
 			icon: "ubesdelight:hopia_ube"
 			shape: "rsquare"
 			size: 1.0d
-			x: 63.75d
-			y: 2.5d
+			x: 25.75d
+			y: 3.75d
 			tasks: [
 				{
 					id: "6E8AE38971758C1E"
@@ -6044,8 +3524,8 @@
 			icon: "ubesdelight:hopia_ube_raw"
 			shape: "rsquare"
 			size: 1.0d
-			x: 65.0d
-			y: 2.5d
+			x: 27.0d
+			y: 3.75d
 			tasks: [
 				{
 					id: "821B43D46BA67461"
@@ -6062,8 +3542,8 @@
 			icon: "ubesdelight:kinilaw"
 			shape: "rsquare"
 			size: 1.0d
-			x: 66.25d
-			y: 2.5d
+			x: 28.25d
+			y: 3.75d
 			tasks: [
 				{
 					id: "9AEEE6D9F1FA7444"
@@ -6080,7 +3560,7 @@
 			icon: "ubesdelight:leche_flan"
 			shape: "rsquare"
 			size: 1.0d
-			x: 47.5d
+			x: 29.5d
 			y: 3.75d
 			tasks: [
 				{
@@ -6098,7 +3578,7 @@
 			icon: "ubesdelight:lemongrass"
 			shape: "rsquare"
 			size: 1.0d
-			x: 48.75d
+			x: 30.75d
 			y: 3.75d
 			tasks: [
 				{
@@ -6116,7 +3596,7 @@
 			icon: "ubesdelight:lumpia"
 			shape: "rsquare"
 			size: 1.0d
-			x: 50.0d
+			x: 32.0d
 			y: 3.75d
 			tasks: [
 				{
@@ -6134,7 +3614,7 @@
 			icon: "ubesdelight:mechado"
 			shape: "rsquare"
 			size: 1.0d
-			x: 51.25d
+			x: 33.25d
 			y: 3.75d
 			tasks: [
 				{
@@ -6152,7 +3632,7 @@
 			icon: "ubesdelight:pandesal"
 			shape: "rsquare"
 			size: 1.0d
-			x: 52.5d
+			x: 34.5d
 			y: 3.75d
 			tasks: [
 				{
@@ -6170,7 +3650,7 @@
 			icon: "ubesdelight:pandesal_raw"
 			shape: "rsquare"
 			size: 1.0d
-			x: 53.75d
+			x: 35.75d
 			y: 3.75d
 			tasks: [
 				{
@@ -6188,7 +3668,7 @@
 			icon: "ubesdelight:pandesal_ube"
 			shape: "rsquare"
 			size: 1.0d
-			x: 55.0d
+			x: 37.0d
 			y: 3.75d
 			tasks: [
 				{
@@ -6206,7 +3686,7 @@
 			icon: "ubesdelight:pandesal_ube_raw"
 			shape: "rsquare"
 			size: 1.0d
-			x: 56.25d
+			x: 38.25d
 			y: 3.75d
 			tasks: [
 				{
@@ -6224,7 +3704,7 @@
 			icon: "ubesdelight:polvorone"
 			shape: "rsquare"
 			size: 1.0d
-			x: 57.5d
+			x: 39.5d
 			y: 3.75d
 			tasks: [
 				{
@@ -6242,7 +3722,7 @@
 			icon: "ubesdelight:polvorone_cc"
 			shape: "rsquare"
 			size: 1.0d
-			x: 58.75d
+			x: 40.75d
 			y: 3.75d
 			tasks: [
 				{
@@ -6260,7 +3740,7 @@
 			icon: "ubesdelight:polvorone_pinipig"
 			shape: "rsquare"
 			size: 1.0d
-			x: 60.0d
+			x: 42.0d
 			y: 3.75d
 			tasks: [
 				{
@@ -6278,7 +3758,7 @@
 			icon: "ubesdelight:polvorone_ube"
 			shape: "rsquare"
 			size: 1.0d
-			x: 61.25d
+			x: 43.25d
 			y: 3.75d
 			tasks: [
 				{
@@ -6296,8 +3776,8 @@
 			icon: "ubesdelight:sinangag"
 			shape: "rsquare"
 			size: 1.0d
-			x: 62.5d
-			y: 3.75d
+			x: 24.5d
+			y: 5.0d
 			tasks: [
 				{
 					id: "4C43A2174C8120EA"
@@ -6314,8 +3794,8 @@
 			icon: "ubesdelight:sisig"
 			shape: "rsquare"
 			size: 1.0d
-			x: 63.75d
-			y: 3.75d
+			x: 25.75d
+			y: 5.0d
 			tasks: [
 				{
 					id: "A0A78E548A901147"
@@ -6332,8 +3812,8 @@
 			icon: "ubesdelight:tocino"
 			shape: "rsquare"
 			size: 1.0d
-			x: 65.0d
-			y: 3.75d
+			x: 27.0d
+			y: 5.0d
 			tasks: [
 				{
 					id: "1CF5EBFF9E1D2836"
@@ -6350,8 +3830,8 @@
 			icon: "ubesdelight:tosilog"
 			shape: "rsquare"
 			size: 1.0d
-			x: 66.25d
-			y: 3.75d
+			x: 28.25d
+			y: 5.0d
 			tasks: [
 				{
 					id: "08986CA4B3660A4B"
@@ -6368,7 +3848,7 @@
 			icon: "ubesdelight:ube"
 			shape: "rsquare"
 			size: 1.0d
-			x: 47.5d
+			x: 29.5d
 			y: 5.0d
 			tasks: [
 				{
@@ -6386,7 +3866,7 @@
 			icon: "ubesdelight:ube_cake_slice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 48.75d
+			x: 30.75d
 			y: 5.0d
 			tasks: [
 				{
@@ -6404,7 +3884,7 @@
 			icon: "undergarden:blisterberry"
 			shape: "rsquare"
 			size: 1.0d
-			x: 50.0d
+			x: 32.0d
 			y: 5.0d
 			tasks: [
 				{
@@ -6422,7 +3902,7 @@
 			icon: "undergarden:blood_globule"
 			shape: "rsquare"
 			size: 1.0d
-			x: 51.25d
+			x: 33.25d
 			y: 5.0d
 			tasks: [
 				{
@@ -6440,7 +3920,7 @@
 			icon: "undergarden:cooked_gwibling"
 			shape: "rsquare"
 			size: 1.0d
-			x: 52.5d
+			x: 34.5d
 			y: 5.0d
 			tasks: [
 				{
@@ -6458,7 +3938,7 @@
 			icon: "undergarden:droopvine_item"
 			shape: "rsquare"
 			size: 1.0d
-			x: 53.75d
+			x: 35.75d
 			y: 5.0d
 			tasks: [
 				{
@@ -6476,7 +3956,7 @@
 			icon: "undergarden:gloomgourd_pie"
 			shape: "rsquare"
 			size: 1.0d
-			x: 55.0d
+			x: 37.0d
 			y: 5.0d
 			tasks: [
 				{
@@ -6494,7 +3974,7 @@
 			icon: "undergarden:gloomper_leg"
 			shape: "rsquare"
 			size: 1.0d
-			x: 56.25d
+			x: 38.25d
 			y: 5.0d
 			tasks: [
 				{
@@ -6512,7 +3992,7 @@
 			icon: "undergarden:goo_ball"
 			shape: "rsquare"
 			size: 1.0d
-			x: 57.5d
+			x: 39.5d
 			y: 5.0d
 			tasks: [
 				{
@@ -6530,7 +4010,7 @@
 			icon: "undergarden:raw_dweller_meat"
 			shape: "rsquare"
 			size: 1.0d
-			x: 58.75d
+			x: 40.75d
 			y: 5.0d
 			tasks: [
 				{
@@ -6548,7 +4028,7 @@
 			icon: "undergarden:raw_gloomper_leg"
 			shape: "rsquare"
 			size: 1.0d
-			x: 60.0d
+			x: 42.0d
 			y: 5.0d
 			tasks: [
 				{
@@ -6566,7 +4046,7 @@
 			icon: "undergarden:raw_gwibling"
 			shape: "rsquare"
 			size: 1.0d
-			x: 61.25d
+			x: 43.25d
 			y: 5.0d
 			tasks: [
 				{
@@ -6584,8 +4064,8 @@
 			icon: "undergarden:roasted_underbeans"
 			shape: "rsquare"
 			size: 1.0d
-			x: 62.5d
-			y: 5.0d
+			x: 24.5d
+			y: 6.25d
 			tasks: [
 				{
 					id: "522728B7611844C6"
@@ -6602,8 +4082,8 @@
 			icon: "undergarden:rotten_blisterberry"
 			shape: "rsquare"
 			size: 1.0d
-			x: 63.75d
-			y: 5.0d
+			x: 25.75d
+			y: 6.25d
 			tasks: [
 				{
 					id: "7E539CA76C1CB9D6"
@@ -6620,8 +4100,8 @@
 			icon: "undergarden:slop_bowl"
 			shape: "rsquare"
 			size: 1.0d
-			x: 65.0d
-			y: 5.0d
+			x: 27.0d
+			y: 6.25d
 			tasks: [
 				{
 					id: "DBEB6B0E7FCF76DC"
@@ -6638,1021 +4118,13 @@
 			icon: "undergarden:underbeans"
 			shape: "rsquare"
 			size: 1.0d
-			x: 66.25d
-			y: 5.0d
+			x: 28.25d
+			y: 6.25d
 			tasks: [
 				{
 					id: "3E561D3C440ADE83"
 					type: "item"
 					item: "undergarden:underbeans"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "FA8D611EF23DE72F"
-			title: "All Foods: Baked Sweet Potato"
-			icon: "veggiesdelight:baked_sweet_potato"
-			shape: "rsquare"
-			size: 1.0d
-			x: 47.5d
-			y: 6.25d
-			tasks: [
-				{
-					id: "E479A7A518562C2D"
-					type: "item"
-					item: "veggiesdelight:baked_sweet_potato"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "706FA777A602740B"
-			title: "All Foods: Beetroot Brownie"
-			icon: "veggiesdelight:beetroot_brownie"
-			shape: "rsquare"
-			size: 1.0d
-			x: 48.75d
-			y: 6.25d
-			tasks: [
-				{
-					id: "3185F49CA05C99CB"
-					type: "item"
-					item: "veggiesdelight:beetroot_brownie"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "2037FB19E56D6BA0"
-			title: "All Foods: Bellpepper"
-			icon: "veggiesdelight:bellpepper"
-			shape: "rsquare"
-			size: 1.0d
-			x: 50.0d
-			y: 6.25d
-			tasks: [
-				{
-					id: "E7517FDFD71EDD11"
-					type: "item"
-					item: "veggiesdelight:bellpepper"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "03E5EF9F849BB3F9"
-			title: "All Foods: Broccoli"
-			icon: "veggiesdelight:broccoli"
-			shape: "rsquare"
-			size: 1.0d
-			x: 51.25d
-			y: 6.25d
-			tasks: [
-				{
-					id: "2FAC16E64E870C3D"
-					type: "item"
-					item: "veggiesdelight:broccoli"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "18E8BD3F8B2481DF"
-			title: "All Foods: Broccoli Salad"
-			icon: "veggiesdelight:broccoli_salad"
-			shape: "rsquare"
-			size: 1.0d
-			x: 52.5d
-			y: 6.25d
-			tasks: [
-				{
-					id: "10B0B2E62FF2B08F"
-					type: "item"
-					item: "veggiesdelight:broccoli_salad"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "8A9F30FF1BD7A09F"
-			title: "All Foods: Cacciatore"
-			icon: "veggiesdelight:cacciatore"
-			shape: "rsquare"
-			size: 1.0d
-			x: 53.75d
-			y: 6.25d
-			tasks: [
-				{
-					id: "EA804ABF94D5F009"
-					type: "item"
-					item: "veggiesdelight:cacciatore"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "2C3D1B3F6A4E00AC"
-			title: "All Foods: Carrot Cake Slice"
-			icon: "veggiesdelight:carrot_cake_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 55.0d
-			y: 6.25d
-			tasks: [
-				{
-					id: "4DA076954D1FDE42"
-					type: "item"
-					item: "veggiesdelight:carrot_cake_slice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "BA5E4822AFE00CD9"
-			title: "All Foods: Cauliflower"
-			icon: "veggiesdelight:cauliflower"
-			shape: "rsquare"
-			size: 1.0d
-			x: 56.25d
-			y: 6.25d
-			tasks: [
-				{
-					id: "3DC80CC9ABA4CF2D"
-					type: "item"
-					item: "veggiesdelight:cauliflower"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "E3271359355BAF12"
-			title: "All Foods: Cauliflower Bread"
-			icon: "veggiesdelight:cauliflower_bread"
-			shape: "rsquare"
-			size: 1.0d
-			x: 57.5d
-			y: 6.25d
-			tasks: [
-				{
-					id: "86724DEAA10F0EAC"
-					type: "item"
-					item: "veggiesdelight:cauliflower_bread"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "8F11723429258B63"
-			title: "All Foods: Cauliflower Floret"
-			icon: "veggiesdelight:cauliflower_floret"
-			shape: "rsquare"
-			size: 1.0d
-			x: 58.75d
-			y: 6.25d
-			tasks: [
-				{
-					id: "56EAA746CFE19625"
-					type: "item"
-					item: "veggiesdelight:cauliflower_floret"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "1C2BB7C017C1D400"
-			title: "All Foods: Cauliflower Kuku"
-			icon: "veggiesdelight:cauliflower_kuku"
-			shape: "rsquare"
-			size: 1.0d
-			x: 60.0d
-			y: 6.25d
-			tasks: [
-				{
-					id: "BD7F5698FF4E8D77"
-					type: "item"
-					item: "veggiesdelight:cauliflower_kuku"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "303F29E76518A1DB"
-			title: "All Foods: Cesar Salad"
-			icon: "veggiesdelight:cesar_salad"
-			shape: "rsquare"
-			size: 1.0d
-			x: 61.25d
-			y: 6.25d
-			tasks: [
-				{
-					id: "AC729FC1079D2E6A"
-					type: "item"
-					item: "veggiesdelight:cesar_salad"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "8D31A7F3E1886654"
-			title: "All Foods: Chicken Fajitas Wrap"
-			icon: "veggiesdelight:chicken_fajitas_wrap"
-			shape: "rsquare"
-			size: 1.0d
-			x: 62.5d
-			y: 6.25d
-			tasks: [
-				{
-					id: "05CADBC380B8A94A"
-					type: "item"
-					item: "veggiesdelight:chicken_fajitas_wrap"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "3EFBE0FA6C8B0C76"
-			title: "All Foods: Coleslaw"
-			icon: "veggiesdelight:coleslaw"
-			shape: "rsquare"
-			size: 1.0d
-			x: 63.75d
-			y: 6.25d
-			tasks: [
-				{
-					id: "0CA1FAA108043656"
-					type: "item"
-					item: "veggiesdelight:coleslaw"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "EA1C9157F82ACBB9"
-			title: "All Foods: Cooked Vegetarian Patty"
-			icon: "veggiesdelight:cooked_vegetarian_patty"
-			shape: "rsquare"
-			size: 1.0d
-			x: 65.0d
-			y: 6.25d
-			tasks: [
-				{
-					id: "4ACE19918A8C0EF6"
-					type: "item"
-					item: "veggiesdelight:cooked_vegetarian_patty"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "0CC534C028A1EA29"
-			title: "All Foods: Dandelion And Eggs"
-			icon: "veggiesdelight:dandelion_and_eggs"
-			shape: "rsquare"
-			size: 1.0d
-			x: 66.25d
-			y: 6.25d
-			tasks: [
-				{
-					id: "54A9F530D0F3CB84"
-					type: "item"
-					item: "veggiesdelight:dandelion_and_eggs"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "6F0AD13F31075761"
-			title: "All Foods: Dandelion Leaf"
-			icon: "veggiesdelight:dandelion_leaf"
-			shape: "rsquare"
-			size: 1.0d
-			x: 47.5d
-			y: 7.5d
-			tasks: [
-				{
-					id: "0304F97ABD5DD7E8"
-					type: "item"
-					item: "veggiesdelight:dandelion_leaf"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "EED218721D76EFB2"
-			title: "All Foods: Fermented Garlic Honey"
-			icon: "veggiesdelight:fermented_garlic_honey"
-			shape: "rsquare"
-			size: 1.0d
-			x: 48.75d
-			y: 7.5d
-			tasks: [
-				{
-					id: "6CC1DB8BE294876D"
-					type: "item"
-					item: "veggiesdelight:fermented_garlic_honey"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "D2A297D6EF6009B4"
-			title: "All Foods: Fish And Chips"
-			icon: "veggiesdelight:fish_and_chips"
-			shape: "rsquare"
-			size: 1.0d
-			x: 50.0d
-			y: 7.5d
-			tasks: [
-				{
-					id: "72A654ECD50FBA7A"
-					type: "item"
-					item: "veggiesdelight:fish_and_chips"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "E7A1F59353C9BC82"
-			title: "All Foods: Garlic Baked Cod"
-			icon: "veggiesdelight:garlic_baked_cod"
-			shape: "rsquare"
-			size: 1.0d
-			x: 51.25d
-			y: 7.5d
-			tasks: [
-				{
-					id: "36CD16863CB75A45"
-					type: "item"
-					item: "veggiesdelight:garlic_baked_cod"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "C6B604AF29912A64"
-			title: "All Foods: Garlic Bread"
-			icon: "veggiesdelight:garlic_bread"
-			shape: "rsquare"
-			size: 1.0d
-			x: 52.5d
-			y: 7.5d
-			tasks: [
-				{
-					id: "FA6C11AEBCC2DA03"
-					type: "item"
-					item: "veggiesdelight:garlic_bread"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "55B85606574DF3A6"
-			title: "All Foods: Garlic Clove"
-			icon: "veggiesdelight:garlic_clove"
-			shape: "rsquare"
-			size: 1.0d
-			x: 53.75d
-			y: 7.5d
-			tasks: [
-				{
-					id: "0C82909A3B95D3C1"
-					type: "item"
-					item: "veggiesdelight:garlic_clove"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "F8C61E0AD66AC387"
-			title: "All Foods: Garlic Rice With Cauliflower"
-			icon: "veggiesdelight:garlic_rice_with_cauliflower"
-			shape: "rsquare"
-			size: 1.0d
-			x: 55.0d
-			y: 7.5d
-			tasks: [
-				{
-					id: "D2EEF624358520DF"
-					type: "item"
-					item: "veggiesdelight:garlic_rice_with_cauliflower"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "3C51B94ED849C7F7"
-			title: "All Foods: Garlic Stuffed Mushrooms"
-			icon: "veggiesdelight:garlic_stuffed_mushrooms"
-			shape: "rsquare"
-			size: 1.0d
-			x: 56.25d
-			y: 7.5d
-			tasks: [
-				{
-					id: "900A75241D7E91DE"
-					type: "item"
-					item: "veggiesdelight:garlic_stuffed_mushrooms"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "2D0DAEE3DDB33B7E"
-			title: "All Foods: Mashed Potatoes"
-			icon: "veggiesdelight:mashed_potatoes"
-			shape: "rsquare"
-			size: 1.0d
-			x: 57.5d
-			y: 7.5d
-			tasks: [
-				{
-					id: "4A73B5D9D9A96A58"
-					type: "item"
-					item: "veggiesdelight:mashed_potatoes"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "BE848FBC97D05EE8"
-			title: "All Foods: Mhadjeb"
-			icon: "veggiesdelight:mhadjeb"
-			shape: "rsquare"
-			size: 1.0d
-			x: 58.75d
-			y: 7.5d
-			tasks: [
-				{
-					id: "9F61E45B3F67DC14"
-					type: "item"
-					item: "veggiesdelight:mhadjeb"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "9DE25DCC5C8EACE7"
-			title: "All Foods: Pasta With Broccoli"
-			icon: "veggiesdelight:pasta_with_broccoli"
-			shape: "rsquare"
-			size: 1.0d
-			x: 60.0d
-			y: 7.5d
-			tasks: [
-				{
-					id: "EBA9C9E4744D1A0A"
-					type: "item"
-					item: "veggiesdelight:pasta_with_broccoli"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "0E6F76005F9E768E"
-			title: "All Foods: Potato Noodle"
-			icon: "veggiesdelight:potato_noodle"
-			shape: "rsquare"
-			size: 1.0d
-			x: 61.25d
-			y: 7.5d
-			tasks: [
-				{
-					id: "0600A0B39C7FAEFE"
-					type: "item"
-					item: "veggiesdelight:potato_noodle"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "0B75B8C53FB397A5"
-			title: "All Foods: Potato Noodles"
-			icon: "veggiesdelight:potato_noodles"
-			shape: "rsquare"
-			size: 1.0d
-			x: 62.5d
-			y: 7.5d
-			tasks: [
-				{
-					id: "0357B539FE2E099C"
-					type: "item"
-					item: "veggiesdelight:potato_noodles"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "8E2B9BE70C5117E4"
-			title: "All Foods: Raw Vegetarian Patty"
-			icon: "veggiesdelight:raw_vegetarian_patty"
-			shape: "rsquare"
-			size: 1.0d
-			x: 63.75d
-			y: 7.5d
-			tasks: [
-				{
-					id: "FB5FDFB51B10D9E1"
-					type: "item"
-					item: "veggiesdelight:raw_vegetarian_patty"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "593B0AFB0D7F1CA2"
-			title: "All Foods: Rice And Vegetables"
-			icon: "veggiesdelight:rice_and_vegetables"
-			shape: "rsquare"
-			size: 1.0d
-			x: 65.0d
-			y: 7.5d
-			tasks: [
-				{
-					id: "07E9BF3F46C0EDB6"
-					type: "item"
-					item: "veggiesdelight:rice_and_vegetables"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "5B8570B6BD1F630D"
-			title: "All Foods: Roasted Cauliflower Floret"
-			icon: "veggiesdelight:roasted_cauliflower_floret"
-			shape: "rsquare"
-			size: 1.0d
-			x: 66.25d
-			y: 7.5d
-			tasks: [
-				{
-					id: "9E927657FE5F17C7"
-					type: "item"
-					item: "veggiesdelight:roasted_cauliflower_floret"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "A6640BF193E95993"
-			title: "All Foods: Roasted Garlic Clove"
-			icon: "veggiesdelight:roasted_garlic_clove"
-			shape: "rsquare"
-			size: 1.0d
-			x: 47.5d
-			y: 8.75d
-			tasks: [
-				{
-					id: "329E21B285673350"
-					type: "item"
-					item: "veggiesdelight:roasted_garlic_clove"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "2869587510BD54F7"
-			title: "All Foods: Roasted Vegetables"
-			icon: "veggiesdelight:roasted_vegetables"
-			shape: "rsquare"
-			size: 1.0d
-			x: 48.75d
-			y: 8.75d
-			tasks: [
-				{
-					id: "BA95412474F8A1BC"
-					type: "item"
-					item: "veggiesdelight:roasted_vegetables"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "6F2E3B153F8BFDA4"
-			title: "All Foods: Roasted Zucchini"
-			icon: "veggiesdelight:roasted_zucchini"
-			shape: "rsquare"
-			size: 1.0d
-			x: 50.0d
-			y: 8.75d
-			tasks: [
-				{
-					id: "780A7DD9096C7265"
-					type: "item"
-					item: "veggiesdelight:roasted_zucchini"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "FE5EF526184DF9F5"
-			title: "All Foods: Shakshouka"
-			icon: "veggiesdelight:shakshouka"
-			shape: "rsquare"
-			size: 1.0d
-			x: 51.25d
-			y: 8.75d
-			tasks: [
-				{
-					id: "869AC044306ECB2C"
-					type: "item"
-					item: "veggiesdelight:shakshouka"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "AC3FD70B634E04A9"
-			title: "All Foods: Smoked Bellpepper"
-			icon: "veggiesdelight:smoked_bellpepper"
-			shape: "rsquare"
-			size: 1.0d
-			x: 52.5d
-			y: 8.75d
-			tasks: [
-				{
-					id: "0A1AC9799D7CC117"
-					type: "item"
-					item: "veggiesdelight:smoked_bellpepper"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "9C670C45F899E638"
-			title: "All Foods: Stuffed Zucchini Boat"
-			icon: "veggiesdelight:stuffed_zucchini_boat"
-			shape: "rsquare"
-			size: 1.0d
-			x: 53.75d
-			y: 8.75d
-			tasks: [
-				{
-					id: "B2427F407BFFEF94"
-					type: "item"
-					item: "veggiesdelight:stuffed_zucchini_boat"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "51B04EB5B50FD6B9"
-			title: "All Foods: Stuffed Zucchinis"
-			icon: "veggiesdelight:stuffed_zucchinis"
-			shape: "rsquare"
-			size: 1.0d
-			x: 55.0d
-			y: 8.75d
-			tasks: [
-				{
-					id: "1402320270DF2EB9"
-					type: "item"
-					item: "veggiesdelight:stuffed_zucchinis"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "F82B8A4634B71CFA"
-			title: "All Foods: Sweet Potato"
-			icon: "veggiesdelight:sweet_potato"
-			shape: "rsquare"
-			size: 1.0d
-			x: 56.25d
-			y: 8.75d
-			tasks: [
-				{
-					id: "B193636129C3553C"
-					type: "item"
-					item: "veggiesdelight:sweet_potato"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "3A773529A0D55D99"
-			title: "All Foods: Sweet Potato Cupcake"
-			icon: "veggiesdelight:sweet_potato_cupcake"
-			shape: "rsquare"
-			size: 1.0d
-			x: 57.5d
-			y: 8.75d
-			tasks: [
-				{
-					id: "553ED278BF2C3DFF"
-					type: "item"
-					item: "veggiesdelight:sweet_potato_cupcake"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "853E8F6952E4A94A"
-			title: "All Foods: Sweet Potato Dough"
-			icon: "veggiesdelight:sweet_potato_dough"
-			shape: "rsquare"
-			size: 1.0d
-			x: 58.75d
-			y: 8.75d
-			tasks: [
-				{
-					id: "13441457A8CE29CF"
-					type: "item"
-					item: "veggiesdelight:sweet_potato_dough"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "0B4D161863818196"
-			title: "All Foods: Sweet Potato Pancakes"
-			icon: "veggiesdelight:sweet_potato_pancakes"
-			shape: "rsquare"
-			size: 1.0d
-			x: 60.0d
-			y: 8.75d
-			tasks: [
-				{
-					id: "45943BFB803845AA"
-					type: "item"
-					item: "veggiesdelight:sweet_potato_pancakes"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "09BC150C8D069049"
-			title: "All Foods: Sweet Potato Pie Slice"
-			icon: "veggiesdelight:sweet_potato_pie_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 61.25d
-			y: 8.75d
-			tasks: [
-				{
-					id: "D287B161E1D4C3FB"
-					type: "item"
-					item: "veggiesdelight:sweet_potato_pie_slice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "320EC43F85E58141"
-			title: "All Foods: Turnip"
-			icon: "veggiesdelight:turnip"
-			shape: "rsquare"
-			size: 1.0d
-			x: 62.5d
-			y: 8.75d
-			tasks: [
-				{
-					id: "10C6B21A897FC66E"
-					type: "item"
-					item: "veggiesdelight:turnip"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "DC53A25F6836D373"
-			title: "All Foods: Turnip Cake"
-			icon: "veggiesdelight:turnip_cake"
-			shape: "rsquare"
-			size: 1.0d
-			x: 63.75d
-			y: 8.75d
-			tasks: [
-				{
-					id: "CF1CBA448BFA8DB0"
-					type: "item"
-					item: "veggiesdelight:turnip_cake"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "33E827F2D9ED9CDE"
-			title: "All Foods: Turnip Mutton Skewer"
-			icon: "veggiesdelight:turnip_mutton_skewer"
-			shape: "rsquare"
-			size: 1.0d
-			x: 65.0d
-			y: 8.75d
-			tasks: [
-				{
-					id: "6E9C4DBA159DB537"
-					type: "item"
-					item: "veggiesdelight:turnip_mutton_skewer"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "DEE15FFD0E087AA6"
-			title: "All Foods: Turnip Salad"
-			icon: "veggiesdelight:turnip_salad"
-			shape: "rsquare"
-			size: 1.0d
-			x: 66.25d
-			y: 8.75d
-			tasks: [
-				{
-					id: "C807FCA0C5E59DC4"
-					type: "item"
-					item: "veggiesdelight:turnip_salad"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "9C8EF37E856771F9"
-			title: "All Foods: Uncooked Mhadjeb"
-			icon: "veggiesdelight:uncooked_mhadjeb"
-			shape: "rsquare"
-			size: 1.0d
-			x: 47.5d
-			y: 10.0d
-			tasks: [
-				{
-					id: "5CBF5F42290CE4F9"
-					type: "item"
-					item: "veggiesdelight:uncooked_mhadjeb"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "DD50659C36161952"
-			title: "All Foods: Vegan Pizza Slice"
-			icon: "veggiesdelight:vegan_pizza_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 48.75d
-			y: 10.0d
-			tasks: [
-				{
-					id: "B7F9AFBF1C4C9626"
-					type: "item"
-					item: "veggiesdelight:vegan_pizza_slice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "0C3AFAFF066434AE"
-			title: "All Foods: Vegetables Wrap"
-			icon: "veggiesdelight:vegetables_wrap"
-			shape: "rsquare"
-			size: 1.0d
-			x: 50.0d
-			y: 10.0d
-			tasks: [
-				{
-					id: "66BAB7BAA93E68E7"
-					type: "item"
-					item: "veggiesdelight:vegetables_wrap"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "F31C8FE366FF99DC"
-			title: "All Foods: Vegetarian Burger"
-			icon: "veggiesdelight:vegetarian_burger"
-			shape: "rsquare"
-			size: 1.0d
-			x: 51.25d
-			y: 10.0d
-			tasks: [
-				{
-					id: "21448A6F218F7C1E"
-					type: "item"
-					item: "veggiesdelight:vegetarian_burger"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "CD92DAE7D646D285"
-			title: "All Foods: Zucchini"
-			icon: "veggiesdelight:zucchini"
-			shape: "rsquare"
-			size: 1.0d
-			x: 52.5d
-			y: 10.0d
-			tasks: [
-				{
-					id: "CF68C337CCCB0E29"
-					type: "item"
-					item: "veggiesdelight:zucchini"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "6AC3A187B181DA59"
-			title: "All Foods: Zucchini Quiche Slice"
-			icon: "veggiesdelight:zucchini_quiche_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 53.75d
-			y: 10.0d
-			tasks: [
-				{
-					id: "575E05A81E7EC1BF"
-					type: "item"
-					item: "veggiesdelight:zucchini_quiche_slice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "BD876531F8084B36"
-			title: "All Foods: Zucchini Sandwich"
-			icon: "veggiesdelight:zucchini_sandwich"
-			shape: "rsquare"
-			size: 1.0d
-			x: 55.0d
-			y: 10.0d
-			tasks: [
-				{
-					id: "6FD84A4A803691F9"
-					type: "item"
-					item: "veggiesdelight:zucchini_sandwich"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "7231795333E8C610"
-			title: "All Foods: Zucchini Slice"
-			icon: "veggiesdelight:zucchini_slice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 56.25d
-			y: 10.0d
-			tasks: [
-				{
-					id: "441C954A257A383A"
-					type: "item"
-					item: "veggiesdelight:zucchini_slice"
 					count: 1
 				}
 			]
@@ -7674,7 +4146,7 @@
 				}
 			]
 			rewards: [ ]
-			description: ["74 starter stubs."]
+			description: ["39 starter stubs."]
 		}
 		{
 			id: "48D0076A72C75058"
@@ -7965,156 +4437,12 @@
 			rewards: [ ]
 		}
 		{
-			id: "94279190585937B5"
-			title: "All Drinks: Berry Matcha Latte"
-			icon: "delightful:berry_matcha_latte"
-			shape: "rsquare"
-			size: 1.0d
-			x: 1.5d
-			y: 13.75d
-			tasks: [
-				{
-					id: "DF6A959F91110567"
-					type: "item"
-					item: "delightful:berry_matcha_latte"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "303D0D7E063DEBE6"
-			title: "All Drinks: Cactus Soup"
-			icon: "delightful:cactus_soup"
-			shape: "rsquare"
-			size: 1.0d
-			x: 2.75d
-			y: 13.75d
-			tasks: [
-				{
-					id: "5E1A8C87442BAE33"
-					type: "item"
-					item: "delightful:cactus_soup"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "17B17A4A4E4CFF1F"
-			title: "All Drinks: Cactus Steak"
-			icon: "delightful:cactus_steak"
-			shape: "rsquare"
-			size: 1.0d
-			x: 4.0d
-			y: 13.75d
-			tasks: [
-				{
-					id: "C2506E6FC707153B"
-					type: "item"
-					item: "delightful:cactus_steak"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "99AE5A8790A40184"
-			title: "All Drinks: Matcha Latte"
-			icon: "delightful:matcha_latte"
-			shape: "rsquare"
-			size: 1.0d
-			x: 5.25d
-			y: 13.75d
-			tasks: [
-				{
-					id: "1DC7850BEA826076"
-					type: "item"
-					item: "delightful:matcha_latte"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "8724B1109A5D705B"
-			title: "All Drinks: Matcha Milkshake"
-			icon: "delightful:matcha_milkshake"
-			shape: "rsquare"
-			size: 1.0d
-			x: 6.5d
-			y: 13.75d
-			tasks: [
-				{
-					id: "CE0F195DA42AEFE7"
-					type: "item"
-					item: "delightful:matcha_milkshake"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "635341D2385D27B0"
-			title: "All Drinks: Salmonberry Milkshake"
-			icon: "delightful:salmonberry_milkshake"
-			shape: "rsquare"
-			size: 1.0d
-			x: 7.75d
-			y: 13.75d
-			tasks: [
-				{
-					id: "50C22CC4E881160F"
-					type: "item"
-					item: "delightful:salmonberry_milkshake"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "D94FBA62A3198367"
-			title: "All Drinks: Source Berry Milkshake"
-			icon: "delightful:source_berry_milkshake"
-			shape: "rsquare"
-			size: 1.0d
-			x: 9.0d
-			y: 13.75d
-			tasks: [
-				{
-					id: "3B565D2D38DC787D"
-					type: "item"
-					item: "delightful:source_berry_milkshake"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "3AD70F555BBB46BD"
-			title: "All Drinks: Venison Stew"
-			icon: "delightful:venison_stew"
-			shape: "rsquare"
-			size: 1.0d
-			x: 10.25d
-			y: 13.75d
-			tasks: [
-				{
-					id: "3B7DAA02DED04813"
-					type: "item"
-					item: "delightful:venison_stew"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
 			id: "D1B5C5FCB5319D25"
 			title: "All Drinks: Apple Cider"
 			icon: "farmersdelight:apple_cider"
 			shape: "rsquare"
 			size: 1.0d
-			x: 11.5d
+			x: 1.5d
 			y: 13.75d
 			tasks: [
 				{
@@ -8132,7 +4460,7 @@
 			icon: "farmersdelight:baked_cod_stew"
 			shape: "rsquare"
 			size: 1.0d
-			x: 12.75d
+			x: 2.75d
 			y: 13.75d
 			tasks: [
 				{
@@ -8150,7 +4478,7 @@
 			icon: "farmersdelight:beef_stew"
 			shape: "rsquare"
 			size: 1.0d
-			x: 14.0d
+			x: 4.0d
 			y: 13.75d
 			tasks: [
 				{
@@ -8168,7 +4496,7 @@
 			icon: "farmersdelight:bone_broth"
 			shape: "rsquare"
 			size: 1.0d
-			x: 15.25d
+			x: 5.25d
 			y: 13.75d
 			tasks: [
 				{
@@ -8186,7 +4514,7 @@
 			icon: "farmersdelight:chicken_soup"
 			shape: "rsquare"
 			size: 1.0d
-			x: 16.5d
+			x: 6.5d
 			y: 13.75d
 			tasks: [
 				{
@@ -8204,7 +4532,7 @@
 			icon: "farmersdelight:chocolate_pie_slice"
 			shape: "rsquare"
 			size: 1.0d
-			x: 17.75d
+			x: 7.75d
 			y: 13.75d
 			tasks: [
 				{
@@ -8222,7 +4550,7 @@
 			icon: "farmersdelight:fish_stew"
 			shape: "rsquare"
 			size: 1.0d
-			x: 19.0d
+			x: 9.0d
 			y: 13.75d
 			tasks: [
 				{
@@ -8240,7 +4568,7 @@
 			icon: "farmersdelight:noodle_soup"
 			shape: "rsquare"
 			size: 1.0d
-			x: 20.25d
+			x: 10.25d
 			y: 13.75d
 			tasks: [
 				{
@@ -8258,8 +4586,8 @@
 			icon: "farmersdelight:pumpkin_soup"
 			shape: "rsquare"
 			size: 1.0d
-			x: 1.5d
-			y: 15.0d
+			x: 11.5d
+			y: 13.75d
 			tasks: [
 				{
 					id: "7FF8339073494EFC"
@@ -8276,8 +4604,8 @@
 			icon: "farmersdelight:steak_and_potatoes"
 			shape: "rsquare"
 			size: 1.0d
-			x: 2.75d
-			y: 15.0d
+			x: 12.75d
+			y: 13.75d
 			tasks: [
 				{
 					id: "FE05A858478118ED"
@@ -8294,8 +4622,8 @@
 			icon: "farmersdelight:vegetable_soup"
 			shape: "rsquare"
 			size: 1.0d
-			x: 4.0d
-			y: 15.0d
+			x: 14.0d
+			y: 13.75d
 			tasks: [
 				{
 					id: "F4FAD4C900BADAA3"
@@ -8312,8 +4640,8 @@
 			icon: "immersive_weathering:azalea_flowers"
 			shape: "rsquare"
 			size: 1.0d
-			x: 5.25d
-			y: 15.0d
+			x: 15.25d
+			y: 13.75d
 			tasks: [
 				{
 					id: "1D706D39CB45541F"
@@ -8330,8 +4658,8 @@
 			icon: "minecraft:beetroot_soup"
 			shape: "rsquare"
 			size: 1.0d
-			x: 6.5d
-			y: 15.0d
+			x: 16.5d
+			y: 13.75d
 			tasks: [
 				{
 					id: "DD1157417548E5BB"
@@ -8348,8 +4676,8 @@
 			icon: "minecraft:mushroom_stew"
 			shape: "rsquare"
 			size: 1.0d
-			x: 7.75d
-			y: 15.0d
+			x: 17.75d
+			y: 13.75d
 			tasks: [
 				{
 					id: "24A1FE1066C111B9"
@@ -8366,8 +4694,8 @@
 			icon: "minecraft:rabbit_stew"
 			shape: "rsquare"
 			size: 1.0d
-			x: 9.0d
-			y: 15.0d
+			x: 19.0d
+			y: 13.75d
 			tasks: [
 				{
 					id: "EF7F088D76108741"
@@ -8384,8 +4712,8 @@
 			icon: "minecraft:suspicious_stew"
 			shape: "rsquare"
 			size: 1.0d
-			x: 10.25d
-			y: 15.0d
+			x: 20.25d
+			y: 13.75d
 			tasks: [
 				{
 					id: "30520EB1B3ACB68D"
@@ -8397,355 +4725,13 @@
 			rewards: [ ]
 		}
 		{
-			id: "FF80D81C3C28C317"
-			title: "All Drinks: Blue Tenderloin Steak"
-			icon: "mynethersdelight:blue_tenderloin_steak"
-			shape: "rsquare"
-			size: 1.0d
-			x: 11.5d
-			y: 15.0d
-			tasks: [
-				{
-					id: "B7ACDAF9AFED30A1"
-					type: "item"
-					item: "mynethersdelight:blue_tenderloin_steak"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "C89C53004261DC14"
-			title: "All Drinks: Egg Soup"
-			icon: "mynethersdelight:egg_soup"
-			shape: "rsquare"
-			size: 1.0d
-			x: 12.75d
-			y: 15.0d
-			tasks: [
-				{
-					id: "39E6461FD0E79650"
-					type: "item"
-					item: "mynethersdelight:egg_soup"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "83CF579548C1162A"
-			title: "All Drinks: Rock Soup"
-			icon: "mynethersdelight:rock_soup"
-			shape: "rsquare"
-			size: 1.0d
-			x: 14.0d
-			y: 15.0d
-			tasks: [
-				{
-					id: "EB854015BBD07EA5"
-					type: "item"
-					item: "mynethersdelight:rock_soup"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "54B937652F085665"
-			title: "All Drinks: Spicy Hoglin Stew"
-			icon: "mynethersdelight:spicy_hoglin_stew"
-			shape: "rsquare"
-			size: 1.0d
-			x: 15.25d
-			y: 15.0d
-			tasks: [
-				{
-					id: "5ABD2745BC7FC18F"
-					type: "item"
-					item: "mynethersdelight:spicy_hoglin_stew"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "CC0C2990D5A7FD4B"
-			title: "All Drinks: Spicy Noodle Soup"
-			icon: "mynethersdelight:spicy_noodle_soup"
-			shape: "rsquare"
-			size: 1.0d
-			x: 16.5d
-			y: 15.0d
-			tasks: [
-				{
-					id: "2F51A4D0DB26009C"
-					type: "item"
-					item: "mynethersdelight:spicy_noodle_soup"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "C3CCDDA449E822FC"
-			title: "All Drinks: Strider Stew"
-			icon: "mynethersdelight:strider_stew"
-			shape: "rsquare"
-			size: 1.0d
-			x: 17.75d
-			y: 15.0d
-			tasks: [
-				{
-					id: "7E0F6112CA76C610"
-					type: "item"
-					item: "mynethersdelight:strider_stew"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "81E03C6C13A35BD6"
-			title: "All Drinks: Tear Popsicle"
-			icon: "mynethersdelight:tear_popsicle"
-			shape: "rsquare"
-			size: 1.0d
-			x: 19.0d
-			y: 15.0d
-			tasks: [
-				{
-					id: "D31F50EEF8D26FAE"
-					type: "item"
-					item: "mynethersdelight:tear_popsicle"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "6C9A9F93EE5FA1C9"
-			title: "All Drinks: Bell Pepper Soup"
-			icon: "rusticdelight:bell_pepper_soup"
-			shape: "rsquare"
-			size: 1.0d
-			x: 20.25d
-			y: 15.0d
-			tasks: [
-				{
-					id: "640ECC609FE74C6C"
-					type: "item"
-					item: "rusticdelight:bell_pepper_soup"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "6E08AC0AC5EA2DA9"
-			title: "All Drinks: Chocolate Coffee"
-			icon: "rusticdelight:chocolate_coffee"
-			shape: "rsquare"
-			size: 1.0d
-			x: 1.5d
-			y: 16.25d
-			tasks: [
-				{
-					id: "99A13055EDCA6729"
-					type: "item"
-					item: "rusticdelight:chocolate_coffee"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "F43F59CD412FD237"
-			title: "All Drinks: Chocolate Pancake"
-			icon: "rusticdelight:chocolate_pancake"
-			shape: "rsquare"
-			size: 1.0d
-			x: 2.75d
-			y: 16.25d
-			tasks: [
-				{
-					id: "2C2A83F2215288AD"
-					type: "item"
-					item: "rusticdelight:chocolate_pancake"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "A0E3F372637360CD"
-			title: "All Drinks: Coffee"
-			icon: "rusticdelight:coffee"
-			shape: "rsquare"
-			size: 1.0d
-			x: 4.0d
-			y: 16.25d
-			tasks: [
-				{
-					id: "AEA1E2A8C2F79583"
-					type: "item"
-					item: "rusticdelight:coffee"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "11A0FB022ACD3115"
-			title: "All Drinks: Coffee Braised Beef"
-			icon: "rusticdelight:coffee_braised_beef"
-			shape: "rsquare"
-			size: 1.0d
-			x: 5.25d
-			y: 16.25d
-			tasks: [
-				{
-					id: "82ED895E99B5B13E"
-					type: "item"
-					item: "rusticdelight:coffee_braised_beef"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "AAFD6BAD12CC9216"
-			title: "All Drinks: Coffee Cookie"
-			icon: "rusticdelight:coffee_cookie"
-			shape: "rsquare"
-			size: 1.0d
-			x: 6.5d
-			y: 16.25d
-			tasks: [
-				{
-					id: "617667A44E5C7429"
-					type: "item"
-					item: "rusticdelight:coffee_cookie"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "5C802060AB919A1C"
-			title: "All Drinks: Dark Coffee"
-			icon: "rusticdelight:dark_coffee"
-			shape: "rsquare"
-			size: 1.0d
-			x: 7.75d
-			y: 16.25d
-			tasks: [
-				{
-					id: "340CB2F761E8F21C"
-					type: "item"
-					item: "rusticdelight:dark_coffee"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "E83484FC28286757"
-			title: "All Drinks: Golden Coffee Beans"
-			icon: "rusticdelight:golden_coffee_beans"
-			shape: "rsquare"
-			size: 1.0d
-			x: 9.0d
-			y: 16.25d
-			tasks: [
-				{
-					id: "9CFF4012120A585A"
-					type: "item"
-					item: "rusticdelight:golden_coffee_beans"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "DA1566ADEB924CCB"
-			title: "All Drinks: Honey Coffee"
-			icon: "rusticdelight:honey_coffee"
-			shape: "rsquare"
-			size: 1.0d
-			x: 10.25d
-			y: 16.25d
-			tasks: [
-				{
-					id: "13D5C4EED5E5342E"
-					type: "item"
-					item: "rusticdelight:honey_coffee"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "16DE326238679D50"
-			title: "All Drinks: Milk Coffee"
-			icon: "rusticdelight:milk_coffee"
-			shape: "rsquare"
-			size: 1.0d
-			x: 11.5d
-			y: 16.25d
-			tasks: [
-				{
-					id: "4E7D154A24039D6D"
-					type: "item"
-					item: "rusticdelight:milk_coffee"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "E3C272E9D1D5542A"
-			title: "All Drinks: Roasted Coffee Beans"
-			icon: "rusticdelight:roasted_coffee_beans"
-			shape: "rsquare"
-			size: 1.0d
-			x: 12.75d
-			y: 16.25d
-			tasks: [
-				{
-					id: "E3D6E62DF187138C"
-					type: "item"
-					item: "rusticdelight:roasted_coffee_beans"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "03BC1BCC3D48E5D3"
-			title: "All Drinks: Syrup Coffee"
-			icon: "rusticdelight:syrup_coffee"
-			shape: "rsquare"
-			size: 1.0d
-			x: 14.0d
-			y: 16.25d
-			tasks: [
-				{
-					id: "C7EAD81856936AEC"
-					type: "item"
-					item: "rusticdelight:syrup_coffee"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
 			id: "B94E716CB69384D8"
 			title: "All Drinks: Meat Soup"
 			icon: "tconstruct:meat_soup"
 			shape: "rsquare"
 			size: 1.0d
-			x: 15.25d
-			y: 16.25d
+			x: 1.5d
+			y: 15.0d
 			tasks: [
 				{
 					id: "1383FEE431EA1C6C"
@@ -8762,8 +4748,8 @@
 			icon: "ubesdelight:milk_tea_ube"
 			shape: "rsquare"
 			size: 1.0d
-			x: 16.5d
-			y: 16.25d
+			x: 2.75d
+			y: 15.0d
 			tasks: [
 				{
 					id: "CEEA55D420168922"
@@ -8780,8 +4766,8 @@
 			icon: "undergarden:bloody_stew"
 			shape: "rsquare"
 			size: 1.0d
-			x: 17.75d
-			y: 16.25d
+			x: 4.0d
+			y: 15.0d
 			tasks: [
 				{
 					id: "28DFD4739D8D913C"
@@ -8798,8 +4784,8 @@
 			icon: "undergarden:dweller_steak"
 			shape: "rsquare"
 			size: 1.0d
-			x: 19.0d
-			y: 16.25d
+			x: 5.25d
+			y: 15.0d
 			tasks: [
 				{
 					id: "EFA9FFCE1C657FE8"
@@ -8816,8 +4802,8 @@
 			icon: "undergarden:indigo_stew"
 			shape: "rsquare"
 			size: 1.0d
-			x: 20.25d
-			y: 16.25d
+			x: 6.5d
+			y: 15.0d
 			tasks: [
 				{
 					id: "D4A8566EB0C62EEB"
@@ -8834,8 +4820,8 @@
 			icon: "undergarden:inky_stew"
 			shape: "rsquare"
 			size: 1.0d
-			x: 1.5d
-			y: 17.5d
+			x: 7.75d
+			y: 15.0d
 			tasks: [
 				{
 					id: "C71015BB115705E2"
@@ -8852,157 +4838,13 @@
 			icon: "undergarden:veiled_stew"
 			shape: "rsquare"
 			size: 1.0d
-			x: 2.75d
-			y: 17.5d
+			x: 9.0d
+			y: 15.0d
 			tasks: [
 				{
 					id: "FBC8B26115E0B90A"
 					type: "item"
 					item: "undergarden:veiled_stew"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "52630354A4569BEA"
-			title: "All Drinks: Broccoli Soup"
-			icon: "veggiesdelight:broccoli_soup"
-			shape: "rsquare"
-			size: 1.0d
-			x: 4.0d
-			y: 17.5d
-			tasks: [
-				{
-					id: "3ABD02C03F4E5674"
-					type: "item"
-					item: "veggiesdelight:broccoli_soup"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "49809DFDD8BC06B9"
-			title: "All Drinks: Carrot Juice"
-			icon: "veggiesdelight:carrot_juice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 5.25d
-			y: 17.5d
-			tasks: [
-				{
-					id: "55C2BE90FD6BAC57"
-					type: "item"
-					item: "veggiesdelight:carrot_juice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "4A8E245CEB1932D8"
-			title: "All Drinks: Cauliflower Soup"
-			icon: "veggiesdelight:cauliflower_soup"
-			shape: "rsquare"
-			size: 1.0d
-			x: 6.5d
-			y: 17.5d
-			tasks: [
-				{
-					id: "37AA90819A1B16A6"
-					type: "item"
-					item: "veggiesdelight:cauliflower_soup"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "F3D56DD9C020D470"
-			title: "All Drinks: Dandelion Juice"
-			icon: "veggiesdelight:dandelion_juice"
-			shape: "rsquare"
-			size: 1.0d
-			x: 7.75d
-			y: 17.5d
-			tasks: [
-				{
-					id: "C0A8ADCA79265FD4"
-					type: "item"
-					item: "veggiesdelight:dandelion_juice"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "A7D515A5ED5BB2D6"
-			title: "All Drinks: Garlic Chicken Stew"
-			icon: "veggiesdelight:garlic_chicken_stew"
-			shape: "rsquare"
-			size: 1.0d
-			x: 9.0d
-			y: 17.5d
-			tasks: [
-				{
-					id: "0D2760E7FA8CAF39"
-					type: "item"
-					item: "veggiesdelight:garlic_chicken_stew"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "D6D2A0083E3BE544"
-			title: "All Drinks: Steak And Broccoli"
-			icon: "veggiesdelight:steak_and_broccoli"
-			shape: "rsquare"
-			size: 1.0d
-			x: 10.25d
-			y: 17.5d
-			tasks: [
-				{
-					id: "3E5B012C0C353256"
-					type: "item"
-					item: "veggiesdelight:steak_and_broccoli"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "59CC73D72A06A1CA"
-			title: "All Drinks: Turnip Beef Stew"
-			icon: "veggiesdelight:turnip_beef_stew"
-			shape: "rsquare"
-			size: 1.0d
-			x: 11.5d
-			y: 17.5d
-			tasks: [
-				{
-					id: "3661E77C36DD5BB1"
-					type: "item"
-					item: "veggiesdelight:turnip_beef_stew"
-					count: 1
-				}
-			]
-			rewards: [ ]
-		}
-		{
-			id: "A71C5398CEF72F1B"
-			title: "All Drinks: Turnip Water"
-			icon: "veggiesdelight:turnip_water"
-			shape: "rsquare"
-			size: 1.0d
-			x: 12.75d
-			y: 17.5d
-			tasks: [
-				{
-					id: "735DC95CC7F86EA9"
-					type: "item"
-					item: "veggiesdelight:turnip_water"
 					count: 1
 				}
 			]

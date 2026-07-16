@@ -4299,6 +4299,9 @@ fun buildServerBundle(exportsDir: Path, serverTreeDir: Path, serverZip: Path, cl
         )
         if (install.exitCode != 0) return install
     }
+    deleteTree(serverTreeDir.resolve(".java-tmp"))
+    Files.deleteIfExists(serverTreeDir.resolve(installer.fileName))
+    Files.deleteIfExists(serverTreeDir.resolve("forge-$forgeCoord-installer.jar.log"))
     mirrorRepoDatapacks(serverTreeDir.resolve("world"))
     deleteTree(serverTreeDir.resolve("world"))
     deleteTree(serverTreeDir.resolve("logs"))
@@ -4325,19 +4328,18 @@ This bundle is generated from the repository source plus server-side packwiz dow
     writeLocalServerProperties(serverTreeDir.resolve("server.properties"), defaultServerPort, onlineMode = true)
     Files.writeString(serverTreeDir.resolve("user_jvm_args.txt"), "-Xms2G\n-Xmx6G\n-XX:+UseG1GC\n-Dfile.encoding=UTF-8\n")
     serverZip.parent.createDirectories()
-    val jar = runProcess(
+    Files.deleteIfExists(serverZip)
+    val archive = runProcess(
         listOf(
-            javaBin.replace("/bin/java", "/bin/jar"),
-            "--create",
-            "--file",
+            "zip",
+            "-q",
+            "-r",
             serverZip.toString(),
-            "-C",
-            serverTreeDir.parent.toString(),
             serverTreeDir.fileName.toString(),
         ),
-        extraEnv = javaTempEnvironment(exportsDir.parent),
+        workDir = serverTreeDir.parent,
     )
-    return if (jar.exitCode == 0) ProcessRun(0, "Complete server tree exported to $serverZip") else jar
+    return if (archive.exitCode == 0) ProcessRun(0, "Complete server tree exported to $serverZip") else archive
 }
 
 fun handleDoctor(subArgs: List<String>): CommandResult {
@@ -5525,7 +5527,7 @@ fun handleBuild(subArgs: List<String>): CommandResult {
                     )
                 }
                 "server" -> {
-                    val prereqs = ensureCommands("packwiz")
+                    val prereqs = ensureCommands("packwiz", "zip")
                     if (prereqs.isNotEmpty()) return prereqFailure("bundle prerequisites missing", prereqs)
                     if (!detectJava17()) return prereqFailure("Java 17 is required for build bundle server")
                     var exportsDir = defaultExportsDir

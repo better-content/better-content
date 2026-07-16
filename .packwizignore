@@ -18,6 +18,7 @@ generated/custom-mod-sources/
 logs
 /libraries/
 /modpack questbook notes
+/options.txt
 /pca.sh
 /run.bat
 /run.sh

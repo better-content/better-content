@@ -11,8 +11,11 @@
       "samples": 1,
       "serverOnly": true,
       "checks": [
-        "starter_viability",
-        "deposit_y_bands",
+        "replacement_ore_density",
+        "replacement_ore_diversity",
+        "vanilla_ore_exclusion",
+        "adlod_surface_signal",
+        "tectonic_depth",
         "hard_log_scan"
       ]
     },
@@ -27,7 +30,11 @@
       "samples": 3,
       "serverOnly": true,
       "checks": [
-        "starter_viability",
+        "replacement_ore_density",
+        "replacement_ore_diversity",
+        "vanilla_ore_exclusion",
+        "adlod_surface_signal",
+        "tectonic_depth",
         "deposit_distribution",
         "structure_route_frequency",
         "lava_depth_contact",

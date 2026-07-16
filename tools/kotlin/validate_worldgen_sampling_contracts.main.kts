@@ -17,7 +17,11 @@ val requiredNeedles = listOf(
     "\"release\"",
     "\"seedCount\": 3",
     "\"seedCount\": 12",
-    "\"starter_viability\"",
+    "\"replacement_ore_density\"",
+    "\"replacement_ore_diversity\"",
+    "\"vanilla_ore_exclusion\"",
+    "\"adlod_surface_signal\"",
+    "\"tectonic_depth\"",
     "\"hard_log_scan\"",
 )
 val missing = requiredNeedles.filterNot(text::contains)
@@ -67,3 +71,18 @@ if (!stress.contains("tools/bc") || !stress.contains("unearthed-replacement") ||
     exitProcess(1)
 }
 println("Unearthed replacement regression contract validates")
+
+val oreAuditPath = root.resolve("kubejs/server_scripts/90_dev_debug/55_ore_worldgen_audit.js")
+val oreAudit = if (Files.isRegularFile(oreAuditPath)) Files.readString(oreAuditPath) else ""
+val requiredOreNeedles = listOf(
+    "bc_ore_audit",
+    "BC_FORBIDDEN_VANILLA_ORES",
+    "[BC-ORE-AUDIT]",
+    "surface_samples=",
+)
+val missingOreAudit = requiredOreNeedles.filterNot(oreAudit::contains)
+if (missingOreAudit.isNotEmpty() || !stress.contains("realistic_ore_blocks") || !stress.contains("vanilla_ore_blocks")) {
+    System.err.println("FAIL - ore worldgen regression integration is incomplete")
+    exitProcess(1)
+}
+println("ore worldgen regression contract validates")

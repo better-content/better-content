@@ -239,11 +239,32 @@ fun hasFatalLogText(text: String): String? {
     return checks.entries.firstOrNull { it.value.containsMatchIn(text) }?.key
 }
 
+val oreAuditMarker = Regex("""\[BC-ORE-AUDIT]([^\r\n]+)""")
+val oreAuditValue = Regex("""([a-z_]+)=(-?\d+)""")
+
+fun oreAuditCount(paths: List<Path>): Int =
+    paths.sumOf { oreAuditMarker.findAll(tailText(it)).count() }
+
+fun waitForOreAudit(paths: List<Path>, previousCount: Int, process: Process): Map<String, Int> {
+    val deadline = System.currentTimeMillis() + 300_000L
+    while (System.currentTimeMillis() < deadline) {
+        if (!process.isAlive) error("ore audit exited with ${process.exitValue()}")
+        val matches = paths.flatMap { oreAuditMarker.findAll(tailText(it)).toList() }
+        if (matches.size > previousCount) {
+            return oreAuditValue.findAll(matches.last().groupValues[1]).associate {
+                it.groupValues[1] to it.groupValues[2].toInt()
+            }
+        }
+        Thread.sleep(1000)
+    }
+    error("ore audit timed out")
+}
+
 val root = Paths.get("").toAbsolutePath().normalize()
 val config = parseConfig(args)
 config.runRoot.createDirectories()
 if (!config.keepRuns && config.bootstrapMode == "once") deleteTree(config.runRoot.resolve("prepared"))
-val readyPattern = Regex("""Done \([\d.]+s\)! For help, type "help"""")
+val readyPattern = Regex("""World started, doDaylightCycle is delayed until first player join""")
 
 var failed = false
 for (cycle in 1..config.cycles) {
@@ -277,22 +298,49 @@ for (cycle in 1..config.cycles) {
 
     var server: RunningServer? = null
     var cyclePassed = true
+    var auditedOreBlocks = 0
+    var auditedFamilies = 0
+    var auditedVanillaOres = 0
+    var auditedSurfaceSamples = 0
+    var auditedOverworldSamples = 0
     try {
         val cyclePort = if (config.bootstrapMode == "always") config.basePort + cycle - 1 else config.basePort
         server = startServer(serverDir, cyclePort, evidenceDir)
-        val logs = listOf(serverDir.resolve("logs/latest.log"), server.logPath)
+        // The dedicated evidence log is created for this process; latest.log may still contain a prior run during startup.
+        val logs = listOf(server.logPath)
         waitForPattern(logs, readyPattern, 900, server.process, "server boot")
+        Thread.sleep(5000L)
         for (dimension in config.dimensions) {
             for (sample in 0 until config.samples) {
-                val cx = sample * (config.radius * 4 + 24)
-                val cz = sample * (config.radius * -3 - 21)
-                sendCommand(server, "execute in $dimension run forceload add ${cx - config.radius} ${cz - config.radius} ${cx + config.radius} ${cz + config.radius}")
-                Thread.sleep(config.settleSeconds * 1000L)
+                // Keep census chunks outside spawn preparation and reusable-runtime history.
+                val cx = 2000 + sample * (config.radius * 4 + 24)
+                val cz = 2000 + sample * (config.radius * -3 - 21)
+                if (dimension == "minecraft:overworld") {
+                    val previousAudits = oreAuditCount(logs)
+                    sendCommand(server, "bc_ore_audit ${cx - config.radius} ${cz - config.radius} ${cx + config.radius} ${cz + config.radius}")
+                    val audit = waitForOreAudit(logs, previousAudits, server.process)
+                    auditedOverworldSamples++
+                    auditedOreBlocks += audit["realistic_ore_blocks"] ?: 0
+                    auditedFamilies = maxOf(auditedFamilies, audit["realistic_families"] ?: 0)
+                    auditedVanillaOres += audit["vanilla_ore_blocks"] ?: 0
+                    auditedSurfaceSamples += audit["surface_samples"] ?: 0
+                    if (audit["min_y"] != -128) error("Tectonic depth regression: min_y=${audit["min_y"]}")
+                } else {
+                    sendCommand(server, "execute in $dimension run forceload add ${(cx - config.radius) * 16} ${(cz - config.radius) * 16} ${(cx + config.radius + 1) * 16 - 1} ${(cz + config.radius + 1) * 16 - 1}")
+                    Thread.sleep(config.settleSeconds * 1000L)
+                }
                 val text = logs.joinToString("\n") { tailText(it) }
                 hasFatalLogText(text)?.let { error("fatal classifier tripped: $it") }
                 println("cycle $cycle: sampled $dimension [${sample + 1}/${config.samples}]")
             }
-            sendCommand(server, "execute in $dimension run forceload remove all")
+            if (dimension != "minecraft:overworld") sendCommand(server, "execute in $dimension run forceload remove all")
+        }
+        if (auditedOverworldSamples > 0) {
+            if (auditedOreBlocks < 100 * auditedOverworldSamples) error("replacement ore density regression: $auditedOreBlocks blocks")
+            if (auditedFamilies < 5) error("replacement ore diversity regression: $auditedFamilies families")
+            if (auditedVanillaOres != 0) error("vanilla ore exclusion regression: $auditedVanillaOres blocks")
+            if (auditedSurfaceSamples == 0) error("ADLOD surface signal regression: no samples in audited chunks")
+            println("cycle $cycle: ore audit blocks=$auditedOreBlocks families=$auditedFamilies vanilla=$auditedVanillaOres samples=$auditedSurfaceSamples")
         }
     } catch (error: Throwable) {
         failed = true

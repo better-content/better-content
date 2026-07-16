@@ -1,6 +1,6 @@
 # Automated Pack Test Report
 
-Generated: 2026-07-16T02:06:26.942591304Z
+Generated: 2026-07-16T07:02:26.157895464Z
 
 Repo: `/home/dev/workspace`
 
@@ -15,16 +15,17 @@ Data dump evidence mode: `opportunistic`
 ## Result
 | Class         | Count |
 | ------------- | ----- |
-| Passes        | 19    |
+| Passes        | 18    |
 | Hard failures | 0     |
-| Soft findings | 0     |
+| Soft findings | 1     |
 | Skipped       | 2     |
 ## Hard Failures
 | Test | Detail |
 | ---- | ------ |
 ## Soft Findings
-| Rank | Test | Detail |
-| ---- | ---- | ------ |
+| Rank   | Test                              | Detail              |
+| ------ | --------------------------------- | ------------------- |
+| SHOULD | spawn preparation budget exceeded | 64231 ms > 60000 ms |
 ## Passes
 | Test                                                                | Detail                                  |
 | ------------------------------------------------------------------- | --------------------------------------- |
@@ -38,15 +39,14 @@ Data dump evidence mode: `opportunistic`
 | runtime minecraft:planks item tag keeps vanilla and mahogany planks | 133 values                              |
 | generic wood storage fallback routes remain registered              |                                         |
 | representative wood-specific recipes remain specialized             |                                         |
-| performance budget: runtime core tag regression validation          | 566.59 ms <= 1500 ms                    |
-| latest engine log is recent                                         | 0.04 minutes old                        |
+| performance budget: runtime core tag regression validation          | 566.5 ms <= 1500 ms                     |
+| latest engine log is recent                                         | 0.08 minutes old                        |
 | engine reached dedicated server startup                             |                                         |
 | world became playable/servable                                      |                                         |
-| spawn preparation budget                                            | 32027 ms <= 60000 ms                    |
 | server tick-behind budget                                           | 0 warnings, max 0 ms                    |
-| world save budget                                                   | 1363 ms <= 10000 ms                     |
+| world save budget                                                   | 1643 ms <= 10000 ms                     |
 | hard engine log failure scan                                        |                                         |
-| performance budget: engine and world performance log analysis       | 607.41 ms <= 750 ms                     |
+| performance budget: engine and world performance log analysis       | 659.69 ms <= 750 ms                     |
 ## Skipped
 | Test                                        | Detail                                                  |
 | ------------------------------------------- | ------------------------------------------------------- |
@@ -55,5 +55,5 @@ Data dump evidence mode: `opportunistic`
 ## Metrics
 
 ```json
-{"runtimeCoreTagRecipeGraph":{"path":"/home/dev/.cache/bc/dimension-worldgen/prepared/server/generated/runtime-dumps/recipes.json", "sizeBytes":28692378}, "runtimeCoreTagConsumers":{"logs":55, "logs_that_burn":1, "wooden_buttons":6, "wooden_slabs":86, "wooden_doors":6, "wooden_pressure_plates":7, "wooden_stairs":3, "wooden_trapdoors":3, "fence_gates":1, "wooden_fences":6}, "engineWorld":{"latestLog":"/home/dev/.cache/bc/dimension-worldgen/prepared/server/logs/latest.log", "latestLogAgeMinutes":0.04, "latestLogLines":26850, "reachedIntegratedServer":false, "reachedDedicatedServer":true, "startedServingLan":false, "reachedInGame":true, "spawnPrepTimeMs":32027, "serverTickBehindWarnings":0, "maxTickBehindMs":0, "distantHorizonsIncompleteTasks":0, "emiTotalReloadMs":null, "kubejsRecipeParseErrors":0, "kubejsFailedRecipeCount":0, "newestCrashReport":null, "newestCrashReportAfterLatestLog":false, "hardLogScanOk":true, "hardLogScan":"ok - hard log failure scan (/home/dev/.cache/bc/dimension-worldgen/prepared/server/logs/latest.log)"}, "performance":{"budgetsMs":{"JSON and JS syntax validation":8000, "critical progression surfaces":750, "progression parenting and economy validation":2500, "pack contract validation":1000, "contract completeness classification":1000, "autonomous contract validation":1500, "quest book validation":250, "Wares and villager trade validation":250, "repo loot data validation":500, "runtime core tag regression validation":1500, "generated recipe graph validation":5000, "generated loot dump validation":2500, "engine and world performance log analysis":750, "Realistic Hands validation":2000, "KubeJS asset validation":2000, "chemistry identity validation":1500, "dev dump health validation":50, "plank regression static validation":250}, "hardLimitsMs":{"JSON and JS syntax validation":24000, "critical progression surfaces":3000, "progression parenting and economy validation":10000, "pack contract validation":5000, "contract completeness classification":5000, "autonomous contract validation":6000, "quest book validation":1500, "Wares and villager trade validation":1500, "repo loot data validation":3000, "runtime core tag regression validation":6000, "generated recipe graph validation":20000, "generated loot dump validation":10000, "engine and world performance log analysis":1500, "Realistic Hands validation":5000, "KubeJS asset validation":5000, "chemistry identity validation":4000, "dev dump health validation":500, "plank regression static validation":1500}, "results":[{"name":"runtime core tag regression validation", "durationMs":566.59, "budgetMs":1500, "hardLimitMs":6000}, {"name":"engine and world performance log analysis", "durationMs":607.41, "budgetMs":750, "hardLimitMs":1500}]}}
+{"runtimeCoreTagRecipeGraph":{"path":"/home/dev/.cache/bc/dimension-worldgen/prepared/server/generated/runtime-dumps/recipes.json", "sizeBytes":28692378}, "runtimeCoreTagConsumers":{"logs":55, "logs_that_burn":1, "wooden_buttons":6, "wooden_slabs":86, "wooden_doors":6, "wooden_pressure_plates":7, "wooden_stairs":3, "wooden_trapdoors":3, "fence_gates":1, "wooden_fences":6}, "engineWorld":{"latestLog":"/home/dev/.cache/bc/dimension-worldgen/prepared/server/logs/latest.log", "latestLogAgeMinutes":0.08, "latestLogLines":27187, "reachedIntegratedServer":false, "reachedDedicatedServer":true, "startedServingLan":false, "reachedInGame":true, "spawnPrepTimeMs":64231, "serverTickBehindWarnings":0, "maxTickBehindMs":0, "distantHorizonsIncompleteTasks":0, "emiTotalReloadMs":null, "kubejsRecipeParseErrors":0, "kubejsFailedRecipeCount":0, "newestCrashReport":null, "newestCrashReportAfterLatestLog":false, "hardLogScanOk":true, "hardLogScan":"ok - hard log failure scan (/home/dev/.cache/bc/dimension-worldgen/prepared/server/logs/latest.log)"}, "performance":{"budgetsMs":{"JSON and JS syntax validation":8000, "critical progression surfaces":750, "progression parenting and economy validation":2500, "pack contract validation":1000, "contract completeness classification":1000, "autonomous contract validation":1500, "quest book validation":250, "Wares and villager trade validation":250, "repo loot data validation":500, "runtime core tag regression validation":1500, "generated recipe graph validation":5000, "generated loot dump validation":2500, "engine and world performance log analysis":750, "Realistic Hands validation":2000, "KubeJS asset validation":2000, "chemistry identity validation":1500, "dev dump health validation":50, "plank regression static validation":250}, "hardLimitsMs":{"JSON and JS syntax validation":24000, "critical progression surfaces":3000, "progression parenting and economy validation":10000, "pack contract validation":5000, "contract completeness classification":5000, "autonomous contract validation":6000, "quest book validation":1500, "Wares and villager trade validation":1500, "repo loot data validation":3000, "runtime core tag regression validation":6000, "generated recipe graph validation":20000, "generated loot dump validation":10000, "engine and world performance log analysis":1500, "Realistic Hands validation":5000, "KubeJS asset validation":5000, "chemistry identity validation":4000, "dev dump health validation":500, "plank regression static validation":1500}, "results":[{"name":"runtime core tag regression validation", "durationMs":566.5, "budgetMs":1500, "hardLimitMs":6000}, {"name":"engine and world performance log analysis", "durationMs":659.69, "budgetMs":750, "hardLimitMs":1500}]}}
 ```

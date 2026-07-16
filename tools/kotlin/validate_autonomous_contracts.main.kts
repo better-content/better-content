@@ -865,7 +865,7 @@ fun validateWorldgenStaticContractsImpl() {
     if (forbiddenIds.isEmpty()) ok("RBP generated whitelist excludes lifecycle/progression/decor-sensitive blocks") else fail("RBP generated whitelist excludes lifecycle/progression/decor-sensitive blocks", forbiddenIds.take(20).joinToString(", "))
     val tectonic = readJson("config/tectonic.json")
     val terrain = jsonObject(tectonic["global_terrain"])
-    if ((jsonNumber(terrain["min_y"])?.toInt() == -64) && bool(terrain["lava_tunnels"]) == true) ok("Tectonic Overworld exposes lava-depth terrain band", "min_y=${jsonNumber(terrain["min_y"])}, lava_tunnels=${bool(terrain["lava_tunnels"])}")
+    if ((jsonNumber(terrain["min_y"])?.toInt() == -128) && bool(terrain["lava_tunnels"]) == true) ok("Tectonic Overworld exposes lava-depth terrain band", "min_y=${jsonNumber(terrain["min_y"])}, lava_tunnels=${bool(terrain["lava_tunnels"])}")
     else fail("Tectonic Overworld exposes lava-depth terrain band", "min_y=${jsonNumber(terrain["min_y"])}, lava_tunnels=${bool(terrain["lava_tunnels"])}")
     val adlodDeposits = walk("config/adlods/Deposits") { it.endsWith(".cfg") }
     if (adlodDeposits.size >= 40) ok("ADLODS deposit surface covers bulk and strategic geology", "${adlodDeposits.size} deposits") else fail("ADLODS deposit surface covers bulk and strategic geology", "${adlodDeposits.size} < 40")
@@ -883,7 +883,7 @@ fun validateWorldgenStaticContractsImpl() {
     val invalidCompositeFields = adlodCompositeHosts.mapNotNull { (file, host) ->
         val path = "config/adlods/Deposits/$file"
         val text = read(path)
-        if (host in text && "#minecraft:deepslate_ore_replaceables" in text && "realisticores:crushed_" in text) null else path
+        if (host in text && "#realisticores:overworld_ore_replaceables" in text && "realisticores:crushed_" in text) null else path
     }
     if (invalidCompositeFields.isEmpty()) ok("ADLODS bulk fields use host-correct Realistic Ores geology", "${adlodCompositeHosts.size} representatives")
     else fail("ADLODS bulk fields use host-correct Realistic Ores geology", invalidCompositeFields.joinToString(", "))
@@ -902,9 +902,14 @@ fun validateWorldgenStaticContractsImpl() {
         val text = read("config/adlods/Deposits/$id.cfg")
         "minecraft:lava -> realisticores:deepslate_${id}_ore" !in text ||
             "realisticores:crushed_${id}_ore" !in text ||
-            "I:min=-64" !in text || "I:max=0" !in text
+            "I:min=-128" !in text || "I:max=512" !in text
     }
-    if (invalidFissileFields.isEmpty()) ok("uranium and thorium are signalled ADLODS lava fields") else fail("uranium and thorium are signalled ADLODS lava fields", invalidFissileFields.joinToString(", "))
+    if (invalidFissileFields.isEmpty()) ok("uranium and thorium are full-height signalled ADLODS lava fields") else fail("uranium and thorium are full-height signalled ADLODS lava fields", invalidFissileFields.joinToString(", "))
+
+    val commonBulkRarities = mapOf("coal.cfg" to 32, "iron.cfg" to 32, "copper.cfg" to 48, "tin.cfg" to 64, "zinc.cfg" to 64, "lead.cfg" to 64)
+    val sparseBulkFields = commonBulkRarities.filter { (file, rarity) -> "I:rarity=$rarity" !in read("config/adlods/Deposits/$file") }
+    if (sparseBulkFields.isEmpty()) ok("ADLODS parent fields are regional rather than lottery-rare", "${commonBulkRarities.size} bulk representatives")
+    else fail("ADLODS parent fields are regional rather than lottery-rare", sparseBulkFields.keys.joinToString(", "))
 
     val oilSizes = mapOf("oil_small" to "I:max=120", "oil_medium" to "I:max=600", "oil_large" to "I:max=3000", "oil_huge" to "I:max=12000")
     val invalidOilFields = oilSizes.mapNotNull { (id, sizeMarker) ->
@@ -1020,7 +1025,7 @@ fun validateWorldgenStaticContractsImpl() {
     val hyleStoneReplacer = readJson("datapacks/hyle_deep/data/hyle/worldgen/placed_feature/stone_replacer.json")
     val hylePlacement = jsonArray(hyleStoneReplacer["placement"])
     val hyleStoneReplacerY = jsonNumber(jsonObject(jsonObject(hylePlacement.firstOrNull())["height"])["value"]?.let(::jsonObject)?.get("absolute"))?.toInt()
-    if (hyleStoneReplacerY == -64) ok("Hyle stone replacement starts at world bottom", "y=$hyleStoneReplacerY")
+    if (hyleStoneReplacerY == -128) ok("Hyle stone replacement starts at world bottom", "y=$hyleStoneReplacerY")
     else fail("Hyle stone replacement starts at world bottom", "y=$hyleStoneReplacerY")
 
     val hyleConfigured = readJson("datapacks/hyle_deep/data/hyle/worldgen/configured_feature/stone_replacer.json")
@@ -1110,13 +1115,13 @@ fun validateWorldgenStaticContractsImpl() {
     val lavaPlaced = walk("datapacks/realistic_ores_lava_depths/data/realisticores/worldgen/placed_feature") { it.endsWith(".json") }
     val lavaPlacementFailures = lavaPlaced.filter { file ->
         val text = read(file)
-        "minecraft:block_predicate_filter" !in text || "minecraft:matching_fluids" !in text || "minecraft:lava" !in text || "\"absolute\": -64" !in text || "\"absolute\": 0" !in text
+        "minecraft:block_predicate_filter" !in text || "minecraft:matching_fluids" !in text || "minecraft:lava" !in text || "\"absolute\": -128" !in text || "\"absolute\": 0" !in text
     }
     if (lavaPlacementFailures.isEmpty()) ok("lava-depth placed features are height-bounded and lava-contact filtered", "${lavaPlaced.size} placed features")
     else fail("lava-depth placed features are height-bounded and lava-contact filtered", lavaPlacementFailures.joinToString(", "))
 
     val spawnerText = read("config/incontrol/spawner.json")
-    val missingLavaSpawnerMarkers = listOf("minecraft:magma_cube", "\"inlava\": true", "\"minheight\": -64", "\"maxheight\": 0").filterNot(spawnerText::contains)
+    val missingLavaSpawnerMarkers = listOf("minecraft:magma_cube", "\"inlava\": true", "\"minheight\": -128", "\"maxheight\": 0").filterNot(spawnerText::contains)
     if (missingLavaSpawnerMarkers.isEmpty()) ok("lava-depth danger spawner targets lava diving band") else fail("lava-depth danger spawner targets lava diving band", missingLavaSpawnerMarkers.joinToString(", "))
 
     val contract = readJson("tools/pack_contract.json")
@@ -1150,6 +1155,29 @@ fun validateWorldgenStaticContractsImpl() {
     if (invalidCaveCounts.isEmpty()) ok("Realistic Ores cave frequencies use the halved ore-pass budget", "${expectedCaveCounts.size} deposits")
     else fail("Realistic Ores cave frequencies use the halved ore-pass budget", invalidCaveCounts.distinct().joinToString(", "))
 
+    val replacedVanillaOres = listOf("coal", "copper", "diamond", "emerald", "gold", "iron", "lapis", "redstone")
+    val restoredVanillaOres = replacedVanillaOres.filter { ore ->
+        "S:generation=none" !in read("config/adlods/VanillaOres/${ore}_ore.cfg")
+    }
+    val copiedBiomeOres = walk("datapacks/dt_forest_worldgen_fix/data/minecraft/worldgen/biome") { it.endsWith(".json") }.filter { file ->
+        Regex("minecraft:ore_(coal|copper|diamond|emerald|gold|iron|lapis|redstone)").containsMatchIn(read(file))
+    }
+    if (restoredVanillaOres.isEmpty() && copiedBiomeOres.isEmpty()) {
+        ok("overridden vanilla ores stay disabled across ADLODS and copied biome data")
+    } else fail(
+        "overridden vanilla ores stay disabled across ADLODS and copied biome data",
+        (restoredVanillaOres + copiedBiomeOres).joinToString(", ")
+    )
+
+    val oreHostTag = readJson("datapacks/hyle_deep/data/realisticores/tags/blocks/overworld_ore_replaceables.json")
+    val oreHostValues = jsonArray(oreHostTag["values"]).mapNotNull(::jsonString)
+    val configuredOreFeatures = walk("generated/custom-mod-sources/realistic-ores/src/main/resources/data/realisticores/worldgen/configured_feature") { it.endsWith(".json") }
+    val wrongOreHosts = configuredOreFeatures.filter { "realisticores:overworld_ore_replaceables" !in read(it) }
+    val hasCurrentSchistId = "unearthed:schist" in oreHostValues && oreHostValues.none { it.matches(Regex("unearthed:schist_[xyz]")) }
+    if (oreHostValues.count { it.startsWith("unearthed:") } >= 16 && hasCurrentSchistId && wrongOreHosts.isEmpty()) {
+        ok("Realistic Ores veins replace active Hyle/Unearthed strata", "${configuredOreFeatures.size} features, ${oreHostValues.size} hosts")
+    } else fail("Realistic Ores veins replace active Hyle/Unearthed strata", wrongOreHosts.joinToString(", "))
+
     val modBlocksPath = realisticOresRoot.resolve("src/main/java/io/github/realisticores/registry/ModBlocks.java")
     val sampleBlockPath = realisticOresRoot.resolve("src/main/java/io/github/realisticores/block/SurfaceSampleBlock.java")
     val sampleSourceText = listOf(modBlocksPath, sampleBlockPath).filter { Files.exists(it) }.joinToString("\n") { Files.readString(it) }
@@ -1157,6 +1185,17 @@ fun validateWorldgenStaticContractsImpl() {
     val ironSampleState = realisticOresRoot.resolve("src/main/resources/assets/realisticores/blockstates/crushed_ironstone.json")
     if (missingSampleMarkers.isEmpty() && ironSampleState.exists()) ok("crushed ores register as placeable collectible surface samples")
     else fail("crushed ores register as placeable collectible surface samples", missingSampleMarkers.joinToString(", "))
+
+    val sampleModelRoot = realisticOresRoot.resolve("src/main/resources/assets/realisticores/models/block")
+    val sampleGeometrySignatures = if (sampleModelRoot.exists()) Files.list(sampleModelRoot).use { paths ->
+        paths.filter { it.fileName.toString().matches(Regex("crushed_.+_[0-4]\\.json")) }
+            .toList()
+            .groupBy { it.fileName.toString().replace(Regex("_[0-4]\\.json$"), "") }
+            .mapValues { (_, models) -> models.sorted().joinToString("|") { path -> jsonArray(readJson(path.toString())["elements"]).toString() } }
+    } else emptyMap()
+    if (sampleGeometrySignatures.size >= 20 && sampleGeometrySignatures.values.toSet().size == sampleGeometrySignatures.size) {
+        ok("crushed ore surface samples use unique per-ore geometry", "${sampleGeometrySignatures.size} material scatters")
+    } else fail("crushed ore surface samples use unique per-ore geometry", "${sampleGeometrySignatures.values.toSet().size}/${sampleGeometrySignatures.size} unique")
 
     val osmiridiumDefinitionPath = Paths.get(sourceRoot, "realistic-ores/src/main/resources/data/realisticores/realistic_ores/osmiridium_lava_sulfide.json")
     val osmiridiumDefinitionText = if (osmiridiumDefinitionPath.exists()) Files.readString(osmiridiumDefinitionPath) else ""

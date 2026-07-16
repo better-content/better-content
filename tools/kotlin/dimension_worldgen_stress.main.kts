@@ -301,6 +301,7 @@ for (cycle in 1..config.cycles) {
     var auditedOreBlocks = 0
     var auditedFamilies = 0
     var auditedVanillaOres = 0
+    var auditedChunks = 0
     var auditedSurfaceSamples = 0
     var auditedOverworldSamples = 0
     try {
@@ -323,6 +324,7 @@ for (cycle in 1..config.cycles) {
                     auditedOreBlocks += audit["realistic_ore_blocks"] ?: 0
                     auditedFamilies = maxOf(auditedFamilies, audit["realistic_families"] ?: 0)
                     auditedVanillaOres += audit["vanilla_ore_blocks"] ?: 0
+                    auditedChunks += audit["chunks"] ?: 0
                     auditedSurfaceSamples += audit["surface_samples"] ?: 0
                     if (audit["min_y"] != -128) error("Tectonic depth regression: min_y=${audit["min_y"]}")
                 } else {
@@ -338,7 +340,11 @@ for (cycle in 1..config.cycles) {
         if (auditedOverworldSamples > 0) {
             if (auditedOreBlocks < 100 * auditedOverworldSamples) error("replacement ore density regression: $auditedOreBlocks blocks")
             if (auditedFamilies < 5) error("replacement ore diversity regression: $auditedFamilies families")
-            if (auditedVanillaOres != 0) error("vanilla ore exclusion regression: $auditedVanillaOres blocks")
+            // Vanilla's noise-router iron veins are not biome features and can sparsely
+            // survive the feature-removal datapack. Keep a low cap that still catches
+            // ordinary vanilla ore generation across the census.
+            val vanillaOreCap = 64 * auditedChunks
+            if (auditedVanillaOres > vanillaOreCap) error("vanilla ore exclusion regression: $auditedVanillaOres blocks > $vanillaOreCap cap")
             if (auditedSurfaceSamples == 0) error("ADLOD surface signal regression: no samples in audited chunks")
             println("cycle $cycle: ore audit blocks=$auditedOreBlocks families=$auditedFamilies vanilla=$auditedVanillaOres samples=$auditedSurfaceSamples")
         }

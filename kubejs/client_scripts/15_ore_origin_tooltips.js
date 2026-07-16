@@ -128,16 +128,16 @@ var BC_REALISTIC_ORE_ORIGINS = [
     },
     {
         name: 'Uranium ore',
-        source: 'Signalled strategic lava field',
-        detail: 'ADLODS-localized uranium replaces lava in the Y -64 to 0 diving band.',
+        source: 'Signalled strategic deposit',
+        detail: 'Scarce ADLODS-localized rock deposit across the full Overworld build range, Y -128 to 512.',
         processing: 'Crush for uranium with lead, thorium, and calcium traces.',
         blocks: ['realisticores:uranium_ore', 'realisticores:deepslate_uranium_ore'],
         crushed: 'realisticores:crushed_uranium_ore'
     },
     {
         name: 'Thorium ore',
-        source: 'Signalled strategic lava field',
-        detail: 'ADLODS-localized thorium replaces lava in the Y -64 to 0 diving band.',
+        source: 'Signalled strategic deposit',
+        detail: 'Scarce ADLODS-localized rock deposit across the full Overworld build range, Y -128 to 512.',
         processing: 'Crush for thorium with uranium and lead traces.',
         blocks: ['realisticores:thorium_ore', 'realisticores:deepslate_thorium_ore'],
         crushed: 'realisticores:crushed_thorium_ore'

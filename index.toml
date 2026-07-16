@@ -1234,7 +1234,7 @@ hash = "21ea298c7d585d39bb29deab074b81c94f69d59a5bf2885dbfa1f5a90dca0c7e"
 
 [[files]]
 file = "config/adlods/Deposits/thorium.cfg"
-hash = "bd6718685a49f94f836cfc22cfdb5ee43e43282d307d6e8f7ac4ff85ecc66213"
+hash = "8192b137557bc011f70caf2407dec8a6954fbfca708b44519db826d0ef01d5d9"
 
 [[files]]
 file = "config/adlods/Deposits/tin.cfg"
@@ -1254,7 +1254,7 @@ hash = "4ddda5924ac16b23b9ffb6c0a8deffa87931d7ebf1e791c4df673a83499da74e"
 
 [[files]]
 file = "config/adlods/Deposits/uranium.cfg"
-hash = "c64c257edda5495b3dcf430601037b040a426683056c70811ad87fe53703cc6f"
+hash = "d41c99801f8253f7ab671010f2d1bdb919013c392483883af6f7fcb4559a7491"
 
 [[files]]
 file = "config/adlods/Deposits/zinc.cfg"
@@ -7834,23 +7834,23 @@ hash = "0b21eea8110a92ad130cbb27bd221f532c43f296ba1424954ce8bf76802c82fa"
 
 [[files]]
 file = "datapacks/fallout_wasteland_biome_fix/data/fallout_wastelands_/worldgen/biome/wasteland_badlands.json"
-hash = "a2e404f515d7b32a8a016593e44a7e29dad28faf428378074807293b3df02900"
+hash = "7bc1d39af8f57d95b94c640a25c4bf30a7394fc811a9ee1a0289af978bc79c1b"
 
 [[files]]
 file = "datapacks/fallout_wasteland_biome_fix/data/fallout_wastelands_/worldgen/biome/wasteland_city.json"
-hash = "9d8e66022e730c6c1ee536ce4977ae622347d7f471254e77a149f39bcb3bd339"
+hash = "da30107378869e6b6935fe5a8dad7276fff36c7bfd360ef9456dbc63329848e1"
 
 [[files]]
 file = "datapacks/fallout_wasteland_biome_fix/data/fallout_wastelands_/worldgen/biome/wasteland_dryland.json"
-hash = "90e0a4854a2f328f72157f77a37ddbd8f67eda0a1b44a81023ab85a576190a67"
+hash = "1d2369e9d260128e849853b21c64b29768b7c61db732d737c902db1344e3b64f"
 
 [[files]]
 file = "datapacks/fallout_wasteland_biome_fix/data/fallout_wastelands_/worldgen/biome/wasteland_plains.json"
-hash = "fc56aaee94107771867994a264923fe7c9c6b5156323e91319f4716c80684bc6"
+hash = "96ff8e2aa787aac73511ac94a594f6a7484dbe2b0e3ee8ea3344576d930f5503"
 
 [[files]]
 file = "datapacks/fallout_wasteland_biome_fix/data/fallout_wastelands_/worldgen/biome/wasteland_sea.json"
-hash = "a4b6b962b8cdc1dc8fb57d5211409b82a1e2e5df68eb8222280717e9b7ba93f6"
+hash = "6e464bdc768ec1904a5441b643a9fdc0d29e1622f8be73279be5e487f12a245e"
 
 [[files]]
 file = "datapacks/fallout_wasteland_biome_fix/pack.mcmeta"
@@ -9442,7 +9442,7 @@ hash = "6b66f43c5a8ad14538b5785ad5aaa837ba529783fe5dda9653d3abd4b208e90c"
 
 [[files]]
 file = "kubejs/client_scripts/15_ore_origin_tooltips.js"
-hash = "95f49b0e54f45f0713f9fc38053d9124bba2f19715b70dcd0975d295cfad92a4"
+hash = "63c1b78441a052411a2c49d33defd1cf6d4d2ed6894aad7db512d4b93c915d6a"
 
 [[files]]
 file = "kubejs/client_scripts/20_hide_vanilla_tools.js"
@@ -10770,7 +10770,7 @@ hash = "24c62acdb6c0d3d64166b27deb0fe2b6e74eb59a8540bfe960cc27cefc6a8056"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/110_extreme_y_band_reward_gates.js"
-hash = "9623c36b32ab3e2ef3453b3ebce56296a9709c856e5f43db24b3163103736402"
+hash = "df69809ae0ed43dfc1e9e34cca769cfc978f5648ccdcc886563a030d8aef67be"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/115_material_economy_recipe_pass.js"

@@ -900,11 +900,14 @@ fun validateWorldgenStaticContractsImpl() {
     val fissileFiles = listOf("uranium", "thorium")
     val invalidFissileFields = fissileFiles.filter { id ->
         val text = read("config/adlods/Deposits/$id.cfg")
-        "minecraft:lava -> realisticores:deepslate_${id}_ore" !in text ||
+        "#minecraft:stone_ore_replaceables -> realisticores:${id}_ore" !in text ||
+            "#minecraft:deepslate_ore_replaceables -> realisticores:deepslate_${id}_ore" !in text ||
+            "#realisticores:overworld_ore_replaceables" !in text ||
+            "minecraft:lava" in text ||
             "realisticores:crushed_${id}_ore" !in text ||
             "I:min=-128" !in text || "I:max=512" !in text
     }
-    if (invalidFissileFields.isEmpty()) ok("uranium and thorium are full-height signalled ADLODS lava fields") else fail("uranium and thorium are full-height signalled ADLODS lava fields", invalidFissileFields.joinToString(", "))
+    if (invalidFissileFields.isEmpty()) ok("uranium and thorium are full-height signalled rock-hosted ADLODS fields") else fail("uranium and thorium are full-height signalled rock-hosted ADLODS fields", invalidFissileFields.joinToString(", "))
 
     val commonBulkRarities = mapOf("coal.cfg" to 32, "iron.cfg" to 32, "copper.cfg" to 48, "tin.cfg" to 64, "zinc.cfg" to 64, "lead.cfg" to 64)
     val sparseBulkFields = commonBulkRarities.filter { (file, rarity) -> "I:rarity=$rarity" !in read("config/adlods/Deposits/$file") }
@@ -1159,7 +1162,7 @@ fun validateWorldgenStaticContractsImpl() {
     val restoredVanillaOres = replacedVanillaOres.filter { ore ->
         "S:generation=none" !in read("config/adlods/VanillaOres/${ore}_ore.cfg")
     }
-    val copiedBiomeOres = walk("datapacks/dt_forest_worldgen_fix/data/minecraft/worldgen/biome") { it.endsWith(".json") }.filter { file ->
+    val copiedBiomeOres = walk("datapacks") { it.endsWith(".json") && "/worldgen/biome/" in it }.filter { file ->
         Regex("minecraft:ore_(coal|copper|diamond|emerald|gold|iron|lapis|redstone)").containsMatchIn(read(file))
     }
     if (restoredVanillaOres.isEmpty() && copiedBiomeOres.isEmpty()) {

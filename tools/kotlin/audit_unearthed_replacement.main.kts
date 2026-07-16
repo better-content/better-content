@@ -17,7 +17,9 @@ import kotlin.system.exitProcess
 val CUTOFF_Y = 64
 val MIN_FULL_CHUNKS = 9
 val MIN_UNDERGROUND_UNEARTHED_PER_CHUNK = 1_000L
-val MIN_ABOVEGROUND_UNEARTHED_PER_CHUNK = 100L
+// Exposed rock is biome- and terrain-shape-dependent; require broad evidence without
+// assuming every sampled chunk contains a cliff or bare mountainside.
+val MIN_ABOVEGROUND_UNEARTHED_PER_CHUNK = 25L
 val MIN_ABOVEGROUND_REGOLITH_PER_CHUNK = 5L
 val MAX_UNDERGROUND_ROCK_RATIO = 0.0001
 val MAX_ABOVEGROUND_ROCK_RATIO = 0.001

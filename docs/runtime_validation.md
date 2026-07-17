@@ -27,6 +27,7 @@ tools/bc test scenario-headful dimension_worldgen --cycles 1 --radius 1 --sample
 tools/bc test scenario lc_tfth_c2me_dh --samples 4 --settle-seconds 30 --bootstrap-mode once
 tools/bc test scenario mod_ram_partition --bootstrap-mode once
 tools/bc test scenario opening_progression --cycles 1 --bootstrap-mode once
+tools/bc test scenario progression_milestones --bootstrap-mode once
 tools/bc test scenario worldgen_sampling --profile local --bootstrap-mode once
 tools/bc test scenario worldgen_sampling --profile quick --bootstrap-mode once
 tools/bc test scenario worldgen_sampling --profile release --bootstrap-mode once
@@ -194,6 +195,15 @@ tools/bc test scenario opening_progression --cycles 1 --bootstrap-mode once
 ```
 
 Expected validation: a fresh disposable pack server boots normally, then the `sam validate_opening_progression` runtime validator proves gravel hand-breakability, hand denial on stone and logs, live flint availability from placed gravel, straw drops from placed tall grass cut with the primitive butcher knife, runtime primitive recipe presence for the butcher knife and hand axe, and first log access with the crafted primitive hand axe.
+
+Progression milestone runtime validation:
+
+```bash
+tools/bc test scenario progression_milestones --bootstrap-mode once
+tools/bc test scenario progression_milestones --phase create_brass --bootstrap-mode once
+```
+
+This disposable-server lane injects the reobfuscated `bc_validation_probe` only after runtime preparation; it is never part of pack exports. It checks every declared milestone output and recipe ID against the live registry/recipe manager, preserves the existing opening runtime proof, and writes machine-readable phase evidence under its run root. Operational machine fixtures and negative controls are added as each tier receives a concrete runtime cell.
 
 Worldgen sampling:
 

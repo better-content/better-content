@@ -109,6 +109,7 @@ Use the portable harness layer for repeatable runtime tests instead of hand-buil
   - `mod_ram_partition`
   - `dimension_worldgen`
   - `opening_progression`
+  - `progression_milestones`
   - `pillager_campaigns`
   - `worldgen_sampling`
   - `worldgen_marketing_screenshots`

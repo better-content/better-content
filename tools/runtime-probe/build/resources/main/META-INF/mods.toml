@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="bc_validation_probe"
+version="0.1.0"
+displayName="Better Content Validation Probe"
+authors="Better Content"
+description='''Disposable runtime-only progression validation probe. Not pack content.'''
+
+[[dependencies.bc_validation_probe]]
+modId="forge"
+mandatory=true
+versionRange="[47.4.13,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.bc_validation_probe]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.bc_validation_probe]]
+modId="kotlinforforge"
+mandatory=true
+versionRange="[4.11.0,)"
+ordering="NONE"
+side="BOTH"

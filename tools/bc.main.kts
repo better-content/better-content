@@ -283,6 +283,11 @@ val scenarios = linkedMapOf(
         "Opening progression runtime validation",
         "tools/kotlin/opening_progression_runtime_validation.main.kts",
     ),
+    "progression_milestones" to ScenarioDefinition(
+        "progression_milestones",
+        "Disposable runtime milestone registry and route validation",
+        "tools/kotlin/progression_milestones.main.kts",
+    ),
     "pillager_campaigns" to ScenarioDefinition(
         "pillager_campaigns",
         "Deterministic pillager campaigns captain/warlord regression lane",
@@ -451,7 +456,7 @@ Commands:
 """.trimIndent()
 
 fun internalHelp(): String = """
-Usage: tools/bc internal <resolve-packwiz-downloads|prune-runtime-mods|log-hard-failure-scan|prepare-server-runtime|prepare-client-runtime|minecraft-client-argfile|sync-burnt-coverage-tags|generate-completionist-quests|audit-ftbq-layout|check-js-syntax|check-json-surface|validate-bettergrassify-grass-blocks|validate-pack-contract|contract-completeness-report|validate-kubejs-assets|validate-autonomous-contracts|validate-realistic-hands|validate-dynamic-trees-coverage|validate-chemistry-identity|validate-synthesis-pipeline|validate-player-progression-contracts|validate-progression-reachability|validate-burnt-coverage|validate-lc-tfth-dh-contracts|validate-kotlin-tool-surface|validate-tool-doc-surface|validate-worldgen-sampling-contracts|validate-client-smoke-contracts|verify-pack-fast|verify-pack-full> ...
+Usage: tools/bc internal <resolve-packwiz-downloads|prune-runtime-mods|log-hard-failure-scan|prepare-server-runtime|prepare-client-runtime|inject-validation-probe|minecraft-client-argfile|sync-burnt-coverage-tags|generate-completionist-quests|audit-ftbq-layout|check-js-syntax|check-json-surface|validate-bettergrassify-grass-blocks|validate-pack-contract|contract-completeness-report|validate-kubejs-assets|validate-autonomous-contracts|validate-realistic-hands|validate-dynamic-trees-coverage|validate-chemistry-identity|validate-synthesis-pipeline|validate-player-progression-contracts|validate-progression-reachability|validate-burnt-coverage|validate-lc-tfth-dh-contracts|validate-kotlin-tool-surface|validate-tool-doc-surface|validate-worldgen-sampling-contracts|validate-client-smoke-contracts|verify-pack-fast|verify-pack-full> ...
 """.trimIndent()
 
 fun usageError(message: String, help: String = mainHelp()): CommandResult =
@@ -2519,6 +2524,28 @@ fun bootstrapServerRuntime(serverDir: Path, port: Int, reset: Boolean): ProcessR
     }
     deleteTree(bundleWorkRoot)
     return ProcessRun(0, "Bootstrapped server runtime: $serverDir")
+}
+
+fun injectValidationProbe(runtimeDir: Path, contract: Path): ProcessRun {
+    if (!runtimeDir.resolve("run.sh").exists()) return ProcessRun(2, "prepared runtime missing: $runtimeDir")
+    if (!contract.exists()) return ProcessRun(2, "progression validation contract missing: $contract")
+    val probeRoot = root.resolve("tools/runtime-probe")
+    val wrapper = root.resolve("generated/custom-mod-sources/pillager-campaigns/gradlew")
+    if (!probeRoot.resolve("build.gradle.kts").exists() || !wrapper.exists()) {
+        return ProcessRun(2, "validation probe build surface is incomplete")
+    }
+    val build = runProcess(listOf(wrapper.toString(), "-p", probeRoot.toString(), "reobfJar"), stream = false)
+    if (build.exitCode != 0) return ProcessRun(build.exitCode, "validation probe build failed\n${build.output}")
+    val jar = probeRoot.resolve("build/reobfJar/output.jar")
+    if (!jar.exists()) return ProcessRun(1, "validation probe reobfJar did not produce $jar")
+    val mods = runtimeDir.resolve("mods")
+    mods.createDirectories()
+    val deployed = mods.resolve("bc-validation-probe-0.1.0.jar")
+    Files.copy(jar, deployed, StandardCopyOption.REPLACE_EXISTING)
+    val configDir = runtimeDir.resolve("config/bc-validation-probe")
+    configDir.createDirectories()
+    Files.copy(contract, configDir.resolve("progression_milestones.json"), StandardCopyOption.REPLACE_EXISTING)
+    return ProcessRun(0, "Injected validation probe: $deployed\nsha256=${sha256(deployed)}\ncontract=${configDir.resolve("progression_milestones.json")}")
 }
 
 fun bootstrapClientRuntime(clientDir: Path): ProcessRun {
@@ -4597,6 +4624,22 @@ fun handleInternal(subArgs: List<String>): CommandResult {
             val run = bootstrapClientRuntime(path)
             CommandResult("internal prepare-client-runtime", if (run.exitCode == 0) "success" else "failure", run.output, artifacts = listOf(ArtifactRef(path.toString(), "directory")), exitCode = if (run.exitCode == 0) 0 else 1, mutated = true)
         }
+        "inject-validation-probe" -> {
+            var runtimeDir: String? = null
+            var contract: String? = null
+            var index = 1
+            while (index < subArgs.size) {
+                when (subArgs[index]) {
+                    "--runtime-dir" -> { runtimeDir = subArgs.getOrNull(index + 1) ?: return usageError("--runtime-dir is required", internalHelp()); index += 2 }
+                    "--contract" -> { contract = subArgs.getOrNull(index + 1) ?: return usageError("--contract is required", internalHelp()); index += 2 }
+                    else -> return usageError("unknown argument: ${subArgs[index]}", internalHelp())
+                }
+            }
+            val runtime = resolveUserPath(runtimeDir ?: return usageError("--runtime-dir is required", internalHelp()))
+            val contractPath = resolveUserPath(contract ?: return usageError("--contract is required", internalHelp()))
+            val run = injectValidationProbe(runtime, contractPath)
+            CommandResult("internal inject-validation-probe", if (run.exitCode == 0) "success" else "failure", run.output, artifacts = listOf(ArtifactRef(runtime.resolve("mods/bc-validation-probe-0.1.0.jar").toString())), exitCode = if (run.exitCode == 0) 0 else 1, mutated = run.exitCode == 0)
+        }
         "minecraft-client-argfile" -> {
             var clientDir: String? = null
             var versionId: String? = null
@@ -5014,6 +5057,7 @@ fun scenarioDefaultRunRoot(name: String, args: List<String>): Path {
     if (explicit != null) return resolveUserPath(explicit)
     return when (name) {
         "opening_progression" -> cachePath("opening-progression")
+        "progression_milestones" -> cachePath("progression-milestones")
         "lc_tfth_c2me_dh" -> cachePath("lc-c2me-dh-repro")
         "mod_ram_partition" -> cachePath("mod-ram-partition")
         "dimension_worldgen", "worldgen_sampling" -> cachePath("dimension-worldgen")

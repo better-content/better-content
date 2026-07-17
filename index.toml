@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "AGENTS.md"
-hash = "75b78f82975fe69e691ebe4cac7aef892b60252966eb3c2467c1371e07f179ee"
+hash = "f21e0dda95ac64c50bf1a92cfb5f13783af779a392cfa1fe81ddb2685a1739d0"
 
 [[files]]
 file = "LICENSE"
@@ -9174,7 +9174,7 @@ hash = "dc753044f39d65b2a0106b3ea4005dd10287e94c4ce1cc7d5bb4f9948bbb37c2"
 
 [[files]]
 file = "kubejs/config/player_progression_regression.json"
-hash = "67ff25c6ac0d9ccac7c364913dac0ae75c51ed566d5c062d6b46933c3ec67ebb"
+hash = "0310adb74cb627452ee368f80ec9e361a14ce3af4eb8a5de86b49a8a3fd2d3f7"
 
 [[files]]
 file = "kubejs/config/progression_reachability_sources.json"

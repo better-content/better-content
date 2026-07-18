@@ -67,7 +67,7 @@ tools/bc doctor runtime --instance /path/to/fresh/runtime
 - `tools/bc internal validate-kotlin-tool-surface` fails if active `tools/` contains `.py` or `.sh` files outside `tools/quarantine/`.
 - `tools/bc internal validate-lc-tfth-dh-contracts` is a source-level Lost Cities/C2ME/DH guard contract and is included in `tools/bc test static`; it does not launch Minecraft.
 
-Realistic Hands static regressions now cover explicit `bcfixes:realistic_hands/*` tag coverage for primitive loose-earth surfaces, representative knife/sword separation, first-class tool coverage, primitive flint/bone/rock butcher knife and hand axe recipes, Farmer's Delight straw-harvester knife tags, and ore/deepslate hardness probe coverage. The retained runtime hardness assertion currently expects deepslate ore variants at `+1.5` destroy-time over their stone counterparts when `generated/runtime-dumps/block_hardness_probe.json` exists.
+Realistic Hands static regressions now require a single no-tree-punching block tag backed by `#minecraft:logs`, a single accepted-tool tag backed by `#forge:tools/axes`, and no other runtime Realistic Hands policy files. They also verify that the exhaustive tag matrix and knife loot implementation remain quarantined, while the primitive butcher knife and hand axe recipes stay craftable. A fresh smoke runtime loaded the narrowed log and axe tags without tag rejection and passed the strict pack suite. The follow-up `opening_progression` scenario remained inconclusive because its prerequisite smoke stopped on missing aboveground Unearthed replacement evidence before the opening assertions ran. Ore/deepslate hardness probes remain independent worldgen evidence rather than harvesting gates.
 
 Player progression regressions are data-driven by `kubejs/config/player_progression_regression.json` plus the authoritative parenting/acquisition manifests in `kubejs/config/tech_parenting.json`, `magic_parenting.json`, `economy_acquisition.json`, and `surface_registry.json`. `tools/bc internal validate-player-progression-contracts` now checks the primitive tool route, the full machine casing ladder, Blood Magic heart/orb/slate authority, Creating Space dimension routes, reward-surface bypass bans, direct coin-crafting bans, Font coin-only payouts, registered recipe/acquisition surfaces, and parenting coverage for retained craftable outputs. Effective recipe graph route reachability still requires a refreshed strict runtime dump.
 
@@ -194,7 +194,7 @@ Opening progression runtime validation:
 tools/bc test scenario opening_progression --cycles 1 --bootstrap-mode once
 ```
 
-Expected validation: a fresh disposable pack server boots normally, then the `sam validate_opening_progression` runtime validator proves gravel hand-breakability, hand denial on stone and logs, live flint availability from placed gravel, straw drops from placed tall grass cut with the primitive butcher knife, runtime primitive recipe presence for the butcher knife and hand axe, and first log access with the crafted primitive hand axe.
+Expected validation: a fresh disposable pack server boots normally, then the `sam validate_opening_progression` runtime validator proves gravel, stone, and vegetation remain outside the custom hand gate; live flint is available from placed gravel; the primitive butcher knife and hand axe recipes are present; bare-hand logs are denied; and the crafted primitive hand axe unlocks the first log.
 
 Progression milestone runtime validation:
 

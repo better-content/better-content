@@ -653,12 +653,42 @@ fun validateVanillaStyleToolSuppression() {
 }
 
 fun validateRealisticHands() {
-    val audit = readJson("generated/runtime-dumps/realistic_hands_audit.json")
-    val blockTags = jsonObject(audit["blockTags"]).mapValues { (_, values) -> jsonArray(values).mapNotNull(::jsonString).toSet() }
-    if ("minecraft:gravel" in (blockTags["hand"] ?: emptySet())) ok("Realistic Hands explicit hand tag keeps gravel hand-breakable")
-    else fail("Realistic Hands explicit hand tag keeps gravel hand-breakable", "minecraft:gravel missing frombcfixes:realistic_hands/hand")
-    if ("unearthed:siltstone_regolith" in (blockTags["force_harvest"] ?: emptySet())) ok("Realistic Hands force-harvest tag covers siltstone regolith")
-    else fail("Realistic Hands force-harvest tag covers siltstone regolith", "unearthed:siltstone_regolith missing frombcfixes:realistic_hands/force_harvest")
+    val tagRoot = "generated/custom-mod-sources/better-content-fixes/src/main/resources/data/bcfixes/tags"
+    val blockTag = readJson("$tagRoot/blocks/realistic_hands/axe.json")
+    val itemTag = readJson("$tagRoot/items/realistic_hands/tools/axe.json")
+    val blockValues = jsonArray(blockTag["values"]).mapNotNull(::jsonString).toSet()
+    val itemValues = jsonArray(itemTag["values"]).mapNotNull(::jsonString).toSet()
+    if (blockValues == setOf("#minecraft:logs") && itemValues == setOf("#forge:tools/axes")) {
+        ok("Realistic Hands retains only the no-tree-punching tag gate")
+    } else fail("Realistic Hands retains only the no-tree-punching tag gate", "blocks=$blockValues tools=$itemValues")
+    val blockFiles = walk("$tagRoot/blocks/realistic_hands") { it.endsWith(".json") }
+    val itemFiles = walk("$tagRoot/items/realistic_hands/tools") { it.endsWith(".json") }
+    if (blockFiles.size == 1 && itemFiles.size == 1) ok("Realistic Hands runtime tags exclude exhaustive policy data")
+    else fail("Realistic Hands runtime tags exclude exhaustive policy data", "blockFiles=${blockFiles.size} itemFiles=${itemFiles.size}")
+    val quarantine = "generated/custom-mod-sources/better-content-fixes/quarantine/realistic-hands-exhaustive-policy"
+    if (exists("$quarantine/README.md") && exists("$quarantine/resources/tags/blocks/knife.json") && exists("$quarantine/java/RealisticHandsKnifeLootModifier.java")) {
+        ok("exhaustive Realistic Hands policy remains quarantined outside runtime resources")
+    } else fail("exhaustive Realistic Hands policy remains quarantined outside runtime resources", quarantine)
+    val retiredLogOverrides = "tools/quarantine/realistic-hands-exhaustive-policy/retired-log-tag-overrides"
+    val activeLogs = readJson("kubejs/data/minecraft/tags/blocks/logs.json")
+    val activeBurnableLogs = readJson("kubejs/data/minecraft/tags/blocks/logs_that_burn.json")
+    val activeItemLogs = readJson("kubejs/data/minecraft/tags/items/logs.json")
+    val activeBurnableItemLogs = readJson("kubejs/data/minecraft/tags/items/logs_that_burn.json")
+    val coreLogTags = setOf("#minecraft:acacia_logs", "#minecraft:birch_logs", "#minecraft:cherry_logs", "#minecraft:dark_oak_logs", "#minecraft:jungle_logs", "#minecraft:mangrove_logs", "#minecraft:oak_logs", "#minecraft:spruce_logs")
+    if (jsonArray(activeLogs["values"]).mapNotNull(::jsonString).toSet() == coreLogTags &&
+        jsonArray(activeBurnableLogs["values"]).mapNotNull(::jsonString).toSet() == coreLogTags &&
+        jsonArray(activeItemLogs["values"]).mapNotNull(::jsonString).toSet() == coreLogTags &&
+        jsonArray(activeBurnableItemLogs["values"]).mapNotNull(::jsonString).toSet() == coreLogTags &&
+        exists("$retiredLogOverrides/logs.json") && exists("$retiredLogOverrides/logs_that_burn.json") &&
+        exists("$retiredLogOverrides/item_logs.json") && exists("$retiredLogOverrides/item_logs_that_burn.json")) {
+        ok("stale pack-wide Minecraft log overrides remain quarantined")
+    } else fail("stale pack-wide Minecraft log overrides remain quarantined", retiredLogOverrides)
+    val compat = read("generated/custom-mod-sources/better-content-fixes/src/main/java/io/github/bcfixes/compat/RealisticHandsCompat.java")
+    val requiredCompat = listOf("state.is(RealisticHandsTags.AXE)", "stack.is(RealisticHandsTags.AXE_TOOLS)")
+    val forbiddenCompat = listOf("RealisticHandsTags.KNIFE", "RealisticHandsTags.PICKAXE", "damageKnife")
+    val compatProblems = requiredCompat.filterNot(compat::contains) + forbiddenCompat.filter(compat::contains)
+    if (compatProblems.isEmpty()) ok("Forge enforcement is scoped to logs and axes")
+    else fail("Forge enforcement is scoped to logs and axes", compatProblems.joinToString(", "))
     val retiredHook = read("kubejs/startup_scripts/20_blocks/20_realistic_hands.js")
     val retiredAssignments = read("kubejs/startup_scripts/99_realistic_hands_assignments.js")
     val retiredLoot = read("kubejs/server_scripts/50_loot/11_realistic_hands_outcomes.js")
@@ -671,25 +701,7 @@ fun validateRealisticHands() {
 // Remaining sections are direct text/JSON audits translated from the JS validator.
 // They stay explicit rather than abstract so the contract remains easy to diff against the original source.
 fun validatePrimitiveMiningRegressionContracts() = validateByNodeParity("validatePrimitiveMiningRegressionContracts") {
-    val audit = readJson("generated/runtime-dumps/realistic_hands_audit.json")
-    val blockSets = jsonObject(audit["blockTags"]).mapValues { (_, values) -> jsonArray(values).mapNotNull(::jsonString).toSet() }
-    fun blocksIn(group: String, ids: List<String>): List<String> = ids.filter { it !in (blockSets[group] ?: emptySet()) }
     fun ingredientCount(recipe: Map<String, Any?>, item: String): Int = jsonArray(recipe["ingredients"]).map(::jsonObject).count { jsonString(it["item"]) == item }
-    val handSoftBlocks = listOf("minecraft:sand","minecraft:red_sand","minecraft:gravel","minecraft:dirt","minecraft:coarse_dirt","minecraft:rooted_dirt","minecraft:mud","minecraft:grass_block","immersive_weathering:loam","immersive_weathering:silt","dynamictrees:rooty_gravel")
-    val missingHandSoft = blocksIn("hand", handSoftBlocks)
-    if (missingHandSoft.isEmpty()) ok("primitive soft ground blocks remain hand-mineable", "${handSoftBlocks.size} representative blocks") else fail("primitive soft ground blocks remain hand-mineable", missingHandSoft.joinToString(", "))
-    val pickStoneBlocks = listOf("minecraft:stone","minecraft:cobblestone","minecraft:deepslate","minecraft:tuff","minecraft:calcite","minecraft:granite","minecraft:diorite","minecraft:andesite","minecraft:basalt")
-    val missingPickStone = blocksIn("pickaxe", pickStoneBlocks)
-    if (missingPickStone.isEmpty()) ok("stone-like blocks remain pickaxe-mineable", "${pickStoneBlocks.size} representative blocks") else fail("stone-like blocks remain pickaxe-mineable", missingPickStone.joinToString(", "))
-    val axeWoodBlocks = listOf("minecraft:oak_log","minecraft:oak_wood","minecraft:stripped_oak_log","minecraft:oak_planks","malum:runewood_log","hexerei:willow_log","dynamictrees:oak_branch")
-    val missingAxeWood = blocksIn("axe", axeWoodBlocks)
-    if (missingAxeWood.isEmpty()) ok("wood-like blocks remain axe-mineable", "${axeWoodBlocks.size} representative blocks") else fail("wood-like blocks remain axe-mineable", missingAxeWood.joinToString(", "))
-    val shovelSoftBlocks = listOf("minecraft:sand","minecraft:gravel","minecraft:dirt","minecraft:coarse_dirt","minecraft:rooted_dirt","minecraft:mud","minecraft:grass_block","immersive_weathering:grassy_silt")
-    val missingShovelSoft = shovelSoftBlocks.filter { it !in (blockSets["hand"] ?: emptySet()) && it !in (blockSets["shovel"] ?: emptySet()) }
-    if (missingShovelSoft.isEmpty()) ok("soft ground blocks remain shovel-usable through hand or shovel gates", "${shovelSoftBlocks.size} representative blocks") else fail("soft ground blocks remain shovel-usable through hand or shovel gates", missingShovelSoft.joinToString(", "))
-    val grassRegolithBlocks = listOf("unearthed:beige_limestone_grassy_regolith","unearthed:conglomerate_grassy_regolith","unearthed:limestone_grassy_regolith","unearthed:stone_grassy_regolith")
-    val missingGrassRegolith = grassRegolithBlocks.filter { it !in (blockSets["hand"] ?: emptySet()) && it !in (blockSets["shovel"] ?: emptySet()) }
-    if (missingGrassRegolith.isEmpty()) ok("grassy regolith remains hand-or-shovel usable", "${grassRegolithBlocks.size} representative blocks") else fail("grassy regolith remains hand-or-shovel usable", missingGrassRegolith.joinToString(", "))
     val butcherKnife = readJson("kubejs/data/kubejs/recipes/primitive/flint_butcher_knife.json")
     val handAxe = readJson("kubejs/data/kubejs/recipes/primitive/flint_hand_axe.json")
     val knifeProblems = mutableListOf<String>()
@@ -713,9 +725,6 @@ fun validatePrimitiveMiningRegressionContracts() = validateByNodeParity("validat
     if ("additionalweaponry:butcher_knife" !in jsonArray(fdKnives["values"]).mapNotNull(::jsonString)) knifeTagProblems += "farmersdelight:tools/knives"
     if ("additionalweaponry:butcher_knife" !in jsonArray(fdStrawHarvesters["values"]).mapNotNull(::jsonString)) knifeTagProblems += "farmersdelight:straw_harvesters"
     if (knifeTagProblems.isEmpty()) ok("flint butcher knife remains a Farmer Delight straw harvester") else fail("flint butcher knife remains a Farmer Delight straw harvester", knifeTagProblems.joinToString(", "))
-    val forgeRhCompat = read("generated/custom-mod-sources/better-content-fixes/src/main/java/io/github/bcfixes/compat/RealisticHandsCompat.java")
-    val knifeDurabilityMarkers = listOf("damageKnife", "state.is(RealisticHandsTags.KNIFE)", "stack.is(RealisticHandsTags.KNIFE_TOOLS)", "stack.hurtAndBreak(1", "broadcastBreakEvent(InteractionHand.MAIN_HAND)").filterNot(forgeRhCompat::contains)
-    if (knifeDurabilityMarkers.isEmpty()) ok("knife-gated plant cutting consumes knife durability") else fail("knife-gated plant cutting consumes knife durability", knifeDurabilityMarkers.joinToString(", "))
     val tconPatternRoutes = read("kubejs/server_scripts/30_recipe_replace/98_starting_progression_bypasses.js")
     val tconPatternMarkers = listOf("event.remove({ id: 'tconstruct:common/pattern' })","event.remove({ id: 'tconstruct:tables/pattern' })","event.remove({ id: 'tconstruct:pattern' })","event.remove({ type: 'minecraft:crafting_shaped', output: 'tconstruct:pattern' })","event.remove({ type: 'minecraft:crafting_shapeless', output: 'tconstruct:pattern' })","event.shaped(Item.of('tconstruct:pattern', 4)","C: 'farmersdelight:canvas'","type: 'create:pressing'","{ item: 'minecraft:paper' }","{ item: 'tconstruct:pattern' }").filterNot(tconPatternRoutes::contains)
     if (tconPatternMarkers.isEmpty()) ok("TConstruct pattern routes use canvas grid and Create paper pressing") else fail("TConstruct pattern routes use canvas grid and Create paper pressing", tconPatternMarkers.joinToString(", "))
@@ -838,12 +847,12 @@ fun validateWorldgenStaticContractsImpl() {
     val pvjDetailPackSolidIds = generatedPackSolidIds.filter { it in pvjDetailPackSolidBlocklist }
     if (pvjDetailPackSolidIds.isEmpty()) ok("RBP generated pack-solid definition excludes exact PVJ loose detail blocks")
     else fail("RBP generated pack-solid definition excludes exact PVJ loose detail blocks", pvjDetailPackSolidIds.joinToString(", "))
-    val removedNamespacePrefixes = listOf("alekiships:", "immersive_aircraft:", "inventorysorter:", "man_of_many_planes:", "the_finley_dimension_remastered:", "callfromthedepth_:", "createbigcannons:", "iceandfire:", "mynethersdelight:", "supplementaries:")
-    val looseEarthIds = jsonArray(readJson("generated/runtime-dumps/realistic_hands_audit.json")["looseSurfaceIds"])
-        .mapNotNull(::jsonString)
-        .filter { id -> removedNamespacePrefixes.none(id::startsWith) }
-        .mapNotNull(::jsonString)
-        .filterNot { it.startsWith("minecraft:") || it == "dynamictrees:rooty_gravel" }
+    val generatedModdedSandText = read("config/rbp/block_definitions/generated_modded_sand.toml")
+    val looseEarthIds = Regex(""""([a-z0-9_.-]+:[a-z0-9_/.-]+)"""").findAll(generatedModdedSandText)
+        .map { it.groupValues[1] }
+        .filter { id -> listOf("sand", "gravel", "dirt", "mud", "regolith", "loam", "silt", "soil").any(id::contains) }
+        .filterNot { it.startsWith("notreepunching:") }
+        .toList()
     val generatedRbpWhitelistFiles = walk("config/rbp/block_definitions") { it.substringAfterLast('/').startsWith("generated_modded_") && it.endsWith(".toml") }
     val generatedRbpWhitelistText = generatedRbpWhitelistFiles.joinToString("\n") { read(it) }
     val generatedRbpWhitelistIds = generatedRbpWhitelistText.lineSequence().map(String::trim).filter { it.startsWith('"') }.map { it.replace(Regex("""^"([^"]+)".*$"""), "$1") }.toList()
@@ -979,7 +988,6 @@ fun validateWorldgenStaticContractsImpl() {
     if (gravelTargetProblems.isEmpty()) ok("stone-style dimension drink ores can replace gravel")
     else fail("stone-style dimension drink ores can replace gravel", gravelTargetProblems.joinToString(", "))
 
-    val ntpAudit = readJson("generated/runtime-dumps/realistic_hands_audit.json")
     val rbpGeneratedSolid = read("config/rbp/block_definitions/generated_pack_solid_blocks.toml")
     val rbpGeneratedModdedSand = read("config/rbp/block_definitions/generated_modded_sand.toml")
     val staleGravelEvOres = listOf(
@@ -991,17 +999,12 @@ fun validateWorldgenStaticContractsImpl() {
         "gravel_natural_quartz_ore",
         "gravel_zinc_ore"
     ).map { "excavated_variants:$it" }
-    val ntpBlocks = jsonObject(ntpAudit["blockTags"])
-    val shovelSet = jsonArray(ntpBlocks["shovel"]).mapNotNull(::jsonString).toSet()
-    val pickaxeSet = jsonArray(ntpBlocks["pickaxe"]).mapNotNull(::jsonString).toSet()
-    val staleGravelShovel = staleGravelEvOres.filter { it in shovelSet }
-    val staleGravelPickaxe = staleGravelEvOres.filter { it in pickaxeSet }
     val staleGravelRbp = staleGravelEvOres.filter { id ->
         val key = "\"$id\""
         key in rbpGeneratedSolid || key in rbpGeneratedModdedSand
     }
-    if (staleGravelShovel.isEmpty() && staleGravelPickaxe.isEmpty() && staleGravelRbp.isEmpty()) ok("stale gravel Excavated Variants ore IDs stay out of generated assignments", "${staleGravelEvOres.size} representatives")
-    else fail("stale gravel Excavated Variants ore IDs stay out of generated assignments", "shovel=${staleGravelShovel.joinToString(", ")} pickaxe=${staleGravelPickaxe.joinToString(", ")} rbp=${staleGravelRbp.joinToString(", ")}")
+    if (staleGravelRbp.isEmpty()) ok("stale gravel Excavated Variants ore IDs stay out of generated assignments", "${staleGravelEvOres.size} representatives")
+    else fail("stale gravel Excavated Variants ore IDs stay out of generated assignments", "rbp=${staleGravelRbp.joinToString(", ")}")
 
     val looseEarthMissingSandPhysics = looseEarthIds.filter { "\"$it\"" !in rbpGeneratedModdedSand }
     val looseEarthStillStonePhysics = looseEarthIds.filter { "\"$it\"" in rbpGeneratedSolid || "\"$it\"" in read("config/rbp/block_definitions/generated_modded_stone.toml") }

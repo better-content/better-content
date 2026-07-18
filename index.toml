@@ -9934,11 +9934,11 @@ hash = "f2b95edb54406e3d4ab28275c063b5123615bb823373532b753845016a7e44cd"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/logs.json"
-hash = "f640adbf039d35afeb6bb78eb6eebab869fa1f4d674e365f87aa41801e66f89c"
+hash = "6b2d9ee29b3891d7418f67156c55683f7706c88c35b6be3829bd48481deedb64"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/logs_that_burn.json"
-hash = "f640adbf039d35afeb6bb78eb6eebab869fa1f4d674e365f87aa41801e66f89c"
+hash = "6b2d9ee29b3891d7418f67156c55683f7706c88c35b6be3829bd48481deedb64"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/mineable/axe.json"
@@ -10026,11 +10026,11 @@ hash = "cd7af27aa1355b4499e749ba3a1b51575b5c3069a05db9e3eba46b679966750a"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/logs.json"
-hash = "f640adbf039d35afeb6bb78eb6eebab869fa1f4d674e365f87aa41801e66f89c"
+hash = "6b2d9ee29b3891d7418f67156c55683f7706c88c35b6be3829bd48481deedb64"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/logs_that_burn.json"
-hash = "f640adbf039d35afeb6bb78eb6eebab869fa1f4d674e365f87aa41801e66f89c"
+hash = "6b2d9ee29b3891d7418f67156c55683f7706c88c35b6be3829bd48481deedb64"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/meat.json"
@@ -10796,7 +10796,7 @@ hash = "be6bf3dc5bf7b1f5204937c37dc8df5d36a3fe61cc2684b2551d0306def7599b"
 
 [[files]]
 file = "mods/bcfixes-0.1.0.jar"
-hash = "f6a57b2b862126aca9450006fe6cd233f9fce03c1b34d969a78c67b018f5a024"
+hash = "d7197ff0b54dc5e5629e6bac57610e32054f422fc420c7f8675427daa1f13131"
 
 [[files]]
 file = "mods/better-combat-by-daedelus.pw.toml"
@@ -11455,7 +11455,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillagercampaigns-0.2.0.jar"
-hash = "f056e61bfe6e1fc0f0ef6eca9e03cfd0858d960f049e4804f30da57c54512118"
+hash = "f4d5d07ead907f416c71477918326aa1f074f6ac5c9f1a1f43306a0431cc8a28"
 
 [[files]]
 file = "mods/placebo.pw.toml"

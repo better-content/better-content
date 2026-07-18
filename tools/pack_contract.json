@@ -57,6 +57,7 @@
     "excludedIndexPrefixes": [
       "tools/",
       "generated/",
+      "exports/",
       "server-instance/",
       "server-template/"
     ],

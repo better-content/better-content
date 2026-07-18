@@ -298,9 +298,20 @@ test("help shows public commands") {
     assertContains(output, "tools/bc test static", "help should list static test")
     assertContains(output, "tools/bc test unearthed-replacement", "help should list Unearthed replacement test")
     assertContains(output, "tools/bc build sync server", "help should list build sync server")
+    assertContains(output, "tools/bc build bundle release", "help should list tested release bundles")
     assertContains(output, "tools/bc graph item ITEM_ID", "help should list graph item")
     assertContains(output, "tools/bc graph route ITEM_ID", "help should list graph route")
     assertContains(output, "tools/bc doctor env", "help should list doctor env")
+}
+
+test("release bundle help and port validation are bounded") {
+    val (helpExit, helpOutput) = runCommand("tools/bc", "build", "bundle", "release", "--help")
+    assertTrue(helpExit == 0, "release bundle help should exit 0, got $helpExit")
+    assertContains(helpOutput, "refreshes packwiz metadata", "release help should describe manifest refresh")
+    assertContains(helpOutput, "fresh server smoke", "release help should describe runtime validation")
+    val (portExit, portOutput) = runCommand("tools/bc", "build", "bundle", "release", "--port", "nope")
+    assertTrue(portExit == 2, "release bundle should reject an invalid port with usage exit 2, got $portExit")
+    assertContains(portOutput, "invalid --port: nope", "release bundle port error should be specific")
 }
 
 test("graph help shows subcommands") {

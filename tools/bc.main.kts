@@ -371,6 +371,7 @@ Public commands:
   tools/bc build dumps [--server-dir PATH] [--port N] [--reset-runtime]
   tools/bc build bundle curseforge [--exports-dir PATH]
   tools/bc build bundle server [--exports-dir PATH] [--server-tree-dir PATH] [--server-zip PATH] [--clean]
+  tools/bc build bundle release [--exports-dir PATH] [--smoke-server-dir PATH] [--port N] [--skip-smoke]
   tools/bc graph item ITEM_ID [--producers|--consumers|--all] [--limit N] [--type RECIPE_TYPE] [--graph PATH]
   tools/bc graph route ITEM_ID [--graph PATH] [--sources PATH] [--spine PATH]
   tools/bc graph blockers ITEM_ID [--graph PATH] [--sources PATH] [--spine PATH] [--limit N]
@@ -444,6 +445,11 @@ Commands:
   dumps [--server-dir PATH] [--port N] [--reset-runtime]
   bundle curseforge [--exports-dir PATH]
   bundle server [--exports-dir PATH] [--server-tree-dir PATH] [--server-zip PATH] [--clean]
+  bundle release [--exports-dir PATH] [--smoke-server-dir PATH] [--port N] [--skip-smoke]
+
+The release bundle command refreshes packwiz metadata in the current source tree,
+runs static validation, exports both archives, verifies their required contents,
+and runs a fresh server smoke unless --skip-smoke is explicit.
 """.trimIndent()
 
 fun doctorHelp(): String = """
@@ -4335,7 +4341,7 @@ fun buildServerBundle(exportsDir: Path, serverTreeDir: Path, serverZip: Path, cl
         val install = runProcess(
             listOf(javaBin, "-jar", serverTreeDir.resolve("forge-$forgeCoord-installer.jar").toString(), "--installServer"),
             extraEnv = javaTempEnvironment(serverTreeDir),
-            stream = !jsonOutput && !quiet,
+            stream = false,
             workDir = serverTreeDir,
         )
         if (install.exitCode != 0) return install
@@ -4381,6 +4387,63 @@ This bundle is generated from the repository source plus server-side packwiz dow
         workDir = serverTreeDir.parent,
     )
     return if (archive.exitCode == 0) ProcessRun(0, "Complete server tree exported to $serverZip") else archive
+}
+
+fun verifyReleaseBundleArchives(clientZip: Path, serverZip: Path): ProcessRun {
+    val failures = mutableListOf<String>()
+    fun inspect(archive: Path, requiredEntries: List<String>) {
+        if (!archive.exists()) {
+            failures += "missing archive: $archive"
+            return
+        }
+        try {
+            java.util.zip.ZipFile(archive.toFile()).use { zip ->
+                for (entryName in requiredEntries) {
+                    val entry = zip.getEntry(entryName)
+                    if (entry == null || entry.isDirectory || entry.size == 0L) {
+                        failures += "$archive is missing non-empty entry $entryName"
+                    }
+                }
+            }
+        } catch (error: Exception) {
+            failures += "$archive is unreadable: ${error.message ?: error.javaClass.simpleName}"
+        }
+    }
+    inspect(
+        clientZip,
+        listOf(
+            "manifest.json",
+            "overrides/options.txt",
+            "overrides/config/ftbquests/quests/chapter_groups.snbt",
+        ),
+    )
+    if (clientZip.exists() && root.resolve("options.txt").exists()) {
+        try {
+            java.util.zip.ZipFile(clientZip.toFile()).use { zip ->
+                val entry = zip.getEntry("overrides/options.txt")
+                if (entry != null) {
+                    val bundled = zip.getInputStream(entry).use { it.readBytes() }
+                    val source = Files.readAllBytes(root.resolve("options.txt"))
+                    if (!bundled.contentEquals(source)) failures += "$clientZip does not contain the exact repo-root options.txt"
+                }
+            }
+        } catch (error: Exception) {
+            failures += "could not compare bundled options.txt: ${error.message ?: error.javaClass.simpleName}"
+        }
+    }
+    inspect(
+        serverZip,
+        listOf(
+            "better-content-server/SERVER_README.txt",
+            "better-content-server/run.sh",
+            "better-content-server/config/ftbquests/quests/chapter_groups.snbt",
+        ),
+    )
+    return if (failures.isEmpty()) {
+        ProcessRun(0, "release bundle archives verify\nclient=$clientZip\nserver=$serverZip")
+    } else {
+        ProcessRun(1, failures.joinToString("\n"))
+    }
 }
 
 fun handleDoctor(subArgs: List<String>): CommandResult {
@@ -5596,7 +5659,7 @@ fun handleBuild(subArgs: List<String>): CommandResult {
             )
         }
         "bundle" -> {
-            val target = subArgs.getOrNull(1) ?: return usageError("build bundle requires curseforge or server", buildHelp())
+            val target = subArgs.getOrNull(1) ?: return usageError("build bundle requires curseforge, server, or release", buildHelp())
             return when (target) {
                 "curseforge" -> {
                     val prereqs = ensureCommands("packwiz")
@@ -5640,6 +5703,11 @@ fun handleBuild(subArgs: List<String>): CommandResult {
                     val prereqs = ensureCommands("packwiz", "zip")
                     if (prereqs.isNotEmpty()) return prereqFailure("bundle prerequisites missing", prereqs)
                     if (!detectJava17()) return prereqFailure("Java 17 is required for build bundle server")
+                    try {
+                        findForgeInstaller()
+                    } catch (error: Exception) {
+                        return prereqFailure(error.message ?: "Forge installer is missing")
+                    }
                     var exportsDir = defaultExportsDir
                     var serverTreeDir: String? = null
                     var serverZip: String? = null
@@ -5687,6 +5755,87 @@ fun handleBuild(subArgs: List<String>): CommandResult {
                         findings = listOf(ValidationFinding("error", "build bundle server failed with exit $exitCode")),
                         details = mapOf("target" to "server", "exportsDir" to exportsPath.toString(), "serverTreeDir" to serverTreePath.toString(), "serverZip" to serverZipPath.toString(), "clean" to clean) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
                         artifacts = listOf(ArtifactRef(exportsPath.toString(), "directory"), ArtifactRef(serverZipPath.toString())),
+                        exitCode = exitCode,
+                        mutated = true,
+                        evidenceLevel = "build",
+                    )
+                }
+                "release" -> {
+                    val prereqs = ensureCommands("packwiz", "zip")
+                    if (prereqs.isNotEmpty()) return prereqFailure("release bundle prerequisites missing", prereqs)
+                    if (!detectJava17()) return prereqFailure("Java 17 is required for release bundles")
+                    try {
+                        findForgeInstaller()
+                    } catch (error: Exception) {
+                        return prereqFailure(error.message ?: "Forge installer is missing")
+                    }
+                    var exportsDir = defaultExportsDir
+                    var smokeServerDir = cachePath("bundle-release-smoke").toString()
+                    var port = defaultServerPort.toString()
+                    var skipSmoke = false
+                    val rest = subArgs.drop(2)
+                    var index = 0
+                    while (index < rest.size) {
+                        when (rest[index]) {
+                            "--exports-dir" -> {
+                                exportsDir = rest.getOrNull(index + 1) ?: return usageError("--exports-dir needs a path", buildHelp())
+                                index += 2
+                            }
+                            "--smoke-server-dir" -> {
+                                smokeServerDir = rest.getOrNull(index + 1) ?: return usageError("--smoke-server-dir needs a path", buildHelp())
+                                index += 2
+                            }
+                            "--port" -> {
+                                port = rest.getOrNull(index + 1) ?: return usageError("--port needs a value", buildHelp())
+                                if (port.toIntOrNull() !in 1..65535) return usageError("invalid --port: $port", buildHelp())
+                                index += 2
+                            }
+                            "--skip-smoke" -> {
+                                skipSmoke = true
+                                index += 1
+                            }
+                            "--help" -> return success("build bundle release", buildHelp(), evidenceLevel = "build")
+                            else -> return usageError("unknown argument: ${rest[index]}", buildHelp())
+                        }
+                    }
+                    val exportsPath = resolveUserPath(exportsDir)
+                    val clientZip = exportsPath.resolve("better-content-playtest-4-v1-curseforge.zip")
+                    val serverTree = exportsPath.resolve("server-tree/better-content-server")
+                    val serverZip = exportsPath.resolve("better-content-playtest-4-v1-server.zip")
+                    val smokePath = resolveUserPath(smokeServerDir)
+                    val run = runStepSequence(buildList {
+                        add("refresh packwiz metadata" to {
+                            runProcess(listOf("packwiz", "refresh"), workDir = root, stream = false)
+                        })
+                        add("static validation" to { runStaticValidation() })
+                        add("CurseForge export" to { exportCurseforgeBundles(exportsPath) })
+                        add("complete server export" to { buildServerBundle(exportsPath, serverTree, serverZip, clean = true) })
+                        add("archive verification" to { verifyReleaseBundleArchives(clientZip, serverZip) })
+                        if (!skipSmoke) {
+                            add("fresh server smoke" to { runSmokeValidation(smokePath, port.toInt(), reset = true) })
+                        }
+                    })
+                    val exitCode = classifyBuildExit(run.exitCode, run.output)
+                    if (exitCode == 0) success(
+                        command = "build bundle release",
+                        summary = "tested release bundles completed",
+                        artifacts = listOf(ArtifactRef(clientZip.toString()), ArtifactRef(serverZip.toString())),
+                        details = mapOf(
+                            "exportsDir" to exportsPath.toString(),
+                            "clientZip" to clientZip.toString(),
+                            "serverZip" to serverZip.toString(),
+                            "smokeServerDir" to if (skipSmoke) null else smokePath.toString(),
+                            "smokeSkipped" to skipSmoke,
+                        ) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
+                        mutated = true,
+                        evidenceLevel = if (skipSmoke) "build" else "fresh-runtime",
+                    ) else CommandResult(
+                        command = "build bundle release",
+                        status = "failure",
+                        summary = "tested release bundle workflow failed with exit $exitCode",
+                        findings = listOf(ValidationFinding("error", "tested release bundle workflow failed with exit $exitCode")),
+                        details = mapOf("exportsDir" to exportsPath.toString()) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
+                        artifacts = listOf(ArtifactRef(exportsPath.toString(), "directory")),
                         exitCode = exitCode,
                         mutated = true,
                         evidenceLevel = "build",

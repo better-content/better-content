@@ -77,6 +77,7 @@ Do not sync or delete player/runtime state by default. The tracked repo-root `op
 - Client sync apply: `tools/bc build sync client --dir /path/to/client --apply`
 - CurseForge bundle export: `tools/bc build bundle curseforge`
 - Complete server bundle export: `tools/bc build bundle server`
+- Tested release bundle export: `tools/bc build bundle release --exports-dir /path/to/exports`
 - Environment checks: `tools/bc doctor env`
 - Repo checks: `tools/bc doctor repo`
 - Runtime inspection: `tools/bc doctor runtime --instance /path/to/fresh/runtime`
@@ -86,6 +87,15 @@ The supported public contract is the `bc` tree only. Legacy shell, Python, and N
 Outside `kubejs/`, JavaScript is transitional only where an existing pack/runtime integration requires it. Do not add new `.js` or `.mjs` entrypoints under `tools/`. New non-KubeJS automation should default to Kotlin under the `bc` surface or to internal Kotlin support scripts it calls.
 The active tooling surface is Kotlin-first. If you find legacy Node-era instructions or generated metadata, treat them as cleanup debt and port them to Kotlin instead of extending them.
 Original shell/Python tools are quarantined under `tools/quarantine/original-tools/` for archival reference. Do not move them back into the active `tools/` root.
+
+## Release Bundle Workflow
+- Use `tools/bc build bundle release --exports-dir /path/to/exports` as the normal front door when the user asks for fresh or tested ZIPs. Do not reproduce this workflow with a disposable Git worktree, direct `packwiz` calls, manual archive assembly, or copied ignored artifacts.
+- The release command operates on the current source tree intentionally. It refreshes packwiz metadata, runs static validation, builds the CurseForge/client and complete-server ZIPs, verifies required archive entries (including the tracked root `options.txt`), and runs a reset-runtime server smoke by default.
+- Keep release outputs under `generated/exports/` or another path outside the repo. Repo-root `exports/` is ignored and contract-forbidden from `index.toml` so packwiz cannot recursively package previous ZIPs or server trees.
+- Review the working tree before running it. Packwiz refresh updates `index.toml` and `pack.toml` to match all current indexed source files. Preserve unrelated edits, and commit the source changes together with their refreshed manifest hashes; never commit manifest hashes that refer to source changes left outside the commit.
+- Use `--skip-smoke` only when the user explicitly requests untested artifacts or a current equivalent fresh-runtime result is intentionally being reused. Do not call ZIP integrity or static validation a runtime test.
+- The release command uses repo-root ignored prerequisites such as the Forge installer, shader ZIP, and bundled custom jars. If one is missing, repair the real source/prerequisite state; do not construct a partial worktree and discover ignored inputs one at a time.
+- On success, report both exact archive paths, sizes, SHA-256 checksums, and which validation tiers actually ran. Keep routine Forge installer output suppressed; surface captured output only on failure.
 
 ## Tool Prerequisites
 - Run `tools/bc doctor env` before claiming the toolchain is usable.

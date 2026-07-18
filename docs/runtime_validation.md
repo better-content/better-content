@@ -23,6 +23,7 @@ tools/bc graph item minecraft:glass
 tools/bc graph route kubejs:seared_machine_casing
 tools/bc graph blockers minecraft:bedrock
 tools/bc build dumps --server-dir ~/.cache/bc/bc-dump-refresh --port 25565 --reset-runtime
+tools/bc build bundle release --exports-dir generated/exports
 tools/bc test scenario-headful dimension_worldgen --cycles 1 --radius 1 --samples 1 --bootstrap-mode once
 tools/bc test scenario lc_tfth_c2me_dh --samples 4 --settle-seconds 30 --bootstrap-mode once
 tools/bc test scenario mod_ram_partition --bootstrap-mode once
@@ -53,6 +54,7 @@ tools/bc doctor runtime --instance /path/to/fresh/runtime
 - `--smoke`: fresh disposable server bootstrap, boot, hard-log scan, and strict runtime suite.
 - `tools/bc graph ...`: supported retained-runtime graph API for item adjacency, one deterministic progression route, and blocker hints. It requires a current retained `generated/runtime-dumps/recipes.json` and reads progression manifests from `kubejs/config/`.
 - `build dumps`: fresh disposable server bootstrap plus refresh of the full retained runtime-dump surface, including direct runtime JSON, retained Burnt coverage tables, functional-block audits, and KubeJS config dumps.
+- `build bundle release`: supported fresh/tested ZIP workflow. It refreshes packwiz metadata in the current source tree, runs the full static lane, exports the CurseForge/client and complete-server archives, verifies required archive entries and the client `options.txt`, then runs a fresh reset-runtime server smoke. Use the individual `bundle curseforge` and `bundle server` commands only when a single untested artifact is specifically needed. Do not stage releases through Git worktrees: ignored pack-critical inputs such as bundled jars, the shader ZIP, and Forge installer are intentionally resolved from the real repo environment.
 - `tools/bc test scenario` is the supported front door for headless-safe harness-backed runtime scenarios.
 - `tools/bc test scenario-headful` is the supported front door for headful harness-backed runtime scenarios.
 - `--bootstrap-mode always|once|never` controls scenario/runtime bootstrap reuse. `always` rebuilds each cycle, `once` prepares one reusable runtime per invocation, and `never` requires a prepared runtime and fails fast if it is missing.

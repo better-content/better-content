@@ -90,6 +90,7 @@ data class CommandResult(
 )
 
 data class ProcessRun(val exitCode: Int, val output: String)
+data class PlaytestRelease(val version: Int, val baseName: String)
 data class ScenarioDefinition(
     val name: String,
     val description: String,
@@ -447,9 +448,10 @@ Commands:
   bundle server [--exports-dir PATH] [--server-tree-dir PATH] [--server-zip PATH] [--clean]
   bundle release [--exports-dir PATH] [--smoke-server-dir PATH] [--port N] [--skip-smoke]
 
-The release bundle command refreshes packwiz metadata in the current source tree,
-runs static validation, exports both archives, verifies their required contents,
-and runs a fresh server smoke unless --skip-smoke is explicit.
+The release bundle command reserves the next persistent Playtest version, then
+refreshes packwiz metadata in the current source tree, runs static validation, exports both
+archives as better-content-playtest-v<N>-{curseforge,server}.zip, verifies their
+required contents, and runs a fresh server smoke unless --skip-smoke is explicit.
 """.trimIndent()
 
 fun doctorHelp(): String = """
@@ -2447,6 +2449,43 @@ fun generateMinecraftClientArgfile(clientDir: Path, versionId: String, username:
     return ProcessRun(0, out.toString())
 }
 
+val playtestVersionPattern = Regex("""(?m)^version\s*=\s*"Playtest v([1-9][0-9]*)"\s*$""")
+
+fun currentPlaytestRelease(): PlaytestRelease {
+    val packToml = root.resolve("pack.toml")
+    val text = Files.readString(packToml)
+    val match = playtestVersionPattern.find(text)
+        ?: error("pack.toml version must use the form: Playtest v<N>")
+    val version = match.groupValues[1].toIntOrNull()
+        ?: error("pack.toml Playtest version is outside the supported integer range")
+    return PlaytestRelease(version, "better-content-playtest-v$version")
+}
+
+fun nextPlaytestRelease(current: PlaytestRelease = currentPlaytestRelease()): PlaytestRelease {
+    val version = Math.addExact(current.version, 1)
+    return PlaytestRelease(version, "better-content-playtest-v$version")
+}
+
+fun reserveNextPlaytestRelease(): PlaytestRelease {
+    val next = nextPlaytestRelease()
+    val packToml = root.resolve("pack.toml")
+    val text = Files.readString(packToml)
+    val updated = playtestVersionPattern.replace(text, "version = \"Playtest v${next.version}\"")
+    Files.writeString(packToml, updated)
+    return next
+}
+
+fun releaseArchivePaths(exportsDir: Path, release: PlaytestRelease): Pair<Path, Path> =
+    exportsDir.resolve("${release.baseName}-curseforge.zip") to exportsDir.resolve("${release.baseName}-server.zip")
+
+fun refuseExistingReleaseArchives(vararg archives: Path): ProcessRun? {
+    val existing = archives.filter { it.exists() }
+    return if (existing.isEmpty()) null else ProcessRun(
+        1,
+        "refusing to overwrite existing release archive(s):\n${existing.joinToString("\n")}",
+    )
+}
+
 fun syncManaged(side: String, targetDir: Path, apply: Boolean): ProcessRun {
     val output = mutableListOf<String>()
     targetDir.createDirectories()
@@ -2494,7 +2533,7 @@ fun bootstrapServerRuntime(serverDir: Path, port: Int, reset: Boolean): ProcessR
     val bundleWorkRoot = serverDir.parent.resolve("${serverDir.fileName}.bundle-work")
     val exportsDir = bundleWorkRoot.resolve("exports")
     val serverTreeDir = exportsDir.resolve("server-tree/better-content-server")
-    val serverZip = exportsDir.resolve("better-content-playtest-4-v1-server.zip")
+    val serverZip = exportsDir.resolve("${currentPlaytestRelease().baseName}-server.zip")
     val extractRoot = bundleWorkRoot.resolve("unzipped")
     if (reset) {
         deleteTree(bundleWorkRoot)
@@ -4307,15 +4346,16 @@ fun runBurntCoverageTagSync(
     return ProcessRun(if (!writeChanges && changed.isNotEmpty()) 1 else 0, output)
 }
 
-fun exportCurseforgeBundles(exportsDir: Path): ProcessRun {
+fun exportCurseforgeBundle(exportsDir: Path, clientZip: Path): ProcessRun {
     exportsDir.createDirectories()
+    refuseExistingReleaseArchives(clientZip)?.let { return it }
     return runProcess(
         listOf(
             "packwiz",
             "curseforge",
             "export",
             "-o",
-            exportsDir.resolve("better-content-playtest-4-v1-curseforge.zip").toString(),
+            clientZip.toString(),
             "-s",
             "client",
             "-y",
@@ -5678,22 +5718,24 @@ fun handleBuild(subArgs: List<String>): CommandResult {
                         }
                     }
                     val exportsPath = resolveUserPath(exportsDir)
-                    val run = exportCurseforgeBundles(exportsPath)
+                    val release = currentPlaytestRelease()
+                    val (clientZip, _) = releaseArchivePaths(exportsPath, release)
+                    val run = exportCurseforgeBundle(exportsPath, clientZip)
                     val exitCode = classifyBuildExit(run.exitCode, run.output)
                     if (exitCode == 0) success(
                         command = "build bundle curseforge",
                         summary = "CurseForge bundle export completed",
-                        artifacts = listOf(ArtifactRef(exportsPath.toString(), "directory")),
-                        details = mapOf("target" to "curseforge", "exportsDir" to exportsPath.toString()) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
+                        artifacts = listOf(ArtifactRef(clientZip.toString())),
+                        details = mapOf("target" to "curseforge", "exportsDir" to exportsPath.toString(), "version" to release.version, "clientZip" to clientZip.toString()) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
                         mutated = true,
                         evidenceLevel = "build",
                     ) else CommandResult(
                         command = "build bundle curseforge",
                         status = "failure",
                         summary = "build bundle curseforge failed with exit $exitCode",
-                        findings = listOf(ValidationFinding("error", "build bundle curseforge failed with exit $exitCode")),
+                        findings = listOf(ValidationFinding("error", run.output.ifBlank { "build bundle curseforge failed with exit $exitCode" })),
                         details = mapOf("target" to "curseforge", "exportsDir" to exportsPath.toString()) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
-                        artifacts = listOf(ArtifactRef(exportsPath.toString(), "directory")),
+                        artifacts = listOf(ArtifactRef(clientZip.toString())),
                         exitCode = exitCode,
                         mutated = true,
                         evidenceLevel = "build",
@@ -5738,21 +5780,23 @@ fun handleBuild(subArgs: List<String>): CommandResult {
                     }
                     val exportsPath = resolveUserPath(exportsDir)
                     val serverTreePath = resolveUserPath(serverTreeDir ?: exportsPath.resolve("server-tree/better-content-server").toString())
-                    val serverZipPath = resolveUserPath(serverZip ?: exportsPath.resolve("better-content-playtest-4-v1-server.zip").toString())
-                    val run = buildServerBundle(exportsPath, serverTreePath, serverZipPath, clean)
+                    val release = currentPlaytestRelease()
+                    val serverZipPath = resolveUserPath(serverZip ?: exportsPath.resolve("${release.baseName}-server.zip").toString())
+                    val run = refuseExistingReleaseArchives(serverZipPath)
+                        ?: buildServerBundle(exportsPath, serverTreePath, serverZipPath, clean)
                     val exitCode = classifyBuildExit(run.exitCode, run.output)
                     if (exitCode == 0) success(
                         command = "build bundle server",
                         summary = "server bundle export completed",
                         artifacts = listOf(ArtifactRef(exportsPath.toString(), "directory"), ArtifactRef(serverZipPath.toString())),
-                        details = mapOf("target" to "server", "exportsDir" to exportsPath.toString(), "serverTreeDir" to serverTreePath.toString(), "serverZip" to serverZipPath.toString(), "clean" to clean) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
+                        details = mapOf("target" to "server", "exportsDir" to exportsPath.toString(), "serverTreeDir" to serverTreePath.toString(), "serverZip" to serverZipPath.toString(), "version" to release.version, "clean" to clean) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
                         mutated = true,
                         evidenceLevel = "build",
                     ) else CommandResult(
                         command = "build bundle server",
                         status = "failure",
                         summary = "build bundle server failed with exit $exitCode",
-                        findings = listOf(ValidationFinding("error", "build bundle server failed with exit $exitCode")),
+                        findings = listOf(ValidationFinding("error", run.output.ifBlank { "build bundle server failed with exit $exitCode" })),
                         details = mapOf("target" to "server", "exportsDir" to exportsPath.toString(), "serverTreeDir" to serverTreePath.toString(), "serverZip" to serverZipPath.toString(), "clean" to clean) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
                         artifacts = listOf(ArtifactRef(exportsPath.toString(), "directory"), ArtifactRef(serverZipPath.toString())),
                         exitCode = exitCode,
@@ -5799,16 +5843,28 @@ fun handleBuild(subArgs: List<String>): CommandResult {
                         }
                     }
                     val exportsPath = resolveUserPath(exportsDir)
-                    val clientZip = exportsPath.resolve("better-content-playtest-4-v1-curseforge.zip")
+                    val nextRelease = nextPlaytestRelease()
+                    val (clientZip, serverZip) = releaseArchivePaths(exportsPath, nextRelease)
+                    refuseExistingReleaseArchives(clientZip, serverZip)?.let { refusal ->
+                        return CommandResult(
+                            command = "build bundle release",
+                            status = "failure",
+                            summary = "release version v${nextRelease.version} is already in use",
+                            findings = listOf(ValidationFinding("error", refusal.output)),
+                            artifacts = listOf(ArtifactRef(exportsPath.toString(), "directory")),
+                            exitCode = refusal.exitCode,
+                            evidenceLevel = "build",
+                        )
+                    }
+                    val release = reserveNextPlaytestRelease()
                     val serverTree = exportsPath.resolve("server-tree/better-content-server")
-                    val serverZip = exportsPath.resolve("better-content-playtest-4-v1-server.zip")
                     val smokePath = resolveUserPath(smokeServerDir)
                     val run = runStepSequence(buildList {
                         add("refresh packwiz metadata" to {
                             runProcess(listOf("packwiz", "refresh"), workDir = root, stream = false)
                         })
                         add("static validation" to { runStaticValidation() })
-                        add("CurseForge export" to { exportCurseforgeBundles(exportsPath) })
+                        add("CurseForge export" to { exportCurseforgeBundle(exportsPath, clientZip) })
                         add("complete server export" to { buildServerBundle(exportsPath, serverTree, serverZip, clean = true) })
                         add("archive verification" to { verifyReleaseBundleArchives(clientZip, serverZip) })
                         if (!skipSmoke) {
@@ -5822,6 +5878,7 @@ fun handleBuild(subArgs: List<String>): CommandResult {
                         artifacts = listOf(ArtifactRef(clientZip.toString()), ArtifactRef(serverZip.toString())),
                         details = mapOf(
                             "exportsDir" to exportsPath.toString(),
+                            "version" to release.version,
                             "clientZip" to clientZip.toString(),
                             "serverZip" to serverZip.toString(),
                             "smokeServerDir" to if (skipSmoke) null else smokePath.toString(),
@@ -5834,8 +5891,13 @@ fun handleBuild(subArgs: List<String>): CommandResult {
                         status = "failure",
                         summary = "tested release bundle workflow failed with exit $exitCode",
                         findings = listOf(ValidationFinding("error", "tested release bundle workflow failed with exit $exitCode")),
-                        details = mapOf("exportsDir" to exportsPath.toString()) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
-                        artifacts = listOf(ArtifactRef(exportsPath.toString(), "directory")),
+                        details = mapOf(
+                            "exportsDir" to exportsPath.toString(),
+                            "version" to release.version,
+                            "clientZip" to clientZip.toString(),
+                            "serverZip" to serverZip.toString(),
+                        ) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
+                        artifacts = listOf(ArtifactRef(clientZip.toString()), ArtifactRef(serverZip.toString())),
                         exitCode = exitCode,
                         mutated = true,
                         evidenceLevel = "build",

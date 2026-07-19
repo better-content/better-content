@@ -308,6 +308,8 @@ test("release bundle help and port validation are bounded") {
     val (helpExit, helpOutput) = runCommand("tools/bc", "build", "bundle", "release", "--help")
     assertTrue(helpExit == 0, "release bundle help should exit 0, got $helpExit")
     assertContains(helpOutput, "refreshes packwiz metadata", "release help should describe manifest refresh")
+    assertContains(helpOutput, "reserves the next persistent Playtest version", "release help should describe automatic versioning")
+    assertContains(helpOutput, "better-content-playtest-v<N>-{curseforge,server}.zip", "release help should describe paired versioned archive names")
     assertContains(helpOutput, "fresh server smoke", "release help should describe runtime validation")
     val (portExit, portOutput) = runCommand("tools/bc", "build", "bundle", "release", "--port", "nope")
     assertTrue(portExit == 2, "release bundle should reject an invalid port with usage exit 2, got $portExit")

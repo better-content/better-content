@@ -51,21 +51,13 @@ Do not sync or delete player/runtime state by default. The tracked repo-root `op
 - `tools/`: test/profiling/worldgen harness scripts
 - `server-instance/`: generated dedicated server runtime; sync from source before launching
 
-## Screenshot Composition
-- Follow `tools/screenshot_composition.md` for polished Minecraft screenshots.
-- Keep diagnostic captures distinct from marketing candidates.
-- Worldgen marketing screenshots require active shaders and the selected shader pack, corrected client graphics settings, deterministic shot metadata, Distant Horizons LOD-settle evidence (`stable` preferred; explicit bounded `low-tail-stable` allowed only with recorded tail evidence), and mandatory vision-capable AI review.
-- Use `tools/bc test scenario-headful worldgen_marketing_screenshots` for deterministic recapture unless the user explicitly asks for an exploratory/manual capture.
-- A screenshot is not publishable until its final export and target crops pass the AI gate and have machine-readable review sidecars.
-
 ## Supported Tool Surface
 - Launcher: `tools/bc`
 - Validation: `tools/bc test static`
 - Existing runtime validation: `tools/bc test runtime --instance /path/to/fresh/runtime`
 - Unearthed replacement regression: `tools/bc test unearthed-replacement --instance /path/to/fresh/runtime`
 - Fresh smoke validation: `tools/bc test smoke --server-dir ~/.cache/bc/agent-validate-smoke --port 25565 --reset-runtime`
-- Headless scenario validation: `tools/bc test scenario opening_progression --cycles 1`
-- Headful scenario validation: `tools/bc test scenario-headful client_smoke --profile quick --bootstrap-mode once`
+- Scenario validation: `tools/bc test scenario opening_progression --cycles 1`
 - Kotlin test runner: `tools/bc test kotlin`
 - Graph adjacency query: `tools/bc graph item ITEM_ID [--producers|--consumers|--all] [--limit N] [--type RECIPE_TYPE] [--graph PATH]`
 - Graph route query: `tools/bc graph route ITEM_ID [--graph PATH] [--sources PATH] [--spine PATH]`
@@ -113,25 +105,15 @@ Original shell/Python tools are quarantined under `tools/quarantine/original-too
 ## Modular Harnesses
 Use the portable harness layer for repeatable runtime tests instead of hand-built local instances.
 
-- Public scenario entrypoints:
-  - `tools/bc test scenario NAME [scenario args]` for headless-safe scenarios
-  - `tools/bc test scenario-headful NAME [scenario args]` for headful scenarios
+- Public scenario entrypoint: `tools/bc test scenario NAME [scenario args]`.
 - Current public scenarios:
   - `lc_tfth_c2me_dh`
-  - `dimension_worldgen`
   - `opening_progression`
   - `progression_milestones`
   - `pillager_campaigns`
   - `worldgen_sampling`
-  - `worldgen_marketing_screenshots`
-  - `rain_collector_visuals`
-  - `ore_texture_gallery`
   - `vs_ships_stability`
   - `vs_ships_matrix`
-  - `client_smoke`
-  - `revival`
-  - `vs_ships_client`
-  - `vs_ships_release`
 - Internal harness/scenario implementation should define only:
   - scenario metadata and default run/docs paths
   - required mod jar patterns
@@ -146,10 +128,6 @@ Use the portable harness layer for repeatable runtime tests instead of hand-buil
 - Use `--cycles`, `--idle-seconds`, `--keep-going`, `--keep-runs`, `--min-free-gb`, and `--max-old-runs` to tune validation runs. Default behavior should prune old cache-backed runs and fail early if free space is low.
 - On stalls, timeouts, watchdogs, JVM exits, or crash reports, capture diagnostics through the harness before stopping processes.
 
-Current rain collector visual scenario:
-- Run: `tools/bc test scenario-headful rain_collector_visuals --bootstrap-mode once`
-- Expectation: a disposable Xvfb client captures the fixed no-shader collector fixture under active rain, including every water level from empty through full. Treat the generated technical review as incomplete until a vision-capable AI has inspected the final image for missing textures, broken transparency, clipping, z-fighting, and readable level progression.
-
 Current LC/DH scenario:
 - Run: `tools/bc test scenario lc_tfth_c2me_dh`
 - Short smoke: `tools/bc test scenario lc_tfth_c2me_dh --samples 4 --settle-seconds 30 --bootstrap-mode once`
@@ -159,13 +137,12 @@ This scenario is diagnostic-only. Do not treat it as part of the normal `tools/b
 Current VS ships diagnostic scenarios:
 - Headless stability: `tools/bc test scenario vs_ships_stability --profile quick --cycles 1 --bootstrap-mode once`
 - Isolation matrix: `tools/bc test scenario vs_ships_matrix --profile quick --bootstrap-mode once`
-- Headful client/render lane: `tools/bc test scenario-headful vs_ships_client --profile quick --bootstrap-mode once`
-- Full-family release gate: `tools/bc test scenario-headful vs_ships_release --bootstrap-mode once`
 
 These scenarios are failure-surface discovery lanes for Valkyrien Skies, Eureka, VS: Clockwork, Trackwork, DH, and C2ME interactions. Keep them diagnostic-only: do not add progression integration, quests, balance hooks, or UX expansion as part of this lane.
 
 ## Core Rules
 - Prototype freeze policy: until the user explicitly says the freeze is released, do not add new features, new progression branches, new content systems, or broad UX/theme expansions. Balance tuning is allowed, but keep it scoped to the existing systems and avoid feature drift. Limit work to stabilization, crash fixes, progression deadlock fixes, balance changes, validation/tooling fixes, packaging, questbook authoring/revision, menu clarity, and other changes required to ship or playtest the frozen prototype.
+- Each validation effort may use at most one Minecraft save/world. Reuse that world across compatible checks; dimensions inside it are allowed. Do not create A/B clones, multi-seed worlds, multi-cycle worlds, or per-variant worlds. If a test requires more than one save, do not run it and report it as incompatible with this rule.
 - Do not invent IDs; mark unknowns as `UNKNOWN`.
 - Keep KubeJS Rhino-safe and deterministic (`kubejs:*` IDs).
 - Prefer data-driven generation over copy-paste recipes.

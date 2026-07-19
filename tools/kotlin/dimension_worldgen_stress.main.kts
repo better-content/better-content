@@ -60,7 +60,7 @@ data class RunningServer(val process: Process, val stdin: BufferedWriter?, val l
 
 fun usage(message: String? = null): Nothing {
     if (message != null) System.err.println(message)
-    System.err.println("Usage: tools/bc test scenario-headful dimension_worldgen [--cycles N] [--port N] [--radius N] [--samples N] [--settle-seconds N] [--dimensions a,b,c] [--server-dir PATH] [--server-only] [--bootstrap-mode always|once|never] [--run-root PATH] [--keep-going] [--keep-runs]")
+    System.err.println("Usage: internal worldgen sampling backend [--cycles N] [--port N] [--radius N] [--samples N] [--settle-seconds N] [--dimensions a,b,c] [--server-dir PATH] [--server-only] [--bootstrap-mode always|once|never] [--run-root PATH] [--keep-going] [--keep-runs]")
     exitProcess(2)
 }
 

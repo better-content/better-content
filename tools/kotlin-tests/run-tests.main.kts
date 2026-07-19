@@ -399,11 +399,9 @@ test("scenario help shows scenarios") {
     assertContains(output, "fast [--repo ID|PATH] [--list-repos]", "scenario help should show fast usage")
     assertContains(output, "full [--workspace [--repo ID|PATH] [--list-repos]]", "scenario help should show full workspace usage")
     assertContains(output, "--bootstrap-mode always|once|never", "scenario help should show bootstrap mode")
-    assertContains(output, "Headless Scenarios:", "scenario help should list headless scenarios")
-    assertContains(output, "Headful Scenarios:", "scenario help should list headful scenarios")
+    assertContains(output, "Scenarios:", "scenario help should list scenarios")
     assertContains(output, "opening_progression", "scenario help should include opening_progression")
     assertContains(output, "worldgen_sampling", "scenario help should include worldgen_sampling")
-    assertContains(output, "client_smoke", "scenario help should include client_smoke")
 }
 
 test("fast repo listing shows workspace inventory") {
@@ -438,6 +436,18 @@ test("unknown scenario is a usage error") {
     val (exit, output) = runCommand("tools/bc", "test", "scenario", "not_a_real_scenario")
     assertTrue(exit == 2, "unknown scenario should exit 2, got $exit")
     assertContains(output, "unknown scenario: not_a_real_scenario", "unknown scenario error should be specific")
+}
+
+test("multi-world scenarios are rejected") {
+    val (exit, output) = runCommand("tools/bc", "test", "scenario", "vs_ships_matrix", "--profile", "quick")
+    assertTrue(exit == 2, "multi-world scenario should exit 2, got $exit")
+    assertContains(output, "violates the one-world validation rule", "multi-world scenario should explain the rejection")
+}
+
+test("multiple scenario cycles are rejected") {
+    val (exit, output) = runCommand("tools/bc", "test", "scenario", "opening_progression", "--cycles", "2")
+    assertTrue(exit == 2, "multiple cycles should exit 2, got $exit")
+    assertContains(output, "use --cycles 1", "multiple cycles should explain the one-world limit")
 }
 
 test("doctor repo succeeds") {
@@ -552,12 +562,6 @@ test("internal worldgen sampling contract validator runs through bc") {
     assertContains(output, "worldgen sampling contracts validate", "worldgen sampling contract validator should report success")
 }
 
-test("internal client smoke contract validator runs through bc") {
-    val (exit, output) = runCommand("tools/bc", "internal", "validate-client-smoke-contracts")
-    assertTrue(exit == 0, "internal validate-client-smoke-contracts should exit 0, got $exit")
-    assertContains(output, "client smoke contracts validate", "client smoke contract validator should report success")
-}
-
 test("internal kubejs assets validator runs through bc") {
     val (exit, output) = runCommand("tools/bc", "internal", "validate-kubejs-assets")
     assertTrue(exit == 0, "internal validate-kubejs-assets should exit 0, got $exit")
@@ -649,28 +653,10 @@ test("no active python or shell source files remain under tools") {
     assertTrue(offenders.isEmpty(), "active tools surface should not contain .py or .sh files: $offenders")
 }
 
-test("headful scenario enforcement rejects client smoke on headless path") {
-    val (exit, output) = runCommand("tools/bc", "test", "scenario", "client_smoke", "--profile", "quick")
-    assertTrue(exit == 2, "client_smoke on headless path should exit 2, got $exit")
-    assertContains(output, "scenario 'client_smoke' is headful", "client_smoke should require scenario-headful")
-}
-
-test("headless scenario enforcement rejects lc repro on headful path") {
-    val (exit, output) = runCommand("tools/bc", "test", "scenario-headful", "lc_tfth_c2me_dh", "--samples", "1", "--settle-seconds", "1")
-    assertTrue(exit == 2, "lc_tfth_c2me_dh on headful path should exit 2, got $exit")
-    assertContains(output, "scenario 'lc_tfth_c2me_dh' is headless-safe", "lc_tfth_c2me_dh should require scenario")
-}
-
 test("worldgen sampling rejects invalid profile with usage error") {
     val (exit, output) = runCommand("tools/bc", "test", "scenario", "worldgen_sampling", "--profile", "bad")
     assertTrue(exit == 2, "worldgen_sampling with invalid profile should exit 2, got $exit")
     assertContains(output, "invalid profile: bad", "worldgen_sampling should reject invalid profile")
-}
-
-test("client smoke rejects invalid profile with usage error") {
-    val (exit, output) = runCommand("tools/bc", "test", "scenario-headful", "client_smoke", "--profile", "bad")
-    assertTrue(exit == 2, "client_smoke with invalid profile should exit 2, got $exit")
-    assertContains(output, "invalid profile: bad", "client_smoke should reject invalid profile")
 }
 
 test("opening progression rejects invalid bootstrap mode with usage error") {
@@ -977,12 +963,6 @@ test("worldgen sampling rejects invalid bootstrap mode with usage error") {
     val (exit, output) = runCommand("tools/bc", "test", "scenario", "worldgen_sampling", "--profile", "quick", "--bootstrap-mode", "bad")
     assertTrue(exit == 2, "worldgen_sampling with invalid bootstrap mode should exit 2, got $exit")
     assertContains(output, "invalid bootstrap mode: bad", "worldgen_sampling should reject invalid bootstrap mode")
-}
-
-test("client smoke rejects invalid bootstrap mode with usage error") {
-    val (exit, output) = runCommand("tools/bc", "test", "scenario-headful", "client_smoke", "--profile", "quick", "--bootstrap-mode", "bad")
-    assertTrue(exit == 2, "client_smoke with invalid bootstrap mode should exit 2, got $exit")
-    assertContains(output, "invalid bootstrap mode: bad", "client_smoke should reject invalid bootstrap mode")
 }
 
 test("kotlin test filter runs only matching cases") {

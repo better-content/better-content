@@ -95,7 +95,7 @@ data class ScenarioDefinition(
     val name: String,
     val description: String,
     val script: String,
-    val headful: Boolean = false,
+    val requiresMultipleWorlds: Boolean = false,
 )
 data class WorkspaceRepoDefinition(
     val id: String,
@@ -242,37 +242,12 @@ val clientOnlyModGlobs = listOf(
     "darkness*",
 )
 
-val scenarioDimensionWorldgen = listOf(
-    "minecraft:overworld",
-    "minecraft:the_nether",
-    "aether:the_aether",
-    "undergarden:undergarden",
-    "twilightforest:twilight_forest",
-    "deeperdarker:otherside",
-    "lostcities:lostcity",
-    "fallout_wastelands_:wastelands",
-    "creatingspace:earth_orbit",
-    "creatingspace:moon_orbit",
-    "creatingspace:mars_orbit",
-    "creatingspace:the_moon",
-    "creatingspace:mars",
-    "creatingspace:venus",
-    "ae2:spatial_storage",
-    "bloodmagic:dungeon",
-    "irons_spellbooks:pocket_dimension",
-)
-
 val scenarios = linkedMapOf(
     "lc_tfth_c2me_dh" to ScenarioDefinition(
         "lc_tfth_c2me_dh",
         "Lost Cities/C2ME/Distant Horizons serialization-guard regression repro",
         "tools/kotlin/lc_tfth_c2me_dh_stability.main.kts",
-    ),
-    "dimension_worldgen" to ScenarioDefinition(
-        "dimension_worldgen",
-        "All-dimension worldgen stress run",
-        "tools/kotlin/dimension_worldgen_stress.main.kts",
-        headful = true,
+        requiresMultipleWorlds = true,
     ),
     "opening_progression" to ScenarioDefinition(
         "opening_progression",
@@ -294,24 +269,6 @@ val scenarios = linkedMapOf(
         "Seeded worldgen sampling lane with local/quick/release profiles",
         "tools/kotlin/worldgen_sampling.main.kts",
     ),
-    "worldgen_marketing_screenshots" to ScenarioDefinition(
-        "worldgen_marketing_screenshots",
-        "Deterministic shader/DH worldgen marketing screenshot capture lane",
-        "tools/kotlin/worldgen_marketing_screenshots.main.kts",
-        headful = true,
-    ),
-    "rain_collector_visuals" to ScenarioDefinition(
-        "rain_collector_visuals",
-        "Xvfb functional visual gate for rain collector models and water levels",
-        "tools/kotlin/rain_collector_visuals.main.kts",
-        headful = true,
-    ),
-    "ore_texture_gallery" to ScenarioDefinition(
-        "ore_texture_gallery",
-        "Matched normal and shader galleries for realistic ore-family outcrops",
-        "tools/kotlin/ore_texture_gallery.main.kts",
-        headful = true,
-    ),
     "vs_ships_stability" to ScenarioDefinition(
         "vs_ships_stability",
         "Valkyrien Skies family headless server stability diagnostics",
@@ -321,30 +278,7 @@ val scenarios = linkedMapOf(
         "vs_ships_matrix",
         "Valkyrien Skies family disposable runtime isolation matrix",
         "tools/kotlin/vs_ships_matrix.main.kts",
-    ),
-    "client_smoke" to ScenarioDefinition(
-        "client_smoke",
-        "Client-facing quick/release smoke lane",
-        "tools/kotlin/client_smoke.main.kts",
-        headful = true,
-    ),
-    "revival" to ScenarioDefinition(
-        "revival",
-        "Revival client/server load, replacement, and visual-surface smoke lane",
-        "tools/kotlin/revival.main.kts",
-        headful = true,
-    ),
-    "vs_ships_client" to ScenarioDefinition(
-        "vs_ships_client",
-        "Valkyrien Skies family headful client/render/sync diagnostics",
-        "tools/kotlin/vs_ships_client.main.kts",
-        headful = true,
-    ),
-    "vs_ships_release" to ScenarioDefinition(
-        "vs_ships_release",
-        "Full Valkyrien Skies family release-grade lifecycle and compatibility gate",
-        "tools/kotlin/vs_ships_release.main.kts",
-        headful = true,
+        requiresMultipleWorlds = true,
     ),
 )
 
@@ -379,7 +313,6 @@ Public commands:
   tools/bc test unearthed-replacement --instance PATH [--world PATH] [--output PATH]
   tools/bc test smoke [--server-dir PATH] [--port N] [--reset-runtime]
   tools/bc test scenario NAME [scenario args]
-  tools/bc test scenario-headful NAME [scenario args]
   tools/bc build sync server --dir PATH --dry-run|--apply
   tools/bc build sync client --dir PATH --dry-run|--apply
   tools/bc build dumps [--server-dir PATH] [--port N] [--reset-runtime]
@@ -434,21 +367,11 @@ Commands:
   unearthed-replacement --instance PATH [--world PATH] [--output PATH]
   smoke [--server-dir PATH] [--port N] [--reset-runtime] [--bootstrap-mode always|once|never]
   scenario NAME [scenario args]
-  scenario-headful NAME [scenario args]
   kotlin [--filter NAME]
 
-Headless Scenarios:
-${scenarios.values.filterNot { it.headful }.joinToString("\n") { "  ${it.name.padEnd(18)} ${it.description}" }}
-
-Headful Scenarios:
-${scenarios.values.filter { it.headful }.joinToString("\n") { "  ${it.name.padEnd(18)} ${it.description}" }}
+Scenarios:
+${scenarios.values.joinToString("\n") { "  ${it.name.padEnd(22)} ${it.description}" }}
 """.trimIndent()
-
-fun canRunHeadfulScenario(): Boolean {
-    if (System.getenv("BC_FORCE_XVFB") == "1") return findXvfbRunPath() != null
-    if (!System.getenv("DISPLAY").isNullOrBlank()) return true
-    return findXvfbRunPath() != null
-}
 
 fun buildHelp(): String = """
 Usage: tools/bc build <sync|bundle> ...
@@ -570,16 +493,6 @@ fun findJava17Path(): String? {
         }
     }
     return null
-}
-
-fun findXvfbRunPath(): String? {
-    val candidates = listOfNotNull(
-        System.getenv("XVFB_RUN")?.takeIf { it.isNotBlank() },
-        System.getenv("BC_XVFB_RUN")?.takeIf { it.isNotBlank() },
-        userLocalExecutable(".local", "bin", "xvfb-run"),
-        findCommandPath("xvfb-run"),
-    )
-    return candidates.firstOrNull { Files.isExecutable(Paths.get(it)) }
 }
 
 fun readCommand(command: List<String>): String =
@@ -2886,7 +2799,6 @@ fun runPackFullLane(): ProcessRun = runStepSequence(
     buildList {
         val serverDir = packFullServerDir()
         val openingRunRoot = cachePath("opening-progression")
-        val clientSmokeRunRoot = cachePath("client-smoke-quick")
         add("pack fast" to { runPackFastLane() })
         add("runtime smoke" to { runSmokeValidation(serverDir, 25570, reset = true, bootstrapMode = "always") })
         add("opening progression scenario" to {
@@ -2899,13 +2811,6 @@ fun runPackFullLane(): ProcessRun = runStepSequence(
             runKotlinScript(
                 root.resolve("tools/kotlin/worldgen_sampling.main.kts"),
                 scriptArgs = listOf("--profile", "local", "--bootstrap-mode", "never", "--server-dir", serverDir.toString(), "--port", "25566"),
-            )
-        })
-        add("client smoke scenario" to {
-            if (!canRunHeadfulScenario()) return@to ProcessRun(3, "DISPLAY or xvfb-run is required")
-            runKotlinScript(
-                root.resolve("tools/kotlin/client_smoke.main.kts"),
-                scriptArgs = listOf("--profile", "quick", "--bootstrap-mode", "once", "--run-root", clientSmokeRunRoot.toString()),
             )
         })
     },
@@ -4038,7 +3943,7 @@ fun runToolDocSurfaceValidation(): ProcessRun {
     val docsReadmeText = repoRead(docsReadmePath)
 
     val expectedAgentCommands = listOf(
-        "Headless scenario validation: `tools/bc test scenario opening_progression --cycles 1`",
+        "Scenario validation: `tools/bc test scenario opening_progression --cycles 1`",
         "Runtime dump refresh: `tools/bc build dumps --server-dir ~/.cache/bc/dump-refresh --port 25565 --reset-runtime`",
     )
     for (line in expectedAgentCommands) {
@@ -4055,35 +3960,11 @@ fun runToolDocSurfaceValidation(): ProcessRun {
         fail("$agentsPath scenario list drift: expected ${expectedScenarios.joinToString(", ")}, found ${documentedScenarios.joinToString(", ")}")
     }
 
-    val staleHeadfulCommands = listOf(
-        agentsPath to listOf(
-            "tools/bc test scenario dimension_worldgen",
-        ),
-        runtimeValidationPath to listOf(
-            "tools/bc test scenario dimension_worldgen",
-        ),
-        performancePath to listOf(
-            "tools/bc test scenario-headful lc_tfth_c2me_dh",
-        ),
-    )
-    for ((path, commands) in staleHeadfulCommands) {
-        val text = when (path) {
-            agentsPath -> agentsText
-            runtimeValidationPath -> runtimeText
-            performancePath -> performanceText
-            else -> ""
-        }
-        for (command in commands) {
-            if (text.contains(command)) fail("$path still documents invalid headful command: `$command`")
-        }
-    }
-
     val requiredRuntimeCommands = listOf(
         "tools/bc test fast",
         "tools/bc test full",
         "tools/bc test full --workspace",
         "tools/bc test unearthed-replacement --instance /path/to/fresh/runtime",
-        "tools/bc test scenario-headful dimension_worldgen --cycles 1 --radius 1 --samples 1 --bootstrap-mode once",
         "tools/bc test scenario lc_tfth_c2me_dh --samples 4 --settle-seconds 30 --bootstrap-mode once",
         "tools/bc test scenario opening_progression --cycles 1 --bootstrap-mode once",
         "tools/bc test scenario worldgen_sampling --profile local --bootstrap-mode once",
@@ -4091,19 +3972,12 @@ fun runToolDocSurfaceValidation(): ProcessRun {
         "tools/bc test scenario worldgen_sampling --profile release --bootstrap-mode once",
         "tools/bc test scenario vs_ships_stability --profile quick --cycles 1 --bootstrap-mode once",
         "tools/bc test scenario vs_ships_matrix --profile quick --bootstrap-mode once",
-        "tools/bc test scenario-headful client_smoke --profile quick --bootstrap-mode once",
-        "tools/bc test scenario-headful client_smoke --profile release --bootstrap-mode once",
-        "tools/bc test scenario-headful vs_ships_client --profile quick --bootstrap-mode once",
-        "tools/bc test scenario-headful vs_ships_client --profile stress --fixture combined --bootstrap-mode once",
     )
     for (command in requiredRuntimeCommands) {
         if (!runtimeText.contains(command)) fail("$runtimeValidationPath missing scenario command: `$command`")
     }
-    if (!runtimeText.contains("`tools/bc test scenario` is the supported front door for headless-safe harness-backed runtime scenarios.")) {
-        fail("$runtimeValidationPath must distinguish the headless-safe scenario front door")
-    }
-    if (!runtimeText.contains("`tools/bc test scenario-headful` is the supported front door for headful harness-backed runtime scenarios.")) {
-        fail("$runtimeValidationPath must distinguish the headful scenario front door")
+    if (!runtimeText.contains("`tools/bc test scenario` is the supported front door for harness-backed runtime scenarios.")) {
+        fail("$runtimeValidationPath must document the scenario front door")
     }
     if (!runtimeText.contains("`--bootstrap-mode always|once|never`")) {
         fail("$runtimeValidationPath must document bootstrap-mode semantics")
@@ -4121,7 +3995,6 @@ fun runToolDocSurfaceValidation(): ProcessRun {
         fail("$performancePath must not describe the LC/C2ME/DH repro as part of test full coverage")
     }
     if (!runtimeText.contains("`worldgen_sampling` is the normal worldgen confidence lane")
-        || !runtimeText.contains("`dimension_worldgen` is the explicit all-dimension stress/debug lane")
         || !runtimeText.contains("`lc_tfth_c2me_dh` is a diagnostic-only regression repro")
     ) {
         fail("$runtimeValidationPath must distinguish normal worldgen coverage from stress and diagnostic-only lanes")
@@ -4556,7 +4429,6 @@ fun handleDoctor(subArgs: List<String>): CommandResult {
                 "kotlin" to readCommand(listOf("kotlin", "-version")).ifBlank { null },
                 "java" to findJava17Path()?.let { readCommand(listOf(it, "-version")).lineSequence().firstOrNull()?.ifBlank { null } },
                 "java17" to findJava17Path(),
-                "xvfbRun" to findXvfbRunPath(),
                 "rg" to findCommandPath("rg"),
                 "packwiz" to findCommandPath("packwiz"),
             )
@@ -4917,10 +4789,6 @@ fun handleInternal(subArgs: List<String>): CommandResult {
             val run = runKotlinScript(root.resolve("tools/kotlin/validate_worldgen_sampling_contracts.main.kts"))
             CommandResult("internal validate-worldgen-sampling-contracts", if (run.exitCode == 0) "success" else "failure", run.output, exitCode = if (run.exitCode == 0) 0 else 1)
         }
-        "validate-client-smoke-contracts" -> {
-            val run = runKotlinScript(root.resolve("tools/kotlin/validate_client_smoke_contracts.main.kts"))
-            CommandResult("internal validate-client-smoke-contracts", if (run.exitCode == 0) "success" else "failure", run.output, exitCode = if (run.exitCode == 0) 0 else 1)
-        }
         "verify-pack-fast" -> {
             val run = runPackFastLane()
             CommandResult("internal verify-pack-fast", if (run.exitCode == 0) "success" else "failure", run.output, exitCode = if (run.exitCode == 0) 0 else if (run.exitCode == 3) 3 else 1)
@@ -5208,44 +5076,16 @@ fun scenarioDefaultRunRoot(name: String, args: List<String>): Path {
         "opening_progression" -> cachePath("opening-progression")
         "progression_milestones" -> cachePath("progression-milestones")
         "lc_tfth_c2me_dh" -> cachePath("lc-c2me-dh-repro")
-        "dimension_worldgen", "worldgen_sampling" -> cachePath("dimension-worldgen")
+        "worldgen_sampling" -> cachePath("dimension-worldgen")
         "pillager_campaigns" -> cachePath("pillager-campaigns")
         "vs_ships_stability" -> cachePath("vs-ships-stability")
         "vs_ships_matrix" -> cachePath("vs-ships-matrix")
-        "client_smoke" -> {
-            val profile = argValue(args, "--profile") ?: "quick"
-            cachePath(if (profile == "release") "client-smoke-release" else "client-smoke-quick")
-        }
-        "vs_ships_client" -> {
-            val profile = argValue(args, "--profile") ?: "quick"
-            cachePath(when (profile) {
-                "release" -> "vs-ships-client-release"
-                "stress" -> "vs-ships-client-stress"
-                else -> "vs-ships-client-quick"
-            })
-        }
-        "vs_ships_release" -> cachePath("vs-ships-release")
-        "worldgen_marketing_screenshots" -> cachePath("worldgen-marketing-screenshots")
-        "rain_collector_visuals" -> cachePath("rain-collector-visuals")
-        "ore_texture_gallery" -> cachePath("ore-texture-gallery")
         else -> cachePath("scenario-$name")
     }.toAbsolutePath().normalize()
 }
 
 fun scenarioRequestedPort(name: String, args: List<String>): Int? =
     argValue(args, "--port")?.toIntOrNull() ?: when (name) {
-        "client_smoke" -> when (argValue(args, "--profile") ?: "quick") {
-            "release" -> 25568
-            else -> 25567
-        }
-        "rain_collector_visuals" -> 25573
-        "ore_texture_gallery" -> 25574
-        "vs_ships_client" -> when (argValue(args, "--profile") ?: "quick") {
-            "release" -> 25570
-            "stress" -> 25571
-            else -> 25569
-        }
-        "vs_ships_release" -> 25570
         "pillager_campaigns" -> null
         else -> defaultServerPort
     }
@@ -5491,31 +5331,25 @@ fun handleTest(subArgs: List<String>): CommandResult {
                 harness.finalizeState("failed", lastError = "test smoke failed with exit $exitCode", summaryExtra = listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(), preserveSummary = true)
             }
         }
-        "scenario", "scenario-headful" -> {
+        "scenario" -> {
             val missing = ensureCommands("kotlin")
             if (missing.isNotEmpty()) return prereqFailure("scenario prerequisites missing", missing)
             val name = subArgs.getOrNull(1) ?: return usageError("test scenario requires a scenario name", testHelp())
-            val headfulCommand = subArgs.first() == "scenario-headful"
-            if (name == "--help") return success(if (headfulCommand) "test scenario-headful" else "test scenario", testHelp(), evidenceLevel = "scenario-runtime")
+            if (name == "--help") return success("test scenario", testHelp(), evidenceLevel = "scenario-runtime")
             val scenario = scenarios[name] ?: return usageError("unknown scenario: $name", testHelp())
-            if (scenario.headful && !headfulCommand) {
-                return usageError("scenario '$name' is headful; run it via `tools/bc test scenario-headful $name ...`", testHelp())
-            }
-            if (!scenario.headful && headfulCommand) {
-                return usageError("scenario '$name' is headless-safe; run it via `tools/bc test scenario $name ...`", testHelp())
-            }
-            if (scenario.headful && !canRunHeadfulScenario()) {
-                return prereqFailure(
-                    "headful scenario prerequisites missing",
-                    listOf(ValidationFinding("error", "DISPLAY or xvfb-run is required")),
-                )
-            }
             var passthroughArgs = subArgs.drop(2)
+            if (scenario.requiresMultipleWorlds) {
+                return usageError("scenario $name is disabled: it requires multiple worlds and violates the one-world validation rule", testHelp())
+            }
+            val requestedCycles = passthroughArgs.windowed(2).firstOrNull { it[0] == "--cycles" }?.get(1)?.toIntOrNull()
+            if (requestedCycles != null && requestedCycles > 1) {
+                return usageError("--cycles $requestedCycles violates the one-world validation rule; use --cycles 1", testHelp())
+            }
             val runRoot = scenarioDefaultRunRoot(name, passthroughArgs)
             val requestedPort = scenarioRequestedPort(name, passthroughArgs)
             val reservedPort = requestedPort?.let {
                 reserveAvailablePort(it) ?: return CommandResult(
-                    command = if (scenario.headful) "test scenario-headful $name" else "test scenario $name",
+                    command = "test scenario $name",
                     status = "failure",
                     summary = "no free port found in ${it}..${it + 50}",
                     findings = listOf(ValidationFinding("error", "no free port found in ${it}..${it + 50}")),
@@ -5530,7 +5364,7 @@ fun handleTest(subArgs: List<String>): CommandResult {
             val latestStatus = runRoot.resolve("latest-status.json")
             val latestSummary = runRoot.resolve("latest-summary.json")
             val keySeed = "scenario:$name:${runRoot.toAbsolutePath().normalize()}"
-            val commandName = if (scenario.headful) "test scenario-headful $name" else "test scenario $name"
+            val commandName = "test scenario $name"
             val (harness, conflict) = startHarnessRun(
                 HarnessSpec(
                     keySeed = keySeed,
@@ -5586,7 +5420,7 @@ fun handleTest(subArgs: List<String>): CommandResult {
                 success(
                     command = commandName,
                     summary = "scenario $name passed",
-                    details = mapOf("scenario" to scenario.name, "script" to scenario.script, "args" to passthroughArgs, "headful" to scenario.headful, "requestedPort" to requestedPort, "actualPort" to reservedPort?.port, "runRoot" to runRoot.toString()),
+                    details = mapOf("scenario" to scenario.name, "script" to scenario.script, "args" to passthroughArgs, "requestedPort" to requestedPort, "actualPort" to reservedPort?.port, "runRoot" to runRoot.toString()),
                     artifacts = listOf(ArtifactRef(harness.paths.status.toString()), ArtifactRef(harness.paths.summary.toString()), ArtifactRef(latestStatus.toString()), ArtifactRef(latestSummary.toString())),
                     evidenceLevel = "scenario-runtime",
                     mutated = true,
@@ -5597,7 +5431,7 @@ fun handleTest(subArgs: List<String>): CommandResult {
                     command = commandName,
                     status = "failure",
                     summary = "$commandName failed with exit $mappedExit",
-                    details = mapOf("scenario" to scenario.name, "script" to scenario.script, "args" to passthroughArgs, "headful" to scenario.headful, "requestedPort" to requestedPort, "actualPort" to reservedPort?.port, "runRoot" to runRoot.toString()) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
+                    details = mapOf("scenario" to scenario.name, "script" to scenario.script, "args" to passthroughArgs, "requestedPort" to requestedPort, "actualPort" to reservedPort?.port, "runRoot" to runRoot.toString()) + listOfNotNull(outputSnippet(run.output)?.let { "capturedOutput" to it }).toMap(),
                     findings = listOf(ValidationFinding("error", "$commandName failed with exit $mappedExit")),
                     artifacts = listOf(ArtifactRef(harness.paths.status.toString()), ArtifactRef(harness.paths.summary.toString()), ArtifactRef(latestStatus.toString()), ArtifactRef(latestSummary.toString())),
                     exitCode = mappedExit,

@@ -161,38 +161,12 @@ for (path in listOf("mods/shoulder-surfing-reloaded.pw.toml", "config/shouldersu
     else fail("deferred or incompatible pack surface is absent", path)
 }
 
-val clientContractPath = rel("tools/vs_ships_client_contract.properties")
-if (!clientContractPath.isRegularFile()) {
-    fail("VS client source contract is present", clientContractPath.toString())
-} else {
-    val properties = java.util.Properties().apply { Files.newBufferedReader(clientContractPath).use(::load) }
-    val expected = mapOf(
-        "schema" to "bc.vs_ships_client_contract.v1",
-        "eureka.sourceCommit" to "07cf4181d72590731d140d603bda5c9de23c5ae7",
-        "vs.sourceCommit" to "9a09dd2609d482948f261a02c8103c1ba44ba5c1",
-        "display.width" to "1280",
-        "display.height" to "720",
-        "display.guiScale" to "3",
-        "helm.assemble.x" to "10",
-        "helm.assemble.y" to "73",
-        "helm.assemble.width" to "156",
-        "helm.assemble.height" to "23",
-        "fixture.expectedBlocks" to "5",
-        "fixture.maximumBfsBlocks" to "8",
-        "assembly.syncWaitSeconds" to "4",
-        "screenshots" to "pilot-joined.png,core-fixture.png,helm-gui.png,helm-button-hovered.png,helm-button-pressed.png,ship-assembled.png,ship-after-reconnect-probe.png,ship-after-teleport-probe.png,pilot-reconnected.png,pilot-after-server-restart.png",
-    )
-    val wrong = expected.filter { (key, value) -> properties.getProperty(key) != value }
-    if (wrong.isEmpty()) ok("VS client source contract is pinned", "${expected.size} fields")
-    else fail("VS client source contract is pinned", wrong.keys.joinToString())
-}
-
 val bcText = read("tools/bc.main.kts")
-for (scenario in listOf("vs_ships_stability", "vs_ships_matrix", "vs_ships_client", "vs_ships_release")) {
+for (scenario in listOf("vs_ships_stability", "vs_ships_matrix")) {
     if (""""$scenario" to ScenarioDefinition(""" in bcText) ok("$scenario is registered")
     else fail("$scenario is registered", "missing ScenarioDefinition")
 }
-for (internalCommand in listOf("prepare-server-runtime", "prepare-client-runtime", "minecraft-client-argfile")) {
+for (internalCommand in listOf("prepare-server-runtime")) {
     if (bcText.contains("\"$internalCommand\" ->")) ok("$internalCommand internal hook is registered")
     else fail("$internalCommand internal hook is registered", "missing internal command")
 }
@@ -246,70 +220,6 @@ val scriptChecks = mapOf(
         "status == \"passed\" && !keepRuns",
         "cycle-\$cycle-base",
     ),
-    "tools/kotlin/vs_ships_client.main.kts" to listOf(
-        "client_render_failure",
-        "client_disconnect_failure",
-        "onboarding_failure",
-        "respawn_failure",
-        "render_environment_inconclusive",
-        "assembly_sync_failure",
-        "ship_transform_sync_failure",
-        "client_backlog_stress_failure",
-        "assembledGeometryScore",
-        "captureWorld",
-        "flywheel_visual_failure",
-        "vs_init_failure",
-        "eureka_init_failure",
-        "clockwork_init_failure",
-        "trackwork_init_failure",
-        "c2me_dh_threading_failure",
-        "prepare-client-runtime",
-        "minecraft-client-argfile",
-        "startClient",
-        "assertPlayerConnected",
-        "respawnIfDead",
-        "setworldspawn 0 \$y 4",
-        "vs_ships_client_contract.properties",
-        "fixture_connectivity_failure",
-        "menu_packet_failure",
-        "assembly_registration_failure",
-        "Assembled ship with ([0-9]+) blocks",
-        "transform=source_assembly",
-        "teleport_probe_confirmed",
-        "render_environment_inconclusive",
-        "screenshot-manifest.json",
-        "ship-after-reconnect-probe.png",
-        "ship-after-teleport-probe.png",
-        "helm-button-pressed.png",
-        "--fixture",
-        "--variant",
-        "--profile quick|release|stress",
-        "client_backlog_stress",
-        "stress_physics_queue_warnings",
-        "stress_modernfix_watchdogs",
-        "stress_disconnects",
-        "dh_renderer_disabled",
-        "dh_renderer_connectivity",
-        "--stop-after",
-        "removed-mods.txt",
-        "helm_assembly",
-        "vs set-static @v[]",
-        "client_reconnect",
-        "server_restart_reload",
-        "xvfb-run",
-        "pilot-after-server-restart.png",
-        "status == \"passed\" && !keepRuns",
-    ),
-    "tools/kotlin/vs_ships_release.main.kts" to listOf(
-        "vs_ships_stability",
-        "vs_ships_matrix",
-        "listOf(\"core\", \"clockwork\", \"trackwork\", \"combined\")",
-        "dh_disabled",
-        "c2me_disabled",
-        "dh_c2me_disabled",
-        "--keep-going",
-        "summary.json",
-    ),
 )
 for ((path, needles) in scriptChecks) {
     if (!rel(path).isRegularFile()) {
@@ -326,13 +236,10 @@ if (!matrixText.contains("\"test\", \"smoke\"")) ok("VS isolation variants bypas
 else fail("VS isolation variants bypass smoke manifest preflight", "matrix still boots mutated runtimes through test smoke")
 
 val docs = mapOf(
-    "AGENTS.md" to listOf("vs_ships_stability", "vs_ships_matrix", "vs_ships_client"),
+    "AGENTS.md" to listOf("vs_ships_stability", "vs_ships_matrix"),
     "docs/runtime_validation.md" to listOf(
         "tools/bc test scenario vs_ships_stability --profile quick --cycles 1 --bootstrap-mode once",
         "tools/bc test scenario vs_ships_matrix --profile quick --bootstrap-mode once",
-        "tools/bc test scenario-headful vs_ships_client --profile quick --bootstrap-mode once",
-        "tools/bc test scenario-headful vs_ships_client --profile stress --fixture combined --bootstrap-mode once",
-        "tools/bc test scenario-headful vs_ships_release --bootstrap-mode once",
     ),
     "docs/performance_and_mods.md" to listOf("Valkyrien Skies", "Eureka", "Clockwork", "Trackwork", "vs_ships_stability"),
 )

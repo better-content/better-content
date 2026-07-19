@@ -56,7 +56,7 @@ Tinkers establishes seared/scorched metallurgy before Create authority. Create a
 
 `50_loot/50_player_kill_coin_drops.js` awards one copper coin for every non-player living entity killed by a player, including player-fired projectiles. Campaign pillagers keep their separate strength-scaled coin bundles, so the surface threat remains a premium combat payout rather than being flattened into the global baseline.
 
-The first hand tools are authored TConstruct stacks: a hand axe crafted from flint, PVJ bones, or PVJ rocks plus Farmer's Delight straw and a stick, plus a butcher knife crafted from flint, PVJ bones, or PVJ rocks plus a stick. The pack-owned no-tree-punching gate applies only to logs and accepts Forge-tagged axes; normal terrain, stone, ores, plants, leaves, and decorative blocks use their ordinary harvesting behavior. The former exhaustive Realistic Hands policy is quarantined outside runtime resources.
+The first hand tools are authored TConstruct stacks: a hand axe crafted from flint, PVJ bones, or PVJ rocks plus Farmer's Delight straw and a stick, plus a butcher knife crafted from flint, PVJ bones, or PVJ rocks plus a stick. Those same inputs work in the TConstruct part builder: flint keeps its native flint identity, PVJ bones map to bone, and PVJ rocks map to the stone rock variant. The pack-owned no-tree-punching gate applies only to logs and accepts Forge-tagged axes; normal terrain, stone, ores, plants, leaves, and decorative blocks use their ordinary harvesting behavior. The former exhaustive Realistic Hands policy is quarantined outside runtime resources.
 
 The butcher knife consumes durability when it successfully clears grass, tall grass, ferns, or large ferns.
 

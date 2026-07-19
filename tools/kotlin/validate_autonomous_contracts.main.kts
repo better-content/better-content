@@ -719,6 +719,16 @@ fun validatePrimitiveMiningRegressionContracts() = validateByNodeParity("validat
     val axeNbt = jsonString(jsonObject(handAxe["result"])["nbt"]).orEmpty()
     if ("tconstruct:flint" !in axeNbt || "tconstruct:wood" !in axeNbt) axeProblems += "TConstruct flint/wood NBT"
     if (axeProblems.isEmpty()) ok("straw/flint/stick hand axe primitive recipe remains craftable") else fail("straw/flint/stick hand axe primitive recipe remains craftable", axeProblems.joinToString(", "))
+    val primitiveBoneMaterial = readJson("kubejs/data/kubejs/recipes/tools/materials/primitive_bones.json")
+    val primitiveRockMaterial = readJson("kubejs/data/kubejs/recipes/tools/materials/primitive_rocks.json")
+    val partBuilderMaterialProblems = mutableListOf<String>()
+    if (jsonString(primitiveBoneMaterial["type"]) != "tconstruct:material") partBuilderMaterialProblems += "bone recipe type"
+    if (jsonString(jsonObject(primitiveBoneMaterial["ingredient"])["tag"]) != "kubejs:primitive_tcon_bones") partBuilderMaterialProblems += "bone ingredient tag"
+    if (jsonString(primitiveBoneMaterial["material"]) != "tconstruct:bone") partBuilderMaterialProblems += "bone material"
+    if (jsonString(primitiveRockMaterial["type"]) != "tconstruct:material") partBuilderMaterialProblems += "rock recipe type"
+    if (jsonString(jsonObject(primitiveRockMaterial["ingredient"])["tag"]) != "kubejs:primitive_tcon_rocks") partBuilderMaterialProblems += "rock ingredient tag"
+    if (jsonString(primitiveRockMaterial["material"]) != "tconstruct:rock#stone") partBuilderMaterialProblems += "rock material"
+    if (partBuilderMaterialProblems.isEmpty()) ok("PVJ bootstrap materials work in the TConstruct part builder") else fail("PVJ bootstrap materials work in the TConstruct part builder", partBuilderMaterialProblems.joinToString(", "))
     val fdKnives = readJson("kubejs/data/farmersdelight/tags/items/tools/knives.json")
     val fdStrawHarvesters = readJson("kubejs/data/farmersdelight/tags/items/straw_harvesters.json")
     val knifeTagProblems = mutableListOf<String>()

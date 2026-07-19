@@ -9849,6 +9849,14 @@ file = "kubejs/data/kubejs/recipes/primitive/rock_hand_axe.json"
 hash = "6b2af34e87c65d45a3fa893bebdab89f008770b66f6dc42ffde690d85288cefb"
 
 [[files]]
+file = "kubejs/data/kubejs/recipes/tools/materials/primitive_bones.json"
+hash = "5af8475bc702a5175f82e21b879606f9a9fbb63fca113385d020a2cf2669cd10"
+
+[[files]]
+file = "kubejs/data/kubejs/recipes/tools/materials/primitive_rocks.json"
+hash = "b000179a26ea59f581b189dd0576c19b70b41202e5f8d136802d9c3992636561"
+
+[[files]]
 file = "kubejs/data/kubejs/tags/blocks/dirt_like.json"
 hash = "647e6ec708bc8d049d8f7372d766096564cc165833c0ef18757d6ccb3619213d"
 

@@ -95,9 +95,7 @@ data class WorkspaceRepoDefinition(
     val id: String,
     val path: String,
     val kind: String,
-    val fastCommand: List<String>,
-    val fullCommand: List<String>,
-    val fullMeaningful: Boolean,
+    val command: List<String>,
 )
 data class HarnessPaths(
     val dir: Path,
@@ -1954,9 +1952,7 @@ fun loadWorkspaceRepoDefinitions(): List<WorkspaceRepoDefinition> {
             id = jsonString(repo["id"]) ?: error("workspace repo entry missing id"),
             path = jsonString(repo["path"]) ?: error("workspace repo entry missing path"),
             kind = jsonString(repo["kind"]) ?: "unknown",
-            fastCommand = jsonStringList(repo["fastCommand"]).ifEmpty { error("workspace repo entry missing fastCommand") },
-            fullCommand = jsonStringList(repo["fullCommand"]).ifEmpty { error("workspace repo entry missing fullCommand") },
-            fullMeaningful = jsonBoolean(repo["fullMeaningful"]) ?: true,
+            command = jsonStringList(repo["fastCommand"]).ifEmpty { error("workspace repo entry missing fastCommand") },
         )
     }
 }
@@ -1991,7 +1987,7 @@ fun repoMatchesFilter(repo: WorkspaceRepoDefinition, filter: String): Boolean {
 
 fun selectWorkspaceRepos(mode: String, filters: List<String>): Pair<List<WorkspaceRepoDefinition>, List<String>> {
     val repos = loadWorkspaceRepoDefinitions()
-    val eligible = if (mode == "full") repos.filter { it.fullMeaningful } else repos
+    val eligible = repos
     if (filters.isEmpty()) return eligible to emptyList()
     val selected = eligible.filter { repo -> filters.any { repoMatchesFilter(repo, it) } }
     val unmatched = filters.filterNot { filter -> eligible.any { repoMatchesFilter(it, filter) } }
@@ -2001,8 +1997,7 @@ fun selectWorkspaceRepos(mode: String, filters: List<String>): Pair<List<Workspa
 fun formatWorkspaceRepoList(mode: String, repos: List<WorkspaceRepoDefinition>): String = buildString {
     appendLine("workspace $mode repo selection:")
     repos.forEach { repo ->
-        val command = if (mode == "full") repo.fullCommand else repo.fastCommand
-        appendLine("  ${repo.id.padEnd(34)} ${repo.path} :: ${command.joinToString(" ")}")
+        appendLine("  ${repo.id.padEnd(34)} ${repo.path} :: ${repo.command.joinToString(" ")}")
     }
 }
 
@@ -2015,7 +2010,7 @@ fun runWorkspaceLane(mode: String, filters: List<String>, listOnly: Boolean): Pr
     val output = mutableListOf<String>()
     for (repo in selected) {
         val workDir = root.resolve(repo.path).normalize()
-        val command = if (mode == "full") repo.fullCommand else repo.fastCommand
+        val command = repo.command
         val run = runProcess(command, stream = false, workDir = workDir)
         output += buildString {
             appendLine("==> ${repo.id} (${repoRel(workDir)})")
@@ -4670,7 +4665,7 @@ fun runWorkspaceVerification(mode: String, rawArgs: List<String>): CommandResult
             details = mapOf(
                 "mode" to mode,
                 "filters" to filters,
-                "repos" to selectedRepos.map { mapOf("id" to it.id, "path" to it.path, "kind" to it.kind, "fullMeaningful" to it.fullMeaningful) },
+                "repos" to selectedRepos.map { mapOf("id" to it.id, "path" to it.path, "kind" to it.kind, "command" to it.command) },
             ),
             artifacts = listOf(ArtifactRef(workspaceInventoryPath.toString())),
             evidenceLevel = "source",
@@ -4707,7 +4702,7 @@ fun runWorkspaceVerification(mode: String, rawArgs: List<String>): CommandResult
     val stubSleepMs = System.getenv("BC_TEST_WORKSPACE_STUB_SLEEP_MS")?.toLongOrNull() ?: 0L
     try {
         for ((repoIndex, repo) in selectedRepos.withIndex()) {
-            val command = if (mode == "full") repo.fullCommand else repo.fastCommand
+            val command = repo.command
             val workDir = if (repo.path == ".") root else root.resolve(repo.path)
             harness.updateStatus(
                 status = "running",

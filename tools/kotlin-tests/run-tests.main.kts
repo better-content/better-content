@@ -300,6 +300,7 @@ test("help shows public commands") {
     assertContains(output, "tools/bc test fast", "help should list fast test")
     assertContains(output, "tools/bc test static", "help should list static test")
     assertContains(output, "tools/bc test kotlin", "help should list Kotlin tests")
+    assertContains(output, "tools/bc test smoke", "help should list the single-world smoke")
     assertNotContains(output, "tools/bc test scenario", "help must not list removed runtime scenarios")
     assertContains(output, "tools/bc build sync server", "help should list build sync server")
     assertContains(output, "tools/bc build bundle release", "help should list tested release bundles")
@@ -483,6 +484,15 @@ test("public static lane passes") {
     assertContains(output, "\"status\":\"success\"", "test static should report success JSON")
     assertContains(output, "\"command\":\"test static\"", "test static should identify its command")
     assertContains(output, "\"evidenceLevel\":\"source\"", "test static should report source evidence")
+}
+
+test("single-world smoke validates bounded options without launching") {
+    val (badIdleExit, badIdleOutput) = runCommand("tools/bc", "test", "smoke", "--idle-seconds", "301")
+    assertTrue(badIdleExit == 2, "smoke should reject an out-of-range idle duration, got $badIdleExit")
+    assertContains(badIdleOutput, "--idle-seconds must be between 0 and 300", "smoke should report its idle bound")
+    val (badBootstrapExit, badBootstrapOutput) = runCommand("tools/bc", "test", "smoke", "--bootstrap-mode", "twice")
+    assertTrue(badBootstrapExit == 2, "smoke should reject invalid bootstrap mode, got $badBootstrapExit")
+    assertContains(badBootstrapOutput, "invalid bootstrap mode: twice", "smoke should report invalid bootstrap mode")
 }
 
 test("public fast lane passes when recursive kotlin step is disabled") {

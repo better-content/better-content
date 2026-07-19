@@ -260,6 +260,7 @@ Public commands:
   tools/bc test fast [--repo ID|PATH] [--list-repos]
   tools/bc test static
   tools/bc test kotlin [--filter NAME]
+  tools/bc test smoke [--run-root PATH] [--bootstrap-mode always|once|never] [--port N] [--idle-seconds N]
   tools/bc build sync server --dir PATH --dry-run|--apply
   tools/bc build sync client --dir PATH --dry-run|--apply
   tools/bc build bundle curseforge [--exports-dir PATH]
@@ -303,12 +304,13 @@ Examples:
 """.trimIndent()
 
 fun testHelp(): String = """
-Usage: tools/bc test <fast|static|kotlin> ...
+Usage: tools/bc test <fast|static|kotlin|smoke> ...
 
 Commands:
   fast [--repo ID|PATH] [--list-repos]
   static
   kotlin [--filter NAME]
+  smoke [--run-root PATH] [--bootstrap-mode always|once|never] [--port N] [--idle-seconds N]
 """.trimIndent()
 
 fun buildHelp(): String = """
@@ -3860,16 +3862,17 @@ fun runToolDocSurfaceValidation(): ProcessRun {
         "Validation: `tools/bc test static`",
         "Kotlin test runner: `tools/bc test kotlin`",
         "Fast workspace checks: `tools/bc test fast`",
+        "One-world server/client smoke: `tools/bc test smoke --bootstrap-mode always`",
     )
     for (line in expectedAgentCommands) {
         if (!agentsText.contains(line)) fail("$agentsPath missing documented command: $line")
     }
 
-    for (command in listOf("tools/bc test static", "tools/bc test kotlin", "tools/bc test fast")) {
+    for (command in listOf("tools/bc test static", "tools/bc test kotlin", "tools/bc test fast", "tools/bc test smoke --bootstrap-mode always")) {
         if (!runtimeText.contains(command)) fail("$runtimeValidationPath missing supported command: `$command`")
     }
-    if (!runtimeText.contains("runtime scenario surface has been intentionally removed")) {
-        fail("$runtimeValidationPath must state that runtime scenarios are removed")
+    if (!runtimeText.contains("one Xvfb-backed client")) {
+        fail("$runtimeValidationPath must describe the single client lifecycle smoke")
     }
 
     val docsList = Regex("""- `([^`]+)`:""").findAll(docsReadmeText).map { it.groupValues[1] }.toList()
@@ -3995,6 +3998,95 @@ fun runSmokeValidation(serverDir: Path, port: Int, reset: Boolean, bootstrapMode
         )
     }
     return ProcessRun(suite.exitCode, listOf(unearthedAudit.output, suite.output).filter(String::isNotBlank).joinToString("\n\n"))
+}
+
+fun startSmokeClient(clientDir: Path, port: Int, evidenceDir: Path): Pair<RunningProcess, Process> {
+    val versionId = "$mcVersion-forge-$forgeVersion"
+    val argfile = evidenceDir.resolve("client.args")
+    val argfileRun = generateMinecraftClientArgfile(clientDir, versionId, "SmokeClient", "127.0.0.1:$port", argfile)
+    require(argfileRun.exitCode == 0) { argfileRun.output }
+    val display = ":${100 + (port % 100)}"
+    val xvfbLog = evidenceDir.resolve("xvfb.log")
+    val xvfb = ProcessBuilder(listOf("Xvfb", display, "-screen", "0", "1280x720x24", "-nolisten", "tcp"))
+        .redirectErrorStream(true)
+        .redirectOutput(xvfbLog.toFile())
+        .start()
+    Thread.sleep(500)
+    if (!xvfb.isAlive) error("Xvfb exited before the smoke client started")
+    val clientLog = evidenceDir.resolve("client-console.log")
+    val client = ProcessBuilder(listOf(requireJava17Path(), "@${argfile}"))
+        .directory(clientDir.toFile())
+        .redirectErrorStream(true)
+        .redirectOutput(clientLog.toFile())
+    client.environment()["DISPLAY"] = display
+    client.environment()["LIBGL_ALWAYS_SOFTWARE"] = "1"
+    client.environment().putAll(javaTempEnvironment(clientDir))
+    return RunningProcess(client.start(), clientLog) to xvfb
+}
+
+fun runSingleWorldSmoke(runRoot: Path, port: Int, bootstrapMode: String, idleSeconds: Int, harness: HarnessRun? = null): ProcessRun {
+    if (idleSeconds !in 0..300) return ProcessRun(2, "--idle-seconds must be between 0 and 300")
+    val serverDir = runRoot.resolve("server")
+    val clientDir = runRoot.resolve("client")
+    val stamp = timestamp()
+    val evidenceDir = runRoot.resolve("evidence/$stamp")
+    evidenceDir.createDirectories()
+    fun bootstrap(): ProcessRun = when (bootstrapMode) {
+        "always" -> {
+            val server = bootstrapServerRuntime(serverDir, port, reset = true)
+            if (server.exitCode != 0) server else bootstrapClientRuntime(clientDir)
+        }
+        "once" -> {
+            val server = if (serverDir.resolve("run.sh").exists()) ProcessRun(0, "reusing prepared server runtime") else bootstrapServerRuntime(serverDir, port, reset = true)
+            if (server.exitCode != 0) server
+            else if (clientDir.resolve("versions").exists()) ProcessRun(0, "reusing prepared client runtime") else bootstrapClientRuntime(clientDir)
+        }
+        "never" -> if (serverDir.resolve("run.sh").exists() && clientDir.resolve("versions").exists()) ProcessRun(0, "using prepared runtimes") else ProcessRun(2, "prepared server and client runtimes are required for bootstrap-mode never")
+        else -> ProcessRun(2, "invalid bootstrap mode: $bootstrapMode")
+    }
+    harness?.updateStatus(status = "running", phase = "bootstrap", evidencePaths = listOf(evidenceDir.toString()))
+    val prepared = bootstrap()
+    if (prepared.exitCode != 0) return prepared
+    val prune = pruneRuntimeMods(serverDir, "server", apply = false)
+    if (prune.exitCode != 0) return prune
+    val serverLog = evidenceDir.resolve("server-console.log")
+    val server = startServerProcess(serverDir, port, listOf("nogui"), serverLog)
+    var client: RunningProcess? = null
+    var xvfb: Process? = null
+    harness?.updateStatus(status = "running", phase = "wait_server", childPids = listOf(server.process.pid()))
+    try {
+        waitForLogPattern(listOf(serverLog), Regex("""Done \([\d.]+s\)! For help, type \"help\""""), 900, server.process, "server startup")
+        harness?.updateStatus(status = "running", phase = "start_client", childPids = listOf(server.process.pid()))
+        val started = startSmokeClient(clientDir, port, evidenceDir)
+        client = started.first
+        xvfb = started.second
+        harness?.updateStatus(status = "running", phase = "wait_join", childPids = listOf(server.process.pid(), client.process.pid(), xvfb.pid()))
+        waitForLogPattern(listOf(serverLog), Regex("""SmokeClient joined the game"""), 300, client.process, "client join")
+        val hardDuringJoin = scanHardFailures(serverLog, serverDir)
+        if (!hardDuringJoin.ok) return ProcessRun(1, "hard server log failure after client join")
+        harness?.updateStatus(status = "running", phase = "settle")
+        val deadline = System.currentTimeMillis() + idleSeconds * 1000L
+        while (System.currentTimeMillis() < deadline) {
+            if (!server.process.isAlive) return ProcessRun(1, "server exited during settle")
+            if (!client.process.isAlive) return ProcessRun(1, "client exited during settle")
+            Thread.sleep(1000)
+        }
+        sendCommand(server, "kick SmokeClient smoke complete")
+        waitForLogPattern(listOf(serverLog), Regex("""SmokeClient lost connection"""), 60, server.process, "client disconnect")
+        val serverScan = scanHardFailures(serverLog, serverDir)
+        val clientScan = scanHardFailures(client.logPath, clientDir)
+        if (!serverScan.ok || !clientScan.ok) return ProcessRun(1, "hard log failure after lifecycle smoke")
+        writeJsonFile(evidenceDir.resolve("summary.json"), mapOf("status" to "passed", "serverDir" to serverDir.toString(), "clientDir" to clientDir.toString(), "port" to port, "idleSeconds" to idleSeconds, "evidence" to listOf(serverLog.toString(), client.logPath.toString())))
+        return ProcessRun(0, "single-world server/client smoke passed")
+    } catch (error: Throwable) {
+        captureSmokeStartupDiagnostics(server, evidenceDir)
+        return ProcessRun(1, error.message ?: error::class.java.simpleName)
+    } finally {
+        harness?.updateStatus(status = "running", phase = "shutdown")
+        stopProcess(client)
+        xvfb?.let { if (it.isAlive) it.destroyForcibly() }
+        stopProcess(server, "stop")
+    }
 }
 
 fun runKotlinTests(filter: String?): ProcessRun {
@@ -4918,13 +5010,54 @@ fun scenarioRequestedPort(name: String, args: List<String>): Int? =
         else -> defaultServerPort
     }
 
+fun handleSingleWorldSmoke(rawArgs: List<String>): CommandResult {
+    val missing = ensureCommands("java", "Xvfb")
+    if (missing.isNotEmpty()) return prereqFailure("single-world smoke prerequisites missing", missing)
+    var runRoot = cachePath("smoke").toString()
+    var requestedPort = defaultServerPort
+    var bootstrapMode = "always"
+    var idleSeconds = 30
+    var index = 0
+    while (index < rawArgs.size) {
+        when (rawArgs[index]) {
+            "--run-root" -> { runRoot = rawArgs.getOrNull(index + 1) ?: return usageError("--run-root needs a path", testHelp()); index += 2 }
+            "--port" -> { requestedPort = rawArgs.getOrNull(index + 1)?.toIntOrNull() ?: return usageError("--port needs a number", testHelp()); if (requestedPort !in 1..65535) return usageError("invalid --port: $requestedPort", testHelp()); index += 2 }
+            "--bootstrap-mode" -> { bootstrapMode = rawArgs.getOrNull(index + 1) ?: return usageError("--bootstrap-mode needs always, once, or never", testHelp()); if (bootstrapMode !in setOf("always", "once", "never")) return usageError("invalid bootstrap mode: $bootstrapMode", testHelp()); index += 2 }
+            "--idle-seconds" -> { idleSeconds = rawArgs.getOrNull(index + 1)?.toIntOrNull() ?: return usageError("--idle-seconds needs a number", testHelp()); if (idleSeconds !in 0..300) return usageError("--idle-seconds must be between 0 and 300", testHelp()); index += 2 }
+            "--help" -> return success("test smoke", testHelp(), evidenceLevel = "fresh-runtime")
+            else -> return usageError("unknown argument: ${rawArgs[index]}", testHelp())
+        }
+    }
+    val rootPath = resolveUserPath(runRoot)
+    val reserved = reserveAvailablePort(requestedPort) ?: return CommandResult("test smoke", "failure", "no free port found in $requestedPort..${requestedPort + 50}", exitCode = 1, evidenceLevel = "fresh-runtime")
+    val (harness, conflict) = startHarnessRun(HarnessSpec(
+        keySeed = "test-smoke:${rootPath.toAbsolutePath().normalize()}", runKind = "test smoke", command = "test smoke", repoOrScenario = "single-world-smoke", workDirOrRunRoot = rootPath.toString(), requestedPort = requestedPort, actualPort = reserved.port, reservedPortPath = reserved.path,
+    ))
+    if (conflict != null) {
+        releasePortReservation(reserved.path)
+        return CommandResult("test smoke", "failure", conflict.message, findings = listOf(ValidationFinding("error", conflict.message)), details = conflict.details, exitCode = 1, evidenceLevel = "fresh-runtime")
+    }
+    harness!!
+    harness.announce(remapped = reserved.port != requestedPort)
+    val run = try { runSingleWorldSmoke(rootPath, reserved.port, bootstrapMode, idleSeconds, harness) } catch (error: Throwable) { ProcessRun(1, error.message ?: error::class.java.simpleName) }
+    val artifacts = listOf(ArtifactRef(rootPath.toString(), "directory"), ArtifactRef(harness.paths.status.toString()), ArtifactRef(harness.paths.summary.toString()))
+    return if (run.exitCode == 0) {
+        harness.finalizeState("passed", preserveSummary = true)
+        success("test smoke", "single-world server/client smoke passed", artifacts = artifacts, details = mapOf("runRoot" to rootPath.toString(), "requestedPort" to requestedPort, "actualPort" to reserved.port, "bootstrapMode" to bootstrapMode, "idleSeconds" to idleSeconds), mutated = true, evidenceLevel = "fresh-runtime")
+    } else {
+        harness.finalizeState("failed", lastError = run.output, preserveSummary = true)
+        CommandResult("test smoke", "failure", "test smoke failed", findings = listOf(ValidationFinding("error", run.output.ifBlank { "single-world smoke failed" })), artifacts = artifacts, details = mapOf("runRoot" to rootPath.toString(), "requestedPort" to requestedPort, "actualPort" to reserved.port, "bootstrapMode" to bootstrapMode, "idleSeconds" to idleSeconds), exitCode = if (run.exitCode == 2) 2 else 1, mutated = true, evidenceLevel = "fresh-runtime")
+    }
+}
+
 fun handleTest(subArgs: List<String>): CommandResult {
     if (subArgs.isEmpty() || subArgs == listOf("--help")) {
         return success("test", testHelp(), evidenceLevel = "source")
     }
-    if (subArgs.first() !in setOf("fast", "static", "kotlin")) {
+    if (subArgs.first() !in setOf("fast", "static", "kotlin", "smoke")) {
         return usageError("unknown test command: ${subArgs.first()}", testHelp())
     }
+    if (subArgs.first() == "smoke") return handleSingleWorldSmoke(subArgs.drop(1))
     return when (subArgs.first()) {
         "fast" -> runWorkspaceVerification("fast", subArgs.drop(1))
         "full" -> runFullCommand(subArgs.drop(1))

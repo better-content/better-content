@@ -56,6 +56,7 @@ Do not sync or delete player/runtime state by default. The tracked repo-root `op
 - Validation: `tools/bc test static`
 - Kotlin test runner: `tools/bc test kotlin`
 - Fast workspace checks: `tools/bc test fast`
+- One-world server/client smoke: `tools/bc test smoke --bootstrap-mode always`
 - Graph adjacency query: `tools/bc graph item ITEM_ID [--producers|--consumers|--all] [--limit N] [--type RECIPE_TYPE] [--graph PATH]`
 - Graph route query: `tools/bc graph route ITEM_ID [--graph PATH] [--sources PATH] [--spine PATH]`
 - Graph blocker query: `tools/bc graph blockers ITEM_ID [--graph PATH] [--sources PATH] [--spine PATH] [--limit N]`
@@ -98,8 +99,8 @@ Original shell/Python tools are quarantined under `tools/quarantine/original-too
 - `tools/bc` is the only supported front door. Archived compatibility shims may remain under `tools/quarantine/`, but supported `test`, `build`, and `doctor` flows should not depend on them or be taught as live entrypoints.
 - KubeJS scripts are the only normal place for pack-authored JavaScript. Repo tooling should be Kotlin unless the user explicitly asks for a quarantined compatibility path.
 
-## Runtime Test Reset
-All headed, headless, and level-generating test surfaces are removed. Do not add a runtime scenario or world generator until a replacement one-world worldgen suite has an approved design.
+## Runtime Test Surface
+The sole runtime test is `tools/bc test smoke`. It uses one disposable dedicated-server world and one Xvfb-backed client, verifies boot, join, a bounded settled connection, clean disconnect/server stop, and hard-log health. Do not add scenario matrices, cloned worlds, multi-cycle runs, or worldgen statistics until separately designed.
 
 ## Core Rules
 - Prototype freeze policy: until the user explicitly says the freeze is released, do not add new features, new progression branches, new content systems, or broad UX/theme expansions. Balance tuning is allowed, but keep it scoped to the existing systems and avoid feature drift. Limit work to stabilization, crash fixes, progression deadlock fixes, balance changes, validation/tooling fixes, packaging, questbook authoring/revision, menu clarity, and other changes required to ship or playtest the frozen prototype.
@@ -124,7 +125,7 @@ Recommended validation ladder:
 2. Kotlin checks: `tools/bc test kotlin`.
 3. Fast source workspace checks when relevant: `tools/bc test fast`.
 
-Do not claim runtime validation until the replacement one-world worldgen suite exists.
+Treat the smoke as lifecycle/network evidence only; it is not a gameplay, worldgen-distribution, or visual-quality claim.
 
 For runtime/tooling changes, also run:
 1. `tools/bc doctor env`

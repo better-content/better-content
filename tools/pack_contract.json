@@ -431,26 +431,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "worldgen_statistical_sampling",
-      "tier": "L5",
-      "requiredFiles": [
-        "tools/kotlin/worldgen_sampling.main.kts",
-        "tools/worldgen_sampling_contract.json",
-        "datapacks/realistic_ores_lava_depths/pack.mcmeta",
-        "datapacks/hyle_deep/pack.mcmeta"
-      ],
-      "contains": [
-        {
-          "file": "docs/runtime_validation.md",
-          "all": [
-            "settlement-roads",
-            "village-walls",
-            "Hyle"
-          ]
-        }
-      ]
     }
   ],
   "validationTiers": [
@@ -494,19 +474,10 @@
     },
     {
       "id": "L4",
-      "name": "client/server scenario harnesses",
+      "name": "source build and configuration checks",
       "requiredTools": [
         "tools/bc",
         "tools/bc.main.kts"
-      ]
-    },
-    {
-      "id": "L5",
-      "name": "statistical seed/worldgen/performance sampling",
-      "requiredTools": [
-        "tools/kotlin/worldgen_sampling.main.kts",
-        "tools/kotlin/validate_worldgen_sampling_contracts.main.kts",
-        "tools/worldgen_sampling_contract.json"
       ]
     }
   ],
@@ -564,7 +535,7 @@
       },
       {
         "id": "progression_recipe_graph",
-        "status": "runtime_checked",
+        "status": "marker_checked",
         "tierRefs": [
           "L2",
           "L3"
@@ -585,7 +556,9 @@
           "tools/kotlin/expert_graph_audit.main.kts",
           "tools/kotlin/audit_indirect_casing_economy.main.kts"
         ],
-        "openRequirements": []
+        "openRequirements": [
+          "Restore runtime proof only through the approved one-world validation suite."
+        ]
       },
       {
         "id": "bounded_matter_geology_chemistry",
@@ -692,7 +665,7 @@
       },
       {
         "id": "runtime_concurrency_performance",
-        "status": "runtime_checked",
+        "status": "marker_checked",
         "tierRefs": [
           "L3",
           "L4"
@@ -700,7 +673,7 @@
         "systemRefs": [
           "runtime_concurrency_performance"
         ],
-        "claim": "Fresh server smoke validates boot, hard log scan, recipe parse health, tick/save budgets, dimension save fanout, DH backlog, and recent crash state.",
+        "claim": "Runtime concurrency configuration and retained audit scripts are source-checked; no runtime smoke claim is active.",
         "evidence": [
           "tools/bc",
           "tools/bc.main.kts",
@@ -710,7 +683,9 @@
           "tools/bc",
           "tools/kotlin/pack_test_suite.main.kts"
         ],
-        "openRequirements": []
+        "openRequirements": [
+          "Design and implement the approved one-world runtime validation suite before making runtime claims."
+        ]
       },
       {
         "id": "client_visibility_quests",
@@ -733,33 +708,6 @@
           "tools/kotlin/validate_pack_contract.main.kts"
         ],
         "openRequirements": []
-      },
-      {
-        "id": "worldgen_statistics",
-        "status": "marker_checked",
-        "tierRefs": [
-          "L5"
-        ],
-        "systemRefs": [
-          "worldgen_statistical_sampling"
-        ],
-        "claim": "Worldgen datapacks, C2ME matrix tooling, memory inventory, and known follow-ups exist; density and accessibility proof requires seed sampling.",
-        "evidence": [
-          "tools/kotlin/validate_autonomous_contracts.main.kts",
-          "tools/kotlin/worldgen_sampling.main.kts",
-          "tools/worldgen_sampling_contract.json",
-          "datapacks/realistic_ores_lava_depths/pack.mcmeta",
-          "datapacks/hyle_deep/pack.mcmeta"
-        ],
-        "validators": [
-          "tools/kotlin/validate_autonomous_contracts.main.kts",
-          "tools/kotlin/worldgen_sampling.main.kts",
-          "tools/kotlin/validate_worldgen_sampling_contracts.main.kts"
-        ],
-        "openRequirements": [
-          "Add deterministic seed sampling for deposits, Y-bands, villages, roads, walls, structures, forageables, and spawn viability.",
-          "Define acceptable distance/depth distributions and fail outside confidence bounds."
-        ]
       },
       {
         "id": "custom_mods",

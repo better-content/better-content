@@ -53,13 +53,10 @@ val steps = listOf(
     StaticStep("validate synthesis pipeline", listOf("tools/bc", "internal", "validate-synthesis-pipeline")),
     StaticStep("validate progression contracts", listOf("kotlin", repo.resolve("tools/kotlin/validate_progression_contracts.main.kts").toString())),
     StaticStep("validate player progression contracts", listOf("tools/bc", "internal", "validate-player-progression-contracts")),
-    StaticStep("validate progression milestones contract", listOf("kotlin", repo.resolve("tools/kotlin/validate_progression_milestones_contract.main.kts").toString())),
-    StaticStep("validate progression client visibility contract", listOf("kotlin", repo.resolve("tools/kotlin/validate_progression_client_visibility.main.kts").toString())),
     StaticStep("validate progression reachability", listOf("tools/bc", "internal", "validate-progression-reachability")),
     StaticStep("validate Burnt coverage", listOf("tools/bc", "internal", "validate-burnt-coverage")),
     StaticStep("validate LC/TFTH/DH contracts", listOf("kotlin", repo.resolve("tools/kotlin/validate_lc_tfth_dh_contracts.main.kts").toString())),
     StaticStep("validate VS ships contracts", listOf("kotlin", repo.resolve("tools/kotlin/validate_vs_ships_contracts.main.kts").toString())),
-    StaticStep("validate worldgen sampling contracts", listOf("kotlin", repo.resolve("tools/kotlin/validate_worldgen_sampling_contracts.main.kts").toString())),
 )
 
 for (step in steps) {

@@ -438,12 +438,6 @@ test("unknown scenario is a usage error") {
     assertContains(output, "unknown scenario: not_a_real_scenario", "unknown scenario error should be specific")
 }
 
-test("multi-world scenarios are rejected") {
-    val (exit, output) = runCommand("tools/bc", "test", "scenario", "vs_ships_matrix", "--profile", "quick")
-    assertTrue(exit == 2, "multi-world scenario should exit 2, got $exit")
-    assertContains(output, "violates the one-world validation rule", "multi-world scenario should explain the rejection")
-}
-
 test("multiple scenario cycles are rejected") {
     val (exit, output) = runCommand("tools/bc", "test", "scenario", "opening_progression", "--cycles", "2")
     assertTrue(exit == 2, "multiple cycles should exit 2, got $exit")

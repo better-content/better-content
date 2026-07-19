@@ -95,7 +95,6 @@ data class ScenarioDefinition(
     val name: String,
     val description: String,
     val script: String,
-    val requiresMultipleWorlds: Boolean = false,
 )
 data class WorkspaceRepoDefinition(
     val id: String,
@@ -243,12 +242,6 @@ val clientOnlyModGlobs = listOf(
 )
 
 val scenarios = linkedMapOf(
-    "lc_tfth_c2me_dh" to ScenarioDefinition(
-        "lc_tfth_c2me_dh",
-        "Lost Cities/C2ME/Distant Horizons serialization-guard regression repro",
-        "tools/kotlin/lc_tfth_c2me_dh_stability.main.kts",
-        requiresMultipleWorlds = true,
-    ),
     "opening_progression" to ScenarioDefinition(
         "opening_progression",
         "Opening progression runtime validation",
@@ -273,12 +266,6 @@ val scenarios = linkedMapOf(
         "vs_ships_stability",
         "Valkyrien Skies family headless server stability diagnostics",
         "tools/kotlin/vs_ships_stability.main.kts",
-    ),
-    "vs_ships_matrix" to ScenarioDefinition(
-        "vs_ships_matrix",
-        "Valkyrien Skies family disposable runtime isolation matrix",
-        "tools/kotlin/vs_ships_matrix.main.kts",
-        requiresMultipleWorlds = true,
     ),
 )
 
@@ -3965,13 +3952,11 @@ fun runToolDocSurfaceValidation(): ProcessRun {
         "tools/bc test full",
         "tools/bc test full --workspace",
         "tools/bc test unearthed-replacement --instance /path/to/fresh/runtime",
-        "tools/bc test scenario lc_tfth_c2me_dh --samples 4 --settle-seconds 30 --bootstrap-mode once",
         "tools/bc test scenario opening_progression --cycles 1 --bootstrap-mode once",
         "tools/bc test scenario worldgen_sampling --profile local --bootstrap-mode once",
         "tools/bc test scenario worldgen_sampling --profile quick --bootstrap-mode once",
         "tools/bc test scenario worldgen_sampling --profile release --bootstrap-mode once",
         "tools/bc test scenario vs_ships_stability --profile quick --cycles 1 --bootstrap-mode once",
-        "tools/bc test scenario vs_ships_matrix --profile quick --bootstrap-mode once",
     )
     for (command in requiredRuntimeCommands) {
         if (!runtimeText.contains(command)) fail("$runtimeValidationPath missing scenario command: `$command`")
@@ -3986,18 +3971,8 @@ fun runToolDocSurfaceValidation(): ProcessRun {
         fail("$runtimeValidationPath must document the workspace inventory")
     }
 
-    if (!performanceText.contains("`tools/bc test scenario lc_tfth_c2me_dh`")) {
-        fail("$performancePath missing headless LC/C2ME/DH guard repro harness reference")
-    }
-    if (performanceText.contains("`tools/bc test full` for pack-only validation")
-        || performanceText.contains("`tools/bc test full --workspace` for workspace-wide full fanout")
-    ) {
-        fail("$performancePath must not describe the LC/C2ME/DH repro as part of test full coverage")
-    }
-    if (!runtimeText.contains("`worldgen_sampling` is the normal worldgen confidence lane")
-        || !runtimeText.contains("`lc_tfth_c2me_dh` is a diagnostic-only regression repro")
-    ) {
-        fail("$runtimeValidationPath must distinguish normal worldgen coverage from stress and diagnostic-only lanes")
+    if (!runtimeText.contains("`worldgen_sampling` is the normal worldgen confidence lane")) {
+        fail("$runtimeValidationPath must document normal worldgen coverage")
     }
 
     val docsList = Regex("""- `([^`]+)`:""").findAll(docsReadmeText).map { it.groupValues[1] }.toList()
@@ -5075,11 +5050,9 @@ fun scenarioDefaultRunRoot(name: String, args: List<String>): Path {
     return when (name) {
         "opening_progression" -> cachePath("opening-progression")
         "progression_milestones" -> cachePath("progression-milestones")
-        "lc_tfth_c2me_dh" -> cachePath("lc-c2me-dh-repro")
         "worldgen_sampling" -> cachePath("dimension-worldgen")
         "pillager_campaigns" -> cachePath("pillager-campaigns")
         "vs_ships_stability" -> cachePath("vs-ships-stability")
-        "vs_ships_matrix" -> cachePath("vs-ships-matrix")
         else -> cachePath("scenario-$name")
     }.toAbsolutePath().normalize()
 }
@@ -5338,9 +5311,6 @@ fun handleTest(subArgs: List<String>): CommandResult {
             if (name == "--help") return success("test scenario", testHelp(), evidenceLevel = "scenario-runtime")
             val scenario = scenarios[name] ?: return usageError("unknown scenario: $name", testHelp())
             var passthroughArgs = subArgs.drop(2)
-            if (scenario.requiresMultipleWorlds) {
-                return usageError("scenario $name is disabled: it requires multiple worlds and violates the one-world validation rule", testHelp())
-            }
             val requestedCycles = passthroughArgs.windowed(2).firstOrNull { it[0] == "--cycles" }?.get(1)?.toIntOrNull()
             if (requestedCycles != null && requestedCycles > 1) {
                 return usageError("--cycles $requestedCycles violates the one-world validation rule; use --cycles 1", testHelp())

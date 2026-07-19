@@ -162,7 +162,7 @@ for (path in listOf("mods/shoulder-surfing-reloaded.pw.toml", "config/shouldersu
 }
 
 val bcText = read("tools/bc.main.kts")
-for (scenario in listOf("vs_ships_stability", "vs_ships_matrix")) {
+for (scenario in listOf("vs_ships_stability")) {
     if (""""$scenario" to ScenarioDefinition(""" in bcText) ok("$scenario is registered")
     else fail("$scenario is registered", "missing ScenarioDefinition")
 }
@@ -192,34 +192,6 @@ val scriptChecks = mapOf(
         "vs_eureka:oak_ship_helm",
         "vs_eureka:floater",
     ),
-    "tools/kotlin/vs_ships_matrix.main.kts" to listOf(
-        "current_config",
-        "dh_disabled",
-        "c2me_disabled",
-        "dh_c2me_disabled",
-        "vs_core_only",
-        "vs_eureka",
-        "vs_clockwork",
-        "vs_trackwork",
-        "full_vs_family",
-        "full_vs_family_current_dh_c2me",
-        "addon_removal_boot_failure",
-        "partial_save_corruption",
-        "vs_init_failure",
-        "eureka_init_failure",
-        "clockwork_init_failure",
-        "trackwork_init_failure",
-        "suspected_ship_object_leak",
-        "--variants",
-        "--cycles",
-        "cloneRuntime",
-        "--reflink=auto",
-        "physics_queue_warnings",
-        "timedOut && !ready && physicsWarnings > 0",
-        "exitProcess(if (finalStatus == \"passed\") 0 else 1)",
-        "status == \"passed\" && !keepRuns",
-        "cycle-\$cycle-base",
-    ),
 )
 for ((path, needles) in scriptChecks) {
     if (!rel(path).isRegularFile()) {
@@ -231,15 +203,10 @@ for ((path, needles) in scriptChecks) {
     if (missing.isEmpty()) ok("$path keeps required VS classifiers/contracts", "${needles.size} checks")
     else fail("$path keeps required VS classifiers/contracts", missing.joinToString(", "))
 }
-val matrixText = read("tools/kotlin/vs_ships_matrix.main.kts")
-if (!matrixText.contains("\"test\", \"smoke\"")) ok("VS isolation variants bypass smoke manifest preflight")
-else fail("VS isolation variants bypass smoke manifest preflight", "matrix still boots mutated runtimes through test smoke")
-
 val docs = mapOf(
-    "AGENTS.md" to listOf("vs_ships_stability", "vs_ships_matrix"),
+    "AGENTS.md" to listOf("vs_ships_stability"),
     "docs/runtime_validation.md" to listOf(
         "tools/bc test scenario vs_ships_stability --profile quick --cycles 1 --bootstrap-mode once",
-        "tools/bc test scenario vs_ships_matrix --profile quick --bootstrap-mode once",
     ),
     "docs/performance_and_mods.md" to listOf("Valkyrien Skies", "Eureka", "Clockwork", "Trackwork", "vs_ships_stability"),
 )

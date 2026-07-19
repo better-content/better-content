@@ -56,7 +56,7 @@ Current dedicated-server defaults are 4 GiB initial and 16 GiB maximum heap, wit
 
 ## C2ME, DH, LC, And TFTH
 
-Current source state keeps C2ME, Distant Horizons, Lost Cities, and The Flesh That Hates active. The focused Lost Cities regression harness entrypoint is `tools/bc test scenario lc_tfth_c2me_dh`. For reusable prepared runtimes, prefer `tools/bc test scenario lc_tfth_c2me_dh --samples 4 --settle-seconds 30 --bootstrap-mode once`. This is a targeted diagnostic repro, not part of the default `tools/bc test full` or `tools/bc test full --workspace` coverage.
+Current source state keeps C2ME, Distant Horizons, Lost Cities, and The Flesh That Hates active. Their previous guarded/unguarded Lost Cities regression harness was removed because it required multiple worlds and violated the one-world validation rule.
 
 Historical conclusions to preserve:
 
@@ -76,7 +76,6 @@ Valkyrien Skies, Eureka, VS: Clockwork, and Trackwork are active as pinned trans
 
 ```bash
 tools/bc test scenario vs_ships_stability --profile quick --cycles 1 --bootstrap-mode once
-tools/bc test scenario vs_ships_matrix --profile quick --bootstrap-mode once
 ```
 
 Use these to classify server boot, dependency/mixin, ship assembly, save/restart lifecycle, dimension, C2ME/DH/threading, add-on removal, partial-save corruption, and suspected ship object leaks. They write raw evidence under `~/.cache/bc/bc-vs-*`; keep durable conclusions here only after a fresh run. Player-control and rendering behavior remain manual-playtest surfaces.

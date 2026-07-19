@@ -107,13 +107,11 @@ Use the portable harness layer for repeatable runtime tests instead of hand-buil
 
 - Public scenario entrypoint: `tools/bc test scenario NAME [scenario args]`.
 - Current public scenarios:
-  - `lc_tfth_c2me_dh`
   - `opening_progression`
   - `progression_milestones`
   - `pillager_campaigns`
   - `worldgen_sampling`
   - `vs_ships_stability`
-  - `vs_ships_matrix`
 - Internal harness/scenario implementation should define only:
   - scenario metadata and default run/docs paths
   - required mod jar patterns
@@ -128,15 +126,8 @@ Use the portable harness layer for repeatable runtime tests instead of hand-buil
 - Use `--cycles`, `--idle-seconds`, `--keep-going`, `--keep-runs`, `--min-free-gb`, and `--max-old-runs` to tune validation runs. Default behavior should prune old cache-backed runs and fail early if free space is low.
 - On stalls, timeouts, watchdogs, JVM exits, or crash reports, capture diagnostics through the harness before stopping processes.
 
-Current LC/DH scenario:
-- Run: `tools/bc test scenario lc_tfth_c2me_dh`
-- Short smoke: `tools/bc test scenario lc_tfth_c2me_dh --samples 4 --settle-seconds 30 --bootstrap-mode once`
-- Full validation expectation: a guarded Lost Cities-only control runtime passes, an otherwise identical unguarded runtime fails with a targeted Lost Cities/C2ME/DH classifier, and the scenario fails as inconclusive if the unguarded repro does not trigger within its fixed workload budget.
-This scenario is diagnostic-only. Do not treat it as part of the normal `tools/bc test full` coverage.
-
 Current VS ships diagnostic scenarios:
 - Headless stability: `tools/bc test scenario vs_ships_stability --profile quick --cycles 1 --bootstrap-mode once`
-- Isolation matrix: `tools/bc test scenario vs_ships_matrix --profile quick --bootstrap-mode once`
 
 These scenarios are failure-surface discovery lanes for Valkyrien Skies, Eureka, VS: Clockwork, Trackwork, DH, and C2ME interactions. Keep them diagnostic-only: do not add progression integration, quests, balance hooks, or UX expansion as part of this lane.
 

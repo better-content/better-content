@@ -20,9 +20,7 @@ tools/bc test scenario pillager_campaigns --lane all --bootstrap-mode once
 tools/bc test scenario worldgen_sampling --profile local --bootstrap-mode once
 tools/bc test scenario worldgen_sampling --profile quick --bootstrap-mode once
 tools/bc test scenario worldgen_sampling --profile release --bootstrap-mode once
-tools/bc test scenario lc_tfth_c2me_dh --samples 4 --settle-seconds 30 --bootstrap-mode once
 tools/bc test scenario vs_ships_stability --profile quick --cycles 1 --bootstrap-mode once
-tools/bc test scenario vs_ships_matrix --profile quick --bootstrap-mode once
 ```
 
 `tools/bc test scenario` is the supported front door for harness-backed runtime scenarios. The public scenario surface is server/headless only.
@@ -48,9 +46,7 @@ The smoke launcher uses a deterministic seed and captures timeout diagnostics be
 - `pillager_campaigns` covers the campaign lanes in one reusable world when invoked with `--lane all`.
 - `worldgen_sampling` is the normal worldgen confidence lane. Its checked-in contract is `tools/worldgen_sampling_contract.json`; its internal server backend is not a separate public scenario.
 - Worldgen sampling retains contract coverage for settlement-roads, village-walls, and Hyle generation surfaces in the single disposable world.
-- `lc_tfth_c2me_dh` is a diagnostic-only regression repro. Its historical A/B behavior is incompatible with the one-world rule and must not be run unless redesigned around one save.
 - `vs_ships_stability` is the focused server lifecycle diagnostic.
-- `vs_ships_matrix` historically cloned runtimes and worlds for isolation variants. It is incompatible with the one-world rule and must not be run unless redesigned around one save.
 
 Do not make a diagnostic pass by disabling the feature being tested in source.
 

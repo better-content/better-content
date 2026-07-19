@@ -401,21 +401,10 @@
       "requiredFiles": [
         "tools/bc",
         "tools/bc.main.kts",
-        "tools/kotlin/lc_tfth_c2me_dh_stability.main.kts",
         "config/c2me.toml",
         "config/DistantHorizons.toml"
       ],
       "contains": [
-        {
-          "file": "tools/kotlin/lc_tfth_c2me_dh_stability.main.kts",
-          "all": [
-            "modernfix_watchdog",
-            "C2ME",
-            "DistantHorizons",
-            "serializeDhC2meFeaturePlacement",
-            "lostcities:lostcity"
-          ]
-        },
         {
           "file": "tools/bc.main.kts",
           "all": [
@@ -508,8 +497,7 @@
       "name": "client/server scenario harnesses",
       "requiredTools": [
         "tools/bc",
-        "tools/bc.main.kts",
-        "tools/kotlin/lc_tfth_c2me_dh_stability.main.kts"
+        "tools/bc.main.kts"
       ]
     },
     {
@@ -690,8 +678,7 @@
           "kubejs/data/twilightforest/creatingspace/rocket_accessible_dimension/twilight_forest.json",
           "config/twilightforest-common.toml",
           "config/structurify.json",
-          "config/dimension_drink/dimension_drink/aether.json",
-          "tools/kotlin/lc_tfth_c2me_dh_stability.main.kts"
+          "config/dimension_drink/dimension_drink/aether.json"
         ],
         "validators": [
           "tools/bc",
@@ -717,13 +704,11 @@
         "evidence": [
           "tools/bc",
           "tools/bc.main.kts",
-          "tools/kotlin/pack_test_suite.main.kts",
-          "tools/kotlin/lc_tfth_c2me_dh_stability.main.kts"
+          "tools/kotlin/pack_test_suite.main.kts"
         ],
         "validators": [
           "tools/bc",
-          "tools/kotlin/pack_test_suite.main.kts",
-          "tools/kotlin/lc_tfth_c2me_dh_stability.main.kts"
+          "tools/kotlin/pack_test_suite.main.kts"
         ],
         "openRequirements": []
       },

@@ -513,7 +513,8 @@
         "milestone": "airtight",
         "sourceFiles": [
           "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js",
-          "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js"
+          "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js",
+          "kubejs/server_scripts/40_recipe_add/58_create_pncr_molecular_synthesis.js"
         ],
         "requiredOutputs": [
           "kubejs:pressure_seal",

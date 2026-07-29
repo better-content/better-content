@@ -8,7 +8,7 @@ var BC_CREATE_DEPOSITS = [
     { id: 'tin', tag: 'kubejs:deposit_blocks/tin', crushed: 'realisticores:crushed_tin_ore', wash: [{ item: 'create:crushed_raw_tin', count: 2 }, { item: 'minecraft:quartz', chance: 0.40 }, { item: 'chemlib:tungsten', chance: 0.12 }], fluid: 'forge:molten_tin', amount: 180, temp: 225 },
     { id: 'zinc', tag: 'kubejs:deposit_blocks/zinc', crushed: 'realisticores:crushed_zinc_ore', wash: [{ item: 'create:crushed_raw_zinc', count: 2 }, { item: 'create:crushed_raw_lead', chance: 0.30 }, { item: 'chemlib:cadmium', chance: 0.12 }], fluid: 'forge:molten_zinc', amount: 180, temp: 420 },
     { id: 'lead_zinc_vein', tag: 'kubejs:deposit_blocks/lead_zinc_vein', crushed: 'realisticores:crushed_lead_zinc_vein', wash: [{ item: 'create:crushed_raw_lead', count: 2 }, { item: 'create:crushed_raw_zinc', chance: 0.45 }, { item: 'create:crushed_raw_silver', chance: 0.25 }], fluid: 'forge:molten_lead', amount: 180, temp: 420 },
-    { id: 'quartz_vein', tag: 'kubejs:deposit_blocks/quartz_vein', crushed: 'realisticores:crushed_quartz_vein', wash: [{ item: 'minecraft:quartz', count: 3 }, { item: 'chemlib:silicon', chance: 0.35 }, { item: 'create:crushed_raw_gold', chance: 0.12 }, { item: 'create:crushed_raw_copper', chance: 0.12 }], fluid: 'tconstruct:molten_quartz', amount: 100, temp: 700 },
+    { id: 'quartz_vein', tag: 'kubejs:deposit_blocks/quartz_vein', crushed: 'realisticores:crushed_quartz_vein', wash: [{ item: 'minecraft:quartz', count: 3 }, { item: 'chemlib:silicon_dioxide', chance: 0.35 }, { item: 'create:crushed_raw_gold', chance: 0.12 }, { item: 'create:crushed_raw_copper', chance: 0.12 }], fluid: 'tconstruct:molten_quartz', amount: 100, temp: 700 },
     { id: 'bauxite_laterite', tag: 'kubejs:deposit_blocks/bauxite_laterite', crushed: 'realisticores:crushed_bauxite_laterite', wash: [{ item: 'create:crushed_raw_aluminum', count: 2 }, { item: 'chemlib:aluminum_oxide', chance: 0.25 }, { item: 'create:crushed_raw_nickel', chance: 0.20 }], fluid: 'forge:molten_aluminum', amount: 180, temp: 660 },
     { id: 'nickel_sulfide', tag: 'kubejs:deposit_blocks/nickel_sulfide', crushed: 'realisticores:crushed_nickel_sulfide_ore', wash: [{ item: 'create:crushed_raw_nickel', count: 2 }, { item: 'create:crushed_raw_iron', chance: 0.35 }, { item: 'chemlib:sulfur', chance: 0.35 }, { item: 'chemlib:platinum', chance: 0.08 }], fluid: 'forge:molten_nickel', amount: 180, temp: 700 },
     { id: 'osmiridium_lava_sulfide', tag: 'kubejs:deposit_blocks/osmiridium_lava_sulfide', crushed: 'realisticores:crushed_osmiridium_lava_sulfide_ore', wash: [{ item: 'chemlib:osmium', count: 1 }, { item: 'chemlib:iridium', count: 1 }, { item: 'chemlib:platinum', chance: 0.20 }, { item: 'chemlib:palladium', chance: 0.16 }, { item: 'chemlib:ruthenium', chance: 0.12 }] },
@@ -40,6 +40,17 @@ function bcFluidOutput(ref, amount) {
 }
 
 ServerEvents.recipes(function (event) {
+    event.remove({ id: 'create:milling/calcite' })
+    event.custom({
+        type: 'create:milling',
+        ingredients: [{ item: 'minecraft:calcite' }],
+        processingTime: 250,
+        results: [
+            { item: 'chemlib:calcium_carbonate' },
+            { item: 'minecraft:bone_meal', chance: 0.25 }
+        ]
+    }).id('kubejs:create/milling/calcite_carbonate')
+
     for (var i = 0; i < BC_CREATE_DEPOSITS.length; i++) {
         var dep = BC_CREATE_DEPOSITS[i]
 

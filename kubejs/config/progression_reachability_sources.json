@@ -27,6 +27,8 @@
     "minecraft:stick",
     "minecraft:white_dye",
     "minecraft:wooden_button",
+    "chemlib:carbon",
+    "chemlib:sulfur",
     "chemlib:zinc_ingot",
     "create:piston_extension_pole",
     "farmersdelight:straw",
@@ -67,7 +69,8 @@
   ],
   "seedFluids": [
     "minecraft:water",
-    "minecraft:lava"
+    "minecraft:lava",
+    "forge:ethanol"
   ],
   "tagProviders": {
     "forge:glass": [
@@ -450,7 +453,12 @@
       "inputs": [
         "create:mechanical_mixer",
         "minecraft:dried_kelp",
-        "minecraft:slime_ball"
+        "minecraft:slime_ball",
+        "chemlib:carbon",
+        "chemlib:sulfur"
+      ],
+      "fluidsIn": [
+        "forge:ethanol"
       ]
     },
     {

@@ -89,11 +89,11 @@ ServerEvents.recipes(function (event) {
         { item: 'minecraft:dried_kelp' },
         { item: 'chemlib:sulfur' },
         { item: 'chemlib:carbon' },
-        { fluid: 'chemlib:ethanol_fluid', amount: 250 }
+        { fluidTag: 'forge:ethanol', amount: 250 }
     ], [{ item: 'kubejs:pressure_seal', count: 2 }], null)
 
      bcChemMixing(event, 'ethanol_from_sugar', [
-        { item: 'minecraft:sugar' },
+        { item: 'minecraft:sugar', count: 2 },
         { item: 'chemlib:carbon' },
         { fluid: 'minecraft:water', amount: 250 }
     ], bcChemResults([{ fluid: 'chemlib:ethanol_fluid', amount: 250 }], [

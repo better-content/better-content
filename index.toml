@@ -5410,7 +5410,7 @@ hash = "21c3b91848f1423f098000d5f01ef4a9bc7f083f2e515e24acd99988573c4f98"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/chemistry_matter_routes.snbt"
-hash = "328c601b50d6cfb75e5e828427ef36199b96086ffdffe5909d309205189422b3"
+hash = "a03d9b06c70f2a478db5b3d94d8bb8cd893e5fafb3e80b3033b6ee6b5073712c"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/coins_wares_settlements.snbt"
@@ -9198,11 +9198,11 @@ hash = "dc753044f39d65b2a0106b3ea4005dd10287e94c4ce1cc7d5bb4f9948bbb37c2"
 
 [[files]]
 file = "kubejs/config/player_progression_regression.json"
-hash = "0310adb74cb627452ee368f80ec9e361a14ce3af4eb8a5de86b49a8a3fd2d3f7"
+hash = "51f84ac6390b520b9ede19c36579c781ac2a558168f877a35711f6468ebcf0a1"
 
 [[files]]
 file = "kubejs/config/progression_reachability_sources.json"
-hash = "4165faf82a7ddc9189d3892bef49c9d96aa2520d57f1f72a73eb0853c28ff1d4"
+hash = "5653661801f458bfd2f9f22f1b02248077a19fdafd815ab4ff214f8da0323232"
 
 [[files]]
 file = "kubejs/config/runtime_graph_dumps.json"
@@ -10417,6 +10417,10 @@ file = "kubejs/server_scripts/10_tags/50_sand_compat.js"
 hash = "56f2fd6078c57f42b66aed52d5e1a4a587d626668edeb5bcac4f38c01ba6a2b1"
 
 [[files]]
+file = "kubejs/server_scripts/10_tags/55_chemistry_fluid_compat.js"
+hash = "0871972a2a53c027f0e9f6c9f2ef9cc6227f9ed9c0c1a1539134aa8a2535c12f"
+
+[[files]]
 file = "kubejs/server_scripts/10_tags/60_realistic_ores_deposit_tags.js"
 hash = "4253beeb6ffc1a0f22a6281d286447a5db2df536b19f3454c0f09b91a3df53ba"
 
@@ -10638,7 +10642,7 @@ hash = "8e30f43d0de55ca41e7b75334179ced10e7068942b72ffd6961eb1feaa3dbc11"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js"
-hash = "b78ce11eb6123d1b0b58d1aed3d9f647e681c9b619eef4e53c1f1cc42d640f3f"
+hash = "482a27676f676ae9f652d6f47ea53477948612732b33d45ec456f2895cb7fba0"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js"
@@ -10658,7 +10662,7 @@ hash = "c8bbeb8175e396d72230ae75013b605192ee9902d0951704d1bd5953ab183d3a"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/58_create_pncr_molecular_synthesis.js"
-hash = "061c9005a285f063f9fd2627361492d6c504d9f6a2a5f75029b3cce509f1e756"
+hash = "9b5db0b69b79452dc07e491df6dcb20fe57045d586c498a25c36a03e3ddfbc9c"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/59_formulaic_synthesis_magic_routes.js"
@@ -10670,7 +10674,7 @@ hash = "f9d493c02af38c1690da86a74566e26a779aa233587af36a03cbb313e32bd3ab"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/61_chemical_existing_item_alternatives.js"
-hash = "c0cfd4ff38f6d5fc51eb9f114b27e18d2e5fe9b0f3f26ecd5266f4963b694f16"
+hash = "b9b6f185512e4a9c7d9c8fd8f841fbfc54ee599d9eeb31a2fe9d96a9f08b1d35"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/62_chemical_electronics_magic_growth_routes.js"

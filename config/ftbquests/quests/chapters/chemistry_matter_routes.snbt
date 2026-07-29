@@ -105,7 +105,7 @@
 			y: -1.0d
 		}
 		{
-			description: ["Create handles open mixing, washing, precipitation, reduction, and bulk transformations."]
+			description: ["Create handles open mixing, washing, precipitation, reduction, and bulk transformations. Fermented crops are the efficient early ethanol supply; direct sugar, carbon, and water synthesis is a deliberately expensive fallback."]
 			icon: "create:mechanical_mixer"
 			id: "08B7998EC9B77508"
 			shape: "square"
@@ -120,7 +120,7 @@
 			y: -3.0d
 		}
 		{
-			description: ["Washing and blasting make chemistry visible before sealed machines appear."]
+			description: ["Washing starter deposits exposes useful chemistry before sealed machines appear: coal measures shed carbon, copper sulfides shed sulfur, quartz veins shed silica, and bauxite sheds alumina. Keep these side streams instead of voiding them."]
 			icon: "create:encased_fan"
 			id: "6ED592E593A00B56"
 			shape: "rsquare"
@@ -128,12 +128,33 @@
 				id: "122ED91D51EC5A03"
 				item: "create:encased_fan"
 				type: "item"
+			}
+			{
+				id: "64E5E5D7EBC39DA4"
+				item: "chemlib:carbon"
+				type: "item"
+			}
+			{
+				id: "50EB1CF6887F704C"
+				item: "chemlib:sulfur"
+				type: "item"
+			}
+			{
+				id: "8A467DABA67E57C2"
+				item: "chemlib:silicon_dioxide"
+				type: "item"
+			}
+			{
+				id: "B270484CD25B44D7"
+				item: "chemlib:aluminum_oxide"
+				type: "item"
 			}]
 			title: "Wash"
 			x: -1.58d
 			y: -1.0d
 		}
 		{
+			dependencies: ["259352F93245052C"]
 			description: ["Sealed cells mark the move from open vats to controlled pressure chemistry."]
 			icon: "latent_chemlib:sealed_chemical_cell"
 			id: "15E8F973446C60BC"
@@ -163,7 +184,7 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["6ED592E593A00B56"]
+			dependencies: ["259352F93245052C"]
 			description: ["Use PNCR for pressure, gas handling, thermal control, plastics, and PCB etching."]
 			icon: "pneumaticcraft:pressure_chamber_valve"
 			id: "07162C74BA5A22E4"
@@ -369,35 +390,49 @@
 			y: -5.0d
 		}
 		{
-			description: ["Keep open-vat chemistry in a visible station with room to inspect recipes. That makes transformation steps easier to trust and debug."]
-			icon: "create:basin"
+			dependencies: ["6ED592E593A00B56"]
+			description: ["Mill calcite into reliable calcium carbonate, then combine carbonate and washed silica with netherrack aggregate for a high-yield grout batch. The minerals improve refractory work without bypassing the Nether proof."]
+			icon: "chemlib:calcium_carbonate"
 			id: "6E6B9CFEB0837CA1"
 			shape: "rsquare"
 			size: 0.9d
 			tasks: [{
 				id: "399A7FA67C61C0D7"
-				title: "Run open-vat recipes before sealed reactions"
-				type: "checkmark"
+				item: "chemlib:calcium_carbonate"
+				type: "item"
+			}
+			{
+				id: "509AE7199DDA20BA"
+				item: "tconstruct:grout"
+				type: "item"
 			}]
-			title: "Basin Work"
-			x: -1.58d
-			y: -1.0d
+			title: "Refractory Batch"
+			x: -3.17d
+			y: 1.0d
 		}
 		{
-			dependencies: ["15E8F973446C60BC"]
-			description: ["Treat sealed cells as a real threshold from open mixing into dangerous reactions. Move into them only when the recipe actually needs that control."]
-			icon: "minecraft:iron_bars"
+			dependencies: [
+				"3A2B0FA3A95CE344"
+				"6ED592E593A00B56"
+			]
+			description: ["Ferment crops or a prepared spider eye into ethanol, then compact it with washed carbon and sulfur, dried kelp, and slime. The resulting pressure seals turn otherwise incidental farm and ore outputs into the threshold for airtight machinery."]
+			icon: "kubejs:pressure_seal"
 			id: "259352F93245052C"
 			shape: "diamond"
 			size: 0.9d
 			tasks: [{
 				id: "5C718C81DADFD7AC"
-				title: "Move dangerous reactions into sealed cells"
+				title: "Use fermentation as the efficient ethanol route"
 				type: "checkmark"
+			}
+			{
+				id: "9525BB8836D1C632"
+				item: "kubejs:pressure_seal"
+				type: "item"
 			}]
-			title: "Seal Proof"
-			x: 0.0d
-			y: -0.9d
+			title: "Seal Compound"
+			x: -1.58d
+			y: 1.0d
 		}
 		{
 			description: ["Use PNCR when recipes need pressure, heat, gas handling, or controlled reactions."]

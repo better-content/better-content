@@ -101,8 +101,8 @@ function bcChemAltPressure(event, id, output, count, pressure, inputs) {
 ServerEvents.recipes(function (event) {
     // Refractory and casting materials.
      bcChemAltMix(event, 'tconstruct/grout_chemical_bulk', 'tconstruct:grout', 12, [
-        'minecraft:clay_ball',
-        'minecraft:clay_ball',
+        'minecraft:netherrack',
+        'minecraft:netherrack',
         '#forge:sand',
         '#forge:gravel',
         'chemlib:calcium_carbonate',

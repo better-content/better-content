@@ -134,6 +134,7 @@ ServerEvents.recipes(function (event) {
      bcChemUsePressure(event, 'pneumaticcraft/unassembled_pcb_etched_batch', 'pneumaticcraft:unassembled_pcb', 2, 2.5, [
         'pneumaticcraft:empty_pcb',
         'chemlib:copper_chloride',
+        'chemlib:ammonium_chloride',
         'chemlib:silicon_dioxide',
         'pneumaticcraft:transistor',
         'pneumaticcraft:capacitor'

@@ -1,7 +1,7 @@
 // Formulaic synthesis expansion.
 //
 // Tech routes give throughput and automation. Blood Magic provides manual,
-// high-yield alternatives where life-force extraction, dangerous sorting, and
+// count-scaled batches where life-force extraction, dangerous sorting, and
 // player attention are more immersive than machinery; Ars handles purified
 // resonance and source stabilization.
 
@@ -13,13 +13,6 @@ function bcSynIngredientExists(ingredient) {
     if (!ingredient || ingredient.tag || ingredient.fluid) return true
     if (ingredient.item) return bcSynExists(ingredient.item)
     return true
-}
-
-function bcSynFluidExists(id) {
-    try {
-        if (typeof Fluid !== 'undefined' && Fluid.exists) return Fluid.exists(id)
-    } catch (e) {}
-    return !!BC_SYN_KNOWN_FLUIDS[id]
 }
 
 function bcSynMixing(event, id, ingredients, output, heat, time, sideProducts) {
@@ -46,25 +39,6 @@ function bcSynMixing(event, id, ingredients, output, heat, time, sideProducts) {
     event.custom(recipe).id('kubejs:synthesis/formulaic/create_mixing/' + id)
 }
 
-function bcSynThermo(event, id, itemInput, fluid, amount, output, pressure, minTemp) {
-    if (!bcSynExists(output.item)) return
-    if (!bcSynIngredientExists(itemInput) || !bcSynFluidExists(fluid)) return
-    event.custom({
-        type: 'pneumaticcraft:thermo_plant',
-        exothermic: false,
-        item_input: itemInput,
-        fluid_input: {
-            type: 'pneumaticcraft:fluid',
-            fluid: fluid,
-            amount: amount
-        },
-        item_output: output,
-        pressure: pressure || 2.5,
-        speed: 0.35,
-        temperature: { min_temp: minTemp || 473 }
-    }).id('kubejs:synthesis/formulaic/pncr_thermo/' + id)
-}
-
 function bcSynBloodAlchemy(event, id, inputs, output, syphon, ticks, tier) {
     var outputItem = typeof output === 'string' ? output : output.item
     var outputCount = typeof output === 'string' ? 1 : (output.count || 1)
@@ -84,7 +58,7 @@ function bcSynBloodAlchemy(event, id, inputs, output, syphon, ticks, tier) {
     }).id('kubejs:synthesis/magic/blood_alchemy/' + id)
 }
 
-function bcSynBloodArc(event, id, input, tool, output, sideProducts) {
+function bcSynBloodArc(event, id, input, inputCount, tool, output, sideProducts) {
     if (!bcSynExists(input) || !bcSynExists(tool) || !bcSynExists(output.item)) return
     var added = []
     for (var i = 0; i < (sideProducts || []).length; i++) {
@@ -101,9 +75,9 @@ function bcSynBloodArc(event, id, input, tool, output, sideProducts) {
     var recipe = {
         type: 'bloodmagic:arc',
         input: { item: input },
-        inputsize: 1,
+        inputsize: inputCount || 1,
         tool: { item: tool },
-        consumeingredient: false,
+        consumeingredient: true,
         mainoutputchance: 0.0,
         output: output
     }
@@ -138,52 +112,12 @@ function bcSynArsApparatus(event, id, reagent, output, pedestalItems, sourceCost
     }).id('kubejs:synthesis/magic/ars_apparatus/' + id)
 }
 
-function bcSynCompoundName(element, suffix) {
-    var aliases = BC_SYN_COMPOUND_ALIASES[element]
-    if (aliases && aliases[suffix]) return aliases[suffix]
-    return 'chemlib:' + element + '_' + suffix
-}
-
-var BC_SYN_ELEMENTS = [
-    'aluminum', 'barium', 'beryllium', 'cadmium', 'calcium', 'carbon', 'cesium',
-    'chromium', 'cobalt', 'copper', 'gold', 'iron', 'lead', 'lithium',
-    'magnesium', 'manganese', 'nickel', 'palladium', 'phosphorus', 'platinum',
-    'potassium', 'rubidium', 'silicon', 'silver', 'sodium', 'strontium', 'tin',
-    'titanium', 'tungsten', 'uranium', 'thorium', 'zinc'
-]
-
-var BC_SYN_FAMILIES = [
-    { id: 'oxide', suffix: 'oxide', fluid: 'minecraft:water', amount: 125, reagent: 'chemlib:oxygen', heat: 'heated', time: 180 },
-    { id: 'hydroxide', suffix: 'hydroxide', fluid: 'minecraft:water', amount: 250, reagent: 'chemlib:sodium_hydroxide', heat: null, time: 180, gas: { item: 'chemlib:hydrogen', chance: 0.10 } },
-    { id: 'carbonate', suffix: 'carbonate', fluid: 'minecraft:water', amount: 250, reagent: 'chemlib:carbon', heat: null, time: 180, gas: { item: 'chemlib:carbon_dioxide', chance: 0.12 } },
-    { id: 'chloride', suffix: 'chloride', fluid: 'chemlib:hydrochloric_acid_fluid', amount: 250, reagent: 'chemlib:sodium_chloride', thermo: true, heat: 'heated', time: 220, gas: { item: 'chemlib:hydrogen', chance: 0.18 } },
-    { id: 'nitrate', suffix: 'nitrate', fluid: 'chemlib:nitric_acid_fluid', amount: 250, reagent: 'minecraft:redstone', thermo: true, heat: 'heated', time: 240, gas: { item: 'chemlib:nitrogen_dioxide', chance: 0.22 } },
-    { id: 'sulfate', suffix: 'sulfate', fluid: 'chemlib:sulfuric_acid_fluid', amount: 250, reagent: 'chemlib:sulfur', thermo: true, heat: 'heated', time: 230, gas: { item: 'chemlib:sulfur_dioxide', chance: 0.18 } },
-    { id: 'sulfide', suffix: 'sulfide', fluid: 'minecraft:water', amount: 125, reagent: 'chemlib:sulfur', heat: 'heated', time: 210, gas: { item: 'chemlib:hydrogen_sulfide', chance: 0.16 } },
-    { id: 'phosphate', suffix: 'phosphate', fluid: 'kubejs:phosphoric_acid_fluid', amount: 250, reagent: 'chemlib:phosphorus', heat: 'heated', time: 230, gas: { item: 'chemlib:oxygen', chance: 0.10 } }
-]
-
 var BC_SYN_SIDE_GASES = {
     acetic: { item: 'chemlib:carbon_dioxide', chance: 0.30 },
     sulfuric: { item: 'chemlib:sulfur_dioxide', chance: 0.30 },
     hydrochloric: { item: 'chemlib:hydrogen', chance: 0.30 },
     nitric: { item: 'chemlib:nitrogen_dioxide', chance: 0.35 },
     phosphoric: { item: 'chemlib:oxygen', chance: 0.22 }
-}
-
-var BC_SYN_KNOWN_FLUIDS = {
-    'minecraft:water': true,
-    'chemlib:hydrochloric_acid_fluid': true,
-    'chemlib:nitric_acid_fluid': true,
-    'chemlib:sulfuric_acid_fluid': true,
-    'kubejs:phosphoric_acid_fluid': true
-}
-
-var BC_SYN_COMPOUND_ALIASES = {
-    carbon: { oxide: 'chemlib:carbon_dioxide', sulfide: 'chemlib:carbon_disulfide' },
-    copper: { oxide: 'chemlib:copper_i_oxide', hydroxide: 'chemlib:copper_ii_hydroxide', sulfate: 'chemlib:copper_ii_sulfate', sulfide: 'chemlib:copper_i_sulfide' },
-    iron: { sulfate: 'chemlib:iron_ii_sulfate', nitrate: 'chemlib:iron_iii_nitrate' },
-    silicon: { oxide: 'chemlib:silicon_dioxide' }
 }
 
 var BC_SYN_MAGIC_CRYSTALS = [
@@ -252,37 +186,27 @@ ServerEvents.recipes(function (event) {
         ], cuttingFluid.item, cuttingFluid.syphon, cuttingFluid.ticks, cuttingFluid.tier)
     }
 
-    for (var e = 0; e < BC_SYN_ELEMENTS.length; e++) {
-        var element = BC_SYN_ELEMENTS[e]
-        var elementId = 'chemlib:' + element
-        if (!bcSynExists(elementId)) continue
-
-        for (var f = 0; f < BC_SYN_FAMILIES.length; f++) {
-            var family = BC_SYN_FAMILIES[f]
-            var outputId = bcSynCompoundName(element, family.suffix)
-            if (!bcSynExists(outputId) || !bcSynFluidExists(family.fluid)) continue
-            var ingredients = [
-                { item: elementId },
-                { item: family.reagent },
-                { fluid: family.fluid, amount: family.amount }
-            ]
-             bcSynMixing(event, element + '/' + family.id, ingredients, { item: outputId, count: 2 }, family.heat, family.time, family.gas ? [family.gas] : [])
-            if (family.thermo) {
-                 bcSynThermo(event, element + '/' + family.id, { item: elementId }, family.fluid, family.amount, { item: outputId, count: 3 }, family.id === 'nitrate' ? 3.5 : 2.75, family.id === 'nitrate' ? 573 : 523)
-            }
-        }
-
-        var oxide = bcSynCompoundName(element, 'oxide')
-        if (bcSynExists(oxide)) {
-             bcSynBloodAlchemy(event, element + '_blood_reduction', [
-                { item: oxide },
-                { item: 'bloodmagic:reinforcedslate' },
-                { item: BC_SYN_MAGIC_CUTTING_FLUIDS.sulfuric.item }
-            ], { item: elementId, count: 4 }, 9000, 260, 2)
-             bcSynBloodArc(event, element + '_sulfuric_reduction_gas', oxide, BC_SYN_MAGIC_CUTTING_FLUIDS.sulfuric.item, { item: elementId, count: 2 }, [
-                BC_SYN_SIDE_GASES.sulfuric
-            ])
-        }
+    var safeOxideReductions = [
+        { id: 'iron', oxide: 'chemlib:iron_oxide', element: 'chemlib:iron' },
+        { id: 'lead', oxide: 'chemlib:lead_oxide', element: 'chemlib:lead' },
+        { id: 'tin', oxide: 'chemlib:tin_oxide', element: 'chemlib:tin' },
+        { id: 'zinc', oxide: 'chemlib:zinc_oxide', element: 'chemlib:zinc' },
+        { id: 'copper', oxide: 'chemlib:copper_ii_oxide', element: 'chemlib:copper' },
+        { id: 'nickel', oxide: 'chemlib:nickel_oxide', element: 'chemlib:nickel' },
+        { id: 'titanium', oxide: 'chemlib:titanium_oxide', element: 'chemlib:titanium' },
+        { id: 'aluminum', oxide: 'chemlib:aluminum_oxide', element: 'chemlib:aluminum' }
+    ]
+    for (var e = 0; e < safeOxideReductions.length; e++) {
+        var reduction = safeOxideReductions[e]
+        if (!bcSynExists(reduction.oxide) || !bcSynExists(reduction.element)) continue
+         bcSynBloodAlchemy(event, reduction.id + '_blood_reduction', [
+            { item: reduction.oxide, count: 4 },
+            { item: 'bloodmagic:reinforcedslate' },
+            { item: BC_SYN_MAGIC_CUTTING_FLUIDS.sulfuric.item }
+        ], { item: reduction.element, count: 4 }, 9000, 260, 2)
+         bcSynBloodArc(event, reduction.id + '_sulfuric_reduction_gas', reduction.oxide, 2, BC_SYN_MAGIC_CUTTING_FLUIDS.sulfuric.item, { item: reduction.element, count: 2 }, [
+            BC_SYN_SIDE_GASES.sulfuric
+        ])
     }
 
     var deposits = global.BC_RO_DEPOSITS || []
@@ -295,7 +219,7 @@ ServerEvents.recipes(function (event) {
                     { item: 'bloodmagic:blankslate' },
                     { item: BC_SYN_MAGIC_CUTTING_FLUIDS.acetic.item }
                 ], { item: dep.primary, count: 4 }, 4800, 220, 1)
-                 bcSynBloodArc(event, dep.id + '_arc_primary_gas', dep.crushed, BC_SYN_MAGIC_CUTTING_FLUIDS.acetic.item, { item: dep.primary, count: 2 }, [
+                 bcSynBloodArc(event, dep.id + '_arc_primary_gas', dep.crushed, 1, BC_SYN_MAGIC_CUTTING_FLUIDS.acetic.item, { item: dep.primary, count: 2 }, [
                     BC_SYN_SIDE_GASES.acetic
                 ])
             }
@@ -305,7 +229,7 @@ ServerEvents.recipes(function (event) {
                     { item: 'bloodmagic:infusedslate' },
                     { item: BC_SYN_MAGIC_CUTTING_FLUIDS.nitric.item }
                 ], { item: dep.trace, count: 2 }, 11000, 320, 3)
-                 bcSynBloodArc(event, dep.id + '_arc_trace_gas', dep.crushed, BC_SYN_MAGIC_CUTTING_FLUIDS.nitric.item, { item: dep.trace }, [
+                 bcSynBloodArc(event, dep.id + '_arc_trace_gas', dep.crushed, 1, BC_SYN_MAGIC_CUTTING_FLUIDS.nitric.item, { item: dep.trace }, [
                     BC_SYN_SIDE_GASES.nitric
                 ])
             }
@@ -315,7 +239,7 @@ ServerEvents.recipes(function (event) {
                     { item: 'bloodmagic:demonslate' },
                     { item: BC_SYN_MAGIC_CUTTING_FLUIDS.hydrochloric.item }
                 ], { item: dep.hard, count: 2 }, 14000, 380, 4)
-                 bcSynBloodArc(event, dep.id + '_arc_hard_gas', dep.crushed, BC_SYN_MAGIC_CUTTING_FLUIDS.hydrochloric.item, { item: dep.hard }, [
+                 bcSynBloodArc(event, dep.id + '_arc_hard_gas', dep.crushed, 1, BC_SYN_MAGIC_CUTTING_FLUIDS.hydrochloric.item, { item: dep.hard }, [
                     BC_SYN_SIDE_GASES.hydrochloric
                 ])
             }
@@ -325,7 +249,7 @@ ServerEvents.recipes(function (event) {
                     { item: 'bloodmagic:etherealslate' },
                     { item: BC_SYN_MAGIC_CUTTING_FLUIDS.phosphoric.item }
                 ], { item: dep.rare, count: 2 }, 18000, 460, 4)
-                 bcSynBloodArc(event, dep.id + '_arc_rare_gas', dep.crushed, BC_SYN_MAGIC_CUTTING_FLUIDS.phosphoric.item, { item: dep.rare }, [
+                 bcSynBloodArc(event, dep.id + '_arc_rare_gas', dep.crushed, 1, BC_SYN_MAGIC_CUTTING_FLUIDS.phosphoric.item, { item: dep.rare }, [
                     BC_SYN_SIDE_GASES.phosphoric
                 ])
             }

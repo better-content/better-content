@@ -112,30 +112,7 @@ function bcFullChemPressure(event, id, inputs, output, pressure) {
 function bcFullChemPressureInput(input) {
     if (input.type) return input
     if (input.item) return { type: 'pneumaticcraft:stacked_item', item: input.item, count: input.count || 1 }
-    if (input.fluid) {
-        var mapped = BC_FULL_CHEM_PRESSURE_FLUID_ITEMS[input.fluid]
-        if (!mapped || !bcFullChemExists(mapped)) return null
-        return { type: 'pneumaticcraft:stacked_item', item: mapped, count: input.amount && input.amount > 250 ? 2 : 1 }
-    }
     return null
-}
-
-function bcFullChemThermo(event, id, itemInput, fluid, amount, output, pressure, minTemp) {
-    if (!bcFullChemIngredientExists(itemInput) || !bcFullChemFluidExists(fluid) || !bcFullChemExists(output.item)) return
-    event.custom({
-        type: 'pneumaticcraft:thermo_plant',
-        exothermic: false,
-        item_input: itemInput,
-        fluid_input: {
-            type: 'pneumaticcraft:fluid',
-            fluid: fluid,
-            amount: amount
-        },
-        item_output: bcFullChemResult(output.item, output.count || 1, null),
-        pressure: pressure || 2.5,
-        speed: 0.35,
-        temperature: { min_temp: minTemp || 473 }
-    }).id('kubejs:chemlib_full/pncr_thermo/' + id)
 }
 
 function bcFullChemBlood(event, id, inputs, output, syphon, ticks, tier) {
@@ -167,19 +144,6 @@ var BC_FULL_CHEM_KNOWN_FLUIDS = {
     'chemlib:oxygen_fluid': true,
     'chemlib:hydrogen_fluid': true,
     'chemlib:chlorine_fluid': true
-}
-
-var BC_FULL_CHEM_PRESSURE_FLUID_ITEMS = {
-    'minecraft:water': 'minecraft:water_bucket',
-    'chemlib:ethanol_fluid': 'chemlib:ethanol',
-    'chemlib:acetic_acid_fluid': 'chemlib:acetic_acid',
-    'chemlib:hydrochloric_acid_fluid': 'chemlib:hydrochloric_acid',
-    'chemlib:nitric_acid_fluid': 'chemlib:nitric_acid',
-    'chemlib:sulfuric_acid_fluid': 'chemlib:sulfuric_acid',
-    'kubejs:phosphoric_acid_fluid': 'chemlib:phosphoric_acid',
-    'chemlib:oxygen_fluid': 'chemlib:oxygen',
-    'chemlib:hydrogen_fluid': 'chemlib:hydrogen',
-    'chemlib:chlorine_fluid': 'chemlib:chlorine'
 }
 
 var BC_FULL_CHEM_COMPOUND_ALIASES = {
@@ -308,29 +272,28 @@ var BC_FULL_CHEM_EXISTING_LOOPS = [
 ]
 
 var BC_FULL_CHEM_MOLECULES = [
-    { id: 'cellulose', item: 'chemlib:cellulose', source: [{ tag: 'minecraft:logs' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'minecraft:paper', count: 6 }], process: 'fiber_pulping', slate: 'bloodmagic:blankslate' },
-    { id: 'starch', item: 'chemlib:starch', source: [{ item: 'minecraft:potato' }, { item: 'minecraft:wheat' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'minecraft:slime_ball', count: 2 }], process: 'binder_gelatinization', slate: 'bloodmagic:blankslate' },
-    { id: 'sucrose', item: 'chemlib:sucrose', source: [{ item: 'minecraft:sugar_cane' }, { item: 'minecraft:beetroot' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'minecraft:sugar', count: 6 }], process: 'sugar_crystallization', slate: 'bloodmagic:blankslate' },
-    { id: 'ethanol', item: 'chemlib:ethanol', fluid: 'chemlib:ethanol_fluid', source: [{ item: 'chemlib:sucrose' }, { item: 'chemlib:starch' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'create:blaze_cake_base', count: 1 }], process: 'fermentation_fuel', slate: 'bloodmagic:reinforcedslate' },
-    { id: 'acetic_acid', item: 'chemlib:acetic_acid', fluid: 'chemlib:acetic_acid_fluid', source: [{ item: 'chemlib:ethanol' }, { item: 'chemlib:oxygen' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'minecraft:leather', count: 2 }], process: 'mild_solvent', slate: 'bloodmagic:reinforcedslate' },
-    { id: 'ethylene', item: 'chemlib:ethylene', source: [{ item: 'chemlib:ethanol' }, { item: 'chemlib:carbon' }, { fluid: 'minecraft:water', amount: 125 }], outputs: [{ item: 'chemlib:polyvinyl_chloride', count: 4 }], process: 'polymer_feedstock', slate: 'bloodmagic:infusedslate' },
-    { id: 'acetylene', item: 'chemlib:acetylene', source: [{ item: 'chemlib:calcium_carbonate' }, { item: 'chemlib:carbon' }, { fluid: 'minecraft:water', amount: 125 }], outputs: [{ item: 'minecraft:torch', count: 12 }], process: 'hot_cutting_gas', slate: 'bloodmagic:infusedslate' },
-    { id: 'methane', item: 'chemlib:methane', source: [{ item: 'chemlib:cellulose' }, { item: 'chemlib:hydrogen' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'minecraft:charcoal', count: 2 }], process: 'fuel_gas', slate: 'bloodmagic:reinforcedslate' },
-    { id: 'propane', item: 'chemlib:propane', source: [{ item: 'chemlib:methane' }, { item: 'chemlib:carbon' }, { item: 'chemlib:hydrogen' }], outputs: [{ item: 'create:blaze_cake_base', count: 1 }], process: 'pressure_fuel', slate: 'bloodmagic:infusedslate' },
-    { id: 'butane', item: 'chemlib:butane', source: [{ item: 'chemlib:propane' }, { item: 'chemlib:carbon' }, { item: 'chemlib:hydrogen' }], outputs: [{ item: 'minecraft:fire_charge', count: 4 }], process: 'liquefied_fuel', slate: 'bloodmagic:infusedslate' },
-    { id: 'carbon_dioxide', item: 'chemlib:carbon_dioxide', source: [{ item: 'chemlib:calcium_carbonate' }, { item: 'minecraft:charcoal' }], outputs: [{ item: 'chemlib:calcium_carbonate', count: 2 }], process: 'scrubbing_carbonation', slate: 'bloodmagic:blankslate' },
-    { id: 'carbon_monoxide', item: 'chemlib:carbon_monoxide', source: [{ item: 'chemlib:carbon_dioxide' }, { item: 'chemlib:carbon' }], outputs: [{ item: 'chemlib:iron', count: 2 }], process: 'reducing_gas', slate: 'bloodmagic:reinforcedslate' },
-    { id: 'carbon_disulfide', item: 'chemlib:carbon_disulfide', source: [{ item: 'chemlib:carbon' }, { item: 'chemlib:sulfur' }, { fluid: 'chemlib:sulfuric_acid_fluid', amount: 125 }], outputs: [{ item: 'minecraft:string', count: 4 }], process: 'sulfur_solvent', slate: 'bloodmagic:infusedslate' },
-    { id: 'ammonia', item: 'chemlib:ammonia', source: [{ item: 'chemlib:nitrogen' }, { item: 'chemlib:hydrogen' }, { item: 'chemlib:hydrogen' }], outputs: [{ item: 'minecraft:bone_meal', count: 6 }], process: 'nitrogen_fixation', slate: 'bloodmagic:reinforcedslate' },
-    { id: 'ammonium', item: 'chemlib:ammonium', source: [{ item: 'chemlib:ammonia' }, { item: 'chemlib:hydrogen' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'chemlib:diammonium_phosphate', count: 2 }], process: 'fertilizer_salt', slate: 'bloodmagic:reinforcedslate' },
-    { id: 'ammonium_chloride', item: 'chemlib:ammonium_chloride', source: [{ item: 'chemlib:ammonium' }, { item: 'chemlib:chlorine' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'pneumaticcraft:empty_pcb', count: 2 }], process: 'flux_cleaning', slate: 'bloodmagic:infusedslate' },
-    { id: 'diammonium_phosphate', item: 'chemlib:diammonium_phosphate', source: [{ item: 'chemlib:ammonium' }, { item: 'chemlib:phosphoric_acid' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'minecraft:bone_meal', count: 12 }], process: 'fertilizer_prilling', slate: 'bloodmagic:infusedslate' },
-    { id: 'hydrogen_sulfide', item: 'chemlib:hydrogen_sulfide', source: [{ item: 'chemlib:sulfur' }, { item: 'chemlib:hydrogen' }], outputs: [{ item: 'chemlib:sulfur', count: 3 }], process: 'sulfide_precipitation', slate: 'bloodmagic:demonslate' },
-    { id: 'sulfur_dioxide', item: 'chemlib:sulfur_dioxide', source: [{ item: 'chemlib:sulfur' }, { item: 'chemlib:oxygen' }], outputs: [{ item: 'chemlib:sulfuric_acid', count: 2 }], process: 'acid_gas', slate: 'bloodmagic:demonslate' },
-    { id: 'sulfur_trioxide', item: 'chemlib:sulfur_trioxide', source: [{ item: 'chemlib:sulfur_dioxide' }, { item: 'chemlib:oxygen' }], outputs: [{ item: 'chemlib:sulfuric_acid', count: 3 }], process: 'acid_upgrade', slate: 'bloodmagic:demonslate' },
-    { id: 'nitric_oxide', item: 'chemlib:nitric_oxide', source: [{ item: 'chemlib:nitrogen' }, { item: 'chemlib:oxygen' }, { item: 'minecraft:redstone' }], outputs: [{ item: 'chemlib:nitrogen_dioxide', count: 2 }], process: 'oxidation_gas', slate: 'bloodmagic:demonslate' },
-    { id: 'nitrogen_dioxide', item: 'chemlib:nitrogen_dioxide', source: [{ item: 'chemlib:nitric_oxide' }, { item: 'chemlib:oxygen' }], outputs: [{ item: 'chemlib:nitric_acid', count: 2 }], process: 'acid_absorption', slate: 'bloodmagic:demonslate' },
-    { id: 'polyvinyl_chloride', item: 'chemlib:polyvinyl_chloride', source: [{ item: 'chemlib:ethylene' }, { item: 'chemlib:chlorine' }, { item: 'kubejs:pressure_seal' }], outputs: [{ item: 'kubejs:pressure_seal', count: 4 }], process: 'polymer_compounding', slate: 'bloodmagic:infusedslate' }
+    { id: 'cellulose', item: 'chemlib:cellulose', source: [{ tag: 'minecraft:logs' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'minecraft:paper', count: 6 }], process: 'fiber_pulping' },
+    { id: 'starch', item: 'chemlib:starch', source: [{ item: 'minecraft:potato' }, { item: 'minecraft:wheat' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'minecraft:slime_ball' }], process: 'binder_gelatinization' },
+    { id: 'sucrose', item: 'chemlib:sucrose', source: [{ item: 'minecraft:sugar_cane' }, { item: 'minecraft:beetroot' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'minecraft:sugar', count: 6 }], process: 'sugar_crystallization' },
+    { id: 'ethanol', item: 'chemlib:ethanol', source: [{ item: 'chemlib:sucrose' }, { item: 'chemlib:starch' }, { fluid: 'minecraft:water', amount: 250 }] },
+    { id: 'acetic_acid', item: 'chemlib:acetic_acid', source: [{ item: 'chemlib:ethanol' }, { item: 'chemlib:oxygen' }, { fluid: 'minecraft:water', amount: 250 }] },
+    { id: 'ethylene', item: 'chemlib:ethylene', source: [{ item: 'chemlib:ethanol' }, { item: 'chemlib:carbon' }, { fluid: 'minecraft:water', amount: 125 }] },
+    { id: 'acetylene', item: 'chemlib:acetylene', source: [{ item: 'chemlib:calcium_carbonate' }, { item: 'chemlib:carbon' }, { fluid: 'minecraft:water', amount: 125 }], outputs: [{ item: 'minecraft:torch', count: 12 }], process: 'hot_cutting_gas' },
+    { id: 'methane', item: 'chemlib:methane', source: [{ item: 'chemlib:cellulose' }, { item: 'chemlib:hydrogen' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'minecraft:charcoal' }], process: 'fuel_gas' },
+    { id: 'propane', item: 'chemlib:propane', sourceKind: 'pressure', source: [{ item: 'chemlib:methane' }, { item: 'chemlib:carbon' }, { item: 'chemlib:hydrogen' }] },
+    { id: 'butane', item: 'chemlib:butane', sourceKind: 'pressure', source: [{ item: 'chemlib:propane' }, { item: 'chemlib:carbon' }, { item: 'chemlib:hydrogen' }], outputs: [{ item: 'minecraft:fire_charge', count: 2 }], process: 'liquefied_fuel' },
+    { id: 'carbon_monoxide', item: 'chemlib:carbon_monoxide', sourceKind: 'pressure', source: [{ item: 'chemlib:carbon_dioxide' }, { item: 'chemlib:carbon' }] },
+    { id: 'carbon_disulfide', item: 'chemlib:carbon_disulfide', source: [{ item: 'chemlib:carbon' }, { item: 'chemlib:sulfur' }, { fluid: 'chemlib:sulfuric_acid_fluid', amount: 125 }], outputs: [{ item: 'minecraft:string', count: 2 }], process: 'sulfur_solvent' },
+    { id: 'ammonia', item: 'chemlib:ammonia', sourceKind: 'pressure', source: [{ item: 'chemlib:nitrogen' }, { item: 'chemlib:hydrogen' }, { item: 'chemlib:hydrogen' }] },
+    { id: 'ammonium', item: 'chemlib:ammonium', source: [{ item: 'chemlib:ammonia' }, { item: 'chemlib:hydrogen' }, { fluid: 'minecraft:water', amount: 250 }] },
+    { id: 'ammonium_chloride', item: 'chemlib:ammonium_chloride' },
+    { id: 'diammonium_phosphate', item: 'chemlib:diammonium_phosphate', outputs: [{ item: 'minecraft:bone_meal', count: 6 }], process: 'fertilizer_prilling' },
+    { id: 'hydrogen_sulfide', item: 'chemlib:hydrogen_sulfide' },
+    { id: 'sulfur_dioxide', item: 'chemlib:sulfur_dioxide', sourceKind: 'pressure', source: [{ item: 'chemlib:sulfur' }, { item: 'chemlib:oxygen' }], outputs: [{ item: 'chemlib:sulfuric_acid' }], process: 'acid_gas' },
+    { id: 'sulfur_trioxide', item: 'chemlib:sulfur_trioxide', sourceKind: 'pressure', source: [{ item: 'chemlib:sulfur_dioxide' }, { item: 'chemlib:oxygen' }], outputs: [{ item: 'chemlib:sulfuric_acid' }], process: 'acid_upgrade' },
+    { id: 'nitric_oxide', item: 'chemlib:nitric_oxide', outputs: [{ item: 'chemlib:nitrogen_dioxide' }], process: 'oxidation_gas' },
+    { id: 'nitrogen_dioxide', item: 'chemlib:nitrogen_dioxide', sourceKind: 'pressure', source: [{ item: 'chemlib:nitric_oxide' }, { item: 'chemlib:oxygen' }], outputs: [{ item: 'chemlib:nitric_acid' }], process: 'acid_absorption' },
+    { id: 'polyvinyl_chloride', item: 'chemlib:polyvinyl_chloride' }
 ]
 
 function bcFullChemRegisterElement(event, group, element) {
@@ -358,42 +321,24 @@ function bcFullChemRegisterElement(event, group, element) {
 
     for (var f = 0; f < BC_FULL_CHEM_FAMILIES.length; f++) {
         var family = BC_FULL_CHEM_FAMILIES[f]
+        if (family.id === 'oxide' && (element === 'carbon' || element === 'silicon')) continue
         var compound = bcFullChemCompound(element, family.suffix)
         if (!bcFullChemExists(compound) || !bcFullChemFluidExists(family.fluid)) continue
         bcFullChemMix(event, 'compound/' + element + '/' + family.id, [
             { item: elementItem },
             { item: family.reagent },
             { fluid: family.fluid, amount: family.amount }
-        ], [{ item: compound, count: 2 }].concat(bcFullChemSideResults(family.side)), family.heat, 220)
+        ], [{ item: compound, count: family.id === 'oxide' || family.id === 'carbonate' ? 1 : 2 }].concat(bcFullChemSideResults(family.side)), family.heat, 220)
 
-         bcFullChemThermo(event, 'compound/' + element + '/' + family.id, { item: elementItem }, family.fluid, family.amount, { item: compound, count: 3 }, family.pressure, family.temp)
-
-        // Oxides already have carbon and Blood Magic reductions below. Other
-        // generated salts get a lossy sealed reclamation path so production is
-        // useful without creating a second progression branch.
+        // Curated oxide reductions live in the neighboring transformation and
+        // magic passes. Other generated salts get a lossy sealed reclamation
+        // path without creating a second progression branch.
         if (family.id !== 'oxide') {
              bcFullChemPressure(event, 'recovery/compound/' + element + '/' + family.id, [
                 { item: compound, count: 2 },
                 { item: 'kubejs:pressure_seal' }
             ], { item: elementItem, count: 1 }, family.pressure || 2.5)
         }
-    }
-
-    var oxide = bcFullChemCompound(element, 'oxide')
-    if (bcFullChemExists(oxide)) {
-         bcFullChemMix(event, 'reduction/carbon/' + element, [
-            { item: oxide },
-            { item: 'chemlib:carbon' },
-            { fluid: 'minecraft:water', amount: 125 }
-        ], [
-            { item: elementItem, count: 1 },
-            { item: 'chemlib:carbon_dioxide', chance: 0.25 }
-        ], 'heated', 220)
-         bcFullChemBlood(event, 'reduction/blood/' + element, [
-            { item: oxide },
-            { item: group.slate },
-            { item: 'chemlib:carbon' }
-        ], { item: elementItem, count: 4 }, 10000, 300, 3)
     }
 
     var sinks = BC_FULL_CHEM_GROUP_SINKS[group.id] || []
@@ -430,18 +375,16 @@ function bcFullChemRegisterSink(event, group, elementItem, sink) {
 }
 
 function bcFullChemRegisterMolecule(event, molecule) {
-    if (!bcFullChemExists(molecule.item)) return bcFullChemMix(event, 'molecule/source/' + molecule.id, molecule.source, [{ item: molecule.item, count: 2 }], 'heated', 220)
-     bcFullChemPressure(event, 'molecule/pressure_source/' + molecule.id, molecule.source, { item: molecule.item, count: 3 }, 2.75)
-     bcFullChemBlood(event, 'molecule/manual_yield/' + molecule.id, molecule.source.concat([{ item: molecule.slate }]), { item: molecule.item, count: 5 }, 8000, 240, 2)
-
-     bcFullChemMix(event, 'molecule/use/' + molecule.id + '/' + molecule.process, [{ item: molecule.item }], molecule.outputs, molecule.id.indexOf('oxide') >= 0 ? 'heated' : null, 180)
-     bcFullChemPressure(event, 'molecule/controlled_use/' + molecule.id + '/' + molecule.process, [{ item: molecule.item }, { item: 'kubejs:pressure_seal' }], { item: molecule.outputs[0].item, count: molecule.outputs[0].count || 1 }, 2.5)
-
-    if (molecule.fluid &&  bcFullChemFluidExists(molecule.fluid)) {
-         bcFullChemMix(event, 'molecule/fluid_spend/' + molecule.id, [
-            { item: molecule.item },
-            { fluid: molecule.fluid, amount: 250 }
-        ], molecule.outputs, null, 160)
+    if (!bcFullChemExists(molecule.item)) return
+    if (molecule.source) {
+        if (molecule.sourceKind === 'pressure') {
+             bcFullChemPressure(event, 'molecule/source/' + molecule.id, molecule.source, { item: molecule.item, count: 1 }, 2.75)
+        } else {
+             bcFullChemMix(event, 'molecule/source/' + molecule.id, molecule.source, [{ item: molecule.item, count: 1 }], 'heated', 220)
+        }
+    }
+    if (molecule.outputs && molecule.outputs.length > 0) {
+         bcFullChemMix(event, 'molecule/use/' + molecule.id + '/' + molecule.process, [{ item: molecule.item }], molecule.outputs, null, 180)
     }
 }
 
@@ -450,7 +393,7 @@ ServerEvents.recipes(function (event) {
         { item: 'chemlib:chlorine' },
         { item: 'chemlib:hydrogen' },
         { fluid: 'minecraft:water', amount: 250 }
-    ], [{ item: 'chemlib:hydrochloric_acid', count: 2 }], null, 180)
+    ], [{ item: 'chemlib:hydrochloric_acid', count: 1 }], null, 180)
 
     for (var g = 0; g < BC_FULL_CHEM_ELEMENT_GROUPS.length; g++) {
         var group = BC_FULL_CHEM_ELEMENT_GROUPS[g]

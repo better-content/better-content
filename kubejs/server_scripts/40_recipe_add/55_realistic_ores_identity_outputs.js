@@ -286,7 +286,8 @@ function bcRoAddOverworldOreExtra(results, dep, solvent, ball) {
     var bySolvent = byDeposit[solvent.id]
     if (!bySolvent) return
     var extra = bySolvent[ball.id] || bySolvent[ball.bias]
-    if (!extra) return bcRoAddResult(results, extra, 1, 0.18 + solvent.trace + ball.traceBonus)
+    if (!extra) return
+    bcRoAddResult(results, extra, 1, 0.18 + solvent.trace + ball.traceBonus)
 }
 
 function bcRoIngredientsExist(ingredients) {

@@ -121,7 +121,7 @@ Current implementation date: 2026-05-17.
 
 Create: Power Grid keeps its native electrical and device-overheat simulation. HeatSync provides an optional adapter for Power Grid block entities that expose `ThermalBehaviour`, mapping Power Grid device temperature into the HeatSync capability so HeatSync pipes and exchangers can exchange heat without making Power Grid a second pack heat API.
 
-`latent_chemlib` remains the nuclear and high-energy chemistry authority. Its machines expose HeatSync heat storage and nuclear/process emissions add heat through that capability. Radiation is now an internal event hook owned by `latent_chemlib`, not a dependency on an external reactor API.
+`latent_chemlib` remains the nuclear and high-energy chemistry authority. Its datapack machine profile owns gameplay capacity and conditioning rates, while scheduler profiles only own per-tick work budgets. The reaction chamber exposes a 32,000-unit HeatSync buffer, a charge ceiling of 20, and bounded global conditioning rates that cover every authored reaction; other Latent machines retain the 4,000-unit default. Nuclear/process emissions add heat through HeatSync, and radiation remains an internal `latent_chemlib` event hook rather than an external reactor dependency.
 
 PNCR remains separate. Its native heat and thermo-plant recipe semantics should stay PNCR-owned unless an explicit adapter is added for a concrete machine integration.
 

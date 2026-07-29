@@ -149,7 +149,7 @@
 		}
 		{
 			dependencies: ["15E8F973446C60BC"]
-			description: ["Gas reaction chambers own dangerous sealed reactions rather than pretending bottles are enough."]
+			description: ["Cloud capture only moves gas into storage. The reaction chamber conditions sealed matter for deterministic capture or fusion, while neutron capture remains a separate flux-driven process. Chamber heat selects the route: condition first and supply fusion heat only when the stored state is ready."]
 			icon: "latent_chemlib:gas_reaction_chamber"
 			id: "3D8722F9925D50DE"
 			shape: "rsquare"

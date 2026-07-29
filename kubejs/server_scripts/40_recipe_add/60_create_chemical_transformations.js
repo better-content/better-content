@@ -82,7 +82,7 @@ function bcChemXPressure(event, id, output, count, inputs, pressure) {
 
 ServerEvents.recipes(function (event) {
     var carbonates = [
-        { id: 'calcium', carbonate: 'chemlib:calcium_carbonate', oxide: 'chemlib:calcium_oxide' },
+        { id: 'calcium', carbonate: 'chemlib:calcium_carbonate', oxide: 'chemlib:calcium_oxide', carbonDioxideChance: 1 },
         { id: 'zinc', carbonate: 'chemlib:zinc_carbonate', oxide: 'chemlib:zinc_oxide' },
         { id: 'lead', carbonate: 'chemlib:lead_carbonate', oxide: 'chemlib:lead_oxide' },
         { id: 'iron', carbonate: 'chemlib:iron_carbonate', oxide: 'chemlib:iron_oxide' },
@@ -94,7 +94,7 @@ ServerEvents.recipes(function (event) {
          bcChemXCompact(event, carbonates[c].id + '_carbonate_roasting', carbonates[c].oxide, 1, [
             carbonates[c].carbonate,
             'minecraft:charcoal'
-        ], 'heated', { item: 'chemlib:carbon_dioxide', chance: 0.35 })
+        ], 'heated', { item: 'chemlib:carbon_dioxide', chance: carbonates[c].carbonDioxideChance || 0.35 })
     }
 
     var reductions = [
@@ -113,6 +113,10 @@ ServerEvents.recipes(function (event) {
             reductions[r].reductant || 'chemlib:carbon'
         ], 'superheated', { item: 'chemlib:carbon_dioxide', chance: reductions[r].reductant ? 0.12 : 0.30 })
     }
+     bcChemXCompact(event, 'iron_oxide_carbon_monoxide_reduction', 'chemlib:iron', 1, [
+        'chemlib:iron_oxide',
+        'chemlib:carbon_monoxide'
+    ], 'superheated', { item: 'chemlib:carbon_dioxide' })
 
     var leaches = [
         { id: 'copper_sulfate_from_carbonate', input: 'chemlib:copper_carbonate', fluid: 'chemlib:sulfuric_acid_fluid', output: 'chemlib:copper_ii_sulfate' },
@@ -153,7 +157,7 @@ ServerEvents.recipes(function (event) {
         'chemlib:phosphoric_acid',
         'chemlib:calcium'
     ], 'minecraft:water', 250, null, 180, null)
-     bcChemXCompact(event, 'carbon_dioxide_scrub_lime', 'chemlib:calcium_carbonate', 2, [
+     bcChemXCompact(event, 'carbon_dioxide_scrub_lime', 'chemlib:calcium_carbonate', 1, [
         'chemlib:calcium_oxide',
         'chemlib:carbon_dioxide'
     ], null, null)

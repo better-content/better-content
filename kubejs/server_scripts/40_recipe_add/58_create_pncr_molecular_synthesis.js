@@ -153,11 +153,6 @@ ServerEvents.recipes(function (event) {
         { item: 'minecraft:bone_meal' }
     ], [{ item: 'chemlib:calcium_carbonate', count: 2 }], null)
 
-     bcChemCompacting(event, 'calcium_oxide', [
-        { item: 'chemlib:calcium_carbonate' },
-        { item: 'minecraft:charcoal' }
-    ], [{ item: 'chemlib:calcium_oxide' }, { item: 'chemlib:carbon_dioxide' }], 'heated')
-
      bcChemMixing(event, 'iron_ii_oxide', [
         { item: 'chemlib:iron' }, bcChemGas('chemlib:oxygen'),
         { item: 'minecraft:charcoal' }
@@ -175,29 +170,25 @@ ServerEvents.recipes(function (event) {
     ], { item: 'chemlib:copper_nitrate', count: 2 }, 3.0)
 
      bcChemPressure(event, 'pvc', [bcChemGas('chemlib:ethylene'), bcChemGas('chemlib:chlorine'),
-        { item: 'chemlib:carbon' },
-        { item: 'kubejs:pressure_seal' }
+        { item: 'chemlib:carbon' }
     ], { item: 'chemlib:polyvinyl_chloride', count: 4 }, 3.5)
 
      bcChemPressure(event, 'hydrogen_sulfide', [
-        { item: 'chemlib:sulfur' }, bcChemGas('chemlib:hydrogen'),
-        { item: 'kubejs:pressure_seal' }
-    ], { item: 'chemlib:hydrogen_sulfide', count: 2 }, 2.75)
+        { item: 'chemlib:sulfur' }, bcChemGas('chemlib:hydrogen')
+    ], { item: 'chemlib:hydrogen_sulfide' }, 2.75)
 
      bcChemPressure(event, 'nitric_oxide', [bcChemGas('chemlib:nitrogen'), bcChemGas('chemlib:oxygen'),
         { item: 'minecraft:redstone' }
-    ], { item: 'chemlib:nitric_oxide', count: 2 }, 3.0)
+    ], { item: 'chemlib:nitric_oxide' }, 3.0)
 
      bcChemPressure(event, 'ammonium_chloride', [
-        { item: 'chemlib:ammonium' }, bcChemGas('chemlib:chlorine'),
-        { fluid: 'minecraft:water', amount: 250 }
-    ], { item: 'chemlib:ammonium_chloride', count: 2 }, 2.75)
+        { item: 'chemlib:ammonium' }, bcChemGas('chemlib:chlorine')
+    ], { item: 'chemlib:ammonium_chloride' }, 2.75)
 
      bcChemPressure(event, 'diammonium_phosphate', [
         { item: 'chemlib:ammonium' },
-        { item: 'chemlib:phosphoric_acid' },
-        { fluid: 'minecraft:water', amount: 250 }
-    ], { item: 'chemlib:diammonium_phosphate', count: 2 }, 3.0)
+        { item: 'chemlib:phosphoric_acid' }
+    ], { item: 'chemlib:diammonium_phosphate' }, 3.0)
 
      bcChemMixing(event, 'arsenic_sulfide', [
         { item: 'chemlib:arsenic' },

@@ -36,3 +36,13 @@ Objective connection states are `acquired_and_used`, `acquisition_only`, `use_on
 Retained recipes, registries, tags, and pack-authored source surfaces are strong inputs, but the matrix cannot exhaustively observe native or dynamically generated loot, trades, or worldgen. Those gaps must remain explicit evidence limitations or runtime-verification findings rather than being reported as definite absence.
 
 Agentic review delegation uses a frozen registry union and deterministic, non-overlapping ID shards. Each agent returns only its assigned review records with the seeded `evidence_refs` unchanged; the root reviewer validates exact shard coverage, adjudicates policy-sensitive findings, and merges the shards before accepting the manifest. The generator rejects duplicate IDs, changed evidence references, malformed records, and unreviewed registry drift. A completed pass must contain zero `automatic-evidence-pass` records.
+
+## Mod integration matrix
+
+```text
+tools/bc build mod-integration-matrix [--output-dir PATH] [--staging-dir PATH]
+```
+
+The command resolves dedicated client and server mod distributions, recursively inventories top-level and embedded Forge mod IDs, and writes JSON, TSV, and Markdown outputs under `generated/validation/mod-integration-matrix/`. It records provider artifacts, side presence, dependency edges, verified archive namespaces, item/block evidence, configuration and data overrides, objective connection state, and the review decision from `tools/mod_integration_review.json`.
+
+Connection states are `system_integrated`, `pack_configured`, `referenced_only`, `present_only`, and `dependency_only`. Embedded libraries, platform helpers, performance infrastructure, scripting APIs, and confirmed client utilities remain matrix rows but are excluded from the content-integration backlog. Resolved distribution presence is not runtime-load proof, and automatic reviews are triage decisions rather than final adjudication.

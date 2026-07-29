@@ -87,15 +87,119 @@ function bcRuntimeSortStrings(arr) {
     return arr
 }
 
-function bcRuntimeRegistryDump(registry) {
+function bcRuntimeRegistryId(registry, value) {
+    if (value === null || value === undefined) return null
+    try {
+        var key = registry.getKey(value)
+        return key ? String(key) : null
+    } catch (e) {
+        return null
+    }
+}
+
+function bcRuntimeClassName(value) {
+    if (value === null || value === undefined) return null
+    try {
+        return String(value.getClass().getName())
+    } catch (e) {
+        return null
+    }
+}
+
+function bcRuntimeBoolean(target, methodNames) {
+    var value = bcRuntimeCall(target, methodNames, [])
+    if (value === null || value === undefined) return null
+    return value === true
+}
+
+function bcRuntimeNumber(target, methodNames) {
+    var value = bcRuntimeCall(target, methodNames, [])
+    if (value === null || value === undefined) return null
+    var number = Number(value)
+    return isNaN(number) ? null : number
+}
+
+function bcRuntimeFoodMetadata(item) {
+    var edible = bcRuntimeBoolean(item, ['isEdible'])
+    if (edible !== true) return null
+    var food = bcRuntimeCall(item, ['getFoodProperties'], [])
+    if (!food) return { edible: true }
+    return {
+        edible: true,
+        nutrition: bcRuntimeNumber(food, ['getNutrition']),
+        saturation_modifier: bcRuntimeNumber(food, ['getSaturationModifier']),
+        meat: bcRuntimeBoolean(food, ['isMeat']),
+        always_eat: bcRuntimeBoolean(food, ['canAlwaysEat']),
+        fast_food: bcRuntimeBoolean(food, ['isFastFood'])
+    }
+}
+
+function bcRuntimeItemMetadata(item) {
+    var blockId = null
+    try {
+        var block = bcRuntimeCall(item, ['getBlock'], [])
+        if (block) blockId = bcRuntimeRegistryId(BcRuntimeBuiltInRegistries.BLOCK, block)
+    } catch (e) {
+        blockId = null
+    }
+
+    var remainingItemId = null
+    try {
+        if (item.hasCraftingRemainingItem()) {
+            remainingItemId = bcRuntimeRegistryId(BcRuntimeBuiltInRegistries.ITEM, item.getCraftingRemainingItem())
+        }
+    } catch (e) {
+        remainingItemId = null
+    }
+
+    var maxDamage = bcRuntimeNumber(item, ['getMaxDamage'])
+    return {
+        java_class: bcRuntimeClassName(item),
+        description_id: String(bcRuntimeCall(item, ['getDescriptionId'], []) || 'UNKNOWN'),
+        max_stack_size: bcRuntimeNumber(item, ['getMaxStackSize']),
+        max_damage: maxDamage,
+        damageable: maxDamage === null ? null : maxDamage > 0,
+        block_id: blockId,
+        crafting_remaining_item_id: remainingItemId,
+        food: bcRuntimeFoodMetadata(item)
+    }
+}
+
+function bcRuntimeBlockMetadata(block) {
+    var state = bcRuntimeCall(block, ['defaultBlockState'], [])
+    var itemId = null
+    try {
+        itemId = bcRuntimeRegistryId(BcRuntimeBuiltInRegistries.ITEM, block.asItem())
+        if (itemId === 'minecraft:air') itemId = null
+    } catch (e) {
+        itemId = null
+    }
+    return {
+        java_class: bcRuntimeClassName(block),
+        description_id: String(bcRuntimeCall(block, ['getDescriptionId'], []) || 'UNKNOWN'),
+        item_id: itemId,
+        default_state: {
+            air: bcRuntimeBoolean(state, ['isAir']),
+            has_block_entity: bcRuntimeBoolean(state, ['hasBlockEntity']),
+            replaceable: bcRuntimeBoolean(state, ['canBeReplaced']),
+            requires_correct_tool_for_drops: bcRuntimeBoolean(state, ['requiresCorrectToolForDrops']),
+            light_emission: bcRuntimeNumber(state, ['getLightEmission'])
+        }
+    }
+}
+
+function bcRuntimeRegistryDump(registry, kind) {
     var out = {}
     var keys = registry.keySet().iterator()
     while (keys.hasNext()) {
         var key = keys.next()
         var id = String(key)
-        out[id] = {
-            namespace: bcRuntimeNamespace(id)
-        }
+        var entry = registry.get(key)
+        var metadata = {}
+        if (kind === 'item') metadata = bcRuntimeItemMetadata(entry)
+        else if (kind === 'block') metadata = bcRuntimeBlockMetadata(entry)
+        metadata.namespace = bcRuntimeNamespace(id)
+        out[id] = metadata
     }
     return out
 }
@@ -345,10 +449,10 @@ ServerEvents.recipes(function (event) {
 
      bcRuntimeWriteFile(cfg.outputDir, 'registries.json', {
         schema: 'bc.registries.v1',
-        items: bcRuntimeRegistryDump(BcRuntimeBuiltInRegistries.ITEM),
-        blocks: bcRuntimeRegistryDump(BcRuntimeBuiltInRegistries.BLOCK),
-        fluids: bcRuntimeRegistryDump(BcRuntimeBuiltInRegistries.FLUID),
-        entities: bcRuntimeRegistryDump(BcRuntimeBuiltInRegistries.ENTITY_TYPE)
+        items: bcRuntimeRegistryDump(BcRuntimeBuiltInRegistries.ITEM, 'item'),
+        blocks: bcRuntimeRegistryDump(BcRuntimeBuiltInRegistries.BLOCK, 'block'),
+        fluids: bcRuntimeRegistryDump(BcRuntimeBuiltInRegistries.FLUID, 'fluid'),
+        entities: bcRuntimeRegistryDump(BcRuntimeBuiltInRegistries.ENTITY_TYPE, 'entity')
     })
 
      bcRuntimeWriteFile(cfg.outputDir, 'tags.json', {

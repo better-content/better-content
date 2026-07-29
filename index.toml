@@ -10726,7 +10726,7 @@ hash = "960e2f9cb88c3c4b7b5dd4283edc84b5670bd3a3567f008a8fe05a520dffd39a"
 
 [[files]]
 file = "kubejs/server_scripts/90_dev_debug/30_runtime_graph_dumps.js"
-hash = "a47310519a0b93f16f827c9816c83d3cab632228078b7cd61edf4f772e66ebf2"
+hash = "70caf36b8c2163773c39d5dcf2d47d02d80681cc2f0ffebd89c27f02d82f8bb0"
 
 [[files]]
 file = "kubejs/server_scripts/90_dev_debug/40_block_hardness_probe.js"

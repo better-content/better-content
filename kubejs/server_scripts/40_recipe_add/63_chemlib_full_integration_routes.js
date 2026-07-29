@@ -83,6 +83,16 @@ function bcFullChemCompact(event, id, inputs, outputs, heat) {
     event.custom(recipe).id('kubejs:chemlib_full/create_compacting/' + id)
 }
 
+function bcFullChemMill(event, id, input, output) {
+    if (!bcFullChemExists(input) || !bcFullChemExists(output.item)) return
+    event.custom({
+        type: 'create:milling',
+        ingredients: [{ item: input }],
+        results: [bcFullChemResult(output.item, output.count || 1, null)],
+        processingTime: 120
+    }).id('kubejs:chemlib_full/create_milling/' + id)
+}
+
 function bcFullChemPressure(event, id, inputs, output, pressure) {
     if (!bcFullChemAllInputsExist(inputs) || !bcFullChemExists(output.item)) return
     var pressureInputs = []
@@ -198,7 +208,7 @@ var BC_FULL_CHEM_ELEMENT_GROUPS = [
     { id: 'alkali', slate: 'bloodmagic:blankslate', source: BC_FULL_CHEM_SOURCE_DEPOSITS.alkali, acid: 'chemlib:hydrochloric_acid_fluid', elements: ['lithium', 'sodium', 'potassium', 'rubidium', 'cesium', 'francium'] },
     { id: 'alkaline', slate: 'bloodmagic:blankslate', source: BC_FULL_CHEM_SOURCE_DEPOSITS.alkaline, acid: 'kubejs:phosphoric_acid_fluid', elements: ['beryllium', 'magnesium', 'calcium', 'strontium', 'barium', 'radium'] },
     { id: 'transition', slate: 'bloodmagic:infusedslate', source: BC_FULL_CHEM_SOURCE_DEPOSITS.transition, acid: 'chemlib:nitric_acid_fluid', elements: ['scandium', 'titanium', 'vanadium', 'chromium', 'manganese', 'iron', 'cobalt', 'nickel', 'copper', 'zinc'] },
-    { id: 'refractory', slate: 'bloodmagic:demonslate', source: BC_FULL_CHEM_SOURCE_DEPOSITS.refractory, acid: 'chemlib:hydrochloric_acid_fluid', elements: ['zirconium', 'niobium', 'molybdenum', 'hafnium', 'tantalum', 'tungsten', 'rhenium'] },
+    { id: 'refractory', slate: 'bloodmagic:demonslate', source: BC_FULL_CHEM_SOURCE_DEPOSITS.refractory, acid: 'chemlib:hydrochloric_acid_fluid', elements: ['tin', 'zirconium', 'niobium', 'molybdenum', 'hafnium', 'tantalum', 'tungsten', 'rhenium'] },
     { id: 'noble', slate: 'bloodmagic:etherealslate', source: BC_FULL_CHEM_SOURCE_DEPOSITS.noble, acid: 'chemlib:nitric_acid_fluid', elements: ['ruthenium', 'rhodium', 'palladium', 'osmium', 'iridium', 'platinum', 'gold', 'silver'] },
     { id: 'rare_earth', slate: 'bloodmagic:demonslate', source: BC_FULL_CHEM_SOURCE_DEPOSITS.rare_earth, acid: 'kubejs:phosphoric_acid_fluid', elements: ['lanthanum', 'cerium', 'praseodymium', 'neodymium', 'samarium', 'europium', 'gadolinium', 'terbium', 'dysprosium', 'holmium', 'erbium', 'thulium', 'ytterbium', 'lutetium', 'yttrium'] },
     { id: 'chalcophile', slate: 'bloodmagic:infusedslate', source: BC_FULL_CHEM_SOURCE_DEPOSITS.chalcophile, acid: 'chemlib:sulfuric_acid_fluid', elements: ['cadmium', 'mercury', 'lead', 'bismuth', 'arsenic', 'antimony', 'selenium', 'tellurium'] },
@@ -265,6 +275,38 @@ var BC_FULL_CHEM_GROUP_SINKS = {
     ]
 }
 
+// Explicit terminal decisions for produced registrations whose purpose is their
+// placed light-emitting block behavior rather than another crafting sink.
+var BC_FULL_CHEM_TERMINAL_OUTPUTS = {
+    'chemlib:argon_lamp_block': 'functional_light_block',
+    'chemlib:helium_lamp_block': 'functional_light_block',
+    'chemlib:krypton_lamp_block': 'functional_light_block',
+    'chemlib:neon_lamp_block': 'functional_light_block',
+    'chemlib:radon_lamp_block': 'functional_light_block',
+    'chemlib:xenon_lamp_block': 'functional_light_block'
+}
+
+// Manufactured forms with no intrinsic final use get a lossy recovery sink.
+// This is form reclamation inside the existing chemistry lane, not a new
+// material source.
+var BC_FULL_CHEM_RECOVERY_FORMS = [
+    { id: 'cobalt_plate', input: 'chemlib:cobalt_plate', output: 'chemlib:cobalt' }
+]
+
+var BC_FULL_CHEM_RECOVERY_COMPOUNDS = [
+    { id: 'iron_disulfide', input: 'chemlib:iron_disulfide', output: 'chemlib:iron' },
+    { id: 'iron_ii_oxide', input: 'chemlib:iron_ii_oxide', output: 'chemlib:iron' }
+]
+
+// These loops are authored in the neighboring identity/transformation passes;
+// retaining the exact IDs here makes their cross-script ownership explicit.
+var BC_FULL_CHEM_EXISTING_LOOPS = [
+    'chemlib:beryl',
+    'chemlib:iron_disulfide',
+    'chemlib:iron_ii_oxide',
+    'chemlib:phosphate'
+]
+
 var BC_FULL_CHEM_MOLECULES = [
     { id: 'cellulose', item: 'chemlib:cellulose', source: [{ tag: 'minecraft:logs' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'minecraft:paper', count: 6 }], process: 'fiber_pulping', slate: 'bloodmagic:blankslate' },
     { id: 'starch', item: 'chemlib:starch', source: [{ item: 'minecraft:potato' }, { item: 'minecraft:wheat' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'minecraft:slime_ball', count: 2 }], process: 'binder_gelatinization', slate: 'bloodmagic:blankslate' },
@@ -295,6 +337,8 @@ function bcFullChemRegisterElement(event, group, element) {
     var elementItem = 'chemlib:' + element
     if (!bcFullChemExists(elementItem)) return
 
+     bcFullChemRegisterDustForm(event, elementItem, element)
+
     if (bcFullChemExists(group.source)) {
          bcFullChemMix(event, 'source/' + group.id + '/' + element, [
             { item: group.source },
@@ -316,13 +360,23 @@ function bcFullChemRegisterElement(event, group, element) {
         var family = BC_FULL_CHEM_FAMILIES[f]
         var compound = bcFullChemCompound(element, family.suffix)
         if (!bcFullChemExists(compound) || !bcFullChemFluidExists(family.fluid)) continue
-         bcFullChemMix(event, 'compound/' + element + '/' + family.id, [
+        bcFullChemMix(event, 'compound/' + element + '/' + family.id, [
             { item: elementItem },
             { item: family.reagent },
             { fluid: family.fluid, amount: family.amount }
         ], [{ item: compound, count: 2 }].concat(bcFullChemSideResults(family.side)), family.heat, 220)
 
          bcFullChemThermo(event, 'compound/' + element + '/' + family.id, { item: elementItem }, family.fluid, family.amount, { item: compound, count: 3 }, family.pressure, family.temp)
+
+        // Oxides already have carbon and Blood Magic reductions below. Other
+        // generated salts get a lossy sealed reclamation path so production is
+        // useful without creating a second progression branch.
+        if (family.id !== 'oxide') {
+             bcFullChemPressure(event, 'recovery/compound/' + element + '/' + family.id, [
+                { item: compound, count: 2 },
+                { item: 'kubejs:pressure_seal' }
+            ], { item: elementItem, count: 1 }, family.pressure || 2.5)
+        }
     }
 
     var oxide = bcFullChemCompound(element, 'oxide')
@@ -346,6 +400,16 @@ function bcFullChemRegisterElement(event, group, element) {
     for (var s = 0; s < sinks.length; s++) {
          bcFullChemRegisterSink(event, group, elementItem, sinks[s])
     }
+}
+
+function bcFullChemRegisterDustForm(event, elementItem, element) {
+    var dust = 'chemlib:' + element + '_dust'
+    if (!bcFullChemExists(dust)) return
+
+     bcFullChemMill(event, 'form/dust/' + element, elementItem, { item: dust, count: 1 })
+     bcFullChemCompact(event, 'recovery/dust/' + element, [
+        { item: dust }
+    ], [{ item: elementItem, count: 1 }], null)
 }
 
 function bcFullChemSinkInputs(elementItem, sink) {
@@ -382,6 +446,12 @@ function bcFullChemRegisterMolecule(event, molecule) {
 }
 
 ServerEvents.recipes(function (event) {
+    bcFullChemMix(event, 'molecule/source/hydrochloric_acid', [
+        { item: 'chemlib:chlorine' },
+        { item: 'chemlib:hydrogen' },
+        { fluid: 'minecraft:water', amount: 250 }
+    ], [{ item: 'chemlib:hydrochloric_acid', count: 2 }], null, 180)
+
     for (var g = 0; g < BC_FULL_CHEM_ELEMENT_GROUPS.length; g++) {
         var group = BC_FULL_CHEM_ELEMENT_GROUPS[g]
         for (var e = 0; e < group.elements.length; e++) {
@@ -391,5 +461,18 @@ ServerEvents.recipes(function (event) {
 
     for (var m = 0; m < BC_FULL_CHEM_MOLECULES.length; m++) {
          bcFullChemRegisterMolecule(event, BC_FULL_CHEM_MOLECULES[m])
+    }
+
+    for (var r = 0; r < BC_FULL_CHEM_RECOVERY_FORMS.length; r++) {
+        var recovery = BC_FULL_CHEM_RECOVERY_FORMS[r]
+         bcFullChemMill(event, 'recovery/form/' + recovery.id, recovery.input, { item: recovery.output, count: 1 })
+    }
+
+    for (var c = 0; c < BC_FULL_CHEM_RECOVERY_COMPOUNDS.length; c++) {
+        var compoundRecovery = BC_FULL_CHEM_RECOVERY_COMPOUNDS[c]
+         bcFullChemPressure(event, 'recovery/existing_compound/' + compoundRecovery.id, [
+            { item: compoundRecovery.input, count: 2 },
+            { item: 'kubejs:pressure_seal' }
+        ], { item: compoundRecovery.output, count: 1 }, 2.5)
     }
 })

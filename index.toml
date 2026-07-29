@@ -1106,7 +1106,7 @@ hash = "37de97f56573139fb11c801ad2238aaf339a4e6b0de1c3e54fb811adc25bbe16"
 
 [[files]]
 file = "config/adlods/Deposits/aluminum.cfg"
-hash = "334195e321e30b42d08e99fcbc64492fa40b0a7ae38c92f394065d2825a75aab"
+hash = "877de174e9437bb90bc9f84d48700cf04709bad4bca0841a0dd1ce31f8bdf78e"
 
 [[files]]
 file = "config/adlods/Deposits/amethyst.cfg"
@@ -1118,7 +1118,7 @@ hash = "3bd2f3c03bee924c1b7a833ce917a6943c3397e32bd1bd07bb98683c725a94ed"
 
 [[files]]
 file = "config/adlods/Deposits/coal.cfg"
-hash = "487494548321eecb702fd0d7e2b9f83058b9d6a757bc2f61db12fc2f9e351f0f"
+hash = "c4276b69b4d6fe9e1948d5144d0628d1704012bc35b78df0577313f5f89738c5"
 
 [[files]]
 file = "config/adlods/Deposits/cobalt.cfg"
@@ -1126,19 +1126,19 @@ hash = "f493fe1b1a9c6403e52d28c394067621098c51102e090af95079cfe16ffb6c94"
 
 [[files]]
 file = "config/adlods/Deposits/copper.cfg"
-hash = "a95ef16e3f8a5a1f258ea7bf4c7a60894213a6fd498ff979b330fa859c96928f"
+hash = "7e35792a4e5106380d7c5e1da81a076cbc54fbf3e90845f1da62be006e9229a5"
 
 [[files]]
 file = "config/adlods/Deposits/corundum.cfg"
-hash = "d60f614704f2817dffbb1605e4de9dccaf638d865ecf44cb4cb0a7bca91e390e"
+hash = "1cde779f5d44680026449d6baab0d3a08e02cf84e7fb290619003d6e9aeeabd4"
 
 [[files]]
 file = "config/adlods/Deposits/diamond.cfg"
-hash = "32cd7a299e5e7b31c27d0fe96e866e5d978c14ed984cd2c5fe484b0fa5b0c48e"
+hash = "d2803dc40e0074e590088e009d3f2ae492603bfeb9b7a0f34cd9584c5e5b6765"
 
 [[files]]
 file = "config/adlods/Deposits/emerald.cfg"
-hash = "e8146073dd06bf3bd99c8e13e6c9c34f8ae990c64c5360eca35a794f2571e48a"
+hash = "e54c0eb6b7f7f5d66389ffc03a1c4203e71162e5c07960efe73152991f59f921"
 
 [[files]]
 file = "config/adlods/Deposits/gas_pocket.cfg"
@@ -1154,15 +1154,15 @@ hash = "0ddf10ea856d734f8790e432e742e4e7eb2b2d541a148c97655254dcf0597312"
 
 [[files]]
 file = "config/adlods/Deposits/iron.cfg"
-hash = "d327cce446498e0a47a01dcec1a2327f41d5ec18a59e4d2caf243f7ecbf7c4d6"
+hash = "ed003fb9d697d99965f9273c3c306cacf40862df33241ac4a0eccd844475f6f7"
 
 [[files]]
 file = "config/adlods/Deposits/lapis.cfg"
-hash = "b33e03941b63e0305dbd187edbb051b44a1ada8962894188616a955b4cc77c90"
+hash = "d0362432b70c6082e58aadcadea0c9b9a3aefb14c541464403459d2f84c96011"
 
 [[files]]
 file = "config/adlods/Deposits/lead.cfg"
-hash = "a4d1712e3998af6770cadec34302f9608225d64722b387b20fd761048dc73a88"
+hash = "65b125805a5c5aff032757d9783837570d6b7deb9ce931274585f11cad9709e8"
 
 [[files]]
 file = "config/adlods/Deposits/nether_gold.cfg"
@@ -1174,7 +1174,7 @@ hash = "8728389ea3da324ae45e56093c7c94bc84d2a8deba9fcc2db05040de4ed0efe5"
 
 [[files]]
 file = "config/adlods/Deposits/nickel.cfg"
-hash = "832d3d9019367c973a9ac040c33c4ffe9eb18ff57a2c8ed232daea613a4b0d01"
+hash = "dca3e274642dbef5d0863a5ee6a39883b81acc03d2522fd3df64e02ef5c94c44"
 
 [[files]]
 file = "config/adlods/Deposits/oil_huge.cfg"
@@ -1202,7 +1202,7 @@ hash = "372d84d5b41266cab10e492ac1a3fe7db8a76351e3da998eef246fdf77617b50"
 
 [[files]]
 file = "config/adlods/Deposits/phosphate.cfg"
-hash = "a6c7533f4459a4bdb002749596b09ac86a9ea207b93e8ebd06b862edca82d931"
+hash = "37250d8310bc976bf257cd8c4f6b270dc957662dc842cd00200b0af0f091fd5b"
 
 [[files]]
 file = "config/adlods/Deposits/platinum.cfg"
@@ -1210,11 +1210,11 @@ hash = "602ef04912e1985b49194085721b91ace02fef1462a45578c6f95d4bd64f93f0"
 
 [[files]]
 file = "config/adlods/Deposits/quartz.cfg"
-hash = "6a09be5385e795e8e62e72c003773b09b09d788b97a6cca8e961a614bb5c0975"
+hash = "3e618cb1191d2bc3b2a4f3ae16ed89b049095cf209fc50faf752861114e6fff8"
 
 [[files]]
 file = "config/adlods/Deposits/redstone.cfg"
-hash = "69c86bc7da73142fee88fbc9c08fc11130450bbc3eed905e40b1c3a4b0bea9ae"
+hash = "c89a163e95a64f70c881a45daeabe262bad7a0c2b30454d84dfddf8323585ecd"
 
 [[files]]
 file = "config/adlods/Deposits/rhodium.cfg"
@@ -1238,23 +1238,23 @@ hash = "8fefd2f583c8ea6bade0ed593bc1022e120141e45de46719916a761dee1f7c4a"
 
 [[files]]
 file = "config/adlods/Deposits/sulfur_pyrite.cfg"
-hash = "21ea298c7d585d39bb29deab074b81c94f69d59a5bf2885dbfa1f5a90dca0c7e"
+hash = "196f5ea7c05650228290119eec526231fd3c355b14b232239a45a11f5f62a75b"
 
 [[files]]
 file = "config/adlods/Deposits/thorium.cfg"
-hash = "8192b137557bc011f70caf2407dec8a6954fbfca708b44519db826d0ef01d5d9"
+hash = "e1b6ac094dd3ebbc5bc958f377719c90e282eaeff1fc490602f01d785aab65a4"
 
 [[files]]
 file = "config/adlods/Deposits/tin.cfg"
-hash = "f2dc611fc926975a934e1ba39c29e1e4114d07d57c9f9be96fba88e351bede98"
+hash = "223b54178da7325097c1a30dc5199a4d9de9955ee6a7bccdfa5258dc0b95b5aa"
 
 [[files]]
 file = "config/adlods/Deposits/tin_tungsten.cfg"
-hash = "599a45cdf461394443a2615f5b6264826c9f4c818e61c17def082243ee96c627"
+hash = "0d8f3c04d2c6d3f9d6dc156269efe665eb9fb446b90d2200d9577b1b16ce9e08"
 
 [[files]]
 file = "config/adlods/Deposits/titanium.cfg"
-hash = "92d1eed8e6aa7240d55c4dbe6603a05bf8f7f4c5517920559c1ab878ed0a2474"
+hash = "11f5a15ed52ce96f5e7d67925f284715d36700255a4d3ae0fae351cf47a959b6"
 
 [[files]]
 file = "config/adlods/Deposits/topaz.cfg"
@@ -1262,11 +1262,11 @@ hash = "4ddda5924ac16b23b9ffb6c0a8deffa87931d7ebf1e791c4df673a83499da74e"
 
 [[files]]
 file = "config/adlods/Deposits/uranium.cfg"
-hash = "d41c99801f8253f7ab671010f2d1bdb919013c392483883af6f7fcb4559a7491"
+hash = "e7a4dd38b49c078760e9788cb5db39cf15b732ce20dbcfe3edba65c21304fc25"
 
 [[files]]
 file = "config/adlods/Deposits/zinc.cfg"
-hash = "24b9b78d025f3178565dfa4bd5c70ba11d151203bae381b3269b80643bc28b87"
+hash = "1f044107a74a74363adbce4f22515c4d578ddf0322e0594772a96796cb11229c"
 
 [[files]]
 file = "config/adlods/Geodes/amethyst.cfg"
@@ -9122,7 +9122,7 @@ hash = "3a6483697f865aa908aa1cd5b0f0d8a107f77d4afbb85b9048a2230669fb6296"
 
 [[files]]
 file = "kubejs/client_scripts/40_hide_quarantined_systems.js"
-hash = "631e55662f2471cf1c6abe3a3f6f97825ba5cb19920903ff68c11dd1f615f426"
+hash = "49283de3a16c240fa209ee4e9e4e2da6a02c542623e534f1f04f20dcded3b0ab"
 
 [[files]]
 file = "kubejs/client_scripts/45_hide_vanilla_style_boats.js"
@@ -9157,6 +9157,10 @@ file = "kubejs/config/block_hardness_probe.json"
 hash = "627b340a9c28a68ad8860c2a1a689c879c7420dc789ee582fe0b49e3bacadfe9"
 
 [[files]]
+file = "kubejs/config/chemlib_form_policy.json"
+hash = "293cc3060683c313d540ee1ff8e190c7aac17f930d7ba7673ca0670ac29dc443"
+
+[[files]]
 file = "kubejs/config/client.properties"
 hash = "ca1bcfdcb5e2feb66eea14271ba8ceb5aaa1cc81fba3b5294a2cc0a14eb26b6e"
 
@@ -9166,7 +9170,7 @@ hash = "46a66b6e003ba7953c9a13428fd9c1967e862a673d7fd849831defab59eb08f1"
 
 [[files]]
 file = "kubejs/config/economy_acquisition.json"
-hash = "e10ff09d8f5596921fdb1864d090355bd3bcf2f882b55cd96d5ef12f64bc7d43"
+hash = "5e85125f9aeda6d625860beea3d034a0572463e41f6e903f6dbbdf5872080bfe"
 
 [[files]]
 file = "kubejs/config/food_effect_progression_candidates.json"
@@ -10426,7 +10430,7 @@ hash = "c2a82b99259f6281874089a5f4a9e16932d5d71993d299fadcb454c806148b65"
 
 [[files]]
 file = "kubejs/server_scripts/20_recipe_remove/30_remove_items.js"
-hash = "32d9333f795bd8696af351902934150338a80cff1d31d53e96e860300ba4751f"
+hash = "6b3babca192cc0d26bb3abbdd3b166362245d6b5f017259e5fbc3d3ea013435f"
 
 [[files]]
 file = "kubejs/server_scripts/20_recipe_remove/50_disable_createdeco_coin_recipes.js"
@@ -10606,7 +10610,7 @@ hash = "abc59339241088a77f10d8a95a9e30dcae4e5185c503e46482ddaccc51aefbbb"
 
 [[files]]
 file = "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js"
-hash = "77525afeb7392779e70a3df0d169b417716f644169ee7656a368235cac9cb488"
+hash = "79b112a3514449b00612b1703229715f9d1cee34bb8b1bc3c7467df613f11aa1"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/10_campfire_recipe.js"
@@ -10670,7 +10674,7 @@ hash = "de61f249827ecda8acaf1c09f3a1e3ce8efba583025d44a1ede53e1e92869ae4"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js"
-hash = "7f3499cd913488aa992de427f97de485460f639d10dd407b115b98dcc2bf6822"
+hash = "260101f9da4aa08b4dd77cee1227025ccbc3523c78ec0e93a573918b8c869c8e"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/65_chemlib_plate_manufacturing_routes.js"

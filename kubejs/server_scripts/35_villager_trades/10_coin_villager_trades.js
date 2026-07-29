@@ -15,12 +15,11 @@ var BC_VILLAGER_COIN_WHITELIST = { copper: true, zinc: true, iron: true, industr
 var BC_LOW_TIER_PROFESSIONS = ['minecraft:farmer','minecraft:fisherman','minecraft:fletcher','minecraft:mason','minecraft:librarian','minecraft:toolsmith']
 
 var BC_30_ITEMS = [
-    ['minecraft:bread',4],['minecraft:apple',4],['minecraft:torch',16],['minecraft:coal',8],['minecraft:stick',32],
+    ['minecraft:bread',4],['minecraft:apple',4],['minecraft:torch',16],['minecraft:stick',32],
     ['minecraft:string',8],['minecraft:leather',4],['minecraft:paper',16],['minecraft:arrow',16],['minecraft:glass',8],
     ['minecraft:bucket',1],['minecraft:lantern',2],['minecraft:cooked_beef',4],['minecraft:carrot',12],['minecraft:potato',12],
-    ['minecraft:oak_planks',32],['minecraft:cobblestone',48],['minecraft:andesite',32],['minecraft:granite',32],['minecraft:diorite',32],
-    ['minecraft:iron_ingot',2],['minecraft:redstone',8],['minecraft:compass',1],['minecraft:map',1],['minecraft:fishing_rod',1],
-    ['minecraft:shears',1],['minecraft:rail',16],['minecraft:tnt',1],['minecraft:bone_meal',16],['minecraft:bookshelf',1]
+    ['minecraft:compass',1],['minecraft:map',1],['minecraft:fishing_rod',1],
+    ['minecraft:shears',1],['minecraft:rail',16],['minecraft:bone_meal',16],['minecraft:bookshelf',1]
 ]
 
 var BC_INDUSTRIAL_IRON_MARKET = [
@@ -69,7 +68,6 @@ var BC_GOLD_MARKET = [
     ['minecraft:leatherworker',4,5,'sophisticatedbackpacks:restock_upgrade',1,3,16],
     ['minecraft:mason',4,5,'minecraft:obsidian',8,5,16],
     ['minecraft:mason',4,5,'minecraft:crying_obsidian',4,4,18],
-    ['minecraft:toolsmith',4,5,'minecraft:diamond_pickaxe',1,3,18],
     ['minecraft:toolsmith',4,5,'create:empty_blaze_burner',1,3,18],
     ['minecraft:armorer',4,5,'minecraft:diamond_boots',1,2,18],
     ['minecraft:armorer',4,5,'minecraft:diamond_helmet',1,2,18],
@@ -89,19 +87,12 @@ var BC_PLATINUM_MARKET = [
     ['minecraft:leatherworker',5,8,'sophisticatedbackpacks:advanced_pickup_upgrade',1,2,22],
     ['minecraft:leatherworker',5,8,'sophisticatedbackpacks:advanced_magnet_upgrade',1,2,22],
     ['minecraft:mason',5,7,'ae2:sky_stone_block',16,2,22],
-    ['minecraft:mason',5,8,'minecraft:ancient_debris',2,1,26],
-    ['minecraft:toolsmith',5,7,'minecraft:netherite_upgrade_smithing_template',1,1,24],
-    ['minecraft:toolsmith',5,8,'minecraft:netherite_scrap',2,1,26],
     ['minecraft:armorer',5,8,'minecraft:diamond_chestplate',1,1,24],
     ['minecraft:armorer',5,8,'minecraft:diamond_leggings',1,1,24],
-    ['minecraft:weaponsmith',5,8,'minecraft:enchanted_golden_apple',1,1,28],
-    ['minecraft:weaponsmith',5,9,'minecraft:netherite_scrap',2,1,28],
     ['minecraft:cleric',5,8,'minecraft:ghast_tear',2,2,24],
     ['minecraft:cleric',5,10,'minecraft:sculk_catalyst',1,1,30],
     ['minecraft:librarian',5,8,'minecraft:enchanted_book',1,2,24],
-    ['minecraft:librarian',5,8,'minecraft:dragon_breath',2,2,30],
-    ['minecraft:cartographer',5,8,'minecraft:lodestone',1,2,24],
-    ['minecraft:cartographer',5,10,'minecraft:beacon',1,1,32]
+    ['minecraft:cartographer',5,8,'minecraft:lodestone',1,2,24]
 ]
 
 // Wandering trader: broad recovery, exploration, ecology, decor, and route supplies.
@@ -272,9 +263,7 @@ var BC_WANDERER_MARKET = [
     [2, 'platinum', 8, 'pneumaticcraft:night_vision_upgrade', 1, 1, 24],
     [2, 'platinum', 8, 'minecraft:shulker_shell', 1, 2, 22],
     [2, 'platinum', 7, 'minecraft:totem_of_undying', 1, 1, 24],
-    [2, 'platinum', 8, 'minecraft:dragon_breath', 2, 1, 26],
-    [2, 'platinum', 8, 'minecraft:dragon_head', 1, 1, 28],
-    [2, 'platinum', 10, 'minecraft:nether_star', 1, 1, 32]
+    [2, 'platinum', 8, 'minecraft:dragon_head', 1, 1, 28]
 ]
 
 var BC_NON_GROWN_TRADE_BUY_BLOCKLIST = {
@@ -610,10 +599,8 @@ if (typeof MoreJSEvents !== 'undefined') {
             [1, 'copper', 2, 'minecraft:cobblestone_wall', 16, 16, 2],
             [1, 'copper', 2, 'minecraft:ladder', 16, 16, 2],
             [1, 'copper', 3, 'wares:cardboard_box', 4, 12, 2],
-            [2, 'iron', 3, 'tconstruct:seared_brick', 8, 12, 6],
             [2, 'iron', 3, 'minecraft:stonecutter', 1, 6, 6],
             [2, 'iron', 4, 'minecraft:barrel', 2, 8, 6],
-            [2, 'brass', 3, 'tconstruct:scorched_brick', 8, 8, 10],
             [3, 'brass', 4, 'minecraft:cauldron', 1, 4, 10],
             [3, 'brass', 4, 'minecraft:quartz_block', 8, 8, 10],
             [3, 'brass', 4, 'minecraft:stone_bricks', 16, 8, 10],
@@ -631,12 +618,9 @@ if (typeof MoreJSEvents !== 'undefined') {
          bcAddTrades(event, 'minecraft:toolsmith', [
             [1, 'copper', 4, 'tconstruct:repair_kit', 1, 8, 3],
             [1, 'copper', 2, 'minecraft:flint_and_steel', 1, 8, 2],
-            [1, 'copper', 3, 'minecraft:stone_pickaxe', 1, 8, 2],
-            [2, 'iron', 4, 'minecraft:iron_pickaxe', 1, 4, 6],
             [2, 'brass', 4, 'minecraft:shears', 1, 6, 6],
             [3, 'brass', 4, 'create:super_glue', 1, 6, 10],
-            [4, 'gold', 6, 'additionalweaponry:wrench', 1, 4, 16],
-            [5, 'platinum', 6, 'minecraft:diamond_pickaxe', 1, 2, 22]
+            [4, 'gold', 6, 'additionalweaponry:wrench', 1, 4, 16]
         ])
 
         // Armorer: defensive recovery, not main gear progression.
@@ -655,21 +639,15 @@ if (typeof MoreJSEvents !== 'undefined') {
 
         // Weaponsmith: expedition weapons and blast-mining stock.
          bcAddTrades(event, 'minecraft:weaponsmith', [
-            [1, 'copper', 3, 'minecraft:stone_sword', 1, 8, 2],
-            [1, 'copper', 3, 'minecraft:iron_axe', 1, 6, 3],
             [2, 'iron', 4, 'minecraft:crossbow', 1, 6, 6],
             [2, 'brass', 3, 'minecraft:gunpowder', 8, 10, 6],
             [3, 'brass', 4, 'minecraft:tnt', 4, 6, 10],
             [3, 'brass', 4, 'minecraft:fire_charge', 8, 8, 10],
-            [4, 'brass', 5, 'minecraft:diamond_sword', 1, 2, 16],
-            [4, 'gold', 5, 'minecraft:golden_apple', 1, 4, 16],
-            [5, 'platinum', 8, 'minecraft:enchanted_golden_apple', 1, 1, 28],
-            [5, 'platinum', 8, 'minecraft:netherite_scrap', 1, 1, 28]
+            [4, 'gold', 5, 'minecraft:golden_apple', 1, 4, 16]
         ])
 
         // Cleric: magic recovery and ritual support. High slates stay altar-authored.
          bcAddTrades(event, 'minecraft:cleric', [
-            [1, 'copper', 3, 'minecraft:redstone', 8, 12, 3],
             [1, 'copper', 3, 'minecraft:lapis_lazuli', 8, 12, 3],
             [2, 'iron', 4, 'minecraft:glowstone_dust', 8, 10, 6],
             [2, 'brass', 4, 'bloodmagic:blankslate', 1, 6, 10],
@@ -691,8 +669,7 @@ if (typeof MoreJSEvents !== 'undefined') {
             [3, 'brass', 5, 'minecraft:experience_bottle', 8, 8, 12],
             [4, 'gold', 5, 'minecraft:echo_shard', 1, 4, 16],
             [4, 'platinum', 6, 'ae2:certus_quartz_crystal', 4, 4, 18],
-            [5, 'platinum', 8, 'minecraft:enchanted_book', 1, 2, 24],
-            [5, 'platinum', 10, 'minecraft:dragon_breath', 2, 2, 30]
+            [5, 'platinum', 8, 'minecraft:enchanted_book', 1, 2, 24]
         ])
 
         // Cartographer: maps, route planning, and authored distance tools.

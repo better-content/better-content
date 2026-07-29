@@ -54,6 +54,43 @@ var BC_HIDDEN_QUARANTINED_ITEMS = [
     'pneumaticcraft:jet_boots_upgrade_5'
 ]
 
+var BC_CHEMLIB_FORM_POLICY = JsonIO.read('kubejs/config/chemlib_form_policy.json') || { hidden_forms: [], hidden_compounds: [] }
+
+var BC_HIDDEN_CONFIRMED_CLEANUP_ITEMS = [
+    'create:chromatic_compound',
+    'create:refined_radiance_casing',
+    'create:shadow_steel_casing',
+    'creatingspace:crystal_shard',
+    'creatingspace:incomplete_iron_injector',
+    'creatingspace:injector_grid',
+    'creatingspace:reinforced_injector_grid',
+    'createdeco:netherite_sheet',
+    'forbidden_arcanus:orb_of_temporary_flight',
+    'forbidden_arcanus:reinforced_deorum_axe',
+    'forbidden_arcanus:reinforced_deorum_hoe',
+    'forbidden_arcanus:reinforced_deorum_pickaxe',
+    'forbidden_arcanus:reinforced_deorum_shovel',
+    'forbidden_arcanus:reinforced_deorum_sword',
+    'minecraft:knowledge_book',
+    'minecraft:petrified_oak_slab',
+    'rpgstats:bone_ritual_dagger',
+    'rpgstats:carpus_catalyst',
+    'rpgstats:carpus_heart',
+    'rpgstats:diamond_ritual_dagger',
+    'rpgstats:echo_ritual_dagger',
+    'rpgstats:gold_ritual_dagger',
+    'rpgstats:heart_flesh',
+    'rpgstats:hemostasis_catalyst',
+    'rpgstats:hemostasis_heart',
+    'rpgstats:iron_ritual_dagger',
+    'rpgstats:myofibra_catalyst',
+    'rpgstats:myofibra_heart',
+    'rpgstats:osteon_catalyst',
+    'rpgstats:osteon_heart',
+    'rpgstats:synapsis_catalyst',
+    'rpgstats:synapsis_heart'
+]
+
 var BC_HIDDEN_DIRECT_DIMENSION_TRAVEL_ITEMS = [
     'fallout_wastelands_:portal_frame',
     'fallout_wastelands_:wastelands',
@@ -74,7 +111,11 @@ var BC_HIDDEN_DIRECT_DIMENSION_TRAVEL_ITEMS = [
     'deeperdarker:otherside_portal'
 ]
 
-var BC_HIDDEN_ITEMS = BC_HIDDEN_QUARANTINED_ITEMS.concat(BC_HIDDEN_DIRECT_DIMENSION_TRAVEL_ITEMS)
+var BC_HIDDEN_ITEMS = BC_HIDDEN_QUARANTINED_ITEMS
+    .concat(BC_HIDDEN_CONFIRMED_CLEANUP_ITEMS)
+    .concat(BC_CHEMLIB_FORM_POLICY.hidden_forms || [])
+    .concat(BC_CHEMLIB_FORM_POLICY.hidden_compounds || [])
+    .concat(BC_HIDDEN_DIRECT_DIMENSION_TRAVEL_ITEMS)
 
 JEIEvents.hideItems(function (event) {
     BC_HIDDEN_ITEMS.forEach(function (item) { event.hide(item) })

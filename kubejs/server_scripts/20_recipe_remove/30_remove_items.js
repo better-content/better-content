@@ -2,6 +2,42 @@
 
 const Gson = Java.loadClass('com.google.gson.Gson')
 const GSON = new Gson()
+const CHEMLIB_FORM_POLICY = JsonIO.read('kubejs/config/chemlib_form_policy.json') || { hidden_forms: [], hidden_compounds: [] }
+
+const CONFIRMED_CLEANUP_ITEMS = [
+    'create:chromatic_compound',
+    'create:refined_radiance_casing',
+    'create:shadow_steel_casing',
+    'creatingspace:crystal_shard',
+    'creatingspace:incomplete_iron_injector',
+    'creatingspace:injector_grid',
+    'creatingspace:reinforced_injector_grid',
+    'createdeco:netherite_sheet',
+    'forbidden_arcanus:orb_of_temporary_flight',
+    'forbidden_arcanus:reinforced_deorum_axe',
+    'forbidden_arcanus:reinforced_deorum_hoe',
+    'forbidden_arcanus:reinforced_deorum_pickaxe',
+    'forbidden_arcanus:reinforced_deorum_shovel',
+    'forbidden_arcanus:reinforced_deorum_sword',
+    'minecraft:knowledge_book',
+    'minecraft:petrified_oak_slab',
+    'rpgstats:bone_ritual_dagger',
+    'rpgstats:carpus_catalyst',
+    'rpgstats:carpus_heart',
+    'rpgstats:diamond_ritual_dagger',
+    'rpgstats:echo_ritual_dagger',
+    'rpgstats:gold_ritual_dagger',
+    'rpgstats:heart_flesh',
+    'rpgstats:hemostasis_catalyst',
+    'rpgstats:hemostasis_heart',
+    'rpgstats:iron_ritual_dagger',
+    'rpgstats:myofibra_catalyst',
+    'rpgstats:myofibra_heart',
+    'rpgstats:osteon_catalyst',
+    'rpgstats:osteon_heart',
+    'rpgstats:synapsis_catalyst',
+    'rpgstats:synapsis_heart'
+]
 
 const DISABLED_ITEMS = [
     'fallout_wastelands_:steel_ingot',
@@ -78,7 +114,9 @@ const DISABLED_ITEMS = [
 'irons_spellbooks:wayward_compass',
 'aether:aether_portal_frame',
 'deeperdarker:otherside_portal'
-]
+].concat(CONFIRMED_CLEANUP_ITEMS)
+    .concat(CHEMLIB_FORM_POLICY.hidden_forms || [])
+    .concat(CHEMLIB_FORM_POLICY.hidden_compounds || [])
 
 function safeString(value) {
     if (value == null) return ''

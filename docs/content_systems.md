@@ -150,6 +150,8 @@ Pillager Campaigns is now part of that coin economy too: active campaign kills a
 
 Villager and wandering-trader markets are recovery and route-planning support, not renewable material factories. The current trade pass leans early and midgame on hydration, field utility, walls, signs, minecarts, rope, boats, and similar settlement stock, while keeping deep-progression knowledge outputs like experience bottles, echo shards, and sculk catalysts out of normal buy restocks.
 
+The integration audit also removes bounded matter, boss rewards, Nether progression, seared/scorched factory inputs, and vanilla-style tools from purchase stock. Coal, bulk stone, iron, redstone, TNT, ancient debris/scrap/templates, dragon breath, nether stars, beacons, enchanted golden apples, and equivalent gated outputs must come from their canonical world, combat, or processing routes.
+
 Loot is treated as a crafting surface:
 
 - `20_world_chest_coin_tiers.js` injects tiered coin rewards into world chests.

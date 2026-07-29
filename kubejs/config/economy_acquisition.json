@@ -2526,34 +2526,6 @@
       ]
     },
     {
-      "id": "villager_trade:BC_30_ITEMS:minecraft:iron_ingot:22",
-      "source": "villager_trade",
-      "output": "minecraft:iron_ingot",
-      "policy": "support_only",
-      "era_reference": {
-        "contract": "tech_parenting",
-        "output": "minecraft:iron_ingot",
-        "era": "survival"
-      },
-      "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:22"
-      ]
-    },
-    {
-      "id": "villager_trade:BC_30_ITEMS:minecraft:oak_planks:21",
-      "source": "villager_trade",
-      "output": "minecraft:oak_planks",
-      "policy": "support_only",
-      "era_reference": {
-        "contract": "tech_parenting",
-        "output": "minecraft:oak_planks",
-        "era": "survival"
-      },
-      "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:21"
-      ]
-    },
-    {
       "id": "villager_trade:BC_30_ITEMS:minecraft:shears:23",
       "source": "villager_trade",
       "output": "minecraft:shears",
@@ -3107,16 +3079,6 @@
       "era_reference": null,
       "evidence": [
         "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:116"
-      ]
-    },
-    {
-      "id": "wanderer_trade:BC_WANDERER_MARKET:minecraft:dragon_breath:278",
-      "source": "wanderer_trade",
-      "output": "minecraft:dragon_breath",
-      "policy": "support_only",
-      "era_reference": null,
-      "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:278"
       ]
     },
     {
@@ -3699,16 +3661,6 @@
       "era_reference": null,
       "evidence": [
         "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:211"
-      ]
-    },
-    {
-      "id": "wanderer_trade:BC_WANDERER_MARKET:minecraft:nether_star:280",
-      "source": "wanderer_trade",
-      "output": "minecraft:nether_star",
-      "policy": "support_only",
-      "era_reference": null,
-      "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:280"
       ]
     },
     {

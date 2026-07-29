@@ -5410,7 +5410,11 @@ hash = "21c3b91848f1423f098000d5f01ef4a9bc7f083f2e515e24acd99988573c4f98"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/chemistry_matter_routes.snbt"
-hash = "a03d9b06c70f2a478db5b3d94d8bb8cd893e5fafb3e80b3033b6ee6b5073712c"
+hash = "683d0129c8ae4d230b1c9504b5a67858f6600481d11ded990b9d56547fb990a2"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/early_chemistry_fieldwork.snbt"
+hash = "f48b2a155188ffe284accbfb3c48393bf2990c826d66403e69fd07342d7d8c61"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/coins_wares_settlements.snbt"
@@ -9169,6 +9173,10 @@ file = "kubejs/config/common.properties"
 hash = "46a66b6e003ba7953c9a13428fd9c1967e862a673d7fd849831defab59eb08f1"
 
 [[files]]
+file = "kubejs/config/early_chemistry_routes.json"
+hash = "d12d9590a4cd3f1331102958df711ad67dad273df0b431f68140893e5f31e32d"
+
+[[files]]
 file = "kubejs/config/economy_acquisition.json"
 hash = "5e85125f9aeda6d625860beea3d034a0572463e41f6e903f6dbbdf5872080bfe"
 
@@ -10639,6 +10647,10 @@ hash = "cd90c26a1b2343ea4f490d6bd5391115dbee827a598988b1339d0a8d19ba7341"
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/45_deposit_furnace_fallbacks.js"
 hash = "8e30f43d0de55ca41e7b75334179ced10e7068942b72ffd6961eb1feaa3dbc11"
+
+[[files]]
+file = "kubejs/server_scripts/40_recipe_add/46_early_chemistry_fieldwork.js"
+hash = "4566798f740cf23cf1fa80be8bf772c13e1daf43545ea3c3c3a5c91a470e844a"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js"

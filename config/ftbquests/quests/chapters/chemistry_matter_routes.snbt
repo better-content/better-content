@@ -105,7 +105,7 @@
 			y: -1.0d
 		}
 		{
-			description: ["Create handles open mixing, washing, precipitation, reduction, and bulk transformations. Fermented crops are the efficient early ethanol supply; direct sugar, carbon, and water synthesis is a deliberately expensive fallback."]
+			description: ["Create is the first industrial open-chemistry tier: mixing, washing, precipitation, reduction, and bulk transformations. The earlier Keg supplies fermented ethanol; direct sugar, carbon, and water synthesis remains a deliberately expensive Create-era recovery route."]
 			icon: "create:mechanical_mixer"
 			id: "08B7998EC9B77508"
 			shape: "square"
@@ -120,7 +120,7 @@
 			y: -3.0d
 		}
 		{
-			description: ["Washing starter deposits exposes useful chemistry before sealed machines appear: coal measures shed carbon, copper sulfides shed sulfur, quartz veins shed silica, and bauxite sheds alumina. Keep these side streams instead of voiding them."]
+			description: ["Create washing scales the fieldwork routes into repeatable processing before Scorched construction: coal measures shed carbon, copper sulfides shed sulfur, quartz veins shed silica, and bauxite finally sheds alumina once useful demand exists. Keep these industrial side streams instead of voiding them."]
 			icon: "create:encased_fan"
 			id: "6ED592E593A00B56"
 			shape: "rsquare"
@@ -415,7 +415,7 @@
 				"3A2B0FA3A95CE344"
 				"6ED592E593A00B56"
 			]
-			description: ["Ferment crops or a prepared spider eye into ethanol, then compact it with washed carbon and sulfur, dried kelp, and slime. The resulting pressure seals turn otherwise incidental farm and ore outputs into the threshold for airtight machinery."]
+			description: ["Bring Keg-fermented ethanol forward into Create, then compact it with washed carbon and sulfur, dried kelp, and slime. The resulting pressure seals are an industrial carry-forward sink and the material threshold for airtight machinery."]
 			icon: "kubejs:pressure_seal"
 			id: "259352F93245052C"
 			shape: "diamond"

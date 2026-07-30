@@ -123,6 +123,8 @@ Create: Power Grid keeps its native electrical and device-overheat simulation. H
 
 `latent_chemlib` remains the nuclear and high-energy chemistry authority. Its datapack machine profile owns gameplay capacity and conditioning rates, while scheduler profiles only own per-tick work budgets. The reaction chamber exposes a 32,000-unit HeatSync buffer, a charge ceiling of 20, and bounded global conditioning rates that cover every authored reaction; other Latent machines retain the 4,000-unit default. Nuclear/process emissions add heat through HeatSync, and radiation remains an internal `latent_chemlib` event hook rather than an external reactor dependency.
 
+The AdPother bridge is a terminal adapter, not a second atmospheric scheduler. It preserves AdPother's emitter and chimney selection, runs chimney filters before handoff, inserts accepted units directly into Latent clouds, and exposes loaded clouds back to AdPother point-pollution and gas-detection reads. Cloud evolution continues to spend only the existing `latent_chemlib` scheduler budgets; there is no deferred integration queue, coalescing tier, or degraded simulation mode.
+
 PNCR remains separate. Its native heat and thermo-plant recipe semantics should stay PNCR-owned unless an explicit adapter is added for a concrete machine integration.
 
 Retired content: the standalone coolant jar, redundant fission reactor jar, and Create New Age runtime dependency are no longer active pack content. Rebuild disposable runtimes before validating so stale copied jars do not mask missing dependency problems.

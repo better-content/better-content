@@ -23,7 +23,7 @@ Kotlin harness lifecycle tests synchronize on the per-run `lock.json`; incidenta
 
 The smoke proves lifecycle and client/server network compatibility only. Gameplay, worldgen distributions, progression routes, and visual quality require separately designed evidence.
 
-On 2026-07-30 the smoke passed after the AdPother/Latent gas unification using the staged reobfuscated `latent_chemlib-0.1.0.jar`: the dedicated server completed a fresh spawn, the client joined and remained connected for the bounded settle window, and both sides shut down cleanly with no hard-log finding. The run also caught and prompted removal of a blocking chunk lookup in the AdPother point-pollution projection; the validated bridge now reads only already-materialized chunks.
+On 2026-07-30 the smoke passed after the AdPother/Latent gas unification using the staged reobfuscated `latent_chemlib-0.1.0.jar`: the dedicated server completed a fresh spawn, the client joined and remained connected for the bounded settle window, and both sides shut down cleanly with no hard-log finding. An earlier attempt timed out while the exact-contact adapter recursively waited for a chunk that was still loading; the captured thread dump identified `AdpotherCloudView.contactAt` as the caller. The corrected and validated bridge now obtains cloud block entities only from already-materialized chunks, including both exact-contact and gas-selector reads.
 
 ## Item/block integration matrix
 

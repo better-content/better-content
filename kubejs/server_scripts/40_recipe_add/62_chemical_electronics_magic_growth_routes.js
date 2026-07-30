@@ -199,7 +199,7 @@ ServerEvents.recipes(function (event) {
      bcChemUseAlchemy(event, 'bloodmagic/demonic_slate_soul_carbon_batch', 'bloodmagic:demonslate', 2, [
         'bloodmagic:infusedslate',
         'chemlib:carbon',
-        'chemlib:hydrogen_sulfide',
+        'chemlib:sulfur',
         'minecraft:soul_sand'
     ], 10000, 360, 3)
 
@@ -253,7 +253,7 @@ ServerEvents.recipes(function (event) {
      bcChemUseMix(event, 'farmersdelight/organic_compost_npk', 'farmersdelight:organic_compost', 4, [
         'minecraft:dirt',
         'chemlib:phosphate',
-        'chemlib:nitrogen',
+        'chemlib:nitrate',
         'chemlib:potassium',
         'minecraft:bone_meal'
     ], 'minecraft:water', 250, null, 200)
@@ -266,7 +266,7 @@ ServerEvents.recipes(function (event) {
         'minecraft:wheat_seeds',
         'chemlib:phosphate',
         'chemlib:potassium',
-        'chemlib:nitrogen'
+        'chemlib:nitrate'
     ], 'minecraft:water', 250, null, 160)
      bcChemUseMix(event, 'minecraft/leather_tanned_hide', 'minecraft:leather', 2, [
         'minecraft:rotten_flesh',

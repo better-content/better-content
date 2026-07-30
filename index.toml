@@ -5410,11 +5410,7 @@ hash = "21c3b91848f1423f098000d5f01ef4a9bc7f083f2e515e24acd99988573c4f98"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/chemistry_matter_routes.snbt"
-hash = "683d0129c8ae4d230b1c9504b5a67858f6600481d11ded990b9d56547fb990a2"
-
-[[files]]
-file = "config/ftbquests/quests/chapters/early_chemistry_fieldwork.snbt"
-hash = "f48b2a155188ffe284accbfb3c48393bf2990c826d66403e69fd07342d7d8c61"
+hash = "9172c291662e5fbdb1b329fd813b09a9f7937475e3cfae53d2d812f2697c1ae9"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/coins_wares_settlements.snbt"
@@ -9126,7 +9122,7 @@ hash = "3a6483697f865aa908aa1cd5b0f0d8a107f77d4afbb85b9048a2230669fb6296"
 
 [[files]]
 file = "kubejs/client_scripts/40_hide_quarantined_systems.js"
-hash = "49283de3a16c240fa209ee4e9e4e2da6a02c542623e534f1f04f20dcded3b0ab"
+hash = "8954fa09b166639f127fc2def9861195cf12c2305bcc10d56aad3fb10bfa3aa8"
 
 [[files]]
 file = "kubejs/client_scripts/45_hide_vanilla_style_boats.js"
@@ -9162,7 +9158,7 @@ hash = "627b340a9c28a68ad8860c2a1a689c879c7420dc789ee582fe0b49e3bacadfe9"
 
 [[files]]
 file = "kubejs/config/chemlib_form_policy.json"
-hash = "293cc3060683c313d540ee1ff8e190c7aac17f930d7ba7673ca0670ac29dc443"
+hash = "ad77584f8be4a785c2d2540c7ed1cd7a67ef5dd24a0aaa00e589de092e827588"
 
 [[files]]
 file = "kubejs/config/client.properties"
@@ -9171,10 +9167,6 @@ hash = "ca1bcfdcb5e2feb66eea14271ba8ceb5aaa1cc81fba3b5294a2cc0a14eb26b6e"
 [[files]]
 file = "kubejs/config/common.properties"
 hash = "46a66b6e003ba7953c9a13428fd9c1967e862a673d7fd849831defab59eb08f1"
-
-[[files]]
-file = "kubejs/config/early_chemistry_routes.json"
-hash = "d12d9590a4cd3f1331102958df711ad67dad273df0b431f68140893e5f31e32d"
 
 [[files]]
 file = "kubejs/config/economy_acquisition.json"
@@ -10446,7 +10438,7 @@ hash = "c2a82b99259f6281874089a5f4a9e16932d5d71993d299fadcb454c806148b65"
 
 [[files]]
 file = "kubejs/server_scripts/20_recipe_remove/30_remove_items.js"
-hash = "6b3babca192cc0d26bb3abbdd3b166362245d6b5f017259e5fbc3d3ea013435f"
+hash = "7325a0ccea58cb9ac0233c11f4d608e583373605a775a37885e43a4af329086e"
 
 [[files]]
 file = "kubejs/server_scripts/20_recipe_remove/50_disable_createdeco_coin_recipes.js"
@@ -10649,20 +10641,16 @@ file = "kubejs/server_scripts/40_recipe_add/45_deposit_furnace_fallbacks.js"
 hash = "8e30f43d0de55ca41e7b75334179ced10e7068942b72ffd6961eb1feaa3dbc11"
 
 [[files]]
-file = "kubejs/server_scripts/40_recipe_add/46_early_chemistry_fieldwork.js"
-hash = "4566798f740cf23cf1fa80be8bf772c13e1daf43545ea3c3c3a5c91a470e844a"
-
-[[files]]
 file = "kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js"
 hash = "482a27676f676ae9f652d6f47ea53477948612732b33d45ec456f2895cb7fba0"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js"
-hash = "80f1789e1e1ad5efbf8df807b77d588dc2c21c92a6e141e4e7503df4cd59b512"
+hash = "459ec5d23e2accd326a9bc17dda94205683cb2e9d4e41330f42808b5b1c777b2"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/56_alchemistry_dissolver_create_port.js"
-hash = "2eb840af5012b3160392424748f47dbca5e4dfffb2f834d3f6011abba1ac8ba5"
+hash = "ba1e139a515b42def5cd709fa9217d3fe8b176e437b05bb3ec52cb84931c3ba6"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js"
@@ -10674,7 +10662,7 @@ hash = "c8bbeb8175e396d72230ae75013b605192ee9902d0951704d1bd5953ab183d3a"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/58_create_pncr_molecular_synthesis.js"
-hash = "9b5db0b69b79452dc07e491df6dcb20fe57045d586c498a25c36a03e3ddfbc9c"
+hash = "1b3293c0ca77252985252d561f30d3af2c5332d57fa70b50d7802fe47b9f1bba"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/59_formulaic_synthesis_magic_routes.js"
@@ -10682,7 +10670,7 @@ hash = "9ac020825d5f1f75d3f0b4f003f2b08b2f1956a034e201fd1948863ea74e4743"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/60_create_chemical_transformations.js"
-hash = "f9d493c02af38c1690da86a74566e26a779aa233587af36a03cbb313e32bd3ab"
+hash = "f51a8ae8bc0c53ad7acd8f69737df6a0169ded1ba9ee19c80167d60879ae0067"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/61_chemical_existing_item_alternatives.js"
@@ -10690,11 +10678,11 @@ hash = "b9b6f185512e4a9c7d9c8fd8f841fbfc54ee599d9eeb31a2fe9d96a9f08b1d35"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/62_chemical_electronics_magic_growth_routes.js"
-hash = "9f1f3c328edb1ae08649ef3acf40ef09c073214c82dd838e098783431ff561de"
+hash = "fe04d6dbda7a562242cf02b9f3c62bdf462e41d87b9c2021c159b73f86f63bc9"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js"
-hash = "c3f26378207f0d4bf0eb6d84f5e19115c7d15e9332a87f3ab111f0b89dbd36ba"
+hash = "3bcd3fa59bda1986494895be32993bb07a59ee98a0e926adb91ed8ee59993eea"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/65_chemlib_plate_manufacturing_routes.js"
@@ -11393,7 +11381,7 @@ metafile = true
 
 [[files]]
 file = "mods/latent_chemlib-0.1.0.jar"
-hash = "ca2754f8d029e88f9b87970f30d0114a55c6a31586b1ed8e5dc4989f7e78c7c6"
+hash = "8fe24b8682377d09900d70c727dd358155e524b407c3b34ae8d0149bdc21810c"
 
 [[files]]
 file = "mods/lithostitched.pw.toml"

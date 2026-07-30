@@ -54,7 +54,7 @@ var BC_HIDDEN_QUARANTINED_ITEMS = [
     'pneumaticcraft:jet_boots_upgrade_5'
 ]
 
-var BC_CHEMLIB_FORM_POLICY = JsonIO.read('kubejs/config/chemlib_form_policy.json') || { hidden_forms: [], hidden_compounds: [] }
+var BC_CHEMLIB_FORM_POLICY = JsonIO.read('kubejs/config/chemlib_form_policy.json') || { hidden_gas_buckets: [], hidden_forms: [], hidden_compounds: [] }
 
 var BC_HIDDEN_CONFIRMED_CLEANUP_ITEMS = [
     'create:chromatic_compound',
@@ -113,6 +113,7 @@ var BC_HIDDEN_DIRECT_DIMENSION_TRAVEL_ITEMS = [
 
 var BC_HIDDEN_ITEMS = BC_HIDDEN_QUARANTINED_ITEMS
     .concat(BC_HIDDEN_CONFIRMED_CLEANUP_ITEMS)
+    .concat(BC_CHEMLIB_FORM_POLICY.hidden_gas_buckets || [])
     .concat(BC_CHEMLIB_FORM_POLICY.hidden_forms || [])
     .concat(BC_CHEMLIB_FORM_POLICY.hidden_compounds || [])
     .concat(BC_HIDDEN_DIRECT_DIMENSION_TRAVEL_ITEMS)

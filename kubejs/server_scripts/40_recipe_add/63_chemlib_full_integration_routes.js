@@ -8,6 +8,21 @@ function bcFullChemExists(id) {
     try { return Item.exists(id) } catch (e) { return false }
 }
 
+var BC_FULL_CHEM_DISSOLVER_TABLE = JsonIO.read('kubejs/config/alchemistry_dissolver_port.json') || { recipes: [] }
+
+function bcFullChemGet(object, key) {
+    if (!object || !key) return null
+    try {
+        if (object.containsKey && !object.containsKey(key)) return null
+        if (object.get) return object.get(key)
+    } catch (ignored) {}
+    try {
+        return object[key]
+    } catch (ignored2) {
+        return null
+    }
+}
+
 function bcFullChemFluidExists(id) {
     if (id === 'minecraft:water') return true
     try {
@@ -47,6 +62,22 @@ function bcFullChemSideResults(items) {
     return results
 }
 
+function bcFullChemExpandCreateInputs(inputs) {
+    var expanded = []
+    for (var i = 0; i < inputs.length; i++) {
+        var input = inputs[i]
+        var copies = input && (input.item || input.tag) ? (input.count || 1) : 1
+        for (var copyIndex = 0; copyIndex < copies; copyIndex++) {
+            var copy = {}
+            for (var key in input) {
+                if (key !== 'count') copy[key] = input[key]
+            }
+            expanded.push(copy)
+        }
+    }
+    return expanded
+}
+
 function bcFullChemMix(event, id, inputs, outputs, heat, time) {
     if (!bcFullChemAllInputsExist(inputs)) return
     var results = []
@@ -57,7 +88,7 @@ function bcFullChemMix(event, id, inputs, outputs, heat, time) {
     }
     var recipe = {
         type: 'create:mixing',
-        ingredients: inputs,
+        ingredients: bcFullChemExpandCreateInputs(inputs),
         results: results,
         processingTime: time || 200
     }
@@ -75,7 +106,7 @@ function bcFullChemCompact(event, id, inputs, outputs, heat) {
     }
     var recipe = {
         type: 'create:compacting',
-        ingredients: inputs,
+        ingredients: bcFullChemExpandCreateInputs(inputs),
         results: results,
         processingTime: 180
     }
@@ -115,6 +146,59 @@ function bcFullChemPressureInput(input) {
     return null
 }
 
+function bcFullChemGasFluid(id, count) {
+    if (!BC_FULL_CHEM_MOLECULE_GASES[id]) return null
+    return {
+        type: 'pneumaticcraft:fluid',
+        fluid: id + '_fluid',
+        amount: 250 * (count || 1)
+    }
+}
+
+function bcFullChemThermoItemInput(input) {
+    if (!input || !input.count || input.count <= 1) return input
+    return {
+        type: 'pneumaticcraft:stacked_item',
+        item: input.item,
+        count: input.count
+    }
+}
+
+function bcFullChemThermo(event, id, itemInput, fluidInput, itemOutput, pressure, temp) {
+    if (!itemInput || !fluidInput || !bcFullChemExists(itemInput.item) || !bcFullChemExists(itemOutput.item)) return
+    event.custom({
+        type: 'pneumaticcraft:thermo_plant',
+        exothermic: false,
+        item_input: bcFullChemThermoItemInput(itemInput),
+        fluid_input: fluidInput,
+        item_output: itemOutput,
+        pressure: pressure || 2.5,
+        speed: 0.45,
+        temperature: { min_temp: temp || 473 }
+    }).id('kubejs:chemlib_full/pncr_thermo/' + id)
+}
+
+function bcFullChemGasExtraction(event, group, elementItem) {
+    if (!bcFullChemExists(group.source) || !bcFullChemFluidExists(group.acid)) return
+    event.custom({
+        type: 'pneumaticcraft:thermo_plant',
+        exothermic: false,
+        item_input: { item: group.source },
+        fluid_input: {
+            type: 'pneumaticcraft:fluid',
+            fluid: group.acid,
+            amount: 250
+        },
+        fluid_output: {
+            fluid: elementItem + '_fluid',
+            amount: 250
+        },
+        pressure: 2.75,
+        speed: 0.35,
+        temperature: { min_temp: 523 }
+    }).id('kubejs:chemlib_full/pncr_thermo/source/' + group.id + '/' + elementItem.substring(8))
+}
+
 function bcFullChemBlood(event, id, inputs, output, syphon, ticks, tier) {
     if (!bcFullChemAllInputsExist(inputs) || !bcFullChemExists(output.item)) return
     event.custom({
@@ -146,11 +230,49 @@ var BC_FULL_CHEM_KNOWN_FLUIDS = {
     'chemlib:chlorine_fluid': true
 }
 
+var BC_FULL_CHEM_MOLECULE_GASES = {
+    'chemlib:hydrogen': true,
+    'chemlib:helium': true,
+    'chemlib:nitrogen': true,
+    'chemlib:oxygen': true,
+    'chemlib:fluorine': true,
+    'chemlib:neon': true,
+    'chemlib:chlorine': true,
+    'chemlib:argon': true,
+    'chemlib:krypton': true,
+    'chemlib:xenon': true,
+    'chemlib:radon': true,
+    'chemlib:carbon_dioxide': true,
+    'chemlib:ethylene': true,
+    'chemlib:ammonium': true,
+    'chemlib:methane': true,
+    'chemlib:ethane': true,
+    'chemlib:propane': true,
+    'chemlib:butane': true,
+    'chemlib:sulfur_dioxide': true,
+    'chemlib:nitrogen_dioxide': true,
+    'chemlib:ammonia': true,
+    'chemlib:hydrogen_sulfide': true,
+    'chemlib:acetylene': true,
+    'chemlib:carbon_monoxide': true,
+    'chemlib:nitric_oxide': true
+}
+
 var BC_FULL_CHEM_COMPOUND_ALIASES = {
     carbon: { oxide: 'chemlib:carbon_dioxide', sulfide: 'chemlib:carbon_disulfide' },
     copper: { oxide: 'chemlib:copper_i_oxide', hydroxide: 'chemlib:copper_ii_hydroxide', sulfate: 'chemlib:copper_ii_sulfate', sulfide: 'chemlib:copper_i_sulfide' },
     iron: { sulfate: 'chemlib:iron_ii_sulfate', nitrate: 'chemlib:iron_iii_nitrate' },
     silicon: { oxide: 'chemlib:silicon_dioxide' }
+}
+
+var BC_FULL_CHEM_EXPLICIT_COMPOUNDS = {
+    'chemlib:sodium_hydroxide': true,
+    'chemlib:calcium_carbonate': true,
+    'chemlib:copper_chloride': true,
+    'chemlib:copper_nitrate': true,
+    'chemlib:arsenic_sulfide': true,
+    'chemlib:mercury_sulfide': true,
+    'chemlib:carbon_disulfide': true
 }
 
 var BC_FULL_CHEM_SOURCE_DEPOSITS = {
@@ -182,14 +304,14 @@ var BC_FULL_CHEM_ELEMENT_GROUPS = [
 ]
 
 var BC_FULL_CHEM_FAMILIES = [
-    { id: 'oxide', suffix: 'oxide', fluid: 'minecraft:water', amount: 125, reagent: 'chemlib:oxygen', side: [{ item: 'chemlib:oxygen', chance: 0.08 }], heat: 'heated', pressure: 2.0, temp: 473 },
-    { id: 'hydroxide', suffix: 'hydroxide', fluid: 'minecraft:water', amount: 250, reagent: 'chemlib:sodium_hydroxide', side: [{ item: 'chemlib:hydrogen', chance: 0.10 }], heat: null, pressure: 2.0, temp: 423 },
-    { id: 'carbonate', suffix: 'carbonate', fluid: 'minecraft:water', amount: 250, reagent: 'chemlib:carbon', side: [{ item: 'chemlib:carbon_dioxide', chance: 0.12 }], heat: null, pressure: 2.25, temp: 423 },
-    { id: 'chloride', suffix: 'chloride', fluid: 'chemlib:hydrochloric_acid_fluid', amount: 250, reagent: 'chemlib:sodium_chloride', side: [{ item: 'chemlib:hydrogen', chance: 0.16 }], heat: 'heated', pressure: 2.75, temp: 523 },
-    { id: 'nitrate', suffix: 'nitrate', fluid: 'chemlib:nitric_acid_fluid', amount: 250, reagent: 'minecraft:redstone', side: [{ item: 'chemlib:nitrogen_dioxide', chance: 0.22 }], heat: 'heated', pressure: 3.25, temp: 573 },
-    { id: 'sulfate', suffix: 'sulfate', fluid: 'chemlib:sulfuric_acid_fluid', amount: 250, reagent: 'chemlib:sulfur', side: [{ item: 'chemlib:sulfur_dioxide', chance: 0.18 }], heat: 'heated', pressure: 3.0, temp: 548 },
-    { id: 'sulfide', suffix: 'sulfide', fluid: 'minecraft:water', amount: 125, reagent: 'chemlib:sulfur', side: [{ item: 'chemlib:hydrogen_sulfide', chance: 0.16 }], heat: 'heated', pressure: 2.5, temp: 523 },
-    { id: 'phosphate', suffix: 'phosphate', fluid: 'kubejs:phosphoric_acid_fluid', amount: 250, reagent: 'chemlib:phosphorus', side: [{ item: 'chemlib:oxygen', chance: 0.10 }], heat: 'heated', pressure: 3.0, temp: 548 }
+    { id: 'oxide', suffix: 'oxide', heat: 'heated', pressure: 2.0, temp: 473 },
+    { id: 'hydroxide', suffix: 'hydroxide', heat: null, pressure: 2.0, temp: 423 },
+    { id: 'carbonate', suffix: 'carbonate', heat: null, pressure: 2.25, temp: 423 },
+    { id: 'chloride', suffix: 'chloride', heat: 'heated', pressure: 2.75, temp: 523 },
+    { id: 'nitrate', suffix: 'nitrate', heat: 'heated', pressure: 3.25, temp: 573 },
+    { id: 'sulfate', suffix: 'sulfate', heat: 'heated', pressure: 3.0, temp: 548 },
+    { id: 'sulfide', suffix: 'sulfide', heat: 'heated', pressure: 2.5, temp: 523 },
+    { id: 'phosphate', suffix: 'phosphate', heat: 'heated', pressure: 3.0, temp: 548 }
 ]
 
 var BC_FULL_CHEM_GROUP_SINKS = {
@@ -276,29 +398,94 @@ var BC_FULL_CHEM_MOLECULES = [
     { id: 'starch', item: 'chemlib:starch', source: [{ item: 'minecraft:potato' }, { item: 'minecraft:wheat' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'minecraft:slime_ball' }], process: 'binder_gelatinization' },
     { id: 'sucrose', item: 'chemlib:sucrose', source: [{ item: 'minecraft:sugar_cane' }, { item: 'minecraft:beetroot' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'minecraft:sugar', count: 6 }], process: 'sugar_crystallization' },
     { id: 'ethanol', item: 'chemlib:ethanol', source: [{ item: 'chemlib:sucrose' }, { item: 'chemlib:starch' }, { fluid: 'minecraft:water', amount: 250 }] },
-    { id: 'acetic_acid', item: 'chemlib:acetic_acid', source: [{ item: 'chemlib:ethanol' }, { item: 'chemlib:oxygen' }, { fluid: 'minecraft:water', amount: 250 }] },
-    { id: 'ethylene', item: 'chemlib:ethylene', source: [{ item: 'chemlib:ethanol' }, { item: 'chemlib:carbon' }, { fluid: 'minecraft:water', amount: 125 }] },
-    { id: 'acetylene', item: 'chemlib:acetylene', source: [{ item: 'chemlib:calcium_carbonate' }, { item: 'chemlib:carbon' }, { fluid: 'minecraft:water', amount: 125 }], outputs: [{ item: 'minecraft:torch', count: 12 }], process: 'hot_cutting_gas' },
-    { id: 'methane', item: 'chemlib:methane', source: [{ item: 'chemlib:cellulose' }, { item: 'chemlib:hydrogen' }, { fluid: 'minecraft:water', amount: 250 }], outputs: [{ item: 'minecraft:charcoal' }], process: 'fuel_gas' },
-    { id: 'propane', item: 'chemlib:propane', sourceKind: 'pressure', source: [{ item: 'chemlib:methane' }, { item: 'chemlib:carbon' }, { item: 'chemlib:hydrogen' }] },
-    { id: 'butane', item: 'chemlib:butane', sourceKind: 'pressure', source: [{ item: 'chemlib:propane' }, { item: 'chemlib:carbon' }, { item: 'chemlib:hydrogen' }], outputs: [{ item: 'minecraft:fire_charge', count: 2 }], process: 'liquefied_fuel' },
-    { id: 'carbon_monoxide', item: 'chemlib:carbon_monoxide', sourceKind: 'pressure', source: [{ item: 'chemlib:carbon_dioxide' }, { item: 'chemlib:carbon' }] },
-    { id: 'carbon_disulfide', item: 'chemlib:carbon_disulfide', source: [{ item: 'chemlib:carbon' }, { item: 'chemlib:sulfur' }, { fluid: 'chemlib:sulfuric_acid_fluid', amount: 125 }], outputs: [{ item: 'minecraft:string', count: 2 }], process: 'sulfur_solvent' },
-    { id: 'ammonia', item: 'chemlib:ammonia', sourceKind: 'pressure', source: [{ item: 'chemlib:nitrogen' }, { item: 'chemlib:hydrogen' }, { item: 'chemlib:hydrogen' }] },
-    { id: 'ammonium', item: 'chemlib:ammonium', source: [{ item: 'chemlib:ammonia' }, { item: 'chemlib:hydrogen' }, { fluid: 'minecraft:water', amount: 250 }] },
-    { id: 'ammonium_chloride', item: 'chemlib:ammonium_chloride' },
-    { id: 'diammonium_phosphate', item: 'chemlib:diammonium_phosphate', outputs: [{ item: 'minecraft:bone_meal', count: 6 }], process: 'fertilizer_prilling' },
-    { id: 'hydrogen_sulfide', item: 'chemlib:hydrogen_sulfide' },
-    { id: 'sulfur_dioxide', item: 'chemlib:sulfur_dioxide', sourceKind: 'pressure', source: [{ item: 'chemlib:sulfur' }, { item: 'chemlib:oxygen' }], outputs: [{ item: 'chemlib:sulfuric_acid' }], process: 'acid_gas' },
-    { id: 'sulfur_trioxide', item: 'chemlib:sulfur_trioxide', sourceKind: 'pressure', source: [{ item: 'chemlib:sulfur_dioxide' }, { item: 'chemlib:oxygen' }], outputs: [{ item: 'chemlib:sulfuric_acid' }], process: 'acid_upgrade' },
-    { id: 'nitric_oxide', item: 'chemlib:nitric_oxide', outputs: [{ item: 'chemlib:nitrogen_dioxide' }], process: 'oxidation_gas' },
-    { id: 'nitrogen_dioxide', item: 'chemlib:nitrogen_dioxide', sourceKind: 'pressure', source: [{ item: 'chemlib:nitric_oxide' }, { item: 'chemlib:oxygen' }], outputs: [{ item: 'chemlib:nitric_acid' }], process: 'acid_absorption' },
-    { id: 'polyvinyl_chloride', item: 'chemlib:polyvinyl_chloride' }
+    { id: 'acetic_acid', item: 'chemlib:acetic_acid', source: [{ fluid: 'chemlib:acetic_acid_fluid', amount: 250 }] },
+    { id: 'ethylene', item: 'chemlib:ethylene', airtightGas: true },
+    { id: 'acetylene', item: 'chemlib:acetylene', airtightGas: true },
+    { id: 'methane', item: 'chemlib:methane', airtightGas: true },
+    { id: 'propane', item: 'chemlib:propane', airtightGas: true },
+    { id: 'butane', item: 'chemlib:butane', airtightGas: true },
+    { id: 'carbon_monoxide', item: 'chemlib:carbon_monoxide', airtightGas: true },
+    { id: 'carbon_disulfide', item: 'chemlib:carbon_disulfide', managedExplicitly: true },
+    { id: 'ammonia', item: 'chemlib:ammonia', airtightGas: true },
+    { id: 'ammonium', item: 'chemlib:ammonium', airtightGas: true },
+    { id: 'ammonium_chloride', item: 'chemlib:ammonium_chloride', managedExplicitly: true },
+    { id: 'diammonium_phosphate', item: 'chemlib:diammonium_phosphate', managedExplicitly: true },
+    { id: 'hydrogen_sulfide', item: 'chemlib:hydrogen_sulfide', airtightGas: true },
+    { id: 'sulfur_dioxide', item: 'chemlib:sulfur_dioxide', airtightGas: true },
+    { id: 'sulfur_trioxide', item: 'chemlib:sulfur_trioxide', managedExplicitly: true },
+    { id: 'nitric_oxide', item: 'chemlib:nitric_oxide', airtightGas: true },
+    { id: 'nitrogen_dioxide', item: 'chemlib:nitrogen_dioxide', airtightGas: true },
+    { id: 'polyvinyl_chloride', item: 'chemlib:polyvinyl_chloride', managedExplicitly: true }
 ]
+
+function bcFullChemFormulaFor(compound) {
+    var recipes = bcFullChemGet(BC_FULL_CHEM_DISSOLVER_TABLE, 'recipes') || []
+    for (var i = 0; i < recipes.length; i++) {
+        var row = recipes[i]
+        var input = bcFullChemGet(row, 'input')
+        if (bcFullChemGet(input, 'item') === compound) return bcFullChemGet(row, 'results') || []
+    }
+    return []
+}
+
+function bcFullChemFormulaComponent(source) {
+    var item = bcFullChemGet(source, 'item')
+    if (!item || !bcFullChemExists(item)) return null
+    return { item: item, count: bcFullChemGet(source, 'count') || 1 }
+}
+
+function bcFullChemRegisterFormulaCompound(event, elementItem, family, compound) {
+    var formula = bcFullChemFormulaFor(compound)
+    if (!formula.length) return
+
+    var itemInputs = []
+    var gasInputs = []
+    for (var i = 0; i < formula.length; i++) {
+        var component = bcFullChemFormulaComponent(formula[i])
+        if (!component) return
+        if (BC_FULL_CHEM_MOLECULE_GASES[component.item]) gasInputs.push(component)
+        else itemInputs.push(component)
+    }
+
+    if (gasInputs.length === 0) {
+        bcFullChemMix(event, 'compound/' + elementItem.substring(8) + '/' + family.id,
+            itemInputs, [{ item: compound }], family.heat, 220)
+        return
+    }
+
+    if (gasInputs.length === 1 && itemInputs.length === 1) {
+        bcFullChemThermo(event, 'compound/' + elementItem.substring(8) + '/' + family.id,
+            itemInputs[0], bcFullChemGasFluid(gasInputs[0].item, gasInputs[0].count),
+            { item: compound }, family.pressure, family.temp)
+        return
+    }
+
+    // Sulfate formulas are metal + S + 4O. One sulfuric-acid unit supplies
+    // the exact S/O vector while excess hydrogen is safely discarded.
+    if (family.id === 'sulfate' && gasInputs.length === 1 && gasInputs[0].item === 'chemlib:oxygen') {
+        var metal = null
+        for (var j = 0; j < itemInputs.length; j++) {
+            if (itemInputs[j].item === elementItem) metal = itemInputs[j]
+        }
+        if (metal) {
+            bcFullChemThermo(event, 'compound/' + elementItem.substring(8) + '/' + family.id,
+                metal, {
+                    type: 'pneumaticcraft:fluid',
+                    fluid: 'chemlib:sulfuric_acid_fluid',
+                    amount: 250
+                }, { item: compound }, family.pressure, family.temp)
+        }
+    }
+}
 
 function bcFullChemRegisterElement(event, group, element) {
     var elementItem = 'chemlib:' + element
     if (!bcFullChemExists(elementItem)) return
+
+    if (BC_FULL_CHEM_MOLECULE_GASES[elementItem]) {
+        bcFullChemGasExtraction(event, group, elementItem)
+        return
+    }
 
      bcFullChemRegisterDustForm(event, elementItem, element)
 
@@ -323,12 +510,8 @@ function bcFullChemRegisterElement(event, group, element) {
         var family = BC_FULL_CHEM_FAMILIES[f]
         if (family.id === 'oxide' && (element === 'carbon' || element === 'silicon')) continue
         var compound = bcFullChemCompound(element, family.suffix)
-        if (!bcFullChemExists(compound) || !bcFullChemFluidExists(family.fluid)) continue
-        bcFullChemMix(event, 'compound/' + element + '/' + family.id, [
-            { item: elementItem },
-            { item: family.reagent },
-            { fluid: family.fluid, amount: family.amount }
-        ], [{ item: compound, count: family.id === 'oxide' || family.id === 'carbonate' ? 1 : 2 }].concat(bcFullChemSideResults(family.side)), family.heat, 220)
+        if (!bcFullChemExists(compound) || BC_FULL_CHEM_EXPLICIT_COMPOUNDS[compound]) continue
+        bcFullChemRegisterFormulaCompound(event, elementItem, family, compound)
 
         // Curated oxide reductions live in the neighboring transformation and
         // magic passes. Other generated salts get a lossy sealed reclamation
@@ -376,6 +559,7 @@ function bcFullChemRegisterSink(event, group, elementItem, sink) {
 
 function bcFullChemRegisterMolecule(event, molecule) {
     if (!bcFullChemExists(molecule.item)) return
+    if (molecule.airtightGas || molecule.managedExplicitly) return
     if (molecule.source) {
         if (molecule.sourceKind === 'pressure') {
              bcFullChemPressure(event, 'molecule/source/' + molecule.id, molecule.source, { item: molecule.item, count: 1 }, 2.75)
@@ -390,9 +574,7 @@ function bcFullChemRegisterMolecule(event, molecule) {
 
 ServerEvents.recipes(function (event) {
     bcFullChemMix(event, 'molecule/source/hydrochloric_acid', [
-        { item: 'chemlib:chlorine' },
-        { item: 'chemlib:hydrogen' },
-        { fluid: 'minecraft:water', amount: 250 }
+        { fluid: 'chemlib:hydrochloric_acid_fluid', amount: 250 }
     ], [{ item: 'chemlib:hydrochloric_acid', count: 1 }], null, 180)
 
     for (var g = 0; g < BC_FULL_CHEM_ELEMENT_GROUPS.length; g++) {

@@ -2,7 +2,7 @@
 
 const Gson = Java.loadClass('com.google.gson.Gson')
 const GSON = new Gson()
-const CHEMLIB_FORM_POLICY = JsonIO.read('kubejs/config/chemlib_form_policy.json') || { hidden_forms: [], hidden_compounds: [] }
+const CHEMLIB_FORM_POLICY = JsonIO.read('kubejs/config/chemlib_form_policy.json') || { hidden_gas_buckets: [], hidden_forms: [], hidden_compounds: [] }
 
 const CONFIRMED_CLEANUP_ITEMS = [
     'create:chromatic_compound',
@@ -115,6 +115,7 @@ const DISABLED_ITEMS = [
 'aether:aether_portal_frame',
 'deeperdarker:otherside_portal'
 ].concat(CONFIRMED_CLEANUP_ITEMS)
+    .concat(CHEMLIB_FORM_POLICY.hidden_gas_buckets || [])
     .concat(CHEMLIB_FORM_POLICY.hidden_forms || [])
     .concat(CHEMLIB_FORM_POLICY.hidden_compounds || [])
 

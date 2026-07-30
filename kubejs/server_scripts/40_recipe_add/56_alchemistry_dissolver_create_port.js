@@ -5,6 +5,34 @@
 
 var BC_ADP_TABLE = JsonIO.read('kubejs/config/alchemistry_dissolver_port.json') || { recipes: [] }
 
+var BC_ADP_GAS_INPUTS = {
+    'chemlib:hydrogen': true,
+    'chemlib:helium': true,
+    'chemlib:nitrogen': true,
+    'chemlib:oxygen': true,
+    'chemlib:fluorine': true,
+    'chemlib:neon': true,
+    'chemlib:chlorine': true,
+    'chemlib:argon': true,
+    'chemlib:krypton': true,
+    'chemlib:xenon': true,
+    'chemlib:radon': true,
+    'chemlib:carbon_dioxide': true,
+    'chemlib:ethylene': true,
+    'chemlib:ammonium': true,
+    'chemlib:methane': true,
+    'chemlib:ethane': true,
+    'chemlib:propane': true,
+    'chemlib:butane': true,
+    'chemlib:sulfur_dioxide': true,
+    'chemlib:nitrogen_dioxide': true,
+    'chemlib:ammonia': true,
+    'chemlib:hydrogen_sulfide': true,
+    'chemlib:acetylene': true,
+    'chemlib:carbon_monoxide': true,
+    'chemlib:nitric_oxide': true
+}
+
 function bcAdpGet(object, key) {
     if (!object || !key) return null
     try {
@@ -107,6 +135,7 @@ ServerEvents.recipes(function (event) {
         var acid = bcAdpGet(row, 'acid')
         var ballId = bcAdpGet(row, 'ball')
         var input = bcAdpGet(row, 'input')
+        if (BC_ADP_GAS_INPUTS[bcAdpGet(input, 'item')]) continue
         var solvent = bcAdpSolventById(acid)
         var ball = bcAdpBallById(ballId)
         if (!solvent || !ball) continue

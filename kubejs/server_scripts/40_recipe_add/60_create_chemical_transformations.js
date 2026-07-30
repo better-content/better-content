@@ -13,6 +13,22 @@ function bcChemXIngredient(input) {
     return { item: input }
 }
 
+function bcChemXExpandCreateIngredients(inputs) {
+    var expanded = []
+    for (var i = 0; i < inputs.length; i++) {
+        var input = bcChemXIngredient(inputs[i])
+        var copies = input && (input.item || input.tag) ? (input.count || 1) : 1
+        for (var copyIndex = 0; copyIndex < copies; copyIndex++) {
+            var copy = {}
+            for (var key in input) {
+                if (key !== 'count') copy[key] = input[key]
+            }
+            expanded.push(copy)
+        }
+    }
+    return expanded
+}
+
 function bcChemXIngredientExists(input) {
     if (!input) return false
     if (typeof input !== 'string') return true
@@ -37,7 +53,7 @@ function bcChemXResult(item, count, chance) {
 
 function bcChemXMix(event, id, output, count, inputs, fluid, amount, heat, time, side) {
     if (!bcChemXCanCraft(output, inputs)) return
-    var ingredients = inputs.map(bcChemXIngredient)
+    var ingredients = bcChemXExpandCreateIngredients(inputs)
     if (fluid) ingredients.push({ fluid: fluid, amount: amount || 250 })
     var results = [bcChemXResult(output, count || 1)]
     if (side &&  bcChemXExists(side.item)) results.push(bcChemXResult(side.item, side.count || 1, side.chance || 1))
@@ -57,7 +73,7 @@ function bcChemXCompact(event, id, output, count, inputs, heat, side) {
     if (side &&  bcChemXExists(side.item)) results.push(bcChemXResult(side.item, side.count || 1, side.chance || 1))
     var recipe = {
         type: 'create:compacting',
-        ingredients: inputs.map(bcChemXIngredient),
+        ingredients: bcChemXExpandCreateIngredients(inputs),
         results: results,
         processingTime: 180
     }
@@ -72,12 +88,49 @@ function bcChemXPressure(event, id, output, count, inputs, pressure) {
         inputs: inputs.map(function (input) {
             var stack = bcChemXIngredient(input)
             stack.type = 'pneumaticcraft:stacked_item'
-            stack.count = 1
+            stack.count = stack.count || 1
             return stack
         }),
         pressure: pressure || 2.0,
         results: [bcChemXResult(output, count || 1)]
     }).id('kubejs:chemistry/transform/pncr_pressure/' + id)
+}
+
+function bcChemXGasReduction(event, id, oxide, metal, gas, exhaust) {
+    if (!bcChemXExists(oxide) || !bcChemXExists(metal)) return
+    event.custom({
+        type: 'pneumaticcraft:thermo_plant',
+        exothermic: false,
+        item_input: { item: oxide },
+        fluid_input: {
+            type: 'pneumaticcraft:fluid',
+            fluid: gas + '_fluid',
+            amount: 250
+        },
+        item_output: { item: metal },
+        fluid_output: { fluid: exhaust + '_fluid', amount: 250 },
+        pressure: 3.0,
+        speed: 0.4,
+        temperature: { min_temp: 773 }
+    }).id('kubejs:chemistry/transform/pncr_thermo/' + id)
+}
+
+function bcChemXGasFixation(event, id, solid, gas, gasUnits, output, pressure, temp) {
+    if (!bcChemXExists(solid) || !bcChemXExists(output)) return
+    event.custom({
+        type: 'pneumaticcraft:thermo_plant',
+        exothermic: false,
+        item_input: { item: solid },
+        fluid_input: {
+            type: 'pneumaticcraft:fluid',
+            fluid: gas + '_fluid',
+            amount: 250 * (gasUnits || 1)
+        },
+        item_output: { item: output },
+        pressure: pressure || 2.5,
+        speed: 0.45,
+        temperature: { min_temp: temp || 473 }
+    }).id('kubejs:chemistry/transform/pncr_thermo/' + id)
 }
 
 ServerEvents.recipes(function (event) {
@@ -113,10 +166,9 @@ ServerEvents.recipes(function (event) {
             reductions[r].reductant || 'chemlib:carbon'
         ], 'superheated', { item: 'chemlib:carbon_dioxide', chance: reductions[r].reductant ? 0.12 : 0.30 })
     }
-     bcChemXCompact(event, 'iron_oxide_carbon_monoxide_reduction', 'chemlib:iron', 1, [
-        'chemlib:iron_oxide',
-        'chemlib:carbon_monoxide'
-    ], 'superheated', { item: 'chemlib:carbon_dioxide' })
+    bcChemXGasReduction(event, 'iron_oxide_carbon_monoxide_reduction',
+        'chemlib:iron_oxide', 'chemlib:iron',
+        'chemlib:carbon_monoxide', 'chemlib:carbon_dioxide')
 
     var leaches = [
         { id: 'copper_sulfate_from_carbonate', input: 'chemlib:copper_carbonate', fluid: 'chemlib:sulfuric_acid_fluid', output: 'chemlib:copper_ii_sulfate' },
@@ -129,7 +181,7 @@ ServerEvents.recipes(function (event) {
         { id: 'beryllium_chloride_from_beryl', input: 'chemlib:beryl', fluid: 'chemlib:hydrochloric_acid_fluid', output: 'chemlib:beryllium_chloride' }
     ]
     for (var l = 0; l < leaches.length; l++) {
-         bcChemXMix(event, leaches[l].id, leaches[l].output, 2, [
+         bcChemXMix(event, leaches[l].id, leaches[l].output, 1, [
             leaches[l].input
         ], leaches[l].fluid, 250, 'heated', 220, { item: 'chemlib:carbon_dioxide', chance: 0.20 })
     }
@@ -143,26 +195,26 @@ ServerEvents.recipes(function (event) {
         { id: 'lead_carbonate', salt: 'chemlib:lead_nitrate', base: 'chemlib:sodium_carbonate', output: 'chemlib:lead_carbonate' }
     ]
     for (var p = 0; p < precipitates.length; p++) {
-         bcChemXMix(event, precipitates[p].id + '_precipitation', precipitates[p].output, 2, [
+         bcChemXMix(event, precipitates[p].id + '_precipitation', precipitates[p].output, 1, [
             precipitates[p].salt,
             precipitates[p].base
         ], 'minecraft:water', 250, null, 180, { item: 'chemlib:sodium_sulfate', chance: 0.25 })
     }
 
-     bcChemXMix(event, 'soda_ash_from_salt_and_lime', 'chemlib:sodium_carbonate', 2, [
-        'chemlib:sodium_chloride',
+     bcChemXMix(event, 'soda_ash_from_salt_and_lime', 'chemlib:sodium_carbonate', 1, [
+        { item: 'chemlib:sodium_chloride', count: 2 },
         'chemlib:calcium_carbonate'
     ], 'minecraft:water', 250, 'heated', 220, { item: 'chemlib:calcium_chloride', chance: 0.50 })
-     bcChemXMix(event, 'phosphate_from_phosphoric_lime', 'chemlib:phosphate', 2, [
+     bcChemXMix(event, 'phosphate_from_phosphoric_lime', 'chemlib:phosphate', 1, [
         'chemlib:phosphoric_acid',
         'chemlib:calcium'
     ], 'minecraft:water', 250, null, 180, null)
-     bcChemXCompact(event, 'carbon_dioxide_scrub_lime', 'chemlib:calcium_carbonate', 1, [
-        'chemlib:calcium_oxide',
-        'chemlib:carbon_dioxide'
-    ], null, null)
-     bcChemXPressure(event, 'chloralkali_salt_cell', 'chemlib:sodium_hydroxide', 2, [
+    bcChemXGasFixation(event, 'carbon_dioxide_scrub_lime',
+        'chemlib:calcium_oxide', 'chemlib:carbon_dioxide', 1,
+        'chemlib:calcium_carbonate', 2.5, 423)
+     bcChemXPressure(event, 'chloralkali_salt_cell', 'chemlib:sodium_hydroxide', 1, [
         'chemlib:sodium_chloride',
+        'chemlib:hydroxide',
         'kubejs:pressure_seal',
         '#forge:plates/copper'
     ], 2.5)

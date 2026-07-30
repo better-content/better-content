@@ -422,7 +422,7 @@ ServerEvents.recipes(function (event) {
         { item: 'chemlib:titanium_ingot' },
         { item: 'chemlib:titanium_oxide' },
         { item: 'kubejs:tungsten_carbide_insert' },
-        { item: 'chemlib:oxygen' }
+        { item: 'chemlib:aluminum_oxide' }
     ], 'heated')
 
      bcRoMixingComponent(event, 'kimberlite_diamond_seed', { item: 'kubejs:kimberlite_diamond_seed' }, [

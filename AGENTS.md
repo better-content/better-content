@@ -102,6 +102,8 @@ Original shell/Python tools are quarantined under `tools/quarantine/original-too
 ## Runtime Test Surface
 The sole runtime test is `tools/bc test smoke`. It uses one disposable dedicated-server world and one Xvfb-backed client, verifies boot, join, a bounded settled connection, clean disconnect/server stop, and hard-log health. Do not add scenario matrices, cloned worlds, multi-cycle runs, or worldgen statistics until separately designed.
 
+Use a superflat world for in-game screenshots unless the subject specifically requires natural terrain, world generation, another dimension, or other environmental context that superflat cannot provide.
+
 ## Core Rules
 - Prototype freeze policy: until the user explicitly says the freeze is released, do not add new features, new progression branches, new content systems, or broad UX/theme expansions. Balance tuning is allowed, but keep it scoped to the existing systems and avoid feature drift. Limit work to stabilization, crash fixes, progression deadlock fixes, balance changes, validation/tooling fixes, packaging, questbook authoring/revision, menu clarity, and other changes required to ship or playtest the frozen prototype.
 - A future runtime validation effort may use at most one Minecraft save/world. Do not add it until the replacement suite is designed.

@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "AGENTS.md"
-hash = "f0fd2cbafd5cb69103d2c261938321303f4c129d8a2507bc99a0e0b34043ee72"
+hash = "ee369816b7c88f6a1c3bfc3652ab92c985af784adde290b30ba0e519a3d3c5e4"
 
 [[files]]
 file = "LICENSE"
@@ -10770,7 +10770,7 @@ hash = "482a27676f676ae9f652d6f47ea53477948612732b33d45ec456f2895cb7fba0"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/51_surface_sample_processing.js"
-hash = "885b69d93438abf81d15486cc34f8831251381a36bf4b35d07e86282905f7c43"
+hash = "89863396c15124c2956a423339f5ad99175ff2ff4e3e838ce4ae590407d8faa8"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js"
@@ -11734,7 +11734,7 @@ metafile = true
 
 [[files]]
 file = "mods/realisticores-0.1.0.jar"
-hash = "e733efd05fa630c5c6ecaba4f8a20da1bc9c43038e9b01961eb836601e266b57"
+hash = "fcd8b4f9037486a22d0b9028acf0a155d794fc0463271c50c7409cc4f0d83ac0"
 
 [[files]]
 file = "mods/rehooked.pw.toml"

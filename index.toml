@@ -9218,7 +9218,7 @@ hash = "6b66f43c5a8ad14538b5785ad5aaa837ba529783fe5dda9653d3abd4b208e90c"
 
 [[files]]
 file = "kubejs/client_scripts/15_ore_origin_tooltips.js"
-hash = "63c1b78441a052411a2c49d33defd1cf6d4d2ed6894aad7db512d4b93c915d6a"
+hash = "cc185694c65cbea9acdf9e2c3b979ba6fe3cb68fe576e96beeec3fc0db0eb992"
 
 [[files]]
 file = "kubejs/client_scripts/20_hide_vanilla_tools.js"
@@ -11734,7 +11734,7 @@ metafile = true
 
 [[files]]
 file = "mods/realisticores-0.1.0.jar"
-hash = "47d27b9fa2eac80f0d8aa66ae7dbae17f03e07c340c7c0c13543070b2a190d1b"
+hash = "e733efd05fa630c5c6ecaba4f8a20da1bc9c43038e9b01961eb836601e266b57"
 
 [[files]]
 file = "mods/rehooked.pw.toml"

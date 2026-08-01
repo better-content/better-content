@@ -390,7 +390,11 @@ ItemEvents.tooltip(function (event) {
         var source = dep.source === 'Realistic Ores deposit' ? 'Cave vein + signalled ADLODS field' : dep.source
         var lines = bcOreOriginLines(source, dep.name + ': ' + dep.detail, dep.processing)
          bcAddOreOrigin(event, dep.blocks, lines)
-        event.add(dep.crushed, bcOreOriginLines('Crushed ore and placeable survey sample', dep.name + ': process it, or place it as low groundcover. Matching surface samples mark bulk fields where configured.', dep.processing))
+        event.add(dep.crushed, bcOreOriginLines('Crushed deposit material', dep.name + ': a processing ingredient recovered from the matching deposit or its surface rubble.', dep.processing))
+        event.add(
+            dep.crushed.replace('realisticores:crushed_', 'realisticores:surface_sample_'),
+            bcOreOriginLines('Placeable survey sample', dep.name + ': loose surface rubble signalling a matching ADLODS field where configured.', 'Collect it for low-yield milling, or leave it in place as a prospecting marker.')
+        )
     }
 
     for (var j = 0; j < BC_SIMPLE_ORE_ORIGINS.length; j++) {

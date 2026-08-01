@@ -6166,7 +6166,7 @@ hash = "3d0fd21e010bc2c14eef52ba05cda3ebb128bc813ee91d60b6d176e2005217ca"
 
 [[files]]
 file = "config/spawnbalanceutility/BiomeMobWeight.csv"
-hash = "6ea800db9f6bebe0f05b0ed3f90a6268b4b037b155c770153a1ad24d925ec585"
+hash = "f0ed8e39e78435725300f50f2356926666f3c0f98302fcaa113885c43650701e"
 
 [[files]]
 file = "config/spawnbalanceutility/MassAdditionMobs.rpt"
@@ -10367,6 +10367,10 @@ hash = "5fecb85c0830794ea4004eb041897b08938ebb5383670ada06a3647727ddcf36"
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/materials/stats/wood.json"
 hash = "389fbf9ce65e3f432b559875b00a79903759730fcf9d0752a9ed784c1301756c"
+
+[[files]]
+file = "kubejs/data/thalassophobia/forge/biome_modifier/leech_biome_modifier.json"
+hash = "57c8899b0c2b6c266bc114548695279e406eb483e5877ea29bb74775737cc950"
 
 [[files]]
 file = "kubejs/data/tinker_rapier/weapon_attributes/estoc_tic.json"

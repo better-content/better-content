@@ -1,0 +1,11 @@
+{
+  "type": "forge:remove_spawns",
+  "biomes": [
+    "minecraft:mangrove_swamp",
+    "minecraft:swamp",
+    "minecraft:river"
+  ],
+  "entity_types": [
+    "thalassophobia:leech"
+  ]
+}

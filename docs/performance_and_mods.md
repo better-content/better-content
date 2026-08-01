@@ -105,7 +105,7 @@ Prior repairs worth retaining as current expectations:
 - `settlementroads` should avoid unbounded tick-time work and clean level-unload state.
 - `villagewalls` should cap automatic wall generation work and avoid endless retries for failed village cells.
 - `pillagercampaigns` placement and materialization scans should use already-loaded `LevelChunk` data via `getChunkNow`, not blocking `ServerLevel.getHeight` or `getBlockState` calls from chunk-load paths.
-- Pillager campaigns travel at the current 120 ticks per chunk configuration; the stale 1200-tick value made invasions appear absent. Ping Wheel 1.10.1 and Thalassophobia 1.8 are pinned client-and-server additions for the approved post-freeze playtest surface.
+- Pillager campaigns travel at the current 120 ticks per chunk configuration; the stale 1200-tick value made invasions appear absent. Ping Wheel 1.10.1 and Thalassophobia 1.8 are pinned client-and-server additions for the approved post-freeze playtest surface. Thalassophobia leeches remain registered for explicit item/command use but are removed from natural river, swamp, and mangrove-swamp spawns, including Spawn Balance Utility's tables.
 - Fowl Play 1.2.1 is pinned for Forge 1.20.1 on both client and server, adding ambient birds and their native behaviors without an additional required dependency.
 - `bcfixes` includes compatibility behavior for C2ME safe-random guard noise around EMI tooltip indexing.
 - Worldgen C2ME compatibility fixes now include a pack datapack no-op for PVJ Nether `charred_bones` groundcover, and `dimension_drink_ore_relocation` routes relocated Malum cthonic gold through vanilla `minecraft:ore` instead of Malum's custom cross-chunk writer.

@@ -5778,7 +5778,7 @@ hash = "7699b1da74a628bf541f530e721f842347519110f0c889dab2ec06fd12fdde06"
 
 [[files]]
 file = "config/pillagercampaigns-common.toml"
-hash = "7886596688f00449447dbdcb3e8ed439b4e549dc6f21df2592ecc6a01691613f"
+hash = "efc465cd9a5c03484680113ddf8448874803fc5f95a5de711d0ffc52a173cf97"
 
 [[files]]
 file = "config/projectvibrantjourneys-common.toml"
@@ -6194,7 +6194,7 @@ hash = "dd7415a83aef00c385628fe1756a0a97738b8dffd00f30effd08dd5e1da27431"
 
 [[files]]
 file = "config/structure_generation_improver.json"
-hash = "0637356ab7e7d491522ad7251a45cd19ad104e0f5af0b05e794be8491a319e6b"
+hash = "a59c6f6b05695e3683253f35b675efe0d77c8f7298a36d85ae6345e242f58ffc"
 
 [[files]]
 file = "config/structurify.json"
@@ -7695,6 +7695,10 @@ hash = "cc0ad8ab5219760fa84d977cae1aedca850abcccd739f61923c5faaa8761a203"
 [[files]]
 file = "datapacks/realistic_ores_lava_depths/pack.mcmeta"
 hash = "94c6436848f8dca5dbeec0af1e229aa802a131b7db09db54bca51c5a934f4d8c"
+
+[[files]]
+file = "datapacks/worldgen_compat_fixes/data/forbidden_arcanus/worldgen/structure_set/nipas.json"
+hash = "5ed518089fd5f35b29ef1d7ac937b1b1b9af17669caa9702aec67012e550cf65"
 
 [[files]]
 file = "datapacks/worldgen_compat_fixes/data/immersive_weathering/tags/blocks/grass_blocks.json"
@@ -9761,6 +9765,18 @@ file = "kubejs/data/fallout_wastelands_/tags/blocks/vaultdoorblock.json"
 hash = "40defb95b90b81e93e532d584018618b6819b15d11c0fb0489b1e98a6d0f0033"
 
 [[files]]
+file = "kubejs/data/farmersdelight/loot_modifiers/straw_from_grass.json"
+hash = "98f412300c431823dca6e5809407b13a70c6165c3e58375606284fdb74421ceb"
+
+[[files]]
+file = "kubejs/data/farmersdelight/loot_modifiers/straw_from_sandy_shrub.json"
+hash = "9d014c8d743d94b928c39151a81bde44d32ae0f8392e076e4e60083da0b16dfb"
+
+[[files]]
+file = "kubejs/data/farmersdelight/loot_modifiers/straw_from_tall_grass.json"
+hash = "fc3463a683d3a65096cb44296cdbf05ca803ac991194a30141e6a7a475a52518"
+
+[[files]]
 file = "kubejs/data/farmersdelight/tags/items/straw_harvesters.json"
 hash = "4ab403f039ef563c3f95eb80b5f5d24aec32957b8c9ddbe076058845cd7c91ab"
 
@@ -9986,7 +10002,7 @@ hash = "3b00f5ad4688ae0694cab04dc8c7a7286b9ab6fe2b4a4cc0ce9da1afdf1bb1b1"
 
 [[files]]
 file = "kubejs/data/kubejs/tags/blocks/hand_breakable.json"
-hash = "51ebe6e3d91478476b8aa5f52154951d52732bc75372d2e4c308a10ce9b1bcbc"
+hash = "1efdac8473a5241d60bdf07b6b8cc1d810ddb9b8f3f6e2041b9744240e49b894"
 
 [[files]]
 file = "kubejs/data/kubejs/tags/items/primitive_tcon_bones.json"
@@ -10665,6 +10681,10 @@ file = "kubejs/server_scripts/30_recipe_replace/171_k_turrets_electrical_gates.j
 hash = "949dbdaf905b7d4d4761d2de2b3a0dcb1ddb815631ee227f79f038f490d9adb1"
 
 [[files]]
+file = "kubejs/server_scripts/30_recipe_replace/175_playtest_recipe_repairs.js"
+hash = "7455671cb6b05658196c67d16f4699d4fcfee6419345797b66c0f29f489011aa"
+
+[[files]]
 file = "kubejs/server_scripts/30_recipe_replace/20_expensive_grout.js"
 hash = "e6c8d7264f4564aa029554693e293cc3184550dddf826e07111bf37f9ff459fb"
 
@@ -10714,7 +10734,7 @@ hash = "9f73178059c1200caf1aac0ee979988465bc35f28954900bf69078e1b036b542"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/98_starting_progression_bypasses.js"
-hash = "0d03b5549d231b4d55b8f96ed32fd47f262c32603f6cb677b2132196ae44c2a9"
+hash = "04e7ec38b5ebe3dbe2b9787588ed84071fd6a8cbb493eb5f3c43ca27db9467af"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js"
@@ -10807,6 +10827,10 @@ hash = "cfbed8c61ca5b728f9af4e463f05a43a578c761ae14e960fa017f596cabd8221"
 [[files]]
 file = "kubejs/server_scripts/50_loot/11_realistic_hands_outcomes.js"
 hash = "1f2c394ce1b6aca274d9c7ded530fd4ac14be121a6a4566cd0f164d501479acf"
+
+[[files]]
+file = "kubejs/server_scripts/50_loot/12_unearthed_regolith_identity.js"
+hash = "f0f4db2a4361afbdf8f42317c72b6890776348fb01c6dad2c7e52a1bac33ed43"
 
 [[files]]
 file = "kubejs/server_scripts/50_loot/20_world_chest_coin_tiers.js"
@@ -10953,7 +10977,7 @@ hash = "a7327d4d5e251c864f25346e598d5721ad4dd98c18f4d14f6991a3e46b6fda39"
 
 [[files]]
 file = "mods/bcfixes-0.1.0.jar"
-hash = "414b09455537149bd5b2a972fb9595449678afe28347c9613ca9da406082e56a"
+hash = "43b27c51cc6abebca538ef2a45c6cc1c5622c1ce27bdd2eb5d1a298517be0b75"
 
 [[files]]
 file = "mods/better-combat-by-daedelus.pw.toml"
@@ -11113,7 +11137,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimensiondrink-1.0.0.jar"
-hash = "c3d07eb40ed45899ff3f32ce0fb3020590ce499d100d68e2f1ae253eff408822"
+hash = "65e81f97e7d1c476733f1b8200541b61c82438835fd48d599f4f91e6757d47f1"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -11489,7 +11513,7 @@ metafile = true
 
 [[files]]
 file = "mods/latent_chemlib-0.1.0.jar"
-hash = "6a7ecbc6a7741ccd0f90d0dbf3e8d4f8c3ffe2443f9b2ae876c6601a135eebf8"
+hash = "61a122e1d949ec5103a550e251d0b98f387c327897662d141efde431477d01e2"
 
 [[files]]
 file = "mods/lithostitched.pw.toml"
@@ -11635,6 +11659,11 @@ file = "mods/pillagercampaigns-0.2.0.jar"
 hash = "369a1cf5c8e0bcb594b0e3fecf3052aa0896f653ad54152832fd7567fe1ba8b2"
 
 [[files]]
+file = "mods/ping-wheel.pw.toml"
+hash = "c2c97ca62b3b9b141c6f3be96768e17f184fd16cf55ebf7ef7e60f988f6bd680"
+metafile = true
+
+[[files]]
 file = "mods/placebo.pw.toml"
 hash = "045d582e2c534c5bb96d7336b4ae2cd12692c6de29b19ae5f1dbfd8759c03b03"
 metafile = true
@@ -11719,7 +11748,7 @@ metafile = true
 
 [[files]]
 file = "mods/revival-1.0.0.jar"
-hash = "18ef44817852cfaa3a3314537cde33f1d065d860ef15675a8439f87d0c77cb2d"
+hash = "f3b16bbbffc9d108d2a4ceed2cc33336f9056766ed7d96710b725717601fe4c8"
 
 [[files]]
 file = "mods/rhino.pw.toml"
@@ -11861,6 +11890,11 @@ metafile = true
 [[files]]
 file = "mods/terrablender.pw.toml"
 hash = "fde3d3b1607636100e382dce1bba80ab4608ebfa1ef888a37b86bc8c7dcbafe5"
+metafile = true
+
+[[files]]
+file = "mods/thalassophobia.pw.toml"
+hash = "740904c6314a5652b7991b431c0ebbd0a3158d694ffe9c798f723bd1ae12d8ee"
 metafile = true
 
 [[files]]
@@ -12049,7 +12083,7 @@ hash = "f6f084ae1df2f43e4a0e70b7d361ea766a0db9be9429ef43614d3d1ad8c20be4"
 
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.8.1.zip"
-hash = "4379723bba900fc0ec97efeb604bd839150733e6603b901be20940667e7cf8ff"
+hash = "bc0eb8c1ac515f9f83e97fd2b0e05abcf95e49e200d1b04699e68d8c24ee22d7"
 
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.8.1.zip.txt"

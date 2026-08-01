@@ -27,6 +27,8 @@ On 2026-07-30 the smoke passed after the AdPother/Latent gas unification using t
 
 On 2026-08-01 the release-candidate smoke passed again with `--bootstrap-mode always`: one disposable dedicated-server world booted, the Xvfb client joined and remained connected for the bounded settle window, and both sides shut down cleanly with no hard-log finding. Before the smoke, retained runtime dumps were refreshed, 25 newly visible AdPother gas item/block IDs received explicit runtime-oracle review records, and the static, Kotlin, and 19-repository fast suites passed.
 
+The August playtest stabilization pass also makes Complementary Reimagined's glowing-ore list consume all retained Excavated Variants ore IDs. `tools/bc internal sync-shader-glowing-ores` updates the packed shader deterministically, and chemistry validation fails if retained variants are missing from `block.10024`.
+
 ## Item/block integration matrix
 
 ```text

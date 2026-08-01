@@ -30,7 +30,7 @@
 	stale_region_ticks = 120000
 	base_scan_interval_ticks = 200
 	campaign_tick_interval = 100
-	campaign_speed_ticks_per_chunk = 1200
+	campaign_speed_ticks_per_chunk = 120
 	max_campaigns_per_base = 4
 	max_satellites_per_major_base = 4
 	replace_natural_outpost_spawns = true

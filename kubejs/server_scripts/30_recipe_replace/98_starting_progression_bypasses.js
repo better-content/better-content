@@ -20,10 +20,11 @@ ServerEvents.recipes(function (event) {
     event.remove({ type: 'minecraft:crafting_shapeless', output: 'tconstruct:pattern' })
 
     event.shaped(Item.of('tconstruct:pattern', 4), [
-        'CC',
-        'CC'
+        'SS',
+        'TT'
     ], {
-        C: 'farmersdelight:canvas'
+        S: 'minecraft:stick',
+        T: 'farmersdelight:straw'
     }).id('kubejs:tconstruct/pattern_from_canvas')
 
     event.custom({

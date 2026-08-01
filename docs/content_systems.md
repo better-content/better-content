@@ -168,6 +168,10 @@ Loot is treated as a crafting surface:
 
 Trades should support recovery and route planning without replacing factories, metallurgy, or chemistry.
 
+Playtest stabilization restores tag-wide vanilla chest and barrel crafting, the final sand-tag glass smelting route, stick-and-straw TConstruct patterns, doubled wild straw chances, and literal Unearthed regolith block drops. PVJ loose starter rocks and bones are classified as hand-breakable. Forbidden & Arcanus nipa is excluded from SGI foundation sampling, and the floating nipa structure variant is disabled while grounded nipa remains enabled.
+
+The Curios water slot accepts only water potion bottles. It automatically drinks one when that bottle's native thirst restoration fits entirely below the 20-point cap, preserving Thirst Was Taken purity behavior and returning the empty bottle safely; canteens, teas, and non-water potions are intentionally excluded.
+
 ## Quests
 
 The live quest book is hand-authored under `config/ftbquests/`, especially `config/ftbquests/quests/chapters/`. That tree is the current source of truth for chapter layout, quest text, tasks, rewards, and progression presentation. When quest intent changes, update this doc or `progression.md`, then validate the live `config/ftbquests/` content.

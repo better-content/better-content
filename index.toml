@@ -10749,6 +10749,10 @@ file = "kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js"
 hash = "482a27676f676ae9f652d6f47ea53477948612732b33d45ec456f2895cb7fba0"
 
 [[files]]
+file = "kubejs/server_scripts/40_recipe_add/51_surface_sample_processing.js"
+hash = "885b69d93438abf81d15486cc34f8831251381a36bf4b35d07e86282905f7c43"
+
+[[files]]
 file = "kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js"
 hash = "459ec5d23e2accd326a9bc17dda94205683cb2e9d4e41330f42808b5b1c777b2"
 
@@ -11701,7 +11705,7 @@ metafile = true
 
 [[files]]
 file = "mods/realisticores-0.1.0.jar"
-hash = "7902591b2a7adf1a6e897580806a355713a21e1702708de56bb0885069b544e1"
+hash = "47d27b9fa2eac80f0d8aa66ae7dbae17f03e07c340c7c0c13543070b2a190d1b"
 
 [[files]]
 file = "mods/rehooked.pw.toml"

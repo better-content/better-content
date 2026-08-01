@@ -2,6 +2,15 @@
 // this file removes Create/TCon shortcuts that bypass early metallurgy and deployer assembly.
 
 ServerEvents.recipes(function (event) {
+    // Copper tool parts begin at the smeltery. Solid copper forms must not
+    // register copper material for hand-shaping in the Part Builder.
+    ;[
+        'tconstruct:tools/materials/copper/block',
+        'tconstruct:tools/materials/copper/ingot',
+        'tconstruct:tools/materials/copper/nugget',
+        'tconstruct:tools/materials/copper/oxidized'
+    ].forEach(function (id) { event.remove({ id: id }) })
+
     event.remove({ id: 'tconstruct:common/materials/flint_from_gravel' })
     event.remove({ id: 'tconstruct:materials/flint_from_gravel' })
     event.remove({ id: 'tconstruct:flint_from_gravel' })

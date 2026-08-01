@@ -10734,7 +10734,7 @@ hash = "9f73178059c1200caf1aac0ee979988465bc35f28954900bf69078e1b036b542"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/98_starting_progression_bypasses.js"
-hash = "04e7ec38b5ebe3dbe2b9787588ed84071fd6a8cbb493eb5f3c43ca27db9467af"
+hash = "80caeb0f0e6620e7d8505f366fd0f1807f6f66621590c7fb10b0d21d5752f24f"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js"

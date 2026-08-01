@@ -12,6 +12,8 @@ generated/cache/
 generated/evidence/
 generated/custom-mod-sources/
 generated/pack-site/
+generated/surface-marker-capture/
+generated/surface-samples-*-superflat.png
 exports/
 
 kubejs/recipe_dumps/

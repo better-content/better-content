@@ -11318,6 +11318,11 @@ hash = "62ef7e92478035b77e996189984e4749b2d876ed0a389977a2670a28f105bfd2"
 metafile = true
 
 [[files]]
+file = "mods/fowlplay.pw.toml"
+hash = "92868c3acedb9402aa8de0a8d95d8a097ee0584c318510e26d47e0c8904e7140"
+metafile = true
+
+[[files]]
 file = "mods/framedblocks.pw.toml"
 hash = "a06a97ba002c875926da3c83ef2027388c4e8a66e01b8bf1fd3d69be54bd6e64"
 metafile = true

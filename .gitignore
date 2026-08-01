@@ -1,4 +1,5 @@
 *.zip
+!tacz/*.zip
 *.jar
 tools/runtime-probe/.gradle/
 tools/runtime-probe/build/

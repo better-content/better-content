@@ -4,6 +4,8 @@
 
 Active downloaded mods are the current `mods/*.pw.toml` files. Active custom bundled jars in `mods/` include:
 
+TaCZ 1.1.8 is active on both sides with its recommended playerAnimator integration (already present) and client-only Accelerated Rendering optimization. Create Armorer, Applied Armorer, and Immersive Armorer ship as external TaCZ gun-pack ZIPs under `tacz/`. The shared TaCZ benches begin at brass factory manufacture; the themed benches then require brass/Create, post-AE2 Impossible, and Electrical milestones respectively.
+
 Pinned Valkyrien Skies family transport manifests are active and side `both`:
 
 - Valkyrien Skies `valkyrienskies-120-2.4.11.jar`

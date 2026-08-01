@@ -10685,6 +10685,10 @@ file = "kubejs/server_scripts/30_recipe_replace/171_k_turrets_electrical_gates.j
 hash = "949dbdaf905b7d4d4761d2de2b3a0dcb1ddb815631ee227f79f038f490d9adb1"
 
 [[files]]
+file = "kubejs/server_scripts/30_recipe_replace/171_tacz_manufacturing_gates.js"
+hash = "3552f27131bc1cf78a9157c72a5229d457f8b1360fc587697b1f8338f4636475"
+
+[[files]]
 file = "kubejs/server_scripts/30_recipe_replace/175_playtest_recipe_repairs.js"
 hash = "7455671cb6b05658196c67d16f4699d4fcfee6419345797b66c0f29f489011aa"
 
@@ -10919,6 +10923,11 @@ hash = "1e4abc890d237727cad14e58dab2b8f140afc38b9fdbd3035b2467e5bae3c2bf"
 [[files]]
 file = "kubejs/startup_scripts/99_realistic_hands_assignments.js"
 hash = "2965087518c5775657092b7e341f5351a9ca1a8b38fa39bc305fabf466e2e24e"
+
+[[files]]
+file = "mods/accelerated-rendering.pw.toml"
+hash = "24976f7ca7bd43a73fa4546def95312267f8d016ff836badb209f43c032cd097"
+metafile = true
 
 [[files]]
 file = "mods/advanced-chimneys.pw.toml"
@@ -11937,6 +11946,11 @@ hash = "435e86380f442b28ab298cb300fa0f51d1772e854252c31726b17ccb1ec5041e"
 metafile = true
 
 [[files]]
+file = "mods/timeless-and-classics-zero.pw.toml"
+hash = "733b8967d6f263e9cc7ca2f001067be6ed8e21c214d73afb4e7fb418fa3e4364"
+metafile = true
+
+[[files]]
 file = "mods/tinker-and-better-combat.pw.toml"
 hash = "ae964462914269638b6297d88658c3b1a101e5cf595ee38f9221116855672ac0"
 metafile = true
@@ -12097,3 +12111,15 @@ hash = "bc0eb8c1ac515f9f83e97fd2b0e05abcf95e49e200d1b04699e68d8c24ee22d7"
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.8.1.zip.txt"
 hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
+
+[[files]]
+file = "tacz/Applied Armorer-v1.1.4.1-for114+.zip"
+hash = "e52ddb8b6412951f9b79c9ed9a7521a849cef4192f19af4843a3392cdbcfc420"
+
+[[files]]
+file = "tacz/Create Armorer-v1.2.0.1-for117.zip"
+hash = "479f0ac05833ccec554efa1b22e6f71553c7ebe7f381310c28467a399c98b0ba"
+
+[[files]]
+file = "tacz/Immersive Armorer-v1.2.1-for117.zip"
+hash = "2f8c939fc533fc612b139d6ec74fdfb52412b83ea5da169e5a2380985af74050"

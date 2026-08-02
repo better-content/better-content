@@ -5502,7 +5502,7 @@ hash = "48a6b1bcc8d96a1f987c24f3e53ee0091c242cb660169dc9f2e39687de4a8f18"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/body_spawn_recovery.snbt"
-hash = "8468fc238157281b00cc2a538dc70d7a73bee3552f456c05740ca6fdc5b40ff5"
+hash = "701a3a8d2d68605341b13175665d7c941cddd57730c3d0b6a43b24caa2e16a4e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/casings.snbt"
@@ -9226,7 +9226,7 @@ hash = "cc185694c65cbea9acdf9e2c3b979ba6fe3cb68fe576e96beeec3fc0db0eb992"
 
 [[files]]
 file = "kubejs/client_scripts/20_hide_vanilla_tools.js"
-hash = "3a6483697f865aa908aa1cd5b0f0d8a107f77d4afbb85b9048a2230669fb6296"
+hash = "2efa028a8bec041886007786ce289ebf51f7358eb12fe1f42c3de3c2045d7936"
 
 [[files]]
 file = "kubejs/client_scripts/40_hide_quarantined_systems.js"
@@ -9322,7 +9322,7 @@ hash = "5653661801f458bfd2f9f22f1b02248077a19fdafd815ab4ff214f8da0323232"
 
 [[files]]
 file = "kubejs/config/quarantined_items.json"
-hash = "11cc635ae16e6d9a8a1e0ef6cf1ba074e0c2a29e442c6f7929da1b39a6a2f649"
+hash = "23d971245136a52cf19e6bb5fbd2b6db0ccf2ec848d47bdf74ef604a5e0b0579"
 
 [[files]]
 file = "kubejs/config/runtime_graph_dumps.json"
@@ -10730,7 +10730,7 @@ hash = "bb9d6744e0676c5a762256e254ea1e1f46b6e898c1ba37894d8ee13b33154488"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/60_vanilla_tools_to_tcon_heads.js"
-hash = "d509f4c601acedeef63dcc889da8b9be329cbf65edbafc5f61b36d6ddad4d3d0"
+hash = "f535e6ac24f5356c19104170f069dc44385f702508a41f04b2a67985c33f0a53"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/70_kettle_rune_swap.js"
@@ -11807,7 +11807,7 @@ metafile = true
 
 [[files]]
 file = "mods/rpgstats-1.0.0.jar"
-hash = "e3ef546d9b1be932779c742574a70db9fc8f7f257647249c0a99c44ff1b18c7b"
+hash = "91cb3566b2e9de890d07c577c1e798ea6d4c2d3e4e078148adc6c73e1e567ec0"
 
 [[files]]
 file = "mods/satako-library.pw.toml"

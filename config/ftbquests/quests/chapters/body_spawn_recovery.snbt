@@ -185,7 +185,7 @@
 		}
 		{
 			description: ["Death costs you body progress, not just a walk. Respect that loss and plan safer routes once a life starts getting valuable."]
-			icon: "rpgstats:myofibra_catalyst"
+			icon: "minecraft:experience_bottle"
 			id: "3FA9A4546B77AE0C"
 			shape: "rsquare"
 			tasks: [{

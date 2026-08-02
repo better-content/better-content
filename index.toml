@@ -11150,7 +11150,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimensiondrink-1.0.0.jar"
-hash = "1dbaae8f325ebaf81bc00486cbddd72952899adf1795e7e162dcd4fd0d6bf32a"
+hash = "d8456add389b9c3bfb0785d1ac27f35d510e6e7624497d808f269f9132e73567"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"

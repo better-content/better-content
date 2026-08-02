@@ -1,4 +1,4 @@
 {
-  "enabled": true,
+  "enabled": false,
   "outputDir": "generated/runtime-dumps/"
 }

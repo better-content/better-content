@@ -36,7 +36,6 @@ var K_CFG = 'rrhubs_cfg'
 var FX_DURATION_TICKS = 60         // 3 seconds
 var FX_PULSE_EVERY_TICKS = 2       // 1=thicker, 2=good, 3=cheaper
 var FX_SPREAD = 1.0                // 3x3x3 cube spread
-var FX_COUNTS_EVERY_TICKS = 200
 
 // Per-pulse counts (accumulate over duration)
 var FX_COUNT_SOUL_PER_PULSE = 70
@@ -470,6 +469,10 @@ function actionStatus(server) {
 }
 
 // -------------------- events --------------------
+ServerEvents.loaded(function (event) {
+    loadState(event.server)
+})
+
 PlayerEvents.respawned(function (event) {
     var player = event.player
     var server = event.server
@@ -493,19 +496,6 @@ PlayerEvents.respawned(function (event) {
 
                                         teleportPlayerToHubAndFx(server, player, rrHubs[idx])
                         })
-})
-
-ServerEvents.tick(function (event) {
-    var server = event.server
-    try {
-        var now = safeInt(server.tickCount, 0)
-        var every = safeInt(FX_COUNTS_EVERY_TICKS, 200)
-        if (every < 20) every = 20
-            if (now % every === 0) saveCounts(server)
-    } catch (e) {
-        rrLog(server, 'tick crash: ' + e)
-        throw e
-    }
 })
 
 // -------------------- Brigadier commands --------------------

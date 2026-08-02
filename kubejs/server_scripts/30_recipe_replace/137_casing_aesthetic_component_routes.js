@@ -113,9 +113,12 @@ function bcAestheticAssembly(event, program, id, input, output) {
     }).id('kubejs:casing_aesthetic/pncr_assembly/' + id)
 }
 
-function bcAestheticEnergising(event, id, output, energy, inputs) {
-    if (!bcAestheticCanMake(output, inputs)) return bcAestheticRemove(event, output)
-    global.bcPncrPressure(event, 'kubejs:casing_aesthetic/pncr_pressure/' + id, output, 1, Math.max(1.0, energy / 4000), inputs)
+function bcAestheticElectricalPressure(event, id, output, pressure, inputs) {
+    var gatedInputs = inputs.slice()
+    gatedInputs.push(BC_CASING_AESTHETIC.electricalInstrumentationModule)
+    if (!bcAestheticCanMake(output, gatedInputs)) return bcAestheticRemove(event, output)
+    event.remove({ output: output })
+    global.bcPncrPressure(event, 'kubejs:casing_aesthetic/pncr_pressure/' + id, output, 1, pressure, gatedInputs)
 }
 
 function bcAestheticMechanical(event, id, output, pattern, keys) {
@@ -207,45 +210,45 @@ ServerEvents.recipes(function (event) {
         { id: BC_CASING_AESTHETIC.pressureSeal, count: 2 }
     ])
 
-    // Small electrical fittings are energiser outputs. The energiser block is
-    // Electrical-casing-gated, while the parts stay visually wire/coil/gauge
-    // sized.
-     bcAestheticEnergising(event, 'portable_battery', 'powergrid:portable_battery', 6000, [
+    // Small electrical fittings are sealed pressure assemblies. Consuming the
+    // instrumentation module carries the Electrical-casing proof into parts
+    // that are too small to contain a whole machine frame.
+     bcAestheticElectricalPressure(event, 'portable_battery', 'powergrid:portable_battery', 1.5, [
         'powergrid:battery',
         'powergrid:capacitor',
         BC_CASING_AESTHETIC.zincPlate
     ])
-     bcAestheticEnergising(event, 'relay', 'powergrid:relay', 4000, [
+     bcAestheticElectricalPressure(event, 'relay', 'powergrid:relay', 1.0, [
         'powergrid:wire',
         BC_CASING_AESTHETIC.redstoneRelay,
         'powergrid:capacitor'
     ])
-     bcAestheticEnergising(event, 'relay_dpdt', 'powergrid:relay_dpdt', 6000, [
+     bcAestheticElectricalPressure(event, 'relay_dpdt', 'powergrid:relay_dpdt', 1.5, [
         'powergrid:relay',
         'powergrid:wire',
         BC_CASING_AESTHETIC.redstoneRelay
     ])
-     bcAestheticEnergising(event, 'current_gauge', 'powergrid:current_gauge', 4000, [
+     bcAestheticElectricalPressure(event, 'current_gauge', 'powergrid:current_gauge', 1.0, [
         BC_CASING_AESTHETIC.glass,
         'powergrid:copper_coil',
         'powergrid:wire'
     ])
-     bcAestheticEnergising(event, 'voltage_gauge', 'powergrid:voltage_gauge', 4000, [
+     bcAestheticElectricalPressure(event, 'voltage_gauge', 'powergrid:voltage_gauge', 1.0, [
         BC_CASING_AESTHETIC.glass,
         'powergrid:capacitor',
         BC_CASING_AESTHETIC.redstoneRelay
     ])
-     bcAestheticEnergising(event, 'power_gauge', 'powergrid:power_gauge', 6000, [
+     bcAestheticElectricalPressure(event, 'power_gauge', 'powergrid:power_gauge', 1.5, [
         'powergrid:current_gauge',
         'powergrid:voltage_gauge',
         'powergrid:wire'
     ])
-     bcAestheticEnergising(event, 'device_connector', 'powergrid:device_connector', 5000, [
+     bcAestheticElectricalPressure(event, 'device_connector', 'powergrid:device_connector', 1.25, [
         'powergrid:wire_connector',
         BC_CASING_AESTHETIC.circuit,
         BC_CASING_AESTHETIC.copperPlate
     ])
-     bcAestheticEnergising(event, 'heavy_wire_connector', 'powergrid:heavy_wire_connector', 7000, [
+     bcAestheticElectricalPressure(event, 'heavy_wire_connector', 'powergrid:heavy_wire_connector', 1.75, [
         'powergrid:wire_connector',
         'powergrid:conductive_casing',
         BC_CASING_AESTHETIC.copperPlate

@@ -9230,7 +9230,7 @@ hash = "3a6483697f865aa908aa1cd5b0f0d8a107f77d4afbb85b9048a2230669fb6296"
 
 [[files]]
 file = "kubejs/client_scripts/40_hide_quarantined_systems.js"
-hash = "8954fa09b166639f127fc2def9861195cf12c2305bcc10d56aad3fb10bfa3aa8"
+hash = "6805bcce1a2fc6fe5dc7dfc6f9bb10b784decbc37872df2bdc52bad12f711cdc"
 
 [[files]]
 file = "kubejs/client_scripts/45_arcane_chunkloader_ui.js"
@@ -9262,7 +9262,7 @@ hash = "f9a34140252a5c961db16ee2e82a4b291f5630213d7210994f0d05e85aac0c16"
 
 [[files]]
 file = "kubejs/config/audit_dumps.json"
-hash = "b35a8c826862ef7c41189316d335e76d9528b42a220e2fc06e7aba3cf6e88252"
+hash = "156805429f42bd6a528436e65317763027c3c5cbb5c3801aedc6e258fe97f990"
 
 [[files]]
 file = "kubejs/config/bc_expert_graph_catalog.json"
@@ -9270,7 +9270,7 @@ hash = "587c6dc3caa1a77308faac9198d5e6a7c17ee71c1498b87b81f61ea52bba4ec5"
 
 [[files]]
 file = "kubejs/config/block_hardness_probe.json"
-hash = "627b340a9c28a68ad8860c2a1a689c879c7420dc789ee582fe0b49e3bacadfe9"
+hash = "0360c310f9d72806563f50e809fcff6601bb90dee22b4a710a8bc5535fd05d93"
 
 [[files]]
 file = "kubejs/config/chemlib_form_policy.json"
@@ -9321,8 +9321,12 @@ file = "kubejs/config/progression_reachability_sources.json"
 hash = "5653661801f458bfd2f9f22f1b02248077a19fdafd815ab4ff214f8da0323232"
 
 [[files]]
+file = "kubejs/config/quarantined_items.json"
+hash = "11cc635ae16e6d9a8a1e0ef6cf1ba074e0c2a29e442c6f7929da1b39a6a2f649"
+
+[[files]]
 file = "kubejs/config/runtime_graph_dumps.json"
-hash = "8405a203dd1b7fa9335b24067944bf5b5d474621dd1c6ff61ab3d59c6feed5fc"
+hash = "8a5916e8206a54f4b1f632a448656239f4eba78ab3635dfde0157b485b31cb49"
 
 [[files]]
 file = "kubejs/config/surface_registry.json"
@@ -10574,7 +10578,7 @@ hash = "c2a82b99259f6281874089a5f4a9e16932d5d71993d299fadcb454c806148b65"
 
 [[files]]
 file = "kubejs/server_scripts/20_recipe_remove/30_remove_items.js"
-hash = "7325a0ccea58cb9ac0233c11f4d608e583373605a775a37885e43a4af329086e"
+hash = "b8df6598648aa9488e7ace0047a5bccd2353deb48445ac22aaa0515e3413d2a4"
 
 [[files]]
 file = "kubejs/server_scripts/20_recipe_remove/50_disable_createdeco_coin_recipes.js"
@@ -10638,11 +10642,11 @@ hash = "2c18e5c2b999935e9072853a9b2b782662432b71ddbd3c8121320dcdbb1be07f"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js"
-hash = "f36df3c16ad771a18c943d1620a25c1c3b596409c0588cbc84597d66bd4ff97a"
+hash = "e8dfe32db9c8d6c343d54da3e20cddeb55dda5c47e256bc256258e157d374e8f"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js"
-hash = "f7153de8491f6e5dd5389e2c0bf1c42aaffbe46f7cec80fd42e9d216546d2102"
+hash = "ec667b07e048db992a2701921228012188abe523a41776b7cb21d38aa6eac693"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/140_latent_chemlib_power_gates.js"
@@ -10886,7 +10890,7 @@ hash = "97f418df54bff034d8963fc5cd004eaf0c0f64bed2908ba4190fbaec4598495d"
 
 [[files]]
 file = "kubejs/server_scripts/70_spawn/10_spawn_randomizer.js"
-hash = "71cf48039941d735dee02d05c6d8380a5464c28a14e73e3675e9e54cbd68dadf"
+hash = "c12e429fc2763813587ba16e68971d023642c107dd62e9b8087d3295a6628c0b"
 
 [[files]]
 file = "kubejs/server_scripts/80_recipe_policy/10_no_complex_grid_defaults.js"

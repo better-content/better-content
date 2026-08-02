@@ -43,6 +43,8 @@ Disposable runtimes can inherit stale jars from `server-template/`, `server-inst
 
 If a runtime dump mentions a mod not present in current manifests or bundled jars, treat it as contaminated until the runtime is rebuilt and pruned.
 
+Runtime graph, recipe-audit, and block-hardness diagnostics ship disabled in source configs. `tools/bc build dumps` enables them only in its disposable server runtime before collecting retained evidence.
+
 Current heat authority: `heatsync` owns industrial heat storage, transfer, pipe ambient bridge behavior, hot water, and the coolant exchanger. The former standalone coolant jar and redundant fission reactor jar are retired from the active pack; `latent_chemlib` remains the nuclear/fission authority and emits process heat into HeatSync.
 
 ## Memory Findings

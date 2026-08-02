@@ -1,5 +1,5 @@
 {
-  "enabled": true,
+  "enabled": false,
   "outputDir": "generated/runtime-dumps/",
   "writeAllBlocks": true,
   "blockIds": [

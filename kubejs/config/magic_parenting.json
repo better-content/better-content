@@ -15448,6 +15448,102 @@
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
       "weight_class": "structural_progression"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:arcane_chunkloaders:flux_chunk_anchor",
+      "kind": "crafted",
+      "mod": "arcane_chunkloaders",
+      "output": "arcane_chunkloaders:flux_chunk_anchor",
+      "authority": "tag:arcane_chunkloaders:magic_catalysts",
+      "surface_type": "minecraft:crafting_shaped",
+      "evidence": ["kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"],
+      "blood_era": "slate_t1_blank",
+      "branch": "cross_magic",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:arcane_chunkloaders:kinetic_chunk_anchor",
+      "kind": "crafted",
+      "mod": "arcane_chunkloaders",
+      "output": "arcane_chunkloaders:kinetic_chunk_anchor",
+      "authority": "tag:arcane_chunkloaders:magic_catalysts",
+      "surface_type": "minecraft:crafting_shaped",
+      "evidence": ["kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"],
+      "blood_era": "slate_t1_blank",
+      "branch": "cross_magic",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:arcane_chunkloaders:source_chunk_anchor",
+      "kind": "crafted",
+      "mod": "arcane_chunkloaders",
+      "output": "arcane_chunkloaders:source_chunk_anchor",
+      "authority": "tag:arcane_chunkloaders:magic_catalysts",
+      "surface_type": "minecraft:crafting_shaped",
+      "evidence": ["kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"],
+      "blood_era": "slate_t1_blank",
+      "branch": "cross_magic",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:arcane_chunkloaders:lifeforce_chunk_anchor",
+      "kind": "crafted",
+      "mod": "arcane_chunkloaders",
+      "output": "arcane_chunkloaders:lifeforce_chunk_anchor",
+      "authority": "tag:arcane_chunkloaders:magic_catalysts",
+      "surface_type": "minecraft:crafting_shaped",
+      "evidence": ["kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"],
+      "blood_era": "slate_t1_blank",
+      "branch": "cross_magic",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:arcane_chunkloaders:pressure_chunk_anchor",
+      "kind": "crafted",
+      "mod": "arcane_chunkloaders",
+      "output": "arcane_chunkloaders:pressure_chunk_anchor",
+      "authority": "tag:arcane_chunkloaders:magic_catalysts",
+      "surface_type": "minecraft:crafting_shaped",
+      "evidence": ["kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"],
+      "blood_era": "slate_t1_blank",
+      "branch": "cross_magic",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:arcane_chunkloaders:soul_chunk_anchor",
+      "kind": "crafted",
+      "mod": "arcane_chunkloaders",
+      "output": "arcane_chunkloaders:soul_chunk_anchor",
+      "authority": "tag:arcane_chunkloaders:magic_catalysts",
+      "surface_type": "minecraft:crafting_shaped",
+      "evidence": ["kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"],
+      "blood_era": "slate_t1_blank",
+      "branch": "cross_magic",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:arcane_chunkloaders:spirit_chunk_anchor",
+      "kind": "crafted",
+      "mod": "arcane_chunkloaders",
+      "output": "arcane_chunkloaders:spirit_chunk_anchor",
+      "authority": "tag:arcane_chunkloaders:magic_catalysts",
+      "surface_type": "minecraft:crafting_shaped",
+      "evidence": ["kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"],
+      "blood_era": "slate_t1_blank",
+      "branch": "cross_magic",
+      "weight_class": "utility_support"
+    },
+    {
+      "id": "crafted:kubejs:authored_recipe:arcane_chunkloaders:aureal_chunk_anchor",
+      "kind": "crafted",
+      "mod": "arcane_chunkloaders",
+      "output": "arcane_chunkloaders:aureal_chunk_anchor",
+      "authority": "tag:arcane_chunkloaders:magic_catalysts",
+      "surface_type": "minecraft:crafting_shaped",
+      "evidence": ["kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"],
+      "blood_era": "slate_t1_blank",
+      "branch": "cross_magic",
+      "weight_class": "utility_support"
     }
   ]
 }

@@ -88,6 +88,10 @@ After removing automated mount/movement/observer control, `~/.cache/bc/bc-vs-rel
 
 The 2026-07-16 post-integration reset-runtime smoke passed with zero soft findings. A same-day retired full-family client orchestration retry reached a playable dedicated server, then stopped in its first lifecycle lane because Moonlight's known VS forced-crash-prevention message matched `dependency_mixin_failure`; 109 physics-queue warnings were also retained. This is historical compatibility evidence only.
 
+## Persistent Chunk Loading
+
+`arcane_chunkloaders` is the only craftable persistent-loading surface. Each active anchor owns exactly nine full-ticking Forge block tickets in the centered 3x3 around itself; tickets are released immediately when the buffer starves, redstone disables the anchor, or the block is removed. Saved records allow valid active tickets to be restored after restart while stale callback tickets are discarded. There is intentionally no per-owner cap, so the bounded footprint, visible two-hour buffer, continuous operating cost, and operator audit command are the performance controls. Operators can use `/chunkloaders list [page]` and its clickable teleport controls to inspect every recorded anchor across dimensions.
+
 ## Custom Mod Notes
 
 Canonical custom mod sources live under `generated/custom-mod-sources`. Use `generated/custom-mod-sources/settlement-roads` for settlement roads unless explicitly told otherwise. `generated/custom-mod-sources/dynamic-trees-dimension-compat` is the canonical `bcdimtrees` source checkout for pack-owned dimension forest Dynamic Trees coverage.

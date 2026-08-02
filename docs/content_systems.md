@@ -178,6 +178,12 @@ Playtest stabilization restores tag-wide vanilla chest and barrel crafting, the 
 
 The Curios water slot accepts only water potion bottles. It automatically drinks one when that bottle's native thirst restoration fits entirely below the 20-point cap, preserving Thirst Was Taken purity behavior and returning the empty bottle safely; canteens, teas, and non-water potions are intentionally excluded.
 
+## Arcane Chunk Anchors
+
+Persistent chunk loading is a pack-owned magical utility family. Native craftable loaders are suppressed; all eight `arcane_chunkloaders` anchors require the interchangeable `#arcane_chunkloaders:magic_catalysts` proof, so Ars Nouveau, Blood Magic, Hexerei, Occultism, Malum, Goety, Forbidden and Arcanus, or Iron's Spellbooks can each open the craft without becoming the universal parent of the system. The variants then specialize by infrastructure: Forge Energy (FE/RF), Create rotational power (SU), Ars Source, Blood Magic life essence/LP, PneumaticCraft air pressure, Goety soul energy, Malum spirits, and Forbidden and Arcanus Aureal.
+
+Every anchor full-ticks the centered 3x3 chunk square while enabled and funded. Each buffer defaults to two hours of service at 20 TPS; a redstone signal releases its tickets without stopping charging. Comparator output and item tooltips expose charge, stored power survives breaking, and the operator-only `/chunkloaders list` output provides paged, clickable teleport entries for all recorded placements across dimensions. The shared visual language is a quiet arcane astrolabe: dark plinth and pylons, one restrained rotating ring assembly, and a source-specific core rather than eight unrelated machine shells.
+
 ## Quests
 
 The live quest book is hand-authored under `config/ftbquests/`, especially `config/ftbquests/quests/chapters/`. That tree is the current source of truth for chapter layout, quest text, tasks, rewards, and progression presentation. When quest intent changes, update this doc or `progression.md`, then validate the live `config/ftbquests/` content.

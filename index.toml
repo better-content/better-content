@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "AGENTS.md"
-hash = "ee369816b7c88f6a1c3bfc3652ab92c985af784adde290b30ba0e519a3d3c5e4"
+hash = "e58b00f6bfb4add1b867fbe7d4d37c7f43708263b4c50e075c17489163d1f617"
 
 [[files]]
 file = "LICENSE"
@@ -7841,6 +7841,10 @@ file = "defaultconfigs/Diminishing_Health.toml"
 hash = "d7c4fa4596c77b19b8abd724e8e95142b20cab0e03cfdc4fd1fab1c8169a9ddd"
 
 [[files]]
+file = "defaultconfigs/arcane_chunkloaders-server.toml"
+hash = "5db4ff75a4cdc9e4bc8e396d1c53d41047ea1c5f933db50425cf06fb888d26cc"
+
+[[files]]
 file = "defaultconfigs/ars_nouveau/glyph_break.toml"
 hash = "7f38e343fac1c852ffe4e905f1eee5fb6ec5fd742d902cd4844d60dd45e07d4b"
 
@@ -9229,6 +9233,10 @@ file = "kubejs/client_scripts/40_hide_quarantined_systems.js"
 hash = "8954fa09b166639f127fc2def9861195cf12c2305bcc10d56aad3fb10bfa3aa8"
 
 [[files]]
+file = "kubejs/client_scripts/45_arcane_chunkloader_ui.js"
+hash = "201ed45a03b6749ccd7ad80a7f1476c64bcf74be62f2bbbf15e8f32315a0b6be"
+
+[[files]]
 file = "kubejs/client_scripts/45_hide_vanilla_style_boats.js"
 hash = "311f6ee7598a320e7a87c7bc8d687ba046cab86170ad059e1cddd2e152183f49"
 
@@ -9298,7 +9306,7 @@ hash = "9d734d8f9b4ba19dce7c21e44f618524733742516fe647ee72c820c71649acbb"
 
 [[files]]
 file = "kubejs/config/magic_parenting.json"
-hash = "e64c983b626d708d94940f3e0296d4d1563064c01734ab94b5ce38252e8f897b"
+hash = "a6c95cd49ab1ba4796d158ba87a8fda149652b3bfd90f016e795cc4a0d7d543c"
 
 [[files]]
 file = "kubejs/config/perf_probe.json"
@@ -9322,7 +9330,7 @@ hash = "46940e857300a46d9972ff9861050755c2caca59663727d294253fcd7e24722d"
 
 [[files]]
 file = "kubejs/config/tech_parenting.json"
-hash = "5cbaebd8dfdea247ba772059e4bd8f9425a0d344a0af7caf97646fb96a931e85"
+hash = "8144be78d9c9c9cdb75fc511516e09c099dc1fb4d17dde79d0818a026509174f"
 
 [[files]]
 file = "kubejs/data/additionalweaponry/recipes/embellishment/amethyst.json"
@@ -10553,6 +10561,10 @@ file = "kubejs/server_scripts/10_tags/70_formal_magic_domains.js"
 hash = "59bf7dafd8746953e2ffefc0f1160127a50bc80e32455ff1b36da500d01f4b5e"
 
 [[files]]
+file = "kubejs/server_scripts/10_tags/75_arcane_chunkloader_tags.js"
+hash = "ea2944ea450ba866df70cd6e820360971b28a049c68e1c410843d845f0101609"
+
+[[files]]
 file = "kubejs/server_scripts/20_recipe_remove/10_no_boats.js"
 hash = "414cb572a58c1ed06e1157bfb6b2da6b61fb5dd100f6a27003541deb319e2145"
 
@@ -10567,6 +10579,10 @@ hash = "7325a0ccea58cb9ac0233c11f4d608e583373605a775a37885e43a4af329086e"
 [[files]]
 file = "kubejs/server_scripts/20_recipe_remove/50_disable_createdeco_coin_recipes.js"
 hash = "5352611f78d2bdebcdae3321f7ef58ca0bbac07aceb122b695bcf4f5e5be2d89"
+
+[[files]]
+file = "kubejs/server_scripts/20_recipe_remove/95_remove_native_chunkloaders.js"
+hash = "dda8c3100e497e8703f4c044ca2b414bea9936ad67406195030738f7ce963ca6"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/100_high_value_mod_progression_gates.js"
@@ -10833,6 +10849,10 @@ file = "kubejs/server_scripts/40_recipe_add/70_food_potion_reagents.js"
 hash = "204c63aa4ac6e3f56015ef338e924904f25a75549d1c9ed6a7f714abd896023f"
 
 [[files]]
+file = "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+hash = "e67e0a49a494caad0502840b2390c6162edf6cf7e2b544de9f4a566645b3f080"
+
+[[files]]
 file = "kubejs/server_scripts/50_loot/10_overworld_block_drops.js"
 hash = "cfbed8c61ca5b728f9af4e463f05a43a578c761ae14e960fa017f596cabd8221"
 
@@ -10972,6 +10992,10 @@ metafile = true
 file = "mods/applied-energistics-2.pw.toml"
 hash = "0f4c2198603cd84a14dc6741729d0b0dcf509574776e620c36c3e7180082db32"
 metafile = true
+
+[[files]]
+file = "mods/arcane_chunkloaders-0.1.0.jar"
+hash = "1ca7004bdc24035fe756437a46add203df3a639be586b8dca982ab3ed1ae3b0f"
 
 [[files]]
 file = "mods/architectury-api.pw.toml"

@@ -111237,19 +111237,6 @@
       "weight_class": "utility_support"
     },
     {
-      "id": "crafted:minecraft:crafting_shaped:pneumaticcraft:chunkloader_upgrade",
-      "kind": "crafted",
-      "mod": "pneumaticcraft",
-      "output": "pneumaticcraft:chunkloader_upgrade",
-      "authority": "namespace:pneumaticcraft",
-      "surface_type": "minecraft:crafting_shaped",
-      "evidence": [
-        "pneumaticcraft:chunkloader_upgrade"
-      ],
-      "era": "airtight",
-      "weight_class": "utility_support"
-    },
-    {
       "id": "crafted:minecraft:crafting_shapeless:pneumaticcraft:classify_filter",
       "kind": "crafted",
       "mod": "pneumaticcraft",

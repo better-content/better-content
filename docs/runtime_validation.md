@@ -29,6 +29,8 @@ On 2026-08-01 the release-candidate smoke passed again with `--bootstrap-mode al
 
 The August playtest stabilization pass also makes Complementary Reimagined's glowing-ore list consume all retained Excavated Variants ore IDs. `tools/bc internal sync-shader-glowing-ores` updates the packed shader deterministically, and chemistry validation fails if retained variants are missing from `block.10024`.
 
+On 2026-08-02 the `arcane_chunkloaders` visual harness passed with all eight anchors command-placed in one superflat world. The representative minimal closure included Create, Power Grid, Ars Nouveau, Blood Magic, PneumaticCraft, Goety, Malum, and Forbidden and Arcanus; both captured views completed with no anchor tag, model, registry, or recipe errors. The same day's full smoke loaded the reobfuscated anchor jar and all four KubeJS integration scripts successfully on both sides, but is not recorded as a lifecycle pass: the Xvfb client later failed while Accelerated Rendering requested GLSL 4.60 from the lane's llvmpipe OpenGL 4.5 device. The failure was graphics-environment-specific and outside the anchor stack; the dedicated server completed startup and clean shutdown.
+
 ## Item/block integration matrix
 
 ```text

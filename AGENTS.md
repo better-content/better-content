@@ -149,6 +149,7 @@ Active pack-critical sources:
 - `dynamic-trees-hexerei` (`dthexerei`)
 - `dynamic-trees-malum` (`dtmalum`)
 - `heat-sync` (`heatsync`)
+- `arcane-chunkloaders` (`arcane_chunkloaders`)
 - `latent_chemlib` (`latent_chemlib`)
 - `dimension-drink` (`dimension_drink`)
 - `oc2r-create-bridge` (`computerbridge`)

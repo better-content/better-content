@@ -121,6 +121,8 @@ All non-grown renewable resource sources should be absent or quarantined. Geolog
 
 ## Magic Gates
 
+Chunk loading is magical infrastructure but not the property of any one tradition. The eight `arcane_chunkloaders` recipes all consume one interchangeable proof from `#arcane_chunkloaders:magic_catalysts`; the tag accepts proof from Ars Nouveau, Blood Magic, Hexerei, Occultism, Malum, Goety, Forbidden and Arcanus, or Iron's Spellbooks. After that shared gate, players choose the power economy they have actually built: FE/RF, Create SU, Ars Source, Blood Magic life essence, PneumaticCraft air, Goety soul energy, Malum spirits, or Aureal. Each choice produces the same centered 3x3 full-ticking service and two-hour default reserve, so the variants express infrastructure preference rather than stronger loading tiers.
+
 Still-Beating Hearts bridge the death loop and body systems into Blood Magic. `rpgstats:still_beating_heart` is a milestone item, not bulk fuel. Current KubeJS adds pack-owned heart keys and Blood Orb altar recipes in `40_blood_orbs_from_still_beating_hearts.js`; the weak orb also has a direct still-beating-heart altar fallback so the first Blood Magic loop is not bricked by its own catalyst chain. `82_blood_magic_lifeforce_rework.js` makes the first Blood Altar consume the heart plus common Otherside proof from `deeperdarker:cobbled_sculk_stone`, while later altar/rune escalation remains costly.
 
 Growables now feed chemistry through `57_grown_material_acid_ball_processing.js`. Plants, fungi, honeycomb, meat, fish, hide, bone, feather, and venomous tissue use the same solvent/grinding-ball language as Realistic Ores, so farm and animal loops produce differentiated chemical side streams rather than one generic biomass output.

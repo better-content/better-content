@@ -1,0 +1,40 @@
+#All defaults provide two hours of unattended 3x3 chunk loading at 20 TPS.
+[buffers]
+	#Range: > 256
+	fe_capacity = 36864000
+	#Range: 1 ~ 1000000
+	fe_per_tick = 256
+	#Range: > 1
+	source_capacity = 144000
+	#Range: 1 ~ 10000
+	source_per_tick = 1
+	#Range: > 1
+	lifeforce_capacity_mb = 144000
+	#Range: 1 ~ 10000
+	lifeforce_mb_per_tick = 1
+	#Range: > 1
+	air_capacity = 720000
+	#Range: 1 ~ 10000
+	air_per_tick = 5
+	#Range: > 1
+	goety_soul_capacity = 7200
+	#Range: 1 ~ 72000
+	goety_soul_interval_ticks = 20
+	#Range: 1 ~ 64
+	malum_spirit_capacity = 24
+	#Range: 1 ~ 720000
+	malum_spirit_interval_ticks = 6000
+	#Range: 1 ~ 10000
+	aureal_capacity = 120
+	#Range: 1 ~ 720000
+	aureal_interval_ticks = 1200
+	#Range: > 1
+	kinetic_service_tick_capacity = 144000
+
+[kinetic]
+	#Range: 1 ~ 256
+	minimum_rpm = 32
+	#Range: 0.0 ~ 4096.0
+	stress_impact = 64.0
+	#Range: 1 ~ 100
+	service_ticks_gained_per_powered_tick = 2

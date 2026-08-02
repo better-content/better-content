@@ -12,6 +12,7 @@ generated/exports/
 generated/cache/
 generated/evidence/
 generated/custom-mod-sources/
+generated/asset-review/*/evidence/
 generated/pack-site/
 generated/surface-marker-capture/
 generated/surface-samples-*-superflat.png

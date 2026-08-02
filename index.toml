@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "AGENTS.md"
-hash = "e58b00f6bfb4add1b867fbe7d4d37c7f43708263b4c50e075c17489163d1f617"
+hash = "c1ec01ccd672208ba168c8499c3cb80c805a92ed12d6bcd8c493653627e1b148"
 
 [[files]]
 file = "LICENSE"
@@ -5542,7 +5542,7 @@ hash = "3c6d12036c50286960930f479a65e418d27d803ae50e7ce0d71ebb3d50f54167"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/create_and_circuits.snbt"
-hash = "1b4941ff41025cd79b79183b0fb31311fa70fbf04ef8d9a72f855a762512851c"
+hash = "ba131854c7cdf722975dedd6e16518273d3a11f66feac3f36de650e8af97233d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/deposits_ore_identity.snbt"
@@ -5550,7 +5550,7 @@ hash = "b0201c2826e0df61cf338d7e0f3dc13dcdeea114b1285af9fe86db743df86260"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/dimensions.snbt"
-hash = "fec7f5bf990b5d53f14e881cf073c2d8d30657990338ccad019d24c5c2a982e5"
+hash = "a5b28fe21dbc5ab21362e4ec1a19253192cff3d91203056241584fb5ffd438c5"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/dirty_magic_spines.snbt"
@@ -5570,7 +5570,7 @@ hash = "fd9ed1dcdee7eb584634f47d4f4921ad4707a98802be68c0869e3a72f874f808"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/pressure_power_control.snbt"
-hash = "411747855cb749eaffc8290c0cbc4bc81109c69ac14fd709c7f3b118409478b1"
+hash = "42698a9b9504f179af909b990c1f23faf496ca556ef167e5fc5e2e60d4ee588c"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/space_ae2_lava_depths.snbt"
@@ -5578,7 +5578,7 @@ hash = "21fe74375cd609f4bfafaa02f553960dc6fddd8baa4452f3253f04655dc25d5b"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/the_situation.snbt"
-hash = "38cad8282f21a56f6bd7da815054fd76829578033ad3806fdd6bc80b8ee335ff"
+hash = "077870cd1551423ee588ff420b898092aca388d828d8299be1e986360cf23cf2"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -9230,7 +9230,7 @@ hash = "2efa028a8bec041886007786ce289ebf51f7358eb12fe1f42c3de3c2045d7936"
 
 [[files]]
 file = "kubejs/client_scripts/40_hide_quarantined_systems.js"
-hash = "6805bcce1a2fc6fe5dc7dfc6f9bb10b784decbc37872df2bdc52bad12f711cdc"
+hash = "8c384f45f3250559d61b15c25131ca5b0ed6a57bc27d52eaa7d6684d37ff7910"
 
 [[files]]
 file = "kubejs/client_scripts/45_arcane_chunkloader_ui.js"
@@ -9262,7 +9262,7 @@ hash = "f9a34140252a5c961db16ee2e82a4b291f5630213d7210994f0d05e85aac0c16"
 
 [[files]]
 file = "kubejs/config/audit_dumps.json"
-hash = "156805429f42bd6a528436e65317763027c3c5cbb5c3801aedc6e258fe97f990"
+hash = "0061fec1c86671b6ae07912b7e6337d045f0e59f64e3c7162c38b9f5db474bab"
 
 [[files]]
 file = "kubejs/config/bc_expert_graph_catalog.json"
@@ -9294,7 +9294,7 @@ hash = "29b8a33b287b827e711bc0a90c3f5853ffa829336f3ea598761868112103047f"
 
 [[files]]
 file = "kubejs/config/food_effect_source_catalog.json"
-hash = "9f389c7051efc14582d372126829aafd6c5de531590b43e3d4d45501ab021b90"
+hash = "ee0b4a43103a0ec86286ef1d8602d2b44386c15c654130e5c1fbe5c82ab77b73"
 
 [[files]]
 file = "kubejs/config/formal_magic_domains.json"
@@ -9318,15 +9318,11 @@ hash = "51f84ac6390b520b9ede19c36579c781ac2a558168f877a35711f6468ebcf0a1"
 
 [[files]]
 file = "kubejs/config/progression_reachability_sources.json"
-hash = "5653661801f458bfd2f9f22f1b02248077a19fdafd815ab4ff214f8da0323232"
+hash = "6067edc18d636682b0bd6c64cfbd74e19e87784c3f7de91d8765f3a2266cd662"
 
 [[files]]
 file = "kubejs/config/quarantined_items.json"
 hash = "23d971245136a52cf19e6bb5fbd2b6db0ccf2ec848d47bdf74ef604a5e0b0579"
-
-[[files]]
-file = "kubejs/config/runtime_graph_dumps.json"
-hash = "8a5916e8206a54f4b1f632a448656239f4eba78ab3635dfde0157b485b31cb49"
 
 [[files]]
 file = "kubejs/config/surface_registry.json"
@@ -9334,7 +9330,11 @@ hash = "46940e857300a46d9972ff9861050755c2caca59663727d294253fcd7e24722d"
 
 [[files]]
 file = "kubejs/config/tech_parenting.json"
-hash = "8144be78d9c9c9cdb75fc511516e09c099dc1fb4d17dde79d0818a026509174f"
+hash = "c46ae30016302785e90bcee801510beadad8aab998a63271f4174a2e31f43801"
+
+[[files]]
+file = "kubejs/config/vs_transport_surfaces.json"
+hash = "fc439f3aaba5c0dff0281f6e377f4593f8c22363e3b7e012ad15432c09b21e5d"
 
 [[files]]
 file = "kubejs/data/additionalweaponry/recipes/embellishment/amethyst.json"
@@ -10517,10 +10517,6 @@ file = "kubejs/data/wares/loot_tables/package/village/taiga.json"
 hash = "53dabdc57b80e447ff95d2033033aa8a12ed9e210aaa9a32dcd6586f6ede784a"
 
 [[files]]
-file = "kubejs/dump_copper_ingot_recipes.js"
-hash = "8948dcf343e53226e2a802ed4095940e45f6620104a1fe44a041b4e1de7e8f61"
-
-[[files]]
 file = "kubejs/dump_iron_recip.js"
 hash = "d58c0ef29fc194715f4c2018b0da90625508e098045de796443825f4b985d999"
 
@@ -10678,7 +10674,7 @@ hash = "439aa26d8fee4667da3c64329c946ffef1bd6a9337c1a00e15de83effb6db8ef"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js"
-hash = "2b0be16a5c7cdddf9c9c3c8dacb0756f82933f741cc46b04b5f78dae0c916709"
+hash = "abb947da17f2cd064b75728fed68c88b9b73be888d4916cad8961955c6e0c660"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/165_protection_pixel_post_ae2_gates.js"
@@ -10766,7 +10762,7 @@ hash = "80caeb0f0e6620e7d8505f366fd0f1807f6f66621590c7fb10b0d21d5752f24f"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js"
-hash = "abc59339241088a77f10d8a95a9e30dcae4e5185c503e46482ddaccc51aefbbb"
+hash = "8684cbcf31ac698024b7b45fe2f9509d4f9a37898cfc233f7a523909d0dbdc19"
 
 [[files]]
 file = "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js"
@@ -10897,16 +10893,8 @@ file = "kubejs/server_scripts/80_recipe_policy/10_no_complex_grid_defaults.js"
 hash = "fbca76ef8739bb25ac00277c14f973128d18f7bc2c992d1c056c83b367f8954e"
 
 [[files]]
-file = "kubejs/server_scripts/90_dev_debug/10_recipe_audit_dumps.js"
-hash = "a5e798d9840310cb0bf388a03694d86b31868bfd11c5f13396c67fa852c3ee5a"
-
-[[files]]
 file = "kubejs/server_scripts/90_dev_debug/20_food_effect_audit_dumps.js"
 hash = "960e2f9cb88c3c4b7b5dd4283edc84b5670bd3a3567f008a8fe05a520dffd39a"
-
-[[files]]
-file = "kubejs/server_scripts/90_dev_debug/30_runtime_graph_dumps.js"
-hash = "70caf36b8c2163773c39d5dcf2d47d02d80681cc2f0ffebd89c27f02d82f8bb0"
 
 [[files]]
 file = "kubejs/server_scripts/90_dev_debug/40_block_hardness_probe.js"
@@ -11023,6 +11011,10 @@ hash = "a7327d4d5e251c864f25346e598d5721ad4dd98c18f4d14f6991a3e46b6fda39"
 [[files]]
 file = "mods/bcfixes-0.1.0.jar"
 hash = "1db3cbf5fa228a7759282356c68fdc0e86ef3096edfaea8e61466b1a4d0e408a"
+
+[[files]]
+file = "mods/bcrecipegraph-0.1.0.jar"
+hash = "5d23baaa7f2d5ea6ff68902bfcd847a2cbe01728fade36f28875dbd22c0794ff"
 
 [[files]]
 file = "mods/better-combat-by-daedelus.pw.toml"

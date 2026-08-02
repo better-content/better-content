@@ -63,9 +63,16 @@
     "morered:red_alloy_wire",
     "oc2r:network_connector",
     "oc2r:silicon_wafer",
-    "creatingspace:hastelloy_ingot",
-    "creatingspace:inconel_sheet",
-    "creatingspace:rocket_casing"
+      "creatingspace:hastelloy_ingot",
+      "creatingspace:inconel_sheet",
+      "creatingspace:rocket_casing",
+      "aether:aerogel",
+      "aether:ambrosium_shard",
+      "aether:blue_aercloud",
+      "aether:holystone",
+      "aether:quicksoil_glass",
+      "aether:skyroot_stick",
+      "aether:zanite_gemstone"
   ],
   "seedFluids": [
     "minecraft:water",
@@ -789,6 +796,201 @@
         "kubejs:raw_impossible_casing",
         "bloodmagic:etherealslate",
         "bloodmagic:archmagebloodorb"
+      ]
+    },
+    {
+      "id": "bc:tcon/transport_part_tables",
+      "outputs": [
+        "tconstruct:part_builder",
+        "tconstruct:tinker_station"
+      ],
+      "inputs": [
+        "minecraft:oak_planks",
+        "minecraft:stick"
+      ]
+    },
+    {
+      "id": "bc:tcon/transport_material_parts",
+      "outputs": [
+        "tconstruct:tool_handle",
+        "tconstruct:tool_binding",
+        "tconstruct:repair_kit",
+        "tconstruct:small_blade"
+      ],
+      "inputs": [
+        "tconstruct:part_builder",
+        "tconstruct:tinker_station",
+        "minecraft:stick"
+      ]
+    },
+    {
+      "id": "bc:vs_transport/eureka_primitive",
+      "outputs": [
+        "vs_eureka:acacia_ship_helm",
+        "vs_eureka:anchor",
+        "vs_eureka:ballast",
+        "vs_eureka:birch_ship_helm",
+        "vs_eureka:crimson_ship_helm",
+        "vs_eureka:dark_oak_ship_helm",
+        "vs_eureka:engine",
+        "vs_eureka:floater",
+        "vs_eureka:jungle_ship_helm",
+        "vs_eureka:oak_ship_helm",
+        "vs_eureka:spruce_ship_helm",
+        "vs_eureka:warped_ship_helm"
+      ],
+      "inputs": [
+        "tconstruct:tool_handle",
+        "tconstruct:tool_binding",
+        "tconstruct:repair_kit",
+        "tconstruct:small_blade"
+      ]
+    },
+    {
+      "id": "bc:vs_transport/trackwork_train_peer",
+      "outputs": [
+        "trackwork:horn",
+        "trackwork:large_phys_track",
+        "trackwork:large_simple_wheel",
+        "trackwork:large_simple_wheel_part",
+        "trackwork:large_suspension_track",
+        "trackwork:med_phys_track",
+        "trackwork:med_simple_wheel",
+        "trackwork:med_simple_wheel_part",
+        "trackwork:med_suspension_track",
+        "trackwork:oleo_wheel",
+        "trackwork:phys_track",
+        "trackwork:simple_wheel",
+        "trackwork:simple_wheel_part",
+        "trackwork:small_simple_wheel",
+        "trackwork:small_simple_wheel_part",
+        "trackwork:suspension_track",
+        "trackwork:track_level_controller",
+        "trackwork:track_tool_kit"
+      ],
+      "inputs": [
+        "create:railway_casing",
+        "create:precision_mechanism"
+      ]
+    },
+    {
+      "id": "bc:vs_transport/aether_airtight_flight",
+      "outputs": [
+        "vs_clockwork:andesite_flap_bearing",
+        "vs_clockwork:balloon_casing",
+        "vs_clockwork:balloon_encased_shaft",
+        "vs_clockwork:blade_controller",
+        "vs_clockwork:brass_propeller_bearing",
+        "vs_clockwork:clock",
+        "vs_clockwork:flap",
+        "vs_clockwork:goo_block",
+        "vs_clockwork:juryrigged_propeller_bearing",
+        "vs_clockwork:music_disc_wanderlust",
+        "vs_clockwork:propeller_blade",
+        "vs_clockwork:redstone_resistor",
+        "vs_clockwork:screwdriver",
+        "vs_clockwork:spinoff_bearing",
+        "vs_clockwork:sugar_rocket",
+        "vs_clockwork:universal_shaft",
+        "vs_clockwork:universal_shaft_item",
+        "vs_clockwork:wide_propeller_blade",
+        "vs_clockwork:wing",
+        "vs_eureka:balloon",
+        "vs_eureka:black_balloon",
+        "vs_eureka:blue_balloon",
+        "vs_eureka:brown_balloon",
+        "vs_eureka:cyan_balloon",
+        "vs_eureka:gray_balloon",
+        "vs_eureka:green_balloon",
+        "vs_eureka:light_blue_balloon",
+        "vs_eureka:light_gray_balloon",
+        "vs_eureka:lime_balloon",
+        "vs_eureka:magenta_balloon",
+        "vs_eureka:orange_balloon",
+        "vs_eureka:pink_balloon",
+        "vs_eureka:purple_balloon",
+        "vs_eureka:red_balloon",
+        "vs_eureka:white_balloon",
+        "vs_eureka:yellow_balloon"
+      ],
+      "inputs": [
+        "aether:aerogel",
+        "aether:blue_aercloud",
+        "kubejs:airtight_machine_casing"
+      ]
+    },
+    {
+      "id": "bc:vs_transport/pneumatic_flight_systems",
+      "outputs": [
+        "vs_clockwork:air_compressor",
+        "vs_clockwork:charged_nyx",
+        "vs_clockwork:chiseled_wanderlite",
+        "vs_clockwork:coal_burner",
+        "vs_clockwork:cobbled_nyx",
+        "vs_clockwork:duct",
+        "vs_clockwork:duct_tank",
+        "vs_clockwork:exhaust",
+        "vs_clockwork:extendon",
+        "vs_clockwork:extendon_hose",
+        "vs_clockwork:gas_backtank",
+        "vs_clockwork:gas_engine",
+        "vs_clockwork:gas_heater",
+        "vs_clockwork:gas_nozzle",
+        "vs_clockwork:gas_thruster",
+        "vs_clockwork:hose_port",
+        "vs_clockwork:nyx",
+        "vs_clockwork:pump_duct",
+        "vs_clockwork:redstone_duct",
+        "vs_clockwork:smooth_wanderlite",
+        "vs_clockwork:smooth_wanderlite_slab",
+        "vs_clockwork:smooth_wanderlite_stairs",
+        "vs_clockwork:steam_generator",
+        "vs_clockwork:valve_duct",
+        "vs_clockwork:wanderglass",
+        "vs_clockwork:wanderlite_block",
+        "vs_clockwork:wanderlite_bricks",
+        "vs_clockwork:wanderlite_crystal",
+        "vs_clockwork:wanderlite_cube",
+        "vs_clockwork:wanderlite_matrix",
+        "vs_clockwork:wanderwand"
+      ],
+      "inputs": [
+        "pneumaticcraft:pressure_tube",
+        "pneumaticcraft:ingot_iron_compressed",
+        "kubejs:pressure_seal",
+        "kubejs:airtight_machine_casing"
+      ]
+    },
+    {
+      "id": "bc:vs_transport/pcb_flight_control",
+      "outputs": [
+        "vs_clockwork:aeronaut_boots",
+        "vs_clockwork:aeronaut_goggles",
+        "vs_clockwork:aeronaut_jacket",
+        "vs_clockwork:aeronaut_jumpers",
+        "vs_clockwork:alt_meter",
+        "vs_clockwork:command_seat",
+        "vs_clockwork:copter_bearing",
+        "vs_clockwork:delivery_cannon",
+        "vs_clockwork:delivery_chute",
+        "vs_clockwork:distance_sensor",
+        "vs_clockwork:gas_crafter",
+        "vs_clockwork:gravitron",
+        "vs_clockwork:gyro",
+        "vs_clockwork:gyroscopic_sensor",
+        "vs_clockwork:impact_sensor",
+        "vs_clockwork:lodefocus",
+        "vs_clockwork:phys_bearing",
+        "vs_clockwork:physics_infuser",
+        "vs_clockwork:reactionwheel",
+        "vs_clockwork:slicker",
+        "vs_clockwork:smart_flap_bearing",
+        "vs_clockwork:solver"
+      ],
+      "inputs": [
+        "pneumaticcraft:printed_circuit_board",
+        "kubejs:airtight_machine_casing",
+        "vs_clockwork:wanderlite_matrix"
       ]
     }
   ],

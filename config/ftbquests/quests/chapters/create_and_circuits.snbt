@@ -486,7 +486,7 @@
 		}
 		{
 			dependencies: ["43E30496929C8519"]
-			description: ["Use Trackwork when a fixed rail line is the wrong answer. Its wheels and tracks consume railway casing and precision mechanisms, so rough-terrain vehicles arrive beside trains instead of bypassing them."]
+			description: ["Use Trackwork when a fixed rail line is the wrong answer. Its wheels and tracks consume railway casing and precision mechanisms, making rough-terrain vehicles a train-era peer instead of a shortcut around rail logistics."]
 			icon: "trackwork:phys_track"
 			id: "3162DC713348344A"
 			shape: "octagon"

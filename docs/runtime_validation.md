@@ -23,6 +23,24 @@ Kotlin harness lifecycle tests synchronize on the per-run `lock.json`; incidenta
 
 The smoke proves lifecycle and client/server network compatibility only. Gameplay, worldgen distributions, progression routes, and visual quality require separately designed evidence.
 
+## Live recipe graph
+
+`tools/bc build dumps` starts one disposable dedicated server and invokes the
+operator-only `bcgraph dump` command after startup. The bundled
+`bcrecipegraph` Forge mod reads the final live `RecipeManager`, after datapack
+and KubeJS mutations, and writes the authoritative `bc.recipe_graph.v2`
+snapshot to `generated/runtime-dumps/recipes.json`. The same command writes
+matching registry, tag, mod, and completion snapshots with a shared ID.
+
+Recipe input slots retain AND semantics and each slot's alternatives retain OR
+semantics. Tag membership is resolved from the matching live `tags.json` rather
+than duplicated in every recipe. Every recipe also retains its serializer's
+network payload and an explicit normalization state; partial records remain in
+the graph and are reported instead of being silently treated as complete.
+
+The mod never dumps automatically during startup, reload, or player login. On
+a manually managed server, run `/bcgraph dump` as an operator.
+
 On 2026-07-30 the smoke passed after the AdPother/Latent gas unification using the staged reobfuscated `latent_chemlib-0.1.0.jar`: the dedicated server completed a fresh spawn, the client joined and remained connected for the bounded settle window, and both sides shut down cleanly with no hard-log finding. An earlier attempt timed out while the exact-contact adapter recursively waited for a chunk that was still loading; the captured thread dump identified `AdpotherCloudView.contactAt` as the caller. The corrected and validated bridge now obtains cloud block entities only from already-materialized chunks, including both exact-contact and gas-selector reads.
 
 On 2026-08-01 the release-candidate smoke passed again with `--bootstrap-mode always`: one disposable dedicated-server world booted, the Xvfb client joined and remained connected for the bounded settle window, and both sides shut down cleanly with no hard-log finding. Before the smoke, retained runtime dumps were refreshed, 25 newly visible AdPother gas item/block IDs received explicit runtime-oracle review records, and the static, Kotlin, and 19-repository fast suites passed.

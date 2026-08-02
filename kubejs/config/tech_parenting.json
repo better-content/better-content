@@ -165201,6 +165201,1791 @@
       ],
       "era": "survival",
       "weight_class": "utility_support"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:acacia_ship_helm",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:acacia_ship_helm",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "survival",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:anchor",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:anchor",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "survival",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:ballast",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:ballast",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "survival",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:birch_ship_helm",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:birch_ship_helm",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "survival",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:crimson_ship_helm",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:crimson_ship_helm",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "survival",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:dark_oak_ship_helm",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:dark_oak_ship_helm",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "survival",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:engine",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:engine",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "survival",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:floater",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:floater",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "survival",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:jungle_ship_helm",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:jungle_ship_helm",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "survival",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:oak_ship_helm",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:oak_ship_helm",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "survival",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:spruce_ship_helm",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:spruce_ship_helm",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "survival",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:warped_ship_helm",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:warped_ship_helm",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "survival",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:horn",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:horn",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:large_phys_track",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:large_phys_track",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:large_simple_wheel",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:large_simple_wheel",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:large_simple_wheel_part",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:large_simple_wheel_part",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:large_suspension_track",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:large_suspension_track",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:med_phys_track",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:med_phys_track",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:med_simple_wheel",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:med_simple_wheel",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:med_simple_wheel_part",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:med_simple_wheel_part",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:med_suspension_track",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:med_suspension_track",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:oleo_wheel",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:oleo_wheel",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:phys_track",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:phys_track",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:simple_wheel",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:simple_wheel",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:simple_wheel_part",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:simple_wheel_part",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:small_simple_wheel",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:small_simple_wheel",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:small_simple_wheel_part",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:small_simple_wheel_part",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:suspension_track",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:suspension_track",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:track_level_controller",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:track_level_controller",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:trackwork:track_tool_kit",
+      "kind": "integration_parent",
+      "mod": "trackwork",
+      "output": "trackwork:track_tool_kit",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "brass",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:andesite_flap_bearing",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:andesite_flap_bearing",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:balloon_casing",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:balloon_casing",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:balloon_encased_shaft",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:balloon_encased_shaft",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:blade_controller",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:blade_controller",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:brass_propeller_bearing",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:brass_propeller_bearing",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:clock",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:clock",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:flap",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:flap",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:goo_block",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:goo_block",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:juryrigged_propeller_bearing",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:juryrigged_propeller_bearing",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:music_disc_wanderlust",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:music_disc_wanderlust",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:propeller_blade",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:propeller_blade",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:redstone_resistor",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:redstone_resistor",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:screwdriver",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:screwdriver",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:spinoff_bearing",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:spinoff_bearing",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:sugar_rocket",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:sugar_rocket",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:universal_shaft",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:universal_shaft",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:universal_shaft_item",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:universal_shaft_item",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:wide_propeller_blade",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:wide_propeller_blade",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:wing",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:wing",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:black_balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:black_balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:blue_balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:blue_balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:brown_balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:brown_balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:cyan_balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:cyan_balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:gray_balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:gray_balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:green_balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:green_balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:light_blue_balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:light_blue_balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:light_gray_balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:light_gray_balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:lime_balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:lime_balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:magenta_balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:magenta_balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:orange_balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:orange_balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:pink_balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:pink_balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:purple_balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:purple_balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:red_balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:red_balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:white_balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:white_balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_eureka:yellow_balloon",
+      "kind": "integration_parent",
+      "mod": "vs_eureka",
+      "output": "vs_eureka:yellow_balloon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:air_compressor",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:air_compressor",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:charged_nyx",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:charged_nyx",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:chiseled_wanderlite",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:chiseled_wanderlite",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:coal_burner",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:coal_burner",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:cobbled_nyx",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:cobbled_nyx",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:duct",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:duct",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:duct_tank",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:duct_tank",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:exhaust",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:exhaust",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:extendon",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:extendon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:extendon_hose",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:extendon_hose",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:gas_backtank",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:gas_backtank",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:gas_engine",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:gas_engine",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:gas_heater",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:gas_heater",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:gas_nozzle",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:gas_nozzle",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:gas_thruster",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:gas_thruster",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:hose_port",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:hose_port",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:nyx",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:nyx",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:pump_duct",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:pump_duct",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:redstone_duct",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:redstone_duct",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:smooth_wanderlite",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:smooth_wanderlite",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:smooth_wanderlite_slab",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:smooth_wanderlite_slab",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:smooth_wanderlite_stairs",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:smooth_wanderlite_stairs",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:steam_generator",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:steam_generator",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:valve_duct",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:valve_duct",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:wanderglass",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:wanderglass",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:wanderlite_block",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:wanderlite_block",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:wanderlite_bricks",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:wanderlite_bricks",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:wanderlite_crystal",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:wanderlite_crystal",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:wanderlite_cube",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:wanderlite_cube",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:wanderlite_matrix",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:wanderlite_matrix",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:wanderwand",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:wanderwand",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:aeronaut_boots",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:aeronaut_boots",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:aeronaut_goggles",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:aeronaut_goggles",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:aeronaut_jacket",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:aeronaut_jacket",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:aeronaut_jumpers",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:aeronaut_jumpers",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:alt_meter",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:alt_meter",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:command_seat",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:command_seat",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:copter_bearing",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:copter_bearing",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:delivery_cannon",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:delivery_cannon",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:delivery_chute",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:delivery_chute",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:distance_sensor",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:distance_sensor",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:gas_crafter",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:gas_crafter",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:gravitron",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:gravitron",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:gyro",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:gyro",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:gyroscopic_sensor",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:gyroscopic_sensor",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:impact_sensor",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:impact_sensor",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:lodefocus",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:lodefocus",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:phys_bearing",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:phys_bearing",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:physics_infuser",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:physics_infuser",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:reactionwheel",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:reactionwheel",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:slicker",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:slicker",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:smart_flap_bearing",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:smart_flap_bearing",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
+    },
+    {
+      "id": "integration:vs_transport:vs_clockwork:solver",
+      "kind": "integration_parent",
+      "mod": "vs_clockwork",
+      "output": "vs_clockwork:solver",
+      "authority": "integration:vs_transport",
+      "surface_type": "family:survival_surface",
+      "evidence": [
+        "kubejs/config/vs_transport_surfaces.json",
+        "kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js",
+        "generated/runtime-dumps/recipes.json"
+      ],
+      "era": "airtight",
+      "weight_class": "structural_progression"
     }
   ]
 }

@@ -422,7 +422,7 @@
 				"0EB806E4337DC7FA"
 				"1B09C8F1C2FE5053"
 			]
-			description: ["Turn Part Builder handles, blades, and repair kits into a working wooden ship. Vanilla boats are absent: build a helm, primitive fuel engine, floaters, and a hull so rivers and coasts become your first serious resource routes."]
+			description: ["Turn Part Builder handles, blades, bindings, and repair kits into a working wooden ship. Vanilla boats are absent: build a helm, primitive fuel engine, floaters, ballast, and a hull so rivers and coasts become your first serious resource routes. An anchor is optional, but wise before leaving shore."]
 			icon: "vs_eureka:oak_ship_helm"
 			id: "20AFF935B3BB1384"
 			rewards: [{
@@ -454,6 +454,11 @@
 				{
 					id: "4EA0F60C623A8508"
 					item: "vs_eureka:floater"
+					type: "item"
+				}
+				{
+					id: "E82540BFD579361C"
+					item: "vs_eureka:ballast"
 					type: "item"
 				}
 			]

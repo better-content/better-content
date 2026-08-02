@@ -157,6 +157,7 @@ Active pack-critical sources:
 - `pillager-campaigns` (`pillagercampaigns`)
 - `procedural-bouquets` (`procedural_bouquets`)
 - `realistic-ores` (`realisticores`)
+- `recipe-graph-dumper` (`bcrecipegraph`)
 - `revival` (`revival`)
 - `rpg-stats` (`rpgstats`)
 - `settlement-roads` (`settlementroads`)

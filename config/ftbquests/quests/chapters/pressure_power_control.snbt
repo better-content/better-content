@@ -194,6 +194,34 @@
 			y: -3.0d
 		}
 		{
+			dependencies: ["4F21F4F7C4150D7D"]
+			description: ["Apply PNCR pressure hardware and printed circuit boards to flight. Gas crafters prove the sealed pneumatic layer; copter bearings and the solver prove that stabilization and exotic physics no longer belong to the basic Aether lift tier."]
+			icon: "vs_clockwork:copter_bearing"
+			id: "A4E10C7B9135F2D8"
+			shape: "hexagon"
+			size: 1.15d
+			tasks: [
+				{
+					id: "B5F21D8CA24603E9"
+					item: "vs_clockwork:gas_crafter"
+					type: "item"
+				}
+				{
+					id: "C6032E9DB35714FA"
+					item: "vs_clockwork:copter_bearing"
+					type: "item"
+				}
+				{
+					id: "D7143FAEC468250B"
+					item: "vs_clockwork:solver"
+					type: "item"
+				}
+			]
+			title: "Controlled Aeronautics"
+			x: 4.75d
+			y: -5.0d
+		}
+		{
 			description: ["Build assembly machines when hand-crafted boards start slowing you down. Group the controller, platform, laser, drill, and import/export parts together."]
 			icon: "pneumaticcraft:assembly_controller"
 			id: "67B7DDA7976C7903"

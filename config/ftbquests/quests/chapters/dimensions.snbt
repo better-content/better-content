@@ -45,7 +45,7 @@
 		}
 		{
 			dependencies: ["14F60973DD91B6F2"]
-			description: ["Gliders prove Aether mobility at brass. Powered ships wait for sealed Airtight manufacture: aercloud, aerogel, and ambrosium identify every flight route while Clockwork controllers provide the machinery."]
+			description: ["Gliders prove Aether mobility at brass. Basic powered ships wait for sealed Airtight manufacture: aercloud, aerogel, and ambrosium identify the lift route while simple Clockwork controllers provide the machinery. Gas systems and active stabilization continue in PNCR."]
 			icon: "vs_eureka:balloon"
 			id: "236A84EC019738BD"
 			rewards: [{
@@ -69,7 +69,7 @@
 					type: "item"
 				}
 			]
-			title: "Powered Aeronautics"
+			title: "Basic Powered Aeronautics"
 			x: -3.0d
 			y: -0.5d
 		}

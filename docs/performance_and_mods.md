@@ -13,7 +13,7 @@ Pinned Valkyrien Skies family transport manifests are active and side `both`:
 - VS: Clockwork `clockwork-0.5.6.jar`
 - Trackwork `trackwork-1.20.1-1.2.4.jar`
 
-All four mods ship as integrated transport surfaces. Eureka owns primitive wooden watercraft, Trackwork joins the Create railway era, and powered Eureka/Clockwork flight requires Aether proof plus Airtight casing manufacture. The 2026-07-16 user-directed in-game test is the playable-stability signoff; the automated harness remains the regression and compatibility evidence surface. Shoulder Surfing remains removed because its own compatibility warning identifies Valkyrien Skies as incompatible.
+All four mods ship as integrated transport surfaces. Eureka owns primitive post-Part-Builder wooden watercraft, Trackwork is a peer of Create trains, and powered Eureka/Clockwork flight progresses through Aether plus Airtight lift, PNCR gas hardware, and PCB-controlled stabilization. The version-locked surface contract classifies all 145 family registry items: 119 supported survival entries and 26 hidden technical, creative, incomplete, tool-conflict, or unsupported-worldgen entries. The 2026-07-16 user-directed in-game test is the playable-stability signoff; the automated harness remains the regression and compatibility evidence surface. Shoulder Surfing remains removed because its own compatibility warning identifies Valkyrien Skies as incompatible.
 
 - `bcfixes-0.1.0.jar`
 - `classselector-1.0.0.jar`

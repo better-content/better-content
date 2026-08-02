@@ -147,6 +147,23 @@ ServerEvents.recipes(function (event) {
         }).id('kubejs:create/sequenced_assembly/pneumaticcraft/rotational_compressor_core')
     }
 
+    // The Airtight casing is the real PNCR bootstrap proof. Keep the effective
+    // recipe aligned with the reachability contract instead of relying on the
+    // removed legacy shaped definition or a manual graph edge alone.
+    event.remove({ output: 'kubejs:airtight_machine_casing' })
+    global.bcFactoryCrafting(event, 'kubejs:machine_casing/airtight_factory', 'kubejs:airtight_machine_casing', 1, [
+        'BSB',
+        'ICI',
+        'TMT'
+    ], {
+        B: 'kubejs:brass_machine_casing',
+        S: 'kubejs:pressure_seal',
+        I: 'pneumaticcraft:ingot_iron_compressed',
+        C: 'kubejs:rotational_compressor_core',
+        T: 'pneumaticcraft:pressure_tube',
+        M: 'create:mechanical_crafter'
+    }, { mirrored: true })
+
     event.custom({
         type: 'pneumaticcraft:pressure_chamber',
         inputs: [

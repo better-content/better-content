@@ -108,6 +108,10 @@
   "ignoredRecipeTypes": [
     "cucumber:shaped_tag"
   ],
-  "ignoredRecipes": [],
+  "ignoredRecipes": [
+    "^realisticores:compat/create/crushing/.*$",
+    "^realisticores:crafting/ore_reassembly/.*$",
+    "^kubejs:realistic_ores/.*$"
+  ],
   "itemsHidingJeiRei": true
 }

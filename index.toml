@@ -5250,7 +5250,7 @@ hash = "ad711622f9b8c5cc8115f52396f5d82587b809fb20cbf9d94c7744aeebcaf4d5"
 
 [[files]]
 file = "config/almostunified/unify.json"
-hash = "975a3187b400976a49048b15d33b0262e69757be83f79d36205957e5faa24cc2"
+hash = "382b0f932d4ccffaff60087ca6e8a16f5be9febaedafa04e6405137c70b97ba6"
 
 [[files]]
 file = "config/apotheosis/adventure.cfg"
@@ -10546,7 +10546,7 @@ hash = "0871972a2a53c027f0e9f6c9f2ef9cc6227f9ed9c0c1a1539134aa8a2535c12f"
 
 [[files]]
 file = "kubejs/server_scripts/10_tags/60_realistic_ores_deposit_tags.js"
-hash = "4253beeb6ffc1a0f22a6281d286447a5db2df536b19f3454c0f09b91a3df53ba"
+hash = "f385ff5d7e2f897d361763a14e9f51bce487f6120c2a2dd7bc3c6768cce6af3a"
 
 [[files]]
 file = "kubejs/server_scripts/10_tags/70_formal_magic_domains.js"
@@ -10774,11 +10774,15 @@ hash = "8e30f43d0de55ca41e7b75334179ced10e7068942b72ffd6961eb1feaa3dbc11"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js"
-hash = "482a27676f676ae9f652d6f47ea53477948612732b33d45ec456f2895cb7fba0"
+hash = "73453baab2e7f3dc083ff0f188f07723f39dd06cd37d01a40f70eb4ad6756d80"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/51_surface_sample_processing.js"
 hash = "89863396c15124c2956a423339f5ad99175ff2ff4e3e838ce4ae590407d8faa8"
+
+[[files]]
+file = "kubejs/server_scripts/40_recipe_add/52_realistic_ores_excavated_host_cycles.js"
+hash = "2f3f459e173fa93ab4a09424cfb5251bc49d9c63081bcbe83d767d47c6253491"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js"
@@ -11752,7 +11756,7 @@ metafile = true
 
 [[files]]
 file = "mods/realisticores-0.1.0.jar"
-hash = "fcd8b4f9037486a22d0b9028acf0a155d794fc0463271c50c7409cc4f0d83ac0"
+hash = "d78f4209a6debcaa0ba500462f612a4406463029a8d92e5b28c43f18217ddb3c"
 
 [[files]]
 file = "mods/rehooked.pw.toml"

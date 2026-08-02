@@ -1,5 +1,6 @@
-// Create ore preprocessing for the starter Realistic Ores deposit subset.
-// Conceptual chain: deposit -> crushed deposit -> washed concentrate -> TCon/Foundry input.
+// Create ore preprocessing for Realistic Ores.
+// Ore block separation and chunk crushing are owned by the Realistic Ores mod so they
+// remain exact-item, host-aware recipes. This layer starts at crushed material.
 
 var BC_CREATE_DEPOSITS = [
     { id: 'coal_measures', tag: 'kubejs:deposit_blocks/coal_measures', crushed: 'realisticores:crushed_coal_measures', wash: [{ item: 'minecraft:coal', count: 2 }, { item: 'chemlib:carbon', chance: 0.35 }, { item: 'create:crushed_raw_iron', chance: 0.20 }], fluid: 'forge:molten_iron', amount: 90, temp: 800 },
@@ -53,18 +54,6 @@ ServerEvents.recipes(function (event) {
 
     for (var i = 0; i < BC_CREATE_DEPOSITS.length; i++) {
         var dep = BC_CREATE_DEPOSITS[i]
-
-        event.custom({
-            type: 'create:crushing',
-            ingredients: [{ tag: dep.tag }],
-            processingTime: 400,
-            results: [
-                { item: dep.crushed, count: 2 },
-                { item: dep.crushed, chance: 0.50 },
-                { item: 'create:experience_nugget', chance: 0.50 },
-                { item: 'minecraft:cobbled_deepslate', chance: 0.12 }
-            ]
-        }).id('kubejs:create/crushing/deposits/' + dep.id)
 
         var washResults = []
         for (var j = 0; j < dep.wash.length; j++) washResults.push(bcResult(dep.wash[j]))

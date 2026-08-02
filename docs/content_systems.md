@@ -36,6 +36,12 @@ Cross-mod standardization is moderate rather than total:
 
 Deposit processing is multi-surface:
 
+- Realistic Ores deposits normally drop one non-placeable, host-independent ore chunk;
+  Fortune does not alter that loot path, while Silk Touch preserves the exact native or
+  Excavated Variants host block. Create crushing separates an ore block into its chunk
+  and host stone, the same pair shapelessly reconstructs it, and crushing the chunk
+  produces two crushed deposit items plus a 50% chance of a third.
+
 - `45_deposit_furnace_fallbacks.js`: poor emergency fallback.
 - `60_worldgen/10_r_ores_melted.js`: TCon melter and ore-melting outputs.
 - `50_create_deposit_preprocessing.js`: Create crushing/washing preparation.

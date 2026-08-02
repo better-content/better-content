@@ -26,6 +26,31 @@ var BC_DEPOSIT_SOURCE_BLOCKS = {
     sulfur_bearing_pyrite_ore: ['realisticores:sulfur_bearing_pyrite_ore', 'realisticores:deepslate_sulfur_bearing_pyrite_ore']
 }
 
+var BC_DEPOSIT_ORE_CHUNKS = {
+    coal_measures: 'realisticores:ore_chunk_coal_measures',
+    ironstone: 'realisticores:ore_chunk_ironstone',
+    copper_sulfide: 'realisticores:ore_chunk_copper_sulfide_ore',
+    tin: 'realisticores:ore_chunk_tin_ore',
+    zinc: 'realisticores:ore_chunk_zinc_ore',
+    lead_zinc_vein: 'realisticores:ore_chunk_lead_zinc_vein',
+    quartz_vein: 'realisticores:ore_chunk_quartz_vein',
+    bauxite_laterite: 'realisticores:ore_chunk_bauxite_laterite',
+    nickel_sulfide: 'realisticores:ore_chunk_nickel_sulfide_ore',
+    osmiridium_lava_sulfide: 'realisticores:ore_chunk_osmiridium_lava_sulfide_ore',
+    tin_tungsten_greisen: 'realisticores:ore_chunk_tin_tungsten_greisen',
+    titanium_iron_oxide: 'realisticores:ore_chunk_titanium_iron_oxide_ore',
+    kimberlite_pipe: 'realisticores:ore_chunk_kimberlite_pipe',
+    emerald_schist_beryl: 'realisticores:ore_chunk_emerald_schist_beryl_vein',
+    corundum_beryl_vein: 'realisticores:ore_chunk_corundum_beryl_gem_vein',
+    uranium_ore: 'realisticores:ore_chunk_uranium_ore',
+    thorium_ore: 'realisticores:ore_chunk_thorium_ore',
+    cupriferous_redbed_redstone_vein: 'realisticores:ore_chunk_cupriferous_redbed_redstone_vein',
+    lazurite_vein: 'realisticores:ore_chunk_lazurite_vein',
+    phosphate_rock: 'realisticores:ore_chunk_phosphate_rock',
+    soul_bearing_black_shale_soulstone_vein: 'realisticores:ore_chunk_soul_bearing_black_shale_soulstone_vein',
+    sulfur_bearing_pyrite_ore: 'realisticores:ore_chunk_sulfur_bearing_pyrite_ore'
+}
+
 function bcAddDepositTags(event) {
     for (var id in BC_DEPOSIT_SOURCE_BLOCKS) {
         var tag = 'kubejs:deposit_blocks/' + id
@@ -34,5 +59,10 @@ function bcAddDepositTags(event) {
     }
 }
 
-ServerEvents.tags('item', function (event) {  bcAddDepositTags(event) })
+ServerEvents.tags('item', function (event) {
+    bcAddDepositTags(event)
+    for (var id in BC_DEPOSIT_ORE_CHUNKS) {
+        event.add('kubejs:deposit_blocks/' + id, BC_DEPOSIT_ORE_CHUNKS[id])
+    }
+})
 ServerEvents.tags('block', function (event) {  bcAddDepositTags(event) })

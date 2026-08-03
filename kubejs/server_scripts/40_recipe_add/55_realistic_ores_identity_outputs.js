@@ -44,6 +44,12 @@ var BC_RO_SOLVENT_GAS_PRODUCTS = {
 
 var BC_RO_CREATE_ITEM_OUTPUT_LIMIT = 6
 
+// Human-reviewed solvent cohorts are disabled here without changing the shared
+// solvent catalog consumed by neighboring scripts.
+var BC_RO_DISABLED_DEPOSIT_SOLVENTS = {
+    ethanol: true
+}
+
 var BC_RO_OVERWORLD_ORE_EXTRAS = {
     coal_measures: {
         ethanol: { andesite: 'minecraft:coal', steel: 'minecraft:coal' },
@@ -405,6 +411,7 @@ ServerEvents.recipes(function (event) {
 
     for (var d = 0; d < BC_RO_DEPOSITS.length; d++) {
         for (var s = 0; s < BC_RO_SOLVENTS.length; s++) {
+            if (BC_RO_DISABLED_DEPOSIT_SOLVENTS[BC_RO_SOLVENTS[s].id]) continue
             for (var b = 0; b < BC_RO_BALLS.length; b++) {
                  bcRoMixing(event, BC_RO_DEPOSITS[d], BC_RO_SOLVENTS[s], BC_RO_BALLS[b])
             }

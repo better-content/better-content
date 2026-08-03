@@ -9306,7 +9306,7 @@ hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/recipe_authority_manifest.json"
-hash = "490142c2d785d9aa923b5f24c367d51bc3167144d3c027473a10c6908229a178"
+hash = "86d12af9d60512192185945ea526be4b03d128af67aa67b194c078da9704b708"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
@@ -10874,7 +10874,7 @@ hash = "2f3f459e173fa93ab4a09424cfb5251bc49d9c63081bcbe83d767d47c6253491"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js"
-hash = "459ec5d23e2accd326a9bc17dda94205683cb2e9d4e41330f42808b5b1c777b2"
+hash = "75de848be5f6d48d3cdf25d6ee2f22d5ce64677adaf03fdc9bc0f6bf78f22fa9"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/56_alchemistry_dissolver_create_port.js"

@@ -22,9 +22,9 @@ var BC_30_ITEMS = [
     ['minecraft:shears',1],['minecraft:rail',16],['minecraft:bone_meal',16],['minecraft:bookshelf',1]
 ]
 
+// TCon owns andesite-alloy metallurgy, and the first casing proves Deployer
+// assembly. Villager recovery stock must not replace either factory gate.
 var BC_INDUSTRIAL_IRON_MARKET = [
-    ['minecraft:mason',2,3,'create:andesite_alloy',4,8,6],
-    ['minecraft:mason',2,3,'create:andesite_casing',4,8,6],
     ['minecraft:mason',3,4,'create:cut_limestone',16,8,8],
     ['minecraft:mason',3,4,'create:cut_scoria',16,8,8],
     ['minecraft:mason',3,4,'create:cut_ochrum',16,8,8],
@@ -605,7 +605,6 @@ if (typeof MoreJSEvents !== 'undefined') {
             [3, 'brass', 4, 'minecraft:quartz_block', 8, 8, 10],
             [3, 'brass', 4, 'minecraft:stone_bricks', 16, 8, 10],
             [3, 'brass', 4, 'minecraft:mossy_stone_bricks', 16, 8, 10],
-            [3, 'brass', 4, 'create:andesite_alloy', 4, 5, 12],
             [4, 'brass', 5, 'create:brass_sheet', 4, 4, 16],
             [4, 'brass', 5, 'minecraft:lantern', 8, 6, 16],
             [4, 'brass', 5, 'minecraft:chain', 16, 6, 16],

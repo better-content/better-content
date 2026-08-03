@@ -97,6 +97,23 @@
       "review_state": "statically_approved_pending_oracle"
     }
   ],
+  "pending_recipe_families": [
+    {
+      "family": "chemlib_full_formula_compound_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:chemlib_full/(create_mixing|pncr_thermo)/compound/.*$",
+      "retained_recipe_count": 105,
+      "sorted_recipe_ids_sha256": "96fdf25ca443b76554b54461d5dc8c54002055ebcadb0c4bdf747a53199b9bb1",
+      "disposition": "pending_tooling_alignment_and_reaction_review",
+      "exact_material_purpose": "Attempt formula-derived formation of named ChemLib compounds from their registered elemental or gaseous components.",
+      "current_static_finding": "Not approved: formula lookup establishes nominal composition but does not by itself establish a common fixed-mass packet, correct reaction conditions, charge state, complete acid residues, or safe gas transfer.",
+      "source_status": "Retained unchanged because the deferred chemistry-loop tooling contract still asserts positive presence for this family; changing it in this phase would require an explicitly deferred tooling-source amendment.",
+      "industrial_authority_boundary": "No pending route is authority-approved merely because it uses Create or PNCR; any finished elemental-metal output elsewhere remains forbidden, and every retained compound route requires reaction-level adjudication.",
+      "required_followup": "Align the deferred tooling contract, then review or remove these routes in bounded material-specific cohorts before fresh runtime recapture.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle",
+      "review_state": "pending_not_approved"
+    }
+  ],
   "rejected_recipe_contracts": [
     {
       "id": "kubejs:chemistry/transform/create_compacting/iron_oxide_reduction",

@@ -9306,7 +9306,7 @@ hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/recipe_authority_manifest.json"
-hash = "5fa6959fd90cdce7beb25c27cb66facdbcb4515147f3e42c9b23d6c9fd14d4be"
+hash = "5199d20115f9c086b7abed005149240d5db23d7f6554923a0079248f6eb6cf83"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"

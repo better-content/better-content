@@ -818,6 +818,25 @@
       "industrial_authority_finding": "Rejected: 12 routes directly formed finished metal nuggets outside TConstruct metallurgy; the four coal/quartz routes share the same unbounded fallback defect and are removed with the authored family.",
       "progression_finding": "Existing smelting and blasting recipes for these deposit tags remain explicitly removed; no vanilla furnace bypass is restored.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "grid_policy_finished_ingot_reroutes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_patterns": [
+        "^kubejs:grid_policy/create_mixing/.*$",
+        "^kubejs:grid_policy/blood_alchemy/.*$"
+      ],
+      "retained_selection": "Only retained dynamic grid-policy replacements whose exact output item path ends with _ingot.",
+      "retained_recipe_count": 24,
+      "retained_recipe_breakdown": { "create_mixing_reroutes": 12, "blood_alchemy_reroutes": 12 },
+      "sorted_recipe_ids_sha256": "bdb22fc0a9bf808735c8825bbf94eeecda0b443a662ae525190e4f62a4feec0c",
+      "disposition": "removed_generic_finished_ingot_reroutes",
+      "exact_material_purpose": "Move complex crafting-grid ingot recipes to a non-grid industrial or magical surface while preserving their original inputs and output counts.",
+      "fixed_mass_finding": "Rejected: the generic rerouter copied block decomposition, scrap conversion, and alloy recipes without establishing material-specific packet masses or complete residues.",
+      "magic_provenance_finding": "Rejected: magic-namespace ingots were redirected through generic LP cost without an identity-changing provenance or residue contract.",
+      "industrial_authority_finding": "Rejected: Create mixing and Blood Magic directly formed finished ingots outside TConstruct metallurgy. Original crafting recipes remain removed, but ingot outputs are no longer dynamically rerouted.",
+      "review_scope": "The suffix gate applies only to finished-ingot outputs; all non-ingot grid-policy behavior remains unchanged and unapproved by this disposition.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ]
 }

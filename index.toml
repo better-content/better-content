@@ -9306,7 +9306,7 @@ hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/recipe_authority_manifest.json"
-hash = "adc167e5791edcdc94ed469d03ae638f6f57a2774fdd0a7e550dce0c22c3f640"
+hash = "fc95b7a9d8ecd9694e142e385640c0bbaa3fe683c6ab0446b0fdba8906bf0238"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
@@ -10962,7 +10962,7 @@ hash = "c12e429fc2763813587ba16e68971d023642c107dd62e9b8087d3295a6628c0b"
 
 [[files]]
 file = "kubejs/server_scripts/80_recipe_policy/10_no_complex_grid_defaults.js"
-hash = "fbca76ef8739bb25ac00277c14f973128d18f7bc2c992d1c056c83b367f8954e"
+hash = "7161061fe1835d4d9fec9666966d50304007d5fb59b0f4df9157db24dca22de8"
 
 [[files]]
 file = "kubejs/server_scripts/90_dev_debug/20_food_effect_audit_dumps.js"

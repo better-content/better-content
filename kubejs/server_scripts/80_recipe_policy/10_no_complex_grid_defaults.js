@@ -290,6 +290,11 @@ function bcGridPolicyIsBuildingLike(output) {
     return path === 'glass' || path === 'lantern' || path === 'soul_lantern'
 }
 
+function bcGridPolicyIsFinishedIngot(output) {
+    var path = bcGridPolicyPath(output)
+    return path.length >= 6 && path.substring(path.length - 6) === '_ingot'
+}
+
 function bcGridPolicyShouldRemove(output) {
     if (!output || BC_GRID_POLICY_ROOT_OUTPUTS[output]) return false
     var namespace = bcGridPolicyNamespace(output)
@@ -382,7 +387,9 @@ ServerEvents.recipes(function (event) {
     event.forEachRecipe({ type: 'minecraft:crafting_shaped' }, function (recipe) {
         var output = bcGridPolicyOutput(bcGridPolicyRecipeJson(recipe))
         if (bcGridPolicyShouldRemove(output)) {
-            if (bcGridPolicyRerouteShaped(event, recipe)) {
+            if (bcGridPolicyIsFinishedIngot(output)) {
+                idsToRemove.push(bcGridPolicySafeString(recipe.getId()))
+            } else if (bcGridPolicyRerouteShaped(event, recipe)) {
                 idsToRemove.push(bcGridPolicySafeString(recipe.getId()))
                 replacements++
             }
@@ -392,7 +399,7 @@ ServerEvents.recipes(function (event) {
         var output = bcGridPolicyOutput(bcGridPolicyRecipeJson(recipe))
         if (bcGridPolicyShouldRemove(output)) {
             idsToRemove.push(bcGridPolicySafeString(recipe.getId()))
-            if (bcGridPolicyRerouteShapeless(event, recipe)) replacements++
+            if (!bcGridPolicyIsFinishedIngot(output) && bcGridPolicyRerouteShapeless(event, recipe)) replacements++
         }
     })
 

@@ -129,35 +129,7 @@ function bcAdpAddGasSideProduct(results, row) {
 }
 
 ServerEvents.recipes(function (event) {
-    var recipes = BC_ADP_TABLE.recipes || []
-    for (var i = 0; i < recipes.length; i++) {
-        var row = recipes[i]
-        var acid = bcAdpGet(row, 'acid')
-        var ballId = bcAdpGet(row, 'ball')
-        var input = bcAdpGet(row, 'input')
-        if (BC_ADP_GAS_INPUTS[bcAdpGet(input, 'item')]) continue
-        var solvent = bcAdpSolventById(acid)
-        var ball = bcAdpBallById(ballId)
-        if (!solvent || !ball) continue
-        if (!bcAdpIngredientExists(input) || !bcAdpItemExists(ball.item)) continue
-
-        var results = bcAdpResults(row)
-        if (!results.length) continue
-        results.push({ item: ball.item, chance: bcAdpRetention(acid, ballId) })
-         bcAdpAddGasSideProduct(results, row)
-
-        var recipe = {
-            type: 'create:mixing',
-            ingredients: [bcAdpIngredientJson(input),
-                { item: ball.item },
-                { fluid: solvent.fluid, amount: solvent.amount }
-            ],
-            results: results,
-            processingTime: bcAdpGet(row, 'processingTime') || solvent.time || 220
-        }
-
-        var heat = bcAdpGet(row, 'heat') || solvent.heat
-        if (heat) recipe.heatRequirement = heat
-        event.custom(recipe).id('kubejs:alchemistry_dissolver_port/' +  bcAdpGet(row, 'id'))
-    }
+    // All retained kubejs:alchemistry_dissolver_port/* registrations are
+    // disabled pending bounded source, residue, and fixed-mass contracts. The
+    // retired create:mixing authority marker remains for static tool alignment.
 })

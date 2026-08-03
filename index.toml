@@ -9306,7 +9306,7 @@ hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/recipe_authority_manifest.json"
-hash = "1e06b16cbafde18f5e960a0c864ab0d0e835460904b573e9838968d938778ae7"
+hash = "7e62f5ca8e2da7927954cb8ad0fb30195016118c9963c88b25de511820907413"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
@@ -10878,7 +10878,7 @@ hash = "32c5ac72cf1137afa89837d4c83b8f8ad8307bdc6a3e0b00a6c00417baecd48d"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/56_alchemistry_dissolver_create_port.js"
-hash = "ba1e139a515b42def5cd709fa9217d3fe8b176e437b05bb3ec52cb84931c3ba6"
+hash = "9652984c730f360fa8df527c3fb77fdb0eecb19fbf4e6e169ad5e11c8d07f9f4"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js"

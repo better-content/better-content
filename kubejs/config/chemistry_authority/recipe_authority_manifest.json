@@ -680,6 +680,103 @@
       "industrial_authority_finding": "Rejected: 30 smelting/blasting routes directly formed finished metal nuggets outside TConstruct metallurgy; the 16 nonmetal furnace routes shared the same unbounded packet and residue defect and are removed with the coherent authored family.",
       "progression_finding": "The separately registered low-chance Create milling routes remain available as prospecting-to-crushed-feed candidates, but are not approved by this disposition and remain pending balance review.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "alchemistry_dissolver_routes_a_b",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:alchemistry_dissolver_port/[a-b].*$",
+      "retained_recipe_count": 89,
+      "sorted_recipe_ids_sha256": "a9ddcc184ade8c2ff4e6be71a6c599b50686ef11aa7fe5884a2cafbad5e41725",
+      "disposition": "disabled_unbounded_dissolver_port_cohort",
+      "exact_material_purpose": "Port named Alchemistry dissolver decompositions into solvent-and-grinding-ball Create mixing.",
+      "fixed_mass_finding": "Rejected: opaque feed, solvent, and tool packets emitted multiple products plus probabilistic tool/gas results without common fixed mass, gangue, liquor, or exhaust contracts.",
+      "industrial_authority_finding": "Rejected: the cohort includes direct finished elemental-metal outputs outside TConstruct authority; compound-only rows share the same unbounded residue defect.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "alchemistry_dissolver_routes_c",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:alchemistry_dissolver_port/c.*$",
+      "retained_recipe_count": 123,
+      "sorted_recipe_ids_sha256": "0f1bd010c3226b7ab93dff08a7cb52597389ed0c5dcf257e2c55d69e6d22a72f",
+      "disposition": "disabled_unbounded_dissolver_port_cohort",
+      "exact_material_purpose": "Port named Alchemistry dissolver decompositions into solvent-and-grinding-ball Create mixing.",
+      "fixed_mass_finding": "Rejected: opaque feed, solvent, and tool packets emitted multiple products plus probabilistic tool/gas results without common fixed mass, gangue, liquor, or exhaust contracts.",
+      "industrial_authority_finding": "Rejected: the cohort includes direct finished elemental-metal outputs outside TConstruct authority; compound-only rows share the same unbounded residue defect.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "alchemistry_dissolver_routes_d_f",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:alchemistry_dissolver_port/[d-f].*$",
+      "retained_recipe_count": 147,
+      "sorted_recipe_ids_sha256": "94638d7324305472998ebbe0a8f38af45d9567bab793d89a1e266326b2702f15",
+      "disposition": "disabled_unbounded_dissolver_port_cohort",
+      "exact_material_purpose": "Port named Alchemistry dissolver decompositions into solvent-and-grinding-ball Create mixing.",
+      "fixed_mass_finding": "Rejected: opaque feed, solvent, and tool packets emitted multiple products plus probabilistic tool/gas results without common fixed mass, gangue, liquor, or exhaust contracts.",
+      "industrial_authority_finding": "Rejected: the cohort includes direct finished elemental-metal outputs outside TConstruct authority; compound-only rows share the same unbounded residue defect.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "alchemistry_dissolver_routes_g_l",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:alchemistry_dissolver_port/[g-l].*$",
+      "retained_recipe_count": 173,
+      "sorted_recipe_ids_sha256": "95220705f87096ff24c8cb84b1b6670ea1dd1db98de4c5ff14a0fe5abd58818e",
+      "disposition": "disabled_unbounded_dissolver_port_cohort",
+      "exact_material_purpose": "Port named Alchemistry dissolver decompositions into solvent-and-grinding-ball Create mixing.",
+      "fixed_mass_finding": "Rejected: opaque feed, solvent, and tool packets emitted multiple products plus probabilistic tool/gas results without common fixed mass, gangue, liquor, or exhaust contracts.",
+      "industrial_authority_finding": "Rejected: the cohort includes direct finished elemental-metal outputs outside TConstruct authority; compound-only rows share the same unbounded residue defect.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "alchemistry_dissolver_routes_m_o",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:alchemistry_dissolver_port/[m-o].*$",
+      "retained_recipe_count": 161,
+      "sorted_recipe_ids_sha256": "ed00c0de1fc8eb2b81604a73117bc1fa3bc204ea875f0ca424e331fd9dbc0297",
+      "disposition": "disabled_unbounded_dissolver_port_cohort",
+      "exact_material_purpose": "Port named Alchemistry dissolver decompositions into solvent-and-grinding-ball Create mixing.",
+      "fixed_mass_finding": "Rejected: opaque feed, solvent, and tool packets emitted multiple products plus probabilistic tool/gas results without common fixed mass, gangue, liquor, or exhaust contracts.",
+      "industrial_authority_finding": "Rejected: the cohort includes direct finished elemental-metal outputs outside TConstruct authority; compound-only rows share the same unbounded residue defect.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "alchemistry_dissolver_routes_p_r",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:alchemistry_dissolver_port/[p-r].*$",
+      "retained_recipe_count": 162,
+      "sorted_recipe_ids_sha256": "fb5b611eea2da7bd92788440543269acd2707adbb62ba9b7d2320c7ddffc2acc",
+      "disposition": "disabled_unbounded_dissolver_port_cohort",
+      "exact_material_purpose": "Port named Alchemistry dissolver decompositions into solvent-and-grinding-ball Create mixing.",
+      "fixed_mass_finding": "Rejected: opaque feed, solvent, and tool packets emitted multiple products plus probabilistic tool/gas results without common fixed mass, gangue, liquor, or exhaust contracts.",
+      "industrial_authority_finding": "Rejected: the cohort includes direct finished elemental-metal outputs outside TConstruct authority; compound-only rows share the same unbounded residue defect.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "alchemistry_dissolver_routes_s",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:alchemistry_dissolver_port/s.*$",
+      "retained_recipe_count": 146,
+      "sorted_recipe_ids_sha256": "7bd43a183aaaf8c82c3cfc15d51ff2b2438d5031b19cfeda8aea32088a073546",
+      "disposition": "disabled_unbounded_dissolver_port_cohort",
+      "exact_material_purpose": "Port named Alchemistry dissolver decompositions into solvent-and-grinding-ball Create mixing.",
+      "fixed_mass_finding": "Rejected: opaque feed, solvent, and tool packets emitted multiple products plus probabilistic tool/gas results without common fixed mass, gangue, liquor, or exhaust contracts.",
+      "industrial_authority_finding": "Rejected: the cohort includes direct finished elemental-metal outputs outside TConstruct authority; compound-only rows share the same unbounded residue defect.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "alchemistry_dissolver_routes_t_z",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:alchemistry_dissolver_port/[t-z0-9].*$",
+      "retained_recipe_count": 51,
+      "sorted_recipe_ids_sha256": "bacfae3588fa26b00e485bedfc167b6be2c80cebca6b1a7847bc2a997f2fc09e",
+      "disposition": "disabled_unbounded_dissolver_port_cohort",
+      "exact_material_purpose": "Port named Alchemistry dissolver decompositions into solvent-and-grinding-ball Create mixing.",
+      "fixed_mass_finding": "Rejected: opaque feed, solvent, and tool packets emitted multiple products plus probabilistic tool/gas results without common fixed mass, gangue, liquor, or exhaust contracts.",
+      "industrial_authority_finding": "Rejected: the cohort includes direct finished elemental-metal outputs outside TConstruct authority; compound-only rows share the same unbounded residue defect.",
+      "review_scope": "All 1,052 retained dissolver-port registrations are disabled across eight non-overlapping generated cohorts; source data and helper code remain only for tooling compatibility and future bounded redesign.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
     }
   ]
 }

@@ -545,16 +545,16 @@
 		}
 		{
 			dependencies: ["E300000000000001"]
-			description: ["There is currently no authored fission reactor, fusion reactor, or reactor power ladder. Isotope clocks, event-local schedulers, neutron-capture chemistry, and the sealed reaction chamber are real chemistry infrastructure, but they do not generate reactor power. Do not treat speculative reactor or fusion concepts as quests, rewards, or available progression until their conservation model and machines are implemented and tested."]
+			description: ["There is no fission reactor block, fusion reactor block, or reactor power ladder. Nuclear change is an emergent material hazard: sufficiently hot, dense, concentrated uranium or plutonium can become critical when neutron flux, moderation, and local contact align, releasing conserved heat, radiation, and daughter products into the surrounding world. Fusion likewise belongs to opposing streams of sufficiently hot, dense compatible light gases, not to a named machine. Containment and geometry are the player's apparatus; ordinary matter state is the fuel, and nearby material can melt when the released heat has somewhere real to go."]
 			icon: "chemlib:uranium"
 			id: "E300000000000002"
 			shape: "rsquare"
 			tasks: [{
 				id: "E300000000000102"
-				title: "Reactor and fusion power are future work"
+				title: "Observe nuclear phenomena without a reactor machine"
 				type: "checkmark"
 			}]
-			title: "Future, Not Live"
+			title: "Emergent, Not a Reactor"
 			x: 12.67d
 			y: 4.5d
 		}

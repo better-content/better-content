@@ -7886,7 +7886,7 @@ hash = "7d94d8343d08f9ec17a8b041441604401d1dd7a849453182d4b0f62a9d0c149a"
 
 [[files]]
 file = "defaultconfigs/create-server.toml"
-hash = "606f31c7d6970b52478ce6fcb065ad094bdaf452e3614b542796a1f4596161ab"
+hash = "702cb57b0512a13a973e2d81c1d1969e6df226c6a5717b6672603562fbd95351"
 
 [[files]]
 file = "defaultconfigs/farsightedmobs-server.toml"
@@ -9294,7 +9294,7 @@ hash = "aa35273fec61c1befe5be6ffea05e6ad26ade94e0c32f29fc9e7f2c36f8a28e6"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/form_roles.json"
-hash = "b0884dbe81b9c42cdbaf991433f9c1240a4c5c13cc5aac3762455cc737273e06"
+hash = "163b8d4b7c8e299c8effa6959752812193573d7bb5196ccd0b6c734ef4884b01"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/isotope_policy.json"
@@ -9334,7 +9334,7 @@ hash = "9842084f3f18b53e5848014781fcb996aad39fd2fcd8fdbe72cf492075e3af74"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/species.json"
-hash = "bab4f19eedc2af7930afc9fbeee56d4574c685d0d084813f0fba300331d06360"
+hash = "47158bb1384e6b3abd726944632c6359c1e86667c36eaf3dee532d65845db8c0"
 
 [[files]]
 file = "kubejs/config/chemlib_form_policy.json"
@@ -9350,7 +9350,7 @@ hash = "46a66b6e003ba7953c9a13428fd9c1967e862a673d7fd849831defab59eb08f1"
 
 [[files]]
 file = "kubejs/config/create_tcon_bootstrap.json"
-hash = "6b8ead263282ebcb1930f2737cc4ac2efb816ad47fc1b74805ceb57ff918c423"
+hash = "2fdad489d277c84485375e7de32379776420c62e2dc536f548597edb017f39e3"
 
 [[files]]
 file = "kubejs/config/economy_acquisition.json"
@@ -10682,7 +10682,7 @@ hash = "3c557ca6a4b4bb3a0000a45364f1e6be93bb4f1bd2f3da4cb41824dbf8ee59e2"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/123_more_red_primitive_circuitry.js"
-hash = "a4887c55d317023c4fc4e14d945a4f3201303e353332a57fa847e108956b1eee"
+hash = "5ce567a293ed7f57bdebf36327d14f624b01da241d4d3eaf30aa3f09a2425a38"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/125_magic_power_spike_gates.js"
@@ -10702,11 +10702,11 @@ hash = "f6ef6152ca960bb700d7f891617742ad5cbff56753a24fee5bf7418e3305cced"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/135_recipe_graph_closure.js"
-hash = "2c18e5c2b999935e9072853a9b2b782662432b71ddbd3c8121320dcdbb1be07f"
+hash = "eef957eeed84507e6922a56227c6a890be46a365993c77a197c37095120aa1a4"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js"
-hash = "e8dfe32db9c8d6c343d54da3e20cddeb55dda5c47e256bc256258e157d374e8f"
+hash = "0f2ea6cd0b5bc5cd3e7ff6914222cba310d50852b4da2f0e57f224b785ecc4b2"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/137_casing_aesthetic_component_routes.js"
@@ -10830,7 +10830,7 @@ hash = "80caeb0f0e6620e7d8505f366fd0f1807f6f66621590c7fb10b0d21d5752f24f"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js"
-hash = "8684cbcf31ac698024b7b45fe2f9509d4f9a37898cfc233f7a523909d0dbdc19"
+hash = "f6ce010c4a697318d3367dd3126c1bbe37aff4e62fe834f104eea68e742ddeee"
 
 [[files]]
 file = "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js"
@@ -10882,7 +10882,7 @@ hash = "f5f52248250099503c6986fed5d29e4ba694e6761910908b84d9c62d30f18c9d"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/58_blood_magic_manual_create_yields.js"
-hash = "c8bbeb8175e396d72230ae75013b605192ee9902d0951704d1bd5953ab183d3a"
+hash = "1b2d496657140b3bf4912298e36d4eb99bc912db0766a058514447556a2a2403"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/58_create_pncr_molecular_synthesis.js"
@@ -10898,11 +10898,11 @@ hash = "f51a8ae8bc0c53ad7acd8f69737df6a0169ded1ba9ee19c80167d60879ae0067"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/61_chemical_existing_item_alternatives.js"
-hash = "b9b6f185512e4a9c7d9c8fd8f841fbfc54ee599d9eeb31a2fe9d96a9f08b1d35"
+hash = "260a8a44155c79e73f63a27bcd3f0546bca9b81c63b54d2b29e08288c5e52492"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/62_chemical_electronics_magic_growth_routes.js"
-hash = "fe04d6dbda7a562242cf02b9f3c62bdf462e41d87b9c2021c159b73f86f63bc9"
+hash = "b18013efd11e4fe048104e722555e469f728cf3ae7c3912ff3ee391deac1123e"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js"
@@ -10974,7 +10974,7 @@ hash = "6085ae1ef8cd534ec59740a61ae9bcb49d50cf65abb72d60b7c0b840ceed606d"
 
 [[files]]
 file = "kubejs/server_scripts/99_final/10_create_tcon_bootstrap.js"
-hash = "8caff5cf64a1397a6ebda64353b468dbf6f07eaf772839cb8e0d8226f69cf597"
+hash = "9ed0127d6b1ee24864de3db13bdbf2bc250fc353c38fc9ce779052b58263ff0f"
 
 [[files]]
 file = "kubejs/server_scripts/99_final/90_energy_ladder_gate.js"
@@ -11635,7 +11635,7 @@ metafile = true
 
 [[files]]
 file = "mods/latent_chemlib-0.1.0.jar"
-hash = "66847e04558c88a1c38977980587037dae3c219ec98ecf91d88e3132a0c95190"
+hash = "226413150068ad8f0f48340f74b5b3f7f665d9f61607d203b6a28b58e518aeb7"
 
 [[files]]
 file = "mods/lithostitched.pw.toml"

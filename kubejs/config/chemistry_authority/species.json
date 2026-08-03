@@ -1,7 +1,7 @@
 {
   "schema": "bc.chemical_species.v1",
   "generated_from": {
-    "registry_snapshot": "796bd1742d67b7f2e7361ca5",
+    "registry_snapshot": "0b0a7bbfd02bbfbb47dd6adf",
     "registries": "generated/runtime-dumps/registries.json",
     "composition_evidence": "kubejs/config/alchemistry_dissolver_port.json"
   },

@@ -25,6 +25,12 @@ var BC_GROWN_MATERIALS = [
     { id: 'venom_rot', input: 'minecraft:spider_eye', primary: 'minecraft:fermented_spider_eye', ethanol: 'chemlib:carbon', acetic: 'chemlib:carbon_dioxide', sulfuric: 'chemlib:sulfur', hydrochloric: 'chemlib:hydrogen', nitric: 'chemlib:nitrogen', phosphoric: 'chemlib:phosphorus', gangue: 'minecraft:fermented_spider_eye', ferrous: 'chemlib:iron', nonferrous: 'chemlib:potassium', hard: 'chemlib:magnesium', rare: 'minecraft:redstone', blood: 'minecraft:redstone', ae: 'chemlib:silicon', trace: 'chemlib:nitrogen' }
 ]
 
+// Solvent families stay explicit so rejected retained routes can be disabled
+// without changing the neighboring generator or its deterministic recipe IDs.
+var BC_GROW_DISABLED_SOLVENTS = {
+    ethanol: true
+}
+
 function bcGrowExists(id) {
     if (!id) return false
     try { return Item.exists(id) } catch (e) { return false }
@@ -55,6 +61,7 @@ function bcGrowResults(def, solvent, ball) {
 }
 
 function bcGrowRecipe(event, def, solvent, ball) {
+    if (BC_GROW_DISABLED_SOLVENTS[solvent.id]) return
     if (!bcGrowExists(def.input) || !bcGrowExists(ball.item)) return
     var recipe = {
         type: 'create:mixing',

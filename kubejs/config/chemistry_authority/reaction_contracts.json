@@ -166,6 +166,23 @@
       "industrial_authority_finding": "Rejected: machine selection followed group adjacency rather than a material-specific Create or PNCR operation contract.",
       "review_scope": "This disposition does not approve formula creation, molecule-use generators, terminal-output declarations, or the retained cross-script identity list.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "grown_material_ethanol_acid_ball_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:grown_materials/acid_ball/[^/]+/ethanol/[^/]+$",
+      "retained_recipe_count": 160,
+      "retained_recipe_breakdown": {
+        "grown_material_inputs": 20,
+        "grinding_ball_variants_per_input": 8
+      },
+      "sorted_recipe_ids_sha256": "3e3f424c83b6ae2fe6bab839383530f5e9ae8ede9e8474b7db29496621992d57",
+      "disposition": "disabled_unproven_ethanol_extraction_family",
+      "source_composition_finding": "Rejected: crop, wood, fungus, insect, animal, and monster inputs were mapped through ethanol to broad elemental or unrelated material outputs without source-specific composition evidence.",
+      "fixed_mass_finding": "Rejected: multiple probabilistic outputs and probabilistic grinding-ball recovery used opaque item packets without a conserved fixed-mass basis.",
+      "purpose_finding": "Rejected: grinding-ball bias changed the selected material identity to create graph adjacency rather than serving a material-specific extraction purpose.",
+      "review_scope": "Only ethanol is disabled by this disposition; acetic, sulfuric, hydrochloric, nitric, and phosphoric solvent families remain unapproved and pending separate review.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ],
   "reactions": []

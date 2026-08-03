@@ -1,0 +1,309 @@
+{
+  "schema": "bc.recipe_authority_audit.v1",
+  "manifest_purpose": "Human-reviewed recipe dispositions and exact material-purpose contracts kept outside compiler-owned chemistry authority output.",
+  "compiler_owned_reaction_authority": "kubejs/config/chemistry_authority/reaction_contracts.json",
+  "review_scope": "The rejected contracts below cover only the ten removed direct elemental-metal outputs. Every other authored transformation remains pending reaction-level balance and behavioral review; presence in source is not approval.",
+  "approved_recipe_contracts": [
+    {
+      "id": "kubejs:chemistry/pneumaticcraft/fluid_mixer/carbon_monoxide_oxidation",
+      "family": "airtight_carbon_monoxide_oxidation",
+      "equation": "2 CO + O2 -> 2 CO2",
+      "fixed_mass_packet_basis": "One gaseous formula-unit packet is 250 mB.",
+      "inputs": [
+        {
+          "id": "chemlib:carbon_monoxide",
+          "packets": 2,
+          "amount_mb": 500
+        },
+        {
+          "id": "chemlib:oxygen",
+          "packets": 1,
+          "amount_mb": 250
+        }
+      ],
+      "outputs": [
+        {
+          "id": "chemlib:carbon_dioxide",
+          "packets": 2,
+          "amount_mb": 500
+        }
+      ],
+      "atom_balance": {
+        "input": {
+          "carbon": 2,
+          "oxygen": 4
+        },
+        "output": {
+          "carbon": 2,
+          "oxygen": 4
+        }
+      },
+      "declared_losses": [],
+      "catalysts": [],
+      "machine_authority": "pneumaticcraft:fluid_mixer",
+      "progression_boundary": "airtight_era",
+      "exact_material_purpose": "Consume a bounded carbon-monoxide gas stream by complete oxidation into carbon dioxide inside PNCR containment; this is a specific toxic/combustible-gas treatment sink, not a generic molecule conversion or graph-adjacency route.",
+      "industrial_authority_finding": "PNCR owns this deliberate contained gas reaction; the route forms no elemental metal and does not overlap TConstruct metal formation.",
+      "gas_destination_contract": "The two carbon-dioxide packets remain a PNCR fluid output for contained downstream handling.",
+      "runtime_evidence": "pending_fresh_gas_oracle",
+      "required_runtime_oracle": "Fresh capture must prove exact recipe registration, 500 mB CO plus 250 mB O2 consumption, 500 mB CO2 delivery to a contained destination, and the uncontained escape behavior at the gas boundary.",
+      "review_state": "statically_approved_pending_oracle"
+    }
+  ],
+  "rejected_recipe_contracts": [
+    {
+      "id": "kubejs:chemistry/transform/create_compacting/iron_oxide_reduction",
+      "exact_material_purpose": "Reduction of iron oxide into elemental iron stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: opaque item packets and probabilistic carbon-dioxide residue do not prove conserved iron, carbon, and oxygen quantities.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "id": "kubejs:chemistry/transform/create_compacting/lead_oxide_reduction",
+      "exact_material_purpose": "Reduction of lead oxide into elemental lead stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: opaque item packets and probabilistic carbon-dioxide residue do not prove conserved lead, carbon, and oxygen quantities.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "id": "kubejs:chemistry/transform/create_compacting/tin_oxide_reduction",
+      "exact_material_purpose": "Reduction of tin oxide into elemental tin stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: opaque item packets and probabilistic carbon-dioxide residue do not prove conserved tin, carbon, and oxygen quantities.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "id": "kubejs:chemistry/transform/create_compacting/zinc_oxide_reduction",
+      "exact_material_purpose": "Reduction of zinc oxide into elemental zinc stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: opaque item packets and probabilistic carbon-dioxide residue do not prove conserved zinc, carbon, and oxygen quantities.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "id": "kubejs:chemistry/transform/create_compacting/copper_oxide_reduction",
+      "exact_material_purpose": "Reduction of copper(II) oxide into elemental copper stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: opaque item packets and probabilistic carbon-dioxide residue do not prove conserved copper, carbon, and oxygen quantities.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "id": "kubejs:chemistry/transform/create_compacting/nickel_oxide_reduction",
+      "exact_material_purpose": "Reduction of nickel oxide into elemental nickel stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: opaque item packets and probabilistic carbon-dioxide residue do not prove conserved nickel, carbon, and oxygen quantities.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "id": "kubejs:chemistry/transform/create_compacting/titanium_magnesium_oxide_reduction",
+      "exact_material_purpose": "Magnesiothermic reduction of titanium oxide into elemental titanium stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: the former route omitted magnesium-bearing residue and therefore could not conserve the declared fixed material packets.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "id": "kubejs:chemistry/transform/create_compacting/aluminum_magnesium_oxide_reduction",
+      "exact_material_purpose": "Magnesiothermic reduction of aluminum oxide into elemental aluminum stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: the former route omitted magnesium-bearing residue and therefore could not conserve the declared fixed material packets.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "id": "kubejs:chemistry/transform/pncr_thermo/iron_oxide_carbon_monoxide_reduction",
+      "exact_material_purpose": "Carbon-monoxide reduction of iron oxide into elemental iron stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: one opaque oxide item and 250 mB gas were mapped to one opaque element item and 250 mB exhaust without a proven common mass basis.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_oracle"
+    },
+    {
+      "id": "kubejs:chemistry/transform/pncr_pressure/beryllium_from_beryllium_chloride",
+      "exact_material_purpose": "Magnesium reduction of beryllium chloride into elemental beryllium stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: the former route omitted magnesium-chloride residue and therefore could not conserve the declared fixed material packets.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    }
+  ],
+  "rejected_recipe_families": [
+    {
+      "family": "chemlib_full_generated_source_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:chemlib_full/.*/source/.*$",
+      "retained_recipe_count": 167,
+      "retained_recipe_breakdown": {
+        "blood_manual_element_sources": 75,
+        "create_mixing_element_sources": 75,
+        "pncr_thermo_gas_element_sources": 11,
+        "create_mixing_molecule_sources": 6
+      },
+      "sorted_recipe_ids_sha256": "5067e9b452b3eabcc8611777712bbabff6a5738c6c5b7bc637a785302c663a4b",
+      "disposition": "removed_blanket_source_family",
+      "source_specificity_finding": "Rejected: each periodic group reused one generic deposit selector for every member, so the input composition did not justify the selected element; the molecule subset likewise lacked accepted fixed-packet source contracts.",
+      "magic_provenance_finding": "Rejected: LP and slate costs did not declare an identity-changing provenance transform or material-specific residue, including for radioactive species.",
+      "fixed_mass_finding": "Rejected: probabilistic Create yields, multi-item Blood outputs, and item-to-gas volume conversion had no shared fixed-mass basis or complete residue accounting.",
+      "industrial_authority_finding": "Rejected: Create and Blood Magic directly formed finished elemental metals reserved to TConstruct metallurgy.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "chemlib_full_element_dust_and_cobalt_form_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_patterns": [
+        "^kubejs:chemlib_full/create_milling/form/dust/.*$",
+        "^kubejs:chemlib_full/create_compacting/recovery/dust/.*$",
+        "^kubejs:chemlib_full/create_milling/recovery/form/cobalt_plate$"
+      ],
+      "retained_recipe_count": 149,
+      "retained_recipe_breakdown": {
+        "create_milling_element_to_dust": 74,
+        "create_compacting_dust_to_element": 74,
+        "create_milling_cobalt_plate_to_element": 1
+      },
+      "sorted_recipe_ids_sha256": "0176fc0dde988dcf9c1a88c1347bb1a10a03e37fc8fac8a664bf8ea86aafb2cf",
+      "disposition": "removed_non_tcon_element_form_family",
+      "fixed_mass_finding": "Rejected: opaque one-item element, dust, and plate packets were treated as equal without an accepted common mass basis.",
+      "industrial_authority_finding": "Rejected: Create milling and compacting directly formed or reclaimed finished elemental material reserved to TConstruct metallurgy and remelting.",
+      "review_scope": "This disposition does not approve formula, compound-recovery, sink, or molecule-use generators.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "chemlib_full_pncr_compound_to_element_recovery_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_patterns": [
+        "^kubejs:chemlib_full/pncr_pressure/recovery/compound/.*$",
+        "^kubejs:chemlib_full/pncr_pressure/recovery/existing_compound/.*$"
+      ],
+      "retained_recipe_count": 88,
+      "retained_recipe_breakdown": {
+        "generated_compound_recovery": 86,
+        "explicit_existing_compound_recovery": 2
+      },
+      "sorted_recipe_ids_sha256": "bdac725ca68e048a30401edd604e330a457c18ce596a71004c8b674859b642ae",
+      "disposition": "removed_non_tcon_compound_to_element_family",
+      "fixed_mass_finding": "Rejected: two opaque compound items were mapped to one opaque elemental item without a common fixed-mass basis or composition-derived stoichiometry.",
+      "residue_finding": "Rejected: pressure seals were consumed while every non-target atom in the oxide, chloride, nitrate, sulfate, sulfide, carbonate, hydroxide, or phosphate input disappeared without a named residue.",
+      "industrial_authority_finding": "Rejected: PNCR directly formed finished elemental material reserved to TConstruct metallurgy and remelting.",
+      "review_scope": "This disposition does not approve formula creation, sinks, molecule-use generators, or the retained cross-script identity list.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "chemlib_full_group_generic_sink_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:chemlib_full/.*/sink/.*$",
+      "retained_recipe_count": 129,
+      "retained_recipe_breakdown": {
+        "create_mixing_sinks": 75,
+        "create_compacting_sinks": 10,
+        "pncr_pressure_sinks": 44
+      },
+      "sorted_recipe_ids_sha256": "b41f854c5762f57dd2dc6167db51632cc26833893b6f694fc91a6a1d51d053e2",
+      "disposition": "removed_group_generic_adjacency_family",
+      "source_purpose_finding": "Rejected: every surviving element in a broad periodic group was accepted by the same one-or-two generic sink set even when its composition or physical properties had no material-specific relationship to the output.",
+      "fixed_mass_finding": "Rejected: one opaque element packet plus unrelated components could yield multiplied glass, wire, fertilizer, grout, tubes, dust, or compost without a composition-derived fixed-mass account.",
+      "magic_provenance_finding": "Rejected: the five biogenic Source Gem routes combined an arbitrary group element, amethyst, and a Blood slate without an identity-changing provenance transform or a named residue.",
+      "industrial_authority_finding": "Rejected: machine selection followed group adjacency rather than a material-specific Create or PNCR operation contract.",
+      "review_scope": "This disposition does not approve formula creation, molecule-use generators, terminal-output declarations, or the retained cross-script identity list.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "grown_material_ethanol_acid_ball_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:grown_materials/acid_ball/[^/]+/ethanol/[^/]+$",
+      "retained_recipe_count": 160,
+      "retained_recipe_breakdown": {
+        "grown_material_inputs": 20,
+        "grinding_ball_variants_per_input": 8
+      },
+      "sorted_recipe_ids_sha256": "3e3f424c83b6ae2fe6bab839383530f5e9ae8ede9e8474b7db29496621992d57",
+      "disposition": "disabled_unproven_ethanol_extraction_family",
+      "source_composition_finding": "Rejected: crop, wood, fungus, insect, animal, and monster inputs were mapped through ethanol to broad elemental or unrelated material outputs without source-specific composition evidence.",
+      "fixed_mass_finding": "Rejected: multiple probabilistic outputs and probabilistic grinding-ball recovery used opaque item packets without a conserved fixed-mass basis.",
+      "purpose_finding": "Rejected: grinding-ball bias changed the selected material identity to create graph adjacency rather than serving a material-specific extraction purpose.",
+      "review_scope": "This disposition disables only ethanol; later solvent dispositions are recorded as separate rejected families.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "grown_material_acetic_acid_ball_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:grown_materials/acid_ball/[^/]+/acetic/[^/]+$",
+      "retained_recipe_count": 160,
+      "retained_recipe_breakdown": {
+        "grown_material_inputs": 20,
+        "grinding_ball_variants_per_input": 8
+      },
+      "sorted_recipe_ids_sha256": "0d36eff26c03447a6e2d8b818099151cc6fff5a68a6337f23362ec0fe9b36d5d",
+      "disposition": "disabled_unproven_acetic_extraction_family",
+      "source_composition_finding": "Rejected: crop, wood, fungus, insect, animal, and monster inputs were mapped through acetic acid to carbon, carbon dioxide, sodium, calcium carbonate, or unrelated products without source-specific composition evidence.",
+      "fixed_mass_finding": "Rejected: multiple probabilistic outputs and probabilistic grinding-ball recovery used opaque item packets without a conserved fixed-mass basis.",
+      "purpose_finding": "Rejected: grinding-ball bias changed the selected material identity to create graph adjacency rather than serving a material-specific extraction purpose.",
+      "review_scope": "All six grown-material solvent families are disabled by separate exact dispositions; no grown acid-ball recipe is approved or intended to register pending fresh recapture.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "grown_material_sulfuric_acid_ball_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:grown_materials/acid_ball/[^/]+/sulfuric/[^/]+$",
+      "retained_recipe_count": 160,
+      "retained_recipe_breakdown": {
+        "grown_material_inputs": 20,
+        "grinding_ball_variants_per_input": 8
+      },
+      "sorted_recipe_ids_sha256": "e74abb184fee6569156c152f98dbf5d758c1cbcaadf5512bb952b88a19198727",
+      "disposition": "disabled_unproven_sulfuric_extraction_family",
+      "source_composition_finding": "Rejected: diverse biological inputs were mapped through sulfuric acid to elemental sulfur or calcium sulfate without source-specific composition and stoichiometric residue evidence.",
+      "fixed_mass_finding": "Rejected: multiple probabilistic outputs and probabilistic grinding-ball recovery used opaque item packets without a conserved fixed-mass basis.",
+      "purpose_finding": "Rejected: grinding-ball bias changed the selected material identity to create graph adjacency rather than serving a material-specific extraction purpose.",
+      "review_scope": "All six grown-material solvent families are disabled by separate exact dispositions; no grown acid-ball recipe is approved or intended to register pending fresh recapture.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "grown_material_hydrochloric_acid_ball_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:grown_materials/acid_ball/[^/]+/hydrochloric/[^/]+$",
+      "retained_recipe_count": 160,
+      "retained_recipe_breakdown": {
+        "grown_material_inputs": 20,
+        "grinding_ball_variants_per_input": 8
+      },
+      "sorted_recipe_ids_sha256": "6d79ae583c077b630cc0f9968717181e8dcd5c4bd398dcedcfdb1e5573356926",
+      "disposition": "disabled_unproven_hydrochloric_extraction_family",
+      "source_composition_finding": "Rejected: diverse biological inputs were mapped through hydrochloric acid to hydrogen, chlorine, silicon dioxide, or calcium chloride without source-specific composition and stoichiometric residue evidence.",
+      "fixed_mass_finding": "Rejected: multiple probabilistic outputs and probabilistic grinding-ball recovery used opaque item packets without a conserved fixed-mass basis.",
+      "purpose_finding": "Rejected: grinding-ball bias changed the selected material identity to create graph adjacency rather than serving a material-specific extraction purpose.",
+      "review_scope": "All six grown-material solvent families are disabled by separate exact dispositions; no grown acid-ball recipe is approved or intended to register pending fresh recapture.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "grown_material_nitric_acid_ball_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:grown_materials/acid_ball/[^/]+/nitric/[^/]+$",
+      "retained_recipe_count": 160,
+      "retained_recipe_breakdown": {
+        "grown_material_inputs": 20,
+        "grinding_ball_variants_per_input": 8
+      },
+      "sorted_recipe_ids_sha256": "38b19835c4d98e0b2333087dbd05af60732446f564577c69f5018e3fbcd117b3",
+      "disposition": "disabled_unproven_nitric_extraction_family",
+      "source_composition_finding": "Rejected: diverse biological inputs were mapped through nitric acid to elemental nitrogen or calcium nitrate without source-specific composition and stoichiometric residue evidence.",
+      "fixed_mass_finding": "Rejected: multiple probabilistic outputs and probabilistic grinding-ball recovery used opaque item packets without a conserved fixed-mass basis.",
+      "purpose_finding": "Rejected: grinding-ball bias changed the selected material identity to create graph adjacency rather than serving a material-specific extraction purpose.",
+      "review_scope": "All six grown-material solvent families are disabled by separate exact dispositions; no grown acid-ball recipe is approved or intended to register pending fresh recapture.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "grown_material_phosphoric_acid_ball_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:grown_materials/acid_ball/[^/]+/phosphoric/[^/]+$",
+      "retained_recipe_count": 160,
+      "retained_recipe_breakdown": {
+        "grown_material_inputs": 20,
+        "grinding_ball_variants_per_input": 8
+      },
+      "sorted_recipe_ids_sha256": "0e0f71ec851fc8c3c517e13ed11a89dfe2eef99462fd1b3965d8278666722976",
+      "disposition": "disabled_unproven_phosphoric_extraction_family",
+      "source_composition_finding": "Rejected: diverse biological inputs were mapped through phosphoric acid to elemental phosphorus and grinding-ball-selected materials without source-specific composition and stoichiometric residue evidence.",
+      "fixed_mass_finding": "Rejected: multiple probabilistic outputs and probabilistic grinding-ball recovery used opaque item packets without a conserved fixed-mass basis.",
+      "purpose_finding": "Rejected: grinding-ball bias changed the selected material identity to create graph adjacency rather than serving a material-specific extraction purpose.",
+      "cohort_status": "All 960 retained grown-material acid-ball routes across six 160-ID solvent families are disabled by exact rejection dispositions.",
+      "review_scope": "No grown-material acid-ball recipe is approved or intended to register; fresh runtime recapture remains required to verify the cohort is absent.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    }
+  ]
+}

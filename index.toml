@@ -9302,7 +9302,11 @@ hash = "9c49404e035ab22320f2edb851a55a65c3645a64accab3ea6450cea3b7f7a82e"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/reaction_contracts.json"
-hash = "6bfeb29d5c955b0b23c7f86134f647e58f21d450a0b80addfc5fbff856894527"
+hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
+
+[[files]]
+file = "kubejs/config/chemistry_authority/recipe_authority_manifest.json"
+hash = "70d044689688a9a7f7b11f491f80a596af60b1ef9bf0f7fbb8e313caf43d6931"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
@@ -10886,7 +10890,7 @@ hash = "1b2d496657140b3bf4912298e36d4eb99bc912db0766a058514447556a2a2403"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/58_create_pncr_molecular_synthesis.js"
-hash = "1b3293c0ca77252985252d561f30d3af2c5332d57fa70b50d7802fe47b9f1bba"
+hash = "40ab76070b588db7b96b74df11dac1ed12f83bf70208692303c46011591dcfc3"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/59_formulaic_synthesis_magic_routes.js"

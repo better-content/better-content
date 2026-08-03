@@ -283,6 +283,9 @@ ServerEvents.recipes(function (event) {
     bcChemFluidMixer(event, 'hydrogen_sulfide_scrubbing', bcChemGasFluid('chemlib:hydrogen_sulfide'), bcChemGasFluid('chemlib:oxygen', 2), {
         fluid: 'chemlib:sulfur_dioxide_fluid', amount: 250
     }, 2.75, 220)
+    bcChemFluidMixer(event, 'carbon_monoxide_oxidation', bcChemGasFluid('chemlib:carbon_monoxide', 2), bcChemGasFluid('chemlib:oxygen'), {
+        fluid: 'chemlib:carbon_dioxide_fluid', amount: 500
+    }, 3.0, 240)
     bcChemFluidMixer(event, 'butane_fuel_charge', bcChemGasFluid('chemlib:butane'), bcChemGasFluid('chemlib:oxygen'), {
         item: 'minecraft:fire_charge', count: 2
     }, 3.0, 200)

@@ -9306,7 +9306,7 @@ hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/recipe_authority_manifest.json"
-hash = "1805ff32456f5e315909e33a995f7204b0f6bf93641aa72c0b2c8ab88c8671e7"
+hash = "adc167e5791edcdc94ed469d03ae638f6f57a2774fdd0a7e550dce0c22c3f640"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
@@ -10858,7 +10858,7 @@ hash = "cd90c26a1b2343ea4f490d6bd5391115dbee827a598988b1339d0a8d19ba7341"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/45_deposit_furnace_fallbacks.js"
-hash = "8e30f43d0de55ca41e7b75334179ced10e7068942b72ffd6961eb1feaa3dbc11"
+hash = "f03785bd8ef07dd0e0646431361344db201eba97f74f030cc485cfe8716157b4"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js"

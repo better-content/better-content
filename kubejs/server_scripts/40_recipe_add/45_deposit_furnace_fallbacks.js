@@ -16,19 +16,8 @@ ServerEvents.recipes(function (event) {
     for (var i = 0; i < BC_DEPOSIT_FURNACE_FALLBACKS.length; i++) {
         var dep = BC_DEPOSIT_FURNACE_FALLBACKS[i]
         var input = '#' + dep.tag
-        var output = Item.of(dep.output, dep.count)
 
         event.remove({ type: 'minecraft:smelting', input: input })
         event.remove({ type: 'minecraft:blasting', input: input })
-
-        event.smelting(output, input)
-            .xp(0.1)
-            .cookingTime(240)
-            .id('kubejs:furnace_fallback/deposits/' + dep.id)
-
-        event.blasting(output, input)
-            .xp(0.1)
-            .cookingTime(120)
-            .id('kubejs:blasting_fallback/deposits/' + dep.id)
     }
 })

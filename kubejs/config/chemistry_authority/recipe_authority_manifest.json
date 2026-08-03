@@ -800,6 +800,24 @@
       "industrial_authority_finding": "Rejected: many routes directly formed finished elemental metals outside TConstruct metallurgy; adjacency-driven magic does not override industrial authority.",
       "review_scope": "The retained source loop remains for tooling alignment but iterates an explicitly empty local deposit list, so none of the 176 generated registrations is intended to remain live.",
       "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "deposit_furnace_fallback_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_patterns": [
+        "^kubejs:furnace_fallback/deposits/.*$",
+        "^kubejs:blasting_fallback/deposits/.*$"
+      ],
+      "retained_recipe_count": 16,
+      "retained_recipe_breakdown": { "smelting_routes": 8, "blasting_routes": 8 },
+      "sorted_recipe_ids_sha256": "36ac3c0a1378fcf28d15b5351e0cf23d8030e43482cfd77e0bd3a2d7b842f19e",
+      "disposition": "removed_deposit_furnace_formation_bypass",
+      "exact_material_purpose": "Provide a low-yield emergency furnace conversion from broad deposit-block tags into coal, quartz, or finished metal nuggets.",
+      "source_composition_finding": "Rejected: broad deposit tags mapped opaque blocks directly to fixed output counts without bounded grade or gangue residue.",
+      "fixed_mass_finding": "Rejected: one tagged deposit block became one nonmetal item or three finished nuggets without a common fixed-mass basis.",
+      "industrial_authority_finding": "Rejected: 12 routes directly formed finished metal nuggets outside TConstruct metallurgy; the four coal/quartz routes share the same unbounded fallback defect and are removed with the authored family.",
+      "progression_finding": "Existing smelting and blasting recipes for these deposit tags remain explicitly removed; no vanilla furnace bypass is restored.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ]
 }

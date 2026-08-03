@@ -9306,7 +9306,7 @@ hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/recipe_authority_manifest.json"
-hash = "fef08fde4552c7e71d1d492a50903465cdc9be36e09d4e60a76bc17d25b759d6"
+hash = "74ff98e5571f372cf182750c6458a619c50c1ca2405659856294df0928cea95c"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
@@ -10906,7 +10906,7 @@ hash = "260a8a44155c79e73f63a27bcd3f0546bca9b81c63b54d2b29e08288c5e52492"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/62_chemical_electronics_magic_growth_routes.js"
-hash = "b18013efd11e4fe048104e722555e469f728cf3ae7c3912ff3ee391deac1123e"
+hash = "0bfdfb6a1a708e8bb6cbdde8379bcdc446b789a2bc257efe2905cf608fb5cd90"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js"

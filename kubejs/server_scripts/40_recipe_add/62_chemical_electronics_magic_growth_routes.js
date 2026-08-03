@@ -1,7 +1,8 @@
 // Chemical routes for electronics, magic reagents, and growable economy sinks.
 //
-// Finished circuit authority remains in PNCR assembly. These recipes prepare boards,
-// wafers, pigments, salts, and manual/magic alternatives around that authority.
+// Finished circuit authority remains in PNCR assembly. The definitions below are
+// retained proposal/tooling markers only; no route registers pending bounded
+// manufactured-part, magic-provenance, and biological-yield contracts.
 
 function bcChemUseExists(id) {
     try { return Item.exists(id) } catch (e) { return false }
@@ -103,6 +104,10 @@ function bcChemUseArsImbue(event, id, input, output, count, source, pedestalItem
 }
 
 ServerEvents.recipes(function (event) {
+    // All chemistry/use registrations are intentionally unreachable pending
+    // bounded manufactured-part, magic-provenance, and biological-yield contracts.
+    return
+
     // Electronics: boards, wafers, processors-in-waiting.
      bcChemUseCompact(event, 'morered/stone_plate_ceramic', 'morered:stone_plate', 4, [
         '#forge:stone',

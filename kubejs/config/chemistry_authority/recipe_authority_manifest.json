@@ -851,6 +851,49 @@
       "industrial_authority_finding": "Create may own physical sample milling, but only with bounded prospecting-feed quantities and complete residues absent from this family.",
       "review_scope": "All 22 retained milling registrations are removed. The source table remains as historical/tooling context for future deposit-specific redesign; no furnace or milling recipe is intended to register from this file.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "chemistry_use_electronics_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_patterns": [
+        "^kubejs:chemistry/use/create_compacting/.*$",
+        "^kubejs:chemistry/use/create_mixing/(ae2|powergrid)/.*$",
+        "^kubejs:chemistry/use/pncr_pressure/.*$"
+      ],
+      "retained_recipe_count": 13,
+      "sorted_recipe_ids_sha256": "fe54c8697156ad18ee7e145ba1fd4ee376b9ae937bf9b3eb5d59d7854d9fc623",
+      "disposition": "disabled_unbounded_chemical_electronics_routes",
+      "exact_material_purpose": "Use named ceramics, dopants, etchants, and conductors to prepare plates, boards, wafers, transistors, capacitors, and printed processor parts.",
+      "fixed_mass_finding": "Rejected: opaque chemical and manufactured-part packets yielded multiplied electronics without substrate area, dopant dose, etchant consumption, mother-liquor, or waste-copper accounting.",
+      "industrial_authority_finding": "Create may own open ceramic preparation and PNCR may own Airtight-era etching/circuit operations, but machine fit alone does not supply bounded quantities or residues.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "chemistry_use_magic_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_patterns": [
+        "^kubejs:chemistry/use/ars_imbuement/.*$",
+        "^kubejs:chemistry/use/blood_alchemy/.*$"
+      ],
+      "retained_recipe_count": 15,
+      "sorted_recipe_ids_sha256": "17aac8ed637242ec56924446cbc7f9da2f2e59777a72d1b48c6ca609f65b229c",
+      "disposition": "disabled_uncontracted_chemical_magic_routes",
+      "exact_material_purpose": "Use named mineral or chemical reagents with LP, slates, and Source to batch slates, runes, chalks, blood bottles, and Source Gems.",
+      "fixed_mass_finding": "Rejected: opaque reagents and magical catalysts became multiplied outputs without bounded material yields or deterministic residues.",
+      "magic_provenance_finding": "Rejected: LP, Source, slates, and identity-bearing reagents lacked explicit identity-changing cost, residue, and provenance transforms.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "chemistry_use_biological_and_growth_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:chemistry/use/create_mixing/(farmersdelight|minecraft)/.*$",
+      "retained_recipe_count": 7,
+      "sorted_recipe_ids_sha256": "1338798387eba5bec2f621ee16afaa2e70f0b77a7607bc36b30890aa9273177e",
+      "disposition": "disabled_unbounded_biological_adjacency_routes",
+      "exact_material_purpose": "Use named nutrient, mineral, or tanning inputs to prepare fertilizer, soil, feed, leather, string, or polymerized biomass.",
+      "source_composition_finding": "Rejected: broad nutrient and element inputs were treated as generic adjacency tokens for unrelated biological products without source-specific composition or process evidence.",
+      "fixed_mass_finding": "Rejected: opaque inputs became two to eight output items without bounded water uptake, biomass yield, liquor, off-gas, or residue streams.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ]
 }

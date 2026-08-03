@@ -1,71 +1,53 @@
 {
   "schema": "bc.isotope_state.v1",
-  "scope": "all ChemLib matter forms, containers, tanks, clouds, dropped stacks, inventories, and machine transactions",
+  "scope": "loaded ChemLib matter in clouds, tanks, sealed cells, loose stacks, player inventories, block inventories, and active machine state",
   "time_basis": "server_game_time",
-  "evaluation_model": "event_local_lazy_analytic_decay",
+  "evaluation_model": "bounded_loaded_holder_continuous_microbatch_and_deterministic_stack_exposure",
   "global_scans_allowed": false,
   "canonical_state_may_be_implicit": true,
   "state_fields": [
-    "species_id",
-    "form",
-    "matter_quanta",
-    "isotope_vector",
-    "origin_provenance",
-    "last_evaluated_game_time",
-    "immutable_nonce",
-    "decay_epoch",
-    "daughter_remainder",
-    "stabilizer_proof",
-    "stabilizer_strength",
-    "stabilizer_charge",
-    "stabilizer_expiry_game_time"
+    "chemical_id",
+    "component_masses",
+    "total_mass",
+    "density",
+    "temperature",
+    "charge",
+    "energy",
+    "optional_isotope_abundance_ppm",
+    "isotope_binding",
+    "loaded_exposure_ticks",
+    "deterministic_exposure_seed"
   ],
-  "event_boundaries": [
-    "stack_create",
-    "stack_load",
-    "stack_save",
-    "stack_copy",
-    "stack_split",
-    "stack_merge",
-    "craft_result_take",
-    "item_handler_insert",
-    "item_handler_extract",
-    "machine_transaction_commit",
-    "pickup",
-    "drop",
-    "despawn",
-    "block_place",
-    "block_break",
-    "container_load",
-    "container_unload",
-    "chunk_load",
-    "chunk_unload",
-    "player_login",
-    "slot_mutation",
-    "tooltip",
-    "item_use"
+  "evaluation_surfaces": [
+    "machine_or_cloud_tick",
+    "player_inventory_periodic_scan",
+    "active_dropped_item_scan",
+    "active_block_inventory_scan",
+    "sealed_cell_evaluation"
   ],
   "active_holder_index": {
-    "scope": "radioactive_holders_only",
-    "scheduling": "timing_wheel_or_priority_queue",
-    "updated_by_events_only": true
+    "scope": "radioactive_dropped_items_and_loaded_block_inventories",
+    "scheduling": "bounded_round_robin_budgeted_periodic_scan",
+    "membership_updates": [
+      "entity_join_leave",
+      "chunk_load_unload",
+      "block_entity_mutation"
+    ],
+    "player_inventory_scheduling": "direct_periodic_scan_every_40_ticks"
   },
   "decay_math": {
-    "remaining": "initial * 2^(-elapsed_game_ticks / half_life_game_ticks)",
-    "rounding": "fixed_point_remainder_with_nonce_epoch_for_discrete_materialization",
-    "unloaded_catchup": "analytic_on_load"
+    "bulk_and_cell": "continuous_deterministic_mass_debit_with_explicit_daughter_and_mass_defect_heat",
+    "loose_stack": "deterministic_loaded_exposure_probability_per_evaluation_window",
+    "loaded_time_only": true,
+    "unloaded_catchup": false
   },
-  "magic_stabilization": {
-    "required_for_short_half_life_bulk_forms": true,
-    "matter_creation_allowed": false,
-    "required_provenance": [
-      "tradition",
-      "stabilizer_item",
-      "charge_source",
-      "created_game_time",
-      "expiry_game_time"
-    ],
-    "expiry_result": "resume physical decay and preserve daughter matter"
-  },
-  "isotope_catalog_status": "pending_upstream_catalog_and_half_life_review"
+  "excluded_features": {
+    "global_world_or_inventory_scan": "not_implemented_by_design",
+    "unloaded_decay_catchup": "not_implemented",
+    "timing_wheel_or_priority_queue": "not_implemented",
+    "declared_event_boundary_state_machine": "not_implemented",
+    "magic_stabilization": "not_implemented",
+    "reactor_machine_or_nuclear_energy_capability": "not_implemented_by_design",
+    "full_upstream_isotope_catalog": "not_implemented_and_release_blocking"
+  }
 }

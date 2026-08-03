@@ -8,7 +8,9 @@
     "time_basis",
     "evaluation_model",
     "state_fields",
-    "event_boundaries",
-    "magic_stabilization"
+    "evaluation_surfaces",
+    "active_holder_index",
+    "decay_math",
+    "excluded_features"
   ]
 }

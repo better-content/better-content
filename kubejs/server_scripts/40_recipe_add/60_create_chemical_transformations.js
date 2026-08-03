@@ -115,21 +115,7 @@ function bcChemXGasFixation(event, id, solid, gas, gasUnits, output, pressure, t
 }
 
 ServerEvents.recipes(function (event) {
-     bcChemXMix(event, 'soda_ash_from_salt_and_lime', 'chemlib:sodium_carbonate', 1, [
-        { item: 'chemlib:sodium_chloride', count: 2 },
-        'chemlib:calcium_carbonate'
-    ], 'minecraft:water', 250, 'heated', 220, { item: 'chemlib:calcium_chloride', chance: 0.50 })
-     bcChemXMix(event, 'phosphate_from_phosphoric_lime', 'chemlib:phosphate', 1, [
-        'chemlib:phosphoric_acid',
-        'chemlib:calcium'
-    ], 'minecraft:water', 250, null, 180, null)
     bcChemXGasFixation(event, 'carbon_dioxide_scrub_lime',
         'chemlib:calcium_oxide', 'chemlib:carbon_dioxide', 1,
         'chemlib:calcium_carbonate', 2.5, 423)
-     bcChemXPressure(event, 'chloralkali_salt_cell', 'chemlib:sodium_hydroxide', 1, [
-        'chemlib:sodium_chloride',
-        'chemlib:hydroxide',
-        'kubejs:pressure_seal',
-        '#forge:plates/copper'
-    ], 2.5)
 })

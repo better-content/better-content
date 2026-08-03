@@ -48,6 +48,53 @@
       "runtime_evidence": "pending_fresh_gas_oracle",
       "required_runtime_oracle": "Fresh capture must prove exact recipe registration, 500 mB CO plus 250 mB O2 consumption, 500 mB CO2 delivery to a contained destination, and the uncontained escape behavior at the gas boundary.",
       "review_state": "statically_approved_pending_oracle"
+    },
+    {
+      "id": "kubejs:chemistry/transform/pncr_thermo/carbon_dioxide_scrub_lime",
+      "family": "airtight_lime_carbon_dioxide_scrubbing",
+      "equation": "CaO + CO2 -> CaCO3",
+      "fixed_mass_packet_basis": "One solid formula-unit item reacts with one 250 mB gaseous formula-unit packet to produce one solid formula-unit item.",
+      "inputs": [
+        {
+          "id": "chemlib:calcium_oxide",
+          "packets": 1,
+          "amount_items": 1
+        },
+        {
+          "id": "chemlib:carbon_dioxide",
+          "packets": 1,
+          "amount_mb": 250
+        }
+      ],
+      "outputs": [
+        {
+          "id": "chemlib:calcium_carbonate",
+          "packets": 1,
+          "amount_items": 1
+        }
+      ],
+      "atom_balance": {
+        "input": {
+          "calcium": 1,
+          "carbon": 1,
+          "oxygen": 3
+        },
+        "output": {
+          "calcium": 1,
+          "carbon": 1,
+          "oxygen": 3
+        }
+      },
+      "declared_losses": [],
+      "catalysts": [],
+      "machine_authority": "pneumaticcraft:thermo_plant",
+      "progression_boundary": "airtight_era",
+      "exact_material_purpose": "Fix a bounded contained carbon-dioxide packet into calcium carbonate using lime as a material-specific gas scrubber.",
+      "industrial_authority_finding": "PNCR owns the contained gas/solid reaction; it forms no elemental metal and does not overlap TConstruct metallurgy.",
+      "gas_destination_contract": "The carbon-dioxide packet is consumed inside PNCR containment; any future uncontained feed must escape to Latent rather than materialize as a native bucket or block.",
+      "runtime_evidence": "pending_fresh_gas_oracle",
+      "required_runtime_oracle": "Fresh capture must prove exact recipe registration, one calcium-oxide item plus 250 mB carbon-dioxide consumption, one calcium-carbonate item output, and containment behavior.",
+      "review_state": "statically_approved_pending_oracle"
     }
   ],
   "rejected_recipe_contracts": [
@@ -346,6 +393,27 @@
       "residue_finding": "Rejected: aluminum nitrate and lead nitrate incorrectly shared a sodium-sulfate side result, while nitrate residue was omitted; sulfate routes also omitted most deterministic sodium-sulfate residue.",
       "industrial_authority_finding": "Create mixing may own open precipitation, but only with salt-specific stoichiometry, deterministic mother-liquor residues, and bounded quantities absent from this family.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "explicit_unbalanced_transform_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_ids": [
+        "kubejs:chemistry/transform/create_mixing/phosphate_from_phosphoric_lime",
+        "kubejs:chemistry/transform/create_mixing/soda_ash_from_salt_and_lime",
+        "kubejs:chemistry/transform/pncr_pressure/chloralkali_salt_cell"
+      ],
+      "retained_recipe_count": 3,
+      "sorted_recipe_ids_sha256": "97eea1d8ebddca9a7e3277a483884526c5a4abbd6893fe45ce0d5433dfe30f94",
+      "disposition": "removed_unbalanced_explicit_transform_routes",
+      "exact_material_purposes": [
+        "Produce soda ash and calcium chloride from sodium chloride and limestone.",
+        "Produce a phosphate sample from phosphoric acid and calcium.",
+        "Produce sodium hydroxide from a sodium-chloride pressure-cell feed."
+      ],
+      "fixed_mass_finding": "Rejected: opaque solid and fluid packets had no common mass basis; the soda-ash route emitted calcium chloride only probabilistically, the phosphate route discarded calcium, hydrogen, and oxygen, and the chloralkali route omitted chlorine and hydrogen products.",
+      "residue_finding": "Rejected: all three routes omitted required deterministic products or residues, so none represents its named material operation.",
+      "industrial_authority_finding": "Create and PNCR are plausible authorities for corrected Solvay-style and airtight electrochemical operations, but these exact recipes do not supply the required stoichiometry or complete products.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
     }
   ]
 }

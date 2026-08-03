@@ -9306,7 +9306,7 @@ hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/recipe_authority_manifest.json"
-hash = "5199d20115f9c086b7abed005149240d5db23d7f6554923a0079248f6eb6cf83"
+hash = "93a8ef98a5ae6a9c570be009961b0a18430fe36a0aee9a2b9d61b65156b099a3"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
@@ -10886,7 +10886,7 @@ hash = "b0f38cc45fa38ec08f7ab102467f57d34fdb1cd3efbc23a722643dbaafcc94d1"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/58_blood_magic_manual_create_yields.js"
-hash = "1b2d496657140b3bf4912298e36d4eb99bc912db0766a058514447556a2a2403"
+hash = "54f00723c5f86b34820dc04d75cecf1f11d5ca74355fea55e6916ef2c2d7feea"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/58_create_pncr_molecular_synthesis.js"

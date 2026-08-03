@@ -454,6 +454,29 @@
       "industrial_authority_finding": "Create may own open pulping, gelatinization, and crystallization only after each material-specific route declares bounded inputs, yields, and residues.",
       "review_scope": "The three species remain cataloged as managed explicitly, but no molecule-use conversion is approved or intended to register from this generator.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "blood_magic_manual_create_yield_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:bloodmagic/manual_create_yield/.*$",
+      "retained_recipe_count": 2,
+      "source_attempt_count": 3,
+      "retained_recipe_breakdown": {
+        "precision_mechanism_pair": 1,
+        "pressure_seal_batch": 1
+      },
+      "sorted_recipe_ids_sha256": "dc669f1e3ecd2fea269806fa72e797d6b790ade42dc9228f57aca332b1847994",
+      "disposition": "removed_uncontracted_magic_identity_and_batch_routes",
+      "exact_material_purposes": [
+        "Batch andesite alloy manually with LP and a blank slate.",
+        "Batch precision mechanisms manually with LP and an infused slate.",
+        "Batch airtight pressure seals manually with LP and a blank slate."
+      ],
+      "fixed_mass_finding": "Rejected: LP and consumed slates were treated as generic multipliers while opaque component packets became two, four, or six outputs without a fixed-mass or reusable-tool account.",
+      "magic_provenance_finding": "Rejected: none of the three source attempts declared what identity-changing work LP performs, what residue carries discarded material, or whether slate provenance is preserved or consumed into the output.",
+      "progression_finding": "Rejected: manual magical duplication overlaps established Create assembly and manufactured-part progression without a material-specific need beyond alternate graph adjacency.",
+      "review_scope": "The retained snapshot registered two exact IDs; the malformed guarded andesite-alloy source attempt was also removed so a future control-flow correction cannot silently enable an unreviewed third route.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ]
 }

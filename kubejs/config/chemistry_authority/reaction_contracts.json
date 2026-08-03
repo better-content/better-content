@@ -147,6 +147,25 @@
       "industrial_authority_finding": "Rejected: PNCR directly formed finished elemental material reserved to TConstruct metallurgy and remelting.",
       "review_scope": "This disposition does not approve formula creation, sinks, molecule-use generators, or the retained cross-script identity list.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "chemlib_full_group_generic_sink_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:chemlib_full/.*/sink/.*$",
+      "retained_recipe_count": 129,
+      "retained_recipe_breakdown": {
+        "create_mixing_sinks": 75,
+        "create_compacting_sinks": 10,
+        "pncr_pressure_sinks": 44
+      },
+      "sorted_recipe_ids_sha256": "b41f854c5762f57dd2dc6167db51632cc26833893b6f694fc91a6a1d51d053e2",
+      "disposition": "removed_group_generic_adjacency_family",
+      "source_purpose_finding": "Rejected: every surviving element in a broad periodic group was accepted by the same one-or-two generic sink set even when its composition or physical properties had no material-specific relationship to the output.",
+      "fixed_mass_finding": "Rejected: one opaque element packet plus unrelated components could yield multiplied glass, wire, fertilizer, grout, tubes, dust, or compost without a composition-derived fixed-mass account.",
+      "magic_provenance_finding": "Rejected: the five biogenic Source Gem routes combined an arbitrary group element, amethyst, and a Blood slate without an identity-changing provenance transform or a named residue.",
+      "industrial_authority_finding": "Rejected: machine selection followed group adjacency rather than a material-specific Create or PNCR operation contract.",
+      "review_scope": "This disposition does not approve formula creation, molecule-use generators, terminal-output declarations, or the retained cross-script identity list.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ],
   "reactions": []

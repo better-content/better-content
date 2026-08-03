@@ -257,53 +257,6 @@ var BC_FULL_CHEM_FAMILIES = [
     { id: 'phosphate', suffix: 'phosphate', heat: 'heated', pressure: 3.0, temp: 548 }
 ]
 
-var BC_FULL_CHEM_GROUP_SINKS = {
-    light_metal: [
-        { id: 'light_ceramic_glass', output: 'minecraft:glass', count: 6, inputs: ['chemlib:silicon_dioxide', 'chemlib:aluminum_oxide'], kind: 'compact' },
-        { id: 'light_pcb_laminate', output: 'pneumaticcraft:empty_pcb', count: 2, inputs: ['chemlib:polyvinyl_chloride', 'chemlib:silicon_dioxide'], kind: 'pressure', pressure: 2.0 }
-    ],
-    alkali: [
-        { id: 'electrolyte_red_alloy', output: 'morered:red_alloy_wire', count: 8, inputs: ['minecraft:redstone', 'minecraft:copper_ingot'], kind: 'mix' },
-        { id: 'alkali_fertilizer', output: 'minecraft:bone_meal', count: 8, inputs: ['chemlib:phosphate', 'minecraft:bone_meal'], kind: 'mix' }
-    ],
-    alkaline: [
-        { id: 'lime_scrubbed_filter', output: 'pneumaticcraft:air_canister', count: 1, inputs: ['chemlib:calcium_oxide', 'kubejs:pressure_seal'], kind: 'pressure', pressure: 2.0 },
-        { id: 'refractory_grout', output: 'tconstruct:grout', count: 6, inputs: ['chemlib:silicon_dioxide', 'minecraft:clay_ball'], kind: 'compact' }
-    ],
-    transition: [
-        { id: 'transition_mechanism_polish', output: 'create:precision_mechanism', count: 1, inputs: ['create:cogwheel', 'create:large_cogwheel', 'create:electron_tube'], kind: 'mix' },
-        { id: 'transition_pressure_tube', output: 'pneumaticcraft:pressure_tube', count: 4, inputs: ['minecraft:glass', 'kubejs:pressure_seal'], kind: 'pressure', pressure: 2.0 }
-    ],
-    refractory: [
-        { id: 'refractory_advanced_tube', output: 'pneumaticcraft:advanced_pressure_tube', count: 2, inputs: ['pneumaticcraft:reinforced_pressure_tube', 'kubejs:pressure_seal'], kind: 'pressure', pressure: 3.2 },
-        { id: 'refractory_heat_shield', output: 'creatingspace:heat_shield', count: 1, inputs: ['chemlib:titanium_oxide', 'chemlib:aluminum_oxide'], kind: 'compact' }
-    ],
-    noble: [
-        { id: 'noble_catalyst_pcb', output: 'pneumaticcraft:transistor', count: 2, inputs: ['chemlib:silicon_dioxide', 'chemlib:copper_chloride'], kind: 'pressure', pressure: 2.75 },
-        { id: 'noble_precision_laser_trim', output: 'ae2:printed_logic_processor', count: 1, inputs: ['ae2:printed_silicon', 'minecraft:gold_ingot'], kind: 'mix' }
-    ],
-    rare_earth: [
-        { id: 'rare_earth_fluix_lens', output: 'ae2:fluix_dust', count: 2, inputs: ['ae2:certus_quartz_crystal', 'minecraft:redstone'], kind: 'mix' },
-        { id: 'rare_earth_signal_pigment', output: 'minecraft:glowstone_dust', count: 3, inputs: ['minecraft:redstone', 'minecraft:lapis_lazuli'], kind: 'mix' }
-    ],
-    chalcophile: [
-        { id: 'chalcophile_shielding_glass', output: 'protection_pixel:shieldingglass', count: 2, inputs: ['minecraft:glass', 'chemlib:lead_oxide'], kind: 'compact' },
-        { id: 'chalcophile_etchant_charge', output: 'pneumaticcraft:unassembled_pcb', count: 1, inputs: ['pneumaticcraft:empty_pcb', 'pneumaticcraft:capacitor', 'pneumaticcraft:transistor'], kind: 'pressure', pressure: 2.5 }
-    ],
-    radioactive: [
-        { id: 'radioactive_salt_blend', output: 'kubejs:fissile_salt_blend', count: 1, inputs: ['chemlib:lead_sulfate', 'chemlib:calcium_sulfate'], kind: 'mix' },
-        { id: 'radioactive_late_glass', output: 'protection_pixel:shieldingglass', count: 4, inputs: ['minecraft:glass', 'chemlib:lead_oxide'], kind: 'compact' }
-    ],
-    biogenic: [
-        { id: 'biogenic_feed', output: 'farmersdelight:organic_compost', count: 2, inputs: ['minecraft:bone_meal', 'minecraft:wheat'], kind: 'mix' },
-        { id: 'biogenic_source_gem', output: 'ars_nouveau:source_gem', count: 1, inputs: ['minecraft:amethyst_shard', 'bloodmagic:blankslate'], kind: 'mix' }
-    ],
-    gas: [
-        { id: 'gas_lamp_glass', output: 'minecraft:glass_bottle', count: 4, inputs: ['minecraft:glass', 'kubejs:pressure_seal'], kind: 'pressure', pressure: 2.0 },
-        { id: 'gas_coolant_charge', output: 'kubejs:pressure_seal', count: 2, inputs: ['minecraft:dried_kelp', 'minecraft:slime_ball'], kind: 'pressure', pressure: 2.25 }
-    ]
-}
-
 // Explicit terminal decisions for produced registrations whose purpose is their
 // placed light-emitting block behavior rather than another crafting sink.
 var BC_FULL_CHEM_TERMINAL_OUTPUTS = {
@@ -424,27 +377,6 @@ function bcFullChemRegisterElement(event, group, element) {
 
     }
 
-    var sinks = BC_FULL_CHEM_GROUP_SINKS[group.id] || []
-    for (var s = 0; s < sinks.length; s++) {
-         bcFullChemRegisterSink(event, group, elementItem, sinks[s])
-    }
-}
-
-function bcFullChemSinkInputs(elementItem, sink) {
-    var inputs = [{ item: elementItem }]
-    for (var i = 0; i < sink.inputs.length; i++) inputs.push({ item: sink.inputs[i] })
-    return inputs
-}
-
-function bcFullChemRegisterSink(event, group, elementItem, sink) {
-    var input = bcFullChemSinkInputs(elementItem, sink)
-    if (sink.kind === 'pressure') {
-         bcFullChemPressure(event, 'sink/' + group.id + '/' + elementItem.substring(8) + '/' + sink.id, input, { item: sink.output, count: sink.count || 1 }, sink.pressure || 2.5)
-    } else if (sink.kind === 'compact') {
-         bcFullChemCompact(event, 'sink/' + group.id + '/' + elementItem.substring(8) + '/' + sink.id, input, [{ item: sink.output, count: sink.count || 1 }], sink.heat || null)
-    } else {
-         bcFullChemMix(event, 'sink/' + group.id + '/' + elementItem.substring(8) + '/' + sink.id, input, [{ item: sink.output, count: sink.count || 1 }], sink.heat || null, 200)
-    }
 }
 
 function bcFullChemRegisterMolecule(event, molecule) {

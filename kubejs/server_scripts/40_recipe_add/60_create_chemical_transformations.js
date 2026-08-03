@@ -1,7 +1,7 @@
 // General chemistry transformations.
 //
 // These routes turn acid/ball outputs into a reusable manufacturing language:
-// roast salts, leach solids, precipitate powders, reduce oxides, and scrub gases.
+// roast salts, leach solids, precipitate powders, and scrub gases.
 
 function bcChemXExists(id) {
     try { return Item.exists(id) } catch (e) { return false }
@@ -96,25 +96,6 @@ function bcChemXPressure(event, id, output, count, inputs, pressure) {
     }).id('kubejs:chemistry/transform/pncr_pressure/' + id)
 }
 
-function bcChemXGasReduction(event, id, oxide, metal, gas, exhaust) {
-    if (!bcChemXExists(oxide) || !bcChemXExists(metal)) return
-    event.custom({
-        type: 'pneumaticcraft:thermo_plant',
-        exothermic: false,
-        item_input: { item: oxide },
-        fluid_input: {
-            type: 'pneumaticcraft:fluid',
-            fluid: gas + '_fluid',
-            amount: 250
-        },
-        item_output: { item: metal },
-        fluid_output: { fluid: exhaust + '_fluid', amount: 250 },
-        pressure: 3.0,
-        speed: 0.4,
-        temperature: { min_temp: 773 }
-    }).id('kubejs:chemistry/transform/pncr_thermo/' + id)
-}
-
 function bcChemXGasFixation(event, id, solid, gas, gasUnits, output, pressure, temp) {
     if (!bcChemXExists(solid) || !bcChemXExists(output)) return
     event.custom({
@@ -149,26 +130,6 @@ ServerEvents.recipes(function (event) {
             'minecraft:charcoal'
         ], 'heated', { item: 'chemlib:carbon_dioxide', chance: carbonates[c].carbonDioxideChance || 0.35 })
     }
-
-    var reductions = [
-        { id: 'iron', oxide: 'chemlib:iron_oxide', metal: 'chemlib:iron' },
-        { id: 'lead', oxide: 'chemlib:lead_oxide', metal: 'chemlib:lead' },
-        { id: 'tin', oxide: 'chemlib:tin_oxide', metal: 'chemlib:tin' },
-        { id: 'zinc', oxide: 'chemlib:zinc_oxide', metal: 'chemlib:zinc' },
-        { id: 'copper', oxide: 'chemlib:copper_ii_oxide', metal: 'chemlib:copper' },
-        { id: 'nickel', oxide: 'chemlib:nickel_oxide', metal: 'chemlib:nickel' },
-        { id: 'titanium_magnesium', oxide: 'chemlib:titanium_oxide', metal: 'chemlib:titanium', reductant: 'chemlib:magnesium' },
-        { id: 'aluminum_magnesium', oxide: 'chemlib:aluminum_oxide', metal: 'chemlib:aluminum', reductant: 'chemlib:magnesium' }
-    ]
-    for (var r = 0; r < reductions.length; r++) {
-         bcChemXCompact(event, reductions[r].id + '_oxide_reduction', reductions[r].metal, 1, [
-            reductions[r].oxide,
-            reductions[r].reductant || 'chemlib:carbon'
-        ], 'superheated', { item: 'chemlib:carbon_dioxide', chance: reductions[r].reductant ? 0.12 : 0.30 })
-    }
-    bcChemXGasReduction(event, 'iron_oxide_carbon_monoxide_reduction',
-        'chemlib:iron_oxide', 'chemlib:iron',
-        'chemlib:carbon_monoxide', 'chemlib:carbon_dioxide')
 
     var leaches = [
         { id: 'copper_sulfate_from_carbonate', input: 'chemlib:copper_carbonate', fluid: 'chemlib:sulfuric_acid_fluid', output: 'chemlib:copper_ii_sulfate' },
@@ -218,8 +179,4 @@ ServerEvents.recipes(function (event) {
         'kubejs:pressure_seal',
         '#forge:plates/copper'
     ], 2.5)
-     bcChemXPressure(event, 'beryllium_from_beryllium_chloride', 'chemlib:beryllium', 1, [
-        'chemlib:beryllium_chloride',
-        'chemlib:magnesium'
-    ], 3.0)
 })

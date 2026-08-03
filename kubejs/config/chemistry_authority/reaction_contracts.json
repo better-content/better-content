@@ -2,6 +2,7 @@
   "schema": "bc.chemical_reactions.v1",
   "authority_rule": "Each reaction declares balanced inputs, outputs, catalysts, losses, energy conditions, machine authority, provenance transform, and runtime evidence.",
   "live_graph_import_status": "pending_bc_recipe_graph_v2_state_edges",
+  "review_scope": "The rejected contracts below cover only the ten removed direct elemental-metal outputs. Every other authored transformation remains pending reaction-level balance and behavioral review; presence in source is not approval.",
   "reaction_fields": [
     "id",
     "inputs",
@@ -13,6 +14,78 @@
     "provenance_transform",
     "runtime_evidence",
     "review_state"
+  ],
+  "rejected_recipe_contracts": [
+    {
+      "id": "kubejs:chemistry/transform/create_compacting/iron_oxide_reduction",
+      "exact_material_purpose": "Reduction of iron oxide into elemental iron stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: opaque item packets and probabilistic carbon-dioxide residue do not prove conserved iron, carbon, and oxygen quantities.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "id": "kubejs:chemistry/transform/create_compacting/lead_oxide_reduction",
+      "exact_material_purpose": "Reduction of lead oxide into elemental lead stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: opaque item packets and probabilistic carbon-dioxide residue do not prove conserved lead, carbon, and oxygen quantities.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "id": "kubejs:chemistry/transform/create_compacting/tin_oxide_reduction",
+      "exact_material_purpose": "Reduction of tin oxide into elemental tin stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: opaque item packets and probabilistic carbon-dioxide residue do not prove conserved tin, carbon, and oxygen quantities.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "id": "kubejs:chemistry/transform/create_compacting/zinc_oxide_reduction",
+      "exact_material_purpose": "Reduction of zinc oxide into elemental zinc stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: opaque item packets and probabilistic carbon-dioxide residue do not prove conserved zinc, carbon, and oxygen quantities.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "id": "kubejs:chemistry/transform/create_compacting/copper_oxide_reduction",
+      "exact_material_purpose": "Reduction of copper(II) oxide into elemental copper stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: opaque item packets and probabilistic carbon-dioxide residue do not prove conserved copper, carbon, and oxygen quantities.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "id": "kubejs:chemistry/transform/create_compacting/nickel_oxide_reduction",
+      "exact_material_purpose": "Reduction of nickel oxide into elemental nickel stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: opaque item packets and probabilistic carbon-dioxide residue do not prove conserved nickel, carbon, and oxygen quantities.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "id": "kubejs:chemistry/transform/create_compacting/titanium_magnesium_oxide_reduction",
+      "exact_material_purpose": "Magnesiothermic reduction of titanium oxide into elemental titanium stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: the former route omitted magnesium-bearing residue and therefore could not conserve the declared fixed material packets.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "id": "kubejs:chemistry/transform/create_compacting/aluminum_magnesium_oxide_reduction",
+      "exact_material_purpose": "Magnesiothermic reduction of aluminum oxide into elemental aluminum stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: the former route omitted magnesium-bearing residue and therefore could not conserve the declared fixed material packets.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "id": "kubejs:chemistry/transform/pncr_thermo/iron_oxide_carbon_monoxide_reduction",
+      "exact_material_purpose": "Carbon-monoxide reduction of iron oxide into elemental iron stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: one opaque oxide item and 250 mB gas were mapped to one opaque element item and 250 mB exhaust without a proven common mass basis.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_oracle"
+    },
+    {
+      "id": "kubejs:chemistry/transform/pncr_pressure/beryllium_from_beryllium_chloride",
+      "exact_material_purpose": "Magnesium reduction of beryllium chloride into elemental beryllium stock.",
+      "disposition": "removed_tcon_formation_authority",
+      "fixed_mass_finding": "Rejected: the former route omitted magnesium-chloride residue and therefore could not conserve the declared fixed material packets.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    }
   ],
   "reactions": []
 }

@@ -9302,7 +9302,7 @@ hash = "9c49404e035ab22320f2edb851a55a65c3645a64accab3ea6450cea3b7f7a82e"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/reaction_contracts.json"
-hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
+hash = "3fafcfdbebec103fa73eb3761d851ed4dbebcd2ea3a9b4b97e3d269f431cd6c2"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
@@ -10894,7 +10894,7 @@ hash = "9ac020825d5f1f75d3f0b4f003f2b08b2f1956a034e201fd1948863ea74e4743"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/60_create_chemical_transformations.js"
-hash = "f51a8ae8bc0c53ad7acd8f69737df6a0169ded1ba9ee19c80167d60879ae0067"
+hash = "3a1e37499179212931675e0761321169b1679c0d72038f4ba8d5218342318187"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/61_chemical_existing_item_alternatives.js"

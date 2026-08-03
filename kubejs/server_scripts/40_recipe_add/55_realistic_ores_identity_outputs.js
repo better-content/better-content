@@ -50,7 +50,8 @@ var BC_RO_DISABLED_DEPOSIT_SOLVENTS = {
     ethanol: true,
     acetic: true,
     sulfuric: true,
-    hydrochloric: true
+    hydrochloric: true,
+    nitric: true
 }
 
 var BC_RO_OVERWORLD_ORE_EXTRAS = {

@@ -4865,6 +4865,10 @@ file = "config/adpother/Torches/unlit$wall_torch_lit.cfg"
 hash = "0a7b7b5f2e62c38cd7382e60f63e0288a7aaf4e6b12b58f93242bfa778ccb242"
 
 [[files]]
+file = "config/ae2/common.json"
+hash = "7736f246cd7f489865f4b10ffab8ef960ad0af2d39c4e2f631efbee07023bce0"
+
+[[files]]
 file = "config/aether-client.toml"
 hash = "d5c84f15b387d3382b1e25b317034f9225a6f945074e2844f0cab6541005da73"
 
@@ -5338,7 +5342,7 @@ hash = "8bbeca158f88f60a46fc56efcf89152899ab9d42c133eeb51245cf6208af7b82"
 
 [[files]]
 file = "config/classselector/kits.json"
-hash = "bd3b259ae25741351263400a88bb4c1b7a3345295e4d9a2375c9bcaff5c82113"
+hash = "aae5b34856c15f25df8ccdad02746e8efbb7b8885016393b7f57810731113eac"
 
 [[files]]
 file = "config/coldsweat/client.toml"
@@ -5510,7 +5514,7 @@ hash = "21c3b91848f1423f098000d5f01ef4a9bc7f083f2e515e24acd99988573c4f98"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/chemistry_matter_routes.snbt"
-hash = "9172c291662e5fbdb1b329fd813b09a9f7937475e3cfae53d2d812f2697c1ae9"
+hash = "fdd64068fd574e9e13065b877e2427a8a8a895100e14cb9c2000f50e9252c701"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/coins_wares_settlements.snbt"
@@ -5542,7 +5546,7 @@ hash = "3c6d12036c50286960930f479a65e418d27d803ae50e7ce0d71ebb3d50f54167"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/create_and_circuits.snbt"
-hash = "ba131854c7cdf722975dedd6e16518273d3a11f66feac3f36de650e8af97233d"
+hash = "a892cfbfcde6dd3ba41f34663e4f86dc19ee77cc69794e7c4abf63d0742cbcfc"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/deposits_ore_identity.snbt"
@@ -5570,7 +5574,7 @@ hash = "fd9ed1dcdee7eb584634f47d4f4921ad4707a98802be68c0869e3a72f874f808"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/pressure_power_control.snbt"
-hash = "42698a9b9504f179af909b990c1f23faf496ca556ef167e5fc5e2e60d4ee588c"
+hash = "5a1f1956321dcc987aeef676d436bff40628a7db8e5791d56aae75bc048a1b32"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/space_ae2_lava_depths.snbt"
@@ -5595,6 +5599,10 @@ hash = "f1d7bd782ae6603b429b3e5b7ce958deea5d2876fc03fc5e9d71feb7d7e152cb"
 [[files]]
 file = "config/globalgamerules-common.toml"
 hash = "66a900c615bb06d67970cab96a125ee7d167bc040ab5dce164c89f42157784b2"
+
+[[files]]
+file = "config/heatsync-common.toml"
+hash = "d7b91d1c32f80ebc6c13d020614aa3e276dcd056dbc76b79e2fa0a4749776870"
 
 [[files]]
 file = "config/hyle-common.toml"
@@ -5779,6 +5787,10 @@ hash = "7699b1da74a628bf541f530e721f842347519110f0c889dab2ec06fd12fdde06"
 [[files]]
 file = "config/pillagercampaigns-common.toml"
 hash = "efc465cd9a5c03484680113ddf8448874803fc5f95a5de711d0ffc52a173cf97"
+
+[[files]]
+file = "config/pneumaticcraft-common.toml"
+hash = "7c55f51be2b4414cf12d683863148cc97028c0687e45371cc7402d0d820cf50f"
 
 [[files]]
 file = "config/projectvibrantjourneys-common.toml"
@@ -7865,12 +7877,16 @@ file = "defaultconfigs/ars_nouveau/glyph_touch.toml"
 hash = "7f38e343fac1c852ffe4e905f1eee5fb6ec5fd742d902cd4844d60dd45e07d4b"
 
 [[files]]
+file = "defaultconfigs/compressedcreativity-server.toml"
+hash = "8ced97f1929eb814f8554b317ede6bb58d86fa039ec43d7929fab146e67520be"
+
+[[files]]
 file = "defaultconfigs/configurabledeath-server.toml"
 hash = "7d94d8343d08f9ec17a8b041441604401d1dd7a849453182d4b0f62a9d0c149a"
 
 [[files]]
 file = "defaultconfigs/create-server.toml"
-hash = "5f7035fdba24002f84c268f581ca64a161492ff3efae32e72943c4f138d26407"
+hash = "606f31c7d6970b52478ce6fcb065ad094bdaf452e3614b542796a1f4596161ab"
 
 [[files]]
 file = "defaultconfigs/farsightedmobs-server.toml"
@@ -9273,6 +9289,54 @@ file = "kubejs/config/block_hardness_probe.json"
 hash = "0360c310f9d72806563f50e809fcff6601bb90dee22b4a710a8bc5535fd05d93"
 
 [[files]]
+file = "kubejs/config/chemistry_authority/emission_contracts.json"
+hash = "aa35273fec61c1befe5be6ffea05e6ad26ade94e0c32f29fc9e7f2c36f8a28e6"
+
+[[files]]
+file = "kubejs/config/chemistry_authority/form_roles.json"
+hash = "cf0f42bc512aa37c4f1f8a3d8cc52a920015f9faf6509576d5731e148d4821fc"
+
+[[files]]
+file = "kubejs/config/chemistry_authority/isotope_policy.json"
+hash = "9c49404e035ab22320f2edb851a55a65c3645a64accab3ea6450cea3b7f7a82e"
+
+[[files]]
+file = "kubejs/config/chemistry_authority/reaction_contracts.json"
+hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
+
+[[files]]
+file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
+hash = "951f9088b2b780d37975ba4b126c4d04afe0b5c8373ad791234b742f3012259f"
+
+[[files]]
+file = "kubejs/config/chemistry_authority/schemas/form_roles.schema.json"
+hash = "2291740e2bdc7b13aec4427159a2c400fd9826b4f20490194afc2145998c6cbb"
+
+[[files]]
+file = "kubejs/config/chemistry_authority/schemas/isotope_state.schema.json"
+hash = "19d8d24a1a90c0a37801b498e193d8a4e0ab77cf805aae4cd0301fdb74207b33"
+
+[[files]]
+file = "kubejs/config/chemistry_authority/schemas/reactions.schema.json"
+hash = "caee058eedbd7efe46af2eabbeac0185261a7df27f36b66052a9fa5af293cb64"
+
+[[files]]
+file = "kubejs/config/chemistry_authority/schemas/sources.schema.json"
+hash = "fc7b46d1b98c09eb62c7b10de63674bde338a98a77f9538faa6100917b698d0b"
+
+[[files]]
+file = "kubejs/config/chemistry_authority/schemas/species.schema.json"
+hash = "05e4d6b0fca9e7acad998658421d87a49031a0e3aae2cb907e70a55095d824a1"
+
+[[files]]
+file = "kubejs/config/chemistry_authority/source_contracts.json"
+hash = "9842084f3f18b53e5848014781fcb996aad39fd2fcd8fdbe72cf492075e3af74"
+
+[[files]]
+file = "kubejs/config/chemistry_authority/species.json"
+hash = "6bc049ad6eede2dee046a6624cfc5449be12e9f4702eb810a99da8e4f35266fc"
+
+[[files]]
 file = "kubejs/config/chemlib_form_policy.json"
 hash = "ad77584f8be4a785c2d2540c7ed1cd7a67ef5dd24a0aaa00e589de092e827588"
 
@@ -9283,6 +9347,10 @@ hash = "ca1bcfdcb5e2feb66eea14271ba8ceb5aaa1cc81fba3b5294a2cc0a14eb26b6e"
 [[files]]
 file = "kubejs/config/common.properties"
 hash = "46a66b6e003ba7953c9a13428fd9c1967e862a673d7fd849831defab59eb08f1"
+
+[[files]]
+file = "kubejs/config/create_tcon_bootstrap.json"
+hash = "6b8ead263282ebcb1930f2737cc4ac2efb816ad47fc1b74805ceb57ff918c423"
 
 [[files]]
 file = "kubejs/config/economy_acquisition.json"
@@ -10066,7 +10134,7 @@ hash = "c8d0807cf673a3f74e92dfe8717e119d2a6d7f8e42ab5de4d8fa4b5710fd2354"
 
 [[files]]
 file = "kubejs/data/latent_chemlib/reaction_rules/default.json"
-hash = "3ada5b8e5405a7ed1c8c3f96cd0f6c75378c966a8322ce082435577d0f6c3866"
+hash = "0a1b025304df9b2284e8404b1fadc47881f6d38a7fd5bbcbb31221225be1f705"
 
 [[files]]
 file = "kubejs/data/latent_chemlib/scheduler_profiles/default.json"
@@ -10766,7 +10834,7 @@ hash = "8684cbcf31ac698024b7b45fe2f9509d4f9a37898cfc233f7a523909d0dbdc19"
 
 [[files]]
 file = "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js"
-hash = "79b112a3514449b00612b1703229715f9d1cee34bb8b1bc3c7467df613f11aa1"
+hash = "68de0fbd9a7145e5c21fb1d7bcbe5031b6ad80413e738eabf5103743615123bc"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/10_campfire_recipe.js"
@@ -10905,12 +10973,24 @@ file = "kubejs/server_scripts/90_dev_debug/55_ore_worldgen_audit.js"
 hash = "6085ae1ef8cd534ec59740a61ae9bcb49d50cf65abb72d60b7c0b840ceed606d"
 
 [[files]]
+file = "kubejs/server_scripts/99_final/10_create_tcon_bootstrap.js"
+hash = "8caff5cf64a1397a6ebda64353b468dbf6f07eaf772839cb8e0d8226f69cf597"
+
+[[files]]
+file = "kubejs/server_scripts/99_final/90_energy_ladder_gate.js"
+hash = "c8cc9f0c4c401ba7154ca396b677336b2de6469fba0f52889aee52b9b7e9b295"
+
+[[files]]
 file = "kubejs/startup_scripts/00_globals/20_progression_catalogues.js"
 hash = "2d3a9578f0ffa4629b4591e714ec7de11862c8247947f31f8829597582b032f3"
 
 [[files]]
 file = "kubejs/startup_scripts/10_items_blocks/30_progression_items.js"
 hash = "63290fa8e6be65583a1756960ad78baf26c00a9c252b4b685ae1a00c948cf5cf"
+
+[[files]]
+file = "kubejs/startup_scripts/10_items_blocks/35_create_tcon_bootstrap_items.js"
+hash = "05e7cb3b5e3606fe6135ef4ef11a34523894dfa274de751afcf4b2767a080be8"
 
 [[files]]
 file = "kubejs/startup_scripts/20_blocks/10_ae2_skystone_hardness.js"
@@ -11010,11 +11090,11 @@ hash = "a7327d4d5e251c864f25346e598d5721ad4dd98c18f4d14f6991a3e46b6fda39"
 
 [[files]]
 file = "mods/bcfixes-0.1.0.jar"
-hash = "676e504b6fff3922c23cc548e0877fb2b05e8a1ff587b45bb9f732a62c164b40"
+hash = "5b0609d5979c6f8249e19c0448470acfd19eae5de0a62f73756567c99f3a92b7"
 
 [[files]]
 file = "mods/bcrecipegraph-0.1.0.jar"
-hash = "5d23baaa7f2d5ea6ff68902bfcd847a2cbe01728fade36f28875dbd22c0794ff"
+hash = "357693be8b2e4164eaab4d62c0fb9872dec8b21524cac527ff1e50a7fc3d0123"
 
 [[files]]
 file = "mods/better-combat-by-daedelus.pw.toml"
@@ -11451,7 +11531,7 @@ metafile = true
 
 [[files]]
 file = "mods/heatsync-0.1.0.jar"
-hash = "132a102e3cf4f5be64743c9d1da7082233ff7a28a855670b700a166c63e218aa"
+hash = "a7215a8afafd0e3f1544c1c1d7210b4942d850eeddb118d142d63a805752a882"
 
 [[files]]
 file = "mods/hexerei.pw.toml"
@@ -11555,7 +11635,7 @@ metafile = true
 
 [[files]]
 file = "mods/latent_chemlib-0.1.0.jar"
-hash = "d93773bb96cc09d275c1dd7a2283deb99f1a08d94e58eac08b58ff9d65c7ceab"
+hash = "66847e04558c88a1c38977980587037dae3c219ec98ecf91d88e3132a0c95190"
 
 [[files]]
 file = "mods/lithostitched.pw.toml"

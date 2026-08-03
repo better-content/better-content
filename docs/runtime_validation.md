@@ -28,15 +28,36 @@ The smoke proves lifecycle and client/server network compatibility only. Gamepla
 `tools/bc build dumps` starts one disposable dedicated server and invokes the
 operator-only `bcgraph dump` command after startup. The bundled
 `bcrecipegraph` Forge mod reads the final live `RecipeManager`, after datapack
-and KubeJS mutations, and writes the authoritative `bc.recipe_graph.v2`
-snapshot to `generated/runtime-dumps/recipes.json`. The same command writes
-matching registry, tag, mod, and completion snapshots with a shared ID.
+and KubeJS mutations, and writes a candidate `bc.recipe_graph.v2` snapshot to
+`generated/runtime-dumps/recipes.json`. The same command writes
+matching registry, tag, effective loot-table, sampled dynamic trade, worldgen,
+mod, and `bc.runtime_dump_completion.v2` snapshots with a shared ID. Promotion
+is all-or-nothing: every recipe must have a complete normalized edge, every
+serializer export must succeed, and every exact runtime surface must have zero
+errors. An incomplete candidate remains in the disposable server directory for
+diagnosis and is never copied over retained evidence or fingerprinted as fresh.
+
+`loot.json` serializes the server's post-reload loot-table definitions. That is
+exact loaded-table evidence, not proof that any chest, mob, structure, fishing,
+or ritual context occurs in reachable play. `trades.json` evaluates every live
+villager and wandering-trader listing against 16 stable seeds, retaining each
+distinct sampled offer and its full NBT. It is explicitly a deterministic
+sample contract, not an exhaustive claim about randomized or state-dependent
+offers. `worldgen.json` codec-serializes the effective configured-feature,
+placed-feature, biome, structure, and Forge biome-modifier registries. Registry
+presence is not proof of placement, distribution, biome attachment, or
+occurrence in an existing world. These qualified datasets are included in the
+retained provenance fingerprint only after their declared contract passes.
 
 Recipe input slots retain AND semantics and each slot's alternatives retain OR
 semantics. Tag membership is resolved from the matching live `tags.json` rather
-than duplicated in every recipe. Every recipe also retains its serializer's
-network payload and an explicit normalization state; partial records remain in
-the graph and are reported instead of being silently treated as complete.
+than duplicated in every recipe. The exporter preserves counted stacked
+ingredients where the live API exposes them, including PneumaticCraft pressure
+chamber display inputs, and records output alternatives as groups. It also
+attempts to retain each serializer's network payload and records an explicit
+normalization state. Partial records remain useful diagnostics, but one partial
+row makes the completion snapshot false and blocks promotion of the entire
+candidate graph.
 
 The mod never dumps automatically during startup, reload, or player login. On
 a manually managed server, run `/bcgraph dump` as an operator.

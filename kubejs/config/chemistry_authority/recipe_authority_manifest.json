@@ -601,6 +601,22 @@
       "gas_destination_contract": "Probabilistic nitrogen-dioxide and deposit-gas items prove neither contained delivery nor uncontained Latent escape.",
       "review_scope": "Only the 176-ID nitric cohort is disabled by this disposition; the shared solvent catalog remains available to separately reviewed neighboring scripts.",
       "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "realistic_ores_phosphoric_acid_ball_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:realistic_ores/acid_ball/[^/]+/phosphoric/[^/]+$",
+      "retained_recipe_count": 176,
+      "retained_recipe_breakdown": { "deposit_inputs": 22, "grinding_ball_variants_per_input": 8 },
+      "sorted_recipe_ids_sha256": "bd6da8822e19a2b8280caa25fca51356b8ee20ab0a6fdad7ae53c6c18ce5490e",
+      "disposition": "disabled_unproven_deposit_phosphoric_extraction_family",
+      "exact_material_purpose": "Use phosphoric acid and a named grinding ball to separate a bounded, deposit-specific mineral fraction from one crushed Realistic Ores deposit.",
+      "source_composition_finding": "Rejected: grinding-ball bias changed selected material identity, including direct finished elements, without a composition-derived separation mechanism.",
+      "fixed_mass_finding": "Rejected: opaque feed, acid, and tool packets yielded multiple deterministic and probabilistic products without conserved fixed mass or complete gangue/liquor residue.",
+      "industrial_authority_finding": "Rejected: Create mixing directly formed finished elemental metals reserved to TConstruct and used adjacency-driven outputs rather than bounded concentrates or salts.",
+      "gas_destination_contract": "Probabilistic hydrogen and deposit-gas items prove neither contained delivery nor uncontained Latent escape.",
+      "review_scope": "All 1,056 retained Realistic Ores acid-ball routes across six exact 176-ID solvent cohorts are disabled; the shared solvent catalog remains available to separately reviewed neighboring scripts.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
     }
   ]
 }

@@ -28,7 +28,8 @@ var BC_GROWN_MATERIALS = [
 // Solvent families stay explicit so rejected retained routes can be disabled
 // without changing the neighboring generator or its deterministic recipe IDs.
 var BC_GROW_DISABLED_SOLVENTS = {
-    ethanol: true
+    ethanol: true,
+    acetic: true
 }
 
 function bcGrowExists(id) {

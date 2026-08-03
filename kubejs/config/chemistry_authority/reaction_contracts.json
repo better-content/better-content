@@ -181,7 +181,24 @@
       "source_composition_finding": "Rejected: crop, wood, fungus, insect, animal, and monster inputs were mapped through ethanol to broad elemental or unrelated material outputs without source-specific composition evidence.",
       "fixed_mass_finding": "Rejected: multiple probabilistic outputs and probabilistic grinding-ball recovery used opaque item packets without a conserved fixed-mass basis.",
       "purpose_finding": "Rejected: grinding-ball bias changed the selected material identity to create graph adjacency rather than serving a material-specific extraction purpose.",
-      "review_scope": "Only ethanol is disabled by this disposition; acetic, sulfuric, hydrochloric, nitric, and phosphoric solvent families remain unapproved and pending separate review.",
+      "review_scope": "This disposition disables only ethanol; later solvent dispositions are recorded as separate rejected families.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "grown_material_acetic_acid_ball_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:grown_materials/acid_ball/[^/]+/acetic/[^/]+$",
+      "retained_recipe_count": 160,
+      "retained_recipe_breakdown": {
+        "grown_material_inputs": 20,
+        "grinding_ball_variants_per_input": 8
+      },
+      "sorted_recipe_ids_sha256": "0d36eff26c03447a6e2d8b818099151cc6fff5a68a6337f23362ec0fe9b36d5d",
+      "disposition": "disabled_unproven_acetic_extraction_family",
+      "source_composition_finding": "Rejected: crop, wood, fungus, insect, animal, and monster inputs were mapped through acetic acid to carbon, carbon dioxide, sodium, calcium carbonate, or unrelated products without source-specific composition evidence.",
+      "fixed_mass_finding": "Rejected: multiple probabilistic outputs and probabilistic grinding-ball recovery used opaque item packets without a conserved fixed-mass basis.",
+      "purpose_finding": "Rejected: grinding-ball bias changed the selected material identity to create graph adjacency rather than serving a material-specific extraction purpose.",
+      "review_scope": "Ethanol and acetic acid are disabled by separate dispositions; sulfuric, hydrochloric, nitric, and phosphoric families remain unapproved and pending separate review.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ],

@@ -777,6 +777,29 @@
       "industrial_authority_finding": "Rejected: the cohort includes direct finished elemental-metal outputs outside TConstruct authority; compound-only rows share the same unbounded residue defect.",
       "review_scope": "All 1,052 retained dissolver-port registrations are disabled across eight non-overlapping generated cohorts; source data and helper code remain only for tooling compatibility and future bounded redesign.",
       "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "blood_magic_deposit_transmutation_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_patterns": [
+        "^kubejs:synthesis/magic/blood_alchemy/.*_(cutting_primary|life_(trace|hard_fraction|rare_fraction))$",
+        "^kubejs:synthesis/magic/blood_arc/.*_arc_(primary|trace|hard|rare)_gas$"
+      ],
+      "retained_recipe_count": 176,
+      "retained_recipe_breakdown": {
+        "deposit_inputs": 22,
+        "material_roles_per_deposit": 4,
+        "blood_recipe_forms_per_role": 2
+      },
+      "sorted_recipe_ids_sha256": "0ca2ba072afc5104adeb35d1199247885621717ad9dab207f400fd30a4666292",
+      "disposition": "disabled_uncontracted_magic_deposit_transmutation_family",
+      "exact_material_purpose": "Use Blood Magic cutting fluids to extract primary, trace, hard, or rare material fractions from one named crushed deposit.",
+      "source_composition_finding": "Rejected: one crushed-deposit item could yield multiplied, role-selected elements or unrelated materials without a bounded assay, while the role table reused broad identity selectors across deposits.",
+      "fixed_mass_finding": "Rejected: opaque deposit, slate, cutting-fluid, and LP packets became two or four outputs; Blood Arc variants added probabilistic gas items without complete gangue, liquor, or exhaust residues.",
+      "magic_provenance_finding": "Rejected: LP, slates, and sanguine fluids lacked an explicit identity-changing provenance transform and deterministic residue contract.",
+      "industrial_authority_finding": "Rejected: many routes directly formed finished elemental metals outside TConstruct metallurgy; adjacency-driven magic does not override industrial authority.",
+      "review_scope": "The retained source loop remains for tooling alignment but iterates an explicitly empty local deposit list, so none of the 176 generated registrations is intended to remain live.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
     }
   ]
 }

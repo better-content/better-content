@@ -9306,7 +9306,7 @@ hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/recipe_authority_manifest.json"
-hash = "7e62f5ca8e2da7927954cb8ad0fb30195016118c9963c88b25de511820907413"
+hash = "1805ff32456f5e315909e33a995f7204b0f6bf93641aa72c0b2c8ab88c8671e7"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
@@ -10894,7 +10894,7 @@ hash = "40ab76070b588db7b96b74df11dac1ed12f83bf70208692303c46011591dcfc3"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/59_formulaic_synthesis_magic_routes.js"
-hash = "3003f784990699697bca1eee862563068582a0a3e570912c65b8fc3088724a80"
+hash = "cafbde33f2a46b8293b27d6b91ed6d15adecae3d6a4c4d42165f95514d8dc7cb"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/60_create_chemical_transformations.js"

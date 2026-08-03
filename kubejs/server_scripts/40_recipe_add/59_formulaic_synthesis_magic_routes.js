@@ -184,7 +184,9 @@ ServerEvents.recipes(function (event) {
         ], cuttingFluid.item, cuttingFluid.syphon, cuttingFluid.ticks, cuttingFluid.tier)
     }
 
-    var deposits = global.BC_RO_DEPOSITS || []
+    // Retained deposit transmutation code is intentionally unreachable pending
+    // bounded mass, residue, provenance, and industrial-authority contracts.
+    var deposits = []
     if (deposits.length > 0) {
         for (var d = 0; d < deposits.length; d++) {
             var dep = deposits[d]

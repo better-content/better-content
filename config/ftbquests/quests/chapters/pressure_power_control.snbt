@@ -63,8 +63,9 @@
 			dependencies: [
 				"064CFC665D86BAD3"
 				"0937583E1460B930"
+				"600F16DD06445D0D"
 			]
-			description: ["The pressure chamber is the first big payoff in this lane. It unlocks sealed processing and the materials that lead into plastics and boards."]
+			description: ["Feed the pressure chamber with normal air from the Rotational Compressor. This is the first big payoff: sealed processing and the parts that lead into plastics, boards, and eventually the first FE source."]
 			icon: "pneumaticcraft:pressure_chamber_valve"
 			id: "5DCC13C74FA59703"
 			rewards: [{
@@ -85,8 +86,11 @@
 			y: -2.25d
 		}
 		{
-			dependencies: ["5DCC13C74FA59703"]
-			description: ["Use the rotational compressor to feed pressure from your existing Create power. This lets one power room support both Create machines and pressure work."]
+			dependencies: [
+				"064CFC665D86BAD3"
+				"0937583E1460B930"
+			]
+			description: ["Build the Rotational Compressor in the hand-cranked, governed Create workshop. It is the only normal-air bootstrap: fuel, liquid, thermal, manual, solar, lightning, and FE compressors have no recipes."]
 			icon: "compressedcreativity:rotational_compressor"
 			id: "600F16DD06445D0D"
 			shape: "rsquare"
@@ -98,6 +102,21 @@
 			title: "Compressor"
 			x: -1.58d
 			y: -4.0d
+		}
+		{
+			dependencies: ["5DCC13C74FA59703"]
+			description: ["Load real furnace fuel into the HeatSync firebox by hand or automation. Every burning tick consumes fuel duration before adding heat; adjacent HeatSync and PNCR thermal bodies share that same stored heat instead of duplicating it."]
+			icon: "heatsync:thermal_firebox"
+			id: "E200000000000001"
+			shape: "rsquare"
+			tasks: [{
+				id: "E200000000000101"
+				item: "heatsync:thermal_firebox"
+				type: "item"
+			}]
+			title: "Conserved Heat"
+			x: -4.75d
+			y: 1.5d
 		}
 		{
 			dependencies: ["5DCC13C74FA59703"]
@@ -130,7 +149,8 @@
 			y: -1.0d
 		}
 		{
-			description: ["Bring Power Grid online after basic pressure work. Use it to separate generation, storage, and logic instead of running every machine from one messy setup."]
+			dependencies: ["E200000000000002"]
+			description: ["Build storage only after the Pneumatic Dynamo has established first FE. The battery consumes Dynamo hardware, so a casing recipe or charged find cannot silently move the electrical era ahead of normal air."]
 			icon: "powergrid:battery"
 			id: "4C5C5C74A457E34F"
 			shape: "rsquare"
@@ -144,7 +164,8 @@
 			y: -3.0d
 		}
 		{
-			description: ["Use the design table to plan circuits, not to skip board assembly. PNCR machines still handle the finished PCB work."]
+			dependencies: ["5DCC13C74FA59703"]
+			description: ["Use the design table to plan circuits, not to skip board assembly. PNCR machines still handle the finished PCB work needed before first FE."]
 			icon: "powergrid:circuit_design_table"
 			id: "04C9EB5FBCCFB09A"
 			shape: "diamond"
@@ -159,7 +180,11 @@
 			y: -3.0d
 		}
 		{
-			description: ["Unassembled boards are a checkpoint, not the finish line. They prove your chemistry and design work is ready for the assembly machines."]
+			dependencies: [
+				"49DC185F1980F4E3"
+				"04C9EB5FBCCFB09A"
+			]
+			description: ["Unassembled boards are a checkpoint, not the finish line. They prove your chemistry, pressure, and design work is ready for the assembly machines."]
 			icon: "pneumaticcraft:unassembled_pcb"
 			id: "15AA1D081CD6B3B2"
 			shape: "rsquare"
@@ -194,6 +219,40 @@
 			y: -3.0d
 		}
 		{
+			dependencies: [
+				"4F21F4F7C4150D7D"
+				"600F16DD06445D0D"
+			]
+			description: ["Turn normal PNCR air into the pack's first Forge Energy with the Pneumatic Dynamo. Its printed board and electrical casing prove a working pressure chamber. At the pinned ratio, 100 mL yields 25 FE; this is an intentionally modest bridge, not free power."]
+			icon: "pneumaticcraft:pneumatic_dynamo"
+			id: "E200000000000002"
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "E200000000000102"
+				item: "pneumaticcraft:pneumatic_dynamo"
+				type: "item"
+			}]
+			title: "First FE"
+			x: 4.75d
+			y: -6.75d
+		}
+		{
+			dependencies: ["E200000000000002"]
+			description: ["The Compressed Air Engine is a later return path, not the bootstrap. It consumes Dynamo hardware, retains the workshop governor, and is mechanically crafted. Its air cost is pinned above the Rotational Compressor's return, so an air/SU loop always loses power."]
+			icon: "compressedcreativity:compressed_air_engine"
+			id: "E200000000000003"
+			shape: "rsquare"
+			tasks: [{
+				id: "E200000000000103"
+				item: "compressedcreativity:compressed_air_engine"
+				type: "item"
+			}]
+			title: "Lossy Return"
+			x: 8.5d
+			y: -6.75d
+		}
+		{
 			dependencies: ["4F21F4F7C4150D7D"]
 			description: ["Apply PNCR pressure hardware and printed circuit boards to flight. Gas crafters prove the sealed pneumatic layer; copter bearings and the solver prove that stabilization and exotic physics no longer belong to the basic Aether lift tier."]
 			icon: "vs_clockwork:copter_bearing"
@@ -222,7 +281,8 @@
 			y: -5.0d
 		}
 		{
-			description: ["Build assembly machines when hand-crafted boards start slowing you down. Group the controller, platform, laser, drill, and import/export parts together."]
+			dependencies: ["4F21F4F7C4150D7D"]
+			description: ["Build assembly machines when prepared boards start slowing you down. Group the controller, platform, laser, drill, and import/export parts together."]
 			icon: "pneumaticcraft:assembly_controller"
 			id: "67B7DDA7976C7903"
 			shape: "hexagon"
@@ -237,6 +297,7 @@
 			y: -3.0d
 		}
 		{
+			dependencies: ["67B7DDA7976C7903"]
 			description: ["The assembly laser is for precision work that does not belong on a crafting table. Use it to feel the jump from preparation into finished manufacture."]
 			icon: "pneumaticcraft:assembly_laser"
 			id: "29F946BFE1267DF0"
@@ -251,6 +312,7 @@
 			y: -4.0d
 		}
 		{
+			dependencies: ["67B7DDA7976C7903"]
 			description: ["The assembly drill matters because some parts need to look machined, not hand-finished. It helps the whole board route read as industrial."]
 			icon: "pneumaticcraft:assembly_drill"
 			id: "6D98944E2044FC1F"
@@ -354,14 +416,14 @@
 		}
 		{
 			dependencies: ["7BA3BC1109BE6EFA"]
-			description: ["Make compressed iron through the pressure route and keep a small stock. It is the first sign that air pressure is now part of manufacturing."]
+			description: ["Make compressed iron through Create pressing and keep a small stock. It is structural preparation for pressure machinery, not proof that an air network already exists."]
 			icon: "create:mechanical_press"
 			id: "27F80DD57773A65C"
 			shape: "diamond"
 			size: 0.9d
 			tasks: [{
 				id: "3713BABC7ADD46DD"
-				title: "Show how iron becomes pressure material"
+				title: "Press iron for pressure machinery"
 				type: "checkmark"
 			}]
 			title: "Compression Cell"
@@ -385,7 +447,7 @@
 			y: -0.25d
 		}
 		{
-			description: ["Power the compressor from your local Create setup so pressure work grows out of the machines you already understand."]
+			description: ["Power the Rotational Compressor from the governed Create workshop so normal air grows out of machines you already understand. Do not restore a second bootstrap compressor."]
 			icon: "create:shaft"
 			id: "1E521D54CE181E54"
 			shape: "rsquare"

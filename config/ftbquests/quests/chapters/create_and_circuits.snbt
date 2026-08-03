@@ -9,7 +9,7 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["Make andesite alloy once seared metalwork is steady. This is the part that turns simple foundry progress into real Create machines."]
+			description: ["Form andesite alloy only after Tinkers seared metallurgy is steady. Melt and cast the alloy: solid mixer and shapeless shortcuts are gone because TCon, not Create, owns metal alloying and recovery."]
 			icon: "create:andesite_alloy"
 			id: "1C422F3D6A28E9E7"
 			rewards: [{
@@ -60,7 +60,26 @@
 			y: -2.5d
 		}
 		{
-			dependencies: ["1C422F3D6A28E9E7"]
+			dependencies: [
+				"4800B838DBC550AD"
+				"4514593EF2F3FDA2"
+			]
+			description: ["Build the hand crank as the workshop's only manual power source. Use it to run the first press, mixer, mill, saw, drill, and compacting jobs yourself; passive and fuelled Create power stays locked until the workshop can manufacture its governor."]
+			icon: "create:hand_crank"
+			id: "E100000000000001"
+			shape: "hexagon"
+			size: 1.15d
+			tasks: [{
+				id: "E100000000000101"
+				item: "create:hand_crank"
+				type: "item"
+			}]
+			title: "Hand-Cranked Workshop"
+			x: -7.92d
+			y: -3.0d
+		}
+		{
+			dependencies: ["E100000000000001"]
 			description: ["Check andesite casing uses in EMI as soon as you craft it. Its recipes point you toward the first useful Create machines."]
 			icon: "create:andesite_casing"
 			id: "4145E9AE6FCF2471"
@@ -83,7 +102,7 @@
 		}
 		{
 			dependencies: ["4145E9AE6FCF2471"]
-			description: ["Build the press when you start needing repeated plates and compact parts. It is one of the first machines that pays back immediately in many other recipes."]
+			description: ["Build the press when you start needing repeated plates and compact parts. Crank it by hand now; dependable passive power is a later manufactured milestone, not the workshop's starting assumption."]
 			icon: "create:mechanical_press"
 			id: "745F897829E7FFB9"
 			shape: "rsquare"
@@ -98,7 +117,7 @@
 		}
 		{
 			dependencies: ["4145E9AE6FCF2471"]
-			description: ["Use the mixer for your first serious alloys and open-vat chemistry. It is the easy way to see that some materials now want machines, not hand crafting."]
+			description: ["Use the hand-cranked mixer for open-vat chemistry and other bulk mixtures. Metal alloys remain molten Tinkers work: a mixer is not a second metallurgy authority."]
 			icon: "create:mechanical_mixer"
 			id: "365A91EF34589A8D"
 			shape: "rsquare"
@@ -273,6 +292,10 @@
 			y: -3.0d
 		}
 		{
+			dependencies: [
+				"4F9F165124F0D4E0"
+				"7DF707B2CB4ED504"
+			]
 			description: ["Make precision mechanisms once you can run deployers and supply gold sheets reliably. They are the step from basic motion into repeatable assembly."]
 			icon: "create:precision_mechanism"
 			id: "462D890004610901"
@@ -285,6 +308,22 @@
 			title: "Precision"
 			x: 1.58d
 			y: -3.0d
+		}
+		{
+			dependencies: ["462D890004610901"]
+			description: ["Assemble the workshop governor with a deployer, pressing, brass sheet, and real casing work. This proves that the manual shop can reproduce controlled machinery. Water wheels, windmills, steam engines, compressed-air engines, diesel engines, and electrical motors all keep this governor and Create machine crafting in their ancestry."]
+			icon: "kubejs:workshop_governor"
+			id: "E100000000000002"
+			shape: "hexagon"
+			size: 1.15d
+			tasks: [{
+				id: "E100000000000102"
+				item: "kubejs:workshop_governor"
+				type: "item"
+			}]
+			title: "Governor Boundary"
+			x: 3.17d
+			y: -6.5d
 		}
 		{
 			description: ["Use the mechanical arm when a machine needs to move specific items to specific places. It is best for local sorting, loading, and controlled handoffs."]

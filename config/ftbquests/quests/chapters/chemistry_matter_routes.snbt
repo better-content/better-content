@@ -185,7 +185,7 @@
 				"15E8F973446C60BC"
 				"71781B17892A20AF"
 			]
-			description: ["The reaction chamber is a later high-energy system, not the basic gas collector. Use Airtight-era capture, tanks, and cells for ordinary gas logistics; use the chamber only when a conditioned sealed state must undergo a deliberate reaction. Neutron capture remains a separate flux-driven process."]
+			description: ["The reaction chamber is a later high-energy chemistry system, not a basic gas collector and not a reactor. Use Airtight-era capture, tanks, and cells for ordinary gas logistics; use the chamber only when a conditioned sealed state must undergo a deliberate reaction. Neutron capture is a separate flux-driven chemistry process, not fission or fusion power."]
 			icon: "latent_chemlib:gas_reaction_chamber"
 			id: "3D8722F9925D50DE"
 			shape: "rsquare"
@@ -526,6 +526,37 @@
 			title: "Audit Trail"
 			x: 7.92d
 			y: 2.0d
+		}
+		{
+			dependencies: ["366348FD8CF74489"]
+			description: ["HeatSync now defines the conserved impossible-matter transducer boundary, but the block intentionally has no recipe because no installed source yet owns finite impossible-matter inventory and daughter products. When a real source exists, FE will pay containment only; AE and heat must come from the debited source, rejected AE remains buffered, throughput stays fixed per block, and overheating melts the transducer. This is an implemented interface, not a playable production objective yet."]
+			icon: "heatsync:impossible_matter_transducer"
+			id: "E300000000000001"
+			shape: "hexagon"
+			size: 1.15d
+			tasks: [{
+				id: "E300000000000101"
+				title: "No finite source or transducer recipe exists yet"
+				type: "checkmark"
+			}]
+			title: "Impossible-Matter Contract"
+			x: 7.92d
+			y: 4.5d
+		}
+		{
+			dependencies: ["E300000000000001"]
+			description: ["There is currently no authored fission reactor, fusion reactor, or reactor power ladder. Isotope clocks, event-local schedulers, neutron-capture chemistry, and the sealed reaction chamber are real chemistry infrastructure, but they do not generate reactor power. Do not treat speculative reactor or fusion concepts as quests, rewards, or available progression until their conservation model and machines are implemented and tested."]
+			icon: "chemlib:uranium"
+			id: "E300000000000002"
+			shape: "rsquare"
+			tasks: [{
+				id: "E300000000000102"
+				title: "Reactor and fusion power are future work"
+				type: "checkmark"
+			}]
+			title: "Future, Not Live"
+			x: 12.67d
+			y: 4.5d
 		}
 	]
 	title: "Chemistry and Matter Routes"

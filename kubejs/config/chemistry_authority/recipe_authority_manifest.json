@@ -617,6 +617,20 @@
       "gas_destination_contract": "Probabilistic hydrogen and deposit-gas items prove neither contained delivery nor uncontained Latent escape.",
       "review_scope": "All 1,056 retained Realistic Ores acid-ball routes across six exact 176-ID solvent cohorts are disabled; the shared solvent catalog remains available to separately reviewed neighboring scripts.",
       "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "create_deposit_splashing_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:create/splashing/deposits/.*$",
+      "retained_recipe_count": 22,
+      "sorted_recipe_ids_sha256": "bbd82bcf0f777d40e70d4afcfa180e72ebb8aa7d861a8a0dc0fcebe0e34f0a15",
+      "disposition": "removed_unbounded_deposit_splashing_family",
+      "exact_material_purpose": "Wash a named crushed deposit into bounded physical crushed-ore fractions, minerals, or composition-specific compounds.",
+      "source_composition_finding": "Rejected: the generated table selected finished elements, crushed ores, minerals, and compounds from one opaque deposit packet without a bounded assay or source-specific separation contract.",
+      "fixed_mass_finding": "Rejected: multiple deterministic and probabilistic products had no conserved fixed-mass basis, complete gangue stream, or wash-water residue contract.",
+      "industrial_authority_finding": "Rejected: Create splashing directly formed finished elemental metals reserved to TConstruct; even the retained non-element candidates remain unapproved until each route has bounded quantities and complete residues.",
+      "review_scope": "All 22 uniformly generated splashing registrations are removed. The shared deposit table and separately registered TConstruct melting routes remain unchanged for independent review and tooling compatibility.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ]
 }

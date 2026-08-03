@@ -26,6 +26,7 @@ var BC_CREATE_DEPOSITS = [
     { id: 'soul_bearing_black_shale_soulstone_vein', tag: 'kubejs:deposit_blocks/soul_bearing_black_shale_soulstone_vein', crushed: 'realisticores:crushed_soul_bearing_black_shale_soulstone_vein', wash: [{ item: 'chemlib:carbon', count: 2 }, { item: 'minecraft:soul_sand', chance: 0.45 }, { item: 'chemlib:sulfur', chance: 0.30 }, { item: 'minecraft:redstone', chance: 0.12 }] },
     { id: 'sulfur_bearing_pyrite_ore', tag: 'kubejs:deposit_blocks/sulfur_bearing_pyrite_ore', crushed: 'realisticores:crushed_sulfur_bearing_pyrite_ore', wash: [{ item: 'chemlib:sulfur', count: 3 }, { item: 'create:crushed_raw_iron', chance: 0.65 }, { item: 'create:crushed_raw_copper', chance: 0.20 }, { item: 'create:crushed_raw_gold', chance: 0.08 }] }
 ]
+
 function bcResult(entry) {
     var result = { item: entry.item }
     if (entry.count) result.count = entry.count
@@ -54,14 +55,6 @@ ServerEvents.recipes(function (event) {
 
     for (var i = 0; i < BC_CREATE_DEPOSITS.length; i++) {
         var dep = BC_CREATE_DEPOSITS[i]
-
-        var washResults = []
-        for (var j = 0; j < dep.wash.length; j++) washResults.push(bcResult(dep.wash[j]))
-        event.custom({
-            type: 'create:splashing',
-            ingredients: [{ item: dep.crushed }],
-            results: washResults
-        }).id('kubejs:create/splashing/deposits/' + dep.id)
 
         if (dep.fluid) {
             event.custom({

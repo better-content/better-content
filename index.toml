@@ -9306,7 +9306,7 @@ hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/recipe_authority_manifest.json"
-hash = "c328015d541472ac64a54f7729c4811986a7934ec769a95bbe88c6213dd3c1f5"
+hash = "397bbd6056b5f0a17f8d2b009922f35a9399ee5dfb86db6ef7adfcc2a9da2d0f"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
@@ -10862,7 +10862,7 @@ hash = "8e30f43d0de55ca41e7b75334179ced10e7068942b72ffd6961eb1feaa3dbc11"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js"
-hash = "73453baab2e7f3dc083ff0f188f07723f39dd06cd37d01a40f70eb4ad6756d80"
+hash = "438a3f93201c8f2125dd014464b6214d853d11dd3d0db1af325a6391d4958d4f"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/51_surface_sample_processing.js"

@@ -37,6 +37,23 @@ function bcEnergyRemoveOutputs(event, outputs) {
     for (var i = 0; i < outputs.length; i++) event.remove({ output: outputs[i] })
 }
 
+function bcEnergyIngredient(reference) {
+    if (reference.charAt(0) === '#') return { tag: reference.substring(1) }
+    return { item: reference }
+}
+
+function bcEnergyMechanicalCrafting(event, output, pattern, keys, id) {
+    var keyJson = {}
+    for (var symbol in keys) keyJson[symbol] = bcEnergyIngredient(keys[symbol])
+    event.custom({
+        type: 'create:mechanical_crafting',
+        acceptMirrored: true,
+        pattern: pattern,
+        key: keyJson,
+        result: { item: output }
+    }).id(id)
+}
+
 ServerEvents.recipes(function (event) {
     var required = [
         'compressedcreativity:rotational_compressor',
@@ -45,6 +62,7 @@ ServerEvents.recipes(function (event) {
         'kubejs:rotational_compressor_core',
         'kubejs:airtight_machine_casing',
         'kubejs:electrical_machine_casing',
+        'kubejs:workshop_governor',
         'heatsync:thermal_firebox',
         'heatsync:impossible_matter_transducer'
     ]
@@ -84,20 +102,21 @@ ServerEvents.recipes(function (event) {
     }).id('kubejs:energy_ladder/first_fe/pneumatic_dynamo')
 
     // Air-to-SU exists only after first FE and consumes the dynamo rotor/control
-    // body. The pinned Compressed Creativity ratios make the return path lossy.
+    // body. Mechanical crafting and the governor preserve the workshop boundary.
+    // The pinned Compressed Creativity ratios make the return path lossy.
     event.remove({ output: 'compressedcreativity:compressed_air_engine' })
-    event.shaped('compressedcreativity:compressed_air_engine', [
-        'PTP',
+    bcEnergyMechanicalCrafting(event, 'compressedcreativity:compressed_air_engine', [
+        'TGT',
         'RDR',
         'BAB'
     ], {
-        P: '#forge:plates/brass',
         T: 'pneumaticcraft:advanced_pressure_tube',
+        G: 'kubejs:workshop_governor',
         R: 'compressedcreativity:engine_rotor',
         D: 'pneumaticcraft:pneumatic_dynamo',
         B: '#forge:plates/copper',
         A: 'kubejs:airtight_machine_casing'
-    }).id('kubejs:energy_ladder/post_fe/compressed_air_engine')
+    }, 'kubejs:energy_ladder/post_fe/compressed_air_engine')
 
     // Storage and FE/SU converters consume first-FE hardware, so charged loot
     // or a broad casing recipe cannot skip the normal-air milestone.
@@ -115,54 +134,57 @@ ServerEvents.recipes(function (event) {
     }).id('kubejs:energy_ladder/post_fe/powergrid_battery')
 
     event.remove({ output: 'powergrid:electric_motor' })
-    event.shaped('powergrid:electric_motor', [
-        'WCW',
-        'PAP',
-        ' S '
+    bcEnergyMechanicalCrafting(event, 'powergrid:electric_motor', [
+        'WGW',
+        'CPC',
+        'ASA'
     ], {
         W: 'powergrid:wire',
+        G: 'kubejs:workshop_governor',
         C: 'powergrid:copper_coil',
         P: 'pneumaticcraft:pneumatic_dynamo',
         A: 'kubejs:electrical_machine_casing',
         S: 'create:shaft'
-    }).id('kubejs:energy_ladder/post_fe/powergrid_electric_motor')
+    }, 'kubejs:energy_ladder/post_fe/powergrid_electric_motor')
 
     event.remove({ output: 'powergrid:constant_speed_motor' })
-    event.shaped('powergrid:constant_speed_motor', [
-        'RMR',
-        'PAP',
-        'RMR'
+    bcEnergyMechanicalCrafting(event, 'powergrid:constant_speed_motor', [
+        'RGR',
+        'MPM',
+        'RAR'
     ], {
         R: 'powergrid:redstone_relay',
+        G: 'kubejs:workshop_governor',
         M: 'kubejs:electrical_control_module',
         P: 'pneumaticcraft:pneumatic_dynamo',
         A: 'kubejs:electrical_machine_casing'
-    }).id('kubejs:energy_ladder/post_fe/powergrid_constant_speed_motor')
+    }, 'kubejs:energy_ladder/post_fe/powergrid_constant_speed_motor')
 
     event.remove({ output: 'powergrid:generator_housing' })
-    event.shaped('powergrid:generator_housing', [
-        'IMI',
+    bcEnergyMechanicalCrafting(event, 'powergrid:generator_housing', [
+        'IGI',
         'PAP',
         'IOI'
     ], {
         I: '#forge:plates/iron',
-        M: 'kubejs:electrical_control_module',
+        G: 'kubejs:workshop_governor',
         P: 'pneumaticcraft:pneumatic_dynamo',
         A: 'kubejs:electrical_machine_casing',
         O: 'chemlib:aluminum_oxide'
-    }).id('kubejs:energy_ladder/post_fe/powergrid_generator_housing')
+    }, 'kubejs:energy_ladder/post_fe/powergrid_generator_housing')
 
     event.remove({ output: 'powergrid:vertical_generator_housing' })
-    event.shaped('powergrid:vertical_generator_housing', [
-        'ICI',
+    bcEnergyMechanicalCrafting(event, 'powergrid:vertical_generator_housing', [
+        'IGI',
         'PAP',
-        'III'
+        'ICI'
     ], {
         I: '#forge:plates/iron',
+        G: 'kubejs:workshop_governor',
         C: 'powergrid:generator_commutator',
         P: 'pneumaticcraft:pneumatic_dynamo',
         A: 'kubejs:electrical_machine_casing'
-    }).id('kubejs:energy_ladder/post_fe/powergrid_vertical_generator_housing')
+    }, 'kubejs:energy_ladder/post_fe/powergrid_vertical_generator_housing')
 
     event.remove({ output: 'heatsync:thermal_firebox' })
     event.shaped('heatsync:thermal_firebox', [

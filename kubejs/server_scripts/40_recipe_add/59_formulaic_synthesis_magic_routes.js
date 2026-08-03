@@ -186,29 +186,6 @@ ServerEvents.recipes(function (event) {
         ], cuttingFluid.item, cuttingFluid.syphon, cuttingFluid.ticks, cuttingFluid.tier)
     }
 
-    var safeOxideReductions = [
-        { id: 'iron', oxide: 'chemlib:iron_oxide', element: 'chemlib:iron' },
-        { id: 'lead', oxide: 'chemlib:lead_oxide', element: 'chemlib:lead' },
-        { id: 'tin', oxide: 'chemlib:tin_oxide', element: 'chemlib:tin' },
-        { id: 'zinc', oxide: 'chemlib:zinc_oxide', element: 'chemlib:zinc' },
-        { id: 'copper', oxide: 'chemlib:copper_ii_oxide', element: 'chemlib:copper' },
-        { id: 'nickel', oxide: 'chemlib:nickel_oxide', element: 'chemlib:nickel' },
-        { id: 'titanium', oxide: 'chemlib:titanium_oxide', element: 'chemlib:titanium' },
-        { id: 'aluminum', oxide: 'chemlib:aluminum_oxide', element: 'chemlib:aluminum' }
-    ]
-    for (var e = 0; e < safeOxideReductions.length; e++) {
-        var reduction = safeOxideReductions[e]
-        if (!bcSynExists(reduction.oxide) || !bcSynExists(reduction.element)) continue
-         bcSynBloodAlchemy(event, reduction.id + '_blood_reduction', [
-            { item: reduction.oxide, count: 4 },
-            { item: 'bloodmagic:reinforcedslate' },
-            { item: BC_SYN_MAGIC_CUTTING_FLUIDS.sulfuric.item }
-        ], { item: reduction.element, count: 4 }, 9000, 260, 2)
-         bcSynBloodArc(event, reduction.id + '_sulfuric_reduction_gas', reduction.oxide, 2, BC_SYN_MAGIC_CUTTING_FLUIDS.sulfuric.item, { item: reduction.element, count: 2 }, [
-            BC_SYN_SIDE_GASES.sulfuric
-        ])
-    }
-
     var deposits = global.BC_RO_DEPOSITS || []
     if (deposits.length > 0) {
         for (var d = 0; d < deposits.length; d++) {

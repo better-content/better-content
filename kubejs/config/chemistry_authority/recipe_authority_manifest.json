@@ -477,6 +477,28 @@
       "progression_finding": "Rejected: manual magical duplication overlaps established Create assembly and manufactured-part progression without a material-specific need beyond alternate graph adjacency.",
       "review_scope": "The retained snapshot registered two exact IDs; the malformed guarded andesite-alloy source attempt was also removed so a future control-flow correction cannot silently enable an unreviewed third route.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "blood_magic_oxide_to_element_reduction_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_patterns": [
+        "^kubejs:synthesis/magic/blood_alchemy/.*_blood_reduction$",
+        "^kubejs:synthesis/magic/blood_arc/.*_sulfuric_reduction_gas$"
+      ],
+      "retained_recipe_count": 14,
+      "source_attempt_count": 16,
+      "retained_recipe_breakdown": {
+        "blood_alchemy_reductions": 7,
+        "blood_arc_reductions": 7
+      },
+      "sorted_recipe_ids_sha256": "5e17bfa790f8a1fc08a991ab3332a094eaac44fe8f44c48783afc3e4018c3e9c",
+      "disposition": "removed_magic_element_formation_and_unbalanced_reduction_family",
+      "exact_material_purpose": "Reduce eight named metal oxides into finished elemental metal using Blood Magic and a sanguine sulfuric cutting fluid.",
+      "fixed_mass_finding": "Rejected: opaque oxide packets became equal-count element packets despite formula-dependent oxygen content; the Blood Arc variant emitted sulfur dioxide only probabilistically and neither variant accounted for oxide oxygen, cutting-fluid sulfur/hydrogen/oxygen, or slate material.",
+      "magic_provenance_finding": "Rejected: LP, slates, and sanguine cutting fluid supplied no explicit identity-changing provenance or deterministic residue contract.",
+      "industrial_authority_finding": "Rejected: Blood Magic directly formed finished elemental metals reserved exclusively to TConstruct formation, alloying, casting, and remelting.",
+      "review_scope": "The retained snapshot registered seven metals in two route forms; both guarded copper source attempts were also removed so registry changes cannot silently add unreviewed direct copper formation.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
     }
   ]
 }

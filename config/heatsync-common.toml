@@ -1,0 +1,44 @@
+[mapping]
+	absolute_zero_offset = 100.0
+	cs_to_cna_scale = 40.0
+	pipe_min_heat = 0.0
+	pipe_max_heat = 400.0
+
+[thermal_firebox]
+	# Fuel duration is preserved: heat is never created without a burning tick.
+	heat_per_tick = 6.0
+	target_heat = 360.0
+
+[pneumaticcraft]
+	ambient_heat = 100.0
+	ambient_temperature_k = 295.15
+	heat_per_kelvin = 0.25
+
+[impossible_transducer]
+	# FE is containment work only. Finite source inventory owns AE, daughters,
+	# heat, and every other unbinding side effect.
+	fe_capacity = 100000
+	fe_per_unit = 2000
+	units_per_tick = 1
+	max_heat = 400.0
+[pipe_behavior]
+	ambient_blend_rate = 0.08
+	pipe_loss_per_tick = 0.5
+	network_equalization_strength = 0.3
+	cold_source_pull_rate = 0.18
+
+[cold_sources]
+	ice_source_heat = 80.0
+	packed_ice_source_heat = 50.0
+	blue_ice_source_heat = 20.0
+	tagged_cold_source_default_heat = 80.0
+
+[radiation]
+	pipe_blocktemp_range = 5.0
+	pipe_blocktemp_max_effect = 0.75
+
+[power_grid]
+	ambient_heat = 100.0
+	ambient_temperature_c = 22.0
+	heat_per_degree_c = 0.2546689303904924
+	max_heat = 400.0

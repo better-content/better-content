@@ -1,0 +1,32 @@
+# Authoritative normal-air bridge values for new worlds.
+
+[general]
+	backtank_compat_item = true
+	backtank_compat_block = true
+	chestplate_compat = true
+	chestplate_min_pressure = 2.0
+
+[machines]
+
+	[machines.rotational_compressor]
+		# At equal speed the return engine consumes substantially more air than
+		# this compressor produces, preventing a closed SU/air loop.
+		stress = 2048
+		volume = 5000
+		base_production = 10.0
+		pressure_tier = "TIER_ONE"
+
+		[machines.rotational_compressor.custom_pressure]
+			danger_pressure = 5.0
+			critical_pressure = 2.0
+	[machines.compressed_air_engine]
+		stress = 1024
+		volume = 1000
+		air_usage_work = 40.0
+		air_usage_idle = 80.0
+		work_pressure = 3.0
+		pressure_tier = "TIER_ONE"
+
+		[machines.compressed_air_engine.custom_pressure]
+			danger_pressure = 5.0
+			critical_pressure = 2.0

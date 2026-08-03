@@ -1,0 +1,16 @@
+{
+  "PowerRatios": {
+    "ForgeEnergy": 0.0,
+    "UsageMultiplier": 1.0,
+    "GridEnergyStoragePerNode": 25.0,
+    "CrystalResonanceGeneratorRate": 0.0,
+    "p2pTunnelEnergyTax": 0.025,
+    "p2pTunnelTransportTax": 0.025
+  },
+  "vibrationChamber": {
+    "_comment": "Native Vibration Chambers are recipe-disabled; AE2 requires this value to remain at least 0.1.",
+    "baseEnergyPerFuelTick": 0.1,
+    "minEnergyPerGameTick": 0,
+    "baseMaxEnergyPerGameTick": 1
+  }
+}

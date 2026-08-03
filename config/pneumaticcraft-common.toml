@@ -1,0 +1,16 @@
+# Better Content energy-ladder authority.
+# Native compressor recipes are retired by KubeJS; these ratios make every
+# remaining cross-domain conversion explicitly lossy.
+
+["Machine Properties"]
+	# 100 FE can produce at most 20 mL if a Flux Compressor is ever restored.
+	flux_compressor_efficiency = 20
+	# Create kinetic input can produce at most 20 mL per 100 MJ if restored.
+	kinetic_compressor_efficiency = 20
+	# The authored Rotational Compressor produces normal air; its first useful
+	# electrical sink yields only 25 FE per 100 mL.
+	pneumatic_dynamo_efficiency = 25
+	# Air-to-kinetic conversion is also below the native parity default.
+	pneumatic_engine_efficiency = 20
+	manual_compressor_air_per_cycle = 250
+	manual_compressor_allow_fake_players = false

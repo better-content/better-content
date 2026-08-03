@@ -106,6 +106,27 @@
       "fixed_mass_finding": "Rejected: probabilistic Create yields, multi-item Blood outputs, and item-to-gas volume conversion had no shared fixed-mass basis or complete residue accounting.",
       "industrial_authority_finding": "Rejected: Create and Blood Magic directly formed finished elemental metals reserved to TConstruct metallurgy.",
       "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "chemlib_full_element_dust_and_cobalt_form_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_patterns": [
+        "^kubejs:chemlib_full/create_milling/form/dust/.*$",
+        "^kubejs:chemlib_full/create_compacting/recovery/dust/.*$",
+        "^kubejs:chemlib_full/create_milling/recovery/form/cobalt_plate$"
+      ],
+      "retained_recipe_count": 149,
+      "retained_recipe_breakdown": {
+        "create_milling_element_to_dust": 74,
+        "create_compacting_dust_to_element": 74,
+        "create_milling_cobalt_plate_to_element": 1
+      },
+      "sorted_recipe_ids_sha256": "0176fc0dde988dcf9c1a88c1347bb1a10a03e37fc8fac8a664bf8ea86aafb2cf",
+      "disposition": "removed_non_tcon_element_form_family",
+      "fixed_mass_finding": "Rejected: opaque one-item element, dust, and plate packets were treated as equal without an accepted common mass basis.",
+      "industrial_authority_finding": "Rejected: Create milling and compacting directly formed or reclaimed finished elemental material reserved to TConstruct metallurgy and remelting.",
+      "review_scope": "This disposition does not approve formula, compound-recovery, sink, or molecule-use generators.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ],
   "reactions": []

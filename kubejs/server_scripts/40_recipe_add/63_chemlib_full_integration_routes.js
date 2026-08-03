@@ -114,16 +114,6 @@ function bcFullChemCompact(event, id, inputs, outputs, heat) {
     event.custom(recipe).id('kubejs:chemlib_full/create_compacting/' + id)
 }
 
-function bcFullChemMill(event, id, input, output) {
-    if (!bcFullChemExists(input) || !bcFullChemExists(output.item)) return
-    event.custom({
-        type: 'create:milling',
-        ingredients: [{ item: input }],
-        results: [bcFullChemResult(output.item, output.count || 1, null)],
-        processingTime: 120
-    }).id('kubejs:chemlib_full/create_milling/' + id)
-}
-
 function bcFullChemPressure(event, id, inputs, output, pressure) {
     if (!bcFullChemAllInputsExist(inputs) || !bcFullChemExists(output.item)) return
     var pressureInputs = []
@@ -325,13 +315,6 @@ var BC_FULL_CHEM_TERMINAL_OUTPUTS = {
     'chemlib:xenon_lamp_block': 'functional_light_block'
 }
 
-// Manufactured forms with no intrinsic final use get a lossy recovery sink.
-// This is form reclamation inside the existing chemistry lane, not a new
-// material source.
-var BC_FULL_CHEM_RECOVERY_FORMS = [
-    { id: 'cobalt_plate', input: 'chemlib:cobalt_plate', output: 'chemlib:cobalt' }
-]
-
 var BC_FULL_CHEM_RECOVERY_COMPOUNDS = [
     { id: 'iron_disulfide', input: 'chemlib:iron_disulfide', output: 'chemlib:iron' },
     { id: 'iron_ii_oxide', input: 'chemlib:iron_ii_oxide', output: 'chemlib:iron' }
@@ -437,8 +420,6 @@ function bcFullChemRegisterElement(event, group, element) {
 
     if (BC_FULL_CHEM_MOLECULE_GASES[elementItem]) return
 
-     bcFullChemRegisterDustForm(event, elementItem, element)
-
     for (var f = 0; f < BC_FULL_CHEM_FAMILIES.length; f++) {
         var family = BC_FULL_CHEM_FAMILIES[f]
         if (family.id === 'oxide' && (element === 'carbon' || element === 'silicon')) continue
@@ -461,16 +442,6 @@ function bcFullChemRegisterElement(event, group, element) {
     for (var s = 0; s < sinks.length; s++) {
          bcFullChemRegisterSink(event, group, elementItem, sinks[s])
     }
-}
-
-function bcFullChemRegisterDustForm(event, elementItem, element) {
-    var dust = 'chemlib:' + element + '_dust'
-    if (!bcFullChemExists(dust)) return
-
-     bcFullChemMill(event, 'form/dust/' + element, elementItem, { item: dust, count: 1 })
-     bcFullChemCompact(event, 'recovery/dust/' + element, [
-        { item: dust }
-    ], [{ item: elementItem, count: 1 }], null)
 }
 
 function bcFullChemSinkInputs(elementItem, sink) {
@@ -508,11 +479,6 @@ ServerEvents.recipes(function (event) {
 
     for (var m = 0; m < BC_FULL_CHEM_MOLECULES.length; m++) {
          bcFullChemRegisterMolecule(event, BC_FULL_CHEM_MOLECULES[m])
-    }
-
-    for (var r = 0; r < BC_FULL_CHEM_RECOVERY_FORMS.length; r++) {
-        var recovery = BC_FULL_CHEM_RECOVERY_FORMS[r]
-         bcFullChemMill(event, 'recovery/form/' + recovery.id, recovery.input, { item: recovery.output, count: 1 })
     }
 
     for (var c = 0; c < BC_FULL_CHEM_RECOVERY_COMPOUNDS.length; c++) {

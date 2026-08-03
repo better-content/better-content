@@ -46,6 +46,16 @@ var BC_CASING_ECO = {
     titaniumOxide: 'chemlib:titanium_oxide'
 }
 
+// These outputs are exclusively authored by create_tcon_bootstrap.json. Keeping
+// the denylist beside the generic casing helper prevents this broad expansion
+// pass from recreating a hand-crafted bypass after the authority pass runs.
+var BC_CASING_ECO_GOVERNED_POWER_OUTPUTS = [
+    'create:steam_engine',
+    'createdieselgenerators:diesel_engine',
+    'powergrid:electric_motor',
+    'powergrid:constant_speed_motor'
+]
+
 function bcEcoExists(id) {
     try { return Item.exists(id) } catch (e) { return false }
 }
@@ -66,6 +76,7 @@ function bcEcoCanCraft(recipe) {
 }
 
 function bcEcoAddShaped(event, recipe) {
+    if (BC_CASING_ECO_GOVERNED_POWER_OUTPUTS.indexOf(recipe.output) >= 0) return
     if (!bcEcoCanCraft(recipe)) return
     event.remove({ output: recipe.output })
     global.bcFactoryCrafting(event, recipe.id, recipe.output, recipe.count || 1, recipe.pattern, recipe.keys, { mirrored: true })

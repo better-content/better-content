@@ -22,14 +22,6 @@ ServerEvents.recipes(function (event) {
         { item: 'bloodmagic:blankslate' }
     ], { item: 'create:andesite_alloy', count: 6 }, 1600, 120, 1)
 
-     bcBmManualAlchemy(event, 'brass_ingot_batch', [
-        { item: 'minecraft:copper_ingot' },
-        { item: 'minecraft:copper_ingot' },
-        { item: 'chemlib:zinc_ingot' },
-        { item: 'chemlib:zinc_ingot' },
-        { item: 'bloodmagic:reinforcedslate' }
-    ], { item: 'create:brass_ingot', count: 4 }, 4200, 160, 2)
-
      bcBmManualAlchemy(event, 'precision_mechanism_pair', [
         { item: 'create:brass_sheet' },
         { item: 'create:cogwheel' },

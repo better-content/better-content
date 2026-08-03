@@ -47,20 +47,6 @@ ServerEvents.recipes(function (event) {
     event.remove({ id: 'morered:soldering_table' })
 
     event.custom({
-        type: 'create:mixing',
-        ingredients: [
-            { tag: 'forge:ingots/copper' },
-            { tag: 'forge:ingots/zinc' },
-            { item: 'minecraft:redstone' },
-            { item: 'minecraft:redstone' },
-            { item: 'minecraft:redstone' },
-            { item: 'minecraft:redstone' }
-        ],
-        results: [{ item: BC_MORERED.alloy, count: 2 }],
-        processingTime: 160
-    }).id('kubejs:morered/create_mixing/red_alloy_ingot')
-
-    event.custom({
         type: 'create:pressing',
         ingredients: [{ item: BC_MORERED.alloy }],
         results: [{ item: BC_MORERED.wire, count: 2 }]

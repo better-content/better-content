@@ -91,6 +91,12 @@ function bcCreateTconValidateContract() {
             bcCreateTconFail('unsupported positive-SU policy for ' + source.id + ': ' + source.policy)
         }
     }
+    if (BC_CREATE_TCON.forbidden_power_recipe_ids.length !== 9) {
+        bcCreateTconFail('positive-SU bypass denylist must contain exactly nine audited recipe IDs')
+    }
+    if (BC_CREATE_TCON.forbidden_metallurgy_recipe_ids.length !== 10) {
+        bcCreateTconFail('metallurgy bypass denylist must contain exactly ten audited recipe IDs')
+    }
     for (var o = 0; o < BC_CREATE_TCON.ore_contract.ores.length; o++) {
         var ore = BC_CREATE_TCON.ore_contract.ores[o]
         if (!bcCreateTconTagExists(ore.input_tag)) bcCreateTconFail('ore contract references empty tag #' + ore.input_tag)
@@ -108,6 +114,15 @@ function bcCreateTconFluid(ref, amount, rate) {
 
 ServerEvents.recipes(function (event) {
     bcCreateTconValidateContract()
+
+    // Defense in depth for native recipes and any stale datapack copies. KubeJS-owned
+    // producers are also removed at their source so callback order cannot restore them.
+    for (var fp = 0; fp < BC_CREATE_TCON.forbidden_power_recipe_ids.length; fp++) {
+        event.remove({ id: BC_CREATE_TCON.forbidden_power_recipe_ids[fp] })
+    }
+    for (var fm = 0; fm < BC_CREATE_TCON.forbidden_metallurgy_recipe_ids.length; fm++) {
+        event.remove({ id: BC_CREATE_TCON.forbidden_metallurgy_recipe_ids[fm] })
+    }
 
     // Patterns are not a progression currency. TCon workstations and molten metal are.
     event.remove({ output: 'tconstruct:pattern' })

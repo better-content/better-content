@@ -104,12 +104,6 @@ function bcChemUseArsImbue(event, id, input, output, count, source, pedestalItem
 
 ServerEvents.recipes(function (event) {
     // Electronics: boards, wafers, processors-in-waiting.
-     bcChemUseMix(event, 'morered/red_alloy_signal_salt', 'morered:red_alloy_ingot', 3, [
-        '#forge:ingots/copper',
-        '#forge:ingots/zinc',
-        'minecraft:redstone',
-        'chemlib:copper_nitrate'
-    ], null, 0, null, 160)
      bcChemUseCompact(event, 'morered/stone_plate_ceramic', 'morered:stone_plate', 4, [
         '#forge:stone',
         'chemlib:aluminum_oxide',

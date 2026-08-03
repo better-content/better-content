@@ -28,7 +28,9 @@
   "positive_su_sources": [
     {
       "id": "create:hand_crank",
-      "policy": "manual_only"
+      "policy": "manual_only",
+      "capacity_su": 16,
+      "hunger_multiplier": 0.01
     },
     {
       "id": "create:creative_motor",
@@ -219,6 +221,29 @@
       }
     ]
   },
+  "forbidden_power_recipe_ids": [
+    "kubejs:casing_ecosystem/brass/steam_engine",
+    "kubejs:chemistry/existing/pncr_pressure/create/steam_engine_nickel_condenser",
+    "kubejs:closure/create/steam_engine",
+    "kubejs:casing_ecosystem/brass/diesel_engine",
+    "kubejs:closure/createdieselgenerators/diesel_engine",
+    "kubejs:closure/createdieselgenerators/large_diesel_engine",
+    "kubejs:closure/createdieselgenerators/huge_diesel_engine",
+    "kubejs:casing_ecosystem/electrical/electric_motor",
+    "kubejs:casing_ecosystem/electrical/constant_speed_motor"
+  ],
+  "forbidden_metallurgy_recipe_ids": [
+    "createaddition:mixing/electrum",
+    "creatingspace:alloy_recipe/copronickel_ingot_mixing",
+    "creatingspace:alloy_recipe/hastelloy_ingot_mixing",
+    "creatingspace:alloy_recipe/inconel_ingot_mixing",
+    "creatingspace:alloy_recipe/monel_ingot_mixing",
+    "creatingspace:alloy_recipe/reinforced_copper_ingot_mixing",
+    "kubejs:bloodmagic/manual_create_yield/brass_ingot_batch",
+    "kubejs:chemistry/use/create_mixing/morered/red_alloy_signal_salt",
+    "kubejs:create/mixing/sky_steel_ingot",
+    "kubejs:morered/create_mixing/red_alloy_ingot"
+  ],
   "forbidden_solid_alloy_mixing_outputs": [
     "create:andesite_alloy",
     "create:brass_ingot",

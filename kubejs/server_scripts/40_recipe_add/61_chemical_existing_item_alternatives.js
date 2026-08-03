@@ -217,13 +217,6 @@ ServerEvents.recipes(function (event) {
         'chemlib:copper_chloride',
         'kubejs:pressure_seal'
     ])
-     bcChemAltPressure(event, 'create/steam_engine_nickel_condenser', 'create:steam_engine', 1, 2.5, [
-        'kubejs:brass_machine_casing',
-        '#forge:storage_blocks/copper',
-        'chemlib:nickel_sulfate',
-        'chemlib:aluminum_oxide'
-    ])
-
     // PneumaticCraft, pressure hardware, and late materials.
      bcChemAltPressure(event, 'pneumaticcraft/pressure_chamber_wall_refractory', 'pneumaticcraft:pressure_chamber_wall', 8, 2.0, [
         'pneumaticcraft:ingot_iron_compressed',

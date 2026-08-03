@@ -112,11 +112,6 @@ ServerEvents.recipes(function (event) {
         'GSG',
         'AEA'
     ], { G: BC_CLOSURE.goldPlate, S: '#forge:rods/wooden', A: BC_CLOSURE.andesite, E: 'create:electron_tube' }, 'kubejs:closure/create/controller_rail')
-     bcClosureShaped(event, 'create:steam_engine', [
-        ' G ',
-        ' B ',
-        ' C '
-    ], { G: BC_CLOSURE.goldPlate, B: BC_CLOSURE.brass, C: '#forge:storage_blocks/copper' }, 'kubejs:closure/create/steam_engine')
      bcClosureShaped(event, 'create:transmitter', [
         ' L ',
         'CAC',
@@ -185,21 +180,6 @@ ServerEvents.recipes(function (event) {
         'WBW',
         'PWS'
     ], { A: 'create:andesite_alloy', S: BC_CLOSURE.ironPlate, W: '#minecraft:wool', P: 'create:fluid_pipe', B: BC_CLOSURE.brass }, 'kubejs:closure/createdieselgenerators/engine_silencer')
-     bcClosureShaped(event, 'createdieselgenerators:diesel_engine', [
-        ' Q ',
-        'PBP',
-        'SFS'
-    ], { Q: 'minecraft:flint_and_steel', P: 'createdieselgenerators:engine_piston', B: BC_CLOSURE.brass, S: 'minecraft:polished_blackstone_slab', F: 'create:fluid_tank' }, 'kubejs:closure/createdieselgenerators/diesel_engine')
-     bcClosureShaped(event, 'createdieselgenerators:large_diesel_engine', [
-        ' P ',
-        'SBS',
-        ' E '
-    ], { P: BC_CLOSURE.power, S: BC_CLOSURE.brassPlate, B: BC_CLOSURE.brass, E: 'createdieselgenerators:diesel_engine' }, 'kubejs:closure/createdieselgenerators/large_diesel_engine')
-     bcClosureShaped(event, 'createdieselgenerators:huge_diesel_engine', [
-        'PFP',
-        'SES',
-        'BDB'
-    ], { P: BC_CLOSURE.power, F: 'minecraft:flint_and_steel', S: BC_CLOSURE.brassPlate, E: 'create:steam_engine', B: BC_CLOSURE.brass, D: 'createdieselgenerators:large_diesel_engine' }, 'kubejs:closure/createdieselgenerators/huge_diesel_engine')
      bcClosureShaped(event, 'createdieselgenerators:engine_turbocharger', [
         'AZF',
         'SBS',

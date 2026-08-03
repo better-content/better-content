@@ -199,18 +199,6 @@ ServerEvents.recipes(function (event) {
     }
 
     event.custom({
-        type: 'create:mixing',
-        heatRequirement: 'heated',
-        ingredients: [
-            { item: 'ae2:fluix_crystal' },
-            { item: 'ae2:sky_dust' },
-            { item: 'ae2:sky_dust' },
-            { item: 'ae2:engineering_processor' }
-        ],
-        results: [{ item: 'kubejs:sky_steel_ingot' }]
-    }).id('kubejs:create/mixing/sky_steel_ingot')
-
-    event.custom({
         type: 'create:pressing',
         ingredients: [{ item: 'kubejs:sky_steel_ingot' }],
         results: [{ item: 'kubejs:sky_steel_sheet' }]

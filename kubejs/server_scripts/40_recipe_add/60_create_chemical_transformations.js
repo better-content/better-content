@@ -115,22 +115,6 @@ function bcChemXGasFixation(event, id, solid, gas, gasUnits, output, pressure, t
 }
 
 ServerEvents.recipes(function (event) {
-    var leaches = [
-        { id: 'copper_sulfate_from_carbonate', input: 'chemlib:copper_carbonate', fluid: 'chemlib:sulfuric_acid_fluid', output: 'chemlib:copper_ii_sulfate' },
-        { id: 'zinc_sulfate_from_carbonate', input: 'chemlib:zinc_carbonate', fluid: 'chemlib:sulfuric_acid_fluid', output: 'chemlib:zinc_sulfate' },
-        { id: 'nickel_sulfate_from_carbonate', input: 'chemlib:nickel_carbonate', fluid: 'chemlib:sulfuric_acid_fluid', output: 'chemlib:nickel_sulfate' },
-        { id: 'magnesium_sulfate_from_carbonate', input: 'chemlib:magnesium_carbonate', fluid: 'chemlib:sulfuric_acid_fluid', output: 'chemlib:magnesium_sulfate' },
-        { id: 'calcium_nitrate_from_carbonate', input: 'chemlib:calcium_carbonate', fluid: 'chemlib:nitric_acid_fluid', output: 'chemlib:calcium_nitrate' },
-        { id: 'copper_chloride_from_carbonate', input: 'chemlib:copper_carbonate', fluid: 'chemlib:hydrochloric_acid_fluid', output: 'chemlib:copper_chloride' },
-        { id: 'nickel_chloride_from_carbonate', input: 'chemlib:nickel_carbonate', fluid: 'chemlib:hydrochloric_acid_fluid', output: 'chemlib:nickel_chloride' },
-        { id: 'beryllium_chloride_from_beryl', input: 'chemlib:beryl', fluid: 'chemlib:hydrochloric_acid_fluid', output: 'chemlib:beryllium_chloride' }
-    ]
-    for (var l = 0; l < leaches.length; l++) {
-         bcChemXMix(event, leaches[l].id, leaches[l].output, 1, [
-            leaches[l].input
-        ], leaches[l].fluid, 250, 'heated', 220, { item: 'chemlib:carbon_dioxide', chance: 0.20 })
-    }
-
     var precipitates = [
         { id: 'copper_hydroxide', salt: 'chemlib:copper_ii_sulfate', base: 'chemlib:sodium_hydroxide', output: 'chemlib:copper_ii_hydroxide' },
         { id: 'aluminum_hydroxide', salt: 'chemlib:aluminum_nitrate', base: 'chemlib:sodium_hydroxide', output: 'chemlib:aluminum_hydroxide' },

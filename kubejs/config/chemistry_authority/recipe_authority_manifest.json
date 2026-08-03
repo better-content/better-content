@@ -319,6 +319,20 @@
       "industrial_authority_finding": "The intended calcination role is compatible with heated Create processing, but machine fit does not cure the missing fixed-mass and residue contracts.",
       "review_scope": "The retained snapshot registered six exact IDs; the guarded copper source attempt was also removed so a future registry change cannot silently add a seventh unreviewed route.",
       "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "create_carbonate_and_beryl_acid_leach_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:chemistry/transform/create_mixing/.*_(from_carbonate|from_beryl)$",
+      "retained_recipe_count": 8,
+      "sorted_recipe_ids_sha256": "3941730b42c6793961c141ac0a10bfbc017462089c20bf65976047d192385a12",
+      "disposition": "removed_unbalanced_acid_leach_family",
+      "exact_material_purpose": "Leach named carbonate feedstocks into sulfate, nitrate, or chloride salts and extract beryllium chloride from beryl.",
+      "fixed_mass_finding": "Rejected: one opaque acid-fluid packet and one opaque mineral item became one salt item without a common fixed-mass basis; seven carbonate routes returned carbon dioxide only at 20 percent chance, while the beryl route did not account for aluminum, silicon, oxygen, or hydrogen residues.",
+      "residue_finding": "Rejected: the carbonate carbon and acid hydrogen were not deterministically delivered to named products, and the beryl gangue disappeared entirely.",
+      "industrial_authority_finding": "Open heated Create leaching is a permissible process class, but each retained route lacks the material-specific stoichiometry and complete residue contract required for that authority.",
+      "gas_destination_contract": "Any corrected carbonate-acid route must deterministically account for carbon-dioxide production and declare contained delivery or uncontained escape behavior; no gas behavior is approved here.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
     }
   ]
 }

@@ -644,6 +644,23 @@
       "industrial_authority_finding": "Rejected: heated Create compacting directly formed finished ingots, violating TConstruct's exclusive metal-formation, casting, and remelting authority.",
       "progression_finding": "Vanilla smelting and blasting removals remain in place for all 62 materials; this change removes the Create replacement rather than restoring a furnace bypass.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "create_crushed_raw_to_finished_ingot_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:vanillish_expert/create_compacting/crushed_raw/.*_ingot$",
+      "retained_recipe_count": 8,
+      "retained_recipe_breakdown": {
+        "vanilla_ingots": 3,
+        "chemlib_ingots": 5
+      },
+      "sorted_recipe_ids_sha256": "2bb2eb8048c720abbb220a86e2f8b7e394914e20e7bcac9722461f3481d3eba0",
+      "disposition": "removed_create_crushed_raw_ingot_formation",
+      "exact_material_purpose": "Convert one crushed raw ore packet directly into its finished iron, copper, gold, aluminum, cobalt, nickel, silver, or zinc ingot.",
+      "fixed_mass_finding": "Rejected: one opaque crushed-ore item was treated as exactly one ingot without a declared concentrate grade, slag stream, or TConstruct-compatible charge quantity.",
+      "industrial_authority_finding": "Rejected: heated Create compacting directly formed finished ingots reserved exclusively to TConstruct metallurgy.",
+      "progression_finding": "The surrounding vanilla and ChemLib smelting/blasting removals remain in place; no furnace metallurgy bypass is restored.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ]
 }

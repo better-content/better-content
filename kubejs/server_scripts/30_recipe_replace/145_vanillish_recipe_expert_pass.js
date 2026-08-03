@@ -296,9 +296,6 @@ ServerEvents.recipes(function (event) {
      bcVanRemoveCooking(event, 'minecraft:iron_ingot')
      bcVanRemoveCooking(event, 'minecraft:copper_ingot')
      bcVanRemoveCooking(event, 'minecraft:gold_ingot')
-     bcVanCompacting(event, 'crushed_raw/iron_ingot', 'minecraft:iron_ingot', 1, ['create:crushed_raw_iron'], 'heated')
-     bcVanCompacting(event, 'crushed_raw/copper_ingot', 'minecraft:copper_ingot', 1, ['create:crushed_raw_copper'], 'heated')
-     bcVanCompacting(event, 'crushed_raw/gold_ingot', 'minecraft:gold_ingot', 1, ['create:crushed_raw_gold'], 'heated')
 
     var chemlibDustIngots = [
         'actinium', 'aluminum', 'barium', 'beryllium', 'bismuth', 'cadmium', 'calcium',
@@ -315,12 +312,6 @@ ServerEvents.recipes(function (event) {
     for (var i = 0; i < chemlibDustIngots.length; i++) {
         bcVanRemoveCooking(event, 'chemlib:' + chemlibDustIngots[i] + '_ingot')
     }
-
-     bcVanCompacting(event, 'crushed_raw/aluminum_ingot', 'chemlib:aluminum_ingot', 1, ['create:crushed_raw_aluminum'], 'heated')
-     bcVanCompacting(event, 'crushed_raw/cobalt_ingot', 'chemlib:cobalt_ingot', 1, ['creatingspace:crushed_cobalt_ore'], 'heated')
-     bcVanCompacting(event, 'crushed_raw/nickel_ingot', 'chemlib:nickel_ingot', 1, ['create:crushed_raw_nickel'], 'heated')
-     bcVanCompacting(event, 'crushed_raw/silver_ingot', 'chemlib:silver_ingot', 1, ['create:crushed_raw_silver'], 'heated')
-     bcVanCompacting(event, 'crushed_raw/zinc_ingot', 'chemlib:zinc_ingot', 1, ['create:crushed_raw_zinc'], 'heated')
 
      bcVanRemoveCooking(event, 'ae2:silicon')
      bcVanCompacting(event, 'ae2/silicon_from_certus_and_silicon', 'ae2:silicon', 1, [

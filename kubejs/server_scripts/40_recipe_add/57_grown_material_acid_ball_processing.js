@@ -29,7 +29,8 @@ var BC_GROWN_MATERIALS = [
 // without changing the neighboring generator or its deterministic recipe IDs.
 var BC_GROW_DISABLED_SOLVENTS = {
     ethanol: true,
-    acetic: true
+    acetic: true,
+    sulfuric: true
 }
 
 function bcGrowExists(id) {

@@ -545,7 +545,7 @@
 		}
 		{
 			dependencies: ["E300000000000001"]
-			description: ["There is no fission reactor block, fusion reactor block, or reactor power ladder. Nuclear change is an emergent material hazard: sufficiently hot, dense, concentrated uranium or plutonium can become critical when neutron flux, moderation, and local contact align, releasing conserved heat, radiation, and daughter products into the surrounding world. Fusion likewise belongs to opposing streams of sufficiently hot, dense compatible light gases, not to a named machine. Containment and geometry are the player's apparatus; ordinary matter state is the fuel, and nearby material can melt when the released heat has somewhere real to go."]
+			description: ["There is no fission reactor block, fusion reactor block, or reactor power ladder. Every configured unstable isotope decays according to its loaded half-life and daughter rule, turning the mass defect into conserved heat that conducts into touching matter. Sufficiently heavy fissile isotope state can also become critical when concentration, density, temperature, neutron flux, moderation, contact, and geometry align, releasing further heat, radiation, and daughter products into the surrounding world. Fusion likewise belongs to opposing streams of sufficiently hot, dense compatible light gases, not to a named machine. Containment and geometry are the player's apparatus; nearby material can melt when the released heat has somewhere real to go."]
 			icon: "chemlib:uranium"
 			id: "E300000000000002"
 			shape: "rsquare"

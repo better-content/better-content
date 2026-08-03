@@ -1,0 +1,164 @@
+{
+  "schema": "bc.chemical_sources.v1",
+  "policy": "Natural and biological sources are fixed material contracts, never periodic-table group selectors.",
+  "forbidden_source_strategies": [
+    "periodic_group_substitution",
+    "generic_biomass_element",
+    "generic_blood_element",
+    "crop_to_arbitrary_pure_element",
+    "ore_to_unhosted_element"
+  ],
+  "contracts": [
+    {
+      "id": "mineral:lazurite_fixed_host",
+      "source_kind": "fixed_mineral_host",
+      "fixed_inputs": [
+        "realisticores:crushed_lazurite_vein"
+      ],
+      "host_identity": "lazurite-bearing aluminosilicate assemblage",
+      "allowed_outputs": [
+        "minecraft:lapis_lazuli",
+        "chemlib:sodium",
+        "chemlib:aluminum",
+        "chemlib:silicon",
+        "chemlib:oxygen",
+        "chemlib:sulfur",
+        "chemlib:chlorine",
+        "chemlib:calcium"
+      ],
+      "forbidden_outputs": [
+        "chemlib:lithium",
+        "chemlib:potassium",
+        "chemlib:rubidium",
+        "chemlib:cesium",
+        "chemlib:francium",
+        "chemlib:gold"
+      ],
+      "provenance_required": true,
+      "review_state": "requires_host_assay",
+      "evidence": [
+        "kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js",
+        "kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js"
+      ]
+    },
+    {
+      "id": "mineral:uranium_fixed_host",
+      "source_kind": "fixed_mineral_host",
+      "fixed_inputs": [
+        "realisticores:crushed_uranium_ore"
+      ],
+      "host_identity": "uranium ore with radiogenic lead, thorium association, and calcium-bearing gangue",
+      "allowed_outputs": [
+        "chemlib:uranium",
+        "chemlib:lead",
+        "chemlib:thorium",
+        "chemlib:calcium"
+      ],
+      "forbidden_outputs": [
+        "chemlib:actinium",
+        "chemlib:protactinium",
+        "chemlib:polonium"
+      ],
+      "provenance_required": true,
+      "review_state": "requires_host_assay",
+      "evidence": [
+        "kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js",
+        "kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js"
+      ]
+    },
+    {
+      "id": "biochemistry:bone_mineral",
+      "source_kind": "fixed_biochemistry",
+      "fixed_inputs": [
+        "minecraft:bone"
+      ],
+      "host_identity": "collagen and hydroxylapatite-bearing bone",
+      "allowed_outputs": [
+        "chemlib:hydroxylapatite",
+        "chemlib:calcium",
+        "chemlib:phosphate",
+        "chemlib:protein"
+      ],
+      "forbidden_outputs": [
+        "periodic_group_substitution",
+        "arbitrary_pure_element"
+      ],
+      "provenance_required": true,
+      "review_state": "requires_biochemical_yield_contract",
+      "evidence": [
+        "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js#bone_mineral"
+      ]
+    },
+    {
+      "id": "biochemistry:kelp_iodine",
+      "source_kind": "fixed_biochemistry",
+      "fixed_inputs": [
+        "minecraft:kelp"
+      ],
+      "host_identity": "kelp biomass with iodine and marine salt traces",
+      "allowed_outputs": [
+        "chemlib:iodine",
+        "chemlib:sodium_chloride",
+        "chemlib:potassium_chloride",
+        "chemlib:cellulose"
+      ],
+      "forbidden_outputs": [
+        "periodic_group_substitution",
+        "arbitrary_pure_element"
+      ],
+      "provenance_required": true,
+      "review_state": "requires_biochemical_yield_contract",
+      "evidence": [
+        "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js#kelp_iodine_brinery"
+      ]
+    },
+    {
+      "id": "biochemistry:keratinous_tissue",
+      "source_kind": "fixed_biochemistry",
+      "fixed_inputs": [
+        "minecraft:feather",
+        "minecraft:leather"
+      ],
+      "host_identity": "keratinous or collagenous animal tissue",
+      "allowed_outputs": [
+        "chemlib:keratin",
+        "chemlib:protein",
+        "chemlib:sulfur"
+      ],
+      "forbidden_outputs": [
+        "periodic_group_substitution",
+        "arbitrary_pure_element"
+      ],
+      "provenance_required": true,
+      "review_state": "requires_biochemical_yield_contract",
+      "evidence": [
+        "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js#feather_keratin",
+        "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js#hide_collagen"
+      ]
+    },
+    {
+      "id": "biochemistry:plant_carbohydrate",
+      "source_kind": "fixed_biochemistry",
+      "fixed_inputs": [
+        "minecraft:wheat",
+        "minecraft:sugar_cane"
+      ],
+      "host_identity": "plant starch, sucrose, and cellulose",
+      "allowed_outputs": [
+        "chemlib:starch",
+        "chemlib:sucrose",
+        "chemlib:cellulose"
+      ],
+      "forbidden_outputs": [
+        "periodic_group_substitution",
+        "arbitrary_pure_element"
+      ],
+      "provenance_required": true,
+      "review_state": "requires_biochemical_yield_contract",
+      "evidence": [
+        "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js#wheat_starch",
+        "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js#sugar_cane_fiber"
+      ]
+    }
+  ]
+}

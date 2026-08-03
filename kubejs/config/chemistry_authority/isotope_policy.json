@@ -1,0 +1,71 @@
+{
+  "schema": "bc.isotope_state.v1",
+  "scope": "all ChemLib matter forms, containers, tanks, clouds, dropped stacks, inventories, and machine transactions",
+  "time_basis": "server_game_time",
+  "evaluation_model": "event_local_lazy_analytic_decay",
+  "global_scans_allowed": false,
+  "canonical_state_may_be_implicit": true,
+  "state_fields": [
+    "species_id",
+    "form",
+    "matter_quanta",
+    "isotope_vector",
+    "origin_provenance",
+    "last_evaluated_game_time",
+    "immutable_nonce",
+    "decay_epoch",
+    "daughter_remainder",
+    "stabilizer_proof",
+    "stabilizer_strength",
+    "stabilizer_charge",
+    "stabilizer_expiry_game_time"
+  ],
+  "event_boundaries": [
+    "stack_create",
+    "stack_load",
+    "stack_save",
+    "stack_copy",
+    "stack_split",
+    "stack_merge",
+    "craft_result_take",
+    "item_handler_insert",
+    "item_handler_extract",
+    "machine_transaction_commit",
+    "pickup",
+    "drop",
+    "despawn",
+    "block_place",
+    "block_break",
+    "container_load",
+    "container_unload",
+    "chunk_load",
+    "chunk_unload",
+    "player_login",
+    "slot_mutation",
+    "tooltip",
+    "item_use"
+  ],
+  "active_holder_index": {
+    "scope": "radioactive_holders_only",
+    "scheduling": "timing_wheel_or_priority_queue",
+    "updated_by_events_only": true
+  },
+  "decay_math": {
+    "remaining": "initial * 2^(-elapsed_game_ticks / half_life_game_ticks)",
+    "rounding": "fixed_point_remainder_with_nonce_epoch_for_discrete_materialization",
+    "unloaded_catchup": "analytic_on_load"
+  },
+  "magic_stabilization": {
+    "required_for_short_half_life_bulk_forms": true,
+    "matter_creation_allowed": false,
+    "required_provenance": [
+      "tradition",
+      "stabilizer_item",
+      "charge_source",
+      "created_game_time",
+      "expiry_game_time"
+    ],
+    "expiry_result": "resume physical decay and preserve daughter matter"
+  },
+  "isotope_catalog_status": "pending_upstream_catalog_and_half_life_review"
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://better-content.invalid/schema/bc.chemical_form_roles.v1.json",
+  "title": "Better Content chemical form lifecycle roles",
+  "type": "object",
+  "required": [
+    "schema",
+    "coverage",
+    "role_contracts",
+    "rows"
+  ],
+  "properties": {
+    "schema": {
+      "const": "bc.chemical_form_roles.v1"
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "key",
+          "registry_kind",
+          "id",
+          "role_contract",
+          "entry",
+          "use",
+          "conclusion",
+          "philosophy_fit",
+          "implementation_status",
+          "review_state",
+          "evidence"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://better-content.invalid/schema/bc.isotope_state.v1.json",
+  "title": "Better Content physical-everywhere isotope state",
+  "type": "object",
+  "required": [
+    "schema",
+    "time_basis",
+    "evaluation_model",
+    "state_fields",
+    "event_boundaries",
+    "magic_stabilization"
+  ]
+}

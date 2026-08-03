@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://better-content.invalid/schema/bc.emission_policy.v3.json",
+  "title": "Better Content AdPother-to-Latent emission adapters",
+  "type": "object",
+  "required": [
+    "schema",
+    "physical_authority",
+    "adapters",
+    "migration"
+  ]
+}

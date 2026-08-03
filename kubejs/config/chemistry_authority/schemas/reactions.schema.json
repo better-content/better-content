@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://better-content.invalid/schema/bc.chemical_reactions.v1.json",
+  "title": "Better Content balanced chemical reactions",
+  "type": "object",
+  "required": [
+    "schema",
+    "live_graph_import_status",
+    "reactions"
+  ]
+}

@@ -122,8 +122,6 @@ var BC_SYN_SIDE_GASES = {
 
 var BC_SYN_MAGIC_CRYSTALS = [
     { input: 'minecraft:quartz', output: 'chemlib:silicon_dioxide', source: 400, pedestal: ['ars_nouveau:source_gem'] },
-    { input: 'chemlib:silicon_dioxide', output: 'chemlib:silicon', source: 900, pedestal: ['ars_nouveau:source_gem', 'bloodmagic:reinforcedslate'] },
-    { input: 'chemlib:beryl', output: 'chemlib:beryllium', source: 1200, pedestal: ['ars_nouveau:source_gem', 'minecraft:emerald'] },
     { input: 'ae2:certus_quartz_crystal', output: 'ae2:fluix_dust', source: 1800, pedestal: ['ars_nouveau:source_gem', 'minecraft:redstone', 'bloodmagic:infusedslate'] }
 ]
 

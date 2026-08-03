@@ -499,6 +499,25 @@
       "industrial_authority_finding": "Rejected: Blood Magic directly formed finished elemental metals reserved exclusively to TConstruct formation, alloying, casting, and remelting.",
       "review_scope": "The retained snapshot registered seven metals in two route forms; both guarded copper source attempts were also removed so registry changes cannot silently add unreviewed direct copper formation.",
       "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "ars_elemental_crystal_transmutation_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_ids": [
+        "kubejs:synthesis/magic/ars_imbuement/chemlib_beryllium",
+        "kubejs:synthesis/magic/ars_imbuement/chemlib_silicon"
+      ],
+      "retained_recipe_count": 2,
+      "sorted_recipe_ids_sha256": "2e9a8fe58515c48dca4a23c7dfe381581557c2a2cdd2d41b6d637dfad2d56a14",
+      "disposition": "removed_uncontracted_magic_element_transmutation",
+      "exact_material_purposes": [
+        "Reduce silicon dioxide to finished elemental silicon through Ars imbuement.",
+        "Extract finished elemental beryllium from beryl through Ars imbuement."
+      ],
+      "fixed_mass_finding": "Rejected: one opaque oxide or mineral packet became one elemental packet while oxygen and the aluminum/silicon/oxygen fraction of beryl disappeared without bounded quantities or residues.",
+      "magic_provenance_finding": "Rejected: Source, Source Gems, slates, and emeralds did not declare an identity-changing cost/residue/provenance contract.",
+      "industrial_authority_finding": "Rejected: Ars Nouveau directly formed finished elemental material, including beryllium metal reserved to TConstruct metallurgy.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ]
 }

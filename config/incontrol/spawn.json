@@ -104,6 +104,19 @@
     "result": "deny"
   },
   {
+    "mob": "forbidden_arcanus:lost_soul",
+    "seesky": true,
+    "result": "deny"
+  },
+  {
+    "mob": "forbidden_arcanus:lost_soul",
+    "blocktest": {
+      "tag": "kubejs:grass_like",
+      "distbelow": 1
+    },
+    "result": "deny"
+  },
+  {
     "dimension": "minecraft:overworld",
     "hostile": true,
     "blocktest": {

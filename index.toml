@@ -5642,7 +5642,7 @@ hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
 
 [[files]]
 file = "config/incontrol/spawn.json"
-hash = "c5724214802c5afd6a93dead8a544ae69ff48ea5cf1aa5522ddcd792ef9d3c7d"
+hash = "2bded9e23701cf98d77ea15928b77e30799ac778ee83a37cea69628419061674"
 
 [[files]]
 file = "config/incontrol/spawner.json"
@@ -11010,7 +11010,7 @@ hash = "a7327d4d5e251c864f25346e598d5721ad4dd98c18f4d14f6991a3e46b6fda39"
 
 [[files]]
 file = "mods/bcfixes-0.1.0.jar"
-hash = "1db3cbf5fa228a7759282356c68fdc0e86ef3096edfaea8e61466b1a4d0e408a"
+hash = "676e504b6fff3922c23cc548e0877fb2b05e8a1ff587b45bb9f732a62c164b40"
 
 [[files]]
 file = "mods/bcrecipegraph-0.1.0.jar"
@@ -11555,7 +11555,7 @@ metafile = true
 
 [[files]]
 file = "mods/latent_chemlib-0.1.0.jar"
-hash = "61a122e1d949ec5103a550e251d0b98f387c327897662d141efde431477d01e2"
+hash = "d93773bb96cc09d275c1dd7a2283deb99f1a08d94e58eac08b58ff9d65c7ceab"
 
 [[files]]
 file = "mods/lithostitched.pw.toml"
@@ -11790,7 +11790,7 @@ metafile = true
 
 [[files]]
 file = "mods/revival-1.0.0.jar"
-hash = "f3b16bbbffc9d108d2a4ceed2cc33336f9056766ed7d96710b725717601fe4c8"
+hash = "14dcd1ad27b47d4d29d108a8c4ded40a70914dd04ba387031d4e697955d06a70"
 
 [[files]]
 file = "mods/rhino.pw.toml"

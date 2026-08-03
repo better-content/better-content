@@ -34,17 +34,6 @@ ServerEvents.recipes(function (event) {
         var input = row.id === 'oil_seep'
             ? 'realisticores:oil_seep'
             : 'realisticores:surface_sample_' + row.id
-        var result = Item.of(row.output, row.count)
-
-        event.smelting(result, input)
-            .xp(0.05)
-            .cookingTime(160)
-            .id('kubejs:surface_samples/smelting/' + row.id)
-        event.blasting(result, input)
-            .xp(0.05)
-            .cookingTime(80)
-            .id('kubejs:surface_samples/blasting/' + row.id)
-
         if (!row.noCrushed) {
             event.custom({
                 type: 'create:milling',

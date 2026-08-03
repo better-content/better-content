@@ -661,6 +661,25 @@
       "industrial_authority_finding": "Rejected: heated Create compacting directly formed finished ingots reserved exclusively to TConstruct metallurgy.",
       "progression_finding": "The surrounding vanilla and ChemLib smelting/blasting removals remain in place; no furnace metallurgy bypass is restored.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "surface_sample_furnace_output_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:surface_samples/(smelting|blasting)/.*$",
+      "retained_recipe_count": 46,
+      "retained_recipe_breakdown": {
+        "smelting_routes": 23,
+        "blasting_routes": 23,
+        "finished_metal_nugget_routes": 30
+      },
+      "sorted_recipe_ids_sha256": "8e2a1d74d4175903419f7278b5ec730747379755c0919265b67863d2d532e2dc",
+      "disposition": "removed_unbounded_surface_sample_furnace_routes",
+      "exact_material_purpose": "Give each prospecting surface sample a weak furnace conversion into a small named material yield.",
+      "source_composition_finding": "Rejected: one opaque prospecting rubble item became coal, quartz, redstone, lapis, bone meal, finished elemental carbon, or two finished metal nuggets without a source assay or residue stream.",
+      "fixed_mass_finding": "Rejected: sample items and outputs had no common fixed-mass basis; doubling into two output items was not justified by bounded sample composition.",
+      "industrial_authority_finding": "Rejected: 30 smelting/blasting routes directly formed finished metal nuggets outside TConstruct metallurgy; the 16 nonmetal furnace routes shared the same unbounded packet and residue defect and are removed with the coherent authored family.",
+      "progression_finding": "The separately registered low-chance Create milling routes remain available as prospecting-to-crushed-feed candidates, but are not approved by this disposition and remain pending balance review.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ]
 }

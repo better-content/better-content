@@ -333,6 +333,19 @@
       "industrial_authority_finding": "Open heated Create leaching is a permissible process class, but each retained route lacks the material-specific stoichiometry and complete residue contract required for that authority.",
       "gas_destination_contract": "Any corrected carbonate-acid route must deterministically account for carbon-dioxide production and declare contained delivery or uncontained escape behavior; no gas behavior is approved here.",
       "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "create_hydroxide_and_carbonate_precipitation_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:chemistry/transform/create_mixing/.*_precipitation$",
+      "retained_recipe_count": 6,
+      "sorted_recipe_ids_sha256": "da5c551091d3d8715ba654e8d5a5c06e90c7b29dbdbce192a32541bc18970247",
+      "disposition": "removed_unbalanced_precipitation_family",
+      "exact_material_purpose": "Precipitate copper, aluminum, or zinc hydroxides and nickel, magnesium, or lead carbonates from named soluble salts.",
+      "fixed_mass_finding": "Rejected: opaque salt and base packets were mapped to one precipitate item while sodium sulfate appeared only at 25 percent chance; exact formula coefficients and a shared packet mass were not declared.",
+      "residue_finding": "Rejected: aluminum nitrate and lead nitrate incorrectly shared a sodium-sulfate side result, while nitrate residue was omitted; sulfate routes also omitted most deterministic sodium-sulfate residue.",
+      "industrial_authority_finding": "Create mixing may own open precipitation, but only with salt-specific stoichiometry, deterministic mother-liquor residues, and bounded quantities absent from this family.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ]
 }

@@ -115,21 +115,6 @@ function bcChemXGasFixation(event, id, solid, gas, gasUnits, output, pressure, t
 }
 
 ServerEvents.recipes(function (event) {
-    var precipitates = [
-        { id: 'copper_hydroxide', salt: 'chemlib:copper_ii_sulfate', base: 'chemlib:sodium_hydroxide', output: 'chemlib:copper_ii_hydroxide' },
-        { id: 'aluminum_hydroxide', salt: 'chemlib:aluminum_nitrate', base: 'chemlib:sodium_hydroxide', output: 'chemlib:aluminum_hydroxide' },
-        { id: 'zinc_hydroxide', salt: 'chemlib:zinc_sulfate', base: 'chemlib:sodium_hydroxide', output: 'chemlib:zinc_hydroxide' },
-        { id: 'nickel_carbonate', salt: 'chemlib:nickel_sulfate', base: 'chemlib:sodium_carbonate', output: 'chemlib:nickel_carbonate' },
-        { id: 'magnesium_carbonate', salt: 'chemlib:magnesium_sulfate', base: 'chemlib:sodium_carbonate', output: 'chemlib:magnesium_carbonate' },
-        { id: 'lead_carbonate', salt: 'chemlib:lead_nitrate', base: 'chemlib:sodium_carbonate', output: 'chemlib:lead_carbonate' }
-    ]
-    for (var p = 0; p < precipitates.length; p++) {
-         bcChemXMix(event, precipitates[p].id + '_precipitation', precipitates[p].output, 1, [
-            precipitates[p].salt,
-            precipitates[p].base
-        ], 'minecraft:water', 250, null, 180, { item: 'chemlib:sodium_sulfate', chance: 0.25 })
-    }
-
      bcChemXMix(event, 'soda_ash_from_salt_and_lime', 'chemlib:sodium_carbonate', 1, [
         { item: 'chemlib:sodium_chloride', count: 2 },
         'chemlib:calcium_carbonate'

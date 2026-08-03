@@ -42,16 +42,18 @@ function bcCreateTconTagExists(id) {
 }
 
 function bcCreateTconRequireIngredient(ref, context) {
-    if (ref.charAt(0) === '#') {
-        if (!bcCreateTconTagExists(ref.substring(1))) bcCreateTconFail(context + ' references empty item tag ' + ref)
-    } else if (!bcCreateTconItemExists(ref)) {
-        bcCreateTconFail(context + ' references missing item ' + ref)
+    var ingredientRef = String(ref)
+    if (ingredientRef.indexOf('#') === 0) {
+        if (!bcCreateTconTagExists(ingredientRef.substring(1))) bcCreateTconFail(context + ' references empty item tag ' + ingredientRef)
+    } else if (!bcCreateTconItemExists(ingredientRef)) {
+        bcCreateTconFail(context + ' references missing item ' + ingredientRef)
     }
 }
 
 function bcCreateTconIngredient(ref) {
-    if (ref.charAt(0) === '#') return { tag: ref.substring(1) }
-    return { item: ref }
+    var ingredientRef = String(ref)
+    if (ingredientRef.indexOf('#') === 0) return { tag: ingredientRef.substring(1) }
+    return { item: ingredientRef }
 }
 
 function bcCreateTconKeyJson(key) {

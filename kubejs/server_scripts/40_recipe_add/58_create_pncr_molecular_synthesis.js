@@ -35,6 +35,32 @@ var BC_CHEM_GASES = {
     'chemlib:nitric_oxide': true
 }
 
+var BC_CHEM_REJECTED_MOLECULAR_ROUTES = {
+    acetic_acid_from_ethanol: true,
+    acetylene: true,
+    ammonia: true,
+    butane: true,
+    butane_fuel_charge: true,
+    diammonium_phosphate: true,
+    ethylene: true,
+    ethylene_from_acetylene: true,
+    hydrochloric_acid_from_chlorine: true,
+    hydrogen_sulfide: true,
+    hydrogen_sulfide_scrubbing: true,
+    hydroxide: true,
+    nitrate: true,
+    nitric_oxide: true,
+    carbonate: true,
+    phosphate: true,
+    ammonium: true,
+    ammonium_chloride: true,
+    nitric_acid_from_nitrogen_dioxide: true,
+    propane: true,
+    pvc: true,
+    sulfur_trioxide: true,
+    methane: true
+}
+
 function bcChemGasFluid(id, count) {
     if (!BC_CHEM_GASES[id]) throw new Error('Not a ChemLib gas: ' + id)
     return {
@@ -115,6 +141,7 @@ function bcChemThermoItemInput(input) {
 }
 
 function bcChemThermo(event, id, itemInput, fluidInput, output, pressure, minTemp) {
+    if (BC_CHEM_REJECTED_MOLECULAR_ROUTES[id]) return
     if (itemInput && itemInput.item && !bcChemItem(itemInput.item)) return
     if (output.item && !bcChemItem(output.item)) return
     var recipe = {
@@ -132,6 +159,7 @@ function bcChemThermo(event, id, itemInput, fluidInput, output, pressure, minTem
 }
 
 function bcChemFluidMixer(event, id, input1, input2, output, pressure, time) {
+    if (BC_CHEM_REJECTED_MOLECULAR_ROUTES[id]) return
     if (output.item && !bcChemItem(output.item)) return
     var recipe = {
         type: 'pneumaticcraft:fluid_mixer',
@@ -211,48 +239,48 @@ ServerEvents.recipes(function (event) {
         { fluid: 'minecraft:water', amount: 250 }
     ], [{ item: 'minecraft:bone_meal', count: 6 }], null, 160)
 
-    // Sourceable formula radicals for the conservative compound generator.
+    // Rejected radical proposals are retained below as auditable tooling markers.
     bcChemFluidMixer(event, 'hydroxide', bcChemGasFluid('chemlib:hydrogen'), bcChemGasFluid('chemlib:oxygen'), {
-        item: 'chemlib:hydroxide'
+        item: 'chemlib:hydroxide', count: 2
     }, 2.0, 160)
     bcChemFluidMixer(event, 'nitrate', bcChemGasFluid('chemlib:nitrogen'), bcChemGasFluid('chemlib:oxygen', 3), {
-        item: 'chemlib:nitrate'
+        item: 'chemlib:nitrate', count: 2
     }, 2.5, 180)
-    bcChemThermo(event, 'carbonate', { item: 'chemlib:carbon' }, bcChemGasFluid('chemlib:oxygen', 3), {
-        item: 'chemlib:carbonate'
+    bcChemThermo(event, 'carbonate', { item: 'chemlib:carbon', count: 2 }, bcChemGasFluid('chemlib:oxygen', 3), {
+        item: 'chemlib:carbonate', count: 2
     }, 2.5, 473)
-    bcChemThermo(event, 'phosphate', { item: 'chemlib:phosphorus' }, bcChemGasFluid('chemlib:oxygen', 4), {
-        item: 'chemlib:phosphate'
+    bcChemThermo(event, 'phosphate', { item: 'chemlib:phosphorus', count: 2 }, bcChemGasFluid('chemlib:oxygen', 4), {
+        item: 'chemlib:phosphate', count: 2
     }, 2.75, 523)
-    // Airtight-era elemental gas synthesis.
-    bcChemThermo(event, 'silicon_dioxide', { item: 'chemlib:silicon' }, bcChemGasFluid('chemlib:oxygen', 2), {
+    // Conditioned Airtight-era synthesis plus disabled proposals retained as markers.
+    bcChemThermo(event, 'silicon_dioxide', { item: 'chemlib:silicon' }, bcChemGasFluid('chemlib:oxygen'), {
         item: 'chemlib:silicon_dioxide'
-    }, 2.0, 473)
-    bcChemThermo(event, 'iron_ii_oxide', { item: 'chemlib:iron' }, bcChemGasFluid('chemlib:oxygen'), {
-        item: 'chemlib:iron_ii_oxide'
-    }, 2.0, 473)
-    bcChemThermo(event, 'copper_chloride', { item: 'chemlib:copper' }, bcChemGasFluid('chemlib:chlorine', 2), {
+    }, 2.0, 1073)
+    bcChemThermo(event, 'iron_ii_oxide', { item: 'chemlib:iron', count: 2 }, bcChemGasFluid('chemlib:oxygen'), {
+        item: 'chemlib:iron_ii_oxide', count: 2
+    }, 2.0, 923)
+    bcChemThermo(event, 'copper_chloride', { item: 'chemlib:copper' }, bcChemGasFluid('chemlib:chlorine'), {
         item: 'chemlib:copper_chloride'
     }, 2.5, 523)
 
-    bcChemThermo(event, 'ethylene', { item: 'chemlib:carbon', count: 2 }, bcChemGasFluid('chemlib:hydrogen', 4), {
+    bcChemThermo(event, 'ethylene', { item: 'chemlib:carbon', count: 2 }, bcChemGasFluid('chemlib:hydrogen', 2), {
         fluid: 'chemlib:ethylene_fluid', amount: 250
     }, 2.5, 523)
-    bcChemThermo(event, 'acetylene', { item: 'chemlib:carbon', count: 2 }, bcChemGasFluid('chemlib:hydrogen', 2), {
+    bcChemThermo(event, 'acetylene', { item: 'chemlib:carbon', count: 2 }, bcChemGasFluid('chemlib:hydrogen'), {
         fluid: 'chemlib:acetylene_fluid', amount: 250
     }, 2.75, 573)
-    bcChemThermo(event, 'methane', { item: 'chemlib:carbon' }, bcChemGasFluid('chemlib:hydrogen', 4), {
+    bcChemThermo(event, 'methane', { item: 'chemlib:carbon' }, bcChemGasFluid('chemlib:hydrogen', 2), {
         fluid: 'chemlib:methane_fluid', amount: 250
     }, 2.5, 523)
-    bcChemThermo(event, 'carbon_monoxide', { item: 'chemlib:carbon' }, bcChemGasFluid('chemlib:oxygen'), {
-        fluid: 'chemlib:carbon_monoxide_fluid', amount: 250
-    }, 2.5, 523)
-    bcChemThermo(event, 'hydrogen_sulfide', { item: 'chemlib:sulfur' }, bcChemGasFluid('chemlib:hydrogen', 2), {
+    bcChemThermo(event, 'carbon_monoxide', { item: 'chemlib:carbon', count: 2 }, bcChemGasFluid('chemlib:oxygen'), {
+        fluid: 'chemlib:carbon_monoxide_fluid', amount: 500
+    }, 2.5, 873)
+    bcChemThermo(event, 'hydrogen_sulfide', { item: 'chemlib:sulfur' }, bcChemGasFluid('chemlib:hydrogen'), {
         fluid: 'chemlib:hydrogen_sulfide_fluid', amount: 250
     }, 2.75, 523)
-    bcChemThermo(event, 'sulfur_dioxide', { item: 'chemlib:sulfur' }, bcChemGasFluid('chemlib:oxygen', 2), {
+    bcChemThermo(event, 'sulfur_dioxide', { item: 'chemlib:sulfur' }, bcChemGasFluid('chemlib:oxygen'), {
         fluid: 'chemlib:sulfur_dioxide_fluid', amount: 250
-    }, 2.0, 473)
+    }, 2.0, 523)
 
     bcChemFluidMixer(event, 'propane', bcChemGasFluid('chemlib:ethylene'), bcChemGasFluid('chemlib:methane'), {
         fluid: 'chemlib:propane_fluid', amount: 250
@@ -261,23 +289,23 @@ ServerEvents.recipes(function (event) {
         fluid: 'chemlib:butane_fluid', amount: 250
     }, 3.0, 240)
     bcChemFluidMixer(event, 'ammonia', bcChemGasFluid('chemlib:nitrogen'), bcChemGasFluid('chemlib:hydrogen', 3), {
-        fluid: 'chemlib:ammonia_fluid', amount: 250
+        fluid: 'chemlib:ammonia_fluid', amount: 500
     }, 3.0, 240)
-    bcChemFluidMixer(event, 'ammonium', bcChemGasFluid('chemlib:ammonia'), bcChemGasFluid('chemlib:hydrogen'), {
-        fluid: 'chemlib:ammonium_fluid', amount: 250
+    bcChemFluidMixer(event, 'ammonium', bcChemGasFluid('chemlib:ammonia', 2), bcChemGasFluid('chemlib:hydrogen'), {
+        fluid: 'chemlib:ammonium_fluid', amount: 500
     }, 3.0, 220)
     bcChemFluidMixer(event, 'nitric_oxide', bcChemGasFluid('chemlib:nitrogen'), bcChemGasFluid('chemlib:oxygen'), {
-        fluid: 'chemlib:nitric_oxide_fluid', amount: 250
+        fluid: 'chemlib:nitric_oxide_fluid', amount: 500
     }, 3.0, 220)
-    bcChemFluidMixer(event, 'nitrogen_dioxide', bcChemGasFluid('chemlib:nitric_oxide'), bcChemGasFluid('chemlib:oxygen'), {
-        fluid: 'chemlib:nitrogen_dioxide_fluid', amount: 250
+    bcChemFluidMixer(event, 'nitrogen_dioxide', bcChemGasFluid('chemlib:nitric_oxide', 2), bcChemGasFluid('chemlib:oxygen'), {
+        fluid: 'chemlib:nitrogen_dioxide_fluid', amount: 500
     }, 3.0, 220)
-    bcChemFluidMixer(event, 'sulfur_trioxide', bcChemGasFluid('chemlib:sulfur_dioxide'), bcChemGasFluid('chemlib:oxygen'), {
-        fluid: 'chemlib:sulfur_trioxide_fluid', amount: 250
+    bcChemFluidMixer(event, 'sulfur_trioxide', bcChemGasFluid('chemlib:sulfur_dioxide', 2), bcChemGasFluid('chemlib:oxygen'), {
+        fluid: 'chemlib:sulfur_trioxide_fluid', amount: 500
     }, 3.0, 240)
 
     // Gas demand and connected acid chains.
-    bcChemFluidMixer(event, 'ethylene_from_acetylene', bcChemGasFluid('chemlib:acetylene'), bcChemGasFluid('chemlib:hydrogen', 2), {
+    bcChemFluidMixer(event, 'ethylene_from_acetylene', bcChemGasFluid('chemlib:acetylene'), bcChemGasFluid('chemlib:hydrogen'), {
         fluid: 'chemlib:ethylene_fluid', amount: 250
     }, 2.75, 200)
     bcChemFluidMixer(event, 'hydrogen_sulfide_scrubbing', bcChemGasFluid('chemlib:hydrogen_sulfide'), bcChemGasFluid('chemlib:oxygen', 2), {
@@ -292,8 +320,8 @@ ServerEvents.recipes(function (event) {
     bcChemFluidMixer(event, 'pvc', bcChemGasFluid('chemlib:ethylene', 4), bcChemGasFluid('chemlib:chlorine', 4), {
         item: 'chemlib:polyvinyl_chloride', count: 4
     }, 3.5, 260)
-    bcChemFluidMixer(event, 'ammonium_chloride', bcChemGasFluid('chemlib:ammonium'), bcChemGasFluid('chemlib:chlorine'), {
-        item: 'chemlib:ammonium_chloride'
+    bcChemFluidMixer(event, 'ammonium_chloride', bcChemGasFluid('chemlib:ammonium', 2), bcChemGasFluid('chemlib:chlorine'), {
+        item: 'chemlib:ammonium_chloride', count: 2
     }, 2.75, 220)
     bcChemFluidMixer(event, 'diammonium_phosphate', bcChemGasFluid('chemlib:ammonium', 2), {
         type: 'pneumaticcraft:fluid',
@@ -304,7 +332,7 @@ ServerEvents.recipes(function (event) {
     }, 3.0, 240)
 
     bcChemFluidMixer(event, 'hydrochloric_acid_from_chlorine', bcChemGasFluid('chemlib:hydrogen'), bcChemGasFluid('chemlib:chlorine'), {
-        fluid: 'chemlib:hydrochloric_acid_fluid', amount: 250
+        fluid: 'chemlib:hydrochloric_acid_fluid', amount: 500
     }, 2.5, 220)
     bcChemFluidMixer(event, 'acetic_acid_from_ethanol', {
         type: 'pneumaticcraft:fluid',

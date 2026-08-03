@@ -95,6 +95,28 @@
       "runtime_evidence": "pending_fresh_gas_oracle",
       "required_runtime_oracle": "Fresh capture must prove exact recipe registration, one calcium-oxide item plus 250 mB carbon-dioxide consumption, one calcium-carbonate item output, and containment behavior.",
       "review_state": "statically_approved_pending_oracle"
+    },
+    {
+      "family": "airtight_conditioned_molecular_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_count": 7,
+      "sorted_recipe_ids_sha256": "780df3d92ca569a7553bad7b54cc01886b5bb4bc8e6aa32879d4378b25bdf0ce",
+      "fixed_mass_packet_basis": "Each solid item is one elemental or compound formula-unit packet. Each 250 mB elemental oxygen or chlorine fluid packet is O2 or Cl2 respectively; molecular gas packets use their named molecular formula.",
+      "reactions": [
+        { "id": "kubejs:chemistry/pneumaticcraft/fluid_mixer/nitrogen_dioxide", "equation": "2 NO + O2 -> 2 NO2", "exact_packet_change": "500 mB NO + 250 mB O2 -> 500 mB NO2", "process_contract": "PNCR contained oxidation at 3.0 bar.", "exact_material_purpose": "Oxidize contained nitric oxide into nitrogen dioxide for bounded downstream nitrogen chemistry.", "integration_state": "not_source_reachable_pending_valid_nitric_oxide_source_and_downstream_sink_redesign" },
+        { "id": "kubejs:chemistry/pneumaticcraft/fluid_mixer/sulfuric_acid_from_sulfur_trioxide", "equation": "SO3 + H2O -> H2SO4", "exact_packet_change": "250 mB SO3 + 250 mB H2O -> 250 mB H2SO4", "process_contract": "PNCR contained hydration at 3.0 bar; statically balanced pending repair of a valid SO3 source.", "exact_material_purpose": "Hydrate one sulfur-trioxide packet into one contained sulfuric-acid packet.", "integration_state": "not_source_reachable_pending_sulfur_trioxide_source_repair" },
+        { "id": "kubejs:chemistry/pneumaticcraft/thermo_plant/carbon_monoxide", "equation": "2 C + O2 -> 2 CO", "exact_packet_change": "2 C items + 250 mB O2 -> 500 mB CO", "process_contract": "PNCR oxygen-limited partial oxidation at 2.5 bar and at least 873 K.", "exact_material_purpose": "Produce contained carbon monoxide for explicit downstream oxidation without permitting complete combustion conditions." },
+        { "id": "kubejs:chemistry/pneumaticcraft/thermo_plant/copper_chloride", "equation": "Cu + Cl2 -> CuCl2", "exact_packet_change": "1 Cu item + 250 mB Cl2 -> 1 CuCl2 item", "process_contract": "PNCR contained chlorination at 2.5 bar and at least 523 K.", "exact_material_purpose": "Convert one copper packet into copper(II)-chloride etchant rather than a finished elemental metal." },
+        { "id": "kubejs:chemistry/pneumaticcraft/thermo_plant/iron_ii_oxide", "equation": "2 Fe + O2 -> 2 FeO", "exact_packet_change": "2 Fe items + 250 mB O2 -> 2 FeO items", "process_contract": "PNCR oxygen-limited oxidation at 2.0 bar and at least 923 K, above the wuestite stability threshold.", "exact_material_purpose": "Produce bounded iron(II)-oxide charge without creating finished elemental metal." },
+        { "id": "kubejs:chemistry/pneumaticcraft/thermo_plant/silicon_dioxide", "equation": "Si + O2 -> SiO2", "exact_packet_change": "1 Si item + 250 mB O2 -> 1 SiO2 item", "process_contract": "PNCR contained bulk oxidation at 2.0 bar and at least 1073 K.", "exact_material_purpose": "Oxidize one silicon packet into one silica packet under high-temperature containment." },
+        { "id": "kubejs:chemistry/pneumaticcraft/thermo_plant/sulfur_dioxide", "equation": "S + O2 -> SO2", "exact_packet_change": "1 S item + 250 mB O2 -> 250 mB SO2", "process_contract": "PNCR contained sulfur oxidation at 2.0 bar and at least 523 K.", "exact_material_purpose": "Produce one contained sulfur-dioxide packet as a named sulfur-process intermediate.", "integration_state": "statically_valid_contained_production_pending_approved_downstream_sink" }
+      ],
+      "atom_balance_finding": "All seven equations conserve every named atom using the established diatomic elemental-gas packets and integer coefficients.",
+      "industrial_authority_finding": "PNCR owns these conditioned contained-gas, acid, and compound operations; none creates a finished elemental metal, so TConstruct metallurgy remains exclusive.",
+      "gas_destination_contract": "All gaseous inputs and outputs remain PNCR-contained recipe packets; transfer, hazards, and uncontained escape to Latent remain pending oracle.",
+      "review_scope": "Static approval covers packet arithmetic, bounded purpose, and encoded machine conditions only. It does not claim integrated source-to-sink chains; missing NO and SO3 sources and missing NO2 and SO2 sinks remain pending redesign. Runtime registration, hazard behavior, gas transfer, charge state, and source provenance also remain pending oracle.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle",
+      "review_state": "statically_approved_routes_pending_oracle_and_source_sink_repairs"
     }
   ],
   "pending_recipe_families": [
@@ -894,6 +916,67 @@
       "source_composition_finding": "Rejected: broad nutrient and element inputs were treated as generic adjacency tokens for unrelated biological products without source-specific composition or process evidence.",
       "fixed_mass_finding": "Rejected: opaque inputs became two to eight output items without bounded water uptake, biomass yield, liquor, off-gas, or residue streams.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "rejected_fluid_mixer_molecular_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_ids": [
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/acetic_acid_from_ethanol",
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/ammonia",
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/ammonium",
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/ammonium_chloride",
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/butane",
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/butane_fuel_charge",
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/diammonium_phosphate",
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/ethylene_from_acetylene",
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/hydrochloric_acid_from_chlorine",
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/hydrogen_sulfide_scrubbing",
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/hydroxide",
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/nitrate",
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/nitric_acid_from_nitrogen_dioxide",
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/nitric_oxide",
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/propane",
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/pvc",
+        "kubejs:chemistry/pneumaticcraft/fluid_mixer/sulfur_trioxide"
+      ],
+      "retained_recipe_count": 17,
+      "sorted_recipe_ids_sha256": "13a226e9c53191bc3e92067a79f86dff19475974d9a762afa6732407fd19a4e8",
+      "disposition": "disabled_pending_material_specific_redesign",
+      "route_findings": [
+        { "ids": ["ammonia", "sulfur_trioxide", "ethylene_from_acetylene"], "finding": "Reject: atom balance alone does not justify catalyst-free, low-pressure ammonia synthesis, sulfur-dioxide oxidation, or acetylene hydrogenation." },
+        { "ids": ["nitric_oxide", "hydrochloric_acid_from_chlorine"], "finding": "Reject: the authored mixer encodes neither the high-energy initiation needed for N2/O2 conversion nor controlled initiation and hazard handling for H2/Cl2." },
+        { "ids": ["hydroxide", "nitrate", "ammonium", "ammonium_chloride"], "finding": "Reject: neutral elemental or molecular packets are treated as free ions/radicals without charge, counterion, electrochemical, or residue contracts." },
+        { "ids": ["propane", "butane", "butane_fuel_charge", "pvc"], "finding": "Reject: generic hydrocarbon adjacency or a fuel-use output does not define balanced synthesis, polymerization, exhaust, or residue streams." },
+        { "ids": ["hydrogen_sulfide_scrubbing", "diammonium_phosphate", "acetic_acid_from_ethanol", "nitric_acid_from_nitrogen_dioxide"], "finding": "Reject: authored packets lose hydrogen or omit required water, oxidation, or disproportionation coproducts." }
+      ],
+      "fixed_mass_finding": "These seventeen routes are disabled because they are unbalanced, charge-undefined, process-unsupported, or adjacency-only under the 250 mB formula-unit packet policy.",
+      "industrial_authority_finding": "PNCR containment is necessary for a future corrected route but does not itself establish reaction feasibility or bounded residues.",
+      "gas_destination_contract": "No rejected route establishes safe gas delivery or escape; redesign requires explicit contained outputs and later gas oracle evidence.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "rejected_thermo_plant_molecular_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_ids": [
+        "kubejs:chemistry/pneumaticcraft/thermo_plant/acetylene",
+        "kubejs:chemistry/pneumaticcraft/thermo_plant/carbonate",
+        "kubejs:chemistry/pneumaticcraft/thermo_plant/ethylene",
+        "kubejs:chemistry/pneumaticcraft/thermo_plant/hydrogen_sulfide",
+        "kubejs:chemistry/pneumaticcraft/thermo_plant/methane",
+        "kubejs:chemistry/pneumaticcraft/thermo_plant/phosphate"
+      ],
+      "retained_recipe_count": 6,
+      "sorted_recipe_ids_sha256": "245b0b495bed60aed639d90f77dc77ed9f7ad0e36fa7ed76acc9ced8eacf4ac3",
+      "disposition": "disabled_pending_material_specific_redesign",
+      "route_findings": [
+        { "ids": ["carbonate", "phosphate"], "finding": "Reject: direct elemental oxidation does not produce free carbonate or phosphate anions without charge, counterion, and process contracts." },
+        { "ids": ["ethylene", "acetylene", "methane"], "finding": "Reject: direct carbon-plus-hydrogen adjacency lacks a plausible catalyst, feedstock pathway, process conditions, and residue contract." },
+        { "ids": ["hydrogen_sulfide"], "finding": "Reject: direct sulfur-plus-hydrogen adjacency lacks an established contained industrial route and hazard contract." }
+      ],
+      "fixed_mass_finding": "Although corrected coefficients can conserve named atoms, these six routes remain rejected because graph adjacency and balance alone do not establish chemically grounded synthesis.",
+      "industrial_authority_finding": "PNCR may own a future conditioned contained route, but no disabled route creates a finished elemental metal or receives authority approval.",
+      "gas_destination_contract": "Future redesign must specify contained product delivery or uncontained escape to Latent and remain pending gas oracle evidence.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
     }
   ]
 }

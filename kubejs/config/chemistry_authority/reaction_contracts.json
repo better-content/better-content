@@ -127,6 +127,26 @@
       "industrial_authority_finding": "Rejected: Create milling and compacting directly formed or reclaimed finished elemental material reserved to TConstruct metallurgy and remelting.",
       "review_scope": "This disposition does not approve formula, compound-recovery, sink, or molecule-use generators.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "chemlib_full_pncr_compound_to_element_recovery_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_patterns": [
+        "^kubejs:chemlib_full/pncr_pressure/recovery/compound/.*$",
+        "^kubejs:chemlib_full/pncr_pressure/recovery/existing_compound/.*$"
+      ],
+      "retained_recipe_count": 88,
+      "retained_recipe_breakdown": {
+        "generated_compound_recovery": 86,
+        "explicit_existing_compound_recovery": 2
+      },
+      "sorted_recipe_ids_sha256": "bdac725ca68e048a30401edd604e330a457c18ce596a71004c8b674859b642ae",
+      "disposition": "removed_non_tcon_compound_to_element_family",
+      "fixed_mass_finding": "Rejected: two opaque compound items were mapped to one opaque elemental item without a common fixed-mass basis or composition-derived stoichiometry.",
+      "residue_finding": "Rejected: pressure seals were consumed while every non-target atom in the oxide, chloride, nitrate, sulfate, sulfide, carbonate, hydroxide, or phosphate input disappeared without a named residue.",
+      "industrial_authority_finding": "Rejected: PNCR directly formed finished elemental material reserved to TConstruct metallurgy and remelting.",
+      "review_scope": "This disposition does not approve formula creation, sinks, molecule-use generators, or the retained cross-script identity list.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ],
   "reactions": []

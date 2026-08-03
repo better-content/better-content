@@ -9302,7 +9302,7 @@ hash = "9c49404e035ab22320f2edb851a55a65c3645a64accab3ea6450cea3b7f7a82e"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/reaction_contracts.json"
-hash = "5a791d29c31b62d34c1f72100a5ae437bf3375feaf24967ceb92e1a3509af05c"
+hash = "752e198daa695f30ff758106d2485f3b8df9b07bf9ff5077bd4110356a391511"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
@@ -10906,7 +10906,7 @@ hash = "b18013efd11e4fe048104e722555e469f728cf3ae7c3912ff3ee391deac1123e"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js"
-hash = "e9dcaaafb2cfef289acc56933fa615e4982ce76bd950b3f1122bc9cd651a05f6"
+hash = "8ab1ff17c4fe6d4723e50a87b13d5725f1290d891afdb16cd5c679e19ea06ad2"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/65_chemlib_plate_manufacturing_routes.js"

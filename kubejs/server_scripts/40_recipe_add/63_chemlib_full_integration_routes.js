@@ -315,11 +315,6 @@ var BC_FULL_CHEM_TERMINAL_OUTPUTS = {
     'chemlib:xenon_lamp_block': 'functional_light_block'
 }
 
-var BC_FULL_CHEM_RECOVERY_COMPOUNDS = [
-    { id: 'iron_disulfide', input: 'chemlib:iron_disulfide', output: 'chemlib:iron' },
-    { id: 'iron_ii_oxide', input: 'chemlib:iron_ii_oxide', output: 'chemlib:iron' }
-]
-
 // These loops are authored in the neighboring identity/transformation passes;
 // retaining the exact IDs here makes their cross-script ownership explicit.
 var BC_FULL_CHEM_EXISTING_LOOPS = [
@@ -427,15 +422,6 @@ function bcFullChemRegisterElement(event, group, element) {
         if (!bcFullChemExists(compound) || BC_FULL_CHEM_EXPLICIT_COMPOUNDS[compound]) continue
         bcFullChemRegisterFormulaCompound(event, elementItem, family, compound)
 
-        // Curated oxide reductions live in the neighboring transformation and
-        // magic passes. Other generated salts get a lossy sealed reclamation
-        // path without creating a second progression branch.
-        if (family.id !== 'oxide') {
-             bcFullChemPressure(event, 'recovery/compound/' + element + '/' + family.id, [
-                { item: compound, count: 2 },
-                { item: 'kubejs:pressure_seal' }
-            ], { item: elementItem, count: 1 }, family.pressure || 2.5)
-        }
     }
 
     var sinks = BC_FULL_CHEM_GROUP_SINKS[group.id] || []
@@ -481,11 +467,4 @@ ServerEvents.recipes(function (event) {
          bcFullChemRegisterMolecule(event, BC_FULL_CHEM_MOLECULES[m])
     }
 
-    for (var c = 0; c < BC_FULL_CHEM_RECOVERY_COMPOUNDS.length; c++) {
-        var compoundRecovery = BC_FULL_CHEM_RECOVERY_COMPOUNDS[c]
-         bcFullChemPressure(event, 'recovery/existing_compound/' + compoundRecovery.id, [
-            { item: compoundRecovery.input, count: 2 },
-            { item: 'kubejs:pressure_seal' }
-        ], { item: compoundRecovery.output, count: 1 }, 2.5)
-    }
 })

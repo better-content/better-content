@@ -128,16 +128,16 @@ Rebuild and redeploy custom jars deliberately; then sync, prune, boot, and valid
 
 ## Heat Authority
 
-Current implementation date: 2026-05-17.
+Current implementation date: 2026-08-03.
 
 `heatsync` is the pack-owned industrial heat authority. It provides the Forge heat capability, native heat pipe, creative heat/cold sources, coolant exchanger, hot water, coolant data loading, transfer helpers, sync/tooltips, and Cold Sweat ambient bridge behavior.
 
 Create: Power Grid keeps its native electrical and device-overheat simulation. HeatSync provides an optional adapter for Power Grid block entities that expose `ThermalBehaviour`, mapping Power Grid device temperature into the HeatSync capability so HeatSync pipes and exchangers can exchange heat without making Power Grid a second pack heat API.
 
-`latent_chemlib` remains the nuclear and high-energy chemistry authority. Its datapack machine profile owns gameplay capacity and conditioning rates, while scheduler profiles only own per-tick work budgets. The reaction chamber exposes a 32,000-unit HeatSync buffer, a charge ceiling of 20, and bounded global conditioning rates that cover every authored reaction; other Latent machines retain the 4,000-unit default. Nuclear/process emissions add heat through HeatSync, and radiation remains an internal `latent_chemlib` event hook rather than an external reactor dependency.
+`latent_chemlib` remains the nuclear and high-energy chemistry authority. Its ordinary reaction chamber owns deliberately conditioned sealed reactions, but it is not a nuclear machine. Fission instead emerges from sufficiently hot, dense, concentrated uranium or plutonium state when neutron flux, moderation, and local contact qualify; opposing sufficiently hot and dense compatible light-gas streams can fuse at their collision boundary. Both paths debit their source matter, preserve daughter/product state, express mass defect as heat and radiation, and can melt real nearby material. Radioactive stacks remain chemically active while carried by lava. No fission or fusion block, reactor power ladder, or nuclear energy capability exists; scheduler profiles bound loaded-world work rather than defining a machine.
 
 The AdPother bridge is a terminal adapter, not a second atmospheric scheduler. It preserves AdPother's emitter and chimney selection, runs chimney filters before handoff, inserts accepted units directly into Latent clouds, and exposes loaded clouds back to AdPother point-pollution and gas-detection reads. Entity hazards query only the exact eye cell, avoiding chunk-area projections. Same-species insertion performs a deterministic bounded merge/place pass, while ignition walks only the existing Latent neighbor budget to total an adjacent mixed-species flammable component. The resulting bounded-power blast uses the ordinary Forge explosion path so Explosion Overhaul remains authoritative. Cloud evolution continues to spend only the existing `latent_chemlib` scheduler budgets; there is no deferred integration queue, coalescing tier, or degraded simulation mode.
 
-PNCR remains separate. Its native heat and thermo-plant recipe semantics should stay PNCR-owned unless an explicit adapter is added for a concrete machine integration.
+PNCR retains its native pressure, heat, and thermo-plant semantics. The explicit Latent boundary gives selected pressure tubes either normal-air or chemical service, with separate ledgers and a dry-air separation route; PNCR transport does not become a second persisted chemistry authority.
 
 Retired content: the standalone coolant jar, redundant fission reactor jar, and Create New Age runtime dependency are no longer active pack content. Rebuild disposable runtimes before validating so stale copied jars do not mask missing dependency problems.

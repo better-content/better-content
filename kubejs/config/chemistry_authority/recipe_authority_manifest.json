@@ -414,6 +414,29 @@
       "residue_finding": "Rejected: all three routes omitted required deterministic products or residues, so none represents its named material operation.",
       "industrial_authority_finding": "Create and PNCR are plausible authorities for corrected Solvay-style and airtight electrochemical operations, but these exact recipes do not supply the required stoichiometry or complete products.",
       "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "chemlib_full_molecule_use_conversions",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:chemlib_full/create_mixing/molecule/use/.*$",
+      "retained_recipe_count": 3,
+      "retained_recipe_breakdown": {
+        "cellulose_to_paper": 1,
+        "starch_to_slime_ball": 1,
+        "sucrose_to_sugar": 1
+      },
+      "sorted_recipe_ids_sha256": "2e1126589c8c57af1ebf6b279109fc36d396fe36967aeb42b9345bf2c4de22c4",
+      "disposition": "removed_unproven_molecule_use_conversions",
+      "exact_material_purposes": [
+        "Convert cellulose into a paper batch by open fiber pulping.",
+        "Convert starch into a slime-ball binder by gelatinization.",
+        "Convert sucrose into a sugar batch by crystallization."
+      ],
+      "fixed_mass_finding": "Rejected: one opaque molecule item became six paper, one slime ball, or six sugar items without a shared packet-mass basis; water, pulp liquor, crystallization yield, and binder additives were not represented.",
+      "identity_finding": "Cellulose-to-paper and sucrose-to-sugar name plausible process relationships, but recipe adjacency alone does not establish conserved quantities; starch-to-slime additionally changes functional material identity without an additive or residue contract.",
+      "industrial_authority_finding": "Create may own open pulping, gelatinization, and crystallization only after each material-specific route declares bounded inputs, yields, and residues.",
+      "review_scope": "The three species remain cataloged as managed explicitly, but no molecule-use conversion is approved or intended to register from this generator.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ]
 }

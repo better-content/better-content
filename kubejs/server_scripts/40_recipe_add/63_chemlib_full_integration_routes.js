@@ -278,9 +278,9 @@ var BC_FULL_CHEM_EXISTING_LOOPS = [
 ]
 
 var BC_FULL_CHEM_MOLECULES = [
-    { id: 'cellulose', item: 'chemlib:cellulose', outputs: [{ item: 'minecraft:paper', count: 6 }], process: 'fiber_pulping' },
-    { id: 'starch', item: 'chemlib:starch', outputs: [{ item: 'minecraft:slime_ball' }], process: 'binder_gelatinization' },
-    { id: 'sucrose', item: 'chemlib:sucrose', outputs: [{ item: 'minecraft:sugar', count: 6 }], process: 'sugar_crystallization' },
+    { id: 'cellulose', item: 'chemlib:cellulose', managedExplicitly: true },
+    { id: 'starch', item: 'chemlib:starch', managedExplicitly: true },
+    { id: 'sucrose', item: 'chemlib:sucrose', managedExplicitly: true },
     { id: 'ethanol', item: 'chemlib:ethanol' },
     { id: 'acetic_acid', item: 'chemlib:acetic_acid' },
     { id: 'ethylene', item: 'chemlib:ethylene', airtightGas: true },

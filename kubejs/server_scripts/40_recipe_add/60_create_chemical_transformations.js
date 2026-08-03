@@ -115,22 +115,6 @@ function bcChemXGasFixation(event, id, solid, gas, gasUnits, output, pressure, t
 }
 
 ServerEvents.recipes(function (event) {
-    var carbonates = [
-        { id: 'calcium', carbonate: 'chemlib:calcium_carbonate', oxide: 'chemlib:calcium_oxide', carbonDioxideChance: 1 },
-        { id: 'zinc', carbonate: 'chemlib:zinc_carbonate', oxide: 'chemlib:zinc_oxide' },
-        { id: 'lead', carbonate: 'chemlib:lead_carbonate', oxide: 'chemlib:lead_oxide' },
-        { id: 'iron', carbonate: 'chemlib:iron_carbonate', oxide: 'chemlib:iron_oxide' },
-        { id: 'magnesium', carbonate: 'chemlib:magnesium_carbonate', oxide: 'chemlib:magnesium_oxide' },
-        { id: 'nickel', carbonate: 'chemlib:nickel_carbonate', oxide: 'chemlib:nickel_oxide' },
-        { id: 'copper', carbonate: 'chemlib:copper_carbonate', oxide: 'chemlib:copper_ii_oxide' }
-    ]
-    for (var c = 0; c < carbonates.length; c++) {
-         bcChemXCompact(event, carbonates[c].id + '_carbonate_roasting', carbonates[c].oxide, 1, [
-            carbonates[c].carbonate,
-            'minecraft:charcoal'
-        ], 'heated', { item: 'chemlib:carbon_dioxide', chance: carbonates[c].carbonDioxideChance || 0.35 })
-    }
-
     var leaches = [
         { id: 'copper_sulfate_from_carbonate', input: 'chemlib:copper_carbonate', fluid: 'chemlib:sulfuric_acid_fluid', output: 'chemlib:copper_ii_sulfate' },
         { id: 'zinc_sulfate_from_carbonate', input: 'chemlib:zinc_carbonate', fluid: 'chemlib:sulfuric_acid_fluid', output: 'chemlib:zinc_sulfate' },

@@ -2,7 +2,7 @@
   "schema": "bc.recipe_authority_audit.v1",
   "manifest_purpose": "Human-reviewed recipe dispositions and exact material-purpose contracts kept outside compiler-owned chemistry authority output.",
   "compiler_owned_reaction_authority": "kubejs/config/chemistry_authority/reaction_contracts.json",
-  "review_scope": "The rejected contracts below cover only the ten removed direct elemental-metal outputs. Every other authored transformation remains pending reaction-level balance and behavioral review; presence in source is not approval.",
+  "review_scope": "This human-reviewed ledger records only the exact approved and rejected cohorts named below. Every other authored transformation remains pending reaction-level balance and behavioral review; presence in source is not approval.",
   "approved_recipe_contracts": [
     {
       "id": "kubejs:chemistry/pneumaticcraft/fluid_mixer/carbon_monoxide_oxidation",
@@ -304,6 +304,21 @@
       "cohort_status": "All 960 retained grown-material acid-ball routes across six 160-ID solvent families are disabled by exact rejection dispositions.",
       "review_scope": "No grown-material acid-ball recipe is approved or intended to register; fresh runtime recapture remains required to verify the cohort is absent.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "create_carbonate_charcoal_roasting_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:chemistry/transform/create_compacting/.*_carbonate_roasting$",
+      "retained_recipe_count": 6,
+      "source_attempt_count": 7,
+      "sorted_recipe_ids_sha256": "363fead5192c8ca051548fdd214c1882ce204513c516e85d4e942f95d00747fd",
+      "disposition": "removed_unbalanced_carbonate_roasting_family",
+      "exact_material_purpose": "Roast named metal carbonates to their corresponding oxides before later material-specific processing.",
+      "fixed_mass_finding": "Rejected: every source route consumed charcoal in addition to the carbonate but omitted the charcoal-derived carbon balance; five retained routes emitted carbon dioxide only probabilistically, and the exact oxide, charcoal, and gas item packets had no common fixed-mass basis.",
+      "residue_finding": "Rejected: the source did not name a complete carbon-bearing exhaust or ash residue for the consumed charcoal.",
+      "industrial_authority_finding": "The intended calcination role is compatible with heated Create processing, but machine fit does not cure the missing fixed-mass and residue contracts.",
+      "review_scope": "The retained snapshot registered six exact IDs; the guarded copper source attempt was also removed so a future registry change cannot silently add a seventh unreviewed route.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
     }
   ]
 }

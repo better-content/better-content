@@ -198,7 +198,7 @@
       "source_composition_finding": "Rejected: crop, wood, fungus, insect, animal, and monster inputs were mapped through acetic acid to carbon, carbon dioxide, sodium, calcium carbonate, or unrelated products without source-specific composition evidence.",
       "fixed_mass_finding": "Rejected: multiple probabilistic outputs and probabilistic grinding-ball recovery used opaque item packets without a conserved fixed-mass basis.",
       "purpose_finding": "Rejected: grinding-ball bias changed the selected material identity to create graph adjacency rather than serving a material-specific extraction purpose.",
-      "review_scope": "Ethanol, acetic acid, and sulfuric acid are disabled by separate dispositions; hydrochloric, nitric, and phosphoric families remain unapproved and pending separate review.",
+      "review_scope": "Ethanol, acetic acid, sulfuric acid, and hydrochloric acid are disabled by separate dispositions; nitric and phosphoric families remain unapproved and pending separate review.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
     },
     {
@@ -215,7 +215,24 @@
       "source_composition_finding": "Rejected: diverse biological inputs were mapped through sulfuric acid to elemental sulfur or calcium sulfate without source-specific composition and stoichiometric residue evidence.",
       "fixed_mass_finding": "Rejected: multiple probabilistic outputs and probabilistic grinding-ball recovery used opaque item packets without a conserved fixed-mass basis.",
       "purpose_finding": "Rejected: grinding-ball bias changed the selected material identity to create graph adjacency rather than serving a material-specific extraction purpose.",
-      "review_scope": "Ethanol, acetic acid, and sulfuric acid are disabled by separate dispositions; hydrochloric, nitric, and phosphoric families remain active, unapproved, and pending separate review.",
+      "review_scope": "Ethanol, acetic acid, sulfuric acid, and hydrochloric acid are disabled by separate dispositions; nitric and phosphoric families remain active, unapproved, and pending separate review.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "grown_material_hydrochloric_acid_ball_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:grown_materials/acid_ball/[^/]+/hydrochloric/[^/]+$",
+      "retained_recipe_count": 160,
+      "retained_recipe_breakdown": {
+        "grown_material_inputs": 20,
+        "grinding_ball_variants_per_input": 8
+      },
+      "sorted_recipe_ids_sha256": "6d79ae583c077b630cc0f9968717181e8dcd5c4bd398dcedcfdb1e5573356926",
+      "disposition": "disabled_unproven_hydrochloric_extraction_family",
+      "source_composition_finding": "Rejected: diverse biological inputs were mapped through hydrochloric acid to hydrogen, chlorine, silicon dioxide, or calcium chloride without source-specific composition and stoichiometric residue evidence.",
+      "fixed_mass_finding": "Rejected: multiple probabilistic outputs and probabilistic grinding-ball recovery used opaque item packets without a conserved fixed-mass basis.",
+      "purpose_finding": "Rejected: grinding-ball bias changed the selected material identity to create graph adjacency rather than serving a material-specific extraction purpose.",
+      "review_scope": "Ethanol, acetic acid, sulfuric acid, and hydrochloric acid are disabled by separate dispositions; nitric and phosphoric families remain active, unapproved, and pending separate review.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ],

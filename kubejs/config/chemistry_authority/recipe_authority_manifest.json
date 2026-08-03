@@ -117,6 +117,26 @@
       "review_scope": "Static approval covers packet arithmetic, bounded purpose, and encoded machine conditions only. It does not claim integrated source-to-sink chains; missing NO and SO3 sources and missing NO2 and SO2 sinks remain pending redesign. Runtime registration, hazard behavior, gas transfer, charge state, and source provenance also remain pending oracle.",
       "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle",
       "review_state": "statically_approved_routes_pending_oracle_and_source_sink_repairs"
+    },
+    {
+      "family": "create_phosphoric_acid_phase_conversions",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_ids": [
+        "kubejs:chemistry/create_compacting/phosphoric_acid_molecule",
+        "kubejs:chemistry/create_mixing/phosphoric_acid_fluid"
+      ],
+      "retained_recipe_count": 2,
+      "sorted_recipe_ids_sha256": "12db5f83d8efa868373512e66589773dca2425ef86b864680ce955f1ab1ec134",
+      "fixed_mass_packet_basis": "One phosphoric-acid item and 250 mB phosphoric-acid fluid are reciprocal representations of one H3PO4 packet.",
+      "reactions": [
+        { "id": "kubejs:chemistry/create_compacting/phosphoric_acid_molecule", "equation": "H3PO4 (fluid packet) -> H3PO4 (item packet)", "exact_packet_change": "250 mB kubejs:phosphoric_acid_fluid -> 1 chemlib:phosphoric_acid item", "exact_material_purpose": "Recover the same phosphoric-acid packet from its open-fluid representation for item-based chemistry.", "declared_residue": "none_identity_preserving_phase_conversion" },
+        { "id": "kubejs:chemistry/create_mixing/phosphoric_acid_fluid", "equation": "H3PO4 (item packet) -> H3PO4 (fluid packet)", "exact_packet_change": "1 chemlib:phosphoric_acid item -> 250 mB kubejs:phosphoric_acid_fluid", "exact_material_purpose": "Expose the same phosphoric-acid packet as a fluid for open liquid chemistry.", "declared_residue": "none_identity_preserving_phase_conversion" }
+      ],
+      "fixed_mass_finding": "The reciprocal one-to-one conversions preserve one named formula packet without multiplication, elemental identity change, or omitted reaction coproducts.",
+      "industrial_authority_finding": "Create owns this open liquid/solid phase handling; no gas synthesis or finished-metal formation occurs.",
+      "review_scope": "Static approval covers identity and packet arithmetic only; fluid-container interaction, runtime recipe registration, and transfer behavior remain pending oracle.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_container_oracle",
+      "review_state": "statically_approved_pending_oracle"
     }
   ],
   "pending_recipe_families": [
@@ -977,6 +997,38 @@
       "industrial_authority_finding": "PNCR may own a future conditioned contained route, but no disabled route creates a finished elemental metal or receives authority approval.",
       "gas_destination_contract": "Future redesign must specify contained product delivery or uncontained escape to Latent and remain pending gas oracle evidence.",
       "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "rejected_create_utility_and_open_synthesis_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_ids": [
+        "kubejs:chemistry/create_compacting/calcium_carbonate",
+        "kubejs:chemistry/create_compacting/pressure_seal",
+        "kubejs:chemistry/create_compacting/sodium_hydroxide",
+        "kubejs:chemistry/create_mixing/arsenic_sulfide",
+        "kubejs:chemistry/create_mixing/carbon_disulfide",
+        "kubejs:chemistry/create_mixing/carbon_disulfide_fiber",
+        "kubejs:chemistry/create_mixing/copper_nitrate",
+        "kubejs:chemistry/create_mixing/diammonium_phosphate_fertilizer",
+        "kubejs:chemistry/create_mixing/ethanol_from_sugar",
+        "kubejs:chemistry/create_mixing/mercury_sulfide"
+      ],
+      "retained_recipe_count": 10,
+      "sorted_recipe_ids_sha256": "5f20ec8eec83f5ae91e2c3f7212a8428710fc5fb4417d17456d670e887139572",
+      "disposition": "disabled_unbounded_or_wrong_authority_create_routes",
+      "route_findings": [
+        { "ids": ["pressure_seal"], "finding": "Reject: unrelated slime, kelp, sulfur, carbon, and ethanol packets become two manufactured seals without a material composition, binder yield, tooling, or residue contract." },
+        { "ids": ["ethanol_from_sugar"], "finding": "Reject: sugar, elemental carbon, and water become ethanol with only probabilistic carbon-dioxide residue, so carbon, hydrogen, and oxygen are neither deterministically balanced nor process-grounded." },
+        { "ids": ["sodium_hydroxide", "calcium_carbonate"], "finding": "Reject: elemental metal plus a free anion is formula adjacency, not a bounded reaction with charge, counterion, redox, and residue accounting; calcium carbonate already has an approved lime-and-CO2 fixation authority." },
+        { "ids": ["copper_nitrate"], "finding": "Reject: elemental copper plus free nitrate packets omits the acid medium, copper oxidation, nitrogen-oxide products, water, and charge accounting required by the named salt route." },
+        { "ids": ["arsenic_sulfide", "mercury_sulfide", "carbon_disulfide"], "finding": "Reject in this authored form: atom balance does not authorize an open Create basin for volatile or toxic arsenic, mercury, sulfur-vapor, and carbon-disulfide processing; correct physical phases, sealed containment, and hazard behavior require redesign and oracle evidence." },
+        { "ids": ["carbon_disulfide_fiber"], "finding": "Reject: carbon disulfide plus paper becoming two string omits alkali activation, cellulose dissolution and regeneration, bath liquor, sulfur residues, and bounded fiber yield." },
+        { "ids": ["diammonium_phosphate_fertilizer"], "finding": "Reject: one opaque salt packet plus water becoming six bone meal items is generic fertilizer adjacency and multiplication without mineral composition, moisture, yield, or residue accounting." }
+      ],
+      "fixed_mass_finding": "All ten routes fail deterministic conservation, shared packet yield, required residue, physical-phase, containment, or process evidence despite some nominal formula matches.",
+      "industrial_authority_finding": "Create may handle open mixing and shaping, but volatile/toxic synthesis belongs in a future contained process and manufactured seals require a bounded component contract.",
+      "review_scope": "Definitions remain as auditable source markers but are gated before recipe registration. No behavioral, hazard, or container claim is approved.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_hazard_oracle"
     }
   ]
 }

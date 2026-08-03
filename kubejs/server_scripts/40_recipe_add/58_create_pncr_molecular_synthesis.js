@@ -61,6 +61,19 @@ var BC_CHEM_REJECTED_MOLECULAR_ROUTES = {
     methane: true
 }
 
+var BC_CHEM_REJECTED_CREATE_ROUTES = {
+    arsenic_sulfide: true,
+    calcium_carbonate: true,
+    carbon_disulfide: true,
+    carbon_disulfide_fiber: true,
+    copper_nitrate: true,
+    diammonium_phosphate_fertilizer: true,
+    ethanol_from_sugar: true,
+    mercury_sulfide: true,
+    pressure_seal: true,
+    sodium_hydroxide: true
+}
+
 function bcChemGasFluid(id, count) {
     if (!BC_CHEM_GASES[id]) throw new Error('Not a ChemLib gas: ' + id)
     return {
@@ -103,6 +116,7 @@ function bcChemExpandCreateIngredients(ingredients) {
 }
 
 function bcChemMixing(event, id, ingredients, results, heat, time) {
+    if (BC_CHEM_REJECTED_CREATE_ROUTES[id]) return
     var recipe = {
         type: 'create:mixing',
         ingredients: bcChemExpandCreateIngredients(ingredients),
@@ -114,6 +128,7 @@ function bcChemMixing(event, id, ingredients, results, heat, time) {
 }
 
 function bcChemCompacting(event, id, ingredients, results, heat) {
+    if (BC_CHEM_REJECTED_CREATE_ROUTES[id]) return
     for (var i = 0; i < results.length; i++) {
         if (results[i].item && !bcChemItem(results[i].item)) return
     }
@@ -174,6 +189,7 @@ function bcChemFluidMixer(event, id, input1, input2, output, pressure, time) {
 }
 
 ServerEvents.recipes(function (event) {
+    // Rejected utility proposals remain below as auditable tooling markers.
     event.remove({ id: 'kubejs:pneumaticcraft/pressure_seal' })
     bcChemCompacting(event, 'pressure_seal', [
         { item: 'minecraft:slime_ball' },
@@ -192,7 +208,7 @@ ServerEvents.recipes(function (event) {
         { item: 'chemlib:carbon_dioxide', chance: 0.20 }
     ]), null, 120)
 
-    // Non-gaseous molecule/item conversions remain visible Create chemistry.
+    // The reciprocal phosphoric-acid packet conversions remain visible Create chemistry.
     bcChemMixing(event, 'phosphoric_acid_fluid', [
         { item: 'chemlib:phosphoric_acid' }
     ], [{ fluid: 'kubejs:phosphoric_acid_fluid', amount: 250 }], 'heated', 180)

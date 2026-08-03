@@ -533,9 +533,25 @@
       "exact_material_purpose": "Use ethanol and a named grinding ball to separate a bounded, deposit-specific mineral fraction from one crushed Realistic Ores deposit.",
       "source_composition_finding": "Rejected: the grinding-ball bias could change the selected element or product identity, including direct finished elements, without a composition-derived separation mechanism.",
       "fixed_mass_finding": "Rejected: opaque crushed-deposit, ethanol, and grinding-ball packets yielded multiple count and chance-weighted products without a conserved fixed-mass basis or complete gangue/liquor residue.",
-      "industrial_authority_finding": "Rejected: Create washing/mixing directly formed finished elemental metals reserved to TConstruct and used adjacency-driven outputs rather than bounded concentrates or salts.",
+      "industrial_authority_finding": "Rejected: Create mixing directly formed finished elemental metals reserved to TConstruct and used adjacency-driven outputs rather than bounded concentrates or salts.",
       "gas_destination_contract": "Probabilistic gas item side products do not establish contained delivery or uncontained Latent escape; gas behavior remains pending oracle.",
       "review_scope": "Only the 176-ID ethanol cohort is disabled here; the shared solvent catalog remains available to separately reviewed neighboring scripts.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "realistic_ores_acetic_acid_ball_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:realistic_ores/acid_ball/[^/]+/acetic/[^/]+$",
+      "retained_recipe_count": 176,
+      "retained_recipe_breakdown": { "deposit_inputs": 22, "grinding_ball_variants_per_input": 8 },
+      "sorted_recipe_ids_sha256": "89dbc912a74f03b6bfc0789388c3ada2418342284fa3d277f7cc99d6d5f70b46",
+      "disposition": "disabled_unproven_deposit_acetic_extraction_family",
+      "exact_material_purpose": "Use acetic acid and a named grinding ball to separate a bounded, deposit-specific mineral fraction from one crushed Realistic Ores deposit.",
+      "source_composition_finding": "Rejected: grinding-ball bias changed selected material identity, including direct finished elements, without a composition-derived separation mechanism.",
+      "fixed_mass_finding": "Rejected: opaque feed, acid, and tool packets yielded multiple deterministic and probabilistic products without conserved fixed mass or complete gangue/liquor residue.",
+      "industrial_authority_finding": "Rejected: Create directly formed finished elemental metals reserved to TConstruct and used adjacency-driven outputs rather than bounded concentrates or salts.",
+      "gas_destination_contract": "Probabilistic gas items prove neither contained delivery nor uncontained Latent escape.",
+      "review_scope": "Only the 176-ID acetic cohort is disabled by this disposition; the shared solvent catalog remains available to separately reviewed neighboring scripts.",
       "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
     }
   ]

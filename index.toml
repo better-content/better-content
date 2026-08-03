@@ -9294,7 +9294,7 @@ hash = "aa35273fec61c1befe5be6ffea05e6ad26ade94e0c32f29fc9e7f2c36f8a28e6"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/form_roles.json"
-hash = "163b8d4b7c8e299c8effa6959752812193573d7bb5196ccd0b6c734ef4884b01"
+hash = "318fee3652c19bad2f2381a40493cdc3e352cd84827f53accb2336991d6e5b76"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/isotope_policy.json"
@@ -9306,7 +9306,7 @@ hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/recipe_authority_manifest.json"
-hash = "8eb27051d213a5d00307d226969feffc5d61c314515a98491cda4d995faed986"
+hash = "5cd2cca8b9385ae0c399cdbecb608ddd49f1f20e3fc0a3fdff728f777811274f"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
@@ -9338,7 +9338,7 @@ hash = "9842084f3f18b53e5848014781fcb996aad39fd2fcd8fdbe72cf492075e3af74"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/species.json"
-hash = "47158bb1384e6b3abd726944632c6359c1e86667c36eaf3dee532d65845db8c0"
+hash = "6597fa550c2382554b79e320c8d2e1971cbda0af3667b2ee409d1e177899e8df"
 
 [[files]]
 file = "kubejs/config/chemlib_form_policy.json"
@@ -9386,11 +9386,11 @@ hash = "dc753044f39d65b2a0106b3ea4005dd10287e94c4ce1cc7d5bb4f9948bbb37c2"
 
 [[files]]
 file = "kubejs/config/player_progression_regression.json"
-hash = "51f84ac6390b520b9ede19c36579c781ac2a558168f877a35711f6468ebcf0a1"
+hash = "5547030be31bc15a5da20dc4cd02361b8339f3063a3e97dd3685eedc98d4a70e"
 
 [[files]]
 file = "kubejs/config/progression_reachability_sources.json"
-hash = "6067edc18d636682b0bd6c64cfbd74e19e87784c3f7de91d8765f3a2266cd662"
+hash = "16e5f5c31f5304b7df37e6fc92802eeb8b22155fdf75d1d0e5f2b150c10ec402"
 
 [[files]]
 file = "kubejs/config/quarantined_items.json"
@@ -10910,7 +10910,7 @@ hash = "0bfdfb6a1a708e8bb6cbdde8379bcdc446b789a2bc257efe2905cf608fb5cd90"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/63_chemlib_full_integration_routes.js"
-hash = "febac8a2ea882b78ec85dd4609286c9f8b65aae1c6f630b63500e3a7f6473ab0"
+hash = "48db26bdc805d75204e8c1a4d51c489e3ae353dcd7a5a10955fbe1a3cc3b0d35"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/65_chemlib_plate_manufacturing_routes.js"

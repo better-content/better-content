@@ -642,13 +642,6 @@
         ]
       },
       {
-        "id": "create:splashing",
-        "needles": [
-          "type: 'create:splashing'",
-          "type: \"create:splashing\""
-        ]
-      },
-      {
         "id": "create:sequenced_assembly",
         "needles": [
           "type: 'create:sequenced_assembly'",

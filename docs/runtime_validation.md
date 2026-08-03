@@ -10,6 +10,14 @@ It prepares one disposable dedicated-server world and one Xvfb-backed client und
 
 Optional controls are `--run-root PATH`, `--bootstrap-mode always|once|never`, `--port N`, and `--idle-seconds N`. It never creates cycles, variants, cloned worlds, or additional test worlds.
 
+For a bounded recapture tied to that same world, use:
+
+```text
+tools/bc test smoke --bootstrap-mode always --capture-dumps --oracle-manifest tools/runtime-oracles/changed_scope.json
+```
+
+This enables the live dump command before startup, joins the ordinary smoke client, invokes `bcgraph dump` in the same disposable server world, promotes the complete shared-snapshot dump set, and evaluates only the manifest's changed scope. The current manifest checks the 11 statically approved chemistry routes, absence of every exact or patterned rejected recipe cohort, and live registration for the 37 independently adjudicated packet IDs. Rows whose blocker is static design, integration, world occurrence, or behavior are emitted as `not_oracle_ready` or behavior-pending; registration evidence never upgrades them to accepted. The result is retained as `generated/runtime-dumps/changed_scope_oracle.json` and explicitly makes no global 19,315-ID completion claim.
+
 ## Complementary source checks
 
 ```text
@@ -21,7 +29,7 @@ tools/bc test fast
 
 Kotlin harness lifecycle tests synchronize on the per-run `lock.json`; incidental harness-root entries such as `port-reservations/` are not evidence that a run is ready to interrupt or inspect.
 
-The smoke proves lifecycle and client/server network compatibility only. Gameplay, worldgen distributions, progression routes, and visual quality require separately designed evidence.
+The ordinary smoke proves lifecycle and client/server network compatibility only. Changed-scope dump capture additionally proves live recipe/registry declarations and rejected-route absence, but not machine execution, gas escape, hazards, provenance, container transfer, world occurrence, progression traversal, or visual quality.
 
 ## Live recipe graph
 

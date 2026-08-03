@@ -302,6 +302,11 @@ var BC_FULL_CHEM_MOLECULES = [
     { id: 'polyvinyl_chloride', item: 'chemlib:polyvinyl_chloride', managedExplicitly: true }
 ]
 
+// Formula adjacency is retained below as audit context only. A registered
+// dissolver composition does not prove a bounded industrial synthesis route.
+// Material-specific recipes must be reviewed and registered explicitly.
+var BC_FULL_CHEM_FORMULA_ROUTES_ENABLED = false
+
 function bcFullChemFormulaFor(compound) {
     var recipes = bcFullChemGet(BC_FULL_CHEM_DISSOLVER_TABLE, 'recipes') || []
     for (var i = 0; i < recipes.length; i++) {
@@ -363,6 +368,7 @@ function bcFullChemRegisterFormulaCompound(event, elementItem, family, compound)
 }
 
 function bcFullChemRegisterElement(event, group, element) {
+    if (!BC_FULL_CHEM_FORMULA_ROUTES_ENABLED) return
     var elementItem = 'chemlib:' + element
     if (!bcFullChemExists(elementItem)) return
 

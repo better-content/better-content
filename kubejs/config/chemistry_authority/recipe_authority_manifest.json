@@ -45,7 +45,7 @@
       "exact_material_purpose": "Consume a bounded carbon-monoxide gas stream by complete oxidation into carbon dioxide inside PNCR containment; this is a specific toxic/combustible-gas treatment sink, not a generic molecule conversion or graph-adjacency route.",
       "industrial_authority_finding": "PNCR owns this deliberate contained gas reaction; the route forms no elemental metal and does not overlap TConstruct metal formation.",
       "gas_destination_contract": "The two carbon-dioxide packets remain a PNCR fluid output for contained downstream handling.",
-      "runtime_evidence": "pending_fresh_gas_oracle",
+      "runtime_evidence": "fresh_snapshot_ca89408b24879e42f06ffb81_registration_and_exact_normalized_packets_observed_pending_machine_execution_gas_escape_and_hazard_oracle",
       "required_runtime_oracle": "Fresh capture must prove exact recipe registration, 500 mB CO plus 250 mB O2 consumption, 500 mB CO2 delivery to a contained destination, and the uncontained escape behavior at the gas boundary.",
       "review_state": "statically_approved_pending_oracle"
     },
@@ -92,7 +92,7 @@
       "exact_material_purpose": "Fix a bounded contained carbon-dioxide packet into calcium carbonate using lime as a material-specific gas scrubber.",
       "industrial_authority_finding": "PNCR owns the contained gas/solid reaction; it forms no elemental metal and does not overlap TConstruct metallurgy.",
       "gas_destination_contract": "The carbon-dioxide packet is consumed inside PNCR containment; any future uncontained feed must escape to Latent rather than materialize as a native bucket or block.",
-      "runtime_evidence": "pending_fresh_gas_oracle",
+      "runtime_evidence": "fresh_snapshot_ca89408b24879e42f06ffb81_registration_and_exact_normalized_packets_observed_pending_machine_execution_containment_and_gas_escape_oracle",
       "required_runtime_oracle": "Fresh capture must prove exact recipe registration, one calcium-oxide item plus 250 mB carbon-dioxide consumption, one calcium-carbonate item output, and containment behavior.",
       "review_state": "statically_approved_pending_oracle"
     },
@@ -115,7 +115,7 @@
       "industrial_authority_finding": "PNCR owns these conditioned contained-gas, acid, and compound operations; none creates a finished elemental metal, so TConstruct metallurgy remains exclusive.",
       "gas_destination_contract": "All gaseous inputs and outputs remain PNCR-contained recipe packets; transfer, hazards, and uncontained escape to Latent remain pending oracle.",
       "review_scope": "Static approval covers packet arithmetic, bounded purpose, and encoded machine conditions only. It does not claim integrated source-to-sink chains; missing NO and SO3 sources and missing NO2 and SO2 sinks remain pending redesign. Runtime registration, hazard behavior, gas transfer, charge state, and source provenance also remain pending oracle.",
-      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle",
+      "runtime_evidence": "fresh_snapshot_ca89408b24879e42f06ffb81_all_seven_routes_registered; carbon_monoxide_and_iron_ii_oxide_stacked_item_counts_unobservable_in_public_normalizer_pending_execution_oracle; gas_behavior_and_named_source_sink_repairs_remain_pending",
       "review_state": "statically_approved_routes_pending_oracle_and_source_sink_repairs"
     },
     {
@@ -135,27 +135,11 @@
       "fixed_mass_finding": "The reciprocal one-to-one conversions preserve one named formula packet without multiplication, elemental identity change, or omitted reaction coproducts.",
       "industrial_authority_finding": "Create owns this open liquid/solid phase handling; no gas synthesis or finished-metal formation occurs.",
       "review_scope": "Static approval covers identity and packet arithmetic only; fluid-container interaction, runtime recipe registration, and transfer behavior remain pending oracle.",
-      "runtime_evidence": "pending_fresh_runtime_recapture_and_container_oracle",
+      "runtime_evidence": "fresh_snapshot_ca89408b24879e42f06ffb81_both_phase_routes_registered_with_normalized_outputs_pending_container_transfer_and_execution_oracle",
       "review_state": "statically_approved_pending_oracle"
     }
   ],
-  "pending_recipe_families": [
-    {
-      "family": "chemlib_full_formula_compound_routes",
-      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
-      "retained_recipe_id_pattern": "^kubejs:chemlib_full/(create_mixing|pncr_thermo)/compound/.*$",
-      "retained_recipe_count": 105,
-      "sorted_recipe_ids_sha256": "96fdf25ca443b76554b54461d5dc8c54002055ebcadb0c4bdf747a53199b9bb1",
-      "disposition": "pending_tooling_alignment_and_reaction_review",
-      "exact_material_purpose": "Attempt formula-derived formation of named ChemLib compounds from their registered elemental or gaseous components.",
-      "current_static_finding": "Not approved: formula lookup establishes nominal composition but does not by itself establish a common fixed-mass packet, correct reaction conditions, charge state, complete acid residues, or safe gas transfer.",
-      "source_status": "Retained unchanged because the deferred chemistry-loop tooling contract still asserts positive presence for this family; changing it in this phase would require an explicitly deferred tooling-source amendment.",
-      "industrial_authority_boundary": "No pending route is authority-approved merely because it uses Create or PNCR; any finished elemental-metal output elsewhere remains forbidden, and every retained compound route requires reaction-level adjudication.",
-      "required_followup": "Align the deferred tooling contract, then review or remove these routes in bounded material-specific cohorts before fresh runtime recapture.",
-      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle",
-      "review_state": "pending_not_approved"
-    }
-  ],
+  "pending_recipe_families": [],
   "rejected_recipe_contracts": [
     {
       "id": "kubejs:chemistry/transform/create_compacting/iron_oxide_reduction",
@@ -1029,6 +1013,21 @@
       "industrial_authority_finding": "Create may handle open mixing and shaping, but volatile/toxic synthesis belongs in a future contained process and manufactured seals require a bounded component contract.",
       "review_scope": "Definitions remain as auditable source markers but are gated before recipe registration. No behavioral, hazard, or container claim is approved.",
       "runtime_evidence": "pending_fresh_runtime_recapture_and_hazard_oracle"
+    },
+    {
+      "family": "chemlib_full_formula_compound_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:chemlib_full/(create_mixing|pncr_thermo)/compound/.*$",
+      "retained_recipe_count": 105,
+      "sorted_recipe_ids_sha256": "96fdf25ca443b76554b54461d5dc8c54002055ebcadb0c4bdf747a53199b9bb1",
+      "disposition": "disabled_formula_adjacency_pending_material_specific_redesign",
+      "exact_material_purpose": "The retired generator attempted formula-derived formation of named ChemLib compounds from registered elemental or gaseous components.",
+      "fixed_mass_finding": "Rejected: formula lookup establishes nominal composition but does not establish a common fixed-mass packet, correct reaction conditions, charge state, complete acid residues, or deterministic gas transfer.",
+      "source_status": "Definitions remain as auditable source context, but BC_FULL_CHEM_FORMULA_ROUTES_ENABLED is false and registration exits before emitting any family member.",
+      "industrial_authority_boundary": "Create or PNCR machine selection does not confer authority; each future compound route requires its own bounded material purpose and reaction adjudication.",
+      "required_followup": "Redesign only useful compounds as bounded material-specific cohorts, then obtain fresh registration and behavior evidence.",
+      "runtime_evidence": "pending_fresh_runtime_absence_recapture_and_gas_behavior_oracle",
+      "review_state": "rejected_disabled_pending_oracle"
     }
   ]
 }

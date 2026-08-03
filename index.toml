@@ -9306,7 +9306,7 @@ hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/recipe_authority_manifest.json"
-hash = "397bbd6056b5f0a17f8d2b009922f35a9399ee5dfb86db6ef7adfcc2a9da2d0f"
+hash = "b6ecf630ffab3cee9ba48688b950b7706ce8624ed3bafee76b030a32fecd1136"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
@@ -10730,7 +10730,7 @@ hash = "005e7258d781923a0efe801fc137d4cb997e05ccac44b0c6014aa541a4aaaf86"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/145_vanillish_recipe_expert_pass.js"
-hash = "e860c9c1ebf19331a10a77badfd08c7c77caf1c0916265d3232a95ca9bb40d43"
+hash = "7bede7711a01527924d0eb5175386190f510a4e8c11e2ac883ad780bc299ec53"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/146_hexerei_mahogany_to_natures_spirit.js"

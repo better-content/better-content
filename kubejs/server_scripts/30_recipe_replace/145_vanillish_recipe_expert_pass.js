@@ -114,13 +114,6 @@ function bcVanAlchemy(event, id, output, count, inputs, syphon, ticks, upgradeLe
     }).id('kubejs:vanillish_expert/blood_alchemy/' + id)
 }
 
-function bcVanDustIngot(event, material) {
-    var output = 'chemlib:' + material + '_ingot'
-    var dust = 'chemlib:' + material + '_dust'
-     bcVanRemoveCooking(event, output)
-     bcVanCompacting(event, 'chemlib/' + material + '_ingot_from_dust', output, 1, [dust], 'heated')
-}
-
 ServerEvents.recipes(function (event) {
     // Vanilla redstone and transport automation should show up as assembled machinery,
     // not as hand-stacked cobble, planks, and dust.
@@ -319,7 +312,9 @@ ServerEvents.recipes(function (event) {
         'thulium', 'tin', 'titanium', 'tungsten', 'uranium', 'vanadium', 'ytterbium',
         'yttrium', 'zinc', 'zirconium'
     ]
-    for (var i = 0; i < chemlibDustIngots.length; i++)  bcVanDustIngot(event, chemlibDustIngots[i])
+    for (var i = 0; i < chemlibDustIngots.length; i++) {
+        bcVanRemoveCooking(event, 'chemlib:' + chemlibDustIngots[i] + '_ingot')
+    }
 
      bcVanCompacting(event, 'crushed_raw/aluminum_ingot', 'chemlib:aluminum_ingot', 1, ['create:crushed_raw_aluminum'], 'heated')
      bcVanCompacting(event, 'crushed_raw/cobalt_ingot', 'chemlib:cobalt_ingot', 1, ['creatingspace:crushed_cobalt_ore'], 'heated')

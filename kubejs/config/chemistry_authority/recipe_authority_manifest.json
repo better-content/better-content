@@ -631,6 +631,19 @@
       "industrial_authority_finding": "Rejected: Create splashing directly formed finished elemental metals reserved to TConstruct; even the retained non-element candidates remain unapproved until each route has bounded quantities and complete residues.",
       "review_scope": "All 22 uniformly generated splashing registrations are removed. The shared deposit table and separately registered TConstruct melting routes remain unchanged for independent review and tooling compatibility.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "create_chemlib_dust_to_ingot_compacting_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:vanillish_expert/create_compacting/chemlib/.*_ingot_from_dust$",
+      "retained_recipe_count": 62,
+      "sorted_recipe_ids_sha256": "cd0af7c4c38e4376a0589abd2ab553eb0b03daa4838ca839f184d788f654e689",
+      "disposition": "removed_create_dust_to_ingot_formation_family",
+      "exact_material_purpose": "Convert one named ChemLib elemental dust packet into its finished ingot form.",
+      "fixed_mass_finding": "Rejected: opaque dust and ingot items were assumed to share an exact packet mass without a declared form conversion or TConstruct-compatible charge contract.",
+      "industrial_authority_finding": "Rejected: heated Create compacting directly formed finished ingots, violating TConstruct's exclusive metal-formation, casting, and remelting authority.",
+      "progression_finding": "Vanilla smelting and blasting removals remain in place for all 62 materials; this change removes the Create replacement rather than restoring a furnace bypass.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ]
 }

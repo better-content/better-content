@@ -9302,7 +9302,7 @@ hash = "9c49404e035ab22320f2edb851a55a65c3645a64accab3ea6450cea3b7f7a82e"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/reaction_contracts.json"
-hash = "e349a286fc802733bfdcbc1b496f12d31abe88dcf810059c9b1d71724f6299af"
+hash = "0c8e0c1d06001a88a9165862d29bdde53447dc03fd02345d153b373e27916f9e"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
@@ -10878,7 +10878,7 @@ hash = "ba1e139a515b42def5cd709fa9217d3fe8b176e437b05bb3ec52cb84931c3ba6"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js"
-hash = "35e75a9d62262465327db9ddf3d11c5d75257fa6e9c0d1b8f2154cd5cb35fbe5"
+hash = "feef3d9a1388c06184e0d981b98b056734f0aad3d9f0e0852aa5004c699c360b"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/58_blood_magic_manual_create_yields.js"

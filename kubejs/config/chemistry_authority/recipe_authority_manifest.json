@@ -569,6 +569,22 @@
       "gas_destination_contract": "Probabilistic sulfur-dioxide and deposit-gas items prove neither contained delivery nor uncontained Latent escape.",
       "review_scope": "Only the 176-ID sulfuric cohort is disabled by this disposition; the shared solvent catalog remains available to separately reviewed neighboring scripts.",
       "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    },
+    {
+      "family": "realistic_ores_hydrochloric_acid_ball_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:realistic_ores/acid_ball/[^/]+/hydrochloric/[^/]+$",
+      "retained_recipe_count": 176,
+      "retained_recipe_breakdown": { "deposit_inputs": 22, "grinding_ball_variants_per_input": 8 },
+      "sorted_recipe_ids_sha256": "f3d16f78410745aed081dc65f7b9e3b6cef973a8526b7862d5875303cedc5f6d",
+      "disposition": "disabled_unproven_deposit_hydrochloric_extraction_family",
+      "exact_material_purpose": "Use hydrochloric acid and a named grinding ball to separate a bounded, deposit-specific mineral fraction from one crushed Realistic Ores deposit.",
+      "source_composition_finding": "Rejected: grinding-ball bias changed selected material identity, including direct finished elements, without a composition-derived separation mechanism.",
+      "fixed_mass_finding": "Rejected: opaque feed, acid, and tool packets yielded multiple deterministic and probabilistic products without conserved fixed mass or complete gangue/liquor residue.",
+      "industrial_authority_finding": "Rejected: Create mixing directly formed finished elemental metals reserved to TConstruct and used adjacency-driven outputs rather than bounded concentrates or salts.",
+      "gas_destination_contract": "Probabilistic hydrogen and deposit-gas items prove neither contained delivery nor uncontained Latent escape.",
+      "review_scope": "Only the 176-ID hydrochloric cohort is disabled by this disposition; the shared solvent catalog remains available to separately reviewed neighboring scripts.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
     }
   ]
 }

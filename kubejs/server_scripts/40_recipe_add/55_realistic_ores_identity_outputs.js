@@ -49,7 +49,8 @@ var BC_RO_CREATE_ITEM_OUTPUT_LIMIT = 6
 var BC_RO_DISABLED_DEPOSIT_SOLVENTS = {
     ethanol: true,
     acetic: true,
-    sulfuric: true
+    sulfuric: true,
+    hydrochloric: true
 }
 
 var BC_RO_OVERWORLD_ORE_EXTRAS = {

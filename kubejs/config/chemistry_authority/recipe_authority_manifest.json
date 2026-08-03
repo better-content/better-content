@@ -837,6 +837,20 @@
       "industrial_authority_finding": "Rejected: Create mixing and Blood Magic directly formed finished ingots outside TConstruct metallurgy. Original crafting recipes remain removed, but ingot outputs are no longer dynamically rerouted.",
       "review_scope": "The suffix gate applies only to finished-ingot outputs; all non-ingot grid-policy behavior remains unchanged and unapproved by this disposition.",
       "runtime_evidence": "pending_fresh_runtime_recapture"
+    },
+    {
+      "family": "surface_sample_create_milling_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:create/milling/surface_samples/.*$",
+      "retained_recipe_count": 22,
+      "sorted_recipe_ids_sha256": "7b38ee2642a688345388d31c682be376b2e41900f3dfc81b2efa7a290bb1bbcc",
+      "disposition": "removed_unbounded_surface_sample_milling_family",
+      "exact_material_purpose": "Mill one named prospecting surface sample into a small chance of its matching crushed-deposit feed plus flint.",
+      "source_composition_finding": "Rejected: opaque surface indicators were treated as uniform ore-bearing packets without a bounded sample grade or deposit-specific assay.",
+      "fixed_mass_finding": "Rejected: the 25 percent crushed-feed and 10 percent flint outputs had no common fixed-mass basis, deterministic waste stream, or named gangue residue.",
+      "industrial_authority_finding": "Create may own physical sample milling, but only with bounded prospecting-feed quantities and complete residues absent from this family.",
+      "review_scope": "All 22 retained milling registrations are removed. The source table remains as historical/tooling context for future deposit-specific redesign; no furnace or milling recipe is intended to register from this file.",
+      "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ]
 }

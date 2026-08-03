@@ -1,6 +1,5 @@
-// Surface indicators are prospecting rubble, not full ore blocks. Every collected
-// marker has a weak guaranteed furnace use; mineral samples can instead be milled for
-// a modest chance to enter the matching crushed-deposit processing chain.
+// Surface indicators are prospecting rubble, not full ore blocks. This retained
+// table is historical/tooling context only; no furnace or milling route registers.
 
 var BC_SURFACE_SAMPLE_PROCESSING = [
     { id: 'coal_measures', output: 'minecraft:coal', count: 1 },
@@ -29,21 +28,6 @@ var BC_SURFACE_SAMPLE_PROCESSING = [
 ]
 
 ServerEvents.recipes(function (event) {
-    for (var i = 0; i < BC_SURFACE_SAMPLE_PROCESSING.length; i++) {
-        var row = BC_SURFACE_SAMPLE_PROCESSING[i]
-        var input = row.id === 'oil_seep'
-            ? 'realisticores:oil_seep'
-            : 'realisticores:surface_sample_' + row.id
-        if (!row.noCrushed) {
-            event.custom({
-                type: 'create:milling',
-                ingredients: [{ item: input }],
-                processingTime: 100,
-                results: [
-                    { item: 'realisticores:crushed_' + row.id, chance: 0.25 },
-                    { item: 'minecraft:flint', chance: 0.10 }
-                ]
-            }).id('kubejs:create/milling/surface_samples/' + row.id)
-        }
-    }
+    // Retired create:milling and kubejs:create/milling/surface_samples/* markers:
+    // no surface-sample recipe registers pending bounded prospecting-feed yields.
 })

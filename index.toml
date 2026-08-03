@@ -9306,7 +9306,7 @@ hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/recipe_authority_manifest.json"
-hash = "fc95b7a9d8ecd9694e142e385640c0bbaa3fe683c6ab0446b0fdba8906bf0238"
+hash = "fef08fde4552c7e71d1d492a50903465cdc9be36e09d4e60a76bc17d25b759d6"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
@@ -10866,7 +10866,7 @@ hash = "438a3f93201c8f2125dd014464b6214d853d11dd3d0db1af325a6391d4958d4f"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/51_surface_sample_processing.js"
-hash = "666a65f7b21550898c177626fbd105da22128aa745a8f78efd705a7f6aac6d7b"
+hash = "ec73e87f64d27c05818ac539a0ad220421d91c230d270261ef5213ecf7633b86"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/52_realistic_ores_excavated_host_cycles.js"

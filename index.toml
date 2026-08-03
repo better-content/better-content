@@ -9294,7 +9294,7 @@ hash = "aa35273fec61c1befe5be6ffea05e6ad26ade94e0c32f29fc9e7f2c36f8a28e6"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/form_roles.json"
-hash = "cf0f42bc512aa37c4f1f8a3d8cc52a920015f9faf6509576d5731e148d4821fc"
+hash = "b0884dbe81b9c42cdbaf991433f9c1240a4c5c13cc5aac3762455cc737273e06"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/isotope_policy.json"
@@ -9334,7 +9334,7 @@ hash = "9842084f3f18b53e5848014781fcb996aad39fd2fcd8fdbe72cf492075e3af74"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/species.json"
-hash = "6bc049ad6eede2dee046a6624cfc5449be12e9f4702eb810a99da8e4f35266fc"
+hash = "bab4f19eedc2af7930afc9fbeee56d4574c685d0d084813f0fba300331d06360"
 
 [[files]]
 file = "kubejs/config/chemlib_form_policy.json"

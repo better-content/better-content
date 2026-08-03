@@ -87,5 +87,26 @@
       "runtime_evidence": "pending_fresh_runtime_recapture"
     }
   ],
+  "rejected_recipe_families": [
+    {
+      "family": "chemlib_full_generated_source_routes",
+      "retained_snapshot_id": "0b0a7bbfd02bbfbb47dd6adf",
+      "retained_recipe_id_pattern": "^kubejs:chemlib_full/.*/source/.*$",
+      "retained_recipe_count": 167,
+      "retained_recipe_breakdown": {
+        "blood_manual_element_sources": 75,
+        "create_mixing_element_sources": 75,
+        "pncr_thermo_gas_element_sources": 11,
+        "create_mixing_molecule_sources": 6
+      },
+      "sorted_recipe_ids_sha256": "5067e9b452b3eabcc8611777712bbabff6a5738c6c5b7bc637a785302c663a4b",
+      "disposition": "removed_blanket_source_family",
+      "source_specificity_finding": "Rejected: each periodic group reused one generic deposit selector for every member, so the input composition did not justify the selected element; the molecule subset likewise lacked accepted fixed-packet source contracts.",
+      "magic_provenance_finding": "Rejected: LP and slate costs did not declare an identity-changing provenance transform or material-specific residue, including for radioactive species.",
+      "fixed_mass_finding": "Rejected: probabilistic Create yields, multi-item Blood outputs, and item-to-gas volume conversion had no shared fixed-mass basis or complete residue accounting.",
+      "industrial_authority_finding": "Rejected: Create and Blood Magic directly formed finished elemental metals reserved to TConstruct metallurgy.",
+      "runtime_evidence": "pending_fresh_runtime_recapture_and_gas_behavior_oracle"
+    }
+  ],
   "reactions": []
 }

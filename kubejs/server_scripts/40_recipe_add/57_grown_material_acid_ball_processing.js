@@ -32,7 +32,8 @@ var BC_GROW_DISABLED_SOLVENTS = {
     acetic: true,
     sulfuric: true,
     hydrochloric: true,
-    nitric: true
+    nitric: true,
+    phosphoric: true
 }
 
 function bcGrowExists(id) {

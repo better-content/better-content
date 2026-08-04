@@ -5301,6 +5301,10 @@ file = "config/bcfixes-common.toml"
 hash = "22c65f2c1cf9a92c0663d30041fd2470a3e34a78385de9ea8a09eed9ebd0ed8b"
 
 [[files]]
+file = "config/bcfixes-prestige-biomes.txt"
+hash = "d13936253ac9a9ce7f02c6c7211e8c92f82e368f04301fbef52cf852b06c4afb"
+
+[[files]]
 file = "config/bettercombat/client.json5"
 hash = "744d7a62f2b493bc45feb87a6a09a5ca1663d4439999dc07b05278e353b35fcb"
 
@@ -11094,7 +11098,7 @@ hash = "a7327d4d5e251c864f25346e598d5721ad4dd98c18f4d14f6991a3e46b6fda39"
 
 [[files]]
 file = "mods/bcfixes-0.1.0.jar"
-hash = "43fa5fc16d2aca3d319aa87e1a44c4ba59a44d6bbc0b1c5b4db565d886e57bd5"
+hash = "ca31a71715d21494abbbf0f8622712999ea9e921e219844076b458a23ef58368"
 
 [[files]]
 file = "mods/bcrecipegraph-0.1.0.jar"
@@ -12198,7 +12202,7 @@ hash = "2f6ad32e090a7481a9fcdf9dc3bbd720efffa5dcada8efb1ad3f9f05c73c9d77"
 
 [[files]]
 file = "prestige-server.sh"
-hash = "04a42f817ffec6850ae9d9b690d5f7595d8438e46512103f3efb9b00ed08fbef"
+hash = "0738b5157621a4b79f7af8da796bd4c4dc18ab464ab1e7cfcd0b1b82dfa19f46"
 
 [[files]]
 file = "quests/graph.yml"

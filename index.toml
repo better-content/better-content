@@ -11094,7 +11094,7 @@ hash = "a7327d4d5e251c864f25346e598d5721ad4dd98c18f4d14f6991a3e46b6fda39"
 
 [[files]]
 file = "mods/bcfixes-0.1.0.jar"
-hash = "5b0609d5979c6f8249e19c0448470acfd19eae5de0a62f73756567c99f3a92b7"
+hash = "43fa5fc16d2aca3d319aa87e1a44c4ba59a44d6bbc0b1c5b4db565d886e57bd5"
 
 [[files]]
 file = "mods/bcrecipegraph-0.1.0.jar"
@@ -12195,6 +12195,10 @@ metafile = true
 [[files]]
 file = "options.txt"
 hash = "2f6ad32e090a7481a9fcdf9dc3bbd720efffa5dcada8efb1ad3f9f05c73c9d77"
+
+[[files]]
+file = "prestige-server.sh"
+hash = "04a42f817ffec6850ae9d9b690d5f7595d8438e46512103f3efb9b00ed08fbef"
 
 [[files]]
 file = "quests/graph.yml"

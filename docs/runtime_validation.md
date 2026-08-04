@@ -31,6 +31,12 @@ Kotlin harness lifecycle tests synchronize on the per-run `lock.json`; incidenta
 
 The ordinary smoke proves lifecycle and client/server network compatibility only. Changed-scope dump capture additionally proves live recipe/registry declarations and rejected-route absence, but not machine execution, gas escape, hazards, provenance, container transfer, world occurrence, progression traversal, or visual quality.
 
+## Prestige dedicated-server lifecycle
+
+Server bundles include `prestige-server.sh` as the normal launch wrapper. The operator-only Forge flow is `prestige prototype stage <seed> <impact-profile>`, inspect with `status`, then `commit`; the wrapper alone consumes the committed request after Minecraft has finalized and released the save. Direct `run.sh` launch is a diagnostic bypass and never performs regeneration.
+
+On 2026-08-04 a disposable complete bundle verified the real lifecycle with seed `246813579` and impact profile `any`: the live Forge command stopped the original server, the wrapper archived the old canonical world, the successor reached `Done`, `bcfixes` published matching health, and lineage count advanced from zero to one only after the stability window. The wrapper fixture separately proves successor-console forwarding, compatibility with the canonical archive verifier, retained request/health evidence, and automatic old-world restoration after three wrong-seed health reports. This is dedicated-server evidence only; interruption recovery, singleplayer parity, exact biome selection, fresh-player assertions, and Create schematic sanitization remain open.
+
 ## Live recipe graph
 
 `tools/bc build dumps` starts one disposable dedicated server and invokes the

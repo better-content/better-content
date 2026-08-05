@@ -22,7 +22,7 @@ die() { printf 'prestige supervisor failed: %s\n' "$*" >&2; exit 1; }
 for command in awk base64 cmp cut find flock mkfifo mv od sha256sum sort stat tr unzip xargs zip; do
   command -v "$command" >/dev/null 2>&1 || die "missing required command: $command"
 done
-[[ -x "$SCRIPT_DIR/run.sh" ]] || die "missing executable Forge launcher: $SCRIPT_DIR/run.sh"
+[[ -x "$SCRIPT_DIR/run-forge.sh" ]] || die "missing executable Forge launcher: $SCRIPT_DIR/run-forge.sh"
 [[ "$HEALTH_TIMEOUT_SECONDS" =~ ^[1-9][0-9]*$ ]] || die "PRESTIGE_HEALTH_TIMEOUT_SECONDS must be positive"
 [[ "$HEALTH_STABILITY_SECONDS" =~ ^[0-9]+$ ]] || die "PRESTIGE_HEALTH_STABILITY_SECONDS must be non-negative"
 
@@ -274,7 +274,7 @@ run_successor_attempt() {
   printf 'prestige supervisor: launching successor attempt %s/3 seed=%s biome=%s\n' "$attempt" "$seed" "$REQUEST_BIOME"
   local fifo="$CONTROL_DIR/successor-console-$REQUEST_TRANSACTION-$attempt.fifo"
   rm -f -- "$fifo"; mkfifo -m 600 -- "$fifo"; exec 8<>"$fifo"; rm -f -- "$fifo"
-  "$SCRIPT_DIR/run.sh" "$@" <&8 9>&- & SUCCESSOR_PID=$!
+  "$SCRIPT_DIR/run-forge.sh" "$@" <&8 9>&- & SUCCESSOR_PID=$!
   printf '%s\n' "$SUCCESSOR_PID" > "$TRANSACTION_ROOT/successor.pid"
   cat <&0 >&8 & CONSOLE_RELAY_PID=$!
   local deadline=$((SECONDS+HEALTH_TIMEOUT_SECONDS))
@@ -308,7 +308,7 @@ finalize_success() {
 
 ensure_lineage
 if [[ ! -e "$RESET_FILE" ]]; then
-  set +e; "$SCRIPT_DIR/run.sh" "$@"; INITIAL_EXIT=$?; set -e
+  set +e; "$SCRIPT_DIR/run-forge.sh" "$@"; INITIAL_EXIT=$?; set -e
   [[ -e "$RESET_FILE" ]] || exit "$INITIAL_EXIT"
 fi
 parse_reset
@@ -337,7 +337,7 @@ FINAL_ARCHIVE="$ARCHIVE_DIR/${LINEAGE_ID}-p$(printf '%06d' "$TARGET_TOTAL")-${RE
 if [[ "$CURRENT_PHASE" == lineage-committed ]]; then
   rm -f -- "$RESET_FILE" "$SUCCESSOR_FILE" "$HEALTH_FILE" "$SHUTDOWN_FILE" "$STAGED_FILE" "$DRAFT_FILE"
   [[ -d "$ACTIVE_WORLD" ]] || die "committed lineage lacks canonical successor world"
-  exec "$SCRIPT_DIR/run.sh" "$@"
+  exec "$SCRIPT_DIR/run-forge.sh" "$@"
 fi
 
 if [[ "$CURRENT_PHASE" == health-verified ]]; then
@@ -350,7 +350,7 @@ if [[ "$CURRENT_PHASE" == health-verified ]]; then
     stop_failed_server "$SUCCESSOR_PID"
   fi
   rm -f -- "$SHUTDOWN_FILE"
-  exec "$SCRIPT_DIR/run.sh" "$@"
+  exec "$SCRIPT_DIR/run-forge.sh" "$@"
 fi
 
 if [[ ! -d "$ARCHIVE_INPUT/world" ]]; then
@@ -391,4 +391,4 @@ mv -T -- "$ARCHIVE_INPUT/world" "$ACTIVE_WORLD"
 rm -f -- "$RESET_FILE" "$SUCCESSOR_FILE" "$HEALTH_FILE" "$SHUTDOWN_FILE" "$STAGED_FILE" "$DRAFT_FILE"
 write_phase rolled-back
 printf 'prestige supervisor: restored old world after three failed successor attempts\n' >&2
-exec "$SCRIPT_DIR/run.sh" "$@"
+exec "$SCRIPT_DIR/run-forge.sh" "$@"

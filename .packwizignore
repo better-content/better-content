@@ -22,6 +22,7 @@ logs
 /pca.sh
 /run.bat
 /run.sh
+/run-forge.sh
 server-instance
 server-template
 /tools/

@@ -12202,7 +12202,7 @@ hash = "2f6ad32e090a7481a9fcdf9dc3bbd720efffa5dcada8efb1ad3f9f05c73c9d77"
 
 [[files]]
 file = "prestige-server.sh"
-hash = "0738b5157621a4b79f7af8da796bd4c4dc18ab464ab1e7cfcd0b1b82dfa19f46"
+hash = "ee4458318adbb780211f0b1b8d1c9199988a40474a720e0c1e9af5d157e6f185"
 
 [[files]]
 file = "quests/graph.yml"

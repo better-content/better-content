@@ -1,0 +1,94 @@
+{
+  "schema": "bc.mod_progression_gates.v1",
+  "review_status": "adjudicated",
+  "description": "Human decisions for anchor-first per-mod recipe control. Frequency nominates candidates; only reviewed native hierarchy anchors may change recipes.",
+  "candidate_policy": {
+    "base": 3,
+    "entries_per_increment": 100,
+    "rounding": "ceiling",
+    "exact_item_inputs_only": true,
+    "tag_membership_inflation_allowed": false
+  },
+  "gate_preference": [
+    "native_essential_ingredient",
+    "existing_integrating_mod_ingredient",
+    "machine_access_control"
+  ],
+  "new_gate_materials_allowed": false,
+  "decision_groups": [
+    {
+      "group_id": "open_survival",
+      "families": ["adchimneys", "additionalweaponry", "artifacts", "brewinandchewin", "burnt", "cold_sweat", "compressedcreativity", "eanimod", "everythingcopper", "farmersdelight", "farmersrespite", "framedblocks", "ftbquests", "immersive_weathering", "littlelogistics", "minecraft", "moreartifacts", "natures_spirit", "naturescompass", "procedural_bouquets", "projectvibrantjourneys", "quark", "realisticores", "savage_and_ravage", "sereneseasons", "starcatcher", "supplementaries", "tacz", "thalassophobia", "the_flesh_that_hates", "thirst", "tinker_rapier", "tinkers_things", "tinkersweaponry", "ubesdelight", "unearthed", "weather2"],
+      "decision": "not_progression_bearing",
+      "reason": "The family is intentionally available in survival; internal frequency does not justify a progression gate.",
+      "control_refs": []
+    },
+    {
+      "group_id": "dimension_access_controlled",
+      "families": ["aether", "deeperdarker", "fallout_wastelands_", "twilightforest", "undergarden"],
+      "decision": "already_controlled",
+      "reason": "The family is controlled at dimension access; ordinary internal terrain and palette ingredients must not become recipe gates.",
+      "control_refs": ["kubejs/server_scripts/30_recipe_replace/170_space_dimension_access_gates.js", "kubejs/server_scripts/30_recipe_replace/155_dimension_proof_graph_starts.js"]
+    },
+    {
+      "group_id": "native_machine_or_spine_controlled",
+      "families": ["ae2", "ars_nouveau", "bloodmagic", "buildinggadgets2", "create", "creatingspace", "heatsync", "k_turrets", "kubejs", "latent_chemlib", "malum", "morered", "oc2r", "occultism", "pneumaticcraft", "powergrid", "protection_pixel", "rehooked", "sophisticatedbackpacks", "sophisticatedstorage", "tconstruct", "tomeofblood", "trackwork", "vs_clockwork"],
+      "decision": "already_controlled",
+      "reason": "Existing native-machine, internal-component, casing, or magic-spine acquisition already controls this hierarchy candidate.",
+      "control_refs": ["kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js", "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js", "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js"]
+    },
+    {
+      "group_id": "decorative_or_world_material",
+      "families": ["createdeco", "forbidden_arcanus", "goety", "hexerei"],
+      "decision": "decorative_hub",
+      "reason": "The top-N surface is dominated by palette or ordinary world materials; frequency is not hierarchy authority.",
+      "control_refs": []
+    },
+    {
+      "group_id": "material_form_conversions",
+      "families": ["chemlib"],
+      "decision": "conversion_form",
+      "reason": "Elemental ingot frequency comes from material-form conversion and does not define an internal progression tier.",
+      "control_refs": []
+    },
+    {
+      "group_id": "open_subcomponents",
+      "families": ["createdieselgenerators", "hangglider", "irons_spellbooks"],
+      "decision": "not_progression_bearing",
+      "reason": "Common subcomponents may remain open; the completed capability is controlled separately.",
+      "control_refs": []
+    }
+  ],
+  "candidate_overrides": [
+    {"item": "ars_nouveau:archwood_planks", "decision": "decorative_hub", "reason": "Archwood palette use is not a magic tier.", "control_refs": []},
+    {"item": "ars_nouveau:green_archwood_log", "decision": "decorative_hub", "reason": "World-acquired archwood is not a crafted hierarchy anchor.", "control_refs": []},
+    {"item": "ars_nouveau:purple_archwood_log", "decision": "decorative_hub", "reason": "World-acquired archwood is not a crafted hierarchy anchor.", "control_refs": []},
+    {"item": "create:exposed_copper_shingles", "decision": "conversion_form", "reason": "Weathered copper palette conversion is not Create progression.", "control_refs": []},
+    {"item": "create:exposed_copper_tiles", "decision": "conversion_form", "reason": "Weathered copper palette conversion is not Create progression.", "control_refs": []},
+    {"item": "create:oxidized_copper_shingles", "decision": "conversion_form", "reason": "Weathered copper palette conversion is not Create progression.", "control_refs": []},
+    {"item": "goety:ectoplasm", "decision": "not_progression_bearing", "reason": "Ectoplasm is intentional encounter loot; authored altar and focus gates control Goety capability instead.", "control_refs": []},
+    {"item": "goety:cursed_ingot", "decision": "not_progression_bearing", "reason": "Cursed ingot may enter through archaeology while every consequential use remains behind authored altar or cross-magic proof.", "control_refs": []},
+    {"item": "hangglider:hang_glider", "decision": "already_controlled", "reason": "The completed glider carries the Aether-plus-brass proof while its subcomponents remain open.", "control_refs": ["kubejs/server_scripts/30_recipe_replace/156_vs_transport_progression.js"]},
+    {"item": "malum:runewood_planks", "decision": "decorative_hub", "reason": "Runewood palette use is not a Malum tier.", "control_refs": []},
+    {"item": "malum:small_tainted_rock_bricks", "decision": "decorative_hub", "reason": "Masonry conversion is not a Malum tier.", "control_refs": []},
+    {"item": "malum:small_twisted_rock_bricks", "decision": "decorative_hub", "reason": "Masonry conversion is not a Malum tier.", "control_refs": []},
+    {"item": "irons_spellbooks:upgrade_orb", "decision": "already_controlled", "reason": "Upgrade-orb loot is scrubbed and its consequential uses remain on the authored ink and dirty-magic progression.", "control_refs": ["kubejs/server_scripts/50_loot/30_global_loot_progression_scrub.js", "kubejs/server_scripts/30_recipe_replace/126_cross_magic_irons_spellcraft.js"]},
+    {"item": "sophisticatedbackpacks:backpack", "decision": "not_progression_bearing", "reason": "Basic carry is intentionally available early; automation upgrades, not the backpack shell, carry progression.", "control_refs": []},
+    {"item": "sophisticatedstorage:chest", "decision": "not_progression_bearing", "reason": "Basic local storage is intentionally open and does not represent storage automation progression.", "control_refs": []},
+    {"item": "sophisticatedstorage:barrel", "decision": "not_progression_bearing", "reason": "Basic local storage is intentionally open and does not represent storage automation progression.", "control_refs": []},
+    {"item": "sophisticatedstorage:copper_chest", "decision": "not_progression_bearing", "reason": "Ordinary capacity conversion is not the controller or automation hierarchy.", "control_refs": []},
+    {"item": "sophisticatedstorage:gold_chest", "decision": "not_progression_bearing", "reason": "Ordinary capacity conversion is not the controller or automation hierarchy.", "control_refs": []},
+    {"item": "tconstruct:bloodshroom_planks", "decision": "decorative_hub", "reason": "Slimewood palette use is not metallurgy progression.", "control_refs": []},
+    {"item": "tconstruct:enderbark_planks", "decision": "decorative_hub", "reason": "Slimewood palette use is not metallurgy progression.", "control_refs": []},
+    {"item": "tconstruct:greenheart_planks", "decision": "decorative_hub", "reason": "Slimewood palette use is not metallurgy progression.", "control_refs": []},
+    {"item": "tconstruct:skyroot_planks", "decision": "decorative_hub", "reason": "Slimewood palette use is not metallurgy progression.", "control_refs": []},
+    {"item": "tconstruct:clear_glass_pane", "decision": "conversion_form", "reason": "Pane conversion is downstream of smeltery glass and is not an anchor.", "control_refs": []}
+  ],
+  "family_dispositions": [
+    {
+      "families": ["adpother", "amendments", "arcane_chunkloaders", "bcfixes", "dynamictrees", "excavated_variants", "fiahi", "fowlplay", "ftbfiltersystem", "irons_lib", "jumbofurnace", "oc2rwireless", "patchouli", "solcarrot", "tinkers_advanced", "tinkers_battle_spades", "tinkers_katanas", "tradingpost", "vs_eureka", "wares"],
+      "decision": "no_internal_hierarchy",
+      "reason": "No exact same-mod ingredient appears in the top-N input surface; control remains at the owning machine, parent mod, dimension, or explicit capability boundary."
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "spine_post_ae2"
+	group: "61DE599F7F2FAFBD"
+	icon: "kubejs:impossible_machine_casing"
+	id: "CAC9256DFD352356"
+	order_index: 70
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Finish the Impossible Machine Casing after local AE2 intelligence and final Blood proof are stable. Everything beyond this point is an explicit dangerous branch."]
+			icon: "kubejs:impossible_machine_casing"
+			id: "126660FA4D3AFC66"
+			shape: "diamond"
+			size: 1.2d
+			tasks: [			{
+				item: "kubejs:impossible_machine_casing"
+				id: "1D8C3647D37A2419"
+				type: "item"
+			}]
+			title: "Cross The Impossible Tier"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["126660FA4D3AFC66"]
+			description: ["Find an osmiridium surface signal, then prepare a lava expedition below Y zero. The exposed sulfide scatter exists only beside lava and must be brought back alive."]
+			icon: "realisticores:surface_sample_osmiridium_lava_sulfide_ore"
+			id: "FB35E17C4214D970"
+			shape: "rsquare"
+			tasks: [			{
+				item: "realisticores:surface_sample_osmiridium_lava_sulfide_ore"
+				id: "BD4D05D18F9922C5"
+				type: "item"
+			}]
+			title: "Survey Lava-Depth Osmiridium"
+			x: 6.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["126660FA4D3AFC66"]
+			description: ["Craft the Novice Tome of Blood through both late science and late magic. AE2 processors and sealed assembly form the body; Blood and Ars stabilize its use."]
+			icon: "tomeofblood:novice_tome_of_blood"
+			id: "A8D0847B39A25095"
+			shape: "rsquare"
+			tasks: [			{
+				item: "tomeofblood:novice_tome_of_blood"
+				id: "EA18A23902D31B00"
+				type: "item"
+			}]
+			title: "Stabilize The Tome Of Blood"
+			x: 6.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["FB35E17C4214D970"]
+			description: ["Recover osmiridium lava-sulfide ore from a lava-contact vein. This dangerous geology is the material pressure point for Tosaki protection and selected late utility."]
+			icon: "realisticores:osmiridium_lava_sulfide_ore"
+			id: "AEF52D37178A955F"
+			shape: "rsquare"
+			tasks: [			{
+				item: "realisticores:osmiridium_lava_sulfide_ore"
+				id: "434DF91268EF36DF"
+				type: "item"
+			}]
+			title: "Recover The Lava Sulfide"
+			x: 12.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["A8D0847B39A25095"]
+			description: ["Build one Arcane Chunk Anchor using proof from a magic tradition, then choose the power economy you actually maintain. Every variant loads the same centered region."]
+			icon: "arcane_chunkloaders:flux_chunk_anchor"
+			id: "30C4EB7D62B9EC29"
+			shape: "rsquare"
+			tasks: [			{
+				item: "arcane_chunkloaders:flux_chunk_anchor"
+				id: "35D1696C7CEAC207"
+				type: "item"
+			}]
+			title: "Fund A Chunk Anchor"
+			x: 12.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["AEF52D37178A955F"]
+			description: ["Craft the Tosaki chestplate from recovered late matter. Treat the suit as expedition equipment for hostile depths, not as a substitute for route and rescue planning."]
+			icon: "protection_pixel:tosaki_chestplate"
+			id: "0CDB28980B28B9C6"
+			shape: "rsquare"
+			tasks: [			{
+				item: "protection_pixel:tosaki_chestplate"
+				id: "14839A7BD936313A"
+				type: "item"
+			}]
+			title: "Build Tosaki Protection"
+			x: 18.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["0CDB28980B28B9C6", "30C4EB7D62B9EC29"]
+			description: ["Keep local intelligence, hostile-material expeditions, hybrid magic, and powered chunk service running together. The capstone is maintained capability, not one crafted trophy."]
+			icon: "ae2:engineering_processor"
+			id: "4F840BA6BA61DBF3"
+			shape: "octagon"
+			size: 1.2d
+			tasks: [			{
+				title: "Sustain both late science and late magic branches"
+				id: "32B94C38B51113CA"
+				type: "checkmark"
+			}]
+			title: "Maintain Dangerous Systems"
+			x: 24.0d
+			y: 0.0d
+		}
+
+	]
+	title: "Post-AE2 — Dangerous Matter"
+}

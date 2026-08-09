@@ -1,0 +1,170 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "spine_tech_metallurgy"
+	group: "61DE599F7F2FAFBD"
+	icon: "tconstruct:seared_melter"
+	id: "17EA5AFA794175FF"
+	order_index: 10
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Build the Part Builder and learn handles, bindings, and tool parts before metal machines enter the workshop. This is the pack's first manufacturing language."]
+			icon: "tconstruct:part_builder"
+			id: "D299D2001BB42BDE"
+			shape: "diamond"
+			tasks: [			{
+				item: "tconstruct:part_builder"
+				id: "26B2BD4D6EF1A2F3"
+				type: "item"
+			}]
+			title: "Shape Real Parts"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["D299D2001BB42BDE"]
+			description: ["Build a Seared Melter and casting table. Copper parts must be poured from molten metal, so this is a capability rather than another crafting-grid tier."]
+			icon: "tconstruct:seared_melter"
+			id: "721A1ED5B0EFF052"
+			shape: "rsquare"
+			tasks: [			{
+				item: "tconstruct:seared_melter"
+				id: "B1EECD313DE859A4"
+				type: "item"
+			}]
+			title: "Control The First Melt"
+			x: 5.2d
+			y: 0.0d
+		}
+		{
+			dependencies: ["721A1ED5B0EFF052"]
+			description: ["Expand into a real Smeltery for alloying, larger batches, and auditable ore yields. Leave room for drains, tanks, and casting stations you can operate repeatedly."]
+			icon: "tconstruct:smeltery_controller"
+			id: "A2DCAC4A58CD31B0"
+			shape: "rsquare"
+			tasks: [			{
+				item: "tconstruct:smeltery_controller"
+				id: "5404A06B62228D77"
+				type: "item"
+			}]
+			title: "Build The Smeltery"
+			x: 10.4d
+			y: 0.0d
+		}
+		{
+			dependencies: ["A2DCAC4A58CD31B0"]
+			description: ["Produce Scorched Bricks to prove the hotter Foundry route. This heat authority feeds the first true machine casing and later brass-scale manufacturing."]
+			icon: "tconstruct:scorched_bricks"
+			id: "D07830CF56C9C3F8"
+			shape: "rsquare"
+			tasks: [			{
+				item: "tconstruct:scorched_bricks"
+				id: "F2A442441E97E94E"
+				type: "item"
+			}]
+			title: "Prove Foundry Heat"
+			x: 15.6d
+			y: 0.0d
+		}
+		{
+			dependencies: ["D07830CF56C9C3F8"]
+			description: ["Cast Andesite Alloy on the TConstruct surface. Solid Create mixing and nugget shortcuts are absent, so the alloy carries the metallurgy proof into motion."]
+			icon: "create:andesite_alloy"
+			id: "B46F423F34383638"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:andesite_alloy"
+				id: "EFC0F2BB8329B0F4"
+				type: "item"
+			}]
+			title: "Cast Andesite Alloy"
+			x: 20.8d
+			y: 0.0d
+		}
+		{
+			dependencies: ["B46F423F34383638"]
+			description: ["Build the Hand Crank and use it to run the first press and basin. It is the only hand-built positive-SU source, so spend its small stress budget deliberately."]
+			icon: "create:hand_crank"
+			id: "058B0825607F2F60"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:hand_crank"
+				id: "5B43C240463EC4A7"
+				type: "item"
+			}]
+			title: "Run A Manual Workshop"
+			x: 26.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["058B0825607F2F60"]
+			description: ["Compact the first Deployer with the hand-cranked press and basin. This cycle break unlocks ordinary Create casing, sequenced machine bodies, and governed power."]
+			icon: "create:deployer"
+			id: "11BC42AAE3810EDF"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:deployer"
+				id: "00DD8C83DCAF792A"
+				type: "item"
+			}]
+			title: "Earn The Deployer"
+			x: 31.2d
+			y: 0.0d
+		}
+		{
+			dependencies: ["11BC42AAE3810EDF"]
+			description: ["Sequence an Andesite Machine Casing after the Deployer is real. Presses, mixers, fans, drills, saws, and the first governed power network now become sustainable."]
+			icon: "kubejs:andesite_machine_casing"
+			id: "9835E3A1AC899F8E"
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [			{
+				item: "kubejs:andesite_machine_casing"
+				id: "9FE1578E7D3AEF63"
+				type: "item"
+			}]
+			title: "Assemble Andesite Machines"
+			x: 36.4d
+			y: 0.0d
+		}
+		{
+			dependencies: ["9835E3A1AC899F8E"]
+			description: ["Build the Brass Machine Casing through alloying, pressing, and controlled assembly. Brass shifts the workshop from bulk movement toward selection, sensing, and routing."]
+			icon: "kubejs:brass_machine_casing"
+			id: "8B59E71D62ED576A"
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [			{
+				item: "kubejs:brass_machine_casing"
+				id: "24758AE39043ECA8"
+				type: "item"
+			}]
+			title: "Control Brass Logistics"
+			x: 41.6d
+			y: 0.0d
+		}
+		{
+			dependencies: ["8B59E71D62ED576A"]
+			description: ["Make Precision Mechanisms and Railway Casing, then use trains and physical routes before digital storage erases local logistics. Distance should remain a real planning cost."]
+			icon: "create:railway_casing"
+			id: "853BB41B178180AB"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:precision_mechanism"
+				id: "A364AABC6E41EFC5"
+				type: "item"
+			}
+			{
+				item: "create:railway_casing"
+				id: "15BEAEF649AE67E0"
+				type: "item"
+			}]
+			title: "Connect The Railway Era"
+			x: 46.8d
+			y: 0.0d
+		}
+
+	]
+	title: "Tech Spine — Metal Into Motion"
+}

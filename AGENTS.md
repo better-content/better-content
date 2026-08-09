@@ -61,6 +61,7 @@ Do not sync or delete player/runtime state by default. The tracked repo-root `op
 - Graph adjacency query: `tools/bc graph item ITEM_ID [--producers|--consumers|--all] [--limit N] [--type RECIPE_TYPE] [--graph PATH]`
 - Graph route query: `tools/bc graph route ITEM_ID [--graph PATH] [--sources PATH] [--spine PATH]`
 - Graph blocker query: `tools/bc graph blockers ITEM_ID [--graph PATH] [--sources PATH] [--spine PATH] [--limit N]`
+- Agent-facing quest authoring: edit `quests/graph.yml`, then run `tools/bc quests export`; validate with `tools/bc quests check`
 - Server sync dry run: `tools/bc build sync server --dir server-instance --dry-run`
 - Server sync apply: `tools/bc build sync server --dir server-instance --apply`
 - Client sync dry run: `tools/bc build sync client --dir /path/to/client --dry-run`

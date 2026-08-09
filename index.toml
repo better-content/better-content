@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "AGENTS.md"
-hash = "97abc2c6b9fb091aea1a307ea725627ad9e6cbc80611ae8d660abb5de9aada61"
+hash = "ccaa4e6c8696e351111eac883acaa067c58d1c84c526c5805510fac9c2e04a06"
 
 [[files]]
 file = "LICENSE"
@@ -5494,7 +5494,7 @@ hash = "42611061a5f950cfd9c17a7c9eafbc5512c2593ff518517fa9830e08c9d0d141"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
-hash = "7315f25fcbfd216e7c5693579f859c1e31e5abfca6c95577fabfc05b3de0223c"
+hash = "8559c0d613a00034ca809152f9af17f14e9e76a90265146b3a509d002a36fe81"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/better_tools.snbt"
@@ -5579,6 +5579,34 @@ hash = "5a1f1956321dcc987aeef676d436bff40628a7db8e5791d56aae75bc048a1b32"
 [[files]]
 file = "config/ftbquests/quests/chapters/space_ae2_lava_depths.snbt"
 hash = "21fe74375cd609f4bfafaa02f553960dc6fddd8baa4452f3253f04655dc25d5b"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/spine_adventure_economy.snbt"
+hash = "db80b52b536091005852a3298608878a42c362362da75e29ca5691bc205da4d9"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/spine_blood_command.snbt"
+hash = "910274fe519e49c876929cb3a602b64098a0366ec4154c6b4f2b92f3765a1581"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/spine_fonts_occultism.snbt"
+hash = "99ff23b7032e6312d0a7d6ac3f331d60318a61fd4603d07ec04c691a0470b99c"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/spine_formal_magic.snbt"
+hash = "f53b87b2479eb9baaed5c40404023c388db085c906576ffa696bdb22ee407bb2"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/spine_post_ae2.snbt"
+hash = "cb41d1459101ae4f1193824dbea448d58cb1f54599cad0ba9c98763f1ebc4530"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/spine_pressure_control.snbt"
+hash = "5626cf453ba7c1c0076eb6c31569fde4c903e1354d490ffc4e9247307be8bee6"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/spine_tech_metallurgy.snbt"
+hash = "97845e90690992625e451b95fb32b9999ddf32d288904ad44da1d22c98a2d63a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/the_situation.snbt"
@@ -12235,7 +12263,7 @@ hash = "bc3166e2e04937e6671ced207dab15fc9b6aa0236c62cc807d1b99c5a3a7841c"
 
 [[files]]
 file = "quests/graph.yml"
-hash = "3790b846b1ae291485e70e86773ca3bebf69aa63b01be23727d3cb28be99d0fc"
+hash = "8ef1e9b32c86e1e5e1bacf3dc115749e9069123605c54c9e8d4d32759dd7263a"
 
 [[files]]
 file = "recipe-policies.yml"

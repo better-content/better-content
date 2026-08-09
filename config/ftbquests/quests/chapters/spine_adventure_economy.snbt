@@ -1,0 +1,178 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "spine_adventure_economy"
+	group: "61DE599F7F2FAFBD"
+	icon: "createdeco:copper_coin"
+	id: "184620DE314A2002"
+	order_index: 60
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Mark roads, stage food and clean water, and reserve a return slot before leaving the fixed spawn. Adventure pressure is a logistics problem before it is a combat statistic."]
+			icon: "minecraft:compass"
+			id: "197291772F9B2479"
+			shape: "diamond"
+			tasks: [			{
+				title: "Mark a route and stage a recovery cache"
+				id: "F44DB64BFDFFFCA5"
+				type: "checkmark"
+			}]
+			title: "Plan The Way Home"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["197291772F9B2479"]
+			description: ["Build sightlines, walls, patrol routes, and fallback positions before a pillager warband arrives. Surface safety should come from settlement design rather than waiting for daylight."]
+			icon: "minecraft:white_banner"
+			id: "ED7354BC4C68F8EF"
+			shape: "rsquare"
+			tasks: [			{
+				title: "Build warning lines and a fallback route"
+				id: "1E0909C723DF030C"
+				type: "checkmark"
+			}]
+			title: "Harden The Settlement"
+			x: 6.4d
+			y: -9.0d
+		}
+		{
+			dependencies: ["197291772F9B2479"]
+			description: ["Reach the Nether with enough supplies to bring netherrack and heat proof home. This route supports grout and metallurgy rather than serving as a sightseeing trip."]
+			icon: "minecraft:netherrack"
+			id: "75FD0C4219599FB8"
+			shape: "rsquare"
+			tasks: [			{
+				dimension: "minecraft:the_nether"
+				id: "D7BE0AC22204E571"
+				type: "dimension"
+			}]
+			title: "Nether Heat Route"
+			x: 6.4d
+			y: -6.0d
+		}
+		{
+			dependencies: ["197291772F9B2479"]
+			description: ["Reach the Aether and return with mobility proof for balloons, gliders, and controlled flight. Pack for vertical travel and a reliable way back down."]
+			icon: "aether:skyroot_log"
+			id: "E9E86416ACE5403F"
+			shape: "rsquare"
+			tasks: [			{
+				dimension: "aether:the_aether"
+				id: "6C00359DC3265E88"
+				type: "dimension"
+			}]
+			title: "Aether Mobility Route"
+			x: 6.4d
+			y: -3.0d
+		}
+		{
+			dependencies: ["197291772F9B2479"]
+			description: ["Reach the Undergarden with room for food, forage, and body-system materials. Treat its pantry value as expedition support rather than a free resource bypass."]
+			icon: "undergarden:depthrock"
+			id: "352FF9B1BBB0A925"
+			shape: "rsquare"
+			tasks: [			{
+				dimension: "undergarden:undergarden"
+				id: "F41E9E7E6DFC4122"
+				type: "dimension"
+			}]
+			title: "Undergarden Pantry Route"
+			x: 6.4d
+			y: 0.0d
+		}
+		{
+			dependencies: ["197291772F9B2479"]
+			description: ["Reach the Otherside and return with common raw magic matter. Sculk, echo, soul, and resonance feed Blood-refined traditions instead of forming a separate workstation spine."]
+			icon: "deeperdarker:cobbled_sculk_stone"
+			id: "1FF79D76C1F18DD8"
+			shape: "rsquare"
+			tasks: [			{
+				dimension: "deeperdarker:otherside"
+				id: "63BB5EE66E19E49D"
+				type: "dimension"
+			}]
+			title: "Otherside Matter Route"
+			x: 6.4d
+			y: 3.0d
+		}
+		{
+			dependencies: ["197291772F9B2479"]
+			description: ["Reach Earth orbit only after fuel, oxygen, recovery, and return logistics are staged. A successful launch is incomplete until the expedition can come home intact."]
+			icon: "creatingspace:flight_recorder"
+			id: "AD4E30D82FC71589"
+			shape: "rsquare"
+			tasks: [			{
+				dimension: "creatingspace:earth_orbit"
+				id: "EE0A3F2C5DC89FF5"
+				type: "dimension"
+			}]
+			title: "Orbit Supply Route"
+			x: 6.4d
+			y: 6.0d
+		}
+		{
+			dependencies: ["197291772F9B2479"]
+			description: ["Connect a village or settlement to your physical routes. Specialist trades should relieve expedition friction while machine, casing, and magic gates remain yours to solve."]
+			icon: "minecraft:bell"
+			id: "11858C7F6C7720B4"
+			shape: "rsquare"
+			tasks: [			{
+				title: "Connect a settlement to a maintained route"
+				id: "BC134FAFFCD196F5"
+				type: "checkmark"
+			}]
+			title: "Build A Recovery Market"
+			x: 6.4d
+			y: 9.0d
+		}
+		{
+			dependencies: ["ED7354BC4C68F8EF"]
+			description: ["Defeat a campaign push and recover its coin rewards, or accept the easing path after a loss. Each warband adapts to outcomes instead of scaling from global time."]
+			icon: "minecraft:crossbow"
+			id: "56286CE0BBF1D1DC"
+			shape: "rsquare"
+			tasks: [			{
+				title: "Defeat or recover from a campaign push"
+				id: "66BE8206DD5A35C7"
+				type: "checkmark"
+			}]
+			title: "Survive Adaptive Pressure"
+			x: 12.8d
+			y: -9.0d
+		}
+		{
+			dependencies: ["11858C7F6C7720B4"]
+			description: ["Earn Copper Coins through routes, quests, combat pressure, and useful work. Coin conversion loses value deliberately, so access and recovery matter more than arbitrage."]
+			icon: "createdeco:copper_coin"
+			id: "A53643CC3D672386"
+			shape: "rsquare"
+			tasks: [			{
+				item: "createdeco:copper_coin"
+				id: "6AD6BCA8BBFC4523"
+				type: "item"
+			}]
+			title: "Earn Recovery Currency"
+			x: 12.8d
+			y: 9.0d
+		}
+		{
+			dependencies: ["A53643CC3D672386"]
+			description: ["Obtain a Wares Delivery Agreement and use packages for route support or recovery. Packages must never replace factories, metallurgy, chemistry, or deep resource fields."]
+			icon: "wares:delivery_agreement"
+			id: "A9F5859FFEEFF4A9"
+			shape: "rsquare"
+			tasks: [			{
+				item: "wares:delivery_agreement"
+				id: "F57FE430C99757B9"
+				type: "item"
+			}]
+			title: "Contract For Expedition Support"
+			x: 19.2d
+			y: 9.0d
+		}
+
+	]
+	title: "Adventure Spine — Routes And Recovery"
+}

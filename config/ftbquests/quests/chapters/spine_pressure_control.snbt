@@ -1,0 +1,177 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "spine_pressure_control"
+	group: "61DE599F7F2FAFBD"
+	icon: "pneumaticcraft:pressure_chamber_valve"
+	id: "77BB41FEB659E52C"
+	order_index: 20
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Wash carbon and sulfur and combine them with fermented ethanol to make a Pressure Seal. The seal is the chemistry bootstrap, not permission to store loose gas."]
+			icon: "kubejs:pressure_seal"
+			id: "BCD4EFE8E5190AF8"
+			shape: "diamond"
+			tasks: [			{
+				item: "kubejs:pressure_seal"
+				id: "A432C2E09CA4B45D"
+				type: "item"
+			}]
+			title: "Make A Pressure Seal"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["BCD4EFE8E5190AF8"]
+			description: ["Build the Airtight Machine Casing from brass machinery, pressure hardware, and seals. Only this tier makes deliberate gas capture and sealed processing legitimate."]
+			icon: "kubejs:airtight_machine_casing"
+			id: "6E321C8FF7056158"
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [			{
+				item: "kubejs:airtight_machine_casing"
+				id: "FFEC9F0DE30B53D9"
+				type: "item"
+			}]
+			title: "Seal The Machine Body"
+			x: 5.2d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6E321C8FF7056158"]
+			description: ["Build a Pressure Chamber with a working valve and safe pressure supply. It becomes the authority for sealed materials, compressed parts, and boundary assemblies."]
+			icon: "pneumaticcraft:pressure_chamber_valve"
+			id: "66C5DB283C12B670"
+			shape: "rsquare"
+			tasks: [			{
+				item: "pneumaticcraft:pressure_chamber_valve"
+				id: "0CD93BED10B8EC9C"
+				type: "item"
+			}]
+			title: "Work Under Pressure"
+			x: 10.4d
+			y: 0.0d
+		}
+		{
+			dependencies: ["66C5DB283C12B670"]
+			description: ["Finish Printed Circuit Boards with PneumaticCraft assembly. Earlier benches and chemistry may prepare traces and wafers, but completed circuits belong to this surface."]
+			icon: "pneumaticcraft:printed_circuit_board"
+			id: "A6CB2513CBA0D945"
+			shape: "rsquare"
+			tasks: [			{
+				item: "pneumaticcraft:printed_circuit_board"
+				id: "8FDFE32DDC04F60E"
+				type: "item"
+			}]
+			title: "Finish Printed Boards"
+			x: 15.6d
+			y: 0.0d
+		}
+		{
+			dependencies: ["A6CB2513CBA0D945"]
+			description: ["Assemble the Electrical Machine Casing from pressure, circuit, Power Grid, and OC2R proofs. This is the shared control tier rather than a generic era token."]
+			icon: "kubejs:electrical_machine_casing"
+			id: "B6546E45D2093AFB"
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [			{
+				item: "kubejs:electrical_machine_casing"
+				id: "56DD5FE0DA42CDDA"
+				type: "item"
+			}]
+			title: "Unite Power And Logic"
+			x: 20.8d
+			y: 0.0d
+		}
+		{
+			dependencies: ["B6546E45D2093AFB"]
+			description: ["Build a Power Grid battery and redstone relay. Treat electricity as measured infrastructure with storage and switching, not as invisible recipe tax."]
+			icon: "powergrid:battery"
+			id: "3A26B7BE6BF2D71F"
+			shape: "rsquare"
+			tasks: [			{
+				item: "powergrid:battery"
+				id: "CD3B3EB964CB534C"
+				type: "item"
+			}
+			{
+				item: "powergrid:redstone_relay"
+				id: "B3FC1D86DBF2A422"
+				type: "item"
+			}]
+			title: "Store Controlled Power"
+			x: 26.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3A26B7BE6BF2D71F"]
+			description: ["Build an OC2R computer after the circuit chain is stable. Use it for intersite information and coordination while trains and physical logistics still move matter."]
+			icon: "oc2r:computer"
+			id: "00FA05D93A3834DE"
+			shape: "rsquare"
+			tasks: [			{
+				item: "oc2r:computer"
+				id: "6FCBB973C606F104"
+				type: "item"
+			}]
+			title: "Bridge Distant Information"
+			x: 31.2d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00FA05D93A3834DE"]
+			description: ["Build the Space Machine Casing when oxygen, launch hardware, and long supply lines can be manufactured reliably. A rocket route needs a return plan, not one lucky launch."]
+			icon: "kubejs:space_machine_casing"
+			id: "BFA97293ADC65C6A"
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [			{
+				item: "kubejs:space_machine_casing"
+				id: "9984896A4FDC65D5"
+				type: "item"
+			}]
+			title: "Manufacture For Distance"
+			x: 36.4d
+			y: 0.0d
+		}
+		{
+			dependencies: ["BFA97293ADC65C6A"]
+			description: ["Build an AE2 Controller only after processors, pressure, and launch-scale logistics are solved. AE2 sharpens one site; it does not replace intersite transport."]
+			icon: "ae2:controller"
+			id: "9F53980A2B3C5E65"
+			shape: "rsquare"
+			tasks: [			{
+				item: "ae2:controller"
+				id: "67CFB5FDBABFAB56"
+				type: "item"
+			}]
+			title: "Introduce Local Intelligence"
+			x: 41.6d
+			y: 0.0d
+		}
+		{
+			dependencies: ["9F53980A2B3C5E65"]
+			description: ["Stabilize Raw Impossible Casing with AE2 processors and final Blood Magic proof. This closes the structural machine ladder and opens explicitly post-AE2 work."]
+			icon: "kubejs:impossible_machine_casing"
+			id: "FC1F01695F00ABD5"
+			shape: "octagon"
+			size: 1.2d
+			tasks: [			{
+				item: "kubejs:raw_impossible_casing"
+				id: "E4F4A8C523584131"
+				type: "item"
+			}
+			{
+				item: "kubejs:impossible_machine_casing"
+				id: "CCCE6F22CD099029"
+				type: "item"
+			}]
+			title: "Finish The Casing Ladder"
+			x: 46.8d
+			y: 0.0d
+		}
+
+	]
+	title: "Tech Spine — Pressure Into Control"
+}

@@ -4,112 +4,1562 @@ meta:
   minecraft: "1.20.1"
   quest_system: ftbquests
 
-chapters:
-  start:
-    title: Start
-    order: 10
-    icon: minecraft:grass_block
+groups:
+  guided_progression:
+    title: Guided Progression
 
-  automation:
-    title: Automation
+chapters:
+  tech_metallurgy:
+    title: Tech Spine — Metal Into Motion
+    order: 10
+    icon: tconstruct:seared_melter
+    group: guided_progression
+    filename: spine_tech_metallurgy
+    source_refs:
+      - docs/progression.md
+      - kubejs/config/tech_parenting.json
+
+  pressure_control:
+    title: Tech Spine — Pressure Into Control
+    order: 20
+    icon: pneumaticcraft:pressure_chamber_valve
+    group: guided_progression
+    filename: spine_pressure_control
+    source_refs:
+      - docs/progression.md
+      - kubejs/config/tech_parenting.json
+
+  fonts_occultism:
+    title: Magic Spine — Fonts Into Pacts
+    order: 30
+    icon: hexerei:mixing_cauldron
+    group: guided_progression
+    filename: spine_fonts_occultism
+    source_refs:
+      - docs/progression.md
+      - kubejs/config/magic_parenting.json
+
+  blood_command:
+    title: Magic Spine — Blood Into Command
     order: 40
-    icon: create:cogwheel
+    icon: bloodmagic:altar
+    group: guided_progression
+    filename: spine_blood_command
+    source_refs:
+      - docs/progression.md
+      - kubejs/config/magic_parenting.json
+
+  formal_magic:
+    title: Formal Magic — Grammar And Schools
+    order: 50
+    icon: ars_nouveau:novice_spell_book
+    group: guided_progression
+    filename: spine_formal_magic
+    source_refs:
+      - docs/progression.md
+      - kubejs/config/formal_magic_domains.json
+
+  adventure_economy:
+    title: Adventure Spine — Routes And Recovery
+    order: 60
+    icon: createdeco:copper_coin
+    group: guided_progression
+    filename: spine_adventure_economy
+    source_refs:
+      - docs/progression.md
+      - kubejs/config/economy_acquisition.json
 
   post_ae2:
-    title: Post-AE2 Reminders
-    order: 900
-    icon: ae2:controller
+    title: Post-AE2 — Dangerous Matter
+    order: 70
+    icon: kubejs:impossible_machine_casing
+    group: guided_progression
+    filename: spine_post_ae2
+    source_refs:
+      - docs/progression.md
+      - kubejs/config/tech_parenting.json
 
 nodes:
-  start_here:
+  tech_part_builder:
     type: quest
-    title: Start Here
-    chapter: start
-    icon: minecraft:book
+    title: Shape Real Parts
+    chapter: tech_metallurgy
+    icon: tconstruct:part_builder
     stage: early
     x: 0
     y: 0
+    shape: diamond
     body: |
-      Placeholder quest used to validate the quest graph pipeline.
+      Build the Part Builder and learn handles, bindings, and tool parts before metal machines enter the workshop. This is the pack's first manufacturing language.
     tasks:
       - type: item
-        item: minecraft:dirt
-        count: 1
-    rewards: []
+        item: tconstruct:part_builder
     tags:
-      - fixture
+      - tech_spine
+      - tconstruct
+    mods:
+      - tconstruct
 
-  automation_intro:
+  tech_seared_melter:
     type: quest
-    title: Automation Intro
-    chapter: automation
-    icon: create:cogwheel
-    stage: early
+    title: Control The First Melt
+    chapter: tech_metallurgy
+    icon: tconstruct:seared_melter
+    stage: seared
     requires:
-      - start_here
-    x: 2
+      - tech_part_builder
+    x: 5.2
     y: 0
     body: |
-      Placeholder quest used to validate dependencies and export.
+      Build a Seared Melter and casting table. Copper parts must be poured from molten metal, so this is a capability rather than another crafting-grid tier.
     tasks:
       - type: item
-        item: minecraft:cobblestone
-        count: 1
-    rewards: []
+        item: tconstruct:seared_melter
     tags:
-      - fixture
+      - tech_spine
+      - metallurgy
+    mods:
+      - tconstruct
 
-  ae2_orbit_ship_reminder:
+  tech_smeltery:
     type: quest
-    title: Ruined AE2 Ship In Orbit
-    chapter: post_ae2
+    title: Build The Smeltery
+    chapter: tech_metallurgy
+    icon: tconstruct:smeltery_controller
+    stage: seared
+    requires:
+      - tech_seared_melter
+    x: 10.4
+    y: 0
+    body: |
+      Expand into a real Smeltery for alloying, larger batches, and auditable ore yields. Leave room for drains, tanks, and casting stations you can operate repeatedly.
+    tasks:
+      - type: item
+        item: tconstruct:smeltery_controller
+    tags:
+      - tech_spine
+      - metallurgy
+    mods:
+      - tconstruct
+
+  tech_scorched:
+    type: quest
+    title: Prove Foundry Heat
+    chapter: tech_metallurgy
+    icon: tconstruct:scorched_bricks
+    stage: seared
+    requires:
+      - tech_smeltery
+    x: 15.6
+    y: 0
+    body: |
+      Produce Scorched Bricks to prove the hotter Foundry route. This heat authority feeds the first true machine casing and later brass-scale manufacturing.
+    tasks:
+      - type: item
+        item: tconstruct:scorched_bricks
+    tags:
+      - tech_spine
+      - foundry
+    mods:
+      - tconstruct
+
+  tech_andesite_alloy:
+    type: quest
+    title: Cast Andesite Alloy
+    chapter: tech_metallurgy
+    icon: create:andesite_alloy
+    stage: andesite
+    requires:
+      - tech_scorched
+    x: 20.8
+    y: 0
+    body: |
+      Cast Andesite Alloy on the TConstruct surface. Solid Create mixing and nugget shortcuts are absent, so the alloy carries the metallurgy proof into motion.
+    tasks:
+      - type: item
+        item: create:andesite_alloy
+    tags:
+      - tech_spine
+      - create
+    mods:
+      - create
+      - tconstruct
+
+  tech_hand_crank:
+    type: quest
+    title: Run A Manual Workshop
+    chapter: tech_metallurgy
+    icon: create:hand_crank
+    stage: andesite
+    requires:
+      - tech_andesite_alloy
+    x: 26
+    y: 0
+    body: |
+      Build the Hand Crank and use it to run the first press and basin. It is the only hand-built positive-SU source, so spend its small stress budget deliberately.
+    tasks:
+      - type: item
+        item: create:hand_crank
+    tags:
+      - tech_spine
+      - manual_power
+    mods:
+      - create
+
+  tech_deployer:
+    type: quest
+    title: Earn The Deployer
+    chapter: tech_metallurgy
+    icon: create:deployer
+    stage: andesite
+    requires:
+      - tech_hand_crank
+    x: 31.2
+    y: 0
+    body: |
+      Compact the first Deployer with the hand-cranked press and basin. This cycle break unlocks ordinary Create casing, sequenced machine bodies, and governed power.
+    tasks:
+      - type: item
+        item: create:deployer
+    tags:
+      - tech_spine
+      - automation
+    mods:
+      - create
+
+  tech_andesite_casing:
+    type: quest
+    title: Assemble Andesite Machines
+    chapter: tech_metallurgy
+    icon: kubejs:andesite_machine_casing
+    stage: andesite
+    requires:
+      - tech_deployer
+    x: 36.4
+    y: 0
+    shape: hexagon
+    size: 1.2
+    body: |
+      Sequence an Andesite Machine Casing after the Deployer is real. Presses, mixers, fans, drills, saws, and the first governed power network now become sustainable.
+    tasks:
+      - type: item
+        item: kubejs:andesite_machine_casing
+    tags:
+      - tech_spine
+      - machine_casing
+    mods:
+      - create
+      - kubejs
+
+  tech_brass_casing:
+    type: quest
+    title: Control Brass Logistics
+    chapter: tech_metallurgy
+    icon: kubejs:brass_machine_casing
+    stage: brass
+    requires:
+      - tech_andesite_casing
+    x: 41.6
+    y: 0
+    shape: hexagon
+    size: 1.2
+    body: |
+      Build the Brass Machine Casing through alloying, pressing, and controlled assembly. Brass shifts the workshop from bulk movement toward selection, sensing, and routing.
+    tasks:
+      - type: item
+        item: kubejs:brass_machine_casing
+    tags:
+      - tech_spine
+      - machine_casing
+    mods:
+      - create
+      - kubejs
+
+  tech_precision_railway:
+    type: quest
+    title: Connect The Railway Era
+    chapter: tech_metallurgy
+    icon: create:railway_casing
+    stage: brass
+    requires:
+      - tech_brass_casing
+    x: 46.8
+    y: 0
+    body: |
+      Make Precision Mechanisms and Railway Casing, then use trains and physical routes before digital storage erases local logistics. Distance should remain a real planning cost.
+    tasks:
+      - type: item
+        item: create:precision_mechanism
+      - type: item
+        item: create:railway_casing
+    tags:
+      - tech_spine
+      - logistics
+    mods:
+      - create
+
+  pressure_seal:
+    type: quest
+    title: Make A Pressure Seal
+    chapter: pressure_control
+    icon: kubejs:pressure_seal
+    stage: brass
+    x: 0
+    y: 0
+    shape: diamond
+    body: |
+      Wash carbon and sulfur and combine them with fermented ethanol to make a Pressure Seal. The seal is the chemistry bootstrap, not permission to store loose gas.
+    tasks:
+      - type: item
+        item: kubejs:pressure_seal
+    tags:
+      - tech_spine
+      - chemistry
+    mods:
+      - kubejs
+      - pneumaticcraft
+
+  pressure_airtight:
+    type: quest
+    title: Seal The Machine Body
+    chapter: pressure_control
+    icon: kubejs:airtight_machine_casing
+    stage: airtight
+    requires:
+      - pressure_seal
+    x: 5.2
+    y: 0
+    shape: hexagon
+    size: 1.2
+    body: |
+      Build the Airtight Machine Casing from brass machinery, pressure hardware, and seals. Only this tier makes deliberate gas capture and sealed processing legitimate.
+    tasks:
+      - type: item
+        item: kubejs:airtight_machine_casing
+    tags:
+      - tech_spine
+      - machine_casing
+    mods:
+      - kubejs
+      - pneumaticcraft
+
+  pressure_chamber:
+    type: quest
+    title: Work Under Pressure
+    chapter: pressure_control
+    icon: pneumaticcraft:pressure_chamber_valve
+    stage: airtight
+    requires:
+      - pressure_airtight
+    x: 10.4
+    y: 0
+    body: |
+      Build a Pressure Chamber with a working valve and safe pressure supply. It becomes the authority for sealed materials, compressed parts, and boundary assemblies.
+    tasks:
+      - type: item
+        item: pneumaticcraft:pressure_chamber_valve
+    tags:
+      - tech_spine
+      - pneumaticcraft
+    mods:
+      - pneumaticcraft
+
+  pressure_pcb:
+    type: quest
+    title: Finish Printed Boards
+    chapter: pressure_control
+    icon: pneumaticcraft:printed_circuit_board
+    stage: electrical
+    requires:
+      - pressure_chamber
+    x: 15.6
+    y: 0
+    body: |
+      Finish Printed Circuit Boards with PneumaticCraft assembly. Earlier benches and chemistry may prepare traces and wafers, but completed circuits belong to this surface.
+    tasks:
+      - type: item
+        item: pneumaticcraft:printed_circuit_board
+    tags:
+      - tech_spine
+      - circuits
+    mods:
+      - pneumaticcraft
+
+  pressure_electrical:
+    type: quest
+    title: Unite Power And Logic
+    chapter: pressure_control
+    icon: kubejs:electrical_machine_casing
+    stage: electrical
+    requires:
+      - pressure_pcb
+    x: 20.8
+    y: 0
+    shape: hexagon
+    size: 1.2
+    body: |
+      Assemble the Electrical Machine Casing from pressure, circuit, Power Grid, and OC2R proofs. This is the shared control tier rather than a generic era token.
+    tasks:
+      - type: item
+        item: kubejs:electrical_machine_casing
+    tags:
+      - tech_spine
+      - machine_casing
+    mods:
+      - kubejs
+      - powergrid
+      - oc2r
+
+  pressure_powergrid:
+    type: quest
+    title: Store Controlled Power
+    chapter: pressure_control
+    icon: powergrid:battery
+    stage: electrical
+    requires:
+      - pressure_electrical
+    x: 26
+    y: 0
+    body: |
+      Build a Power Grid battery and redstone relay. Treat electricity as measured infrastructure with storage and switching, not as invisible recipe tax.
+    tasks:
+      - type: item
+        item: powergrid:battery
+      - type: item
+        item: powergrid:redstone_relay
+    tags:
+      - tech_spine
+      - power_grid
+    mods:
+      - powergrid
+
+  pressure_oc2r:
+    type: quest
+    title: Bridge Distant Information
+    chapter: pressure_control
+    icon: oc2r:computer
+    stage: electrical
+    requires:
+      - pressure_powergrid
+    x: 31.2
+    y: 0
+    body: |
+      Build an OC2R computer after the circuit chain is stable. Use it for intersite information and coordination while trains and physical logistics still move matter.
+    tasks:
+      - type: item
+        item: oc2r:computer
+    tags:
+      - tech_spine
+      - intersite_information
+    mods:
+      - oc2r
+
+  pressure_space:
+    type: quest
+    title: Manufacture For Distance
+    chapter: pressure_control
+    icon: kubejs:space_machine_casing
+    stage: space
+    requires:
+      - pressure_oc2r
+    x: 36.4
+    y: 0
+    shape: hexagon
+    size: 1.2
+    body: |
+      Build the Space Machine Casing when oxygen, launch hardware, and long supply lines can be manufactured reliably. A rocket route needs a return plan, not one lucky launch.
+    tasks:
+      - type: item
+        item: kubejs:space_machine_casing
+    tags:
+      - tech_spine
+      - machine_casing
+    mods:
+      - creatingspace
+      - kubejs
+
+  pressure_ae2:
+    type: quest
+    title: Introduce Local Intelligence
+    chapter: pressure_control
     icon: ae2:controller
-    stage: post_ae2
+    stage: ae2
     requires:
-      - automation_intro
+      - pressure_space
+    x: 41.6
+    y: 0
+    body: |
+      Build an AE2 Controller only after processors, pressure, and launch-scale logistics are solved. AE2 sharpens one site; it does not replace intersite transport.
+    tasks:
+      - type: item
+        item: ae2:controller
+    tags:
+      - tech_spine
+      - local_intelligence
+    mods:
+      - ae2
+
+  pressure_impossible:
+    type: quest
+    title: Finish The Casing Ladder
+    chapter: pressure_control
+    icon: kubejs:impossible_machine_casing
+    stage: ae2
+    requires:
+      - pressure_ae2
+    x: 46.8
+    y: 0
+    shape: octagon
+    size: 1.2
+    body: |
+      Stabilize Raw Impossible Casing with AE2 processors and final Blood Magic proof. This closes the structural machine ladder and opens explicitly post-AE2 work.
+    tasks:
+      - type: item
+        item: kubejs:raw_impossible_casing
+      - type: item
+        item: kubejs:impossible_machine_casing
+    tags:
+      - tech_spine
+      - machine_casing
+    mods:
+      - ae2
+      - bloodmagic
+      - kubejs
+
+  fonts_read_route:
+    type: quest
+    title: Read A Dimension Font
+    chapter: fonts_occultism
+    icon: minecraft:written_book
+    stage: adventure
     x: 0
     y: 0
+    shape: diamond
     body: |
-      Reminder only. Future work may add a ruined orbital ship structure tied to AE2 lore.
-    tasks: []
-    rewards: []
+      Use Dimension Drink fonts as route surfaces: prepare the destination, its hazards, and the way home before drinking. The journey is the first proof in this tradition.
+    tasks:
+      - type: checkmark
+        title: Prepare and use a dimension font route
     tags:
-      - reminder
-      - post_ae2
+      - fonts_spine
+      - route
+    mods:
+      - dimension_drink
 
-  avatar_cloning_reminder:
+  fonts_cauldron:
     type: quest
-    title: Avatar And Cloning Vats
-    chapter: post_ae2
-    icon: minecraft:player_head
-    stage: post_ae2
+    title: Work The Mixing Cauldron
+    chapter: fonts_occultism
+    icon: hexerei:mixing_cauldron
+    stage: magic_1
     requires:
-      - automation_intro
-    x: 2
+      - fonts_read_route
+    x: 5.6
     y: 0
     body: |
-      Reminder only. Future work may pair remote avatar piloting with inferior cloning vats.
-    tasks: []
-    rewards: []
+      Build Hexerei's Mixing Cauldron and stage herbs, bottles, candles, and woods around it. Folk magic begins as place-bound preparation rather than portable spell power.
+    tasks:
+      - type: item
+        item: hexerei:mixing_cauldron
     tags:
-      - reminder
-      - post_ae2
+      - fonts_spine
+      - hexerei
+    mods:
+      - hexerei
 
-  spawn_ritual_reminder:
+  fonts_book:
     type: quest
-    title: Spawn Moving Ritual
-    chapter: post_ae2
+    title: Keep A Book Of Shadows
+    chapter: fonts_occultism
+    icon: hexerei:book_of_shadows
+    stage: magic_1
+    requires:
+      - fonts_cauldron
+    x: 11.2
+    y: 0
+    body: |
+      Make the Book of Shadows and use it as the working record for cauldron, broom, and ritual preparation. Keep this infrastructure near its real materials.
+    tasks:
+      - type: item
+        item: hexerei:book_of_shadows
+    tags:
+      - fonts_spine
+      - hexerei
+    mods:
+      - hexerei
+
+  fonts_otherstone:
+    type: quest
+    title: Open The Otherstone Boundary
+    chapter: fonts_occultism
+    icon: occultism:otherstone
+    stage: magic_2
+    requires:
+      - fonts_book
+    x: 16.8
+    y: 0
+    shape: hexagon
+    size: 1.15
+    body: |
+      Mix Otherstone through Hexerei with Otherside matter and a reinforced slate. This recurring Occultism substrate is the boundary between folk practice and spirit pacts.
+    tasks:
+      - type: item
+        item: occultism:otherstone
+    tags:
+      - fonts_spine
+      - native_anchor
+    mods:
+      - hexerei
+      - occultism
+      - bloodmagic
+
+  fonts_dictionary:
+    type: quest
+    title: Study The Spirit Dictionary
+    chapter: fonts_occultism
+    icon: occultism:dictionary_of_spirits
+    stage: magic_2
+    requires:
+      - fonts_otherstone
+    x: 22.4
+    y: 0
+    body: |
+      Craft the Dictionary of Spirits and read the ritual requirements before placing a circle. Occultism trades portable convenience for prepared sites and negotiated entities.
+    tasks:
+      - type: item
+        item: occultism:dictionary_of_spirits
+    tags:
+      - fonts_spine
+      - occultism
+    mods:
+      - occultism
+
+  fonts_first_pact:
+    type: quest
+    title: Prepare The First Pact
+    chapter: fonts_occultism
+    icon: occultism:golden_sacrificial_bowl
+    stage: magic_3
+    requires:
+      - fonts_dictionary
+    x: 28
+    y: 0
+    shape: octagon
+    size: 1.15
+    body: |
+      Make the Golden Sacrificial Bowl and prepare a complete circle before summoning. Containment, ingredients, and the entity's role should all be decided before the pact begins.
+    tasks:
+      - type: item
+        item: occultism:golden_sacrificial_bowl
+    tags:
+      - fonts_spine
+      - pact
+    mods:
+      - occultism
+
+  blood_heart:
+    type: quest
+    title: Bring Back A Life
+    chapter: blood_command
+    icon: rpgstats:still_beating_heart
+    stage: magic_1
+    x: 0
+    y: 0
+    shape: diamond
+    body: |
+      Return from death with a Still-Beating Heart that records the life you actually lived. Save this milestone for Blood Magic instead of treating it as bulk fuel.
+    tasks:
+      - type: item
+        item: rpgstats:still_beating_heart
+    tags:
+      - blood_spine
+      - death_loop
+    mods:
+      - rpgstats
+      - bloodmagic
+
+  blood_altar:
+    type: quest
+    title: Build The Blood Altar
+    chapter: blood_command
+    icon: bloodmagic:altar
+    stage: magic_1
+    requires:
+      - blood_heart
+    x: 5.2
+    y: 0
+    body: |
+      Build the Blood Altar with your heart and Otherside matter. Give it room for runes, storage, safe sacrifice, and later rituals before the room becomes crowded.
+    tasks:
+      - type: item
+        item: bloodmagic:altar
+    tags:
+      - blood_spine
+      - bloodmagic
+    mods:
+      - bloodmagic
+
+  blood_weak_orb:
+    type: quest
+    title: Bind The Weak Orb
+    chapter: blood_command
     icon: bloodmagic:weakbloodorb
-    stage: post_ae2
+    stage: magic_1
     requires:
-      - automation_intro
-    x: 4
+      - blood_altar
+    x: 10.4
     y: 0
     body: |
-      Reminder only. Future work should build on class-selector spawn locking and require a
-      late-game maintained ritual cost.
-    tasks: []
-    rewards: []
+      Bind a Weak Blood Orb and make a Divination Sigil before repeated sacrifice. Blood work becomes manageable only when LP cost and capacity stop being guesses.
+    tasks:
+      - type: item
+        item: bloodmagic:weakbloodorb
     tags:
-      - reminder
+      - blood_spine
+      - bloodmagic
+    mods:
+      - bloodmagic
+
+  blood_blank_slate:
+    type: quest
+    title: Refine Blank Slates
+    chapter: blood_command
+    icon: bloodmagic:blankslate
+    stage: magic_1
+    requires:
+      - blood_weak_orb
+    x: 15.6
+    y: 0
+    shape: hexagon
+    size: 1.1
+    body: |
+      Produce Blank Slates reliably. They are the first durable Blood proof and the entry authority for Malum materials and common formal-magic work.
+    tasks:
+      - type: item
+        item: bloodmagic:blankslate
+    tags:
+      - blood_spine
+      - slate
+    mods:
+      - bloodmagic
+
+  blood_malum_altar:
+    type: quest
+    title: Raise A Spirit Altar
+    chapter: blood_command
+    icon: malum:spirit_altar
+    stage: magic_1
+    requires:
+      - blood_blank_slate
+    x: 20.8
+    y: 0
+    body: |
+      Build Malum's Spirit Altar and capture spirits in their native vessels. This side tradition inherits Blood proof while keeping its own reagents, risks, and transformations.
+    tasks:
+      - type: item
+        item: malum:spirit_altar
+      - type: item
+        item: malum:spirit_jar
+    tags:
+      - blood_spine
+      - malum
+    mods:
+      - malum
+
+  blood_spool:
+    type: quest
+    title: Infuse The Esoteric Spool
+    chapter: blood_command
+    icon: malum:esoteric_spool
+    stage: magic_1
+    requires:
+      - blood_malum_altar
+    x: 26
+    y: 0
+    body: |
+      Spirit-infuse the Esoteric Spool with a Blank Slate. The spool is a recurring native Malum hub, so this one boundary controls many later equipment uses.
+    tasks:
+      - type: item
+        item: malum:esoteric_spool
+    tags:
+      - blood_spine
+      - native_anchor
+    mods:
+      - malum
+      - bloodmagic
+
+  blood_reinforced:
+    type: quest
+    title: Hold Reinforced Costs
+    chapter: blood_command
+    icon: bloodmagic:reinforcedslate
+    stage: magic_2
+    requires:
+      - blood_spool
+    x: 31.2
+    y: 0
+    shape: hexagon
+    size: 1.1
+    body: |
+      Refine Reinforced Slates when the altar can sustain larger LP jobs. This proof advances Malum manufacturing and opens stronger cross-tradition utility.
+    tasks:
+      - type: item
+        item: bloodmagic:reinforcedslate
+    tags:
+      - blood_spine
+      - slate
+    mods:
+      - bloodmagic
+
+  blood_impetus:
+    type: quest
+    title: Build Alchemical Impetus
+    chapter: blood_command
+    icon: malum:alchemical_impetus
+    stage: magic_2
+    requires:
+      - blood_reinforced
+    x: 36.4
+    y: 0
+    body: |
+      Spirit-infuse Alchemical Impetus with a Reinforced Slate. This recurring Malum component carries the middle Blood tier into consequential alchemical machines.
+    tasks:
+      - type: item
+        item: malum:alchemical_impetus
+    tags:
+      - blood_spine
+      - native_anchor
+    mods:
+      - malum
+      - bloodmagic
+
+  blood_infused:
+    type: quest
+    title: Stabilize Infused Slates
+    chapter: blood_command
+    icon: bloodmagic:infusedslate
+    stage: magic_3
+    requires:
+      - blood_impetus
+    x: 41.6
+    y: 0
+    shape: hexagon
+    size: 1.1
+    body: |
+      Refine Infused Slates for stable hybrid magic and higher Malum metallurgy. Repeated production should be safe before you spend them on downstream systems.
+    tasks:
+      - type: item
+        item: bloodmagic:infusedslate
+    tags:
+      - blood_spine
+      - slate
+    mods:
+      - bloodmagic
+
+  blood_soul_steel:
+    type: quest
+    title: Stain Steel With Souls
+    chapter: blood_command
+    icon: malum:soul_stained_steel_ingot
+    stage: magic_3
+    requires:
+      - blood_infused
+    x: 46.8
+    y: 0
+    body: |
+      Spirit-infuse Soul-Stained Steel with an Infused Slate. The ingot is Malum's late manufactured hub and should remain tied to both spirit work and Blood depth.
+    tasks:
+      - type: item
+        item: malum:soul_stained_steel_ingot
+    tags:
+      - blood_spine
+      - native_anchor
+    mods:
+      - malum
+      - bloodmagic
+
+  blood_demonic:
+    type: quest
+    title: Enter Demonic Work
+    chapter: blood_command
+    icon: bloodmagic:demonslate
+    stage: magic_4
+    requires:
+      - blood_soul_steel
+    x: 52
+    y: 0
+    shape: hexagon
+    size: 1.15
+    body: |
+      Refine Demonic Slates only after LP supply, ritual space, and personal safety are stronger than the craft. This is the authority for dangerous command magic.
+    tasks:
+      - type: item
+        item: bloodmagic:demonslate
+    tags:
+      - blood_spine
+      - slate
+    mods:
+      - bloodmagic
+
+  blood_goety_altar:
+    type: quest
+    title: Construct The Dark Altar
+    chapter: blood_command
+    icon: goety:dark_altar
+    stage: magic_4
+    requires:
+      - blood_demonic
+    x: 57.2
+    y: 0
+    body: |
+      Construct Goety's Dark Altar and keep command magic inside prepared infrastructure. Summons and focuses should cost containment, cursed matter, and deliberate staging.
+    tasks:
+      - type: item
+        item: goety:dark_altar
+    tags:
+      - blood_spine
+      - goety
+    mods:
+      - goety
+
+  blood_goety_focus:
+    type: quest
+    title: Author A Command Focus
+    chapter: blood_command
+    icon: goety:empty_focus
+    stage: magic_4
+    requires:
+      - blood_goety_altar
+    x: 62.4
+    y: 0
+    body: |
+      Make an Empty Focus and bind a specific Goety operation through its native altar route. The focus records dangerous intent rather than granting a free spell family.
+    tasks:
+      - type: item
+        item: goety:empty_focus
+    tags:
+      - blood_spine
+      - command_magic
+    mods:
+      - goety
+
+  blood_ethereal:
+    type: quest
+    title: Reach Ethereal Proof
+    chapter: blood_command
+    icon: bloodmagic:etherealslate
+    stage: magic_5
+    requires:
+      - blood_goety_focus
+    x: 67.6
+    y: 0
+    shape: octagon
+    size: 1.2
+    body: |
+      Refine an Ethereal Slate as the final shared Blood proof. Legendary formal ink and endgame hybrid magic may consume it, but side recipes should not spam hearts.
+    tasks:
+      - type: item
+        item: bloodmagic:etherealslate
+    tags:
+      - blood_spine
+      - slate
+    mods:
+      - bloodmagic
+
+  formal_intro:
+    type: quest
+    title: Separate Depth From Breadth
+    chapter: formal_magic
+    icon: minecraft:writable_book
+    stage: magic_1
+    x: 0
+    y: 0
+    shape: diamond
+    body: |
+      Build empty writing infrastructure early, but expect dirty traditions to supply usable ink and domains. Ink rarity sets depth; native focuses and essences set breadth.
+    tasks:
+      - type: checkmark
+        title: Choose programmable glyphs or fixed schools
+    tags:
+      - formal_magic
+      - guidance
+
+  formal_ars_book:
+    type: quest
+    title: Open Programmable Grammar
+    chapter: formal_magic
+    icon: ars_nouveau:novice_spell_book
+    stage: magic_1
+    requires:
+      - formal_intro
+    x: 5.6
+    y: -2.2
+    body: |
+      Make the Novice Spell Book as an empty grammar container. Ars Nouveau composes forms, effects, and modifiers, but retained glyphs still need authored domain proof.
+    tasks:
+      - type: item
+        item: ars_nouveau:novice_spell_book
+    tags:
+      - formal_magic
+      - ars
+    mods:
+      - ars_nouveau
+
+  formal_ars_scribe:
+    type: quest
+    title: Build The Scribe Table
+    chapter: formal_magic
+    icon: ars_nouveau:scribes_table
+    stage: magic_1
+    requires:
+      - formal_ars_book
+    x: 11.2
+    y: -2.2
+    body: |
+      Build the Scribe's Table beside source storage and your reagent shelf. The station is intentionally early; the materials for meaningful glyphs carry the real gate.
+    tasks:
+      - type: item
+        item: ars_nouveau:scribes_table
+    tags:
+      - formal_magic
+      - ars
+    mods:
+      - ars_nouveau
+
+  formal_ars_thread:
+    type: quest
+    title: Prepare Blank Thread
+    chapter: formal_magic
+    icon: ars_nouveau:blank_thread
+    stage: magic_1
+    requires:
+      - formal_ars_scribe
+    x: 16.8
+    y: -2.2
+    body: |
+      Mix Blank Thread through Hexerei with a Blank Slate. The recurring Ars equipment hub makes early formal infrastructure inherit a dirty-magic proof without rewriting every use.
+    tasks:
+      - type: item
+        item: ars_nouveau:blank_thread
+    tags:
+      - formal_magic
+      - native_anchor
+    mods:
+      - ars_nouveau
+      - hexerei
+      - bloodmagic
+
+  formal_ars_abjuration:
+    type: quest
+    title: Imbue Abjuration
+    chapter: formal_magic
+    icon: ars_nouveau:abjuration_essence
+    stage: magic_2
+    requires:
+      - formal_ars_thread
+    x: 22.4
+    y: -2.2
+    body: |
+      Imbue Abjuration Essence with a Reinforced Slate on the native Ars surface. Defensive and cleansing effects now prove both source work and Blood depth.
+    tasks:
+      - type: item
+        item: ars_nouveau:abjuration_essence
+    tags:
+      - formal_magic
+      - native_anchor
+    mods:
+      - ars_nouveau
+      - bloodmagic
+
+  formal_ars_manipulation:
+    type: quest
+    title: Imbue Manipulation
+    chapter: formal_magic
+    icon: ars_nouveau:manipulation_essence
+    stage: magic_3
+    requires:
+      - formal_ars_abjuration
+    x: 28
+    y: -2.2
+    body: |
+      Imbue Manipulation Essence with an Infused Slate. Strong utility and control effects now sit behind a recurring native Ars ingredient instead of scattered recipe taxes.
+    tasks:
+      - type: item
+        item: ars_nouveau:manipulation_essence
+    tags:
+      - formal_magic
+      - native_anchor
+    mods:
+      - ars_nouveau
+      - bloodmagic
+
+  formal_irons_book:
+    type: quest
+    title: Open Fixed Spellcraft
+    chapter: formal_magic
+    icon: irons_spellbooks:copper_spell_book
+    stage: magic_1
+    requires:
+      - formal_intro
+    x: 5.6
+    y: 2.2
+    body: |
+      Make a Copper Spell Book as empty fixed-spell infrastructure. Iron's Spellbooks records complete spells; it does not share Ars Nouveau's programmable grammar.
+    tasks:
+      - type: item
+        item: irons_spellbooks:copper_spell_book
+    tags:
+      - formal_magic
+      - irons
+    mods:
+      - irons_spellbooks
+
+  formal_common_ink:
+    type: quest
+    title: Mix Common Ink
+    chapter: formal_magic
+    icon: irons_spellbooks:common_ink
+    stage: magic_1
+    requires:
+      - formal_irons_book
+    x: 11.2
+    y: 2.2
+    body: |
+      Craft Common Ink with an entry proof from a dirty tradition. Random usable scrolls and pre-inscribed books are scrubbed, so authored ink begins real spell access.
+    tasks:
+      - type: item
+        item: irons_spellbooks:common_ink
+    tags:
+      - formal_magic
+      - ink_depth
+    mods:
+      - irons_spellbooks
+
+  formal_rare_ink:
+    type: quest
+    title: Mix Rare Ink
+    chapter: formal_magic
+    icon: irons_spellbooks:rare_ink
+    stage: magic_2
+    requires:
+      - formal_common_ink
+    x: 16.8
+    y: 2.2
+    body: |
+      Craft Rare Ink after a dirty route reaches its middle proof. School breadth still comes from a native focus, so ink alone cannot flatten every magical tradition.
+    tasks:
+      - type: item
+        item: irons_spellbooks:rare_ink
+    tags:
+      - formal_magic
+      - ink_depth
+    mods:
+      - irons_spellbooks
+
+  formal_epic_ink:
+    type: quest
+    title: Mix Epic Ink
+    chapter: formal_magic
+    icon: irons_spellbooks:epic_ink
+    stage: magic_4
+    requires:
+      - formal_rare_ink
+    x: 22.4
+    y: 2.2
+    body: |
+      Craft Epic Ink only after deeper slate or tradition proof is stable. High-rarity spell records should represent developed infrastructure, not lucky chest loot.
+    tasks:
+      - type: item
+        item: irons_spellbooks:epic_ink
+    tags:
+      - formal_magic
+      - ink_depth
+    mods:
+      - irons_spellbooks
+
+  formal_legendary_ink:
+    type: quest
+    title: Mix Legendary Ink
+    chapter: formal_magic
+    icon: irons_spellbooks:legendary_ink
+    stage: magic_5
+    requires:
+      - formal_epic_ink
+    x: 28
+    y: 2.2
+    body: |
+      Craft Legendary Ink with final dirty-magic proof. This establishes global depth while each school remains tied to its own focus and thematic parent tradition.
+    tasks:
+      - type: item
+        item: irons_spellbooks:legendary_ink
+    tags:
+      - formal_magic
+      - ink_depth
+    mods:
+      - irons_spellbooks
+
+  formal_concordance:
+    type: quest
+    title: Complete Both Formalisms
+    chapter: formal_magic
+    icon: minecraft:enchanted_book
+    stage: magic_5
+    requires:
+      - formal_ars_manipulation
+      - formal_legendary_ink
+    x: 34
+    y: 0
+    shape: octagon
+    size: 1.2
+    body: |
+      Demonstrate useful glyph composition and fixed spells across the dirty-tradition domains. Full breadth is a capstone after both spines, not an ingredient tax on every spell.
+    tasks:
+      - type: checkmark
+        title: Author and use spells from both formalisms
+    tags:
+      - formal_magic
+      - capstone
+
+  adventure_route_plan:
+    type: quest
+    title: Plan The Way Home
+    chapter: adventure_economy
+    icon: minecraft:compass
+    stage: adventure
+    x: 0
+    y: 0
+    shape: diamond
+    body: |
+      Mark roads, stage food and clean water, and reserve a return slot before leaving the fixed spawn. Adventure pressure is a logistics problem before it is a combat statistic.
+    tasks:
+      - type: checkmark
+        title: Mark a route and stage a recovery cache
+    tags:
+      - adventure_spine
+      - recovery
+
+  adventure_nether:
+    type: quest
+    title: Nether Heat Route
+    chapter: adventure_economy
+    icon: minecraft:netherrack
+    stage: adventure
+    requires:
+      - adventure_route_plan
+    x: 6.4
+    y: -6
+    body: |
+      Reach the Nether with enough supplies to bring netherrack and heat proof home. This route supports grout and metallurgy rather than serving as a sightseeing trip.
+    tasks:
+      - type: dimension
+        dimension: minecraft:the_nether
+    tags:
+      - adventure_spine
+      - dimension
+
+  adventure_aether:
+    type: quest
+    title: Aether Mobility Route
+    chapter: adventure_economy
+    icon: aether:skyroot_log
+    stage: adventure
+    requires:
+      - adventure_route_plan
+    x: 6.4
+    y: -3
+    body: |
+      Reach the Aether and return with mobility proof for balloons, gliders, and controlled flight. Pack for vertical travel and a reliable way back down.
+    tasks:
+      - type: dimension
+        dimension: aether:the_aether
+    tags:
+      - adventure_spine
+      - dimension
+
+  adventure_undergarden:
+    type: quest
+    title: Undergarden Pantry Route
+    chapter: adventure_economy
+    icon: undergarden:depthrock
+    stage: adventure
+    requires:
+      - adventure_route_plan
+    x: 6.4
+    y: 0
+    body: |
+      Reach the Undergarden with room for food, forage, and body-system materials. Treat its pantry value as expedition support rather than a free resource bypass.
+    tasks:
+      - type: dimension
+        dimension: undergarden:undergarden
+    tags:
+      - adventure_spine
+      - dimension
+
+  adventure_otherside:
+    type: quest
+    title: Otherside Matter Route
+    chapter: adventure_economy
+    icon: deeperdarker:cobbled_sculk_stone
+    stage: adventure
+    requires:
+      - adventure_route_plan
+    x: 6.4
+    y: 3
+    body: |
+      Reach the Otherside and return with common raw magic matter. Sculk, echo, soul, and resonance feed Blood-refined traditions instead of forming a separate workstation spine.
+    tasks:
+      - type: dimension
+        dimension: deeperdarker:otherside
+    tags:
+      - adventure_spine
+      - dimension
+
+  adventure_orbit:
+    type: quest
+    title: Orbit Supply Route
+    chapter: adventure_economy
+    icon: creatingspace:flight_recorder
+    stage: space
+    requires:
+      - adventure_route_plan
+    x: 6.4
+    y: 6
+    body: |
+      Reach Earth orbit only after fuel, oxygen, recovery, and return logistics are staged. A successful launch is incomplete until the expedition can come home intact.
+    tasks:
+      - type: dimension
+        dimension: creatingspace:earth_orbit
+    tags:
+      - adventure_spine
+      - dimension
+
+  adventure_settlement:
+    type: quest
+    title: Build A Recovery Market
+    chapter: adventure_economy
+    icon: minecraft:bell
+    stage: adventure
+    requires:
+      - adventure_route_plan
+    x: 6.4
+    y: 9
+    body: |
+      Connect a village or settlement to your physical routes. Specialist trades should relieve expedition friction while machine, casing, and magic gates remain yours to solve.
+    tasks:
+      - type: checkmark
+        title: Connect a settlement to a maintained route
+    tags:
+      - adventure_spine
+      - settlement
+
+  adventure_coins:
+    type: quest
+    title: Earn Recovery Currency
+    chapter: adventure_economy
+    icon: createdeco:copper_coin
+    stage: adventure
+    requires:
+      - adventure_settlement
+    x: 12.8
+    y: 9
+    body: |
+      Earn Copper Coins through routes, quests, combat pressure, and useful work. Coin conversion loses value deliberately, so access and recovery matter more than arbitrage.
+    tasks:
+      - type: item
+        item: createdeco:copper_coin
+    tags:
+      - adventure_spine
+      - economy
+
+  adventure_wares:
+    type: quest
+    title: Contract For Expedition Support
+    chapter: adventure_economy
+    icon: wares:delivery_agreement
+    stage: adventure
+    requires:
+      - adventure_coins
+    x: 19.2
+    y: 9
+    body: |
+      Obtain a Wares Delivery Agreement and use packages for route support or recovery. Packages must never replace factories, metallurgy, chemistry, or deep resource fields.
+    tasks:
+      - type: item
+        item: wares:delivery_agreement
+    tags:
+      - adventure_spine
+      - economy
+
+  adventure_campaign:
+    type: quest
+    title: Harden The Settlement
+    chapter: adventure_economy
+    icon: minecraft:white_banner
+    stage: adventure
+    requires:
+      - adventure_route_plan
+    x: 6.4
+    y: -9
+    body: |
+      Build sightlines, walls, patrol routes, and fallback positions before a pillager warband arrives. Surface safety should come from settlement design rather than waiting for daylight.
+    tasks:
+      - type: checkmark
+        title: Build warning lines and a fallback route
+    tags:
+      - adventure_spine
+      - combat_pressure
+
+  adventure_survive_campaign:
+    type: quest
+    title: Survive Adaptive Pressure
+    chapter: adventure_economy
+    icon: minecraft:crossbow
+    stage: adventure
+    requires:
+      - adventure_campaign
+    x: 12.8
+    y: -9
+    body: |
+      Defeat a campaign push and recover its coin rewards, or accept the easing path after a loss. Each warband adapts to outcomes instead of scaling from global time.
+    tasks:
+      - type: checkmark
+        title: Defeat or recover from a campaign push
+    tags:
+      - adventure_spine
+      - combat_pressure
+
+  post_impossible:
+    type: quest
+    title: Cross The Impossible Tier
+    chapter: post_ae2
+    icon: kubejs:impossible_machine_casing
+    stage: post_ae2
+    x: 0
+    y: 0
+    shape: diamond
+    size: 1.2
+    body: |
+      Finish the Impossible Machine Casing after local AE2 intelligence and final Blood proof are stable. Everything beyond this point is an explicit dangerous branch.
+    tasks:
+      - type: item
+        item: kubejs:impossible_machine_casing
+    tags:
       - post_ae2
+      - machine_casing
+
+  post_lava_sample:
+    type: quest
+    title: Survey Lava-Depth Osmiridium
+    chapter: post_ae2
+    icon: realisticores:surface_sample_osmiridium_lava_sulfide_ore
+    stage: post_ae2
+    requires:
+      - post_impossible
+    x: 6
+    y: -2.5
+    body: |
+      Find an osmiridium surface signal, then prepare a lava expedition below Y zero. The exposed sulfide scatter exists only beside lava and must be brought back alive.
+    tasks:
+      - type: item
+        item: realisticores:surface_sample_osmiridium_lava_sulfide_ore
+    tags:
+      - post_ae2
+      - lava_depths
+
+  post_osmiridium:
+    type: quest
+    title: Recover The Lava Sulfide
+    chapter: post_ae2
+    icon: realisticores:osmiridium_lava_sulfide_ore
+    stage: post_ae2
+    requires:
+      - post_lava_sample
+    x: 12
+    y: -2.5
+    body: |
+      Recover osmiridium lava-sulfide ore from a lava-contact vein. This dangerous geology is the material pressure point for Tosaki protection and selected late utility.
+    tasks:
+      - type: item
+        item: realisticores:osmiridium_lava_sulfide_ore
+    tags:
+      - post_ae2
+      - lava_depths
+
+  post_tosaki:
+    type: quest
+    title: Build Tosaki Protection
+    chapter: post_ae2
+    icon: protection_pixel:tosaki_chestplate
+    stage: post_ae2
+    requires:
+      - post_osmiridium
+    x: 18
+    y: -2.5
+    body: |
+      Craft the Tosaki chestplate from recovered late matter. Treat the suit as expedition equipment for hostile depths, not as a substitute for route and rescue planning.
+    tasks:
+      - type: item
+        item: protection_pixel:tosaki_chestplate
+    tags:
+      - post_ae2
+      - protection
+
+  post_tome:
+    type: quest
+    title: Stabilize The Tome Of Blood
+    chapter: post_ae2
+    icon: tomeofblood:novice_tome_of_blood
+    stage: post_ae2
+    requires:
+      - post_impossible
+    x: 6
+    y: 2.5
+    body: |
+      Craft the Novice Tome of Blood through both late science and late magic. AE2 processors and sealed assembly form the body; Blood and Ars stabilize its use.
+    tasks:
+      - type: item
+        item: tomeofblood:novice_tome_of_blood
+    tags:
+      - post_ae2
+      - hybrid_magic
+
+  post_chunk_anchor:
+    type: quest
+    title: Fund A Chunk Anchor
+    chapter: post_ae2
+    icon: arcane_chunkloaders:flux_chunk_anchor
+    stage: post_ae2
+    requires:
+      - post_tome
+    x: 12
+    y: 2.5
+    body: |
+      Build one Arcane Chunk Anchor using proof from a magic tradition, then choose the power economy you actually maintain. Every variant loads the same centered region.
+    tasks:
+      - type: item
+        item: arcane_chunkloaders:flux_chunk_anchor
+    tags:
+      - post_ae2
+      - infrastructure
+
+  post_capstone:
+    type: quest
+    title: Maintain Dangerous Systems
+    chapter: post_ae2
+    icon: ae2:engineering_processor
+    stage: post_ae2
+    requires:
+      - post_tosaki
+      - post_chunk_anchor
+    x: 24
+    y: 0
+    shape: octagon
+    size: 1.2
+    body: |
+      Keep local intelligence, hostile-material expeditions, hybrid magic, and powered chunk service running together. The capstone is maintained capability, not one crafted trophy.
+    tasks:
+      - type: checkmark
+        title: Sustain both late science and late magic branches
+    tags:
+      - post_ae2
+      - capstone

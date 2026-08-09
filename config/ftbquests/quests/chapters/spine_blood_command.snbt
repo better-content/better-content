@@ -1,0 +1,233 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "spine_blood_command"
+	group: "61DE599F7F2FAFBD"
+	icon: "bloodmagic:altar"
+	id: "5F26200FD7558E29"
+	order_index: 40
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Return from death with a Still-Beating Heart that records the life you actually lived. Save this milestone for Blood Magic instead of treating it as bulk fuel."]
+			icon: "rpgstats:still_beating_heart"
+			id: "FCA4E77DDE7A6572"
+			shape: "diamond"
+			tasks: [			{
+				item: "rpgstats:still_beating_heart"
+				id: "1BE1D63A4BF53240"
+				type: "item"
+			}]
+			title: "Bring Back A Life"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["FCA4E77DDE7A6572"]
+			description: ["Build the Blood Altar with your heart and Otherside matter. Give it room for runes, storage, safe sacrifice, and later rituals before the room becomes crowded."]
+			icon: "bloodmagic:altar"
+			id: "124A80CBF921A4AD"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:altar"
+				id: "1D4CBD81575B7561"
+				type: "item"
+			}]
+			title: "Build The Blood Altar"
+			x: 5.2d
+			y: 0.0d
+		}
+		{
+			dependencies: ["124A80CBF921A4AD"]
+			description: ["Bind a Weak Blood Orb and make a Divination Sigil before repeated sacrifice. Blood work becomes manageable only when LP cost and capacity stop being guesses."]
+			icon: "bloodmagic:weakbloodorb"
+			id: "688DF46B33EE4F9E"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:weakbloodorb"
+				id: "17698503A3400291"
+				type: "item"
+			}]
+			title: "Bind The Weak Orb"
+			x: 10.4d
+			y: 0.0d
+		}
+		{
+			dependencies: ["688DF46B33EE4F9E"]
+			description: ["Produce Blank Slates reliably. They are the first durable Blood proof and the entry authority for Malum materials and common formal-magic work."]
+			icon: "bloodmagic:blankslate"
+			id: "0F1684E156BB517A"
+			shape: "hexagon"
+			size: 1.1d
+			tasks: [			{
+				item: "bloodmagic:blankslate"
+				id: "5BB29A64DFE05279"
+				type: "item"
+			}]
+			title: "Refine Blank Slates"
+			x: 15.6d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0F1684E156BB517A"]
+			description: ["Build Malum's Spirit Altar and capture spirits in their native vessels. This side tradition inherits Blood proof while keeping its own reagents, risks, and transformations."]
+			icon: "malum:spirit_altar"
+			id: "01A0351EECE105FA"
+			shape: "rsquare"
+			tasks: [			{
+				item: "malum:spirit_altar"
+				id: "976085AFA25275B4"
+				type: "item"
+			}
+			{
+				item: "malum:spirit_jar"
+				id: "72F74E5861F624F2"
+				type: "item"
+			}]
+			title: "Raise A Spirit Altar"
+			x: 20.8d
+			y: 0.0d
+		}
+		{
+			dependencies: ["01A0351EECE105FA"]
+			description: ["Spirit-infuse the Esoteric Spool with a Blank Slate. The spool is a recurring native Malum hub, so this one boundary controls many later equipment uses."]
+			icon: "malum:esoteric_spool"
+			id: "479C51B9BAAF27E6"
+			shape: "rsquare"
+			tasks: [			{
+				item: "malum:esoteric_spool"
+				id: "677E69D096046E05"
+				type: "item"
+			}]
+			title: "Infuse The Esoteric Spool"
+			x: 26.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["479C51B9BAAF27E6"]
+			description: ["Refine Reinforced Slates when the altar can sustain larger LP jobs. This proof advances Malum manufacturing and opens stronger cross-tradition utility."]
+			icon: "bloodmagic:reinforcedslate"
+			id: "5341FE1CE3FF464F"
+			shape: "hexagon"
+			size: 1.1d
+			tasks: [			{
+				item: "bloodmagic:reinforcedslate"
+				id: "2CEFFC48E3FD65E5"
+				type: "item"
+			}]
+			title: "Hold Reinforced Costs"
+			x: 31.2d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5341FE1CE3FF464F"]
+			description: ["Spirit-infuse Alchemical Impetus with a Reinforced Slate. This recurring Malum component carries the middle Blood tier into consequential alchemical machines."]
+			icon: "malum:alchemical_impetus"
+			id: "D0594FE62DF06313"
+			shape: "rsquare"
+			tasks: [			{
+				item: "malum:alchemical_impetus"
+				id: "827B6F8039658298"
+				type: "item"
+			}]
+			title: "Build Alchemical Impetus"
+			x: 36.4d
+			y: 0.0d
+		}
+		{
+			dependencies: ["D0594FE62DF06313"]
+			description: ["Refine Infused Slates for stable hybrid magic and higher Malum metallurgy. Repeated production should be safe before you spend them on downstream systems."]
+			icon: "bloodmagic:infusedslate"
+			id: "4F302119B706700C"
+			shape: "hexagon"
+			size: 1.1d
+			tasks: [			{
+				item: "bloodmagic:infusedslate"
+				id: "0C69502C38417058"
+				type: "item"
+			}]
+			title: "Stabilize Infused Slates"
+			x: 41.6d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4F302119B706700C"]
+			description: ["Spirit-infuse Soul-Stained Steel with an Infused Slate. The ingot is Malum's late manufactured hub and should remain tied to both spirit work and Blood depth."]
+			icon: "malum:soul_stained_steel_ingot"
+			id: "A5353B75FDB5C328"
+			shape: "rsquare"
+			tasks: [			{
+				item: "malum:soul_stained_steel_ingot"
+				id: "64FCDD8097013F35"
+				type: "item"
+			}]
+			title: "Stain Steel With Souls"
+			x: 46.8d
+			y: 0.0d
+		}
+		{
+			dependencies: ["A5353B75FDB5C328"]
+			description: ["Refine Demonic Slates only after LP supply, ritual space, and personal safety are stronger than the craft. This is the authority for dangerous command magic."]
+			icon: "bloodmagic:demonslate"
+			id: "F8BD063F85E6FD66"
+			shape: "hexagon"
+			size: 1.15d
+			tasks: [			{
+				item: "bloodmagic:demonslate"
+				id: "A8B19B8A4C889996"
+				type: "item"
+			}]
+			title: "Enter Demonic Work"
+			x: 52.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["F8BD063F85E6FD66"]
+			description: ["Construct Goety's Dark Altar and keep command magic inside prepared infrastructure. Summons and focuses should cost containment, cursed matter, and deliberate staging."]
+			icon: "goety:dark_altar"
+			id: "D63B10CF462933B4"
+			shape: "rsquare"
+			tasks: [			{
+				item: "goety:dark_altar"
+				id: "2A0A1F10405D3B0A"
+				type: "item"
+			}]
+			title: "Construct The Dark Altar"
+			x: 57.2d
+			y: 0.0d
+		}
+		{
+			dependencies: ["D63B10CF462933B4"]
+			description: ["Make an Empty Focus and bind a specific Goety operation through its native altar route. The focus records dangerous intent rather than granting a free spell family."]
+			icon: "goety:empty_focus"
+			id: "5348A7BBA1D5C6AE"
+			shape: "rsquare"
+			tasks: [			{
+				item: "goety:empty_focus"
+				id: "49800F7DCD60FB7C"
+				type: "item"
+			}]
+			title: "Author A Command Focus"
+			x: 62.4d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5348A7BBA1D5C6AE"]
+			description: ["Refine an Ethereal Slate as the final shared Blood proof. Legendary formal ink and endgame hybrid magic may consume it, but side recipes should not spam hearts."]
+			icon: "bloodmagic:etherealslate"
+			id: "DA282A7605185BFF"
+			shape: "octagon"
+			size: 1.2d
+			tasks: [			{
+				item: "bloodmagic:etherealslate"
+				id: "83A2A7FD44D69627"
+				type: "item"
+			}]
+			title: "Reach Ethereal Proof"
+			x: 67.6d
+			y: 0.0d
+		}
+
+	]
+	title: "Magic Spine — Blood Into Command"
+}

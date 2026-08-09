@@ -11098,7 +11098,7 @@ hash = "a7327d4d5e251c864f25346e598d5721ad4dd98c18f4d14f6991a3e46b6fda39"
 
 [[files]]
 file = "mods/bcfixes-0.1.0.jar"
-hash = "bcca72a6f4f7999bd67e57c647bdae8e164c9f130af65ae27782c0dbd3a7bc4b"
+hash = "0ac8830489659e4d0eb44fa912881b3a45e006e3ad3408fed92b985df2316501"
 
 [[files]]
 file = "mods/bcrecipegraph-0.1.0.jar"
@@ -11267,6 +11267,11 @@ hash = "d8456add389b9c3bfb0785d1ac27f35d510e6e7624497d808f269f9132e73567"
 [[files]]
 file = "mods/distant-horizons.pw.toml"
 hash = "6a18fc39dbe317dcdba9aac9d5457e1bb2aa6decf77a6f4d6e67d7fbff0831d0"
+metafile = true
+
+[[files]]
+file = "mods/drive-by-wire.pw.toml"
+hash = "f90d0296de2d7cbb30eddaefa5c8f3205d6aa0ab1bf7447072b44e4a2d10b187"
 metafile = true
 
 [[files]]

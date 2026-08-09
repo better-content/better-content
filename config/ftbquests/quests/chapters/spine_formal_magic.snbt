@@ -18,7 +18,7 @@
 				id: "C0C32BD5F7710482"
 				type: "checkmark"
 			}]
-			title: "Separate Depth From Breadth"
+			title: "Two Formalisms"
 			x: 0.0d
 			y: 0.0d
 		}
@@ -33,8 +33,8 @@
 				id: "5D7BE49D09C06B88"
 				type: "item"
 			}]
-			title: "Open Programmable Grammar"
-			x: 5.6d
+			title: "Ars Nouveau"
+			x: 3.0d
 			y: -2.2d
 		}
 		{
@@ -48,9 +48,24 @@
 				id: "A1ACE6911BED7819"
 				type: "item"
 			}]
-			title: "Open Fixed Spellcraft"
-			x: 5.6d
+			title: "Iron Spellbooks"
+			x: 3.0d
 			y: 2.2d
+		}
+		{
+			dependencies: ["C19EBB7552D83AD8"]
+			description: ["Prepare Source Gems as the material side of programmable spellcraft. Keep source work tied to earned magical proofs rather than a free side lane."]
+			icon: "ars_nouveau:source_gem"
+			id: "A8667CA3083AFAE4"
+			shape: "rsquare"
+			tasks: [			{
+				item: "ars_nouveau:source_gem"
+				id: "5891CE37CA4DDF21"
+				type: "item"
+			}]
+			title: "Source Gem"
+			x: 6.0d
+			y: -4.4d
 		}
 		{
 			dependencies: ["C19EBB7552D83AD8"]
@@ -63,8 +78,8 @@
 				id: "B3089645CFD3797E"
 				type: "item"
 			}]
-			title: "Build The Scribe Table"
-			x: 11.2d
+			title: "Scribe Table"
+			x: 6.0d
 			y: -2.2d
 		}
 		{
@@ -78,8 +93,8 @@
 				id: "1CD787D87B4C11D4"
 				type: "item"
 			}]
-			title: "Mix Common Ink"
-			x: 11.2d
+			title: "Common Ink"
+			x: 6.0d
 			y: 2.2d
 		}
 		{
@@ -93,8 +108,8 @@
 				id: "E87B9AE95E2A6F60"
 				type: "item"
 			}]
-			title: "Prepare Blank Thread"
-			x: 16.8d
+			title: "Blank Thread"
+			x: 9.0d
 			y: -2.2d
 		}
 		{
@@ -108,9 +123,24 @@
 				id: "3C93DBADE3C41E36"
 				type: "item"
 			}]
-			title: "Mix Rare Ink"
-			x: 16.8d
+			title: "Rare Ink"
+			x: 9.0d
 			y: 2.2d
+		}
+		{
+			dependencies: ["56982A7E6EA5A2A3"]
+			description: ["Forge a scroll from ink and a native school focus. Fixed spellcraft records earned schools instead of collapsing every tradition into one reagent."]
+			icon: "irons_spellbooks:scroll"
+			id: "43F818018A8629F0"
+			shape: "rsquare"
+			tasks: [			{
+				item: "irons_spellbooks:scroll"
+				id: "FF1FA0E91D6800CF"
+				type: "item"
+			}]
+			title: "Forged Scroll"
+			x: 9.0d
+			y: 4.4d
 		}
 		{
 			dependencies: ["1C25189A1B9FBF76"]
@@ -123,8 +153,8 @@
 				id: "6FDA329466E23031"
 				type: "item"
 			}]
-			title: "Imbue Abjuration"
-			x: 22.4d
+			title: "Abjuration"
+			x: 12.0d
 			y: -2.2d
 		}
 		{
@@ -138,8 +168,8 @@
 				id: "C90ABC119A71FE73"
 				type: "item"
 			}]
-			title: "Mix Epic Ink"
-			x: 22.4d
+			title: "Epic Ink"
+			x: 12.0d
 			y: 2.2d
 		}
 		{
@@ -153,8 +183,8 @@
 				id: "BE1B1976315EDB4F"
 				type: "item"
 			}]
-			title: "Imbue Manipulation"
-			x: 28.0d
+			title: "Manipulation"
+			x: 15.0d
 			y: -2.2d
 		}
 		{
@@ -168,8 +198,8 @@
 				id: "959AD74A093EEE5E"
 				type: "item"
 			}]
-			title: "Mix Legendary Ink"
-			x: 28.0d
+			title: "Legendary Ink"
+			x: 15.0d
 			y: 2.2d
 		}
 		{
@@ -184,8 +214,8 @@
 				id: "280B927942B48C76"
 				type: "checkmark"
 			}]
-			title: "Complete Both Formalisms"
-			x: 34.0d
+			title: "Concordance"
+			x: 18.0d
 			y: 0.0d
 		}
 

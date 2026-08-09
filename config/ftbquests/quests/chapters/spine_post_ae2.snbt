@@ -19,7 +19,7 @@
 				id: "1D8C3647D37A2419"
 				type: "item"
 			}]
-			title: "Cross The Impossible Tier"
+			title: "Impossible Casing"
 			x: 0.0d
 			y: 0.0d
 		}
@@ -34,8 +34,8 @@
 				id: "BD4D05D18F9922C5"
 				type: "item"
 			}]
-			title: "Survey Lava-Depth Osmiridium"
-			x: 6.0d
+			title: "Lava Sample"
+			x: 3.0d
 			y: -2.5d
 		}
 		{
@@ -49,9 +49,24 @@
 				id: "EA18A23902D31B00"
 				type: "item"
 			}]
-			title: "Stabilize The Tome Of Blood"
-			x: 6.0d
+			title: "Tome of Blood"
+			x: 3.0d
 			y: 2.5d
+		}
+		{
+			dependencies: ["FB35E17C4214D970"]
+			description: ["Bring uranium home from its dangerous geological route. Treat the material as expedition proof rather than another routine ore checklist entry."]
+			icon: "chemlib:uranium_ingot"
+			id: "DB6038BE0D39D83D"
+			shape: "rsquare"
+			tasks: [			{
+				item: "chemlib:uranium_ingot"
+				id: "4000344446166805"
+				type: "item"
+			}]
+			title: "Uranium"
+			x: 6.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["FB35E17C4214D970"]
@@ -64,8 +79,8 @@
 				id: "434DF91268EF36DF"
 				type: "item"
 			}]
-			title: "Recover The Lava Sulfide"
-			x: 12.0d
+			title: "Osmiridium"
+			x: 6.0d
 			y: -2.5d
 		}
 		{
@@ -79,9 +94,24 @@
 				id: "35D1696C7CEAC207"
 				type: "item"
 			}]
-			title: "Fund A Chunk Anchor"
-			x: 12.0d
+			title: "Chunk Anchor"
+			x: 6.0d
 			y: 2.5d
+		}
+		{
+			dependencies: ["DB6038BE0D39D83D"]
+			description: ["Recover thorium through the same heat, combat, extraction, and return discipline. Rare chemistry starts from sources with real cost."]
+			icon: "chemlib:thorium_ingot"
+			id: "7C8A19C3FEDF46C1"
+			shape: "rsquare"
+			tasks: [			{
+				item: "chemlib:thorium_ingot"
+				id: "D0BACA744B6CAD19"
+				type: "item"
+			}]
+			title: "Thorium"
+			x: 9.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["AEF52D37178A955F"]
@@ -94,12 +124,27 @@
 				id: "14839A7BD936313A"
 				type: "item"
 			}]
-			title: "Build Tosaki Protection"
-			x: 18.0d
+			title: "Tosaki Suit"
+			x: 9.0d
 			y: -2.5d
 		}
 		{
-			dependencies: ["0CDB28980B28B9C6", "30C4EB7D62B9EC29"]
+			dependencies: ["30C4EB7D62B9EC29"]
+			description: ["Build the support matrix for upgrades that sit beside Impossible machinery. Its ingredients should still expose late science and magic ancestry."]
+			icon: "kubejs:impossible_support_matrix"
+			id: "EC5A3FE00A5E2E88"
+			shape: "rsquare"
+			tasks: [			{
+				item: "kubejs:impossible_support_matrix"
+				id: "A76896EA6AD7FA64"
+				type: "item"
+			}]
+			title: "Support Matrix"
+			x: 9.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0CDB28980B28B9C6", "EC5A3FE00A5E2E88"]
 			description: ["Keep local intelligence, hostile-material expeditions, hybrid magic, and powered chunk service running together. The capstone is maintained capability, not one crafted trophy."]
 			icon: "ae2:engineering_processor"
 			id: "4F840BA6BA61DBF3"
@@ -110,8 +155,8 @@
 				id: "32B94C38B51113CA"
 				type: "checkmark"
 			}]
-			title: "Maintain Dangerous Systems"
-			x: 24.0d
+			title: "Capstone"
+			x: 12.0d
 			y: 0.0d
 		}
 

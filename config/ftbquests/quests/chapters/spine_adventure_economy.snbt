@@ -18,7 +18,7 @@
 				id: "F44DB64BFDFFFCA5"
 				type: "checkmark"
 			}]
-			title: "Plan The Way Home"
+			title: "Way Home"
 			x: 0.0d
 			y: 0.0d
 		}
@@ -33,8 +33,8 @@
 				id: "1E0909C723DF030C"
 				type: "checkmark"
 			}]
-			title: "Harden The Settlement"
-			x: 6.4d
+			title: "Fortify"
+			x: 3.0d
 			y: -9.0d
 		}
 		{
@@ -48,8 +48,8 @@
 				id: "D7BE0AC22204E571"
 				type: "dimension"
 			}]
-			title: "Nether Heat Route"
-			x: 6.4d
+			title: "Nether Route"
+			x: 3.0d
 			y: -6.0d
 		}
 		{
@@ -63,8 +63,8 @@
 				id: "6C00359DC3265E88"
 				type: "dimension"
 			}]
-			title: "Aether Mobility Route"
-			x: 6.4d
+			title: "Aether Route"
+			x: 3.0d
 			y: -3.0d
 		}
 		{
@@ -78,8 +78,8 @@
 				id: "F41E9E7E6DFC4122"
 				type: "dimension"
 			}]
-			title: "Undergarden Pantry Route"
-			x: 6.4d
+			title: "Undergarden Route"
+			x: 3.0d
 			y: 0.0d
 		}
 		{
@@ -93,8 +93,8 @@
 				id: "63BB5EE66E19E49D"
 				type: "dimension"
 			}]
-			title: "Otherside Matter Route"
-			x: 6.4d
+			title: "Otherside Route"
+			x: 3.0d
 			y: 3.0d
 		}
 		{
@@ -108,8 +108,8 @@
 				id: "EE0A3F2C5DC89FF5"
 				type: "dimension"
 			}]
-			title: "Orbit Supply Route"
-			x: 6.4d
+			title: "Earth Orbit"
+			x: 3.0d
 			y: 6.0d
 		}
 		{
@@ -123,8 +123,8 @@
 				id: "BC134FAFFCD196F5"
 				type: "checkmark"
 			}]
-			title: "Build A Recovery Market"
-			x: 6.4d
+			title: "Recovery Market"
+			x: 3.0d
 			y: 9.0d
 		}
 		{
@@ -138,9 +138,44 @@
 				id: "66BE8206DD5A35C7"
 				type: "checkmark"
 			}]
-			title: "Survive Adaptive Pressure"
-			x: 12.8d
+			title: "Campaign"
+			x: 6.0d
 			y: -9.0d
+		}
+		{
+			dependencies: ["E9E86416ACE5403F"]
+			description: ["Turn Aether lift materials into controlled aeronautics only after the sealed manufacturing route is ready. Powered ships are earned transport infrastructure."]
+			icon: "vs_eureka:balloon"
+			id: "47002A1BEBE6F9F2"
+			shape: "rsquare"
+			tasks: [			{
+				item: "vs_eureka:balloon"
+				id: "B688D8CDEB4AC421"
+				type: "item"
+			}
+			{
+				item: "vs_clockwork:blade_controller"
+				id: "CDF780B06BAEA2DD"
+				type: "item"
+			}]
+			title: "Powered Flight"
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["AD4E30D82FC71589"]
+			description: ["Reach Moon orbit with enough fuel, oxygen, and recovery supplies to continue or return. A fragile outbound trip is not ready for landing."]
+			icon: "creatingspace:flight_recorder"
+			id: "B724B6B258A08266"
+			shape: "rsquare"
+			tasks: [			{
+				dimension: "creatingspace:moon_orbit"
+				id: "0A28EBCD2CA7A4B8"
+				type: "dimension"
+			}]
+			title: "Moon Orbit"
+			x: 6.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["11858C7F6C7720B4"]
@@ -153,9 +188,24 @@
 				id: "6AD6BCA8BBFC4523"
 				type: "item"
 			}]
-			title: "Earn Recovery Currency"
-			x: 12.8d
+			title: "Copper Coin"
+			x: 6.0d
 			y: 9.0d
+		}
+		{
+			dependencies: ["B724B6B258A08266"]
+			description: ["Land with a target item and a complete return plan. The expedition counts only when its materials and crew arrive back at the supply chain."]
+			icon: "creatingspace:moon_stone"
+			id: "75C047D90D3E1DB0"
+			shape: "rsquare"
+			tasks: [			{
+				dimension: "creatingspace:the_moon"
+				id: "CEA0B1C9D1CC197A"
+				type: "dimension"
+			}]
+			title: "The Moon"
+			x: 9.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["A53643CC3D672386"]
@@ -168,9 +218,54 @@
 				id: "F57FE430C99757B9"
 				type: "item"
 			}]
-			title: "Contract For Expedition Support"
-			x: 19.2d
+			title: "Wares Contract"
+			x: 9.0d
 			y: 9.0d
+		}
+		{
+			dependencies: ["75C047D90D3E1DB0"]
+			description: ["Treat Mars distance as a logistics multiplier. Confirm replacement gear, extra consumables, and the full return stack before descent."]
+			icon: "creatingspace:flight_recorder"
+			id: "B187318A5D659942"
+			shape: "rsquare"
+			tasks: [			{
+				dimension: "creatingspace:mars_orbit"
+				id: "A19086BCCE076B21"
+				type: "dimension"
+			}]
+			title: "Mars Orbit"
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["B187318A5D659942"]
+			description: ["Land prepared for hostile terrain and a longer recovery loop than the Moon. Remote work must remain supportable from the home route."]
+			icon: "creatingspace:mars_stone"
+			id: "D7B1B33746A475D5"
+			shape: "rsquare"
+			tasks: [			{
+				dimension: "creatingspace:mars"
+				id: "C6C6D6DED05CAE19"
+				type: "dimension"
+			}]
+			title: "Mars"
+			x: 15.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["D7B1B33746A475D5"]
+			description: ["Reach Venus only when launch, suit, resupply, and return systems can sustain remote work. Fix weak logistics before treating it as a routine route."]
+			icon: "creatingspace:flight_recorder"
+			id: "9A16DE21F65A4E3D"
+			shape: "rsquare"
+			tasks: [			{
+				dimension: "creatingspace:venus"
+				id: "DCE408C081D3F7B6"
+				type: "dimension"
+			}]
+			title: "Venus"
+			x: 18.0d
+			y: 6.0d
 		}
 
 	]

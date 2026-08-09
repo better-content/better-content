@@ -18,7 +18,7 @@
 				id: "26B2BD4D6EF1A2F3"
 				type: "item"
 			}]
-			title: "Shape Real Parts"
+			title: "Part Builder"
 			x: 0.0d
 			y: 0.0d
 		}
@@ -33,9 +33,24 @@
 				id: "B1EECD313DE859A4"
 				type: "item"
 			}]
-			title: "Control The First Melt"
-			x: 5.2d
+			title: "Melter"
+			x: 3.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["721A1ED5B0EFF052"]
+			description: ["Cast the first machine body after fuel, drains, and pouring are repeatable. The casing proves the foundry is a working cell rather than a one-off unlock."]
+			icon: "kubejs:seared_machine_casing"
+			id: "8FC70A23132E625C"
+			shape: "rsquare"
+			tasks: [			{
+				item: "kubejs:seared_machine_casing"
+				id: "AA6906135D09A6D1"
+				type: "item"
+			}]
+			title: "Seared Casing"
+			x: 6.0d
+			y: -2.4d
 		}
 		{
 			dependencies: ["721A1ED5B0EFF052"]
@@ -48,9 +63,24 @@
 				id: "5404A06B62228D77"
 				type: "item"
 			}]
-			title: "Build The Smeltery"
-			x: 10.4d
+			title: "Smeltery"
+			x: 6.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["721A1ED5B0EFF052"]
+			description: ["Add casting storage beside the table and basin so molten material has an explicit path from fuel to drain to finished part."]
+			icon: "tconstruct:seared_casting_tank"
+			id: "EBF85CA5E954CF9E"
+			shape: "rsquare"
+			tasks: [			{
+				item: "tconstruct:seared_casting_tank"
+				id: "A6B0C0593532D795"
+				type: "item"
+			}]
+			title: "Casting Tank"
+			x: 6.0d
+			y: 2.4d
 		}
 		{
 			dependencies: ["A2DCAC4A58CD31B0"]
@@ -63,9 +93,29 @@
 				id: "F2A442441E97E94E"
 				type: "item"
 			}]
-			title: "Prove Foundry Heat"
-			x: 15.6d
+			title: "Foundry Heat"
+			x: 9.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["EBF85CA5E954CF9E"]
+			description: ["Mill calcite into calcium carbonate, then combine it with washed silica and Nether aggregate for a deliberate high-yield grout batch."]
+			icon: "tconstruct:grout"
+			id: "800E58D1DC993681"
+			shape: "rsquare"
+			tasks: [			{
+				item: "chemlib:calcium_carbonate"
+				id: "DA17D0ECA6E893D2"
+				type: "item"
+			}
+			{
+				item: "tconstruct:grout"
+				id: "5DEB3FD3A79FCB17"
+				type: "item"
+			}]
+			title: "Refractory Batch"
+			x: 9.0d
+			y: 2.4d
 		}
 		{
 			dependencies: ["D07830CF56C9C3F8"]
@@ -78,9 +128,24 @@
 				id: "EFC0F2BB8329B0F4"
 				type: "item"
 			}]
-			title: "Cast Andesite Alloy"
-			x: 20.8d
+			title: "Andesite Alloy"
+			x: 12.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["B46F423F34383638"]
+			description: ["Make shafts before adding machines. Rotation needs a readable route through the workshop before it becomes useful power."]
+			icon: "create:shaft"
+			id: "FF797B74875D32E6"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:shaft"
+				id: "C8223306B45C8CF1"
+				type: "item"
+			}]
+			title: "Shafts"
+			x: 15.0d
+			y: -2.4d
 		}
 		{
 			dependencies: ["B46F423F34383638"]
@@ -93,12 +158,57 @@
 				id: "5B43C240463EC4A7"
 				type: "item"
 			}]
-			title: "Run A Manual Workshop"
-			x: 26.0d
+			title: "Hand Crank"
+			x: 15.0d
 			y: 0.0d
 		}
 		{
+			dependencies: ["FF797B74875D32E6"]
+			description: ["Use cogwheels to turn corners and distribute local rotation. Keep the path visible so speed and stress problems remain diagnosable."]
+			icon: "create:cogwheel"
+			id: "B936472BB148E441"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:cogwheel"
+				id: "A5F77294A0B37005"
+				type: "item"
+			}]
+			title: "Cogwheels"
+			x: 18.0d
+			y: -2.4d
+		}
+		{
 			dependencies: ["058B0825607F2F60"]
+			description: ["Hand-crank the first press and turn repeated plates into a production lane. Passive Create power remains a manufactured milestone."]
+			icon: "create:mechanical_press"
+			id: "7144FECF36D7FACE"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:mechanical_press"
+				id: "2009345F8D30E502"
+				type: "item"
+			}]
+			title: "Mechanical Press"
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7144FECF36D7FACE"]
+			description: ["Use the mixer for open-vat chemistry and bulk mixtures. Metal alloys remain molten Tinkers work rather than gaining a second authority."]
+			icon: "create:mechanical_mixer"
+			id: "1995A1E644568D46"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:mechanical_mixer"
+				id: "997A01F241C6A07B"
+				type: "item"
+			}]
+			title: "Mixer"
+			x: 21.0d
+			y: -2.4d
+		}
+		{
+			dependencies: ["7144FECF36D7FACE"]
 			description: ["Compact the first Deployer with the hand-cranked press and basin. This cycle break unlocks ordinary Create casing, sequenced machine bodies, and governed power."]
 			icon: "create:deployer"
 			id: "11BC42AAE3810EDF"
@@ -108,12 +218,102 @@
 				id: "00DD8C83DCAF792A"
 				type: "item"
 			}]
-			title: "Earn The Deployer"
-			x: 31.2d
+			title: "Deployer"
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1995A1E644568D46"]
+			description: ["Build distinct washing and blasting stations around the fan. Visible processing lanes make ore byproducts easier to follow."]
+			icon: "create:encased_fan"
+			id: "0D67BB1B7520E119"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:encased_fan"
+				id: "C0A48ECD99EDC04A"
+				type: "item"
+			}]
+			title: "Encased Fan"
+			x: 24.0d
+			y: -2.4d
+		}
+		{
+			dependencies: ["11BC42AAE3810EDF"]
+			description: ["Assemble the governor from pressing, deployer, brass-sheet, and casing work. It proves the manual shop can reproduce controlled machinery."]
+			icon: "kubejs:workshop_governor"
+			id: "5A056236EB5F46CF"
+			shape: "rsquare"
+			tasks: [			{
+				item: "kubejs:workshop_governor"
+				id: "FF08465C608323BB"
+				type: "item"
+			}]
+			title: "Governor"
+			x: 24.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["11BC42AAE3810EDF"]
+			description: ["Add a saw when repeated cutting begins wasting time. Keep it in the compact workcell with the other first-generation Create machines."]
+			icon: "create:mechanical_saw"
+			id: "FAE4BA58768A2B0E"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:mechanical_saw"
+				id: "4FCDD6C806ABD108"
+				type: "item"
+			}]
+			title: "Mechanical Saw"
+			x: 24.0d
+			y: 2.4d
+		}
+		{
+			dependencies: ["0D67BB1B7520E119"]
+			description: ["Wash representative deposit outputs and inspect their carbon, sulfur, silica, and alumina side streams before scaling bulk processing."]
+			icon: "create:encased_fan"
+			id: "D758B526B9F33C0E"
+			shape: "rsquare"
+			tasks: [			{
+				item: "chemlib:carbon"
+				id: "097A0BA272252D54"
+				type: "item"
+			}
+			{
+				item: "chemlib:sulfur"
+				id: "B7D103ED24E90E1E"
+				type: "item"
+			}
+			{
+				item: "chemlib:silicon_dioxide"
+				id: "90ECAB35A99CBBFF"
+				type: "item"
+			}
+			{
+				item: "chemlib:aluminum_oxide"
+				id: "9322580818C041E9"
+				type: "item"
+			}]
+			title: "Wash Assay"
+			x: 27.0d
+			y: -4.8d
+		}
+		{
+			dependencies: ["5A056236EB5F46CF"]
+			description: ["Inspect andesite-casing uses in EMI and keep the first machine fanout together. One casing should visibly open several practical jobs."]
+			icon: "create:andesite_casing"
+			id: "E74C2679FB8407AD"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:andesite_casing"
+				id: "28108F5C7C87A9B4"
+				type: "item"
+			}]
+			title: "Create Casing"
+			x: 27.0d
+			y: -2.4d
+		}
+		{
+			dependencies: ["5A056236EB5F46CF"]
 			description: ["Sequence an Andesite Machine Casing after the Deployer is real. Presses, mixers, fans, drills, saws, and the first governed power network now become sustainable."]
 			icon: "kubejs:andesite_machine_casing"
 			id: "9835E3A1AC899F8E"
@@ -124,9 +324,24 @@
 				id: "9FE1578E7D3AEF63"
 				type: "item"
 			}]
-			title: "Assemble Andesite Machines"
-			x: 36.4d
+			title: "Andesite Tier"
+			x: 27.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["FAE4BA58768A2B0E"]
+			description: ["Treat the drill as controlled extraction attached to a material route, not as a replacement for surveying and geology."]
+			icon: "create:mechanical_drill"
+			id: "A8AA81D884BBC8E6"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:mechanical_drill"
+				id: "8C0CED1F48E0B57D"
+				type: "item"
+			}]
+			title: "Mechanical Drill"
+			x: 27.0d
+			y: 2.4d
 		}
 		{
 			dependencies: ["9835E3A1AC899F8E"]
@@ -140,9 +355,24 @@
 				id: "24758AE39043ECA8"
 				type: "item"
 			}]
-			title: "Control Brass Logistics"
-			x: 41.6d
+			title: "Brass Tier"
+			x: 30.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["8B59E71D62ED576A"]
+			description: ["Use an arm for selective local handoffs. It improves a physical line without making belts, trains, or distance disappear."]
+			icon: "create:mechanical_arm"
+			id: "F98C2054C7A68958"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:mechanical_arm"
+				id: "272FCBBD9F36DA33"
+				type: "item"
+			}]
+			title: "Mechanical Arm"
+			x: 33.0d
+			y: -2.4d
 		}
 		{
 			dependencies: ["8B59E71D62ED576A"]
@@ -160,8 +390,43 @@
 				id: "15BEAEF649AE67E0"
 				type: "item"
 			}]
-			title: "Connect The Railway Era"
-			x: 46.8d
+			title: "Railway Era"
+			x: 33.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["8B59E71D62ED576A"]
+			description: ["Display stock or machine state where operators can see it. Readable factories are easier to maintain than hidden automation."]
+			icon: "create:display_link"
+			id: "0B70AA93FB3F2542"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:display_link"
+				id: "753DE9BE3431A8D4"
+				type: "item"
+			}]
+			title: "Display Link"
+			x: 33.0d
+			y: 2.4d
+		}
+		{
+			dependencies: ["853BB41B178180AB"]
+			description: ["Build tracks after railway casing and precision work. Rough-terrain vehicles are a train-era peer, not a shortcut around logistics."]
+			icon: "trackwork:phys_track"
+			id: "9AB8D481C414D707"
+			shape: "rsquare"
+			tasks: [			{
+				item: "trackwork:phys_track"
+				id: "5C994B6B0A7BD2B2"
+				type: "item"
+			}
+			{
+				item: "trackwork:track_tool_kit"
+				id: "7AFEB526710218F7"
+				type: "item"
+			}]
+			title: "Tracked Mobility"
+			x: 36.0d
 			y: 0.0d
 		}
 

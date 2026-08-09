@@ -18,7 +18,7 @@
 				id: "52C51393D069A825"
 				type: "checkmark"
 			}]
-			title: "Read A Dimension Font"
+			title: "Dimension Font"
 			x: 0.0d
 			y: 0.0d
 		}
@@ -33,9 +33,24 @@
 				id: "15C7C06D3F426D5E"
 				type: "item"
 			}]
-			title: "Work The Mixing Cauldron"
-			x: 5.6d
+			title: "Mixing Cauldron"
+			x: 3.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["3BD8898DC0688EF5"]
+			description: ["Establish a renewable mahogany supply beside the cauldron. Wood identity remains a real ingredient in folk magic rather than generic decoration."]
+			icon: "hexerei:mahogany_sapling"
+			id: "28909B649E0C281F"
+			shape: "rsquare"
+			tasks: [			{
+				item: "hexerei:mahogany_sapling"
+				id: "40059EDA5E719828"
+				type: "item"
+			}]
+			title: "Mahogany"
+			x: 6.0d
+			y: -2.4d
 		}
 		{
 			dependencies: ["3BD8898DC0688EF5"]
@@ -48,9 +63,24 @@
 				id: "A2FD9B76AEAAEE19"
 				type: "item"
 			}]
-			title: "Keep A Book Of Shadows"
-			x: 11.2d
+			title: "Book of Shadows"
+			x: 6.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["28909B649E0C281F"]
+			description: ["Craft the broom after its ritual materials and route are stable. This mobility is earned from folk-magic infrastructure, not granted as free flight."]
+			icon: "hexerei:mahogany_broom"
+			id: "966230984B22DEEF"
+			shape: "rsquare"
+			tasks: [			{
+				item: "hexerei:mahogany_broom"
+				id: "460E3424F3D50F02"
+				type: "item"
+			}]
+			title: "Mahogany Broom"
+			x: 9.0d
+			y: -2.4d
 		}
 		{
 			dependencies: ["8FBDCDA786C5F030"]
@@ -64,8 +94,8 @@
 				id: "3ED9273D6C7270AB"
 				type: "item"
 			}]
-			title: "Open The Otherstone Boundary"
-			x: 16.8d
+			title: "Otherstone"
+			x: 9.0d
 			y: 0.0d
 		}
 		{
@@ -79,8 +109,8 @@
 				id: "7EB73C06F5280437"
 				type: "item"
 			}]
-			title: "Study The Spirit Dictionary"
-			x: 22.4d
+			title: "Spirit Dictionary"
+			x: 12.0d
 			y: 0.0d
 		}
 		{
@@ -95,8 +125,8 @@
 				id: "B8580A2CD6EA3727"
 				type: "item"
 			}]
-			title: "Prepare The First Pact"
-			x: 28.0d
+			title: "First Pact"
+			x: 15.0d
 			y: 0.0d
 		}
 

@@ -18,9 +18,24 @@
 				id: "1BE1D63A4BF53240"
 				type: "item"
 			}]
-			title: "Bring Back A Life"
+			title: "Heart"
 			x: 0.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["124A80CBF921A4AD"]
+			description: ["Pay health deliberately only after food, safety, and a protected altar room exist. Blood costs should be visible decisions rather than accidents."]
+			icon: "bloodmagic:sacrificialdagger"
+			id: "A5DE6AA17E6F964B"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:sacrificialdagger"
+				id: "D4AC85DA492EA62D"
+				type: "item"
+			}]
+			title: "Sacrificial Dagger"
+			x: 3.0d
+			y: -2.4d
 		}
 		{
 			dependencies: ["FCA4E77DDE7A6572"]
@@ -33,9 +48,24 @@
 				id: "1D4CBD81575B7561"
 				type: "item"
 			}]
-			title: "Build The Blood Altar"
-			x: 5.2d
+			title: "Blood Altar"
+			x: 3.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["688DF46B33EE4F9E"]
+			description: ["Read altar and network LP before every expensive craft. Stop guessing about reserves before increasing the cost of the work."]
+			icon: "bloodmagic:divinationsigil"
+			id: "A94FC5D83A06DAF4"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:divinationsigil"
+				id: "1B19A9E191FC4531"
+				type: "item"
+			}]
+			title: "Divination Sigil"
+			x: 6.0d
+			y: -2.4d
 		}
 		{
 			dependencies: ["124A80CBF921A4AD"]
@@ -48,9 +78,24 @@
 				id: "17698503A3400291"
 				type: "item"
 			}]
-			title: "Bind The Weak Orb"
-			x: 10.4d
+			title: "Weak Orb"
+			x: 6.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["0F1684E156BB517A"]
+			description: ["Add runes to solve specific altar problems such as capacity, speed, or safer sacrifice. Expand the room before upgrades crowd it out."]
+			icon: "bloodmagic:blankrune"
+			id: "B61F7083F7D26650"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:blankrune"
+				id: "7F6FAC3D2ED8A932"
+				type: "item"
+			}]
+			title: "Blank Rune"
+			x: 9.0d
+			y: -2.4d
 		}
 		{
 			dependencies: ["688DF46B33EE4F9E"]
@@ -64,9 +109,24 @@
 				id: "5BB29A64DFE05279"
 				type: "item"
 			}]
-			title: "Refine Blank Slates"
-			x: 15.6d
+			title: "Blank Slate"
+			x: 9.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["B61F7083F7D26650"]
+			description: ["Use Blood Alchemy for deliberate high-yield manual batches. It improves efficiency without becoming unattended throughput or erasing chemistry."]
+			icon: "bloodmagic:alchemytable"
+			id: "FDF94A9575BB66E5"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:alchemytable"
+				id: "1C839363B09BB473"
+				type: "item"
+			}]
+			title: "Alchemy Table"
+			x: 12.0d
+			y: -2.4d
 		}
 		{
 			dependencies: ["0F1684E156BB517A"]
@@ -84,8 +144,8 @@
 				id: "72F74E5861F624F2"
 				type: "item"
 			}]
-			title: "Raise A Spirit Altar"
-			x: 20.8d
+			title: "Spirit Altar"
+			x: 12.0d
 			y: 0.0d
 		}
 		{
@@ -99,9 +159,24 @@
 				id: "677E69D096046E05"
 				type: "item"
 			}]
-			title: "Infuse The Esoteric Spool"
-			x: 26.0d
+			title: "Esoteric Spool"
+			x: 15.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["5341FE1CE3FF464F"]
+			description: ["Upgrade the orb only when the altar loop can refill the larger network reliably. Its cost is a readiness check for sustained Blood work."]
+			icon: "bloodmagic:apprenticebloodorb"
+			id: "CD8A46A902FDE33E"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:apprenticebloodorb"
+				id: "0B14007CE9AD3CA2"
+				type: "item"
+			}]
+			title: "Apprentice Orb"
+			x: 18.0d
+			y: -2.4d
 		}
 		{
 			dependencies: ["479C51B9BAAF27E6"]
@@ -115,8 +190,8 @@
 				id: "2CEFFC48E3FD65E5"
 				type: "item"
 			}]
-			title: "Hold Reinforced Costs"
-			x: 31.2d
+			title: "Reinforced Slate"
+			x: 18.0d
 			y: 0.0d
 		}
 		{
@@ -130,8 +205,8 @@
 				id: "827B6F8039658298"
 				type: "item"
 			}]
-			title: "Build Alchemical Impetus"
-			x: 36.4d
+			title: "Impetus"
+			x: 21.0d
 			y: 0.0d
 		}
 		{
@@ -146,9 +221,24 @@
 				id: "0C69502C38417058"
 				type: "item"
 			}]
-			title: "Stabilize Infused Slates"
-			x: 41.6d
+			title: "Infused Slate"
+			x: 24.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["4F302119B706700C"]
+			description: ["Leave real footprint and upkeep space for rituals before constructing them. They are infrastructure projects rather than tiny altar upgrades."]
+			icon: "bloodmagic:masterritualstone"
+			id: "5AD0C8F892A5A2E9"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:masterritualstone"
+				id: "FB2B37E600C84810"
+				type: "item"
+			}]
+			title: "Ritual Stone"
+			x: 27.0d
+			y: -2.4d
 		}
 		{
 			dependencies: ["4F302119B706700C"]
@@ -161,9 +251,24 @@
 				id: "64FCDD8097013F35"
 				type: "item"
 			}]
-			title: "Stain Steel With Souls"
-			x: 46.8d
+			title: "Soul-Stained Steel"
+			x: 27.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["5AD0C8F892A5A2E9"]
+			description: ["Bind the Magician Orb once storage, runes, and ritual supply can support repeated high-cost work without emergency sacrifice."]
+			icon: "bloodmagic:magicianbloodorb"
+			id: "B7EEB2D198CF5925"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:magicianbloodorb"
+				id: "B721FC914102EAF2"
+				type: "item"
+			}]
+			title: "Magician Orb"
+			x: 30.0d
+			y: -2.4d
 		}
 		{
 			dependencies: ["A5353B75FDB5C328"]
@@ -177,9 +282,24 @@
 				id: "A8B19B8A4C889996"
 				type: "item"
 			}]
-			title: "Enter Demonic Work"
-			x: 52.0d
+			title: "Demon Slate"
+			x: 30.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["F8BD063F85E6FD66"]
+			description: ["Bind entity risk into the late route with a Soul Snare. Prepare containment and escape space before dangerous summons enter the base."]
+			icon: "bloodmagic:soulsnare"
+			id: "1DF034539ACAA583"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:soulsnare"
+				id: "5875A21FDC9F0F18"
+				type: "item"
+			}]
+			title: "Soul Snare"
+			x: 33.0d
+			y: -2.4d
 		}
 		{
 			dependencies: ["F8BD063F85E6FD66"]
@@ -192,8 +312,8 @@
 				id: "2A0A1F10405D3B0A"
 				type: "item"
 			}]
-			title: "Construct The Dark Altar"
-			x: 57.2d
+			title: "Dark Altar"
+			x: 33.0d
 			y: 0.0d
 		}
 		{
@@ -207,9 +327,24 @@
 				id: "49800F7DCD60FB7C"
 				type: "item"
 			}]
-			title: "Author A Command Focus"
-			x: 62.4d
+			title: "Command Focus"
+			x: 36.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["DA282A7605185BFF"]
+			description: ["Craft the Archmage Orb only after the altar room, LP storage, runes, and ritual space can support its repeated cost."]
+			icon: "bloodmagic:archmagebloodorb"
+			id: "9A466A00F1D30E52"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:archmagebloodorb"
+				id: "EF1F4562F9B1BD62"
+				type: "item"
+			}]
+			title: "Archmage Orb"
+			x: 39.0d
+			y: -2.4d
 		}
 		{
 			dependencies: ["5348A7BBA1D5C6AE"]
@@ -223,9 +358,24 @@
 				id: "83A2A7FD44D69627"
 				type: "item"
 			}]
-			title: "Reach Ethereal Proof"
-			x: 67.6d
+			title: "Ethereal Slate"
+			x: 39.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["9A466A00F1D30E52"]
+			description: ["Organize late utility sigils as earned tools and keep their LP supply readable. Utility should return through the main Blood room."]
+			icon: "bloodmagic:sigilofholding"
+			id: "F94BF8075E599695"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:sigilofholding"
+				id: "6EE7880E79B54212"
+				type: "item"
+			}]
+			title: "Holding Sigil"
+			x: 42.0d
+			y: -2.4d
 		}
 
 	]

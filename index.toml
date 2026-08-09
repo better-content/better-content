@@ -9741,6 +9741,10 @@ file = "kubejs/data/burnt/recipes/gunpowder_recipe.json"
 hash = "ac7bd6b6a6625a7f036590d6109c972b94e528886556b1b750718344a791c0d3"
 
 [[files]]
+file = "kubejs/data/burnt/tags/blocks/burning_logs.json"
+hash = "feeee052535b6c1ea2d5e5aabc6be34363ffcadf5d4eef74e2e6a16c907d694e"
+
+[[files]]
 file = "kubejs/data/burnt/tags/blocks/fire_resistant.json"
 hash = "a0e80f3d8d0febc667906c60ec8271eeb426e7570a9f603369c6719731cee123"
 
@@ -12150,7 +12154,7 @@ metafile = true
 
 [[files]]
 file = "mods/traces-0.1.0.jar"
-hash = "785391f3d389a7435854c59e8c99b2100db4082b670bb40f91936c8400ad0f8a"
+hash = "b1d65ab4713ff32dc6d1c5e76cce8935fcbf8c92cfe30f3ba37449937dd006fc"
 
 [[files]]
 file = "mods/trackwork.pw.toml"

@@ -27,10 +27,12 @@ All four mods ship as integrated transport surfaces. Eureka owns primitive post-
 - `latent_chemlib-0.1.0.jar`
 - `oc2rwireless-1.0.0.jar`
 - `pillagercampaigns-0.2.0.jar`
+- `prestige-0.1.0.jar`
 - `procedural_bouquets-0.1.0.jar`
 - `realisticores-0.1.0.jar`
 - `rpgstats-1.0.0.jar`
 - `settlementroads-0.1.0.jar`
+- `traces-0.1.0.jar`
 - `villagewalls-1.0.0.jar`
 
 The exhaustive mod-ID inventory is generated with `tools/bc build mod-integration-matrix`. The current resolved distributions contain 231 shipping artifacts declaring 313 Forge mod IDs, including 82 IDs supplied only through embedded jars. The generated JSON/TSV/Markdown report under `generated/validation/mod-integration-matrix/` separates pack-system integration, configuration, references, presence, and dependency-only roles; reviewer-owned decisions persist in `tools/mod_integration_review.json`. The 2026-07-29 reviewer pass contains zero automatic decisions and retains 17 non-exempt findings, including the known ADLODS marker repair and Excavated Variants worldgen-oracle work rather than misclassifying either mod as absent from pack systems. Library, platform, performance, and confirmed client-utility rows stay visible but are exempt from the content-integration backlog.
@@ -97,6 +99,8 @@ The 2026-07-16 post-integration reset-runtime smoke passed with zero soft findin
 ## Custom Mod Notes
 
 Canonical custom mod sources live under `generated/custom-mod-sources`. Use `generated/custom-mod-sources/settlement-roads` for settlement roads unless explicitly told otherwise. `generated/custom-mod-sources/dynamic-trees-dimension-compat` is the canonical `bcdimtrees` source checkout for pack-owned dimension forest Dynamic Trees coverage.
+
+`prestige` and `traces` are independent required custom mods. Prestige owns only the verified dedicated-server reset and persistent schematic-library surface; `bcfixes` contains no Prestige registrations or assets. Traces owns world-local movement/annotation shards under the active save, uses the full dimension namespace, bounds persisted/network inputs, and drains dirty state on shutdown. Server-root legacy Traces data is ignored so it cannot leak across Prestige generations.
 
 Advanced Chimneys is active on its pinned Forge 1.20.1 release, with ForgeEndertech already supplied as its dependency. The maintained `config/adchimneys/` emitter definitions cover the pack's active furnace, burner, smeltery, and generator surfaces.
 

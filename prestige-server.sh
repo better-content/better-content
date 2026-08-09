@@ -6,14 +6,15 @@ STATE_DIR="$SCRIPT_DIR/.prestige"
 CONTROL_DIR="$STATE_DIR/control"
 ARCHIVE_DIR="$STATE_DIR/archives"
 TRANSACTION_DIR="$STATE_DIR/transactions"
-LINEAGE_FILE="$STATE_DIR/lineage-v2.tsv"
-LEGACY_LINEAGE_FILE="$STATE_DIR/lineage-v1.tsv"
-RESET_FILE="$CONTROL_DIR/reset-request-v2.tsv"
-STAGED_FILE="$CONTROL_DIR/staged-request-v2.tsv"
-DRAFT_FILE="$CONTROL_DIR/draft-v2.tsv"
-SUCCESSOR_FILE="$CONTROL_DIR/successor-request-v2.tsv"
-HEALTH_FILE="$CONTROL_DIR/health-result-v2.tsv"
-SHUTDOWN_FILE="$CONTROL_DIR/shutdown-request-v2.tsv"
+LINEAGE_FILE="$STATE_DIR/lineage-v3.tsv"
+LEGACY_LINEAGE_V1="$STATE_DIR/lineage-v1.tsv"
+LEGACY_LINEAGE_V2="$STATE_DIR/lineage-v2.tsv"
+RESET_FILE="$CONTROL_DIR/reset-request-v3.tsv"
+STAGED_FILE="$CONTROL_DIR/staged-request-v3.tsv"
+DRAFT_FILE="$CONTROL_DIR/draft-v3.tsv"
+SUCCESSOR_FILE="$CONTROL_DIR/successor-request-v3.tsv"
+HEALTH_FILE="$CONTROL_DIR/health-result-v3.tsv"
+SHUTDOWN_FILE="$CONTROL_DIR/shutdown-request-v3.tsv"
 HEALTH_TIMEOUT_SECONDS="${PRESTIGE_HEALTH_TIMEOUT_SECONDS:-300}"
 HEALTH_STABILITY_SECONDS="${PRESTIGE_HEALTH_STABILITY_SECONDS:-10}"
 
@@ -62,32 +63,23 @@ atomic_write() {
 
 ensure_lineage() {
   if [[ ! -e "$LINEAGE_FILE" ]]; then
-    if [[ -f "$LEGACY_LINEAGE_FILE" ]]; then
-      load_contract "$LEGACY_LINEAGE_FILE" 'BC_PRESTIGE_LINEAGE_V1' 3
-      LINEAGE_ID="$(contract_value 1 lineage)"
-      TOTAL_PRESTIGES="$(contract_value 2 prestige_count)"
-      validate_id 'lineage ID' "$LINEAGE_ID"
-      [[ "$TOTAL_PRESTIGES" =~ ^[0-9]+$ ]] || die "legacy prestige count is invalid"
-      atomic_write "$LINEAGE_FILE" 'BC_PRESTIGE_LINEAGE_V2' \
-        "lineage"$'\t'"$LINEAGE_ID" "total_prestiges"$'\t'"$TOTAL_PRESTIGES" \
-        "unspent_points"$'\t'"$TOTAL_PRESTIGES" "generation"$'\t'"$TOTAL_PRESTIGES"
-    else
-      local entropy
-      entropy="$(printf '%s:%s:%s' "$(date +%s%N)" "$$" "$SCRIPT_DIR" | sha256sum | cut -c1-32)"
-      atomic_write "$LINEAGE_FILE" 'BC_PRESTIGE_LINEAGE_V2' \
-        "lineage"$'\t'"lineage-$entropy" "total_prestiges"$'\t''0' \
-        "unspent_points"$'\t''0' "generation"$'\t''0'
-    fi
+    local legacy_control
+    legacy_control="$(find "$CONTROL_DIR" -maxdepth 1 -type f \( -name '*-v1.tsv' -o -name '*-v2.tsv' \) -print -quit)"
+    [[ ! -e "$LEGACY_LINEAGE_V1" && ! -e "$LEGACY_LINEAGE_V2" && -z "$legacy_control" ]] \
+      || die "legacy Prestige lineage is unsupported; archive .prestige before starting v3"
+    local entropy
+    entropy="$(printf '%s:%s:%s' "$(date +%s%N)" "$$" "$SCRIPT_DIR" | sha256sum | cut -c1-32)"
+    atomic_write "$LINEAGE_FILE" 'BC_PRESTIGE_LINEAGE_V3' \
+      "lineage"$'\t'"lineage-$entropy" "total_prestiges"$'\t''0' "generation"$'\t''0'
   fi
-  load_contract "$LINEAGE_FILE" 'BC_PRESTIGE_LINEAGE_V2' 5
+  load_contract "$LINEAGE_FILE" 'BC_PRESTIGE_LINEAGE_V3' 4
   LINEAGE_ID="$(contract_value 1 lineage)"
   TOTAL_PRESTIGES="$(contract_value 2 total_prestiges)"
-  UNSPENT_POINTS="$(contract_value 3 unspent_points)"
-  GENERATION="$(contract_value 4 generation)"
+  GENERATION="$(contract_value 3 generation)"
   validate_id 'lineage ID' "$LINEAGE_ID"
-  [[ "$TOTAL_PRESTIGES" =~ ^[0-9]+$ && "$UNSPENT_POINTS" =~ ^[0-9]+$ && "$GENERATION" =~ ^[0-9]+$ ]] \
+  [[ "$TOTAL_PRESTIGES" =~ ^[0-9]+$ && "$GENERATION" =~ ^[0-9]+$ ]] \
     || die "lineage counters are invalid"
-  (( UNSPENT_POINTS <= TOTAL_PRESTIGES && GENERATION == TOTAL_PRESTIGES )) || die "lineage counters violate MVP invariants"
+  (( GENERATION == TOTAL_PRESTIGES )) || die "lineage counters violate invariants"
 }
 
 server_property() {
@@ -114,7 +106,7 @@ random_seed() {
 }
 
 parse_reset() {
-  load_contract "$RESET_FILE" 'BC_PRESTIGE_RESET_V2' 8
+  load_contract "$RESET_FILE" 'BC_PRESTIGE_RESET_V3' 8
   [[ "$(contract_value 1 state)" == committed ]] || die "reset request is not committed"
   REQUEST_LINEAGE="$(contract_value 2 lineage)"
   REQUEST_TRANSACTION="$(contract_value 3 transaction)"
@@ -193,7 +185,7 @@ create_verified_archive() {
 write_successor_request() {
   local attempt="$1" seed="$2"
   rm -f -- "$SUCCESSOR_FILE.partial"
-  atomic_write "$SUCCESSOR_FILE" 'BC_PRESTIGE_SUCCESSOR_V2' \
+  atomic_write "$SUCCESSOR_FILE" 'BC_PRESTIGE_SUCCESSOR_V3' \
     "lineage"$'\t'"$REQUEST_LINEAGE" "transaction"$'\t'"$REQUEST_TRANSACTION" \
     "successor_seed"$'\t'"$seed" "biome"$'\t'"$REQUEST_BIOME" "attempt"$'\t'"$attempt"
 }
@@ -202,7 +194,7 @@ health_is_valid() {
   local expected_attempt="$1" expected_seed="$2"
   [[ -f "$HEALTH_FILE" && ! -L "$HEALTH_FILE" ]] || return 1
   mapfile -t CONTRACT_LINES < "$HEALTH_FILE"
-  [[ "${#CONTRACT_LINES[@]}" -eq 12 && "${CONTRACT_LINES[0]}" == BC_PRESTIGE_HEALTH_V2 ]] || return 1
+  [[ "${#CONTRACT_LINES[@]}" -eq 12 && "${CONTRACT_LINES[0]}" == BC_PRESTIGE_HEALTH_V3 ]] || return 1
   [[ "${CONTRACT_LINES[1]}" == "lineage"$'\t'"$REQUEST_LINEAGE" && "${CONTRACT_LINES[2]}" == "transaction"$'\t'"$REQUEST_TRANSACTION" ]] || return 1
   [[ "${CONTRACT_LINES[3]}" == "successor_seed"$'\t'"$expected_seed" && "${CONTRACT_LINES[4]}" == "actual_seed"$'\t'"$expected_seed" ]] || return 1
   [[ "${CONTRACT_LINES[5]}" == "requested_biome"$'\t'"$REQUEST_BIOME" && "${CONTRACT_LINES[6]}" == "actual_biome"$'\t'"$REQUEST_BIOME" ]] || return 1
@@ -213,7 +205,7 @@ health_is_valid() {
 
 request_successor_shutdown() {
   rm -f -- "$SHUTDOWN_FILE" "$SHUTDOWN_FILE.partial"
-  atomic_write "$SHUTDOWN_FILE" 'BC_PRESTIGE_SHUTDOWN_V2' "transaction"$'\t'"$REQUEST_TRANSACTION"
+  atomic_write "$SHUTDOWN_FILE" 'BC_PRESTIGE_SHUTDOWN_V3' "transaction"$'\t'"$REQUEST_TRANSACTION"
 }
 
 stop_console_relay() {
@@ -244,27 +236,26 @@ process_is_live() {
 
 commit_lineage() {
   ensure_lineage
-  if (( TOTAL_PRESTIGES == TARGET_TOTAL && UNSPENT_POINTS == TARGET_UNSPENT && GENERATION == TARGET_GENERATION )); then
+  if (( TOTAL_PRESTIGES == TARGET_TOTAL && GENERATION == TARGET_GENERATION )); then
     return
   fi
-  (( TOTAL_PRESTIGES == BASE_TOTAL && UNSPENT_POINTS == BASE_UNSPENT && GENERATION == BASE_GENERATION )) \
+  (( TOTAL_PRESTIGES == BASE_TOTAL && GENERATION == BASE_GENERATION )) \
     || die "durable lineage changed outside the active transaction"
   rm -f -- "$LINEAGE_FILE.partial"
-  atomic_write "$LINEAGE_FILE" 'BC_PRESTIGE_LINEAGE_V2' \
+  atomic_write "$LINEAGE_FILE" 'BC_PRESTIGE_LINEAGE_V3' \
     "lineage"$'\t'"$LINEAGE_ID" "total_prestiges"$'\t'"$TARGET_TOTAL" \
-    "unspent_points"$'\t'"$TARGET_UNSPENT" "generation"$'\t'"$TARGET_GENERATION"
+    "generation"$'\t'"$TARGET_GENERATION"
 }
 
 load_transaction_lineage() {
-  load_contract "$TRANSACTION_ROOT/lineage-before-v2.tsv" 'BC_PRESTIGE_LINEAGE_V2' 5
+  load_contract "$TRANSACTION_ROOT/lineage-before-v3.tsv" 'BC_PRESTIGE_LINEAGE_V3' 4
   [[ "$(contract_value 1 lineage)" == "$REQUEST_LINEAGE" ]] || die "transaction lineage evidence has the wrong identity"
   BASE_TOTAL="$(contract_value 2 total_prestiges)"
-  BASE_UNSPENT="$(contract_value 3 unspent_points)"
-  BASE_GENERATION="$(contract_value 4 generation)"
-  [[ "$BASE_TOTAL" =~ ^[0-9]+$ && "$BASE_UNSPENT" =~ ^[0-9]+$ && "$BASE_GENERATION" =~ ^[0-9]+$ ]] \
+  BASE_GENERATION="$(contract_value 3 generation)"
+  [[ "$BASE_TOTAL" =~ ^[0-9]+$ && "$BASE_GENERATION" =~ ^[0-9]+$ ]] \
     || die "transaction lineage counters are invalid"
-  (( BASE_UNSPENT <= BASE_TOTAL && BASE_GENERATION == BASE_TOTAL )) || die "transaction lineage evidence violates MVP invariants"
-  TARGET_TOTAL=$((BASE_TOTAL+1)); TARGET_UNSPENT=$((BASE_UNSPENT+1)); TARGET_GENERATION=$((BASE_GENERATION+1))
+  (( BASE_GENERATION == BASE_TOTAL )) || die "transaction lineage evidence violates invariants"
+  TARGET_TOTAL=$((BASE_TOTAL+1)); TARGET_GENERATION=$((BASE_GENERATION+1))
 }
 
 run_successor_attempt() {
@@ -291,8 +282,8 @@ run_successor_attempt() {
 }
 
 finalize_success() {
-  cp -- "$SUCCESSOR_FILE" "$TRANSACTION_ROOT/successor-request-v2.tsv"
-  cp -- "$HEALTH_FILE" "$TRANSACTION_ROOT/health-result-v2.tsv"
+  cp -- "$SUCCESSOR_FILE" "$TRANSACTION_ROOT/successor-request-v3.tsv"
+  cp -- "$HEALTH_FILE" "$TRANSACTION_ROOT/health-result-v3.tsv"
   write_phase health-verified
   verify_archive_against_world "$FINAL_ARCHIVE" "$ARCHIVE_INPUT/prestige-archive-manifest-v1.tsv" "$VERIFY_ROOT"
   commit_lineage
@@ -322,13 +313,13 @@ PHASE_FILE="$TRANSACTION_ROOT/phase-v1.tsv"
 if [[ ! -e "$TRANSACTION_ROOT" ]]; then
   mkdir -p -- "$ARCHIVE_INPUT"
   cp -- "$SCRIPT_DIR/server.properties" "$TRANSACTION_ROOT/server.properties.before"
-  cp -- "$RESET_FILE" "$TRANSACTION_ROOT/reset-request-v2.tsv"
-  cp -- "$LINEAGE_FILE" "$TRANSACTION_ROOT/lineage-before-v2.tsv"
+  cp -- "$RESET_FILE" "$TRANSACTION_ROOT/reset-request-v3.tsv"
+  cp -- "$LINEAGE_FILE" "$TRANSACTION_ROOT/lineage-before-v3.tsv"
   write_phase request-recorded
 else
-  [[ -f "$TRANSACTION_ROOT/reset-request-v2.tsv" ]] || die "existing transaction lacks reset evidence"
-  [[ -f "$TRANSACTION_ROOT/lineage-before-v2.tsv" ]] || die "existing transaction lacks lineage evidence"
-  cmp -s -- "$RESET_FILE" "$TRANSACTION_ROOT/reset-request-v2.tsv" || die "existing transaction reset identity changed"
+  [[ -f "$TRANSACTION_ROOT/reset-request-v3.tsv" ]] || die "existing transaction lacks reset evidence"
+  [[ -f "$TRANSACTION_ROOT/lineage-before-v3.tsv" ]] || die "existing transaction lacks lineage evidence"
+  cmp -s -- "$RESET_FILE" "$TRANSACTION_ROOT/reset-request-v3.tsv" || die "existing transaction reset identity changed"
   read_phase
 fi
 load_transaction_lineage
@@ -341,7 +332,7 @@ if [[ "$CURRENT_PHASE" == lineage-committed ]]; then
 fi
 
 if [[ "$CURRENT_PHASE" == health-verified ]]; then
-  load_contract "$SUCCESSOR_FILE" 'BC_PRESTIGE_SUCCESSOR_V2' 6
+  load_contract "$SUCCESSOR_FILE" 'BC_PRESTIGE_SUCCESSOR_V3' 6
   RECOVER_SEED="$(contract_value 3 successor_seed)"; RECOVER_ATTEMPT="$(contract_value 5 attempt)"
   health_is_valid "$RECOVER_ATTEMPT" "$RECOVER_SEED" || die "persisted health-verified phase no longer validates"
   SUCCESSOR_PID="$(<"$TRANSACTION_ROOT/successor.pid")"
@@ -380,8 +371,8 @@ for ((attempt=START_ATTEMPT; attempt<=3; attempt++)); do
     stop_console_relay; exit "$EXIT_CODE"
   fi
   printf 'prestige supervisor: successor attempt %s failed health verification\n' "$attempt" >&2
-  if [[ -f "$HEALTH_FILE" ]]; then cp -- "$HEALTH_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-health-v2.tsv"; fi
-  cp -- "$SUCCESSOR_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-request-v2.tsv"
+  if [[ -f "$HEALTH_FILE" ]]; then cp -- "$HEALTH_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-health-v3.tsv"; fi
+  cp -- "$SUCCESSOR_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-request-v3.tsv"
   stop_failed_server "$SUCCESSOR_PID"; stop_console_relay
 done
 

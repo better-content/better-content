@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "AGENTS.md"
-hash = "c1ec01ccd672208ba168c8499c3cb80c805a92ed12d6bcd8c493653627e1b148"
+hash = "97abc2c6b9fb091aea1a307ea725627ad9e6cbc80611ae8d660abb5de9aada61"
 
 [[files]]
 file = "LICENSE"
@@ -5301,10 +5301,6 @@ file = "config/bcfixes-common.toml"
 hash = "22c65f2c1cf9a92c0663d30041fd2470a3e34a78385de9ea8a09eed9ebd0ed8b"
 
 [[files]]
-file = "config/bcfixes-prestige-biomes.txt"
-hash = "d13936253ac9a9ce7f02c6c7211e8c92f82e368f04301fbef52cf852b06c4afb"
-
-[[files]]
 file = "config/bettercombat/client.json5"
 hash = "744d7a62f2b493bc45feb87a6a09a5ca1663d4439999dc07b05278e353b35fcb"
 
@@ -5795,6 +5791,10 @@ hash = "efc465cd9a5c03484680113ddf8448874803fc5f95a5de711d0ffc52a173cf97"
 [[files]]
 file = "config/pneumaticcraft-common.toml"
 hash = "7c55f51be2b4414cf12d683863148cc97028c0687e45371cc7402d0d820cf50f"
+
+[[files]]
+file = "config/prestige-biomes.txt"
+hash = "d13936253ac9a9ce7f02c6c7211e8c92f82e368f04301fbef52cf852b06c4afb"
 
 [[files]]
 file = "config/projectvibrantjourneys-common.toml"
@@ -11098,7 +11098,7 @@ hash = "a7327d4d5e251c864f25346e598d5721ad4dd98c18f4d14f6991a3e46b6fda39"
 
 [[files]]
 file = "mods/bcfixes-0.1.0.jar"
-hash = "592820de6276de0ce30531019dbc4d4e65b1068943442620b70802d589357e6a"
+hash = "5834137f0992844058873681859538d683613a2a7851f8adb2f4b86d651c6a1f"
 
 [[files]]
 file = "mods/bcrecipegraph-0.1.0.jar"
@@ -11834,6 +11834,10 @@ hash = "7cc7116fee8b525e93630dc9a4d79b5a6f0ae07434cad71280fad75224442502"
 metafile = true
 
 [[files]]
+file = "mods/prestige-0.1.0.jar"
+hash = "8eb30529d5dbc5c7ff49df4ee176bca92c496fab7b7b7e1423f702f15596ab78"
+
+[[files]]
 file = "mods/procedural_bouquets-0.1.0.jar"
 hash = "fcdb8ee0be346742cc928e43b929bb78787db1c7203fe14b9d3f7fd9db5bb222"
 
@@ -12133,6 +12137,10 @@ hash = "00a0cba74675174812eea16aca533adfe9bac7b30a81a7e33dd81bd9343b45c4"
 metafile = true
 
 [[files]]
+file = "mods/traces-0.1.0.jar"
+hash = "785391f3d389a7435854c59e8c99b2100db4082b670bb40f91936c8400ad0f8a"
+
+[[files]]
 file = "mods/trackwork.pw.toml"
 hash = "1c9c98fae4550eb61ce8816f80dd97538f281e7848c924eb0d15d7929a3b44bb"
 metafile = true
@@ -12207,7 +12215,7 @@ hash = "2f6ad32e090a7481a9fcdf9dc3bbd720efffa5dcada8efb1ad3f9f05c73c9d77"
 
 [[files]]
 file = "prestige-server.sh"
-hash = "ee4458318adbb780211f0b1b8d1c9199988a40474a720e0c1e9af5d157e6f185"
+hash = "bc3166e2e04937e6671ced207dab15fc9b6aa0236c62cc807d1b99c5a3a7841c"
 
 [[files]]
 file = "quests/graph.yml"

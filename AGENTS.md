@@ -155,6 +155,7 @@ Active pack-critical sources:
 - `oc2r-create-bridge` (`computerbridge`)
 - `oc2rwireless-global-pubsub-addon` (`oc2rwireless`)
 - `pillager-campaigns` (`pillagercampaigns`)
+- `prestige` (`prestige`)
 - `procedural-bouquets` (`procedural_bouquets`)
 - `realistic-ores` (`realisticores`)
 - `recipe-graph-dumper` (`bcrecipegraph`)
@@ -162,6 +163,7 @@ Active pack-critical sources:
 - `rpg-stats` (`rpgstats`)
 - `settlement-roads` (`settlementroads`)
 - `tcon-affixes` (`tconaffixes`)
+- `traces` (`traces`)
 - `village-walls` (`villagewalls`)
 
 Note: `settlementroads` appears in multiple dirs; use `generated/custom-mod-sources/settlement-roads` as canonical unless explicitly told otherwise.

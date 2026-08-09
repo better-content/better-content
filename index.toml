@@ -9361,6 +9361,10 @@ file = "kubejs/config/create_tcon_bootstrap.json"
 hash = "2fdad489d277c84485375e7de32379776420c62e2dc536f548597edb017f39e3"
 
 [[files]]
+file = "kubejs/config/cross_mod_boundaries.json"
+hash = "f504d604c0cddb514c6c4167b33e9ed5096fce6f419d720d949dbf959969c4bd"
+
+[[files]]
 file = "kubejs/config/economy_acquisition.json"
 hash = "5e85125f9aeda6d625860beea3d034a0572463e41f6e903f6dbbdf5872080bfe"
 
@@ -9383,6 +9387,10 @@ hash = "9d734d8f9b4ba19dce7c21e44f618524733742516fe647ee72c820c71649acbb"
 [[files]]
 file = "kubejs/config/magic_parenting.json"
 hash = "a6c95cd49ab1ba4796d158ba87a8fda149652b3bfd90f016e795cc4a0d7d543c"
+
+[[files]]
+file = "kubejs/config/mod_progression_gates.json"
+hash = "cc86a19cafddb8c469dae68b0eadf8b7a5cc46fb6d3f6cc137d0950fc6f20014"
 
 [[files]]
 file = "kubejs/config/perf_probe.json"
@@ -10779,6 +10787,10 @@ hash = "949dbdaf905b7d4d4761d2de2b3a0dcb1ddb815631ee227f79f038f490d9adb1"
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/171_tacz_manufacturing_gates.js"
 hash = "3552f27131bc1cf78a9157c72a5229d457f8b1360fc587697b1f8338f4636475"
+
+[[files]]
+file = "kubejs/server_scripts/30_recipe_replace/172_cross_mod_anchor_boundaries.js"
+hash = "0d9ac8bc618c91ddd1f78659e16c003ee9d5f1cdb3e5a546b764879fb66d9685"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/175_playtest_recipe_repairs.js"

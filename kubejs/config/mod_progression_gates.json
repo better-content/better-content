@@ -1,7 +1,7 @@
 {
   "schema": "bc.mod_progression_gates.v1",
-  "review_status": "adjudicated",
-  "description": "Human decisions for anchor-first per-mod recipe control. Frequency nominates candidates; only reviewed native hierarchy anchors may change recipes.",
+  "review_status": "boundary_authored_partial_review",
+  "description": "Top-N nominations plus item-specific decisions. Family-wide defaults are forbidden; unreviewed candidates remain pending_review.",
   "candidate_policy": {
     "base": 3,
     "entries_per_increment": 100,
@@ -15,51 +15,19 @@
     "machine_access_control"
   ],
   "new_gate_materials_allowed": false,
-  "decision_groups": [
-    {
-      "group_id": "open_survival",
-      "families": ["adchimneys", "additionalweaponry", "artifacts", "brewinandchewin", "burnt", "cold_sweat", "compressedcreativity", "eanimod", "everythingcopper", "farmersdelight", "farmersrespite", "framedblocks", "ftbquests", "immersive_weathering", "littlelogistics", "minecraft", "moreartifacts", "natures_spirit", "naturescompass", "procedural_bouquets", "projectvibrantjourneys", "quark", "realisticores", "savage_and_ravage", "sereneseasons", "starcatcher", "supplementaries", "tacz", "thalassophobia", "the_flesh_that_hates", "thirst", "tinker_rapier", "tinkers_things", "tinkersweaponry", "ubesdelight", "unearthed", "weather2"],
-      "decision": "not_progression_bearing",
-      "reason": "The family is intentionally available in survival; internal frequency does not justify a progression gate.",
-      "control_refs": []
-    },
-    {
-      "group_id": "dimension_access_controlled",
-      "families": ["aether", "deeperdarker", "fallout_wastelands_", "twilightforest", "undergarden"],
-      "decision": "already_controlled",
-      "reason": "The family is controlled at dimension access; ordinary internal terrain and palette ingredients must not become recipe gates.",
-      "control_refs": ["kubejs/server_scripts/30_recipe_replace/170_space_dimension_access_gates.js", "kubejs/server_scripts/30_recipe_replace/155_dimension_proof_graph_starts.js"]
-    },
-    {
-      "group_id": "native_machine_or_spine_controlled",
-      "families": ["ae2", "ars_nouveau", "bloodmagic", "buildinggadgets2", "create", "creatingspace", "heatsync", "k_turrets", "kubejs", "latent_chemlib", "malum", "morered", "oc2r", "occultism", "pneumaticcraft", "powergrid", "protection_pixel", "rehooked", "sophisticatedbackpacks", "sophisticatedstorage", "tconstruct", "tomeofblood", "trackwork", "vs_clockwork"],
-      "decision": "already_controlled",
-      "reason": "Existing native-machine, internal-component, casing, or magic-spine acquisition already controls this hierarchy candidate.",
-      "control_refs": ["kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js", "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js", "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js"]
-    },
-    {
-      "group_id": "decorative_or_world_material",
-      "families": ["createdeco", "forbidden_arcanus", "goety", "hexerei"],
-      "decision": "decorative_hub",
-      "reason": "The top-N surface is dominated by palette or ordinary world materials; frequency is not hierarchy authority.",
-      "control_refs": []
-    },
-    {
-      "group_id": "material_form_conversions",
-      "families": ["chemlib"],
-      "decision": "conversion_form",
-      "reason": "Elemental ingot frequency comes from material-form conversion and does not define an internal progression tier.",
-      "control_refs": []
-    },
-    {
-      "group_id": "open_subcomponents",
-      "families": ["createdieselgenerators", "hangglider", "irons_spellbooks"],
-      "decision": "not_progression_bearing",
-      "reason": "Common subcomponents may remain open; the completed capability is controlled separately.",
-      "control_refs": []
-    }
-  ],
+  "decision_groups": [],
   "candidate_overrides": [
+    {"item": "compressedcreativity:engine_rotor", "decision": "anchor", "reason": "The rotor is the recurring Compressed Creativity machine core and now crosses Create plus PneumaticCraft on mechanical crafting.", "control_refs": ["kubejs/server_scripts/30_recipe_replace/172_cross_mod_anchor_boundaries.js"]},
+    {"item": "littlelogistics:spring", "decision": "anchor", "reason": "The spring is the native rolling-stock hub and now requires Create mixing instead of ordinary grid assembly.", "control_refs": ["kubejs/server_scripts/30_recipe_replace/172_cross_mod_anchor_boundaries.js"]},
+    {"item": "weather2:weather_item", "decision": "anchor", "reason": "The shared Weather2 instrument is now pressure-assembled from Power Grid instrumentation and relay proofs.", "control_refs": ["kubejs/server_scripts/30_recipe_replace/172_cross_mod_anchor_boundaries.js"]},
+    {"item": "moreartifacts:shadow_dust", "decision": "anchor", "reason": "Shadow dust dominates More Artifacts equipment and now enters through infused-slate Blood alchemy.", "control_refs": ["kubejs/server_scripts/30_recipe_replace/172_cross_mod_anchor_boundaries.js"]},
+    {"item": "ars_nouveau:blank_thread", "decision": "anchor", "reason": "Blank thread is a recurring Ars equipment hub and now crosses Hexerei plus the blank-slate tier.", "control_refs": ["kubejs/server_scripts/30_recipe_replace/172_cross_mod_anchor_boundaries.js"]},
+    {"item": "ars_nouveau:abjuration_essence", "decision": "anchor", "reason": "Abjuration essence retains native Ars imbuement while adding a reinforced-slate pedestal proof.", "control_refs": ["kubejs/server_scripts/30_recipe_replace/172_cross_mod_anchor_boundaries.js"]},
+    {"item": "ars_nouveau:manipulation_essence", "decision": "anchor", "reason": "Manipulation essence retains native Ars imbuement while adding an infused-slate pedestal proof.", "control_refs": ["kubejs/server_scripts/30_recipe_replace/172_cross_mod_anchor_boundaries.js"]},
+    {"item": "malum:esoteric_spool", "decision": "anchor", "reason": "The recurring Malum spool retains spirit infusion and adds a blank-slate manufacturing proof.", "control_refs": ["kubejs/server_scripts/30_recipe_replace/172_cross_mod_anchor_boundaries.js"]},
+    {"item": "malum:alchemical_impetus", "decision": "anchor", "reason": "The alchemical impetus retains Malum spirit infusion and adds the reinforced-slate boundary.", "control_refs": ["kubejs/server_scripts/30_recipe_replace/172_cross_mod_anchor_boundaries.js"]},
+    {"item": "malum:soul_stained_steel_ingot", "decision": "anchor", "reason": "Soul-stained steel retains its native spirit recipe and adds the infused-slate boundary.", "control_refs": ["kubejs/server_scripts/30_recipe_replace/172_cross_mod_anchor_boundaries.js"]},
+    {"item": "occultism:otherstone", "decision": "anchor", "reason": "Otherstone is the recurring Occultism substrate and now enters through Hexerei cauldron work with a reinforced slate.", "control_refs": ["kubejs/server_scripts/30_recipe_replace/172_cross_mod_anchor_boundaries.js"]},
     {"item": "ars_nouveau:archwood_planks", "decision": "decorative_hub", "reason": "Archwood palette use is not a magic tier.", "control_refs": []},
     {"item": "ars_nouveau:green_archwood_log", "decision": "decorative_hub", "reason": "World-acquired archwood is not a crafted hierarchy anchor.", "control_refs": []},
     {"item": "ars_nouveau:purple_archwood_log", "decision": "decorative_hub", "reason": "World-acquired archwood is not a crafted hierarchy anchor.", "control_refs": []},
@@ -87,8 +55,8 @@
   "family_dispositions": [
     {
       "families": ["adpother", "amendments", "arcane_chunkloaders", "bcfixes", "dynamictrees", "excavated_variants", "fiahi", "fowlplay", "ftbfiltersystem", "irons_lib", "jumbofurnace", "oc2rwireless", "patchouli", "solcarrot", "tinkers_advanced", "tinkers_battle_spades", "tinkers_katanas", "tradingpost", "vs_eureka", "wares"],
-      "decision": "no_internal_hierarchy",
-      "reason": "No exact same-mod ingredient appears in the top-N input surface; control remains at the owning machine, parent mod, dimension, or explicit capability boundary."
+      "decision": "no_top_n_candidate",
+      "reason": "No exact same-mod ingredient appears in the top-N input surface; each family still requires a separate capability-level review."
     }
   ]
 }

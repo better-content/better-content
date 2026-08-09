@@ -26,6 +26,7 @@ logs
 server-instance
 server-template
 /tools/
+/scripts/
 /user_jvm_args.txt
 forge-*-installer.jar
 forge-*-installer.jar.log

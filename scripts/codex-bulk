@@ -1,0 +1,138 @@
+#!/usr/bin/env python3
+"""Adaptive, resumable bulk launcher for structured Codex JSONL jobs."""
+
+import argparse
+import collections
+import json
+import os
+import random
+import signal
+import subprocess
+import sys
+import time
+from pathlib import Path
+
+
+def validate_schema(value, schema, where="$"):
+    expected = schema.get("type")
+    if expected == "object":
+        if not isinstance(value, dict): raise ValueError(f"{where} must be object")
+        for key in schema.get("required", []):
+            if key not in value: raise ValueError(f"{where}.{key} is required")
+        if schema.get("additionalProperties") is False:
+            extra = set(value) - set(schema.get("properties", {}))
+            if extra: raise ValueError(f"{where} has extra keys: {sorted(extra)}")
+        for key, child in schema.get("properties", {}).items():
+            if key in value: validate_schema(value[key], child, f"{where}.{key}")
+    elif expected == "array":
+        if not isinstance(value, list): raise ValueError(f"{where} must be array")
+        for index, child in enumerate(value): validate_schema(child, schema.get("items", {}), f"{where}[{index}]")
+    elif expected == "string" and not isinstance(value, str): raise ValueError(f"{where} must be string")
+    elif expected == "boolean" and not isinstance(value, bool): raise ValueError(f"{where} must be boolean")
+    elif expected == "integer" and (not isinstance(value, int) or isinstance(value, bool)): raise ValueError(f"{where} must be integer")
+    elif expected == "number" and (not isinstance(value, (int, float)) or isinstance(value, bool)): raise ValueError(f"{where} must be number")
+    if "const" in schema and value != schema["const"]: raise ValueError(f"{where} violates const")
+    if "enum" in schema and value not in schema["enum"]: raise ValueError(f"{where} violates enum")
+    if isinstance(value, (int, float)) and "minimum" in schema and value < schema["minimum"]: raise ValueError(f"{where} below minimum")
+    if isinstance(value, (int, float)) and "maximum" in schema and value > schema["maximum"]: raise ValueError(f"{where} above maximum")
+
+
+def validate_result(job, schema):
+    result_path = Path(job["result_path"])
+    value = json.loads(result_path.read_text())
+    validate_schema(value, schema)
+    expected = job.get("expected", {})
+    for key, wanted in expected.items():
+        if value.get(key) != wanted: raise ValueError(f"{key} identity mismatch")
+    allowed = set(job.get("allowed_evidence_refs", []))
+    def walk(node, key=None):
+        if isinstance(node, dict):
+            for child_key, child in node.items(): walk(child, child_key)
+        elif isinstance(node, list):
+            for child in node: walk(child, key)
+        elif isinstance(node, str) and key == "evidence_refs" and node not in allowed:
+            raise ValueError(f"invented evidence ref: {node}")
+    walk(value)
+
+
+def append_event(path, event):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a", encoding="utf-8") as handle:
+        handle.write(json.dumps(event, sort_keys=True, separators=(",", ":")) + "\n")
+        handle.flush(); os.fsync(handle.fileno())
+
+
+def terminate_group(process):
+    if process.poll() is not None: return
+    try: os.killpg(process.pid, signal.SIGTERM)
+    except ProcessLookupError: return
+    try: process.wait(timeout=10)
+    except subprocess.TimeoutExpired:
+        try: os.killpg(process.pid, signal.SIGKILL)
+        except ProcessLookupError: pass
+        process.wait()
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--queue", required=True); parser.add_argument("--events", required=True); parser.add_argument("--schema", required=True)
+    parser.add_argument("--initial-concurrency", type=int, default=32); parser.add_argument("--max-concurrency", type=int, default=256)
+    parser.add_argument("--successes-per-increase", type=int, default=32); parser.add_argument("--cooldown-seconds", type=float, default=60); parser.add_argument("--cooldown-jitter-seconds", type=float, default=10)
+    args = parser.parse_args()
+    if not (1 <= args.initial_concurrency <= args.max_concurrency <= 256): parser.error("concurrency must satisfy 1 <= initial <= max <= 256")
+    schema = json.loads(Path(args.schema).read_text()); events_path = Path(args.events)
+    pending = collections.deque(json.loads(line) for line in Path(args.queue).read_text().splitlines() if line.strip())
+    for job in pending:
+        if not isinstance(job.get("stable_id"), str) or not job["stable_id"]: raise ValueError("every job needs stable_id")
+        job.setdefault("attempts_completed", 0); job.setdefault("first_started_epoch", None)
+    running = {}; concurrency = args.initial_concurrency; streak = 0; cooldown_until = 0.0; cancelled = False
+    def cancel(_signum, _frame):
+        nonlocal cancelled; cancelled = True
+        for state in list(running.values()): terminate_group(state["process"])
+    signal.signal(signal.SIGINT, cancel); signal.signal(signal.SIGTERM, cancel)
+    while (pending or running) and not cancelled:
+        now = time.time()
+        while pending and len(running) < concurrency and now >= cooldown_until:
+            job = pending.popleft(); first = job["first_started_epoch"] or now; job["first_started_epoch"] = first
+            if job["attempts_completed"] >= 3 or now - first >= 900:
+                append_event(events_path, {"stable_id": job["stable_id"], "status": "terminal_error", "attempts": job["attempts_completed"], "first_started_epoch": first, "error": "retry or 15-minute lifetime exhausted"}); continue
+            log_path = Path(job["log_path"]); log_path.parent.mkdir(parents=True, exist_ok=True); log = log_path.open("ab")
+            result_path = Path(job["result_path"]); result_path.parent.mkdir(parents=True, exist_ok=True); result_path.unlink(missing_ok=True)
+            process = subprocess.Popen(job["command"], stdin=subprocess.DEVNULL, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
+            running[process.pid] = {"process": process, "job": job, "log": log, "started": now}
+            append_event(events_path, {"stable_id": job["stable_id"], "status": "started", "attempt": job["attempts_completed"] + 1, "concurrency": concurrency, "first_started_epoch": first})
+        if not running:
+            if pending and time.time() < cooldown_until: time.sleep(min(0.25, cooldown_until - time.time()))
+            continue
+        time.sleep(0.1)
+        for pid, state in list(running.items()):
+            process, job = state["process"], state["job"]
+            if process.poll() is None and time.time() - job["first_started_epoch"] >= 900: terminate_group(process)
+            if process.poll() is None: continue
+            state["log"].close(); running.pop(pid); job["attempts_completed"] += 1
+            output = Path(job["log_path"]).read_text(errors="replace")[-20000:]
+            error = None
+            if process.returncode != 0: error = f"codex exited {process.returncode}"
+            else:
+                try: validate_result(job, schema)
+                except Exception as failure: error = str(failure)
+            rate_limited = "429" in output or "too many requests" in output.lower()
+            if error is None:
+                streak += 1; append_event(events_path, {"stable_id": job["stable_id"], "status": "success", "attempts": job["attempts_completed"], "first_started_epoch": job["first_started_epoch"]})
+                if streak >= args.successes_per_increase and concurrency < args.max_concurrency:
+                    concurrency += 1; streak = 0; append_event(events_path, {"status": "concurrency_increased", "concurrency": concurrency})
+            else:
+                streak = 0; exhausted = job["attempts_completed"] >= 3 or time.time() - job["first_started_epoch"] >= 900
+                status = "terminal_error" if exhausted else "retry"
+                append_event(events_path, {"stable_id": job["stable_id"], "status": status, "attempts": job["attempts_completed"], "first_started_epoch": job["first_started_epoch"], "error": error, "rate_limited": rate_limited})
+                if not exhausted: pending.append(job)
+                if (rate_limited or exhausted) and time.time() >= cooldown_until:
+                    concurrency = max(1, concurrency // 2); cooldown_until = max(cooldown_until, time.time() + args.cooldown_seconds + random.uniform(0, args.cooldown_jitter_seconds))
+                    append_event(events_path, {"status": "queue_cooldown", "concurrency": concurrency, "reason": "429" if rate_limited else "retry_limit", "until_epoch": cooldown_until})
+    if cancelled:
+        for state in list(running.values()): terminate_group(state["process"]); state["log"].close()
+        append_event(events_path, {"status": "cancelled"}); return 130
+    return 0
+
+
+if __name__ == "__main__": raise SystemExit(main())

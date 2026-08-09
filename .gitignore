@@ -16,6 +16,8 @@ generated/asset-review/*/evidence/
 generated/pack-site/
 generated/surface-marker-capture/
 generated/surface-samples-*-superflat.png
+generated/validation/integration-audit/spark-classification/
+generated/validation/integration-audit/stream-classification*/
 exports/
 
 kubejs/recipe_dumps/

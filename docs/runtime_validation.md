@@ -88,6 +88,8 @@ On 2026-08-02 the `arcane_chunkloaders` visual harness passed with all eight anc
 
 On 2026-08-10 the Playtest v28 smoke passed from a fresh bootstrap: the dedicated server completed a new-world start, the Xvfb client joined and remained connected for the bounded settle window, and both sides shut down cleanly with no hard-log finding. The preceding v27 attempt exposed two release blockers before join: Drive-By-Wire 0.1.1 failed dedicated-server registry setup, and the staged Traces JAR was a development-mapped artifact that called `Item.Properties.stacksTo` at runtime. Drive-By-Wire was removed, Traces was rebuilt from ForgeGradle's `reobfJar` output, and its unit checks plus all six Forge GameTests passed before the successful v28 lifecycle smoke.
 
+Traces visual acceptance uses the matched release distributions, not a development client: `tools/bc capture traces --client-zip PATH --server-zip PATH`. The command runs one fixed-camera Survival walk/create/edit loop in a superflat world, restarts only the client with Oculus/Complementary enabled, and records the common embedded Traces JAR hash plus capture/network/render counters.
+
 ## Item/block integration matrix
 
 ```text

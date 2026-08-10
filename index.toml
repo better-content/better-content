@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "AGENTS.md"
-hash = "ccaa4e6c8696e351111eac883acaa067c58d1c84c526c5805510fac9c2e04a06"
+hash = "7f1be9fabab184475a8ccec71bf5e3c5bf9a51786ee57dea0d0384dbfaf62c7d"
 
 [[files]]
 file = "LICENSE"
@@ -12169,7 +12169,7 @@ metafile = true
 
 [[files]]
 file = "mods/traces-0.1.0.jar"
-hash = "a6d3c6dd4bb4cc26c5a1197127ab99f884db24c1848dc721ff7d6643fdf449c4"
+hash = "dcc20c43f9e9f814bd11439cd2b7d06db14ddf26a7b72257df4eeda178a8ae89"
 
 [[files]]
 file = "mods/trackwork.pw.toml"
@@ -12242,7 +12242,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "2f6ad32e090a7481a9fcdf9dc3bbd720efffa5dcada8efb1ad3f9f05c73c9d77"
+hash = "1bb5a261a4e74a21f5548e5e8dd41f9d4417808926ed917524b3cc0604aadb21"
 
 [[files]]
 file = "prestige-server.sh"

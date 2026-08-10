@@ -58,6 +58,7 @@ Do not sync or delete player/runtime state by default. The tracked repo-root `op
 - Fast workspace checks: `tools/bc test fast`
 - One-world server/client smoke: `tools/bc test smoke --bootstrap-mode always`
 - Placed-block screenshots: `tools/bc capture blocks --manifest PATH [--bootstrap-mode always|once|never] [--output-dir PATH]`
+- Traces release proof: `tools/bc capture traces --client-zip PATH --server-zip PATH [--output-dir PATH]`
 - Graph adjacency query: `tools/bc graph item ITEM_ID [--producers|--consumers|--all] [--limit N] [--type RECIPE_TYPE] [--graph PATH]`
 - Graph route query: `tools/bc graph route ITEM_ID [--graph PATH] [--sources PATH] [--spine PATH]`
 - Graph blocker query: `tools/bc graph blockers ITEM_ID [--graph PATH] [--sources PATH] [--spine PATH] [--limit N]`

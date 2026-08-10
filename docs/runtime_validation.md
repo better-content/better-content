@@ -86,6 +86,8 @@ The August playtest stabilization pass also makes Complementary Reimagined's glo
 
 On 2026-08-02 the `arcane_chunkloaders` visual harness passed with all eight anchors command-placed in one superflat world. The representative minimal closure included Create, Power Grid, Ars Nouveau, Blood Magic, PneumaticCraft, Goety, Malum, and Forbidden and Arcanus; both captured views completed with no anchor tag, model, registry, or recipe errors. The same day's full smoke loaded the reobfuscated anchor jar and all four KubeJS integration scripts successfully on both sides, but is not recorded as a lifecycle pass: the Xvfb client later failed while Accelerated Rendering requested GLSL 4.60 from the lane's llvmpipe OpenGL 4.5 device. The failure was graphics-environment-specific and outside the anchor stack; the dedicated server completed startup and clean shutdown.
 
+On 2026-08-10 the Playtest v28 smoke passed from a fresh bootstrap: the dedicated server completed a new-world start, the Xvfb client joined and remained connected for the bounded settle window, and both sides shut down cleanly with no hard-log finding. The preceding v27 attempt exposed two release blockers before join: Drive-By-Wire 0.1.1 failed dedicated-server registry setup, and the staged Traces JAR was a development-mapped artifact that called `Item.Properties.stacksTo` at runtime. Drive-By-Wire was removed, Traces was rebuilt from ForgeGradle's `reobfJar` output, and its unit checks plus all six Forge GameTests passed before the successful v28 lifecycle smoke.
+
 ## Item/block integration matrix
 
 ```text

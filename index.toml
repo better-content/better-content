@@ -11306,11 +11306,6 @@ hash = "6a18fc39dbe317dcdba9aac9d5457e1bb2aa6decf77a6f4d6e67d7fbff0831d0"
 metafile = true
 
 [[files]]
-file = "mods/drive-by-wire.pw.toml"
-hash = "f90d0296de2d7cbb30eddaefa5c8f3205d6aa0ab1bf7447072b44e4a2d10b187"
-metafile = true
-
-[[files]]
 file = "mods/dthexerei-1.0.0.jar"
 hash = "3eac14b6c024efd18914b0f9b6d51cd8f08ccbed4d97bf28160fae99c4613aed"
 
@@ -12174,7 +12169,7 @@ metafile = true
 
 [[files]]
 file = "mods/traces-0.1.0.jar"
-hash = "b1d5d8020988ee4cb010b041c5aad6580976c8e54f4f573eb66520c552f998a7"
+hash = "a6d3c6dd4bb4cc26c5a1197127ab99f884db24c1848dc721ff7d6643fdf449c4"
 
 [[files]]
 file = "mods/trackwork.pw.toml"

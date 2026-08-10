@@ -1,11 +1,11 @@
 name = "Better Content"
-version = "Playtest v27"
+version = "Playtest v28"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "ec11facc709b92fbee62821e5e60d0af1c5d9e695d8cda274484303ac678ba33"
+hash = "e108507479d0ad2562f00d5d9f93617864c175e9107e9b8cedf934368e3deb0e"
 
 [versions]
 forge = "47.4.13"

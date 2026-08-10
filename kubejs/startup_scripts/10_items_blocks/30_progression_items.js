@@ -26,6 +26,16 @@ StartupEvents.registry('fluid', function (event) {
         .displayName('Phosphoric Acid')
         .thinTexture(0xd8b65a)
         .bucketColor(0xd8b65a)
+
+    event.create('molten_titanium')
+        .displayName('Molten Titanium')
+        .thickTexture(0xc6ccd2)
+        .bucketColor(0xc6ccd2)
+
+    event.create('molten_thorium')
+        .displayName('Molten Thorium')
+        .thickTexture(0xe4e0c8)
+        .bucketColor(0xe4e0c8)
 })
 
 StartupEvents.registry('item', function (event) {
@@ -95,6 +105,21 @@ StartupEvents.registry('item', function (event) {
 
     for (var p = 0; p < processingMedia.length; p++) {
         event.create(processingMedia[p][0]).displayName(processingMedia[p][1])
+    }
+
+    var oreIntermediates = [
+        ['mineral_tailings', 'Mineral Tailings'],
+        ['osmiridium_concentrate', 'Osmiridium Concentrate'],
+        ['tungsten_concentrate', 'Tungsten Concentrate'],
+        ['titanium_concentrate', 'Titanium Concentrate'],
+        ['uranium_concentrate', 'Uranium Concentrate'],
+        ['thorium_concentrate', 'Thorium Concentrate'],
+        ['vanadium_contact_catalyst', 'Vanadium Contact Catalyst'],
+        ['oxygenated_vanadium_contact_catalyst', 'Oxygenated Vanadium Contact Catalyst']
+    ]
+
+    for (var oi = 0; oi < oreIntermediates.length; oi++) {
+        event.create(oreIntermediates[oi][0]).displayName(oreIntermediates[oi][1])
     }
 
     var magicCuttingFluids = [

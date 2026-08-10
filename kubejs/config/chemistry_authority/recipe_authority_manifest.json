@@ -5,6 +5,25 @@
   "review_scope": "This human-reviewed ledger records only the exact approved and rejected cohorts named below. Every other authored transformation remains pending reaction-level balance and behavioral review; presence in source is not approval.",
   "approved_recipe_contracts": [
     {
+      "family": "reachable_acids_and_curated_realistic_ore_assays",
+      "catalogue": "kubejs/server_scripts/40_recipe_add/49_realistic_ores_catalog.js",
+      "deposit_count": 22,
+      "recipe_id_patterns": [
+        "^kubejs:chemistry/acids/.*$",
+        "^kubejs:realistic_ores/beneficiation/.*$",
+        "^kubejs:realistic_ores/leaching/.*$",
+        "^kubejs:realistic_ores/sample_milling/.*$"
+      ],
+      "source_contract": "Native PneumaticCraft fermentation supplies forge:ethanol. Water supplies contained oxygen; sulfur and a returned vanadium contact catalyst supply sulfuric acid; kelp salts, saltpeter, and phosphate rock then supply hydrochloric, nitric, and phosphoric acid. Acetic acid consumes tagged ethanol and oxygen.",
+      "assay_contract": "All 22 deposits have one deterministic water-beneficiation assay. Only catalogue entries with a chemically reviewed leach object receive one acid route; the rejected six-by-eight combinatorial output matrix remains removed.",
+      "media_contract": "Grinding balls are exact reusable catalysts. They select equipment tier and processing conditions, never ore identity, and are returned deterministically by every beneficiation, leaching, and ball-assisted component recipe.",
+      "gas_destination_contract": "Water electrolysis keeps oxygen as a PNCR fluid output and emits two ChemLib hydrogen formula-unit packets as its serializer-supported item coproduct. Those packets are valid only at the contained machine boundary and retain the global Latent vent-on-uncontained-extraction behavior.",
+      "loss_contract": "Beneficiation and leaching expose mineral_tailings as fixed residue. Tailings are not placed in generic ore or dust tags and have only a low-value heated clay-recovery sink.",
+      "industrial_authority_finding": "TConstruct retains direct metal formation. Create owns open crushing, beneficiation, liquid leaching, and wet phosphate preparation; PNCR owns deliberate contained oxygen and sulfur-oxide processing.",
+      "runtime_evidence": "pending_fresh_runtime_recipe_registration_and_machine_execution_capture",
+      "review_state": "statically_approved_pending_runtime_registration_and_machine_execution_oracle"
+    },
+    {
       "id": "kubejs:chemistry/pneumaticcraft/fluid_mixer/carbon_monoxide_oxidation",
       "family": "airtight_carbon_monoxide_oxidation",
       "equation": "2 CO + O2 -> 2 CO2",
@@ -104,17 +123,17 @@
       "fixed_mass_packet_basis": "Each solid item is one elemental or compound formula-unit packet. Each 250 mB elemental oxygen or chlorine fluid packet is O2 or Cl2 respectively; molecular gas packets use their named molecular formula.",
       "reactions": [
         { "id": "kubejs:chemistry/pneumaticcraft/fluid_mixer/nitrogen_dioxide", "equation": "2 NO + O2 -> 2 NO2", "exact_packet_change": "500 mB NO + 250 mB O2 -> 500 mB NO2", "process_contract": "PNCR contained oxidation at 3.0 bar.", "exact_material_purpose": "Oxidize contained nitric oxide into nitrogen dioxide for bounded downstream nitrogen chemistry.", "integration_state": "not_source_reachable_pending_valid_nitric_oxide_source_and_downstream_sink_redesign" },
-        { "id": "kubejs:chemistry/pneumaticcraft/fluid_mixer/sulfuric_acid_from_sulfur_trioxide", "equation": "SO3 + H2O -> H2SO4", "exact_packet_change": "250 mB SO3 + 250 mB H2O -> 250 mB H2SO4", "process_contract": "PNCR contained hydration at 3.0 bar; statically balanced pending repair of a valid SO3 source.", "exact_material_purpose": "Hydrate one sulfur-trioxide packet into one contained sulfuric-acid packet.", "integration_state": "not_source_reachable_pending_sulfur_trioxide_source_repair" },
+        { "id": "kubejs:chemistry/acids/sulfuric_acid_hydration", "equation": "SO3 + H2O -> H2SO4", "exact_packet_change": "250 mB SO3 + 250 mB H2O -> 250 mB H2SO4", "process_contract": "PNCR contained hydration at 2.0 bar after the authored vanadium contact-process source.", "exact_material_purpose": "Hydrate one sulfur-trioxide packet into one contained sulfuric-acid packet.", "integration_state": "source_reachable_from_sulfur_water_and_reusable_contact_catalyst" },
         { "id": "kubejs:chemistry/pneumaticcraft/thermo_plant/carbon_monoxide", "equation": "2 C + O2 -> 2 CO", "exact_packet_change": "2 C items + 250 mB O2 -> 500 mB CO", "process_contract": "PNCR oxygen-limited partial oxidation at 2.5 bar and at least 873 K.", "exact_material_purpose": "Produce contained carbon monoxide for explicit downstream oxidation without permitting complete combustion conditions." },
         { "id": "kubejs:chemistry/pneumaticcraft/thermo_plant/copper_chloride", "equation": "Cu + Cl2 -> CuCl2", "exact_packet_change": "1 Cu item + 250 mB Cl2 -> 1 CuCl2 item", "process_contract": "PNCR contained chlorination at 2.5 bar and at least 523 K.", "exact_material_purpose": "Convert one copper packet into copper(II)-chloride etchant rather than a finished elemental metal." },
         { "id": "kubejs:chemistry/pneumaticcraft/thermo_plant/iron_ii_oxide", "equation": "2 Fe + O2 -> 2 FeO", "exact_packet_change": "2 Fe items + 250 mB O2 -> 2 FeO items", "process_contract": "PNCR oxygen-limited oxidation at 2.0 bar and at least 923 K, above the wuestite stability threshold.", "exact_material_purpose": "Produce bounded iron(II)-oxide charge without creating finished elemental metal." },
         { "id": "kubejs:chemistry/pneumaticcraft/thermo_plant/silicon_dioxide", "equation": "Si + O2 -> SiO2", "exact_packet_change": "1 Si item + 250 mB O2 -> 1 SiO2 item", "process_contract": "PNCR contained bulk oxidation at 2.0 bar and at least 1073 K.", "exact_material_purpose": "Oxidize one silicon packet into one silica packet under high-temperature containment." },
-        { "id": "kubejs:chemistry/pneumaticcraft/thermo_plant/sulfur_dioxide", "equation": "S + O2 -> SO2", "exact_packet_change": "1 S item + 250 mB O2 -> 250 mB SO2", "process_contract": "PNCR contained sulfur oxidation at 2.0 bar and at least 523 K.", "exact_material_purpose": "Produce one contained sulfur-dioxide packet as a named sulfur-process intermediate.", "integration_state": "statically_valid_contained_production_pending_approved_downstream_sink" }
+        { "id": "kubejs:chemistry/acids/sulfur_dioxide", "equation": "S + O2 -> SO2", "exact_packet_change": "1 S item + 250 mB O2 -> 250 mB SO2", "process_contract": "PNCR contained sulfur oxidation at 2.0 bar and at least 523 K.", "exact_material_purpose": "Produce one contained sulfur-dioxide packet for the contact-process acid chain.", "integration_state": "source_reachable_and_consumed_by_sulfur_trioxide_contact" }
       ],
       "atom_balance_finding": "All seven equations conserve every named atom using the established diatomic elemental-gas packets and integer coefficients.",
       "industrial_authority_finding": "PNCR owns these conditioned contained-gas, acid, and compound operations; none creates a finished elemental metal, so TConstruct metallurgy remains exclusive.",
       "gas_destination_contract": "All gaseous inputs and outputs remain PNCR-contained recipe packets; transfer, hazards, and uncontained escape to Latent remain pending oracle.",
-      "review_scope": "Static approval covers packet arithmetic, bounded purpose, and encoded machine conditions only. It does not claim integrated source-to-sink chains; missing NO and SO3 sources and missing NO2 and SO2 sinks remain pending redesign. Runtime registration, hazard behavior, gas transfer, charge state, and source provenance also remain pending oracle.",
+      "review_scope": "Static approval covers packet arithmetic, bounded purpose, and encoded machine conditions only. The sulfur dioxide, sulfur trioxide, and sulfuric acid chain is now source-connected; NO and NO2 remain separately pending. Runtime registration, hazard behavior, gas transfer, charge state, and source provenance remain pending oracle.",
       "runtime_evidence": "fresh_snapshot_ca89408b24879e42f06ffb81_all_seven_routes_registered; carbon_monoxide_and_iron_ii_oxide_stacked_item_counts_unobservable_in_public_normalizer_pending_execution_oracle; gas_behavior_and_named_source_sink_repairs_remain_pending",
       "review_state": "statically_approved_routes_pending_oracle_and_source_sink_repairs"
     },

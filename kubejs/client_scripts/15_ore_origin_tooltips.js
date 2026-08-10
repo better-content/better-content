@@ -393,9 +393,15 @@ ItemEvents.tooltip(function (event) {
         event.add(dep.crushed, bcOreOriginLines('Crushed deposit material', dep.name + ': a processing ingredient recovered from the matching deposit or its surface rubble.', dep.processing))
         event.add(
             dep.crushed.replace('realisticores:crushed_', 'realisticores:surface_sample_'),
-            bcOreOriginLines('Placeable survey sample', dep.name + ': loose surface rubble signalling a matching ADLODS field where configured.', 'Collect it for low-yield milling, or leave it in place as a prospecting marker.')
+            bcOreOriginLines('Placeable survey sample', dep.name + ': loose surface rubble signalling a matching ADLODS field where configured.', 'Eight collected samples process into one matching crushed feed; furnace extraction is unavailable.')
         )
     }
+
+    event.add('kubejs:mineral_tailings', [
+        Text.gold('Ore-processing residue'),
+        Text.gray('A fixed loss from beneficiation and leaching.'),
+        Text.darkGray('Heated clay recovery is its only general sink; tailings are not ore-tagged feedstock.')
+    ])
 
     for (var j = 0; j < BC_SIMPLE_ORE_ORIGINS.length; j++) {
          bcAddOreOrigin(event, BC_SIMPLE_ORE_ORIGINS[j].items, BC_SIMPLE_ORE_ORIGINS[j].lines)

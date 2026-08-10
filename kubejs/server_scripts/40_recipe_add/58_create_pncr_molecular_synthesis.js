@@ -58,6 +58,8 @@ var BC_CHEM_REJECTED_MOLECULAR_ROUTES = {
     propane: true,
     pvc: true,
     sulfur_trioxide: true,
+    sulfur_dioxide: true,
+    sulfuric_acid_from_sulfur_trioxide: true,
     methane: true
 }
 

@@ -80,30 +80,15 @@ ServerEvents.recipes(function (event) {
     //
     // Unsupported with current molten-fluid set and therefore omitted:
     //   lazurite_vein, redstone_vein, sulfur_bearing_pyrite, phosphate_rock,
-    //   soul_bearing_black_shale, thorium_ore
+    //   coal_measures, soul_bearing_black_shale
     //
     // Partial-faithful mappings used to cover all remaining deposits:
-    //   coal_measures -> iron primary only (3rd output)
     //   titanium_iron_oxide -> titanium + iron + chromium
     //   corundum_beryl_vein -> emerald + sapphire + quartz
     //   bauxite_laterite -> aluminum + iron + nickel
     //   emerald_schist_beryl -> emerald + aluminum + quartz
 
     var deposits = [
-        {
-            id: 'coal_measures',
-            tag: 'kubejs:deposit_blocks/coal_measures',
-            primary: fluidTag('iron'),
-                     secondary: null,
-                     tertiary: null,
-                     temperature: 800,
-                     melterAmount: 45,
-                     oreAmount: 90,
-                     secondaryAmount: 0,
-                     tertiaryAmount: 0,
-                     melterTime: 110,
-                     oreTime: 150
-        },
         {
             id: 'ironstone',
             tag: 'kubejs:deposit_blocks/ironstone',
@@ -219,7 +204,7 @@ ServerEvents.recipes(function (event) {
         {
             id: 'titanium_iron_oxide',
             tag: 'kubejs:deposit_blocks/titanium_iron_oxide',
-            primary: fluidTag('aluminum'), // fallback if you have no molten titanium; replace with your own molten titanium tag if later added
+            primary: 'kubejs:molten_titanium',
                      secondary: fluidTag('iron'),
                      tertiary: fluidTag('chromium'),
                      temperature: 950,
@@ -299,6 +284,20 @@ ServerEvents.recipes(function (event) {
                      tertiaryAmount: 22,
                      melterTime: 160,
                      oreTime: 230
+        },
+        {
+            id: 'thorium_ore',
+            tag: 'kubejs:deposit_blocks/thorium_ore',
+            primary: 'kubejs:molten_thorium',
+                     secondary: fluidTag('lead'),
+                     tertiary: null,
+                     temperature: 950,
+                     melterAmount: 90,
+                     oreAmount: 180,
+                     secondaryAmount: 45,
+                     tertiaryAmount: 0,
+                     melterTime: 130,
+                     oreTime: 190
         },
         {
             id: 'uranium_ore',

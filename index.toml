@@ -8365,12 +8365,24 @@ file = "kubejs/assets/kubejs/models/item/melon_life_extract.json"
 hash = "0b79f0cb55627ab1a371e82a40cafa5a215681c707be706d29bdaf58730afe44"
 
 [[files]]
+file = "kubejs/assets/kubejs/models/item/mineral_tailings.json"
+hash = "9827c6264c00c160bef4aaeac1a0e3b71d7d1433ff36657cd5771534bfcdae4b"
+
+[[files]]
 file = "kubejs/assets/kubejs/models/item/mountain_beryl_lens.json"
 hash = "55ebb69b9be410dfd68934c7f8e5c27ddb887e14cc1d07a7482087622f2c93db"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/nickel_grinding_ball.json"
 hash = "ed8526ca58dbf46d642200de65425cfcf0111e66c1cc91bb3a0a96348ca8c71b"
+
+[[files]]
+file = "kubejs/assets/kubejs/models/item/osmiridium_concentrate.json"
+hash = "5681f49957881288bdf96792d920373e6146de3afff4576648bf9fa6f7bc6e5b"
+
+[[files]]
+file = "kubejs/assets/kubejs/models/item/oxygenated_vanadium_contact_catalyst.json"
+hash = "ff5bdf2eae81ff394ad7a8122a3ed2f11468e110f7d03310c5097b3a8303715e"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/phosphate_flux.json"
@@ -8489,6 +8501,14 @@ file = "kubejs/assets/kubejs/models/item/steel_grinding_ball.json"
 hash = "6f7ac3c8f2a3b1123bf6c6f8e47c0d145d3a18f76de3cbfeb3f85abac314aeac"
 
 [[files]]
+file = "kubejs/assets/kubejs/models/item/thorium_concentrate.json"
+hash = "e21b8e28152899f1077dd3ec8a1fa100596e83139ff13267c6beb67d69116cb6"
+
+[[files]]
+file = "kubejs/assets/kubejs/models/item/titanium_concentrate.json"
+hash = "39b71f9f681e365776527bef4c10d251816d851afe09c8e386951a9a476c65e8"
+
+[[files]]
 file = "kubejs/assets/kubejs/models/item/titanium_grinding_ball.json"
 hash = "43fefc71b360d464bd91525358c0000f109399832e96c0bb0de7d1067f268bbc"
 
@@ -8505,8 +8525,20 @@ file = "kubejs/assets/kubejs/models/item/tungsten_carbide_insert.json"
 hash = "5681f49957881288bdf96792d920373e6146de3afff4576648bf9fa6f7bc6e5b"
 
 [[files]]
+file = "kubejs/assets/kubejs/models/item/tungsten_concentrate.json"
+hash = "2e4b6ac989e312fa856c62c5a3002b22c4e4188543587b296e7055024fcb0518"
+
+[[files]]
 file = "kubejs/assets/kubejs/models/item/turtle_guard_extract.json"
 hash = "b776631b2f3649f66b1464784880bd02fa76661815fef1d8179d95231cf7540f"
+
+[[files]]
+file = "kubejs/assets/kubejs/models/item/uranium_concentrate.json"
+hash = "fad36d2cd1c60b6afe9a8445a915ba6d8fd0616993056a88d9462d7fc2ed9500"
+
+[[files]]
+file = "kubejs/assets/kubejs/models/item/vanadium_contact_catalyst.json"
+hash = "012bc049ff6b9bbba1eca66b839e23e2a63fbb3d1d15d7ee009be10994aed13e"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/item/vision_extract.json"
@@ -9218,7 +9250,7 @@ hash = "6b66f43c5a8ad14538b5785ad5aaa837ba529783fe5dda9653d3abd4b208e90c"
 
 [[files]]
 file = "kubejs/client_scripts/15_ore_origin_tooltips.js"
-hash = "cc185694c65cbea9acdf9e2c3b979ba6fe3cb68fe576e96beeec3fc0db0eb992"
+hash = "55f53d17bfcf7f9febc120754acf0093f0645556663aeea847cb7bf190e0378d"
 
 [[files]]
 file = "kubejs/client_scripts/20_hide_vanilla_tools.js"
@@ -9274,7 +9306,7 @@ hash = "aa35273fec61c1befe5be6ffea05e6ad26ade94e0c32f29fc9e7f2c36f8a28e6"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/form_roles.json"
-hash = "318fee3652c19bad2f2381a40493cdc3e352cd84827f53accb2336991d6e5b76"
+hash = "27f5da6dfcb16920fdba90b392a6608628daa9b66669910e548cc3ad29de1653"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/isotope_policy.json"
@@ -9286,7 +9318,7 @@ hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/recipe_authority_manifest.json"
-hash = "5cd2cca8b9385ae0c399cdbecb608ddd49f1f20e3fc0a3fdff728f777811274f"
+hash = "8f279ed3ca3234e13e90d367d314caa98aecbe9153b38d57e941c177dcb01d95"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
@@ -9318,7 +9350,7 @@ hash = "9842084f3f18b53e5848014781fcb996aad39fd2fcd8fdbe72cf492075e3af74"
 
 [[files]]
 file = "kubejs/config/chemistry_authority/species.json"
-hash = "6597fa550c2382554b79e320c8d2e1971cbda0af3667b2ee409d1e177899e8df"
+hash = "ddc576d34cafa280d33f11348478b42afaebac8d1cada4f7e42b47308ef41340"
 
 [[files]]
 file = "kubejs/config/chemlib_form_policy.json"
@@ -10857,12 +10889,16 @@ file = "kubejs/server_scripts/40_recipe_add/45_deposit_furnace_fallbacks.js"
 hash = "f03785bd8ef07dd0e0646431361344db201eba97f74f030cc485cfe8716157b4"
 
 [[files]]
+file = "kubejs/server_scripts/40_recipe_add/49_realistic_ores_catalog.js"
+hash = "ea1fdf3ace1afaecde6ef5ef131a931733540d39c5a15cc83a4503c6b6cdd4eb"
+
+[[files]]
 file = "kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js"
-hash = "438a3f93201c8f2125dd014464b6214d853d11dd3d0db1af325a6391d4958d4f"
+hash = "83acbae7103d6fb4a9c024f42bbc8b59f151bcbbee99620cb30227c35ad04e63"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/51_surface_sample_processing.js"
-hash = "ec73e87f64d27c05818ac539a0ad220421d91c230d270261ef5213ecf7633b86"
+hash = "44f12cc733777babfd911e29e7b97a1707dd367393dea35c5adea99367dcab5b"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/52_realistic_ores_excavated_host_cycles.js"
@@ -10870,15 +10906,19 @@ hash = "2f3f459e173fa93ab4a09424cfb5251bc49d9c63081bcbe83d767d47c6253491"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js"
-hash = "32c5ac72cf1137afa89837d4c83b8f8ad8307bdc6a3e0b00a6c00417baecd48d"
+hash = "c6f608eba7fcfd5609968557784efa855fd9b019554307ff731735b6b6c504b8"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/56_alchemistry_dissolver_create_port.js"
 hash = "9652984c730f360fa8df527c3fb77fdb0eecb19fbf4e6e169ad5e11c8d07f9f4"
 
 [[files]]
+file = "kubejs/server_scripts/40_recipe_add/56_titanium_thorium_casting.js"
+hash = "25b8a1659be9a473e9f3f8279d2b16f2ea3a01ffa98398c71d7d2aaa81231848"
+
+[[files]]
 file = "kubejs/server_scripts/40_recipe_add/57_grown_material_acid_ball_processing.js"
-hash = "b0f38cc45fa38ec08f7ab102467f57d34fdb1cd3efbc23a722643dbaafcc94d1"
+hash = "fc3e20d83417e24a736a496218233f810193036f0151997453947a9f77e0c39a"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/58_blood_magic_manual_create_yields.js"
@@ -10886,11 +10926,15 @@ hash = "54f00723c5f86b34820dc04d75cecf1f11d5ca74355fea55e6916ef2c2d7feea"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/58_create_pncr_molecular_synthesis.js"
-hash = "f6dc682b1ae72ff3459f813b2b8ec579a15cfd7d464d8196fd7adbbf29284035"
+hash = "8423f481e66a96c1ec4684bcc827f7fdf49b5adeb96bfbe5f10f72eda3c53c97"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/59_formulaic_synthesis_magic_routes.js"
 hash = "cafbde33f2a46b8293b27d6b91ed6d15adecae3d6a4c4d42165f95514d8dc7cb"
+
+[[files]]
+file = "kubejs/server_scripts/40_recipe_add/59_reachable_acid_authoring.js"
+hash = "a69ad763260f80bea75f6a62424252e49a7a0aeb9d326bbde065b773e74c553d"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/60_create_chemical_transformations.js"
@@ -10950,7 +10994,7 @@ hash = "76d9664d30d9b7f0d9ef49f7c5b50eb80b45355c9794d4361cfc65da5ab273f0"
 
 [[files]]
 file = "kubejs/server_scripts/60_worldgen/10_r_ores_melted.js"
-hash = "97f418df54bff034d8963fc5cd004eaf0c0f64bed2908ba4190fbaec4598495d"
+hash = "fdb9e2731c01028e7e1001458f7989bcbbd066e804777295a45816a446663f13"
 
 [[files]]
 file = "kubejs/server_scripts/70_spawn/10_spawn_randomizer.js"
@@ -10986,7 +11030,7 @@ hash = "2d3a9578f0ffa4629b4591e714ec7de11862c8247947f31f8829597582b032f3"
 
 [[files]]
 file = "kubejs/startup_scripts/10_items_blocks/30_progression_items.js"
-hash = "63290fa8e6be65583a1756960ad78baf26c00a9c252b4b685ae1a00c948cf5cf"
+hash = "5b56ab3b8fe8c66eba1d54678c81259b6ecb831d63e264f1380f04442f49d9be"
 
 [[files]]
 file = "kubejs/startup_scripts/10_items_blocks/35_create_tcon_bootstrap_items.js"
@@ -11254,7 +11298,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimensiondrink-1.0.0.jar"
-hash = "d8456add389b9c3bfb0785d1ac27f35d510e6e7624497d808f269f9132e73567"
+hash = "8eef06bf0f184f20d67f34e8620ecc4b66d0a4d144e7e304cc75aea1d74691a0"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -11827,7 +11871,7 @@ metafile = true
 
 [[files]]
 file = "mods/prestige-0.1.0.jar"
-hash = "8eb30529d5dbc5c7ff49df4ee176bca92c496fab7b7b7e1423f702f15596ab78"
+hash = "de72185297182513d5e6ba19de261eda7a3182033f1185ff36c02a5e00067f38"
 
 [[files]]
 file = "mods/procedural_bouquets-0.1.0.jar"

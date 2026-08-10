@@ -61,7 +61,10 @@ function bcGrowResults(def, solvent, ball) {
      bcGrowPush(results, bcGrowBallProduct(def, ball), 1, 0.35 + ball.secondaryBonus)
      bcGrowPush(results, def.trace, 1, solvent.trace + ball.traceBonus)
     var retained = global.BC_RO_RETENTION[solvent.id][ball.id]
-    if (retained &&  bcGrowExists(ball.item)) results.push({ item: ball.item, chance: retained })
+    if (retained && bcGrowExists(ball.item)) {
+        if (retained >= 1) results.push({ item: ball.item })
+        else results.push({ item: ball.item, chance: retained })
+    }
     return results
 }
 

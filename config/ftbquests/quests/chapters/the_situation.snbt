@@ -311,25 +311,6 @@
 			y: -2.5d
 		}
 		{
-			dependencies: ["42D24E824C64D60C"]
-			description: ["Use the first basket as mobile storage, not decoration. Carrying a little more safely matters when your base, spawn, and supply routes are still fragile."]
-			id: "37415796F9E8231D"
-			rewards: [{
-				count: 4
-				id: "7A29AEA03831EDDF"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			tasks: [{
-				id: "0C254D5348E5B87A"
-				item: "farmersdelight:wooden_basket"
-				type: "item"
-			}]
-			title: "Basket"
-			x: -10.5d
-			y: -5.0d
-		}
-		{
 			dependencies: ["66E00FBCA8C5476E"]
 			description: ["Cut planks after you secure logs. Stable wood processing is what finally lets you build stations and settle into repeatable tool work."]
 			id: "535E16A7456BAE19"

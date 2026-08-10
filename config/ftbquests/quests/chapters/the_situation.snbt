@@ -349,25 +349,6 @@
 			y: -5.0d
 		}
 		{
-			dependencies: ["2C6BBA4DA6B238F5"]
-			description: ["Patterns mark the shift into Tinkers workstations. Once you can cut patterns, you can start building tools as parts instead of relying on one-off crafts."]
-			id: "67B724BED12A7BBE"
-			rewards: [{
-				count: 4
-				id: "7B01111A12A77C51"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			tasks: [{
-				id: "4E6B41B768C7A6D3"
-				item: "tconstruct:pattern"
-				type: "item"
-			}]
-			title: "Pattern"
-			x: -8.0d
-			y: -4.0d
-		}
-		{
 			dependencies: ["66E00FBCA8C5476E"]
 			description: ["Cut planks after you secure logs. Stable wood processing is what finally lets you build stations and settle into repeatable tool work."]
 			id: "535E16A7456BAE19"
@@ -395,10 +376,10 @@
 		}
 		{
 			dependencies: [
-				"67B724BED12A7BBE"
+				"2C6BBA4DA6B238F5"
 				"535E16A7456BAE19"
 			]
-			description: ["Build the Tinker Station once patterns and planks are ready. This is where your early parts become real tools and repairs stop being guesswork."]
+			description: ["Build the Tinker Station once planks are ready. This is where your early parts become real tools and repairs stop being guesswork."]
 			id: "0EB806E4337DC7FA"
 			rewards: [{
 				count: 4
@@ -468,7 +449,7 @@
 		}
 		{
 			dependencies: [
-				"67B724BED12A7BBE"
+				"2C6BBA4DA6B238F5"
 				"535E16A7456BAE19"
 			]
 			description: ["The Part Builder is the first serious tool bench. Use it to make heads, handles, and bindings on purpose instead of hoping the next recipe is obvious."]
@@ -491,10 +472,10 @@
 		}
 		{
 			dependencies: [
-				"67B724BED12A7BBE"
+				"2C6BBA4DA6B238F5"
 				"535E16A7456BAE19"
 			]
-			description: ["Upgrade to a crafting station as soon as planks and patterns are under control. Better workstation flow saves time and cuts down on avoidable early-game friction."]
+			description: ["Upgrade to a crafting station as soon as planks are under control. Better workstation flow saves time and cuts down on avoidable early-game friction."]
 			id: "300DA0AD6EE9E507"
 			rewards: [{
 				count: 4

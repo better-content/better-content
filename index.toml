@@ -12174,7 +12174,7 @@ metafile = true
 
 [[files]]
 file = "mods/traces-0.1.0.jar"
-hash = "6d1cd26b725361488f2e00d5a22ae608b62f277bdeb17281ea58d22a0cfd4ae6"
+hash = "b1d5d8020988ee4cb010b041c5aad6580976c8e54f4f573eb66520c552f998a7"
 
 [[files]]
 file = "mods/trackwork.pw.toml"

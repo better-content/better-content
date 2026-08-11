@@ -10866,7 +10866,7 @@ hash = "f6ce010c4a697318d3367dd3126c1bbe37aff4e62fe834f104eea68e742ddeee"
 
 [[files]]
 file = "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js"
-hash = "68de0fbd9a7145e5c21fb1d7bcbe5031b6ad80413e738eabf5103743615123bc"
+hash = "e26c4e77303b5ae98c7c27a55ae7a521df3701392eb6b0e269863279fa1e9a2b"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/10_campfire_recipe.js"
@@ -12040,7 +12040,7 @@ metafile = true
 
 [[files]]
 file = "mods/tconaffixes-1.0.0.jar"
-hash = "950de0310d682b88ac07051d66d4cf5fc05a32ddbbcedbc376ec64b8ad6afdde"
+hash = "f8d5b7b9d9f6bd51d50bf788822f792aadf7c75dff7f9557e2b971b336fce5b5"
 
 [[files]]
 file = "mods/tconjei.pw.toml"

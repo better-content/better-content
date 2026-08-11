@@ -65,7 +65,7 @@ Dimension travel has two authored surfaces only: Dimension Drink from `dimension
 
 Font runs no longer apply pack-authored monster spawn acceleration or forced aggro pulses. Configured ordinary spawning and the expedition/reward loop remain.
 
-Affixed Tinkers parts are no longer Font rewards. The standalone `tconaffixes-1.0.0.jar` distributes rare rolled parts through hostile drops and chest-loot Affixed Part Caches; opening a cache yields one affixed Tinkers part. Font completion remains its own expedition-reward surface.
+Affixed Tinkers parts are no longer Font rewards. The standalone `tconaffixes-1.0.0.jar` is a global loot-flavour system: hostile drops and chest-loot Affixed Part Caches yield rare rolled parts with compatible materials selected from configurable weighted tiers, including a 0.1% tier-4 jackpot by default. Its stat rolls survive Tinkers rebuilds, and native modifier grants are restricted to compatible tools without claiming player-applied modifier levels. Font completion remains its own expedition-reward surface.
 
 | Dimension | Graph Start Opened | Proof Route |
 | --- | --- | --- |

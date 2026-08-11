@@ -5762,7 +5762,7 @@ hash = "7699b1da74a628bf541f530e721f842347519110f0c889dab2ec06fd12fdde06"
 
 [[files]]
 file = "config/pillagercampaigns-common.toml"
-hash = "efc465cd9a5c03484680113ddf8448874803fc5f95a5de711d0ffc52a173cf97"
+hash = "c7d7dc953be1a45681c6715b9975bc49b240c955d3fef73d81327cdc85788e8b"
 
 [[files]]
 file = "config/pneumaticcraft-common.toml"
@@ -11822,7 +11822,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillagercampaigns-0.2.0.jar"
-hash = "f4aeefb414a8df38caebd1602597a536b5dbfb2a1577eadd132dd7f4e7219322"
+hash = "d6ab36ce7483f50655d1d98c1df7205eb9d8defff504b6f9c181ba05203d03b6"
 
 [[files]]
 file = "mods/ping-wheel.pw.toml"

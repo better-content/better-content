@@ -23,6 +23,21 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["721A1ED5B0EFF052"]
+			description: ["Cast Andesite Alloy on the TConstruct surface. Solid Create mixing and nugget shortcuts are absent, so the alloy carries the metallurgy proof into motion."]
+			icon: "create:andesite_alloy"
+			id: "B46F423F34383638"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:andesite_alloy"
+				id: "EFC0F2BB8329B0F4"
+				type: "item"
+			}]
+			title: "Andesite Alloy"
+			x: 3.0d
+			y: -4.8d
+		}
+		{
 			dependencies: ["D299D2001BB42BDE"]
 			description: ["Build a Seared Melter and casting table. Copper parts must be poured from molten metal, so this is a capability rather than another crafting-grid tier."]
 			icon: "tconstruct:seared_melter"
@@ -36,6 +51,36 @@
 			title: "Melter"
 			x: 3.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["B46F423F34383638"]
+			description: ["Make shafts before adding machines. Rotation needs a readable route through the workshop before it becomes useful power."]
+			icon: "create:shaft"
+			id: "FF797B74875D32E6"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:shaft"
+				id: "C8223306B45C8CF1"
+				type: "item"
+			}]
+			title: "Shafts"
+			x: 6.0d
+			y: -7.2d
+		}
+		{
+			dependencies: ["B46F423F34383638"]
+			description: ["Build the Hand Crank and use it to run the first press and basin. It is the only hand-built positive-SU source, so spend its small stress budget deliberately."]
+			icon: "create:hand_crank"
+			id: "058B0825607F2F60"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:hand_crank"
+				id: "5B43C240463EC4A7"
+				type: "item"
+			}]
+			title: "Hand Crank"
+			x: 6.0d
+			y: -4.8d
 		}
 		{
 			dependencies: ["721A1ED5B0EFF052"]
@@ -83,23 +128,38 @@
 			y: 2.4d
 		}
 		{
-			dependencies: ["A2DCAC4A58CD31B0"]
-			description: ["Produce Scorched Bricks to prove the hotter Foundry route. This heat authority feeds the first true machine casing and later brass-scale manufacturing."]
-			icon: "tconstruct:scorched_bricks"
-			id: "D07830CF56C9C3F8"
+			dependencies: ["FF797B74875D32E6"]
+			description: ["Use cogwheels to turn corners and distribute local rotation. Keep the path visible so speed and stress problems remain diagnosable."]
+			icon: "create:cogwheel"
+			id: "B936472BB148E441"
 			shape: "rsquare"
 			tasks: [			{
-				item: "tconstruct:scorched_bricks"
-				id: "F2A442441E97E94E"
+				item: "create:cogwheel"
+				id: "A5F77294A0B37005"
 				type: "item"
 			}]
-			title: "Foundry Heat"
+			title: "Cogwheels"
 			x: 9.0d
-			y: 0.0d
+			y: -7.2d
+		}
+		{
+			dependencies: ["058B0825607F2F60"]
+			description: ["Hand-crank the first press and turn repeated plates into a production lane. Passive Create power remains a manufactured milestone."]
+			icon: "create:mechanical_press"
+			id: "7144FECF36D7FACE"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:mechanical_press"
+				id: "2009345F8D30E502"
+				type: "item"
+			}]
+			title: "Mechanical Press"
+			x: 9.0d
+			y: -4.8d
 		}
 		{
 			dependencies: ["EBF85CA5E954CF9E"]
-			description: ["Mill calcite into calcium carbonate, then combine it with washed silica and Nether aggregate for a deliberate high-yield grout batch."]
+			description: ["Once the Mixer and chemistry routes are established, combine carbonate, silica, sand, gravel, and Nether aggregate for a deliberate high-yield alternative to the four basic Font grout batches."]
 			icon: "tconstruct:grout"
 			id: "800E58D1DC993681"
 			shape: "rsquare"
@@ -118,79 +178,19 @@
 			y: 2.4d
 		}
 		{
-			dependencies: ["D07830CF56C9C3F8"]
-			description: ["Cast Andesite Alloy on the TConstruct surface. Solid Create mixing and nugget shortcuts are absent, so the alloy carries the metallurgy proof into motion."]
-			icon: "create:andesite_alloy"
-			id: "B46F423F34383638"
+			dependencies: ["1995A1E644568D46"]
+			description: ["Build distinct washing and blasting stations around the fan. Visible processing lanes make ore byproducts easier to follow."]
+			icon: "create:encased_fan"
+			id: "0D67BB1B7520E119"
 			shape: "rsquare"
 			tasks: [			{
-				item: "create:andesite_alloy"
-				id: "EFC0F2BB8329B0F4"
+				item: "create:encased_fan"
+				id: "C0A48ECD99EDC04A"
 				type: "item"
 			}]
-			title: "Andesite Alloy"
+			title: "Encased Fan"
 			x: 12.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["B46F423F34383638"]
-			description: ["Make shafts before adding machines. Rotation needs a readable route through the workshop before it becomes useful power."]
-			icon: "create:shaft"
-			id: "FF797B74875D32E6"
-			shape: "rsquare"
-			tasks: [			{
-				item: "create:shaft"
-				id: "C8223306B45C8CF1"
-				type: "item"
-			}]
-			title: "Shafts"
-			x: 15.0d
-			y: -2.4d
-		}
-		{
-			dependencies: ["B46F423F34383638"]
-			description: ["Build the Hand Crank and use it to run the first press and basin. It is the only hand-built positive-SU source, so spend its small stress budget deliberately."]
-			icon: "create:hand_crank"
-			id: "058B0825607F2F60"
-			shape: "rsquare"
-			tasks: [			{
-				item: "create:hand_crank"
-				id: "5B43C240463EC4A7"
-				type: "item"
-			}]
-			title: "Hand Crank"
-			x: 15.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["FF797B74875D32E6"]
-			description: ["Use cogwheels to turn corners and distribute local rotation. Keep the path visible so speed and stress problems remain diagnosable."]
-			icon: "create:cogwheel"
-			id: "B936472BB148E441"
-			shape: "rsquare"
-			tasks: [			{
-				item: "create:cogwheel"
-				id: "A5F77294A0B37005"
-				type: "item"
-			}]
-			title: "Cogwheels"
-			x: 18.0d
-			y: -2.4d
-		}
-		{
-			dependencies: ["058B0825607F2F60"]
-			description: ["Hand-crank the first press and turn repeated plates into a production lane. Passive Create power remains a manufactured milestone."]
-			icon: "create:mechanical_press"
-			id: "7144FECF36D7FACE"
-			shape: "rsquare"
-			tasks: [			{
-				item: "create:mechanical_press"
-				id: "2009345F8D30E502"
-				type: "item"
-			}]
-			title: "Mechanical Press"
-			x: 18.0d
-			y: 0.0d
+			y: -7.2d
 		}
 		{
 			dependencies: ["7144FECF36D7FACE"]
@@ -204,12 +204,12 @@
 				type: "item"
 			}]
 			title: "Mixer"
-			x: 21.0d
-			y: -2.4d
+			x: 12.0d
+			y: -4.8d
 		}
 		{
 			dependencies: ["7144FECF36D7FACE"]
-			description: ["Compact the first Deployer with the hand-cranked press and basin. This cycle break unlocks ordinary Create casing, sequenced machine bodies, and governed power."]
+			description: ["Compact the first Deployer with the hand-cranked press and basin. This cycle break unlocks ordinary Create casing and sequenced machine bodies without inventing a separate era token."]
 			icon: "create:deployer"
 			id: "11BC42AAE3810EDF"
 			shape: "rsquare"
@@ -219,52 +219,22 @@
 				type: "item"
 			}]
 			title: "Deployer"
-			x: 21.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1995A1E644568D46"]
-			description: ["Build distinct washing and blasting stations around the fan. Visible processing lanes make ore byproducts easier to follow."]
-			icon: "create:encased_fan"
-			id: "0D67BB1B7520E119"
-			shape: "rsquare"
-			tasks: [			{
-				item: "create:encased_fan"
-				id: "C0A48ECD99EDC04A"
-				type: "item"
-			}]
-			title: "Encased Fan"
-			x: 24.0d
-			y: -2.4d
-		}
-		{
-			dependencies: ["11BC42AAE3810EDF"]
-			description: ["Assemble the governor from pressing, deployer, brass-sheet, and casing work. It proves the manual shop can reproduce controlled machinery."]
-			icon: "kubejs:workshop_governor"
-			id: "5A056236EB5F46CF"
-			shape: "rsquare"
-			tasks: [			{
-				item: "kubejs:workshop_governor"
-				id: "FF08465C608323BB"
-				type: "item"
-			}]
-			title: "Governor"
-			x: 24.0d
+			x: 12.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["11BC42AAE3810EDF"]
-			description: ["Add a saw when repeated cutting begins wasting time. Keep it in the compact workcell with the other first-generation Create machines."]
-			icon: "create:mechanical_saw"
-			id: "FAE4BA58768A2B0E"
+			description: ["Inspect andesite-casing uses in EMI and keep the first machine fanout together. One casing should visibly open several practical jobs."]
+			icon: "create:andesite_casing"
+			id: "E74C2679FB8407AD"
 			shape: "rsquare"
 			tasks: [			{
-				item: "create:mechanical_saw"
-				id: "4FCDD6C806ABD108"
+				item: "create:andesite_casing"
+				id: "28108F5C7C87A9B4"
 				type: "item"
 			}]
-			title: "Mechanical Saw"
-			x: 24.0d
+			title: "Create Casing"
+			x: 12.0d
 			y: 2.4d
 		}
 		{
@@ -294,27 +264,57 @@
 				type: "item"
 			}]
 			title: "Wash Assay"
-			x: 27.0d
+			x: 15.0d
+			y: -7.2d
+		}
+		{
+			dependencies: ["1995A1E644568D46"]
+			description: ["Mix blank schematics, prepare a quill and table, then compact the Schematicannon in the hand-cranked Press and Basin. Prestige lineage downloads preserve plans only: the cannon still consumes gunpowder and every required block."]
+			icon: "create:schematicannon"
+			id: "E27886E92A64F7B0"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:empty_schematic"
+				id: "9163D03510E49CEC"
+				type: "item"
+			}
+			{
+				item: "create:schematic_and_quill"
+				id: "72E6106590A134A1"
+				type: "item"
+			}
+			{
+				item: "create:schematic_table"
+				id: "E17B990C8CD28ED9"
+				type: "item"
+			}
+			{
+				item: "create:schematicannon"
+				id: "582076D761E47E02"
+				type: "item"
+			}]
+			title: "Lineage Schematics"
+			x: 15.0d
 			y: -4.8d
 		}
 		{
-			dependencies: ["5A056236EB5F46CF"]
-			description: ["Inspect andesite-casing uses in EMI and keep the first machine fanout together. One casing should visibly open several practical jobs."]
-			icon: "create:andesite_casing"
-			id: "E74C2679FB8407AD"
+			dependencies: ["1995A1E644568D46"]
+			description: ["Return from the Nether and mix its magma, soul aggregate, and gravel into refractory grout. Scorched Bricks now mark the transition from a hand-powered workshop to sustained industry."]
+			icon: "tconstruct:scorched_bricks"
+			id: "D07830CF56C9C3F8"
 			shape: "rsquare"
 			tasks: [			{
-				item: "create:andesite_casing"
-				id: "28108F5C7C87A9B4"
+				item: "tconstruct:scorched_bricks"
+				id: "F2A442441E97E94E"
 				type: "item"
 			}]
-			title: "Create Casing"
-			x: 27.0d
+			title: "Foundry Heat"
+			x: 15.0d
 			y: -2.4d
 		}
 		{
-			dependencies: ["5A056236EB5F46CF"]
-			description: ["Sequence an Andesite Machine Casing after the Deployer is real. Presses, mixers, fans, drills, saws, and the first governed power network now become sustainable."]
+			dependencies: ["11BC42AAE3810EDF", "D07830CF56C9C3F8"]
+			description: ["Sequence an Andesite Machine Casing after the Deployer and Nether refractory route are real. Its scorched core is the physical boundary for sustainable water, wind, and later powered machinery."]
 			icon: "kubejs:andesite_machine_casing"
 			id: "9835E3A1AC899F8E"
 			shape: "hexagon"
@@ -325,23 +325,38 @@
 				type: "item"
 			}]
 			title: "Andesite Tier"
-			x: 27.0d
+			x: 15.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["FAE4BA58768A2B0E"]
-			description: ["Treat the drill as controlled extraction attached to a material route, not as a replacement for surveying and geology."]
-			icon: "create:mechanical_drill"
-			id: "A8AA81D884BBC8E6"
+			dependencies: ["11BC42AAE3810EDF"]
+			description: ["Add a saw when repeated cutting begins wasting time. Keep it in the compact workcell with the other first-generation Create machines."]
+			icon: "create:mechanical_saw"
+			id: "FAE4BA58768A2B0E"
 			shape: "rsquare"
 			tasks: [			{
-				item: "create:mechanical_drill"
-				id: "8C0CED1F48E0B57D"
+				item: "create:mechanical_saw"
+				id: "4FCDD6C806ABD108"
 				type: "item"
 			}]
-			title: "Mechanical Drill"
-			x: 27.0d
+			title: "Mechanical Saw"
+			x: 15.0d
 			y: 2.4d
+		}
+		{
+			dependencies: ["8B59E71D62ED576A"]
+			description: ["Use an arm for selective local handoffs. It improves a physical line without making belts, trains, or distance disappear."]
+			icon: "create:mechanical_arm"
+			id: "F98C2054C7A68958"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:mechanical_arm"
+				id: "272FCBBD9F36DA33"
+				type: "item"
+			}]
+			title: "Mechanical Arm"
+			x: 18.0d
+			y: -2.4d
 		}
 		{
 			dependencies: ["9835E3A1AC899F8E"]
@@ -356,23 +371,38 @@
 				type: "item"
 			}]
 			title: "Brass Tier"
-			x: 30.0d
+			x: 18.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["8B59E71D62ED576A"]
-			description: ["Use an arm for selective local handoffs. It improves a physical line without making belts, trains, or distance disappear."]
-			icon: "create:mechanical_arm"
-			id: "F98C2054C7A68958"
+			dependencies: ["FAE4BA58768A2B0E"]
+			description: ["Treat the drill as controlled extraction attached to a material route, not as a replacement for surveying and geology."]
+			icon: "create:mechanical_drill"
+			id: "A8AA81D884BBC8E6"
 			shape: "rsquare"
 			tasks: [			{
-				item: "create:mechanical_arm"
-				id: "272FCBBD9F36DA33"
+				item: "create:mechanical_drill"
+				id: "8C0CED1F48E0B57D"
 				type: "item"
 			}]
-			title: "Mechanical Arm"
-			x: 33.0d
-			y: -2.4d
+			title: "Mechanical Drill"
+			x: 18.0d
+			y: 2.4d
+		}
+		{
+			dependencies: ["8B59E71D62ED576A"]
+			description: ["Display stock or machine state where operators can see it. Readable factories are easier to maintain than hidden automation."]
+			icon: "create:display_link"
+			id: "0B70AA93FB3F2542"
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:display_link"
+				id: "753DE9BE3431A8D4"
+				type: "item"
+			}]
+			title: "Display Link"
+			x: 18.0d
+			y: 4.8d
 		}
 		{
 			dependencies: ["8B59E71D62ED576A"]
@@ -391,23 +421,8 @@
 				type: "item"
 			}]
 			title: "Railway Era"
-			x: 33.0d
+			x: 21.0d
 			y: 0.0d
-		}
-		{
-			dependencies: ["8B59E71D62ED576A"]
-			description: ["Display stock or machine state where operators can see it. Readable factories are easier to maintain than hidden automation."]
-			icon: "create:display_link"
-			id: "0B70AA93FB3F2542"
-			shape: "rsquare"
-			tasks: [			{
-				item: "create:display_link"
-				id: "753DE9BE3431A8D4"
-				type: "item"
-			}]
-			title: "Display Link"
-			x: 33.0d
-			y: 2.4d
 		}
 		{
 			dependencies: ["853BB41B178180AB"]
@@ -426,7 +441,7 @@
 				type: "item"
 			}]
 			title: "Tracked Mobility"
-			x: 36.0d
+			x: 24.0d
 			y: 0.0d
 		}
 

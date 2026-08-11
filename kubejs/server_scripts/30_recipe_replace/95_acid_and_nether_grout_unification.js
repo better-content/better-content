@@ -64,23 +64,30 @@ ServerEvents.recipes(event => {
     // Remove flint + magma casting table shortcut for scorched bricks.
     event.remove({ id: 'tconstruct:smeltery/casting/scorched/brick_composite' })
 
-    // New nether grout path through Create mixing.
+    // Scorched metallurgy is the later Nether-specific refractory boundary.
+    // Both batches run on the hand-cranked Mixer, but all special aggregate is
+    // native to the Nether rather than coupling this route to Undergarden.
     event.custom({
         type: 'create:mixing',
         ingredients: [
+            { item: 'minecraft:magma_cream' },
             { item: 'minecraft:soul_sand' },
-            { item: 'minecraft:soul_sand' },
-            { item: 'minecraft:soul_sand' },
-            { item: 'minecraft:soul_sand' },
-            { item: 'undergarden:deepsoil' },
-            { item: 'undergarden:deepsoil' },
-            { item: 'undergarden:deepsoil' },
-            { item: 'undergarden:deepsoil' },
-            { item: 'minecraft:netherrack' },
-            { item: 'minecraft:netherrack' },
-            { item: 'minecraft:netherrack' },
-            { item: 'minecraft:netherrack' }
+            { item: 'minecraft:soul_soil' },
+            { item: 'minecraft:gravel' }
         ],
-        results: [{ item: 'tconstruct:nether_grout', count: 12 }]
-    }).id('kubejs:create/mixing/nether_grout')
+        processingTime: 120,
+        results: [{ item: 'tconstruct:nether_grout', count: 2 }]
+    }).id('kubejs:create/mixing/nether_grout_small')
+
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+            { item: 'minecraft:magma_block' },
+            { item: 'minecraft:soul_sand', count: 4 },
+            { item: 'minecraft:soul_soil', count: 4 },
+            { item: 'minecraft:gravel', count: 4 }
+        ],
+        processingTime: 120,
+        results: [{ item: 'tconstruct:nether_grout', count: 8 }]
+    }).id('kubejs:create/mixing/nether_grout_bulk')
 })

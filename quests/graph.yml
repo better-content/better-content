@@ -149,11 +149,11 @@ nodes:
     icon: tconstruct:scorched_bricks
     stage: seared
     requires:
-      - tech_smeltery
-    x: 9
-    y: 0
+      - tech_mixer
+    x: 15
+    y: -2.4
     body: |
-      Produce Scorched Bricks to prove the hotter Foundry route. This heat authority feeds the first true machine casing and later brass-scale manufacturing.
+      Return from the Nether and mix its magma, soul aggregate, and gravel into refractory grout. Scorched Bricks now mark the transition from a hand-powered workshop to sustained industry.
     tasks:
       - type: item
         item: tconstruct:scorched_bricks
@@ -170,9 +170,9 @@ nodes:
     icon: create:andesite_alloy
     stage: andesite
     requires:
-      - tech_scorched
-    x: 12
-    y: 0
+      - tech_seared_melter
+    x: 3
+    y: -4.8
     body: |
       Cast Andesite Alloy on the TConstruct surface. Solid Create mixing and nugget shortcuts are absent, so the alloy carries the metallurgy proof into motion.
     tasks:
@@ -193,8 +193,8 @@ nodes:
     stage: andesite
     requires:
       - tech_andesite_alloy
-    x: 15
-    y: 0
+    x: 6
+    y: -4.8
     body: |
       Build the Hand Crank and use it to run the first press and basin. It is the only hand-built positive-SU source, so spend its small stress budget deliberately.
     tasks:
@@ -214,10 +214,10 @@ nodes:
     stage: andesite
     requires:
       - tech_mechanical_press
-    x: 21
+    x: 12
     y: 0
     body: |
-      Compact the first Deployer with the hand-cranked press and basin. This cycle break unlocks ordinary Create casing, sequenced machine bodies, and governed power.
+      Compact the first Deployer with the hand-cranked press and basin. This cycle break unlocks ordinary Create casing and sequenced machine bodies without inventing a separate era token.
     tasks:
       - type: item
         item: create:deployer
@@ -234,13 +234,14 @@ nodes:
     icon: kubejs:andesite_machine_casing
     stage: andesite
     requires:
-      - tech_workshop_governor
-    x: 27
+      - tech_deployer
+      - tech_scorched
+    x: 15
     y: 0
     shape: hexagon
     size: 1.2
     body: |
-      Sequence an Andesite Machine Casing after the Deployer is real. Presses, mixers, fans, drills, saws, and the first governed power network now become sustainable.
+      Sequence an Andesite Machine Casing after the Deployer and Nether refractory route are real. Its scorched core is the physical boundary for sustainable water, wind, and later powered machinery.
     tasks:
       - type: item
         item: kubejs:andesite_machine_casing
@@ -259,7 +260,7 @@ nodes:
     stage: brass
     requires:
       - tech_andesite_casing
-    x: 30
+    x: 18
     y: 0
     shape: hexagon
     size: 1.2
@@ -283,7 +284,7 @@ nodes:
     stage: brass
     requires:
       - tech_brass_casing
-    x: 33
+    x: 21
     y: 0
     body: |
       Make Precision Mechanisms and Railway Casing, then use trains and physical routes before digital storage erases local logistics. Distance should remain a real planning cost.
@@ -1250,7 +1251,7 @@ nodes:
     x: 3
     y: -6
     body: |
-      Reach the Nether with enough supplies to bring netherrack and heat proof home. This route supports grout and metallurgy rather than serving as a sightseeing trip.
+      Reach the Nether with enough supplies to bring magma, soul aggregate, netherrack, and refractory heat proof home. Basic seared work can begin from any Font route; the Nether now opens scorched metallurgy and sustained industry.
     tasks:
       - type: dimension
         dimension: minecraft:the_nether
@@ -1602,8 +1603,8 @@ nodes:
     stage: andesite
     requires:
       - tech_andesite_alloy
-    x: 15
-    y: -2.4
+    x: 6
+    y: -7.2
     body: |
       Make shafts before adding machines. Rotation needs a readable route through the workshop before it becomes useful power.
     tasks:
@@ -1617,8 +1618,8 @@ nodes:
     stage: andesite
     requires:
       - tech_shaft
-    x: 18
-    y: -2.4
+    x: 9
+    y: -7.2
     body: |
       Use cogwheels to turn corners and distribute local rotation. Keep the path visible so speed and stress problems remain diagnosable.
     tasks:
@@ -1632,8 +1633,8 @@ nodes:
     stage: andesite
     requires:
       - tech_hand_crank
-    x: 18
-    y: 0
+    x: 9
+    y: -4.8
     body: |
       Hand-crank the first press and turn repeated plates into a production lane. Passive Create power remains a manufactured milestone.
     tasks:
@@ -1647,13 +1648,34 @@ nodes:
     stage: andesite
     requires:
       - tech_mechanical_press
-    x: 21
-    y: -2.4
+    x: 12
+    y: -4.8
     body: |
       Use the mixer for open-vat chemistry and bulk mixtures. Metal alloys remain molten Tinkers work rather than gaining a second authority.
     tasks:
       - type: item
         item: create:mechanical_mixer
+
+  tech_schematic_workshop:
+    title: Lineage Schematics
+    chapter: tech_metallurgy
+    icon: create:schematicannon
+    stage: andesite
+    requires:
+      - tech_mixer
+    x: 15
+    y: -4.8
+    body: |
+      Mix blank schematics, prepare a quill and table, then compact the Schematicannon in the hand-cranked Press and Basin. Prestige lineage downloads preserve plans only: the cannon still consumes gunpowder and every required block.
+    tasks:
+      - type: item
+        item: create:empty_schematic
+      - type: item
+        item: create:schematic_and_quill
+      - type: item
+        item: create:schematic_table
+      - type: item
+        item: create:schematicannon
 
   tech_fan:
     title: Encased Fan
@@ -1662,8 +1684,8 @@ nodes:
     stage: andesite
     requires:
       - tech_mixer
-    x: 24
-    y: -2.4
+    x: 12
+    y: -7.2
     body: |
       Build distinct washing and blasting stations around the fan. Visible processing lanes make ore byproducts easier to follow.
     tasks:
@@ -1677,7 +1699,7 @@ nodes:
     stage: andesite
     requires:
       - tech_deployer
-    x: 24
+    x: 15
     y: 2.4
     body: |
       Add a saw when repeated cutting begins wasting time. Keep it in the compact workcell with the other first-generation Create machines.
@@ -1692,7 +1714,7 @@ nodes:
     stage: andesite
     requires:
       - tech_saw
-    x: 27
+    x: 18
     y: 2.4
     body: |
       Treat the drill as controlled extraction attached to a material route, not as a replacement for surveying and geology.
@@ -1700,30 +1722,15 @@ nodes:
       - type: item
         item: create:mechanical_drill
 
-  tech_workshop_governor:
-    title: Governor
-    chapter: tech_metallurgy
-    icon: kubejs:workshop_governor
-    stage: andesite
-    requires:
-      - tech_deployer
-    x: 24
-    y: 0
-    body: |
-      Assemble the governor from pressing, deployer, brass-sheet, and casing work. It proves the manual shop can reproduce controlled machinery.
-    tasks:
-      - type: item
-        item: kubejs:workshop_governor
-
   tech_create_casing:
     title: Create Casing
     chapter: tech_metallurgy
     icon: create:andesite_casing
     stage: andesite
     requires:
-      - tech_workshop_governor
-    x: 27
-    y: -2.4
+      - tech_deployer
+    x: 12
+    y: 2.4
     body: |
       Inspect andesite-casing uses in EMI and keep the first machine fanout together. One casing should visibly open several practical jobs.
     tasks:
@@ -1737,7 +1744,7 @@ nodes:
     stage: brass
     requires:
       - tech_brass_casing
-    x: 33
+    x: 18
     y: -2.4
     body: |
       Use an arm for selective local handoffs. It improves a physical line without making belts, trains, or distance disappear.
@@ -1752,8 +1759,8 @@ nodes:
     stage: brass
     requires:
       - tech_brass_casing
-    x: 33
-    y: 2.4
+    x: 18
+    y: 4.8
     body: |
       Display stock or machine state where operators can see it. Readable factories are easier to maintain than hidden automation.
     tasks:
@@ -1767,7 +1774,7 @@ nodes:
     stage: brass
     requires:
       - tech_precision_railway
-    x: 36
+    x: 24
     y: 0
     body: |
       Build tracks after railway casing and precision work. Rough-terrain vehicles are a train-era peer, not a shortcut around logistics.
@@ -2466,7 +2473,7 @@ nodes:
     x: 9
     y: 2.4
     body: |
-      Mill calcite into calcium carbonate, then combine it with washed silica and Nether aggregate for a deliberate high-yield grout batch.
+      Once the Mixer and chemistry routes are established, combine carbonate, silica, sand, gravel, and Nether aggregate for a deliberate high-yield alternative to the four basic Font grout batches.
     tasks:
       - type: item
         item: chemlib:calcium_carbonate
@@ -2480,8 +2487,8 @@ nodes:
     stage: andesite
     requires:
       - tech_fan
-    x: 27
-    y: -4.8
+    x: 15
+    y: -7.2
     body: |
       Wash representative deposit outputs and inspect their carbon, sulfur, silica, and alumina side streams before scaling bulk processing.
     tasks:

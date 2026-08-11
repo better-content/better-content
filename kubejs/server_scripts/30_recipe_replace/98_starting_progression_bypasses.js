@@ -1,4 +1,4 @@
-// Starting progression hard gates: netherrack grout remains in 20_expensive_grout.js;
+// Starting progression hard gates: Font-neutral grout lives in 20_expensive_grout.js;
 // this file removes Create/TCon shortcuts that bypass early metallurgy and deployer assembly.
 
 ServerEvents.recipes(function (event) {

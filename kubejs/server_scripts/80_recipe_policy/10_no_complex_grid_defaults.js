@@ -88,7 +88,6 @@ var BC_GRID_POLICY_ROOT_OUTPUTS = {
     'kubejs:seared_machine_casing': true,
     'tconstruct:crafting_station': true,
     'tconstruct:grout': true,
-    'tconstruct:nether_grout': true,
     'tconstruct:modifier_worktable': true,
     'tconstruct:part_builder': true,
     'tconstruct:pattern': true,

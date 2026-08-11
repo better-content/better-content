@@ -5498,7 +5498,7 @@ hash = "d2c6cb4bfe9c0341608a1c118bef9388879773689ca6ae732ea07918773c5c76"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/better_tools.snbt"
-hash = "cd4b4a4e4915a431ea60c9011bcad346f3555e72a57c6f2a73740a744287577a"
+hash = "2f09570ff30310d9976cac986829fa0a992837e8f6cbbf5ec052993938ef969b"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/completionist_armour_sets.snbt"
@@ -5530,7 +5530,7 @@ hash = "67a13079e41cb7b58511e7837dd7df8b194eb80ff28cc5cae3f67a39106f0712"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/spine_adventure_economy.snbt"
-hash = "bc17c7d8f9ff92c1c08a0e78cd81f3e1e2531491d0a04b7fc8b5f31abb16ca00"
+hash = "0d1ad02854c1542cee7d81da4ce11d446e779df96c0fe279f8dc50309b5f4a85"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/spine_blood_command.snbt"
@@ -5554,7 +5554,7 @@ hash = "af5fb688e8f7f9fe264608d02589a01a502bdbca1047c9006dd342f875b9cc29"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/spine_tech_metallurgy.snbt"
-hash = "6d902462d857a7fae5eb6905fb003f46bcbddef9048c89a90819219224090bad"
+hash = "c1f31c4fc1fd51e92e2990090de97d0ab39aa207682a9b00f78dad6d40dc34a9"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/the_situation.snbt"
@@ -9366,7 +9366,7 @@ hash = "46a66b6e003ba7953c9a13428fd9c1967e862a673d7fd849831defab59eb08f1"
 
 [[files]]
 file = "kubejs/config/create_tcon_bootstrap.json"
-hash = "8bcd78b6a4edbeff5c7271042963a6dc3c47d1a7379b7a6244fe62819c73a1fc"
+hash = "2fdad489d277c84485375e7de32379776420c62e2dc536f548597edb017f39e3"
 
 [[files]]
 file = "kubejs/config/cross_mod_boundaries.json"
@@ -9406,11 +9406,11 @@ hash = "dc753044f39d65b2a0106b3ea4005dd10287e94c4ce1cc7d5bb4f9948bbb37c2"
 
 [[files]]
 file = "kubejs/config/player_progression_regression.json"
-hash = "4719660c4f6650ceeffff0499271968abd47ca080f25b784d944a8b50a4ab078"
+hash = "5547030be31bc15a5da20dc4cd02361b8339f3063a3e97dd3685eedc98d4a70e"
 
 [[files]]
 file = "kubejs/config/progression_reachability_sources.json"
-hash = "6bc27359ead8ee94002cadc083123f3bd41513ead4f2d064a679483083970076"
+hash = "16e5f5c31f5304b7df37e6fc92802eeb8b22155fdf75d1d0e5f2b150c10ec402"
 
 [[files]]
 file = "kubejs/config/quarantined_items.json"
@@ -10810,7 +10810,7 @@ hash = "7455671cb6b05658196c67d16f4699d4fcfee6419345797b66c0f29f489011aa"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/20_expensive_grout.js"
-hash = "9c25ed87c0983d3c58fa7047061a8cd25406ddb2038dbecb7de50f7488f6ea25"
+hash = "e6c8d7264f4564aa029554693e293cc3184550dddf826e07111bf37f9ff459fb"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/30_expensive_water_wheels_and_windmills.js"
@@ -10854,11 +10854,11 @@ hash = "209e2449cd5d9e7febf3002f00468255813b0b332595d881ce845588f903f48e"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/95_acid_and_nether_grout_unification.js"
-hash = "ff55e787d851d73f77858fc1b6e5e02b3002c8646bec9f7925abed3823a94278"
+hash = "9f73178059c1200caf1aac0ee979988465bc35f28954900bf69078e1b036b542"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/98_starting_progression_bypasses.js"
-hash = "1e9382e0b7ca92858b0d20a252fe5c818698db254cf19533b8dd4d62629299b6"
+hash = "80caeb0f0e6620e7d8505f366fd0f1807f6f66621590c7fb10b0d21d5752f24f"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js"
@@ -11002,7 +11002,7 @@ hash = "c12e429fc2763813587ba16e68971d023642c107dd62e9b8087d3295a6628c0b"
 
 [[files]]
 file = "kubejs/server_scripts/80_recipe_policy/10_no_complex_grid_defaults.js"
-hash = "5c4db6082db4126953f89489731779b52628ca7ac4763b5b3f7c858d64957ada"
+hash = "7161061fe1835d4d9fec9666966d50304007d5fb59b0f4df9157db24dca22de8"
 
 [[files]]
 file = "kubejs/server_scripts/90_dev_debug/20_food_effect_audit_dumps.js"
@@ -11018,11 +11018,11 @@ hash = "6085ae1ef8cd534ec59740a61ae9bcb49d50cf65abb72d60b7c0b840ceed606d"
 
 [[files]]
 file = "kubejs/server_scripts/99_final/10_create_tcon_bootstrap.js"
-hash = "f9737d584a399fb9be4a2032fdb830a401c6a78599d123c26796f2f396732544"
+hash = "9ed0127d6b1ee24864de3db13bdbf2bc250fc353c38fc9ce779052b58263ff0f"
 
 [[files]]
 file = "kubejs/server_scripts/99_final/90_energy_ladder_gate.js"
-hash = "eeacdf097bb0f86539370c2d04a7b64d6ab03d98d34cd73f9843d6a729187157"
+hash = "c8cc9f0c4c401ba7154ca396b677336b2de6469fba0f52889aee52b9b7e9b295"
 
 [[files]]
 file = "kubejs/startup_scripts/00_globals/20_progression_catalogues.js"
@@ -11034,7 +11034,7 @@ hash = "5b56ab3b8fe8c66eba1d54678c81259b6ecb831d63e264f1380f04442f49d9be"
 
 [[files]]
 file = "kubejs/startup_scripts/10_items_blocks/35_create_tcon_bootstrap_items.js"
-hash = "779fa1e175646a283769ea35eede92212b0dcf25786e1faebe3e9ee64e3a4a30"
+hash = "05e7cb3b5e3606fe6135ef4ef11a34523894dfa274de751afcf4b2767a080be8"
 
 [[files]]
 file = "kubejs/startup_scripts/20_blocks/10_ae2_skystone_hardness.js"
@@ -12250,7 +12250,7 @@ hash = "2406e0552b15aef5645445c437a5cc1fc6908f1cbf72842da61ba5b71f3f2786"
 
 [[files]]
 file = "quests/graph.yml"
-hash = "e83e24bff066467c98ce1e43e1fc935be135d8993c40911b47ed0c4b8734202a"
+hash = "1f3254777c3204c27f06c3310914411218ae4ea99efbdc7db3a6eb367f5b277d"
 
 [[files]]
 file = "recipe-policies.yml"

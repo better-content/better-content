@@ -141,53 +141,6 @@ ServerEvents.recipes(function (event) {
             .id('kubejs:create_tcon_bootstrap/manual/' + manual.output.substring(manual.output.indexOf(':') + 1))
     }
 
-    // Prestige lineage files are available in the first crank-powered workshop
-    // and still use Create's ordinary material accounting.
-    event.remove({ output: 'create:empty_schematic' })
-    event.custom({
-        type: 'create:mixing',
-        ingredients: [{ item: 'minecraft:paper' }, { tag: 'forge:dyes/light_blue' }],
-        results: [{ item: 'create:empty_schematic' }],
-        processingTime: 80
-    }).id('kubejs:create_tcon_bootstrap/manual/empty_schematic')
-
-    event.remove({ output: 'create:schematic_and_quill' })
-    event.custom({
-        type: 'create:mixing',
-        ingredients: [{ item: 'create:empty_schematic' }, { tag: 'forge:feathers' }],
-        results: [{ item: 'create:schematic_and_quill' }],
-        processingTime: 80
-    }).id('kubejs:create_tcon_bootstrap/manual/schematic_and_quill')
-
-    event.remove({ output: 'create:schematic_table' })
-    event.shaped('create:schematic_table', [
-        'WWW',
-        ' S ',
-        ' S '
-    ], {
-        W: '#minecraft:wooden_slabs',
-        S: 'minecraft:smooth_stone'
-    }).id('kubejs:create_tcon_bootstrap/manual/schematic_table')
-
-    // The cannon uses the same Press/Basin instead of inheriting the later
-    // Dispenser casing gate.
-    event.remove({ output: 'create:schematicannon' })
-    event.custom({
-        type: 'create:compacting',
-        ingredients: [
-            { tag: 'forge:storage_blocks/iron' },
-            { tag: 'forge:storage_blocks/iron' },
-            { tag: 'minecraft:logs' },
-            { tag: 'minecraft:logs' },
-            { item: 'minecraft:smooth_stone' },
-            { item: 'minecraft:smooth_stone' },
-            { item: 'minecraft:bow' },
-            { item: 'minecraft:redstone' }
-        ],
-        results: [{ item: 'create:schematicannon' }],
-        processingTime: 200
-    }).id('kubejs:create_tcon_bootstrap/manual/schematicannon')
-
     // The hand-cranked press and basin make the first Deployer without requiring a casing.
     event.remove({ output: 'create:deployer' })
     event.custom({
@@ -225,8 +178,23 @@ ServerEvents.recipes(function (event) {
         loops: 2
     }).id('kubejs:create_tcon_bootstrap/machine/andesite_machine_casing')
 
+    event.remove({ output: 'kubejs:workshop_governor' })
+    event.custom({
+        type: 'create:sequenced_assembly',
+        ingredient: { item: 'create:andesite_casing' },
+        transitionalItem: { item: 'kubejs:incomplete_workshop_governor' },
+        sequence: [
+            { type: 'create:deploying', ingredients: [{ item: 'kubejs:incomplete_workshop_governor' }, { item: 'create:cogwheel' }], results: [{ item: 'kubejs:incomplete_workshop_governor' }] },
+            { type: 'create:deploying', ingredients: [{ item: 'kubejs:incomplete_workshop_governor' }, { item: 'create:brass_sheet' }], results: [{ item: 'kubejs:incomplete_workshop_governor' }] },
+            { type: 'create:deploying', ingredients: [{ item: 'kubejs:incomplete_workshop_governor' }, { tag: 'forge:plates/iron' }], results: [{ item: 'kubejs:incomplete_workshop_governor' }] },
+            { type: 'create:pressing', ingredients: [{ item: 'kubejs:incomplete_workshop_governor' }], results: [{ item: 'kubejs:incomplete_workshop_governor' }] }
+        ],
+        results: [{ item: 'kubejs:workshop_governor' }],
+        loops: 1
+    }).id('kubejs:create_tcon_bootstrap/machine/workshop_governor')
+
     // Every registered positive-SU block is either the crank, recipe-less creative content,
-    // or rebuilt on an actual Create machine surface with a real casing and mechanism.
+    // or rebuilt on an actual Create machine surface behind the governor boundary.
     for (var s = 0; s < BC_CREATE_TCON.positive_su_sources.length; s++) {
         var source = BC_CREATE_TCON.positive_su_sources[s]
         if (source.policy === 'manual_only') continue

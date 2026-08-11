@@ -62,7 +62,7 @@ ServerEvents.recipes(function (event) {
         'kubejs:rotational_compressor_core',
         'kubejs:airtight_machine_casing',
         'kubejs:electrical_machine_casing',
-        'powergrid:generator_commutator',
+        'kubejs:workshop_governor',
         'heatsync:thermal_firebox',
         'heatsync:impossible_matter_transducer'
     ]
@@ -102,7 +102,7 @@ ServerEvents.recipes(function (event) {
     }).id('kubejs:energy_ladder/first_fe/pneumatic_dynamo')
 
     // Air-to-SU exists only after first FE and consumes the dynamo rotor/control
-    // body. Mechanical crafting and real pneumatic/electrical components preserve the workshop boundary.
+    // body. Mechanical crafting and the governor preserve the workshop boundary.
     // The pinned Compressed Creativity ratios make the return path lossy.
     event.remove({ output: 'compressedcreativity:compressed_air_engine' })
     bcEnergyMechanicalCrafting(event, 'compressedcreativity:compressed_air_engine', [
@@ -111,7 +111,7 @@ ServerEvents.recipes(function (event) {
         'BAB'
     ], {
         T: 'pneumaticcraft:advanced_pressure_tube',
-        G: 'pneumaticcraft:compressed_iron_gear',
+        G: 'kubejs:workshop_governor',
         R: 'compressedcreativity:engine_rotor',
         D: 'pneumaticcraft:pneumatic_dynamo',
         B: '#forge:plates/copper',
@@ -140,7 +140,7 @@ ServerEvents.recipes(function (event) {
         'ASA'
     ], {
         W: 'powergrid:wire',
-        G: 'powergrid:generator_commutator',
+        G: 'kubejs:workshop_governor',
         C: 'powergrid:copper_coil',
         P: 'pneumaticcraft:pneumatic_dynamo',
         A: 'kubejs:electrical_machine_casing',
@@ -154,7 +154,7 @@ ServerEvents.recipes(function (event) {
         'RAR'
     ], {
         R: 'powergrid:redstone_relay',
-        G: 'powergrid:generator_commutator',
+        G: 'kubejs:workshop_governor',
         M: 'kubejs:electrical_control_module',
         P: 'pneumaticcraft:pneumatic_dynamo',
         A: 'kubejs:electrical_machine_casing'
@@ -167,7 +167,7 @@ ServerEvents.recipes(function (event) {
         'IOI'
     ], {
         I: '#forge:plates/iron',
-        G: 'powergrid:copper_coil',
+        G: 'kubejs:workshop_governor',
         P: 'pneumaticcraft:pneumatic_dynamo',
         A: 'kubejs:electrical_machine_casing',
         O: 'chemlib:aluminum_oxide'
@@ -180,7 +180,7 @@ ServerEvents.recipes(function (event) {
         'ICI'
     ], {
         I: '#forge:plates/iron',
-        G: 'powergrid:copper_coil',
+        G: 'kubejs:workshop_governor',
         C: 'powergrid:generator_commutator',
         P: 'pneumaticcraft:pneumatic_dynamo',
         A: 'kubejs:electrical_machine_casing'

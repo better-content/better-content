@@ -1,9 +1,7 @@
 {
   "schema": "bc.create_tcon_bootstrap.v1",
   "bootstrap_items": [
-    "kubejs:incomplete_andesite_machine_casing",
-    "kubejs:incomplete_workshop_governor",
-    "kubejs:workshop_governor"
+    "kubejs:incomplete_andesite_machine_casing"
   ],
   "manual_recipe_outputs": [
     "create:hand_crank",
@@ -43,7 +41,7 @@
       "pattern": ["PGP", "GCG", "PGP"],
       "key": {
         "P": "#minecraft:planks",
-        "G": "kubejs:workshop_governor",
+        "G": "create:cogwheel",
         "C": "kubejs:andesite_machine_casing"
       }
     },
@@ -54,7 +52,7 @@
       "pattern": ["PGP", "WCW", "PGP"],
       "key": {
         "P": "#minecraft:planks",
-        "G": "kubejs:workshop_governor",
+        "G": "create:cogwheel",
         "W": "create:water_wheel",
         "C": "kubejs:andesite_machine_casing"
       }
@@ -66,7 +64,7 @@
       "pattern": ["SGS", "GCG", "SAS"],
       "key": {
         "S": "create:white_sail",
-        "G": "kubejs:workshop_governor",
+        "G": "create:cogwheel",
         "C": "kubejs:andesite_machine_casing",
         "A": "create:shaft"
       }
@@ -78,7 +76,7 @@
       "pattern": ["PGP", "BCB", "PGP"],
       "key": {
         "P": "#forge:plates/gold",
-        "G": "kubejs:workshop_governor",
+        "G": "minecraft:nether_brick",
         "B": "kubejs:brass_machine_casing",
         "C": "#forge:storage_blocks/copper"
       }
@@ -90,7 +88,7 @@
       "pattern": ["TGT", "RBR", "ICI"],
       "key": {
         "T": "pneumaticcraft:pressure_tube",
-        "G": "kubejs:workshop_governor",
+        "G": "pneumaticcraft:compressed_iron_gear",
         "R": "compressedcreativity:engine_rotor",
         "B": "kubejs:brass_machine_casing",
         "I": "pneumaticcraft:ingot_iron_compressed",
@@ -104,7 +102,7 @@
       "pattern": ["PGP", "EBE", "SFS"],
       "key": {
         "P": "createdieselgenerators:engine_piston",
-        "G": "kubejs:workshop_governor",
+        "G": "minecraft:nether_brick",
         "E": "create:fluid_tank",
         "B": "kubejs:brass_machine_casing",
         "S": "minecraft:polished_blackstone_slab",
@@ -118,7 +116,7 @@
       "pattern": ["PGP", "EDE", "PBP"],
       "key": {
         "P": "#forge:plates/brass",
-        "G": "kubejs:workshop_governor",
+        "G": "create:precision_mechanism",
         "E": "kubejs:electrical_machine_casing",
         "D": "createdieselgenerators:diesel_engine",
         "B": "kubejs:brass_machine_casing"
@@ -131,7 +129,7 @@
       "pattern": ["EGP", "LSP", "EBE"],
       "key": {
         "E": "kubejs:electrical_machine_casing",
-        "G": "kubejs:workshop_governor",
+        "G": "kubejs:electrical_control_module",
         "P": "create:precision_mechanism",
         "L": "createdieselgenerators:large_diesel_engine",
         "S": "create:steam_engine",
@@ -145,7 +143,7 @@
       "pattern": ["WGW", "CAC", "WSW"],
       "key": {
         "W": "powergrid:wire",
-        "G": "kubejs:workshop_governor",
+        "G": "powergrid:generator_commutator",
         "C": "powergrid:copper_coil",
         "A": "kubejs:electrical_machine_casing",
         "S": "create:shaft"
@@ -158,7 +156,7 @@
       "pattern": ["RGR", "MAM", "RPR"],
       "key": {
         "R": "powergrid:redstone_relay",
-        "G": "kubejs:workshop_governor",
+        "G": "powergrid:generator_commutator",
         "M": "kubejs:electrical_control_module",
         "A": "kubejs:electrical_machine_casing",
         "P": "create:precision_mechanism"

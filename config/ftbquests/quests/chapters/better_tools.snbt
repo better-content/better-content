@@ -16,8 +16,8 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["Bring back netherrack to prove Nether heat is now part of progression. You need that proof before early metalwork becomes reliable."]
-			icon: "minecraft:netherrack"
+			description: ["Use a Dimension Font and return with one local aggregate: Nether netherrack, Aether holystone, Undergarden deepsoil, or Otherside cobbled sculk stone. Any one route can start seared metalwork."]
+			icon: "dimensiondrink:dimensional_font"
 			id: "15C391E4708D16B9"
 			rewards: [{
 				count: 4
@@ -28,16 +28,16 @@
 			shape: "hexagon"
 			tasks: [{
 				id: "1EBE9E86314A44CA"
-				item: "minecraft:netherrack"
-				type: "item"
+				title: "Return with one Font aggregate"
+				type: "checkmark"
 			}]
-			title: "Netherrack"
+			title: "Font Aggregate"
 			x: -12.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["15C391E4708D16B9"]
-			description: ["Make grout from the rough materials you already gathered. This is the first real step from surface scavenging into foundry parts."]
+			description: ["Combine sand and gravel with the aggregate from your chosen Font. Nether, Aether, Undergarden, and Otherside routes all make the same early grout."]
 			icon: "tconstruct:grout"
 			id: "7CD10E3F93270496"
 			rewards: [{

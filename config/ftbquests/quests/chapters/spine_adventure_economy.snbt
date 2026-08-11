@@ -39,7 +39,7 @@
 		}
 		{
 			dependencies: ["197291772F9B2479"]
-			description: ["Reach the Nether with enough supplies to bring netherrack and heat proof home. This route supports grout and metallurgy rather than serving as a sightseeing trip."]
+			description: ["Reach the Nether with enough supplies to bring magma, soul aggregate, netherrack, and refractory heat proof home. Basic seared work can begin from any Font route; the Nether now opens scorched metallurgy and sustained industry."]
 			icon: "minecraft:netherrack"
 			id: "75FD0C4219599FB8"
 			shape: "rsquare"

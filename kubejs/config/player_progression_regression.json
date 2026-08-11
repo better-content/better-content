@@ -64,7 +64,7 @@
       ],
       "requiresPrevious": "primitive_tools",
       "route": [
-        "Nether/netherrack grout proof",
+        "one Nether, Aether, Undergarden, or Otherside aggregate grout proof",
         "TConstruct seared materials",
         "seared machine casing"
       ],
@@ -73,7 +73,10 @@
           "file": "kubejs/server_scripts/30_recipe_replace/20_expensive_grout.js",
           "all": [
             "tconstruct:grout",
-            "minecraft:netherrack"
+            "minecraft:netherrack",
+            "aether:holystone",
+            "undergarden:deepsoil",
+            "deeperdarker:cobbled_sculk_stone"
           ]
         },
         {
@@ -94,9 +97,9 @@
       ],
       "requiresPrevious": "tcon_seared",
       "route": [
-        "TConstruct scorched component proof",
         "TConstruct alloy/casting andesite alloy",
-        "andesite machine casing"
+        "hand-cranked Create workshop",
+        "Nether refractory proof for passive power and andesite machine casing"
       ],
       "sourceAssertions": [
         {

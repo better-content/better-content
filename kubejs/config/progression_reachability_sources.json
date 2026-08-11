@@ -19,10 +19,18 @@
     "minecraft:iron_ingot",
     "minecraft:iron_bars",
     "minecraft:book",
+    "minecraft:bow",
+    "minecraft:feather",
+    "minecraft:light_blue_dye",
+    "minecraft:oak_log",
+    "minecraft:oak_slab",
+    "minecraft:magma_cream",
     "minecraft:netherrack",
     "minecraft:paper",
     "minecraft:redstone",
     "minecraft:sand",
+    "minecraft:soul_sand",
+    "minecraft:soul_soil",
     "minecraft:slime_ball",
     "minecraft:smooth_stone",
     "minecraft:stone",
@@ -75,7 +83,9 @@
       "aether:holystone",
       "aether:quicksoil_glass",
       "aether:skyroot_stick",
-      "aether:zanite_gemstone"
+      "aether:zanite_gemstone",
+      "undergarden:deepsoil",
+      "deeperdarker:cobbled_sculk_stone"
   ],
   "seedFluids": [
     "minecraft:water",
@@ -115,6 +125,18 @@
     ],
     "minecraft:planks": [
       "minecraft:oak_planks"
+    ],
+    "minecraft:logs": [
+      "minecraft:oak_log"
+    ],
+    "minecraft:wooden_slabs": [
+      "minecraft:oak_slab"
+    ],
+    "forge:dyes/light_blue": [
+      "minecraft:light_blue_dye"
+    ],
+    "forge:feathers": [
+      "minecraft:feather"
     ]
   },
   "freeRecipeTypes": [
@@ -186,13 +208,45 @@
       ]
     },
     {
-      "id": "bc:tcon/grout",
+      "id": "bc:tcon/grout_nether",
       "outputs": [
         "tconstruct:grout"
       ],
       "inputs": [
         "minecraft:netherrack",
-        "minecraft:clay_ball",
+        "minecraft:sand",
+        "minecraft:gravel"
+      ]
+    },
+    {
+      "id": "bc:tcon/grout_aether",
+      "outputs": [
+        "tconstruct:grout"
+      ],
+      "inputs": [
+        "aether:holystone",
+        "minecraft:sand",
+        "minecraft:gravel"
+      ]
+    },
+    {
+      "id": "bc:tcon/grout_undergarden",
+      "outputs": [
+        "tconstruct:grout"
+      ],
+      "inputs": [
+        "undergarden:deepsoil",
+        "minecraft:sand",
+        "minecraft:gravel"
+      ]
+    },
+    {
+      "id": "bc:tcon/grout_otherside",
+      "outputs": [
+        "tconstruct:grout"
+      ],
+      "inputs": [
+        "deeperdarker:cobbled_sculk_stone",
         "minecraft:sand",
         "minecraft:gravel"
       ]
@@ -252,9 +306,11 @@
         "tconstruct:nether_grout"
       ],
       "inputs": [
-        "kubejs:seared_machine_casing",
-        "minecraft:netherrack",
-        "minecraft:blaze_powder"
+        "create:mechanical_mixer",
+        "minecraft:magma_cream",
+        "minecraft:soul_sand",
+        "minecraft:soul_soil",
+        "minecraft:gravel"
       ]
     },
     {
@@ -301,10 +357,31 @@
         "create:andesite_alloy"
       ],
       "inputs": [
-        "tconstruct:scorched_bricks",
+        "tconstruct:seared_melter",
         "minecraft:andesite",
         "minecraft:iron_ingot",
         "chemlib:zinc_ingot"
+      ]
+    },
+    {
+      "id": "bc:create/schematic_workshop",
+      "outputs": [
+        "create:empty_schematic",
+        "create:schematic_and_quill",
+        "create:schematic_table",
+        "create:schematicannon"
+      ],
+      "inputs": [
+        "create:mechanical_mixer",
+        "minecraft:paper",
+        "minecraft:light_blue_dye",
+        "minecraft:feather",
+        "minecraft:iron_block",
+        "minecraft:oak_log",
+        "minecraft:oak_slab",
+        "minecraft:smooth_stone",
+        "minecraft:bow",
+        "minecraft:redstone"
       ]
     },
     {

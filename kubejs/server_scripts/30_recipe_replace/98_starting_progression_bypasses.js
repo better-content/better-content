@@ -93,8 +93,8 @@ ServerEvents.recipes(function (event) {
         results: [{ item: 'create:andesite_casing' }]
     }).id('kubejs:create/deploying/andesite_casing')
 
-    // Gravel has value before bulk Create processing. TNT stays visible and reachable,
-    // but explosive work moves off the crafting table once Create is available.
+    // Gravel has value before bulk Create processing. Keep TNT's vanilla crafting-table
+    // recipe authoritative; Create compacting remains an optional bulk-processing route.
     event.custom({
         type: 'create:milling',
         ingredients: [{ item: 'minecraft:gravel' }],
@@ -105,8 +105,16 @@ ServerEvents.recipes(function (event) {
         ]
     }).id('kubejs:create/milling/gravel_to_flint_and_gunpowder')
 
-    event.remove({ output: 'minecraft:tnt', type: 'minecraft:crafting_shaped' })
-    event.remove({ output: 'minecraft:tnt', type: 'minecraft:crafting_shapeless' })
+    event.remove({ id: 'minecraft:tnt' })
+    event.shaped('minecraft:tnt', [
+        'GSG',
+        'SGS',
+        'GSG'
+    ], {
+        G: 'minecraft:gunpowder',
+        S: '#minecraft:sand'
+    }).id('minecraft:tnt')
+
     global.bcCreateCompacting(event, 'kubejs:create/compacting/tnt_with_flint_core', 'minecraft:tnt', 1, [
         'minecraft:gunpowder',
         'minecraft:gunpowder',

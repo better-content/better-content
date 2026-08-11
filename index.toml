@@ -11866,7 +11866,7 @@ metafile = true
 
 [[files]]
 file = "mods/prestige-0.1.0.jar"
-hash = "de72185297182513d5e6ba19de261eda7a3182033f1185ff36c02a5e00067f38"
+hash = "5c12b91f0836e4c694e2d55216cbd5f93fb0703ef1270a6f4f67ba398c0dfc4a"
 
 [[files]]
 file = "mods/procedural_bouquets-0.1.0.jar"
@@ -12246,7 +12246,7 @@ hash = "1bb5a261a4e74a21f5548e5e8dd41f9d4417808926ed917524b3cc0604aadb21"
 
 [[files]]
 file = "prestige-server.sh"
-hash = "bc3166e2e04937e6671ced207dab15fc9b6aa0236c62cc807d1b99c5a3a7841c"
+hash = "2406e0552b15aef5645445c437a5cc1fc6908f1cbf72842da61ba5b71f3f2786"
 
 [[files]]
 file = "quests/graph.yml"

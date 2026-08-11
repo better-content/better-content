@@ -41,6 +41,15 @@ Traces is also a required standalone custom mod. Its shards live under `world/da
 
 ## Live recipe graph
 
+The retained live recipe and tag snapshots also bound the offline TConstruct surface:
+
+```text
+tools/bc tcon catalog tools|materials|modifiers [--id ID]
+tools/bc tcon make --spec PATH|-
+```
+
+The catalogue reads the pinned `TConstruct-1.20.1-3.11.2.166.jar`, installed addon data, and `kubejs/data` overrides, then keeps only tool-building outputs present in the complete retained graph. A `bc.tcon_formulation.v1` spec names one item, its ordered material IDs, and optional modifier recipe applications. Formulation reproduces the source build order and returns `{item,count,nbt}` while rejecting incompatible parts, unsupported serializers or build modules, unmet prerequisites, duplicate/over-level modifiers, and exhausted slots. It is a deterministic construction primitive, not a build recommender; custom `tcon-affixes` data is outside its contract.
+
 `tools/bc build dumps` starts one disposable dedicated server and invokes the
 operator-only `bcgraph dump` command after startup. The bundled
 `bcrecipegraph` Forge mod reads the final live `RecipeManager`, after datapack

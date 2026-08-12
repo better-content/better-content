@@ -1,5 +1,9 @@
 # Runtime Validation
 
+## Build 40 persistent-world gate
+
+Build 40 is the first durable-world baseline. Existing generated chunks are never rewritten, regenerated, tree-cleaned, or retrofitted automatically; changed world generation applies only when a player reaches new chunks, so terrain borders are expected. A Build 40 candidate must pass three install/update/reconnect cycles using the exact paired client and server archives. The final cycle verifies persisted player/world data, unchanged old chunks, current generation in new chunks, backup recovery, and an optional Prestige transfer on a copy. Prestige is never automatic and never blocks the original backed-up world. A future incompatible release must provide either a tested in-place migration or a tested optional Prestige/export path before publication.
+
 The supported runtime surface is one explicit lifecycle smoke:
 
 ```text

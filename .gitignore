@@ -48,6 +48,9 @@ generated/surface-marker-capture/
 generated/surface-samples-*-superflat.png
 generated/validation/integration-audit/spark-classification/
 generated/validation/integration-audit/stream-classification*/
+generated/validation/traces-*/
+generated/visual-iteration/
+generated/custom-mod-sources/**/logs/
 exports/
 
 kubejs/recipe_dumps/

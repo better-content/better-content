@@ -11111,7 +11111,7 @@ metafile = true
 
 [[files]]
 file = "mods/arcane_chunkloaders-0.1.0.jar"
-hash = "c315583adc7221b8255cc0be7aa4c8c6f4d659c84555d274bb00f1e304d3cb37"
+hash = "0eabac8108de8dc2ac0ed76cbee5cd71255b945178a41dbbafa74627e4aed243"
 
 [[files]]
 file = "mods/architectury-api.pw.toml"
@@ -11298,7 +11298,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimensiondrink-1.0.0.jar"
-hash = "e94377d4724c1bc20883e9550b707317583cf1c147ee7be5a4641c78081259c6"
+hash = "76ae3c92554de4ad3f038e100d54d2a9017c8c973f4062abce1d2c56e17906cf"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -12058,7 +12058,7 @@ metafile = true
 
 [[files]]
 file = "mods/tconaffixes-1.0.0.jar"
-hash = "0eabac8108de8dc2ac0ed76cbee5cd71255b945178a41dbbafa74627e4aed243"
+hash = "415a1c14e6c7dee31eb578f7d1b9b4a1f5749ca93dab1592601a1a223d21b751"
 
 [[files]]
 file = "mods/tconjei.pw.toml"
@@ -12187,7 +12187,7 @@ metafile = true
 
 [[files]]
 file = "mods/traces-0.1.0.jar"
-hash = "461ea4c38f8edb4e0fa243453855dfbcf1323ede811ea169acd43151d3aee278"
+hash = "c315583adc7221b8255cc0be7aa4c8c6f4d659c84555d274bb00f1e304d3cb37"
 
 [[files]]
 file = "mods/trackwork.pw.toml"
@@ -12231,7 +12231,7 @@ metafile = true
 
 [[files]]
 file = "mods/villagewalls-1.0.0.jar"
-hash = "6f86c69b889ea4fe621db4124bd375e6685c7a716691265b3ecda83fb0668d01"
+hash = "07ca98c779ba27bd15e91c8a14706e1eacae6c4756f0b684b81de1810d5d906c"
 
 [[files]]
 file = "mods/wares.pw.toml"

@@ -11831,7 +11831,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillagercampaigns-0.2.0.jar"
-hash = "ade95c2e6d35a8c3d0b7e1f553779d4c2be4ec3b5168f1e97cb4c5ce57868605"
+hash = "870d83741612b13bfa63139ffcc9c7574a7e9f8c5efaa796cd41cd4bd97297e3"
 
 [[files]]
 file = "mods/ping-wheel.pw.toml"
@@ -11884,7 +11884,7 @@ metafile = true
 
 [[files]]
 file = "mods/prestige-0.1.0.jar"
-hash = "436bb020af5b27b19a5bd2d540d2df86068d9620bd9de45b389303be6457843e"
+hash = "c00e355d32a7fb0aeb1e82be84759a8de73ef4e3c40d97baae2dee1efcebc2d5"
 
 [[files]]
 file = "mods/procedural_bouquets-0.1.0.jar"

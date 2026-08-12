@@ -6186,7 +6186,7 @@ hash = "dd7415a83aef00c385628fe1756a0a97738b8dffd00f30effd08dd5e1da27431"
 
 [[files]]
 file = "config/structure_generation_improver.json"
-hash = "a59c6f6b05695e3683253f35b675efe0d77c8f7298a36d85ae6345e242f58ffc"
+hash = "04234b2ec3ba44d3c94935cb2a026a1133f72d51e2e5bb47e796af8f08b115e5"
 
 [[files]]
 file = "config/structurify.json"
@@ -10862,7 +10862,7 @@ hash = "1e9382e0b7ca92858b0d20a252fe5c818698db254cf19533b8dd4d62629299b6"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js"
-hash = "f6ce010c4a697318d3367dd3126c1bbe37aff4e62fe834f104eea68e742ddeee"
+hash = "f75b6c072c79f6127a14fe123e93388549978138a027044b1c9d226bdf9f5dbc"
 
 [[files]]
 file = "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js"
@@ -10890,7 +10890,7 @@ hash = "f03785bd8ef07dd0e0646431361344db201eba97f74f030cc485cfe8716157b4"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/49_realistic_ores_catalog.js"
-hash = "ea1fdf3ace1afaecde6ef5ef131a931733540d39c5a15cc83a4503c6b6cdd4eb"
+hash = "b2169549288cb5d37f2ecfa1a7ec38e1ad66fdda321fa38387b4070ad9af05d4"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/50_create_deposit_preprocessing.js"
@@ -10898,7 +10898,7 @@ hash = "83acbae7103d6fb4a9c024f42bbc8b59f151bcbbee99620cb30227c35ad04e63"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/51_surface_sample_processing.js"
-hash = "44f12cc733777babfd911e29e7b97a1707dd367393dea35c5adea99367dcab5b"
+hash = "e4972154e2f65a4d44cc8ed8deef978417dd1b761908b27b8acef6952aac019a"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/52_realistic_ores_excavated_host_cycles.js"
@@ -10977,6 +10977,10 @@ file = "kubejs/server_scripts/50_loot/12_unearthed_regolith_identity.js"
 hash = "f0f4db2a4361afbdf8f42317c72b6890776348fb01c6dad2c7e52a1bac33ed43"
 
 [[files]]
+file = "kubejs/server_scripts/50_loot/13_realistic_ores_surface_sample_drops.js"
+hash = "09d8ae8ddfc58fd651d94247d5df1808d1e76cbde6c2a1b533fb2ec0dedba632"
+
+[[files]]
 file = "kubejs/server_scripts/50_loot/20_world_chest_coin_tiers.js"
 hash = "dd8e8b2b612ca605499aea8e1ba061bac13afe1f4a77d1fd2f60e24399080552"
 
@@ -11018,7 +11022,7 @@ hash = "6085ae1ef8cd534ec59740a61ae9bcb49d50cf65abb72d60b7c0b840ceed606d"
 
 [[files]]
 file = "kubejs/server_scripts/99_final/10_create_tcon_bootstrap.js"
-hash = "f9737d584a399fb9be4a2032fdb830a401c6a78599d123c26796f2f396732544"
+hash = "607a61b8b802413221c6bc1ca08d48e4b7114bbedb1358be55c8430327651510"
 
 [[files]]
 file = "kubejs/server_scripts/99_final/90_energy_ladder_gate.js"

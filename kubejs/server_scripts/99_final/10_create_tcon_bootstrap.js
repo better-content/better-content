@@ -214,7 +214,7 @@ ServerEvents.recipes(function (event) {
     event.remove({ output: 'kubejs:andesite_machine_casing' })
     event.custom({
         type: 'create:sequenced_assembly',
-        ingredient: { item: 'tconstruct:scorched_bricks' },
+        ingredient: { item: 'create:andesite_alloy' },
         transitionalItem: { item: 'kubejs:incomplete_andesite_machine_casing' },
         sequence: [
             { type: 'create:deploying', ingredients: [{ item: 'kubejs:incomplete_andesite_machine_casing' }, { item: 'create:andesite_casing' }], results: [{ item: 'kubejs:incomplete_andesite_machine_casing' }] },

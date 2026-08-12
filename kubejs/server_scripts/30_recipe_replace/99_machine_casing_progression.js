@@ -36,7 +36,7 @@ ServerEvents.recipes(function (event) {
     ], {
         A: 'create:andesite_alloy',
         D: 'create:andesite_casing',
-        C: 'tconstruct:scorched_bricks'
+        C: 'minecraft:andesite'
     }).id('kubejs:machine_casing/andesite')
 
     // Brass and later casing tiers require Create manufacturing. Remove the simple shaped

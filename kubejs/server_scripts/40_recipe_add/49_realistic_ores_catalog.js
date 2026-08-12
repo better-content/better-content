@@ -26,6 +26,13 @@ var BC_REALISTIC_ORES = [
     { id: 'sulfur_bearing_pyrite_ore', crushed: 'realisticores:crushed_sulfur_bearing_pyrite_ore', sample: 'realisticores:surface_sample_sulfur_bearing_pyrite_ore', ball: 'iron', products: [['chemlib:sulfur', 4], ['create:crushed_raw_iron', 2]], leach: { solvent: 'sulfuric', products: [['chemlib:sulfur', 6], ['create:crushed_raw_iron', 3]] } }
 ]
 
+for (var i = 0; i < BC_REALISTIC_ORES.length; i++) {
+    var deposit = BC_REALISTIC_ORES[i]
+    if (!deposit.chunk && deposit.sample) {
+        deposit.chunk = deposit.sample.replace('realisticores:surface_sample_', 'realisticores:ore_chunk_')
+    }
+}
+
 var BC_RO_BALLS = [
     { id: 'andesite', item: 'kubejs:andesite_grinding_ball', primaryBonus: 0, secondaryBonus: 0.00, traceBonus: 0.00, bias: 'gangue' },
     { id: 'iron', item: 'kubejs:iron_grinding_ball', primaryBonus: 0, secondaryBonus: 0.06, traceBonus: 0.02, bias: 'ferrous' },

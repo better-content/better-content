@@ -7,7 +7,7 @@ ServerEvents.recipes(function (event) {
         var ingredients = []
         for (var i = 0; i < 8; i++) ingredients.push({ item: deposits[d].sample })
         event.custom({
-            type: 'create:mixing',
+            type: 'create:crushing',
             ingredients: ingredients,
             results: [{ item: deposits[d].crushed }],
             processingTime: 300

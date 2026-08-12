@@ -13,6 +13,7 @@ __pycache__/
 server-instance/
 server-template/
 generated/exports/
+generated/exports-build40-*
 generated/cache/
 generated/evidence/
 # Custom-mod source directories are owned source inputs.  Ignore their build and
@@ -49,9 +50,19 @@ generated/surface-samples-*-superflat.png
 generated/validation/integration-audit/spark-classification/
 generated/validation/integration-audit/stream-classification*/
 generated/validation/traces-*/
+generated/validation/build40-*
+generated/validation/mod-gates-pre-complete-*
+generated/validation/automated_test_report.md
+generated/validation/automated_test_summary.json
+generated/validation/contract_completeness_report.md
+generated/validation/contract_completeness_summary.json
 generated/visual-iteration/
 generated/custom-mod-sources/**/logs/
 exports/
+
+# Local run artifacts
+logs/
+quarantine/
 
 kubejs/recipe_dumps/
 kubejs/config/recipe_audit_summary.json

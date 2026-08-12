@@ -9398,7 +9398,7 @@ hash = "a6c95cd49ab1ba4796d158ba87a8fda149652b3bfd90f016e795cc4a0d7d543c"
 
 [[files]]
 file = "kubejs/config/mod_progression_gates.json"
-hash = "cc86a19cafddb8c469dae68b0eadf8b7a5cc46fb6d3f6cc137d0950fc6f20014"
+hash = "d979905cc1412672603f018e38a5e4e97fe7894f09e1dcc76501cad4a6ce78f4"
 
 [[files]]
 file = "kubejs/config/perf_probe.json"
@@ -11298,7 +11298,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimensiondrink-1.0.0.jar"
-hash = "76ae3c92554de4ad3f038e100d54d2a9017c8c973f4062abce1d2c56e17906cf"
+hash = "c068965012bf008393f14f1d967ae88f1927e72ca4de8b4adb7350df081d08aa"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -11884,7 +11884,7 @@ metafile = true
 
 [[files]]
 file = "mods/prestige-0.1.0.jar"
-hash = "c00e355d32a7fb0aeb1e82be84759a8de73ef4e3c40d97baae2dee1efcebc2d5"
+hash = "dad662c77274e43322631e6d284d49b1d7144a610d40cbab550f9240c40324e1"
 
 [[files]]
 file = "mods/procedural_bouquets-0.1.0.jar"
@@ -12187,7 +12187,7 @@ metafile = true
 
 [[files]]
 file = "mods/traces-0.1.0.jar"
-hash = "a2ae72439f6e69f2bf4d2b4818dd82e31b50e52362acfc778d8233bb271639ba"
+hash = "95cf277a48a23efb696f935cb8bcb9ce9c4c167f692adea619fc22dadf682f44"
 
 [[files]]
 file = "mods/trackwork.pw.toml"

@@ -26,9 +26,7 @@ This enables the live dump command before startup, joins the ordinary smoke clie
 
 ```text
 tools/bc doctor env
-tools/bc test static
-tools/bc test kotlin
-tools/bc test fast
+tools/bc test smoke
 ```
 
 Kotlin harness lifecycle tests synchronize on the per-run `lock.json`; incidental harness-root entries such as `port-reservations/` are not evidence that a run is ready to interrupt or inspect.

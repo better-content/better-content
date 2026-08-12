@@ -53,9 +53,6 @@ Do not sync or delete player/runtime state by default. The tracked repo-root `op
 
 ## Supported Tool Surface
 - Launcher: `tools/bc`
-- Validation: `tools/bc test static`
-- Kotlin test runner: `tools/bc test kotlin`
-- Fast workspace checks: `tools/bc test fast`
 - One-world server/client smoke: `tools/bc test smoke --bootstrap-mode always`
 - Placed-block screenshots: `tools/bc capture blocks --manifest PATH [--bootstrap-mode always|once|never] [--output-dir PATH]`
 - Traces release proof: `tools/bc capture traces --client-zip PATH --server-zip PATH [--output-dir PATH]`
@@ -126,9 +123,7 @@ Use a superflat world for in-game screenshots unless the subject specifically re
 6. Record concise findings in the relevant living doc under `docs/`.
 
 Recommended validation ladder:
-1. Static checks: `tools/bc test static`.
-2. Kotlin checks: `tools/bc test kotlin`.
-3. Fast source workspace checks when relevant: `tools/bc test fast`.
+1. Runtime check: `tools/bc test smoke`.
 
 Treat the smoke as lifecycle/network evidence only; it is not a gameplay, worldgen-distribution, or visual-quality claim.
 
@@ -138,7 +133,7 @@ For runtime/tooling changes, also run:
 3. `tools/bc build sync server --dir ~/.cache/bc/sync-server --apply`
 4. `tools/bc build sync client --dir ~/.cache/bc/sync-client --dry-run`
 5. `tools/bc build sync client --dir ~/.cache/bc/sync-client --apply`
-6. `tools/bc test kotlin`
+6. `tools/bc test smoke`
 
 If `tools/bc doctor env` reports missing prerequisites, do not claim validation parity for commands that depend on them.
 

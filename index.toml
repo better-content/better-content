@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "AGENTS.md"
-hash = "7f1be9fabab184475a8ccec71bf5e3c5bf9a51786ee57dea0d0384dbfaf62c7d"
+hash = "521aa4ef470e86b8a651990fd04161cdac9bf82cd6e886bc42f713efbd7ad897"
 
 [[files]]
 file = "LICENSE"
@@ -18,7 +18,7 @@ hash = "014ed50d211c1cc7aebb0e6fa6f42ad8be0e2af6dcbbca7c7738b23b8f9c7279"
 
 [[files]]
 file = "TOOL_MIGRATION_MATRIX.md"
-hash = "f89c8425f885f9669d94225e5a1524594015f83766c28d58052e407f63f18834"
+hash = "6b23b8a2179f62ab6fa7e952cdf54104ecd1162be4781bc701b2c73d190c12a2"
 
 [[files]]
 file = "config/DistantHorizons.toml"

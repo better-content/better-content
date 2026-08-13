@@ -26,7 +26,7 @@ doctor checks, or scenario matrices.
 The entire former `tools/` tree is quarantined. Do not recreate an active `tools/` directory.
 `quarantine/` is unsupported and removable. Active runtime content, `dist.sh`, and `smoke.sh`
 must not depend on or include it. Do not restore or invoke quarantined code unless the user
-explicitly reverses this decision. `generated/custom-mod-sources/` is excluded from the purge.
+explicitly reverses this decision. Custom mod sources live in sibling repositories under `/home/dev` and must not be recreated here.
 
 ## Runtime safety
 Treat pre-existing changes as user-owned. Do not delete player worlds, saves, logs, crash

@@ -18,31 +18,6 @@ generated/cache/
 generated/evidence/
 # Custom-mod source directories are owned source inputs.  Ignore their build and
 # Gradle caches, not the sources themselves.
-generated/custom-mod-sources/**/.gradle/
-generated/custom-mod-sources/**/build/
-generated/custom-mod-sources/**/run/
-generated/custom-mod-sources/better-content-fixes/
-generated/custom-mod-sources/class-selector/
-generated/custom-mod-sources/create-train-fuel-scaling/
-generated/custom-mod-sources/create-transmission-loss/
-generated/custom-mod-sources/dimension-drink/
-generated/custom-mod-sources/dynamic-trees-dimension-compat/
-generated/custom-mod-sources/dynamic-trees-hexerei/
-generated/custom-mod-sources/dynamic-trees-malum/
-generated/custom-mod-sources/heat-sync/
-generated/custom-mod-sources/latent_chemlib/
-generated/custom-mod-sources/oc2r-create-bridge/
-generated/custom-mod-sources/oc2rwireless-global-pubsub-addon/
-generated/custom-mod-sources/pillager-campaigns/
-generated/custom-mod-sources/prestige/
-generated/custom-mod-sources/procedural-bouquets/
-generated/custom-mod-sources/realistic-ores/
-generated/custom-mod-sources/recipe-graph-dumper/
-generated/custom-mod-sources/revival/
-generated/custom-mod-sources/rpg-stats/
-generated/custom-mod-sources/settlement-roads/
-generated/custom-mod-sources/traces/
-generated/custom-mod-sources/village-walls/
 generated/asset-review/*/evidence/
 generated/pack-site/
 generated/surface-marker-capture/
@@ -57,7 +32,6 @@ generated/validation/automated_test_summary.json
 generated/validation/contract_completeness_report.md
 generated/validation/contract_completeness_summary.json
 generated/visual-iteration/
-generated/custom-mod-sources/**/logs/
 exports/
 
 # Local run artifacts

@@ -49,7 +49,7 @@ Magic reads as two dirty parent traditions feeding two clean formalisms. Fonts l
 
 Death is a structured life-length and location penalty, not a random item-loss pressure. `defaultconfigs/configurabledeath-server.toml` keeps inventory, armor, hotbar, mainhand, offhand, food, and saturation on death, with no durability loss on kept items. The costly loss is the current life's RPG Stats power and the trip back to the locked spawn.
 
-RPG Stats awards one stat point for each new XP level above `lifePeakLevel`. On death, `generated/custom-mod-sources/rpg-stats` snapshots the dying player's XP level before Configurable Death clears it, clears unspent points and allocations, baselines the next life to the post-death XP level, and delivers a level-stamped `rpgstats:still_beating_heart` on respawn when Blood Magic is present. The heart records how far that life got and then feeds the Blood Magic bridge; it is the high-score token for the run, not a bulk currency.
+RPG Stats awards one stat point for each new XP level above `lifePeakLevel`. On death, `../rpg-stats` snapshots the dying player's XP level before Configurable Death clears it, clears unspent points and allocations, baselines the next life to the post-death XP level, and delivers a level-stamped `rpgstats:still_beating_heart` on respawn when Blood Magic is present. The heart records how far that life got and then feeds the Blood Magic bridge; it is the high-score token for the run, not a bulk currency.
 
 Respawn heart delivery writes to the highest empty main-inventory slot, then an empty ender slot, and otherwise remains pending. It never inserts into slot 0 or shifts existing inventory stacks.
 

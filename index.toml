@@ -11222,10 +11222,6 @@ hash = "6a18fc39dbe317dcdba9aac9d5457e1bb2aa6decf77a6f4d6e67d7fbff0831d0"
 metafile = true
 
 [[files]]
-file = "mods/downed-player-downed_player_revival-1.0.0.jar"
-hash = "7083d3baf3defb8372ccd46600491d465d735b6c4b91740493bbd6e76e6ee0d3"
-
-[[files]]
 file = "mods/downed-player-revival-1.0.0.jar"
 hash = "4eaf98d6d590460bac2ac44c91da5a264c43eae18460ef4bb94996814cfe13c1"
 

@@ -26,6 +26,12 @@
 				}
 			}
 			id: "1DDAC44A74F57739"
+			rewards: [{
+				count: 8
+				id: "999580D72C0EB1EB"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.8d
 			tasks: [{
@@ -47,6 +53,12 @@
 				}
 			}
 			id: "0D1BCD5229937D35"
+			rewards: [{
+				count: 8
+				id: "8DA937BC5F10BBD3"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -75,6 +87,12 @@
 				}
 			}
 			id: "051C7A8E609C8869"
+			rewards: [{
+				count: 8
+				id: "8BD7D430CDD5BBF7"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -103,6 +121,12 @@
 				}
 			}
 			id: "7D52F602EEBD1BEF"
+			rewards: [{
+				count: 8
+				id: "837356B435C0E517"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -131,6 +155,12 @@
 				}
 			}
 			id: "3EB29801D614E517"
+			rewards: [{
+				count: 8
+				id: "ABDFF65B96A195F9"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -159,6 +189,12 @@
 				}
 			}
 			id: "054F1E45DF0BA910"
+			rewards: [{
+				count: 8
+				id: "B864F4DC4F49CAD2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -188,6 +224,12 @@
 				}
 			}
 			id: "02A1CAE896551923"
+			rewards: [{
+				count: 8
+				id: "45A7DEB9239BBDA9"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.8d
 			tasks: [{
@@ -209,6 +251,12 @@
 				}
 			}
 			id: "33CFE1AF042FF603"
+			rewards: [{
+				count: 8
+				id: "2AF2434F95DA8521"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -261,6 +309,12 @@
 				}
 			}
 			id: "3893B0E7CD370006"
+			rewards: [{
+				count: 8
+				id: "1C710C413E23A9C0"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -336,6 +390,12 @@
 				}
 			}
 			id: "421D05A0E74E640D"
+			rewards: [{
+				count: 8
+				id: "1D086D7E199ED631"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -409,6 +469,12 @@
 				}
 			}
 			id: "3FE4120DC8903C42"
+			rewards: [{
+				count: 8
+				id: "0BEE8163544EDBBC"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -459,6 +525,12 @@
 				}
 			}
 			id: "0EC6FC4FD2E2741A"
+			rewards: [{
+				count: 8
+				id: "0CE0B32900F7438E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -480,6 +552,12 @@
 		{
 			icon: "tconstruct:shuriken"
 			id: "538DB80E80E25718"
+			rewards: [{
+				count: 8
+				id: "D0CD0D77F7DC2015"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -523,6 +601,12 @@
 				}
 			}
 			id: "1498FE2FBEB8EDB2"
+			rewards: [{
+				count: 8
+				id: "A579CAB38E8E0FC6"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -566,6 +650,12 @@
 		{
 			icon: "tconstruct:throwing_axe"
 			id: "25D9ECFDF51895F6"
+			rewards: [{
+				count: 8
+				id: "4AB2144C652D7B00"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -587,6 +677,12 @@
 				}
 			}
 			id: "061EA614141541E6"
+			rewards: [{
+				count: 8
+				id: "B6DA847B81B9FECC"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -616,6 +712,12 @@
 				}
 			}
 			id: "4C110482CB7F7587"
+			rewards: [{
+				count: 8
+				id: "5B4375A5FA96D8E2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.8d
 			tasks: [{
@@ -637,6 +739,12 @@
 				}
 			}
 			id: "6B6328E11F3D2427"
+			rewards: [{
+				count: 8
+				id: "965EAAEF912808D8"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -666,6 +774,12 @@
 				}
 			}
 			id: "636064E27990E532"
+			rewards: [{
+				count: 8
+				id: "079860B551E15968"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.8d
 			tasks: [{
@@ -687,6 +801,12 @@
 				}
 			}
 			id: "72B2D4B4441B3021"
+			rewards: [{
+				count: 8
+				id: "346CC19283643E6D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -715,6 +835,12 @@
 				}
 			}
 			id: "00E756B61F5635A3"
+			rewards: [{
+				count: 8
+				id: "09AE2E337722F795"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -743,6 +869,12 @@
 				}
 			}
 			id: "70E2BA035367D6D9"
+			rewards: [{
+				count: 8
+				id: "9DA999DD41A38EEE"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{

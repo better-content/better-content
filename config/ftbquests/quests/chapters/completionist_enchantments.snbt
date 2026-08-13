@@ -12,6 +12,12 @@
 			description: ["3 starter stubs."]
 			icon: "minecraft:enchanted_book"
 			id: "648B537180843B02"
+			rewards: [{
+				count: 8
+				id: "07967D7D4659D948"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.8d
 			tasks: [{
@@ -27,6 +33,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:sourceberry_bush, forge:storage_blocks/source, forge:gems/diamond, forge:storage_blocks/lapis | Source cost: 2000-5000"]
 			icon: "minecraft:enchanted_book"
 			id: "7114F36A24911676"
+			rewards: [{
+				count: 8
+				id: "C565027DB815AF6D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -42,6 +54,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:sourceberry_bush, ars_nouveau:abjuration_essence, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-5000"]
 			icon: "minecraft:enchanted_book"
 			id: "1B08F6B3233F584C"
+			rewards: [{
+				count: 8
+				id: "ABF08D2919B27407"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -57,6 +75,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via forge:gems/diamond, forge:ender_pearls, ars_nouveau:wilden_tribute, minecraft:blaze_powder | Source cost: 6000-9000"]
 			icon: "minecraft:enchanted_book"
 			id: "3C0BE3733A6143DE"
+			rewards: [{
+				count: 8
+				id: "6C6A0C92CD8F01DF"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -72,6 +96,12 @@
 			description: ["27 starter stubs."]
 			icon: "minecraft:enchanted_book"
 			id: "49C6605CF1EE2629"
+			rewards: [{
+				count: 8
+				id: "4E366F5FD30257E1"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.8d
 			tasks: [{
@@ -87,6 +117,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via minecraft:fishes, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 5000-5000"]
 			icon: "minecraft:enchanted_book"
 			id: "043C9CF755E44226"
+			rewards: [{
+				count: 8
+				id: "52A72CEB9AE0E840"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -102,6 +138,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via minecraft:spider_eye, forge:storage_blocks/source, forge:storage_blocks/lapis, minecraft:fermented_spider_eye | Source cost: 2000-8000"]
 			icon: "minecraft:enchanted_book"
 			id: "222920C78923E4B1"
+			rewards: [{
+				count: 8
+				id: "280BABFAADD1FAA7"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -117,6 +159,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via forge:gems/diamond, forge:storage_blocks/source, forge:storage_blocks/gold, forge:obsidian | Source cost: 2000-8000"]
 			icon: "minecraft:enchanted_book"
 			id: "4B603AA95240AABB"
+			rewards: [{
+				count: 8
+				id: "28C939B0BFA4D283"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -132,6 +180,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:water_essence, forge:storage_blocks/source, minecraft:prismarine_shard, minecraft:nautilus_shell | Source cost: 3000-9000"]
 			icon: "minecraft:enchanted_book"
 			id: "0C952EFF3E40E771"
+			rewards: [{
+				count: 8
+				id: "F66990EA8B77B300"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -147,6 +201,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via forge:storage_blocks/redstone, minecraft:diamond_pickaxe, minecraft:diamond_shovel, forge:storage_blocks/source | Source cost: 2000-8000"]
 			icon: "minecraft:enchanted_book"
 			id: "0296AFF40D77809D"
+			rewards: [{
+				count: 8
+				id: "DF581A5D5A1F81CF"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -162,6 +222,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:air_essence, forge:slimeballs, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-6500"]
 			icon: "minecraft:enchanted_book"
 			id: "1F23019AD66F1891"
+			rewards: [{
+				count: 8
+				id: "45718EE8C1C28CC3"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -177,6 +243,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:fire_essence, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-4000"]
 			icon: "minecraft:enchanted_book"
 			id: "77A6837E23D408A7"
+			rewards: [{
+				count: 8
+				id: "FA62817684D3486E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -192,6 +264,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:fire_essence, ars_nouveau:abjuration_essence, forge:storage_blocks/source, forge:rods/blaze | Source cost: 2000-8000"]
 			icon: "minecraft:enchanted_book"
 			id: "1A8E20C29272A402"
+			rewards: [{
+				count: 8
+				id: "672ABC3A9D2CC50F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -207,6 +285,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:fire_essence, ars_nouveau:air_essence, forge:rods/blaze | Source cost: 5000-5000"]
 			icon: "minecraft:enchanted_book"
 			id: "756935E3003AD4E3"
+			rewards: [{
+				count: 8
+				id: "38318C8A6157B7E9"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -222,6 +306,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:earth_essence, forge:storage_blocks/diamond, forge:storage_blocks/lapis, forge:storage_blocks/source | Source cost: 6000-9000"]
 			icon: "minecraft:enchanted_book"
 			id: "45303570F823023B"
+			rewards: [{
+				count: 8
+				id: "18B61FB8D7D606BA"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -237,6 +327,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:air_essence, forge:storage_blocks/diamond | Source cost: 9000-9000"]
 			icon: "minecraft:enchanted_book"
 			id: "4C89B8A09BC430CC"
+			rewards: [{
+				count: 8
+				id: "23CCEA40D4BBA13D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -252,6 +348,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:manipulation_essence, ars_nouveau:air_essence, forge:storage_blocks/source | Source cost: 2000-4000"]
 			icon: "minecraft:enchanted_book"
 			id: "5FF77F5D6A42E6AC"
+			rewards: [{
+				count: 8
+				id: "3173C63869B72B19"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -267,6 +369,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:earth_essence, forge:storage_blocks/emerald, forge:storage_blocks/lapis, forge:storage_blocks/source | Source cost: 6000-9000"]
 			icon: "minecraft:enchanted_book"
 			id: "3747B891D4401D4D"
+			rewards: [{
+				count: 8
+				id: "1CD4D3EB4159EAB0"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -282,6 +390,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:manipulation_essence, forge:storage_blocks/source | Source cost: 9000-9000"]
 			icon: "minecraft:enchanted_book"
 			id: "22729C737A57F724"
+			rewards: [{
+				count: 8
+				id: "F80D1436DF65643F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -297,6 +411,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:manipulation_essence, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2500-9000"]
 			icon: "minecraft:enchanted_book"
 			id: "240F623DF7D8ECA1"
+			rewards: [{
+				count: 8
+				id: "9EB965215A13B84C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -312,6 +432,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via forge:gems/diamond, ars_nouveau:air_essence, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-9000"]
 			icon: "minecraft:enchanted_book"
 			id: "3E73A3947BF95F9E"
+			rewards: [{
+				count: 8
+				id: "9D24F5CA32B8C389"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -327,6 +453,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via minecraft:arrow, ars_nouveau:air_essence, ars_nouveau:abjuration_essence, forge:storage_blocks/source | Source cost: 2000-8000"]
 			icon: "minecraft:enchanted_book"
 			id: "44F3709F6222A900"
+			rewards: [{
+				count: 8
+				id: "F7F2CE3343857BC2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -342,6 +474,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:manipulation_essence, ars_nouveau:abjuration_essence, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-8000"]
 			icon: "minecraft:enchanted_book"
 			id: "51E48D720BED3284"
+			rewards: [{
+				count: 8
+				id: "C36E2E8F64D42B65"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -357,6 +495,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:air_essence, forge:storage_blocks/source | Source cost: 2000-4000"]
 			icon: "minecraft:enchanted_book"
 			id: "3FB40FD8790D79BA"
+			rewards: [{
+				count: 8
+				id: "DC1D477E9231C9CC"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -372,6 +516,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:air_essence, ars_nouveau:abjuration_essence, forge:storage_blocks/source | Source cost: 2000-6000"]
 			icon: "minecraft:enchanted_book"
 			id: "1EC8A46EA239DB32"
+			rewards: [{
+				count: 8
+				id: "03BD55D28098609C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -387,6 +537,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:water_essence, forge:storage_blocks/source | Source cost: 3000-9000"]
 			icon: "minecraft:enchanted_book"
 			id: "560E4DF365C80894"
+			rewards: [{
+				count: 8
+				id: "2DC1D3F3FC4C5730"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -402,6 +558,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via forge:storage_blocks/quartz, forge:gems/diamond, forge:storage_blocks/lapis, forge:storage_blocks/source | Source cost: 2000-8000"]
 			icon: "minecraft:enchanted_book"
 			id: "3708174C382A8E67"
+			rewards: [{
+				count: 8
+				id: "CBFC6C6A5C1FEE64"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -417,6 +579,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via forge:gems/emerald, forge:gems/diamond, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 9000-9000"]
 			icon: "minecraft:enchanted_book"
 			id: "69036E0EEE55E862"
+			rewards: [{
+				count: 8
+				id: "87EC204C59651B99"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -432,6 +600,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via minecraft:bone_block, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-8000"]
 			icon: "minecraft:enchanted_book"
 			id: "45A9F4644DA4E1B5"
+			rewards: [{
+				count: 8
+				id: "386F7F9A51C89ED9"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -447,6 +621,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:manipulation_essence, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-5000"]
 			icon: "minecraft:enchanted_book"
 			id: "3D247CE2435579ED"
+			rewards: [{
+				count: 8
+				id: "A37CDF4FB48E8C44"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -462,6 +642,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:wilden_spike, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-5000"]
 			icon: "minecraft:enchanted_book"
 			id: "1EC97CF2C4E7A7D7"
+			rewards: [{
+				count: 8
+				id: "94A70BE565F69C1F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -477,6 +663,12 @@
 			description: ["Hint: Ars Enchanting Apparatus via ars_nouveau:abjuration_essence, forge:gems/diamond, forge:storage_blocks/source, forge:storage_blocks/lapis | Source cost: 2000-5000"]
 			icon: "minecraft:enchanted_book"
 			id: "39E17978FE5E656B"
+			rewards: [{
+				count: 8
+				id: "BBAEECA6835CE269"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{

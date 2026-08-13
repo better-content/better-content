@@ -2,6 +2,9 @@
 // and creative/flight/global-bypass items must not enter through random tables.
 
 var BC_LOOT_REMOVE_ITEMS = [
+    // Fishing acquisition is standardized on Starcatcher rods.
+    'minecraft:fishing_rod',
+    'tconstruct:fishing_rod',
     // Generated from registry: all creative and netherite-named items are removed from generic loot.
     'ae2:creative_energy_cell',
     'ae2:creative_fluid_cell',

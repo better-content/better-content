@@ -12,6 +12,12 @@
 			description: ["228 starter stubs."]
 			icon: "minecraft:bread"
 			id: "3887ABEF57010D01"
+			rewards: [{
+				count: 8
+				id: "96BBBA9992F1A90C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.8d
 			tasks: [{
@@ -26,6 +32,12 @@
 		{
 			icon: "aether:blue_berry"
 			id: "11FE7E6B9FACFCCE"
+			rewards: [{
+				count: 8
+				id: "88AE310B8E027046"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -40,6 +52,12 @@
 		{
 			icon: "aether:enchanted_berry"
 			id: "2DC8B0CA74D79985"
+			rewards: [{
+				count: 8
+				id: "BD53E2424C46C905"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -54,6 +72,12 @@
 		{
 			icon: "aether:healing_stone"
 			id: "5D0B0DCAE31AB700"
+			rewards: [{
+				count: 8
+				id: "56C5B687E1B2ADB2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -68,6 +92,12 @@
 		{
 			icon: "ars_nouveau:bastion_pod"
 			id: "7DDD07C6CB9EB13B"
+			rewards: [{
+				count: 8
+				id: "BD90B19F056100FE"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -82,6 +112,12 @@
 		{
 			icon: "ars_nouveau:bombegranate_pod"
 			id: "1C95145B1BE39D71"
+			rewards: [{
+				count: 8
+				id: "A3CC4B4916D34D21"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -96,6 +132,12 @@
 		{
 			icon: "ars_nouveau:frostaya_pod"
 			id: "5E7F85171B3C9EA3"
+			rewards: [{
+				count: 8
+				id: "39C621D05ACC27C1"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -110,6 +152,12 @@
 		{
 			icon: "ars_nouveau:mendosteen_pod"
 			id: "5712A680328440A8"
+			rewards: [{
+				count: 8
+				id: "1FF03AC66349219A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -124,6 +172,12 @@
 		{
 			icon: "ars_nouveau:source_berry_pie"
 			id: "52F737011C2BAA88"
+			rewards: [{
+				count: 8
+				id: "A8D91B29D1E6CDFC"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -138,6 +192,12 @@
 		{
 			icon: "ars_nouveau:source_berry_roll"
 			id: "1AB97C9072C7A37C"
+			rewards: [{
+				count: 8
+				id: "DB8BA3B8520C096A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -152,6 +212,12 @@
 		{
 			icon: "ars_nouveau:sourceberry_bush"
 			id: "6911307DA42717F5"
+			rewards: [{
+				count: 8
+				id: "3E85CD4668A64BA0"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -166,6 +232,12 @@
 		{
 			icon: "brewinandchewin:apple_jelly"
 			id: "3ED841322141AA97"
+			rewards: [{
+				count: 8
+				id: "A0D81A8F4E23444D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -180,6 +252,12 @@
 		{
 			icon: "brewinandchewin:bloody_mary"
 			id: "1E0FFBE2BBEC0D23"
+			rewards: [{
+				count: 8
+				id: "38D32C340BCB956F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -194,6 +272,12 @@
 		{
 			icon: "brewinandchewin:cheesy_pasta"
 			id: "0A1BB1D5110A8BA1"
+			rewards: [{
+				count: 8
+				id: "E3F5EF120399E4F0"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -208,6 +292,12 @@
 		{
 			icon: "brewinandchewin:flaxen_cheese_wedge"
 			id: "4C060A80BDB39C89"
+			rewards: [{
+				count: 8
+				id: "4D4DCC831E794441"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -222,6 +312,12 @@
 		{
 			icon: "brewinandchewin:glittering_grenadine"
 			id: "3E0AA2697F9E7A83"
+			rewards: [{
+				count: 8
+				id: "FD501CAD289BB736"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -236,6 +332,12 @@
 		{
 			icon: "brewinandchewin:glow_berry_marmalade"
 			id: "7D427FF013A48272"
+			rewards: [{
+				count: 8
+				id: "344BA2D0D5C7E177"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -250,6 +352,12 @@
 		{
 			icon: "brewinandchewin:ham_and_cheese_sandwich"
 			id: "2F1E1F001F9447AC"
+			rewards: [{
+				count: 8
+				id: "798E9CE22A00779B"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -264,6 +372,12 @@
 		{
 			icon: "brewinandchewin:horror_lasagna"
 			id: "286EFA83CEA86162"
+			rewards: [{
+				count: 8
+				id: "94C0129DD9E99BCA"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -278,6 +392,12 @@
 		{
 			icon: "brewinandchewin:jerky"
 			id: "53A9A4E9E3A9EF2A"
+			rewards: [{
+				count: 8
+				id: "90142F8714605FFD"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -292,6 +412,12 @@
 		{
 			icon: "brewinandchewin:kimchi"
 			id: "1235A88A64B0E68F"
+			rewards: [{
+				count: 8
+				id: "64EF66BC707C3EDE"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -306,6 +432,12 @@
 		{
 			icon: "brewinandchewin:kippers"
 			id: "23A5874E84FDBC16"
+			rewards: [{
+				count: 8
+				id: "C5233EA93D7903C6"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -320,6 +452,12 @@
 		{
 			icon: "brewinandchewin:pickled_pickles"
 			id: "750E0F8C7AB863A3"
+			rewards: [{
+				count: 8
+				id: "44AF3F6D3C99C90E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -334,6 +472,12 @@
 		{
 			icon: "brewinandchewin:pizza_slice"
 			id: "5D0192AF34725BED"
+			rewards: [{
+				count: 8
+				id: "05C13A8961630F70"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -348,6 +492,12 @@
 		{
 			icon: "brewinandchewin:quiche_slice"
 			id: "10DC8C07DA06DEBF"
+			rewards: [{
+				count: 8
+				id: "DD34ABCE6E8D1F67"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -362,6 +512,12 @@
 		{
 			icon: "brewinandchewin:salty_folly"
 			id: "314326EC67D95122"
+			rewards: [{
+				count: 8
+				id: "BA3F162231F831DB"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -376,6 +532,12 @@
 		{
 			icon: "brewinandchewin:scarlet_cheese_wedge"
 			id: "00A9C7FCDCFE67D0"
+			rewards: [{
+				count: 8
+				id: "2FF4DEB2610C1D5C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -390,6 +552,12 @@
 		{
 			icon: "brewinandchewin:scarlet_pierogi"
 			id: "6422920C4E113169"
+			rewards: [{
+				count: 8
+				id: "79C48910AB139173"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -404,6 +572,12 @@
 		{
 			icon: "brewinandchewin:steel_toe_stout"
 			id: "5F84B4AFDB61E020"
+			rewards: [{
+				count: 8
+				id: "A326B66BD7C74339"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -418,6 +592,12 @@
 		{
 			icon: "brewinandchewin:sweet_berry_jam"
 			id: "445509668D8FC512"
+			rewards: [{
+				count: 8
+				id: "6A59C250730B8FDD"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -432,6 +612,12 @@
 		{
 			icon: "brewinandchewin:vegetable_omelet"
 			id: "18CD7D70B306D239"
+			rewards: [{
+				count: 8
+				id: "C25F19C2A39126D6"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -446,6 +632,12 @@
 		{
 			icon: "brewinandchewin:withering_dross"
 			id: "011BB4D2D107CB43"
+			rewards: [{
+				count: 8
+				id: "9A4EB1D6FD27C6AA"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -460,6 +652,12 @@
 		{
 			icon: "create:honeyed_apple"
 			id: "0D56E3F6963F6AC9"
+			rewards: [{
+				count: 8
+				id: "D9B74CA83964E08C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -474,6 +672,12 @@
 		{
 			icon: "create:sweet_roll"
 			id: "1C9E49077938259F"
+			rewards: [{
+				count: 8
+				id: "F89E1329D5EEE324"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -488,6 +692,12 @@
 		{
 			icon: "fallout_wastelands_:canned_beef"
 			id: "00927D2D69328370"
+			rewards: [{
+				count: 8
+				id: "EB2C735C23B3D61D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -502,6 +712,12 @@
 		{
 			icon: "fallout_wastelands_:gecko_coocked_egg"
 			id: "25E3A99F62353891"
+			rewards: [{
+				count: 8
+				id: "71EE54B52C97677F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -516,6 +732,12 @@
 		{
 			icon: "fallout_wastelands_:gecko_egg"
 			id: "51103F8C1223FA7B"
+			rewards: [{
+				count: 8
+				id: "EE5E32E6272391CE"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -530,6 +752,12 @@
 		{
 			icon: "fallout_wastelands_:mirelurk_cake"
 			id: "71AFC76068338CA0"
+			rewards: [{
+				count: 8
+				id: "4C046955AC488A8B"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -544,6 +772,12 @@
 		{
 			icon: "fallout_wastelands_:mirelurkmeat"
 			id: "2759346086897EE7"
+			rewards: [{
+				count: 8
+				id: "192DB6D547802264"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -558,6 +792,12 @@
 		{
 			icon: "fallout_wastelands_:mutlemon"
 			id: "2BEC0104A7C82726"
+			rewards: [{
+				count: 8
+				id: "7776F2C3472884E0"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -578,6 +818,12 @@
 				}
 			}
 			id: "0393611FE2EFF0A9"
+			rewards: [{
+				count: 8
+				id: "CA3C3F2EAE226DA6"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -598,6 +844,12 @@
 		{
 			icon: "fallout_wastelands_:strange_meat_patty"
 			id: "27814FBB402E0EE3"
+			rewards: [{
+				count: 8
+				id: "502F9250D7568817"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -612,6 +864,12 @@
 		{
 			icon: "fallout_wastelands_:tato"
 			id: "3EA6C16F3ED90166"
+			rewards: [{
+				count: 8
+				id: "6EFF8B42FFA35CA7"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -626,6 +884,12 @@
 		{
 			icon: "farmersdelight:apple_pie_slice"
 			id: "7B0EEFD47A4141E9"
+			rewards: [{
+				count: 8
+				id: "301E046F78D14C36"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -640,6 +904,12 @@
 		{
 			icon: "farmersdelight:bacon"
 			id: "122079BEAA7BAEDD"
+			rewards: [{
+				count: 8
+				id: "6B29098453621FA6"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -654,6 +924,12 @@
 		{
 			icon: "farmersdelight:bacon_and_eggs"
 			id: "0F29126B468AD0CB"
+			rewards: [{
+				count: 8
+				id: "BCCE7CB56F953A78"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -668,6 +944,12 @@
 		{
 			icon: "farmersdelight:bacon_sandwich"
 			id: "65E5784578F76A47"
+			rewards: [{
+				count: 8
+				id: "BE63D0E37550AA37"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -682,6 +964,12 @@
 		{
 			icon: "farmersdelight:barbecue_stick"
 			id: "1405B08C9391B8F1"
+			rewards: [{
+				count: 8
+				id: "911EFB9614977C21"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -696,6 +984,12 @@
 		{
 			icon: "farmersdelight:beef_patty"
 			id: "78C97536B3A506A0"
+			rewards: [{
+				count: 8
+				id: "7BBCAFE085CC5AFE"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -710,6 +1004,12 @@
 		{
 			icon: "farmersdelight:cabbage"
 			id: "69BB10B596449C2C"
+			rewards: [{
+				count: 8
+				id: "266DB925D40972A8"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -724,6 +1024,12 @@
 		{
 			icon: "farmersdelight:cabbage_leaf"
 			id: "66F864F3D093ECA0"
+			rewards: [{
+				count: 8
+				id: "5449174891A3D2A3"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -738,6 +1044,12 @@
 		{
 			icon: "farmersdelight:cabbage_rolls"
 			id: "7DC99A083BE4E715"
+			rewards: [{
+				count: 8
+				id: "3652465EC470C33C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -752,6 +1064,12 @@
 		{
 			icon: "farmersdelight:cake_slice"
 			id: "0F8655A09EAE3ABD"
+			rewards: [{
+				count: 8
+				id: "CDFBF35803FB59A9"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -766,6 +1084,12 @@
 		{
 			icon: "farmersdelight:chicken_cuts"
 			id: "12D88D7F27166B94"
+			rewards: [{
+				count: 8
+				id: "788471C4B2240F62"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -780,6 +1104,12 @@
 		{
 			icon: "farmersdelight:chicken_sandwich"
 			id: "24495815DE44E208"
+			rewards: [{
+				count: 8
+				id: "BCE30A8ADE08DB69"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -794,6 +1124,12 @@
 		{
 			icon: "farmersdelight:cod_roll"
 			id: "0AF4F61D02CECE3E"
+			rewards: [{
+				count: 8
+				id: "EAF6066AF3F96B5B"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -808,6 +1144,12 @@
 		{
 			icon: "farmersdelight:cod_slice"
 			id: "76ACA948C0C6C92B"
+			rewards: [{
+				count: 8
+				id: "6DD112D155F7BF96"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -822,6 +1164,12 @@
 		{
 			icon: "farmersdelight:cooked_bacon"
 			id: "6DF9F8D67BCEA145"
+			rewards: [{
+				count: 8
+				id: "ABFC028206EE1124"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -836,6 +1184,12 @@
 		{
 			icon: "farmersdelight:cooked_chicken_cuts"
 			id: "580462D47F2A3EAD"
+			rewards: [{
+				count: 8
+				id: "824A5CF3234E4715"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -850,6 +1204,12 @@
 		{
 			icon: "farmersdelight:cooked_cod_slice"
 			id: "73A16A1B860D5ADA"
+			rewards: [{
+				count: 8
+				id: "621A3368D3F92FFE"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -864,6 +1224,12 @@
 		{
 			icon: "farmersdelight:cooked_mutton_chops"
 			id: "793E6D7DD66A1938"
+			rewards: [{
+				count: 8
+				id: "F12352C3126574F3"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -878,6 +1244,12 @@
 		{
 			icon: "farmersdelight:cooked_rice"
 			id: "00F4F7C8124615FD"
+			rewards: [{
+				count: 8
+				id: "CA45EA467D4E25AC"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -892,6 +1264,12 @@
 		{
 			icon: "farmersdelight:cooked_salmon_slice"
 			id: "26611FD890F77811"
+			rewards: [{
+				count: 8
+				id: "2AFDC3EC6ABEB2E0"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -906,6 +1284,12 @@
 		{
 			icon: "farmersdelight:dog_food"
 			id: "523E078A23F863DD"
+			rewards: [{
+				count: 8
+				id: "3C586E87B7AE8B62"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -920,6 +1304,12 @@
 		{
 			icon: "farmersdelight:dumplings"
 			id: "1537F0345AC7FA90"
+			rewards: [{
+				count: 8
+				id: "7A474FBFE3DC0ECA"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -934,6 +1324,12 @@
 		{
 			icon: "farmersdelight:egg_sandwich"
 			id: "1033E33CF3832C98"
+			rewards: [{
+				count: 8
+				id: "E65C98481592F4FE"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -948,6 +1344,12 @@
 		{
 			icon: "farmersdelight:fried_egg"
 			id: "0826A0B72A67DDAD"
+			rewards: [{
+				count: 8
+				id: "DC570038639E0314"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -962,6 +1364,12 @@
 		{
 			icon: "farmersdelight:fried_rice"
 			id: "2EACD25A48D60EDC"
+			rewards: [{
+				count: 8
+				id: "0C80A93A3C6D1AC8"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -976,6 +1384,12 @@
 		{
 			icon: "farmersdelight:fruit_salad"
 			id: "26758582FEC64A30"
+			rewards: [{
+				count: 8
+				id: "3EF72FA6715E008B"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -990,6 +1404,12 @@
 		{
 			icon: "farmersdelight:glow_berry_custard"
 			id: "700211D689B94CCA"
+			rewards: [{
+				count: 8
+				id: "7F1AC0AC786F02C2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1004,6 +1424,12 @@
 		{
 			icon: "farmersdelight:grilled_salmon"
 			id: "3E8072105CE4E80A"
+			rewards: [{
+				count: 8
+				id: "E45B942300CF69B3"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1018,6 +1444,12 @@
 		{
 			icon: "farmersdelight:ham"
 			id: "182D77C5B424A147"
+			rewards: [{
+				count: 8
+				id: "61FC0555DF26C0E9"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1032,6 +1464,12 @@
 		{
 			icon: "farmersdelight:hamburger"
 			id: "599E2C07E00D379A"
+			rewards: [{
+				count: 8
+				id: "3AD68468FC403A3A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1046,6 +1484,12 @@
 		{
 			icon: "farmersdelight:honey_cookie"
 			id: "0F1F801D359C2FF7"
+			rewards: [{
+				count: 8
+				id: "1CF53192EC3B05EA"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1060,6 +1504,12 @@
 		{
 			icon: "farmersdelight:kelp_roll"
 			id: "2A41B471D95A7961"
+			rewards: [{
+				count: 8
+				id: "C2AD4ACB9861E7C9"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1074,6 +1524,12 @@
 		{
 			icon: "farmersdelight:kelp_roll_slice"
 			id: "02F38A42E6BD5DA7"
+			rewards: [{
+				count: 8
+				id: "38E6F0A0D8BFEED2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1088,6 +1544,12 @@
 		{
 			icon: "farmersdelight:melon_popsicle"
 			id: "5DAA4344691AF1FF"
+			rewards: [{
+				count: 8
+				id: "EF0E5426B3D0BE7C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1102,6 +1564,12 @@
 		{
 			icon: "farmersdelight:minced_beef"
 			id: "5ABA0A1EF13CA12B"
+			rewards: [{
+				count: 8
+				id: "0E023EA0D3048A48"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1116,6 +1584,12 @@
 		{
 			icon: "farmersdelight:mixed_salad"
 			id: "0B620265D6953953"
+			rewards: [{
+				count: 8
+				id: "0040379CCC66EED8"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1130,6 +1604,12 @@
 		{
 			icon: "farmersdelight:mushroom_rice"
 			id: "07B288A90BB9698C"
+			rewards: [{
+				count: 8
+				id: "2AB1FAA05EB95896"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1144,6 +1624,12 @@
 		{
 			icon: "farmersdelight:mutton_chops"
 			id: "4A963E1643CB7070"
+			rewards: [{
+				count: 8
+				id: "E820F15BFBB8B130"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1158,6 +1644,12 @@
 		{
 			icon: "farmersdelight:mutton_wrap"
 			id: "5204A611D9E5554E"
+			rewards: [{
+				count: 8
+				id: "19E9933A06924F35"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1172,6 +1664,12 @@
 		{
 			icon: "farmersdelight:nether_salad"
 			id: "1232D9902935C528"
+			rewards: [{
+				count: 8
+				id: "EF15DCC787D80290"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1186,6 +1684,12 @@
 		{
 			icon: "farmersdelight:onion"
 			id: "5CDDF6F809B308A3"
+			rewards: [{
+				count: 8
+				id: "023637EAD3CF815E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1200,6 +1704,12 @@
 		{
 			icon: "farmersdelight:pasta_with_meatballs"
 			id: "063027CAD5CB8991"
+			rewards: [{
+				count: 8
+				id: "B8BCFA79C87574D7"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1214,6 +1724,12 @@
 		{
 			icon: "farmersdelight:pasta_with_mutton_chop"
 			id: "31906274F05DBE91"
+			rewards: [{
+				count: 8
+				id: "91372648B49D6B46"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1228,6 +1744,12 @@
 		{
 			icon: "farmersdelight:pie_crust"
 			id: "62D667180C2B68C7"
+			rewards: [{
+				count: 8
+				id: "297307D58555115B"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1242,6 +1764,12 @@
 		{
 			icon: "farmersdelight:pumpkin_pie_slice"
 			id: "0F58E6416EFF0C76"
+			rewards: [{
+				count: 8
+				id: "F6DC7549FD596C5C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1256,6 +1784,12 @@
 		{
 			icon: "farmersdelight:pumpkin_slice"
 			id: "0E437C7B2B945743"
+			rewards: [{
+				count: 8
+				id: "F19839ED03AB9CE2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1270,6 +1804,12 @@
 		{
 			icon: "farmersdelight:ratatouille"
 			id: "768465863D8F49A0"
+			rewards: [{
+				count: 8
+				id: "C045B3CF4766173E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1284,6 +1824,12 @@
 		{
 			icon: "farmersdelight:raw_pasta"
 			id: "694F1DCE8F23B53C"
+			rewards: [{
+				count: 8
+				id: "1A1550044DB27FF7"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1298,6 +1844,12 @@
 		{
 			icon: "farmersdelight:roasted_mutton_chops"
 			id: "00991AED17BE7439"
+			rewards: [{
+				count: 8
+				id: "5E37A38A1CCA4562"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1312,6 +1864,12 @@
 		{
 			icon: "farmersdelight:salmon_roll"
 			id: "21910EDABA00F180"
+			rewards: [{
+				count: 8
+				id: "9D52B92DDC08FB42"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1326,6 +1884,12 @@
 		{
 			icon: "farmersdelight:salmon_slice"
 			id: "437A6A4A3E0DC774"
+			rewards: [{
+				count: 8
+				id: "4988595E07260E6E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1340,6 +1904,12 @@
 		{
 			icon: "farmersdelight:smoked_ham"
 			id: "06BA4716270AAA31"
+			rewards: [{
+				count: 8
+				id: "D6A6C705CD82CF94"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1354,6 +1924,12 @@
 		{
 			icon: "farmersdelight:squid_ink_pasta"
 			id: "7DDBB121565EF698"
+			rewards: [{
+				count: 8
+				id: "3B71C21E5762581E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1368,6 +1944,12 @@
 		{
 			icon: "farmersdelight:stuffed_potato"
 			id: "573134194A68DCC6"
+			rewards: [{
+				count: 8
+				id: "4214ED6CF78FD981"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1382,6 +1964,12 @@
 		{
 			icon: "farmersdelight:sweet_berry_cheesecake_slice"
 			id: "44617DD03B6A3174"
+			rewards: [{
+				count: 8
+				id: "3F304080D952B597"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1396,6 +1984,12 @@
 		{
 			icon: "farmersdelight:sweet_berry_cookie"
 			id: "6E0B4DA410CED3B5"
+			rewards: [{
+				count: 8
+				id: "E54CD9F36E10D2BD"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1410,6 +2004,12 @@
 		{
 			icon: "farmersdelight:tomato"
 			id: "24346303C7CD4903"
+			rewards: [{
+				count: 8
+				id: "1D5BB6CE504D92C2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1424,6 +2024,12 @@
 		{
 			icon: "farmersdelight:tomato_sauce"
 			id: "04C19FCFBE44841E"
+			rewards: [{
+				count: 8
+				id: "7517C616ADB0C7F8"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1438,6 +2044,12 @@
 		{
 			icon: "farmersdelight:vegetable_noodles"
 			id: "5F6E3AC5C555AE7D"
+			rewards: [{
+				count: 8
+				id: "352A7BA9ABE14D4B"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1452,6 +2064,12 @@
 		{
 			icon: "farmersdelight:wheat_dough"
 			id: "35A1F81CB9E5C909"
+			rewards: [{
+				count: 8
+				id: "BC3D3ED4831C3C89"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1466,6 +2084,12 @@
 		{
 			icon: "immersive_weathering:golden_moss_clump"
 			id: "11C8329DEA1A58A8"
+			rewards: [{
+				count: 8
+				id: "0CB67B959A10C637"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1486,6 +2110,12 @@
 				}
 			}
 			id: "0D0EC74A111C36A8"
+			rewards: [{
+				count: 8
+				id: "73E1E52CD26C2D77"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1506,6 +2136,12 @@
 		{
 			icon: "immersive_weathering:icicle"
 			id: "7F955356CD7D1EB5"
+			rewards: [{
+				count: 8
+				id: "BB621D1DB98C45B2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1520,6 +2156,12 @@
 		{
 			icon: "immersive_weathering:moss_clump"
 			id: "37B782C5B080695B"
+			rewards: [{
+				count: 8
+				id: "E16B7DA527081229"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1534,6 +2176,12 @@
 		{
 			icon: "malum:chunk_of_brilliance"
 			id: "4A54F631ABBB7245"
+			rewards: [{
+				count: 8
+				id: "06E1B6D34B347B26"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1548,6 +2196,12 @@
 		{
 			icon: "malum:concentrated_gluttony"
 			id: "16E276077AA94145"
+			rewards: [{
+				count: 8
+				id: "53F1022072C511BD"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1562,6 +2216,12 @@
 		{
 			icon: "malum:cursed_sap"
 			id: "3203D83429D13C3B"
+			rewards: [{
+				count: 8
+				id: "80B22EC79FF82113"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1576,6 +2236,12 @@
 		{
 			icon: "malum:rotting_essence"
 			id: "7BE999E7C72A3690"
+			rewards: [{
+				count: 8
+				id: "FA72E6EFE84FA144"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1590,6 +2256,12 @@
 		{
 			icon: "malum:runic_sap"
 			id: "6939242561138CCA"
+			rewards: [{
+				count: 8
+				id: "B6291DB9089F1905"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1604,6 +2276,12 @@
 		{
 			icon: "minecraft:apple"
 			id: "4E670B059A648DA2"
+			rewards: [{
+				count: 8
+				id: "31401A26A8EC9C5B"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1618,6 +2296,12 @@
 		{
 			icon: "minecraft:baked_potato"
 			id: "46A31101164C4506"
+			rewards: [{
+				count: 8
+				id: "57A7D450680D2D83"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1632,6 +2316,12 @@
 		{
 			icon: "minecraft:beef"
 			id: "42443358ACDEC07B"
+			rewards: [{
+				count: 8
+				id: "6F1E39F1AF20634B"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1646,6 +2336,12 @@
 		{
 			icon: "minecraft:beetroot"
 			id: "29E82E2B49652DC9"
+			rewards: [{
+				count: 8
+				id: "BDA6DE2F591193D4"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1660,6 +2356,12 @@
 		{
 			icon: "minecraft:bread"
 			id: "2E79D554A3FC9C1A"
+			rewards: [{
+				count: 8
+				id: "847F4E75AFDFD364"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1674,6 +2376,12 @@
 		{
 			icon: "minecraft:carrot"
 			id: "7207C03300711872"
+			rewards: [{
+				count: 8
+				id: "726EB677B5F4ED69"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1688,6 +2396,12 @@
 		{
 			icon: "minecraft:chicken"
 			id: "5E7EB6F4F20BEDFB"
+			rewards: [{
+				count: 8
+				id: "35BEA5D724726343"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1702,6 +2416,12 @@
 		{
 			icon: "minecraft:chorus_fruit"
 			id: "2BBECBFF7F4D6BF4"
+			rewards: [{
+				count: 8
+				id: "2F17E1C2D8E18CE8"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1716,6 +2436,12 @@
 		{
 			icon: "minecraft:cod"
 			id: "18F4CEB66E294F02"
+			rewards: [{
+				count: 8
+				id: "23D27B0641546308"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1730,6 +2456,12 @@
 		{
 			icon: "minecraft:cooked_beef"
 			id: "0AF81B32CBFE435B"
+			rewards: [{
+				count: 8
+				id: "B13DBDCD0059299C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1744,6 +2476,12 @@
 		{
 			icon: "minecraft:cooked_chicken"
 			id: "02E90028A93C06F0"
+			rewards: [{
+				count: 8
+				id: "FEB95EFF029632B3"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1758,6 +2496,12 @@
 		{
 			icon: "minecraft:cooked_cod"
 			id: "2488FAC51F6B542C"
+			rewards: [{
+				count: 8
+				id: "95D6EBAA1216BABC"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1772,6 +2516,12 @@
 		{
 			icon: "minecraft:cooked_mutton"
 			id: "6F5CABBF384A4D97"
+			rewards: [{
+				count: 8
+				id: "1F3E99DF19DAF89E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1786,6 +2536,12 @@
 		{
 			icon: "minecraft:cooked_porkchop"
 			id: "1CE29C9DF08024F4"
+			rewards: [{
+				count: 8
+				id: "B60490B720811E0B"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1800,6 +2556,12 @@
 		{
 			icon: "minecraft:cooked_rabbit"
 			id: "2D9F638197B4C7B7"
+			rewards: [{
+				count: 8
+				id: "8DC5DFC512CEE20C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1814,6 +2576,12 @@
 		{
 			icon: "minecraft:cooked_salmon"
 			id: "4006C9D8399671DC"
+			rewards: [{
+				count: 8
+				id: "9D2E12488F5C4D75"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1828,6 +2596,12 @@
 		{
 			icon: "minecraft:cookie"
 			id: "533CA4F5B16B6677"
+			rewards: [{
+				count: 8
+				id: "32430C5184DDDC5D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1842,6 +2616,12 @@
 		{
 			icon: "minecraft:dried_kelp"
 			id: "6483D4B720479B57"
+			rewards: [{
+				count: 8
+				id: "BB055F1489897426"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1856,6 +2636,12 @@
 		{
 			icon: "minecraft:enchanted_golden_apple"
 			id: "5FA141A24872821C"
+			rewards: [{
+				count: 8
+				id: "DF97AF1428E90613"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1870,6 +2656,12 @@
 		{
 			icon: "minecraft:glow_berries"
 			id: "56876FC9CA652429"
+			rewards: [{
+				count: 8
+				id: "EBF40280370ECAE5"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1884,6 +2676,12 @@
 		{
 			icon: "minecraft:golden_apple"
 			id: "47F224640610C50E"
+			rewards: [{
+				count: 8
+				id: "434C22BC599C1C8B"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1898,6 +2696,12 @@
 		{
 			icon: "minecraft:golden_carrot"
 			id: "3404909267FA2B4B"
+			rewards: [{
+				count: 8
+				id: "C21AE3A14623C49C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1912,6 +2716,12 @@
 		{
 			icon: "minecraft:honey_bottle"
 			id: "35B55E6359702A35"
+			rewards: [{
+				count: 8
+				id: "9DE8EFE64F37DBC7"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1926,6 +2736,12 @@
 		{
 			icon: "minecraft:melon_slice"
 			id: "61A3F0374190E10E"
+			rewards: [{
+				count: 8
+				id: "B33AD4FFFE8FB5A7"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1940,6 +2756,12 @@
 		{
 			icon: "minecraft:mutton"
 			id: "0358DF7F2E521EC4"
+			rewards: [{
+				count: 8
+				id: "0F55750EC61FB7C4"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1954,6 +2776,12 @@
 		{
 			icon: "minecraft:poisonous_potato"
 			id: "18F93768EC0F1FDD"
+			rewards: [{
+				count: 8
+				id: "4B3E48473610EE01"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1968,6 +2796,12 @@
 		{
 			icon: "minecraft:porkchop"
 			id: "47FD50F5C66A395B"
+			rewards: [{
+				count: 8
+				id: "90F6DC9C09F603C4"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1982,6 +2816,12 @@
 		{
 			icon: "minecraft:potato"
 			id: "089C9E0FD40DDBA2"
+			rewards: [{
+				count: 8
+				id: "0E9C23D6684DCA5E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1996,6 +2836,12 @@
 		{
 			icon: "minecraft:pufferfish"
 			id: "640F2E638BC8119B"
+			rewards: [{
+				count: 8
+				id: "166A9B0FEA35A450"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2010,6 +2856,12 @@
 		{
 			icon: "minecraft:pumpkin_pie"
 			id: "03B5EADEB776AC57"
+			rewards: [{
+				count: 8
+				id: "8ADD6DA2D483AFFC"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2024,6 +2876,12 @@
 		{
 			icon: "minecraft:rabbit"
 			id: "77B7A18E30430FAF"
+			rewards: [{
+				count: 8
+				id: "F265D7425EF56F17"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2038,6 +2896,12 @@
 		{
 			icon: "minecraft:rotten_flesh"
 			id: "5F2C9E11FD43B0C2"
+			rewards: [{
+				count: 8
+				id: "8CF16D7102665961"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2052,6 +2916,12 @@
 		{
 			icon: "minecraft:salmon"
 			id: "34CE438DE143F8A1"
+			rewards: [{
+				count: 8
+				id: "3901272468E2EFF5"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2066,6 +2936,12 @@
 		{
 			icon: "minecraft:spider_eye"
 			id: "25D3D04DB5577480"
+			rewards: [{
+				count: 8
+				id: "AA34AEA043831626"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2080,6 +2956,12 @@
 		{
 			icon: "minecraft:sweet_berries"
 			id: "5BD425ED480B7580"
+			rewards: [{
+				count: 8
+				id: "9DAB6C5982EF75FF"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2094,6 +2976,12 @@
 		{
 			icon: "minecraft:tropical_fish"
 			id: "31BFA8F166B4EDB4"
+			rewards: [{
+				count: 8
+				id: "5F1E098CF5F52F9A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2108,6 +2996,12 @@
 		{
 			icon: "natures_spirit:coconut_half"
 			id: "0D23A5EE9EA04FB8"
+			rewards: [{
+				count: 8
+				id: "F41BAC9D023F02DC"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2122,6 +3016,12 @@
 		{
 			icon: "natures_spirit:desert_turnip"
 			id: "3AD0C96159CC0DDB"
+			rewards: [{
+				count: 8
+				id: "D0474B82B5297B45"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2136,6 +3036,12 @@
 		{
 			icon: "natures_spirit:whole_pizza"
 			id: "2E5CA80C09006BE6"
+			rewards: [{
+				count: 8
+				id: "9C28A9D1C45D7C6B"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2150,6 +3056,12 @@
 		{
 			icon: "occultism:demons_dream_essence"
 			id: "7280E4C7DC2B940C"
+			rewards: [{
+				count: 8
+				id: "FE75CE78DAACAC6D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2164,6 +3076,12 @@
 		{
 			icon: "occultism:otherworld_essence"
 			id: "616FE0D73526C629"
+			rewards: [{
+				count: 8
+				id: "9DE18DF2678D4F04"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2178,6 +3096,12 @@
 		{
 			icon: "pneumaticcraft:chips"
 			id: "6EDB6F6CFA62028D"
+			rewards: [{
+				count: 8
+				id: "AD37F019557FB0B5"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2192,6 +3116,12 @@
 		{
 			icon: "pneumaticcraft:cod_n_chips"
 			id: "27F91B534C5DB289"
+			rewards: [{
+				count: 8
+				id: "B630D7AF59775C2B"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2206,6 +3136,12 @@
 		{
 			icon: "pneumaticcraft:sourdough_bread"
 			id: "78C4F2421437B336"
+			rewards: [{
+				count: 8
+				id: "8FF73793925D5036"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2220,6 +3156,12 @@
 		{
 			icon: "quark:cooked_crab_leg"
 			id: "459E16A1A2ACFED2"
+			rewards: [{
+				count: 8
+				id: "0D541A2E2F101896"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2234,6 +3176,12 @@
 		{
 			icon: "quark:crab_leg"
 			id: "341CF0BCE88708EB"
+			rewards: [{
+				count: 8
+				id: "287BEB88FAAA3E47"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2248,6 +3196,12 @@
 		{
 			icon: "starcatcher:cooked_starcaught_fish"
 			id: "76EC03AD2A373702"
+			rewards: [{
+				count: 8
+				id: "D7431AD525814277"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2262,6 +3216,12 @@
 		{
 			icon: "tconstruct:bacon"
 			id: "4C564A7092467706"
+			rewards: [{
+				count: 8
+				id: "1729BCF5DA25BBAC"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2276,6 +3236,12 @@
 		{
 			icon: "tconstruct:cheese_block"
 			id: "6081F2F5D308DD15"
+			rewards: [{
+				count: 8
+				id: "4CAF410E2DE1D99E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2290,6 +3256,12 @@
 		{
 			icon: "tconstruct:cheese_ingot"
 			id: "1FCCA9DB0925FC4B"
+			rewards: [{
+				count: 8
+				id: "CD063751BF7E4DEF"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2304,6 +3276,12 @@
 		{
 			icon: "tconstruct:earth_slime_bottle"
 			id: "477350E618DB0787"
+			rewards: [{
+				count: 8
+				id: "1D2907AD2296A36F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2318,6 +3296,12 @@
 		{
 			icon: "tconstruct:ender_slime_bottle"
 			id: "6A774A9FB81269CD"
+			rewards: [{
+				count: 8
+				id: "9F8FB45C403C879D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2332,6 +3316,12 @@
 		{
 			icon: "tconstruct:ichor_slime_bottle"
 			id: "70E45BDF5C773D06"
+			rewards: [{
+				count: 8
+				id: "854226DED9FDF7D1"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2346,6 +3336,12 @@
 		{
 			icon: "tconstruct:jeweled_apple"
 			id: "4414C9131659A968"
+			rewards: [{
+				count: 8
+				id: "76F3767F2E92E2D5"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2360,6 +3356,12 @@
 		{
 			icon: "tconstruct:sky_slime_bottle"
 			id: "0BE713AC4B1427AE"
+			rewards: [{
+				count: 8
+				id: "CB9E3237AF940E3C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2374,6 +3376,12 @@
 		{
 			icon: "tconstruct:venom_bottle"
 			id: "55C5DF170955882C"
+			rewards: [{
+				count: 8
+				id: "4C5EC05A482B64DD"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2388,6 +3396,12 @@
 		{
 			icon: "twilightforest:cooked_meef"
 			id: "1BAE8CD4C93A3FDF"
+			rewards: [{
+				count: 8
+				id: "D21310E1D71D4EFC"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2402,6 +3416,12 @@
 		{
 			icon: "twilightforest:cooked_venison"
 			id: "72C3944896CC6412"
+			rewards: [{
+				count: 8
+				id: "9F031D5A6C5341B6"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2416,6 +3436,12 @@
 		{
 			icon: "twilightforest:hydra_chop"
 			id: "007D741F1B437877"
+			rewards: [{
+				count: 8
+				id: "2E9D9292F36F4BFB"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2430,6 +3456,12 @@
 		{
 			icon: "twilightforest:raw_meef"
 			id: "0ADA8AFAF83B7D0B"
+			rewards: [{
+				count: 8
+				id: "DD6B84BA64A3F049"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2444,6 +3476,12 @@
 		{
 			icon: "twilightforest:raw_venison"
 			id: "34503C2EC143612A"
+			rewards: [{
+				count: 8
+				id: "D66A0CC0317C4A05"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2458,6 +3496,12 @@
 		{
 			icon: "twilightforest:torchberries"
 			id: "74B920FDEF65E210"
+			rewards: [{
+				count: 8
+				id: "7C8BFA9B3EE9BA3A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2472,6 +3516,12 @@
 		{
 			icon: "ubesdelight:arroz_caldo"
 			id: "2C1D9CB92C5198F8"
+			rewards: [{
+				count: 8
+				id: "93167371007F4EB1"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2486,6 +3536,12 @@
 		{
 			icon: "ubesdelight:bangsilog"
 			id: "3AACB8FE31D91E4A"
+			rewards: [{
+				count: 8
+				id: "E95DC1EA4C9D18AF"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2500,6 +3556,12 @@
 		{
 			icon: "ubesdelight:bulalo"
 			id: "6294A51FBDD743A3"
+			rewards: [{
+				count: 8
+				id: "DAAA849B2BE1BB0E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2514,6 +3576,12 @@
 		{
 			icon: "ubesdelight:chicken_inasal"
 			id: "009B3C757AD102FD"
+			rewards: [{
+				count: 8
+				id: "9BDF5672D9B34A5A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2528,6 +3596,12 @@
 		{
 			icon: "ubesdelight:chicken_inasal_rice"
 			id: "41E4686D2031BD9E"
+			rewards: [{
+				count: 8
+				id: "D9243C7C73E0CA29"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2542,6 +3616,12 @@
 		{
 			icon: "ubesdelight:condensed_milk_bottle"
 			id: "169BEB6D58938921"
+			rewards: [{
+				count: 8
+				id: "F977166AFC4AE1E0"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2556,6 +3636,12 @@
 		{
 			icon: "ubesdelight:cookie_ginger"
 			id: "55CB4CF9BDEFB72C"
+			rewards: [{
+				count: 8
+				id: "C2CC21FAE1FD631E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2570,6 +3656,12 @@
 		{
 			icon: "ubesdelight:cookie_ube"
 			id: "575EEBEFCEB1ED5E"
+			rewards: [{
+				count: 8
+				id: "B2A3FCF8849E33F7"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2584,6 +3676,12 @@
 		{
 			icon: "ubesdelight:ensaymada"
 			id: "690F46292F61D0C1"
+			rewards: [{
+				count: 8
+				id: "F3209CC01D7101F0"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2598,6 +3696,12 @@
 		{
 			icon: "ubesdelight:ensaymada_raw"
 			id: "24ED16F83310A6BC"
+			rewards: [{
+				count: 8
+				id: "6B93CE9F820021B8"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2612,6 +3716,12 @@
 		{
 			icon: "ubesdelight:ensaymada_ube"
 			id: "6F606997136A13EF"
+			rewards: [{
+				count: 8
+				id: "03DA85EC1BACB00D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2626,6 +3736,12 @@
 		{
 			icon: "ubesdelight:ensaymada_ube_raw"
 			id: "4238DA777CB88E09"
+			rewards: [{
+				count: 8
+				id: "8BF587E0193A623C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2640,6 +3756,12 @@
 		{
 			icon: "ubesdelight:fish_sauce_bottle"
 			id: "0C04FDA4E777F536"
+			rewards: [{
+				count: 8
+				id: "BEF4A58907181B33"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2654,6 +3776,12 @@
 		{
 			icon: "ubesdelight:garlic"
 			id: "239B9B0939C0B8DC"
+			rewards: [{
+				count: 8
+				id: "70DF39815F71CD13"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2668,6 +3796,12 @@
 		{
 			icon: "ubesdelight:garlic_chop"
 			id: "2282C89CF5F8BC56"
+			rewards: [{
+				count: 8
+				id: "2C8AB78E030C53BA"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2682,6 +3816,12 @@
 		{
 			icon: "ubesdelight:ginger"
 			id: "25B69B60B69B6010"
+			rewards: [{
+				count: 8
+				id: "FC92428941B3D6D3"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2696,6 +3836,12 @@
 		{
 			icon: "ubesdelight:ginger_chop"
 			id: "461DD28C34CF04BB"
+			rewards: [{
+				count: 8
+				id: "48A62C219F9B0CC1"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2710,6 +3856,12 @@
 		{
 			icon: "ubesdelight:halo_halo"
 			id: "283429CA3A936671"
+			rewards: [{
+				count: 8
+				id: "FDFBDC9B03444EA5"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2724,6 +3876,12 @@
 		{
 			icon: "ubesdelight:hopia_munggo"
 			id: "6A2FAE141E61DE78"
+			rewards: [{
+				count: 8
+				id: "299590E15C646580"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2738,6 +3896,12 @@
 		{
 			icon: "ubesdelight:hopia_munggo_raw"
 			id: "0A728C9F67DE1E15"
+			rewards: [{
+				count: 8
+				id: "FC8236CC2F1A1C61"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2752,6 +3916,12 @@
 		{
 			icon: "ubesdelight:hopia_ube"
 			id: "0A19C878907C554B"
+			rewards: [{
+				count: 8
+				id: "B258CC5FC527E9A9"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2766,6 +3936,12 @@
 		{
 			icon: "ubesdelight:hopia_ube_raw"
 			id: "17668B189F3152A8"
+			rewards: [{
+				count: 8
+				id: "4743CED36C2B4EB7"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2780,6 +3956,12 @@
 		{
 			icon: "ubesdelight:kinilaw"
 			id: "75CB1ECC0B7D81C0"
+			rewards: [{
+				count: 8
+				id: "1C0E8880E199AEED"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2794,6 +3976,12 @@
 		{
 			icon: "ubesdelight:leche_flan"
 			id: "0826E42BCBF7BF26"
+			rewards: [{
+				count: 8
+				id: "203D00FD9D2E6C68"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2808,6 +3996,12 @@
 		{
 			icon: "ubesdelight:lemongrass"
 			id: "334F1A5DCFD8CC82"
+			rewards: [{
+				count: 8
+				id: "55233AFB38A521F5"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2822,6 +4016,12 @@
 		{
 			icon: "ubesdelight:lumpia"
 			id: "2E5DC4FDD0B38446"
+			rewards: [{
+				count: 8
+				id: "C48D401AC5986071"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2836,6 +4036,12 @@
 		{
 			icon: "ubesdelight:mechado"
 			id: "68D501D7CA2A7C5F"
+			rewards: [{
+				count: 8
+				id: "5BF15E3D4F81DC8A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2850,6 +4056,12 @@
 		{
 			icon: "ubesdelight:pandesal"
 			id: "0027D3101553BC61"
+			rewards: [{
+				count: 8
+				id: "3B690B7E3CA6A741"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2864,6 +4076,12 @@
 		{
 			icon: "ubesdelight:pandesal_raw"
 			id: "7A2F68B8232B93E1"
+			rewards: [{
+				count: 8
+				id: "B126212877FDEC6A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2878,6 +4096,12 @@
 		{
 			icon: "ubesdelight:pandesal_ube"
 			id: "6AF4D4233E8FBC5A"
+			rewards: [{
+				count: 8
+				id: "32A59947563ACB20"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2892,6 +4116,12 @@
 		{
 			icon: "ubesdelight:pandesal_ube_raw"
 			id: "585E3798A7096A08"
+			rewards: [{
+				count: 8
+				id: "A72C0910E411B8A1"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2906,6 +4136,12 @@
 		{
 			icon: "ubesdelight:polvorone"
 			id: "37B037F43BCC3E8F"
+			rewards: [{
+				count: 8
+				id: "3262BE1D0E3F9FE8"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2920,6 +4156,12 @@
 		{
 			icon: "ubesdelight:polvorone_cc"
 			id: "3A620390FECE1F9B"
+			rewards: [{
+				count: 8
+				id: "3DD92226E706812D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2934,6 +4176,12 @@
 		{
 			icon: "ubesdelight:polvorone_pinipig"
 			id: "01E35F1BC3C24189"
+			rewards: [{
+				count: 8
+				id: "0C9E3C601E7C2C7A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2948,6 +4196,12 @@
 		{
 			icon: "ubesdelight:polvorone_ube"
 			id: "5D43E8D718F7C187"
+			rewards: [{
+				count: 8
+				id: "020F44712171680C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2962,6 +4216,12 @@
 		{
 			icon: "ubesdelight:sinangag"
 			id: "643E4F33D07FA9FF"
+			rewards: [{
+				count: 8
+				id: "FDB1786B3419128D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2976,6 +4236,12 @@
 		{
 			icon: "ubesdelight:sisig"
 			id: "53C374CBA4C48DD5"
+			rewards: [{
+				count: 8
+				id: "A7810AF13C3FC7C9"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -2990,6 +4256,12 @@
 		{
 			icon: "ubesdelight:tocino"
 			id: "08423981A7629BA2"
+			rewards: [{
+				count: 8
+				id: "7CE35026D063494D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3004,6 +4276,12 @@
 		{
 			icon: "ubesdelight:tosilog"
 			id: "18C16CD1BBB5EABD"
+			rewards: [{
+				count: 8
+				id: "387A0F9F81C122EC"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3018,6 +4296,12 @@
 		{
 			icon: "ubesdelight:ube"
 			id: "014394ED6E06312C"
+			rewards: [{
+				count: 8
+				id: "1AEEAA58B7816458"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3032,6 +4316,12 @@
 		{
 			icon: "ubesdelight:ube_cake_slice"
 			id: "5E9FA6EEEEBF2666"
+			rewards: [{
+				count: 8
+				id: "5BE3A974E087023F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3046,6 +4336,12 @@
 		{
 			icon: "undergarden:blisterberry"
 			id: "308A75E9BF4C268A"
+			rewards: [{
+				count: 8
+				id: "B4E2154C3A303859"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3060,6 +4356,12 @@
 		{
 			icon: "undergarden:blood_globule"
 			id: "2226DD8196D9F3E6"
+			rewards: [{
+				count: 8
+				id: "1F5E815E89F0CDB5"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3074,6 +4376,12 @@
 		{
 			icon: "undergarden:cooked_gwibling"
 			id: "29B94F5432E7301D"
+			rewards: [{
+				count: 8
+				id: "90C585BF27D1E3D6"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3088,6 +4396,12 @@
 		{
 			icon: "undergarden:droopvine_item"
 			id: "2574C3C6B4AFCA72"
+			rewards: [{
+				count: 8
+				id: "018CDB63B6C88FB3"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3102,6 +4416,12 @@
 		{
 			icon: "undergarden:gloomgourd_pie"
 			id: "5385B1C64B93AEE7"
+			rewards: [{
+				count: 8
+				id: "E3F61D0DBB894019"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3116,6 +4436,12 @@
 		{
 			icon: "undergarden:gloomper_leg"
 			id: "6906ED005EA00544"
+			rewards: [{
+				count: 8
+				id: "B4042130B07F57A4"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3130,6 +4456,12 @@
 		{
 			icon: "undergarden:goo_ball"
 			id: "3956995CC1D5DE5B"
+			rewards: [{
+				count: 8
+				id: "CF2BF8FB90EF1CFE"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3144,6 +4476,12 @@
 		{
 			icon: "undergarden:raw_dweller_meat"
 			id: "135B82FA2E9C6DB2"
+			rewards: [{
+				count: 8
+				id: "EC741F805A9EE817"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3158,6 +4496,12 @@
 		{
 			icon: "undergarden:raw_gloomper_leg"
 			id: "0C896F349DBACCC4"
+			rewards: [{
+				count: 8
+				id: "E10DFA89B082A4B4"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3172,6 +4516,12 @@
 		{
 			icon: "undergarden:raw_gwibling"
 			id: "1F9C7E6DB49234B9"
+			rewards: [{
+				count: 8
+				id: "FC7D5F785EA9B659"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3186,6 +4536,12 @@
 		{
 			icon: "undergarden:roasted_underbeans"
 			id: "107BE833247FFC87"
+			rewards: [{
+				count: 8
+				id: "867B0C300372EDFB"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3200,6 +4556,12 @@
 		{
 			icon: "undergarden:rotten_blisterberry"
 			id: "1DC420BD3FBE7278"
+			rewards: [{
+				count: 8
+				id: "F28AE95BD814F089"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3214,6 +4576,12 @@
 		{
 			icon: "undergarden:slop_bowl"
 			id: "181A73471F11A799"
+			rewards: [{
+				count: 8
+				id: "6AF3C9F86FEE5EFE"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3228,6 +4596,12 @@
 		{
 			icon: "undergarden:underbeans"
 			id: "082FBB5A341BC779"
+			rewards: [{
+				count: 8
+				id: "79A788DBBB1F21B2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3243,6 +4617,12 @@
 			description: ["39 starter stubs."]
 			icon: "farmersrespite:green_tea"
 			id: "709E33B0CBF9942D"
+			rewards: [{
+				count: 8
+				id: "E396559100E62662"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.8d
 			tasks: [{
@@ -3257,6 +4637,12 @@
 		{
 			icon: "brewinandchewin:beer"
 			id: "48D0076A72C75058"
+			rewards: [{
+				count: 8
+				id: "F43D313376C2BD6A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3271,6 +4657,12 @@
 		{
 			icon: "brewinandchewin:cocoa_fudge"
 			id: "0E16D714A2760616"
+			rewards: [{
+				count: 8
+				id: "9A410BB8B3310188"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3285,6 +4677,12 @@
 		{
 			icon: "brewinandchewin:creamy_onion_soup"
 			id: "586121ABE46FCE46"
+			rewards: [{
+				count: 8
+				id: "85871E05128EEAA4"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3299,6 +4697,12 @@
 		{
 			icon: "brewinandchewin:dread_nog"
 			id: "023325B4D16CCEB8"
+			rewards: [{
+				count: 8
+				id: "D424240267FA7760"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3313,6 +4717,12 @@
 		{
 			icon: "brewinandchewin:egg_grog"
 			id: "03EBD209578822A2"
+			rewards: [{
+				count: 8
+				id: "D52D0861CC8CC94A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3327,6 +4737,12 @@
 		{
 			icon: "brewinandchewin:kombucha"
 			id: "4C9D76C518C59AF4"
+			rewards: [{
+				count: 8
+				id: "F950264B09CBDABB"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3341,6 +4757,12 @@
 		{
 			icon: "brewinandchewin:mead"
 			id: "622DF59FA9FF04A3"
+			rewards: [{
+				count: 8
+				id: "8F63E23B0358F4CB"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3355,6 +4777,12 @@
 		{
 			icon: "brewinandchewin:pale_jane"
 			id: "7254982D4E25ABBB"
+			rewards: [{
+				count: 8
+				id: "3686D37B26DFC5F5"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3369,6 +4797,12 @@
 		{
 			icon: "brewinandchewin:red_rum"
 			id: "0DD0EFFD43009A94"
+			rewards: [{
+				count: 8
+				id: "BA7F3F192B54D1CD"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3383,6 +4817,12 @@
 		{
 			icon: "brewinandchewin:rice_wine"
 			id: "5025F1DA6743C08D"
+			rewards: [{
+				count: 8
+				id: "8999367CD19BCCEA"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3397,6 +4837,12 @@
 		{
 			icon: "brewinandchewin:saccharine_rum"
 			id: "0BDA082F67C1D99F"
+			rewards: [{
+				count: 8
+				id: "D12554F32037DF3A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3411,6 +4857,12 @@
 		{
 			icon: "brewinandchewin:strongroot_ale"
 			id: "6C1025E0927B9D9A"
+			rewards: [{
+				count: 8
+				id: "39114006C1D22CB2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3425,6 +4877,12 @@
 		{
 			icon: "brewinandchewin:vodka"
 			id: "6B8225C6ED5E0CC6"
+			rewards: [{
+				count: 8
+				id: "CFA9EE37560EE14A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3439,6 +4897,12 @@
 		{
 			icon: "create:bar_of_chocolate"
 			id: "241FB00DA742BFCE"
+			rewards: [{
+				count: 8
+				id: "17A5ED42D7E72128"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3453,6 +4917,12 @@
 		{
 			icon: "create:builders_tea"
 			id: "5170C40A7A3CA92C"
+			rewards: [{
+				count: 8
+				id: "D675C0B0981F41EC"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3467,6 +4937,12 @@
 		{
 			icon: "create:chocolate_glazed_berries"
 			id: "7E6A6F96F4438686"
+			rewards: [{
+				count: 8
+				id: "4C2F047BE6D64C01"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3481,6 +4957,12 @@
 		{
 			icon: "farmersdelight:apple_cider"
 			id: "567B0ED42608FBC7"
+			rewards: [{
+				count: 8
+				id: "36ACFC6C3D8E280F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3495,6 +4977,12 @@
 		{
 			icon: "farmersdelight:baked_cod_stew"
 			id: "1CC8A9DA090AD1BC"
+			rewards: [{
+				count: 8
+				id: "5E564D76CE08AD55"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3509,6 +4997,12 @@
 		{
 			icon: "farmersdelight:beef_stew"
 			id: "70094AACD42B7DD2"
+			rewards: [{
+				count: 8
+				id: "32866E382DEB4B07"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3523,6 +5017,12 @@
 		{
 			icon: "farmersdelight:bone_broth"
 			id: "5A67FAF28EDD99B6"
+			rewards: [{
+				count: 8
+				id: "9493E5E302F35D39"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3537,6 +5037,12 @@
 		{
 			icon: "farmersdelight:chicken_soup"
 			id: "40FCC160471029A1"
+			rewards: [{
+				count: 8
+				id: "B6EE2BA47634AB00"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3551,6 +5057,12 @@
 		{
 			icon: "farmersdelight:chocolate_pie_slice"
 			id: "196D186C39AD9121"
+			rewards: [{
+				count: 8
+				id: "2D4AED337CD074D5"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3565,6 +5077,12 @@
 		{
 			icon: "farmersdelight:fish_stew"
 			id: "4D3EAC0AC44FA839"
+			rewards: [{
+				count: 8
+				id: "163A81B06D03EA47"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3579,6 +5097,12 @@
 		{
 			icon: "farmersdelight:noodle_soup"
 			id: "04C230EAB967B033"
+			rewards: [{
+				count: 8
+				id: "0E311018CBADFC9B"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3593,6 +5117,12 @@
 		{
 			icon: "farmersdelight:pumpkin_soup"
 			id: "239F9BE81A0F2FFE"
+			rewards: [{
+				count: 8
+				id: "6AF47243EA6757A8"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3607,6 +5137,12 @@
 		{
 			icon: "farmersdelight:steak_and_potatoes"
 			id: "5A6871F02993FF42"
+			rewards: [{
+				count: 8
+				id: "DDA90F28266636D7"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3621,6 +5157,12 @@
 		{
 			icon: "farmersdelight:vegetable_soup"
 			id: "538D8EAA9BCF318B"
+			rewards: [{
+				count: 8
+				id: "154F10E3B16CF25D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3635,6 +5177,12 @@
 		{
 			icon: "immersive_weathering:azalea_flowers"
 			id: "5364D567A0EDEC4A"
+			rewards: [{
+				count: 8
+				id: "987C3B7C0D66868D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3649,6 +5197,12 @@
 		{
 			icon: "minecraft:beetroot_soup"
 			id: "7E02267F01E061E6"
+			rewards: [{
+				count: 8
+				id: "EFDDA778338D963A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3663,6 +5217,12 @@
 		{
 			icon: "minecraft:mushroom_stew"
 			id: "7ACD5B9BE3F2DA0E"
+			rewards: [{
+				count: 8
+				id: "5152EB5CB8349495"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3677,6 +5237,12 @@
 		{
 			icon: "minecraft:rabbit_stew"
 			id: "180F26854DA8F1F2"
+			rewards: [{
+				count: 8
+				id: "EA0AC80234C4BA36"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3691,6 +5257,12 @@
 		{
 			icon: "minecraft:suspicious_stew"
 			id: "09A9CDF80667FB9E"
+			rewards: [{
+				count: 8
+				id: "E2746FA8217060C3"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3705,6 +5277,12 @@
 		{
 			icon: "tconstruct:meat_soup"
 			id: "60E66354B2BE6403"
+			rewards: [{
+				count: 8
+				id: "5201FCF96AFECBCF"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3719,6 +5297,12 @@
 		{
 			icon: "ubesdelight:milk_tea_ube"
 			id: "024F580A1DBE39D0"
+			rewards: [{
+				count: 8
+				id: "68A0E5D6EEA4A0FF"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3733,6 +5317,12 @@
 		{
 			icon: "undergarden:bloody_stew"
 			id: "592A78D4E8AC0B72"
+			rewards: [{
+				count: 8
+				id: "9AF833A27CB0FA21"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3747,6 +5337,12 @@
 		{
 			icon: "undergarden:dweller_steak"
 			id: "009BEF1B3C380C4A"
+			rewards: [{
+				count: 8
+				id: "AA4025311ADD4334"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3761,6 +5357,12 @@
 		{
 			icon: "undergarden:indigo_stew"
 			id: "09497A506808E7F1"
+			rewards: [{
+				count: 8
+				id: "9DA2376F5583F012"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3775,6 +5377,12 @@
 		{
 			icon: "undergarden:inky_stew"
 			id: "2FC191F53DAAF196"
+			rewards: [{
+				count: 8
+				id: "D3BC3B9464FD9050"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -3789,6 +5397,12 @@
 		{
 			icon: "undergarden:veiled_stew"
 			id: "54D52F3078BFF62F"
+			rewards: [{
+				count: 8
+				id: "7D0B4E5763434AAE"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{

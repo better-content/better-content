@@ -1,0 +1,93 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "spawn_selection"
+	group: "3D1BF480E4BCDBA6"
+	id: "B92DA92D26336367"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Fly in spectator mode while you scout. Press J for quests and K when you are ready to choose your permanent spawn."]
+			id: "F097D8F2C179C07D"
+			tasks: [
+			{
+				id: "7D7406446F100E4D"
+				type: "checkmark"
+			}
+			]
+			title: "Free Scouting"
+			x: -6d
+			y: 0d
+		}
+		{
+			description: ["Check for renewable water and a practical purification route. A visible pond alone does not make a safe supply."]
+			id: "DE9FE439F5764F58"
+			tasks: [
+			{
+				id: "92F7F90CDB7B5813"
+				type: "checkmark"
+			}
+			]
+			title: "Water Nearby"
+			x: -3d
+			y: -3d
+		}
+		{
+			description: ["Test the site through daily and seasonal heat and cold. Plan shelter for the exposure you will actually face."]
+			id: "72690BBC5B77AA81"
+			tasks: [
+			{
+				id: "E2ED9F9E8088C921"
+				type: "checkmark"
+			}
+			]
+			title: "Climate at the Site"
+			x: -3d
+			y: -1d
+		}
+		{
+			description: ["Compare local food with routes to village or Undergarden crops. Make sure the return journey is survivable."]
+			id: "B6B30F094DDB9D27"
+			tasks: [
+			{
+				id: "6E7A25E2EA0414AF"
+				type: "checkmark"
+			}
+			]
+			title: "Food Is a Journey"
+			x: -3d
+			y: 1d
+		}
+		{
+			description: ["Survey twigs, primitive head materials, wood, caves, settlements, rivers, and coast. Choose a site with workable routes, not just a good view."]
+			id: "5DED2D2A6C62C4C7"
+			tasks: [
+			{
+				id: "ABA6AD265C41E5DF"
+				type: "checkmark"
+			}
+			]
+			title: "Materials and Routes"
+			x: -3d
+			y: 3d
+		}
+		{
+			description: ["Finalize the site with Class Selector. This spawn is permanent; beds only accelerate the night."]
+			id: "F838A4605E6A8E08"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+			{
+				id: "2BC0E97C8758B805"
+				criterion: "class_selector_start_finalized"
+				type: "better_content_fixes:criterion"
+			}
+			]
+			title: "Set Your Spawn"
+			x: 0d
+			y: 0d
+		}
+	]
+	title: "Spawn Selection"
+}

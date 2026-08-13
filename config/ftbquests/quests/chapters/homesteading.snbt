@@ -1,1098 +1,1096 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
+	default_quest_shape: "circle"
 	filename: "homesteading"
 	group: "3D1BF480E4BCDBA6"
 	id: "71DE08FE1C5AE391"
-	order_index: 1
+	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["Goat fur provides cold insulation. Use it at the Sewing Table or wear goat-fur clothing when winter, altitude, or a frozen biome pushes body temperature down."]
-			id: "17415831C5853554"
-			tasks: [{
-				id: "7F15080359BD18F6"
-				item: "cold_sweat:goat_fur"
-				type: "item"
-			}]
-			x: -1.0d
-			y: -2.0d
+			description: ["Build roof, walls, light, a closable entrance, and a thermally safe interior. Check this when the shelter fits your chosen site."]
+			id: "22F45D3D9F44B470"
+			rewards: [{ count: 1, id: "DCEEC854E7839E4E", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "5E2D5031DE9E6860"
+				type: "checkmark"
+			}
+			]
+			title: "Under Cover"
+			x: -3d
+			y: -1.5d
 		}
 		{
-			description: ["Hoglin hide provides heat insulation. It is the material to reach for when deserts, furnaces, or other hot environments overwhelm ordinary clothing."]
-			id: "3C22313CCB65D488"
-			tasks: [{
-				id: "3F502189FEFF36D5"
-				item: "cold_sweat:hoglin_hide"
-				type: "item"
-			}]
-			x: -1.0d
-			y: -1.0d
-		}
-		{
-			description: ["Chameleon molt provides adaptive insulation, shifting between heat and cold protection as conditions change. Apply it when a route crosses several climates."]
-			id: "01CF77C871D2865F"
-			tasks: [{
-				id: "0732A50FFC352D24"
-				item: "cold_sweat:chameleon_molt"
-				type: "item"
-			}]
-			x: -1.0d
-			y: -4.0d
-		}
-		{
-			description: ["The Soulspring Lamp suppresses extreme Nether heat while it has fuel. In this pack it only functions in the Nether, so it is expedition equipment rather than universal climate immunity."]
-			id: "773C8C242A84D880"
-			tasks: [{
-				id: "73769B27C4EC5C32"
-				item: {
-					Count: 1
-					id: "cold_sweat:soulspring_lamp"
-					tag: {
-						Fuel: 64.0d
-					}
-				}
-				type: "item"
-			}]
-			x: -2.0d
-			y: -1.0d
-		}
-		{
-			description: ["Soul Sprouts are the pack-configured fuel for the Soulspring Lamp, and eating one provides a sustained cooling effect. Carry enough for the return journey instead of assuming one charge will cover an entire Nether expedition."]
-			id: "3E50A898CF936716"
-			tasks: [{
-				id: "419E9F1212524D39"
-				item: {
-					Count: 1
-					ForgeCaps: {
-						"fiahi:food": { }
-					}
-					id: "cold_sweat:soul_sprout"
-				}
-				type: "item"
-			}]
-			x: -2.0d
-			y: -2.0d
-		}
-		{
-			description: ["Measure the climate before committing to a route or settlement site. Temperature changes with biome, elevation, season, time, weather, nearby blocks, and dimension."]
-			id: "03A9C8A22386DD14"
-			tasks: [{
-				id: "6EB554D38C015A60"
-				item: "cold_sweat:thermometer"
-				type: "item"
-			}]
-			x: -2.0d
-			y: -3.0d
-		}
-		{
-			description: ["The Thermolith is a stationary climate instrument for monitoring conditions around the homestead. Use its readings when testing shelter and thermal equipment."]
-			id: "08D1715923FBD755"
-			tasks: [{
-				id: "772DFC16CB1AEABC"
-				item: "cold_sweat:thermolith"
-				type: "item"
-			}]
-			x: -1.0d
-			y: -3.0d
-		}
-		{
-			description: ["A Hearth conditions a large sheltered area and can send its effect through connected paths. It is substantial Nether-gated infrastructure, not the first answer to a cold night."]
-			id: "734FF52EDA7A1E85"
-			tasks: [{
-				id: "3CEB6097824B0E2E"
-				item: "cold_sweat:hearth"
-				type: "item"
-			}]
-			x: 0.0d
-			y: -2.0d
-		}
-		{
-			description: ["The Boiler warms a smaller nearby area. Fuel it deliberately and use it as household climate control when clothing alone is not enough."]
-			id: "679E40E1720C4BE5"
-			tasks: [{
-				id: "6E1D7A4032F8756B"
-				item: "cold_sweat:boiler"
-				type: "item"
-			}]
-			x: 0.0d
-			y: -3.0d
-		}
-		{
-			description: ["Cold Sweat thermal sources need a Smokestack to distribute conditioned air. Build this as functional climate ducting, separate from the chimneys that vent pollution."]
-			id: "3C57BC749410133B"
-			tasks: [{
-				id: "0EA922193244CDED"
-				item: "cold_sweat:smokestack"
-				type: "item"
-			}]
-			x: 0.0d
-			y: -1.0d
-		}
-		{
-			description: ["The Sewing Table installs insulating materials into wearable armour. Goat fur resists cold, hoglin hide resists heat, and chameleon molt adapts between them."]
-			id: "53D1ECB1B7C43941"
-			tasks: [{
-				id: "4658D59CBF0FEB06"
-				item: "cold_sweat:sewing_table"
-				type: "item"
-			}]
-			x: 0.0d
-			y: -4.0d
-		}
-		{
-			description: ["Use the calendar to plan planting, fishing, travel, and winter preparation. Overworld crops grow slowly outside their fertile seasons instead of simply breaking."]
-			id: "7FF7C82E11AAF3C1"
-			tasks: [{
-				id: "12D4B2B19DCE23A9"
-				item: "sereneseasons:calendar"
-				type: "item"
-			}]
-			x: -1.0d
-			y: -6.5d
-		}
-		{
-			description: ["A stone chimney gives smoke and machine emissions a route out of occupied spaces. Vent combustion instead of letting the homestead become its own environmental hazard."]
-			id: "2170CAE3C4D056CA"
-			tasks: [{
-				id: "288DB78A21D52B7C"
-				item: "adchimneys:stone_chimney"
-				type: "item"
-			}]
-			x: -2.5d
-			y: 2.0d
-		}
-		{
-			description: ["Cobblestone provides an accessible chimney body for early workshops and kitchens. Route it above the roofline and keep the exhaust path clear."]
-			id: "2330572303E1B157"
-			tasks: [{
-				id: "5632E7DC6303C226"
-				item: "adchimneys:cobblestone_chimney"
-				type: "item"
-			}]
-			x: -1.5d
-			y: 2.0d
-		}
-		{
-			description: ["Small brick chimneys are a compact masonry option for venting working buildings. The material changes the build, but the important lesson is to control where emissions leave it."]
-			id: "690D649F22CB8168"
-			tasks: [{
-				id: "1144B7A202EC8BEE"
-				item: "adchimneys:small_brick_chimney"
-				type: "item"
-			}]
-			x: -0.5d
-			y: 2.0d
-		}
-		{
-			description: ["A large brick chimney makes the exhaust system an intentional part of a larger workshop. Use it where several combustion surfaces share the same industrial space."]
-			id: "518AFB9EF61AC906"
-			tasks: [{
-				id: "2A94287E68E9ABFE"
-				item: "adchimneys:large_brick_chimney"
-				type: "item"
-			}]
-			x: 0.5d
-			y: 2.0d
-		}
-		{
-			description: ["The Starcatcher Rod opens a location- and season-sensitive fishing minigame. Fishing is a renewable food route, but the same catch will not be available everywhere or all year."]
-			id: "35CD1117B47188CF"
-			tasks: [{
-				id: "6420A042E547AF11"
-				item: "starcatcher:starcatcher_rod"
-				type: "item"
-			}]
-			x: 4.5d
-			y: 0.0d
-		}
-		{
-			description: ["The Starcatcher Guide records the fish your team has discovered. Entries stay hidden until a fish is caught, so use it as a field journal rather than a complete answer key."]
-			id: "310F6DC6A6BF0883"
-			tasks: [{
-				id: "6CF09234821726DA"
-				item: "starcatcher:starcatcher_guide"
-				type: "item"
-			}]
-			x: 5.5d
-			y: 0.0d
-		}
-		{
-			description: ["The Keg ferments drinks and preserves foods. Start with sufficiently clean liquid: poorly purified fermentation can grow bacteria and make the result dirtier."]
-			id: "535700C7748FB081"
-			tasks: [{
-				id: "524698E90B02597A"
-				item: "brewinandchewin:keg"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 1.0d
-		}
-		{
-			description: ["The Stove is the permanent heat source for Farmer's Delight cookware. It also belongs to the pack's emissions surface, so plan kitchen ventilation with it."]
-			id: "23BED615533CD349"
-			tasks: [{
-				id: "1E83E0E3BDFA95E6"
-				item: "farmersdelight:stove"
-				type: "item"
-			}]
-			x: -8.0d
-			y: -3.5d
-		}
-		{
-			description: ["The Cooking Pot turns several ingredients into efficient meals, stews, and processed extracts. It is where a varied pantry starts becoming sustained working time."]
-			id: "0350BBF8A26EDE29"
-			tasks: [{
-				id: "68BDA367A4545DAE"
-				item: "farmersdelight:cooking_pot"
-				type: "item"
-			}]
-			x: -8.0d
+			description: ["Change the temperature of edible food and read its tooltip. Keep it in the Fresh interval from -25 to 25, away from frozen and rotten levels."]
+			id: "7FA9C44A0F731707"
+			rewards: [{ count: 1, id: "B4A7A2C14F051969", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "7CD1503B63A54453"
+				predicate: "fiahi_temperature_changed"
+				type: "better_content_fixes:stack_predicate"
+			}
+			]
+			title: "Food Has Temperature"
+			x: -3d
 			y: -4.5d
 		}
 		{
-			description: ["The Skillet cooks individual foods directly over heat and remains useful away from the full kitchen. Use it for quick preparation while the pot handles larger recipes."]
-			id: "28053EF5D81A77BE"
-			tasks: [{
-				id: "66FDBA3DAFC546BB"
-				item: {
-					Count: 1
-					id: "farmersdelight:skillet"
-					tag: {
-						Damage: 0
-					}
-				}
-				type: "item"
-			}]
-			x: -8.0d
-			y: -5.5d
+			dependencies: ["7FA9C44A0F731707"]
+			description: ["Store food where its tooltip remains Fresh Food. Choose any method that works; no appliance is mandatory."]
+			id: "362B669D89D67FDF"
+			rewards: [{ count: 1, id: "97307B02BE478958", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "CC738485C8BE181D"
+				type: "checkmark"
+			}
+			]
+			title: "Keep It Fresh"
+			x: -1.5d
+			y: -4.5d
 		}
 		{
-			description: ["Place ingredients on the Cutting Board and work them with a knife to obtain cuts, portions, and useful byproducts. Many pack-authored food reagents begin here."]
-			id: "16758DFB0A034701"
-			tasks: [{
-				id: "0BDA4931A4046F4B"
-				item: "farmersdelight:cutting_board"
-				type: "item"
-			}]
-			x: -8.0d
-			y: -2.5d
+			description: ["Prepare purity-3 water. At this configured purity, poison and nausea chance are both zero."]
+			id: "2AB873C4522527D4"
+			rewards: [{ count: 1, id: "5FB7DE4A0177228A", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "22C4D5FD85112704"
+				predicate: "water_purity_3"
+				type: "better_content_fixes:stack_predicate"
+			}
+			]
+			title: "Safe Water"
+			x: -3d
+			y: 1.5d
 		}
 		{
-			description: ["The Kama combines crop harvesting, tilling, shearing, and plant work in one TConstruct tool. Build it from materials you can repair instead of treating this wooden example as mandatory."]
-			id: "0A6CCFFDF6F2E7FF"
-			tasks: [{
-				id: "15C352100B4BD934"
-				item: {
-					Count: 1
-					id: "tconstruct:kama"
-					tag: {
-						Damage: 0
-						tic_broken: 0b
-						tic_materials: [
-							"tconstruct:wood"
-							"tconstruct:wood"
-							"tconstruct:string"
-						]
-						tic_modifiers: [
-							{
-								level: 2
-								name: "tconstruct:cultivated"
-							}
-							{
-								level: 1
-								name: "tconstruct:stringy"
-							}
-							{
-								level: 1
-								name: "tconstruct:tilling"
-							}
-							{
-								level: 1
-								name: "tconstruct:shears"
-							}
-							{
-								level: 1
-								name: "tconstruct:harvest"
-							}
-						]
-						tic_multipliers: {
-							"tconstruct:attack_damage": 0.5f
-						}
-						tic_persistent: { }
-						tic_stats: {
-							"tconstruct:attack_damage": 0.5f
-							"tconstruct:attack_speed": 1.6f
-							"tconstruct:durability": 60.0f
-							"tconstruct:mining_speed": 2.0f
-						}
-						tic_volatile_data: {
-							abilities: 1
-							upgrades: 3
-						}
-					}
-				}
+			dependencies: ["2AB873C4522527D4"]
+			description: ["Pack enough food and purity-3 water for an overnight trip and return. Do not count on forage."]
+			id: "E16B8796484892FF"
+			rewards: [{ count: 1, id: "46A3FEC9CF52BA01", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "65F4F2413C463A4A"
+				type: "checkmark"
+			}
+			]
+			title: "Provisions"
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["22F45D3D9F44B470" "362B669D89D67FDF" "2AB873C4522527D4" "E16B8796484892FF"]
+			description: ["Bring shelter, fresh storage, safe water, and provisions together. Check this when the first camp can support a real journey."]
+			id: "CB3FCC1B9569023E"
+			rewards: [{ count: 4, id: "8937102841AD8C53", item: "createdeco:copper_coin", type: "item" }]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+			{
+				id: "175418A8B0533B38"
+				type: "checkmark"
+			}
+			]
+			title: "First Camp"
+			x: 0d
+			y: 0d
+		}
+		{
+			description: ["Place any bed to accelerate the night. It does not change your permanent spawn."]
+			id: "EB55D9B89DF28F61"
+			rewards: [{ count: 1, id: "E51D2F7A7E6A9445", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "CCD2728037DB9304"
+				item: { Count: 1, id: "ftbfiltersystem:smart_filter", tag: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:beds)" } }
+				title: "Any bed"
 				type: "item"
-			}]
-			x: -2.0d
+			}
+			]
+			title: "A Bed"
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			description: ["Set down a practical chest, barrel, crate, or cabinet. Keep supplies findable without turning storage into a gate."]
+			id: "D60546FEC80B2A15"
+			rewards: [{ count: 1, id: "C951F3E7072E8DE6", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "EA9B0EF17C93C883"
+				item: { Count: 1, id: "ftbfiltersystem:smart_filter", tag: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(forge:chests/wooden)" } }
+				title: "A practical storage block"
+				type: "item"
+			}
+			]
+			title: "Storage"
+			x: -1.5d
+			y: -3d
+		}
+		{
+			description: ["Load a Food Pouch with at least two distinct foods. Its contents share temperature; the pouch does not preserve them."]
+			id: "7EB9E1A6C63979B4"
+			rewards: [{ count: 2, id: "F72BEE68114CC4A3", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "945FBE9492455C96"
+				predicate: "food_pouch_loaded"
+				type: "better_content_fixes:stack_predicate"
+			}
+			]
+			title: "Food Pouch"
+			x: 0d
+			y: -4.5d
+		}
+		{
+			description: ["Place a Rain Collector under open sky and let rain charge it. It holds four uses."]
+			id: "43B2A5B91CAECA8E"
+			rewards: [{ count: 2, id: "3EDA188370BE7A84", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "8B0B1C7E71E6ACAE"
+				item: "better_content_fixes:rain_collector"
+				type: "item"
+			}
+			]
+			title: "Rain Collector"
+			x: -4.5d
+			y: 3d
+		}
+		{
+			description: ["Make a clay bowl and fill a terracotta water bowl. Use supported heat to purify it."]
+			id: "E56C2F1521364C19"
+			rewards: [{ count: 1, id: "F71C9988C7D50B7A", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "6F444B70AB029E2D"
+				item: "thirst:terracotta_bowl"
+				type: "item"
+			}
+			{
+				id: "4B5DE6C8A7115513"
+				item: "thirst:terracotta_water_bowl"
+				type: "item"
+			}
+			]
+			title: "Water Bowls"
+			x: -3d
+			y: 3.3d
+		}
+		{
+			description: ["Build a campfire for cooking, supported boiling, and snow melting. Do not rely on it as universal warmth."]
+			id: "9C97BF5F8C421E36"
+			rewards: [{ count: 2, id: "CEA0856390848C57", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "5535BB5F3A019859"
+				item: "minecraft:campfire"
+				type: "item"
+			}
+			]
+			title: "Campfire"
+			x: -1.5d
+			y: 3.3d
+		}
+		{
+			description: ["Let the water Curio consume a vanilla water-potion bottle. Prefer purity 3 and collect the returned empty bottle."]
+			id: "1E25D9FE0D841B7F"
+			rewards: [{ count: 1, id: "DE72B5F6A52DCB2F", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "88CEAC4D6B9F5666"
+				criterion: "water_curio_drink"
+				type: "better_content_fixes:criterion"
+			}
+			]
+			title: "Water at Hand"
+			x: 0d
+			y: 2d
+		}
+		{
+			description: ["Breed a maintained pair or herd. Keep enough animals to make the supply renewable."]
+			id: "BDBF3C780B009CD9"
+			rewards: [{ count: 1, id: "64A965C289059480", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "5B6197C755A6418C"
+				type: "checkmark"
+			}
+			]
+			title: "Animal Husbandry"
+			x: 2.5d
+			y: 3d
+		}
+		{
+			dependencies: ["CBE5D08190C37F98" "BDBF3C780B009CD9" "21673617A8A3C196" "0946CB91DEA2D512"]
+			description: ["Complete one renewable food route. A planted harvest, maintained animals, a Starcatcher catch, or transplanted forage is enough."]
+			id: "0EA60205EE4E3808"
+			min_required_dependencies: 1
+			rewards: [{ count: 1, id: "621CD54B26EF305F", item: "createdeco:copper_coin", type: "item" }]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [ ]
+			title: "Lasting Food Supply"
+			x: 3d
+			y: 1d
+		}
+		{
+			dependencies: ["CB3FCC1B9569023E" "0EA60205EE4E3808"]
+			description: ["Bring the first camp and one lasting food supply together. Treat this as guidance, not a recipe gate."]
+			id: "FFF2F274923CC05E"
+			rewards: [{ count: 2, id: "853F8FBDED76D0FB", item: "createdeco:zinc_coin", type: "item" }]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [ ]
+			title: "A Working Homestead"
+			x: 5.3d
+			y: 0d
+		}
+		{
+			description: ["Harvest a mature food crop that you planted. Replant enough to make the next harvest possible."]
+			id: "CBE5D08190C37F98"
+			rewards: [{ count: 1, id: "508BCF9A87C306E0", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "60566B9AD14AF9C2"
+				type: "checkmark"
+			}
+			]
+			title: "Planted Harvest"
+			x: -13d
+			y: -9d
+		}
+		{
+			description: ["Relocate edible forage or an orchard plant, then harvest it. Turn a lucky find into a repeatable local source."]
+			id: "0946CB91DEA2D512"
+			rewards: [{ count: 1, id: "4BAC0504D69BB787", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "7E6E38898EAAE61B"
+				type: "checkmark"
+			}
+			]
+			title: "Transplanted Food"
+			x: -13d
 			y: -7.5d
 		}
 		{
-			description: ["The Sand Filter is the Create-era continuous purification step. It improves water by one purity level and trades early manual boiling for fluid-handling infrastructure."]
-			id: "68EF41C24DDBEA5F"
-			tasks: [{
-				id: "7D4B980DD02A9BEB"
-				item: "thirst:sand_filter"
-				type: "item"
-			}]
-			x: 2.5d
-			y: -6.0d
+			description: ["Grow and harvest a crop on pack-supported regolith farmland. Use the local ground instead of abandoning the site."]
+			id: "36E428FA17A94E0F"
+			rewards: [{ count: 1, id: "09520E612DFB0C8A", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "C29B5250355B0C5C"
+				criterion: "regolith_crop_harvest"
+				type: "better_content_fixes:criterion"
+			}
+			]
+			title: "Regolith Farming"
+			x: -11.5d
+			y: -9d
 		}
 		{
-			description: ["Fire a clay bowl into a reusable terracotta vessel before filling it. It is the simple early container for collecting, carrying, and heating small amounts of water."]
-			id: "02FE7998B829DA0B"
-			tasks: [{
-				id: "18D5AAA11F4A073B"
-				item: "thirst:terracotta_bowl"
-				type: "item"
-			}]
-			x: 3.5d
-			y: -6.0d
-		}
-		{
-			description: ["A Campfire cooks food, boils supported water containers, and melts nearby snow blocks into water. It is the first dependable purification and cold-weather utility station."]
-			id: "5BC604835B2CDEDA"
-			tasks: [{
-				id: "27616B009D034F05"
-				item: "minecraft:campfire"
-				type: "item"
-			}]
-			x: 2.5d
-			y: -5.0d
-		}
-		{
-			description: ["A bottle of water is only a container, not proof that the water is safe. Source and treatment determine purity, and dirty water can inflict nausea or poison."]
-			id: "78BCBF9A4F3E0146"
-			tasks: [{
-				id: "334F3C1FA53F90CC"
-				item: {
-					Count: 1
-					id: "minecraft:potion"
-					tag: {
-						Potion: "minecraft:water"
-					}
-				}
-				type: "item"
-			}]
-			x: 3.5d
-			y: -5.0d
-		}
-		{
-			description: ["An exposed Rain Collector stores up to four charges during rainfall. Drink from it or fill a supported container to turn weather into a renewable early-water reserve."]
-			id: "E6A0291897193FB8"
-			tasks: [{
-				id: "876015D4D16F4251"
-				item: "better_content_fixes:rain_collector"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["The Waterskin is portable water and temperature support. Fill and purify it before travel, then use it for hydration or short-term thermal relief when conditions turn dangerous."]
-			id: "06909084470EB7E9"
-			tasks: [{
-				id: "6FB3C592A35B7673"
-				item: "cold_sweat:waterskin"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["The Icebox chills a nearby sheltered area and can distribute cold through thermal paths. It is the household counterpart to the Boiler for hot climates."]
-			id: "9C202A5FA69F0D77"
-			tasks: [{
-				id: "AEEC149BB119276A"
-				item: "cold_sweat:icebox"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["The Kettle brews Farmer's Respite teas and coffee while improving water purity through boiling. It connects hydration, crop variety, and useful food effects."]
-			id: "4E189F50D436EFAD"
-			tasks: [{
-				id: "0D1258A7847B5358"
-				item: "farmersrespite:kettle"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["The Food Book tracks which foods you have eaten and makes culinary variety visible. Use it to find neglected ingredients instead of grinding one easy meal forever."]
-			id: "010BF0BCB9DCD41A"
-			tasks: [{
-				id: "DDC04118117013A3"
-				item: "solcarrot:food_book"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Combine dirt with biological waste, straw, and bone meal to start Organic Compost. Leave it to mature rather than expecting an instant finished soil block."]
-			id: "CCDD7D4835CEB5EF"
-			tasks: [{
-				id: "C35F461D48547C11"
+			description: ["Make Organic Compost. Let it mature before working the ground."]
+			id: "075DE9AE725DE26C"
+			rewards: [{ count: 1, id: "9789124BFFB5827D", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "063DB30F3557F659"
 				item: "farmersdelight:organic_compost"
 				type: "item"
-			}]
-			x: 0.0d
-			y: 0.0d
+			}
+			]
+			title: "Organic Compost"
+			x: -10d
+			y: -9d
 		}
 		{
-			description: ["Organic Compost eventually matures into Rich Soil. Use it to establish productive permanent plots and as the base for rich-soil farmland."]
-			id: "944D484E726EE5DE"
-			tasks: [{
-				id: "74F9A01D499138CB"
-				item: "farmersdelight:rich_soil"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Tea bushes are specialty forage rather than ordinary Overworld groundcover. Find their starting stock through the Undergarden route, then cultivate a renewable supply at home."]
-			id: "73F0931A5529071A"
-			tasks: [{
-				id: "95E2262B680EE19F"
-				item: "farmersrespite:tea_seeds"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Coffee bushes are another Undergarden forage prize. Bring berries home for cultivation, roast the beans, and use the Kettle to turn them into a repeatable drink crop."]
-			id: "D4AC62CFC37F4919"
-			tasks: [{
-				id: "885E68E880E3664D"
-				item: "farmersrespite:coffee_berries"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Specialty crops are deliberately found through village farms, settlement trade, and Undergarden forage instead of ordinary Overworld wilderness."]
-			icon: "farmersdelight:cabbage"
-			id: "005DC6BB3C38C675"
+			dependencies: ["075DE9AE725DE26C"]
+			description: ["Till matured compost into Rich Soil Farmland. Use the improved bed for demanding crops."]
+			id: "5B3687AEFA829042"
+			rewards: [{ count: 2, id: "74782F73566D940E", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
-				{
-					id: "E7F3409C0E8DA04D"
-					item: "farmersdelight:cabbage"
-					type: "item"
-				}
-				{
-					id: "A6DCF6C41EA8E72E"
-					item: "farmersdelight:onion"
-					type: "item"
-				}
-				{
-					id: "F9F4F1988D7BF228"
-					item: "farmersdelight:tomato"
-					type: "item"
-				}
-				{
-					id: "914720C565A9AC47"
-					item: "farmersdelight:rice"
-					type: "item"
-				}
+			{
+				id: "BEBD2D9851B9BE3B"
+				criterion: "rich_soil_tilled"
+				type: "better_content_fixes:criterion"
+			}
+			]
+			title: "Rich Soil Farmland"
+			x: -8.5d
+			y: -9d
+		}
+		{
+			description: ["Gather cabbage, onion, tomato, and rice. Expand the field beyond staple crops."]
+			id: "005DC6BB3C38C675"
+			rewards: [{ count: 2, id: "9D9E42C7215678C6", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "E5BD8BE5FAC381C7"
+				item: "farmersdelight:cabbage"
+				type: "item"
+			}
+			{
+				id: "FD1D7B8209BBD4FD"
+				item: "farmersdelight:onion"
+				type: "item"
+			}
+			{
+				id: "BC82D05B45FEB8AC"
+				item: "farmersdelight:tomato"
+				type: "item"
+			}
+			{
+				id: "713263F0C6C56819"
+				item: "farmersdelight:rice"
+				type: "item"
+			}
 			]
 			title: "Specialty Crops"
-			x: 0.0d
-			y: 0.0d
+			x: -7d
+			y: -9d
 		}
 		{
-			description: ["Unearthed grassy regolith can be hoed directly into matching farmland when the space above is clear. It supports ordinary crop-type plants and returns to its matching regolith when it decays."]
-			icon: "better_content_fixes:stone_regolith_farmland"
-			id: "36E428FA17A94E0F"
-			tasks: [{
-				id: "C29B5250355B0C5C"
-				title: "Cultivate regolith farmland"
-				type: "checkmark"
-			}]
-			title: "Regolith Farming"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Use the Diet screen and food book to spread meals across fruits, grains, proteins, sugars, and vegetables instead of relying on one food forever."]
-			icon: "farmersdelight:mixed_salad"
-			id: "3778EF4D086DCD6C"
-			tasks: [{
-				id: "FC0C47EE7C8B09C1"
-				title: "Build a balanced diet"
-				type: "checkmark"
-			}]
-			title: "Balanced Diet"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Starcatcher fish vary with location and season. Catching one turns the rod and guide into a working food source rather than a collection shelf."]
-			icon: "starcatcher:starcatcher_rod"
-			id: "FDE9218EF8EEA207"
-			tasks: [{
-				id: "8A122E4EA2A6CB18"
-				title: "Catch a Starcatcher fish"
-				type: "checkmark"
-			}]
-			title: "Seasonal Fishing"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Livestock provide renewable food, hide, bone, feathers, and other biological materials. Genetic Animals makes breeding and herd quality part of maintaining that supply."]
-			icon: "minecraft:lead"
-			id: "BDBF3C780B009CD9"
-			tasks: [{
-				id: "5B6197C755A6418C"
-				title: "Establish a breeding herd"
-				type: "checkmark"
-			}]
-			title: "Animal Husbandry"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Begin with the Framed Cube, then learn the small toolset instead of hand-crafting every variant. The saw selects shapes, the hammer and wrench adjust them, the screwdriver changes supported camo states, the blueprint copies completed frames, and the key preserves a chosen shape against neighbour updates."]
-			icon: "framedblocks:framed_blueprint"
-			id: "9B6C167A50277704"
+			description: ["Build a TConstruct Kama. Use it for compact field work."]
+			id: "887C2998D131A9A1"
+			rewards: [{ count: 2, id: "7F965646EFE67E36", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
-				{
-					id: "47655D59AD3D2444"
-					item: "framedblocks:framed_cube"
-					type: "item"
-				}
-				{
-					id: "A2B7E94EC17B98E9"
-					item: "framedblocks:framing_saw"
-					type: "item"
-				}
-				{
-					id: "CFC44FB9B1E10BF3"
-					item: "framedblocks:framed_hammer"
-					type: "item"
-				}
-				{
-					id: "2DAAD77758F8213E"
-					item: "framedblocks:framed_wrench"
-					type: "item"
-				}
-				{
-					id: "CC591FB33543E343"
-					item: "framedblocks:framed_screwdriver"
-					type: "item"
-				}
-				{
-					id: "A699C612BB94CB38"
-					item: "framedblocks:framed_blueprint"
-					type: "item"
-				}
-				{
-					id: "DF68B447EBEEB555"
-					item: "framedblocks:framed_key"
-					type: "item"
-				}
-			]
-			title: "Framing Toolkit"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["These are the workhorse frame shapes for walls, floors, trim, openings, and boundaries. Apply a full block as camouflage, then use the framing tools when placement or texture orientation needs correction."]
-			icon: "framedblocks:framed_stairs"
-			id: "1AB0A666BB5F0BDC"
-			tasks: [
-				{
-					id: "EE141A138AD5AB80"
-					item: "framedblocks:framed_slab"
-					type: "item"
-				}
-				{
-					id: "12BD8004776386D5"
-					item: "framedblocks:framed_double_slab"
-					type: "item"
-				}
-				{
-					id: "CF00D1CAFC2B8337"
-					item: "framedblocks:framed_panel"
-					type: "item"
-				}
-				{
-					id: "028993756BC4A73D"
-					item: "framedblocks:framed_double_panel"
-					type: "item"
-				}
-				{
-					id: "146175CBB66D2D0B"
-					item: "framedblocks:framed_stairs"
-					type: "item"
-				}
-				{
-					id: "06D689DA4395E9AB"
-					item: "framedblocks:framed_vertical_stairs"
-					type: "item"
-				}
-				{
-					id: "25C4094160AE7157"
-					item: "framedblocks:framed_pillar"
-					type: "item"
-				}
-				{
-					id: "E13A8DDB9AACE900"
-					item: "framedblocks:framed_half_pillar"
-					type: "item"
-				}
-				{
-					id: "9F0AFA5084814FA7"
-					item: "framedblocks:framed_post"
-					type: "item"
-				}
-				{
-					id: "5EBE4DB1C3BEE2EF"
-					item: "framedblocks:framed_wall"
-					type: "item"
-				}
-				{
-					id: "87231B2E15CE3394"
-					item: "framedblocks:framed_fence"
-					type: "item"
-				}
-				{
-					id: "1718B25BD20DE716"
-					item: "framedblocks:framed_fence_gate"
-					type: "item"
-				}
-				{
-					id: "705062D62AE6B682"
-					item: "framedblocks:framed_pane"
-					type: "item"
-				}
-				{
-					id: "CA6C0FB065C356CF"
-					item: "framedblocks:framed_bars"
-					type: "item"
-				}
-				{
-					id: "B98FB04B3D681784"
-					item: "framedblocks:framed_floor_board"
-					type: "item"
-				}
-				{
-					id: "B6DB7F5F97BBAC08"
-					item: "framedblocks:framed_wall_board"
-					type: "item"
-				}
-				{
-					id: "BC71293F5C1ECA68"
-					item: "framedblocks:framed_lattice_block"
-					type: "item"
-				}
-				{
-					id: "EAA5BEE3E1009C73"
-					item: "framedblocks:framed_tube"
-					type: "item"
-				}
-			]
-			title: "Basic Framed Shapes"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Slopes, prisms, corners, and split faces solve rooflines and transitions that ordinary stairs cannot. This representative set teaches the major shape families; use the Framing Saw and EMI to find the finer stacked, elevated, extended, and inverted variants."]
-			icon: "framedblocks:framed_slope"
-			id: "07E2954F4C96084C"
-			tasks: [
-				{
-					id: "E554A104E763EF16"
-					item: "framedblocks:framed_slope"
-					type: "item"
-				}
-				{
-					id: "A541E0FACC1948B3"
-					item: "framedblocks:framed_corner_slope"
-					type: "item"
-				}
-				{
-					id: "85E88AAE2254FC24"
-					item: "framedblocks:framed_inner_corner_slope"
-					type: "item"
-				}
-				{
-					id: "45322540FC006848"
-					item: "framedblocks:framed_half_slope"
-					type: "item"
-				}
-				{
-					id: "FF848AE6CBA435C6"
-					item: "framedblocks:framed_double_slope"
-					type: "item"
-				}
-				{
-					id: "E3C52DE37303A13C"
-					item: "framedblocks:framed_divided_slope"
-					type: "item"
-				}
-				{
-					id: "AEEC7762887A576B"
-					item: "framedblocks:framed_slope_slab"
-					type: "item"
-				}
-				{
-					id: "37895935BD47833A"
-					item: "framedblocks:framed_slope_panel"
-					type: "item"
-				}
-				{
-					id: "D2549436962E8155"
-					item: "framedblocks:framed_prism"
-					type: "item"
-				}
-				{
-					id: "47044DDCA61494AB"
-					item: "framedblocks:framed_inner_prism"
-					type: "item"
-				}
-				{
-					id: "8BA82D0F81FA80B9"
-					item: "framedblocks:framed_sloped_prism"
-					type: "item"
-				}
-				{
-					id: "376EFFBBE62996DF"
-					item: "framedblocks:framed_pyramid"
-					type: "item"
-				}
-				{
-					id: "40D77B578B91D8E1"
-					item: "framedblocks:framed_pyramid_slab"
-					type: "item"
-				}
-				{
-					id: "DE0634432B241D7F"
-					item: "framedblocks:framed_corner_pillar"
-					type: "item"
-				}
-				{
-					id: "4015655773DE2F5B"
-					item: "framedblocks:framed_threeway_corner"
-					type: "item"
-				}
-				{
-					id: "769633B23F5B27A3"
-					item: "framedblocks:framed_slab_edge"
-					type: "item"
-				}
-				{
-					id: "11B839CBA98BEB16"
-					item: "framedblocks:framed_slab_corner"
-					type: "item"
-				}
-				{
-					id: "EF09C3760587004C"
-					item: "framedblocks:framed_checkered_cube"
-					type: "item"
-				}
-			]
-			title: "Slopes, Corners, and Splits"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Collapsible frames can form custom slopes beyond the preset catalogue. Use the Framed Hammer on individual face corners to move them inward or outward, and use the wrench when the triangle split needs to change."]
-			icon: "framedblocks:framed_collapsible_block"
-			id: "D088E669F454C4C1"
-			tasks: [
-				{
-					id: "D0EF7DE45D1803C7"
-					item: "framedblocks:framed_collapsible_block"
-					type: "item"
-				}
-				{
-					id: "D570F3CE3E20C3BA"
-					item: "framedblocks:framed_collapsible_copycat_block"
-					type: "item"
-				}
-			]
-			title: "Custom Surfaces"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["The One-Way Window accepts camouflage while keeping one face transparent from the chosen side. It is useful for observation rooms, guarded entrances, and concealed sightlines."]
-			icon: "framedblocks:framed_one_way_window"
-			id: "D7B7EB4B3DE64D01"
-			tasks: [{
-				id: "CE2A02021745A283"
-				item: "framedblocks:framed_one_way_window"
+			{
+				id: "4778C32A4E9B5068"
+				item: "tconstruct:kama"
 				type: "item"
-			}]
-			title: "One-Way Window"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["The Framed Chest lets storage match the room around it. Secret Storage pushes the idea further by hiding a working inventory inside a camouflaged construction block."]
-			icon: "framedblocks:framed_secret_storage"
-			id: "15D3ECE597FBCD5B"
-			tasks: [
-				{
-					id: "11E78C9BCA9E9FB1"
-					item: "framedblocks:framed_chest"
-					type: "item"
-				}
-				{
-					id: "6956AA0A42D24021"
-					item: "framedblocks:framed_secret_storage"
-					type: "item"
-				}
+			}
 			]
-			title: "Hidden Storage"
-			x: 0.0d
-			y: 0.0d
+			title: "Kama"
+			x: -8.5d
+			y: -7.5d
 		}
 		{
-			description: ["Some frames keep real behaviour beneath their camouflage: the Bouncy Cube launches entities, the Glowing Cube remains visible in darkness without lighting the room, the Redstone Block supplies power, and the Target reacts to projectiles."]
-			icon: "framedblocks:framed_bouncy_cube"
-			id: "8D65C51DB8D38A09"
-			tasks: [
-				{
-					id: "67AC2D72CC35F25A"
-					item: "framedblocks:framed_bouncy_cube"
-					type: "item"
-				}
-				{
-					id: "CF9D6AA4BD626F28"
-					item: "framedblocks:framed_glowing_cube"
-					type: "item"
-				}
-				{
-					id: "C133DC1D2B8E057C"
-					item: "framedblocks:framed_redstone_block"
-					type: "item"
-				}
-				{
-					id: "9054894EE068525A"
-					item: "framedblocks:framed_target"
-					type: "item"
-				}
-			]
-			title: "Frames With Behaviour"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["A filled Waterskin joins the hydration and temperature systems. Treat the water before travel, then warm or cool the skin so it can provide immediate and short-lived thermal relief as well as a drink."]
-			icon: "cold_sweat:filled_waterskin"
-			id: "9101F80C45766D9C"
-			tasks: [{
-				id: "D196BC070084CF59"
-				item: "cold_sweat:filled_waterskin"
-				type: "item"
-			}]
-			title: "Prepared Waterskin"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Set the Season Sensor to a chosen season and it will output redstone while that season is active, rising from signal strength 1 at the beginning to 15 near the end. Use it to signal planting windows or drive seasonal farm controls."]
-			icon: "sereneseasons:season_sensor"
-			id: "AB9756671C0BBA7F"
-			tasks: [{
-				id: "DB0F8524C0B34C1E"
-				item: "sereneseasons:season_sensor"
-				type: "item"
-			}]
-			title: "Season Sensor"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Out-of-season crops grow slowly on the surface, but the pack grants underground fertility below Y 48. A sheltered deep farm is the dependable alternative when the calendar does not match the crop."]
-			icon: "minecraft:wheat_seeds"
-			id: "7FB326F1F794CAC6"
-			tasks: [{
-				id: "3B591CF954AEDA6B"
-				title: "Establish an underground growing plot"
-				type: "checkmark"
-			}]
-			title: "Off-Season Growing"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Advanced Chimneys can form ventilation networks instead of isolated vertical stacks. Combine chimney bodies with the mod's pumps, vents, pipes, or hoppers to collect smoke from several heat sources and release it outdoors."]
-			icon: "adchimneys:cobblestone_chimney"
-			id: "DCD0EB9AAA84BD96"
-			tasks: [{
-				id: "311BDBB1FB8E1225"
-				title: "Build a connected ventilation system"
-				type: "checkmark"
-			}]
-			title: "Ventilation Networks"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Bonemeal farmland to bring worms to the surface. Bait and rod attachments matter when hunting fish with narrow biome, weather, time, elevation, or seasonal conditions."]
-			icon: "starcatcher:worm"
-			id: "2221019FC0A63019"
-			tasks: [{
-				id: "044963301AB528F6"
-				item: "starcatcher:worm"
-				type: "item"
-			}]
-			title: "Bait the Hook"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Fermentation recipes do not all want the same environment. Place a Heating Cask or Ice Crate near the Keg when a recipe calls for a controlled hot or cold process instead of surrounding the room with improvised heat or ice."]
-			icon: "brewinandchewin:heating_cask"
-			id: "30B36A7A3C1AC1DE"
-			tasks: [
-				{
-					id: "F1FB12DC05510129"
-					item: "brewinandchewin:heating_cask"
-					type: "item"
-				}
-				{
-					id: "7C76BC4DCAF0C864"
-					item: "brewinandchewin:ice_crate"
-					type: "item"
-				}
-			]
-			title: "Fermentation Temperature"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["The Keg can turn milk and other ingredients into liquid cheese, which is poured into an unripe waxed wheel. Let the wheel age into finished flaxen cheese before cutting it into servings."]
-			icon: "brewinandchewin:flaxen_cheese_wheel"
-			id: "0B4392BCBAD44C78"
-			tasks: [
-				{
-					id: "FB304E29670C75B5"
-					item: "brewinandchewin:unripe_flaxen_cheese_wheel"
-					type: "item"
-				}
-				{
-					id: "DC514781C5DD540C"
-					item: "brewinandchewin:flaxen_cheese_wheel"
-					type: "item"
-				}
-			]
-			title: "Aged Cheese"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Cabinets are compact kitchen storage that can sit beneath work surfaces without turning the pantry into a wall of generic chests. Keep staple ingredients close to the Cutting Board, Pot, and Kettle."]
-			icon: "farmersdelight:oak_cabinet"
-			id: "69337E236FC13EEF"
-			tasks: [{
-				id: "344A37B10BF17897"
-				item: "farmersdelight:oak_cabinet"
-				type: "item"
-			}]
-			title: "The Pantry"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Farmer's Delight feasts are placed as shared dishes and served into bowls instead of eaten as one oversized item. They turn a broad harvest into several efficient meals for a household or expedition party."]
-			icon: "farmersdelight:roast_chicken_block"
-			id: "D254D08257E1838C"
-			tasks: [{
-				id: "AC05B87A081891E3"
-				item: "farmersdelight:roast_chicken_block"
-				type: "item"
-			}]
-			title: "Serve a Feast"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["The Scythe is the large TConstruct harvesting tool for mature fields and broad plant clearing. Build it when the Kama's careful single-plot work becomes the bottleneck, and choose repairable materials suited to repeated farm use."]
-			icon: "tconstruct:scythe"
+			description: ["Build a TConstruct Scythe. Use its wider cut on established fields."]
 			id: "53C957328751BA80"
-			tasks: [{
+			rewards: [{ count: 2, id: "89926AA6235F76B3", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
 				id: "7039B6B8964C59A6"
 				item: "tconstruct:scythe"
 				type: "item"
-			}]
-			title: "Field Scythe"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			description: ["Shape raw clay into bowls, fire them into reusable terracotta vessels, and fill them with water. The filled bowl retains water purity, so boiling and clean sourcing still matter after choosing a container."]
-			icon: "thirst:terracotta_water_bowl"
-			id: "E56C2F1521364C19"
-			tasks: [
-				{
-					id: "C70FCA8203D0EE0B"
-					item: "thirst:clay_bowl"
-					type: "item"
-				}
-				{
-					id: "E2B712FA5BDC75D9"
-					item: "thirst:terracotta_water_bowl"
-					type: "item"
-				}
+			}
 			]
-			title: "Water Bowls"
-			x: 0.0d
-			y: 0.0d
+			title: "Field Scythe"
+			x: -7d
+			y: -7.5d
 		}
 		{
-			description: ["Use the Kettle to turn cultivated leaves and roasted beans into drinks with strong hydration and useful food effects. Green tea and coffee also become processed extracts in the pack's later food-reagent routes."]
-			icon: "farmersrespite:green_tea"
-			id: "B4C7E8CCB6A1DF43"
+			description: ["Craft the Calendar from a Clock and eight paper. Read the season before committing a field."]
+			id: "E2D46FA5AAAAB5B4"
+			rewards: [{ count: 2, id: "DDCAD2B81AE0C3DA", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
-				{
-					id: "E1FEB7249A8373D3"
-					item: "farmersrespite:green_tea"
-					type: "item"
-				}
-				{
-					id: "CDCA726389F1C66D"
-					item: "farmersrespite:coffee"
-					type: "item"
-				}
+			{
+				id: "128F4F17F5526386"
+				item: "sereneseasons:calendar"
+				type: "item"
+			}
+			]
+			title: "Calendar"
+			x: -4.5d
+			y: -9d
+		}
+		{
+			description: ["Establish an underground growing plot below Y48. Use it when the surface season is wrong."]
+			id: "7FB326F1F794CAC6"
+			rewards: [{ count: 1, id: "C5C23129D21F80E6", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "3B591CF954AEDA6B"
+				type: "checkmark"
+			}
+			]
+			title: "Off-Season Growing"
+			x: -4.5d
+			y: -7.5d
+		}
+		{
+			dependencies: ["E2D46FA5AAAAB5B4"]
+			description: ["Build the Season Sensor with glass, quartz, and a literal Calendar. Put seasonal state where the homestead can read it."]
+			id: "AB9756671C0BBA7F"
+			rewards: [{ count: 2, id: "FF70333ACF7D03C4", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "DB0F8524C0B34C1E"
+				item: "sereneseasons:season_sensor"
+				type: "item"
+			}
+			]
+			title: "Season Sensor"
+			x: -3d
+			y: -9d
+		}
+		{
+			description: ["Carry a Thermometer and compare body temperature with world temperature. Respond to the reading that is actually dangerous."]
+			id: "5A4C3626CCDC25FF"
+			rewards: [{ count: 2, id: "E4C9F1B879928603", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "56BC12C20D2D1237"
+				item: "cold_sweat:thermometer"
+				type: "item"
+			}
+			]
+			title: "Thermometer"
+			x: 3d
+			y: -9d
+		}
+		{
+			description: ["Place a Thermolith for an environmental reading. Use it to test shelter and climate equipment."]
+			id: "273DEB4296EDE4CB"
+			rewards: [{ count: 2, id: "2F13977CF74227DA", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "CD0CEFB8C9B9DCFF"
+				item: "cold_sweat:thermolith"
+				type: "item"
+			}
+			]
+			title: "Thermolith"
+			x: 3d
+			y: -7.5d
+		}
+		{
+			description: ["Build the Sewing Table. Install insulation into clothing here."]
+			id: "65A5ED14755450E0"
+			rewards: [{ count: 2, id: "1B6CC56225A4A778", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "D82C2B5AF10F35BD"
+				item: "cold_sweat:sewing_table"
+				type: "item"
+			}
+			]
+			title: "Sewing Table"
+			x: 4.5d
+			y: -9d
+		}
+		{
+			dependencies: ["65A5ED14755450E0"]
+			description: ["Insert insulation into any armour piece. Wear protection suited to the route."]
+			id: "89B480EEAF34852D"
+			rewards: [{ count: 2, id: "D8FE5A1CEEADD73D", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "B67990C2AE99C4E8"
+				predicate: "armor_with_inserted_insulation"
+				type: "better_content_fixes:stack_predicate"
+			}
+			]
+			title: "Insulated Clothing"
+			x: 6d
+			y: -9d
+		}
+		{
+			description: ["Build a Boiler for local climate control. It also tempers food toward +25."]
+			id: "D4E4A2E0C75C373A"
+			rewards: [{ count: 2, id: "0D1200DCBDBE4A25", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "EA19E78B34CAEC1C"
+				item: "cold_sweat:boiler"
+				type: "item"
+			}
+			]
+			title: "Boiler"
+			x: 7.5d
+			y: -10.5d
+		}
+		{
+			description: ["Build an Icebox for local cooling. It tempers food toward -25."]
+			id: "E300F88A52BC5084"
+			rewards: [{ count: 2, id: "6DB5DDB7B2B18F3A", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "D8CC3BD27C42691D"
+				item: "cold_sweat:icebox"
+				type: "item"
+			}
+			]
+			title: "Icebox"
+			x: 7.5d
+			y: -7.5d
+		}
+		{
+			description: ["Build a Smokestack for the Cold Sweat network. Route conditioned air into the occupied space."]
+			id: "B22A08AFA1F3C2C9"
+			rewards: [{ count: 2, id: "6AEEC20C1312F9B2", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "57513FC7E8333BAC"
+				item: "cold_sweat:smokestack"
+				type: "item"
+			}
+			]
+			title: "Smokestack"
+			x: 9d
+			y: -10.5d
+		}
+		{
+			dependencies: ["B22A08AFA1F3C2C9"]
+			description: ["Build a Hearth and connect its Smokestack. Use it for substantial sheltered climate control."]
+			id: "7201C15BC1D7FAAA"
+			rewards: [{ count: 2, id: "1B4B3789D49143A8", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "7C1BF6F8EA0ECAB8"
+				item: "cold_sweat:hearth"
+				type: "item"
+			}
+			]
+			title: "Hearth"
+			x: 10.5d
+			y: -10.5d
+		}
+		{
+			description: ["Gather a Soulspring Lamp and Soul Sprout. The lamp works only in the Nether and uses the configured sprout fuel."]
+			id: "3CBA7F8A6911486F"
+			rewards: [{ count: 2, id: "0D25822689D7EE24", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "51832B4ACB3887DD"
+				item: "cold_sweat:soulspring_lamp"
+				type: "item"
+			}
+			{
+				id: "3350BEB3486ABF6A"
+				item: "cold_sweat:soul_sprout"
+				type: "item"
+			}
+			]
+			title: "Soulspring Kit"
+			x: 10.5d
+			y: -7.5d
+		}
+		{
+			description: ["Make an empty or filled Cold Sweat waterskin. Use it only for thermal preparation."]
+			id: "816657098A500286"
+			rewards: [{ count: 2, id: "A56A5B234A5B7A6C", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "BDBB8A5139036057"
+				item: "cold_sweat:waterskin"
+				type: "item"
+			}
+			]
+			title: "Waterskin"
+			x: 4.5d
+			y: -6d
+		}
+		{
+			dependencies: ["816657098A500286"]
+			description: ["Prepare a non-neutral hot or cold waterskin. Match it to the exposure ahead."]
+			id: "A89C8BE72849D453"
+			rewards: [{ count: 2, id: "E278332F9CBB4369", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "D81B477B1949ADDD"
+				predicate: "tempered_waterskin"
+				type: "better_content_fixes:stack_predicate"
+			}
+			]
+			title: "Tempered Waterskin"
+			x: 6d
+			y: -6d
+		}
+		{
+			description: ["Build a Cutting Board. Use it for deliberate ingredient preparation."]
+			id: "EFEE23E1323A04A4"
+			rewards: [{ count: 2, id: "31174F9B1216029B", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "DD827E7F29CA9CBD"
+				item: "farmersdelight:cutting_board"
+				type: "item"
+			}
+			]
+			title: "Cutting Board"
+			x: -13.5d
+			y: 8d
+		}
+		{
+			description: ["Build both a Stove and Cooking Pot. Turn varied ingredients into durable meals."]
+			id: "6C8362C9595C865D"
+			rewards: [{ count: 2, id: "12B529D34B60008E", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "FFB0CEAE68AE25B5"
+				item: "farmersdelight:stove"
+				type: "item"
+			}
+			{
+				id: "90A51DFFD0C7926A"
+				item: "farmersdelight:cooking_pot"
+				type: "item"
+			}
+			]
+			title: "Hot Kitchen"
+			x: -12d
+			y: 8d
+		}
+		{
+			description: ["Make a Skillet. Cook quick portions while the pot handles larger recipes."]
+			id: "27E443A98DCF5254"
+			rewards: [{ count: 2, id: "59C20D18FE8B8C14", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "A507C070C222AD95"
+				item: "farmersdelight:skillet"
+				type: "item"
+			}
+			]
+			title: "Skillet"
+			x: -10.5d
+			y: 8d
+		}
+		{
+			description: ["Place any Farmer’s Delight cabinet. Keep the working kitchen stocked and readable."]
+			id: "AF050F3582CBB166"
+			rewards: [{ count: 2, id: "C53B4F3A3A261C66", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "B3A2AEB5E92A479C"
+				item: { Count: 1, id: "ftbfiltersystem:smart_filter", tag: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(farmersdelight:cabinets)" } }
+				title: "Any Farmer's Delight cabinet"
+				type: "item"
+			}
+			]
+			title: "Pantry"
+			x: -9d
+			y: 8d
+		}
+		{
+			description: ["Obtain the Food Book. Use it to see which foods still broaden the tracked diet."]
+			id: "553CB6F08A320BA8"
+			rewards: [{ count: 2, id: "C14DB61F522B56C9", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "3776D6E2D194EBB1"
+				item: "solcarrot:food_book"
+				type: "item"
+			}
+			]
+			title: "Food Book"
+			x: -7.5d
+			y: 8d
+		}
+		{
+			dependencies: ["553CB6F08A320BA8"]
+			description: ["Deliberately broaden the tracked diet. Check this after variety becomes a habit."]
+			id: "3778EF4D086DCD6C"
+			rewards: [{ count: 2, id: "D846F31FC2F74486", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "FC0C47EE7C8B09C1"
+				type: "checkmark"
+			}
+			]
+			title: "Balanced Diet"
+			x: -6d
+			y: 8d
+		}
+		{
+			dependencies: ["6C8362C9595C865D"]
+			description: ["Prepare and place a supported feast block. Serve a shared meal from the finished kitchen."]
+			id: "D254D08257E1838C"
+			rewards: [{ count: 4, id: "C920051A1B10D374", item: "createdeco:copper_coin", type: "item" }]
+			shape: "hexagon"
+			size: 1.3d
+			tasks: [
+			{
+				id: "AC05B87A081891E3"
+				item: { Count: 1, id: "ftbfiltersystem:smart_filter", tag: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(forge:feasts)" } }
+				title: "Any supported feast block"
+				type: "item"
+			}
+			]
+			title: "Serve a Feast"
+			x: -4.5d
+			y: 8d
+		}
+		{
+			description: ["Build the Farmer’s Respite Kettle. Use it to begin deliberate drink brewing."]
+			id: "A8D61A331C05F66A"
+			rewards: [{ count: 2, id: "9B984776A059DC3A", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "EAC0E09E6C75ECA4"
+				item: "farmersrespite:kettle"
+				type: "item"
+			}
+			]
+			title: "Kettle"
+			x: -10.5d
+			y: 10d
+		}
+		{
+			dependencies: ["A8D61A331C05F66A"]
+			description: ["Brew a supported tea or coffee in the Kettle. Carry a drink suited to the work ahead."]
+			id: "B4C7E8CCB6A1DF43"
+			rewards: [{ count: 1, id: "7C98AD72D8DEEF47", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "961AF31EEBC868BA"
+				item: { Count: 1, id: "ftbfiltersystem:smart_filter", tag: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(farmersrespite:drinks)" } }
+				title: "Any supported tea or coffee"
+				type: "item"
+			}
 			]
 			title: "Brewed Drinks"
-			x: 0.0d
-			y: 0.0d
+			x: -9d
+			y: 10d
 		}
 		{
-			description: ["Till mature Rich Soil into Rich Soil Farmland for the permanent high-quality garden. This is a cultivated soil route distinct from the geology-matching regolith farmland used elsewhere."]
-			icon: "farmersdelight:rich_soil_farmland"
-			id: "5B3687AEFA829042"
-			tasks: [{
-				id: "BEBD2D9851B9BE3B"
-				title: "Till rich soil into farmland"
+			description: ["Obtain any Starcatcher rod. Fit tackle for the water and season."]
+			id: "040D5AF60D3E8E1C"
+			rewards: [{ count: 2, id: "467C3C7ECDA4A520", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "7015429E6F67C97F"
+				item: { Count: 1, id: "ftbfiltersystem:smart_filter", tag: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(starcatcher:rods)" } }
+				title: "Any Starcatcher rod"
+				type: "item"
+			}
+			]
+			title: "Rig a Rod"
+			x: 0d
+			y: 8d
+		}
+		{
+			description: ["Gather a Starcatcher worm. Keep bait as a recipe detail, not a new progression tier."]
+			id: "58C2BCCE88B9B17A"
+			rewards: [{ count: 1, id: "1A13CA9D39820E21", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "753D0C47A45F185A"
+				item: "starcatcher:worm"
+				type: "item"
+			}
+			]
+			title: "Worm Bait"
+			x: 1.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["040D5AF60D3E8E1C"]
+			description: ["Craft the Vanilla Bobber and crouch-right-click to select it. It is the exclusive route to vanilla fishing loot."]
+			id: "42B8D60CD4E5C020"
+			rewards: [{ count: 1, id: "E3A094BC53F02705", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "995B08628D730B30"
+				item: "starcatcher:vanilla_bobber"
+				type: "item"
+			}
+			]
+			title: "Vanilla Bobber"
+			x: 1.5d
+			y: 8d
+		}
+		{
+			dependencies: ["040D5AF60D3E8E1C"]
+			description: ["Craft the Angler’s Guide; the rod returns as a crafting remainder. Use the guide as a field journal."]
+			id: "39734B51A659C623"
+			rewards: [{ count: 2, id: "8FEA91FE61F1CE39", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "4EE5839C71AB3631"
+				item: "starcatcher:starcatcher_guide"
+				type: "item"
+			}
+			]
+			title: "Angler’s Guide"
+			x: 1.5d
+			y: 9.5d
+		}
+		{
+			dependencies: ["040D5AF60D3E8E1C"]
+			description: ["Land an edible Starcatcher catch. Let it count as one lasting food route."]
+			id: "21673617A8A3C196"
+			rewards: [{ count: 1, id: "A48FC7A1116350CE", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "FD9BA2954C26C72F"
+				criterion: "starcatcher_edible_catch"
+				type: "better_content_fixes:criterion"
+			}
+			]
+			title: "First Catch"
+			x: 3.5d
+			y: 8d
+		}
+		{
+			description: ["Build a Keg. Start with clean ingredients and controlled storage."]
+			id: "601561FCB39975B6"
+			rewards: [{ count: 2, id: "8CCDACF6345FE3DE", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "94D7729474BBCECB"
+				item: "brewinandchewin:keg"
+				type: "item"
+			}
+			]
+			title: "Keg"
+			x: 6d
+			y: 8d
+		}
+		{
+			dependencies: ["601561FCB39975B6"]
+			description: ["Complete a Keg recipe. Take out the finished ferment instead of only loading ingredients."]
+			id: "4CA91EE9310D1913"
+			rewards: [{ count: 1, id: "4D3FC5FCF82A079B", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "6B6602658CE920AD"
+				criterion: "first_finished_ferment"
+				type: "better_content_fixes:criterion"
+			}
+			]
+			title: "First Ferment"
+			x: 7.5d
+			y: 8d
+		}
+		{
+			dependencies: ["601561FCB39975B6"]
+			description: ["Build a Heating Cask and Ice Crate. Match fermentation temperature to the recipe."]
+			id: "30B36A7A3C1AC1DE"
+			rewards: [{ count: 2, id: "0FFCEB37EF039C8D", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "7B1BEBA0C57231B2"
+				item: "brewinandchewin:heating_cask"
+				type: "item"
+			}
+			{
+				id: "912C95C845C7293C"
+				item: "brewinandchewin:ice_crate"
+				type: "item"
+			}
+			]
+			title: "Fermentation Temperature"
+			x: 9d
+			y: 8d
+		}
+		{
+			description: ["Finish aging a cheese wheel. Take the fully aged result."]
+			id: "0B4392BCBAD44C78"
+			rewards: [{ count: 4, id: "9FD72B0BB000D60C", item: "createdeco:copper_coin", type: "item" }]
+			shape: "hexagon"
+			size: 1.3d
+			tasks: [
+			{
+				id: "582F51EFF95324A8"
+				item: "brewinandchewin:flaxen_cheese_wheel"
+				type: "item"
+			}
+			]
+			title: "Aged Cheese"
+			x: 10.5d
+			y: 8d
+		}
+		{
+			description: ["Install any supported chimney. Give smoke and emissions a route out of occupied space."]
+			id: "2B09758DB1C8060F"
+			rewards: [{ count: 2, id: "FC88BA4062CEF2F6", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "91B90AADF560BC94"
+				item: { Count: 1, id: "ftbfiltersystem:smart_filter", tag: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(forge:chimneys)" } }
+				title: "Any chimney"
+				type: "item"
+			}
+			]
+			title: "Vent the Room"
+			x: 10.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["2B09758DB1C8060F"]
+			description: ["Build a connected pump, vent, and pipe system. Check this after air moves through the whole network."]
+			id: "CC62DF944D975D82"
+			rewards: [{ count: 4, id: "D4650E27F81E383F", item: "createdeco:copper_coin", type: "item" }]
+			shape: "hexagon"
+			size: 1.3d
+			tasks: [
+			{
+				id: "D829C6B78A201DCC"
 				type: "checkmark"
-			}]
-			title: "Rich Soil Farmland"
-			x: 0.0d
-			y: 0.0d
+			}
+			]
+			title: "Ventilation Network"
+			x: 12.2d
+			y: 3.5d
+		}
+		{
+			description: ["Gather a framed cube and the saw, hammer, wrench, screwdriver, blueprint, and key. Use the kit to shape finishes without a catalogue quest."]
+			id: "9B6C167A50277704"
+			rewards: [{ count: 2, id: "78BFF5CBB1F96EBF", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "7CA1EC8B4199500D"
+				item: "framedblocks:framed_cube"
+				type: "item"
+			}
+			{
+				id: "862F0B840A2CCE5F"
+				item: "framedblocks:framed_saw"
+				type: "item"
+			}
+			{
+				id: "52E6D8B8174043BA"
+				item: "framedblocks:framed_hammer"
+				type: "item"
+			}
+			{
+				id: "EA7BA0CBF17FDB80"
+				item: "framedblocks:framed_wrench"
+				type: "item"
+			}
+			{
+				id: "86924DDD62C57F8A"
+				item: "framedblocks:framed_screwdriver"
+				type: "item"
+			}
+			{
+				id: "4446628D8433AC1B"
+				item: "framedblocks:framed_blueprint"
+				type: "item"
+			}
+			{
+				id: "1EF8BB9F879AF7C4"
+				item: "framedblocks:framed_key"
+				type: "item"
+			}
+			]
+			title: "Framing Toolkit"
+			x: 13.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["9B6C167A50277704"]
+			description: ["Apply a material skin to a frame. Match it to the surrounding build."]
+			id: "871389A6BB37C7F1"
+			rewards: [{ count: 1, id: "60EFF0CFED5BE6A4", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "E89BE224C815A35C"
+				criterion: "frame_camouflaged"
+				type: "better_content_fixes:criterion"
+			}
+			]
+			title: "Camouflage a Frame"
+			x: 15d
+			y: -3d
+		}
+		{
+			dependencies: ["9B6C167A50277704"]
+			description: ["Convert or use a representative slope, corner, or split. Shape the structure beyond cubes."]
+			id: "EAA9CFF6057C5A83"
+			rewards: [{ count: 2, id: "968E451D0521AD14", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "86555C8C7DD611EB"
+				criterion: "frame_reshaped"
+				type: "better_content_fixes:criterion"
+			}
+			]
+			title: "Shape a Build"
+			x: 15d
+			y: -1.5d
+		}
+		{
+			dependencies: ["9B6C167A50277704"]
+			description: ["Use a collapsible or custom-surface frame. Tune the visible surface to the build."]
+			id: "D088E669F454C4C1"
+			rewards: [{ count: 2, id: "52B94BB45039ECF2", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "66D5F1726A23E873"
+				criterion: "frame_custom_surface"
+				type: "better_content_fixes:criterion"
+			}
+			]
+			title: "Custom Surfaces"
+			x: 15d
+			y: 0d
+		}
+		{
+			dependencies: ["9B6C167A50277704"]
+			description: ["Use a bouncy, glowing, redstone, target, window, or storage frame. Make the framed surface do real work."]
+			id: "58C70982B1748C8E"
+			rewards: [{ count: 4, id: "4C0BEC2A9F737845", item: "createdeco:copper_coin", type: "item" }]
+			shape: "hexagon"
+			size: 1.3d
+			tasks: [
+			{
+				id: "B8851971030264A9"
+				criterion: "functional_frame_used"
+				type: "better_content_fixes:criterion"
+			}
+			]
+			title: "Functional Frames"
+			x: 17d
+			y: -1.5d
+		}
+		{
+			description: ["Build the distant Sand Filter when the workshop can support it. It is not part of First Camp."]
+			id: "9DB9622E087CCF31"
+			rewards: [{ count: 2, id: "CB61E1BE4CE99061", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [
+			{
+				id: "DD468DCA6CB68B99"
+				item: "thirst:sand_filter"
+				type: "item"
+			}
+			]
+			title: "Sand Filter"
+			x: 20d
+			y: 4d
 		}
 	]
-	title: "Homesteading and Survival"
+	title: "Homesteading"
 }

@@ -1,6 +1,1 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "minecraft:item/fermented_spider_eye"
-  }
-}
+{ "parent": "minecraft:item/generated", "textures": { "layer0": "kubejs:item/weakening_extract" } }

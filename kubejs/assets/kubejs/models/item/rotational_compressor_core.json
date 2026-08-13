@@ -1,1 +1,1 @@
-{ "parent": "minecraft:item/generated", "textures": { "layer0": "minecraft:item/compass" } }
+{ "parent": "minecraft:item/generated", "textures": { "layer0": "kubejs:item/rotational_compressor_core" } }

@@ -1,6 +1,1 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "minecraft:item/ender_eye"
-  }
-}
+{ "parent": "minecraft:item/generated", "textures": { "layer0": "kubejs:item/magician_blood_heart" } }

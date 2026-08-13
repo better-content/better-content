@@ -1,1 +1,1 @@
-{ "parent": "minecraft:item/generated", "textures": { "layer0": "minecraft:item/iron_ingot" } }
+{ "parent": "minecraft:item/generated", "textures": { "layer0": "kubejs:item/titanium_thermal_plate" } }

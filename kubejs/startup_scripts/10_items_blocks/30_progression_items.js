@@ -80,11 +80,7 @@ StartupEvents.registry('item', function (event) {
         ['kimberlite_diamond_seed', 'Kimberlite Diamond Seed'],
         ['tungsten_carbide_insert', 'Tungsten Carbide Insert'],
         ['titanium_thermal_plate', 'Titanium Thermal Plate'],
-        ['fissile_salt_blend', 'Fissile Salt Blend'],
         ['soulstone_carbon_matrix', 'Soulstone Carbon Matrix'],
-        ['redbed_signal_salt', 'Redbed Signal Salt'],
-        ['lazurite_logic_pigment', 'Lazurite Logic Pigment'],
-        ['phosphate_flux', 'Phosphate Flux'],
         ['platinum_group_residue', 'Platinum Group Residue']
     ]
 
@@ -122,6 +118,25 @@ StartupEvents.registry('item', function (event) {
         event.create(oreIntermediates[oi][0]).displayName(oreIntermediates[oi][1])
     }
 
+    var existingOreIntermediates = {}
+    for (var eoi = 0; eoi < oreIntermediates.length; eoi++) existingOreIntermediates[oreIntermediates[eoi][0]] = true
+    var oreMaterials = global.BC_RO_MATERIALS || []
+    for (var omi = 0; omi < oreMaterials.length; omi++) {
+        var oreMaterial = oreMaterials[omi]
+        var concentrate = oreMaterial.concentrate || ('kubejs:' + oreMaterial.id + '_concentrate')
+        var concentratePath = concentrate.substring('kubejs:'.length)
+        if (!existingOreIntermediates[concentratePath]) {
+            event.create(concentratePath)
+                .displayName(oreMaterial.display + ' Concentrate')
+        }
+        event.create('washed_' + concentratePath)
+            .displayName('Washed ' + oreMaterial.display + ' Concentrate')
+    }
+
+    event.create('diamond_chip').displayName('Diamond Chip')
+    event.create('emerald_chip').displayName('Emerald Chip')
+    event.create('amethyst_chip').displayName('Amethyst Chip')
+
     var magicCuttingFluids = [
         ['sanguine_acetic_cutting_fluid', 'Sanguine Acetic Cutting Fluid', 64],
         ['sanguine_sulfuric_cutting_fluid', 'Sanguine Sulfuric Cutting Fluid', 256],
@@ -138,8 +153,6 @@ StartupEvents.registry('item', function (event) {
     }
 
     var reagents = [
-        ['cut_green_tea_leaves', 'Cut Green Tea Leaves'],
-        ['roasted_coffee_reagent', 'Roasted Coffee Reagent'],
         ['mashed_salmonberries', 'Mashed Salmonberries'],
         ['charred_blazing_chili', 'Charred Blazing Chili'],
         ['green_tea_extract', 'Green Tea Extract'],
@@ -148,7 +161,6 @@ StartupEvents.registry('item', function (event) {
         ['brine_extract', 'Brine Extract'],
         ['rose_hip_extract', 'Rose Hip Extract'],
         ['heatproof_extract', 'Heatproof Extract'],
-        ['fortifying_extract', 'Fortifying Extract'],
         ['fermented_pomegranate_extract', 'Fermented Pomegranate Extract'],
         ['toxic_extract', 'Toxic Extract'],
         ['leaping_extract', 'Leaping Extract'],
@@ -166,33 +178,4 @@ StartupEvents.registry('item', function (event) {
         event.create(reagents[r][0]).displayName(reagents[r][1])
     }
 
-    var arsManuscripts = [
-        ['manuscript_touch', 'Touch Manuscript'],
-        ['manuscript_self', 'Self Manuscript'],
-        ['manuscript_projectile', 'Projectile Manuscript'],
-        ['manuscript_break', 'Break Manuscript'],
-        ['manuscript_harm', 'Harm Manuscript'],
-        ['manuscript_light', 'Light Manuscript'],
-        ['manuscript_interact', 'Interact Manuscript'],
-        ['manuscript_ignite', 'Ignite Manuscript'],
-        ['manuscript_launch', 'Launch Manuscript'],
-        ['manuscript_harvest', 'Harvest Manuscript'],
-        ['manuscript_leap', 'Leap Manuscript'],
-        ['manuscript_freeze', 'Freeze Manuscript'],
-        ['manuscript_glide', 'Glide Manuscript'],
-        ['manuscript_blink', 'Blink Manuscript'],
-        ['manuscript_extract', 'Extract Manuscript'],
-        ['manuscript_exchange', 'Exchange Manuscript'],
-        ['manuscript_redstone_signal', 'Redstone Signal Manuscript'],
-        ['manuscript_extend_time', 'Extend Time Manuscript'],
-        ['manuscript_wall', 'Wall Manuscript'],
-        ['manuscript_linger', 'Linger Manuscript'],
-        ['manuscript_lightning', 'Lightning Manuscript'],
-        ['manuscript_wither', 'Wither Manuscript']
-    ]
-
-    for (var a = 0; a < arsManuscripts.length; a++) {
-        event.create(arsManuscripts[a][0])
-            .displayName(arsManuscripts[a][1])
-    }
 })

@@ -14764,314 +14764,6 @@
       ]
     },
     {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_blink",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_blink",
-      "authority": "exact:slate_t3_infused/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:214"
-      ],
-      "blood_era": "slate_t3_infused",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_break",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_break",
-      "authority": "exact:slate_t1_blank/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:155"
-      ],
-      "blood_era": "slate_t1_blank",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_exchange",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_exchange",
-      "authority": "exact:slate_t3_infused/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:224"
-      ],
-      "blood_era": "slate_t3_infused",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_extend_time",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_extend_time",
-      "authority": "exact:slate_t3_infused/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:235"
-      ],
-      "blood_era": "slate_t3_infused",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_extract",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_extract",
-      "authority": "exact:slate_t3_infused/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:219"
-      ],
-      "blood_era": "slate_t3_infused",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_freeze",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_freeze",
-      "authority": "exact:slate_t3_infused/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:203"
-      ],
-      "blood_era": "slate_t3_infused",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_glide",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_glide",
-      "authority": "exact:slate_t3_infused/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:209"
-      ],
-      "blood_era": "slate_t3_infused",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_harm",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_harm",
-      "authority": "exact:slate_t2_reinforced/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:161"
-      ],
-      "blood_era": "slate_t2_reinforced",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_harvest",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_harvest",
-      "authority": "exact:slate_t2_reinforced/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:191"
-      ],
-      "blood_era": "slate_t2_reinforced",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_ignite",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_ignite",
-      "authority": "exact:slate_t2_reinforced/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:179"
-      ],
-      "blood_era": "slate_t2_reinforced",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_interact",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_interact",
-      "authority": "exact:slate_t2_reinforced/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:173"
-      ],
-      "blood_era": "slate_t2_reinforced",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_launch",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_launch",
-      "authority": "exact:slate_t2_reinforced/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:185"
-      ],
-      "blood_era": "slate_t2_reinforced",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_leap",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_leap",
-      "authority": "exact:slate_t2_reinforced/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:197"
-      ],
-      "blood_era": "slate_t2_reinforced",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_light",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_light",
-      "authority": "exact:slate_t1_blank/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:167"
-      ],
-      "blood_era": "slate_t1_blank",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_lightning",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_lightning",
-      "authority": "exact:slate_t4_demonic/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:251"
-      ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_linger",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_linger",
-      "authority": "exact:slate_t4_demonic/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:246"
-      ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_projectile",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_projectile",
-      "authority": "exact:slate_t1_blank/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:137"
-      ],
-      "blood_era": "slate_t1_blank",
-      "branch": "ars",
-      "weight_class": "decor_theme"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_redstone_signal",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_redstone_signal",
-      "authority": "exact:slate_t3_infused/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:229"
-      ],
-      "blood_era": "slate_t3_infused",
-      "branch": "ars",
-      "weight_class": "decor_theme"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_self",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_self",
-      "authority": "exact:slate_t1_blank/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:149"
-      ],
-      "blood_era": "slate_t1_blank",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_touch",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_touch",
-      "authority": "exact:slate_t1_blank/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:143"
-      ],
-      "blood_era": "slate_t1_blank",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_wall",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_wall",
-      "authority": "exact:slate_t4_demonic/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:241"
-      ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "ars",
-      "weight_class": "decor_theme"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:kubejs:manuscript_wither",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:manuscript_wither",
-      "authority": "exact:slate_t4_demonic/ars",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/127_ars_manuscript_progression.js:256"
-      ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "ars",
-      "weight_class": "structural_progression"
-    },
-    {
       "id": "crafted:event.custom(kubejs):kubejs:master_blood_heart",
       "kind": "crafted",
       "mod": "kubejs",
@@ -15456,7 +15148,9 @@
       "output": "arcane_chunk_loaders:flux_chunk_anchor",
       "authority": "tag:arcane_chunk_loaders:magic_catalysts",
       "surface_type": "minecraft:crafting_shaped",
-      "evidence": ["kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"],
+      "evidence": [
+        "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+      ],
       "blood_era": "slate_t1_blank",
       "branch": "cross_magic",
       "weight_class": "utility_support"
@@ -15468,7 +15162,9 @@
       "output": "arcane_chunk_loaders:kinetic_chunk_anchor",
       "authority": "tag:arcane_chunk_loaders:magic_catalysts",
       "surface_type": "minecraft:crafting_shaped",
-      "evidence": ["kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"],
+      "evidence": [
+        "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+      ],
       "blood_era": "slate_t1_blank",
       "branch": "cross_magic",
       "weight_class": "utility_support"
@@ -15480,7 +15176,9 @@
       "output": "arcane_chunk_loaders:source_chunk_anchor",
       "authority": "tag:arcane_chunk_loaders:magic_catalysts",
       "surface_type": "minecraft:crafting_shaped",
-      "evidence": ["kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"],
+      "evidence": [
+        "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+      ],
       "blood_era": "slate_t1_blank",
       "branch": "cross_magic",
       "weight_class": "utility_support"
@@ -15492,7 +15190,9 @@
       "output": "arcane_chunk_loaders:lifeforce_chunk_anchor",
       "authority": "tag:arcane_chunk_loaders:magic_catalysts",
       "surface_type": "minecraft:crafting_shaped",
-      "evidence": ["kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"],
+      "evidence": [
+        "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+      ],
       "blood_era": "slate_t1_blank",
       "branch": "cross_magic",
       "weight_class": "utility_support"
@@ -15504,7 +15204,9 @@
       "output": "arcane_chunk_loaders:pressure_chunk_anchor",
       "authority": "tag:arcane_chunk_loaders:magic_catalysts",
       "surface_type": "minecraft:crafting_shaped",
-      "evidence": ["kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"],
+      "evidence": [
+        "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+      ],
       "blood_era": "slate_t1_blank",
       "branch": "cross_magic",
       "weight_class": "utility_support"
@@ -15516,7 +15218,9 @@
       "output": "arcane_chunk_loaders:soul_chunk_anchor",
       "authority": "tag:arcane_chunk_loaders:magic_catalysts",
       "surface_type": "minecraft:crafting_shaped",
-      "evidence": ["kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"],
+      "evidence": [
+        "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+      ],
       "blood_era": "slate_t1_blank",
       "branch": "cross_magic",
       "weight_class": "utility_support"
@@ -15528,7 +15232,9 @@
       "output": "arcane_chunk_loaders:spirit_chunk_anchor",
       "authority": "tag:arcane_chunk_loaders:magic_catalysts",
       "surface_type": "minecraft:crafting_shaped",
-      "evidence": ["kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"],
+      "evidence": [
+        "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+      ],
       "blood_era": "slate_t1_blank",
       "branch": "cross_magic",
       "weight_class": "utility_support"
@@ -15540,7 +15246,9 @@
       "output": "arcane_chunk_loaders:aureal_chunk_anchor",
       "authority": "tag:arcane_chunk_loaders:magic_catalysts",
       "surface_type": "minecraft:crafting_shaped",
-      "evidence": ["kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"],
+      "evidence": [
+        "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+      ],
       "blood_era": "slate_t1_blank",
       "branch": "cross_magic",
       "weight_class": "utility_support"

@@ -1,1 +1,1 @@
-{ "parent": "minecraft:item/generated", "textures": { "layer0": "bloodmagic:item/advancedcuttingfluid" } }
+{ "parent": "minecraft:item/generated", "textures": { "layer0": "kubejs:item/sanguine_nitric_cutting_fluid" } }

@@ -22,6 +22,43 @@ The live FTB Quests repo surface keeps `Basic Tools` and `Metals and Metal Tools
 
 Integration review is deliberately bounded. The former whole-registry (19k-item) intake and adjudication process is retired and is not a release gate. `N = 3 + ceil(E / 100)` only nominates candidate anchors for a mod family; every returned candidate receives an individual, human-recorded disposition with concrete acquisition, consumer, bypass, and progression evidence. Generated summaries are evidence aids, never automatic acceptance or release approval.
 
+## World-Spine Integration Review
+
+The world-spine model in `progression.md` is presently diagnostic. The following are durable source observations, not automated verdicts or a claim that migration has been approved.
+
+### Supporting Implementations
+
+- Realistic Ores, TConstruct material formation, finite deposits, processing losses, byproducts, tailings, pollution, pressure, and gas containment give Matter provenance and consequences instead of generic tier tokens.
+- Ore bands, biome climate, dimension-specific resources, physical routes, and local infrastructure make Place affect what can be found and done.
+- Diet, thirst, temperature, agriculture, revival, permanent-ish spawn, life-earned RPG Stats, and Still-Beating Hearts make Life embodied and finite.
+- Traces records grounded footprints, persistent notes, bloodstains, and death echoes whose exposure to water and rain matters. This already supplies the perceptual beginning of Traces Into Lineage.
+- Warband recruitment, territory, casualties, retained equipment, learning, withdrawal, and recovery are a strong Society crossing because actors transform local Matter and remember consequences.
+- Arcane chunk anchors accept proof from several traditions and then specialize by built infrastructure. That is a crossing between peers rather than universal parenting by one tradition.
+
+### Structural Tensions
+
+| Current implementation | Tension under the working model |
+| --- | --- |
+| `tech_parenting.json` governs non-magic craftables, while `magic_parenting.json` is explicitly Blood-parented. | “Tech” and aesthetic “magic” are being used as causal catch-alls rather than distinguishing roots, practices, and crossings. |
+| `80_recipe_policy/10_no_complex_grid_defaults.js` routes magic-namespace defaults toward Blood Magic alchemy and non-magic shapeless defaults mainly toward Create mixing. | Namespace appearance chooses authority even when the recipe's actual cause may be Matter, Fonts, Traces, or a crossing. |
+| `80_magic_progression_blood_slate_gates.js`, `125_magic_power_spike_gates.js`, `145_vanillish_recipe_expert_pass.js`, and the parenting manifest use Blood slates across Hexerei, Occultism, Ars, Iron's, Goety, and other magical infrastructure. | Blood acts as a universal magic depth ladder, preventing other roots and formalisms from demonstrating independent native arcs. |
+| The first Blood Altar consumes a Still-Beating Heart and Otherside cobbled sculk stone. | Blood's entry depends on a Font-origin Place proof instead of being independently reachable from its own premise. |
+| Dimension Drink fonts store Blood Magic life essence, spend it to begin runs, and accept Still-Beating Hearts to improve regeneration. | Fonts are mechanically narrated through Blood even though contact, altered perception, correspondence, and pact supply a distinct premise. |
+| The World Condenser uses Blood slates, Blood Altar work, and a bound Blood Orb. | Prestige and Lineage—the proposed conclusion of Traces—are presently parented by Blood rather than earned through perception, inscription, preservation, and inheritance. |
+| Basic TConstruct grout accepts early Font-dimension aggregates but no ordinary Overworld clay route. | Matter's first metallurgy lesson is subordinated to magical travel instead of standing independently and later crossing with Place or Fonts. |
+| Formal spell depth largely follows the Blood slate ladder. | Traces has no authored authority over observation, notation, reproducibility, or inheritance, while Blood supplies both phenomenon and recording depth. |
+| Protection Pixel gear, backpack utilities, impossible-machine components, AE2/chemistry routes, and other non-Blood outputs sometimes consume late slates. | Some may be legitimate Blood crossings, but the recipe must express Blood's life/death premise rather than use a slate as a generic endgame token. |
+| The Adventure package combines dimensions, combat, trade, villages, wares, and logistics. | This remains useful presentation, but it crosses Place, Life, Society, Matter, and History and should not be treated as a single causal spine. |
+
+### Direction Suggested by the Model
+
+- Preserve the player-facing tech, magic, and adventure packages where they improve salience, but assign recipe authority from causal premise rather than namespace or aesthetic.
+- Give Blood, Fonts, and Traces Into Lineage independent entries and complete solo arcs before designing cross-root capstones.
+- Let formal magic receive two different kinds of proof where relevant: Traces proof for recording and reproducibility, and native Blood or Fonts proof for the extraordinary domain being performed.
+- Keep ordinary schematics, computers, networks, and stored data in Matter unless they interact with the world's literal memory. Publishing or inheriting a world-memory artifact may cross into Traces.
+- Retain deliberate cross-root recipes when both premises remain visible. A blood-infused industrial material can be Matter × Blood; it should not imply that all advanced Matter is Blood-parented.
+- Treat the dependency cycle among Blood entry, Font operation, and Prestige as the highest-priority design question if this working model is adopted. Do not mechanically remove the crossings until each root has a viable replacement entry and conclusion.
+
 ## Materials And Chemistry
 
 Cross-mod standardization is moderate rather than total:
@@ -32,17 +69,22 @@ Cross-mod standardization is moderate rather than total:
 
 Deposit processing is multi-surface:
 
+The maintained rationale, invariants, yield semantics, and extension checklist live in
+[`realistic_ore_processing.md`](realistic_ore_processing.md). The summary below names the
+active implementation surfaces and should remain consistent with that contract.
+
 - Realistic Ores deposits normally drop one non-placeable, host-independent ore chunk;
   Fortune does not alter that loot path, while Silk Touch preserves the exact native or
   Excavated Variants host block. Create crushing separates an ore block into its chunk
   and host stone, the same pair shapelessly reconstructs it, and crushing the chunk
-  produces two crushed deposit items plus a 50% chance of a third.
+  produces one crushed deposit item plus three independent 30% bonus rolls.
 
 - `49_realistic_ores_catalog.js`: the 22-deposit processing catalogue.
-- `60_worldgen/10_r_ores_melted.js`: direct TCon baseline, including honest pack-owned molten titanium and thorium; coal has no fictional metal melt.
-- `50_create_deposit_preprocessing.js`: deterministic water beneficiation with fixed products, explicit mineral tailings, and returned grinding media.
-- `51_surface_sample_processing.js`: eight survey samples to one matching crushed feed; oil seeps remain indicators.
-- `55_realistic_ores_identity_outputs.js`: one curated acid/ball assay per chemically suitable deposit, with deterministic ball return.
+- `50_create_deposit_preprocessing.js`: curated water or solvent separation into constituent-specific concentrates, probabilistic coproducts, explicit mineral tailings, and identity-specific grinding-ball wear.
+- `51_surface_sample_processing.js`: one survey sample to its matching chunk; oil seeps remain indicators.
+- `52_realistic_ores_excavated_host_cycles.js`: exact substrate recovery and reconstruction for runtime Excavated Variants hosts.
+- `55_realistic_ores_identity_outputs.js`: unheated manufacture of eight parallel grinding-media identities and their progression components.
+- `57_realistic_ores_smelting_matrix.js`: the single furnace, Smeltery, and Foundry authority for chunks, crushed feeds, separated concentrates, and washed concentrates.
 - `59_reachable_acid_authoring.js`: Airtight PNCR oxygen/contact-process acids plus open kelp-salt and phosphate preparation.
 - `57_grown_material_acid_ball_processing.js`: plant, fungus, honeycomb, and animal acid/ball extraction.
 - `56_alchemistry_dissolver_create_port.js`, `58_create_pncr_molecular_synthesis.js`, and `59_formulaic_synthesis_magic_routes.js`: Create/PNCR/magic-facing chemistry parity.
@@ -53,7 +95,7 @@ Alchemistry/ChemLib content informs material identity, but the authored progress
 
 `kubejs/config/chemistry_authority/` is the Wave 1 authority scaffold for that standard. Its compiler derives 293 ChemLib species and exact lifecycle rows for all 802 item IDs and 105 block IDs from the retained live registry dump; 273 species compositions are derivable from the maintained dissolver evidence and the remaining 20 stay explicitly unresolved. Structural validation passing does not mean the chemistry system is complete. Release validation continues to fail until every form has runtime behavior and philosophy-review evidence, every species has isotope data, fixed sources and reactions are accepted, live non-recipe state edges are imported, and the gas adapters and legacy migration are proven.
 
-Ore chemistry is deliberately bounded. Every deposit has one fixed water-beneficiation assay; only chemically suitable deposits have a single curated leach. Grinding balls control equipment tier and cycle time rather than output identity, and every recipe returns its ball. The six solvent families are reachable: native PneumaticCraft fermentation supplies tagged ethanol; water electrolysis supplies oxygen; sulfur and a reusable vanadium contact catalyst supply sulfuric acid; sulfuric acid then drives kelp-salt hydrochloric acid, saltpeter nitric acid, and phosphate-rock phosphoric acid. Acetic acid oxidizes tagged ethanol. Tailings remain pack-owned waste with only a low-value heated clay-recovery sink.
+Ore chemistry is deliberately bounded. Each deposit declares a geological assay and two or three valid ball/solvent routes rather than accepting every combination. Four crushed feeds always separate into four primary concentrates; media and solvent identity unlock guaranteed major coproducts or independent 50% minor, 20% trace, and 5% precious rolls. Balls are parallel opportunity-cost choices with 55% to 91% identity-specific survival rather than a linear tier ladder. Water routes use 500 mB water; leaches use 250 mB water plus 250 mB solvent. Separation and washing have no Create basin heat variants. The six solvent families are reachable: sugar fermentation supplies tagged ethanol; water electrolysis supplies oxygen; sulfur and a reusable vanadium contact catalyst supply sulfuric acid; sulfuric acid then drives kelp-salt hydrochloric acid, saltpeter nitric acid, and phosphate-rock phosphoric acid. Acetic acid oxidizes tagged ethanol. Tailings remain pack-owned waste with only a low-value clay-recovery sink.
 
 Gas containment begins at the Airtight casing milestone, not at the earlier pressure-seal bootstrap. Before Airtight, incidental loose-gas outputs should vent into hazardous chemical clouds and cannot be used as ordinary open recipe ingredients. The approved authority model retains every ChemLib bucket and phase-block registration: a gas bucket is a sealed measured reagent container, while placement or release must transfer its conserved contents into Latent rather than create a second persistent fluid-gas store. Registered gas phase blocks are transient compatibility and interaction surfaces backed by Latent state; ordinary chemical liquids remain physical fluids. The current gas implementation has not yet proven this full-form lifecycle or mixed-gas behavior, so those rows remain release blockers rather than accepted content.
 
@@ -65,9 +107,9 @@ The active pack carries a narrow set of standalone KubeJS crafting intermediates
 
 Non-grown infinite matter is not an authored resource source. The versioned `quarantined_items.json` manifest is shared by server recipe removal and client JEI/EMI hiding; `30_remove_items.js` also removes passive ore/matter generators such as Occultism miners, Blood Magic dimension drink, Ars conjured islands/fluid glyph routes, and Create Diesel lava fermentation. Create bottomless draining and finite-water biome refills are disabled in config; villager buy restocks only skip knowledge and deep-progression outputs such as experience bottles, echo shards, and sculk catalysts in `35_villager_trades/10_coin_villager_trades.js`. Renewable grown sources such as crops, trees, animals, and ordinary biological drops remain valid economy inputs.
 
-The lava-depth material loop is a late exception within the Overworld geology stack. Tectonic extends terrain to Y -128; `datapacks/realistic_ores_lava_depths` places only lava-exposed Realistic Ores osmiridium lava sulfide in the Y -128 to 0 band. Osmiridium feeds bounded beneficiation and nitric leaching, TCon ore melting, Protection Pixel Tosaki gear, and selected post-AE2 utility. Uranium and thorium are unrelated full-height, rock-hosted strategic ADLODS deposits.
+The lava-depth material loop is a late exception within the Overworld geology stack. Tectonic extends terrain to Y -128; `datapacks/realistic_ores_lava_depths` places only lava-exposed Realistic Ores osmiridium lava sulfide in the Y -128 to 0 band. Osmiridium feeds bounded separation, nitric or phosphoric leaching, TCon ore melting, Protection Pixel Tosaki gear, and selected post-AE2 utility. Uranium and thorium are unrelated full-height, rock-hosted strategic ADLODS deposits.
 
-Vanilla Overworld ore placed features are removed by `datapacks/worldgen_compat_fixes`; their intended value is represented by the fixed geological assays in the Realistic Ores catalogue, not a solvent/media bonus matrix. Realistic Ores also owns gravel ore coverage: `defaultresources/excavated_variants` registers gravel as an Excavated Variants substrate, `defaultresources/excavated_variants/excavated_variants/variants/realistic_ores.json5` emits `excavated_variants:gravel_*` variants for custom deposits, and `datapacks/worldgen_compat_fixes/data/realistic_ores/worldgen/configured_feature` adds gravel replacement targets to the Realistic Ores stone features.
+Vanilla Overworld ore placed features are removed by `datapacks/worldgen_compat_fixes`; their intended value is represented by geological assays and curated solvent/media choices in the Realistic Ores catalogue. Realistic Ores also owns gravel ore coverage: `defaultresources/excavated_variants` registers gravel as an Excavated Variants substrate, `defaultresources/excavated_variants/excavated_variants/variants/realistic_ores.json5` emits `excavated_variants:gravel_*` variants for custom deposits, and `datapacks/worldgen_compat_fixes/data/realistic_ores/worldgen/configured_feature` adds gravel replacement targets to the Realistic Ores stone features.
 
 ## Create And Tinkers
 

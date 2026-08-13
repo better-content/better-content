@@ -163,62 +163,6 @@
       }
     }
   ],
-  "ore_contract": {
-    "furnace_nuggets": 4,
-    "melter_millibuckets": 90,
-    "foundry_millibuckets": 270,
-    "byproduct_millibuckets": 45,
-    "ores": [
-      {
-        "id": "ironstone",
-        "input_tag": "kubejs:deposit_blocks/ironstone",
-        "nugget": "minecraft:iron_nugget",
-        "molten_tag": "forge:molten_iron",
-        "byproduct_tag": "forge:molten_nickel",
-        "temperature": 800
-      },
-      {
-        "id": "copper_sulfide",
-        "input_tag": "kubejs:deposit_blocks/copper_sulfide",
-        "nugget": "tconstruct:copper_nugget",
-        "molten_tag": "forge:molten_copper",
-        "byproduct_tag": "forge:molten_iron",
-        "temperature": 500
-      },
-      {
-        "id": "tin",
-        "input_tag": "kubejs:deposit_blocks/tin",
-        "nugget": "chemlib:tin_nugget",
-        "molten_tag": "forge:molten_tin",
-        "byproduct_fluid": "tconstruct:molten_quartz",
-        "temperature": 225
-      },
-      {
-        "id": "zinc",
-        "input_tag": "kubejs:deposit_blocks/zinc",
-        "nugget": "create:zinc_nugget",
-        "molten_tag": "forge:molten_zinc",
-        "byproduct_tag": "forge:molten_lead",
-        "temperature": 420
-      },
-      {
-        "id": "lead_zinc_vein",
-        "input_tag": "kubejs:deposit_blocks/lead_zinc_vein",
-        "nugget": "chemlib:lead_nugget",
-        "molten_tag": "forge:molten_lead",
-        "byproduct_tag": "forge:molten_zinc",
-        "temperature": 420
-      },
-      {
-        "id": "bauxite_laterite",
-        "input_tag": "kubejs:deposit_blocks/bauxite_laterite",
-        "nugget": "chemlib:aluminum_nugget",
-        "molten_tag": "forge:molten_aluminum",
-        "byproduct_tag": "forge:molten_iron",
-        "temperature": 660
-      }
-    ]
-  },
   "forbidden_power_recipe_ids": [
     "kubejs:casing_ecosystem/brass/steam_engine",
     "kubejs:chemistry/existing/pncr_pressure/create/steam_engine_nickel_condenser",

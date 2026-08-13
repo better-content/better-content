@@ -44,12 +44,6 @@ function bcFormalGlyph(event, spec) {
     }).id('kubejs:formal_magic/ars/glyph/' + name)
 }
 
-var BC_LEGACY_ARS_MANUSCRIPTS = [
-    'touch', 'self', 'projectile', 'break', 'harm', 'light', 'interact', 'ignite',
-    'launch', 'harvest', 'leap', 'freeze', 'glide', 'blink', 'extract', 'exchange',
-    'redstone_signal', 'extend_time', 'wall', 'linger', 'lightning', 'wither'
-]
-
 ServerEvents.recipes(function (event) {
     var glyphs = BC_FORMAL_MAGIC.glyphs || []
     for (var i = 0; i < glyphs.length; i++) {
@@ -106,10 +100,4 @@ ServerEvents.recipes(function (event) {
 
     for (var g = 0; g < glyphs.length; g++) bcFormalGlyph(event, glyphs[g])
 
-    // Existing playtest inventories retain value without keeping the old partial route alive.
-    for (var m = 0; m < BC_LEGACY_ARS_MANUSCRIPTS.length; m++) {
-        var legacy = BC_LEGACY_ARS_MANUSCRIPTS[m]
-        event.shapeless('ars_nouveau:glyph_' + legacy, ['kubejs:manuscript_' + legacy])
-            .id('kubejs:formal_magic/ars/legacy_manuscript/' + legacy)
-    }
 })

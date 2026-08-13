@@ -97,11 +97,6 @@ function bcCreateTconValidateContract() {
     if (BC_CREATE_TCON.forbidden_metallurgy_recipe_ids.length !== 10) {
         bcCreateTconFail('metallurgy bypass denylist must contain exactly ten audited recipe IDs')
     }
-    for (var o = 0; o < BC_CREATE_TCON.ore_contract.ores.length; o++) {
-        var ore = BC_CREATE_TCON.ore_contract.ores[o]
-        if (!bcCreateTconTagExists(ore.input_tag)) bcCreateTconFail('ore contract references empty tag #' + ore.input_tag)
-        if (!bcCreateTconItemExists(ore.nugget)) bcCreateTconFail('ore contract references missing nugget ' + ore.nugget)
-    }
 }
 
 function bcCreateTconFluid(ref, amount, rate) {
@@ -271,41 +266,4 @@ ServerEvents.recipes(function (event) {
         }).id('kubejs:create_tcon_bootstrap/alloy/' + alloy.id)
     })
 
-    // Direct ore has one explicit economy: furnace recovery, Melter primary metal,
-    // or Foundry-scale metal plus a geologically meaningful byproduct.
-    var oreContract = BC_CREATE_TCON.ore_contract
-    for (var o = 0; o < oreContract.ores.length; o++) {
-        var ore = oreContract.ores[o]
-        var input = '#' + ore.input_tag
-        event.remove({ type: 'minecraft:smelting', input: input })
-        event.remove({ type: 'minecraft:blasting', input: input })
-        event.remove({ id: 'kubejs:tconstruct/melting/' + ore.id })
-        event.remove({ id: 'kubejs:tconstruct/ore_melting/' + ore.id })
-
-        event.smelting(Item.of(ore.nugget, oreContract.furnace_nuggets), input)
-            .xp(0.1).cookingTime(240)
-            .id('kubejs:create_tcon_bootstrap/ore/furnace/' + ore.id)
-        event.blasting(Item.of(ore.nugget, oreContract.furnace_nuggets), input)
-            .xp(0.1).cookingTime(120)
-            .id('kubejs:create_tcon_bootstrap/ore/blasting/' + ore.id)
-
-        event.custom({
-            type: 'tconstruct:melting',
-            ingredient: { tag: ore.input_tag },
-            result: { tag: ore.molten_tag, amount: oreContract.melter_millibuckets },
-            temperature: ore.temperature,
-            time: 120
-        }).id('kubejs:create_tcon_bootstrap/ore/melter/' + ore.id)
-
-        var byproductRef = ore.byproduct_tag ? { tag: ore.byproduct_tag } : { fluid: ore.byproduct_fluid }
-        event.custom({
-            type: 'tconstruct:ore_melting',
-            ingredient: { tag: ore.input_tag },
-            result: { tag: ore.molten_tag, amount: oreContract.foundry_millibuckets },
-            byproducts: [bcCreateTconFluid(byproductRef, oreContract.byproduct_millibuckets, 'metal')],
-            rate: 'metal',
-            temperature: ore.temperature,
-            time: 180
-        }).id('kubejs:create_tcon_bootstrap/ore/foundry/' + ore.id)
-    }
 })

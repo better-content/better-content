@@ -76,3 +76,6 @@ docs/client_join_probe/
 /notes/
 
 dist/
+/fresh-dist/
+/*-dist/
+/dist-*/

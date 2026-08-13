@@ -15,6 +15,11 @@ resources
 generated
 generated/custom-mod-sources/
 exports
+dist
+dist-*
+fresh-dist
+*-dist
+*-dist-*
 .pg-native
 logs
 /libraries/
@@ -30,6 +35,11 @@ server-template
 /user_jvm_args.txt
 forge-*-installer.jar
 forge-*-installer.jar.log
+# These third-party mods are represented by their .pw.toml manifests. Keep the
+# loose cached copies out of packwiz exports; only locally built custom mods are
+# bundled as JAR overrides.
+/mods/ftbbackups2-forge-1.20-1.0.23.jar
+/mods/polylib-forge-2000.0.3-build.143.jar
 liboc2rnet.so
 patchouli_data.json
 kubejs/recipe_dumps

@@ -119,11 +119,11 @@ package_dist() {
   client_dir="$release_dir/client"
   server_dir="$release_dir/server"
   stage="$server_dir/server-tree/better-content-server"
-  mkdir -p "$client_dir" "$stage"
   local escaped_version
   escaped_version="$(printf '%s' "$version" | sed 's/[&|\\]/\\&/g')"
   sed -i -E "0,/^version *=/{s|^version *=.*$|version = \"$escaped_version\"|}" "$ROOT/pack.toml"
   (cd "$ROOT" && packwiz refresh >/dev/null)
+  mkdir -p "$client_dir" "$stage"
   (cd "$ROOT" && packwiz curseforge export -o "$client_dir/better-content.zip" -s client -y)
   stage_side server "$stage"
   install_server "$stage" false 25565

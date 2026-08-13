@@ -1,7 +1,0 @@
-{
-  "type": "dynamictrees:tree",
-  "config": {
-    "species": "bcdimtrees:wigglewood",
-    "radius": 3
-  }
-}

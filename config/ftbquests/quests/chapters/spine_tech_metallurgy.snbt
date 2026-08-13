@@ -269,7 +269,7 @@
 		}
 		{
 			dependencies: ["1995A1E644568D46"]
-			description: ["Mix blank schematics, prepare a quill and table, then compact the Schematicannon in the hand-cranked Press and Basin. Prestige lineage downloads preserve plans only: the cannon still consumes gunpowder and every required block."]
+			description: ["Mix blank schematics, prepare a quill and table, then compact the Schematicannon in the hand-cranked Press and Basin. World Lifecycle Manager lineage downloads preserve plans only: the cannon still consumes gunpowder and every required block."]
 			icon: "create:schematicannon"
 			id: "E27886E92A64F7B0"
 			shape: "rsquare"

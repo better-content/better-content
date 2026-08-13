@@ -392,7 +392,7 @@
 			id: "E6A0291897193FB8"
 			tasks: [{
 				id: "876015D4D16F4251"
-				item: "bcfixes:rain_collector"
+				item: "better_content_fixes:rain_collector"
 				type: "item"
 			}]
 			x: 0.0d
@@ -518,7 +518,7 @@
 		}
 		{
 			description: ["Unearthed grassy regolith can be hoed directly into matching farmland when the space above is clear. It supports ordinary crop-type plants and returns to its matching regolith when it decays."]
-			icon: "bcfixes:stone_regolith_farmland"
+			icon: "better_content_fixes:stone_regolith_farmland"
 			id: "36E428FA17A94E0F"
 			tasks: [{
 				id: "C29B5250355B0C5C"

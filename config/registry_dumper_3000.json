@@ -619,7 +619,7 @@
   "reports": {
     "writeGlobalSummary": true,
     "writePerRuleSummaries": true,
-    "printStackTracesToConsole": true
+    "printStackPlayer TracesToConsole": true
   },
   "performance": {
     "tryListResourceStacksWhenAvailable": false

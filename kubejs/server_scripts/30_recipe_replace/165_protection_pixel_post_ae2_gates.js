@@ -110,7 +110,7 @@ ServerEvents.recipes(function (event) {
         ingredients: [
             { item: 'minecraft:white_terracotta' },
             { item: 'minecraft:netherite_scrap' },
-            { item: 'heatsync:heat_pipe' },
+            { item: 'heat_sync:heat_pipe' },
             { item: 'chemlib:thorium_plate' },
             { item: 'chemlib:uranium_plate' }
         ],
@@ -129,7 +129,7 @@ ServerEvents.recipes(function (event) {
     ], {
         S: { item: 'kubejs:sky_steel_sheet' },
         Q: { item: 'kubejs:sky_steel_sheet' },
-        L: { item: 'heatsync:heat_pipe' },
+        L: { item: 'heat_sync:heat_pipe' },
         A: { item: 'protection_pixel:alloyarmorplate' },
         F: { item: 'latent_chemlib:gas_reaction_chamber' },
         C: { item: 'kubejs:impossible_machine_casing' }
@@ -142,7 +142,7 @@ ServerEvents.recipes(function (event) {
         'FQCQF',
         'HFHFH'
     ], {
-        H: { item: 'heatsync:heat_pipe' },
+        H: { item: 'heat_sync:heat_pipe' },
         F: { item: 'latent_chemlib:gas_reaction_chamber' },
         Q: { item: 'kubejs:ae_logic_package' },
         C: { item: 'kubejs:impossible_machine_casing' },
@@ -155,7 +155,7 @@ ServerEvents.recipes(function (event) {
         'RHR'
     ], {
         R: { item: 'chemlib:ruthenium_plate' },
-        H: { item: 'heatsync:coolant_exchanger' },
+        H: { item: 'heat_sync:coolant_exchanger' },
         Q: { item: 'kubejs:ae_logic_package' },
         E: { item: 'protection_pixel:powerengine' }
     }, 'kubejs:create/mechanical_crafting/protection_pixel/heat_overlock_mechanism')
@@ -310,7 +310,7 @@ ServerEvents.recipes(function (event) {
         'STS'
     ], {
         H: { item: 'protection_pixel:heatresistantceramicsheet' },
-        O: { item: 'realisticores:crushed_osmiridium_lava_sulfide_ore' },
+        O: { item: 'realistic_ores:crushed_osmiridium_lava_sulfide_ore' },
         Q: { item: 'kubejs:ae_logic_package' },
         L: { item: 'protection_pixel:linkplate_helmet' },
         S: { item: 'protection_pixel:smallnetheritesheet' },
@@ -324,7 +324,7 @@ ServerEvents.recipes(function (event) {
         'SOS'
     ], {
         H: { item: 'protection_pixel:heatresistantceramicsheet' },
-        O: { item: 'realisticores:crushed_osmiridium_lava_sulfide_ore' },
+        O: { item: 'realistic_ores:crushed_osmiridium_lava_sulfide_ore' },
         Q: { item: 'kubejs:ae_logic_package' },
         L: { item: 'protection_pixel:linkplate_chestplate' },
         A: { item: 'protection_pixel:heatoverlockingmechanism' },
@@ -340,7 +340,7 @@ ServerEvents.recipes(function (event) {
     ], {
         H: { item: 'protection_pixel:heatresistantceramicsheet' },
         Q: { item: 'kubejs:ae_logic_package' },
-        O: { item: 'realisticores:crushed_osmiridium_lava_sulfide_ore' },
+        O: { item: 'realistic_ores:crushed_osmiridium_lava_sulfide_ore' },
         L: { item: 'protection_pixel:linkplate_leggings' },
         S: { item: 'protection_pixel:smallnetheritesheet' },
         I: { item: 'chemlib:iridium_plate' }

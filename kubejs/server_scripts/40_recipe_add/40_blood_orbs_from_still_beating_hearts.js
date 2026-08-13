@@ -20,7 +20,7 @@ function addTypedHeartOrbRecipe(event, idPath, output, input, altarTier, syphon,
 }
 
 ServerEvents.recipes(function (event) {
-    if (!Platform.isLoaded('bloodmagic') || !Platform.isLoaded('rpgstats')) return
+    if (!Platform.isLoaded('bloodmagic') || !Platform.isLoaded('rpg_stats')) return
     if (!event.recipes.bloodmagic || !event.recipes.bloodmagic.altar) {
         console.warn('[blood-orbs-from-hearts] Blood Magic KubeJS addon API not found; skipping.')
         return
@@ -31,7 +31,7 @@ ServerEvents.recipes(function (event) {
     })
 
     addTypedHeartOrbRecipe(event, '10_typed_heart_to_weak_orb', 'bloodmagic:weakbloodorb', 'kubejs:weak_blood_heart', 1, 2000, 20, 20)
-    addTypedHeartOrbRecipe(event, '11_still_beating_heart_to_weak_orb', 'bloodmagic:weakbloodorb', 'rpgstats:still_beating_heart', 1, 2400, 20, 20)
+    addTypedHeartOrbRecipe(event, '11_still_beating_heart_to_weak_orb', 'bloodmagic:weakbloodorb', 'rpg_stats:still_beating_heart', 1, 2400, 20, 20)
     addTypedHeartOrbRecipe(event, '20_typed_heart_to_apprentice_orb', 'bloodmagic:apprenticebloodorb', 'kubejs:apprentice_blood_heart', 2, 5000, 40, 40)
     addTypedHeartOrbRecipe(event, '30_typed_heart_to_magician_orb', 'bloodmagic:magicianbloodorb', 'kubejs:magician_blood_heart', 3, 25000, 70, 70)
     addTypedHeartOrbRecipe(event, '40_typed_heart_to_master_orb', 'bloodmagic:masterbloodorb', 'kubejs:master_blood_heart', 4, 60000, 90, 90)

@@ -2,4 +2,4 @@
 set -eu
 
 SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
-exec "$SCRIPT_DIR/prestige-server.sh" "$@"
+exec "$SCRIPT_DIR/world-lifecycle-manager-server.sh" "$@"

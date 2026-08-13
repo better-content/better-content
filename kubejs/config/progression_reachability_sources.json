@@ -42,7 +42,7 @@
     "chemlib:zinc_ingot",
     "create:piston_extension_pole",
     "farmersdelight:straw",
-    "rpgstats:still_beating_heart",
+    "rpg_stats:still_beating_heart",
     "kubejs:apprentice_blood_heart",
     "kubejs:magician_blood_heart",
     "kubejs:master_blood_heart",
@@ -772,7 +772,7 @@
         "minecraft:bone_block",
         "minecraft:copper_ingot",
         "minecraft:gold_ingot",
-        "rpgstats:still_beating_heart"
+        "rpg_stats:still_beating_heart"
       ]
     },
     {
@@ -781,7 +781,7 @@
         "kubejs:weak_blood_heart"
       ],
       "inputs": [
-        "rpgstats:still_beating_heart"
+        "rpg_stats:still_beating_heart"
       ]
     },
     {
@@ -791,7 +791,7 @@
       ],
       "inputs": [
         "bloodmagic:altar",
-        "rpgstats:still_beating_heart"
+        "rpg_stats:still_beating_heart"
       ]
     },
     {

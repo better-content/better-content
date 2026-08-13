@@ -32,7 +32,7 @@ ServerEvents.recipes(function (event) {
         'GPG'
     ], {
         G: '#forge:glass',
-        P: 'heatsync:heat_pipe',
+        P: 'heat_sync:heat_pipe',
         A: 'kubejs:airtight_machine_casing',
         C: 'latent_chemlib:gas_capture'
     }, false)
@@ -55,7 +55,7 @@ ServerEvents.recipes(function (event) {
         ' V '
     ], {
         P: 'create:propeller',
-        T: 'heatsync:heat_pipe',
+        T: 'heat_sync:heat_pipe',
         C: 'latent_chemlib:gas_tank',
         V: 'create:fluid_valve'
     }, false)
@@ -68,6 +68,6 @@ ServerEvents.recipes(function (event) {
         G: '#forge:glass',
         S: 'kubejs:pressure_seal',
         C: 'pneumaticcraft:small_tank',
-        P: 'heatsync:heat_pipe'
+        P: 'heat_sync:heat_pipe'
     }, true)
 })

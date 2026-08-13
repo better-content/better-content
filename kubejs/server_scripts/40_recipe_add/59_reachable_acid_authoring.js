@@ -103,8 +103,8 @@ ServerEvents.recipes(function (event) {
     event.custom({
         type: 'create:mixing',
         ingredients: [
-            { item: 'realisticores:crushed_phosphate_rock' },
-            { item: 'realisticores:crushed_phosphate_rock' },
+            { item: 'realistic_ores:crushed_phosphate_rock' },
+            { item: 'realistic_ores:crushed_phosphate_rock' },
             { fluid: 'chemlib:sulfuric_acid_fluid', amount: 750 }
         ],
         results: [

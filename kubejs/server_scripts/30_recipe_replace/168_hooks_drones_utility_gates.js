@@ -73,7 +73,7 @@ ServerEvents.recipes(function (event) {
         H: 'minecraft:blaze_rod',
         B: 'rehooked:diamond_hook',
         P: 'kubejs:electrical_machine_casing',
-        C: 'heatsync:heat_pipe'
+        C: 'heat_sync:heat_pipe'
     }, 'kubejs:rehooked/blaze_hook_post_electricity')
 
      bcMobilityMechanical(event, 'rehooked:ender_hook', [

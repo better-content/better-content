@@ -12,7 +12,7 @@ ServerEvents.recipes(function (event) {
     ]
 
     variants.forEach(function (entry) {
-        event.shaped('arcane_chunkloaders:' + entry[0], [
+        event.shaped('arcane_chunk_loaders:' + entry[0], [
             'OEO',
             'EPE',
             'OCO'
@@ -20,7 +20,7 @@ ServerEvents.recipes(function (event) {
             O: 'minecraft:crying_obsidian',
             E: 'minecraft:ender_pearl',
             P: entry[1],
-            C: '#arcane_chunkloaders:magic_catalysts'
-        }).id('arcane_chunkloaders:' + entry[0])
+            C: '#arcane_chunk_loaders:magic_catalysts'
+        }).id('arcane_chunk_loaders:' + entry[0])
     })
 })

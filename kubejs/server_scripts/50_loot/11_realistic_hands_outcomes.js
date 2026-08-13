@@ -1,1 +1,1 @@
-// Retired. Realistic Hands knife loot behavior now lives inbcfixes Forge loot modifiers.
+// Retired. Realistic Hands knife loot behavior now lives inbetter_content_fixes Forge loot modifiers.

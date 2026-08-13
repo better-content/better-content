@@ -141,7 +141,7 @@ ServerEvents.recipes(function (event) {
             .id('kubejs:create_tcon_bootstrap/manual/' + manual.output.substring(manual.output.indexOf(':') + 1))
     }
 
-    // Prestige lineage files are available in the first crank-powered workshop
+    // World Lifecycle Manager lineage files are available in the first crank-powered workshop
     // and still use Create's ordinary material accounting.
     event.remove({ output: 'create:empty_schematic' })
     event.custom({

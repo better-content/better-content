@@ -18,7 +18,7 @@ var BC_EXTREME = {
     lava: {
         osmium: 'kubejs:soulstone_carbon_matrix',
         iridium: 'kubejs:titanium_thermal_plate',
-        osmiridium: 'realisticores:crushed_osmiridium_lava_sulfide_ore',
+        osmiridium: 'realistic_ores:crushed_osmiridium_lava_sulfide_ore',
         debris: 'minecraft:netherite_scrap'
     },
     gate: {

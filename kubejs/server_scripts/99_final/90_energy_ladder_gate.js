@@ -63,8 +63,8 @@ ServerEvents.recipes(function (event) {
         'kubejs:airtight_machine_casing',
         'kubejs:electrical_machine_casing',
         'powergrid:generator_commutator',
-        'heatsync:thermal_firebox',
-        'heatsync:impossible_matter_transducer'
+        'heat_sync:thermal_firebox',
+        'heat_sync:impossible_matter_transducer'
     ]
     for (var r = 0; r < required.length; r++) bcEnergyRequireItem(required[r])
 
@@ -186,14 +186,14 @@ ServerEvents.recipes(function (event) {
         A: 'kubejs:electrical_machine_casing'
     }, 'kubejs:energy_ladder/post_fe/powergrid_vertical_generator_housing')
 
-    event.remove({ output: 'heatsync:thermal_firebox' })
-    event.shaped('heatsync:thermal_firebox', [
+    event.remove({ output: 'heat_sync:thermal_firebox' })
+    event.shaped('heat_sync:thermal_firebox', [
         'IPI',
         'PHP',
         'SFS'
     ], {
         I: '#forge:plates/iron',
-        P: 'heatsync:heat_pipe',
+        P: 'heat_sync:heat_pipe',
         H: 'tconstruct:seared_heater',
         S: 'tconstruct:seared_bricks',
         F: 'minecraft:blast_furnace'
@@ -201,5 +201,5 @@ ServerEvents.recipes(function (event) {
 
     // Deliberately no transducer recipe: no installed implementation currently
     // owns finite impossible-matter inventory plus daughter/heat side effects.
-    event.remove({ output: 'heatsync:impossible_matter_transducer' })
+    event.remove({ output: 'heat_sync:impossible_matter_transducer' })
 })

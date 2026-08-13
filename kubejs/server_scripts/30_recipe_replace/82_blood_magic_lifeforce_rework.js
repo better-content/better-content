@@ -14,7 +14,7 @@ ServerEvents.recipes(function (event) {
         B: 'minecraft:bone_block',
         F: 'minecraft:furnace',
         D: 'deeperdarker:cobbled_sculk_stone',
-        S: 'rpgstats:still_beating_heart'
+        S: 'rpg_stats:still_beating_heart'
     }).id('kubejs:bloodmagic/heart_bound_blood_altar')
 
     if (event.recipes.bloodmagic && event.recipes.bloodmagic.altar) {

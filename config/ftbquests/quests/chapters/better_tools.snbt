@@ -17,7 +17,7 @@
 	quests: [
 		{
 			description: ["Use a Dimension Font and return with one local aggregate: Nether netherrack, Aether holystone, Undergarden deepsoil, or Otherside cobbled sculk stone. Any one route can start seared metalwork."]
-			icon: "dimensiondrink:dimensional_font"
+			icon: "dimension_drink:dimensional_font"
 			id: "15C391E4708D16B9"
 			rewards: [{
 				count: 4

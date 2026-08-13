@@ -19,176 +19,176 @@ var BC_REALISTIC_ORE_ORIGINS = [
         source: 'Realistic Ores deposit',
         detail: 'Overworld coal field, Y 0 to 80.',
         processing: 'Crush for coal, carbon, and ferrous traces.',
-        blocks: ['realisticores:coal_measures', 'realisticores:deepslate_coal_measures'],
-        crushed: 'realisticores:crushed_coal_measures'
+        blocks: ['realistic_ores:coal_measures', 'realistic_ores:deepslate_coal_measures'],
+        crushed: 'realistic_ores:crushed_coal_measures'
     },
     {
         name: 'Ironstone',
         source: 'Realistic Ores deposit',
         detail: 'Overworld iron field, Y -64 to 64.',
         processing: 'Crush for iron with nickel and chromium traces.',
-        blocks: ['realisticores:ironstone', 'realisticores:deepslate_ironstone', 'minecraft:iron_ore', 'minecraft:deepslate_iron_ore'],
-        crushed: 'realisticores:crushed_ironstone'
+        blocks: ['realistic_ores:ironstone', 'realistic_ores:deepslate_ironstone', 'minecraft:iron_ore', 'minecraft:deepslate_iron_ore'],
+        crushed: 'realistic_ores:crushed_ironstone'
     },
     {
         name: 'Copper sulfide',
         source: 'Realistic Ores deposit',
         detail: 'Overworld copper field, Y -16 to 64.',
         processing: 'Crush for copper, sulfur, iron, and gold traces.',
-        blocks: ['realisticores:copper_sulfide_ore', 'realisticores:deepslate_copper_sulfide_ore', 'minecraft:copper_ore', 'minecraft:deepslate_copper_ore'],
-        crushed: 'realisticores:crushed_copper_sulfide_ore'
+        blocks: ['realistic_ores:copper_sulfide_ore', 'realistic_ores:deepslate_copper_sulfide_ore', 'minecraft:copper_ore', 'minecraft:deepslate_copper_ore'],
+        crushed: 'realistic_ores:crushed_copper_sulfide_ore'
     },
     {
         name: 'Tin',
         source: 'Realistic Ores deposit',
         detail: 'Overworld tin field, Y 16 to 64.',
         processing: 'Crush for tin with quartz and tungsten traces.',
-        blocks: ['realisticores:tin_ore', 'realisticores:deepslate_tin_ore'],
-        crushed: 'realisticores:crushed_tin_ore'
+        blocks: ['realistic_ores:tin_ore', 'realistic_ores:deepslate_tin_ore'],
+        crushed: 'realistic_ores:crushed_tin_ore'
     },
     {
         name: 'Zinc',
         source: 'Realistic Ores deposit',
         detail: 'Overworld zinc field, Y 16 to 64. Create native zinc generation is disabled.',
         processing: 'Crush zinc and lead-zinc deposits for Create zinc materials.',
-        blocks: ['realisticores:zinc_ore', 'realisticores:deepslate_zinc_ore', 'create:zinc_ore', 'create:deepslate_zinc_ore'],
-        crushed: 'realisticores:crushed_zinc_ore'
+        blocks: ['realistic_ores:zinc_ore', 'realistic_ores:deepslate_zinc_ore', 'create:zinc_ore', 'create:deepslate_zinc_ore'],
+        crushed: 'realistic_ores:crushed_zinc_ore'
     },
     {
         name: 'Lead-zinc vein',
         source: 'Realistic Ores deposit',
         detail: 'Overworld lead and silver field, Y 16 to 64.',
         processing: 'Crush for lead, zinc, and silver traces.',
-        blocks: ['realisticores:lead_zinc_vein', 'realisticores:deepslate_lead_zinc_vein'],
-        crushed: 'realisticores:crushed_lead_zinc_vein'
+        blocks: ['realistic_ores:lead_zinc_vein', 'realistic_ores:deepslate_lead_zinc_vein'],
+        crushed: 'realistic_ores:crushed_lead_zinc_vein'
     },
     {
         name: 'Quartz vein',
         source: 'Realistic Ores deposit',
         detail: 'Nether quartz remains a Nether deposit; Overworld quartz comes from this deposit route.',
         processing: 'Crush for quartz, silicon, and trace copper or gold.',
-        blocks: ['realisticores:quartz_vein', 'realisticores:deepslate_quartz_vein', 'minecraft:nether_quartz_ore'],
-        crushed: 'realisticores:crushed_quartz_vein'
+        blocks: ['realistic_ores:quartz_vein', 'realistic_ores:deepslate_quartz_vein', 'minecraft:nether_quartz_ore'],
+        crushed: 'realistic_ores:crushed_quartz_vein'
     },
     {
         name: 'Bauxite laterite',
         source: 'Realistic Ores deposit',
         detail: 'Overworld aluminum field, Y 16 to 64.',
         processing: 'Crush for aluminum with nickel, titanium, and gallium traces.',
-        blocks: ['realisticores:bauxite_laterite', 'realisticores:deepslate_bauxite_laterite'],
-        crushed: 'realisticores:crushed_bauxite_laterite'
+        blocks: ['realistic_ores:bauxite_laterite', 'realistic_ores:deepslate_bauxite_laterite'],
+        crushed: 'realistic_ores:crushed_bauxite_laterite'
     },
     {
         name: 'Nickel sulfide',
         source: 'Realistic Ores deposit',
         detail: 'Overworld nickel field, Y 16 to 64. Creating Space Overworld nickel generation is disabled.',
         processing: 'Crush for nickel with sulfur and platinum-group traces.',
-        blocks: ['realisticores:nickel_sulfide_ore', 'realisticores:deepslate_nickel_sulfide_ore', 'creatingspace:nickel_ore', 'creatingspace:deepslate_nickel_ore'],
-        crushed: 'realisticores:crushed_nickel_sulfide_ore'
+        blocks: ['realistic_ores:nickel_sulfide_ore', 'realistic_ores:deepslate_nickel_sulfide_ore', 'creatingspace:nickel_ore', 'creatingspace:deepslate_nickel_ore'],
+        crushed: 'realistic_ores:crushed_nickel_sulfide_ore'
     },
     {
         name: 'Tin-tungsten greisen',
         source: 'Realistic Ores deposit',
         detail: 'Overworld hard-rock tin and tungsten field, Y 16 to 64.',
         processing: 'Crush for tungsten, tin, quartz, and tantalum traces.',
-        blocks: ['realisticores:tin_tungsten_greisen', 'realisticores:deepslate_tin_tungsten_greisen'],
-        crushed: 'realisticores:crushed_tin_tungsten_greisen'
+        blocks: ['realistic_ores:tin_tungsten_greisen', 'realistic_ores:deepslate_tin_tungsten_greisen'],
+        crushed: 'realistic_ores:crushed_tin_tungsten_greisen'
     },
     {
         name: 'Titanium iron oxide',
         source: 'Realistic Ores deposit',
         detail: 'Overworld titanium field, Y -64 to -16.',
         processing: 'Crush for titanium with iron and oxide chemistry.',
-        blocks: ['realisticores:titanium_iron_oxide_ore', 'realisticores:deepslate_titanium_iron_oxide_ore'],
-        crushed: 'realisticores:crushed_titanium_iron_oxide_ore'
+        blocks: ['realistic_ores:titanium_iron_oxide_ore', 'realistic_ores:deepslate_titanium_iron_oxide_ore'],
+        crushed: 'realistic_ores:crushed_titanium_iron_oxide_ore'
     },
     {
         name: 'Kimberlite pipe',
         source: 'Realistic Ores deposit',
         detail: 'Deep Overworld diamond field, Y -64 to -16.',
         processing: 'Crush for carbon, magnesium, and rare diamonds.',
-        blocks: ['realisticores:kimberlite_pipe', 'realisticores:deepslate_kimberlite_pipe', 'minecraft:diamond_ore', 'minecraft:deepslate_diamond_ore'],
-        crushed: 'realisticores:crushed_kimberlite_pipe'
+        blocks: ['realistic_ores:kimberlite_pipe', 'realistic_ores:deepslate_kimberlite_pipe', 'minecraft:diamond_ore', 'minecraft:deepslate_diamond_ore'],
+        crushed: 'realistic_ores:crushed_kimberlite_pipe'
     },
     {
         name: 'Emerald schist beryl',
         source: 'Realistic Ores deposit',
         detail: 'High mountain emerald and beryllium field, Y 112 to 256.',
         processing: 'Crush for beryllium, aluminum, silicon, and emerald traces.',
-        blocks: ['realisticores:emerald_schist_beryl_vein', 'realisticores:deepslate_emerald_schist_beryl_vein', 'minecraft:emerald_ore', 'minecraft:deepslate_emerald_ore'],
-        crushed: 'realisticores:crushed_emerald_schist_beryl_vein'
+        blocks: ['realistic_ores:emerald_schist_beryl_vein', 'realistic_ores:deepslate_emerald_schist_beryl_vein', 'minecraft:emerald_ore', 'minecraft:deepslate_emerald_ore'],
+        crushed: 'realistic_ores:crushed_emerald_schist_beryl_vein'
     },
     {
         name: 'Corundum beryl gem vein',
         source: 'Realistic Ores deposit',
         detail: 'High mountain gem field, Y 112 to 256.',
         processing: 'Crush for amethyst, aluminum, and beryllium chemistry.',
-        blocks: ['realisticores:corundum_beryl_gem_vein', 'realisticores:deepslate_corundum_beryl_gem_vein'],
-        crushed: 'realisticores:crushed_corundum_beryl_gem_vein'
+        blocks: ['realistic_ores:corundum_beryl_gem_vein', 'realistic_ores:deepslate_corundum_beryl_gem_vein'],
+        crushed: 'realistic_ores:crushed_corundum_beryl_gem_vein'
     },
     {
         name: 'Uranium ore',
         source: 'Signalled strategic deposit',
         detail: 'Scarce ADLODS-localized rock deposit across the full Overworld build range, Y -128 to 512.',
         processing: 'Crush for uranium with lead, thorium, and calcium traces.',
-        blocks: ['realisticores:uranium_ore', 'realisticores:deepslate_uranium_ore'],
-        crushed: 'realisticores:crushed_uranium_ore'
+        blocks: ['realistic_ores:uranium_ore', 'realistic_ores:deepslate_uranium_ore'],
+        crushed: 'realistic_ores:crushed_uranium_ore'
     },
     {
         name: 'Thorium ore',
         source: 'Signalled strategic deposit',
         detail: 'Scarce ADLODS-localized rock deposit across the full Overworld build range, Y -128 to 512.',
         processing: 'Crush for thorium with uranium and lead traces.',
-        blocks: ['realisticores:thorium_ore', 'realisticores:deepslate_thorium_ore'],
-        crushed: 'realisticores:crushed_thorium_ore'
+        blocks: ['realistic_ores:thorium_ore', 'realistic_ores:deepslate_thorium_ore'],
+        crushed: 'realistic_ores:crushed_thorium_ore'
     },
     {
         name: 'Osmiridium lava sulfide',
         source: 'Realistic Ores lava-depth pass',
         detail: 'Deep Overworld lava-exposed deposit, Y -64 to 0; each generated ore block must touch lava.',
         processing: 'Crush and wash for osmium, iridium, and platinum-group traces used by Protection Pixel and post-AE2 utility.',
-        blocks: ['realisticores:osmiridium_lava_sulfide_ore', 'realisticores:deepslate_osmiridium_lava_sulfide_ore'],
-        crushed: 'realisticores:crushed_osmiridium_lava_sulfide_ore'
+        blocks: ['realistic_ores:osmiridium_lava_sulfide_ore', 'realistic_ores:deepslate_osmiridium_lava_sulfide_ore'],
+        crushed: 'realistic_ores:crushed_osmiridium_lava_sulfide_ore'
     },
     {
         name: 'Cupriferous redbed redstone',
         source: 'Realistic Ores deposit',
         detail: 'Overworld redstone and copper field, Y -32 to 16.',
         processing: 'Crush for redstone, copper, iron, and gold traces.',
-        blocks: ['realisticores:cupriferous_redbed_redstone_vein', 'realisticores:deepslate_cupriferous_redbed_redstone_vein', 'minecraft:redstone_ore', 'minecraft:deepslate_redstone_ore'],
-        crushed: 'realisticores:crushed_cupriferous_redbed_redstone_vein'
+        blocks: ['realistic_ores:cupriferous_redbed_redstone_vein', 'realistic_ores:deepslate_cupriferous_redbed_redstone_vein', 'minecraft:redstone_ore', 'minecraft:deepslate_redstone_ore'],
+        crushed: 'realistic_ores:crushed_cupriferous_redbed_redstone_vein'
     },
     {
         name: 'Lazurite vein',
         source: 'Realistic Ores deposit',
         detail: 'Overworld lapis field, Y -32 to 16.',
         processing: 'Crush for lapis, sodium, aluminum, and silicon.',
-        blocks: ['realisticores:lazurite_vein', 'realisticores:deepslate_lazurite_vein', 'minecraft:lapis_ore', 'minecraft:deepslate_lapis_ore'],
-        crushed: 'realisticores:crushed_lazurite_vein'
+        blocks: ['realistic_ores:lazurite_vein', 'realistic_ores:deepslate_lazurite_vein', 'minecraft:lapis_ore', 'minecraft:deepslate_lapis_ore'],
+        crushed: 'realistic_ores:crushed_lazurite_vein'
     },
     {
         name: 'Phosphate rock',
         source: 'Realistic Ores deposit',
         detail: 'Overworld phosphate field handled by the bounded matter economy.',
         processing: 'Crush for phosphorus, calcium, oxygen, and bone meal.',
-        blocks: ['realisticores:phosphate_rock', 'realisticores:deepslate_phosphate_rock'],
-        crushed: 'realisticores:crushed_phosphate_rock'
+        blocks: ['realistic_ores:phosphate_rock', 'realistic_ores:deepslate_phosphate_rock'],
+        crushed: 'realistic_ores:crushed_phosphate_rock'
     },
     {
         name: 'Soul-bearing black shale',
         source: 'Realistic Ores cave vein',
         detail: 'Deep carbon and soulstone-adjacent deposit field.',
         processing: 'Crush for carbon, soul sand, sulfur, and redstone traces.',
-        blocks: ['realisticores:soul_bearing_black_shale_soulstone_vein', 'realisticores:deepslate_soul_bearing_black_shale_soulstone_vein'],
-        crushed: 'realisticores:crushed_soul_bearing_black_shale_soulstone_vein'
+        blocks: ['realistic_ores:soul_bearing_black_shale_soulstone_vein', 'realistic_ores:deepslate_soul_bearing_black_shale_soulstone_vein'],
+        crushed: 'realistic_ores:crushed_soul_bearing_black_shale_soulstone_vein'
     },
     {
         name: 'Sulfur-bearing pyrite',
         source: 'Realistic Ores deposit',
         detail: 'Overworld sulfur field handled by the bounded matter economy.',
         processing: 'Crush for sulfur with iron, copper, and gold traces.',
-        blocks: ['realisticores:sulfur_bearing_pyrite_ore', 'realisticores:deepslate_sulfur_bearing_pyrite_ore'],
-        crushed: 'realisticores:crushed_sulfur_bearing_pyrite_ore'
+        blocks: ['realistic_ores:sulfur_bearing_pyrite_ore', 'realistic_ores:deepslate_sulfur_bearing_pyrite_ore'],
+        crushed: 'realistic_ores:crushed_sulfur_bearing_pyrite_ore'
     }
 ]
 
@@ -392,7 +392,7 @@ ItemEvents.tooltip(function (event) {
          bcAddOreOrigin(event, dep.blocks, lines)
         event.add(dep.crushed, bcOreOriginLines('Crushed deposit material', dep.name + ': a processing ingredient recovered from the matching deposit or its surface rubble.', dep.processing))
         event.add(
-            dep.crushed.replace('realisticores:crushed_', 'realisticores:surface_sample_'),
+            dep.crushed.replace('realistic_ores:crushed_', 'realistic_ores:surface_sample_'),
             bcOreOriginLines('Placeable survey sample', dep.name + ': loose surface rubble signalling a matching ADLODS field where configured.', 'Eight collected samples process into one matching crushed feed; furnace extraction is unavailable.')
         )
     }

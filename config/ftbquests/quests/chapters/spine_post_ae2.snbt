@@ -26,11 +26,11 @@
 		{
 			dependencies: ["126660FA4D3AFC66"]
 			description: ["Find an osmiridium surface signal, then prepare a lava expedition below Y zero. The exposed sulfide scatter exists only beside lava and must be brought back alive."]
-			icon: "realisticores:surface_sample_osmiridium_lava_sulfide_ore"
+			icon: "realistic_ores:surface_sample_osmiridium_lava_sulfide_ore"
 			id: "FB35E17C4214D970"
 			shape: "rsquare"
 			tasks: [			{
-				item: "realisticores:surface_sample_osmiridium_lava_sulfide_ore"
+				item: "realistic_ores:surface_sample_osmiridium_lava_sulfide_ore"
 				id: "BD4D05D18F9922C5"
 				type: "item"
 			}]
@@ -71,11 +71,11 @@
 		{
 			dependencies: ["FB35E17C4214D970"]
 			description: ["Recover osmiridium lava-sulfide ore from a lava-contact vein. This dangerous geology is the material pressure point for Tosaki protection and selected late utility."]
-			icon: "realisticores:osmiridium_lava_sulfide_ore"
+			icon: "realistic_ores:osmiridium_lava_sulfide_ore"
 			id: "AEF52D37178A955F"
 			shape: "rsquare"
 			tasks: [			{
-				item: "realisticores:osmiridium_lava_sulfide_ore"
+				item: "realistic_ores:osmiridium_lava_sulfide_ore"
 				id: "434DF91268EF36DF"
 				type: "item"
 			}]
@@ -86,11 +86,11 @@
 		{
 			dependencies: ["A8D0847B39A25095"]
 			description: ["Build one Arcane Chunk Anchor using proof from a magic tradition, then choose the power economy you actually maintain. Every variant loads the same centered region."]
-			icon: "arcane_chunkloaders:flux_chunk_anchor"
+			icon: "arcane_chunk_loaders:flux_chunk_anchor"
 			id: "30C4EB7D62B9EC29"
 			shape: "rsquare"
 			tasks: [			{
-				item: "arcane_chunkloaders:flux_chunk_anchor"
+				item: "arcane_chunk_loaders:flux_chunk_anchor"
 				id: "35D1696C7CEAC207"
 				type: "item"
 			}]

@@ -132,7 +132,7 @@ key_info.structure_gel.building_tool.undo:key.keyboard.z:CONTROL
 key_info.structure_gel.building_tool.redo:key.keyboard.y:CONTROL
 key_key.structure_gel.open_building_tool_gui:key.keyboard.g:SHIFT
 key_key.curios.open.desc:key.keyboard.unknown
-key_key.classselector.open_menu:key.keyboard.k
+key_key.class_selector.open_menu:key.keyboard.k
 key_iris.keybind.reload:key.keyboard.r
 key_iris.keybind.toggleShaders:key.keyboard.unknown
 key_iris.keybind.shaderPackSelection:key.keyboard.backspace
@@ -276,7 +276,7 @@ key_key.immersive_aircraft.boost:key.keyboard.b
 key_key.sophisticatedcore.sort:key.mouse.middle
 key_key.sophisticatedcore.transfer_to_storage:key.keyboard.left.bracket
 key_key.sophisticatedcore.transfer_to_inventory:key.keyboard.right.bracket
-key_key.rpgstats.open_stats:key.keyboard.o
+key_key.rpg_stats.open_stats:key.keyboard.o
 key_placebo.toggleTrails:key.keyboard.keypad.9
 key_placebo.toggleWings:key.keyboard.keypad.8
 key_key.sophisticatedbackpacks.open_backpack:key.keyboard.b

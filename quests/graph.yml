@@ -663,7 +663,7 @@ nodes:
     type: quest
     title: Heart
     chapter: blood_command
-    icon: rpgstats:still_beating_heart
+    icon: rpg_stats:still_beating_heart
     stage: magic_1
     x: 0
     y: 0
@@ -672,12 +672,12 @@ nodes:
       Return from death with a Still-Beating Heart that records the life you actually lived. Save this milestone for Blood Magic instead of treating it as bulk fuel.
     tasks:
       - type: item
-        item: rpgstats:still_beating_heart
+        item: rpg_stats:still_beating_heart
     tags:
       - blood_spine
       - death_loop
     mods:
-      - rpgstats
+      - rpg_stats
       - bloodmagic
 
   blood_altar:
@@ -1453,7 +1453,7 @@ nodes:
     type: quest
     title: Lava Sample
     chapter: post_ae2
-    icon: realisticores:surface_sample_osmiridium_lava_sulfide_ore
+    icon: realistic_ores:surface_sample_osmiridium_lava_sulfide_ore
     stage: post_ae2
     requires:
       - post_impossible
@@ -1463,7 +1463,7 @@ nodes:
       Find an osmiridium surface signal, then prepare a lava expedition below Y zero. The exposed sulfide scatter exists only beside lava and must be brought back alive.
     tasks:
       - type: item
-        item: realisticores:surface_sample_osmiridium_lava_sulfide_ore
+        item: realistic_ores:surface_sample_osmiridium_lava_sulfide_ore
     tags:
       - post_ae2
       - lava_depths
@@ -1472,7 +1472,7 @@ nodes:
     type: quest
     title: Osmiridium
     chapter: post_ae2
-    icon: realisticores:osmiridium_lava_sulfide_ore
+    icon: realistic_ores:osmiridium_lava_sulfide_ore
     stage: post_ae2
     requires:
       - post_lava_sample
@@ -1482,7 +1482,7 @@ nodes:
       Recover osmiridium lava-sulfide ore from a lava-contact vein. This dangerous geology is the material pressure point for Tosaki protection and selected late utility.
     tasks:
       - type: item
-        item: realisticores:osmiridium_lava_sulfide_ore
+        item: realistic_ores:osmiridium_lava_sulfide_ore
     tags:
       - post_ae2
       - lava_depths
@@ -1529,7 +1529,7 @@ nodes:
     type: quest
     title: Chunk Anchor
     chapter: post_ae2
-    icon: arcane_chunkloaders:flux_chunk_anchor
+    icon: arcane_chunk_loaders:flux_chunk_anchor
     stage: post_ae2
     requires:
       - post_tome
@@ -1539,7 +1539,7 @@ nodes:
       Build one Arcane Chunk Anchor using proof from a magic tradition, then choose the power economy you actually maintain. Every variant loads the same centered region.
     tasks:
       - type: item
-        item: arcane_chunkloaders:flux_chunk_anchor
+        item: arcane_chunk_loaders:flux_chunk_anchor
     tags:
       - post_ae2
       - infrastructure
@@ -1666,7 +1666,7 @@ nodes:
     x: 15
     y: -4.8
     body: |
-      Mix blank schematics, prepare a quill and table, then compact the Schematicannon in the hand-cranked Press and Basin. Prestige lineage downloads preserve plans only: the cannon still consumes gunpowder and every required block.
+      Mix blank schematics, prepare a quill and table, then compact the Schematicannon in the hand-cranked Press and Basin. World Lifecycle Manager lineage downloads preserve plans only: the cannon still consumes gunpowder and every required block.
     tasks:
       - type: item
         item: create:empty_schematic
@@ -1847,7 +1847,7 @@ nodes:
   pressure_firebox:
     title: Thermal Firebox
     chapter: pressure_control
-    icon: heatsync:thermal_firebox
+    icon: heat_sync:thermal_firebox
     stage: airtight
     requires:
       - pressure_rotational_compressor
@@ -1857,7 +1857,7 @@ nodes:
       Load real fuel into the firebox and treat heat as conserved process input. Thermal machines should expose their fuel and temperature state.
     tasks:
       - type: item
-        item: heatsync:thermal_firebox
+        item: heat_sync:thermal_firebox
 
   pressure_plastic:
     title: Plastic
@@ -2012,7 +2012,7 @@ nodes:
   pressure_wireless:
     title: Wireless Card
     chapter: pressure_control
-    icon: oc2rwireless:wireless_card
+    icon: oc2r_wireless_pubsub:wireless_card
     stage: space
     requires:
       - pressure_oc2r
@@ -2022,7 +2022,7 @@ nodes:
       Extend an already-readable control network with wireless signals. It coordinates distant sites without teleporting their physical inventories.
     tasks:
       - type: item
-        item: oc2rwireless:wireless_card
+        item: oc2r_wireless_pubsub:wireless_card
 
   pressure_sky_stone:
     title: Sky Stone

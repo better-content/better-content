@@ -10,11 +10,11 @@
 	quests: [
 		{
 			description: ["Return from death with a Still-Beating Heart that records the life you actually lived. Save this milestone for Blood Magic instead of treating it as bulk fuel."]
-			icon: "rpgstats:still_beating_heart"
+			icon: "rpg_stats:still_beating_heart"
 			id: "FCA4E77DDE7A6572"
 			shape: "diamond"
 			tasks: [			{
-				item: "rpgstats:still_beating_heart"
+				item: "rpg_stats:still_beating_heart"
 				id: "1BE1D63A4BF53240"
 				type: "item"
 			}]

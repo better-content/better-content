@@ -200,7 +200,7 @@ ServerEvents.recipes(function (event) {
      bcLatePressure(event, 'sealed_chemical_cell', BC_LATE_ECON.sealedCell, 4, 2.0, [
         { id: 'pneumaticcraft:small_tank' },
         { id: BC_LATE_ECON.pressureSeal, count: 2 },
-        { id: 'heatsync:heat_pipe' },
+        { id: 'heat_sync:heat_pipe' },
         { id: '#forge:glass', count: 2 }
     ])
 
@@ -209,7 +209,7 @@ ServerEvents.recipes(function (event) {
         { id: '#forge:glass' },
         { id: 'pneumaticcraft:pressure_tube' },
         { id: 'pneumaticcraft:small_tank' },
-        { id: 'heatsync:heat_pipe' }
+        { id: 'heat_sync:heat_pipe' }
     ])
 
      bcLatePressure(event, 'airtight_service_module', BC_LATE_ECON.airtightServiceModule, 2, 2.5, [

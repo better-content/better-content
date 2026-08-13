@@ -85,11 +85,11 @@
 		{
 			dependencies: ["C6EF971CD997CC12"]
 			description: ["Load real fuel into the firebox and treat heat as conserved process input. Thermal machines should expose their fuel and temperature state."]
-			icon: "heatsync:thermal_firebox"
+			icon: "heat_sync:thermal_firebox"
 			id: "95EC50A2836C0E7E"
 			shape: "rsquare"
 			tasks: [			{
-				item: "heatsync:thermal_firebox"
+				item: "heat_sync:thermal_firebox"
 				id: "9B2F674B593F1B40"
 				type: "item"
 			}]
@@ -342,11 +342,11 @@
 		{
 			dependencies: ["00FA05D93A3834DE"]
 			description: ["Extend an already-readable control network with wireless signals. It coordinates distant sites without teleporting their physical inventories."]
-			icon: "oc2rwireless:wireless_card"
+			icon: "oc2r_wireless_pubsub:wireless_card"
 			id: "C7EA4BEA0E6D09D5"
 			shape: "rsquare"
 			tasks: [			{
-				item: "oc2rwireless:wireless_card"
+				item: "oc2r_wireless_pubsub:wireless_card"
 				id: "B68566B26DCAFA94"
 				type: "item"
 			}]

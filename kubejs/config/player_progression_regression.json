@@ -561,7 +561,7 @@
           "bloodmagic:etherealslate"
         ],
         "requiredGateItems": [
-          "rpgstats:still_beating_heart",
+          "rpg_stats:still_beating_heart",
           "kubejs:weak_blood_heart",
           "kubejs:archmage_blood_heart",
           "bloodmagic:blankslate",

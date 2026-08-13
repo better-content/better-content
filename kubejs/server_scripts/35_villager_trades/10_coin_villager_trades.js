@@ -620,8 +620,8 @@ if (typeof MoreJSEvents !== 'undefined') {
             [2, 'brass', 4, 'minecraft:shears', 1, 6, 6],
             [3, 'brass', 4, 'create:super_glue', 1, 6, 10],
             [4, 'gold', 6, 'additionalweaponry:wrench', 1, 4, 16],
-            [5, 'iron', 8, 'tconaffixes:forerune_seal', 1, 1, 24],
-            [5, 'iron', 8, 'tconaffixes:afterrune_seal', 1, 1, 24]
+            [5, 'iron', 8, 'tinkers_construct_affixes:forerune_seal', 1, 1, 24],
+            [5, 'iron', 8, 'tinkers_construct_affixes:afterrune_seal', 1, 1, 24]
         ])
 
         // Armorer: defensive recovery, not main gear progression.

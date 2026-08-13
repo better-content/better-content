@@ -2,7 +2,7 @@
 // explicit byproduct control and a weaker normal-milling profile.
 
 function bcRoDepositName(dep) {
-    return dep.sample.replace('realisticores:surface_sample_', '')
+    return dep.sample.replace('realistic_ores:surface_sample_', '')
 }
 
 function bcRoBuildRecipeResults(chunk, byproduct, host) {
@@ -28,28 +28,28 @@ ServerEvents.recipes(function (event) {
         if (!dep || !dep.chunk || !dep.sample || !dep.crushingByproduct || !dep.millingByproduct) continue
 
         var deposit = bcRoDepositName(dep)
-        var normalDeposit = 'realisticores:' + deposit
-        var deepslateDeposit = 'realisticores:deepslate_' + deposit
+        var normalDeposit = 'realistic_ores:' + deposit
+        var deepslateDeposit = 'realistic_ores:deepslate_' + deposit
         var crushingResults = bcRoBuildRecipeResults(dep.chunk, dep.crushingByproduct, 'minecraft:stone')
         var millingResults = bcRoBuildMillingResults(dep.crushed, dep.millingByproduct)
         var crushingDeepslateResults = bcRoBuildRecipeResults(dep.chunk, dep.crushingByproduct, 'minecraft:deepslate')
 
-        event.remove({ id: 'realisticores:compat/create/crushing/' + deposit })
-        event.remove({ id: 'realisticores:compat/create/crushing/deepslate_' + deposit })
+        event.remove({ id: 'realistic_ores:compat/create/crushing/' + deposit })
+        event.remove({ id: 'realistic_ores:compat/create/crushing/deepslate_' + deposit })
 
         event.custom({
             type: 'create:crushing',
             ingredients: [{ type: 'forge:nbt', item: normalDeposit }],
             results: crushingResults,
             processingTime: 250
-        }).id('realisticores:compat/create/crushing/' + deposit)
+        }).id('realistic_ores:compat/create/crushing/' + deposit)
 
         event.custom({
             type: 'create:crushing',
             ingredients: [{ type: 'forge:nbt', item: deepslateDeposit }],
             results: crushingDeepslateResults,
             processingTime: 250
-        }).id('realisticores:compat/create/crushing/deepslate_' + deposit)
+        }).id('realistic_ores:compat/create/crushing/deepslate_' + deposit)
 
         event.custom({
             type: 'create:milling',

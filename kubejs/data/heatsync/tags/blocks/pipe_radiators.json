@@ -1,7 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "heatsync:heat_pipe",
-    "heatsync:coolant_exchanger"
-  ]
-}

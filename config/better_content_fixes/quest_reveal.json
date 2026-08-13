@@ -1,18 +1,18 @@
 {
-  "anchor_quest": "9D4B9A20A53C97D8",
+  "anchor_quest": "1D4B9A20A53C97D8",
   "live_chapters": [
-    "B92DA92D26336367",
+    "392DA92D26336367",
     "009C7E8E281168AB",
-    "93D92B0F3F4750D5",
+    "13D92B0F3F4750D5",
     "71DE08FE1C5AE391",
     "2432CAA2B38B2AB2",
     "22C924409EB64F2C"
   ],
   "preview_chapters": [
-    "93D92B0F3F4750D5"
+    "13D92B0F3F4750D5"
   ],
   "task_unlock_criteria": {
-    "9CD6F432E2ABECA3": "class_selector_start_finalized"
+    "1CD6F432E2ABECA3": "class_selector_start_finalized"
   },
   "chapter_unlocks": {
     "71DE08FE1C5AE391": {

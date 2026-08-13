@@ -3,16 +3,16 @@
 	default_quest_shape: "circle"
 	filename: "spawn_selection"
 	group: "3D1BF480E4BCDBA6"
-	id: "B92DA92D26336367"
+	id: "392DA92D26336367"
 	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
 			description: ["Fly in spectator mode while you scout. Press J for quests and K when you are ready to choose your permanent spawn."]
-			id: "F097D8F2C179C07D"
+			id: "7097D8F2C179C07D"
 			tasks: [
 			{
-				id: "7D7406446F100E4D"
+				id: "7ADEFDDB742C201C"
 				type: "checkmark"
 			}
 			]
@@ -22,10 +22,10 @@
 		}
 		{
 			description: ["Check for renewable water and a practical purification route. A visible pond alone does not make a safe supply."]
-			id: "DE9FE439F5764F58"
+			id: "5E9FE439F5764F58"
 			tasks: [
 			{
-				id: "92F7F90CDB7B5813"
+				id: "699B88C768D9425F"
 				type: "checkmark"
 			}
 			]
@@ -38,7 +38,7 @@
 			id: "72690BBC5B77AA81"
 			tasks: [
 			{
-				id: "E2ED9F9E8088C921"
+				id: "62ED9F9E8088C921"
 				type: "checkmark"
 			}
 			]
@@ -48,10 +48,10 @@
 		}
 		{
 			description: ["Compare local food with routes to village or Undergarden crops. Make sure the return journey is survivable."]
-			id: "B6B30F094DDB9D27"
+			id: "36B30F094DDB9D27"
 			tasks: [
 			{
-				id: "6E7A25E2EA0414AF"
+				id: "40817422705772B4"
 				type: "checkmark"
 			}
 			]
@@ -64,7 +64,7 @@
 			id: "5DED2D2A6C62C4C7"
 			tasks: [
 			{
-				id: "ABA6AD265C41E5DF"
+				id: "2BA6AD265C41E5DF"
 				type: "checkmark"
 			}
 			]
@@ -74,12 +74,12 @@
 		}
 		{
 			description: ["Finalize the site with Class Selector. This spawn is permanent; beds only accelerate the night."]
-			id: "F838A4605E6A8E08"
+			id: "7838A4605E6A8E08"
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [
 			{
-				id: "2BC0E97C8758B805"
+				id: "7071614ADB727504"
 				criterion: "class_selector_start_finalized"
 				type: "better_content_fixes:criterion"
 			}

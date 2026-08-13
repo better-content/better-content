@@ -10,11 +10,11 @@
 		{
 			dependencies: ["3DB748B4699DA8BA"]
 			description: ["Mix sand, gravel, and one aggregate brought back from a Font run. Use any successful destination."]
-			id: "7CD10E3F93270496"
-			rewards: [{ count: 1, id: "BC1579A35E979F79", item: "createdeco:copper_coin", type: "item" }]
+			id: "6BD7628F398523E2"
+			rewards: [{ count: 1, id: "202804EC5C0119E6", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "0ED1612E16B46ED0"
+				id: "728B8337934D3F52"
 				item: "tconstruct:grout"
 				type: "item"
 			}
@@ -24,13 +24,13 @@
 			y: -2d
 		}
 		{
-			dependencies: ["7CD10E3F93270496"]
+			dependencies: ["6BD7628F398523E2"]
 			description: ["Fire grout into Seared Brick. Keep enough for both casting lanes."]
-			id: "0C10825F73EDBA68"
-			rewards: [{ count: 1, id: "5F39F1C032BAB4B5", item: "createdeco:copper_coin", type: "item" }]
+			id: "197680D179F3BC0B"
+			rewards: [{ count: 1, id: "7B9C150B1515C370", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "20BE8A02982451DC"
+				id: "7744F73FC171DC4F"
 				item: "tconstruct:seared_brick"
 				type: "item"
 			}
@@ -40,20 +40,20 @@
 			y: -2d
 		}
 		{
-			dependencies: ["0C10825F73EDBA68"]
+			dependencies: ["197680D179F3BC0B"]
 			description: ["Build a Seared Melter with either a Heater or Fuel Tank. Establish controlled molten work."]
-			id: "D0569DFA5E6FCC89"
-			rewards: [{ count: 2, id: "35AF3434527A5CAB", item: "createdeco:copper_coin", type: "item" }]
+			id: "50569DFA5E6FCC89"
+			rewards: [{ count: 2, id: "6FDA715CD9D89EDC", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			size: 1.3d
 			tasks: [
 			{
-				id: "AA02580EBC5DC9D2"
+				id: "3B1D5F48D8535F76"
 				item: "tconstruct:seared_melter"
 				type: "item"
 			}
 			{
-				id: "60999B0204C1D941"
+				id: "04A8A4F79DE9647D"
 				item: { Count: 1, id: "ftbfiltersystem:smart_filter", tag: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(better_content_fixes:seared_melter_heat_sources)" } }
 				title: "Seared Heater or Fuel Tank"
 				type: "item"
@@ -64,20 +64,20 @@
 			y: -3.2d
 		}
 		{
-			dependencies: ["D0569DFA5E6FCC89"]
+			dependencies: ["50569DFA5E6FCC89"]
 			description: ["Add a Seared Table and Faucet. Pour exact parts on the casting surface."]
-			id: "B1A654FD64110D60"
-			rewards: [{ count: 2, id: "25F33564DCA3ABD8", item: "createdeco:copper_coin", type: "item" }]
+			id: "31A654FD64110D60"
+			rewards: [{ count: 2, id: "23C4A6409D05EDCD", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			size: 1.3d
 			tasks: [
 			{
-				id: "BE4D4AC8ACB6BD93"
+				id: "2F601B3454B6BAE7"
 				item: "tconstruct:seared_table"
 				type: "item"
 			}
 			{
-				id: "37AAD3ABA23A01A1"
+				id: "186A248F89FE43B8"
 				item: "tconstruct:seared_faucet"
 				type: "item"
 			}
@@ -87,13 +87,13 @@
 			y: -3.2d
 		}
 		{
-			dependencies: ["B1A654FD64110D60"]
+			dependencies: ["31A654FD64110D60"]
 			description: ["Make any TConstruct sand cast. Use it for a disposable first pour."]
-			id: "036BF7C739C65CC0"
-			rewards: [{ count: 1, id: "D78996A5781EDCC5", item: "createdeco:copper_coin", type: "item" }]
+			id: "2B65BA312D17FA16"
+			rewards: [{ count: 1, id: "520338035AFD7428", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "5ADC3A1FC31A37C3"
+				id: "602031C30EC62262"
 				predicate: "any_tcon_sand_cast"
 				type: "better_content_fixes:stack_predicate"
 			}
@@ -103,13 +103,13 @@
 			y: -4.4d
 		}
 		{
-			dependencies: ["B1A654FD64110D60"]
+			dependencies: ["31A654FD64110D60"]
 			description: ["Make any permanent TConstruct cast. Keep it for repeatable production."]
 			id: "5A8CDDC79AF6EA35"
-			rewards: [{ count: 1, id: "927C978F83D8F66C", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 1, id: "127C978F83D8F66C", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "A8C2F38328399673"
+				id: "28C2F38328399673"
 				predicate: "any_tcon_permanent_cast"
 				type: "better_content_fixes:stack_predicate"
 			}
@@ -119,14 +119,14 @@
 			y: -2d
 		}
 		{
-			dependencies: ["036BF7C739C65CC0" "5A8CDDC79AF6EA35"]
+			dependencies: ["2B65BA312D17FA16" "5A8CDDC79AF6EA35"]
 			description: ["Cast a functional metal tool part with either kind of cast. Decorative metal appearance does not count."]
-			id: "85DC6A6B1F48DEE6"
+			id: "05DC6A6B1F48DEE6"
 			min_required_dependencies: 1
-			rewards: [{ count: 2, id: "7051894B3B9040E2", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "6BB2D39FD8916506", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "0997EBB16F80B804"
+				id: "6AC90768E2B80EF3"
 				predicate: "tcon_functional_metal_part"
 				type: "better_content_fixes:stack_predicate"
 			}
@@ -136,15 +136,15 @@
 			y: -3.2d
 		}
 		{
-			dependencies: ["85DC6A6B1F48DEE6"]
+			dependencies: ["05DC6A6B1F48DEE6"]
 			description: ["Build a TConstruct tool containing a metal functional part. A metal-looking trim or handle alone does not count."]
-			id: "9B7CF4C8F5700C7F"
-			rewards: [{ count: 4, id: "CAC13694E4227F90", item: "createdeco:copper_coin", type: "item" }]
+			id: "1B7CF4C8F5700C7F"
+			rewards: [{ count: 4, id: "1BA97ECEEBC8EB61", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [
 			{
-				id: "1084785A1D78331D"
+				id: "1D36BE967353B297"
 				predicate: "tcon_tool_with_metal_functional_part"
 				type: "better_content_fixes:stack_predicate"
 			}
@@ -154,13 +154,13 @@
 			y: -3.2d
 		}
 		{
-			dependencies: ["B1A654FD64110D60"]
+			dependencies: ["31A654FD64110D60"]
 			description: ["Add a Seared Basin for bulk pours. Keep table and basin access near the drain."]
-			id: "609904A3320C55BE"
-			rewards: [{ count: 2, id: "FD471228994979DC", item: "createdeco:copper_coin", type: "item" }]
+			id: "4950DF3BF2929E70"
+			rewards: [{ count: 2, id: "0D297ECCAD2A83D6", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "1AD322E16AE8C95C"
+				id: "4886C6AC2105619C"
 				item: "tconstruct:seared_basin"
 				type: "item"
 			}
@@ -170,7 +170,7 @@
 			y: 0d
 		}
 		{
-			dependencies: ["B1A654FD64110D60"]
+			dependencies: ["31A654FD64110D60"]
 			description: ["Build the Smeltery Controller. Leave room for the complete multiblock."]
 			id: "76A14A4FC472B8B9"
 			rewards: [{ count: 2, id: "3C6682B7E663E79E", item: "createdeco:copper_coin", type: "item" }]
@@ -188,13 +188,13 @@
 			y: 0d
 		}
 		{
-			dependencies: ["0C10825F73EDBA68"]
+			dependencies: ["197680D179F3BC0B"]
 			description: ["Obtain a Seared Fuel Tank. A copy earned earlier still satisfies this component."]
-			id: "1E7CD8C092AE1895"
-			rewards: [{ count: 2, id: "BAD4305AACFD4252", item: "createdeco:copper_coin", type: "item" }]
+			id: "31BB16F3451FABAB"
+			rewards: [{ count: 2, id: "7ED8CFAFAA3FC6FC", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "4358F74BB46B03EB"
+				id: "23DF936647CC9C67"
 				item: "tconstruct:seared_fuel_tank"
 				type: "item"
 			}
@@ -204,13 +204,13 @@
 			y: 0d
 		}
 		{
-			dependencies: ["B1A654FD64110D60"]
+			dependencies: ["31A654FD64110D60"]
 			description: ["Build a Seared Drain. Route molten material to accessible casting surfaces."]
-			id: "0DB9BF3F6DFF3EDD"
-			rewards: [{ count: 2, id: "06FF2977F75AE5E3", item: "createdeco:copper_coin", type: "item" }]
+			id: "6A4C20E2414CB66C"
+			rewards: [{ count: 2, id: "2412A314E85F99B3", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "1B453AA6FD78EB5C"
+				id: "6842C2550BD841AE"
 				item: "tconstruct:seared_drain"
 				type: "item"
 			}
@@ -220,16 +220,16 @@
 			y: 0d
 		}
 		{
-			dependencies: ["609904A3320C55BE" "76A14A4FC472B8B9" "1E7CD8C092AE1895" "0DB9BF3F6DFF3EDD"]
+			dependencies: ["4950DF3BF2929E70" "76A14A4FC472B8B9" "31BB16F3451FABAB" "6A4C20E2414CB66C"]
 			description: ["Form a valid Smeltery with controller, fuel tank, drain, and basin access. A loose component pile does not count."]
 			hide_dependency_lines: true
-			id: "F6D4FB5757FB9A04"
-			rewards: [{ count: 4, id: "4013EFEAA638F348", item: "createdeco:copper_coin", type: "item" }]
+			id: "76D4FB5757FB9A04"
+			rewards: [{ count: 4, id: "7A84E740FC887A55", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [
 			{
-				id: "8A8280CA4FA7428E"
+				id: "20261455D5A784E5"
 				criterion: "formed_tcon_smeltery"
 				type: "better_content_fixes:criterion"
 			}
@@ -239,7 +239,7 @@
 			y: 0d
 		}
 		{
-			dependencies: ["F6D4FB5757FB9A04"]
+			dependencies: ["76D4FB5757FB9A04"]
 			description: ["Alloy the first Brass in the full Smeltery. Carry it into the hand-powered workshop."]
 			id: "4CC3C8B2D71507C1"
 			rewards: [{ count: 4, id: "49668ECD6A96D315", item: "createdeco:copper_coin", type: "item" }]
@@ -247,7 +247,7 @@
 			size: 1.3d
 			tasks: [
 			{
-				id: "BDB7EA78C0FD0EF7"
+				id: "3DB7EA78C0FD0EF7"
 				item: "create:brass_ingot"
 				type: "item"
 			}
@@ -257,13 +257,13 @@
 			y: 0d
 		}
 		{
-			dependencies: ["D0569DFA5E6FCC89"]
+			dependencies: ["50569DFA5E6FCC89"]
 			description: ["Add a Seared Fuel Gauge. Read remaining heat before committing a pour."]
-			id: "760336E92F1C069B"
-			rewards: [{ count: 2, id: "66F1BBACD45EF3BE", item: "createdeco:copper_coin", type: "item" }]
+			id: "332BC09746281AAA"
+			rewards: [{ count: 2, id: "3CB743371F2C8B10", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "2DCA1BD4B033648F"
+				id: "19A459EADDCA1493"
 				item: "tconstruct:seared_fuel_gauge"
 				type: "item"
 			}
@@ -273,13 +273,13 @@
 			y: -5.5d
 		}
 		{
-			dependencies: ["B1A654FD64110D60"]
+			dependencies: ["31A654FD64110D60"]
 			description: ["Add a Seared Channel for wider routing. A nearby Seared Lantern can light the work as flavor."]
-			id: "38B4A7E8270AA9F2"
-			rewards: [{ count: 2, id: "7C0CACE23EADA1E9", item: "createdeco:copper_coin", type: "item" }]
+			id: "4D348F53A50EE090"
+			rewards: [{ count: 2, id: "5EBEE5E1A6B75891", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "6B5774BA4546BC08"
+				id: "315091A2BB7A3BD0"
 				item: "tconstruct:seared_channel"
 				type: "item"
 			}
@@ -289,18 +289,18 @@
 			y: 1.8d
 		}
 		{
-			dependencies: ["0DB9BF3F6DFF3EDD"]
+			dependencies: ["6A4C20E2414CB66C"]
 			description: ["Build both a Seared Duct and Chute. Move fluids and items through the foundry deliberately."]
 			id: "672D9E1250AEEB89"
 			rewards: [{ count: 2, id: "07342A942AA50D74", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "A8B2F94E62987CCA"
+				id: "28B2F94E62987CCA"
 				item: "tconstruct:seared_duct"
 				type: "item"
 			}
 			{
-				id: "A721241102FAD361"
+				id: "2721241102FAD361"
 				item: "tconstruct:seared_chute"
 				type: "item"
 			}
@@ -310,18 +310,18 @@
 			y: 1.8d
 		}
 		{
-			dependencies: ["B1A654FD64110D60"]
+			dependencies: ["31A654FD64110D60"]
 			description: ["Build a Seared Ingot Tank and Ingot Gauge. Store and read small molten batches."]
 			id: "074577C9497A56BE"
-			rewards: [{ count: 2, id: "EA783D94B5A5DBD3", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "6A783D94B5A5DBD3", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "4782D7B932EE5B05"
+				id: "0865635326375995"
 				item: "tconstruct:seared_ingot_tank"
 				type: "item"
 			}
 			{
-				id: "05950D129DB5147A"
+				id: "5AB4D4BCB2AE5388"
 				item: "tconstruct:seared_ingot_gauge"
 				type: "item"
 			}

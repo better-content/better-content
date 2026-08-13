@@ -3,33 +3,33 @@
 	default_quest_shape: "circle"
 	filename: "landmarks"
 	group: "3D1BF480E4BCDBA6"
-	id: "93D92B0F3F4750D5"
+	id: "13D92B0F3F4750D5"
 	order_index: 2
 	quest_links: [
-		{ id: "180B97D96B3DB92C", linked_quest: "F838A4605E6A8E08", x: -15d, y: 0d }
-		{ id: "E6639CE5F4303B1B", linked_quest: "01241F25B8A10387", x: -12d, y: 0d }
+		{ id: "180B97D96B3DB92C", linked_quest: "7838A4605E6A8E08", x: -15d, y: 0d }
+		{ id: "66639CE5F4303B1B", linked_quest: "01241F25B8A10387", x: -12d, y: 0d }
 		{ id: "36B0DBB4106B5197", linked_quest: "E16B8796484892FF", x: -9d, y: -3d }
 		{ id: "23090CF4CC94624E", linked_quest: "CB3FCC1B9569023E", x: -6.8d, y: -3d }
 		{ id: "422E2CF0CD06ABAC", linked_quest: "0EA60205EE4E3808", x: -4.6d, y: -4.2d }
 		{ id: "0CAE283C44491BDB", linked_quest: "FFF2F274923CC05E", x: -2.3d, y: -3.5d, shape: "hexagon", size: 1.5d }
-		{ id: "11047E0B3CC19CDD", linked_quest: "9B7CF4C8F5700C7F", x: -2d, y: 1d }
-		{ id: "92DDA1002E0A8F29", linked_quest: "F6D4FB5757FB9A04", x: 0.3d, y: 1d }
-		{ id: "87162CEF4F64D3B2", linked_quest: "4CC3C8B2D71507C1", x: 2.6d, y: 1d }
-		{ id: "A63D68D22664E761", linked_quest: "1D83365BAFA20FFE", x: 5.3d, y: 1d, shape: "hexagon", size: 1.5d }
-		{ id: "47C3CED6BB6F86C0", linked_quest: "91A13F1B3FD3D65A", x: 7.6d, y: -0.3d }
-		{ id: "2CB25F7D55221DC8", linked_quest: "D9B26687F0CD55FA", x: 7.6d, y: 2.3d }
+		{ id: "11047E0B3CC19CDD", linked_quest: "1B7CF4C8F5700C7F", x: -2d, y: 1d }
+		{ id: "12DDA1002E0A8F29", linked_quest: "76D4FB5757FB9A04", x: 0.3d, y: 1d }
+		{ id: "07162CEF4F64D3B2", linked_quest: "4CC3C8B2D71507C1", x: 2.6d, y: 1d }
+		{ id: "263D68D22664E761", linked_quest: "1D83365BAFA20FFE", x: 5.3d, y: 1d, shape: "hexagon", size: 1.5d }
+		{ id: "47C3CED6BB6F86C0", linked_quest: "11A13F1B3FD3D65A", x: 7.6d, y: -0.3d }
+		{ id: "2CB25F7D55221DC8", linked_quest: "59B26687F0CD55FA", x: 7.6d, y: 2.3d }
 	]
 	quests: [
 		{
-			dependencies: ["1B09C8F1C2FE5053" "0EB806E4337DC7FA"]
+			dependencies: ["062784D648C215EE" "4F30B2B217B195D1"]
 			description: ["Assemble a Eureka vessel with a tagged helm, primitive engine, floater, and ballast. Any valid hull counts; an anchor is useful but optional."]
-			id: "20AFF935B3BB1384"
-			rewards: [{ count: 1, id: "E98126893E16F67B", item: "createdeco:iron_coin", type: "item" }]
+			id: "41AE4E6CED77EA27"
+			rewards: [{ count: 1, id: "093E65417C75EB34", item: "createdeco:iron_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.3d
 			tasks: [
 			{
-				id: "1795A975409B406B"
+				id: "060C5EE0FE6C2C3B"
 				criterion: "ship_assembled"
 				type: "better_content_fixes:criterion"
 			}
@@ -46,7 +46,7 @@
 			size: 1.2d
 			tasks: [
 			{
-				id: "9CD6F432E2ABECA3"
+				id: "1CD6F432E2ABECA3"
 				structure: "dimension_drink:dimensional_font"
 				type: "structure"
 			}
@@ -59,7 +59,7 @@
 			dependencies: ["76516020F1FE7DA1"]
 			description: ["Let a Font run transport you. Entering the same dimension by another route does not count."]
 			id: "274083696697A71C"
-			rewards: [{ count: 2, id: "8C57425C4A677CA7", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "0C57425C4A677CA7", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "2527A7C4F308FB74"

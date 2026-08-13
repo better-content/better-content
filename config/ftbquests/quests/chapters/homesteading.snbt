@@ -10,7 +10,7 @@
 		{
 			description: ["Build roof, walls, light, a closable entrance, and a thermally safe interior. Check this when the shelter fits your chosen site."]
 			id: "22F45D3D9F44B470"
-			rewards: [{ count: 1, id: "DCEEC854E7839E4E", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 1, id: "5CEEC854E7839E4E", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "5E2D5031DE9E6860"
@@ -24,7 +24,7 @@
 		{
 			description: ["Change the temperature of edible food and read its tooltip. Keep it in the Fresh interval from -25 to 25, away from frozen and rotten levels."]
 			id: "7FA9C44A0F731707"
-			rewards: [{ count: 1, id: "B4A7A2C14F051969", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 1, id: "34A7A2C14F051969", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "7CD1503B63A54453"
@@ -40,7 +40,7 @@
 			dependencies: ["7FA9C44A0F731707"]
 			description: ["Store food where its tooltip remains Fresh Food. Choose any method that works; no appliance is mandatory."]
 			id: "362B669D89D67FDF"
-			rewards: [{ count: 1, id: "97307B02BE478958", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 1, id: "17307B02BE478958", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "CC738485C8BE181D"
@@ -85,7 +85,7 @@
 			dependencies: ["22F45D3D9F44B470" "362B669D89D67FDF" "2AB873C4522527D4" "E16B8796484892FF"]
 			description: ["Bring shelter, fresh storage, safe water, and provisions together. Check this when the first camp can support a real journey."]
 			id: "CB3FCC1B9569023E"
-			rewards: [{ count: 4, id: "8937102841AD8C53", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 4, id: "0937102841AD8C53", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [
@@ -101,7 +101,7 @@
 		{
 			description: ["Place any bed to accelerate the night. It does not change your permanent spawn."]
 			id: "EB55D9B89DF28F61"
-			rewards: [{ count: 1, id: "E51D2F7A7E6A9445", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 1, id: "651D2F7A7E6A9445", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "CCD2728037DB9304"
@@ -117,7 +117,7 @@
 		{
 			description: ["Set down a practical chest, barrel, crate, or cabinet. Keep supplies findable without turning storage into a gate."]
 			id: "D60546FEC80B2A15"
-			rewards: [{ count: 1, id: "C951F3E7072E8DE6", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 1, id: "4951F3E7072E8DE6", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "EA9B0EF17C93C883"
@@ -133,7 +133,7 @@
 		{
 			description: ["Load a Food Pouch with at least two distinct foods. Its contents share temperature; the pouch does not preserve them."]
 			id: "7EB9E1A6C63979B4"
-			rewards: [{ count: 2, id: "F72BEE68114CC4A3", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "772BEE68114CC4A3", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			size: 1.2d
 			tasks: [
@@ -167,15 +167,15 @@
 		{
 			description: ["Make a clay bowl and fill a terracotta water bowl. Use supported heat to purify it."]
 			id: "E56C2F1521364C19"
-			rewards: [{ count: 1, id: "F71C9988C7D50B7A", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 1, id: "771C9988C7D50B7A", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "6F444B70AB029E2D"
+				id: "7F30F734C2BF3299"
 				item: "thirst:terracotta_bowl"
 				type: "item"
 			}
 			{
-				id: "4B5DE6C8A7115513"
+				id: "5AA2E8C5ECF05747"
 				item: "thirst:terracotta_water_bowl"
 				type: "item"
 			}
@@ -187,7 +187,7 @@
 		{
 			description: ["Build a campfire for cooking, supported boiling, and snow melting. Do not rely on it as universal warmth."]
 			id: "9C97BF5F8C421E36"
-			rewards: [{ count: 2, id: "CEA0856390848C57", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "4EA0856390848C57", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			size: 1.2d
 			tasks: [
@@ -204,7 +204,7 @@
 		{
 			description: ["Let the water Curio consume a vanilla water-potion bottle. Prefer purity 3 and collect the returned empty bottle."]
 			id: "1E25D9FE0D841B7F"
-			rewards: [{ count: 1, id: "DE72B5F6A52DCB2F", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 1, id: "5E72B5F6A52DCB2F", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "88CEAC4D6B9F5666"
@@ -247,7 +247,7 @@
 			dependencies: ["CB3FCC1B9569023E" "0EA60205EE4E3808"]
 			description: ["Bring the first camp and one lasting food supply together. Treat this as guidance, not a recipe gate."]
 			id: "FFF2F274923CC05E"
-			rewards: [{ count: 2, id: "853F8FBDED76D0FB", item: "createdeco:zinc_coin", type: "item" }]
+			rewards: [{ count: 2, id: "053F8FBDED76D0FB", item: "createdeco:zinc_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [ ]
@@ -301,7 +301,7 @@
 		{
 			description: ["Make Organic Compost. Let it mature before working the ground."]
 			id: "075DE9AE725DE26C"
-			rewards: [{ count: 1, id: "9789124BFFB5827D", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 1, id: "1789124BFFB5827D", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "063DB30F3557F659"
@@ -332,25 +332,25 @@
 		{
 			description: ["Gather cabbage, onion, tomato, and rice. Expand the field beyond staple crops."]
 			id: "005DC6BB3C38C675"
-			rewards: [{ count: 2, id: "9D9E42C7215678C6", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "1D9E42C7215678C6", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "E5BD8BE5FAC381C7"
+				id: "0869FDEDB2686E00"
 				item: "farmersdelight:cabbage"
 				type: "item"
 			}
 			{
-				id: "FD1D7B8209BBD4FD"
+				id: "6BA278F997E15303"
 				item: "farmersdelight:onion"
 				type: "item"
 			}
 			{
-				id: "BC82D05B45FEB8AC"
+				id: "23940074CE35C7E2"
 				item: "farmersdelight:tomato"
 				type: "item"
 			}
 			{
-				id: "713263F0C6C56819"
+				id: "58B8C5C37005CAED"
 				item: "farmersdelight:rice"
 				type: "item"
 			}
@@ -377,7 +377,7 @@
 		{
 			description: ["Build a TConstruct Scythe. Use its wider cut on established fields."]
 			id: "53C957328751BA80"
-			rewards: [{ count: 2, id: "89926AA6235F76B3", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "09926AA6235F76B3", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "7039B6B8964C59A6"
@@ -392,7 +392,7 @@
 		{
 			description: ["Craft the Calendar from a Clock and eight paper. Read the season before committing a field."]
 			id: "E2D46FA5AAAAB5B4"
-			rewards: [{ count: 2, id: "DDCAD2B81AE0C3DA", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "5DCAD2B81AE0C3DA", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "128F4F17F5526386"
@@ -407,7 +407,7 @@
 		{
 			description: ["Establish an underground growing plot below Y48. Use it when the surface season is wrong."]
 			id: "7FB326F1F794CAC6"
-			rewards: [{ count: 1, id: "C5C23129D21F80E6", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 1, id: "45C23129D21F80E6", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "3B591CF954AEDA6B"
@@ -422,7 +422,7 @@
 			dependencies: ["E2D46FA5AAAAB5B4"]
 			description: ["Build the Season Sensor with glass, quartz, and a literal Calendar. Put seasonal state where the homestead can read it."]
 			id: "AB9756671C0BBA7F"
-			rewards: [{ count: 2, id: "FF70333ACF7D03C4", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "7F70333ACF7D03C4", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "DB0F8524C0B34C1E"
@@ -437,7 +437,7 @@
 		{
 			description: ["Carry a Thermometer and compare body temperature with world temperature. Respond to the reading that is actually dangerous."]
 			id: "5A4C3626CCDC25FF"
-			rewards: [{ count: 2, id: "E4C9F1B879928603", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "64C9F1B879928603", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "56BC12C20D2D1237"
@@ -485,7 +485,7 @@
 			dependencies: ["65A5ED14755450E0"]
 			description: ["Insert insulation into any armour piece. Wear protection suited to the route."]
 			id: "89B480EEAF34852D"
-			rewards: [{ count: 2, id: "D8FE5A1CEEADD73D", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "58FE5A1CEEADD73D", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "B67990C2AE99C4E8"
@@ -572,12 +572,12 @@
 			size: 1.2d
 			tasks: [
 			{
-				id: "51832B4ACB3887DD"
+				id: "0DEAF72B33059569"
 				item: "cold_sweat:soulspring_lamp"
 				type: "item"
 			}
 			{
-				id: "3350BEB3486ABF6A"
+				id: "3ACAE730CC57D306"
 				item: "cold_sweat:soul_sprout"
 				type: "item"
 			}
@@ -589,7 +589,7 @@
 		{
 			description: ["Make an empty or filled Cold Sweat waterskin. Use it only for thermal preparation."]
 			id: "816657098A500286"
-			rewards: [{ count: 2, id: "A56A5B234A5B7A6C", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "256A5B234A5B7A6C", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			size: 1.2d
 			tasks: [
@@ -607,7 +607,7 @@
 			dependencies: ["816657098A500286"]
 			description: ["Prepare a non-neutral hot or cold waterskin. Match it to the exposure ahead."]
 			id: "A89C8BE72849D453"
-			rewards: [{ count: 2, id: "E278332F9CBB4369", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "6278332F9CBB4369", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "D81B477B1949ADDD"
@@ -644,12 +644,12 @@
 			size: 1.2d
 			tasks: [
 			{
-				id: "FFB0CEAE68AE25B5"
+				id: "758B73FFFF455265"
 				item: "farmersdelight:stove"
 				type: "item"
 			}
 			{
-				id: "90A51DFFD0C7926A"
+				id: "12364C34E02CBA9D"
 				item: "farmersdelight:cooking_pot"
 				type: "item"
 			}
@@ -676,7 +676,7 @@
 		{
 			description: ["Place any Farmer’s Delight cabinet. Keep the working kitchen stocked and readable."]
 			id: "AF050F3582CBB166"
-			rewards: [{ count: 2, id: "C53B4F3A3A261C66", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "453B4F3A3A261C66", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			size: 1.2d
 			tasks: [
@@ -694,7 +694,7 @@
 		{
 			description: ["Obtain the Food Book. Use it to see which foods still broaden the tracked diet."]
 			id: "553CB6F08A320BA8"
-			rewards: [{ count: 2, id: "C14DB61F522B56C9", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "414DB61F522B56C9", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "3776D6E2D194EBB1"
@@ -710,7 +710,7 @@
 			dependencies: ["553CB6F08A320BA8"]
 			description: ["Deliberately broaden the tracked diet. Check this after variety becomes a habit."]
 			id: "3778EF4D086DCD6C"
-			rewards: [{ count: 2, id: "D846F31FC2F74486", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "5846F31FC2F74486", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "FC0C47EE7C8B09C1"
@@ -725,7 +725,7 @@
 			dependencies: ["6C8362C9595C865D"]
 			description: ["Prepare and place a supported feast block. Serve a shared meal from the finished kitchen."]
 			id: "D254D08257E1838C"
-			rewards: [{ count: 4, id: "C920051A1B10D374", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 4, id: "4920051A1B10D374", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.3d
 			tasks: [
@@ -743,7 +743,7 @@
 		{
 			description: ["Build the Farmer’s Respite Kettle. Use it to begin deliberate drink brewing."]
 			id: "A8D61A331C05F66A"
-			rewards: [{ count: 2, id: "9B984776A059DC3A", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "1B984776A059DC3A", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			size: 1.2d
 			tasks: [
@@ -811,7 +811,7 @@
 			dependencies: ["040D5AF60D3E8E1C"]
 			description: ["Craft the Vanilla Bobber and crouch-right-click to select it. It is the exclusive route to vanilla fishing loot."]
 			id: "42B8D60CD4E5C020"
-			rewards: [{ count: 1, id: "E3A094BC53F02705", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 1, id: "63A094BC53F02705", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "995B08628D730B30"
@@ -827,7 +827,7 @@
 			dependencies: ["040D5AF60D3E8E1C"]
 			description: ["Craft the Angler’s Guide; the rod returns as a crafting remainder. Use the guide as a field journal."]
 			id: "39734B51A659C623"
-			rewards: [{ count: 2, id: "8FEA91FE61F1CE39", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "0FEA91FE61F1CE39", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "4EE5839C71AB3631"
@@ -843,7 +843,7 @@
 			dependencies: ["040D5AF60D3E8E1C"]
 			description: ["Land an edible Starcatcher catch. Let it count as one lasting food route."]
 			id: "21673617A8A3C196"
-			rewards: [{ count: 1, id: "A48FC7A1116350CE", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 1, id: "248FC7A1116350CE", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "FD9BA2954C26C72F"
@@ -858,7 +858,7 @@
 		{
 			description: ["Build a Keg. Start with clean ingredients and controlled storage."]
 			id: "601561FCB39975B6"
-			rewards: [{ count: 2, id: "8CCDACF6345FE3DE", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "0CCDACF6345FE3DE", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			size: 1.2d
 			tasks: [
@@ -895,12 +895,12 @@
 			rewards: [{ count: 2, id: "0FFCEB37EF039C8D", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "7B1BEBA0C57231B2"
+				id: "7DEF36FF5F754A7B"
 				item: "brewinandchewin:heating_cask"
 				type: "item"
 			}
 			{
-				id: "912C95C845C7293C"
+				id: "50F9E33749D18F8D"
 				item: "brewinandchewin:ice_crate"
 				type: "item"
 			}
@@ -912,7 +912,7 @@
 		{
 			description: ["Finish aging a cheese wheel. Take the fully aged result."]
 			id: "0B4392BCBAD44C78"
-			rewards: [{ count: 4, id: "9FD72B0BB000D60C", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 4, id: "1FD72B0BB000D60C", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.3d
 			tasks: [
@@ -929,7 +929,7 @@
 		{
 			description: ["Install any supported chimney. Give smoke and emissions a route out of occupied space."]
 			id: "2B09758DB1C8060F"
-			rewards: [{ count: 2, id: "FC88BA4062CEF2F6", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "7C88BA4062CEF2F6", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			size: 1.2d
 			tasks: [
@@ -948,7 +948,7 @@
 			dependencies: ["2B09758DB1C8060F"]
 			description: ["Build a connected pump, vent, and pipe system. Check this after air moves through the whole network."]
 			id: "CC62DF944D975D82"
-			rewards: [{ count: 4, id: "D4650E27F81E383F", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 4, id: "54650E27F81E383F", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.3d
 			tasks: [
@@ -969,37 +969,37 @@
 			size: 1.2d
 			tasks: [
 			{
-				id: "7CA1EC8B4199500D"
+				id: "567ABA8A8A4C1AE1"
 				item: "framedblocks:framed_cube"
 				type: "item"
 			}
 			{
-				id: "862F0B840A2CCE5F"
+				id: "588BBEA469A86782"
 				item: "framedblocks:framed_saw"
 				type: "item"
 			}
 			{
-				id: "52E6D8B8174043BA"
+				id: "5E2975A949924AB7"
 				item: "framedblocks:framed_hammer"
 				type: "item"
 			}
 			{
-				id: "EA7BA0CBF17FDB80"
+				id: "4B01E3111B203B02"
 				item: "framedblocks:framed_wrench"
 				type: "item"
 			}
 			{
-				id: "86924DDD62C57F8A"
+				id: "0EF4972147185474"
 				item: "framedblocks:framed_screwdriver"
 				type: "item"
 			}
 			{
-				id: "4446628D8433AC1B"
+				id: "35C961FF8F929917"
 				item: "framedblocks:framed_blueprint"
 				type: "item"
 			}
 			{
-				id: "1EF8BB9F879AF7C4"
+				id: "196FA3778D370694"
 				item: "framedblocks:framed_key"
 				type: "item"
 			}
@@ -1028,7 +1028,7 @@
 			dependencies: ["9B6C167A50277704"]
 			description: ["Convert or use a representative slope, corner, or split. Shape the structure beyond cubes."]
 			id: "EAA9CFF6057C5A83"
-			rewards: [{ count: 2, id: "968E451D0521AD14", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "168E451D0521AD14", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "86555C8C7DD611EB"
@@ -1077,7 +1077,7 @@
 		{
 			description: ["Build the distant Sand Filter when the workshop can support it. It is not part of First Camp."]
 			id: "9DB9622E087CCF31"
-			rewards: [{ count: 2, id: "CB61E1BE4CE99061", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "4B61E1BE4CE99061", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			size: 1.2d
 			tasks: [

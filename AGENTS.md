@@ -4,7 +4,8 @@
 This repository is the Better Content Forge 1.20.1 modpack content layer.
 
 ## Active scripts
-- `./dist.sh [OUTPUT_DIR]` creates timestamped CurseForge/client and server-content ZIPs.
+- `./dist.sh` creates versioned CurseForge/client and server-content ZIPs under the
+  canonical ignored `dist/` directory. It accepts no output-directory override.
 - `./smoke.sh` is the sole supported evaluation.
 - `./package.sh` is their shared internal packager; do not invoke alternate assemblers.
 

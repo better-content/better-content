@@ -102,9 +102,9 @@ package_runtime() {
 }
 
 package_dist() {
-  (($# <= 1)) || fail 'usage: package.sh dist [OUTPUT_DIR]'
+  (($# == 0)) || fail 'distribution output is fixed at the repository dist/ directory'
   for command in java packwiz python3 zip; do command -v "$command" >/dev/null || fail "$command is required"; done
-  local out_root="${1:-$ROOT/dist}"
+  local out_root="$ROOT/dist"
   local current_version current_build next_build version version_dir_name release_dir client_dir server_dir stage
   current_version="$(awk -F ' *= *' '$1 == "version" { value=$2; gsub(/^"|"$/, "", value); print value; exit }' "$ROOT/pack.toml")"
   current_build="$(printf '%s' "$current_version" | sed -nE 's/^.*[^0-9]([0-9]+)$/\1/p')"
@@ -140,5 +140,5 @@ TXT
 case "${1:-}" in
   runtime) shift; package_runtime "$@" ;;
   dist) shift; package_dist "$@" ;;
-  *) fail 'usage: package.sh <runtime SERVER_DIR CLIENT_DIR PORT|dist [OUTPUT_DIR]>' ;;
+  *) fail 'usage: package.sh <runtime SERVER_DIR CLIENT_DIR PORT|dist>' ;;
 esac

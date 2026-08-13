@@ -35,7 +35,6 @@ All four mods ship as integrated transport surfaces. Eureka owns primitive post-
 - `traces-0.1.0.jar`
 - `villagewalls-1.0.0.jar`
 
-The exhaustive mod-ID inventory is generated with `tools/bc build mod-integration-matrix`. The current resolved distributions contain 231 shipping artifacts declaring 313 Forge mod IDs, including 82 IDs supplied only through embedded jars. The generated JSON/TSV/Markdown report under `generated/validation/mod-integration-matrix/` separates pack-system integration, configuration, references, presence, and dependency-only roles; reviewer-owned decisions persist in `tools/mod_integration_review.json`. The 2026-07-29 reviewer pass contains zero automatic decisions and retains 17 non-exempt findings, including the known ADLODS marker repair and Excavated Variants worldgen-oracle work rather than misclassifying either mod as absent from pack systems. Library, platform, performance, and confirmed client-utility rows stay visible but are exempt from the content-integration backlog.
 
 Do not infer active state from old RAM cuts or runtime caches. In the current repo, Hexerei, Iron's Spells, Malum, Occultism, Goety, Forbidden and Arcanus, Polymorph, Supplementaries, Amendments, and Genetic Animals are active. Genetic Animals is restored at the previously used `0.11.12` release on both client and server. A 2026-07-19 reset-runtime smoke passed with zero soft findings and no tick-behind warnings; Genetic Animals catches and logs an `UnsupportedOperationException` while attempting to extend an immutable village-animal pool, so its ordinary replacement animals load but village-specific animal injection remains unproven. Supplementaries is retained as the physical ash-layer target for Pollution of the Realms; its ash layers are excluded from RBP solid physics. The July 2026 breadth cut still retires Ice and Fire, Dungeon Crawl, Create Big Cannons, Reliquary, the secondary Delight food families, and their now-orphaned libraries. Markdown Manual remains solely because essential OC2R requires it at mod construction. Roots Classic, Mahoutsukai, Eidolon, Theurgy, Psi, and Hex Casting do not have active `mods/*.pw.toml` entries and should be treated as inactive/future unless re-added.
 
@@ -94,7 +93,6 @@ The 2026-07-16 post-integration reset-runtime smoke passed with zero soft findin
 
 ## Persistent Chunk Loading
 
-`arcane_chunkloaders` is the only craftable persistent-loading surface. Each active anchor owns exactly nine full-ticking Forge block tickets in the centered 3x3 around itself; tickets are released immediately when the buffer starves, redstone disables the anchor, or the block is removed. Saved records allow valid active tickets to be restored after restart while stale callback tickets are discarded. There is intentionally no per-owner cap, so the bounded footprint, visible two-hour buffer, continuous operating cost, and operator audit command are the performance controls. Operators can use `/chunkloaders list [page]` and its clickable teleport controls to inspect every recorded anchor across dimensions.
 
 ## Custom Mod Notes
 

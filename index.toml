@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "AGENTS.md"
-hash = "521aa4ef470e86b8a651990fd04161cdac9bf82cd6e886bc42f713efbd7ad897"
+hash = "83ca8d751eb4d79282bd5d78d0550a89be7728008e6a78e4b25fe5f5a5f24d2b"
 
 [[files]]
 file = "LICENSE"
@@ -15,10 +15,6 @@ hash = "40b8430f40df3bcdbf54e6ed70e372aaa8d2302675928ae1fe8a34c031552cfd"
 [[files]]
 file = "README.md"
 hash = "014ed50d211c1cc7aebb0e6fa6f42ad8be0e2af6dcbbca7c7738b23b8f9c7279"
-
-[[files]]
-file = "TOOL_MIGRATION_MATRIX.md"
-hash = "6b23b8a2179f62ab6fa7e952cdf54104ecd1162be4781bc701b2c73d190c12a2"
 
 [[files]]
 file = "config/DistantHorizons.toml"
@@ -7893,6 +7889,10 @@ file = "defaultresources/excavated_variants/excavated_variants/variants/realisti
 hash = "524d3f626ff204f39b7deed3a6917b8dc85979164ad3b163be69e5cdd811df3a"
 
 [[files]]
+file = "dist.sh"
+hash = "5515014b844e1ffd7d3dbc313dfc95ddc49f1ef264a04726faa14625065cb0b0"
+
+[[files]]
 file = "globalresources/dimension_drink/excavated_variants/dimension_drink/variants/dimension_drink_modded_ores.json5"
 hash = "e53ccfa0cf83bcacd081f188e299570e16fc9333ac8f117bac49709f90b6dff2"
 
@@ -9277,10 +9277,6 @@ file = "kubejs/client_scripts/47_hide_ae2_facades_from_emi.js"
 hash = "7ff999bfda91396044c85870d9cd3b009b4866c0b2a4535e24867f4ec6816ce6"
 
 [[files]]
-file = "kubejs/client_scripts/90_dev_debug/10_perf_probe.js"
-hash = "c8910d941db30757ad60dc994ba3043e0680cba8675dd40f160120b6836851fc"
-
-[[files]]
 file = "kubejs/config/adpother_latent_gas_policy.json"
 hash = "456d49c17c73171990b006e7336d6c2bf1206c573c353e788a9db85224875583"
 
@@ -9289,68 +9285,8 @@ file = "kubejs/config/alchemistry_dissolver_port.json"
 hash = "f9a34140252a5c961db16ee2e82a4b291f5630213d7210994f0d05e85aac0c16"
 
 [[files]]
-file = "kubejs/config/audit_dumps.json"
-hash = "0061fec1c86671b6ae07912b7e6337d045f0e59f64e3c7162c38b9f5db474bab"
-
-[[files]]
 file = "kubejs/config/bc_expert_graph_catalog.json"
 hash = "587c6dc3caa1a77308faac9198d5e6a7c17ee71c1498b87b81f61ea52bba4ec5"
-
-[[files]]
-file = "kubejs/config/block_hardness_probe.json"
-hash = "0360c310f9d72806563f50e809fcff6601bb90dee22b4a710a8bc5535fd05d93"
-
-[[files]]
-file = "kubejs/config/chemistry_authority/emission_contracts.json"
-hash = "aa35273fec61c1befe5be6ffea05e6ad26ade94e0c32f29fc9e7f2c36f8a28e6"
-
-[[files]]
-file = "kubejs/config/chemistry_authority/form_roles.json"
-hash = "e5e44d3617db1d8c71d998cb619612e25e2eb7b6fde99dbe276e3772df35a21e"
-
-[[files]]
-file = "kubejs/config/chemistry_authority/isotope_policy.json"
-hash = "9c49404e035ab22320f2edb851a55a65c3645a64accab3ea6450cea3b7f7a82e"
-
-[[files]]
-file = "kubejs/config/chemistry_authority/reaction_contracts.json"
-hash = "8ea09a9db0bd1ee7483adb2f5664f7f5c861946d4ce1256e380f59e37197633c"
-
-[[files]]
-file = "kubejs/config/chemistry_authority/recipe_authority_manifest.json"
-hash = "8f279ed3ca3234e13e90d367d314caa98aecbe9153b38d57e941c177dcb01d95"
-
-[[files]]
-file = "kubejs/config/chemistry_authority/schemas/emission_policy.schema.json"
-hash = "951f9088b2b780d37975ba4b126c4d04afe0b5c8373ad791234b742f3012259f"
-
-[[files]]
-file = "kubejs/config/chemistry_authority/schemas/form_roles.schema.json"
-hash = "2291740e2bdc7b13aec4427159a2c400fd9826b4f20490194afc2145998c6cbb"
-
-[[files]]
-file = "kubejs/config/chemistry_authority/schemas/isotope_state.schema.json"
-hash = "19d8d24a1a90c0a37801b498e193d8a4e0ab77cf805aae4cd0301fdb74207b33"
-
-[[files]]
-file = "kubejs/config/chemistry_authority/schemas/reactions.schema.json"
-hash = "caee058eedbd7efe46af2eabbeac0185261a7df27f36b66052a9fa5af293cb64"
-
-[[files]]
-file = "kubejs/config/chemistry_authority/schemas/sources.schema.json"
-hash = "fc7b46d1b98c09eb62c7b10de63674bde338a98a77f9538faa6100917b698d0b"
-
-[[files]]
-file = "kubejs/config/chemistry_authority/schemas/species.schema.json"
-hash = "05e4d6b0fca9e7acad998658421d87a49031a0e3aae2cb907e70a55095d824a1"
-
-[[files]]
-file = "kubejs/config/chemistry_authority/source_contracts.json"
-hash = "9842084f3f18b53e5848014781fcb996aad39fd2fcd8fdbe72cf492075e3af74"
-
-[[files]]
-file = "kubejs/config/chemistry_authority/species.json"
-hash = "f9b16a75f36b84674cd3afa95ef74f62638453069a792d3670a87d56d22c4b90"
 
 [[files]]
 file = "kubejs/config/chemlib_form_policy.json"
@@ -9399,10 +9335,6 @@ hash = "a6c95cd49ab1ba4796d158ba87a8fda149652b3bfd90f016e795cc4a0d7d543c"
 [[files]]
 file = "kubejs/config/mod_progression_gates.json"
 hash = "d979905cc1412672603f018e38a5e4e97fe7894f09e1dcc76501cad4a6ce78f4"
-
-[[files]]
-file = "kubejs/config/perf_probe.json"
-hash = "dc753044f39d65b2a0106b3ea4005dd10287e94c4ce1cc7d5bb4f9948bbb37c2"
 
 [[files]]
 file = "kubejs/config/player_progression_regression.json"
@@ -10697,10 +10629,6 @@ file = "kubejs/server_scripts/30_recipe_replace/115_material_economy_recipe_pass
 hash = "5b7937cc7695a257c6741d476e499f9a7217dd6d4dc5a03c9248e599be35108c"
 
 [[files]]
-file = "kubejs/server_scripts/30_recipe_replace/120_graph_audit_recipe_gates.js"
-hash = "e3b1b352daf360160f7c177aa85ed9561e30657e6b650f1642f897861e7e14db"
-
-[[files]]
 file = "kubejs/server_scripts/30_recipe_replace/121_create_stack_integration_gates.js"
 hash = "271917b92a02fea5136719933edb5be395d1fd316dec51b0bc720ea7d0863d9f"
 
@@ -10901,10 +10829,6 @@ file = "kubejs/server_scripts/40_recipe_add/51_surface_sample_processing.js"
 hash = "e4972154e2f65a4d44cc8ed8deef978417dd1b761908b27b8acef6952aac019a"
 
 [[files]]
-file = "kubejs/server_scripts/40_recipe_add/52_realistic_ores_excavated_host_cycles.js"
-hash = "2f3f459e173fa93ab4a09424cfb5251bc49d9c63081bcbe83d767d47c6253491"
-
-[[files]]
 file = "kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js"
 hash = "c6f608eba7fcfd5609968557784efa855fd9b019554307ff731735b6b6c504b8"
 
@@ -11007,18 +10931,6 @@ hash = "c12e429fc2763813587ba16e68971d023642c107dd62e9b8087d3295a6628c0b"
 [[files]]
 file = "kubejs/server_scripts/80_recipe_policy/10_no_complex_grid_defaults.js"
 hash = "5c4db6082db4126953f89489731779b52628ca7ac4763b5b3f7c858d64957ada"
-
-[[files]]
-file = "kubejs/server_scripts/90_dev_debug/20_food_effect_audit_dumps.js"
-hash = "960e2f9cb88c3c4b7b5dd4283edc84b5670bd3a3567f008a8fe05a520dffd39a"
-
-[[files]]
-file = "kubejs/server_scripts/90_dev_debug/40_block_hardness_probe.js"
-hash = "0424f26aff21328ace9021811a9d15879fdfa39fc726a8c774b79af24d3e22ca"
-
-[[files]]
-file = "kubejs/server_scripts/90_dev_debug/55_ore_worldgen_audit.js"
-hash = "6085ae1ef8cd534ec59740a61ae9bcb49d50cf65abb72d60b7c0b840ceed606d"
 
 [[files]]
 file = "kubejs/server_scripts/99_final/10_create_tcon_bootstrap.js"
@@ -12289,6 +12201,10 @@ hash = "bc0eb8c1ac515f9f83e97fd2b0e05abcf95e49e200d1b04699e68d8c24ee22d7"
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.8.1.zip.txt"
 hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
+
+[[files]]
+file = "smoke.sh"
+hash = "7b8b746adb044cc1d5731a2800f5c40d06fbf40fedf9c38aac47a79748564ec7"
 
 [[files]]
 file = "tacz/Applied Armorer-v1.1.4.1-for114+.zip"

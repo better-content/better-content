@@ -7,27 +7,27 @@ var BC_RO_SMELTING_MATRIX = {
         foundry: null
     },
     ironstone: {
-        furnace: { item: 'minecraft:iron_nugget', count: 1 },
+        furnace: { item: 'minecraft:iron_ingot', count: 1 },
         melting: { fluid: 'forge:molten_iron', amount: 90, temp: 800 },
         foundry: { fluid: 'forge:molten_iron', amount: 180, temp: 800, byproducts: [['forge:molten_nickel', 45], ['forge:molten_chromium', 22]] }
     },
     copper_sulfide: {
-        furnace: { item: 'tconstruct:copper_nugget', count: 1 },
+        furnace: { item: 'minecraft:copper_ingot', count: 1 },
         melting: { fluid: 'forge:molten_copper', amount: 90, temp: 500 },
         foundry: { fluid: 'forge:molten_copper', amount: 180, temp: 500, byproducts: [['forge:molten_iron', 45], ['forge:molten_gold', 22]] }
     },
     tin: {
-        furnace: { item: 'chemlib:tin_nugget', count: 1 },
+        furnace: { item: 'chemlib:tin_ingot', count: 1 },
         melting: { fluid: 'forge:molten_tin', amount: 90, temp: 225 },
         foundry: { fluid: 'forge:molten_tin', amount: 180, temp: 225, byproducts: [['tconstruct:molten_quartz', 45], ['forge:molten_tungsten', 22]] }
     },
     zinc: {
-        furnace: { item: 'create:zinc_nugget', count: 1 },
+        furnace: { item: 'create:zinc_ingot', count: 1 },
         melting: { fluid: 'forge:molten_zinc', amount: 90, temp: 420 },
         foundry: { fluid: 'forge:molten_zinc', amount: 180, temp: 420, byproducts: [['forge:molten_lead', 45], ['forge:molten_cadmium', 22]] }
     },
     lead_zinc_vein: {
-        furnace: { item: 'chemlib:lead_nugget', count: 1 },
+        furnace: { item: 'chemlib:lead_ingot', count: 1 },
         melting: { fluid: 'forge:molten_lead', amount: 90, temp: 420 },
         foundry: { fluid: 'forge:molten_lead', amount: 180, temp: 420, byproducts: [['forge:molten_zinc', 45], ['forge:molten_silver', 45]] }
     },
@@ -37,12 +37,12 @@ var BC_RO_SMELTING_MATRIX = {
         foundry: { fluid: 'forge:molten_quartz', amount: 180, temp: 1035, byproducts: [['forge:molten_gold', 22], ['forge:molten_copper', 22]] }
     },
     bauxite_laterite: {
-        furnace: { item: 'chemlib:aluminum_nugget', count: 1 },
+        furnace: { item: 'chemlib:aluminum_ingot', count: 1 },
         melting: { fluid: 'forge:molten_aluminum', amount: 90, temp: 425 },
         foundry: { fluid: 'forge:molten_aluminum', amount: 180, temp: 425, byproducts: [['forge:molten_iron', 45], ['forge:molten_nickel', 22]] }
     },
     nickel_sulfide: {
-        furnace: { item: 'chemlib:nickel_nugget', count: 1 },
+        furnace: { item: 'chemlib:nickel_ingot', count: 1 },
         melting: { fluid: 'forge:molten_nickel', amount: 90, temp: 950 },
         foundry: { fluid: 'forge:molten_nickel', amount: 180, temp: 950, byproducts: [['forge:molten_iron', 45], ['forge:molten_cobalt', 22]] }
     },
@@ -52,12 +52,12 @@ var BC_RO_SMELTING_MATRIX = {
         foundry: { fluid: 'tconstruct:molten_osmium', amount: 90, temp: 1450, byproducts: [['forge:molten_platinum', 45]] }
     },
     tin_tungsten_greisen: {
-        furnace: { item: 'chemlib:tin_nugget', count: 1 },
+        furnace: { item: 'chemlib:tin_ingot', count: 1 },
         melting: { fluid: 'forge:molten_tungsten', amount: 90, temp: 1450 },
         foundry: { fluid: 'forge:molten_tungsten', amount: 180, temp: 1450, byproducts: [['forge:molten_tin', 45], ['tconstruct:molten_quartz', 90]] }
     },
     titanium_iron_oxide: {
-        furnace: { item: 'chemlib:titanium_nugget', count: 1 },
+        furnace: { item: 'chemlib:titanium_ingot', count: 1 },
         melting: { fluid: 'kubejs:molten_titanium', amount: 90, temp: 950 },
         foundry: { fluid: 'kubejs:molten_titanium', amount: 180, temp: 950, byproducts: [['forge:molten_iron', 90], ['forge:molten_chromium', 22]] }
     },

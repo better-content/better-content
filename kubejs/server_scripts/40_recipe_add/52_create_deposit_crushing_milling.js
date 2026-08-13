@@ -13,6 +13,13 @@ function bcRoBuildRecipeResults(chunk, byproduct, host) {
     ]
 }
 
+function bcRoBuildMillingResults(crushed, byproduct) {
+    return [
+        { item: crushed },
+        { item: byproduct[0], chance: byproduct[1] }
+    ]
+}
+
 ServerEvents.recipes(function (event) {
     var deposits = global.BC_REALISTIC_ORES || []
 
@@ -24,9 +31,8 @@ ServerEvents.recipes(function (event) {
         var normalDeposit = 'realisticores:' + deposit
         var deepslateDeposit = 'realisticores:deepslate_' + deposit
         var crushingResults = bcRoBuildRecipeResults(dep.chunk, dep.crushingByproduct, 'minecraft:stone')
-        var millingResults = bcRoBuildRecipeResults(dep.chunk, dep.millingByproduct, 'minecraft:stone')
+        var millingResults = bcRoBuildMillingResults(dep.crushed, dep.millingByproduct)
         var crushingDeepslateResults = bcRoBuildRecipeResults(dep.chunk, dep.crushingByproduct, 'minecraft:deepslate')
-        var millingDeepslateResults = bcRoBuildRecipeResults(dep.chunk, dep.millingByproduct, 'minecraft:deepslate')
 
         event.remove({ id: 'realisticores:compat/create/crushing/' + deposit })
         event.remove({ id: 'realisticores:compat/create/crushing/deepslate_' + deposit })
@@ -47,16 +53,9 @@ ServerEvents.recipes(function (event) {
 
         event.custom({
             type: 'create:milling',
-            ingredients: [{ type: 'forge:nbt', item: normalDeposit }],
+            ingredients: [{ type: 'forge:nbt', item: dep.chunk }],
             results: millingResults,
             processingTime: 300
         }).id('kubejs:realistic_ores/milling/' + deposit)
-
-        event.custom({
-            type: 'create:milling',
-            ingredients: [{ type: 'forge:nbt', item: deepslateDeposit }],
-            results: millingDeepslateResults,
-            processingTime: 300
-        }).id('kubejs:realistic_ores/milling/deepslate_' + deposit)
     }
 })

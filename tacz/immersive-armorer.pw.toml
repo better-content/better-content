@@ -1,0 +1,13 @@
+name = "[TaCZ] Immersive Armorer"
+filename = "Immersive Armorer-v1.2.1-for117.zip"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2284c83c1917f4ec16ab1d776dca137b85c98968"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7598069
+project-id = 1081193

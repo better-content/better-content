@@ -9353,10 +9353,6 @@ file = "kubejs/config/surface_registry.json"
 hash = "46940e857300a46d9972ff9861050755c2caca59663727d294253fcd7e24722d"
 
 [[files]]
-file = "kubejs/config/tech_parenting.json"
-hash = "c46ae30016302785e90bcee801510beadad8aab998a63271f4174a2e31f43801"
-
-[[files]]
 file = "kubejs/config/vs_transport_surfaces.json"
 hash = "fc439f3aaba5c0dff0281f6e377f4593f8c22363e3b7e012ad15432c09b21e5d"
 
@@ -10830,7 +10826,7 @@ hash = "e4972154e2f65a4d44cc8ed8deef978417dd1b761908b27b8acef6952aac019a"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/52_create_deposit_crushing_milling.js"
-hash = "e9c493a20e5399b0572a0051502e83599b049439805f37756266a81969c7865c"
+hash = "4edb47c4095030e9d90c1e896e581430f73f313f8b3e76dfe12a8fd7e3c72718"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/55_realistic_ores_identity_outputs.js"
@@ -10850,7 +10846,7 @@ hash = "fc3e20d83417e24a736a496218233f810193036f0151997453947a9f77e0c39a"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/57_realistic_ores_smelting_matrix.js"
-hash = "019e7c4e256ca6e28ba817186189243ef99aad7727bf23aceed176c3d0de2a6d"
+hash = "98c874941d8c5105c23f6387738a3cae97394f881952d55ea56d21b7f6d508ba"
 
 [[files]]
 file = "kubejs/server_scripts/40_recipe_add/58_blood_magic_manual_create_yields.js"
@@ -12180,7 +12176,7 @@ hash = "1bb5a261a4e74a21f5548e5e8dd41f9d4417808926ed917524b3cc0604aadb21"
 
 [[files]]
 file = "package.sh"
-hash = "2804e62495b32f6ba3313bf75646d14c327b64c714e3e17ee35a209fef6b05c4"
+hash = "8ff75c8ef83db58f6cb6420cde485508c7d4c233581b47bb287dfb15d10affd3"
 
 [[files]]
 file = "prestige-server.sh"
@@ -12215,13 +12211,16 @@ file = "smoke.sh"
 hash = "b71c5f94bb2d95c1eba5406b2607b4ac04219857d056a055292abb42ac540277"
 
 [[files]]
-file = "tacz/Applied Armorer-v1.1.4.1-for114+.zip"
-hash = "e52ddb8b6412951f9b79c9ed9a7521a849cef4192f19af4843a3392cdbcfc420"
+file = "tacz/applied-armorer.pw.toml"
+hash = "e786a4717b8f6cdcb018f7f9bc71a30935df713793f7390f9c197051b46ffa81"
+metafile = true
 
 [[files]]
-file = "tacz/Create Armorer-v1.2.0.1-for117.zip"
-hash = "479f0ac05833ccec554efa1b22e6f71553c7ebe7f381310c28467a399c98b0ba"
+file = "tacz/create-armorer.pw.toml"
+hash = "17eb2a1bee7d35971c16b7f78d51d447a10ab3a349a5b1704639cbffb72daeb0"
+metafile = true
 
 [[files]]
-file = "tacz/Immersive Armorer-v1.2.1-for117.zip"
-hash = "2f8c939fc533fc612b139d6ec74fdfb52412b83ea5da169e5a2380985af74050"
+file = "tacz/immersive-armorer.pw.toml"
+hash = "5f316c3735b248f22c3fabeece8ea930e146f39193b13b32f2d1f296c9f3790d"
+metafile = true

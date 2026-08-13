@@ -1,11 +1,11 @@
 name = "Better Content — Persistence Playtest"
-version = "Build 44"
+version = "Build 50"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "1173e97483326defc68b7036533fb7b252aa365bff7d80ba9f845a4abd7dba9c"
+hash = "cedf138c2d5ebb670aa85fb6e69d503bd213a3b478d303006d9a67b34d1e747a"
 
 [versions]
 forge = "47.4.13"

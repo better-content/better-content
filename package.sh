@@ -19,7 +19,7 @@ resolve_artifacts() {
 import fnmatch, hashlib, os, pathlib, shutil, sys, tomllib, urllib.request
 root, target, side = pathlib.Path(sys.argv[1]), pathlib.Path(sys.argv[2]), sys.argv[3]
 client_only = ('ambientsounds*','bettergrassify*','configured*','controlling*','DistantHorizons*','embeddium*','entityculling*','hold-my-items*','mouse-tweaks*','no-more-popups*','no-recipe-book*','oculus*','presence-footsteps*','shoulder-surfing*','sound-physics*','the-one-probe*','true-darkness*','darkness*')
-for folder in ('mods','resourcepacks','shaderpacks'):
+for folder in ('mods','resourcepacks','shaderpacks','tacz'):
     for manifest in sorted((root / folder).glob('*.pw.toml')):
         data = tomllib.loads(manifest.read_text())
         if data.get('side', 'both') not in ('both', side):

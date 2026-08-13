@@ -16,8 +16,6 @@ generated/exports/
 generated/exports-build40-*
 generated/cache/
 generated/evidence/
-# Custom-mod source directories are owned source inputs.  Ignore their build and
-# Gradle caches, not the sources themselves.
 generated/asset-review/*/evidence/
 generated/pack-site/
 generated/surface-marker-capture/

@@ -8,10 +8,10 @@
 	quest_links: [
 		{ id: "180B97D96B3DB92C", linked_quest: "7838A4605E6A8E08", x: -15d, y: 0d }
 		{ id: "66639CE5F4303B1B", linked_quest: "01241F25B8A10387", x: -12d, y: 0d }
-		{ id: "36B0DBB4106B5197", linked_quest: "E16B8796484892FF", x: -9d, y: -3d }
-		{ id: "23090CF4CC94624E", linked_quest: "CB3FCC1B9569023E", x: -6.8d, y: -3d }
+		{ id: "36B0DBB4106B5197", linked_quest: "616B8796484892FF", x: -9d, y: -3d }
+		{ id: "23090CF4CC94624E", linked_quest: "4B3FCC1B9569023E", x: -6.8d, y: -3d }
 		{ id: "422E2CF0CD06ABAC", linked_quest: "0EA60205EE4E3808", x: -4.6d, y: -4.2d }
-		{ id: "0CAE283C44491BDB", linked_quest: "FFF2F274923CC05E", x: -2.3d, y: -3.5d, shape: "hexagon", size: 1.5d }
+		{ id: "0CAE283C44491BDB", linked_quest: "7FF2F274923CC05E", x: -2.3d, y: -3.5d, shape: "hexagon", size: 1.5d }
 		{ id: "11047E0B3CC19CDD", linked_quest: "1B7CF4C8F5700C7F", x: -2d, y: 1d }
 		{ id: "12DDA1002E0A8F29", linked_quest: "76D4FB5757FB9A04", x: 0.3d, y: 1d }
 		{ id: "07162CEF4F64D3B2", linked_quest: "4CC3C8B2D71507C1", x: 2.6d, y: 1d }

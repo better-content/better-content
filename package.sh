@@ -112,7 +112,11 @@ package_dist() {
   next_build=$((10#$current_build + 1))
   version="$(printf '%s' "$current_version" | sed -E "s/[0-9]+$/$next_build/")"
   version_dir_name="$(printf '%s' "$version" | tr '[:upper:] ' '[:lower:]-' | tr -cd 'a-z0-9._-')"
-  mkdir -p "$out_root"
+  if [ -e "$out_root" ]; then
+    find "$out_root" -mindepth 1 -maxdepth 1 -exec rm -rf -- {} +
+  else
+    mkdir -p "$out_root"
+  fi
   out_root="$(cd "$out_root" && pwd)"
   release_dir="$out_root/$version_dir_name"
   [ ! -e "$release_dir" ] || fail "version directory already exists: $release_dir"

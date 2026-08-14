@@ -348,7 +348,7 @@
 		}
 		{
 			dependencies: ["5348A7BBA1D5C6AE"]
-			description: ["Refine an Ethereal Slate as the final shared Blood proof. Legendary formal ink and endgame hybrid magic may consume it, but side recipes should not spam hearts."]
+			description: ["Refine an Ethereal Slate as the final shared Blood proof. Endgame formal glyphs and hybrid magic may consume it, but side recipes should not spam hearts."]
 			icon: "bloodmagic:etherealslate"
 			id: "DA282A7605185BFF"
 			shape: "octagon"
@@ -376,6 +376,51 @@
 			title: "Holding Sigil"
 			x: 42.0d
 			y: -2.4d
+		}
+		{
+			dependencies: ["4F302119B706700C"]
+			description: ["Blood Magic originates Harm, Heal, Dispel, Dampen, Duration Down, Wither, Life Link, Bubble Shield, Infuse, and Hex. Ars records vitality, warding, and dispelling without becoming their source."]
+			icon: "ars_nouveau:glyph_heal"
+			id: "B101000000000001"
+			shape: "hexagon"
+			tasks: [			{
+				title: "Review Blood Magic's formal vocabulary"
+				id: "B101000000000002"
+				type: "checkmark"
+			}]
+			title: "Formalize Vitality"
+			x: 21.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["A5353B75FDB5C328"]
+			description: ["Malum originates Explosion, Firework, Flare, Glide, Gravity, Gust, Launch, Leap, Lightning, Orbit, Slowfall, Toss, Wind Shear, Discharge, Spark, Break, Crush, Ignite, Infuse, Pull, Animate Block, Summon Decoy, Spike, and Wither. Ars formalizes spirit energy as force and motion."]
+			icon: "ars_nouveau:glyph_gravity"
+			id: "B102000000000001"
+			shape: "hexagon"
+			tasks: [			{
+				title: "Review Malum's formal vocabulary"
+				id: "B102000000000002"
+				type: "checkmark"
+			}]
+			title: "Formalize Spirit Force"
+			x: 27.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["5348A7BBA1D5C6AE"]
+			description: ["Goety originates Animate Block, Fangs, Hex, Snare, Summon Decoy, Summon Undead, Summon Vex, Wall, Wither, Phantom Grasp, Spike, Charm, Name, Pull, Summon Steed, Summon Wolves, and Life Link. Ars makes command reproducible while Goety retains the dangerous encounter and apparatus."]
+			icon: "ars_nouveau:glyph_summon_undead"
+			id: "B103000000000001"
+			shape: "hexagon"
+			tasks: [			{
+				title: "Review Goety's formal vocabulary"
+				id: "B103000000000002"
+				type: "checkmark"
+			}]
+			title: "Formalize Command"
+			x: 36.0d
+			y: -5.0d
 		}
 
 	]

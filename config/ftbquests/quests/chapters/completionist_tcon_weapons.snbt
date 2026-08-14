@@ -16,42 +16,7 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["5 starter stubs."]
-			icon: {
-				Count: 1
-				id: "additionalweaponry:butcher_knife"
-				tag: {
-					Damage: 0
-					tic_broken: 0b
-				}
-			}
-			id: "1DDAC44A74F57739"
-			rewards: [{
-				count: 8
-				id: "999580D72C0EB1EB"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "0BDEE3E640A5BAF1"
-				title: "additionalweaponry"
-				type: "checkmark"
-			}]
-			title: "additionalweaponry"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			icon: {
-				Count: 1
-				id: "additionalweaponry:butcher_knife"
-				tag: {
-					Damage: 0
-					tic_broken: 0b
-				}
-			}
+			icon: "minecraft:stone_sword"
 			id: "0D1BCD5229937D35"
 			rewards: [{
 				count: 8
@@ -212,34 +177,6 @@
 			title: "All TCon Weapons: Wrench"
 			x: 6.5d
 			y: 0.0d
-		}
-		{
-			description: ["9 starter stubs."]
-			icon: {
-				Count: 1
-				id: "tconstruct:dagger"
-				tag: {
-					Damage: 0
-					tic_broken: 0b
-				}
-			}
-			id: "02A1CAE896551923"
-			rewards: [{
-				count: 8
-				id: "45A7DEB9239BBDA9"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "11E72D700FB9DC93"
-				title: "tconstruct"
-				type: "checkmark"
-			}]
-			title: "tconstruct"
-			x: 0.0d
-			y: 3.25d
 		}
 		{
 			icon: {
@@ -702,34 +639,6 @@
 			y: 3.25d
 		}
 		{
-			description: ["1 starter stubs."]
-			icon: {
-				Count: 1
-				id: "tinkers_battle_spades:battle_spade"
-				tag: {
-					Damage: 0
-					tic_broken: 0b
-				}
-			}
-			id: "4C110482CB7F7587"
-			rewards: [{
-				count: 8
-				id: "5B4375A5FA96D8E2"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "6E3C3201E602A68B"
-				title: "tinkers_battle_spades"
-				type: "checkmark"
-			}]
-			title: "tinkers_battle_spades"
-			x: 0.0d
-			y: 6.5d
-		}
-		{
 			icon: {
 				Count: 1
 				id: "tinkers_battle_spades:battle_spade"
@@ -762,34 +671,6 @@
 			title: "All TCon Weapons: Battle Spade"
 			x: 1.5d
 			y: 6.5d
-		}
-		{
-			description: ["3 starter stubs."]
-			icon: {
-				Count: 1
-				id: "tinkersweaponry:greatsword"
-				tag: {
-					Damage: 0
-					tic_broken: 0b
-				}
-			}
-			id: "636064E27990E532"
-			rewards: [{
-				count: 8
-				id: "079860B551E15968"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "118CDD2EDC78DDAB"
-				title: "tinkersweaponry"
-				type: "checkmark"
-			}]
-			title: "tinkersweaponry"
-			x: 0.0d
-			y: 9.75d
 		}
 		{
 			icon: {

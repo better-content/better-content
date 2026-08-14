@@ -45,11 +45,6 @@
     { "name": "graveyard:lich_prison", "is_disabled": true },
     { "name": "mna:faction/boss/council_island", "is_disabled": true },
     { "name": "minecraft:ancient_city", "is_disabled": true },
-    { "name":  "forbidden_arcanus:nipa_floating", "is_disabled": true },
-
-
-
-
     { "name": "minecraft:stronghold", "is_disabled": true }
   ],
   "structure_sets": []

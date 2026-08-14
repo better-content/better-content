@@ -149,8 +149,7 @@
       "id": "blood_2",
       "gate": "bloodmagic:reinforcedslate",
       "mods": [
-        "hexerei",
-        "irons_spellbooks"
+        "hexerei"
       ]
     },
     {
@@ -161,29 +160,19 @@
       ]
     },
     {
-      "id": "blood_4",
-      "gate": "bloodmagic:demonslate",
+      "id": "formal_epic",
+      "gate": "#kubejs:formal_magic/proof/epic",
       "mods": [
         "ars_nouveau",
-        "ars_additions",
-        "ars_instrumentum",
         "ars_elemental",
         "goety",
-        "forbidden_arcanus",
-        "theurgy",
-        "ars_creo",
-        "ars_technica",
-        "ars_caelum"
+        "ars_creo"
       ]
     },
     {
-      "id": "blood_5",
-      "gate": "bloodmagic:etherealslate",
+      "id": "formal_legendary",
+      "gate": "#kubejs:formal_magic/proof/legendary",
       "mods": [
-        "hexcasting",
-        "psi",
-        "mna",
-        "hexalia",
         "arseng",
         "tomeofblood"
       ]
@@ -200,7 +189,7 @@
   },
   "criticalRules": [
     "Block-like machines must require their assigned casing tier.",
-    "Magic workstations must be parented to Blood Magic tiers.",
+    "Magic workstations must expose proof from the magical root or formal practice that authorizes their capability.",
     "Hexerei progression must precede Occultism attunement and Ars source precision.",
     "Exact duplicate physical materials should collapse to canonical pack families; mahogany standardizes on natures_spirit.",
     "Loot, Wares, trades, mob drops, and quests are recipe-equivalent material sources.",

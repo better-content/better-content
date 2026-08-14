@@ -9,27 +9,6 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["7 starter stubs."]
-			icon: "minecraft:oak_sapling"
-			id: "52573BB0AF8E3D20"
-			rewards: [{
-				count: 8
-				id: "55956B7910481BD5"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "24056D269CC075DD"
-				title: "Items"
-				type: "checkmark"
-			}]
-			title: "Items"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
 			icon: "farmersdelight:cabbage_seeds"
 			id: "2DF32254DEB903A7"
 			rewards: [{
@@ -168,27 +147,6 @@
 			title: "All Plants: Gloomgourd Seeds"
 			x: 9.0d
 			y: 0.0d
-		}
-		{
-			description: ["25 starter stubs."]
-			icon: "ars_nouveau:magebloom_block"
-			id: "75991AFBEF186884"
-			rewards: [{
-				count: 8
-				id: "589097BD7CD5EAF3"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "15B4252ABFA4E8B5"
-				title: "Flowers"
-				type: "checkmark"
-			}]
-			title: "Flowers"
-			x: 0.0d
-			y: 3.25d
 		}
 		{
 			icon: "ars_nouveau:magebloom_crop"
@@ -583,7 +541,7 @@
 			y: 4.5d
 		}
 		{
-			icon: "farmersdelight:mushroom_rice"
+			icon: { Count: 1, id: "farmersdelight:mushroom_rice", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "54AF5301433489E7"
 			rewards: [{
 				count: 8
@@ -715,27 +673,6 @@
 			y: 5.75d
 		}
 		{
-			description: ["28 starter stubs."]
-			icon: "aether:aether_grass_block"
-			id: "3B8A99D87502CB7C"
-			rewards: [{
-				count: 8
-				id: "AB22CFFD09DFEAD6"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "558D3F24C6BD4063"
-				title: "Roots And Vines"
-				type: "checkmark"
-			}]
-			title: "Roots And Vines"
-			x: 0.0d
-			y: 9.0d
-		}
-		{
 			icon: "aether:skyroot_stick"
 			id: "1479D4417BBC0B85"
 			rewards: [{
@@ -756,7 +693,7 @@
 			y: 9.0d
 		}
 		{
-			icon: "ars_nouveau:sourceberry_bush"
+			icon: { Count: 1, id: "ars_nouveau:sourceberry_bush", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0CB9D63816D914D3"
 			rewards: [{
 				count: 8
@@ -796,7 +733,7 @@
 			y: 9.0d
 		}
 		{
-			icon: "bloodmagic:ritualdivinerdusk"
+			icon: { Count: 1, id: "bloodmagic:ritualdivinerdusk", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "6A2EFE00BB96A233"
 			rewards: [{
 				count: 8
@@ -836,7 +773,7 @@
 			y: 9.0d
 		}
 		{
-			icon: "farmersdelight:cabbage_leaf"
+			icon: { Count: 1, id: "farmersdelight:cabbage_leaf", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0B131CF0827D5DBD"
 			rewards: [{
 				count: 8
@@ -896,7 +833,7 @@
 			y: 9.0d
 		}
 		{
-			icon: "immersive_weathering:golden_moss_clump"
+			icon: { Count: 1, id: "immersive_weathering:golden_moss_clump", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "1FC30B9665933F01"
 			rewards: [{
 				count: 8
@@ -916,7 +853,7 @@
 			y: 9.0d
 		}
 		{
-			icon: "immersive_weathering:moss_clump"
+			icon: { Count: 1, id: "immersive_weathering:moss_clump", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "09C1979E2BE0D1BC"
 			rewards: [{
 				count: 8
@@ -976,7 +913,7 @@
 			y: 9.0d
 		}
 		{
-			icon: "minecraft:beetroot"
+			icon: { Count: 1, id: "minecraft:beetroot", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "2864106B1085FA79"
 			rewards: [{
 				count: 8
@@ -1216,7 +1153,7 @@
 			y: 10.25d
 		}
 		{
-			icon: "ubesdelight:lemongrass"
+			icon: { Count: 1, id: "ubesdelight:lemongrass", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "7850D5E4EE8195BA"
 			rewards: [{
 				count: 8
@@ -1256,7 +1193,7 @@
 			y: 11.5d
 		}
 		{
-			icon: "undergarden:droopvine_item"
+			icon: { Count: 1, id: "undergarden:droopvine_item", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "3D90A9E960DB468C"
 			rewards: [{
 				count: 8
@@ -1296,28 +1233,7 @@
 			y: 11.5d
 		}
 		{
-			description: ["46 starter stubs."]
-			icon: "aether:blue_berry"
-			id: "6FB5AA6A261C3B85"
-			rewards: [{
-				count: 8
-				id: "680E23A195EFC332"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "14F9A5A2413B2E89"
-				title: "Produce"
-				type: "checkmark"
-			}]
-			title: "Produce"
-			x: 0.0d
-			y: 14.75d
-		}
-		{
-			icon: "aether:blue_berry"
+			icon: { Count: 1, id: "aether:blue_berry", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "74E42C5DB2AF78A5"
 			rewards: [{
 				count: 8
@@ -1337,7 +1253,7 @@
 			y: 14.75d
 		}
 		{
-			icon: "aether:enchanted_berry"
+			icon: { Count: 1, id: "aether:enchanted_berry", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "5345A5BD618138BF"
 			rewards: [{
 				count: 8
@@ -1357,7 +1273,7 @@
 			y: 14.75d
 		}
 		{
-			icon: "ars_nouveau:source_berry_roll"
+			icon: { Count: 1, id: "ars_nouveau:source_berry_roll", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "7A3442B1FC5FA847"
 			rewards: [{
 				count: 8
@@ -1397,7 +1313,7 @@
 			y: 14.75d
 		}
 		{
-			icon: "brewinandchewin:glow_berry_marmalade"
+			icon: { Count: 1, id: "brewinandchewin:glow_berry_marmalade", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0B4B84AC9310BBEB"
 			rewards: [{
 				count: 8
@@ -1417,7 +1333,7 @@
 			y: 14.75d
 		}
 		{
-			icon: "create:honeyed_apple"
+			icon: { Count: 1, id: "create:honeyed_apple", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "7449B625934D1D3D"
 			rewards: [{
 				count: 8
@@ -1437,7 +1353,7 @@
 			y: 14.75d
 		}
 		{
-			icon: "farmersdelight:cabbage"
+			icon: { Count: 1, id: "farmersdelight:cabbage", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "2E387AB07E15ABEA"
 			rewards: [{
 				count: 8
@@ -1457,7 +1373,7 @@
 			y: 14.75d
 		}
 		{
-			icon: "farmersdelight:cabbage_rolls"
+			icon: { Count: 1, id: "farmersdelight:cabbage_rolls", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "3BC7BE9622A388EC"
 			rewards: [{
 				count: 8
@@ -1477,7 +1393,7 @@
 			y: 14.75d
 		}
 		{
-			icon: "farmersdelight:glow_berry_custard"
+			icon: { Count: 1, id: "farmersdelight:glow_berry_custard", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "1508B64D1054B696"
 			rewards: [{
 				count: 8
@@ -1497,7 +1413,7 @@
 			y: 14.75d
 		}
 		{
-			icon: "farmersdelight:melon_popsicle"
+			icon: { Count: 1, id: "farmersdelight:melon_popsicle", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "209AD0A2F2630829"
 			rewards: [{
 				count: 8
@@ -1517,7 +1433,7 @@
 			y: 14.75d
 		}
 		{
-			icon: "farmersdelight:onion"
+			icon: { Count: 1, id: "farmersdelight:onion", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "026EF20EA85DB89E"
 			rewards: [{
 				count: 8
@@ -1537,7 +1453,7 @@
 			y: 14.75d
 		}
 		{
-			icon: "farmersdelight:pumpkin_slice"
+			icon: { Count: 1, id: "farmersdelight:pumpkin_slice", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "77F6FF16DE8E11EA"
 			rewards: [{
 				count: 8
@@ -1577,7 +1493,7 @@
 			y: 16.0d
 		}
 		{
-			icon: "farmersdelight:stuffed_potato"
+			icon: { Count: 1, id: "farmersdelight:stuffed_potato", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "4160DCDE6149C484"
 			rewards: [{
 				count: 8
@@ -1597,7 +1513,7 @@
 			y: 16.0d
 		}
 		{
-			icon: "farmersdelight:tomato"
+			icon: { Count: 1, id: "farmersdelight:tomato", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "6C1D84FB65CE3686"
 			rewards: [{
 				count: 8
@@ -1617,7 +1533,7 @@
 			y: 16.0d
 		}
 		{
-			icon: "minecraft:apple"
+			icon: { Count: 1, id: "minecraft:apple", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "54B0558FBFC9C792"
 			rewards: [{
 				count: 8
@@ -1637,7 +1553,7 @@
 			y: 16.0d
 		}
 		{
-			icon: "minecraft:baked_potato"
+			icon: { Count: 1, id: "minecraft:baked_potato", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "53EEC28023E3E7EA"
 			rewards: [{
 				count: 8
@@ -1657,7 +1573,7 @@
 			y: 16.0d
 		}
 		{
-			icon: "minecraft:carrot"
+			icon: { Count: 1, id: "minecraft:carrot", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "30317EA3EF8C85E5"
 			rewards: [{
 				count: 8
@@ -1729,7 +1645,7 @@
 			y: 16.0d
 		}
 		{
-			icon: "minecraft:chorus_fruit"
+			icon: { Count: 1, id: "minecraft:chorus_fruit", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "04FC20DC8129BFE4"
 			rewards: [{
 				count: 8
@@ -1769,7 +1685,7 @@
 			y: 16.0d
 		}
 		{
-			icon: "minecraft:enchanted_golden_apple"
+			icon: { Count: 1, id: "minecraft:enchanted_golden_apple", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0165A44C030322E9"
 			rewards: [{
 				count: 8
@@ -1809,7 +1725,7 @@
 			y: 16.0d
 		}
 		{
-			icon: "minecraft:glow_berries"
+			icon: { Count: 1, id: "minecraft:glow_berries", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "684A6D776647792C"
 			rewards: [{
 				count: 8
@@ -1829,7 +1745,7 @@
 			y: 17.25d
 		}
 		{
-			icon: "minecraft:golden_apple"
+			icon: { Count: 1, id: "minecraft:golden_apple", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0079BA57BB2331CB"
 			rewards: [{
 				count: 8
@@ -1849,7 +1765,7 @@
 			y: 17.25d
 		}
 		{
-			icon: "minecraft:golden_carrot"
+			icon: { Count: 1, id: "minecraft:golden_carrot", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0514BC0DBD3FED0E"
 			rewards: [{
 				count: 8
@@ -1889,7 +1805,7 @@
 			y: 17.25d
 		}
 		{
-			icon: "minecraft:melon_slice"
+			icon: { Count: 1, id: "minecraft:melon_slice", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "75162BA9369624D8"
 			rewards: [{
 				count: 8
@@ -1929,7 +1845,7 @@
 			y: 17.25d
 		}
 		{
-			icon: "minecraft:poisonous_potato"
+			icon: { Count: 1, id: "minecraft:poisonous_potato", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "3DE2E816B7956F6A"
 			rewards: [{
 				count: 8
@@ -1969,7 +1885,7 @@
 			y: 17.25d
 		}
 		{
-			icon: "minecraft:potato"
+			icon: { Count: 1, id: "minecraft:potato", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "6908D087FFECBC6A"
 			rewards: [{
 				count: 8
@@ -2009,7 +1925,7 @@
 			y: 17.25d
 		}
 		{
-			icon: "minecraft:sweet_berries"
+			icon: { Count: 1, id: "minecraft:sweet_berries", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "24CA703811EDBC20"
 			rewards: [{
 				count: 8
@@ -2029,7 +1945,7 @@
 			y: 17.25d
 		}
 		{
-			icon: "natures_spirit:desert_turnip"
+			icon: { Count: 1, id: "natures_spirit:desert_turnip", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "13E24A3F2AD0D67E"
 			rewards: [{
 				count: 8
@@ -2129,7 +2045,7 @@
 			y: 18.5d
 		}
 		{
-			icon: "tconstruct:jeweled_apple"
+			icon: { Count: 1, id: "tconstruct:jeweled_apple", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "1EA8933D1D28F998"
 			rewards: [{
 				count: 8
@@ -2149,7 +2065,7 @@
 			y: 18.5d
 		}
 		{
-			icon: "twilightforest:torchberries"
+			icon: { Count: 1, id: "twilightforest:torchberries", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "174C0EF3AD2729EF"
 			rewards: [{
 				count: 8
@@ -2169,7 +2085,7 @@
 			y: 18.5d
 		}
 		{
-			icon: "undergarden:blisterberry"
+			icon: { Count: 1, id: "undergarden:blisterberry", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "48C31595F7A98FAE"
 			rewards: [{
 				count: 8
@@ -2189,7 +2105,7 @@
 			y: 18.5d
 		}
 		{
-			icon: "undergarden:rotten_blisterberry"
+			icon: { Count: 1, id: "undergarden:rotten_blisterberry", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "749AD4494053BB0D"
 			rewards: [{
 				count: 8
@@ -2241,7 +2157,7 @@
 			y: 18.5d
 		}
 		{
-			icon: "undergarden:underbeans"
+			icon: { Count: 1, id: "undergarden:underbeans", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "47DC5696088E6E0B"
 			rewards: [{
 				count: 8
@@ -2259,27 +2175,6 @@
 			title: "All Plants: Underbeans"
 			x: 12.75d
 			y: 18.5d
-		}
-		{
-			description: ["1 starter stubs."]
-			icon: "quark:seed_pouch"
-			id: "0C41D84D79B17D04"
-			rewards: [{
-				count: 8
-				id: "63BB47446CE8BBC5"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "570D9F4CC350C7EB"
-				title: "Other Plants"
-				type: "checkmark"
-			}]
-			title: "Other Plants"
-			x: 0.0d
-			y: 21.75d
 		}
 		{
 			icon: "quark:seed_pouch"

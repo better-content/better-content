@@ -5,11 +5,22 @@
 	group: "65CC8BE9C7D2A5C0"
 	id: "22C924409EB64F2C"
 	order_index: 1
+	images: [
+		{ alpha: 86, height: 0.090d, image: "#8D8174", order: -10, rotation: 0.000d, width: 2.000d, x: -9.500d, y: 1.500d }
+		{ alpha: 86, height: 0.090d, image: "#8D8174", order: -10, rotation: -14.036d, width: 2.062d, x: -7.500d, y: 1.250d }
+		{ alpha: 86, height: 0.090d, image: "#8D8174", order: -10, rotation: 11.310d, width: 2.550d, x: -5.250d, y: 1.250d }
+		{ alpha: 86, height: 0.090d, image: "#728A8F", order: -10, rotation: 36.870d, width: 2.500d, x: -9.500d, y: 2.250d }
+		{ alpha: 86, height: 0.090d, image: "#728A8F", order: -10, rotation: 0.000d, width: 2.000d, x: -7.500d, y: 3.000d }
+		{ alpha: 86, height: 0.090d, image: "#728A8F", order: -10, rotation: 11.310d, width: 2.550d, x: -5.250d, y: 3.250d }
+		{ alpha: 86, height: 0.090d, image: "#8D8174", order: -10, rotation: 0.000d, width: 2.000d, x: -1.000d, y: 1.500d }
+		{ alpha: 86, height: 0.090d, image: "#728A8F", order: -10, rotation: 0.000d, width: 2.000d, x: -1.000d, y: 3.500d }
+	]
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["05DC6A6B1F48DEE6"]
+			dependencies: ["4950DF3BF2929E70"]
 			description: ["Cast Andesite Alloy through TConstruct. Direct Create mixing remains unavailable."]
+			icon: "create:andesite_alloy"
 			id: "0379EC8BFE48A365"
 			rewards: [{ count: 1, id: "3E4C9A38BE4D14FF", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
@@ -26,6 +37,7 @@
 		{
 			dependencies: ["0379EC8BFE48A365"]
 			description: ["Make Shafts from the alloy. Start a compact transmission line."]
+			icon: "create:shaft"
 			id: "54F7FA3700E06569"
 			rewards: [{ count: 1, id: "78854BF7054580AB", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
@@ -37,11 +49,12 @@
 			]
 			title: "Shafts"
 			x: -10.5d
-			y: -1.5d
+			y: -1d
 		}
 		{
 			dependencies: ["54F7FA3700E06569"]
 			description: ["Make Cogwheels after the recipe’s shaft requirement. Use them to turn the line."]
+			icon: "create:cogwheel"
 			id: "76EBFFD338A56122"
 			rewards: [{ count: 1, id: "6333A983A5EFF554", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
@@ -53,11 +66,11 @@
 			]
 			title: "Cogwheels"
 			x: -9d
-			y: -1.5d
+			y: -1d
 		}
 		{
-			dependencies: ["54F7FA3700E06569" "76EBFFD338A56122"]
-			description: ["Make a Mechanical Belt from its transmission ingredients. Link separated stations cleanly."]
+			description: ["Make a Mechanical Belt from dried kelp. Use it to link separated stations cleanly."]
+			icon: "create:belt_connector"
 			id: "3E1F3C4E42C3D164"
 			rewards: [{ count: 1, id: "1A03D72EBB6F574F", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
@@ -69,11 +82,12 @@
 			]
 			title: "Belt"
 			x: -7.5d
-			y: -1.5d
+			y: -2d
 		}
 		{
-			dependencies: ["54F7FA3700E06569" "76EBFFD338A56122"]
+			dependencies: ["54F7FA3700E06569"]
 			description: ["Build the Hand Crank for 16 SU. Expect a small hunger cost while operating it."]
+			icon: "create:hand_crank"
 			id: "2DA99D3BD6F00324"
 			rewards: [{ count: 2, id: "19590C47E0687660", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
@@ -86,12 +100,12 @@
 			}
 			]
 			title: "Hand Crank"
-			x: -6d
-			y: 0d
+			x: -7.5d
+			y: -0.5d
 		}
 		{
-			dependencies: ["0379EC8BFE48A365"]
 			description: ["Build the Seared Machine Casing. Use it as the body for first Create processing."]
+			icon: "kubejs:seared_machine_casing"
 			id: "77685660FF7C7025"
 			rewards: [{ count: 2, id: "26DDD2BD9641467E", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
@@ -110,6 +124,8 @@
 		{
 			dependencies: ["77685660FF7C7025" "0379EC8BFE48A365"]
 			description: ["Build a Depot from casing and alloy. Put it under the Press."]
+			hide_dependency_lines: true
+			icon: "create:depot"
 			id: "114059585B11EDB5"
 			rewards: [{ count: 2, id: "34AA58B76411EB80", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
@@ -122,12 +138,14 @@
 			}
 			]
 			title: "Depot"
-			x: -7.5d
+			x: -8.5d
 			y: 1.5d
 		}
 		{
 			dependencies: ["77685660FF7C7025" "0379EC8BFE48A365"]
 			description: ["Build a Basin from casing and alloy. Put it under the Mixer."]
+			hide_dependency_lines: true
+			icon: "create:basin"
 			id: "1EB768E35A5FA287"
 			rewards: [{ count: 2, id: "2C8558B73BCDA002", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
@@ -140,12 +158,14 @@
 			}
 			]
 			title: "Basin"
-			x: -6d
-			y: 1.5d
+			x: -8.5d
+			y: 3d
 		}
 		{
 			dependencies: ["54F7FA3700E06569" "77685660FF7C7025"]
 			description: ["Build the Mechanical Press from shaft and casing. Drive it by hand over a Depot."]
+			hide_dependency_lines: true
+			icon: "create:mechanical_press"
 			id: "15A4C0C901F8FBC9"
 			rewards: [{ count: 2, id: "17C0F46119817818", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
@@ -158,12 +178,14 @@
 			}
 			]
 			title: "Mechanical Press"
-			x: -4.5d
-			y: 0.5d
+			x: -6.5d
+			y: 1d
 		}
 		{
 			dependencies: ["54F7FA3700E06569" "77685660FF7C7025"]
 			description: ["Build the Mechanical Mixer from shaft and casing. The Whisk remains a recipe detail."]
+			hide_dependency_lines: true
+			icon: "create:mechanical_mixer"
 			id: "6D2D6CA800B333FD"
 			rewards: [{ count: 2, id: "6CB303FEA3C51CFA", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
@@ -176,12 +198,13 @@
 			}
 			]
 			title: "Mechanical Mixer"
-			x: -4.5d
-			y: 2.5d
+			x: -6.5d
+			y: 3d
 		}
 		{
 			dependencies: ["15A4C0C901F8FBC9" "1EB768E35A5FA287" "4CC3C8B2D71507C1"]
 			description: ["Compact the first Deployer with the Press, Basin, Brass, and literal ingredients. Close the manual casing loop."]
+			icon: "create:deployer"
 			id: "5F9CD19F1B0A4B85"
 			rewards: [{ count: 4, id: "4BF9FB3A6AFB7309", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
@@ -194,12 +217,13 @@
 			}
 			]
 			title: "First Deployer"
-			x: -2d
-			y: 0d
+			x: -4d
+			y: 1.5d
 		}
 		{
 			dependencies: ["5F9CD19F1B0A4B85"]
 			description: ["Make ordinary Andesite Casing through the Deployer route. Keep it as proof for the workcell."]
+			icon: "create:andesite_casing"
 			id: "778F3E474DEFE9B7"
 			rewards: [{ count: 2, id: "250CCC06848C8662", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
@@ -210,13 +234,14 @@
 			}
 			]
 			title: "Andesite Casing"
-			x: 0d
-			y: 0d
+			x: -2d
+			y: 1.5d
 		}
 		{
 			dependencies: ["2DA99D3BD6F00324" "3E1F3C4E42C3D164" "15A4C0C901F8FBC9" "114059585B11EDB5" "6D2D6CA800B333FD" "1EB768E35A5FA287" "5F9CD19F1B0A4B85" "778F3E474DEFE9B7"]
 			description: ["Operate one connected crank-driven cell with transmission, Press and Depot, Mixer and Basin, Deployer, and Andesite Casing proof within 16 blocks. Loose components do not count."]
 			hide_dependency_lines: true
+			icon: "create:wrench"
 			id: "1D83365BAFA20FFE"
 			rewards: [{ count: 1, id: "2E4FCF6DE5DADD7B", item: "createdeco:industrial_iron_coin", type: "item" }]
 			shape: "hexagon"
@@ -229,12 +254,13 @@
 			}
 			]
 			title: "Manual Workcell"
-			x: 2.5d
-			y: 0d
+			x: 0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["6D2D6CA800B333FD"]
 			description: ["Make an Empty Schematic and Schematic-and-Quill through the Mixer route. Record a build worth repeating."]
+			icon: "create:empty_schematic"
 			id: "11A13F1B3FD3D65A"
 			rewards: [{ count: 1, id: "1BF32C17AE98E7ED", item: "createdeco:copper_coin", type: "item" }]
 			shape: "diamond"
@@ -252,12 +278,13 @@
 			}
 			]
 			title: "Draw a Plan"
-			x: 4.5d
-			y: -2d
+			x: -4d
+			y: 3.5d
 		}
 		{
 			dependencies: ["11A13F1B3FD3D65A"]
 			description: ["Build the Schematic Table. Prepare the recorded plan for placement."]
+			icon: "create:schematic_table"
 			id: "618D94BA99863F77"
 			rewards: [{ count: 2, id: "13728E8C1F757ED6", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
@@ -270,12 +297,14 @@
 			}
 			]
 			title: "Schematic Table"
-			x: 6d
-			y: -2d
+			x: -2d
+			y: 3.5d
 		}
 		{
 			dependencies: ["618D94BA99863F77" "15A4C0C901F8FBC9" "1EB768E35A5FA287"]
 			description: ["Compact the Schematicannon with the Press and Basin. Keep broader powered processing for later."]
+			hide_dependency_lines: true
+			icon: "create:schematicannon"
 			id: "251E2393D08845F4"
 			rewards: [{ count: 4, id: "47F6A1BADAD022AC", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
@@ -288,22 +317,24 @@
 			}
 			]
 			title: "Schematicannon"
-			x: 7.5d
-			y: -2d
+			x: 0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["1D83365BAFA20FFE"]
 			description: ["Throw an ordinary Book into fire, soul fire, a lit campfire, or lava. The Book is consumed, and every live chapter is revealed for your FTB team."]
+			icon: "minecraft:book"
 			id: "59B26687F0CD55FA"
 			tasks: [
 			{
-				id: "3B04490AB0AAAA17"
-				type: "checkmark"
+				criterion: "book_burned"
+				id: "894DDF685829DB2C"
+				type: "better_content_fixes:criterion"
 			}
 			]
 			title: "Burn a Book"
-			x: 4.5d
-			y: 2d
+			x: 2d
+			y: 1.5d
 		}
 	]
 	title: "Workshop"

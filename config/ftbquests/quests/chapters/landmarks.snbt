@@ -5,24 +5,40 @@
 	group: "3D1BF480E4BCDBA6"
 	id: "13D92B0F3F4750D5"
 	order_index: 2
+	images: [
+		{ alpha: 112, height: 0.100d, image: "#748C91", order: -10, rotation: 0.000d, width: 2.500d, x: -13.750d, y: 0.000d }
+		{ alpha: 112, height: 0.100d, image: "#748C91", order: -10, rotation: -45.000d, width: 4.243d, x: -11.000d, y: -1.500d }
+		{ alpha: 112, height: 0.100d, image: "#748C91", order: -10, rotation: 0.000d, width: 2.500d, x: -8.250d, y: -3.000d }
+		{ alpha: 112, height: 0.100d, image: "#748C91", order: -10, rotation: 0.000d, width: 2.500d, x: -5.750d, y: -3.000d }
+		{ alpha: 112, height: 0.100d, image: "#748C91", order: -10, rotation: 0.000d, width: 2.500d, x: -3.250d, y: -3.000d }
+		{ alpha: 112, height: 0.100d, image: "#748C91", order: -10, rotation: -10.081d, width: 4.571d, x: -10.250d, y: -0.400d }
+		{ alpha: 112, height: 0.100d, image: "#748C91", order: -10, rotation: 45.000d, width: 3.536d, x: -11.250d, y: 1.250d }
+		{ alpha: 112, height: 0.100d, image: "#748C91", order: -10, rotation: -26.565d, width: 3.354d, x: -3.500d, y: 1.750d }
+		{ alpha: 112, height: 0.100d, image: "#748C91", order: -10, rotation: 0.000d, width: 2.500d, x: -0.750d, y: 1.000d }
+		{ alpha: 112, height: 0.100d, image: "#748C91", order: -10, rotation: 0.000d, width: 2.500d, x: 1.750d, y: 1.000d }
+		{ alpha: 112, height: 0.100d, image: "#748C91", order: -10, rotation: 0.000d, width: 2.500d, x: 4.250d, y: 1.000d }
+		{ alpha: 112, height: 0.100d, image: "#748C91", order: -10, rotation: -30.964d, width: 2.915d, x: 6.750d, y: 0.250d }
+		{ alpha: 112, height: 0.100d, image: "#748C91", order: -10, rotation: 30.964d, width: 2.915d, x: 6.750d, y: 1.750d }
+	]
 	quest_links: [
 		{ id: "180B97D96B3DB92C", linked_quest: "7838A4605E6A8E08", x: -15d, y: 0d }
-		{ id: "66639CE5F4303B1B", linked_quest: "01241F25B8A10387", x: -12d, y: 0d }
-		{ id: "36B0DBB4106B5197", linked_quest: "616B8796484892FF", x: -9d, y: -3d }
-		{ id: "23090CF4CC94624E", linked_quest: "4B3FCC1B9569023E", x: -6.8d, y: -3d }
-		{ id: "422E2CF0CD06ABAC", linked_quest: "0EA60205EE4E3808", x: -4.6d, y: -4.2d }
-		{ id: "0CAE283C44491BDB", linked_quest: "7FF2F274923CC05E", x: -2.3d, y: -3.5d, shape: "hexagon", size: 1.5d }
+		{ id: "66639CE5F4303B1B", linked_quest: "01241F25B8A10387", x: -12.5d, y: 0d }
+		{ id: "36B0DBB4106B5197", linked_quest: "616B8796484892FF", x: -9.5d, y: -3d }
+		{ id: "23090CF4CC94624E", linked_quest: "4B3FCC1B9569023E", x: -7d, y: -3d }
+		{ id: "422E2CF0CD06ABAC", linked_quest: "0EA60205EE4E3808", x: -4.5d, y: -3d }
+		{ id: "0CAE283C44491BDB", linked_quest: "7FF2F274923CC05E", x: -2d, y: -3d, shape: "hexagon", size: 1.5d }
 		{ id: "11047E0B3CC19CDD", linked_quest: "1B7CF4C8F5700C7F", x: -2d, y: 1d }
-		{ id: "12DDA1002E0A8F29", linked_quest: "76D4FB5757FB9A04", x: 0.3d, y: 1d }
-		{ id: "07162CEF4F64D3B2", linked_quest: "4CC3C8B2D71507C1", x: 2.6d, y: 1d }
-		{ id: "263D68D22664E761", linked_quest: "1D83365BAFA20FFE", x: 5.3d, y: 1d, shape: "hexagon", size: 1.5d }
-		{ id: "47C3CED6BB6F86C0", linked_quest: "11A13F1B3FD3D65A", x: 7.6d, y: -0.3d }
-		{ id: "2CB25F7D55221DC8", linked_quest: "59B26687F0CD55FA", x: 7.6d, y: 2.3d }
+		{ id: "12DDA1002E0A8F29", linked_quest: "76D4FB5757FB9A04", x: 0.5d, y: 1d }
+		{ id: "07162CEF4F64D3B2", linked_quest: "4CC3C8B2D71507C1", x: 3d, y: 1d }
+		{ id: "263D68D22664E761", linked_quest: "1D83365BAFA20FFE", x: 5.5d, y: 1d, shape: "hexagon", size: 1.5d }
+		{ id: "47C3CED6BB6F86C0", linked_quest: "11A13F1B3FD3D65A", x: 8d, y: -0.5d }
+		{ id: "2CB25F7D55221DC8", linked_quest: "59B26687F0CD55FA", x: 8d, y: 2.5d }
 	]
 	quests: [
 		{
 			dependencies: ["062784D648C215EE" "4F30B2B217B195D1"]
 			description: ["Assemble a Eureka vessel with a tagged helm, primitive engine, floater, and ballast. Any valid hull counts; an anchor is useful but optional."]
+			icon: "vs_eureka:anchor"
 			id: "41AE4E6CED77EA27"
 			rewards: [{ count: 1, id: "093E65417C75EB34", item: "createdeco:iron_coin", type: "item" }]
 			shape: "hexagon"
@@ -35,11 +51,12 @@
 			}
 			]
 			title: "Build a Real Boat"
-			x: -6.8d
-			y: -1.2d
+			x: -8d
+			y: -0.8d
 		}
 		{
 			description: ["Find a Dimensional Font after spawn finalization. Progress from earlier scouting is intentionally ignored."]
+			icon: "dimension_drink:dimensional_font"
 			id: "76516020F1FE7DA1"
 			rewards: [{ count: 1, id: "4FAD031C8339291A", item: "createdeco:copper_coin", type: "item" }]
 			shape: "diamond"
@@ -52,12 +69,13 @@
 			}
 			]
 			title: "Find a Font"
-			x: -9d
-			y: 2.2d
+			x: -10d
+			y: 2.5d
 		}
 		{
 			dependencies: ["76516020F1FE7DA1"]
 			description: ["Let a Font run transport you. Entering the same dimension by another route does not count."]
+			icon: "dimension_drink:return_seal"
 			id: "274083696697A71C"
 			rewards: [{ count: 2, id: "0C57425C4A677CA7", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
@@ -68,12 +86,13 @@
 			}
 			]
 			title: "Cross the Font"
-			x: -6.8d
-			y: 2.2d
+			x: -7.5d
+			y: 2.5d
 		}
 		{
 			dependencies: ["274083696697A71C"]
 			description: ["Return successfully with the destination’s matching netherrack, holystone, deepsoil, or cobbled sculk stone. Death or disqualification does not count."]
+			icon: "minecraft:netherrack"
 			id: "3DB748B4699DA8BA"
 			rewards: [{ count: 1, id: "6D3807A9574292D4", item: "createdeco:brass_coin", type: "item" }]
 			shape: "hexagon"
@@ -86,8 +105,8 @@
 			}
 			]
 			title: "Bring Back Aggregate"
-			x: -4.6d
-			y: 2.2d
+			x: -5d
+			y: 2.5d
 		}
 	]
 	title: "Landmarks"

@@ -9,6 +9,7 @@
 	quests: [{
 		description: ["Technical anchor for the one-way book reveal ritual."]
 		hide: true
+		icon: "minecraft:written_book"
 		id: "1D4B9A20A53C97D8"
 		tasks: [{ id: "2EE797CB28FE990A", type: "checkmark" }]
 		title: "_book_unbound"

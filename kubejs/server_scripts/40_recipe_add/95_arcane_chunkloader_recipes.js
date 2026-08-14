@@ -7,8 +7,7 @@ ServerEvents.recipes(function (event) {
         ['lifeforce_chunk_anchor', 'bloodmagic:life_essence_bucket'],
         ['pressure_chunk_anchor', 'pneumaticcraft:pressure_tube'],
         ['soul_chunk_anchor', 'goety:totem_of_souls'],
-        ['spirit_chunk_anchor', 'malum:spirit_jar'],
-        ['aureal_chunk_anchor', 'forbidden_arcanus:aureal_bottle']
+        ['spirit_chunk_anchor', 'malum:spirit_jar']
     ]
 
     variants.forEach(function (entry) {

@@ -9,6 +9,7 @@
 	quests: [
 		{
 			description: ["Fly in spectator mode while you scout. Press J for quests and K when you are ready to choose your permanent spawn."]
+			icon: "minecraft:compass"
 			id: "7097D8F2C179C07D"
 			tasks: [
 			{
@@ -22,6 +23,7 @@
 		}
 		{
 			description: ["Check for renewable water and a practical purification route. A visible pond alone does not make a safe supply."]
+			icon: "minecraft:water_bucket"
 			id: "5E9FE439F5764F58"
 			tasks: [
 			{
@@ -35,6 +37,7 @@
 		}
 		{
 			description: ["Test the site through daily and seasonal heat and cold. Plan shelter for the exposure you will actually face."]
+			icon: "cold_sweat:thermometer"
 			id: "72690BBC5B77AA81"
 			tasks: [
 			{
@@ -48,6 +51,7 @@
 		}
 		{
 			description: ["Compare local food with routes to village or Undergarden crops. Make sure the return journey is survivable."]
+			icon: "minecraft:bread"
 			id: "36B30F094DDB9D27"
 			tasks: [
 			{
@@ -61,6 +65,7 @@
 		}
 		{
 			description: ["Survey twigs, primitive head materials, wood, caves, settlements, rivers, and coast. Choose a site with workable routes, not just a good view."]
+			icon: "minecraft:bundle"
 			id: "5DED2D2A6C62C4C7"
 			tasks: [
 			{
@@ -74,6 +79,7 @@
 		}
 		{
 			description: ["Finalize the site with Class Selector. This spawn is permanent; beds only accelerate the night."]
+			icon: "minecraft:lodestone"
 			id: "7838A4605E6A8E08"
 			shape: "hexagon"
 			size: 1.5d

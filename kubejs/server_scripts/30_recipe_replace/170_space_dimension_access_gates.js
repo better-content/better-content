@@ -14,9 +14,6 @@ var BC_DIRECT_DIMENSION_ROUTE_ITEMS = [
     'bloodmagic:teleposerfocus',
     'bloodmagic:reinforcedteleposerfocus',
     'bloodmagic:enhancedteleposerfocus',
-    'irons_spellbooks:portal_frame',
-    'irons_spellbooks:pocket_dimension_portal_frame',
-    'irons_spellbooks:wayward_compass',
     'aether:aether_portal_frame',
     'deeperdarker:otherside_portal'
 ]
@@ -32,8 +29,6 @@ ServerEvents.recipes(function (event) {
     event.remove({ id: 'undergarden:catalyst' })
     event.remove({ id: 'bloodmagic:soulforge/simple_key' })
     event.remove({ id: 'bloodmagic:soulforge/mine_key' })
-    event.remove({ id: 'irons_spellbooks:portal_frame' })
-    event.remove({ id: 'irons_spellbooks:wayward_compass' })
 
     console.info('[space-dimension-access] disabled direct portal/key recipe outputs; use Dimension Drink or Creating Space rocket routes')
 })

@@ -255,28 +255,8 @@ var BC_SUPPRESSED_NATIVE_ORES = [
 
 var BC_DIMENSION_DRINK_ORE_ORIGINS = [
     {
-        ores: ['arcane_crystal_ore', 'runic_stone', 'stella_arcanum', 'mithril_ore'],
+        ores: ['jade_ore', 'cthonic_gold_ore', 'soulstone_ore', 'brilliant_stone'],
         items: [
-            'forbidden_arcanus:arcane_crystal_ore',
-            'forbidden_arcanus:deepslate_arcane_crystal_ore',
-            'forbidden_arcanus:arcane_crystal',
-            'forbidden_arcanus:runic_stone',
-            'forbidden_arcanus:runic_deepslate',
-            'forbidden_arcanus:stella_arcanum',
-            'forbidden_arcanus:stellarite_piece',
-            'irons_spellbooks:mithril_ore',
-            'irons_spellbooks:deepslate_mithril_ore',
-            'irons_spellbooks:raw_mithril'
-        ],
-        lines: bcOreOriginLines('Dimension Drink sky dimensions', 'Natural generation is in Aether dimension_drink target biomes.', 'The original Overworld generators are disabled.')
-    },
-    {
-        ores: ['darkstone', 'gilded_darkstone', 'jade_ore', 'cthonic_gold_ore', 'soulstone_ore', 'brilliant_stone', 'xpetrified_ore'],
-        items: [
-            'forbidden_arcanus:darkstone',
-            'forbidden_arcanus:gilded_darkstone',
-            'forbidden_arcanus:xpetrified_ore',
-            'forbidden_arcanus:xpetrified_orb',
             'goety:jade_ore',
             'goety:jade',
             'malum:cthonic_gold_ore',

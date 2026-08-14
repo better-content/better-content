@@ -129,6 +129,36 @@
 			x: 15.0d
 			y: 0.0d
 		}
+		{
+			dependencies: ["966230984B22DEEF"]
+			description: ["Hexerei originates Break, Cold Snap, Conjure Water, Craft, Crush, Cut, Evaporate, Fell, Freeze, Grow, Harvest, Ignite, Infuse, Interact, Light, Place Block, Redstone Signal, Rotate, Smelt, Summon Steed, Summon Wolves, Bubble Shield, Conjure Terrain, Envenom, Poison Spores, Watery Grave, Dispel, Fortune, Name, Phantom Block, Charm, Spark, and Discharge. Ars inscription is optional formal mastery."]
+			icon: "ars_nouveau:glyph_grow"
+			id: "A101000000000001"
+			shape: "hexagon"
+			tasks: [			{
+				title: "Review Hexerei's formal vocabulary"
+				id: "A101000000000002"
+				type: "checkmark"
+			}]
+			title: "Formalize Correspondence"
+			x: 12.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["8CA12F35053FD2F6"]
+			description: ["Occultism originates Blink, Ender Inventory, Exchange, Extract, Intangible, Invisibility, Name, Phantom Block, Pickup, Sense Magic, Fortune, Dispel, Pull, Snare, Summon Decoy, Wall, Charm, Phantom Grasp, and Life Link. Ars turns observed identity, binding, and displacement into reusable operations."]
+			icon: "ars_nouveau:glyph_blink"
+			id: "A102000000000001"
+			shape: "hexagon"
+			tasks: [			{
+				title: "Review Occultism's formal vocabulary"
+				id: "A102000000000002"
+				type: "checkmark"
+			}]
+			title: "Formalize Binding"
+			x: 18.0d
+			y: -5.0d
+		}
 
 	]
 	title: "Magic Spine — Fonts Into Pacts"

@@ -8,7 +8,6 @@
   "Structure blacklist": [
     "minecraft.*",
     "hexerei.*",
-    "forbidden_arcanus:nipa",
     "ae2.*"
   ],
   "comment_foundation_blacklist": "Supports: full id, namespace.*, *, #namespace:tag",
@@ -16,8 +15,7 @@
     "minecraft.*",
     "hexerei.*",
     "ae2.*",
-    "dimension_drink:dimensional_font",
-    "forbidden_arcanus:nipa_floating"
+    "dimension_drink:dimensional_font"
   ],
   "comment_auto": "Below list contains real structure template files (.nbt). Do not edit."
 }

@@ -9,27 +9,6 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["228 starter stubs."]
-			icon: "minecraft:bread"
-			id: "3887ABEF57010D01"
-			rewards: [{
-				count: 8
-				id: "96BBBA9992F1A90C"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "5B42205DF6BF4A45"
-				title: "Foods"
-				type: "checkmark"
-			}]
-			title: "Foods"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
 			icon: "aether:blue_berry"
 			id: "11FE7E6B9FACFCCE"
 			rewards: [{
@@ -4612,27 +4591,6 @@
 			title: "All Foods: Underbeans"
 			x: 28.25d
 			y: 6.25d
-		}
-		{
-			description: ["39 starter stubs."]
-			icon: "farmersrespite:green_tea"
-			id: "709E33B0CBF9942D"
-			rewards: [{
-				count: 8
-				id: "E396559100E62662"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "0561A92E3349D3F4"
-				title: "Drinks"
-				type: "checkmark"
-			}]
-			title: "Drinks"
-			x: 0.0d
-			y: 12.5d
 		}
 		{
 			icon: "brewinandchewin:beer"

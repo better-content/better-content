@@ -9,6 +9,7 @@
 	quests: [
 		{
 			description: ["Gather three flint, bone, or supported surface rocks. Use whichever the site gives you first."]
+			icon: "minecraft:flint"
 			id: "3B5F470ECF554734"
 			rewards: [{ count: 1, id: "2B8BCBF3A5C15ABD", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
@@ -26,6 +27,7 @@
 		}
 		{
 			description: ["Gather a twig from the ground. Loose wood starts the first tool route."]
+			icon: "projectvibrantjourneys:twigs"
 			id: "64BDCCB8664B53E8"
 			rewards: [{ count: 1, id: "7C3F55974DDD39AB", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
@@ -42,6 +44,7 @@
 		{
 			dependencies: ["64BDCCB8664B53E8"]
 			description: ["Turn a twig into a stick. Keep it for a primitive handle."]
+			icon: "minecraft:stick"
 			id: "0BA98E65D11A599A"
 			rewards: [{ count: 1, id: "157A52253D9D9DB1", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
@@ -58,6 +61,7 @@
 		{
 			dependencies: ["3B5F470ECF554734" "0BA98E65D11A599A"]
 			description: ["Make any authored primitive Butcher Knife. Cut grass with it to open the straw route."]
+			icon: "farmersdelight:flint_knife"
 			id: "1B3C129BE9AB4291"
 			rewards: [{ count: 2, id: "04C6121077F1A458", item: "createdeco:copper_coin", type: "item" }]
 			size: 1.2d
@@ -75,6 +79,7 @@
 		{
 			dependencies: ["1B3C129BE9AB4291"]
 			description: ["Cut grass with the knife and collect straw. Carry it into the next primitive craft."]
+			icon: "farmersdelight:straw"
 			id: "0AA6BEB50F7E0E12"
 			rewards: [{ count: 1, id: "36E498779049561E", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
@@ -91,6 +96,7 @@
 		{
 			dependencies: ["0AA6BEB50F7E0E12" "3B5F470ECF554734" "0BA98E65D11A599A"]
 			description: ["Make any authored primitive Hand Axe. Use it to begin controlled wood harvesting."]
+			icon: "minecraft:stone_axe"
 			id: "69A5C4C1691EBB3E"
 			rewards: [{ count: 2, id: "799256D3811F05D5", item: "createdeco:copper_coin", type: "item" }]
 			size: 1.2d
@@ -108,6 +114,7 @@
 		{
 			dependencies: ["69A5C4C1691EBB3E"]
 			description: ["Fell a tree with the axe and collect a log. Bring the wood home before processing it."]
+			icon: "minecraft:oak_log"
 			id: "6EF943924897595C"
 			rewards: [{ count: 1, id: "12F5995209DFF0AC", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
@@ -125,6 +132,7 @@
 		{
 			dependencies: ["6EF943924897595C"]
 			description: ["Craft planks from the harvested log. Use them for the first benches."]
+			icon: "minecraft:oak_planks"
 			id: "20E939B8E6498DFF"
 			rewards: [{ count: 1, id: "510A802288333773", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
@@ -142,6 +150,7 @@
 		{
 			dependencies: ["20E939B8E6498DFF"]
 			description: ["Build a Crafting Station. Use its retained grid for deliberate assembly."]
+			icon: "tconstruct:crafting_station"
 			id: "02C05875B307B2EC"
 			rewards: [{ count: 2, id: "4CE91E75335E3C78", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
@@ -157,7 +166,8 @@
 		}
 		{
 			dependencies: ["20E939B8E6498DFF"]
-			description: ["Build the Part Builder. Put material directly into its patternless working slot to shape tool parts."]
+			description: ["Shape parts in the patternless slot. A pickaxe uses Pick Head + Tool Handle + Binding; a mattock uses Small Axe Head + Adze Head + Tool Handle."]
+			icon: "tconstruct:part_builder"
 			id: "062784D648C215EE"
 			rewards: [{ count: 2, id: "4028311EDC7D5B56", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
@@ -175,7 +185,8 @@
 		}
 		{
 			dependencies: ["20E939B8E6498DFF" "02C05875B307B2EC"]
-			description: ["Build the Tinker Station from its literal inputs. Assemble and maintain small tools here."]
+			description: ["Assemble small tools here. A kama uses Small Blade + Binding + Tool Handle; a dagger uses Small Blade + Tool Handle and crafts as a pair."]
+			icon: "tconstruct:tinker_station"
 			id: "4F30B2B217B195D1"
 			rewards: [{ count: 2, id: "561C5F989FC16485", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
@@ -193,7 +204,8 @@
 		}
 		{
 			dependencies: ["062784D648C215EE" "4F30B2B217B195D1"]
-			description: ["Build a small TConstruct tool other than the primitive Hand Axe, then repair it once with its matching material. Prove the station can maintain what it makes."]
+			description: ["Build and repair a small TConstruct tool other than the primitive Hand Axe. Its functional head or blade controls the main behavior; repair it with that part’s matching material."]
+			icon: "minecraft:grindstone"
 			id: "01241F25B8A10387"
 			rewards: [{ count: 4, id: "24C20675C07D259A", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
@@ -212,6 +224,7 @@
 		{
 			dependencies: ["02C05875B307B2EC"]
 			description: ["Make TNT as one compact demolition lesson. Gather its sand, gravel, and gunpowder through ordinary play."]
+			icon: "minecraft:tnt"
 			id: "56B179D5D140A2A6"
 			rewards: [{ count: 4, id: "547763EC4149DD4B", item: "createdeco:copper_coin", type: "item" }]
 			size: 2d

@@ -1,5 +1,5 @@
 // Ars is the programmable formal-magic system. Its book and writing desk are early
-// shells; inks set global depth and native proof tags set thematic breadth.
+// shells; depth proofs set complexity and per-glyph origin tags preserve provenance.
 
 var BC_FORMAL_MAGIC = JsonIO.read('kubejs/config/formal_magic_domains.json') || { glyphs: [] }
 
@@ -20,15 +20,15 @@ function bcFormalGlyphInput(input) {
 function bcFormalGlyph(event, spec) {
     var name = spec[0]
     var tier = spec[1]
-    var domain = spec[2]
     var catalyst = spec[3]
-    var output = 'ars_nouveau:glyph_' + name
+    var output = name.indexOf(':') >= 0 ? name : 'ars_nouveau:glyph_' + name
     if (!bcFormalExists(output)) return
+    var glyphName = output.substring(output.indexOf(':') + 1).replace(/^glyph_/, '')
 
     var tierData = {
-        1: { exp: 27, ink: 'irons_spellbooks:common_ink' },
-        2: { exp: 55, ink: 'irons_spellbooks:rare_ink' },
-        3: { exp: 160, ink: 'irons_spellbooks:epic_ink' }
+        1: { exp: 27, proof: '#kubejs:formal_magic/proof/common' },
+        2: { exp: 55, proof: '#kubejs:formal_magic/proof/rare' },
+        3: { exp: 160, proof: '#kubejs:formal_magic/proof/epic' }
     }[tier]
 
     event.custom({
@@ -36,19 +36,23 @@ function bcFormalGlyph(event, spec) {
         count: 1,
         exp: tierData.exp,
         inputItems: [
-            bcFormalGlyphInput(tierData.ink),
-            bcFormalGlyphInput('#kubejs:formal_magic/domain/' + domain),
+            bcFormalGlyphInput('ars_nouveau:blank_parchment'),
+            bcFormalGlyphInput(tierData.proof),
+            bcFormalGlyphInput('#kubejs:formal_magic/glyph_origin/' + glyphName),
             bcFormalGlyphInput(catalyst)
         ],
         output: output
-    }).id('kubejs:formal_magic/ars/glyph/' + name)
+    }).id('kubejs:formal_magic/ars/glyph/' + name.replace(':', '/'))
 }
 
 ServerEvents.recipes(function (event) {
-    var glyphs = BC_FORMAL_MAGIC.glyphs || []
+    var glyphs = (BC_FORMAL_MAGIC.glyphs || []).concat(BC_FORMAL_MAGIC.addon_glyphs || [])
     for (var i = 0; i < glyphs.length; i++) {
-        event.remove({ output: 'ars_nouveau:glyph_' + glyphs[i][0] })
+        var glyphOutput = glyphs[i][0].indexOf(':') >= 0 ? glyphs[i][0] : 'ars_nouveau:glyph_' + glyphs[i][0]
+        event.remove({ output: glyphOutput })
     }
+    var quarantined = BC_FORMAL_MAGIC.quarantined_glyphs || []
+    for (var q = 0; q < quarantined.length; q++) event.remove({ output: quarantined[q].id })
 
     event.remove({ output: 'ars_nouveau:novice_spell_book' })
     event.remove({ output: 'ars_nouveau:apprentice_spell_book' })
@@ -80,7 +84,7 @@ ServerEvents.recipes(function (event) {
         type: 'ars_nouveau:book_upgrade',
         ingredients: [
             { item: 'ars_nouveau:novice_spell_book' },
-            { item: 'irons_spellbooks:uncommon_ink' },
+            { tag: 'kubejs:formal_magic/proof/uncommon' },
             { item: 'minecraft:obsidian' },
             { item: 'minecraft:diamond' }
         ],
@@ -91,7 +95,7 @@ ServerEvents.recipes(function (event) {
         type: 'ars_nouveau:book_upgrade',
         ingredients: [
             { item: 'ars_nouveau:apprentice_spell_book' },
-            { item: 'irons_spellbooks:epic_ink' },
+            { tag: 'kubejs:formal_magic/proof/legendary' },
             { item: 'minecraft:nether_star' },
             { item: 'ars_nouveau:wilden_tribute' }
         ],

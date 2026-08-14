@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "adchimneys:cobblestone_chimney",
+    "adchimneys:glass_chimney",
+    "adchimneys:large_brick_chimney",
+    "adchimneys:metal_chimney",
+    "adchimneys:small_brick_chimney",
+    "adchimneys:stone_chimney"
+  ]
+}

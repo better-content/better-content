@@ -18,7 +18,7 @@ Dimension travel is intentionally narrow: Dimension Drink and Creating Space roc
 Current Dimension Drink shrine generation is structure-set driven rather than biome-modifier feature driven. The procedural site design embeds each raised altar into a copper-framed square junction court, uses packed-mud paths and relic/trophy dressing as the ancient interdimensional language, and no longer registers or places grave-soil tiles. Shrine spacing is 30 with separation 9, roughly doubling shrine frequency from the earlier 42/12 spread. The authored early font set is Nether, Aether, Undergarden, and Otherside; the removed sky-dimension mod and End font access are not active content. Returning from a font run reapplies the drink's Slowness IV and Darkness I for one second.
 KubeJS layout remains load-order grouped by responsibility. `startup_scripts/00_boot` is for shared globals/helpers, startup item/block registration lives under startup item/block domains, and global startup behavior toggles live under startup globals. Server scripts use `10_tags`, `20_recipe_remove`, `30_recipe_replace`, `35_villager_trades`, `40_recipe_add`, `50_loot`, `60_worldgen`, `70_spawn`, `80_recipe_policy`, and `90_dev_debug`; keep `90_dev_debug` empty for release. Client scripts own JEI/EMI visibility, tooltips, and client-only presentation. EMI Loot supplies EMI categories for entity, chest, and block loot so standard monster drops can be queried from either the mob or dropped item; event-driven rewards that do not exist in loot tables remain outside that generated view.
 
-The live FTB Quests repo surface keeps `Basic Tools` and `Metals and Metal Tools` in their progression groups, consolidates the former Work-in-Progress material into the seven generated `Guided Progression` spines, and carries a separate `Completionist` group under `config/ftbquests/quests/chapters/`. Completionist chapters remain exhaustive starter stubs for consumables, effects, enchantments, TCon weapons, plants, and armour: collectible categories use broad item tasks, while effect and enchantment coverage uses checkmarks with runtime/source hints instead of brittle NBT-perfect tasks.
+The live early FTB Quests surface is six hand-authored chapters: `Spawn Selection`, `Basic Tools`, `Landmarks`, `Homesteading`, `Metal Tools`, and `Workshop`. `Landmarks` is the always-visible 16-marker overview and uses native quest links for milestones owned elsewhere; it is not a second progression spine. Unfinished spine files live only under non-runtime `quest-storage/chapters/`. The separate Completionist group remains exhaustive reference content for consumables, effects, enchantments, TCon weapons, plants, and armour. Durable graph, task, icon, copy, reward, visibility, and review rules live in `docs/questbook_standards.md`.
 
 Integration review is deliberately bounded. The former whole-registry (19k-item) intake and adjudication process is retired and is not a release gate. `N = 3 + ceil(E / 100)` only nominates candidate anchors for a mod family; every returned candidate receives an individual, human-recorded disposition with concrete acquisition, consumer, bypass, and progression evidence. Generated summaries are evidence aids, never automatic acceptance or release approval.
 
@@ -29,8 +29,10 @@ The world-spine model in `progression.md` is presently diagnostic. The following
 ### Supporting Implementations
 
 - Realistic Ores, TConstruct material formation, finite deposits, processing losses, byproducts, tailings, pollution, pressure, and gas containment give Matter provenance and consequences instead of generic tier tokens.
-- Ore bands, biome climate, dimension-specific resources, physical routes, and local infrastructure make Place affect what can be found and done.
-- Diet, thirst, temperature, agriculture, revival, permanent-ish spawn, life-earned RPG Stats, and Still-Beating Hearts make Life embodied and finite.
+- Building palettes, decorative blocks, and constructed forms belong to Matter; decoration may be progression-light, but its causal ownership is still material.
+- Ore bands, biome climate, seasons, weather, weathering and exposure, dimension-specific resources, physical routes, and local infrastructure make Place affect what can be found and done.
+- Animals, plants, diet, thirst, temperature, ecology, agriculture, revival, permanent-ish spawn, life-earned RPG Stats, and Still-Beating Hearts make Life embodied and finite.
+- Encounters and settlements belong to Life/ecology where they model creatures, inhabitants, populations, or relationships. Their siting and travel network cross Place, their buildings cross Matter, and their institutions can produce emergent Society.
 - Traces records grounded footprints, persistent notes, bloodstains, and death echoes whose exposure to water and rain matters. This already supplies the perceptual beginning of Traces Into Lineage.
 - Warband recruitment, territory, casualties, retained equipment, learning, withdrawal, and recovery are a strong Society crossing because actors transform local Matter and remember consequences.
 - Arcane chunk anchors accept proof from several traditions and then specialize by built infrastructure. That is a crossing between peers rather than universal parenting by one tradition.
@@ -41,7 +43,7 @@ The world-spine model in `progression.md` is presently diagnostic. The following
 | --- | --- |
 | `tech_parenting.json` governs non-magic craftables, while `magic_parenting.json` is explicitly Blood-parented. | “Tech” and aesthetic “magic” are being used as causal catch-alls rather than distinguishing roots, practices, and crossings. |
 | `80_recipe_policy/10_no_complex_grid_defaults.js` routes magic-namespace defaults toward Blood Magic alchemy and non-magic shapeless defaults mainly toward Create mixing. | Namespace appearance chooses authority even when the recipe's actual cause may be Matter, Fonts, Traces, or a crossing. |
-| `80_magic_progression_blood_slate_gates.js`, `125_magic_power_spike_gates.js`, `145_vanillish_recipe_expert_pass.js`, and the parenting manifest use Blood slates across Hexerei, Occultism, Ars, Iron's, Goety, and other magical infrastructure. | Blood acts as a universal magic depth ladder, preventing other roots and formalisms from demonstrating independent native arcs. |
+| `80_magic_progression_blood_slate_gates.js`, `125_magic_power_spike_gates.js`, `145_vanillish_recipe_expert_pass.js`, and the parenting manifest historically used Blood slates across most magical infrastructure. Hexerei entry, core preparations, Occultism otherstone, chalk, and the remaining high Occultism apparatus are now Font-owned. | Residual generic slate gates still need review so Blood does not remain the universal depth ladder for formalisms or unrelated crossings. |
 | The first Blood Altar consumes a Still-Beating Heart and Otherside cobbled sculk stone. | Blood's entry depends on a Font-origin Place proof instead of being independently reachable from its own premise. |
 | Dimension Drink fonts store Blood Magic life essence, spend it to begin runs, and accept Still-Beating Hearts to improve regeneration. | Fonts are mechanically narrated through Blood even though contact, altered perception, correspondence, and pact supply a distinct premise. |
 | The World Condenser uses Blood slates, Blood Altar work, and a bound Blood Orb. | Prestige and Lineage—the proposed conclusion of Traces—are presently parented by Blood rather than earned through perception, inscription, preservation, and inheritance. |
@@ -188,15 +190,17 @@ Non-village natural crop and edible-plant diversity is relocated into Undergarde
 
 Starting loadouts are owned by the fixed class selector in `config/class_selector/kits.json`; `config/class_selector/embark.json` is set to class mode and remains inactive point-buy fallback data. If embark mode is re-enabled later, its support pool should stay narrow: hydration, climate scouting, light, route marking, rope, a small vanilla rail start, and basic rations. Starting choices must not include starter tools, armor, logs/planks, functional crafting blocks, generic storage, coins, scuba gear, gliders, recovery compass routes, renewable specialty crop starts, ready-made TNT or TNT inputs, Protection Pixel gear, AE2, PNCR pressure items, Blood Magic LP/orbs, Create trains, Wares routes, or other missing-logistics progression before those systems provide power.
 
-`formal_magic_domains.json`, `126_cross_magic_irons_spellcraft.js`, and `127_ars_manuscript_progression.js` are the formal spell-access surface. Ars and Iron's are separate systems with shared infrastructure and inks: Ars composes glyphs while Iron's writes fixed school spells. Empty books and authoring stations are intentionally early. Common through legendary ink requires progressively stronger proof from any dirty route, while native domain reagents prevent one route from exposing every glyph family or Iron's school.
+`formal_magic_domains.json` and `127_ars_manuscript_progression.js` are the formal spell-access surface. Ars is the pack's single unifying formal discipline: it composes glyphs from operations learned through Hexerei, Occultism, Blood Magic, Malum, and Goety without becoming their source. The v3 contract covers all 108 installed glyphs, records shared origins, and generates a distinct origin tag for every obtainable glyph. Blank parchment, a depth proof, any one accepted origin reagent, and the native catalyst meet at the Scribe's Table. The client derives provenance and formal-role tooltips from that same contract. `Conjure Water` remains quarantined under finite-fluid conservation, and `Rewind` remains quarantined because rollback composed with manipulation and automation exposes matter-duplication risk.
 
-The current slate order is deliberate and should stay easy to audit in recipes and docs:
+Formalization is an optional mastery lever. Source-tradition progression never requires glyphs; dormant constellation quests instead expose every discipline's formal vocabulary, while the Ars chapter teaches core syntax, Elemental extension, the Create-era Creo application, the post-AE2 Énergistique capstone, and optional interdisciplinary spell studies. Random caster-tome loot is disabled so it cannot grant unauthored vocabulary.
 
-- Blank Slate: first Blood work, Malum, and common formal-ink proof
-- Reinforced Slate: Hexerei and low-tier cross-magic utility
-- Infused Slate: Occultism bridge content, Ars source handling, and rare formal-ink proof
-- Demonic Slate: Goety operations, epic formal-ink proof, and stronger hybrid magic
-- Ethereal Slate: legendary formal-ink proof plus programmable, networked, or post-AE2 hybrid magic
+The Blood-spine slate order is deliberate and should stay easy to audit in recipes and docs. Slates may cross into reviewed hybrid and formal recipes, but they no longer parent Hexerei or Occultism entry:
+
+- Blank Slate: first Blood work, Malum, and common formal proof
+- Reinforced Slate: Malum refinement, low-tier hybrid utility, and uncommon formal proof
+- Infused Slate: Ars source handling and rare formal proof
+- Demonic Slate: Goety operations, epic formal proof, and stronger hybrid magic
+- Ethereal Slate: final formal proof plus programmable, networked, or post-AE2 hybrid magic
 
 ## Casings And Manufactured Parts
 
@@ -206,7 +210,7 @@ Do not add a simple crafting recipe for a component that bypasses a cased or man
 
 ## Loot, Coins, Wares, And Trades
 
-Coins are defined in `global.BC_COIN_TIERS`: copper, zinc, iron, industrial iron, brass, gold, and platinum using Create Deco coin items. `35_villager_trades/10_coin_villager_trades.js` replaces village trades with dotcoin purchases and lossy coin exchange.
+Coins are defined in `global.BC_COIN_TIERS`: copper, zinc, iron, industrial iron, brass, gold, and platinum using Create Deco coin items. `35_villager_trades/10_coin_villager_trades.js` replaces village trades with dotcoin purchases. Coin types are non-convertible rarity tokens; recipes and trades never exchange one rarity for another.
 Pillager Campaigns is now part of that coin economy too: active campaign kills are a combat payout surface, not just incidental loot, and their bundles scale upward with the warband's current adaptive raid strength rather than using a flat mob table.
 
 Villager and wandering-trader markets are recovery and route-planning support, not renewable material factories. The current trade pass leans early and midgame on hydration, field utility, walls, signs, minecarts, rope, boats, and similar settlement stock, while keeping deep-progression knowledge outputs like experience bottles, echo shards, and sculk catalysts out of normal buy restocks.
@@ -216,27 +220,33 @@ The integration audit also removes bounded matter, boss rewards, Nether progress
 Loot is treated as a crafting surface:
 
 - `20_world_chest_coin_tiers.js` injects tiered coin rewards into world chests.
-- `30_global_loot_progression_scrub.js` removes creative, netherite, flight, global-bypass items, and usable Iron's scrolls, inks, or spellbooks from random loot so formal spellcraft begins through authored reagents.
+- `30_global_loot_progression_scrub.js` removes creative, netherite, flight, and global-bypass items from random loot so authored progression remains authoritative.
 - `40_emerald_loot_coin_replacement.js` replaces emerald currency loot with coins in chest, entity, package, and wares tables while excluding block ore drops.
 - `kubejs/data/wares/` contains current Wares package and agreement loot tables.
 
 Trades should support recovery and route planning without replacing factories, metallurgy, or chemistry.
 
-Playtest stabilization restores tag-wide vanilla chest and barrel crafting, the final sand-tag glass smelting route, stick-and-straw TConstruct patterns, doubled wild straw chances, and literal Unearthed regolith block drops. PVJ loose starter rocks and bones are classified as hand-breakable. Forbidden & Arcanus nipa is excluded from SGI foundation sampling, and the floating nipa structure variant is disabled while grounded nipa remains enabled.
+Playtest stabilization restores tag-wide vanilla chest and barrel crafting, the final sand-tag glass smelting route, stick-and-straw TConstruct patterns, doubled wild straw chances, and literal Unearthed regolith block drops. PVJ loose starter rocks and bones are classified as hand-breakable.
 
 The Curios water slot accepts only water potion bottles. It automatically drinks one when that bottle's native thirst restoration fits entirely below the 20-point cap, preserving Thirst Was Taken purity behavior and returning the empty bottle safely; canteens, teas, and non-water potions are intentionally excluded.
 
 ## Arcane Chunk Anchors
 
-Persistent chunk loading is a pack-owned magical utility family. Native craftable loaders are suppressed; all eight `arcane_chunk_loaders` anchors require the interchangeable `#arcane_chunk_loaders:magic_catalysts` proof, so Ars Nouveau, Blood Magic, Hexerei, Occultism, Malum, Goety, Forbidden and Arcanus, or Iron's Spellbooks can each open the craft without becoming the universal parent of the system. The variants then specialize by infrastructure: Forge Energy (FE/RF), Create rotational power (SU), Ars Source, Blood Magic life essence/LP, PneumaticCraft air pressure, Goety soul energy, Malum spirits, and Forbidden and Arcanus Aureal.
+Persistent chunk loading is a pack-owned magical utility family. Native craftable loaders are suppressed; all seven `arcane_chunk_loaders` anchors require the interchangeable `#arcane_chunk_loaders:magic_catalysts` proof, so Ars Nouveau, Blood Magic, Hexerei, Occultism, Malum, or Goety can each open the craft without becoming the universal parent of the system. The variants then specialize by infrastructure: Forge Energy (FE/RF), Create rotational power (SU), Ars Source, Blood Magic life essence/LP, PneumaticCraft air pressure, Goety soul energy, or Malum spirits.
 
-Every anchor full-ticks the centered 3x3 chunk square while enabled and funded. Each buffer defaults to two hours of service at 20 TPS; a redstone signal releases its tickets without stopping charging. Comparator output and item tooltips expose charge, stored power survives breaking, and the operator-only `/chunkloaders list` output provides paged, clickable teleport entries for all recorded placements across dimensions. The shared visual language is a quiet arcane astrolabe: dark plinth and pylons, one restrained rotating ring assembly, and a source-specific core rather than eight unrelated machine shells.
+Every anchor full-ticks the centered 3x3 chunk square while enabled and funded. Each buffer defaults to two hours of service at 20 TPS; a redstone signal releases its tickets without stopping charging. Comparator output and item tooltips expose charge, stored power survives breaking, and the operator-only `/chunkloaders list` output provides paged, clickable teleport entries for all recorded placements across dimensions. The shared visual language is a quiet arcane astrolabe: dark plinth and pylons, one restrained rotating ring assembly, and a source-specific core rather than seven unrelated machine shells.
 
 ## Quests
 
 The live quest book is hand-authored under `config/ftbquests/`, especially `config/ftbquests/quests/chapters/`. That tree is the current source of truth for chapter layout, quest text, tasks, rewards, and progression presentation. When quest intent changes, update this doc or `progression.md`, then validate the live `config/ftbquests/` content.
 
 Progression-chapter quest text is for first-time players, not for internal pack notes. Each player-facing node should tell the player what to do now, why it matters now, and what concrete uncertainty it clears. Titles and task labels should name the object or action directly. Descriptions should prefer operational guidance, route planning, and next-step clarity over pack-thesis language, TODO phrasing, or abstract commentary about what a chapter is supposed to feel like. Completionist chapters remain scaffold/reference surfaces unless they are explicitly promoted into guided progression.
+
+Every literal live quest owns an explicit, semantically relevant icon; task fallbacks, blank icons, generic maps, checkmarks, and generic spyglasses are not accepted presentation. Icon specifications must be unique across the live book, except that the five Spawn Selection considerations may reuse an established icon when no clearer native symbol exists. Native Landmarks links deliberately reuse their source quest because they are the same quest, not duplicates.
+
+Early layouts use left-to-right flow, short diagonals, and roughly 1.5-unit spacing. Mechanical dependencies alone control completion and visibility. Low-alpha chapter-image guide lines may group optional districts or connect native Landmarks links, but they never grant completion or create a progression gate. Homesteading uses one concrete First Camp trunk followed by a shared visual bus into farming, climate, kitchen, fishing, fermentation, ventilation, and framing districts. Manual checkmarks are reserved for the five pre-spawn site considerations; automatic actions, inventory predicates, and dependency-only milestones own the rest of the early book.
+
+`Burn a Book` is the rewardless final Workshop quest and listens to the real binding ritual. The hidden `_book_unbound` anchor remains technical, while an owned ordinary Book touching true fire or lava completes both the anchor and the visible instruction for the player’s FTB team. Performing the ritual early is retained and reflected when Workshop becomes visible.
 
 
 Quest graph nodes use stable chapter and node keys with explicit stage, icon, position, body, tasks, rewards, dependencies, source references, mod tags, and export metadata. Supported task shapes are item, fluid, entity, dimension, and concrete checkmark tasks. `generated/ftbquests/` and generated site outputs are artifact surfaces only, not living documentation or the authoring source.

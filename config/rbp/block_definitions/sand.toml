@@ -3,7 +3,7 @@
 #	Namespaces:   '<minecraft>'
 #	Tags:         '#forge:stone'
 #	IDs:          'minecraft:stone'
-Blocks = ["#minecraft:sand", "minecraft:black_concrete_powder", "minecraft:blue_concrete_powder", "minecraft:brown_concrete_powder", "minecraft:cyan_concrete_powder", "minecraft:gravel", "minecraft:gray_concrete_powder", "minecraft:green_concrete_powder", "minecraft:light_blue_concrete_powder", "minecraft:light_gray_concrete_powder", "minecraft:lime_concrete_powder", "minecraft:magenta_concrete_powder", "minecraft:orange_concrete_powder", "minecraft:pink_concrete_powder", "minecraft:purple_concrete_powder", "minecraft:red_concrete_powder", "minecraft:white_concrete_powder", "minecraft:yellow_concrete_powder"]
+Blocks = ["fallout_wastelands_:waste_sand", "minecraft:red_sand", "minecraft:sand", "minecraft:suspicious_sand", "natures_spirit:pink_sand", "natures_spirit:sandy_soil", "projectvibrantjourneys:gilded_red_sand", "minecraft:black_concrete_powder", "minecraft:blue_concrete_powder", "minecraft:brown_concrete_powder", "minecraft:cyan_concrete_powder", "minecraft:gravel", "minecraft:gray_concrete_powder", "minecraft:green_concrete_powder", "minecraft:light_blue_concrete_powder", "minecraft:light_gray_concrete_powder", "minecraft:lime_concrete_powder", "minecraft:magenta_concrete_powder", "minecraft:orange_concrete_powder", "minecraft:pink_concrete_powder", "minecraft:purple_concrete_powder", "minecraft:red_concrete_powder", "minecraft:white_concrete_powder", "minecraft:yellow_concrete_powder"]
 
 [Physics]
 	#The maximum weight the block(s) can support both horizontally and vertically.

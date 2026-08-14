@@ -60,15 +60,5 @@
       "type": "tree",
       "namespace": "projectvibrantjourneys"
     }
-  },
-  {
-    "select": {
-      "name": ".*",
-      "tag": "#minecraft:is_overworld"
-    },
-    "cancellers": {
-      "type": "tree",
-      "namespace": "forbidden_arcanus"
-    }
   }
 ]

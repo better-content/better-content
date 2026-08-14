@@ -35,7 +35,7 @@ var BC_MAT = {
     sourceGem: 'ars_nouveau:source_gem',
     manipulationEssence: 'ars_nouveau:manipulation_essence',
     spiritGem: 'occultism:spirit_attuned_gem',
-    deorum: 'forbidden_arcanus:deorum_ingot',
+    elementalMastery: 'ars_elemental:mark_of_mastery',
     platinum: 'chemlib:platinum_plate',
     rhodium: 'chemlib:rhodium_plate',
     palladium: 'chemlib:palladium_plate',
@@ -218,8 +218,7 @@ ServerEvents.recipes(function (event) {
      bcMatReplaceOutputs(event, [
         'ars_nouveau:glyph_glide',
         'ars_nouveau:glyph_linger',
-        'ars_nouveau:glyph_wall',
-        'ars_technica:glyph_obliterate'
+        'ars_nouveau:glyph_wall'
     ], ['minecraft:diamond', '#forge:gems/diamond'], BC_MAT.demonicSlate)
 
      bcMatReplaceOutputs(event, [
@@ -228,8 +227,6 @@ ServerEvents.recipes(function (event) {
     ], ['minecraft:redstone', '#forge:dusts/redstone'], BC_MAT.redstoneRelay)
 
      bcMatReplaceOutputs(event, ['ars_nouveau:enchanting_apparatus'], ['#forge:gems/diamond'], BC_MAT.sourceGem)
-     bcMatReplaceOutputs(event, ['ars_technica:transmutation_focus'], ['minecraft:emerald', '#forge:gems/emerald'], BC_MAT.deorum)
-     bcMatReplaceOutputs(event, ['ars_technica:calibrated_precision_mechanism'], ['minecraft:amethyst_shard', '#forge:gems/amethyst'], BC_MAT.precision)
 
     // Building/modular utility recipes already have tier gates elsewhere; replace the remaining
     // raw vanilla valuables in their key outputs with manufactured power-era parts.

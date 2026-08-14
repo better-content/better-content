@@ -17,7 +17,7 @@ var BC_30_ITEMS = [
     ['minecraft:bread',4],['minecraft:apple',4],['minecraft:torch',16],['minecraft:stick',32],
     ['minecraft:string',8],['minecraft:leather',4],['minecraft:paper',16],['minecraft:arrow',16],['minecraft:glass',8],
     ['minecraft:bucket',1],['minecraft:lantern',2],['minecraft:cooked_beef',4],['minecraft:carrot',12],['minecraft:potato',12],
-    ['minecraft:compass',1],['minecraft:map',1],['minecraft:fishing_rod',1],
+    ['minecraft:compass',1],['minecraft:map',1],
     ['minecraft:shears',1],['minecraft:rail',16],['minecraft:bone_meal',16],['minecraft:bookshelf',1]
 ]
 

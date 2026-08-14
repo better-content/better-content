@@ -15,33 +15,6 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["2 starter stubs."]
-			icon: {
-				Count: 1
-				id: "aether:gravitite_boots"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "77408B054C44BD25"
-			rewards: [{
-				count: 8
-				id: "5EA53DBD2AC64F71"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "160F93E629AB65C4"
-				title: "aether"
-				type: "checkmark"
-			}]
-			title: "aether"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
 			icon: {
 				Count: 1
 				id: "aether:gravitite_chestplate"
@@ -174,33 +147,6 @@
 			title: "All Armour Sets: Zanite"
 			x: 2.75d
 			y: 0.0d
-		}
-		{
-			description: ["3 starter stubs."]
-			icon: {
-				Count: 1
-				id: "ars_nouveau:arcanist_boots"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "4D4819F35D803960"
-			rewards: [{
-				count: 8
-				id: "7365D4351792FC6F"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "3A24CFF9F30FC022"
-				title: "ars_nouveau"
-				type: "checkmark"
-			}]
-			title: "ars_nouveau"
-			x: 0.0d
-			y: 3.25d
 		}
 		{
 			icon: {
@@ -404,33 +350,6 @@
 			y: 3.25d
 		}
 		{
-			description: ["3 starter stubs."]
-			icon: {
-				Count: 1
-				id: "cold_sweat:chameleon_boots"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "6CCE88753BA01B60"
-			rewards: [{
-				count: 8
-				id: "26241FEB7DEF390A"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "65AE361A6F59B333"
-				title: "cold_sweat"
-				type: "checkmark"
-			}]
-			title: "cold_sweat"
-			x: 0.0d
-			y: 6.5d
-		}
-		{
 			icon: {
 				Count: 1
 				id: "cold_sweat:chameleon_chestplate"
@@ -632,33 +551,6 @@
 			y: 6.5d
 		}
 		{
-			description: ["3 starter stubs."]
-			icon: {
-				Count: 1
-				id: "create:cardboard_boots"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "4FD6149A7B3C237C"
-			rewards: [{
-				count: 8
-				id: "7F253BDC42633902"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "3157F5A72FE1957B"
-				title: "create"
-				type: "checkmark"
-			}]
-			title: "create"
-			x: 0.0d
-			y: 9.75d
-		}
-		{
 			icon: {
 				Count: 1
 				id: "create:cardboard_chestplate"
@@ -816,33 +708,6 @@
 			y: 9.75d
 		}
 		{
-			description: ["2 starter stubs."]
-			icon: {
-				Count: 1
-				id: "creatingspace:advanced_spacesuit_boots"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "1EEA46410F318D18"
-			rewards: [{
-				count: 8
-				id: "D6BA4B50194AC7CC"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "576AE0FED937666D"
-				title: "creatingspace"
-				type: "checkmark"
-			}]
-			title: "creatingspace"
-			x: 0.0d
-			y: 13.0d
-		}
-		{
 			icon: {
 				Count: 1
 				id: "creatingspace:advanced_spacesuit_boots"
@@ -953,33 +818,6 @@
 			title: "All Armour Sets: Basic Spacesuit"
 			x: 2.75d
 			y: 13.0d
-		}
-		{
-			description: ["2 starter stubs."]
-			icon: {
-				Count: 1
-				id: "deeperdarker:resonarium_boots"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "664C2AF6C0019B87"
-			rewards: [{
-				count: 8
-				id: "BD5EA5A5C23D06E3"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "731B91F77A967E68"
-				title: "deeperdarker"
-				type: "checkmark"
-			}]
-			title: "deeperdarker"
-			x: 0.0d
-			y: 16.25d
 		}
 		{
 			icon: {
@@ -1116,33 +954,6 @@
 			y: 16.25d
 		}
 		{
-			description: ["1 starter stubs."]
-			icon: {
-				Count: 1
-				id: "everythingcopper:copper_boots"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "49B7771C30830610"
-			rewards: [{
-				count: 8
-				id: "26A7091E55A2F957"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "788EEF5267DE27F6"
-				title: "everythingcopper"
-				type: "checkmark"
-			}]
-			title: "everythingcopper"
-			x: 0.0d
-			y: 19.5d
-		}
-		{
 			icon: {
 				Count: 1
 				id: "everythingcopper:copper_chestplate"
@@ -1208,33 +1019,6 @@
 			title: "All Armour Sets: Copper"
 			x: 1.5d
 			y: 19.5d
-		}
-		{
-			description: ["7 starter stubs."]
-			icon: {
-				Count: 1
-				id: "fallout_wastelands_:antiradsuit_boots"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "695E15FA2B3BEF33"
-			rewards: [{
-				count: 8
-				id: "B0D0B0C57D09B352"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "0BA6BDA8AF6B5469"
-				title: "fallout_wastelands_"
-				type: "checkmark"
-			}]
-			title: "fallout_wastelands_"
-			x: 0.0d
-			y: 22.75d
 		}
 		{
 			icon: {
@@ -1706,33 +1490,6 @@
 			y: 22.75d
 		}
 		{
-			description: ["6 starter stubs."]
-			icon: {
-				Count: 1
-				id: "minecraft:chainmail_boots"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "2B7430243A384F8A"
-			rewards: [{
-				count: 8
-				id: "8789B14D010C549E"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "08EEAE2B534A6BC8"
-				title: "minecraft"
-				type: "checkmark"
-			}]
-			title: "minecraft"
-			x: 0.0d
-			y: 26.0d
-		}
-		{
 			icon: {
 				Count: 1
 				id: "minecraft:chainmail_chestplate"
@@ -2135,33 +1892,6 @@
 			y: 26.0d
 		}
 		{
-			description: ["2 starter stubs."]
-			icon: {
-				Count: 1
-				id: "pneumaticcraft:compressed_iron_boots"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "0E8CA102300D8599"
-			rewards: [{
-				count: 8
-				id: "E660FD5DA41864A4"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "39F48047B854D025"
-				title: "pneumaticcraft"
-				type: "checkmark"
-			}]
-			title: "pneumaticcraft"
-			x: 0.0d
-			y: 29.25d
-		}
-		{
 			icon: {
 				Count: 1
 				id: "pneumaticcraft:compressed_iron_chestplate"
@@ -2296,33 +2026,6 @@
 			y: 29.25d
 		}
 		{
-			description: ["1 starter stubs."]
-			icon: {
-				Count: 1
-				id: "protection_pixel:tosaki_chestplate"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "5B5D7B008CF53315"
-			rewards: [{
-				count: 8
-				id: "297975472A27E711"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "0866AA16D7B99FE4"
-				title: "protection_pixel"
-				type: "checkmark"
-			}]
-			title: "protection_pixel"
-			x: 0.0d
-			y: 32.5d
-		}
-		{
 			icon: {
 				Count: 1
 				id: "protection_pixel:tosaki_chestplate"
@@ -2377,33 +2080,6 @@
 			title: "All Armour Sets: Tosaki"
 			x: 1.5d
 			y: 32.5d
-		}
-		{
-			description: ["1 starter stubs."]
-			icon: {
-				Count: 1
-				id: "savage_and_ravage:griefer_boots"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "679AEFA39B534A43"
-			rewards: [{
-				count: 8
-				id: "A4FF02484F1A550E"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "5598B23D143AE0FB"
-				title: "savage_and_ravage"
-				type: "checkmark"
-			}]
-			title: "savage_and_ravage"
-			x: 0.0d
-			y: 35.75d
 		}
 		{
 			icon: {
@@ -2471,34 +2147,6 @@
 			title: "All Armour Sets: Griefer"
 			x: 1.5d
 			y: 35.75d
-		}
-		{
-			description: ["3 starter stubs."]
-			icon: {
-				Count: 1
-				id: "tconstruct:plate_boots"
-				tag: {
-					Damage: 0
-					tic_broken: 0b
-				}
-			}
-			id: "6AFCF5132017A338"
-			rewards: [{
-				count: 8
-				id: "7ED9536B90503FB2"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "5F834C1B3F5FCD5C"
-				title: "tconstruct"
-				type: "checkmark"
-			}]
-			title: "tconstruct"
-			x: 0.0d
-			y: 39.0d
 		}
 		{
 			icon: {
@@ -2806,33 +2454,6 @@
 			y: 39.0d
 		}
 		{
-			description: ["1 starter stubs."]
-			icon: {
-				Count: 1
-				id: "tomeofblood:living_mage_boots"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "164DB07CB3752271"
-			rewards: [{
-				count: 8
-				id: "35D144B673209811"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "018F7904FB9D4286"
-				title: "tomeofblood"
-				type: "checkmark"
-			}]
-			title: "tomeofblood"
-			x: 0.0d
-			y: 42.25d
-		}
-		{
 			icon: {
 				Count: 1
 				id: "tomeofblood:living_mage_robes"
@@ -2898,33 +2519,6 @@
 			title: "All Armour Sets: Living Mage"
 			x: 1.5d
 			y: 42.25d
-		}
-		{
-			description: ["7 starter stubs."]
-			icon: {
-				Count: 1
-				id: "twilightforest:arctic_boots"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "4BF80515915819A3"
-			rewards: [{
-				count: 8
-				id: "D3092866FE2ABEDC"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "5F6EF4C155D69567"
-				title: "twilightforest"
-				type: "checkmark"
-			}]
-			title: "twilightforest"
-			x: 0.0d
-			y: 45.5d
 		}
 		{
 			icon: {
@@ -3372,33 +2966,6 @@
 			title: "All Armour Sets: Yeti"
 			x: 9.0d
 			y: 45.5d
-		}
-		{
-			description: ["3 starter stubs."]
-			icon: {
-				Count: 1
-				id: "undergarden:cloggrum_boots"
-				tag: {
-					Damage: 0
-				}
-			}
-			id: "5E93D10F3B9E6E5B"
-			rewards: [{
-				count: 8
-				id: "031F90FF29209059"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "11FB3055370F963E"
-				title: "undergarden"
-				type: "checkmark"
-			}]
-			title: "undergarden"
-			x: 0.0d
-			y: 48.75d
 		}
 		{
 			icon: {

@@ -382,25 +382,6 @@ key_quark.keybind.narrator_full_readout:key.keyboard.unknown
 key_quark.keybind.variant_selector:key.keyboard.r
 key_supplementaries.keybind.quiver:key.keyboard.v:SHIFT
 key_key.diet.open.desc:key.keyboard.unknown
-key_key.irons_spellbooks.spell_wheel:key.keyboard.r
-key_key.irons_spellbooks.spell_wheel_toggle:key.keyboard.unknown
-key_key.irons_spellbooks.spellbook_cast:key.keyboard.v
-key_key.irons_spellbooks.spell_bar_modifier:key.keyboard.left.alt
-key_key.irons_spellbooks.spell_quick_cast_1:key.keyboard.unknown
-key_key.irons_spellbooks.spell_quick_cast_2:key.keyboard.unknown
-key_key.irons_spellbooks.spell_quick_cast_3:key.keyboard.unknown
-key_key.irons_spellbooks.spell_quick_cast_4:key.keyboard.unknown
-key_key.irons_spellbooks.spell_quick_cast_5:key.keyboard.unknown
-key_key.irons_spellbooks.spell_quick_cast_6:key.keyboard.unknown
-key_key.irons_spellbooks.spell_quick_cast_7:key.keyboard.unknown
-key_key.irons_spellbooks.spell_quick_cast_8:key.keyboard.unknown
-key_key.irons_spellbooks.spell_quick_cast_9:key.keyboard.unknown
-key_key.irons_spellbooks.spell_quick_cast_10:key.keyboard.unknown
-key_key.irons_spellbooks.spell_quick_cast_11:key.keyboard.unknown
-key_key.irons_spellbooks.spell_quick_cast_12:key.keyboard.unknown
-key_key.irons_spellbooks.spell_quick_cast_13:key.keyboard.unknown
-key_key.irons_spellbooks.spell_quick_cast_14:key.keyboard.unknown
-key_key.irons_spellbooks.spell_quick_cast_15:key.keyboard.unknown
 key_Inspect Key:key.keyboard.j
 key_key.buildinggadgets2.settings_menu:key.keyboard.unknown
 key_key.buildinggadgets2.undo:key.keyboard.u

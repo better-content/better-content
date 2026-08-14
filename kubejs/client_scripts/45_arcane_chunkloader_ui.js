@@ -13,8 +13,7 @@ ItemEvents.tooltip(function (event) {
         'arcane_chunk_loaders:lifeforce_chunk_anchor': 'Accepts Blood Magic life essence fluid from any side.',
         'arcane_chunk_loaders:pressure_chunk_anchor': 'Accepts PneumaticCraft air through pressure tubes.',
         'arcane_chunk_loaders:soul_chunk_anchor': 'Sneak-use with an empty hand to transfer Goety soul energy.',
-        'arcane_chunk_loaders:spirit_chunk_anchor': 'Use Malum spirits on the anchor or insert them automatically.',
-        'arcane_chunk_loaders:aureal_chunk_anchor': 'Sneak-use with an empty hand to transfer Aureal.'
+        'arcane_chunk_loaders:spirit_chunk_anchor': 'Use Malum spirits on the anchor or insert them automatically.'
     }
     Object.keys(descriptions).forEach(function (id) {
         event.add(id, [

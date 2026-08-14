@@ -249,7 +249,7 @@ ServerEvents.recipes(function (event) {
         'minecraft:andesite',
         'hexerei:moon_dust',
         'hexerei:infused_fabric',
-        'deeperdarker:cobbled_sculk_stone',
-        'bloodmagic:reinforcedslate'
+        'hexerei:blood_sigil',
+        'deeperdarker:gloomslate'
     ])
 })

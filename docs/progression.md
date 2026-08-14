@@ -8,9 +8,9 @@ A world spine is a causal premise broad enough to generate several distinct prac
 
 The proposed realism roots use a **rule of expectedness**: their absence would need an extraordinary explanation.
 
-- **Matter:** things have composition and properties; changing or moving them costs work and leaves products, losses, or waste. Physics, chemistry, metallurgy, machinery, energy, structural behavior, deposits, and pollution are practices or crossings rooted here.
-- **Place:** location changes what exists and what is possible. Terrain, climate, dimensions, local resources, distance, travel, infrastructure, and logistics express this root.
-- **Life:** living things are embodied, dependent, vulnerable, reproductive, and finite. Bodies, nutrition, thirst, temperature, ecology, agriculture, injury, revival, mortality, and life history express this root.
+- **Matter:** things have composition and properties; changing or moving them costs work and leaves products, losses, or waste. Physics, chemistry, metallurgy, machinery, energy, structural behavior, deposits, pollution, construction, and decoration are practices or crossings rooted here. Decorative palettes and built forms are expressions of Matter even when they carry no progression gate.
+- **Place:** location changes what exists and what is possible. Terrain, climate, seasons, weather, weathering and exposure, dimensions, local resources, distance, travel, infrastructure, and logistics express this root.
+- **Life:** living things are embodied, dependent, vulnerable, reproductive, and finite. Animals, plants, bodies, nutrition, thirst, temperature, ecology, agriculture, injury, revival, mortality, and life history express this root. Encounters and settlements belong primarily here when they describe inhabitants, populations, or ecological relationships; their sites and routes cross Place, and their built fabric crosses Matter.
 
 The proposed magic roots use a **rule of cool**: each must sell one salient “what if” strongly enough to suspend disbelief.
 
@@ -24,16 +24,29 @@ Physics, chemistry, geology, ecology, logistics, economy, conflict, formal magic
 
 A candidate root should explain multiple practices, change player decisions, and possess costs and conclusions that follow from its premise. Every magical root has a stronger independence requirement: it needs its own encounter or entry, depth ladder, apparatus, characteristic dangers or costs, and reachable conclusion without requiring another magical root. Crossings may enrich or accelerate an arc, but one magical root must not parent another.
 
-Formal magic is a practice, not a root. Traces can explain how an effect is observed, inscribed, taught, and reproduced; Blood or Fonts must still authorize any extraordinary phenomenon drawn from their premises. Ars Nouveau decomposes recorded causality into programmable operations, while Iron's Spellbooks preserves whole performances. Neither formalism should make all magic a child of Traces, and reproducibility alone should not make ordinary computation, schematics, or data storage supernatural.
+Formal magic is a practice, not a root. Traces can explain how an effect is observed, inscribed, taught, and reproduced; Blood or Fonts must still authorize any extraordinary phenomenon drawn from their premises. Ars Nouveau decomposes recorded causality into programmable operations. This formalism should not make all magic a child of Traces, and reproducibility alone should not make ordinary computation, schematics, or data storage supernatural.
 
 ### Current Player-Facing Graph
 
 The current implementation is presented as two primary crafting spines, two formal magic systems, and one pressure spine:
 
 - Tech package: Tinkers seared/scorched metallurgy into Create andesite/brass automation, then Power Grid, OC2R, Creating Space, and AE2-local intelligence. In world-spine terms this is primarily organized mastery of Matter constrained by Place.
-- Magic spines: `Dimension Drink -> Hexerei -> Occultism` and `Blood Magic -> Malum -> Goety`, with Blood Magic still supplying shared slate proofs where recipes need explicit authority.
-- Formal magic: Ars Nouveau provides programmable glyph composition and Iron's Spellbooks provides fixed schools, scrolls, and books. Their empty infrastructure opens early; shared inks set depth and native dirty-magic proofs set breadth.
+- Magic spines: `Dimension Drink -> Hexerei -> Occultism` and `Blood Magic -> Malum -> Goety`. Each spine uses its own native proofs; deliberate hybrid and formal-magic recipes may cross them without making one the parent of the other.
+- Formal magic: Ars Nouveau provides the single programmable grammar shared across magical traditions. Ars Elemental expands that vocabulary under the same provenance rules, Ars Creo crosses formal magic with Create machinery, and Ars Energistique is a late AE2/Source bridge. Empty infrastructure opens early; proof strength sets depth and per-glyph origin reagents preserve breadth.
 - Adventure package: dimension_drink, dimensions, combat, villages, wares, and coins provide route pressure and recovery options without replacing production. This crosses Place, Life, emergent Society, and History rather than supplying one causal root.
+
+### Magic Spine Enumeration And Inner Progression
+
+The implemented dirty-magic graph has two spines. Each has its own entry, preparation apparatus, native depth ladder, and downstream dangerous practice; Ars Nouveau is a formal-magic crossing fed by those spines, not an additional spine.
+
+| Spine | Inner progression | Authority boundary |
+| --- | --- | --- |
+| Fonts | Dimensional shrine and drink -> Nether, Aether, Undergarden, and Otherside expeditions -> Hexerei mixing cauldron -> Aether moon dust, Undergarden infused fabric, Nether blood sigil, and Otherside crystal work -> Hexerei-prepared Occultism otherstone and impure chalk -> Occultism spirit fire -> white/gold/purple/red pentacles -> Foliot/Djinni/Afrit/Marid bargaining | Hexerei owns physical preparation and correspondence among Font reagents. Occultism owns purification, naming, pentacles, binding, possession, and the spirit tiers. |
+| Blood | Still-Beating Heart -> Blood Altar -> Blank/Reinforced/Infused/Demonic/Ethereal Slate refinement -> Malum spirit altar, spirit collection, and infusion -> Goety cursed matter, cages, focuses, and dark altars -> dangerous spirit command | Blood Magic owns life-force extraction and refinement; Malum owns spirit manufacture; Goety owns command and deployment. |
+
+`Traces Into Lineage` remains a proposed third root rather than an implemented crafting spine. Its intended inner progression is event traces -> Trace Sight -> inscription -> preservation -> Prestige -> Lineage. Formal magic remains a reproducibility practice layered across dirty-magic proofs.
+
+Within the Fonts spine, Occultism chalk keeps its native semantic tiers. White is the universal base; gold adds binding and possession; purple calls the higher Djinni/Afrit classes and retains its Foliot-accessed End-stone dependency; red still requires Afrit essence before Marid-grade work. Hexerei prepares the four impure chalks in its cauldron with Font matter, while Occultism spirit fire remains the only purification step.
 
 Local logistics stays first. Create trains and physical routes should matter before AE2 dominates a site, and OC2R is the intended intersite information bridge.
 
@@ -69,7 +82,7 @@ Rally warlords can now move and fight within a 48-block leash rather than being 
 
 Tier design should feel like conquest rather than checklisting: each new tier needs a new resource domain plus a signature transformation, not just a renamed ingredient. Matter should keep memory of where it came from, so geology, death, heat, pressure, distance, and biological growth remain visible in downstream recipes instead of collapsing into generic dusts.
 
-The implemented graph currently reads as two dirty parent traditions feeding two clean formalisms. Fonts leads into Hexerei and then Occultism's attunement and entity bargaining. Blood Magic leads into Malum and then Goety's dangerous command work. Ars Nouveau and Iron's Spellbooks both expose empty books and authoring infrastructure early, but neither can produce usable spells until a dirty tradition supplies proof for ink and a thematic domain. Ars composes programmable glyphs; Iron's records fixed spells by school. The working model adds Traces Into Lineage as a third magic root and treats the present two-parent structure as an implementation to reassess, not as the final ontology.
+The implemented graph currently reads as two dirty parent traditions feeding one clean formalism. Fonts leads into Hexerei and then Occultism's attunement and entity bargaining. Blood Magic leads into Malum and then Goety's dangerous command work. Ars Nouveau exposes its empty book and authoring infrastructure early, but cannot produce usable glyphs until a dirty tradition supplies proof at the required depth and a thematic domain reagent. The working model adds Traces Into Lineage as a third magic root and treats the present two-parent structure as an implementation to reassess, not as the final ontology.
 
 ## Death Loop
 
@@ -129,6 +142,8 @@ The pack currently uses a narrow set of standalone KubeJS intermediates where th
 
 ## Early Chokepoints
 
+The player-facing early book ends at the manual workcell. Its six chapters are Spawn Selection, Basic Tools, the always-visible 16-marker Landmarks overview, Homesteading, Metal Tools, and Workshop. Landmarks links to source quests instead of duplicating their completion or rewards; only the assembled Eureka vessel and first Font expedition are owned by the overview. Homesteading is a concrete First Camp trunk feeding optional visual districts, not a wall of manual acknowledgements. Workshop closes with the rewardless Burn a Book instruction, while the owned-book fire ritual itself remains usable from world start and reveals only the whitelisted live chapters.
+
 - No Tree Punching is a narrow Forge-side `better_content_fixes` first-hour gate: `#minecraft:logs` requires an item in `#forge:tools/axes`. Normal terrain, stone, ores, plants, leaves, and decorative blocks are not part of the custom gate. The first authored tools remain TConstruct hand axes and butcher knives made from flint, PVJ bones, or PVJ rocks. Hand axes use two head materials plus Farmer's Delight straw and a stick; butcher knives use three head materials plus a stick. The retired exhaustive Realistic Hands tag matrix and knife-specific enforcement are quarantined outside runtime resources.
 - TConstruct tool variety comes from authored tool families rather than vanilla-tier disposable tools. Current add-ons include Additional Weaponry, Battle Spades, Tinkers' Things, Katanas, Rapier, and Weaponry; their Better Combat categories are explicit datapack attributes so halberds, katanas, rapiers, lances, pikes, greatswords, and related tools animate consistently.
 - Grout accepts one aggregate from any active early Font: netherrack, holystone, deepsoil, or cobbled sculk stone. Sand and gravel remain shared bulk inputs; ordinary Overworld clay is not a substitute.
@@ -136,7 +151,7 @@ The pack currently uses a narrow set of standalone KubeJS intermediates where th
 - The hand-cranked press/basin compacts the first `create:deployer` and Schematicannon; the early mixer prepares empty schematics and quills, while the table keeps its simple slab-and-stone assembly. This puts World Lifecycle Manager building plans in the working Create era without granting materials.
 - The Deployer gates `create:andesite_casing`. Sequenced andesite machine casing consumes scorched bricks, so Nether refractory work—not a synthetic Governor item—marks the transition to passive power and sustained industry.
 - More Red is the terrestrial primitive circuitry layer around early Create: red alloy forms from molten brass and a consumed redstone cast on a TCon basin, wire comes from Create pressing, and the soldering table consumes andesite-tier parts instead of Nether/blaze ingredients.
-- Vanilla-style automation such as pistons, hoppers, observers, rails, carts, and similar modded hand-stacked machinery is no longer rebuilt as pack-authored Create mechanical crafting. Magic/alchemy workstations such as brewing, enchanting, Ars apparatus, and hellforged processing still use Blood Magic alchemy instead of grid or furnace recipes. The late grid policy in `80_recipe_policy/10_no_complex_grid_defaults.js` now leaves shaped defaults in place unless they can be rerouted to Blood Magic alchemy, while shapeless tech defaults still reroute mainly to Create mixing and small magic defaults use Blood Magic alchemy.
+- Vanilla-style automation such as pistons, hoppers, observers, rails, carts, and similar modded hand-stacked machinery is no longer rebuilt as pack-authored Create mechanical crafting. Ars namespaces are exempt from the late complex-grid rewrite: glyphs use the Scribe's Table, Source uses imbuement, advanced work uses the Enchanting Apparatus, and ordinary Ars assemblies retain native recipes. Other reviewed magic defaults may still use Blood Alchemy where Blood is their actual parent.
 - Finished circuit items belong to PNCR assembly laser/drill. Earlier surfaces prepare boards, traces, wafers, and printed processors; PNCR assembly completes the circuit.
 - The hand crank is the only manually crafted positive-SU source. Every survival-obtainable passive, combustion, pneumatic, diesel, or electric Create-network source is mechanically crafted from the appropriate real casing and mechanism; the maintained registry inventory fails closed when a new source family appears.
 - Clean water, serious extraction, and body-system recovery depend on sustainable tech rather than free early infrastructure.
@@ -168,7 +183,7 @@ All non-grown renewable resource sources should be absent or quarantined. Geolog
 
 ## Magic Gates
 
-Chunk loading is magical infrastructure but not the property of any one tradition. The eight `arcane_chunk_loaders` recipes all consume one interchangeable proof from `#arcane_chunk_loaders:magic_catalysts`; the tag accepts proof from Ars Nouveau, Blood Magic, Hexerei, Occultism, Malum, Goety, Forbidden and Arcanus, or Iron's Spellbooks. After that shared gate, players choose the power economy they have actually built: FE/RF, Create SU, Ars Source, Blood Magic life essence, PneumaticCraft air, Goety soul energy, Malum spirits, or Aureal. Each choice produces the same centered 3x3 full-ticking service and two-hour default reserve, so the variants express infrastructure preference rather than stronger loading tiers.
+Chunk loading is magical infrastructure but not the property of any one tradition. The seven `arcane_chunk_loaders` recipes all consume one interchangeable proof from `#arcane_chunk_loaders:magic_catalysts`; the tag accepts proof from Ars Nouveau, Blood Magic, Hexerei, Occultism, Malum, or Goety. After that shared gate, players choose the power economy they have actually built: FE/RF, Create SU, Ars Source, Blood Magic life essence, PneumaticCraft air, Goety soul energy, or Malum spirits. Each choice produces the same centered 3x3 full-ticking service and two-hour default reserve, so the variants express infrastructure preference rather than stronger loading tiers.
 
 Still-Beating Hearts bridge the death loop and body systems into Blood Magic. `rpg_stats:still_beating_heart` is a milestone item, not bulk fuel. Current KubeJS adds pack-owned heart keys and Blood Orb altar recipes in `40_blood_orbs_from_still_beating_hearts.js`; the weak orb also has a direct still-beating-heart altar fallback so the first Blood Magic loop is not bricked by its own catalyst chain. `82_blood_magic_lifeforce_rework.js` makes the first Blood Altar consume the heart plus common Otherside proof from `deeperdarker:cobbled_sculk_stone`, while later altar/rune escalation remains costly.
 
@@ -186,20 +201,19 @@ The guarded full-integration pass now owns element-to-dust form conversion, two-
 
 Chemical alternatives can offer higher batch throughput, earlier access with more setup, or byproduct-consuming substitutions depending on the target, but reversible chemistry never increases its conserved element count. Finished circuits remain PNCR assembly authority; chemistry prepares wafers, boards, printed processors, etchants, capacitors, and transistors rather than bypassing that completion step. Create recipes represent open bulk processing, grinding media, acids, precipitation, and reduction; PNCR recipes represent sealed pressure, gas handling, thermal control, polymers, and etching; Blood Magic recipes are deliberately manual LP/slate routes whose count-scaled inputs preserve matter.
 
-Blood Magic slates are the side-magic authority where a recipe needs hard proof, and Otherside matter is now the shared raw substrate for non-Hexerei magic infrastructure:
+Blood Magic slates are the Blood-spine depth proofs and may appear in reviewed hybrid or formal-magic crossings. They do not gate Hexerei entry, Hexerei's core preparations, Occultism otherstone, or Occultism chalk. Otherside matter remains the shared raw substrate for non-Hexerei magic infrastructure:
 
-- Blank Slate: first Blood work, Malum, common cobbled sculk stone, and an entry proof for common formal ink.
-- Reinforced Slate: Hexerei and low-tier cross-magic utility, usually paired with gloomslate or echo wood outside Hexerei's core folk identity.
-- Infused Slate: Occultism bridge content, Ars source handling, rare formal ink, and sculk sensor/catalyst/shrieker or echo-shard matter.
-- Demonic Slate: Goety operations, epic formal ink, heavier Ars apparatus, Forbidden and Arcanus, and soul dust or sculk bone matter.
-- Ethereal Slate: legendary formal ink and endgame magic using soul crystal, resonarium, or reinforced echo shard matter where installed and confirmed.
+- Blank Slate: first Blood work, Malum, common cobbled sculk stone, and an entry formal proof.
+- Reinforced Slate: Malum refinement, low-tier hybrid utility, and uncommon formal proof.
+- Infused Slate: Ars source handling, rare formal proof, and sculk sensor/catalyst/shrieker or echo-shard matter.
+- Demonic Slate: Goety operations, epic formal proof, heavier Ars apparatus, advanced Ars Elemental foci, and soul dust or sculk bone matter.
+- Ethereal Slate: final formal proof and endgame magic using soul crystal, resonarium, or reinforced echo shard matter where installed and confirmed.
 
 This keeps the agreed graph explicit:
 
 - Fonts spine: Dimension Drink -> Hexerei -> Occultism
 - Blood spine: Blood Magic -> Malum -> Goety
-- Ars formalism: early empty book and Scribe's Table, then all 77 retained glyphs divided among shared grammar and dirty-tradition domains
-- Iron's formalism: early empty book and authoring stations, then fixed spells whose rarity follows ink and whose school follows a native focus
+- Ars formalism: early empty book and Scribe's Table, then 106 obtainable base and Ars Elemental glyphs plus two explicitly quarantined glyphs, all mapped to formal grammar or one-or-more source traditions; Ars Creo joins at the Create crossing, while Ars Energistique remains post-AE2
 - Otherside: common origin for Blood-refined magic matter, not a standalone magic workstation spine.
 
 Cross-mod material standardization stays moderate:
@@ -208,9 +222,11 @@ Cross-mod material standardization stays moderate:
 - Shared feedstocks such as planks, logs, generic glass, silica-bearing inputs, and plate/sheet tags should standardize through tags and common substrates.
 - Mod-native proof reagents stay distinct. Do not flatten Blood Magic slates, Ars source items, Malum spirits, Occultism attunement matter, Goety cursed matter, AE2 certus/fluix/sky stone, PNCR PCB stages, or OC2R wafers into interchangeable "magic parts."
 
-Do not mistake infrastructure for power. Formal books and writing stations may be early because scrolls, glyphs, inks, and school focuses carry the progression gates. Do not use hearts in side-magic recipe spam; use slates and native proof materials.
+Do not mistake infrastructure for power. Formal books and writing stations may be early because glyph tiers and per-glyph origin reagents carry the progression gates. Do not use hearts in side-magic recipe spam; use slates and native proof materials.
 
-`formal_magic_domains.json` is the authored spell-access contract. Common through legendary Iron's inks form one global depth ladder: proof from any sufficiently developed dirty route can advance it. Breadth remains non-interchangeable. Hexerei owns Nature and Ice, Occultism owns Ender, Blood Magic owns Blood, Malum owns Fire/Holy/Lightning, and Goety owns Evocation/Eldritch; the same domains partition Ars effects while a shared core supplies forms and modifiers. Random scrolls, inks, and pre-inscribed books are scrubbed from loot, so early empty infrastructure cannot become useful without crafted magical proof. Full formal completion is a quest breadth capstone after both dirty spines, not an all-mod ingredient tax on every high-tier spell.
+`formal_magic_domains.json` is the exhaustive spell-access and provenance contract. Proof tags form one global depth ladder: any sufficiently developed magic route can satisfy complexity, while a per-glyph origin tag requires evidence from at least one discipline that actually demonstrates the phenomenon. Hexerei owns correspondence and practical transformation; Occultism owns identity, binding, and displacement; Blood Magic owns vitality and wards; Malum owns spirit force and destructive motion; Goety owns summoning and command. Ars owns only the neutral grammar of shapes, targets, propagation, timing, amplification, and classification. A multiply-originated glyph accepts any declared origin independently. Every glyph also consumes blank parchment and its native catalyst. Of 108 installed glyphs, 106 are authored. `Conjure Water` is quarantined under finite-fluid conservation and `Rewind` is quarantined for rollback duplication risk.
+
+Glyph formalization is optional mastery, not a hard route through the source traditions. The dormant Fonts and Blood chapters show the complete vocabulary each discipline can originate, and the dormant Ars chapter recombines those tributaries into Elemental, Creo, Énergistique, and interdisciplinary spell studies. The same contract generates inscription origin tags and player-facing provenance tooltips, preventing recipes, quests, and explanations from silently disagreeing.
 
 ## Late And Post-AE2
 

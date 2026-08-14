@@ -6,7 +6,6 @@ var BC_VANILLA_STYLE_TOOL_FAMILIES = [
     ['aether', ['gravitite', 'holystone', 'skyroot', 'zanite']],
     ['deeperdarker', ['resonarium', 'warden']],
     ['everythingcopper', ['copper']],
-    ['forbidden_arcanus', ['draco_arcanus']],
     ['goety', ['dark']],
     ['malum', ['soul_stained_steel']],
     ['undergarden', ['cloggrum', 'forgotten', 'froststeel', 'utherium']]
@@ -20,7 +19,6 @@ var BC_VANILLA_STYLE_TOOL_EXTRAS = [
     'farmersdelight:golden_knife',
     'farmersdelight:iron_knife',
     'farmersdelight:netherite_knife',
-    'forbidden_arcanus:slimec_pickaxe',
     'goety:diamond_ice_axe',
     'goety:eerie_pickaxe',
     'goety:graverobber_shovel',

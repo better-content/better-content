@@ -18,5 +18,7 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
+      - name: Install smoke dependencies
+        run: sudo apt-get update && sudo apt-get install --yes ripgrep
       - name: Run supported smoke evaluation
         run: ./smoke.sh

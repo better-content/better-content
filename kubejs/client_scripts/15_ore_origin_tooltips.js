@@ -255,28 +255,8 @@ var BC_SUPPRESSED_NATIVE_ORES = [
 
 var BC_DIMENSION_DRINK_ORE_ORIGINS = [
     {
-        ores: ['arcane_crystal_ore', 'runic_stone', 'stella_arcanum', 'mithril_ore'],
+        ores: ['jade_ore', 'cthonic_gold_ore', 'soulstone_ore', 'brilliant_stone'],
         items: [
-            'forbidden_arcanus:arcane_crystal_ore',
-            'forbidden_arcanus:deepslate_arcane_crystal_ore',
-            'forbidden_arcanus:arcane_crystal',
-            'forbidden_arcanus:runic_stone',
-            'forbidden_arcanus:runic_deepslate',
-            'forbidden_arcanus:stella_arcanum',
-            'forbidden_arcanus:stellarite_piece',
-            'irons_spellbooks:mithril_ore',
-            'irons_spellbooks:deepslate_mithril_ore',
-            'irons_spellbooks:raw_mithril'
-        ],
-        lines: bcOreOriginLines('Dimension Drink sky dimensions', 'Natural generation is in Aether dimension_drink target biomes.', 'The original Overworld generators are disabled.')
-    },
-    {
-        ores: ['darkstone', 'gilded_darkstone', 'jade_ore', 'cthonic_gold_ore', 'soulstone_ore', 'brilliant_stone', 'xpetrified_ore'],
-        items: [
-            'forbidden_arcanus:darkstone',
-            'forbidden_arcanus:gilded_darkstone',
-            'forbidden_arcanus:xpetrified_ore',
-            'forbidden_arcanus:xpetrified_orb',
             'goety:jade_ore',
             'goety:jade',
             'malum:cthonic_gold_ore',
@@ -388,20 +368,40 @@ ItemEvents.tooltip(function (event) {
     for (var i = 0; i < BC_REALISTIC_ORE_ORIGINS.length; i++) {
         var dep = BC_REALISTIC_ORE_ORIGINS[i]
         var source = dep.source === 'Realistic Ores deposit' ? 'Cave vein + signalled ADLODS field' : dep.source
-        var lines = bcOreOriginLines(source, dep.name + ': ' + dep.detail, dep.processing)
+        var lines = bcOreOriginLines(source, dep.name + ': ' + dep.detail, 'Silk Touch keeps this exact host. Otherwise it drops one host-independent chunk; chunk + substrate rebuilds it losslessly.')
          bcAddOreOrigin(event, dep.blocks, lines)
-        event.add(dep.crushed, bcOreOriginLines('Crushed deposit material', dep.name + ': a processing ingredient recovered from the matching deposit or its surface rubble.', dep.processing))
+        var chunk = dep.crushed.replace('realistic_ores:crushed_', 'realistic_ores:ore_chunk_')
+        event.add(chunk, bcOreOriginLines('Host-independent ore chunk', dep.name + ': ' + dep.processing, 'Furnace for an early yield, or crush for 1 material plus three independent 30% bonus rolls.'))
+        event.add(dep.crushed, bcOreOriginLines('Crushed mixed deposit', dep.name + ': ' + dep.processing, 'Furnace for the base ingot yield, or mix four with water, a valid grinding ball, and optionally a matching solvent.'))
         event.add(
             dep.crushed.replace('realistic_ores:crushed_', 'realistic_ores:surface_sample_'),
-            bcOreOriginLines('Placeable survey sample', dep.name + ': loose surface rubble signalling a matching ADLODS field where configured.', 'Eight collected samples process into one matching crushed feed; furnace extraction is unavailable.')
+            bcOreOriginLines('Placeable survey sample', dep.name + ': loose surface rubble signalling a matching ADLODS field where configured.', 'Breaking or crushing this sample produces the deposit chunk and does not skip processing stages.')
         )
     }
 
     event.add('kubejs:mineral_tailings', [
         Text.gold('Ore-processing residue'),
-        Text.gray('A fixed loss from beneficiation and leaching.'),
-        Text.darkGray('Heated clay recovery is its only general sink; tailings are not ore-tagged feedstock.')
+        Text.gray('A fixed loss from separation and leaching.'),
+        Text.darkGray('Clay recovery is its only general sink; tailings are not ore-tagged feedstock.')
     ])
+
+    var balls = global.BC_RO_BALLS || []
+    for (var b = 0; b < balls.length; b++) {
+        event.add(balls[b].item, [
+            Text.gold('Ore-separation grinding medium'),
+            Text.gray('Only curated deposit and solvent combinations accept this material.'),
+            Text.darkGray(Math.round(balls[b].returnChance * 100) + '% chance to survive each separation batch.')
+        ])
+    }
+
+    var materials = global.BC_RO_MATERIALS || []
+    for (var cm = 0; cm < materials.length; cm++) {
+        var material = materials[cm]
+        var concentrate = material.concentrate || ('kubejs:' + material.id + '_concentrate')
+        var washed = 'kubejs:washed_' + concentrate.substring('kubejs:'.length)
+        event.add(concentrate, bcOreOriginLines('Separated concentrate', material.display + ' has already been split from its mixed deposit.', 'Furnace: grade-2 recovery. Washing improves it to grade 3; Smeltery and Foundry multiply recovery.'))
+        event.add(washed, bcOreOriginLines('Washed concentrate', material.display + ' concentrate at maximum ore-refinement grade.', 'Furnace: grade-3 recovery. Smeltery doubles it; Foundry triples it.'))
+    }
 
     for (var j = 0; j < BC_SIMPLE_ORE_ORIGINS.length; j++) {
          bcAddOreOrigin(event, BC_SIMPLE_ORE_ORIGINS[j].items, BC_SIMPLE_ORE_ORIGINS[j].lines)

@@ -1,1 +1,1 @@
-{ "parent": "minecraft:item/generated", "textures": { "layer0": "minecraft:item/diamond" } }
+{ "parent": "minecraft:item/generated", "textures": { "layer0": "kubejs:item/kimberlite_diamond_seed" } }

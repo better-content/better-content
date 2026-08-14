@@ -1,6 +1,1 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "minecraft:item/sweet_berries"
-  }
-}
+{ "parent": "minecraft:item/generated", "textures": { "layer0": "kubejs:item/rose_hip_extract" } }

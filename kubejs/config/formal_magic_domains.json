@@ -1,12 +1,6 @@
 {
-  "schema": "bc.formal_magic_domains.v1",
-  "ink_tiers": [
-    { "id": "common", "item": "irons_spellbooks:common_ink", "proof_tag": "kubejs:formal_magic/proof/common" },
-    { "id": "uncommon", "item": "irons_spellbooks:uncommon_ink", "proof_tag": "kubejs:formal_magic/proof/uncommon" },
-    { "id": "rare", "item": "irons_spellbooks:rare_ink", "proof_tag": "kubejs:formal_magic/proof/rare" },
-    { "id": "epic", "item": "irons_spellbooks:epic_ink", "proof_tag": "kubejs:formal_magic/proof/epic" },
-    { "id": "legendary", "item": "irons_spellbooks:legendary_ink", "proof_tag": "kubejs:formal_magic/proof/legendary" }
-  ],
+  "schema": "bc.formal_magic_domains.v3",
+  "description": "Exhaustive Ars glyph provenance. Ars owns formal grammar; active dirty-magic disciplines originate observable effects. A glyph may accept any listed origin independently.",
   "proofs": {
     "common": ["hexerei:moon_dust", "occultism:burnt_otherstone", "bloodmagic:blankslate", "malum:arcane_spirit", "goety:cursed_ingot"],
     "uncommon": ["hexerei:blood_bottle", "occultism:otherworld_essence", "bloodmagic:reinforcedslate", "malum:processed_soulstone", "goety:magic_emerald"],
@@ -15,23 +9,54 @@
     "legendary": ["occultism:dimensional_matrix", "bloodmagic:etherealslate", "malum:soul_stained_steel_ingot", "goety:soul_emerald"]
   },
   "domains": {
-    "core": ["#kubejs:formal_magic/proof/common", "#kubejs:formal_magic/proof/uncommon", "#kubejs:formal_magic/proof/rare", "#kubejs:formal_magic/proof/epic", "#kubejs:formal_magic/proof/legendary"],
+    "core": ["ars_nouveau:source_gem"],
     "hexerei": ["hexerei:moon_dust", "hexerei:blood_bottle", "hexerei:mandrake_root", "hexerei:blood_sigil"],
     "occultism": ["occultism:burnt_otherstone", "occultism:otherworld_essence", "occultism:spirit_attuned_gem", "occultism:spirit_attuned_crystal"],
     "blood_magic": ["bloodmagic:blankslate", "bloodmagic:reinforcedslate", "bloodmagic:infusedslate", "bloodmagic:demonslate", "bloodmagic:etherealslate"],
     "malum": ["malum:arcane_spirit", "malum:processed_soulstone", "malum:hallowed_gold_ingot", "malum:eldritch_spirit"],
     "goety": ["goety:cursed_ingot", "goety:magic_emerald", "goety:cursed_bars", "goety:dark_scroll", "goety:soul_emerald"]
   },
-  "irons_schools": {
-    "blood": { "domain": "blood_magic", "focus": "bloodmagic:blankslate" },
-    "nature": { "domain": "hexerei", "focus": "hexerei:mandrake_root" },
-    "ice": { "domain": "hexerei", "focus": "hexerei:moon_dust" },
-    "ender": { "domain": "occultism", "focus": "occultism:otherworld_essence" },
-    "fire": { "domain": "malum", "focus": "malum:infernal_spirit" },
-    "holy": { "domain": "malum", "focus": "malum:sacred_spirit" },
-    "lightning": { "domain": "malum", "focus": "malum:aerial_spirit" },
-    "evocation": { "domain": "goety", "focus": "goety:magic_emerald" },
-    "eldritch": { "domain": "goety", "focus": "goety:dark_scroll" }
+  "origin_milestones": {
+    "hexerei": ["fonts_cauldron", "fonts_book", "fonts_broom"],
+    "occultism": ["fonts_otherstone", "fonts_dictionary", "fonts_first_pact"],
+    "blood_magic": ["blood_altar", "blood_blank_slate", "blood_reinforced", "blood_infused", "blood_demonic", "blood_ethereal"],
+    "malum": ["blood_malum_altar", "blood_spool", "blood_impetus", "blood_soul_steel"],
+    "goety": ["blood_goety_altar", "blood_goety_focus"]
+  },
+  "formal_roles": {
+    "core": "shape, targeting, propagation, sequencing, timing, amplification, or neutral classification",
+    "hexerei": "correspondence, preparation, growth, elements, and practical transformation",
+    "occultism": "identity, binding, possession, displacement, extraction, and hidden space",
+    "blood_magic": "vitality, injury, healing, sacrifice, wards, and dispelling",
+    "malum": "spirit energy, force, motion, fire, gravity, and destructive transformation",
+    "goety": "summoning, restraint, curses, command, undead, and animated servants"
+  },
+  "origin_overrides": {
+    "break": ["hexerei", "malum"],
+    "bubble_shield": ["hexerei", "blood_magic"],
+    "charm": ["hexerei", "occultism", "goety"],
+    "crush": ["hexerei", "malum"],
+    "discharge": ["hexerei", "malum"],
+    "dispel": ["hexerei", "occultism", "blood_magic"],
+    "dampen": ["core", "blood_magic"],
+    "duration_down": ["core", "blood_magic"],
+    "fortune": ["hexerei", "occultism"],
+    "hex": ["blood_magic", "goety"],
+    "ignite": ["hexerei", "malum"],
+    "infuse": ["hexerei", "blood_magic", "malum"],
+    "life_link": ["occultism", "blood_magic", "goety"],
+    "name": ["hexerei", "occultism", "goety"],
+    "phantom_block": ["hexerei", "occultism"],
+    "phantom_grasp": ["occultism", "goety"],
+    "pull": ["occultism", "malum", "goety"],
+    "snare": ["occultism", "goety"],
+    "spark": ["hexerei", "malum"],
+    "spike": ["malum", "goety"],
+    "summon_decoy": ["occultism", "malum", "goety"],
+    "summon_steed": ["hexerei", "goety"],
+    "summon_wolves": ["hexerei", "goety"],
+    "wall": ["occultism", "goety"],
+    "wither": ["blood_magic", "malum", "goety"]
   },
   "glyphs": [
     ["accelerate", 2, "core", "minecraft:powered_rail"],
@@ -40,9 +65,9 @@
     ["aoe", 2, "core", "minecraft:firework_star"],
     ["blink", 3, "occultism", "ars_nouveau:manipulation_essence"],
     ["bounce", 1, "core", "ars_nouveau:abjuration_essence"],
+    ["ars_nouveau:burst", 3, "core", "minecraft:firework_star"],
     ["break", 1, "hexerei", "minecraft:iron_pickaxe"],
     ["cold_snap", 2, "hexerei", "ars_nouveau:water_essence"],
-    ["conjure_water", 2, "hexerei", "ars_nouveau:water_essence"],
     ["craft", 1, "hexerei", "minecraft:crafting_table"],
     ["crush", 2, "hexerei", "ars_nouveau:earth_essence"],
     ["cut", 1, "hexerei", "ars_nouveau:manipulation_essence"],
@@ -91,6 +116,7 @@
     ["pull", 1, "malum", "minecraft:fishing_rod"],
     ["randomize", 1, "core", "minecraft:pink_carpet"],
     ["redstone_signal", 1, "hexerei", "ars_nouveau:manipulation_essence"],
+    ["ars_nouveau:reset", 2, "core", "minecraft:clock"],
     ["rotate", 1, "hexerei", "ars_nouveau:manipulation_essence"],
     ["rune", 1, "core", "ars_nouveau:manipulation_essence"],
     ["self", 1, "core", "#minecraft:wooden_pressure_plates"],
@@ -110,6 +136,52 @@
     ["underfoot", 1, "core", "minecraft:iron_boots"],
     ["wall", 3, "goety", "ars_nouveau:manipulation_essence"],
     ["wind_shear", 2, "malum", "ars_nouveau:air_essence"],
-    ["wither", 3, "goety", "ars_nouveau:abjuration_essence"]
+    ["wither", 3, "goety", "ars_nouveau:abjuration_essence"],
+    ["ars_nouveau:wololo", 1, "core", "minecraft:yellow_dye"]
+  ],
+  "addon_glyphs": [
+    ["ars_elemental:glyph_aerial_filter", 1, "core", "minecraft:phantom_membrane"],
+    ["ars_elemental:glyph_aquatic_filter", 1, "core", "minecraft:prismarine_shard"],
+    ["ars_elemental:glyph_arc_projectile", 2, "core", "minecraft:arrow"],
+    ["ars_elemental:glyph_bubble_shield", 2, "hexerei", "minecraft:heart_of_the_sea"],
+    ["ars_elemental:glyph_charm", 2, "occultism", "ars_elemental:anima_essence"],
+    ["ars_elemental:glyph_conjure_terrain", 1, "hexerei", "ars_nouveau:earth_essence"],
+    ["ars_elemental:glyph_discharge", 2, "malum", "minecraft:lightning_rod"],
+    ["ars_elemental:glyph_envenom", 2, "hexerei", "minecraft:poisonous_potato"],
+    ["ars_elemental:glyph_fiery_filter", 1, "core", "minecraft:blaze_powder"],
+    ["ars_elemental:glyph_homing_projectile", 3, "core", "minecraft:nether_star"],
+    ["ars_elemental:glyph_insect_filter", 1, "core", "minecraft:spider_eye"],
+    ["ars_elemental:glyph_life_link", 3, "blood_magic", "minecraft:sculk_sensor"],
+    ["ars_elemental:glyph_not_aerial_filter", 1, "core", "minecraft:phantom_membrane"],
+    ["ars_elemental:glyph_not_aquatic_filter", 1, "core", "minecraft:prismarine_shard"],
+    ["ars_elemental:glyph_not_fiery_filter", 1, "core", "minecraft:blaze_powder"],
+    ["ars_elemental:glyph_not_insect_filter", 1, "core", "minecraft:spider_eye"],
+    ["ars_elemental:glyph_not_summon_filter", 1, "core", "ars_nouveau:conjuration_essence"],
+    ["ars_elemental:glyph_not_undead_filter", 1, "core", "minecraft:bone"],
+    ["ars_elemental:glyph_phantom_grasp", 2, "goety", "minecraft:phantom_membrane"],
+    ["ars_elemental:glyph_poison_spores", 2, "hexerei", "minecraft:spore_blossom"],
+    ["ars_elemental:glyph_propagator_arc", 2, "core", "ars_nouveau:manipulation_essence"],
+    ["ars_elemental:glyph_propagator_homing", 3, "core", "ars_nouveau:manipulation_essence"],
+    ["ars_elemental:glyph_spark", 1, "malum", "ars_nouveau:air_essence"],
+    ["ars_elemental:glyph_spike", 2, "goety", "minecraft:pointed_dripstone"],
+    ["ars_elemental:glyph_summon_filter", 1, "core", "ars_nouveau:conjuration_essence"],
+    ["ars_elemental:glyph_undead_filter", 1, "core", "minecraft:bone"],
+    ["ars_elemental:glyph_watery_grave", 2, "hexerei", "minecraft:kelp"]
+  ],
+  "quarantined_glyphs": [
+    {
+      "id": "ars_nouveau:glyph_conjure_water",
+      "tier": 2,
+      "origins": ["hexerei"],
+      "formal_role": "creation of water without a conserved source",
+      "reason": "The pack forbids renewable non-grown matter and fluid generation that bypasses finite acquisition."
+    },
+    {
+      "id": "ars_nouveau:rewind",
+      "tier": 3,
+      "origins": ["occultism"],
+      "formal_role": "rollback of entity health, location, and moved block state",
+      "reason": "Block-state rollback can duplicate or restore already-consumed matter when composed with manipulation and automation."
+    }
   ]
 }

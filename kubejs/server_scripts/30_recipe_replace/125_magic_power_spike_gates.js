@@ -37,7 +37,7 @@ ServerEvents.recipes(function (event) {
         'malum:spirit_altar'
     ], commonVanillaValuables.concat(['minecraft:torch']), BC_MAGIC_T1)
 
-    // Blood III: early Ars operations start once the teaser book can be fed by real proof.
+    // Formal depth II: rituals operationalize earned vocabulary without Blood parenting Ars.
      bcMagicGateOutputs(event, [
         'ars_nouveau:ritual_brazier',
         'ars_nouveau:ritual_scrying',
@@ -55,26 +55,12 @@ ServerEvents.recipes(function (event) {
         'ars_nouveau:ritual_animal_summon',
         'ars_nouveau:ritual_gravity',
         'ars_nouveau:ritual_wilden_summon',
-        'ars_nouveau:ritual_conjure_island_plains',
-        'ars_nouveau:ritual_conjure_island_desert',
         'ars_elemental:ritual_detection',
-        'ars_elemental:ritual_tesla_coil',
-        'ars_instrumentum:runic_storage_stone',
-        'ars_additions:ritual_locate_structure'
+        'ars_elemental:ritual_tesla_coil'
     ], commonVanillaValuables.concat([
         '#forge:storage_blocks/source', '#forge:gems/source', 'ars_nouveau:source_gem',
         'ars_nouveau:earth_essence', 'ars_nouveau:air_essence', 'minecraft:ender_pearl'
-    ]), BC_MAGIC_T3)
-
-     bcMagicGateOutputs(event, [
-        'irons_spellbooks:pumpkin_helmet'
-    ], commonVanillaValuables, BC_MAGIC_T2)
-
-    // Blood II: Hexerei is the first folk surface off the Fonts spine.
-     bcMagicGateOutputs(event, [
-        'hexerei:book_of_shadows_altar',
-        'hexerei:mixing_cauldron'
-    ], commonVanillaValuables.concat(['minecraft:torch']), BC_MAGIC_T2)
+    ]), '#kubejs:formal_magic/proof/rare')
 
     // Blood IV: Goety operational power. Keep Goety's internal focus chain,
     // but make the cheap focus entry and altar variants require a Demonic Slate.
@@ -132,54 +118,23 @@ ServerEvents.recipes(function (event) {
         'goety:mystic_core', 'goety:empty_focus'
     ]), BC_MAGIC_T4)
 
-    // Blood IV: Theurgy matter work and large Ars Caelum rituals.
-
+    // Formal depth III: Creo is the Create-era formal-motion crossing.
      bcMagicGateOutputs(event, [
-        'theurgy:incubator',
-        'theurgy:incubator_sulfur_vessel',
-        'theurgy:incubator_mercury_vessel',
-        'theurgy:liquefaction_cauldron'
-    ], commonVanillaValuables.concat(['#forge:ingots/copper', 'minecraft:cauldron']), BC_MAGIC_T4)
+        'ars_creo:starbuncle_wheel'
+    ], commonVanillaValuables.concat(['create:water_wheel']), '#kubejs:formal_magic/proof/epic')
 
+    // Formal depth V: Énergistique is the post-AE2 Source-network capstone.
      bcMagicGateOutputs(event, [
-        'ars_caelum:ritual_conjure_island_geode',
-        'ars_caelum:ritual_conjure_island_vexing',
-        'ars_caelum:ritual_conjure_island_village',
-        'ars_caelum:ritual_conjure_island_flourishing',
-        'ars_caelum:ritual_conjure_island_end_portal',
-        'ars_caelum:ritual_conjure_island_blazing',
-        'ars_caelum:ritual_sedimentation',
-        'ars_creo:starbuncle_wheel',
-        'ars_technica:source_engine'
-    ], commonVanillaValuables.concat(['create:water_wheel', 'ars_nouveau:frostaya_pod']), BC_MAGIC_T4)
-
-    // Blood V: programmable/networked magic and late Ars/AE source bridges.
-     bcMagicGateOutputs(event, [
-        'psi:programmer',
-        'psi:cad_assembler',
-        'psi:spell_drive',
-        'psi:cad_battery_basic',
-        'psi:cad_battery_extended',
-        'hexalia:hex_focus',
-        'hexcasting:focus',
-        'mna:occulus',
-        'mna:manaweaving_altar',
-        'mna:ritual_focus_minor',
-        'mna:lesser_eldrin_conduit_air',
-        'mna:lesser_eldrin_conduit_water',
-        'mna:lesser_eldrin_conduit_earth',
-        'mna:lesser_eldrin_conduit_ender',
-        'mna:constructs/construct_storage_torso_wickerwood',
         'arseng:me_source_jar',
         'arseng:source_acceptor',
         'arseng:source_cell_housing',
         'arseng:portable_source_cell_64k',
         'arseng:portable_source_cell_256k'
     ], commonVanillaValuables.concat([
-        '#forge:ingots/iron', 'minecraft:book', 'minecraft:paper', 'mna:vinteum_dust',
-        'minecraft:water_bucket', 'ars_nouveau:manipulation_essence', 'ars_nouveau:source_gem_block',
+        '#forge:ingots/iron', 'minecraft:book', 'minecraft:paper',
+        'ars_nouveau:manipulation_essence', 'ars_nouveau:source_gem_block',
         'ae2:cell_component_64k', 'ae2:cell_component_256k'
-    ]), BC_MAGIC_T5)
+    ]), '#kubejs:formal_magic/proof/legendary')
 
     // Hard removals for normal-logistics bypasses from magic-adjacent systems.
      bcMagicRemoveOutputs(event, [

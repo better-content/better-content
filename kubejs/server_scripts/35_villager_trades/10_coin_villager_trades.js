@@ -1,5 +1,4 @@
-// Replaces village trades with dotcoin purchases and lossy coin exchange.
-// Coins are rewards from quests/adventure first; exchange trades are convenience with spread.
+// Replaces village trades with dotcoin purchases. Coin rarities are never convertible.
 
 var BC_COIN = {
     copper: 'createdeco:copper_coin',
@@ -18,7 +17,7 @@ var BC_30_ITEMS = [
     ['minecraft:bread',4],['minecraft:apple',4],['minecraft:torch',16],['minecraft:stick',32],
     ['minecraft:string',8],['minecraft:leather',4],['minecraft:paper',16],['minecraft:arrow',16],['minecraft:glass',8],
     ['minecraft:bucket',1],['minecraft:lantern',2],['minecraft:cooked_beef',4],['minecraft:carrot',12],['minecraft:potato',12],
-    ['minecraft:compass',1],['minecraft:map',1],['minecraft:fishing_rod',1],
+    ['minecraft:compass',1],['minecraft:map',1],
     ['minecraft:shears',1],['minecraft:rail',16],['minecraft:bone_meal',16],['minecraft:bookshelf',1]
 ]
 
@@ -365,49 +364,11 @@ function bcAddSellTrades(event, profession, rows) {
     }
 }
 
-function bcCoinExchangeTrade(event, profession, level, inputTier, inputCount, outputTier, outputCount, uses, xp) {
-    if (!BC_VILLAGER_COIN_WHITELIST[inputTier] || !BC_VILLAGER_COIN_WHITELIST[outputTier]) return
-    var inputCoin = BC_COIN[inputTier]
-    var outputCoin = BC_COIN[outputTier]
-    if (!inputCoin || !outputCoin) {
-        console.warn('[coin-villager-trades] Unknown exchange tier: ' + inputTier + ' -> ' + outputTier)
-        return
-    }
-    if (!bcItemExists(inputCoin) || !bcItemExists(outputCoin)) return
-
-    var trade = event.addTrade(profession, level, [Item.of(inputCoin, inputCount)], Item.of(outputCoin, outputCount))
-    if (trade && trade.maxUses) trade.maxUses(uses || 12)
-    if (trade && trade.villagerExperience) trade.villagerExperience(xp || level * 2)
-    if (trade && trade.priceMultiplier) trade.priceMultiplier(0.0)
-}
-
-function bcAddCoinExchangeTrades(event, profession, rows) {
-    for (var i = 0; i < rows.length; i++) {
-        var r = rows[i]
-         bcCoinExchangeTrade(event, profession, r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7])
-    }
-}
-
 if (typeof MoreJSEvents !== 'undefined') {
     MoreJSEvents.villagerTrades(function (event) {
         event.removeVanillaTrades()
         event.removeModdedTrades()
 
-        // Moneychanger trades are intentionally lossy in both directions.
-        // They smooth progression currency without making lower-tier farms mint higher-tier coins efficiently.
-         bcAddCoinExchangeTrades(event, 'minecraft:cleric', [
-            [1, 'copper', 10, 'zinc', 1, 16, 2],
-            [1, 'zinc', 1, 'copper', 6, 16, 2],
-            [2, 'zinc', 8, 'iron', 1, 12, 6],
-            [2, 'iron', 1, 'zinc', 5, 12, 6],
-            [3, 'iron', 1, 'copper', 24, 6, 20]
-        ])
-         bcAddCoinExchangeTrades(event, 'minecraft:cartographer', [
-            [2, 'copper', 12, 'zinc', 1, 8, 6],
-            [2, 'zinc', 1, 'copper', 5, 8, 6],
-            [3, 'zinc', 10, 'iron', 1, 6, 10],
-            [3, 'iron', 1, 'zinc', 4, 6, 10]
-        ])
          bcAddThirtyBuys(event, 'copper', 2)
          bcAddThirtyBuys(event, 'zinc', 3)
          bcAddThirtyBuys(event, 'iron', 4)
@@ -533,7 +494,7 @@ if (typeof MoreJSEvents !== 'undefined') {
         // Fisherman: water travel, food, and ocean expedition restock.
          bcAddTrades(event, 'minecraft:fisherman', [
             [1, 'copper', 2, 'minecraft:cod', 8, 16, 2],
-            [1, 'copper', 3, 'minecraft:fishing_rod', 1, 8, 2],
+            [1, 'copper', 3, 'starcatcher:starcatcher_rod', 1, 8, 2],
             [1, 'copper', 2, 'starcatcher:worm', 8, 12, 2],
             [1, 'copper', 3, 'starcatcher:starcatcher_twine', 2, 8, 2],
             [2, 'iron', 3, 'starcatcher:bobber', 1, 8, 6],

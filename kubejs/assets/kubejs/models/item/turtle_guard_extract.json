@@ -1,6 +1,1 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "minecraft:item/scute"
-  }
-}
+{ "parent": "minecraft:item/generated", "textures": { "layer0": "kubejs:item/turtle_guard_extract" } }

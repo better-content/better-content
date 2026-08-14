@@ -24,10 +24,6 @@
 	malum_spirit_capacity = 24
 	#Range: 1 ~ 720000
 	malum_spirit_interval_ticks = 6000
-	#Range: 1 ~ 10000
-	aureal_capacity = 120
-	#Range: 1 ~ 720000
-	aureal_interval_ticks = 1200
 	#Range: > 1
 	kinetic_service_tick_capacity = 144000
 

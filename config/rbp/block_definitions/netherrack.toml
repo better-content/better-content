@@ -3,7 +3,7 @@
 #	Namespaces:   '<minecraft>'
 #	Tags:         '#forge:stone'
 #	IDs:          'minecraft:stone'
-Blocks = ["minecraft:ancient_debris", "minecraft:basalt", "minecraft:gilded_blackstone", "minecraft:magma_block", "minecraft:nether_gold_ore", "minecraft:nether_quartz_ore", "minecraft:netherrack", "minecraft:smooth_basalt"]
+Blocks = ["minecraft:ancient_debris", "minecraft:gilded_blackstone", "minecraft:magma_block", "minecraft:nether_gold_ore", "minecraft:nether_quartz_ore", "minecraft:netherrack", "minecraft:smooth_basalt"]
 
 [Physics]
 	#The maximum weight the block(s) can support both horizontally and vertically.

@@ -9,23 +9,14 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["7 starter stubs."]
-			icon: "minecraft:oak_sapling"
-			id: "52573BB0AF8E3D20"
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "24056D269CC075DD"
-				title: "Items"
-				type: "checkmark"
-			}]
-			title: "Items"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
 			icon: "farmersdelight:cabbage_seeds"
 			id: "2DF32254DEB903A7"
+			rewards: [{
+				count: 8
+				id: "30F344E253D0190C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -40,6 +31,12 @@
 		{
 			icon: "farmersdelight:tomato_seeds"
 			id: "01562CB8C70566C6"
+			rewards: [{
+				count: 8
+				id: "43261A45C67F3584"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -54,6 +51,12 @@
 		{
 			icon: "minecraft:beetroot_seeds"
 			id: "171A703393802B20"
+			rewards: [{
+				count: 8
+				id: "D90F25C939AD8F2C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -68,6 +71,12 @@
 		{
 			icon: "minecraft:melon_seeds"
 			id: "6B120BB6E8FA4B0F"
+			rewards: [{
+				count: 8
+				id: "DE80B5F12A3B5A42"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -82,6 +91,12 @@
 		{
 			icon: "minecraft:pumpkin_seeds"
 			id: "61A97AE81BC83961"
+			rewards: [{
+				count: 8
+				id: "798905C303F61E78"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -96,6 +111,12 @@
 		{
 			icon: "minecraft:wheat_seeds"
 			id: "232909A1A72C8CB5"
+			rewards: [{
+				count: 8
+				id: "50AB06BDF186DCB1"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -110,6 +131,12 @@
 		{
 			icon: "undergarden:gloomgourd_seeds"
 			id: "175D344C5B3A210D"
+			rewards: [{
+				count: 8
+				id: "B1C1A736AA243226"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -122,23 +149,14 @@
 			y: 0.0d
 		}
 		{
-			description: ["25 starter stubs."]
-			icon: "ars_nouveau:magebloom_block"
-			id: "75991AFBEF186884"
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "15B4252ABFA4E8B5"
-				title: "Flowers"
-				type: "checkmark"
-			}]
-			title: "Flowers"
-			x: 0.0d
-			y: 3.25d
-		}
-		{
 			icon: "ars_nouveau:magebloom_crop"
 			id: "0E4C9407A8AE0490"
+			rewards: [{
+				count: 8
+				id: "2DAD299E350647DD"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -153,6 +171,12 @@
 		{
 			icon: "ars_nouveau:magebloom_fiber"
 			id: "64A9949267A722A5"
+			rewards: [{
+				count: 8
+				id: "B12E178ED847AFB1"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -167,6 +191,12 @@
 		{
 			icon: "ars_nouveau:ritual_flowering"
 			id: "63C7C63367C8B72B"
+			rewards: [{
+				count: 8
+				id: "129F450376935128"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -181,6 +211,12 @@
 		{
 			icon: "framedblocks:framed_flower_pot"
 			id: "04C3ACFBB2EC5CB3"
+			rewards: [{
+				count: 8
+				id: "36E6844BD3E0ACB9"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -201,6 +237,12 @@
 				}
 			}
 			id: "00E269C530E0F490"
+			rewards: [{
+				count: 8
+				id: "D39502CF8656899F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -221,6 +263,12 @@
 		{
 			icon: "immersive_weathering:quark/blue_blossom_leaf_pile"
 			id: "39BC653463F87669"
+			rewards: [{
+				count: 8
+				id: "76D7710BC4BA175F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -235,6 +283,12 @@
 		{
 			icon: "immersive_weathering:quark/lavender_blossom_leaf_pile"
 			id: "7FABCABE33F8FC5C"
+			rewards: [{
+				count: 8
+				id: "DFD1C5E907AD2ECB"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -249,6 +303,12 @@
 		{
 			icon: "immersive_weathering:quark/orange_blossom_leaf_pile"
 			id: "1829E43A6A23A2E2"
+			rewards: [{
+				count: 8
+				id: "3A1407A04CDB91BF"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -263,6 +323,12 @@
 		{
 			icon: "immersive_weathering:quark/red_blossom_leaf_pile"
 			id: "58F231409BFC9D33"
+			rewards: [{
+				count: 8
+				id: "43CBCB92EB675D5F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -277,6 +343,12 @@
 		{
 			icon: "immersive_weathering:quark/yellow_blossom_leaf_pile"
 			id: "196C9D2DFD5C8059"
+			rewards: [{
+				count: 8
+				id: "310F72216584C0D4"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -291,6 +363,12 @@
 		{
 			icon: "minecraft:flower_pot"
 			id: "4A45BFD9E8ACB3BB"
+			rewards: [{
+				count: 8
+				id: "248192A1B76060EC"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -305,6 +383,12 @@
 		{
 			icon: "minecraft:lily_pad"
 			id: "6DB9F19F664AAF1E"
+			rewards: [{
+				count: 8
+				id: "547992C1DAC348DF"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -319,6 +403,12 @@
 		{
 			icon: "procedural_bouquets:potted_bouquet"
 			id: "15075540FDFADEFA"
+			rewards: [{
+				count: 8
+				id: "4AE018246310ADB8"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -333,6 +423,12 @@
 		{
 			icon: "quark:blue_blossom_hedge"
 			id: "1451B6F34C0C3996"
+			rewards: [{
+				count: 8
+				id: "514220FCF43F265D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -347,6 +443,12 @@
 		{
 			icon: "quark:lavender_blossom_hedge"
 			id: "34A7403630554942"
+			rewards: [{
+				count: 8
+				id: "8970F694677BEBA6"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -361,6 +463,12 @@
 		{
 			icon: "quark:orange_blossom_hedge"
 			id: "315CAB140C85D7E2"
+			rewards: [{
+				count: 8
+				id: "3AC31BF8E7988F61"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -375,6 +483,12 @@
 		{
 			icon: "quark:red_blossom_hedge"
 			id: "0D911E7714721572"
+			rewards: [{
+				count: 8
+				id: "B51C926A24A78B33"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -389,6 +503,12 @@
 		{
 			icon: "quark:yellow_blossom_hedge"
 			id: "15B4028E7EE51569"
+			rewards: [{
+				count: 8
+				id: "A22F11738113F344"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -403,6 +523,12 @@
 		{
 			icon: "twilightforest:huge_lily_pad"
 			id: "0FF552DE67B5A773"
+			rewards: [{
+				count: 8
+				id: "62FEEF134C7F0D3E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -415,8 +541,14 @@
 			y: 4.5d
 		}
 		{
-			icon: "farmersdelight:mushroom_rice"
+			icon: { Count: 1, id: "farmersdelight:mushroom_rice", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "54AF5301433489E7"
+			rewards: [{
+				count: 8
+				id: "E6A27198FDE9E4E1"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -431,6 +563,12 @@
 		{
 			icon: "minecraft:brown_mushroom"
 			id: "465FEDAC35178B82"
+			rewards: [{
+				count: 8
+				id: "0C970FD0285BEDC3"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -445,6 +583,12 @@
 		{
 			icon: "minecraft:crimson_fungus"
 			id: "717117985B1DEC49"
+			rewards: [{
+				count: 8
+				id: "FFF72B6A8964C5F3"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -459,6 +603,12 @@
 		{
 			icon: "minecraft:red_mushroom"
 			id: "0784CA43F81269FC"
+			rewards: [{
+				count: 8
+				id: "82E794C7DA0A1BAC"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -473,6 +623,12 @@
 		{
 			icon: "minecraft:warped_fungus"
 			id: "23636D3B45DA0923"
+			rewards: [{
+				count: 8
+				id: "911A18080DA9EE59"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -493,6 +649,12 @@
 				}
 			}
 			id: "19D1AE4E1D8A582B"
+			rewards: [{
+				count: 8
+				id: "F08C1397E211211D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -511,23 +673,14 @@
 			y: 5.75d
 		}
 		{
-			description: ["28 starter stubs."]
-			icon: "aether:aether_grass_block"
-			id: "3B8A99D87502CB7C"
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "558D3F24C6BD4063"
-				title: "Roots And Vines"
-				type: "checkmark"
-			}]
-			title: "Roots And Vines"
-			x: 0.0d
-			y: 9.0d
-		}
-		{
 			icon: "aether:skyroot_stick"
 			id: "1479D4417BBC0B85"
+			rewards: [{
+				count: 8
+				id: "7435D44593A548E2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -540,8 +693,14 @@
 			y: 9.0d
 		}
 		{
-			icon: "ars_nouveau:sourceberry_bush"
+			icon: { Count: 1, id: "ars_nouveau:sourceberry_bush", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0CB9D63816D914D3"
+			rewards: [{
+				count: 8
+				id: "18C54A57104C75DC"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -556,6 +715,12 @@
 		{
 			icon: "bloodmagic:ritualdiviner"
 			id: "5C38FBF1740204E0"
+			rewards: [{
+				count: 8
+				id: "A3B1FD01719EF879"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -568,8 +733,14 @@
 			y: 9.0d
 		}
 		{
-			icon: "bloodmagic:ritualdivinerdusk"
+			icon: { Count: 1, id: "bloodmagic:ritualdivinerdusk", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "6A2EFE00BB96A233"
+			rewards: [{
+				count: 8
+				id: "EF485B002853C135"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -584,6 +755,12 @@
 		{
 			icon: "create:bamboo_window"
 			id: "08F612D4DEE3F23C"
+			rewards: [{
+				count: 8
+				id: "368DA75CFFF14D52"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -596,8 +773,14 @@
 			y: 9.0d
 		}
 		{
-			icon: "farmersdelight:cabbage_leaf"
+			icon: { Count: 1, id: "farmersdelight:cabbage_leaf", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0B131CF0827D5DBD"
+			rewards: [{
+				count: 8
+				id: "CC3F147D9D12D6AD"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -612,6 +795,12 @@
 		{
 			icon: "immersive_weathering:aether/crystal_fruit_leaf_pile"
 			id: "7AFB4AD23F6A0BE4"
+			rewards: [{
+				count: 8
+				id: "6103CF3C54ABD1F5"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -626,6 +815,12 @@
 		{
 			icon: "immersive_weathering:aether/skyroot_leaf_pile"
 			id: "5D7B070176EB51DE"
+			rewards: [{
+				count: 8
+				id: "72952C1BCBAAAE2E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -638,8 +833,14 @@
 			y: 9.0d
 		}
 		{
-			icon: "immersive_weathering:golden_moss_clump"
+			icon: { Count: 1, id: "immersive_weathering:golden_moss_clump", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "1FC30B9665933F01"
+			rewards: [{
+				count: 8
+				id: "20294B190C1973D2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -652,8 +853,14 @@
 			y: 9.0d
 		}
 		{
-			icon: "immersive_weathering:moss_clump"
+			icon: { Count: 1, id: "immersive_weathering:moss_clump", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "09C1979E2BE0D1BC"
+			rewards: [{
+				count: 8
+				id: "7A3B230ADDB49BFF"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -668,6 +875,12 @@
 		{
 			icon: "immersive_weathering:twilightforest/beanstalk_leaf_pile"
 			id: "01670E29C546203B"
+			rewards: [{
+				count: 8
+				id: "D834FB2151B78B5D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -682,6 +895,12 @@
 		{
 			icon: "minecraft:bamboo"
 			id: "06FBBE6C8E030AD7"
+			rewards: [{
+				count: 8
+				id: "14D39468B30CC9DE"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -694,8 +913,14 @@
 			y: 9.0d
 		}
 		{
-			icon: "minecraft:beetroot"
+			icon: { Count: 1, id: "minecraft:beetroot", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "2864106B1085FA79"
+			rewards: [{
+				count: 8
+				id: "C925C887F88A9F2B"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -710,6 +935,12 @@
 		{
 			icon: "minecraft:cactus"
 			id: "5A230C685DB9B213"
+			rewards: [{
+				count: 8
+				id: "E7AA1AD03A57A6A1"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -724,6 +955,12 @@
 		{
 			icon: "minecraft:dead_bush"
 			id: "39AE8097D198B50A"
+			rewards: [{
+				count: 8
+				id: "DCCB9A456CE75EB5"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -738,6 +975,12 @@
 		{
 			icon: "minecraft:grass"
 			id: "025C212842A03FF5"
+			rewards: [{
+				count: 8
+				id: "C365781D95E02D35"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -752,6 +995,12 @@
 		{
 			icon: "minecraft:moss_carpet"
 			id: "427D556BC55D6E48"
+			rewards: [{
+				count: 8
+				id: "020571BECA9BF02E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -766,6 +1015,12 @@
 		{
 			icon: "minecraft:muddy_mangrove_roots"
 			id: "14CEBD311EB877B0"
+			rewards: [{
+				count: 8
+				id: "9C40F99311FE36AE"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -780,6 +1035,12 @@
 		{
 			icon: "quark:bamboo_mat"
 			id: "04B3C948F5FBDC49"
+			rewards: [{
+				count: 8
+				id: "454AD0CE37485B40"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -794,6 +1055,12 @@
 		{
 			icon: "tconstruct:earth_enderbark_roots"
 			id: "487D2A8E03DB0AC3"
+			rewards: [{
+				count: 8
+				id: "440A453CCD865048"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -808,6 +1075,12 @@
 		{
 			icon: "tconstruct:ender_enderbark_roots"
 			id: "40DBF4D1C8071614"
+			rewards: [{
+				count: 8
+				id: "DF8D46A46E184BC2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -822,6 +1095,12 @@
 		{
 			icon: "tconstruct:ichor_enderbark_roots"
 			id: "2DD7749CE10F8FBF"
+			rewards: [{
+				count: 8
+				id: "B6DAACEC96A9F592"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -836,6 +1115,12 @@
 		{
 			icon: "tconstruct:sky_enderbark_roots"
 			id: "4FC8F0877C49A639"
+			rewards: [{
+				count: 8
+				id: "4849F5AC79A58B39"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -850,6 +1135,12 @@
 		{
 			icon: "twilightforest:moss_patch"
 			id: "1CA8B47585BF4AE4"
+			rewards: [{
+				count: 8
+				id: "8D4BE9DED3B08ADD"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -862,8 +1153,14 @@
 			y: 10.25d
 		}
 		{
-			icon: "ubesdelight:lemongrass"
+			icon: { Count: 1, id: "ubesdelight:lemongrass", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "7850D5E4EE8195BA"
+			rewards: [{
+				count: 8
+				id: "C815C30B242E22C0"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -878,6 +1175,12 @@
 		{
 			icon: "undergarden:blue_mogmoss_rug"
 			id: "229A8604D554859B"
+			rewards: [{
+				count: 8
+				id: "917C3A465A033F37"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -890,8 +1193,14 @@
 			y: 11.5d
 		}
 		{
-			icon: "undergarden:droopvine_item"
+			icon: { Count: 1, id: "undergarden:droopvine_item", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "3D90A9E960DB468C"
+			rewards: [{
+				count: 8
+				id: "DD569C725C408D45"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -906,6 +1215,12 @@
 		{
 			icon: "undergarden:mogmoss_rug"
 			id: "5384EA4B37E17F01"
+			rewards: [{
+				count: 8
+				id: "AA437CC3B3AEE097"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -918,23 +1233,14 @@
 			y: 11.5d
 		}
 		{
-			description: ["46 starter stubs."]
-			icon: "aether:blue_berry"
-			id: "6FB5AA6A261C3B85"
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "14F9A5A2413B2E89"
-				title: "Produce"
-				type: "checkmark"
-			}]
-			title: "Produce"
-			x: 0.0d
-			y: 14.75d
-		}
-		{
-			icon: "aether:blue_berry"
+			icon: { Count: 1, id: "aether:blue_berry", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "74E42C5DB2AF78A5"
+			rewards: [{
+				count: 8
+				id: "05977CB5588C18A1"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -947,8 +1253,14 @@
 			y: 14.75d
 		}
 		{
-			icon: "aether:enchanted_berry"
+			icon: { Count: 1, id: "aether:enchanted_berry", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "5345A5BD618138BF"
+			rewards: [{
+				count: 8
+				id: "8646AF64D51BF088"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -961,8 +1273,14 @@
 			y: 14.75d
 		}
 		{
-			icon: "ars_nouveau:source_berry_roll"
+			icon: { Count: 1, id: "ars_nouveau:source_berry_roll", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "7A3442B1FC5FA847"
+			rewards: [{
+				count: 8
+				id: "C3AEA483253D1816"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -977,6 +1295,12 @@
 		{
 			icon: "ars_nouveau:sourceberry_sack"
 			id: "26446C3F17B3C25A"
+			rewards: [{
+				count: 8
+				id: "E6D611DCF417B1FB"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -989,8 +1313,14 @@
 			y: 14.75d
 		}
 		{
-			icon: "brewinandchewin:glow_berry_marmalade"
+			icon: { Count: 1, id: "brewinandchewin:glow_berry_marmalade", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0B4B84AC9310BBEB"
+			rewards: [{
+				count: 8
+				id: "CFF8198BBF09147D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1003,8 +1333,14 @@
 			y: 14.75d
 		}
 		{
-			icon: "create:honeyed_apple"
+			icon: { Count: 1, id: "create:honeyed_apple", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "7449B625934D1D3D"
+			rewards: [{
+				count: 8
+				id: "264D2B595C5AFD82"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1017,8 +1353,14 @@
 			y: 14.75d
 		}
 		{
-			icon: "farmersdelight:cabbage"
+			icon: { Count: 1, id: "farmersdelight:cabbage", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "2E387AB07E15ABEA"
+			rewards: [{
+				count: 8
+				id: "C94A48E744769BA2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1031,8 +1373,14 @@
 			y: 14.75d
 		}
 		{
-			icon: "farmersdelight:cabbage_rolls"
+			icon: { Count: 1, id: "farmersdelight:cabbage_rolls", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "3BC7BE9622A388EC"
+			rewards: [{
+				count: 8
+				id: "E63038BD3AC4CD64"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1045,8 +1393,14 @@
 			y: 14.75d
 		}
 		{
-			icon: "farmersdelight:glow_berry_custard"
+			icon: { Count: 1, id: "farmersdelight:glow_berry_custard", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "1508B64D1054B696"
+			rewards: [{
+				count: 8
+				id: "4508C3A2108B7354"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1059,8 +1413,14 @@
 			y: 14.75d
 		}
 		{
-			icon: "farmersdelight:melon_popsicle"
+			icon: { Count: 1, id: "farmersdelight:melon_popsicle", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "209AD0A2F2630829"
+			rewards: [{
+				count: 8
+				id: "81A073BF69D2BE75"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1073,8 +1433,14 @@
 			y: 14.75d
 		}
 		{
-			icon: "farmersdelight:onion"
+			icon: { Count: 1, id: "farmersdelight:onion", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "026EF20EA85DB89E"
+			rewards: [{
+				count: 8
+				id: "4AAE572BF97EE9E2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1087,8 +1453,14 @@
 			y: 14.75d
 		}
 		{
-			icon: "farmersdelight:pumpkin_slice"
+			icon: { Count: 1, id: "farmersdelight:pumpkin_slice", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "77F6FF16DE8E11EA"
+			rewards: [{
+				count: 8
+				id: "4F601ED6012A618C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1103,6 +1475,12 @@
 		{
 			icon: "farmersdelight:rotten_tomato"
 			id: "037D2B2989D50BB7"
+			rewards: [{
+				count: 8
+				id: "6F027D059B87EEB6"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1115,8 +1493,14 @@
 			y: 16.0d
 		}
 		{
-			icon: "farmersdelight:stuffed_potato"
+			icon: { Count: 1, id: "farmersdelight:stuffed_potato", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "4160DCDE6149C484"
+			rewards: [{
+				count: 8
+				id: "E24AF48F76B5577F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1129,8 +1513,14 @@
 			y: 16.0d
 		}
 		{
-			icon: "farmersdelight:tomato"
+			icon: { Count: 1, id: "farmersdelight:tomato", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "6C1D84FB65CE3686"
+			rewards: [{
+				count: 8
+				id: "0C3915576DD986AD"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1143,8 +1533,14 @@
 			y: 16.0d
 		}
 		{
-			icon: "minecraft:apple"
+			icon: { Count: 1, id: "minecraft:apple", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "54B0558FBFC9C792"
+			rewards: [{
+				count: 8
+				id: "F4A575D34269CDA2"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1157,8 +1553,14 @@
 			y: 16.0d
 		}
 		{
-			icon: "minecraft:baked_potato"
+			icon: { Count: 1, id: "minecraft:baked_potato", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "53EEC28023E3E7EA"
+			rewards: [{
+				count: 8
+				id: "53C9ABECF98509B5"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1171,8 +1573,14 @@
 			y: 16.0d
 		}
 		{
-			icon: "minecraft:carrot"
+			icon: { Count: 1, id: "minecraft:carrot", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "30317EA3EF8C85E5"
+			rewards: [{
+				count: 8
+				id: "E90C7AD28943D7F0"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1193,6 +1601,12 @@
 				}
 			}
 			id: "77E4D643543774B1"
+			rewards: [{
+				count: 8
+				id: "CEEFE535A376A8A1"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1213,6 +1627,12 @@
 		{
 			icon: "minecraft:carved_pumpkin"
 			id: "1E5DDC2F722A8ED6"
+			rewards: [{
+				count: 8
+				id: "EA761CD441161008"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1225,8 +1645,14 @@
 			y: 16.0d
 		}
 		{
-			icon: "minecraft:chorus_fruit"
+			icon: { Count: 1, id: "minecraft:chorus_fruit", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "04FC20DC8129BFE4"
+			rewards: [{
+				count: 8
+				id: "B2CC1E9B70AB3F82"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1241,6 +1667,12 @@
 		{
 			icon: "minecraft:cocoa_beans"
 			id: "33FE00798E04F5DF"
+			rewards: [{
+				count: 8
+				id: "636E806DCD23FC0A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1253,8 +1685,14 @@
 			y: 16.0d
 		}
 		{
-			icon: "minecraft:enchanted_golden_apple"
+			icon: { Count: 1, id: "minecraft:enchanted_golden_apple", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0165A44C030322E9"
+			rewards: [{
+				count: 8
+				id: "AA9C18E331750348"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1269,6 +1707,12 @@
 		{
 			icon: "minecraft:glistering_melon_slice"
 			id: "4A442D7D46D4097D"
+			rewards: [{
+				count: 8
+				id: "CE18733EBDBE667C"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1281,8 +1725,14 @@
 			y: 16.0d
 		}
 		{
-			icon: "minecraft:glow_berries"
+			icon: { Count: 1, id: "minecraft:glow_berries", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "684A6D776647792C"
+			rewards: [{
+				count: 8
+				id: "F5AC1A1CE9819D95"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1295,8 +1745,14 @@
 			y: 17.25d
 		}
 		{
-			icon: "minecraft:golden_apple"
+			icon: { Count: 1, id: "minecraft:golden_apple", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0079BA57BB2331CB"
+			rewards: [{
+				count: 8
+				id: "F1399CBC075C5F19"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1309,8 +1765,14 @@
 			y: 17.25d
 		}
 		{
-			icon: "minecraft:golden_carrot"
+			icon: { Count: 1, id: "minecraft:golden_carrot", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0514BC0DBD3FED0E"
+			rewards: [{
+				count: 8
+				id: "82C4448CD862025A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1325,6 +1787,12 @@
 		{
 			icon: "minecraft:melon"
 			id: "25000027FB67FF14"
+			rewards: [{
+				count: 8
+				id: "3763D864F38F38E3"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1337,8 +1805,14 @@
 			y: 17.25d
 		}
 		{
-			icon: "minecraft:melon_slice"
+			icon: { Count: 1, id: "minecraft:melon_slice", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "75162BA9369624D8"
+			rewards: [{
+				count: 8
+				id: "5CE95EFDF85F1A89"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1353,6 +1827,12 @@
 		{
 			icon: "minecraft:nether_wart"
 			id: "1553A6F31836B0B4"
+			rewards: [{
+				count: 8
+				id: "AE0549831E6A79F6"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1365,8 +1845,14 @@
 			y: 17.25d
 		}
 		{
-			icon: "minecraft:poisonous_potato"
+			icon: { Count: 1, id: "minecraft:poisonous_potato", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "3DE2E816B7956F6A"
+			rewards: [{
+				count: 8
+				id: "1DB49C973C1CCCF3"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1381,6 +1867,12 @@
 		{
 			icon: "minecraft:popped_chorus_fruit"
 			id: "3BA0C9055F98E95D"
+			rewards: [{
+				count: 8
+				id: "C07BC9BD950FAF56"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1393,8 +1885,14 @@
 			y: 17.25d
 		}
 		{
-			icon: "minecraft:potato"
+			icon: { Count: 1, id: "minecraft:potato", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "6908D087FFECBC6A"
+			rewards: [{
+				count: 8
+				id: "F32943A7D20CB055"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1409,6 +1907,12 @@
 		{
 			icon: "minecraft:pumpkin"
 			id: "755F83EBDEDCA68D"
+			rewards: [{
+				count: 8
+				id: "E5CA3E10992657A3"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1421,8 +1925,14 @@
 			y: 17.25d
 		}
 		{
-			icon: "minecraft:sweet_berries"
+			icon: { Count: 1, id: "minecraft:sweet_berries", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "24CA703811EDBC20"
+			rewards: [{
+				count: 8
+				id: "2B7AEE5C44DD99E0"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1435,8 +1945,14 @@
 			y: 17.25d
 		}
 		{
-			icon: "natures_spirit:desert_turnip"
+			icon: { Count: 1, id: "natures_spirit:desert_turnip", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "13E24A3F2AD0D67E"
+			rewards: [{
+				count: 8
+				id: "C295FFAB75C61B1F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1451,6 +1967,12 @@
 		{
 			icon: "quark:berry_sack"
 			id: "4582B95DA1242DA2"
+			rewards: [{
+				count: 8
+				id: "BBB5424D708EF19E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1465,6 +1987,12 @@
 		{
 			icon: "quark:cocoa_beans_sack"
 			id: "6EF4D039689FF236"
+			rewards: [{
+				count: 8
+				id: "2A38DDF202C8ADBB"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1479,6 +2007,12 @@
 		{
 			icon: "quark:glowberry_sack"
 			id: "242C147FC10C59B6"
+			rewards: [{
+				count: 8
+				id: "C189CC44BB9EB44A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1493,6 +2027,12 @@
 		{
 			icon: "quark:nether_wart_sack"
 			id: "70443D23D79CC6BA"
+			rewards: [{
+				count: 8
+				id: "2BF507A7A9D96A2F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1505,8 +2045,14 @@
 			y: 18.5d
 		}
 		{
-			icon: "tconstruct:jeweled_apple"
+			icon: { Count: 1, id: "tconstruct:jeweled_apple", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "1EA8933D1D28F998"
+			rewards: [{
+				count: 8
+				id: "E8E9B8AAFB645887"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1519,8 +2065,14 @@
 			y: 18.5d
 		}
 		{
-			icon: "twilightforest:torchberries"
+			icon: { Count: 1, id: "twilightforest:torchberries", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "174C0EF3AD2729EF"
+			rewards: [{
+				count: 8
+				id: "0580E2DFC08EBEAC"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1533,8 +2085,14 @@
 			y: 18.5d
 		}
 		{
-			icon: "undergarden:blisterberry"
+			icon: { Count: 1, id: "undergarden:blisterberry", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "48C31595F7A98FAE"
+			rewards: [{
+				count: 8
+				id: "4096EEC556749648"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1547,8 +2105,14 @@
 			y: 18.5d
 		}
 		{
-			icon: "undergarden:rotten_blisterberry"
+			icon: { Count: 1, id: "undergarden:rotten_blisterberry", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "749AD4494053BB0D"
+			rewards: [{
+				count: 8
+				id: "0B1019BCEAFE3865"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1569,6 +2133,12 @@
 				}
 			}
 			id: "585BBBA578CFEB0C"
+			rewards: [{
+				count: 8
+				id: "08C4B8E28989F368"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1587,8 +2157,14 @@
 			y: 18.5d
 		}
 		{
-			icon: "undergarden:underbeans"
+			icon: { Count: 1, id: "undergarden:underbeans", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "47DC5696088E6E0B"
+			rewards: [{
+				count: 8
+				id: "DD3F5E9B06A24195"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
@@ -1601,23 +2177,14 @@
 			y: 18.5d
 		}
 		{
-			description: ["1 starter stubs."]
-			icon: "quark:seed_pouch"
-			id: "0C41D84D79B17D04"
-			shape: "square"
-			size: 0.8d
-			tasks: [{
-				id: "570D9F4CC350C7EB"
-				title: "Other Plants"
-				type: "checkmark"
-			}]
-			title: "Other Plants"
-			x: 0.0d
-			y: 21.75d
-		}
-		{
 			icon: "quark:seed_pouch"
 			id: "741B61A9F39F633F"
+			rewards: [{
+				count: 8
+				id: "74172769DD30DEF1"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{

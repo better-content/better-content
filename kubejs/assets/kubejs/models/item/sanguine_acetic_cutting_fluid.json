@@ -1,1 +1,1 @@
-{ "parent": "minecraft:item/generated", "textures": { "layer0": "bloodmagic:item/basiccuttingfluid" } }
+{ "parent": "minecraft:item/generated", "textures": { "layer0": "kubejs:item/sanguine_acetic_cutting_fluid" } }

@@ -1,0 +1,428 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "spine_blood_command"
+	group: "61DE599F7F2FAFBD"
+	icon: "bloodmagic:altar"
+	id: "5F26200FD7558E29"
+	order_index: 40
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Return from death with a Still-Beating Heart that records the life you actually lived. Save this milestone for Blood Magic instead of treating it as bulk fuel."]
+			icon: "rpg_stats:still_beating_heart"
+			id: "FCA4E77DDE7A6572"
+			shape: "diamond"
+			tasks: [			{
+				item: "rpg_stats:still_beating_heart"
+				id: "1BE1D63A4BF53240"
+				type: "item"
+			}]
+			title: "Heart"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["124A80CBF921A4AD"]
+			description: ["Pay health deliberately only after food, safety, and a protected altar room exist. Blood costs should be visible decisions rather than accidents."]
+			icon: "bloodmagic:sacrificialdagger"
+			id: "A5DE6AA17E6F964B"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:sacrificialdagger"
+				id: "D4AC85DA492EA62D"
+				type: "item"
+			}]
+			title: "Sacrificial Dagger"
+			x: 3.0d
+			y: -2.4d
+		}
+		{
+			dependencies: ["FCA4E77DDE7A6572"]
+			description: ["Build the Blood Altar with your heart and Otherside matter. Give it room for runes, storage, safe sacrifice, and later rituals before the room becomes crowded."]
+			icon: "bloodmagic:altar"
+			id: "124A80CBF921A4AD"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:altar"
+				id: "1D4CBD81575B7561"
+				type: "item"
+			}]
+			title: "Blood Altar"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["688DF46B33EE4F9E"]
+			description: ["Read altar and network LP before every expensive craft. Stop guessing about reserves before increasing the cost of the work."]
+			icon: "bloodmagic:divinationsigil"
+			id: "A94FC5D83A06DAF4"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:divinationsigil"
+				id: "1B19A9E191FC4531"
+				type: "item"
+			}]
+			title: "Divination Sigil"
+			x: 6.0d
+			y: -2.4d
+		}
+		{
+			dependencies: ["124A80CBF921A4AD"]
+			description: ["Bind a Weak Blood Orb and make a Divination Sigil before repeated sacrifice. Blood work becomes manageable only when LP cost and capacity stop being guesses."]
+			icon: "bloodmagic:weakbloodorb"
+			id: "688DF46B33EE4F9E"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:weakbloodorb"
+				id: "17698503A3400291"
+				type: "item"
+			}]
+			title: "Weak Orb"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0F1684E156BB517A"]
+			description: ["Add runes to solve specific altar problems such as capacity, speed, or safer sacrifice. Expand the room before upgrades crowd it out."]
+			icon: "bloodmagic:blankrune"
+			id: "B61F7083F7D26650"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:blankrune"
+				id: "7F6FAC3D2ED8A932"
+				type: "item"
+			}]
+			title: "Blank Rune"
+			x: 9.0d
+			y: -2.4d
+		}
+		{
+			dependencies: ["688DF46B33EE4F9E"]
+			description: ["Produce Blank Slates reliably. They are the first durable Blood proof and the entry authority for Malum materials and common formal-magic work."]
+			icon: "bloodmagic:blankslate"
+			id: "0F1684E156BB517A"
+			shape: "hexagon"
+			size: 1.1d
+			tasks: [			{
+				item: "bloodmagic:blankslate"
+				id: "5BB29A64DFE05279"
+				type: "item"
+			}]
+			title: "Blank Slate"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["B61F7083F7D26650"]
+			description: ["Use Blood Alchemy for deliberate high-yield manual batches. It improves efficiency without becoming unattended throughput or erasing chemistry."]
+			icon: "bloodmagic:alchemytable"
+			id: "FDF94A9575BB66E5"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:alchemytable"
+				id: "1C839363B09BB473"
+				type: "item"
+			}]
+			title: "Alchemy Table"
+			x: 12.0d
+			y: -2.4d
+		}
+		{
+			dependencies: ["0F1684E156BB517A"]
+			description: ["Build Malum's Spirit Altar and capture spirits in their native vessels. This side tradition inherits Blood proof while keeping its own reagents, risks, and transformations."]
+			icon: "malum:spirit_altar"
+			id: "01A0351EECE105FA"
+			shape: "rsquare"
+			tasks: [			{
+				item: "malum:spirit_altar"
+				id: "976085AFA25275B4"
+				type: "item"
+			}
+			{
+				item: "malum:spirit_jar"
+				id: "72F74E5861F624F2"
+				type: "item"
+			}]
+			title: "Spirit Altar"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["01A0351EECE105FA"]
+			description: ["Spirit-infuse the Esoteric Spool with a Blank Slate. The spool is a recurring native Malum hub, so this one boundary controls many later equipment uses."]
+			icon: "malum:esoteric_spool"
+			id: "479C51B9BAAF27E6"
+			shape: "rsquare"
+			tasks: [			{
+				item: "malum:esoteric_spool"
+				id: "677E69D096046E05"
+				type: "item"
+			}]
+			title: "Esoteric Spool"
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5341FE1CE3FF464F"]
+			description: ["Upgrade the orb only when the altar loop can refill the larger network reliably. Its cost is a readiness check for sustained Blood work."]
+			icon: "bloodmagic:apprenticebloodorb"
+			id: "CD8A46A902FDE33E"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:apprenticebloodorb"
+				id: "0B14007CE9AD3CA2"
+				type: "item"
+			}]
+			title: "Apprentice Orb"
+			x: 18.0d
+			y: -2.4d
+		}
+		{
+			dependencies: ["479C51B9BAAF27E6"]
+			description: ["Refine Reinforced Slates when the altar can sustain larger LP jobs. This proof advances Malum manufacturing and opens stronger cross-tradition utility."]
+			icon: "bloodmagic:reinforcedslate"
+			id: "5341FE1CE3FF464F"
+			shape: "hexagon"
+			size: 1.1d
+			tasks: [			{
+				item: "bloodmagic:reinforcedslate"
+				id: "2CEFFC48E3FD65E5"
+				type: "item"
+			}]
+			title: "Reinforced Slate"
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5341FE1CE3FF464F"]
+			description: ["Spirit-infuse Alchemical Impetus with a Reinforced Slate. This recurring Malum component carries the middle Blood tier into consequential alchemical machines."]
+			icon: "malum:alchemical_impetus"
+			id: "D0594FE62DF06313"
+			shape: "rsquare"
+			tasks: [			{
+				item: "malum:alchemical_impetus"
+				id: "827B6F8039658298"
+				type: "item"
+			}]
+			title: "Impetus"
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["D0594FE62DF06313"]
+			description: ["Refine Infused Slates for stable hybrid magic and higher Malum metallurgy. Repeated production should be safe before you spend them on downstream systems."]
+			icon: "bloodmagic:infusedslate"
+			id: "4F302119B706700C"
+			shape: "hexagon"
+			size: 1.1d
+			tasks: [			{
+				item: "bloodmagic:infusedslate"
+				id: "0C69502C38417058"
+				type: "item"
+			}]
+			title: "Infused Slate"
+			x: 24.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4F302119B706700C"]
+			description: ["Leave real footprint and upkeep space for rituals before constructing them. They are infrastructure projects rather than tiny altar upgrades."]
+			icon: "bloodmagic:masterritualstone"
+			id: "5AD0C8F892A5A2E9"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:masterritualstone"
+				id: "FB2B37E600C84810"
+				type: "item"
+			}]
+			title: "Ritual Stone"
+			x: 27.0d
+			y: -2.4d
+		}
+		{
+			dependencies: ["4F302119B706700C"]
+			description: ["Spirit-infuse Soul-Stained Steel with an Infused Slate. The ingot is Malum's late manufactured hub and should remain tied to both spirit work and Blood depth."]
+			icon: "malum:soul_stained_steel_ingot"
+			id: "A5353B75FDB5C328"
+			shape: "rsquare"
+			tasks: [			{
+				item: "malum:soul_stained_steel_ingot"
+				id: "64FCDD8097013F35"
+				type: "item"
+			}]
+			title: "Soul-Stained Steel"
+			x: 27.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5AD0C8F892A5A2E9"]
+			description: ["Bind the Magician Orb once storage, runes, and ritual supply can support repeated high-cost work without emergency sacrifice."]
+			icon: "bloodmagic:magicianbloodorb"
+			id: "B7EEB2D198CF5925"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:magicianbloodorb"
+				id: "B721FC914102EAF2"
+				type: "item"
+			}]
+			title: "Magician Orb"
+			x: 30.0d
+			y: -2.4d
+		}
+		{
+			dependencies: ["A5353B75FDB5C328"]
+			description: ["Refine Demonic Slates only after LP supply, ritual space, and personal safety are stronger than the craft. This is the authority for dangerous command magic."]
+			icon: "bloodmagic:demonslate"
+			id: "F8BD063F85E6FD66"
+			shape: "hexagon"
+			size: 1.15d
+			tasks: [			{
+				item: "bloodmagic:demonslate"
+				id: "A8B19B8A4C889996"
+				type: "item"
+			}]
+			title: "Demon Slate"
+			x: 30.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["F8BD063F85E6FD66"]
+			description: ["Bind entity risk into the late route with a Soul Snare. Prepare containment and escape space before dangerous summons enter the base."]
+			icon: "bloodmagic:soulsnare"
+			id: "1DF034539ACAA583"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:soulsnare"
+				id: "5875A21FDC9F0F18"
+				type: "item"
+			}]
+			title: "Soul Snare"
+			x: 33.0d
+			y: -2.4d
+		}
+		{
+			dependencies: ["F8BD063F85E6FD66"]
+			description: ["Construct Goety's Dark Altar and keep command magic inside prepared infrastructure. Summons and focuses should cost containment, cursed matter, and deliberate staging."]
+			icon: "goety:dark_altar"
+			id: "D63B10CF462933B4"
+			shape: "rsquare"
+			tasks: [			{
+				item: "goety:dark_altar"
+				id: "2A0A1F10405D3B0A"
+				type: "item"
+			}]
+			title: "Dark Altar"
+			x: 33.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["D63B10CF462933B4"]
+			description: ["Make an Empty Focus and bind a specific Goety operation through its native altar route. The focus records dangerous intent rather than granting a free spell family."]
+			icon: "goety:empty_focus"
+			id: "5348A7BBA1D5C6AE"
+			shape: "rsquare"
+			tasks: [			{
+				item: "goety:empty_focus"
+				id: "49800F7DCD60FB7C"
+				type: "item"
+			}]
+			title: "Command Focus"
+			x: 36.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["DA282A7605185BFF"]
+			description: ["Craft the Archmage Orb only after the altar room, LP storage, runes, and ritual space can support its repeated cost."]
+			icon: "bloodmagic:archmagebloodorb"
+			id: "9A466A00F1D30E52"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:archmagebloodorb"
+				id: "EF1F4562F9B1BD62"
+				type: "item"
+			}]
+			title: "Archmage Orb"
+			x: 39.0d
+			y: -2.4d
+		}
+		{
+			dependencies: ["5348A7BBA1D5C6AE"]
+			description: ["Refine an Ethereal Slate as the final shared Blood proof. Endgame formal glyphs and hybrid magic may consume it, but side recipes should not spam hearts."]
+			icon: "bloodmagic:etherealslate"
+			id: "DA282A7605185BFF"
+			shape: "octagon"
+			size: 1.2d
+			tasks: [			{
+				item: "bloodmagic:etherealslate"
+				id: "83A2A7FD44D69627"
+				type: "item"
+			}]
+			title: "Ethereal Slate"
+			x: 39.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["9A466A00F1D30E52"]
+			description: ["Organize late utility sigils as earned tools and keep their LP supply readable. Utility should return through the main Blood room."]
+			icon: "bloodmagic:sigilofholding"
+			id: "F94BF8075E599695"
+			shape: "rsquare"
+			tasks: [			{
+				item: "bloodmagic:sigilofholding"
+				id: "6EE7880E79B54212"
+				type: "item"
+			}]
+			title: "Holding Sigil"
+			x: 42.0d
+			y: -2.4d
+		}
+		{
+			dependencies: ["4F302119B706700C"]
+			description: ["Blood Magic originates Harm, Heal, Dispel, Dampen, Duration Down, Wither, Life Link, Bubble Shield, Infuse, and Hex. Ars records vitality, warding, and dispelling without becoming their source."]
+			icon: "ars_nouveau:glyph_heal"
+			id: "B101000000000001"
+			shape: "hexagon"
+			tasks: [			{
+				title: "Review Blood Magic's formal vocabulary"
+				id: "B101000000000002"
+				type: "checkmark"
+			}]
+			title: "Formalize Vitality"
+			x: 21.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["A5353B75FDB5C328"]
+			description: ["Malum originates Explosion, Firework, Flare, Glide, Gravity, Gust, Launch, Leap, Lightning, Orbit, Slowfall, Toss, Wind Shear, Discharge, Spark, Break, Crush, Ignite, Infuse, Pull, Animate Block, Summon Decoy, Spike, and Wither. Ars formalizes spirit energy as force and motion."]
+			icon: "ars_nouveau:glyph_gravity"
+			id: "B102000000000001"
+			shape: "hexagon"
+			tasks: [			{
+				title: "Review Malum's formal vocabulary"
+				id: "B102000000000002"
+				type: "checkmark"
+			}]
+			title: "Formalize Spirit Force"
+			x: 27.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["5348A7BBA1D5C6AE"]
+			description: ["Goety originates Animate Block, Fangs, Hex, Snare, Summon Decoy, Summon Undead, Summon Vex, Wall, Wither, Phantom Grasp, Spike, Charm, Name, Pull, Summon Steed, Summon Wolves, and Life Link. Ars makes command reproducible while Goety retains the dangerous encounter and apparatus."]
+			icon: "ars_nouveau:glyph_summon_undead"
+			id: "B103000000000001"
+			shape: "hexagon"
+			tasks: [			{
+				title: "Review Goety's formal vocabulary"
+				id: "B103000000000002"
+				type: "checkmark"
+			}]
+			title: "Formalize Command"
+			x: 36.0d
+			y: -5.0d
+		}
+
+	]
+	title: "Magic Spine — Blood Into Command"
+}

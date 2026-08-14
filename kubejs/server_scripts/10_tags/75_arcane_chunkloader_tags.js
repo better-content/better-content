@@ -6,8 +6,6 @@ ServerEvents.tags('item', function (event) {
         'hexerei:blood_sigil',
         'occultism:spirit_attuned_gem',
         'malum:processed_soulstone',
-        'goety:magic_emerald',
-        'forbidden_arcanus:arcane_crystal',
-        'irons_spellbooks:arcane_essence'
+        'goety:magic_emerald'
     ])
 })

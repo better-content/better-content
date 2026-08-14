@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": { "item": "minecraft:flint" }
+  },
+  "pattern": [
+    "H  ",
+    "H H",
+    " H "
+  ],
+  "result": { "item": "starcatcher:hook" }
+}

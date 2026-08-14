@@ -1,4 +1,4 @@
-// Shared formal-magic proof and school-focus tags.
+// Shared formal-magic depth, origin, and per-glyph provenance tags.
 
 var BC_FORMAL_MAGIC_TAGS = JsonIO.read('kubejs/config/formal_magic_domains.json') || {}
 
@@ -17,29 +17,16 @@ ServerEvents.tags('item', function (event) {
         event.add('kubejs:formal_magic/domain/' + domain, domains[domain])
     }
 
-    var upstreamFocus = {
-        blood: 'irons_spellbooks:blood_vial',
-        nature: 'minecraft:poisonous_potato',
-        ice: 'irons_spellbooks:frozen_bone',
-        ender: 'minecraft:ender_pearl',
-        fire: 'minecraft:blaze_rod',
-        holy: 'irons_spellbooks:divine_pearl',
-        lightning: 'irons_spellbooks:lightning_bottle',
-        evocation: 'minecraft:emerald',
-        eldritch: 'minecraft:echo_shard'
+    var originOverrides = BC_FORMAL_MAGIC_TAGS.origin_overrides || {}
+    var glyphs = (BC_FORMAL_MAGIC_TAGS.glyphs || []).concat(BC_FORMAL_MAGIC_TAGS.addon_glyphs || [])
+    for (var g = 0; g < glyphs.length; g++) {
+        var spec = glyphs[g]
+        var rawName = String(spec[0])
+        var glyphName = rawName.substring(rawName.lastIndexOf(':') + 1).replace(/^glyph_/, '')
+        var origins = originOverrides[glyphName] || [spec[2]]
+        for (var o = 0; o < origins.length; o++) {
+            var reagents = domains[origins[o]] || []
+            event.add('kubejs:formal_magic/glyph_origin/' + glyphName, reagents)
+        }
     }
-    var schools = BC_FORMAL_MAGIC_TAGS.irons_schools || {}
-    var schoolIds = Object.keys(schools)
-    var oldAggregate = []
-    var newAggregate = []
-    for (var s = 0; s < schoolIds.length; s++) {
-        var school = schoolIds[s]
-        var tag = 'irons_spellbooks:' + school + '_focus'
-        event.remove(tag, upstreamFocus[school])
-        event.add(tag, schools[school].focus)
-        oldAggregate.push(upstreamFocus[school])
-        newAggregate.push(schools[school].focus)
-    }
-    event.remove('irons_spellbooks:school_focus', oldAggregate)
-    event.add('irons_spellbooks:school_focus', newAggregate)
 })

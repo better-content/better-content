@@ -102,9 +102,9 @@ package_runtime() {
 }
 
 package_dist() {
-  (($# <= 1)) || fail 'usage: package.sh dist [OUTPUT_DIR]'
+  (($# == 0)) || fail 'distribution output is fixed at the repository dist/ directory'
   for command in java packwiz python3 zip; do command -v "$command" >/dev/null || fail "$command is required"; done
-  local out_root="${1:-$ROOT/dist}"
+  local out_root="$ROOT/dist"
   local current_version current_build next_build version version_dir_name release_dir client_dir server_dir stage
   current_version="$(awk -F ' *= *' '$1 == "version" { value=$2; gsub(/^"|"$/, "", value); print value; exit }' "$ROOT/pack.toml")"
   current_build="$(printf '%s' "$current_version" | sed -nE 's/^.*[^0-9]([0-9]+)$/\1/p')"
@@ -112,7 +112,11 @@ package_dist() {
   next_build=$((10#$current_build + 1))
   version="$(printf '%s' "$current_version" | sed -E "s/[0-9]+$/$next_build/")"
   version_dir_name="$(printf '%s' "$version" | tr '[:upper:] ' '[:lower:]-' | tr -cd 'a-z0-9._-')"
-  mkdir -p "$out_root"
+  if [ -e "$out_root" ]; then
+    find "$out_root" -mindepth 1 -maxdepth 1 -exec rm -rf -- {} +
+  else
+    mkdir -p "$out_root"
+  fi
   out_root="$(cd "$out_root" && pwd)"
   release_dir="$out_root/$version_dir_name"
   [ ! -e "$release_dir" ] || fail "version directory already exists: $release_dir"
@@ -140,5 +144,5 @@ TXT
 case "${1:-}" in
   runtime) shift; package_runtime "$@" ;;
   dist) shift; package_dist "$@" ;;
-  *) fail 'usage: package.sh <runtime SERVER_DIR CLIENT_DIR PORT|dist [OUTPUT_DIR]>' ;;
+  *) fail 'usage: package.sh <runtime SERVER_DIR CLIENT_DIR PORT|dist>' ;;
 esac

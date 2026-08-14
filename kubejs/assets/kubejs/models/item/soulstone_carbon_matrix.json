@@ -1,1 +1,1 @@
-{ "parent": "minecraft:item/generated", "textures": { "layer0": "minecraft:item/charcoal" } }
+{ "parent": "minecraft:item/generated", "textures": { "layer0": "kubejs:item/soulstone_carbon_matrix" } }

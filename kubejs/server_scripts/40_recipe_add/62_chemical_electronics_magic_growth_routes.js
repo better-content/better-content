@@ -202,18 +202,6 @@ ServerEvents.recipes(function (event) {
         'minecraft:soul_sand'
     ], 10000, 360, 3)
 
-    var runes = [
-        { id: 'fire', output: 'irons_spellbooks:fire_rune', inputs: ['chemlib:sulfur', 'minecraft:blaze_powder', 'bloodmagic:reinforcedslate'] },
-        { id: 'ice', output: 'irons_spellbooks:ice_rune', inputs: ['chemlib:sodium_chloride', 'minecraft:packed_ice', 'bloodmagic:reinforcedslate'] },
-        { id: 'lightning', output: 'irons_spellbooks:lightning_rune', inputs: ['chemlib:copper_nitrate', 'minecraft:redstone', 'bloodmagic:infusedslate'] },
-        { id: 'protection', output: 'irons_spellbooks:protection_rune', inputs: ['chemlib:aluminum_oxide', 'minecraft:shield', 'bloodmagic:infusedslate'] },
-        { id: 'blood', output: 'irons_spellbooks:blood_rune', inputs: ['chemlib:iron_oxide', 'chemlib:phosphorus', 'bloodmagic:reinforcedslate'] },
-        { id: 'nature', output: 'irons_spellbooks:nature_rune', inputs: ['chemlib:phosphate', 'chemlib:potassium', 'bloodmagic:reinforcedslate'] }
-    ]
-    for (var r = 0; r < runes.length; r++) {
-         bcChemUseAlchemy(event, 'irons_spellbooks/' + runes[r].id + '_rune_chemical_salt', runes[r].output, 1, runes[r].inputs, 3500, 240, 1)
-    }
-
      bcChemUseAlchemy(event, 'occultism/chalk_white_lime_sulfur', 'occultism:chalk_white', 2, [
         'minecraft:white_dye',
         'chemlib:calcium_carbonate',

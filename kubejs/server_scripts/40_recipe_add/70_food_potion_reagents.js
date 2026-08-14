@@ -80,11 +80,9 @@ ServerEvents.recipes(function (event) {
         }, 'keg_pouring/' + id)
     }
 
-    cutting('farmersrespite:green_tea_leaves', 'kubejs:cut_green_tea_leaves', 2, 'green_tea_leaves')
     cutting('minecraft:sweet_berries', 'kubejs:mashed_salmonberries', 2, 'sweet_berries')
     cutting('minecraft:nether_wart', 'kubejs:charred_blazing_chili', 1, 'nether_wart_prep')
 
-    campfire('farmersrespite:coffee_beans', 'kubejs:roasted_coffee_reagent', 'coffee_reagent', 600)
     campfire('minecraft:nether_wart', 'kubejs:charred_blazing_chili', 'nether_wart', 800)
 
     cooking(['kubejs:mashed_salmonberries', 'minecraft:sea_pickle', 'minecraft:dried_kelp', 'minecraft:pufferfish'], 'kubejs:brine_extract', 'brine_extract', 300)
@@ -103,7 +101,6 @@ ServerEvents.recipes(function (event) {
     kettlePour('farmersrespite:green_tea', 'kubejs:green_tea_extract', 'green_tea_extract')
     kettlePour('farmersrespite:coffee', 'kubejs:caffeine_extract', 'caffeine_extract')
     kettlePour('farmersrespite:rose_hip_tea', 'kubejs:rose_hip_extract', 'rose_hip_extract')
-    kettlePour('farmersrespite:yellow_tea', 'kubejs:fortifying_extract', 'fortifying_extract')
     kettlePour('farmersrespite:purulent_tea', 'kubejs:toxic_extract', 'toxic_extract')
 
     kegPour('brewinandchewin:red_rum', 'kubejs:fermented_pomegranate_extract', 'fermented_pomegranate_extract')

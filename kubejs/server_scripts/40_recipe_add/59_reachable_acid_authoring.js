@@ -39,6 +39,20 @@ function bcAcidMixer(event, id, input1, input2, itemOutput, fluidOutput, pressur
 
 ServerEvents.recipes(function (event) {
     event.custom({
+        type: 'create:mixing',
+        ingredients: [
+            { item: 'minecraft:sugar' },
+            { item: 'minecraft:sugar' },
+            { fluid: 'minecraft:water', amount: 250 }
+        ],
+        results: [
+            { fluid: 'chemlib:ethanol_fluid', amount: 250 },
+            { item: 'chemlib:carbon_dioxide', chance: 0.20 }
+        ],
+        processingTime: 180
+    }).id('kubejs:chemistry/acids/ethanol_fermentation')
+
+    event.custom({
         type: 'pneumaticcraft:pressure_chamber',
         inputs: [
             { type: 'pneumaticcraft:stacked_item', item: 'chemlib:vanadium', count: 8 },
@@ -112,7 +126,6 @@ ServerEvents.recipes(function (event) {
             { item: 'chemlib:calcium_sulfate', count: 3 },
             { item: 'kubejs:mineral_tailings' }
         ],
-        heatRequirement: 'heated',
         processingTime: 300
     }).id('kubejs:chemistry/acids/phosphoric_acid_wet_process')
 })

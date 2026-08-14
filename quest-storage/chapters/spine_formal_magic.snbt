@@ -1,0 +1,223 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "spine_formal_magic"
+	group: "61DE599F7F2FAFBD"
+	icon: "ars_nouveau:novice_spell_book"
+	id: "CB8CEB0747E85033"
+	order_index: 50
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Build empty writing infrastructure early, but expect dirty traditions to authorize usable glyphs. Proof strength sets depth; native reagents and essences set breadth."]
+			icon: "minecraft:writable_book"
+			id: "DA9EA897C8EF092A"
+			shape: "diamond"
+			tasks: [			{
+				title: "Prepare to formalize magical operations"
+				id: "C0C32BD5F7710482"
+				type: "checkmark"
+			}]
+			title: "Formal Grammar"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["DA9EA897C8EF092A"]
+			description: ["Make the Novice Spell Book as an empty grammar container. Ars Nouveau composes forms, effects, and modifiers, but retained glyphs still need authored domain proof."]
+			icon: "ars_nouveau:novice_spell_book"
+			id: "C19EBB7552D83AD8"
+			shape: "rsquare"
+			tasks: [			{
+				item: "ars_nouveau:novice_spell_book"
+				id: "5D7BE49D09C06B88"
+				type: "item"
+			}]
+			title: "Ars Nouveau"
+			x: 3.0d
+			y: -2.2d
+		}
+		{
+			dependencies: ["C19EBB7552D83AD8"]
+			description: ["Prepare Source Gems as the material side of programmable spellcraft. Keep source work tied to earned magical proofs rather than a free side lane."]
+			icon: "ars_nouveau:source_gem"
+			id: "A8667CA3083AFAE4"
+			shape: "rsquare"
+			tasks: [			{
+				item: "ars_nouveau:source_gem"
+				id: "5891CE37CA4DDF21"
+				type: "item"
+			}]
+			title: "Source Gem"
+			x: 6.0d
+			y: -4.4d
+		}
+		{
+			dependencies: ["C19EBB7552D83AD8"]
+			description: ["Build the Scribe's Table beside source storage and your reagent shelf. The station is intentionally early; the materials for meaningful glyphs carry the real gate."]
+			icon: "ars_nouveau:scribes_table"
+			id: "0A82DA7BCE26523F"
+			shape: "rsquare"
+			tasks: [			{
+				item: "ars_nouveau:scribes_table"
+				id: "B3089645CFD3797E"
+				type: "item"
+			}]
+			title: "Scribe Table"
+			x: 6.0d
+			y: -2.2d
+		}
+		{
+			dependencies: ["0A82DA7BCE26523F"]
+			description: ["Mix Blank Thread through Hexerei with a Blank Slate. The recurring Ars equipment hub makes early formal infrastructure inherit a dirty-magic proof without rewriting every use."]
+			icon: "ars_nouveau:blank_thread"
+			id: "1C25189A1B9FBF76"
+			shape: "rsquare"
+			tasks: [			{
+				item: "ars_nouveau:blank_thread"
+				id: "E87B9AE95E2A6F60"
+				type: "item"
+			}]
+			title: "Blank Thread"
+			x: 9.0d
+			y: -2.2d
+		}
+		{
+			dependencies: ["1C25189A1B9FBF76"]
+			description: ["Imbue Abjuration Essence with a Reinforced Slate on the native Ars surface. Defensive and cleansing effects now prove both source work and Blood depth."]
+			icon: "ars_nouveau:abjuration_essence"
+			id: "2C0E5E3F1DC211B1"
+			shape: "rsquare"
+			tasks: [			{
+				item: "ars_nouveau:abjuration_essence"
+				id: "6FDA329466E23031"
+				type: "item"
+			}]
+			title: "Abjuration"
+			x: 12.0d
+			y: -2.2d
+		}
+		{
+			dependencies: ["2C0E5E3F1DC211B1"]
+			description: ["Imbue Manipulation Essence with an Infused Slate. Strong utility and control effects now sit behind a recurring native Ars ingredient instead of scattered recipe taxes."]
+			icon: "ars_nouveau:manipulation_essence"
+			id: "30A3EEA5E7809EAF"
+			shape: "rsquare"
+			tasks: [			{
+				item: "ars_nouveau:manipulation_essence"
+				id: "BE1B1976315EDB4F"
+				type: "item"
+			}]
+			title: "Manipulation"
+			x: 15.0d
+			y: -2.2d
+		}
+		{
+			dependencies: ["30A3EEA5E7809EAF"]
+			description: ["Demonstrate useful glyph composition across the dirty-tradition domains. Full breadth is a capstone after both spines, not an ingredient tax on every glyph."]
+			icon: "minecraft:enchanted_book"
+			id: "FD75C93ED019E0AC"
+			shape: "octagon"
+			size: 1.2d
+			tasks: [			{
+				title: "Author and use glyphs from every domain"
+				id: "280B927942B48C76"
+				type: "checkmark"
+			}]
+			title: "Concordance"
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0A82DA7BCE26523F"]
+			description: ["Learn Ars-native shapes, targeting, propagation, timing, amplification, and classification. These glyphs describe how a spell is written; source traditions supply what its extraordinary effects mean."]
+			icon: "ars_nouveau:glyph_projectile"
+			id: "C101000000000001"
+			shape: "hexagon"
+			tasks: [			{
+				item: "ars_nouveau:glyph_projectile"
+				id: "C101000000000002"
+				type: "item"
+			}]
+			title: "Core Grammar"
+			x: 9.0d
+			y: 2.2d
+		}
+		{
+			dependencies: ["2C0E5E3F1DC211B1"]
+			description: ["Build the native apparatus once rare formal depth is established. Ars equipment and automation stay on Ars surfaces instead of being rewritten as Blood Alchemy."]
+			icon: "ars_nouveau:enchanting_apparatus"
+			id: "C102000000000001"
+			shape: "rsquare"
+			tasks: [			{
+				item: "ars_nouveau:enchanting_apparatus"
+				id: "C102000000000002"
+				type: "item"
+			}]
+			title: "Enchanting Apparatus"
+			x: 15.0d
+			y: -4.4d
+		}
+		{
+			dependencies: ["C102000000000001"]
+			description: ["Extend the same provenance rules through all twenty-seven Ars Elemental glyphs. Effects belong to their observed traditions; filters and propagators remain grammar."]
+			icon: "ars_nouveau:fire_essence"
+			id: "C103000000000001"
+			shape: "rsquare"
+			tasks: [			{
+				item: "ars_elemental:mark_of_mastery"
+				id: "C103000000000002"
+				type: "item"
+			}]
+			title: "Elemental Vocabulary"
+			x: 18.0d
+			y: -4.4d
+		}
+		{
+			dependencies: ["C103000000000001"]
+			description: ["Apply formalized motion and work to Create through Ars Creo. This optional crossing rewards mastery without gating either Create or the source traditions."]
+			icon: "create:cogwheel"
+			id: "C104000000000001"
+			shape: "rsquare"
+			tasks: [			{
+				item: "ars_creo:starbuncle_wheel"
+				id: "C104000000000002"
+				type: "item"
+			}]
+			title: "Formal Motion"
+			x: 21.0d
+			y: -4.4d
+		}
+		{
+			dependencies: ["C104000000000001"]
+			description: ["Join legendary formal proof to an established AE2 network. Ars Énergistique is the optional post-AE2 capstone for Source storage and transport."]
+			icon: "ae2:fluix_crystal"
+			id: "C105000000000001"
+			shape: "octagon"
+			tasks: [			{
+				item: "arseng:me_source_jar"
+				id: "C105000000000002"
+				type: "item"
+			}]
+			title: "Networked Source"
+			x: 24.0d
+			y: -4.4d
+		}
+		{
+			dependencies: ["C103000000000001"]
+			description: ["Author spells that combine binding with vitality, correspondence with elemental propagation, or spirit force with command. These are optional mastery studies, never hard gates."]
+			icon: "ars_nouveau:archmage_spell_book"
+			id: "C106000000000001"
+			shape: "hexagon"
+			tasks: [			{
+				title: "Demonstrate a coherent cross-disciplinary spell"
+				id: "C106000000000002"
+				type: "checkmark"
+			}]
+			title: "Interdisciplinary Studies"
+			x: 21.0d
+			y: 2.2d
+		}
+	]
+	title: "Formal Magic — Ars Grammar"
+}

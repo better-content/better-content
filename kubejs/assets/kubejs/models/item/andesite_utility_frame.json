@@ -1,7 +1,1 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "kubejs:block/andesite_machine_casing_front",
-    "layer1": "create:item/andesite_alloy"
-  }
-}
+{ "parent": "minecraft:item/generated", "textures": { "layer0": "kubejs:item/andesite_utility_frame" } }

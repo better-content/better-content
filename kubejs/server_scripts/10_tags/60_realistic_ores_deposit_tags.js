@@ -1,5 +1,6 @@
-// Deposit source tags for Realistic Ores. These tags are consumed by TCon and
-// Create recipe generators.
+// Processing-facing tags for Realistic Ores. Ore blocks and host-independent
+// chunks intentionally live in separate tag families so generic ore recipes
+// cannot treat either form as the other.
 
 var BC_DEPOSIT_SOURCE_BLOCKS = {
     coal_measures: ['realistic_ores:coal_measures', 'realistic_ores:deepslate_coal_measures'],
@@ -51,18 +52,130 @@ var BC_DEPOSIT_ORE_CHUNKS = {
     sulfur_bearing_pyrite_ore: 'realistic_ores:ore_chunk_sulfur_bearing_pyrite_ore'
 }
 
-function bcAddDepositTags(event) {
+var BC_DEPOSIT_FORGE_ORE_TAGS = {
+    coal_measures: ['coal'],
+    ironstone: ['iron'],
+    copper_sulfide: ['copper'],
+    tin: ['tin'],
+    zinc: ['zinc'],
+    lead_zinc_vein: ['lead', 'zinc'],
+    quartz_vein: ['quartz'],
+    bauxite_laterite: ['aluminum'],
+    nickel_sulfide: ['nickel'],
+    osmiridium_lava_sulfide: ['osmium', 'iridium'],
+    tin_tungsten_greisen: ['tin', 'tungsten'],
+    titanium_iron_oxide: ['titanium', 'iron'],
+    kimberlite_pipe: ['diamond'],
+    emerald_schist_beryl: ['emerald'],
+    corundum_beryl_vein: [],
+    uranium_ore: ['uranium'],
+    thorium_ore: ['thorium'],
+    cupriferous_redbed_redstone_vein: ['redstone', 'copper'],
+    lazurite_vein: ['lapis'],
+    phosphate_rock: ['phosphate'],
+    soul_bearing_black_shale_soulstone_vein: [],
+    sulfur_bearing_pyrite_ore: ['sulfur']
+}
+
+var BC_EV_ORE_TO_DEPOSIT = {
+    bauxite_laterite: 'bauxite_laterite',
+    coal_measures: 'coal_measures',
+    copper_sulfide: 'copper_sulfide',
+    corundum_beryl_gem_vein: 'corundum_beryl_vein',
+    cupriferous_redbed_redstone_vein: 'cupriferous_redbed_redstone_vein',
+    emerald_schist_beryl_vein: 'emerald_schist_beryl',
+    ironstone: 'ironstone',
+    kimberlite_pipe: 'kimberlite_pipe',
+    lazurite_vein: 'lazurite_vein',
+    lead_zinc_vein: 'lead_zinc_vein',
+    nickel_sulfide: 'nickel_sulfide',
+    osmiridium_lava_sulfide: 'osmiridium_lava_sulfide',
+    phosphate_rock: 'phosphate_rock',
+    quartz_vein: 'quartz_vein',
+    soul_bearing_black_shale_soulstone_vein: 'soul_bearing_black_shale_soulstone_vein',
+    sulfur_bearing_pyrite: 'sulfur_bearing_pyrite_ore',
+    thorium: 'thorium_ore',
+    tin: 'tin',
+    tin_tungsten_greisen: 'tin_tungsten_greisen',
+    titanium_iron_oxide: 'titanium_iron_oxide',
+    uranium: 'uranium_ore',
+    zinc: 'zinc'
+}
+
+function bcAddNativeOreBlockTags(event) {
     for (var id in BC_DEPOSIT_SOURCE_BLOCKS) {
-        var tag = 'kubejs:deposit_blocks/' + id
         var blocks = BC_DEPOSIT_SOURCE_BLOCKS[id]
-        for (var i = 0; i < blocks.length; i++) event.add(tag, blocks[i])
+        for (var i = 0; i < blocks.length; i++) {
+            event.add('kubejs:deposit_ore_blocks', blocks[i])
+            event.add('kubejs:deposit_ore_blocks/' + id, blocks[i])
+        }
+    }
+}
+
+function bcIsExcavatedVariantBlockForTags(block) {
+    var blockClass = block.getClass()
+    while (blockClass != null) {
+        if (String(blockClass.getName()) === 'dev.lukebemish.excavatedvariants.impl.ModifiedOreBlock') return true
+        blockClass = blockClass.getSuperclass()
+    }
+    return false
+}
+
+function bcForEachExcavatedDepositBlock(callback) {
+    if (!Platform.isLoaded('excavated_variants')) return
+
+    var ForgeRegistries = Java.loadClass('net.minecraftforge.registries.ForgeRegistries')
+    var blockRegistry = ForgeRegistries.BLOCKS
+    if (blockRegistry == null) return
+
+    var blocks = blockRegistry.getValues().iterator()
+    while (blocks.hasNext()) {
+        var block = blocks.next()
+        if (!bcIsExcavatedVariantBlockForTags(block)) continue
+
+        var depositId = BC_EV_ORE_TO_DEPOSIT[String(block.ore.id)]
+        if (!depositId) continue
+
+        callback(String(blockRegistry.getKey(block)), depositId)
+    }
+}
+
+function bcRemoveGenericOreItemTags(event, itemId, depositId) {
+    event.remove('forge:ores', itemId)
+    event.remove('c:ores', itemId)
+
+    var materialTags = BC_DEPOSIT_FORGE_ORE_TAGS[depositId] || []
+    for (var i = 0; i < materialTags.length; i++) {
+        event.remove('forge:ores/' + materialTags[i], itemId)
+        event.remove('c:ores/' + materialTags[i], itemId)
     }
 }
 
 ServerEvents.tags('item', function (event) {
-    bcAddDepositTags(event)
-    for (var id in BC_DEPOSIT_ORE_CHUNKS) {
-        event.add('kubejs:deposit_blocks/' + id, BC_DEPOSIT_ORE_CHUNKS[id])
+    bcAddNativeOreBlockTags(event)
+
+    for (var id in BC_DEPOSIT_SOURCE_BLOCKS) {
+        var blocks = BC_DEPOSIT_SOURCE_BLOCKS[id]
+        for (var i = 0; i < blocks.length; i++) bcRemoveGenericOreItemTags(event, blocks[i], id)
     }
+
+    for (var chunkId in BC_DEPOSIT_ORE_CHUNKS) {
+        var chunk = BC_DEPOSIT_ORE_CHUNKS[chunkId]
+        event.add('kubejs:deposit_chunks', chunk)
+        event.add('kubejs:deposit_chunks/' + chunkId, chunk)
+    }
+
+    bcForEachExcavatedDepositBlock(function (blockId, depositId) {
+        event.add('kubejs:deposit_ore_blocks', blockId)
+        event.add('kubejs:deposit_ore_blocks/' + depositId, blockId)
+        bcRemoveGenericOreItemTags(event, blockId, depositId)
+    })
 })
-ServerEvents.tags('block', function (event) {  bcAddDepositTags(event) })
+
+ServerEvents.tags('block', function (event) {
+    bcAddNativeOreBlockTags(event)
+    bcForEachExcavatedDepositBlock(function (blockId, depositId) {
+        event.add('kubejs:deposit_ore_blocks', blockId)
+        event.add('kubejs:deposit_ore_blocks/' + depositId, blockId)
+    })
+})

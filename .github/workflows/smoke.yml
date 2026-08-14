@@ -33,4 +33,11 @@ jobs:
             echo "smoke evaluation is still running"
             sleep 30
           done
-          wait "$smoke_pid"
+          if wait "$smoke_pid"; then
+            :
+          else
+            status=$?
+            find "$HOME/.cache/bc/smoke" -path '*/evidence/*.log' -type f \
+              -print -exec tail -n 200 {} \;
+            exit "$status"
+          fi

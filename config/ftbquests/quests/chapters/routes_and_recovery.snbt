@@ -1,39 +1,33 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
-	filename: "spine_adventure_economy"
-	group: "61DE599F7F2FAFBD"
+	default_quest_shape: "circle"
+	filename: "routes_and_recovery"
+	group: "B2E8D1C49A73F506"
 	icon: "createdeco:copper_coin"
 	id: "184620DE314A2002"
 	order_index: 60
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["Mark roads, stage food and clean water, and reserve a return slot before leaving the fixed spawn. Adventure pressure is a logistics problem before it is a combat statistic."]
-			icon: "minecraft:compass"
+			description: ["Craft a Recovery Compass before long expeditions. It points toward the last death site while route marks, food, and clean water still determine whether you get home."]
+			icon: "minecraft:recovery_compass"
 			id: "197291772F9B2479"
+			rewards: [{ count: 2, id: "E700000000000048", item: "createdeco:copper_coin", type: "item" }]
 			shape: "diamond"
-			tasks: [			{
-				title: "Mark a route and stage a recovery cache"
-				id: "F44DB64BFDFFFCA5"
-				type: "checkmark"
-			}]
-			title: "Way Home"
+			tasks: [{ id: "F44DB64BFDFFFCA5", item: "minecraft:recovery_compass", type: "item" }]
+			title: "Recovery Compass"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["197291772F9B2479"]
-			description: ["Build sightlines, walls, patrol routes, and fallback positions before a pillager warband arrives. Surface safety should come from settlement design rather than waiting for daylight."]
+			description: ["Raise a White Banner as a visible rally and fallback marker. Build sightlines, walls, and patrol routes around it before a pillager warband arrives."]
 			icon: "minecraft:white_banner"
 			id: "ED7354BC4C68F8EF"
+			rewards: [{ count: 2, id: "E700000000000049", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
-			tasks: [			{
-				title: "Build warning lines and a fallback route"
-				id: "1E0909C723DF030C"
-				type: "checkmark"
-			}]
-			title: "Fortify"
+			tasks: [{ id: "1E0909C723DF030C", item: "minecraft:white_banner", type: "item" }]
+			title: "Rally Banner"
 			x: 3.0d
 			y: -9.0d
 		}
@@ -42,6 +36,7 @@
 			description: ["Reach the Nether with enough supplies to bring magma, soul aggregate, netherrack, and refractory heat proof home. Basic seared work can begin from any Font route; the Nether now opens scorched metallurgy and sustained industry."]
 			icon: "minecraft:netherrack"
 			id: "75FD0C4219599FB8"
+			rewards: [{ count: 2, id: "E70000000000004A", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "minecraft:the_nether"
@@ -57,6 +52,7 @@
 			description: ["Reach the Aether and return with mobility proof for balloons, gliders, and controlled flight. Pack for vertical travel and a reliable way back down."]
 			icon: "aether:skyroot_log"
 			id: "E9E86416ACE5403F"
+			rewards: [{ count: 2, id: "E70000000000004B", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "aether:the_aether"
@@ -72,6 +68,7 @@
 			description: ["Reach the Undergarden with room for food, forage, and body-system materials. Treat its pantry value as expedition support rather than a free resource bypass."]
 			icon: "undergarden:depthrock"
 			id: "352FF9B1BBB0A925"
+			rewards: [{ count: 2, id: "E70000000000004C", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "undergarden:undergarden"
@@ -87,6 +84,7 @@
 			description: ["Reach the Otherside and return with common raw magic matter. Sculk, echo, soul, and resonance feed Blood-refined traditions instead of forming a separate workstation spine."]
 			icon: "deeperdarker:cobbled_sculk_stone"
 			id: "1FF79D76C1F18DD8"
+			rewards: [{ count: 2, id: "E70000000000004D", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "deeperdarker:otherside"
@@ -100,8 +98,9 @@
 		{
 			dependencies: ["197291772F9B2479"]
 			description: ["Reach Earth orbit only after fuel, oxygen, recovery, and return logistics are staged. A successful launch is incomplete until the expedition can come home intact."]
-			icon: "creatingspace:flight_recorder"
+			icon: "creatingspace:rocket"
 			id: "AD4E30D82FC71589"
+			rewards: [{ count: 2, id: "E70000000000004E", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "creatingspace:earth_orbit"
@@ -114,31 +113,25 @@
 		}
 		{
 			dependencies: ["197291772F9B2479"]
-			description: ["Connect a village or settlement to your physical routes. Specialist trades should relieve expedition friction while machine, casing, and magic gates remain yours to solve."]
-			icon: "minecraft:bell"
+			description: ["Place a Bell at a village or settlement meeting point. Specialist trades relieve expedition friction while machine, casing, and magic gates remain yours to solve."]
+			icon: "minecraft:globe_banner_pattern"
 			id: "11858C7F6C7720B4"
+			rewards: [{ count: 2, id: "E70000000000004F", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
-			tasks: [			{
-				title: "Connect a settlement to a maintained route"
-				id: "BC134FAFFCD196F5"
-				type: "checkmark"
-			}]
-			title: "Recovery Market"
+			tasks: [{ id: "BC134FAFFCD196F5", item: "minecraft:bell", type: "item" }]
+			title: "Settlement Bell"
 			x: 3.0d
 			y: 9.0d
 		}
 		{
 			dependencies: ["ED7354BC4C68F8EF"]
-			description: ["Defeat a campaign push and recover its coin rewards, or accept the easing path after a loss. Each warband adapts to outcomes instead of scaling from global time."]
-			icon: "minecraft:crossbow"
+			description: ["Arm a Crossbow before entering a warned warband territory. Campaign forces adapt to outcomes instead of scaling from global time."]
+			icon: "minecraft:arrow"
 			id: "56286CE0BBF1D1DC"
+			rewards: [{ count: 2, id: "E700000000000050", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
-			tasks: [			{
-				title: "Defeat or recover from a campaign push"
-				id: "66BE8206DD5A35C7"
-				type: "checkmark"
-			}]
-			title: "Campaign"
+			tasks: [{ id: "66BE8206DD5A35C7", item: "minecraft:crossbow", type: "item" }]
+			title: "Campaign Arms"
 			x: 6.0d
 			y: -9.0d
 		}
@@ -147,6 +140,7 @@
 			description: ["Turn Aether lift materials into controlled aeronautics only after the sealed manufacturing route is ready. Powered ships are earned transport infrastructure."]
 			icon: "vs_eureka:balloon"
 			id: "47002A1BEBE6F9F2"
+			rewards: [{ count: 2, id: "E700000000000051", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "vs_eureka:balloon"
@@ -165,8 +159,9 @@
 		{
 			dependencies: ["AD4E30D82FC71589"]
 			description: ["Reach Moon orbit with enough fuel, oxygen, and recovery supplies to continue or return. A fragile outbound trip is not ready for landing."]
-			icon: "creatingspace:flight_recorder"
+			icon: "creatingspace:engine_blueprint"
 			id: "B724B6B258A08266"
+			rewards: [{ count: 2, id: "E700000000000052", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "creatingspace:moon_orbit"
@@ -182,6 +177,7 @@
 			description: ["Earn Copper Coins through routes, quests, combat pressure, and useful work. Coin conversion loses value deliberately, so access and recovery matter more than arbitrage."]
 			icon: "createdeco:copper_coin"
 			id: "A53643CC3D672386"
+			rewards: [{ count: 2, id: "E700000000000053", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "createdeco:copper_coin"
@@ -197,6 +193,7 @@
 			description: ["Land with a target item and a complete return plan. The expedition counts only when its materials and crew arrive back at the supply chain."]
 			icon: "creatingspace:moon_stone"
 			id: "75C047D90D3E1DB0"
+			rewards: [{ count: 2, id: "E700000000000054", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "creatingspace:the_moon"
@@ -212,6 +209,7 @@
 			description: ["Obtain a Wares Delivery Agreement and use packages for route support or recovery. Packages must never replace factories, metallurgy, chemistry, or deep resource fields."]
 			icon: "wares:delivery_agreement"
 			id: "A9F5859FFEEFF4A9"
+			rewards: [{ count: 2, id: "E700000000000055", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "wares:delivery_agreement"
@@ -225,8 +223,9 @@
 		{
 			dependencies: ["75C047D90D3E1DB0"]
 			description: ["Treat Mars distance as a logistics multiplier. Confirm replacement gear, extra consumables, and the full return stack before descent."]
-			icon: "creatingspace:flight_recorder"
+			icon: "creatingspace:big_rocket_engine"
 			id: "B187318A5D659942"
+			rewards: [{ count: 2, id: "E700000000000056", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "creatingspace:mars_orbit"
@@ -242,6 +241,7 @@
 			description: ["Land prepared for hostile terrain and a longer recovery loop than the Moon. Remote work must remain supportable from the home route."]
 			icon: "creatingspace:mars_stone"
 			id: "D7B1B33746A475D5"
+			rewards: [{ count: 2, id: "E700000000000057", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "creatingspace:mars"
@@ -255,8 +255,9 @@
 		{
 			dependencies: ["D7B1B33746A475D5"]
 			description: ["Reach Venus only when launch, suit, resupply, and return systems can sustain remote work. Fix weak logistics before treating it as a routine route."]
-			icon: "creatingspace:flight_recorder"
+			icon: "creatingspace:advanced_spacesuit_helmet"
 			id: "9A16DE21F65A4E3D"
+			rewards: [{ count: 2, id: "E700000000000058", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "creatingspace:venus"
@@ -269,5 +270,5 @@
 		}
 
 	]
-	title: "Adventure Spine — Routes And Recovery"
+	title: "Routes And Recovery"
 }

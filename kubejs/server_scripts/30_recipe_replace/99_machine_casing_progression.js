@@ -213,6 +213,7 @@ ServerEvents.recipes(function (event) {
             { type: 'pneumaticcraft:stacked_item', item: 'ae2:engineering_processor', count: 2 },
             { type: 'pneumaticcraft:stacked_item', item: 'ae2:sky_stone_block', count: 2 },
             { type: 'pneumaticcraft:stacked_item', item: 'chemlib:silicon_dioxide', count: 2 },
+            { type: 'pneumaticcraft:stacked_item', item: 'occultism:afrit_essence', count: 1 },
             { type: 'pneumaticcraft:stacked_item', item: 'ae2:fluix_glass_cable', count: 1 }
         ],
         pressure: 4.5,

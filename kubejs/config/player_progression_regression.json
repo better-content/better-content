@@ -255,6 +255,7 @@
       "route": [
         "space casing",
         "AE2 prepared components",
+        "Occultism Afrit essence",
         "raw impossible casing"
       ],
       "sourceAssertions": [
@@ -263,7 +264,8 @@
           "all": [
             "kubejs:raw_impossible_casing",
             "kubejs:space_machine_casing",
-            "ae2:engineering_processor"
+            "ae2:engineering_processor",
+            "occultism:afrit_essence"
           ],
           "absent": [
             "ae2:controller'\\n        result: { item: 'kubejs:raw_impossible_casing'"
@@ -281,7 +283,7 @@
       "requiresPrevious": "raw_impossible",
       "route": [
         "raw impossible casing",
-        "ethereal slate and archmage blood orb",
+        "late Fonts proof plus ethereal slate and archmage blood orb",
         "impossible casing",
         "AE2 controller"
       ],

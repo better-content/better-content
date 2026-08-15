@@ -367,7 +367,6 @@
       "id": "bc:create/schematic_workshop",
       "outputs": [
         "create:empty_schematic",
-        "create:schematic_and_quill",
         "create:schematic_table",
         "create:schematicannon"
       ],
@@ -375,13 +374,31 @@
         "create:mechanical_mixer",
         "minecraft:paper",
         "minecraft:light_blue_dye",
-        "minecraft:feather",
         "minecraft:iron_block",
         "minecraft:oak_log",
         "minecraft:oak_slab",
         "minecraft:smooth_stone",
         "minecraft:bow",
         "minecraft:redstone"
+      ]
+    },
+    {
+      "id": "bc:create/schematic_mint",
+      "outputs": [
+        "world_lifecycle_manager:schematic_mint",
+        "create:schematic_and_quill"
+      ],
+      "inputs": [
+        "create:mechanical_crafter",
+        "kubejs:andesite_machine_casing",
+        "create:andesite_alloy",
+        "create:brass_sheet",
+        "create:electron_tube",
+        "create:schematic_table",
+        "minecraft:paper",
+        "minecraft:light_blue_dye",
+        "minecraft:feather",
+        "minecraft:ink_sac"
       ]
     },
     {
@@ -759,7 +776,8 @@
         "ae2:engineering_processor",
         "ae2:sky_stone_block",
         "ae2:fluix_glass_cable",
-        "chemlib:silicon_dioxide"
+        "chemlib:silicon_dioxide",
+        "occultism:afrit_essence"
       ]
     },
     {

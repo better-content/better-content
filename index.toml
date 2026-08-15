@@ -2,11 +2,11 @@ hash-format = "sha256"
 
 [[files]]
 file = ".github/workflows/smoke.yml"
-hash = "5a50e71e91c5e59ffe70cb40b01c4252907ecc951df43de16d9a6315ea7022a0"
+hash = "3cc1f64cc6c9fc485828891d0fb64869174421527b9bab5012a54852e139c34f"
 
 [[files]]
 file = "AGENTS.md"
-hash = "4b052b7972a1e5e691ed923186bb4c8df1bbb6cac69f6d818c6a7fc1a6728861"
+hash = "4bb999f5d51ef3875c63dbeda281a78a1291e1afc1149836e4fefbb478be9bb6"
 
 [[files]]
 file = "LICENSE"
@@ -4450,7 +4450,7 @@ hash = "06e8b15ccb861c7607970b8fa0a58d81886cfd6d5a431e7a930d7614705b1e61"
 
 [[files]]
 file = "config/adpother/Impacts/livings.cfg"
-hash = "220be8a7f717f8814b71282aebceaa7c2519aff825b6f23aef353c4c7722b270"
+hash = "04060e60e4129894076edba3d7a8e0ca589c18914785563963a64ad79a8d4fcd"
 
 [[files]]
 file = "config/adpother/Items/aerometer.cfg"
@@ -5302,7 +5302,7 @@ hash = "d39635015cb555c9e4c377e70e9bf4afbfca35f137f4913b0cb35448fd382431"
 
 [[files]]
 file = "config/better_content_fixes/quest_reveal.json"
-hash = "ef31ea55ed593c1368c07eef89466eba58b8a27a7b4cbff101090000d7b25c48"
+hash = "400145e1eacd7e6468591a9fd89511074fbb251991b6f7bb40b3513d987bc575"
 
 [[files]]
 file = "config/bettercombat/client.json5"
@@ -5506,7 +5506,7 @@ hash = "42611061a5f950cfd9c17a7c9eafbc5512c2593ff518517fa9830e08c9d0d141"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
-hash = "d2c6cb4bfe9c0341608a1c118bef9388879773689ca6ae732ea07918773c5c76"
+hash = "52e933fa180e6ed565fe90ce67cc8a5a295e6f81aa6f1d461ef851b7d1c5a98f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/_technical.snbt"
@@ -5514,7 +5514,11 @@ hash = "dcbbf3f6ca2c4db6da572b78af679ead6fc6d5e560764c3fabb3f87e39f8dc35"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/basic_tools.snbt"
-hash = "039d60afad7aaca017ec979402e241e6030d84245ac771c0d170f8d737b62e06"
+hash = "0b1107b7f5320578ba8df34518e1c3fc9abccafca46a4dc1141210ecfa4802ac"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/blood_and_command.snbt"
+hash = "96286a1d177f394a7c2bc356cd83e253a35322bd70a71750c6c655072e94c419"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/completionist_armour_sets.snbt"
@@ -5541,16 +5545,44 @@ file = "config/ftbquests/quests/chapters/completionist_tcon_weapons.snbt"
 hash = "e9df9940eda33b55b994cd590ab5c617f27246fb5c45d3d916a1556066412dfd"
 
 [[files]]
+file = "config/ftbquests/quests/chapters/control_and_intelligence.snbt"
+hash = "35c24ad10f3532621bee8ea76bab0cfbf52a3547093e7161a98037286046b15e"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/dangerous_matter.snbt"
+hash = "d65ac14abb5712a697cfc315db3f64c24fd5ff3aa7665e2371209ddfea4a74c6"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/factory_and_transport.snbt"
+hash = "ca8ca992c9400ed0ae8400dfd2da2df342a427f88eb7e9b529fe271227517563"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/fonts_and_pacts.snbt"
+hash = "bb57e433ab58a9d3f618d2a0609f6457fe22ebf802d759b33d713c717704e006"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/formal_magic.snbt"
+hash = "22a339155d90c025a45e1d3fa37c7c8dbc40b145c8f3a608df910f3b968d05d4"
+
+[[files]]
 file = "config/ftbquests/quests/chapters/homesteading.snbt"
-hash = "34a69040c53228b66ae9a1b8c94d5bd0ae4d739f6a4e741f45eda0f73fa5a239"
+hash = "80ba4379e03848eed3742d1da2dfbff217781e177ee1c5907b719beb3ef7b954"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/landmarks.snbt"
-hash = "6286a659e41bd76273c7fa29857178fca3ad6f7ceb7824c9faa1f56e64031512"
+hash = "c247c5314c043948178275c80bb0e825cdb0c8fec0234b9a69f3cf408f507cf6"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/metal_tools.snbt"
-hash = "4e35229c270e900c9a7f99b6c41828e304bcbbe4a6702bd3bc2a0e887431f16c"
+hash = "f565a7702c2d5b212fd889606b93bc5c68058e1aac73b131d86925693b105f40"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/power.snbt"
+hash = "800370ff731f0b678083caa970cb24a79e73ad31e345783a24c2e10a41e8edf3"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/routes_and_recovery.snbt"
+hash = "34fd602e452d60eff425e0ce90e4074cbc81e6a2e3ebc5efb12e0fed2f25f720"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/spawn_selection.snbt"
@@ -5558,7 +5590,7 @@ hash = "45ed9473e26a7f1cf8fe3fccf26fbfda51c7b70954ab470976fa2e81b4d28f34"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/workshop.snbt"
-hash = "e34c0bc1efc8e999bdbccf02531a764318414dbb27c6a0f68e6876791a2ca92b"
+hash = "8190fe41d47ed68c6568a6ba3a9bdf31db0ff0979ae73933934be945b1a9adcb"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -5626,11 +5658,11 @@ hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
 
 [[files]]
 file = "config/incontrol/spawn.json"
-hash = "c5724214802c5afd6a93dead8a544ae69ff48ea5cf1aa5522ddcd792ef9d3c7d"
+hash = "272059092010b38eb2bab227efabed6db99d5722bc5e8014fa4f8d3a7fcc8a86"
 
 [[files]]
 file = "config/incontrol/spawner.json"
-hash = "e941808a1811d285bab0791cdd6d1b43c29b2f7d4007c8447af7a922bb9fd4c8"
+hash = "2b91472004a719016bec4ff1a83772f5c6e62d50883e2fcda0ddc6b07ba559dc"
 
 [[files]]
 file = "config/incontrol/structure.json"
@@ -9926,7 +9958,7 @@ hash = "f9a34140252a5c961db16ee2e82a4b291f5630213d7210994f0d05e85aac0c16"
 
 [[files]]
 file = "kubejs/config/bc_expert_graph_catalog.json"
-hash = "46ba65a2391c382a8f31dbbe7323d935248ff32e8b1ef1c3a98fe0c1a015234d"
+hash = "18ec2b0147d3b289aedc3abc8e91555765b376abccb6615209fcf25343aa2c44"
 
 [[files]]
 file = "kubejs/config/chemlib_form_policy.json"
@@ -9942,11 +9974,11 @@ hash = "46a66b6e003ba7953c9a13428fd9c1967e862a673d7fd849831defab59eb08f1"
 
 [[files]]
 file = "kubejs/config/create_tcon_bootstrap.json"
-hash = "0eac1e3d710a131dfb50c3ff1d22478f2165d9e2861d48e67f6cec7e9284a1ad"
+hash = "f12159ff94bac9d1d3c7c416b6d059708eb9362948ca9dd8ae3441b786cee2bc"
 
 [[files]]
 file = "kubejs/config/cross_mod_boundaries.json"
-hash = "f504d604c0cddb514c6c4167b33e9ed5096fce6f419d720d949dbf959969c4bd"
+hash = "644294b5505d7c7966d1d333c5bb8ddf8a0d573340c071a41e159640d99d20ec"
 
 [[files]]
 file = "kubejs/config/economy_acquisition.json"
@@ -9978,11 +10010,11 @@ hash = "e674972162c794c78770c4b7e1b2cb04338d0a0db24f01e734dd5d99d698b677"
 
 [[files]]
 file = "kubejs/config/player_progression_regression.json"
-hash = "fcfd93b2b82799793511f52ae68401339c62b1320c869424463ac38ff5cbbf31"
+hash = "b9c9374cca550f58884e089479e61183aef757f68d843fbcfcc40fe58109f070"
 
 [[files]]
 file = "kubejs/config/progression_reachability_sources.json"
-hash = "079cc49ace0fae2ea151cd69283cdf2e21a05eb55d451e0832bd8700385b1dec"
+hash = "7fcabf6a5238b90b9bbb9bf11d248ecd56585176335dfcb06932869dd7689141"
 
 [[files]]
 file = "kubejs/config/quarantined_items.json"
@@ -11390,7 +11422,7 @@ hash = "3552f27131bc1cf78a9157c72a5229d457f8b1360fc587697b1f8338f4636475"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/172_cross_mod_anchor_boundaries.js"
-hash = "ddbb31859917006312755d952127e56b8f20ae9284ee5edec0c4f484fb5506d1"
+hash = "74d2158dfd54ebe0a67bf95add1b8f2278acf93759246130ba5e170030c95154"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/175_playtest_recipe_repairs.js"
@@ -11450,7 +11482,7 @@ hash = "1e9382e0b7ca92858b0d20a252fe5c818698db254cf19533b8dd4d62629299b6"
 
 [[files]]
 file = "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js"
-hash = "f75b6c072c79f6127a14fe123e93388549978138a027044b1c9d226bdf9f5dbc"
+hash = "3f743d9b3f406d4b83a6840958ac317adbd9a6655bc7c41b7c200d7982b6e4fb"
 
 [[files]]
 file = "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js"
@@ -11602,11 +11634,11 @@ hash = "f39f5a3897b059baf31098a415352511efd3f3918e3357ab22a515a0ab1c1247"
 
 [[files]]
 file = "kubejs/server_scripts/99_final/10_create_tcon_bootstrap.js"
-hash = "349f0c4f4a0bdd91c262ede6c438e8858e55b5385b478bf2f9ff8fb18a5a73fb"
+hash = "1db55ee916b6e2a67d700b84fd12bde5915aa076f2a54750e2bdf2e40eef7198"
 
 [[files]]
 file = "kubejs/server_scripts/99_final/90_energy_ladder_gate.js"
-hash = "7958d70db9d624973ea3788e6476a95e0da245b514a3b3cb02416156d4e205e1"
+hash = "a8112932f32aa47aab8fca1baec44aba385ee40321a40605fbbfe454aeac2bb6"
 
 [[files]]
 file = "kubejs/startup_scripts/00_globals/20_progression_catalogues.js"
@@ -11734,7 +11766,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "cecc512a296e5a267c6002dd4c24916be7f62b42e7cd5d1e81228e131fe4e8c8"
+hash = "dd617a9110d6e43aea3801744969ea2247ad170c83d4dfda32658a32a0766f41"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"
@@ -12817,7 +12849,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "d7fb69e17c29ea234c97086eb578bc8335bd4796603a2fa5c20d2071829ccb2d"
+hash = "fe4cf1d0b1c5575d6031f74ad8f56c205d0ccfadcbbb7907db8ecf8a4932ac5e"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"
@@ -12841,34 +12873,6 @@ hash = "93b8474ded428384b345bb5b1a49e043d66c154d266d48bbee5dbdef10501253"
 [[files]]
 file = "package.sh"
 hash = "6a3c95616c62b270193eb5588a03c49d6320d18d4bcb0f6ab50b19bd9a8fd6b3"
-
-[[files]]
-file = "quest-storage/chapters/spine_adventure_economy.snbt"
-hash = "bc17c7d8f9ff92c1c08a0e78cd81f3e1e2531491d0a04b7fc8b5f31abb16ca00"
-
-[[files]]
-file = "quest-storage/chapters/spine_blood_command.snbt"
-hash = "d44c9bb3068ebad66ae4b4cc73aff567d56a77c3ab1ae3443a302ee6d9688df0"
-
-[[files]]
-file = "quest-storage/chapters/spine_fonts_occultism.snbt"
-hash = "3c9132b4f20854db0639c3e58489d7ff2d3bf3898d47ca5b7ffaa1f68db6ad6c"
-
-[[files]]
-file = "quest-storage/chapters/spine_formal_magic.snbt"
-hash = "0dcabbf542ea0a482c202460149dd9633e1420ce3892f436d9035245fc397f41"
-
-[[files]]
-file = "quest-storage/chapters/spine_post_ae2.snbt"
-hash = "2f85dc85a554509b5827caa42eb378874e62045b27dbefe2bf2a041332a9873a"
-
-[[files]]
-file = "quest-storage/chapters/spine_pressure_control.snbt"
-hash = "427e2c0edce903336e494df85efc5a28d4e59318e6ee3b2bb1577dcc7d58efb3"
-
-[[files]]
-file = "quest-storage/chapters/spine_tech_metallurgy.snbt"
-hash = "2c7690e3a7cbf049882f7bb9f662dc5080ea682e4fc76a443023e0f0ca77bf17"
 
 [[files]]
 file = "quests/graph.yml"

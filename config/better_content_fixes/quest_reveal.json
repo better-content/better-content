@@ -6,7 +6,15 @@
     "13D92B0F3F4750D5",
     "71DE08FE1C5AE391",
     "2432CAA2B38B2AB2",
-    "22C924409EB64F2C"
+    "22C924409EB64F2C",
+    "DFFF031F3D7ED9F8",
+    "17EA5AFA794175FF",
+    "77BB41FEB659E52C",
+    "483FCC6FA809E49C",
+    "5F26200FD7558E29",
+    "CB8CEB0747E85033",
+    "184620DE314A2002",
+    "CAC9256DFD352356"
   ],
   "preview_chapters": [
     "13D92B0F3F4750D5"
@@ -23,6 +31,30 @@
     },
     "22C924409EB64F2C": {
       "quest": "4CC3C8B2D71507C1"
+    },
+    "DFFF031F3D7ED9F8": {
+      "quest": "59B26687F0CD55FA"
+    },
+    "17EA5AFA794175FF": {
+      "quest": "59B26687F0CD55FA"
+    },
+    "77BB41FEB659E52C": {
+      "quest": "59B26687F0CD55FA"
+    },
+    "483FCC6FA809E49C": {
+      "quest": "59B26687F0CD55FA"
+    },
+    "5F26200FD7558E29": {
+      "quest": "59B26687F0CD55FA"
+    },
+    "CB8CEB0747E85033": {
+      "quest": "59B26687F0CD55FA"
+    },
+    "184620DE314A2002": {
+      "quest": "59B26687F0CD55FA"
+    },
+    "CAC9256DFD352356": {
+      "quest": "59B26687F0CD55FA"
     }
   }
 }

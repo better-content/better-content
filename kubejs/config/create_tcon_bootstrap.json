@@ -36,7 +36,7 @@
     },
     {
       "id": "create:water_wheel",
-      "policy": "create_mechanical_crafting",
+      "policy": "shaped_crafting",
       "recipe_id": "kubejs:create_tcon_bootstrap/power/water_wheel",
       "pattern": ["PGP", "GCG", "PGP"],
       "key": {
@@ -47,7 +47,7 @@
     },
     {
       "id": "create:large_water_wheel",
-      "policy": "create_mechanical_crafting",
+      "policy": "shaped_crafting",
       "recipe_id": "kubejs:create_tcon_bootstrap/power/large_water_wheel",
       "pattern": ["PGP", "WCW", "PGP"],
       "key": {
@@ -59,7 +59,7 @@
     },
     {
       "id": "create:windmill_bearing",
-      "policy": "create_mechanical_crafting",
+      "policy": "shaped_crafting",
       "recipe_id": "kubejs:create_tcon_bootstrap/power/windmill_bearing",
       "pattern": ["SGS", "GCG", "SAS"],
       "key": {
@@ -71,7 +71,7 @@
     },
     {
       "id": "create:steam_engine",
-      "policy": "create_mechanical_crafting",
+      "policy": "shaped_crafting",
       "recipe_id": "kubejs:create_tcon_bootstrap/power/steam_engine",
       "pattern": ["PGP", "BCB", "PGP"],
       "key": {
@@ -83,7 +83,7 @@
     },
     {
       "id": "compressedcreativity:compressed_air_engine",
-      "policy": "create_mechanical_crafting",
+      "policy": "shaped_crafting",
       "recipe_id": "kubejs:create_tcon_bootstrap/power/compressed_air_engine",
       "pattern": ["TGT", "RBR", "ICI"],
       "key": {
@@ -97,7 +97,7 @@
     },
     {
       "id": "createdieselgenerators:diesel_engine",
-      "policy": "create_mechanical_crafting",
+      "policy": "shaped_crafting",
       "recipe_id": "kubejs:create_tcon_bootstrap/power/diesel_engine",
       "pattern": ["PGP", "EBE", "SFS"],
       "key": {
@@ -111,7 +111,7 @@
     },
     {
       "id": "createdieselgenerators:large_diesel_engine",
-      "policy": "create_mechanical_crafting",
+      "policy": "shaped_crafting",
       "recipe_id": "kubejs:create_tcon_bootstrap/power/large_diesel_engine",
       "pattern": ["PGP", "EDE", "PBP"],
       "key": {
@@ -124,7 +124,7 @@
     },
     {
       "id": "createdieselgenerators:huge_diesel_engine",
-      "policy": "create_mechanical_crafting",
+      "policy": "shaped_crafting",
       "recipe_id": "kubejs:create_tcon_bootstrap/power/huge_diesel_engine",
       "pattern": ["EGP", "LSP", "EBE"],
       "key": {
@@ -138,7 +138,7 @@
     },
     {
       "id": "powergrid:electric_motor",
-      "policy": "create_mechanical_crafting",
+      "policy": "shaped_crafting",
       "recipe_id": "kubejs:create_tcon_bootstrap/power/electric_motor",
       "pattern": ["WGW", "CAC", "WSW"],
       "key": {
@@ -151,7 +151,7 @@
     },
     {
       "id": "powergrid:constant_speed_motor",
-      "policy": "create_mechanical_crafting",
+      "policy": "shaped_crafting",
       "recipe_id": "kubejs:create_tcon_bootstrap/power/constant_speed_motor",
       "pattern": ["RGR", "MAM", "RPR"],
       "key": {

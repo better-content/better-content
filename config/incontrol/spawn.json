@@ -2,23 +2,6 @@
   {
     "dimension": "minecraft:overworld",
     "mob": [
-      "minecraft:pillager",
-      "minecraft:vindicator",
-      "minecraft:evoker",
-      "minecraft:witch",
-      "takesapillage:archer",
-      "takesapillage:skirmisher",
-      "takesapillage:legioner",
-      "savage_and_ravage:griefer",
-      "savage_and_ravage:executioner",
-      "savage_and_ravage:iceologer",
-      "savage_and_ravage:trickster"
-    ],
-    "result": "allow"
-  },
-  {
-    "dimension": "minecraft:overworld",
-    "mob": [
       "born_in_chaos_v1:decrepit_skeleton",
       "born_in_chaos_v1:skeleton_demoman",
       "born_in_chaos_v1:decaying_zombie",
@@ -101,15 +84,11 @@
       "born_in_chaos_v1:missionary_raider"
     ],
     "minheight": 0,
-    "result": "deny"
-  },
-  {
-    "dimension": "minecraft:overworld",
-    "hostile": true,
-    "blocktest": {
-      "tag": "kubejs:grass_like",
-      "distbelow": 1
-    },
+    "when": "position",
+    "spawntype": [
+      "natural",
+      "chunk_generation"
+    ],
     "result": "deny"
   },
   {
@@ -120,39 +99,11 @@
     "dimension": "minecraft:overworld",
     "hostile": true,
     "seesky": true,
-    "biome": [
-      "nyctophobia:ancient_dead_coral_reef",
-      "nyctophobia:deep_dark_forest",
-      "nyctophobia:eroded_haunted_forest",
-      "nyctophobia:haunted_forest",
-      "nyctophobia:haunted_lakes"
+    "when": "position",
+    "spawntype": [
+      "natural",
+      "chunk_generation"
     ],
-    "result": "allow"
-  },
-  {
-    "dimension": "minecraft:overworld",
-    "mob": [
-      "minecraft:pillager",
-      "minecraft:vindicator",
-      "minecraft:evoker",
-      "minecraft:ravager",
-      "minecraft:witch",
-      "minecraft:illusioner",
-      "takesapillage:archer",
-      "takesapillage:skirmisher",
-      "takesapillage:legioner",
-      "savage_and_ravage:griefer",
-      "savage_and_ravage:executioner",
-      "savage_and_ravage:iceologer",
-      "savage_and_ravage:trickster"
-    ],
-    "seesky": true,
-    "result": "allow"
-  },
-  {
-    "dimension": "minecraft:overworld",
-    "hostile": true,
-    "seesky": true,
     "result": "deny"
   }
 ]

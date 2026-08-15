@@ -40,20 +40,6 @@ function bcAnchorRemove(event, output) {
     event.remove({ output: output })
 }
 
-function bcAnchorMechanical(event, id, output, count, pattern, keys) {
-    var inputs = []
-    for (var symbol in keys) inputs.push(keys[symbol])
-    if (!bcAnchorCanMake(output, inputs)) return
-    bcAnchorRemove(event, output)
-    event.custom({
-        type: 'create:mechanical_crafting',
-        acceptMirrored: true,
-        pattern: pattern,
-        key: global.bcRecipeKey(keys),
-        result: bcAnchorResult(output, count || 1)
-    }).id('kubejs:cross_mod_anchor/create_mechanical/' + id)
-}
-
 function bcAnchorMixing(event, id, output, count, inputs) {
     if (!bcAnchorCanMake(output, inputs)) return
     bcAnchorRemove(event, output)
@@ -149,17 +135,13 @@ ServerEvents.recipes(function (event) {
 
     // Compressed Creativity's rotor is the shared mechanical heart of its air/SU
     // machinery. PNCR blades and a pack pressure seal carry the Airtight proof.
-    bcAnchorMechanical(event, 'compressedcreativity_engine_rotor',
-        'compressedcreativity:engine_rotor', 1, [
-            'BTB',
-            'PSP',
-            'BTB'
-        ], {
-            B: 'pneumaticcraft:turbine_blade',
-            T: 'pneumaticcraft:advanced_pressure_tube',
-            P: 'kubejs:pressure_seal',
-            S: 'create:shaft'
-        })
+    bcAnchorPressure(event, 'compressedcreativity_engine_rotor',
+        'compressedcreativity:engine_rotor', 1, 2.0, [
+            { id: 'pneumaticcraft:turbine_blade', count: 4 },
+            { id: 'pneumaticcraft:advanced_pressure_tube', count: 4 },
+            { id: 'kubejs:pressure_seal', count: 1 },
+            { id: 'create:shaft', count: 1 }
+        ])
 
     // Little Logistics uses one spring throughout its rolling stock. Mixing the
     // spring on Create machinery makes that native hub the transport boundary.

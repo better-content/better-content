@@ -1,0 +1,294 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "power"
+	group: "2DFE3653F3B634B9"
+	id: "DFFF031F3D7ED9F8"
+	order_index: 0
+	quest_links: [
+		{ id: "81852F4E3627F0F3", linked_quest: "2DA99D3BD6F00324", x: -16d, y: 0d }
+	]
+	quests: [
+		{
+			description: ["Build the Andesite Machine Casing from ordinary Andesite Casing and alloy. It is the common body for the first passive SU sources."]
+			icon: "kubejs:andesite_machine_casing"
+			id: "E91FBB35797602BC"
+			rewards: [{ count: 2, id: "6B538C25318F885B", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [{ id: "E6B02D87915892E9", item: "kubejs:andesite_machine_casing", type: "item" }]
+			title: "Andesite Machine Casing"
+			x: -14d
+			y: 0d
+		}
+		{
+			dependencies: ["E91FBB35797602BC"]
+			description: ["Assemble the Schematic Mint with a fully occupied 3×3 Mechanical Crafter grid. Its 18 SU demand exceeds a Hand Crank; once built, it turns cheap paper, dye, feather, and ink into fresh recording supplies without further power."]
+			icon: "world_lifecycle_manager:schematic_mint"
+			id: "26BCB761BF83096F"
+			rewards: [{ count: 3, id: "394057C51F30D68C", item: "createdeco:copper_coin", type: "item" }]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{ id: "3C2CBA90B6608141", item: "world_lifecycle_manager:schematic_mint", type: "item" }
+				{ id: "54B74467F4883DCD", item: "create:schematic_and_quill", type: "item" }
+			]
+			title: "Schematic Mint"
+			x: -12d
+			y: 3.5d
+		}
+		{
+			dependencies: ["E91FBB35797602BC"]
+			description: ["Build a Water Wheel for continuous SU beside flowing water. It replaces hand-cranking for small permanent lines."]
+			icon: "create:water_wheel"
+			id: "90D60AE59370EEE0"
+			rewards: [{ count: 2, id: "7AB3BD87C83431FA", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "C686ABF1C595DF2A", item: "create:water_wheel", type: "item" }]
+			title: "Water Power"
+			x: -12d
+			y: -2d
+		}
+		{
+			dependencies: ["90D60AE59370EEE0"]
+			description: ["Upgrade the wheel to its larger form. Use the extra SU capacity before expanding a machine line."]
+			icon: "create:large_water_wheel"
+			id: "2219D9E95F17D21C"
+			rewards: [{ count: 2, id: "F5F91D93FBFD718C", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "BB8618750CADC547", item: "create:large_water_wheel", type: "item" }]
+			title: "Large Water Wheel"
+			x: -10d
+			y: -2d
+		}
+		{
+			dependencies: ["E91FBB35797602BC"]
+			description: ["Build a Windmill Bearing and attach sails to generate SU. Larger sail assemblies trade space for rotational capacity."]
+			icon: "create:windmill_bearing"
+			id: "ED6D2B807DBAE9B2"
+			rewards: [{ count: 2, id: "196DAE0845AA7142", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "916955B01BAE6437", item: "create:windmill_bearing", type: "item" }]
+			title: "Wind Power"
+			x: -12d
+			y: 0d
+		}
+		{
+			dependencies: ["E91FBB35797602BC"]
+			description: ["Sequence an Andesite Machine Casing into the Brass tier. This casing opens denser fueled generation and pneumatic hardware."]
+			icon: "kubejs:brass_machine_casing"
+			id: "C21A4F9E5B02A5EA"
+			rewards: [{ count: 3, id: "662EC7FE491A1275", item: "createdeco:copper_coin", type: "item" }]
+			shape: "hexagon"
+			size: 1.3d
+			tasks: [{ id: "187E3DB442F3A34B", item: "kubejs:brass_machine_casing", type: "item" }]
+			title: "Brass Machine Casing"
+			x: -10d
+			y: 2d
+		}
+		{
+			dependencies: ["C21A4F9E5B02A5EA"]
+			description: ["Build a Steam Engine for a stronger SU plant. Boilers need heat, water, and enough engine capacity to match the attached machinery."]
+			icon: "create:steam_engine"
+			id: "FE57E8F9E4208849"
+			rewards: [{ count: 3, id: "34B221BC8D515414", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [{ id: "FCF39FC7DC5083FD", item: "create:steam_engine", type: "item" }]
+			title: "Steam Power"
+			x: -8d
+			y: 0.5d
+		}
+		{
+			dependencies: ["C21A4F9E5B02A5EA"]
+			description: ["Build a Diesel Engine for compact fueled SU generation. Fuel logistics determine whether it can replace a passive source sustainably."]
+			icon: "createdieselgenerators:diesel_engine"
+			id: "0FFD3324AA11E14D"
+			rewards: [{ count: 3, id: "EDD4A1DC5542C448", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [{ id: "5F0C84DFB2CCD298", item: "createdieselgenerators:diesel_engine", type: "item" }]
+			title: "Diesel Power"
+			x: -8d
+			y: 2.5d
+		}
+		{
+			dependencies: ["C21A4F9E5B02A5EA"]
+			description: ["Craft an Airtight Machine Casing through the mechanical factory route. It is the structural bridge from Create manufacturing into pressure technology."]
+			icon: "kubejs:airtight_machine_casing"
+			id: "A804EDA54F510B43"
+			rewards: [{ count: 3, id: "4F8717A29797905F", item: "createdeco:copper_coin", type: "item" }]
+			shape: "hexagon"
+			size: 1.3d
+			tasks: [{ id: "C86F8F36BD8668C4", item: "kubejs:airtight_machine_casing", type: "item" }]
+			title: "Airtight Machine Casing"
+			x: -8d
+			y: 5d
+		}
+		{
+			dependencies: ["A804EDA54F510B43"]
+			description: ["Build the Rotational Compressor and drive it with SU. It is the pack's sole bootstrap source of normal PneumaticCraft air."]
+			icon: "compressedcreativity:rotational_compressor"
+			id: "96CE00C902BD8E4C"
+			rewards: [{ count: 4, id: "0ED084B86B5C48D4", item: "createdeco:copper_coin", type: "item" }]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{ id: "979AE61F279622D7", item: "compressedcreativity:rotational_compressor", type: "item" }]
+			title: "Motion into Air"
+			x: -5.5d
+			y: 5d
+		}
+		{
+			dependencies: ["A804EDA54F510B43"]
+			description: ["Prepare Pressure Chamber walls for pressure crafting. The chamber consumes compressed air to manufacture the electrical tier."]
+			icon: "pneumaticcraft:pressure_chamber_wall"
+			id: "1F458611C5B165DD"
+			rewards: [{ count: 3, id: "EC3B071A363D7A54", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [{ id: "F67F2BBE92DEF2DD", item: "pneumaticcraft:pressure_chamber_wall", type: "item" }]
+			title: "Pressure Chamber Shell"
+			x: -3.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["96CE00C902BD8E4C"]
+			description: ["Manufacture a Printed Circuit Board through PneumaticCraft assembly. It proves the air network can support precision electrical work."]
+			icon: "pneumaticcraft:printed_circuit_board"
+			id: "59D44B41E1CE51EB"
+			rewards: [{ count: 3, id: "5258C76036B8FB06", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "1C7DDEB3B426F59E", item: "pneumaticcraft:printed_circuit_board", type: "item" }]
+			title: "Pressure-Built Circuits"
+			x: -1d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1F458611C5B165DD" "59D44B41E1CE51EB"]
+			description: ["Pressure-craft an Electrical Machine Casing at 4 bar. It joins pneumatic manufacturing, Power Grid parts, chemistry, and computer components."]
+			icon: "kubejs:electrical_machine_casing"
+			id: "1D88EAD05EC7472F"
+			rewards: [{ count: 4, id: "D373A20750198F36", item: "createdeco:copper_coin", type: "item" }]
+			shape: "hexagon"
+			size: 1.3d
+			tasks: [{ id: "85FD827C4288157F", item: "kubejs:electrical_machine_casing", type: "item" }]
+			title: "Electrical Machine Casing"
+			x: 1d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1D88EAD05EC7472F"]
+			description: ["Build a Pneumatic Dynamo to turn compressed air into the pack's first craftable FE. Native PneumaticCraft compressors and AE2 generators remain disabled."]
+			icon: "pneumaticcraft:pneumatic_dynamo"
+			id: "D613ECFBB80CCDFC"
+			rewards: [{ count: 1, id: "4AEB74C75C951DA6", item: "createdeco:industrial_iron_coin", type: "item" }]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{ id: "189208B82D10BA4B", item: "pneumaticcraft:pneumatic_dynamo", type: "item" }]
+			title: "Air into FE"
+			x: 3.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["D613ECFBB80CCDFC"]
+			description: ["Build a Power Grid Battery after first FE. It stores grid electricity; it does not create energy by itself."]
+			icon: "powergrid:battery"
+			id: "0F0CD821F76A9777"
+			rewards: [{ count: 2, id: "AAC41B622AD6EAA4", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "E8A88891594449E8", item: "powergrid:battery", type: "item" }]
+			title: "Store the Current"
+			x: 6d
+			y: 2d
+		}
+		{
+			dependencies: ["D613ECFBB80CCDFC"]
+			description: ["Build a Generator Housing to convert shaft rotation into Power Grid electricity. The conversion provides routing flexibility, not free power."]
+			icon: "powergrid:generator_housing"
+			id: "8621EA781747709D"
+			rewards: [{ count: 2, id: "24CFBE63A9BE278F", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "17794C8D6BCEA3F5", item: "powergrid:generator_housing", type: "item" }]
+			title: "Motion into Current"
+			x: 6d
+			y: 3.5d
+		}
+		{
+			dependencies: ["D613ECFBB80CCDFC"]
+			description: ["Build an Electric Motor to convert Power Grid electricity back into SU. Round trips are intentionally lossy."]
+			icon: "powergrid:electric_motor"
+			id: "78BA2EB798B488DF"
+			rewards: [{ count: 2, id: "57EED4A3BDB46C02", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "2E7BEB9715E91955", item: "powergrid:electric_motor", type: "item" }]
+			title: "Current into Motion"
+			x: 6d
+			y: 5d
+		}
+		{
+			dependencies: ["D613ECFBB80CCDFC"]
+			description: ["Build a Constant-Speed Motor for regulated electrical-to-SU output. Use it where fixed rotational speed matters more than conversion efficiency."]
+			icon: "powergrid:constant_speed_motor"
+			id: "93E300530C6132C1"
+			rewards: [{ count: 2, id: "0F4D4CC43E94ED4E", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "2DDEE58431D93F5C", item: "powergrid:constant_speed_motor", type: "item" }]
+			title: "Regulated Motion"
+			x: 6d
+			y: 6.5d
+		}
+		{
+			dependencies: ["D613ECFBB80CCDFC"]
+			description: ["Build a Compressed-Air Engine to turn stored pressure back into SU. Its recipe consumes first-FE hardware, and the return path is lossy."]
+			icon: "compressedcreativity:compressed_air_engine"
+			id: "170247C9DADD0054"
+			rewards: [{ count: 2, id: "15A1004FA9987D23", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "340D077FA328793B", item: "compressedcreativity:compressed_air_engine", type: "item" }]
+			title: "Air into Motion"
+			x: 6d
+			y: 8d
+		}
+		{
+			dependencies: ["0FFD3324AA11E14D" "1D88EAD05EC7472F"]
+			description: ["Upgrade the Diesel Engine with an Electrical Machine Casing. This is the first diesel scale that crosses into the electrical tier."]
+			icon: "createdieselgenerators:large_diesel_engine"
+			id: "82A8A28D49E59BA8"
+			rewards: [{ count: 3, id: "6949293F96649343", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "3C3B3AB65159D4DA", item: "createdieselgenerators:large_diesel_engine", type: "item" }]
+			title: "Large Diesel Engine"
+			x: 2d
+			y: 1.5d
+		}
+		{
+			dependencies: ["82A8A28D49E59BA8" "FE57E8F9E4208849"]
+			description: ["Combine the large diesel, steam, and electrical branches into a Huge Diesel Engine. It is the chapter's highest authored SU-generation tier."]
+			icon: "createdieselgenerators:huge_diesel_engine"
+			id: "676AD670206BBB49"
+			rewards: [{ count: 1, id: "E87A097A89CBACFF", item: "createdeco:zinc_coin", type: "item" }]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{ id: "3BB5206D0F6B4151", item: "createdieselgenerators:huge_diesel_engine", type: "item" }]
+			title: "Huge Diesel Engine"
+			x: 4.5d
+			y: 0.5d
+		}
+		{
+			description: ["Build a Thermal Firebox to turn fuel into HeatSync process heat. Heat serves thermal machinery; it is not SU, air, FE, or Power Grid electricity."]
+			icon: "heat_sync:thermal_firebox"
+			id: "9300C23E0BF8BCAB"
+			rewards: [{ count: 2, id: "DE0482DB3D33CAC1", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [{ id: "68D782FD5CAD8981", item: "heat_sync:thermal_firebox", type: "item" }]
+			title: "Process Heat"
+			x: -10d
+			y: -5d
+		}
+		{
+			dependencies: ["0F0CD821F76A9777" "8621EA781747709D" "78BA2EB798B488DF" "93E300530C6132C1" "170247C9DADD0054"]
+			description: ["Complete the storage and conversion routes. SU can create air or grid current, air can create FE or SU, and grid current can return to SU—but every loop needs a real source and loses energy."]
+			icon: "powergrid:generator_commutator"
+			id: "AB9D41E0B5F55E8A"
+			rewards: [{ count: 1, id: "2B2B104C7923A67F", item: "createdeco:industrial_iron_coin", type: "item" }]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [ ]
+			title: "The Conversion Map"
+			x: 8.5d
+			y: 5d
+		}
+	]
+	title: "Power: Motion, Air & Current"
+}

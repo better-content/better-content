@@ -50,18 +50,6 @@ function bcCreateTconRequireIngredient(ref, context) {
     }
 }
 
-function bcCreateTconIngredient(ref) {
-    var ingredientRef = String(ref)
-    if (ingredientRef.indexOf('#') === 0) return { tag: ingredientRef.substring(1) }
-    return { item: ingredientRef }
-}
-
-function bcCreateTconKeyJson(key) {
-    var result = {}
-    for (var symbol in key) result[symbol] = bcCreateTconIngredient(key[symbol])
-    return result
-}
-
 function bcCreateTconValidateContract() {
     if (!BC_CREATE_TCON || BC_CREATE_TCON.schema !== 'bc.create_tcon_bootstrap.v1') {
         bcCreateTconFail('missing or unsupported create_tcon_bootstrap.json')
@@ -85,7 +73,15 @@ function bcCreateTconValidateContract() {
     for (var s = 0; s < BC_CREATE_TCON.positive_su_sources.length; s++) {
         var source = BC_CREATE_TCON.positive_su_sources[s]
         if (!bcCreateTconItemExists(source.id)) bcCreateTconFail('positive-SU inventory references missing item ' + source.id)
-        if (source.policy === 'create_mechanical_crafting') {
+        if (source.policy === 'shaped_crafting') {
+            if (!source.pattern || source.pattern.length < 1 || source.pattern.length > 3) {
+                bcCreateTconFail(source.id + ' shaped recipe must have between one and three rows')
+            }
+            for (var row = 0; row < source.pattern.length; row++) {
+                if (source.pattern[row].length < 1 || source.pattern[row].length > 3) {
+                    bcCreateTconFail(source.id + ' shaped recipe rows must have between one and three columns')
+                }
+            }
             for (var key in source.key) bcCreateTconRequireIngredient(source.key[key], source.id)
         } else if (source.policy !== 'manual_only' && source.policy !== 'recipe_less') {
             bcCreateTconFail('unsupported positive-SU policy for ' + source.id + ': ' + source.policy)
@@ -146,13 +142,27 @@ ServerEvents.recipes(function (event) {
         processingTime: 80
     }).id('kubejs:create_tcon_bootstrap/manual/empty_schematic')
 
-    event.remove({ output: 'create:schematic_and_quill' })
+    // Recording supplies become cheap only after the one-time Schematic Mint gate.
+    // Remove Create's native hand recipe by exact ID; the Mint owns the replacement.
+    event.remove({ id: 'create:crafting/schematics/schematic_and_quill' })
+
     event.custom({
-        type: 'create:mixing',
-        ingredients: [{ item: 'create:empty_schematic' }, { tag: 'forge:feathers' }],
-        results: [{ item: 'create:schematic_and_quill' }],
-        processingTime: 80
-    }).id('kubejs:create_tcon_bootstrap/manual/schematic_and_quill')
+        type: 'create:mechanical_crafting',
+        pattern: [
+            'AEA',
+            'BTB',
+            'ACA'
+        ],
+        key: {
+            A: { item: 'create:andesite_alloy' },
+            E: { item: 'create:electron_tube' },
+            B: { item: 'create:brass_sheet' },
+            T: { item: 'create:schematic_table' },
+            C: { item: 'kubejs:andesite_machine_casing' }
+        },
+        result: { item: 'world_lifecycle_manager:schematic_mint' },
+        acceptMirrored: false
+    }).id('kubejs:create/mechanical_crafting/schematic_mint')
 
     event.remove({ output: 'create:schematic_table' })
     event.shaped('create:schematic_table', [
@@ -227,13 +237,7 @@ ServerEvents.recipes(function (event) {
         if (source.policy === 'manual_only') continue
         event.remove({ output: source.id })
         if (source.policy === 'recipe_less') continue
-        event.custom({
-            type: 'create:mechanical_crafting',
-            acceptMirrored: true,
-            pattern: source.pattern,
-            key: bcCreateTconKeyJson(source.key),
-            result: { item: source.id }
-        }).id(source.recipe_id)
+        event.shaped(source.id, source.pattern, source.key).id(source.recipe_id)
     }
 
     // TCon owns early alloy formation. Create may process formed metal, but cannot mix it

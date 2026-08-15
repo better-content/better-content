@@ -1,0 +1,166 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "factory_and_transport"
+	group: "2DFE3653F3B634B9"
+	icon: "create:railway_casing"
+	id: "17EA5AFA794175FF"
+	order_index: 10
+	quest_links: [{ id: "F110000000000009", linked_quest: "2DA99D3BD6F00324", x: -7d, y: 0d }]
+	quests: [
+		{
+			dependencies: ["E91FBB35797602BC"]
+			description: ["Build distinct washing and blasting stations around the fan. Visible processing lanes make ore byproducts easier to follow."]
+			icon: "create:encased_fan"
+			id: "0D67BB1B7520E119"
+			rewards: [{ count: 2, id: "F110000000000001", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:encased_fan"
+				id: "C0A48ECD99EDC04A"
+				type: "item"
+			}]
+			title: "Encased Fan"
+			x: -4.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["0D67BB1B7520E119"]
+			description: ["Wash representative deposit outputs and inspect their carbon, sulfur, silica, and alumina side streams before scaling bulk processing."]
+			icon: "chemlib:carbon"
+			id: "D758B526B9F33C0E"
+			rewards: [{ count: 2, id: "F110000000000002", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			tasks: [			{
+				item: "chemlib:carbon"
+				id: "097A0BA272252D54"
+				type: "item"
+			}
+			{
+				item: "chemlib:sulfur"
+				id: "B7D103ED24E90E1E"
+				type: "item"
+			}
+			{
+				item: "chemlib:silicon_dioxide"
+				id: "90ECAB35A99CBBFF"
+				type: "item"
+			}
+			{
+				item: "chemlib:aluminum_oxide"
+				id: "9322580818C041E9"
+				type: "item"
+			}]
+			title: "Wash Assay"
+			x: -1.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["E91FBB35797602BC"]
+			description: ["Add a saw when repeated cutting begins wasting time. Keep it in the compact workcell with the other first-generation Create machines."]
+			icon: "create:mechanical_saw"
+			id: "FAE4BA58768A2B0E"
+			rewards: [{ count: 2, id: "F110000000000003", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:mechanical_saw"
+				id: "4FCDD6C806ABD108"
+				type: "item"
+			}]
+			title: "Mechanical Saw"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["FAE4BA58768A2B0E"]
+			description: ["Treat the drill as controlled extraction attached to a material route, not as a replacement for surveying and geology."]
+			icon: "create:mechanical_drill"
+			id: "A8AA81D884BBC8E6"
+			rewards: [{ count: 2, id: "F110000000000004", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:mechanical_drill"
+				id: "8C0CED1F48E0B57D"
+				type: "item"
+			}]
+			title: "Mechanical Drill"
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["C21A4F9E5B02A5EA"]
+			description: ["Use an arm for selective local handoffs. It improves a physical line without making belts, trains, or distance disappear."]
+			icon: "create:mechanical_arm"
+			id: "F98C2054C7A68958"
+			rewards: [{ count: 2, id: "F110000000000005", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:mechanical_arm"
+				id: "272FCBBD9F36DA33"
+				type: "item"
+			}]
+			title: "Mechanical Arm"
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["C21A4F9E5B02A5EA"]
+			description: ["Display stock or machine state where operators can see it. Readable factories are easier to maintain than hidden automation."]
+			icon: "create:display_link"
+			id: "0B70AA93FB3F2542"
+			rewards: [{ count: 2, id: "F110000000000006", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:display_link"
+				id: "753DE9BE3431A8D4"
+				type: "item"
+			}]
+			title: "Display Link"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["C21A4F9E5B02A5EA"]
+			description: ["Make Precision Mechanisms and Railway Casing, then use trains and physical routes before digital storage erases local logistics. Distance should remain a real planning cost."]
+			icon: "create:railway_casing"
+			id: "853BB41B178180AB"
+			rewards: [{ count: 2, id: "F110000000000007", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			tasks: [			{
+				item: "create:precision_mechanism"
+				id: "A364AABC6E41EFC5"
+				type: "item"
+			}
+			{
+				item: "create:railway_casing"
+				id: "15BEAEF649AE67E0"
+				type: "item"
+			}]
+			title: "Railway Era"
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["853BB41B178180AB"]
+			description: ["Build tracks after railway casing and precision work. Rough-terrain vehicles are a train-era peer, not a shortcut around logistics."]
+			icon: "trackwork:phys_track"
+			id: "9AB8D481C414D707"
+			rewards: [{ count: 2, id: "F110000000000008", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			tasks: [			{
+				item: "trackwork:phys_track"
+				id: "5C994B6B0A7BD2B2"
+				type: "item"
+			}
+			{
+				item: "trackwork:track_tool_kit"
+				id: "7AFEB526710218F7"
+				type: "item"
+			}]
+			title: "Tracked Mobility"
+			x: 5.0d
+			y: 2.0d
+		}
+	]
+	title: "Factory And Transport"
+}

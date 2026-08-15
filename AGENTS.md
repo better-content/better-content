@@ -33,3 +33,33 @@ explicitly reverses this decision. Custom mod sources live in sibling repositori
 Treat pre-existing changes as user-owned. Do not delete player worlds, saves, logs, crash
 reports, screenshots, profiler data, or launcher state unless explicitly asked. The tracked
 root `options.txt` remains the client-default source.
+
+## FTB Quests authoring protocol
+
+Treat `config/ftbquests/quests/` as hand-authored runtime content. `quests/graph.yml`,
+`generated/ftbquests/`, and `quest-storage/` are reference or inactive surfaces and must not
+silently replace live SNBT. Read `docs/questbook_standards.md` before changing the questbook.
+
+Before editing, state the intended player action, the task that proves it, and every literal
+prerequisite. Inspect the entire affected chapter plus any linked source quests, reveal rules,
+or KubeJS/custom-mod criteria. Do not infer mechanics from quest prose alone; trace the recipe,
+event, tag, criterion, or integration that implements them.
+
+Preserve chapter, quest, task, and reward IDs when their meanings remain the same. For new IDs,
+use unique uppercase 16-digit hexadecimal values and search all live and stored quest content
+before assigning them. A native quest link points to its authoritative quest; never duplicate
+its task, reward, or completion state. Do not reorder unrelated SNBT or rewrite whole chapters
+for a local change.
+
+Coordinate overlapping quest edits at chapter granularity through the lane claim files. A claim
+must name every chapter and cross-cutting integration file in scope. Before handoff, report:
+
+- the player-visible behavior changed;
+- IDs added, removed, or repurposed;
+- dependencies, links, visibility, criteria, and rewards affected;
+- supporting runtime files changed outside `config/ftbquests/`;
+- the result of `./smoke.sh`, or the exact reason it was not run or did not pass.
+
+Do not invent a second quest compiler, schema, linter, audit, or validation command. Review SNBT
+and in-game presentation according to `docs/questbook_standards.md`; `./smoke.sh` remains the sole
+supported repository evaluation.

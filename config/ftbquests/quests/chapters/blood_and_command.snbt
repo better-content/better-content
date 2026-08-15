@@ -1,8 +1,8 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
-	filename: "spine_blood_command"
-	group: "61DE599F7F2FAFBD"
+	default_quest_shape: "circle"
+	filename: "blood_and_command"
+	group: "A14C70F29B1D8E63"
 	icon: "bloodmagic:altar"
 	id: "5F26200FD7558E29"
 	order_index: 40
@@ -12,6 +12,7 @@
 			description: ["Return from death with a Still-Beating Heart that records the life you actually lived. Save this milestone for Blood Magic instead of treating it as bulk fuel."]
 			icon: "rpg_stats:still_beating_heart"
 			id: "FCA4E77DDE7A6572"
+			rewards: [{ count: 2, id: "E700000000000015", item: "createdeco:copper_coin", type: "item" }]
 			shape: "diamond"
 			tasks: [			{
 				item: "rpg_stats:still_beating_heart"
@@ -27,6 +28,7 @@
 			description: ["Pay health deliberately only after food, safety, and a protected altar room exist. Blood costs should be visible decisions rather than accidents."]
 			icon: "bloodmagic:sacrificialdagger"
 			id: "A5DE6AA17E6F964B"
+			rewards: [{ count: 2, id: "E700000000000016", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "bloodmagic:sacrificialdagger"
@@ -42,6 +44,7 @@
 			description: ["Build the Blood Altar with your heart and Otherside matter. Give it room for runes, storage, safe sacrifice, and later rituals before the room becomes crowded."]
 			icon: "bloodmagic:altar"
 			id: "124A80CBF921A4AD"
+			rewards: [{ count: 2, id: "E700000000000017", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "bloodmagic:altar"
@@ -57,6 +60,7 @@
 			description: ["Read altar and network LP before every expensive craft. Stop guessing about reserves before increasing the cost of the work."]
 			icon: "bloodmagic:divinationsigil"
 			id: "A94FC5D83A06DAF4"
+			rewards: [{ count: 2, id: "E700000000000018", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "bloodmagic:divinationsigil"
@@ -72,6 +76,7 @@
 			description: ["Bind a Weak Blood Orb and make a Divination Sigil before repeated sacrifice. Blood work becomes manageable only when LP cost and capacity stop being guesses."]
 			icon: "bloodmagic:weakbloodorb"
 			id: "688DF46B33EE4F9E"
+			rewards: [{ count: 2, id: "E700000000000019", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "bloodmagic:weakbloodorb"
@@ -87,6 +92,7 @@
 			description: ["Add runes to solve specific altar problems such as capacity, speed, or safer sacrifice. Expand the room before upgrades crowd it out."]
 			icon: "bloodmagic:blankrune"
 			id: "B61F7083F7D26650"
+			rewards: [{ count: 2, id: "E70000000000001A", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "bloodmagic:blankrune"
@@ -102,6 +108,7 @@
 			description: ["Produce Blank Slates reliably. They are the first durable Blood proof and the entry authority for Malum materials and common formal-magic work."]
 			icon: "bloodmagic:blankslate"
 			id: "0F1684E156BB517A"
+			rewards: [{ count: 3, id: "E70000000000001B", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.1d
 			tasks: [			{
@@ -118,6 +125,7 @@
 			description: ["Use Blood Alchemy for deliberate high-yield manual batches. It improves efficiency without becoming unattended throughput or erasing chemistry."]
 			icon: "bloodmagic:alchemytable"
 			id: "FDF94A9575BB66E5"
+			rewards: [{ count: 2, id: "E70000000000001C", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "bloodmagic:alchemytable"
@@ -133,6 +141,7 @@
 			description: ["Build Malum's Spirit Altar and capture spirits in their native vessels. This side tradition inherits Blood proof while keeping its own reagents, risks, and transformations."]
 			icon: "malum:spirit_altar"
 			id: "01A0351EECE105FA"
+			rewards: [{ count: 2, id: "E70000000000001D", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "malum:spirit_altar"
@@ -153,6 +162,7 @@
 			description: ["Spirit-infuse the Esoteric Spool with a Blank Slate. The spool is a recurring native Malum hub, so this one boundary controls many later equipment uses."]
 			icon: "malum:esoteric_spool"
 			id: "479C51B9BAAF27E6"
+			rewards: [{ count: 2, id: "E70000000000001E", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "malum:esoteric_spool"
@@ -168,6 +178,7 @@
 			description: ["Upgrade the orb only when the altar loop can refill the larger network reliably. Its cost is a readiness check for sustained Blood work."]
 			icon: "bloodmagic:apprenticebloodorb"
 			id: "CD8A46A902FDE33E"
+			rewards: [{ count: 2, id: "E70000000000001F", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "bloodmagic:apprenticebloodorb"
@@ -183,6 +194,7 @@
 			description: ["Refine Reinforced Slates when the altar can sustain larger LP jobs. This proof advances Malum manufacturing and opens stronger cross-tradition utility."]
 			icon: "bloodmagic:reinforcedslate"
 			id: "5341FE1CE3FF464F"
+			rewards: [{ count: 3, id: "E700000000000020", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.1d
 			tasks: [			{
@@ -199,6 +211,7 @@
 			description: ["Spirit-infuse Alchemical Impetus with a Reinforced Slate. This recurring Malum component carries the middle Blood tier into consequential alchemical machines."]
 			icon: "malum:alchemical_impetus"
 			id: "D0594FE62DF06313"
+			rewards: [{ count: 2, id: "E700000000000021", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "malum:alchemical_impetus"
@@ -214,6 +227,7 @@
 			description: ["Refine Infused Slates for stable hybrid magic and higher Malum metallurgy. Repeated production should be safe before you spend them on downstream systems."]
 			icon: "bloodmagic:infusedslate"
 			id: "4F302119B706700C"
+			rewards: [{ count: 3, id: "E700000000000022", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.1d
 			tasks: [			{
@@ -230,6 +244,7 @@
 			description: ["Leave real footprint and upkeep space for rituals before constructing them. They are infrastructure projects rather than tiny altar upgrades."]
 			icon: "bloodmagic:masterritualstone"
 			id: "5AD0C8F892A5A2E9"
+			rewards: [{ count: 2, id: "E700000000000023", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "bloodmagic:masterritualstone"
@@ -245,6 +260,7 @@
 			description: ["Spirit-infuse Soul-Stained Steel with an Infused Slate. The ingot is Malum's late manufactured hub and should remain tied to both spirit work and Blood depth."]
 			icon: "malum:soul_stained_steel_ingot"
 			id: "A5353B75FDB5C328"
+			rewards: [{ count: 2, id: "E700000000000024", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "malum:soul_stained_steel_ingot"
@@ -260,6 +276,7 @@
 			description: ["Bind the Magician Orb once storage, runes, and ritual supply can support repeated high-cost work without emergency sacrifice."]
 			icon: "bloodmagic:magicianbloodorb"
 			id: "B7EEB2D198CF5925"
+			rewards: [{ count: 2, id: "E700000000000025", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "bloodmagic:magicianbloodorb"
@@ -275,6 +292,7 @@
 			description: ["Refine Demonic Slates only after LP supply, ritual space, and personal safety are stronger than the craft. This is the authority for dangerous command magic."]
 			icon: "bloodmagic:demonslate"
 			id: "F8BD063F85E6FD66"
+			rewards: [{ count: 3, id: "E700000000000026", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.15d
 			tasks: [			{
@@ -291,6 +309,7 @@
 			description: ["Bind entity risk into the late route with a Soul Snare. Prepare containment and escape space before dangerous summons enter the base."]
 			icon: "bloodmagic:soulsnare"
 			id: "1DF034539ACAA583"
+			rewards: [{ count: 2, id: "E700000000000027", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "bloodmagic:soulsnare"
@@ -306,6 +325,7 @@
 			description: ["Construct Goety's Dark Altar and keep command magic inside prepared infrastructure. Summons and focuses should cost containment, cursed matter, and deliberate staging."]
 			icon: "goety:dark_altar"
 			id: "D63B10CF462933B4"
+			rewards: [{ count: 2, id: "E700000000000028", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "goety:dark_altar"
@@ -321,6 +341,7 @@
 			description: ["Make an Empty Focus and bind a specific Goety operation through its native altar route. The focus records dangerous intent rather than granting a free spell family."]
 			icon: "goety:empty_focus"
 			id: "5348A7BBA1D5C6AE"
+			rewards: [{ count: 2, id: "E700000000000029", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "goety:empty_focus"
@@ -336,6 +357,7 @@
 			description: ["Craft the Archmage Orb only after the altar room, LP storage, runes, and ritual space can support its repeated cost."]
 			icon: "bloodmagic:archmagebloodorb"
 			id: "9A466A00F1D30E52"
+			rewards: [{ count: 2, id: "E70000000000002A", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "bloodmagic:archmagebloodorb"
@@ -351,6 +373,7 @@
 			description: ["Refine an Ethereal Slate as the final shared Blood proof. Endgame formal glyphs and hybrid magic may consume it, but side recipes should not spam hearts."]
 			icon: "bloodmagic:etherealslate"
 			id: "DA282A7605185BFF"
+			rewards: [{ count: 1, id: "E70000000000002B", item: "createdeco:industrial_iron_coin", type: "item" }]
 			shape: "octagon"
 			size: 1.2d
 			tasks: [			{
@@ -367,6 +390,7 @@
 			description: ["Organize late utility sigils as earned tools and keep their LP supply readable. Utility should return through the main Blood room."]
 			icon: "bloodmagic:sigilofholding"
 			id: "F94BF8075E599695"
+			rewards: [{ count: 2, id: "E70000000000002C", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "bloodmagic:sigilofholding"
@@ -382,12 +406,9 @@
 			description: ["Blood Magic originates Harm, Heal, Dispel, Dampen, Duration Down, Wither, Life Link, Bubble Shield, Infuse, and Hex. Ars records vitality, warding, and dispelling without becoming their source."]
 			icon: "ars_nouveau:glyph_heal"
 			id: "B101000000000001"
+			rewards: [{ count: 3, id: "E70000000000002D", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
-			tasks: [			{
-				title: "Review Blood Magic's formal vocabulary"
-				id: "B101000000000002"
-				type: "checkmark"
-			}]
+			tasks: [{ id: "B101000000000002", item: "ars_nouveau:glyph_heal", type: "item" }]
 			title: "Formalize Vitality"
 			x: 21.0d
 			y: -5.0d
@@ -397,12 +418,9 @@
 			description: ["Malum originates Explosion, Firework, Flare, Glide, Gravity, Gust, Launch, Leap, Lightning, Orbit, Slowfall, Toss, Wind Shear, Discharge, Spark, Break, Crush, Ignite, Infuse, Pull, Animate Block, Summon Decoy, Spike, and Wither. Ars formalizes spirit energy as force and motion."]
 			icon: "ars_nouveau:glyph_gravity"
 			id: "B102000000000001"
+			rewards: [{ count: 3, id: "E70000000000002E", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
-			tasks: [			{
-				title: "Review Malum's formal vocabulary"
-				id: "B102000000000002"
-				type: "checkmark"
-			}]
+			tasks: [{ id: "B102000000000002", item: "ars_nouveau:glyph_gravity", type: "item" }]
 			title: "Formalize Spirit Force"
 			x: 27.0d
 			y: -5.0d
@@ -412,17 +430,15 @@
 			description: ["Goety originates Animate Block, Fangs, Hex, Snare, Summon Decoy, Summon Undead, Summon Vex, Wall, Wither, Phantom Grasp, Spike, Charm, Name, Pull, Summon Steed, Summon Wolves, and Life Link. Ars makes command reproducible while Goety retains the dangerous encounter and apparatus."]
 			icon: "ars_nouveau:glyph_summon_undead"
 			id: "B103000000000001"
+			rewards: [{ count: 3, id: "E70000000000002F", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
-			tasks: [			{
-				title: "Review Goety's formal vocabulary"
-				id: "B103000000000002"
-				type: "checkmark"
-			}]
+			tasks: [{ id: "B103000000000002", item: "ars_nouveau:glyph_summon_undead", type: "item" }]
 			title: "Formalize Command"
 			x: 36.0d
 			y: -5.0d
 		}
 
 	]
-	title: "Magic Spine — Blood Into Command"
+	title: "Blood Into Command"
 }
+

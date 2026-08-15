@@ -37,21 +37,8 @@ function bcEnergyRemoveOutputs(event, outputs) {
     for (var i = 0; i < outputs.length; i++) event.remove({ output: outputs[i] })
 }
 
-function bcEnergyIngredient(reference) {
-    if (reference.charAt(0) === '#') return { tag: reference.substring(1) }
-    return { item: reference }
-}
-
-function bcEnergyMechanicalCrafting(event, output, pattern, keys, id) {
-    var keyJson = {}
-    for (var symbol in keys) keyJson[symbol] = bcEnergyIngredient(keys[symbol])
-    event.custom({
-        type: 'create:mechanical_crafting',
-        acceptMirrored: true,
-        pattern: pattern,
-        key: keyJson,
-        result: { item: output }
-    }).id(id)
+function bcEnergyShapedCrafting(event, output, pattern, keys, id) {
+    event.shaped(output, pattern, keys).id(id)
 }
 
 ServerEvents.recipes(function (event) {
@@ -102,10 +89,10 @@ ServerEvents.recipes(function (event) {
     }).id('kubejs:energy_ladder/first_fe/pneumatic_dynamo')
 
     // Air-to-SU exists only after first FE and consumes the dynamo rotor/control
-    // body. Mechanical crafting and real pneumatic/electrical components preserve the workshop boundary.
+    // body. Real pneumatic/electrical components preserve the workshop boundary.
     // The pinned Compressed Creativity ratios make the return path lossy.
     event.remove({ output: 'compressedcreativity:compressed_air_engine' })
-    bcEnergyMechanicalCrafting(event, 'compressedcreativity:compressed_air_engine', [
+    bcEnergyShapedCrafting(event, 'compressedcreativity:compressed_air_engine', [
         'TGT',
         'RDR',
         'BAB'
@@ -134,7 +121,7 @@ ServerEvents.recipes(function (event) {
     }).id('kubejs:energy_ladder/post_fe/powergrid_battery')
 
     event.remove({ output: 'powergrid:electric_motor' })
-    bcEnergyMechanicalCrafting(event, 'powergrid:electric_motor', [
+    bcEnergyShapedCrafting(event, 'powergrid:electric_motor', [
         'WGW',
         'CPC',
         'ASA'
@@ -148,7 +135,7 @@ ServerEvents.recipes(function (event) {
     }, 'kubejs:energy_ladder/post_fe/powergrid_electric_motor')
 
     event.remove({ output: 'powergrid:constant_speed_motor' })
-    bcEnergyMechanicalCrafting(event, 'powergrid:constant_speed_motor', [
+    bcEnergyShapedCrafting(event, 'powergrid:constant_speed_motor', [
         'RGR',
         'MPM',
         'RAR'
@@ -161,7 +148,7 @@ ServerEvents.recipes(function (event) {
     }, 'kubejs:energy_ladder/post_fe/powergrid_constant_speed_motor')
 
     event.remove({ output: 'powergrid:generator_housing' })
-    bcEnergyMechanicalCrafting(event, 'powergrid:generator_housing', [
+    bcEnergyShapedCrafting(event, 'powergrid:generator_housing', [
         'IGI',
         'PAP',
         'IOI'
@@ -174,7 +161,7 @@ ServerEvents.recipes(function (event) {
     }, 'kubejs:energy_ladder/post_fe/powergrid_generator_housing')
 
     event.remove({ output: 'powergrid:vertical_generator_housing' })
-    bcEnergyMechanicalCrafting(event, 'powergrid:vertical_generator_housing', [
+    bcEnergyShapedCrafting(event, 'powergrid:vertical_generator_housing', [
         'IGI',
         'PAP',
         'ICI'

@@ -5,63 +5,6 @@
 	group: "3D1BF480E4BCDBA6"
 	id: "71DE08FE1C5AE391"
 	order_index: 3
-	images: [
-		{ alpha: 62, height: 0.080d, image: "#66756F", order: -20, rotation: 0.000d, width: 1.300d, x: -2.850d, y: 0.000d }
-		{ alpha: 62, height: 0.080d, image: "#66756F", order: -20, rotation: 90.000d, width: 16.500d, x: -2.200d, y: 0.250d }
-		{ alpha: 88, height: 0.090d, image: "#6F936C", order: -10, rotation: 0.000d, width: 1.200d, x: -1.600d, y: -8.000d }
-		{ alpha: 88, height: 0.090d, image: "#6F936C", order: -10, rotation: 0.000d, width: 1.200d, x: -1.600d, y: -6.500d }
-		{ alpha: 88, height: 0.090d, image: "#72939A", order: -10, rotation: 0.000d, width: 1.200d, x: -1.600d, y: -3.500d }
-		{ alpha: 88, height: 0.090d, image: "#A88763", order: -10, rotation: 0.000d, width: 1.200d, x: -1.600d, y: 3.500d }
-		{ alpha: 88, height: 0.090d, image: "#63869B", order: -10, rotation: 0.000d, width: 1.200d, x: -1.600d, y: 7.000d }
-		{ alpha: 88, height: 0.090d, image: "#8B729A", order: -10, rotation: 0.000d, width: 7.200d, x: 1.400d, y: 8.500d }
-		{ alpha: 82, height: 0.090d, image: "#6F936C", order: -10, rotation: 0.000d, width: 1.700d, x: -0.150d, y: -8.000d }
-		{ alpha: 82, height: 0.090d, image: "#6F936C", order: -10, rotation: 0.000d, width: 1.700d, x: 1.550d, y: -8.000d }
-		{ alpha: 82, height: 0.090d, image: "#6F936C", order: -10, rotation: 0.000d, width: 1.700d, x: 3.250d, y: -8.000d }
-		{ alpha: 82, height: 0.090d, image: "#6F936C", order: -10, rotation: 0.000d, width: 1.700d, x: 4.950d, y: -8.000d }
-		{ alpha: 82, height: 0.090d, image: "#6F936C", order: -10, rotation: 0.000d, width: 2.200d, x: 6.900d, y: -8.000d }
-		{ alpha: 82, height: 0.090d, image: "#6F936C", order: -10, rotation: 0.000d, width: 1.700d, x: 8.850d, y: -8.000d }
-		{ alpha: 82, height: 0.090d, image: "#6F936C", order: -10, rotation: 0.000d, width: 5.100d, x: 1.550d, y: -6.500d }
-		{ alpha: 82, height: 0.090d, image: "#6F936C", order: -10, rotation: 0.000d, width: 1.700d, x: 4.950d, y: -6.500d }
-		{ alpha: 82, height: 0.090d, image: "#6F936C", order: -10, rotation: 0.000d, width: 2.200d, x: 6.900d, y: -6.500d }
-		{ alpha: 82, height: 0.090d, image: "#72939A", order: -10, rotation: 0.000d, width: 1.700d, x: -0.150d, y: -3.500d }
-		{ alpha: 82, height: 0.090d, image: "#72939A", order: -10, rotation: 0.000d, width: 1.700d, x: 1.550d, y: -3.500d }
-		{ alpha: 82, height: 0.090d, image: "#72939A", order: -10, rotation: 0.000d, width: 1.700d, x: 3.250d, y: -3.500d }
-		{ alpha: 82, height: 0.090d, image: "#72939A", order: -10, rotation: 0.000d, width: 1.700d, x: 3.250d, y: -1.800d }
-		{ alpha: 82, height: 0.090d, image: "#72939A", order: -10, rotation: -16.390d, width: 1.772d, x: 4.950d, y: -2.050d }
-		{ alpha: 82, height: 0.090d, image: "#72939A", order: -10, rotation: 0.000d, width: 3.400d, x: 7.500d, y: -2.300d }
-		{ alpha: 82, height: 0.090d, image: "#72939A", order: -10, rotation: -35.218d, width: 2.081d, x: 4.950d, y: -4.100d }
-		{ alpha: 82, height: 0.090d, image: "#72939A", order: -10, rotation: 0.000d, width: 1.700d, x: 6.650d, y: -4.700d }
-		{ alpha: 82, height: 0.090d, image: "#72939A", order: -10, rotation: 0.000d, width: 1.700d, x: 8.350d, y: -4.700d }
-		{ alpha: 82, height: 0.090d, image: "#A88763", order: -10, rotation: 0.000d, width: 1.700d, x: -0.150d, y: 3.500d }
-		{ alpha: 82, height: 0.090d, image: "#A88763", order: -10, rotation: 0.000d, width: 1.700d, x: 1.550d, y: 3.500d }
-		{ alpha: 82, height: 0.090d, image: "#A88763", order: -10, rotation: 0.000d, width: 1.700d, x: 3.250d, y: 3.500d }
-		{ alpha: 82, height: 0.090d, image: "#A88763", order: -10, rotation: 0.000d, width: 1.700d, x: 4.950d, y: 3.500d }
-		{ alpha: 82, height: 0.090d, image: "#A88763", order: -10, rotation: 0.000d, width: 1.700d, x: 6.650d, y: 3.500d }
-		{ alpha: 82, height: 0.090d, image: "#A88763", order: -10, rotation: 0.000d, width: 1.700d, x: 8.350d, y: 3.500d }
-		{ alpha: 82, height: 0.090d, image: "#A88763", order: -10, rotation: 0.000d, width: 1.700d, x: 3.250d, y: 5.000d }
-		{ alpha: 82, height: 0.090d, image: "#63869B", order: -10, rotation: 0.000d, width: 1.700d, x: -0.150d, y: 7.000d }
-		{ alpha: 82, height: 0.090d, image: "#63869B", order: -10, rotation: 0.000d, width: 2.100d, x: 1.750d, y: 7.000d }
-		{ alpha: 82, height: 0.090d, image: "#63869B", order: -10, rotation: 90.000d, width: 1.200d, x: 0.700d, y: 6.400d }
-		{ alpha: 82, height: 0.090d, image: "#63869B", order: -10, rotation: 90.000d, width: 1.200d, x: 0.700d, y: 7.600d }
-		{ alpha: 82, height: 0.090d, image: "#8B729A", order: -10, rotation: 0.000d, width: 1.700d, x: 5.850d, y: 8.500d }
-		{ alpha: 82, height: 0.090d, image: "#8B729A", order: -10, rotation: 0.000d, width: 1.700d, x: 7.550d, y: 8.500d }
-		{ alpha: 82, height: 0.090d, image: "#8B729A", order: -10, rotation: 0.000d, width: 1.700d, x: 9.250d, y: 8.500d }
-		{ alpha: 82, height: 0.090d, image: "#A48B62", order: -10, rotation: 0.000d, width: 1.700d, x: 12.850d, y: 4.500d }
-		{ alpha: 82, height: 0.090d, image: "#A48B62", order: -10, rotation: 0.000d, width: 4.300d, x: 15.850d, y: 4.500d }
-		{ alpha: 82, height: 0.090d, image: "#8F8062", order: -10, rotation: -41.424d, width: 2.267d, x: 12.850d, y: -1.250d }
-		{ alpha: 82, height: 0.090d, image: "#8F8062", order: -10, rotation: 90.000d, width: 1.500d, x: 13.700d, y: -1.250d }
-		{ alpha: 82, height: 0.090d, image: "#8F8062", order: -10, rotation: 90.000d, width: 1.500d, x: 13.700d, y: 0.250d }
-		{ alpha: 82, height: 0.090d, image: "#8F8062", order: -10, rotation: -35.538d, width: 2.581d, x: 14.750d, y: 0.250d }
-		{ alpha: 72, height: 0.090d, image: "#9A7D72", order: -10, rotation: 0.000d, width: 1.500d, x: -11.250d, y: -1.500d }
-		{ alpha: 72, height: 0.090d, image: "#9A7D72", order: -10, rotation: -90.000d, width: 1.500d, x: -10.500d, y: -2.250d }
-		{ alpha: 72, height: 0.090d, image: "#9A7D72", order: -10, rotation: -90.000d, width: 1.500d, x: -10.500d, y: -3.750d }
-		{ alpha: 72, height: 0.090d, image: "#9A7D72", order: -10, rotation: 0.000d, width: 1.500d, x: -11.250d, y: 3.500d }
-		{ alpha: 72, height: 0.090d, image: "#9A7D72", order: -10, rotation: -33.690d, width: 1.803d, x: -9.750d, y: 3.000d }
-		{ alpha: 72, height: 0.090d, image: "#9A7D72", order: -10, rotation: 180.000d, width: 1.500d, x: -9.750d, y: -4.500d }
-		{ alpha: 72, height: 0.090d, image: "#9A7D72", order: -10, rotation: 21.801d, width: 2.693d, x: -7.250d, y: 0.500d }
-		{ alpha: 72, height: 0.090d, image: "#9A7D72", order: -10, rotation: -21.801d, width: 2.693d, x: -4.750d, y: 0.500d }
-		{ alpha: 72, height: 0.090d, image: "#9A7D72", order: -10, rotation: -75.964d, width: 2.062d, x: -6.250d, y: 2.000d }
-	]
 	quest_links: [ ]
 	quests: [
 		{
@@ -160,6 +103,7 @@
 			y: 0d
 		}
 		{
+			dependencies: ["22F45D3D9F44B470"]
 			description: ["Place any bed to accelerate the night. It does not change your permanent spawn."]
 			icon: "minecraft:red_bed"
 			id: "6B55D9B89DF28F61"
@@ -177,6 +121,7 @@
 			y: -1.5d
 		}
 		{
+			dependencies: ["6B55D9B89DF28F61"]
 			description: ["Set down a practical chest, barrel, crate, or cabinet. Keep supplies findable without turning storage into a gate."]
 			icon: "minecraft:barrel"
 			id: "560546FEC80B2A15"
@@ -194,6 +139,7 @@
 			y: -3d
 		}
 		{
+			dependencies: ["362B669D89D67FDF"]
 			description: ["Load a Food Pouch with at least two distinct foods. Its contents share temperature; the pouch does not preserve them."]
 			icon: "fiahi:food_pouch"
 			id: "7EB9E1A6C63979B4"
@@ -251,6 +197,7 @@
 			y: 3.5d
 		}
 		{
+			dependencies: ["E56C2F1521364C19"]
 			description: ["Build a campfire for cooking, supported boiling, and snow melting. Do not rely on it as universal warmth."]
 			icon: "minecraft:campfire"
 			id: "1C97BF5F8C421E36"
@@ -269,6 +216,7 @@
 			y: 3.5d
 		}
 		{
+			dependencies: ["1C97BF5F8C421E36"]
 			description: ["Let the water Curio consume a vanilla water-potion bottle. Prefer purity 3 and collect the returned empty bottle."]
 			icon: "minecraft:potion"
 			id: "1E25D9FE0D841B7F"
@@ -303,7 +251,6 @@
 		{
 			dependencies: ["4BE5D08190C37F98" "BDBF3C780B009CD9" "21673617A8A3C196" "0946CB91DEA2D512"]
 			description: ["Complete one renewable food route. A planted harvest, maintained animals, a Starcatcher catch, or transplanted forage is enough."]
-			hide_dependency_lines: true
 			icon: "minecraft:hay_block"
 			id: "0EA60205EE4E3808"
 			min_required_dependencies: 1
@@ -317,7 +264,7 @@
 		}
 		{
 			dependencies: ["4B3FCC1B9569023E" "0EA60205EE4E3808"]
-			description: ["Bring the first camp and one lasting food supply together. Treat this as guidance, not a recipe gate."]
+			description: ["Bring the first camp and one lasting food supply together. This milestone opens the established homestead routes."]
 			icon: "minecraft:bell"
 			id: "7FF2F274923CC05E"
 			rewards: [{ count: 2, id: "59B2D0D6E0683DA8", item: "createdeco:zinc_coin", type: "item" }]
@@ -361,6 +308,7 @@
 			y: -6.5d
 		}
 		{
+			dependencies: ["4BE5D08190C37F98"]
 			description: ["Grow and harvest a crop on pack-supported regolith farmland. Use the local ground instead of abandoning the site."]
 			icon: "minecraft:coarse_dirt"
 			id: "36E428FA17A94E0F"
@@ -377,6 +325,7 @@
 			y: -8d
 		}
 		{
+			dependencies: ["36E428FA17A94E0F"]
 			description: ["Make Organic Compost. Let it mature before working the ground."]
 			icon: "farmersdelight:organic_compost"
 			id: "075DE9AE725DE26C"
@@ -410,6 +359,7 @@
 			y: -8d
 		}
 		{
+			dependencies: ["5B3687AEFA829042"]
 			description: ["Gather cabbage, onion, tomato, and rice. Expand the field beyond staple crops."]
 			icon: "farmersdelight:rich_soil"
 			id: "005DC6BB3C38C675"
@@ -441,6 +391,7 @@
 			y: -8d
 		}
 		{
+			dependencies: ["0946CB91DEA2D512"]
 			description: ["Build a TConstruct Kama. Use it for compact field work."]
 			icon: "tconstruct:kama"
 			id: "087C2998D131A9A1"
@@ -457,6 +408,7 @@
 			y: -6.5d
 		}
 		{
+			dependencies: ["087C2998D131A9A1"]
 			description: ["Build a TConstruct Scythe. Use its wider cut on established fields."]
 			icon: "tconstruct:scythe"
 			id: "53C957328751BA80"
@@ -473,6 +425,7 @@
 			y: -6.5d
 		}
 		{
+			dependencies: ["005DC6BB3C38C675"]
 			description: ["Craft the Calendar from a Clock and eight paper. Read the season before committing a field."]
 			icon: "sereneseasons:calendar"
 			id: "62D46FA5AAAAB5B4"
@@ -489,6 +442,7 @@
 			y: -8d
 		}
 		{
+			dependencies: ["53C957328751BA80"]
 			description: ["Establish an underground growing plot below Y48. Use it when the surface season is wrong."]
 			icon: "minecraft:deepslate"
 			id: "7FB326F1F794CAC6"
@@ -522,6 +476,7 @@
 			y: -8d
 		}
 		{
+			dependencies: ["7FF2F274923CC05E"]
 			description: ["Carry a Thermometer and compare body temperature with world temperature. Respond to the reading that is actually dangerous."]
 			icon: "cold_sweat:thermometer"
 			id: "5A4C3626CCDC25FF"
@@ -538,6 +493,7 @@
 			y: -3.5d
 		}
 		{
+			dependencies: ["5A4C3626CCDC25FF"]
 			description: ["Place a Thermolith for an environmental reading. Use it to test shelter and climate equipment."]
 			icon: "cold_sweat:thermolith"
 			id: "273DEB4296EDE4CB"
@@ -554,6 +510,7 @@
 			y: -3.5d
 		}
 		{
+			dependencies: ["273DEB4296EDE4CB"]
 			description: ["Build the Sewing Table. Install insulation into clothing here."]
 			icon: "cold_sweat:sewing_table"
 			id: "65A5ED14755450E0"
@@ -589,6 +546,7 @@
 			y: -3.5d
 		}
 		{
+			dependencies: ["09B480EEAF34852D"]
 			description: ["Build a Boiler for local climate control. It also tempers food toward +25."]
 			icon: "cold_sweat:boiler"
 			id: "54E4A2E0C75C373A"
@@ -607,6 +565,7 @@
 			y: -4.7d
 		}
 		{
+			dependencies: ["289C8BE72849D453"]
 			description: ["Build an Icebox for local cooling. It tempers food toward -25."]
 			icon: "cold_sweat:icebox"
 			id: "6300F88A52BC5084"
@@ -625,6 +584,7 @@
 			y: -2.3d
 		}
 		{
+			dependencies: ["54E4A2E0C75C373A"]
 			description: ["Build a Smokestack for the Cold Sweat network. Route conditioned air into the occupied space."]
 			icon: "cold_sweat:smokestack"
 			id: "322A08AFA1F3C2C9"
@@ -660,6 +620,7 @@
 			y: -4.7d
 		}
 		{
+			dependencies: ["6300F88A52BC5084"]
 			description: ["Gather a Soulspring Lamp and Soul Sprout. The lamp works only in the Nether and uses the configured sprout fuel."]
 			icon: "cold_sweat:soulspring_lamp"
 			id: "3CBA7F8A6911486F"
@@ -683,6 +644,7 @@
 			y: -2.3d
 		}
 		{
+			dependencies: ["7FF2F274923CC05E"]
 			description: ["Make an empty or filled Cold Sweat waterskin. Use it only for thermal preparation."]
 			icon: "cold_sweat:waterskin"
 			id: "016657098A500286"
@@ -718,6 +680,7 @@
 			y: -1.8d
 		}
 		{
+			dependencies: ["7FF2F274923CC05E"]
 			description: ["Build a Cutting Board. Use it for deliberate ingredient preparation."]
 			icon: "farmersdelight:cutting_board"
 			id: "6FEE23E1323A04A4"
@@ -736,6 +699,7 @@
 			y: 3.5d
 		}
 		{
+			dependencies: ["6FEE23E1323A04A4"]
 			description: ["Build both a Stove and Cooking Pot. Turn varied ingredients into durable meals."]
 			icon: "farmersdelight:stove"
 			id: "6C8362C9595C865D"
@@ -759,6 +723,7 @@
 			y: 3.5d
 		}
 		{
+			dependencies: ["6C8362C9595C865D"]
 			description: ["Make a Skillet. Cook quick portions while the pot handles larger recipes."]
 			icon: "farmersdelight:skillet"
 			id: "27E443A98DCF5254"
@@ -775,6 +740,7 @@
 			y: 3.5d
 		}
 		{
+			dependencies: ["27E443A98DCF5254"]
 			description: ["Place any Farmer’s Delight cabinet. Keep the working kitchen stocked and readable."]
 			icon: "farmersdelight:oak_cabinet"
 			id: "2F050F3582CBB166"
@@ -794,6 +760,7 @@
 			y: 3.5d
 		}
 		{
+			dependencies: ["2F050F3582CBB166"]
 			description: ["Obtain the Food Book. Use it to see which foods still broaden the tracked diet."]
 			icon: "solcarrot:food_book"
 			id: "553CB6F08A320BA8"
@@ -827,7 +794,7 @@
 			y: 3.5d
 		}
 		{
-			dependencies: ["6C8362C9595C865D"]
+			dependencies: ["6C8362C9595C865D" "3778EF4D086DCD6C"]
 			description: ["Prepare and place a supported feast block. Serve a shared meal from the finished kitchen."]
 			icon: "farmersdelight:roast_chicken_block"
 			id: "D254D08257E1838C"
@@ -847,6 +814,7 @@
 			y: 3.5d
 		}
 		{
+			dependencies: ["6C8362C9595C865D"]
 			description: ["Build the Farmer’s Respite Kettle. Use it to begin deliberate drink brewing."]
 			icon: "farmersrespite:kettle"
 			id: "28D61A331C05F66A"
@@ -918,7 +886,7 @@
 			y: 5.8d
 		}
 		{
-			dependencies: ["040D5AF60D3E8E1C"]
+			dependencies: ["040D5AF60D3E8E1C" "58C2BCCE88B9B17A"]
 			description: ["Craft the Vanilla Bobber and crouch-right-click to select it. It is the exclusive route to vanilla fishing loot."]
 			icon: "starcatcher:vanilla_bobber"
 			id: "42B8D60CD4E5C020"
@@ -969,6 +937,7 @@
 			y: 7d
 		}
 		{
+			dependencies: ["7FF2F274923CC05E"]
 			description: ["Build a Keg. Start with clean ingredients and controlled storage."]
 			icon: "brewinandchewin:keg"
 			id: "601561FCB39975B6"
@@ -1004,7 +973,7 @@
 			y: 8.5d
 		}
 		{
-			dependencies: ["601561FCB39975B6"]
+			dependencies: ["601561FCB39975B6" "4CA91EE9310D1913"]
 			description: ["Build a Heating Cask and Ice Crate. Match fermentation temperature to the recipe."]
 			icon: "brewinandchewin:heating_cask"
 			id: "30B36A7A3C1AC1DE"
@@ -1026,6 +995,7 @@
 			y: 8.5d
 		}
 		{
+			dependencies: ["30B36A7A3C1AC1DE"]
 			description: ["Finish aging a cheese wheel. Take the fully aged result."]
 			icon: "brewinandchewin:flaxen_cheese_wheel"
 			id: "0B4392BCBAD44C78"
@@ -1044,6 +1014,7 @@
 			y: 8.5d
 		}
 		{
+			dependencies: ["7FF2F274923CC05E"]
 			description: ["Install any supported chimney. Give smoke and emissions a route out of occupied space."]
 			icon: "minecraft:bricks"
 			id: "2B09758DB1C8060F"
@@ -1082,6 +1053,7 @@
 			y: 4.5d
 		}
 		{
+			dependencies: ["7FF2F274923CC05E"]
 			description: ["Gather a framed cube and the saw, hammer, wrench, screwdriver, blueprint, and key. Use the kit to shape finishes without a catalogue quest."]
 			icon: "framedblocks:framed_hammer"
 			id: "9B6C167A50277704"
@@ -1200,6 +1172,7 @@
 			y: -0.5d
 		}
 		{
+			dependencies: ["4C62DF944D975D82"]
 			description: ["Build the distant Sand Filter when the workshop can support it. It is not part of First Camp."]
 			icon: "thirst:sand_filter"
 			id: "1DB9622E087CCF31"

@@ -1,23 +1,20 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
-	filename: "spine_fonts_occultism"
-	group: "61DE599F7F2FAFBD"
+	default_quest_shape: "circle"
+	filename: "fonts_and_pacts"
+	group: "A14C70F29B1D8E63"
 	icon: "hexerei:mixing_cauldron"
 	id: "483FCC6FA809E49C"
 	order_index: 30
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["Use Dimension Drink fonts as route surfaces: prepare the destination, its hazards, and the way home before drinking. The journey is the first proof in this tradition."]
+			description: ["Enter a Dimension Drink font and return from its expedition. The completed return proves that the route, its hazards, and the way home were handled."]
 			icon: "minecraft:written_book"
 			id: "D9E0FB4DE5F2E341"
+			rewards: [{ count: 2, id: "E700000000000030", item: "createdeco:copper_coin", type: "item" }]
 			shape: "diamond"
-			tasks: [			{
-				title: "Prepare and use a dimension font route"
-				id: "52C51393D069A825"
-				type: "checkmark"
-			}]
+			tasks: [{ criterion: "font_aggregate_return", id: "52C51393D069A825", type: "better_content_fixes:criterion" }]
 			title: "Dimension Font"
 			x: 0.0d
 			y: 0.0d
@@ -27,6 +24,7 @@
 			description: ["Build Hexerei's Mixing Cauldron and stage herbs, bottles, candles, and woods around it. Folk magic begins as place-bound preparation rather than portable spell power."]
 			icon: "hexerei:mixing_cauldron"
 			id: "3BD8898DC0688EF5"
+			rewards: [{ count: 2, id: "E700000000000031", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "hexerei:mixing_cauldron"
@@ -42,6 +40,7 @@
 			description: ["Establish a renewable mahogany supply beside the cauldron. Wood identity remains a real ingredient in folk magic rather than generic decoration."]
 			icon: "hexerei:mahogany_sapling"
 			id: "28909B649E0C281F"
+			rewards: [{ count: 2, id: "E700000000000032", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "hexerei:mahogany_sapling"
@@ -57,6 +56,7 @@
 			description: ["Make the Book of Shadows and use it as the working record for cauldron, broom, and ritual preparation. Keep this infrastructure near its real materials."]
 			icon: "hexerei:book_of_shadows"
 			id: "8FBDCDA786C5F030"
+			rewards: [{ count: 2, id: "E700000000000033", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "hexerei:book_of_shadows"
@@ -72,6 +72,7 @@
 			description: ["Craft the broom after its ritual materials and route are stable. This mobility is earned from folk-magic infrastructure, not granted as free flight."]
 			icon: "hexerei:mahogany_broom"
 			id: "966230984B22DEEF"
+			rewards: [{ count: 2, id: "E700000000000034", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "hexerei:mahogany_broom"
@@ -87,6 +88,7 @@
 			description: ["Mix Otherstone through Hexerei with Otherside matter and a reinforced slate. This recurring Occultism substrate is the boundary between folk practice and spirit pacts."]
 			icon: "occultism:otherstone"
 			id: "9F19D7DB4874F9EB"
+			rewards: [{ count: 3, id: "E700000000000035", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.15d
 			tasks: [			{
@@ -103,6 +105,7 @@
 			description: ["Craft the Dictionary of Spirits and read the ritual requirements before placing a circle. Occultism trades portable convenience for prepared sites and negotiated entities."]
 			icon: "occultism:dictionary_of_spirits"
 			id: "2F23ED4BB0D8DCDE"
+			rewards: [{ count: 2, id: "E700000000000036", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "occultism:dictionary_of_spirits"
@@ -118,6 +121,7 @@
 			description: ["Make the Golden Sacrificial Bowl and prepare a complete circle before summoning. Containment, ingredients, and the entity's role should all be decided before the pact begins."]
 			icon: "occultism:golden_sacrificial_bowl"
 			id: "8CA12F35053FD2F6"
+			rewards: [{ count: 1, id: "E700000000000037", item: "createdeco:industrial_iron_coin", type: "item" }]
 			shape: "octagon"
 			size: 1.15d
 			tasks: [			{
@@ -130,16 +134,79 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["3BD8898DC0688EF5"]
+			description: ["Prepare White Impure Chalk in Hexerei's cauldron from the four Font routes. This is correspondence work; Occultism still owns purification and use."]
+			icon: "occultism:chalk_white_impure"
+			id: "A201000000000001"
+			rewards: [{ count: 2, id: "A201000000000002", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "A201000000000003", item: "occultism:chalk_white_impure", type: "item" }]
+			title: "Impure White Chalk"
+			x: 9.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["A201000000000001"]
+			description: ["Purify White Chalk through Occultism's Spirit Fire. White is the universal base for the named binding tiers."]
+			icon: "occultism:chalk_white"
+			id: "A202000000000001"
+			rewards: [{ count: 2, id: "A202000000000002", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "A202000000000003", item: "occultism:chalk_white", type: "item" }]
+			title: "White Chalk"
+			x: 12.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["966230984B22DEEF" "A202000000000001"]
+			description: ["Prepare Gold Impure Chalk after the first binding work. Gold advances named binding and possession beyond the universal white base."]
+			icon: "occultism:chalk_gold_impure"
+			id: "A203000000000001"
+			rewards: [{ count: 3, id: "A203000000000002", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "A203000000000003", item: "occultism:chalk_gold_impure", type: "item" }]
+			title: "Impure Gold Chalk"
+			x: 15.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["A203000000000001"]
+			description: ["Prepare Purple Impure Chalk with the higher-dimensional proof required by Djinni and Afrit work. Keep its origin visible in the final material."]
+			icon: "occultism:chalk_purple_impure"
+			id: "A204000000000001"
+			rewards: [{ count: 3, id: "A204000000000002", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "A204000000000003", item: "occultism:chalk_purple_impure", type: "item" }]
+			title: "Impure Purple Chalk"
+			x: 18.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["A204000000000001"]
+			description: ["Earn Afrit Essence through the higher spirit ladder. It is the named proof consumed by the final red preparation."]
+			icon: "occultism:afrit_essence"
+			id: "A205000000000001"
+			rewards: [{ count: 1, id: "A205000000000002", item: "createdeco:industrial_iron_coin", type: "item" }]
+			tasks: [{ id: "A205000000000003", item: "occultism:afrit_essence", type: "item" }]
+			title: "Afrit Essence"
+			x: 21.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["A205000000000001"]
+			description: ["Prepare Red Impure Chalk in lava with Afrit Essence. This is the physical preparation for Marid-grade work, not the pact itself."]
+			icon: "occultism:chalk_red_impure"
+			id: "A206000000000001"
+			rewards: [{ count: 1, id: "A206000000000002", item: "createdeco:industrial_iron_coin", type: "item" }]
+			tasks: [{ id: "A206000000000003", item: "occultism:chalk_red_impure", type: "item" }]
+			title: "Impure Red Chalk"
+			x: 24.0d
+			y: 2.5d
+		}
+		{
 			dependencies: ["966230984B22DEEF"]
 			description: ["Hexerei originates Break, Cold Snap, Conjure Water, Craft, Crush, Cut, Evaporate, Fell, Freeze, Grow, Harvest, Ignite, Infuse, Interact, Light, Place Block, Redstone Signal, Rotate, Smelt, Summon Steed, Summon Wolves, Bubble Shield, Conjure Terrain, Envenom, Poison Spores, Watery Grave, Dispel, Fortune, Name, Phantom Block, Charm, Spark, and Discharge. Ars inscription is optional formal mastery."]
 			icon: "ars_nouveau:glyph_grow"
 			id: "A101000000000001"
+			rewards: [{ count: 3, id: "E700000000000038", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
-			tasks: [			{
-				title: "Review Hexerei's formal vocabulary"
-				id: "A101000000000002"
-				type: "checkmark"
-			}]
+			tasks: [{ id: "A101000000000002", item: "ars_nouveau:glyph_grow", type: "item" }]
 			title: "Formalize Correspondence"
 			x: 12.0d
 			y: -5.0d
@@ -149,17 +216,14 @@
 			description: ["Occultism originates Blink, Ender Inventory, Exchange, Extract, Intangible, Invisibility, Name, Phantom Block, Pickup, Sense Magic, Fortune, Dispel, Pull, Snare, Summon Decoy, Wall, Charm, Phantom Grasp, and Life Link. Ars turns observed identity, binding, and displacement into reusable operations."]
 			icon: "ars_nouveau:glyph_blink"
 			id: "A102000000000001"
+			rewards: [{ count: 3, id: "E700000000000039", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
-			tasks: [			{
-				title: "Review Occultism's formal vocabulary"
-				id: "A102000000000002"
-				type: "checkmark"
-			}]
+			tasks: [{ id: "A102000000000002", item: "ars_nouveau:glyph_blink", type: "item" }]
 			title: "Formalize Binding"
 			x: 18.0d
 			y: -5.0d
 		}
 
 	]
-	title: "Magic Spine — Fonts Into Pacts"
+	title: "Fonts Into Pacts"
 }

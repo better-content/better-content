@@ -203,7 +203,7 @@
 			y: -2.6d
 		}
 		{
-			dependencies: ["062784D648C215EE" "4F30B2B217B195D1"]
+			dependencies: ["7838A4605E6A8E08" "062784D648C215EE" "4F30B2B217B195D1"]
 			description: ["Build and repair a small TConstruct tool other than the primitive Hand Axe. Its functional head or blade controls the main behavior; repair it with that part’s matching material."]
 			icon: "minecraft:grindstone"
 			id: "01241F25B8A10387"

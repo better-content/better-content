@@ -16,11 +16,13 @@ Dependencies encode literal recipe, action, or capability requirements. Narrativ
 
 Use the smallest chapter set that gives the route a readable identity. A chapter should describe one coherent phase, system, or reference collection rather than becoming a miscellaneous holding area.
 
+Every live chapter group must contain at least one live chapter. Keep categories for unfinished or stored chapters out of `chapter_groups.snbt` until those chapters are promoted into the runtime book.
+
 - Guidance chapters teach an active play phase through a readable graph.
 - Overview chapters use native FTB quest links to summarize milestones owned elsewhere. Linked milestones do not duplicate tasks or rewards.
 - Completionist chapters are exhaustive reference collections. Their layout may be denser, but every entry still needs an automatic, semantically correct task and a distinct icon.
 - Hidden technical quests may anchor integration state, but they do not appear as player-facing progression.
-- Unfinished or retired chapters belong under non-runtime `config/ftbquests/quest-storage/chapters/`; they must never be reachable through normal visibility or reveal overrides.
+- Do not keep retired guided chapters beside the live book. Delete obsolete drafts once every retained milestone has an authoritative live home; any temporary non-runtime draft must remain outside `config/ftbquests/quests/` and outside reveal overrides.
 
 `Landmarks` is the model for an overview chapter: compact, always visible, and composed mainly of native links. It shows the early route without becoming a mandatory spine or duplicating completion state.
 
@@ -43,10 +45,10 @@ Design the graph before polishing prose. A valid quest file can still be a bad m
 - Attach specialist routes as coherent lanes or constellations with their own local direction.
 - Use shared horizontal or vertical alignment as a visual grammar, not arbitrary coordinates.
 - Keep related equipment and actions near one another. Do not scatter a recipe chain merely to fill empty space.
-- Use guide rails or restrained chapter images only when they materially clarify a large graph; they must support real dependencies rather than disguise a disconnected layout.
-- Hide an individual dependency line only when it would cross a cluster or obscure the map. The dependency itself must remain real.
+- Never use chapter images, colored rectangles, or other artwork as quest connectors. Every line that appears to connect two nodes must be a native FTB dependency edge.
+- Keep dependency lines visible in player-facing chapters. Resolve crossings by removing redundant dependencies or moving nodes, not by hiding real edges.
 
-For a large hub chapter such as Homesteading, establish a practical central route and organize optional systems into named visual districts. Connect each district internally, give it a visible relationship to the hub, and avoid turning the chapter into one giant dependency web.
+For a large hub chapter such as Homesteading, establish a practical central route and organize optional systems into named visual districts. Connect each district with direct dependencies where progression is real, leave genuinely independent routes visibly independent, and avoid implying causality with a decorative bus.
 
 ### Shapes and Scale
 
@@ -139,7 +141,7 @@ Review the book as a player-facing map, not only as SNBT.
 For every changed chapter:
 
 1. Confirm the entry, trunk, branches, junctions, and capstones are visually legible.
-2. Trace every visible line and justify it as a literal requirement.
+2. Trace every visible line and justify it as a literal requirement; confirm that no chapter image resembles a connector.
 3. Inspect every icon as rendered, including linked nodes and unusual NBT-backed items.
 4. Read every title and description at normal UI scale.
 5. Check that automatic tasks prove the stated action and reject component piles or lookalike items.
@@ -147,6 +149,20 @@ For every changed chapter:
 7. Confirm archived chapters remain outside the runtime chapter directory.
 
 The supported pack evaluation remains `./smoke.sh`. It must confirm server readiness, client join, FTB chapter loading, JEI/EMI startup, and absence of fatal registration or mixin errors. Visual authoring review complements that runtime test; it does not replace it.
+
+## Interaction Contract
+
+A quest is an interface between player intent, observable game state, and pack implementation. Keep those three layers explicit whenever a quest is proposed or revised:
+
+1. **Player contract:** name the action or capability the player is being taught and what completion promises.
+2. **Detection contract:** identify the exact item task, predicate, criterion, event, dependency aggregate, or exceptional manual check that proves it.
+3. **Implementation contract:** identify the recipe, tag, script, configuration, or custom-mod behavior that makes the text and detection true.
+
+When one layer cannot be identified, the quest is not ready for runtime authoring. Advice may remain prose, but prose must not be converted into a dependency or completion condition merely to make the graph look connected.
+
+Changes that cross these layers must remain synchronized. A recipe or event change requires review of its task and wording; a task change requires review of dependencies, links, reveal behavior, and rewards; an ID change requires review of every reference to that ID. Native links and technical anchors are references to authoritative state, not copies of it.
+
+For agent-to-agent or agent-to-maintainer handoff, describe behavior rather than only filenames. State the intended action, proof mechanism, literal prerequisites, visibility transition, reward ownership, affected stable IDs, and any runtime integration outside the quest tree. Call out assumptions and unresolved in-game visual checks explicitly so the next author does not have to reconstruct intent from SNBT.
 
 ## Maintenance
 

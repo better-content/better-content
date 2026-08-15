@@ -1,239 +1,19 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
-	filename: "spine_pressure_control"
-	group: "61DE599F7F2FAFBD"
+	default_quest_shape: "circle"
+	filename: "control_and_intelligence"
+	group: "2DFE3653F3B634B9"
 	icon: "pneumaticcraft:pressure_chamber_valve"
 	id: "77BB41FEB659E52C"
 	order_index: 20
-	quest_links: [ ]
+	quest_links: [{ id: "D34C8B7A2105F69E", linked_quest: "1D88EAD05EC7472F", x: -3d, y: 0d }]
 	quests: [
 		{
-			description: ["Wash carbon and sulfur and combine them with fermented ethanol to make a Pressure Seal. The seal is the chemistry bootstrap, not permission to store loose gas."]
-			icon: "kubejs:pressure_seal"
-			id: "BCD4EFE8E5190AF8"
-			shape: "diamond"
-			tasks: [			{
-				item: "kubejs:pressure_seal"
-				id: "A432C2E09CA4B45D"
-				type: "item"
-			}]
-			title: "Pressure Seal"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["BCD4EFE8E5190AF8"]
-			description: ["Press compressed iron through the intended manufacturing route. It is structural preparation for pressure machines, not proof that air is already solved."]
-			icon: "pneumaticcraft:ingot_iron_compressed"
-			id: "4FB3950ABA87B3CC"
-			shape: "rsquare"
-			tasks: [			{
-				item: "pneumaticcraft:ingot_iron_compressed"
-				id: "69B384F7108820C2"
-				type: "item"
-			}]
-			title: "Compressed Iron"
-			x: 3.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["4FB3950ABA87B3CC"]
-			description: ["Lay pressure tubes where their route can be inspected. Air becomes dependable only when supply, consumers, and relief paths are visible."]
-			icon: "pneumaticcraft:pressure_tube"
-			id: "4FABB00C94B34A78"
-			shape: "rsquare"
-			tasks: [			{
-				item: "pneumaticcraft:pressure_tube"
-				id: "81C5DE8B58BE3A26"
-				type: "item"
-			}]
-			title: "Pressure Tube"
-			x: 6.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["4FABB00C94B34A78"]
-			description: ["Install a gauge before trusting the network. Reading pressure turns experiments into machines you can operate safely and repeatedly."]
-			icon: "pneumaticcraft:pressure_gauge"
-			id: "071B4F508DA25924"
-			shape: "rsquare"
-			tasks: [			{
-				item: "pneumaticcraft:pressure_gauge"
-				id: "CF2E7FC739FD0934"
-				type: "item"
-			}]
-			title: "Pressure Gauge"
-			x: 9.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["071B4F508DA25924"]
-			description: ["Feed the Rotational Compressor from the governed Create workshop. This is the normal-air bootstrap; alternate engines remain later return paths."]
-			icon: "compressedcreativity:rotational_compressor"
-			id: "C6EF971CD997CC12"
-			shape: "rsquare"
-			tasks: [			{
-				item: "compressedcreativity:rotational_compressor"
-				id: "D935E7B569E029C5"
-				type: "item"
-			}]
-			title: "Compressor"
-			x: 12.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["C6EF971CD997CC12"]
-			description: ["Load real fuel into the firebox and treat heat as conserved process input. Thermal machines should expose their fuel and temperature state."]
-			icon: "heat_sync:thermal_firebox"
-			id: "95EC50A2836C0E7E"
-			shape: "rsquare"
-			tasks: [			{
-				item: "heat_sync:thermal_firebox"
-				id: "9B2F674B593F1B40"
-				type: "item"
-			}]
-			title: "Thermal Firebox"
-			x: 15.0d
-			y: -2.4d
-		}
-		{
-			dependencies: ["C6EF971CD997CC12"]
-			description: ["Build the Airtight Machine Casing from brass machinery, pressure hardware, and seals. Only this tier makes deliberate gas capture and sealed processing legitimate."]
-			icon: "kubejs:airtight_machine_casing"
-			id: "6E321C8FF7056158"
-			shape: "hexagon"
-			size: 1.2d
-			tasks: [			{
-				item: "kubejs:airtight_machine_casing"
-				id: "FFEC9F0DE30B53D9"
-				type: "item"
-			}]
-			title: "Airtight Tier"
-			x: 15.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["6E321C8FF7056158"]
-			description: ["Cross the Airtight threshold with sealed cells, capture hardware, and tanks. Before this point loose gas is hazardous and cannot become stored inventory."]
-			icon: "latent_chemlib:gas_capture"
-			id: "19822084B691D146"
-			shape: "rsquare"
-			tasks: [			{
-				item: "latent_chemlib:sealed_chemical_cell"
-				id: "5C8602C1319149D0"
-				type: "item"
-			}
-			{
-				item: "latent_chemlib:gas_capture"
-				id: "C6DA74018A43238F"
-				type: "item"
-			}
-			{
-				item: "latent_chemlib:gas_tank"
-				id: "8F9E52333AD46508"
-				type: "item"
-			}]
-			title: "Gas Containment"
-			x: 18.0d
-			y: -2.4d
-		}
-		{
-			dependencies: ["6E321C8FF7056158"]
-			description: ["Build a Pressure Chamber with a working valve and safe pressure supply. It becomes the authority for sealed materials, compressed parts, and boundary assemblies."]
-			icon: "pneumaticcraft:pressure_chamber_valve"
-			id: "66C5DB283C12B670"
-			shape: "rsquare"
-			tasks: [			{
-				item: "pneumaticcraft:pressure_chamber_valve"
-				id: "0CD93BED10B8EC9C"
-				type: "item"
-			}]
-			title: "Pressure Chamber"
-			x: 18.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["66C5DB283C12B670"]
-			description: ["Make plastic beside the pressure chamber. It is the material bridge from sealed processing into boards and durable control components."]
-			icon: "pneumaticcraft:plastic"
-			id: "F1EE621160E045C9"
-			shape: "rsquare"
-			tasks: [			{
-				item: "pneumaticcraft:plastic"
-				id: "1CE8E259E3CA36A1"
-				type: "item"
-			}]
-			title: "Plastic"
-			x: 21.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["F1EE621160E045C9"]
-			description: ["Use the design table to plan circuits without skipping board manufacture. Keep design, substrate, and assembly as distinct visible steps."]
-			icon: "powergrid:circuit_design_table"
-			id: "C66CB7BCB38A4729"
-			shape: "rsquare"
-			tasks: [			{
-				item: "powergrid:circuit_design_table"
-				id: "5393F9601F181B39"
-				type: "item"
-			}]
-			title: "Circuit Design"
-			x: 24.0d
-			y: -2.4d
-		}
-		{
-			dependencies: ["F1EE621160E045C9"]
-			description: ["Prepare an unassembled board after plastic and etching materials are stable. This is a checkpoint before the finished PCB, not the result."]
-			icon: "pneumaticcraft:unassembled_pcb"
-			id: "4ADA3A6BA00CA52B"
-			shape: "rsquare"
-			tasks: [			{
-				item: "pneumaticcraft:unassembled_pcb"
-				id: "BC9AADAD783ED8CD"
-				type: "item"
-			}]
-			title: "Blank PCB"
-			x: 24.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["4ADA3A6BA00CA52B", "C66CB7BCB38A4729"]
-			description: ["Finish Printed Circuit Boards with PneumaticCraft assembly. Earlier benches and chemistry may prepare traces and wafers, but completed circuits belong to this surface."]
-			icon: "pneumaticcraft:printed_circuit_board"
-			id: "A6CB2513CBA0D945"
-			shape: "rsquare"
-			tasks: [			{
-				item: "pneumaticcraft:printed_circuit_board"
-				id: "8FDFE32DDC04F60E"
-				type: "item"
-			}]
-			title: "Printed Boards"
-			x: 27.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["A6CB2513CBA0D945"]
-			description: ["Assemble the Electrical Machine Casing from pressure, circuit, Power Grid, and OC2R proofs. This is the shared control tier rather than a generic era token."]
-			icon: "kubejs:electrical_machine_casing"
-			id: "B6546E45D2093AFB"
-			shape: "hexagon"
-			size: 1.2d
-			tasks: [			{
-				item: "kubejs:electrical_machine_casing"
-				id: "56DD5FE0DA42CDDA"
-				type: "item"
-			}]
-			title: "Electrical Tier"
-			x: 30.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["A6CB2513CBA0D945"]
+			dependencies: ["1D88EAD05EC7472F"]
 			description: ["Lay out controller, platform, and import or export flow as one compact workcell. Repeated precision jobs need a readable material path."]
 			icon: "pneumaticcraft:assembly_controller"
 			id: "1777EDF577F84994"
+			rewards: [{ count: 2, id: "E700000000000001", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "pneumaticcraft:assembly_controller"
@@ -245,25 +25,11 @@
 			y: 2.4d
 		}
 		{
-			dependencies: ["B6546E45D2093AFB"]
-			description: ["Convert normal PNCR air into the pack's first Forge Energy. Printed boards and electrical casing keep power downstream of working pressure control."]
-			icon: "pneumaticcraft:pneumatic_dynamo"
-			id: "0423B5BF607BC331"
-			shape: "rsquare"
-			tasks: [			{
-				item: "pneumaticcraft:pneumatic_dynamo"
-				id: "EF6343CF61034B83"
-				type: "item"
-			}]
-			title: "First FE"
-			x: 33.0d
-			y: 0.0d
-		}
-		{
 			dependencies: ["1777EDF577F84994"]
 			description: ["Add the laser for precision work that does not belong on a crafting table. Keep its inputs beside the rest of the assembly cell."]
 			icon: "pneumaticcraft:assembly_laser"
 			id: "9838EE5C68620C36"
+			rewards: [{ count: 2, id: "E700000000000002", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "pneumaticcraft:assembly_laser"
@@ -275,22 +41,18 @@
 			y: 2.4d
 		}
 		{
-			dependencies: ["0423B5BF607BC331"]
-			description: ["Build a Power Grid battery and redstone relay. Treat electricity as measured infrastructure with storage and switching, not as invisible recipe tax."]
-			icon: "powergrid:battery"
+			dependencies: ["9838EE5C68620C36"]
+			description: ["Add a Power Grid Redstone Relay after the battery route. Treat electricity as measured infrastructure with storage and switching, not as an invisible recipe tax."]
+			icon: "powergrid:redstone_relay"
 			id: "3A26B7BE6BF2D71F"
+			rewards: [{ count: 2, id: "E700000000000003", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
-				item: "powergrid:battery"
-				id: "CD3B3EB964CB534C"
-				type: "item"
-			}
-			{
 				item: "powergrid:redstone_relay"
 				id: "B3FC1D86DBF2A422"
 				type: "item"
 			}]
-			title: "Power Storage"
+			title: "Switch the Current"
 			x: 36.0d
 			y: 0.0d
 		}
@@ -299,6 +61,7 @@
 			description: ["Add the drill so machined parts remain part of the industrial board route rather than appearing as hand-finished components."]
 			icon: "pneumaticcraft:assembly_drill"
 			id: "15B31665748CE617"
+			rewards: [{ count: 2, id: "E700000000000004", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "pneumaticcraft:assembly_drill"
@@ -314,6 +77,7 @@
 			description: ["Build an OC2R computer after the circuit chain is stable. Use it for intersite information and coordination while trains and physical logistics still move matter."]
 			icon: "oc2r:computer"
 			id: "00FA05D93A3834DE"
+			rewards: [{ count: 2, id: "E700000000000005", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "oc2r:computer"
@@ -329,6 +93,7 @@
 			description: ["Build a drone only after boards and assembly are repeatable. Give it a clear route, power source, and bounded job before deployment."]
 			icon: "pneumaticcraft:drone"
 			id: "24118FB617CFB1B1"
+			rewards: [{ count: 2, id: "E700000000000006", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "pneumaticcraft:drone"
@@ -344,6 +109,7 @@
 			description: ["Extend an already-readable control network with wireless signals. It coordinates distant sites without teleporting their physical inventories."]
 			icon: "oc2r_wireless_pubsub:wireless_card"
 			id: "C7EA4BEA0E6D09D5"
+			rewards: [{ count: 2, id: "E700000000000007", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "oc2r_wireless_pubsub:wireless_card"
@@ -359,6 +125,7 @@
 			description: ["Build the Space Machine Casing when oxygen, launch hardware, and long supply lines can be manufactured reliably. A rocket route needs a return plan, not one lucky launch."]
 			icon: "kubejs:space_machine_casing"
 			id: "BFA97293ADC65C6A"
+			rewards: [{ count: 3, id: "E700000000000008", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.2d
 			tasks: [			{
@@ -375,6 +142,7 @@
 			description: ["Program controlled labor beside the machines that make and charge it. Keeping the control stack together makes faults easier to trace."]
 			icon: "pneumaticcraft:programmer"
 			id: "3B749C5D3D6FBFD4"
+			rewards: [{ count: 2, id: "E700000000000009", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "pneumaticcraft:programmer"
@@ -390,6 +158,7 @@
 			description: ["Build the recorder from the established Create and control stack. Launch systems extend manufacturing rather than becoming a disconnected minigame."]
 			icon: "creatingspace:flight_recorder"
 			id: "F612A527168CF3C0"
+			rewards: [{ count: 2, id: "E70000000000000A", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "creatingspace:flight_recorder"
@@ -405,6 +174,7 @@
 			description: ["Bring Sky Stone home through the intended exploration route. AE2 begins with recovered material and logistics rather than bench crafting alone."]
 			icon: "ae2:sky_stone_block"
 			id: "C8A0DD37972550F1"
+			rewards: [{ count: 2, id: "E70000000000000B", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "ae2:sky_stone_block"
@@ -420,6 +190,7 @@
 			description: ["Use security hardware to make doors, routes, and machine authority explicit. The lane is about readable control as much as production."]
 			icon: "pneumaticcraft:security_station"
 			id: "DD3BE3A300618D77"
+			rewards: [{ count: 2, id: "E70000000000000C", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "pneumaticcraft:security_station"
@@ -435,6 +206,7 @@
 			description: ["Industrialize oxygen before trusting launch travel. Space survival needs a repeatable supply chain rather than hand-waved preparation."]
 			icon: "creatingspace:air_liquefier"
 			id: "169E0C5FC13945D3"
+			rewards: [{ count: 2, id: "E70000000000000D", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "creatingspace:air_liquefier"
@@ -450,6 +222,7 @@
 			description: ["Prepare Fluix as a distinct network material after the space route is open. Keep it near the processor line that will consume it."]
 			icon: "ae2:fluix_crystal"
 			id: "F4876544D0F52445"
+			rewards: [{ count: 2, id: "E70000000000000E", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "ae2:fluix_crystal"
@@ -465,6 +238,7 @@
 			description: ["Apply sealed gas hardware and printed control to active flight. Gas crafters, copter bearings, and solvers make stabilization a real control problem."]
 			icon: "vs_clockwork:gas_crafter"
 			id: "002C11FA2F2686A7"
+			rewards: [{ count: 2, id: "E70000000000000F", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "vs_clockwork:gas_crafter"
@@ -490,6 +264,7 @@
 			description: ["Build the high-energy reaction chamber only after ordinary containment and Space manufacture. It is a controlled chemistry system, not a reactor power ladder."]
 			icon: "latent_chemlib:gas_reaction_chamber"
 			id: "98FFCEFB58C6915D"
+			rewards: [{ count: 2, id: "E700000000000010", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "latent_chemlib:gas_reaction_chamber"
@@ -505,6 +280,7 @@
 			description: ["Build the Inscriber so processors become a manufacturing chain. Organize presses, silicon, printed parts, and finished processors together."]
 			icon: "ae2:inscriber"
 			id: "7B321E28F39A0731"
+			rewards: [{ count: 2, id: "E700000000000011", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "ae2:inscriber"
@@ -520,6 +296,7 @@
 			description: ["Produce both logic and engineering processors before the controller. Local storage should begin from a prepared factory, not a recipe surprise."]
 			icon: "ae2:engineering_processor"
 			id: "35010E33AC4388FB"
+			rewards: [{ count: 2, id: "E700000000000012", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "ae2:logic_processor"
@@ -540,6 +317,7 @@
 			description: ["Build an AE2 Controller only after processors, pressure, and launch-scale logistics are solved. AE2 sharpens one site; it does not replace intersite transport."]
 			icon: "ae2:controller"
 			id: "9F53980A2B3C5E65"
+			rewards: [{ count: 2, id: "E700000000000013", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "ae2:controller"
@@ -555,6 +333,7 @@
 			description: ["Stabilize Raw Impossible Casing with AE2 processors and final Blood Magic proof. This closes the structural machine ladder and opens explicitly post-AE2 work."]
 			icon: "kubejs:impossible_machine_casing"
 			id: "FC1F01695F00ABD5"
+			rewards: [{ count: 1, id: "E700000000000014", item: "createdeco:industrial_iron_coin", type: "item" }]
 			shape: "octagon"
 			size: 1.2d
 			tasks: [			{
@@ -573,5 +352,5 @@
 		}
 
 	]
-	title: "Tech Spine — Pressure Into Control"
+	title: "Control And Intelligence"
 }

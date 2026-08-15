@@ -5,10 +5,6 @@
 	group: "65CC8BE9C7D2A5C0"
 	id: "2432CAA2B38B2AB2"
 	order_index: 0
-	images: [
-		{ alpha: 80, height: 0.090d, image: "#8C7770", order: -10, rotation: 0.000d, width: 7.200d, x: -2.900d, y: 3.000d }
-		{ alpha: 64, height: 0.080d, image: "#756F69", order: -20, rotation: 0.000d, width: 5.800d, x: -3.600d, y: 1.800d }
-	]
 	quest_links: [ ]
 	quests: [
 		{
@@ -147,7 +143,7 @@
 			y: 0d
 		}
 		{
-			dependencies: ["05DC6A6B1F48DEE6"]
+			dependencies: ["3DB748B4699DA8BA" "05DC6A6B1F48DEE6"]
 			description: ["Build a TConstruct tool containing a metal functional part. A metal-looking trim or handle alone does not count."]
 			icon: "everythingcopper:copper_pickaxe"
 			id: "1B7CF4C8F5700C7F"
@@ -180,12 +176,11 @@
 			]
 			title: "Casting Basin"
 			x: -6.5d
-			y: 3d
+			y: 4.5d
 		}
 		{
 			dependencies: ["31A654FD64110D60"]
 			description: ["Build the Smeltery Controller. Leave room for the complete multiblock."]
-			hide_dependency_lines: true
 			icon: "tconstruct:smeltery_controller"
 			id: "76A14A4FC472B8B9"
 			rewards: [{ count: 2, id: "3C6682B7E663E79E", item: "createdeco:copper_coin", type: "item" }]
@@ -199,13 +194,12 @@
 			}
 			]
 			title: "Smeltery Controller"
-			x: -4.7d
-			y: 3d
+			x: -4.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["197680D179F3BC0B"]
 			description: ["Obtain a Seared Fuel Tank. A copy earned earlier still satisfies this component."]
-			hide_dependency_lines: true
 			icon: "tconstruct:seared_fuel_tank"
 			id: "31BB16F3451FABAB"
 			rewards: [{ count: 2, id: "7ED8CFAFAA3FC6FC", item: "createdeco:copper_coin", type: "item" }]
@@ -217,13 +211,12 @@
 			}
 			]
 			title: "Fuel Tank"
-			x: -3d
-			y: 3d
+			x: -8.5d
+			y: 6.5d
 		}
 		{
 			dependencies: ["31A654FD64110D60"]
 			description: ["Build a Seared Drain. Route molten material to accessible casting surfaces."]
-			hide_dependency_lines: true
 			icon: "tconstruct:seared_drain"
 			id: "6A4C20E2414CB66C"
 			rewards: [{ count: 2, id: "2412A314E85F99B3", item: "createdeco:copper_coin", type: "item" }]
@@ -235,13 +228,12 @@
 			}
 			]
 			title: "Drain"
-			x: -1.3d
-			y: 3d
+			x: -4.5d
+			y: 6.5d
 		}
 		{
-			dependencies: ["4950DF3BF2929E70" "76A14A4FC472B8B9" "31BB16F3451FABAB" "6A4C20E2414CB66C"]
+			dependencies: ["1B7CF4C8F5700C7F" "4950DF3BF2929E70" "76A14A4FC472B8B9" "31BB16F3451FABAB" "6A4C20E2414CB66C"]
 			description: ["Form a valid Smeltery with controller, fuel tank, drain, and basin access. A loose component pile does not count."]
-			hide_dependency_lines: true
 			icon: "tconstruct:mighty_smelting"
 			id: "76D4FB5757FB9A04"
 			rewards: [{ count: 4, id: "7A84E740FC887A55", item: "createdeco:copper_coin", type: "item" }]
@@ -255,8 +247,8 @@
 			}
 			]
 			title: "Working Smeltery"
-			x: 0.7d
-			y: 3d
+			x: -1d
+			y: 5.5d
 		}
 		{
 			dependencies: ["76D4FB5757FB9A04"]
@@ -274,8 +266,8 @@
 			}
 			]
 			title: "First Brass"
-			x: 3d
-			y: 3d
+			x: 1.5d
+			y: 5.5d
 		}
 		{
 			dependencies: ["50569DFA5E6FCC89"]
@@ -297,7 +289,6 @@
 		{
 			dependencies: ["31A654FD64110D60"]
 			description: ["Add a Seared Channel for wider routing. A nearby Seared Lantern can light the work as flavor."]
-			hide_dependency_lines: true
 			icon: "tconstruct:seared_channel"
 			id: "4D348F53A50EE090"
 			rewards: [{ count: 2, id: "5EBEE5E1A6B75891", item: "createdeco:copper_coin", type: "item" }]
@@ -309,11 +300,11 @@
 			}
 			]
 			title: "Channel"
-			x: -4.7d
-			y: 1.8d
+			x: -4d
+			y: 2.5d
 		}
 		{
-			dependencies: ["6A4C20E2414CB66C"]
+			dependencies: ["4D348F53A50EE090"]
 			description: ["Build both a Seared Duct and Chute. Move fluids and items through the foundry deliberately."]
 			icon: "tconstruct:seared_duct"
 			id: "672D9E1250AEEB89"
@@ -331,13 +322,12 @@
 			}
 			]
 			title: "Transfer"
-			x: -2.7d
-			y: 1.8d
+			x: -2d
+			y: 2.5d
 		}
 		{
-			dependencies: ["31A654FD64110D60"]
+			dependencies: ["672D9E1250AEEB89"]
 			description: ["Build a Seared Ingot Tank and Ingot Gauge. Store and read small molten batches."]
-			hide_dependency_lines: true
 			icon: "tconstruct:seared_ingot_tank"
 			id: "074577C9497A56BE"
 			rewards: [{ count: 2, id: "6A783D94B5A5DBD3", item: "createdeco:copper_coin", type: "item" }]
@@ -354,8 +344,8 @@
 			}
 			]
 			title: "Ingot Storage"
-			x: -0.7d
-			y: 1.8d
+			x: 0d
+			y: 2.5d
 		}
 	]
 	title: "Metal Tools"

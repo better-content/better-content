@@ -5,16 +5,6 @@
 	group: "65CC8BE9C7D2A5C0"
 	id: "22C924409EB64F2C"
 	order_index: 1
-	images: [
-		{ alpha: 86, height: 0.090d, image: "#8D8174", order: -10, rotation: 0.000d, width: 2.000d, x: -9.500d, y: 1.500d }
-		{ alpha: 86, height: 0.090d, image: "#8D8174", order: -10, rotation: -14.036d, width: 2.062d, x: -7.500d, y: 1.250d }
-		{ alpha: 86, height: 0.090d, image: "#8D8174", order: -10, rotation: 11.310d, width: 2.550d, x: -5.250d, y: 1.250d }
-		{ alpha: 86, height: 0.090d, image: "#728A8F", order: -10, rotation: 36.870d, width: 2.500d, x: -9.500d, y: 2.250d }
-		{ alpha: 86, height: 0.090d, image: "#728A8F", order: -10, rotation: 0.000d, width: 2.000d, x: -7.500d, y: 3.000d }
-		{ alpha: 86, height: 0.090d, image: "#728A8F", order: -10, rotation: 11.310d, width: 2.550d, x: -5.250d, y: 3.250d }
-		{ alpha: 86, height: 0.090d, image: "#8D8174", order: -10, rotation: 0.000d, width: 2.000d, x: -1.000d, y: 1.500d }
-		{ alpha: 86, height: 0.090d, image: "#728A8F", order: -10, rotation: 0.000d, width: 2.000d, x: -1.000d, y: 3.500d }
-	]
 	quest_links: [ ]
 	quests: [
 		{
@@ -48,8 +38,8 @@
 			}
 			]
 			title: "Shafts"
-			x: -10.5d
-			y: -1d
+			x: -10d
+			y: 0d
 		}
 		{
 			dependencies: ["54F7FA3700E06569"]
@@ -65,10 +55,11 @@
 			}
 			]
 			title: "Cogwheels"
-			x: -9d
-			y: -1d
+			x: -8d
+			y: -1.5d
 		}
 		{
+			dependencies: ["76EBFFD338A56122"]
 			description: ["Make a Mechanical Belt from dried kelp. Use it to link separated stations cleanly."]
 			icon: "create:belt_connector"
 			id: "3E1F3C4E42C3D164"
@@ -81,8 +72,8 @@
 			}
 			]
 			title: "Belt"
-			x: -7.5d
-			y: -2d
+			x: -8d
+			y: 1.5d
 		}
 		{
 			dependencies: ["54F7FA3700E06569"]
@@ -100,8 +91,8 @@
 			}
 			]
 			title: "Hand Crank"
-			x: -7.5d
-			y: -0.5d
+			x: -8d
+			y: 0d
 		}
 		{
 			description: ["Build the Seared Machine Casing. Use it as the body for first Create processing."]
@@ -118,13 +109,12 @@
 			}
 			]
 			title: "Seared Machine Casing"
-			x: -10.5d
-			y: 1.5d
+			x: -12d
+			y: 6d
 		}
 		{
 			dependencies: ["77685660FF7C7025" "0379EC8BFE48A365"]
 			description: ["Build a Depot from casing and alloy. Put it under the Press."]
-			hide_dependency_lines: true
 			icon: "create:depot"
 			id: "114059585B11EDB5"
 			rewards: [{ count: 2, id: "34AA58B76411EB80", item: "createdeco:copper_coin", type: "item" }]
@@ -138,13 +128,12 @@
 			}
 			]
 			title: "Depot"
-			x: -8.5d
-			y: 1.5d
+			x: -10d
+			y: 4.5d
 		}
 		{
 			dependencies: ["77685660FF7C7025" "0379EC8BFE48A365"]
 			description: ["Build a Basin from casing and alloy. Put it under the Mixer."]
-			hide_dependency_lines: true
 			icon: "create:basin"
 			id: "1EB768E35A5FA287"
 			rewards: [{ count: 2, id: "2C8558B73BCDA002", item: "createdeco:copper_coin", type: "item" }]
@@ -158,13 +147,12 @@
 			}
 			]
 			title: "Basin"
-			x: -8.5d
-			y: 3d
+			x: -10d
+			y: 6d
 		}
 		{
-			dependencies: ["54F7FA3700E06569" "77685660FF7C7025"]
+			dependencies: ["54F7FA3700E06569" "114059585B11EDB5"]
 			description: ["Build the Mechanical Press from shaft and casing. Drive it by hand over a Depot."]
-			hide_dependency_lines: true
 			icon: "create:mechanical_press"
 			id: "15A4C0C901F8FBC9"
 			rewards: [{ count: 2, id: "17C0F46119817818", item: "createdeco:copper_coin", type: "item" }]
@@ -178,13 +166,12 @@
 			}
 			]
 			title: "Mechanical Press"
-			x: -6.5d
-			y: 1d
+			x: -8d
+			y: 4d
 		}
 		{
-			dependencies: ["54F7FA3700E06569" "77685660FF7C7025"]
+			dependencies: ["54F7FA3700E06569" "1EB768E35A5FA287"]
 			description: ["Build the Mechanical Mixer from shaft and casing. The Whisk remains a recipe detail."]
-			hide_dependency_lines: true
 			icon: "create:mechanical_mixer"
 			id: "6D2D6CA800B333FD"
 			rewards: [{ count: 2, id: "6CB303FEA3C51CFA", item: "createdeco:copper_coin", type: "item" }]
@@ -198,8 +185,8 @@
 			}
 			]
 			title: "Mechanical Mixer"
-			x: -6.5d
-			y: 3d
+			x: -8d
+			y: 6d
 		}
 		{
 			dependencies: ["15A4C0C901F8FBC9" "1EB768E35A5FA287" "4CC3C8B2D71507C1"]
@@ -217,8 +204,8 @@
 			}
 			]
 			title: "First Deployer"
-			x: -4d
-			y: 1.5d
+			x: -6d
+			y: 5d
 		}
 		{
 			dependencies: ["5F9CD19F1B0A4B85"]
@@ -234,13 +221,12 @@
 			}
 			]
 			title: "Andesite Casing"
-			x: -2d
-			y: 1.5d
+			x: -4d
+			y: 5d
 		}
 		{
-			dependencies: ["2DA99D3BD6F00324" "3E1F3C4E42C3D164" "15A4C0C901F8FBC9" "114059585B11EDB5" "6D2D6CA800B333FD" "1EB768E35A5FA287" "5F9CD19F1B0A4B85" "778F3E474DEFE9B7"]
+			dependencies: ["4CC3C8B2D71507C1" "2DA99D3BD6F00324" "3E1F3C4E42C3D164" "6D2D6CA800B333FD" "778F3E474DEFE9B7"]
 			description: ["Operate one connected crank-driven cell with transmission, Press and Depot, Mixer and Basin, Deployer, and Andesite Casing proof within 16 blocks. Loose components do not count."]
-			hide_dependency_lines: true
 			icon: "create:wrench"
 			id: "1D83365BAFA20FFE"
 			rewards: [{ count: 1, id: "2E4FCF6DE5DADD7B", item: "createdeco:industrial_iron_coin", type: "item" }]
@@ -254,12 +240,12 @@
 			}
 			]
 			title: "Manual Workcell"
-			x: 0d
-			y: 1.5d
+			x: -2d
+			y: 4.5d
 		}
 		{
-			dependencies: ["6D2D6CA800B333FD"]
-			description: ["Make an Empty Schematic and Schematic-and-Quill through the Mixer route. Record a build worth repeating."]
+			dependencies: ["1D83365BAFA20FFE"]
+			description: ["Make an Empty Schematic for the lineage plans delivered when you join. Published plans are synchronized into schematics/lineage without overwriting local edits."]
 			icon: "create:empty_schematic"
 			id: "11A13F1B3FD3D65A"
 			rewards: [{ count: 1, id: "1BF32C17AE98E7ED", item: "createdeco:copper_coin", type: "item" }]
@@ -271,15 +257,10 @@
 				item: "create:empty_schematic"
 				type: "item"
 			}
-			{
-				id: "54B74467F4883DCD"
-				item: "create:schematic_and_quill"
-				type: "item"
-			}
 			]
-			title: "Draw a Plan"
-			x: -4d
-			y: 3.5d
+			title: "Inherited Plans"
+			x: 0d
+			y: 6d
 		}
 		{
 			dependencies: ["11A13F1B3FD3D65A"]
@@ -297,13 +278,12 @@
 			}
 			]
 			title: "Schematic Table"
-			x: -2d
-			y: 3.5d
+			x: 2d
+			y: 6d
 		}
 		{
-			dependencies: ["618D94BA99863F77" "15A4C0C901F8FBC9" "1EB768E35A5FA287"]
+			dependencies: ["618D94BA99863F77"]
 			description: ["Compact the Schematicannon with the Press and Basin. Keep broader powered processing for later."]
-			hide_dependency_lines: true
 			icon: "create:schematicannon"
 			id: "251E2393D08845F4"
 			rewards: [{ count: 4, id: "47F6A1BADAD022AC", item: "createdeco:copper_coin", type: "item" }]
@@ -317,12 +297,13 @@
 			}
 			]
 			title: "Schematicannon"
-			x: 0d
-			y: 3.5d
+			x: 4d
+			y: 6d
 		}
 		{
-			dependencies: ["1D83365BAFA20FFE"]
+			dependencies: ["251E2393D08845F4"]
 			description: ["Throw an ordinary Book into fire, soul fire, a lit campfire, or lava. The Book is consumed, and every live chapter is revealed for your FTB team."]
+			hide_until_deps_complete: true
 			icon: "minecraft:book"
 			id: "59B26687F0CD55FA"
 			tasks: [
@@ -333,8 +314,8 @@
 			}
 			]
 			title: "Burn a Book"
-			x: 2d
-			y: 1.5d
+			x: 6d
+			y: 6d
 		}
 	]
 	title: "Workshop"

@@ -5,7 +5,10 @@
 	group: "3D1BF480E4BCDBA6"
 	id: "71DE08FE1C5AE391"
 	order_index: 3
-	quest_links: [ ]
+	quest_links: [
+		{ id: "26A016CF5EE93B4C", linked_quest: "1D83365BAFA20FFE", x: 15d, y: 23d }
+		{ id: "3C590B56AD364565", linked_quest: "-3E0FE96A0FF542B", x: 27.5d, y: 9d }
+	]
 	quests: [
 		{
 			description: ["Build roof, walls, light, and a closable entrance around a safe interior. The quest detects a lit, enclosed shelter automatically."]
@@ -20,8 +23,8 @@
 			}
 			]
 			title: "Under Cover"
-			x: -12d
-			y: -1.5d
+			x: 0d
+			y: 0d
 		}
 		{
 			description: ["Change the temperature of edible food and read its tooltip. Keep it in the Fresh interval from -25 to 25, away from frozen and rotten levels."]
@@ -36,8 +39,8 @@
 			}
 			]
 			title: "Food Has Temperature"
-			x: -12d
-			y: -4.5d
+			x: 0d
+			y: -4d
 		}
 		{
 			dependencies: ["7FA9C44A0F731707"]
@@ -53,8 +56,8 @@
 			}
 			]
 			title: "Keep It Fresh"
-			x: -10.5d
-			y: -4.5d
+			x: 2.5d
+			y: -4d
 		}
 		{
 			description: ["Prepare purity-3 water. At this configured purity, poison and nausea chance are both zero."]
@@ -69,8 +72,8 @@
 			}
 			]
 			title: "Safe Water"
-			x: -12d
-			y: 1.5d
+			x: 0d
+			y: -2d
 		}
 		{
 			dependencies: ["2AB873C4522527D4"]
@@ -86,8 +89,8 @@
 			}
 			]
 			title: "Provisions"
-			x: -10.5d
-			y: 1.5d
+			x: 2.5d
+			y: -2d
 		}
 		{
 			dependencies: ["22F45D3D9F44B470" "362B669D89D67FDF" "2AB873C4522527D4" "616B8796484892FF"]
@@ -99,7 +102,7 @@
 			size: 1.5d
 			tasks: [ ]
 			title: "First Camp"
-			x: -8.5d
+			x: 5d
 			y: 0d
 		}
 		{
@@ -117,8 +120,8 @@
 			}
 			]
 			title: "A Bed"
-			x: -10.5d
-			y: -1.5d
+			x: 7.5d
+			y: -2d
 		}
 		{
 			dependencies: ["6B55D9B89DF28F61"]
@@ -135,8 +138,8 @@
 			}
 			]
 			title: "Storage"
-			x: -10.5d
-			y: -3d
+			x: 10d
+			y: -2d
 		}
 		{
 			dependencies: ["362B669D89D67FDF"]
@@ -154,8 +157,8 @@
 			}
 			]
 			title: "Food Pouch"
-			x: -9d
-			y: -4.5d
+			x: 5d
+			y: -4d
 		}
 		{
 			description: ["Place a Rain Collector under open sky and let rain charge it. It holds four uses."]
@@ -172,13 +175,13 @@
 			}
 			]
 			title: "Rain Collector"
-			x: -13.5d
-			y: 3.5d
+			x: 2.5d
+			y: -6d
 		}
 		{
 			description: ["Make a clay bowl and fill a terracotta water bowl. Use supported heat to purify it."]
 			icon: "thirst:terracotta_bowl"
-			id: "E56C2F1521364C19"
+			id: "-1A93D0EADEC9B3E7"
 			rewards: [{ count: 1, id: "771C9988C7D50B7A", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
@@ -193,11 +196,11 @@
 			}
 			]
 			title: "Water Bowls"
-			x: -12d
-			y: 3.5d
+			x: 5d
+			y: -6d
 		}
 		{
-			dependencies: ["E56C2F1521364C19"]
+			dependencies: ["-1A93D0EADEC9B3E7"]
 			description: ["Build a campfire for cooking, supported boiling, and snow melting. Do not rely on it as universal warmth."]
 			icon: "minecraft:campfire"
 			id: "1C97BF5F8C421E36"
@@ -212,8 +215,8 @@
 			}
 			]
 			title: "Campfire"
-			x: -10.5d
-			y: 3.5d
+			x: 7.5d
+			y: 0d
 		}
 		{
 			dependencies: ["1C97BF5F8C421E36"]
@@ -229,13 +232,13 @@
 			}
 			]
 			title: "Water at Hand"
-			x: -9d
-			y: 2.5d
+			x: 10d
+			y: 0d
 		}
 		{
 			description: ["Breed a maintained pair or herd. Keep enough animals to make the supply renewable."]
 			icon: "minecraft:wheat"
-			id: "BDBF3C780B009CD9"
+			id: "-4240C387F4FF6327"
 			rewards: [{ count: 1, id: "64A965C289059480", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
@@ -245,11 +248,11 @@
 			}
 			]
 			title: "Animal Husbandry"
-			x: -6.5d
-			y: 3d
+			x: 5d
+			y: 4d
 		}
 		{
-			dependencies: ["4BE5D08190C37F98" "BDBF3C780B009CD9" "21673617A8A3C196" "0946CB91DEA2D512"]
+			dependencies: ["4BE5D08190C37F98" "-4240C387F4FF6327" "21673617A8A3C196" "0946CB91DEA2D512"]
 			description: ["Complete one renewable food route. A planted harvest, maintained animals, a Starcatcher catch, or transplanted forage is enough."]
 			icon: "minecraft:hay_block"
 			id: "0EA60205EE4E3808"
@@ -259,8 +262,8 @@
 			size: 1.2d
 			tasks: [ ]
 			title: "Lasting Food Supply"
-			x: -6d
-			y: 1d
+			x: 7.5d
+			y: 6d
 		}
 		{
 			dependencies: ["4B3FCC1B9569023E" "0EA60205EE4E3808"]
@@ -272,8 +275,8 @@
 			size: 1.5d
 			tasks: [ ]
 			title: "A Working Homestead"
-			x: -3.5d
-			y: 0d
+			x: 10d
+			y: 6d
 		}
 		{
 			description: ["Harvest a mature food crop that you planted. Replant enough to make the next harvest possible."]
@@ -283,13 +286,13 @@
 			tasks: [
 			{
 				criterion: "planted_harvest"
-				id: "B61B711E0FE054CB"
+				id: "-49E48EE1F01FAB35"
 				type: "better_content_fixes:criterion"
 			}
 			]
 			title: "Planted Harvest"
-			x: -1d
-			y: -8d
+			x: 0d
+			y: 6d
 		}
 		{
 			description: ["Relocate edible forage or an orchard plant, then harvest it. Turn a lucky find into a repeatable local source."]
@@ -304,8 +307,8 @@
 			}
 			]
 			title: "Transplanted Food"
-			x: -1d
-			y: -6.5d
+			x: 2.5d
+			y: 6d
 		}
 		{
 			dependencies: ["4BE5D08190C37F98"]
@@ -315,14 +318,14 @@
 			rewards: [{ count: 1, id: "09520E612DFB0C8A", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "C29B5250355B0C5C"
+				id: "-3D64ADAFCAA4F3A4"
 				criterion: "regolith_crop_harvest"
 				type: "better_content_fixes:criterion"
 			}
 			]
 			title: "Regolith Farming"
-			x: 0.7d
-			y: -8d
+			x: 2.5d
+			y: 14d
 		}
 		{
 			dependencies: ["36E428FA17A94E0F"]
@@ -338,8 +341,8 @@
 			}
 			]
 			title: "Organic Compost"
-			x: 2.4d
-			y: -8d
+			x: 5d
+			y: 14d
 		}
 		{
 			dependencies: ["075DE9AE725DE26C"]
@@ -349,14 +352,14 @@
 			rewards: [{ count: 2, id: "74782F73566D940E", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "BEBD2D9851B9BE3B"
+				id: "-4142D267AE4641C5"
 				criterion: "rich_soil_tilled"
 				type: "better_content_fixes:criterion"
 			}
 			]
 			title: "Rich Soil Farmland"
-			x: 4.1d
-			y: -8d
+			x: 7.5d
+			y: 14d
 		}
 		{
 			dependencies: ["5B3687AEFA829042"]
@@ -387,8 +390,8 @@
 			}
 			]
 			title: "Specialty Crops"
-			x: 5.8d
-			y: -8d
+			x: 10d
+			y: 14d
 		}
 		{
 			dependencies: ["0946CB91DEA2D512"]
@@ -404,8 +407,8 @@
 			}
 			]
 			title: "Kama"
-			x: 4.1d
-			y: -6.5d
+			x: 5d
+			y: 12d
 		}
 		{
 			dependencies: ["087C2998D131A9A1"]
@@ -421,8 +424,8 @@
 			}
 			]
 			title: "Field Scythe"
-			x: 5.8d
-			y: -6.5d
+			x: 7.5d
+			y: 12d
 		}
 		{
 			dependencies: ["005DC6BB3C38C675"]
@@ -438,8 +441,8 @@
 			}
 			]
 			title: "Calendar"
-			x: 8d
-			y: -8d
+			x: 12.5d
+			y: 14d
 		}
 		{
 			dependencies: ["53C957328751BA80"]
@@ -455,25 +458,25 @@
 			}
 			]
 			title: "Off-Season Growing"
-			x: 8d
-			y: -6.5d
+			x: 10d
+			y: 12d
 		}
 		{
 			dependencies: ["62D46FA5AAAAB5B4"]
 			description: ["Build the Season Sensor with glass, quartz, and a literal Calendar. Put seasonal state where the homestead can read it."]
 			icon: "sereneseasons:season_sensor"
-			id: "AB9756671C0BBA7F"
+			id: "-5468A998E3F44581"
 			rewards: [{ count: 2, id: "7F70333ACF7D03C4", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "DB0F8524C0B34C1E"
+				id: "-24F07ADB3F4CB3E2"
 				item: "sereneseasons:season_sensor"
 				type: "item"
 			}
 			]
 			title: "Season Sensor"
-			x: 9.7d
-			y: -8d
+			x: 15d
+			y: 14d
 		}
 		{
 			dependencies: ["7FF2F274923CC05E"]
@@ -489,8 +492,8 @@
 			}
 			]
 			title: "Thermometer"
-			x: -1d
-			y: -3.5d
+			x: 12.5d
+			y: 4d
 		}
 		{
 			dependencies: ["5A4C3626CCDC25FF"]
@@ -506,8 +509,8 @@
 			}
 			]
 			title: "Thermolith"
-			x: 0.7d
-			y: -3.5d
+			x: 15d
+			y: 4d
 		}
 		{
 			dependencies: ["273DEB4296EDE4CB"]
@@ -525,8 +528,8 @@
 			}
 			]
 			title: "Sewing Table"
-			x: 2.4d
-			y: -3.5d
+			x: 17.5d
+			y: 4d
 		}
 		{
 			dependencies: ["65A5ED14755450E0"]
@@ -542,8 +545,8 @@
 			}
 			]
 			title: "Insulated Clothing"
-			x: 4.1d
-			y: -3.5d
+			x: 20d
+			y: 4d
 		}
 		{
 			dependencies: ["09B480EEAF34852D"]
@@ -561,8 +564,8 @@
 			}
 			]
 			title: "Boiler"
-			x: 5.8d
-			y: -4.7d
+			x: 12.5d
+			y: 0d
 		}
 		{
 			dependencies: ["289C8BE72849D453"]
@@ -580,8 +583,8 @@
 			}
 			]
 			title: "Icebox"
-			x: 5.8d
-			y: -2.3d
+			x: 17.5d
+			y: 2d
 		}
 		{
 			dependencies: ["54E4A2E0C75C373A"]
@@ -597,8 +600,8 @@
 			}
 			]
 			title: "Smokestack"
-			x: 7.5d
-			y: -4.7d
+			x: 15d
+			y: 0d
 		}
 		{
 			dependencies: ["322A08AFA1F3C2C9"]
@@ -616,8 +619,8 @@
 			}
 			]
 			title: "Hearth"
-			x: 9.2d
-			y: -4.7d
+			x: 17.5d
+			y: 0d
 		}
 		{
 			dependencies: ["6300F88A52BC5084"]
@@ -640,8 +643,8 @@
 			}
 			]
 			title: "Soulspring Kit"
-			x: 9.2d
-			y: -2.3d
+			x: 20d
+			y: 2d
 		}
 		{
 			dependencies: ["7FF2F274923CC05E"]
@@ -659,8 +662,8 @@
 			}
 			]
 			title: "Waterskin"
-			x: 2.4d
-			y: -1.8d
+			x: 12.5d
+			y: 2d
 		}
 		{
 			dependencies: ["016657098A500286"]
@@ -676,8 +679,8 @@
 			}
 			]
 			title: "Tempered Waterskin"
-			x: 4.1d
-			y: -1.8d
+			x: 15d
+			y: 2d
 		}
 		{
 			dependencies: ["7FF2F274923CC05E"]
@@ -695,8 +698,8 @@
 			}
 			]
 			title: "Cutting Board"
-			x: -1d
-			y: 3.5d
+			x: 12.5d
+			y: 6d
 		}
 		{
 			dependencies: ["6FEE23E1323A04A4"]
@@ -719,8 +722,8 @@
 			}
 			]
 			title: "Hot Kitchen"
-			x: 0.7d
-			y: 3.5d
+			x: 15d
+			y: 6d
 		}
 		{
 			dependencies: ["6C8362C9595C865D"]
@@ -736,8 +739,8 @@
 			}
 			]
 			title: "Skillet"
-			x: 2.4d
-			y: 3.5d
+			x: 17.5d
+			y: 6d
 		}
 		{
 			dependencies: ["27E443A98DCF5254"]
@@ -756,8 +759,8 @@
 			}
 			]
 			title: "Pantry"
-			x: 4.1d
-			y: 3.5d
+			x: 20d
+			y: 6d
 		}
 		{
 			dependencies: ["2F050F3582CBB166"]
@@ -773,8 +776,8 @@
 			}
 			]
 			title: "Food Book"
-			x: 5.8d
-			y: 3.5d
+			x: 22.5d
+			y: 6d
 		}
 		{
 			dependencies: ["553CB6F08A320BA8"]
@@ -790,28 +793,28 @@
 			}
 			]
 			title: "Balanced Diet"
-			x: 7.5d
-			y: 3.5d
+			x: 25d
+			y: 6d
 		}
 		{
 			dependencies: ["6C8362C9595C865D" "3778EF4D086DCD6C"]
 			description: ["Prepare and place a supported feast block. Serve a shared meal from the finished kitchen."]
 			icon: "farmersdelight:roast_chicken_block"
-			id: "D254D08257E1838C"
+			id: "-2DAB2F7DA81E7C74"
 			rewards: [{ count: 4, id: "4920051A1B10D374", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.3d
 			tasks: [
 			{
-				id: "AC05B87A081891E3"
+				id: "-53FA4785F7E76E1D"
 				item: { Count: 1, id: "ftbfiltersystem:smart_filter", tag: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(forge:feasts)" } }
 				title: "Any supported feast block"
 				type: "item"
 			}
 			]
 			title: "Serve a Feast"
-			x: 9.2d
-			y: 3.5d
+			x: 27.5d
+			y: 6d
 		}
 		{
 			dependencies: ["6C8362C9595C865D"]
@@ -829,26 +832,26 @@
 			}
 			]
 			title: "Kettle"
-			x: 2.4d
-			y: 5d
+			x: 17.5d
+			y: 8d
 		}
 		{
 			dependencies: ["28D61A331C05F66A"]
 			description: ["Brew a supported tea or coffee in the Kettle. Carry a drink suited to the work ahead."]
 			icon: "farmersrespite:coffee"
-			id: "B4C7E8CCB6A1DF43"
+			id: "-4B381733495E20BD"
 			rewards: [{ count: 1, id: "7C98AD72D8DEEF47", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
-				id: "961AF31EEBC868BA"
+				id: "-69E50CE114379746"
 				item: { Count: 1, id: "ftbfiltersystem:smart_filter", tag: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(farmersrespite:drinks)" } }
 				title: "Any supported tea or coffee"
 				type: "item"
 			}
 			]
 			title: "Brewed Drinks"
-			x: 4.1d
-			y: 5d
+			x: 20d
+			y: 8d
 		}
 		{
 			description: ["Obtain any Starcatcher rod. Fit tackle for the water and season."]
@@ -866,8 +869,8 @@
 			}
 			]
 			title: "Rig a Rod"
-			x: -1d
-			y: 7d
+			x: 0d
+			y: 9d
 		}
 		{
 			description: ["Gather a Starcatcher worm. Keep bait as a recipe detail, not a new progression tier."]
@@ -882,8 +885,8 @@
 			}
 			]
 			title: "Worm Bait"
-			x: 0.7d
-			y: 5.8d
+			x: 0d
+			y: 11d
 		}
 		{
 			dependencies: ["040D5AF60D3E8E1C" "58C2BCCE88B9B17A"]
@@ -899,8 +902,8 @@
 			}
 			]
 			title: "Vanilla Bobber"
-			x: 0.7d
-			y: 7d
+			x: 2.5d
+			y: 10d
 		}
 		{
 			dependencies: ["040D5AF60D3E8E1C"]
@@ -916,8 +919,8 @@
 			}
 			]
 			title: "Angler’s Guide"
-			x: 0.7d
-			y: 8.2d
+			x: 2.5d
+			y: 8d
 		}
 		{
 			dependencies: ["040D5AF60D3E8E1C"]
@@ -933,8 +936,8 @@
 			}
 			]
 			title: "First Catch"
-			x: 2.8d
-			y: 7d
+			x: 5d
+			y: 9d
 		}
 		{
 			dependencies: ["7FF2F274923CC05E"]
@@ -952,8 +955,8 @@
 			}
 			]
 			title: "Keg"
-			x: 5d
-			y: 8.5d
+			x: 12.5d
+			y: 10d
 		}
 		{
 			dependencies: ["601561FCB39975B6"]
@@ -969,8 +972,8 @@
 			}
 			]
 			title: "First Ferment"
-			x: 6.7d
-			y: 8.5d
+			x: 15d
+			y: 10d
 		}
 		{
 			dependencies: ["601561FCB39975B6" "4CA91EE9310D1913"]
@@ -991,8 +994,8 @@
 			}
 			]
 			title: "Fermentation Temperature"
-			x: 8.4d
-			y: 8.5d
+			x: 17.5d
+			y: 10d
 		}
 		{
 			dependencies: ["30B36A7A3C1AC1DE"]
@@ -1010,8 +1013,8 @@
 			}
 			]
 			title: "Aged Cheese"
-			x: 10.1d
-			y: 8.5d
+			x: 20d
+			y: 10d
 		}
 		{
 			dependencies: ["7FF2F274923CC05E"]
@@ -1030,8 +1033,8 @@
 			}
 			]
 			title: "Vent the Room"
-			x: 12d
-			y: 4.5d
+			x: 12.5d
+			y: 20d
 		}
 		{
 			dependencies: ["2B09758DB1C8060F"]
@@ -1044,19 +1047,19 @@
 			tasks: [
 			{
 				criterion: "ventilation_network"
-				id: "AC9CB732BC098400"
+				id: "-536348CD43F67C00"
 				type: "better_content_fixes:criterion"
 			}
 			]
 			title: "Ventilation Network"
-			x: 13.7d
-			y: 4.5d
+			x: 15d
+			y: 20d
 		}
 		{
 			dependencies: ["7FF2F274923CC05E"]
 			description: ["Gather a framed cube and the saw, hammer, wrench, screwdriver, blueprint, and key. Use the kit to shape finishes without a catalogue quest."]
 			icon: "framedblocks:framed_hammer"
-			id: "9B6C167A50277704"
+			id: "-6493E985AFD888FC"
 			rewards: [{ count: 2, id: "78BFF5CBB1F96EBF", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			size: 1.2d
@@ -1068,7 +1071,7 @@
 			}
 			{
 				id: "5CE54B390C5B0D89"
-				item: "framedblocks:framed_saw"
+				item: "framedblocks:framing_saw"
 				type: "item"
 			}
 			{
@@ -1098,11 +1101,11 @@
 			}
 			]
 			title: "Framing Toolkit"
-			x: 12d
-			y: -0.5d
+			x: 12.5d
+			y: 16d
 		}
 		{
-			dependencies: ["9B6C167A50277704"]
+			dependencies: ["-6493E985AFD888FC"]
 			description: ["Apply a material skin to a frame. Match it to the surrounding build."]
 			icon: "minecraft:grass_block"
 			id: "071389A6BB37C7F1"
@@ -1115,11 +1118,11 @@
 			}
 			]
 			title: "Camouflage a Frame"
-			x: 13.7d
-			y: -2d
+			x: 15d
+			y: 16d
 		}
 		{
-			dependencies: ["9B6C167A50277704"]
+			dependencies: ["-6493E985AFD888FC"]
 			description: ["Convert or use a representative slope, corner, or split. Shape the structure beyond cubes."]
 			icon: "minecraft:iron_pickaxe"
 			id: "6AA9CFF6057C5A83"
@@ -1132,14 +1135,14 @@
 			}
 			]
 			title: "Shape a Build"
-			x: 13.7d
-			y: -0.5d
+			x: 17.5d
+			y: 16d
 		}
 		{
-			dependencies: ["9B6C167A50277704"]
+			dependencies: ["-6493E985AFD888FC"]
 			description: ["Use a collapsible or custom-surface frame. Tune the visible surface to the build."]
 			icon: "minecraft:painting"
-			id: "D088E669F454C4C1"
+			id: "-2F7719960BAB3B3F"
 			rewards: [{ count: 2, id: "52B94BB45039ECF2", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
@@ -1149,11 +1152,11 @@
 			}
 			]
 			title: "Custom Surfaces"
-			x: 13.7d
-			y: 1d
+			x: 20d
+			y: 16d
 		}
 		{
-			dependencies: ["9B6C167A50277704"]
+			dependencies: ["-6493E985AFD888FC"]
 			description: ["Use a bouncy, glowing, redstone, target, window, or storage frame. Make the framed surface do real work."]
 			icon: "minecraft:slime_ball"
 			id: "58C70982B1748C8E"
@@ -1168,8 +1171,8 @@
 			}
 			]
 			title: "Functional Frames"
-			x: 15.8d
-			y: -0.5d
+			x: 22.5d
+			y: 16d
 		}
 		{
 			dependencies: ["4C62DF944D975D82"]
@@ -1187,8 +1190,30 @@
 			}
 			]
 			title: "Sand Filter"
-			x: 18d
-			y: 4.5d
+			x: 17.5d
+			y: 20d
+		}
+		{
+			dependencies: ["-6493E985AFD888FC" "1D83365BAFA20FFE"]
+			description: ["Build a Bouquet Grid as a late homestead display surface. Its cardboard and Create-casing recipe makes this workshop-era decoration, not an early shelter requirement."]
+			icon: "procedural_bouquets:bouquet_grid"
+			id: "6396E7F2F9DD44F6"
+			rewards: [{ count: 2, id: "0B89E937FF51BC23", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "-68E3D53B8A5A9EB8", item: "procedural_bouquets:bouquet_grid", type: "item" }]
+			title: "Decorate With Bouquets"
+			x: 17.5d
+			y: 18d
+		}
+		{
+			dependencies: ["-2DAB2F7DA81E7C74" "-3E0FE96A0FF542B"]
+			description: ["Install a Feeding Upgrade only after mastering meals and post-AE2 body logistics. Automatic feeding does not preserve food or replace dietary variety."]
+			icon: "sophisticatedbackpacks:feeding_upgrade"
+			id: "-7EAAD456A8881EE"
+			rewards: [{ count: 2, id: "3AAD569A6CF44B0E", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "61220A810ADA39F7", item: "sophisticatedbackpacks:feeding_upgrade", type: "item" }]
+			title: "Automated Feeding"
+			x: 30d
+			y: 6d
 		}
 	]
 	title: "Homesteading"

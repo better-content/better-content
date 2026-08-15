@@ -6,30 +6,34 @@
 	icon: "pneumaticcraft:pressure_chamber_valve"
 	id: "77BB41FEB659E52C"
 	order_index: 20
-	quest_links: [{ id: "D34C8B7A2105F69E", linked_quest: "1D88EAD05EC7472F", x: -3d, y: 0d }]
+	quest_links: [
+		{ id: "-2CB37485DEFA0962", linked_quest: "1D88EAD05EC7472F", x: 0d, y: 5.75d }
+		{ id: "-51D7B26D28FD2C58", linked_quest: "0CAAB76E2B7887BC", x: 2d, y: 3.45d }
+		{ id: "-2E4FAC97A4A30441", linked_quest: "-673DFAB385976A8", x: 20d, y: 6d }
+	]
 	quests: [
 		{
 			dependencies: ["1D88EAD05EC7472F"]
 			description: ["Lay out controller, platform, and import or export flow as one compact workcell. Repeated precision jobs need a readable material path."]
 			icon: "pneumaticcraft:assembly_controller"
 			id: "1777EDF577F84994"
-			rewards: [{ count: 2, id: "E700000000000001", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFFF", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "pneumaticcraft:assembly_controller"
-				id: "D5A3D8C1CE4FC6C7"
+				id: "-2A5C273E31B03939"
 				type: "item"
 			}]
 			title: "Assembly Cell"
-			x: 30.0d
-			y: 2.4d
+			x: 1.75d
+			y: 5.75d
 		}
 		{
 			dependencies: ["1777EDF577F84994"]
 			description: ["Add the laser for precision work that does not belong on a crafting table. Keep its inputs beside the rest of the assembly cell."]
 			icon: "pneumaticcraft:assembly_laser"
-			id: "9838EE5C68620C36"
-			rewards: [{ count: 2, id: "E700000000000002", item: "createdeco:copper_coin", type: "item" }]
+			id: "-67C711A3979DF3CA"
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFFE", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "pneumaticcraft:assembly_laser"
@@ -37,31 +41,31 @@
 				type: "item"
 			}]
 			title: "Assembly Laser"
-			x: 33.0d
-			y: 2.4d
+			x: 3.5d
+			y: 5.75d
 		}
 		{
-			dependencies: ["9838EE5C68620C36"]
+			dependencies: ["-67C711A3979DF3CA"]
 			description: ["Add a Power Grid Redstone Relay after the battery route. Treat electricity as measured infrastructure with storage and switching, not as an invisible recipe tax."]
 			icon: "powergrid:redstone_relay"
 			id: "3A26B7BE6BF2D71F"
-			rewards: [{ count: 2, id: "E700000000000003", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFFD", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "powergrid:redstone_relay"
-				id: "B3FC1D86DBF2A422"
+				id: "-4C03E279240D5BDE"
 				type: "item"
 			}]
-			title: "Switch the Current"
-			x: 36.0d
-			y: 0.0d
+			title: "Redstone Relay"
+			x: 5.25d
+			y: 3.45d
 		}
 		{
-			dependencies: ["9838EE5C68620C36"]
+			dependencies: ["-67C711A3979DF3CA"]
 			description: ["Add the drill so machined parts remain part of the industrial board route rather than appearing as hand-finished components."]
 			icon: "pneumaticcraft:assembly_drill"
 			id: "15B31665748CE617"
-			rewards: [{ count: 2, id: "E700000000000004", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFFC", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "pneumaticcraft:assembly_drill"
@@ -69,15 +73,15 @@
 				type: "item"
 			}]
 			title: "Assembly Drill"
-			x: 36.0d
-			y: 2.4d
+			x: 5.25d
+			y: 5.75d
 		}
 		{
 			dependencies: ["3A26B7BE6BF2D71F"]
 			description: ["Build an OC2R computer after the circuit chain is stable. Use it for intersite information and coordination while trains and physical logistics still move matter."]
 			icon: "oc2r:computer"
 			id: "00FA05D93A3834DE"
-			rewards: [{ count: 2, id: "E700000000000005", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFFB", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "oc2r:computer"
@@ -85,15 +89,15 @@
 				type: "item"
 			}]
 			title: "OC2R Control"
-			x: 39.0d
-			y: 0.0d
+			x: 7d
+			y: 2.3d
 		}
 		{
 			dependencies: ["15B31665748CE617"]
 			description: ["Build a drone only after boards and assembly are repeatable. Give it a clear route, power source, and bounded job before deployment."]
 			icon: "pneumaticcraft:drone"
 			id: "24118FB617CFB1B1"
-			rewards: [{ count: 2, id: "E700000000000006", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFFA", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "pneumaticcraft:drone"
@@ -101,64 +105,64 @@
 				type: "item"
 			}]
 			title: "Drone"
-			x: 39.0d
-			y: 2.4d
+			x: 7d
+			y: 4.6d
 		}
 		{
-			dependencies: ["00FA05D93A3834DE"]
+			dependencies: ["4B85D98491A2F9B7"]
 			description: ["Extend an already-readable control network with wireless signals. It coordinates distant sites without teleporting their physical inventories."]
 			icon: "oc2r_wireless_pubsub:wireless_card"
-			id: "C7EA4BEA0E6D09D5"
-			rewards: [{ count: 2, id: "E700000000000007", item: "createdeco:copper_coin", type: "item" }]
+			id: "-3815B415F192F62B"
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFF9", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "oc2r_wireless_pubsub:wireless_card"
-				id: "B68566B26DCAFA94"
+				id: "-497A994D9235056C"
 				type: "item"
 			}]
 			title: "Wireless Card"
-			x: 42.0d
-			y: -2.4d
+			x: 10.5d
+			y: 4.6d
 		}
 		{
 			dependencies: ["00FA05D93A3834DE"]
 			description: ["Build the Space Machine Casing when oxygen, launch hardware, and long supply lines can be manufactured reliably. A rocket route needs a return plan, not one lucky launch."]
 			icon: "kubejs:space_machine_casing"
-			id: "BFA97293ADC65C6A"
-			rewards: [{ count: 3, id: "E700000000000008", item: "createdeco:copper_coin", type: "item" }]
+			id: "-40568D6C5239A396"
+			rewards: [{ count: 3, id: "-18FFFFFFFFFFFFF8", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.2d
 			tasks: [			{
 				item: "kubejs:space_machine_casing"
-				id: "9984896A4FDC65D5"
+				id: "-667B7695B0239A2B"
 				type: "item"
 			}]
 			title: "Space Tier"
-			x: 42.0d
-			y: 0.0d
+			x: 8.75d
+			y: 5.75d
 		}
 		{
 			dependencies: ["24118FB617CFB1B1"]
 			description: ["Program controlled labor beside the machines that make and charge it. Keeping the control stack together makes faults easier to trace."]
 			icon: "pneumaticcraft:programmer"
 			id: "3B749C5D3D6FBFD4"
-			rewards: [{ count: 2, id: "E700000000000009", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFF7", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "pneumaticcraft:programmer"
-				id: "E15A3510F8B3F344"
+				id: "-1EA5CAEF074C0CBC"
 				type: "item"
 			}]
 			title: "Programmer"
-			x: 42.0d
-			y: 2.4d
+			x: 8.75d
+			y: 8.05d
 		}
 		{
-			dependencies: ["BFA97293ADC65C6A"]
+			dependencies: ["-40568D6C5239A396"]
 			description: ["Build the recorder from the established Create and control stack. Launch systems extend manufacturing rather than becoming a disconnected minigame."]
 			icon: "creatingspace:flight_recorder"
-			id: "F612A527168CF3C0"
-			rewards: [{ count: 2, id: "E70000000000000A", item: "createdeco:copper_coin", type: "item" }]
+			id: "-9ED5AD8E9730C40"
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFF6", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "creatingspace:flight_recorder"
@@ -166,15 +170,15 @@
 				type: "item"
 			}]
 			title: "Flight Recorder"
-			x: 45.0d
-			y: -2.4d
+			x: 10.5d
+			y: 2.3d
 		}
 		{
-			dependencies: ["BFA97293ADC65C6A"]
+			dependencies: ["-40568D6C5239A396"]
 			description: ["Bring Sky Stone home through the intended exploration route. AE2 begins with recovered material and logistics rather than bench crafting alone."]
 			icon: "ae2:sky_stone_block"
-			id: "C8A0DD37972550F1"
-			rewards: [{ count: 2, id: "E70000000000000B", item: "createdeco:copper_coin", type: "item" }]
+			id: "-375F22C868DAAF0F"
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFF5", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "ae2:sky_stone_block"
@@ -182,31 +186,31 @@
 				type: "item"
 			}]
 			title: "Sky Stone"
-			x: 45.0d
-			y: 0.0d
+			x: 10.5d
+			y: 6.9d
 		}
 		{
 			dependencies: ["3B749C5D3D6FBFD4"]
 			description: ["Use security hardware to make doors, routes, and machine authority explicit. The lane is about readable control as much as production."]
 			icon: "pneumaticcraft:security_station"
-			id: "DD3BE3A300618D77"
-			rewards: [{ count: 2, id: "E70000000000000C", item: "createdeco:copper_coin", type: "item" }]
+			id: "-22C41C5CFF9E7289"
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFF4", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "pneumaticcraft:security_station"
-				id: "912F649CC1F98808"
+				id: "-6ED09B633E0677F8"
 				type: "item"
 			}]
 			title: "Security Station"
-			x: 45.0d
-			y: 2.4d
+			x: 10.5d
+			y: 9.2d
 		}
 		{
-			dependencies: ["F612A527168CF3C0"]
+			dependencies: ["-9ED5AD8E9730C40"]
 			description: ["Industrialize oxygen before trusting launch travel. Space survival needs a repeatable supply chain rather than hand-waved preparation."]
 			icon: "creatingspace:air_liquefier"
 			id: "169E0C5FC13945D3"
-			rewards: [{ count: 2, id: "E70000000000000D", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFF3", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "creatingspace:air_liquefier"
@@ -214,15 +218,15 @@
 				type: "item"
 			}]
 			title: "Air Liquefier"
-			x: 48.0d
-			y: -2.4d
+			x: 12.25d
+			y: 2.3d
 		}
 		{
-			dependencies: ["C8A0DD37972550F1"]
+			dependencies: ["-375F22C868DAAF0F"]
 			description: ["Prepare Fluix as a distinct network material after the space route is open. Keep it near the processor line that will consume it."]
 			icon: "ae2:fluix_crystal"
-			id: "F4876544D0F52445"
-			rewards: [{ count: 2, id: "E70000000000000E", item: "createdeco:copper_coin", type: "item" }]
+			id: "-B789ABB2F0ADBBB"
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFF2", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "ae2:fluix_crystal"
@@ -230,15 +234,15 @@
 				type: "item"
 			}]
 			title: "Fluix"
-			x: 48.0d
-			y: 0.0d
+			x: 12.25d
+			y: 4.6d
 		}
 		{
-			dependencies: ["DD3BE3A300618D77"]
+			dependencies: ["-22C41C5CFF9E7289"]
 			description: ["Apply sealed gas hardware and printed control to active flight. Gas crafters, copter bearings, and solvers make stabilization a real control problem."]
 			icon: "vs_clockwork:gas_crafter"
 			id: "002C11FA2F2686A7"
-			rewards: [{ count: 2, id: "E70000000000000F", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFF1", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "vs_clockwork:gas_crafter"
@@ -256,31 +260,31 @@
 				type: "item"
 			}]
 			title: "Flight Control"
-			x: 48.0d
-			y: 2.4d
+			x: 12.25d
+			y: 6.9d
 		}
 		{
 			dependencies: ["169E0C5FC13945D3"]
 			description: ["Build the high-energy reaction chamber only after ordinary containment and Space manufacture. It is a controlled chemistry system, not a reactor power ladder."]
 			icon: "latent_chemlib:gas_reaction_chamber"
-			id: "98FFCEFB58C6915D"
-			rewards: [{ count: 2, id: "E700000000000010", item: "createdeco:copper_coin", type: "item" }]
+			id: "-67003104A7396EA3"
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFF0", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "latent_chemlib:gas_reaction_chamber"
-				id: "B06255D4E92CF921"
+				id: "-4F9DAA2B16D306DF"
 				type: "item"
 			}]
 			title: "Gas Reaction"
-			x: 51.0d
-			y: -2.4d
+			x: 14d
+			y: 3.45d
 		}
 		{
-			dependencies: ["F4876544D0F52445"]
+			dependencies: ["-B789ABB2F0ADBBB"]
 			description: ["Build the Inscriber so processors become a manufacturing chain. Organize presses, silicon, printed parts, and finished processors together."]
 			icon: "ae2:inscriber"
 			id: "7B321E28F39A0731"
-			rewards: [{ count: 2, id: "E700000000000011", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFEF", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "ae2:inscriber"
@@ -288,36 +292,39 @@
 				type: "item"
 			}]
 			title: "Inscriber"
-			x: 51.0d
-			y: 0.0d
+			x: 14d
+			y: 5.75d
 		}
 		{
 			dependencies: ["7B321E28F39A0731"]
 			description: ["Produce both logic and engineering processors before the controller. Local storage should begin from a prepared factory, not a recipe surprise."]
 			icon: "ae2:engineering_processor"
 			id: "35010E33AC4388FB"
-			rewards: [{ count: 2, id: "E700000000000012", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFEE", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "ae2:logic_processor"
-				id: "AE5665F7ADB83B2E"
+				id: "-51A99A085247C4D2"
 				type: "item"
 			}
 			{
 				item: "ae2:engineering_processor"
-				id: "9CAB894CD74E8D09"
+				id: "-635476B328B172F7"
 				type: "item"
 			}]
 			title: "AE2 Processors"
-			x: 54.0d
-			y: 0.0d
+			x: 15.75d
+			y: 4.6d
 		}
 		{
-			dependencies: ["35010E33AC4388FB"]
+			dependencies: ["-40395892CD0F97EA"]
 			description: ["Build an AE2 Controller only after processors, pressure, and launch-scale logistics are solved. AE2 sharpens one site; it does not replace intersite transport."]
 			icon: "ae2:controller"
-			id: "9F53980A2B3C5E65"
-			rewards: [{ count: 2, id: "E700000000000013", item: "createdeco:copper_coin", type: "item" }]
+			id: "-60AC67F5D4C3A19B"
+			rewards: [
+				{ count: 2, id: "-18FFFFFFFFFFFFED", item: "createdeco:copper_coin", type: "item" }
+				{ count: 1, id: "595C7BC12B40DEA8", item: "createdeco:zinc_coin", type: "item" }
+			]
 			shape: "rsquare"
 			tasks: [			{
 				item: "ae2:controller"
@@ -325,32 +332,77 @@
 				type: "item"
 			}]
 			title: "Local AE2"
-			x: 57.0d
-			y: 0.0d
+			x: 19.25d
+			y: 4.6d
 		}
 		{
-			dependencies: ["9F53980A2B3C5E65"]
+			dependencies: ["-60AC67F5D4C3A19B"]
 			description: ["Stabilize Raw Impossible Casing with AE2 processors and final Blood Magic proof. This closes the structural machine ladder and opens explicitly post-AE2 work."]
 			icon: "kubejs:impossible_machine_casing"
-			id: "FC1F01695F00ABD5"
-			rewards: [{ count: 1, id: "E700000000000014", item: "createdeco:industrial_iron_coin", type: "item" }]
+			id: "-3E0FE96A0FF542B"
+			rewards: [{ count: 1, id: "-18FFFFFFFFFFFFEC", item: "createdeco:industrial_iron_coin", type: "item" }]
 			shape: "octagon"
 			size: 1.2d
 			tasks: [			{
 				item: "kubejs:raw_impossible_casing"
-				id: "E4F4A8C523584131"
+				id: "-1B0B573ADCA7BECF"
 				type: "item"
 			}
 			{
 				item: "kubejs:impossible_machine_casing"
-				id: "CCCE6F22CD099029"
+				id: "-333190DD32F66FD7"
 				type: "item"
 			}]
 			title: "Impossible Tier"
-			x: 60.0d
-			y: 0.0d
+			x: 21d
+			y: 3.45d
 		}
-
+		{
+			dependencies: ["00FA05D93A3834DE"]
+			description: ["Add an OC2R Network Connector before extending control traffic wirelessly."]
+			icon: "oc2r:network_connector"
+			id: "4B85D98491A2F9B7"
+			rewards: [{ count: 2, id: "09AC2257051625A7", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "-50F735D67995CCAD", item: "oc2r:network_connector", type: "item" }]
+			title: "Network Connector"
+			x: 8.75d
+			y: 3.45d
+		}
+		{
+			dependencies: ["35010E33AC4388FB"]
+			description: ["Assemble the AE Logic Package from finished processors and late pressed materials. It is the recurring post-AE2 integration ingredient."]
+			icon: "kubejs:ae_logic_package"
+			id: "-40395892CD0F97EA"
+			rewards: [{ count: 2, id: "1A98E84E26B99638", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "-90A0295ADBF9258", item: "kubejs:ae_logic_package", type: "item" }]
+			title: "AE Logic Package"
+			x: 17.5d
+			y: 4.6d
+		}
+		{
+			dependencies: ["-60AC67F5D4C3A19B" "-673DFAB385976A8"]
+			description: ["Install a Tool Swapper Upgrade after local AE2 and mechanical handling are established. It automates carried-tool selection but gates no core route."]
+			icon: "sophisticatedbackpacks:tool_swapper_upgrade"
+			id: "67F9C1B009A594CE"
+			rewards: [{ count: 2, id: "0AC70CC49E1138CC", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "7E472C3B6A9048E1", item: "sophisticatedbackpacks:tool_swapper_upgrade", type: "item" }]
+			title: "Automated Toolbelt"
+			x: 21d
+			y: 5.75d
+		}
+		{ dependencies: ["3A26B7BE6BF2D71F"], description: ["Fabricate the registered Power Grid integrated circuit through the authored assembly route."], icon: "powergrid:integrated_circuit", id: "5C10000000000001", rewards: [{ count: 2, id: "5C20000000000001", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "5C30000000000001", item: "powergrid:integrated_circuit", type: "item" }], title: "Integrated Circuit", x: 7d, y: 6.9d }
+		{ dependencies: ["5C10000000000001"], description: ["Deploy a bullet turret as automatic proof of the repository-authored electrical defense route."], icon: "k_turrets:bullet_turret_item", id: "5C10000000000002", rewards: [{ count: 2, id: "5C20000000000002", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "5C30000000000002", item: "k_turrets:bullet_turret_item", type: "item" }], title: "Autonomous Defense", x: 8.75d, y: 1.15d }
+		{ dependencies: ["5C10000000000002"], description: ["Build the registered K-Turrets storage drone after autonomous defense is established."], icon: "k_turrets:storage_drone_item", id: "5C10000000000003", rewards: [{ count: 2, id: "5C20000000000003", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "5C30000000000003", item: "k_turrets:storage_drone_item", type: "item" }], title: "Storage Drone", x: 10.5d, y: 0d }
+		{ dependencies: ["0CAAB76E2B7887BC"], description: ["Craft Weather2's registered forecast block after its shared instrumentation hub."], icon: "weather2:weather_forecast", id: "5C10000000000004", rewards: [{ count: 2, id: "5C20000000000004", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "5C30000000000004", item: "weather2:weather_forecast", type: "item" }], title: "Weather Forecast", x: 3.5d, y: 3.45d }
+		{ dependencies: ["00FA05D93A3834DE"], description: ["Add a Monitor so the OC2R computer has a local operator surface."], icon: "oc2r:monitor", id: "6501000000000001", rewards: [{ count: 2, id: "6502000000000001", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6503000000000001", item: "oc2r:monitor", type: "item" }], title: "Operator Display", x: 7d, y: 0d }
+		{ dependencies: ["6501000000000001"], description: ["Connect a Keyboard to make the local OC2R station directly programmable."], icon: "oc2r:keyboard", id: "6501000000000002", rewards: [{ count: 2, id: "6502000000000002", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6503000000000002", item: "oc2r:keyboard", type: "item" }], title: "Operator Input", x: 8.75d, y: 0d }
+		{ dependencies: ["00FA05D93A3834DE"], description: ["Install a Disk Drive so programs and field data have explicit local storage."], icon: "oc2r:disk_drive", id: "6501000000000003", rewards: [{ count: 2, id: "6502000000000003", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6503000000000003", item: "oc2r:disk_drive", type: "item" }], title: "Local Disk", x: 7d, y: -2.3d }
+		{ dependencies: ["4B85D98491A2F9B7"], description: ["Run Network Cable between OC2R endpoints before adding wireless reach."], icon: "oc2r:network_cable", id: "6501000000000004", rewards: [{ count: 2, id: "6502000000000004", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6503000000000004", item: "oc2r:network_cable", type: "item" }], title: "Wired Network", x: 10.5d, y: 2.3d }
+		{ dependencies: ["35010E33AC4388FB"], description: ["Accept FE into the first local ME network through an Energy Acceptor."], icon: "ae2:energy_acceptor", id: "6501000000000005", rewards: [{ count: 2, id: "6502000000000005", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6503000000000005", item: "ae2:energy_acceptor", type: "item" }], title: "Power the Network", x: 17.5d, y: 6.9d }
+		{ dependencies: ["-60AC67F5D4C3A19B"], description: ["Build an ME Drive as the visible home for local storage cells."], icon: "ae2:drive", id: "6501000000000006", rewards: [{ count: 2, id: "6502000000000006", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6503000000000006", item: "ae2:drive", type: "item" }], title: "ME Drive", x: 19.25d, y: 8.05d }
+		{ dependencies: ["6501000000000006"], description: ["Install a 1k Item Storage Cell to give the drive bounded, inspectable capacity."], icon: "ae2:item_storage_cell_1k", id: "6501000000000007", rewards: [{ count: 2, id: "6502000000000007", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6503000000000007", item: "ae2:item_storage_cell_1k", type: "item" }], title: "First Storage Cell", x: 21d, y: 8.05d }
+		{ dependencies: ["-60AC67F5D4C3A19B"], description: ["Add a Terminal as the operator-facing view into local ME storage."], icon: "ae2:terminal", id: "6501000000000008", rewards: [{ count: 2, id: "6502000000000008", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6503000000000008", item: "ae2:terminal", type: "item" }], title: "ME Terminal", x: 21d, y: 6.9d }
+		{ dependencies: ["-40395892CD0F97EA"], description: ["Build a Molecular Assembler after the logic package makes pattern-driven work supportable."], icon: "ae2:molecular_assembler", id: "6501000000000009", rewards: [{ count: 2, id: "6502000000000009", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6503000000000009", item: "ae2:molecular_assembler", type: "item" }], title: "Pattern Assembly", x: 19.25d, y: 2.3d }
 	]
 	title: "Control And Intelligence"
 }

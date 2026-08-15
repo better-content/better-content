@@ -134,6 +134,24 @@ Visibility is a teaching tool, not a substitute for real requirements.
 
 Use native `quest_links` whenever another chapter owns the milestone. Completion, task, reward, and icon remain authoritative on the original quest.
 
+### Signed 64-Bit Quest IDs
+
+FTB Quests 2001.4.21 parses hexadecimal ID strings with signed `Long.parseLong(..., 16)`. A positive 16-digit value whose first hexadecimal digit is `8`–`F` is therefore not a valid on-disk ID string, even though it is a valid unsigned 64-bit bit pattern and the SNBT parser accepts it.
+
+- Assign new IDs only in the positive signed range `0000000000000002` through `7FFFFFFFFFFFFFFF`. Keep the usual uppercase, 16-digit form.
+- When an existing authoritative ID has its high bit set, preserve its 64-bit identity by writing the signed two's-complement value as a negative hexadecimal string. For unsigned value `U`, write `-(2^64 - U)` in hexadecimal.
+- Apply that signed representation everywhere the ID is parsed: object `id` fields, `group`, `dependencies`, `linked_quest`, image dependencies, autofocus targets, and any other quest-object reference. Mixing the unsigned display form and signed on-disk form breaks identity.
+- Do not change the semantic ID merely to avoid the conversion. At runtime, FTB's `%016X` display of the signed long still produces the original authoritative 16-digit bit pattern.
+
+For example, Local AE2's authoritative ID is `9F53980A2B3C5E65`. Its safe on-disk representation is:
+
+```snbt
+id: "-60AC67F5D4C3A19B"
+linked_quest: "-60AC67F5D4C3A19B"
+```
+
+The two strings represent the same 64 bits. Writing `9F53980A2B3C5E65` directly causes different failures by context: ordinary definitions and references may be rejected, regenerated, or removed, while `QuestLink.readData` lets the `NumberFormatException` escape and can abort the entire questbook load. A successful generic SNBT parse does not catch this error. Review every ID-bearing field for positive high-bit values, then run `./smoke.sh` and confirm the expected FTB chapter and quest counts before distributing the pack.
+
 ## Authoring Review
 
 Review the book as a player-facing map, not only as SNBT.

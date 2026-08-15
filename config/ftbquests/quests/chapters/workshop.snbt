@@ -21,8 +21,8 @@
 			}
 			]
 			title: "Andesite Alloy"
-			x: -12d
-			y: 0d
+			x: 0d
+			y: 3d
 		}
 		{
 			dependencies: ["0379EC8BFE48A365"]
@@ -38,8 +38,8 @@
 			}
 			]
 			title: "Shafts"
-			x: -10d
-			y: 0d
+			x: 2d
+			y: 3d
 		}
 		{
 			dependencies: ["54F7FA3700E06569"]
@@ -55,8 +55,8 @@
 			}
 			]
 			title: "Cogwheels"
-			x: -8d
-			y: -1.5d
+			x: 4d
+			y: 3d
 		}
 		{
 			dependencies: ["76EBFFD338A56122"]
@@ -72,8 +72,8 @@
 			}
 			]
 			title: "Belt"
-			x: -8d
-			y: 1.5d
+			x: 6d
+			y: 3d
 		}
 		{
 			dependencies: ["54F7FA3700E06569"]
@@ -91,8 +91,8 @@
 			}
 			]
 			title: "Hand Crank"
-			x: -8d
-			y: 0d
+			x: 4d
+			y: 1d
 		}
 		{
 			description: ["Build the Seared Machine Casing. Use it as the body for first Create processing."]
@@ -109,8 +109,8 @@
 			}
 			]
 			title: "Seared Machine Casing"
-			x: -12d
-			y: 6d
+			x: 0d
+			y: 5d
 		}
 		{
 			dependencies: ["77685660FF7C7025" "0379EC8BFE48A365"]
@@ -128,8 +128,8 @@
 			}
 			]
 			title: "Depot"
-			x: -10d
-			y: 4.5d
+			x: 2d
+			y: 4d
 		}
 		{
 			dependencies: ["77685660FF7C7025" "0379EC8BFE48A365"]
@@ -147,8 +147,8 @@
 			}
 			]
 			title: "Basin"
-			x: -10d
-			y: 6d
+			x: 2d
+			y: 5d
 		}
 		{
 			dependencies: ["54F7FA3700E06569" "114059585B11EDB5"]
@@ -166,7 +166,7 @@
 			}
 			]
 			title: "Mechanical Press"
-			x: -8d
+			x: 4d
 			y: 4d
 		}
 		{
@@ -185,8 +185,8 @@
 			}
 			]
 			title: "Mechanical Mixer"
-			x: -8d
-			y: 6d
+			x: 4d
+			y: 5d
 		}
 		{
 			dependencies: ["15A4C0C901F8FBC9" "1EB768E35A5FA287" "4CC3C8B2D71507C1"]
@@ -204,8 +204,8 @@
 			}
 			]
 			title: "First Deployer"
-			x: -6d
-			y: 5d
+			x: 6d
+			y: 4d
 		}
 		{
 			dependencies: ["5F9CD19F1B0A4B85"]
@@ -221,8 +221,8 @@
 			}
 			]
 			title: "Andesite Casing"
-			x: -4d
-			y: 5d
+			x: 8d
+			y: 4d
 		}
 		{
 			dependencies: ["4CC3C8B2D71507C1" "2DA99D3BD6F00324" "3E1F3C4E42C3D164" "6D2D6CA800B333FD" "778F3E474DEFE9B7"]
@@ -240,8 +240,8 @@
 			}
 			]
 			title: "Manual Workcell"
-			x: -2d
-			y: 4.5d
+			x: 10d
+			y: 4d
 		}
 		{
 			dependencies: ["1D83365BAFA20FFE"]
@@ -259,8 +259,8 @@
 			}
 			]
 			title: "Inherited Plans"
-			x: 0d
-			y: 6d
+			x: 12d
+			y: 4d
 		}
 		{
 			dependencies: ["11A13F1B3FD3D65A"]
@@ -278,8 +278,8 @@
 			}
 			]
 			title: "Schematic Table"
-			x: 2d
-			y: 6d
+			x: 14d
+			y: 4d
 		}
 		{
 			dependencies: ["618D94BA99863F77"]
@@ -297,8 +297,8 @@
 			}
 			]
 			title: "Schematicannon"
-			x: 4d
-			y: 6d
+			x: 16d
+			y: 4d
 		}
 		{
 			dependencies: ["251E2393D08845F4"]
@@ -309,14 +309,68 @@
 			tasks: [
 			{
 				criterion: "book_burned"
-				id: "894DDF685829DB2C"
+				id: "-76B22097A7D624D4"
 				type: "better_content_fixes:criterion"
 			}
 			]
 			title: "Burn a Book"
+			x: 18d
+			y: 4d
+		}
+		{
+			dependencies: ["76EBFFD338A56122" "778F3E474DEFE9B7"]
+			description: ["Build a Millstone and drive it from the local shaft line. It establishes continuous grinding before the workshop reaches advanced ore processing."]
+			icon: "create:millstone"
+			id: "7A8D6DDB4178EEB0"
+			rewards: [{ count: 2, id: "-40D318E16B00C617", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [{ id: "25FB3B01D51A748C", item: "create:millstone", type: "item" }]
+			title: "Millstone"
+			x: 8d
+			y: 6d
+		}
+		{
+			dependencies: ["114059585B11EDB5" "77685660FF7C7025"]
+			description: ["Fit an Andesite Funnel to the depot so items can enter and leave a processing station deliberately."]
+			icon: "create:andesite_funnel"
+			id: "0B6C99EF4DDC5B67"
+			rewards: [{ count: 2, id: "7E981C598969D714", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "-4381DED103434D23", item: "create:andesite_funnel", type: "item" }]
+			title: "Move Items"
+			x: 2d
+			y: 7d
+		}
+		{
+			dependencies: ["0B6C99EF4DDC5B67"]
+			description: ["Add a Chute to route items vertically. This is a local feed path, not yet a complete logistics network."]
+			icon: "create:chute"
+			id: "-6DD197BE618AF142"
+			rewards: [{ count: 2, id: "0C8CEFF7F11E2A2B", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "-1FF66946C998416", item: "create:chute", type: "item" }]
+			title: "Vertical Feed"
+			x: 4d
+			y: 7d
+		}
+		{
+			dependencies: ["5F9CD19F1B0A4B85" "4CC3C8B2D71507C1"]
+			description: ["Complete a Precision Mechanism by sequenced assembly. This is the recurring brass-era mechanism for automation, trains, and factory logistics."]
+			icon: "create:precision_mechanism"
+			id: "19E547A8242CD9A6"
+			rewards: [{ count: 2, id: "-2A59E488B891054A", item: "createdeco:copper_coin", type: "item" }]
+			shape: "hexagon"
+			size: 1.3d
+			tasks: [{ id: "6C4E861D48014D53", item: "create:precision_mechanism", type: "item" }]
+			title: "Precision Mechanism"
 			x: 6d
 			y: 6d
 		}
+		{ dependencies: ["778F3E474DEFE9B7" "54F7FA3700E06569"], description: ["Route and reverse shafts with a Gearshift at the edge of the workcell."], icon: "create:gearshift", id: "6201000000000001", rewards: [{ count: 2, id: "6202000000000001", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6203000000000001", item: "create:gearshift", type: "item" }], title: "Reverse Rotation", x: 8d, y: 1d }
+		{ dependencies: ["6201000000000001"], description: ["Add a Clutch where redstone must stop a branch without dismantling its shaft line."], icon: "create:clutch", id: "6201000000000002", rewards: [{ count: 2, id: "6202000000000002", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6203000000000002", item: "create:clutch", type: "item" }], title: "Stop Rotation", x: 10d, y: 1d }
+		{ dependencies: ["54F7FA3700E06569"], description: ["Place a Speedometer on the workshop line so rotational speed is visible before tuning machines."], icon: "create:speedometer", id: "6201000000000003", rewards: [{ count: 2, id: "6202000000000003", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6203000000000003", item: "create:speedometer", type: "item" }], title: "Read Speed", x: 2d, y: 1d }
+		{ dependencies: ["778F3E474DEFE9B7"], description: ["Use a Mechanical Bearing as the compact rotation point for a moving contraption."], icon: "create:mechanical_bearing", id: "6201000000000004", rewards: [{ count: 2, id: "6202000000000004", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6203000000000004", item: "create:mechanical_bearing", type: "item" }], title: "Rotating Contraption", x: 10d, y: 2d }
+		{ dependencies: ["778F3E474DEFE9B7"], description: ["Build a Rope Pulley for controlled vertical movement inside the workshop."], icon: "create:rope_pulley", id: "6201000000000005", rewards: [{ count: 2, id: "6202000000000005", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6203000000000005", item: "create:rope_pulley", type: "item" }], title: "Lift a Platform", x: 12d, y: 2d }
+		{ dependencies: ["1D83365BAFA20FFE"], description: ["Keep frequently used tools together in a Toolbox beside the manual workcell."], icon: "create:red_toolbox", id: "6201000000000006", rewards: [{ count: 2, id: "6202000000000006", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6203000000000006", item: "create:red_toolbox", type: "item" }], title: "Workshop Toolbox", x: 10d, y: 6d }
 	]
 	title: "Workshop"
 }

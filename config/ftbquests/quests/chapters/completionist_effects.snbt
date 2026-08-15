@@ -38,8 +38,8 @@
 				}
 			]
 			title: "All Effects: Absorption"
-			x: 1.5d
-			y: 0.0d
+			x: 0d
+			y: 0d
 		}
 		{
 			description: ["Source items: farmersrespite:coffee_beans, farmersrespite:green_tea_leaves, farmersrespite:long_coffee | Runtime hint: kitchen_infrastructure"]
@@ -71,8 +71,8 @@
 				}
 			]
 			title: "All Effects: Caffeinated"
-			x: 2.75d
-			y: 0.0d
+			x: 2d
+			y: 0d
 		}
 		{
 			description: ["Source items: farmersrespite:rose_hips, farmersdelight:chicken_soup, brewinandchewin:fiery_fondue | Runtime hint: kitchen_infrastructure"]
@@ -80,7 +80,7 @@
 			id: "50A8E2A8287266AB"
 			rewards: [{
 				count: 8
-				id: "ECE7E0DB7A3EB0A8"
+				id: "-13181F2485C14F58"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -104,8 +104,8 @@
 				}
 			]
 			title: "All Effects: Comfort"
-			x: 4.0d
-			y: 0.0d
+			x: 4d
+			y: 0d
 		}
 		{
 			description: ["Source items: minecraft:magma_cream, minecraft:enchanted_golden_apple | Runtime hint: keg_distillation"]
@@ -132,8 +132,8 @@
 				}
 			]
 			title: "All Effects: Fire Resistance"
-			x: 5.25d
-			y: 0.0d
+			x: 6d
+			y: 0d
 		}
 		{
 			description: ["Source items: minecraft:glow_berries, minecraft:glow_ink_sac, undergarden:droopvine_item | Runtime hint: kettle_infusion"]
@@ -165,8 +165,8 @@
 				}
 			]
 			title: "All Effects: Glowing"
-			x: 6.5d
-			y: 0.0d
+			x: 8d
+			y: 0d
 		}
 		{
 			description: ["Source items: farmersrespite:green_tea_leaves, farmersrespite:coffee_beans, farmersrespite:long_green_tea | Runtime hint: kettle_infusion"]
@@ -198,8 +198,8 @@
 				}
 			]
 			title: "All Effects: Haste"
-			x: 7.75d
-			y: 0.0d
+			x: 10d
+			y: 0d
 		}
 		{
 			description: ["Source items: brewinandchewin:vodka, brewinandchewin:mead, brewinandchewin:dread_nog | Runtime hint: keg_distillation"]
@@ -231,8 +231,8 @@
 				}
 			]
 			title: "All Effects: Intoxication"
-			x: 1.5d
-			y: 3.25d
+			x: 12d
+			y: 0d
 		}
 		{
 			description: ["Source items: undergarden:gloomper_leg, minecraft:rabbit_foot | Runtime hint: kettle_infusion"]
@@ -240,7 +240,7 @@
 			id: "69DEE4BDBF08053B"
 			rewards: [{
 				count: 8
-				id: "D8AADEA9A6749342"
+				id: "-27552156598B6CBE"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -259,8 +259,8 @@
 				}
 			]
 			title: "All Effects: Jump Boost"
-			x: 2.75d
-			y: 3.25d
+			x: 14d
+			y: 0d
 		}
 		{
 			description: ["Source items: minecraft:shulker_shell, occultism:demons_dream_essence | Runtime hint: dangerous_extraction"]
@@ -268,7 +268,7 @@
 			id: "1D993BA812C8A94D"
 			rewards: [{
 				count: 8
-				id: "E648F9BD4E83CF32"
+				id: "-19B70642B17C30CE"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -287,8 +287,8 @@
 				}
 			]
 			title: "All Effects: Levitation"
-			x: 4.0d
-			y: 3.25d
+			x: 16d
+			y: 0d
 		}
 		{
 			description: ["Source items: occultism:otherworld_essence, minecraft:rabbit_foot, occultism:demons_dream_essence | Runtime hint: kettle_infusion"]
@@ -296,7 +296,7 @@
 			id: "4A8E9D990487D13D"
 			rewards: [{
 				count: 8
-				id: "E21C4867F75ED1F5"
+				id: "-1DE3B79808A12E0B"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -320,12 +320,12 @@
 				}
 			]
 			title: "All Effects: Luck"
-			x: 5.25d
-			y: 3.25d
+			x: 18d
+			y: 0d
 		}
 		{
 			description: ["Source items: ars_nouveau:sourceberry_bush, ars_nouveau:source_berry_pie, ars_nouveau:source_berry_roll | Runtime hint: magic_distillation"]
-			icon: "ars_nouveau:abjuration_essence"
+			icon: "ars_nouveau:source_gem_block"
 			id: "6B1AF497791CB750"
 			rewards: [{
 				count: 8
@@ -353,8 +353,8 @@
 				}
 			]
 			title: "All Effects: Mana Regen"
-			x: 6.5d
-			y: 3.25d
+			x: 20d
+			y: 0d
 		}
 		{
 			description: ["Source items: ubesdelight:ube, minecraft:golden_carrot, creatingspace:space_food | Runtime hint: kettle_infusion"]
@@ -362,7 +362,7 @@
 			id: "1DD8C4C4A1F03BB8"
 			rewards: [{
 				count: 8
-				id: "AAD8216DCFD52754"
+				id: "-5527DE92302AD8AC"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -386,8 +386,8 @@
 				}
 			]
 			title: "All Effects: Night Vision"
-			x: 7.75d
-			y: 3.25d
+			x: 22d
+			y: 0d
 		}
 		{
 			description: ["Source items: farmersdelight:cabbage, farmersdelight:ham, brewinandchewin:scarlet_pierogi | Runtime hint: kitchen_infrastructure"]
@@ -395,7 +395,7 @@
 			id: "7527BD31805E8167"
 			rewards: [{
 				count: 8
-				id: "A801219F7B762C56"
+				id: "-57FEDE608489D3AA"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -419,8 +419,8 @@
 				}
 			]
 			title: "All Effects: Nourishment"
-			x: 9.0d
-			y: 3.25d
+			x: 0d
+			y: 2d
 		}
 		{
 			description: ["Source items: minecraft:spider_eye, minecraft:pufferfish, minecraft:poisonous_potato | Runtime hint: dangerous_extraction"]
@@ -452,8 +452,8 @@
 				}
 			]
 			title: "All Effects: Poison"
-			x: 10.25d
-			y: 3.25d
+			x: 2d
+			y: 2d
 		}
 		{
 			description: ["Source items: brewinandchewin:red_rum, brewinandchewin:bloody_mary | Runtime hint: keg_distillation"]
@@ -461,7 +461,7 @@
 			id: "60782B2305BFE998"
 			rewards: [{
 				count: 8
-				id: "D25A2FCE8F5B3A8A"
+				id: "-2DA5D03170A4C576"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -480,8 +480,8 @@
 				}
 			]
 			title: "All Effects: Raging"
-			x: 1.5d
-			y: 6.5d
+			x: 4d
+			y: 2d
 		}
 		{
 			description: ["Source items: farmersrespite:rose_hips, minecraft:ghast_tear, undergarden:blood_globule | Runtime hint: keg_distillation"]
@@ -513,8 +513,8 @@
 				}
 			]
 			title: "All Effects: Regeneration"
-			x: 2.75d
-			y: 6.5d
+			x: 6d
+			y: 2d
 		}
 		{
 			description: ["Source items: farmersrespite:yellow_tea_leaves, undergarden:ink_mushroom, minecraft:enchanted_golden_apple | Runtime hint: keg_distillation"]
@@ -546,8 +546,8 @@
 				}
 			]
 			title: "All Effects: Resistance"
-			x: 4.0d
-			y: 6.5d
+			x: 8d
+			y: 2d
 		}
 		{
 			description: ["Source items: minecraft:phantom_membrane, undergarden:veiled_stew | Runtime hint: kettle_infusion"]
@@ -555,7 +555,7 @@
 			id: "1B72275AB9460582"
 			rewards: [{
 				count: 8
-				id: "9274C9ECD978594D"
+				id: "-6D8B36132687A6B3"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -574,8 +574,8 @@
 				}
 			]
 			title: "All Effects: Slow Falling"
-			x: 5.25d
-			y: 6.5d
+			x: 10d
+			y: 2d
 		}
 		{
 			description: ["Source items: farmersrespite:coffee_beans, create:bar_of_chocolate, minecraft:sugar | Runtime hint: kettle_infusion"]
@@ -607,8 +607,8 @@
 				}
 			]
 			title: "All Effects: Speed"
-			x: 6.5d
-			y: 6.5d
+			x: 12d
+			y: 2d
 		}
 		{
 			description: ["Source items: brewinandchewin:red_rum, minecraft:blaze_powder | Runtime hint: keg_distillation"]
@@ -635,8 +635,8 @@
 				}
 			]
 			title: "All Effects: Strength"
-			x: 7.75d
-			y: 6.5d
+			x: 14d
+			y: 2d
 		}
 		{
 			description: ["Source items: brewinandchewin:mead, minecraft:honey_bottle, brewinandchewin:saccharine_rum | Runtime hint: keg_distillation"]
@@ -668,8 +668,8 @@
 				}
 			]
 			title: "All Effects: Sweet Heart"
-			x: 9.0d
-			y: 6.5d
+			x: 16d
+			y: 2d
 		}
 		{
 			description: ["Source items: occultism:datura, occultism:demons_dream_essence, occultism:otherworld_essence | Runtime hint: magic_distillation"]
@@ -677,7 +677,7 @@
 			id: "063D9468F2630DE3"
 			rewards: [{
 				count: 8
-				id: "8927B007A370D050"
+				id: "-76D84FF85C8F2FB0"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -701,8 +701,8 @@
 				}
 			]
 			title: "All Effects: Third Eye"
-			x: 10.25d
-			y: 6.5d
+			x: 18d
+			y: 2d
 		}
 		{
 			description: ["Source items: minecraft:sea_pickle, minecraft:pufferfish, immersive_weathering:enchanted_golden_moss_clump | Runtime hint: kettle_infusion"]
@@ -710,7 +710,7 @@
 			id: "13B26F601D86EC88"
 			rewards: [{
 				count: 8
-				id: "AD3AD37A995FAA46"
+				id: "-52C52C8566A055BA"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -734,8 +734,8 @@
 				}
 			]
 			title: "All Effects: Water Breathing"
-			x: 11.5d
-			y: 6.5d
+			x: 20d
+			y: 2d
 		}
 		{
 			description: ["Source items: farmersrespite:purulent_tea, minecraft:fermented_spider_eye, brewinandchewin:withering_dross | Runtime hint: dangerous_extraction"]
@@ -767,8 +767,8 @@
 				}
 			]
 			title: "All Effects: Weakness"
-			x: 12.75d
-			y: 6.5d
+			x: 22d
+			y: 2d
 		}
 	]
 }

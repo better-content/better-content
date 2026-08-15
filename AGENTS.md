@@ -19,15 +19,22 @@ installs Forge, then checks server readiness, client join, one bounded settled c
 process shutdown, and fatal-log signatures. Its cache root and settle duration may be set
 with `BC_SMOKE_RUN_ROOT` and `BC_SMOKE_SETTLE_SECONDS`.
 
-Do not add other evaluations: static validation, contracts, audits, unit tests, GameTests,
-captures, performance budgets, persistence scenarios, visual review, graph evaluation,
-doctor checks, or scenario matrices.
+Do not add other runtime evaluations: static validation suites, contracts, audits, unit tests,
+GameTests, performance budgets, persistence scenarios, doctor checks, or scenario matrices.
+Questbook visual authoring is the sole exception: use the Minecraft-free sibling harness at
+`/home/dev/ftb-quests-layout-harness/standalone` to render and inspect live FTB Quests chapter
+layouts and to run its icon audit against an available reference-client atlas. These are static
+authoring checks, not runtime evaluations; they complement `./smoke.sh` without replacing or
+broadening it.
 
 ## Tools and quarantine
 The entire former `tools/` tree is quarantined. Do not recreate an active `tools/` directory.
 `quarantine/` is unsupported and removable. Active runtime content, `dist.sh`, and `smoke.sh`
 must not depend on or include it. Do not restore or invoke quarantined code unless the user
-explicitly reverses this decision. Custom mod sources live in sibling repositories under `/home/dev` and must not be recreated here.
+explicitly reverses this decision. This quarantine applies to the pack-local former `tools/`
+tree, not to `/home/dev/ftb-quests-layout-harness`, which is the supported questbook layout
+renderer. Custom mod sources live in sibling repositories under `/home/dev` and must not be
+recreated here.
 
 ## Runtime safety
 Treat pre-existing changes as user-owned. Do not delete player worlds, saves, logs, crash
@@ -61,5 +68,6 @@ must name every chapter and cross-cutting integration file in scope. Before hand
 - the result of `./smoke.sh`, or the exact reason it was not run or did not pass.
 
 Do not invent a second quest compiler, schema, linter, audit, or validation command. Review SNBT
-and in-game presentation according to `docs/questbook_standards.md`; `./smoke.sh` remains the sole
-supported repository evaluation.
+and presentation according to `docs/questbook_standards.md`; use only the sibling standalone
+layout harness's documented render and icon-audit commands for static visual authoring.
+`./smoke.sh` remains the sole supported runtime evaluation.

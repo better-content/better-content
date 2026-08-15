@@ -2,57 +2,59 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "circle"
 	filename: "routes_and_recovery"
-	group: "B2E8D1C49A73F506"
+	group: "-4D172E3B658C0AFA"
 	icon: "createdeco:copper_coin"
 	id: "184620DE314A2002"
 	order_index: 60
-	quest_links: [ ]
+	quest_links: [
+		{ id: "-45031D23DF9852A5", linked_quest: "41AE4E6CED77EA27", x: 0d, y: 3d }
+		{ id: "-2050C9C9BE474675", linked_quest: "-65472B7E3BEB28F9", x: 10d, y: 3d }
+		{ id: "50568EC6FACFB0B0", linked_quest: "2DA62AB7707B5D5B", x: 12.5d, y: 3d }
+	]
 	quests: [
 		{
 			description: ["Craft a Recovery Compass before long expeditions. It points toward the last death site while route marks, food, and clean water still determine whether you get home."]
 			icon: "minecraft:recovery_compass"
 			id: "197291772F9B2479"
-			rewards: [{ count: 2, id: "E700000000000048", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFB8", item: "createdeco:copper_coin", type: "item" }]
 			shape: "diamond"
-			tasks: [{ id: "F44DB64BFDFFFCA5", item: "minecraft:recovery_compass", type: "item" }]
+			tasks: [{ id: "-BB249B40200035B", item: "minecraft:recovery_compass", type: "item" }]
 			title: "Recovery Compass"
-			x: 0.0d
-			y: 0.0d
+			x: 0d
+			y: 0d
 		}
 		{
 			dependencies: ["197291772F9B2479"]
 			description: ["Raise a White Banner as a visible rally and fallback marker. Build sightlines, walls, and patrol routes around it before a pillager warband arrives."]
 			icon: "minecraft:white_banner"
-			id: "ED7354BC4C68F8EF"
-			rewards: [{ count: 2, id: "E700000000000049", item: "createdeco:copper_coin", type: "item" }]
+			id: "-128CAB43B3970711"
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFB7", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [{ id: "1E0909C723DF030C", item: "minecraft:white_banner", type: "item" }]
 			title: "Rally Banner"
-			x: 3.0d
-			y: -9.0d
+			x: 2.5d
+			y: 0d
 		}
 		{
-			dependencies: ["197291772F9B2479"]
-			description: ["Reach the Nether with enough supplies to bring magma, soul aggregate, netherrack, and refractory heat proof home. Basic seared work can begin from any Font route; the Nether now opens scorched metallurgy and sustained industry."]
-			icon: "minecraft:netherrack"
+						description: ["Reach the Nether with enough supplies to bring magma, soul aggregate, netherrack, and refractory heat proof home. Basic seared work can begin from any Font route; the Nether now opens scorched metallurgy and sustained industry."]
+			icon: "minecraft:flint_and_steel"
 			id: "75FD0C4219599FB8"
-			rewards: [{ count: 2, id: "E70000000000004A", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFB6", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "minecraft:the_nether"
-				id: "D7BE0AC22204E571"
+				id: "-2841F53DDDFB1A8F"
 				type: "dimension"
 			}]
 			title: "Nether Route"
-			x: 3.0d
-			y: -6.0d
+			x: 0d
+			y: 9d
 		}
 		{
-			dependencies: ["197291772F9B2479"]
-			description: ["Reach the Aether and return with mobility proof for balloons, gliders, and controlled flight. Pack for vertical travel and a reliable way back down."]
+						description: ["Reach the Aether and return with mobility proof for balloons, gliders, and controlled flight. Pack for vertical travel and a reliable way back down."]
 			icon: "aether:skyroot_log"
-			id: "E9E86416ACE5403F"
-			rewards: [{ count: 2, id: "E70000000000004B", item: "createdeco:copper_coin", type: "item" }]
+			id: "-16179BE9531ABFC1"
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFB5", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "aether:the_aether"
@@ -60,31 +62,29 @@
 				type: "dimension"
 			}]
 			title: "Aether Route"
-			x: 3.0d
-			y: -3.0d
+			x: 2.5d
+			y: 9d
 		}
 		{
-			dependencies: ["197291772F9B2479"]
-			description: ["Reach the Undergarden with room for food, forage, and body-system materials. Treat its pantry value as expedition support rather than a free resource bypass."]
+						description: ["Reach the Undergarden with room for food, forage, and body-system materials. Treat its pantry value as expedition support rather than a free resource bypass."]
 			icon: "undergarden:depthrock"
 			id: "352FF9B1BBB0A925"
-			rewards: [{ count: 2, id: "E70000000000004C", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFB4", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "undergarden:undergarden"
-				id: "F41E9E7E6DFC4122"
+				id: "-BE161819203BEDE"
 				type: "dimension"
 			}]
 			title: "Undergarden Route"
-			x: 3.0d
-			y: 0.0d
+			x: 5d
+			y: 9d
 		}
 		{
-			dependencies: ["197291772F9B2479"]
-			description: ["Reach the Otherside and return with common raw magic matter. Sculk, echo, soul, and resonance feed Blood-refined traditions instead of forming a separate workstation spine."]
+						description: ["Reach the Otherside and return with common raw magic matter. Sculk, echo, soul, and resonance feed Blood-refined traditions instead of forming a separate workstation spine."]
 			icon: "deeperdarker:cobbled_sculk_stone"
 			id: "1FF79D76C1F18DD8"
-			rewards: [{ count: 2, id: "E70000000000004D", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFB3", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "deeperdarker:otherside"
@@ -92,76 +92,75 @@
 				type: "dimension"
 			}]
 			title: "Otherside Route"
-			x: 3.0d
-			y: 3.0d
+			x: 7.5d
+			y: 9d
 		}
 		{
-			dependencies: ["197291772F9B2479"]
-			description: ["Reach Earth orbit only after fuel, oxygen, recovery, and return logistics are staged. A successful launch is incomplete until the expedition can come home intact."]
-			icon: "creatingspace:rocket"
-			id: "AD4E30D82FC71589"
-			rewards: [{ count: 2, id: "E70000000000004E", item: "createdeco:copper_coin", type: "item" }]
+						description: ["Reach Earth orbit only after fuel, oxygen, recovery, and return logistics are staged. A successful launch is incomplete until the expedition can come home intact."]
+			icon: "creatingspace:rocket_controls"
+			id: "-52B1CF27D038EA77"
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFB2", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "creatingspace:earth_orbit"
-				id: "EE0A3F2C5DC89FF5"
+				id: "-11F5C0D3A237600B"
 				type: "dimension"
 			}]
 			title: "Earth Orbit"
-			x: 3.0d
-			y: 6.0d
+			x: 0d
+			y: 12d
 		}
 		{
 			dependencies: ["197291772F9B2479"]
 			description: ["Place a Bell at a village or settlement meeting point. Specialist trades relieve expedition friction while machine, casing, and magic gates remain yours to solve."]
 			icon: "minecraft:globe_banner_pattern"
 			id: "11858C7F6C7720B4"
-			rewards: [{ count: 2, id: "E70000000000004F", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFB1", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
-			tasks: [{ id: "BC134FAFFCD196F5", item: "minecraft:bell", type: "item" }]
+			tasks: [{ id: "-43ECB050032E690B", item: "minecraft:bell", type: "item" }]
 			title: "Settlement Bell"
-			x: 3.0d
-			y: 9.0d
+			x: 2.5d
+			y: 3d
 		}
 		{
-			dependencies: ["ED7354BC4C68F8EF"]
+			dependencies: ["-128CAB43B3970711"]
 			description: ["Arm a Crossbow before entering a warned warband territory. Campaign forces adapt to outcomes instead of scaling from global time."]
-			icon: "minecraft:arrow"
+			icon: "minecraft:crossbow"
 			id: "56286CE0BBF1D1DC"
-			rewards: [{ count: 2, id: "E700000000000050", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFB0", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [{ id: "66BE8206DD5A35C7", item: "minecraft:crossbow", type: "item" }]
 			title: "Campaign Arms"
-			x: 6.0d
-			y: -9.0d
+			x: 5d
+			y: 0d
 		}
 		{
-			dependencies: ["E9E86416ACE5403F"]
+			dependencies: ["-16179BE9531ABFC1"]
 			description: ["Turn Aether lift materials into controlled aeronautics only after the sealed manufacturing route is ready. Powered ships are earned transport infrastructure."]
 			icon: "vs_eureka:balloon"
 			id: "47002A1BEBE6F9F2"
-			rewards: [{ count: 2, id: "E700000000000051", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFAF", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "vs_eureka:balloon"
-				id: "B688D8CDEB4AC421"
+				id: "-4977273214B53BDF"
 				type: "item"
 			}
 			{
 				item: "vs_clockwork:blade_controller"
-				id: "CDF780B06BAEA2DD"
+				id: "-32087F4F94515D23"
 				type: "item"
 			}]
 			title: "Powered Flight"
-			x: 6.0d
-			y: -3.0d
+			x: 2.5d
+			y: 12d
 		}
 		{
-			dependencies: ["AD4E30D82FC71589"]
+			dependencies: ["-52B1CF27D038EA77"]
 			description: ["Reach Moon orbit with enough fuel, oxygen, and recovery supplies to continue or return. A fragile outbound trip is not ready for landing."]
 			icon: "creatingspace:engine_blueprint"
-			id: "B724B6B258A08266"
-			rewards: [{ count: 2, id: "E700000000000052", item: "createdeco:copper_coin", type: "item" }]
+			id: "-48DB494DA75F7D9A"
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFAE", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "creatingspace:moon_orbit"
@@ -169,15 +168,15 @@
 				type: "dimension"
 			}]
 			title: "Moon Orbit"
-			x: 6.0d
-			y: 6.0d
+			x: 5d
+			y: 12d
 		}
 		{
 			dependencies: ["11858C7F6C7720B4"]
 			description: ["Earn Copper Coins through routes, quests, combat pressure, and useful work. Coin conversion loses value deliberately, so access and recovery matter more than arbitrage."]
 			icon: "createdeco:copper_coin"
-			id: "A53643CC3D672386"
-			rewards: [{ count: 2, id: "E700000000000053", item: "createdeco:copper_coin", type: "item" }]
+			id: "-5AC9BC33C298DC7A"
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFAD", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "createdeco:copper_coin"
@@ -185,90 +184,140 @@
 				type: "item"
 			}]
 			title: "Copper Coin"
-			x: 6.0d
-			y: 9.0d
+			x: 5d
+			y: 3d
 		}
 		{
-			dependencies: ["B724B6B258A08266"]
+			dependencies: ["-48DB494DA75F7D9A"]
 			description: ["Land with a target item and a complete return plan. The expedition counts only when its materials and crew arrive back at the supply chain."]
 			icon: "creatingspace:moon_stone"
 			id: "75C047D90D3E1DB0"
-			rewards: [{ count: 2, id: "E700000000000054", item: "createdeco:copper_coin", type: "item" }]
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFAC", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "creatingspace:the_moon"
-				id: "CEA0B1C9D1CC197A"
+				id: "-315F4E362E33E686"
 				type: "dimension"
 			}]
 			title: "The Moon"
-			x: 9.0d
-			y: 6.0d
+			x: 7.5d
+			y: 12d
 		}
 		{
-			dependencies: ["A53643CC3D672386"]
+			dependencies: ["-5AC9BC33C298DC7A"]
 			description: ["Obtain a Wares Delivery Agreement and use packages for route support or recovery. Packages must never replace factories, metallurgy, chemistry, or deep resource fields."]
 			icon: "wares:delivery_agreement"
-			id: "A9F5859FFEEFF4A9"
-			rewards: [{ count: 2, id: "E700000000000055", item: "createdeco:copper_coin", type: "item" }]
+			id: "-560A7A6001100B57"
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFAB", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				item: "wares:delivery_agreement"
-				id: "F57FE430C99757B9"
+				id: "-A801BCF3668A847"
 				type: "item"
 			}]
 			title: "Wares Contract"
-			x: 9.0d
-			y: 9.0d
+			x: 7.5d
+			y: 3d
 		}
 		{
 			dependencies: ["75C047D90D3E1DB0"]
 			description: ["Treat Mars distance as a logistics multiplier. Confirm replacement gear, extra consumables, and the full return stack before descent."]
 			icon: "creatingspace:big_rocket_engine"
-			id: "B187318A5D659942"
-			rewards: [{ count: 2, id: "E700000000000056", item: "createdeco:copper_coin", type: "item" }]
+			id: "-4E78CE75A29A66BE"
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFAA", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "creatingspace:mars_orbit"
-				id: "A19086BCCE076B21"
+				id: "-5E6F794331F894DF"
 				type: "dimension"
 			}]
 			title: "Mars Orbit"
-			x: 12.0d
-			y: 6.0d
+			x: 10d
+			y: 12d
 		}
 		{
-			dependencies: ["B187318A5D659942"]
+			dependencies: ["-4E78CE75A29A66BE"]
 			description: ["Land prepared for hostile terrain and a longer recovery loop than the Moon. Remote work must remain supportable from the home route."]
 			icon: "creatingspace:mars_stone"
-			id: "D7B1B33746A475D5"
-			rewards: [{ count: 2, id: "E700000000000057", item: "createdeco:copper_coin", type: "item" }]
+			id: "-284E4CC8B95B8A2B"
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFA9", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "creatingspace:mars"
-				id: "C6C6D6DED05CAE19"
+				id: "-393929212FA351E7"
 				type: "dimension"
 			}]
 			title: "Mars"
-			x: 15.0d
-			y: 6.0d
+			x: 12.5d
+			y: 12d
 		}
 		{
-			dependencies: ["D7B1B33746A475D5"]
+			dependencies: ["-284E4CC8B95B8A2B"]
 			description: ["Reach Venus only when launch, suit, resupply, and return systems can sustain remote work. Fix weak logistics before treating it as a routine route."]
 			icon: "creatingspace:advanced_spacesuit_helmet"
-			id: "9A16DE21F65A4E3D"
-			rewards: [{ count: 2, id: "E700000000000058", item: "createdeco:copper_coin", type: "item" }]
+			id: "-65E921DE09A5B1C3"
+			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFA8", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
 				dimension: "creatingspace:venus"
-				id: "DCE408C081D3F7B6"
+				id: "-231BF73F7E2C084A"
 				type: "dimension"
 			}]
 			title: "Venus"
-			x: 18.0d
-			y: 6.0d
+			x: 15d
+			y: 12d
 		}
-
+		{
+			dependencies: ["-205BDA9BA88D378F" "-16E044CA8689FD44"]
+			description: ["Upgrade the primitive hook with iron and an Andesite Machine Casing. This optional route improves mobility without gating travel."]
+			icon: "rehooked:iron_hook"
+			id: "67BE05F7DD67223F"
+			rewards: [{ count: 2, id: "30B7C2CE6F2A8499", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "-27C98BD4B7879B7B", item: "rehooked:iron_hook", type: "item" }]
+			title: "Iron Grapple"
+			x: 2.5d
+			y: 6d
+		}
+		{
+			dependencies: ["67BE05F7DD67223F" "1D88EAD05EC7472F"]
+			description: ["Build a Blaze Hook once electrical fabrication and Nether heat materials are available."]
+			icon: "rehooked:blaze_hook"
+			id: "-5623F4A42DF6A3F2"
+			rewards: [{ count: 2, id: "6890D9D832076FF9", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "50B828B768B2EEB3", item: "rehooked:blaze_hook", type: "item" }]
+			title: "Blaze Grapple"
+			x: 5d
+			y: 6d
+		}
+		{
+			dependencies: ["-5623F4A42DF6A3F2" "-40568D6C5239A396"]
+			description: ["Finish the Ender Hook after space-grade casing is available. It is the late guided mobility endpoint."]
+			icon: "rehooked:ender_hook"
+			id: "21ED3F870CE88405"
+			rewards: [{ count: 2, id: "6D63B0170FC0D493", item: "createdeco:copper_coin", type: "item" }]
+			shape: "hexagon"
+			size: 1.3d
+			tasks: [{ id: "-4AD3380D6982E9FC", item: "rehooked:ender_hook", type: "item" }]
+			title: "Ender Grapple"
+			x: 7.5d
+			y: 6d
+		}
+		{
+			dependencies: ["19C8FD2A6139CDE7"]
+			description: ["Pressure-craft Thalassophobia's registered oxygen tank as the reviewed diving-air boundary."]
+			icon: "thalassophobia:oxygen_tank"
+			id: "5D40000000000001"
+			rewards: [{ count: 2, id: "5D50000000000001", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "5D60000000000001", item: "thalassophobia:oxygen_tank", type: "item" }]
+			title: "Diving Air"
+			x: 10d
+			y: 6d
+		}
+		{ dependencies: ["-40568D6C5239A396"], description: ["Craft the registered basic Spacesuit Helmet before treating orbit as a survivable route."], icon: "creatingspace:basic_spacesuit_helmet", id: "6A01000000000001", rewards: [{ count: 2, id: "6A02000000000001", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6A03000000000001", item: "creatingspace:basic_spacesuit_helmet", type: "item" }], title: "Pressure Helmet", x: 0d, y: 14.3d }
+		{ dependencies: ["6A01000000000001"], description: ["Build a Copper Oxygen Backtank so the first flight has a carried breathing reserve."], icon: "creatingspace:copper_oxygen_backtank", id: "6A01000000000002", rewards: [{ count: 2, id: "6A02000000000002", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6A03000000000002", item: "creatingspace:copper_oxygen_backtank", type: "item" }], title: "Flight Oxygen", x: 2.5d, y: 14.3d }
+		{ dependencies: ["-52B1CF27D038EA77"], description: ["Manufacture a Rocket Engine after the Earth-orbit assembly route is established."], icon: "creatingspace:rocket_engine", id: "6A01000000000003", rewards: [{ count: 2, id: "6A02000000000003", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6A03000000000003", item: "creatingspace:rocket_engine", type: "item" }], title: "Rocket Engine", x: 5d, y: 14.3d }
+		{ dependencies: ["6A01000000000003"], description: ["Add a Flow Meter so propellant movement remains visible during launch preparation."], icon: "creatingspace:flow_meter", id: "6A01000000000004", rewards: [{ count: 2, id: "6A02000000000004", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6A03000000000004", item: "creatingspace:flow_meter", type: "item" }], title: "Measure Propellant", x: 7.5d, y: 14.3d }
+		{ dependencies: ["6A01000000000003" "169E0C5FC13945D3"], description: ["Build a Cryogenic Tank after air liquefaction and rocket propulsion are both available."], icon: "creatingspace:cryogenic_tank", id: "6A01000000000005", rewards: [{ count: 2, id: "6A02000000000005", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6A03000000000005", item: "creatingspace:cryogenic_tank", type: "item" }], title: "Cryogenic Storage", x: 10d, y: 14.3d }
 	]
 	title: "Routes And Recovery"
 }

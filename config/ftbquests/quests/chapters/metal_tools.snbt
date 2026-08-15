@@ -5,7 +5,10 @@
 	group: "65CC8BE9C7D2A5C0"
 	id: "2432CAA2B38B2AB2"
 	order_index: 0
-	quest_links: [ ]
+	quest_links: [
+		{ id: "7C65C47A6B6015A1", linked_quest: "77685660FF7C7025", x: 0d, y: 6d }
+		{ id: "489258DEB9723919", linked_quest: "75FD0C4219599FB8", x: 11.8d, y: 4d }
+	]
 	quests: [
 		{
 			dependencies: ["3DB748B4699DA8BA"]
@@ -21,7 +24,7 @@
 			}
 			]
 			title: "Grout"
-			x: -12d
+			x: 0d
 			y: 0d
 		}
 		{
@@ -38,7 +41,7 @@
 			}
 			]
 			title: "Seared Brick"
-			x: -10.5d
+			x: 1.8d
 			y: 0d
 		}
 		{
@@ -63,7 +66,7 @@
 			}
 			]
 			title: "Melting Setup"
-			x: -8.5d
+			x: 3.6d
 			y: 0d
 		}
 		{
@@ -87,7 +90,7 @@
 			}
 			]
 			title: "Casting Setup"
-			x: -6.5d
+			x: 5.4d
 			y: 0d
 		}
 		{
@@ -104,8 +107,8 @@
 			}
 			]
 			title: "Sand Cast"
-			x: -4.7d
-			y: -1.2d
+			x: 6.8d
+			y: -2d
 		}
 		{
 			dependencies: ["31A654FD64110D60"]
@@ -121,8 +124,8 @@
 			}
 			]
 			title: "Permanent Cast"
-			x: -4.7d
-			y: 1.2d
+			x: 6.8d
+			y: -0.8d
 		}
 		{
 			dependencies: ["2B65BA312D17FA16" "5A8CDDC79AF6EA35"]
@@ -139,8 +142,8 @@
 			}
 			]
 			title: "Metal Part"
-			x: -2.5d
-			y: 0d
+			x: 8.4d
+			y: -1.4d
 		}
 		{
 			dependencies: ["3DB748B4699DA8BA" "05DC6A6B1F48DEE6"]
@@ -158,8 +161,8 @@
 			}
 			]
 			title: "Metal Tool"
-			x: -0.3d
-			y: 0d
+			x: 10d
+			y: -1.4d
 		}
 		{
 			dependencies: ["31A654FD64110D60"]
@@ -175,8 +178,8 @@
 			}
 			]
 			title: "Casting Basin"
-			x: -6.5d
-			y: 4.5d
+			x: 6.8d
+			y: 0.5d
 		}
 		{
 			dependencies: ["31A654FD64110D60"]
@@ -194,8 +197,8 @@
 			}
 			]
 			title: "Smeltery Controller"
-			x: -4.5d
-			y: 4.5d
+			x: 6.8d
+			y: 1.7d
 		}
 		{
 			dependencies: ["197680D179F3BC0B"]
@@ -211,8 +214,8 @@
 			}
 			]
 			title: "Fuel Tank"
-			x: -8.5d
-			y: 6.5d
+			x: 3.6d
+			y: 2.2d
 		}
 		{
 			dependencies: ["31A654FD64110D60"]
@@ -228,8 +231,8 @@
 			}
 			]
 			title: "Drain"
-			x: -4.5d
-			y: 6.5d
+			x: 6.8d
+			y: 3d
 		}
 		{
 			dependencies: ["1B7CF4C8F5700C7F" "4950DF3BF2929E70" "76A14A4FC472B8B9" "31BB16F3451FABAB" "6A4C20E2414CB66C"]
@@ -247,8 +250,8 @@
 			}
 			]
 			title: "Working Smeltery"
-			x: -1d
-			y: 5.5d
+			x: 10d
+			y: 1.5d
 		}
 		{
 			dependencies: ["76D4FB5757FB9A04"]
@@ -266,8 +269,8 @@
 			}
 			]
 			title: "First Brass"
-			x: 1.5d
-			y: 5.5d
+			x: 11.8d
+			y: 1.5d
 		}
 		{
 			dependencies: ["50569DFA5E6FCC89"]
@@ -283,8 +286,8 @@
 			}
 			]
 			title: "Fuel Gauge"
-			x: -6.5d
-			y: -3d
+			x: 5.4d
+			y: 2.2d
 		}
 		{
 			dependencies: ["31A654FD64110D60"]
@@ -300,8 +303,8 @@
 			}
 			]
 			title: "Channel"
-			x: -4d
-			y: 2.5d
+			x: 6.8d
+			y: 5d
 		}
 		{
 			dependencies: ["4D348F53A50EE090"]
@@ -322,8 +325,8 @@
 			}
 			]
 			title: "Transfer"
-			x: -2d
-			y: 2.5d
+			x: 8.4d
+			y: 5d
 		}
 		{
 			dependencies: ["672D9E1250AEEB89"]
@@ -344,9 +347,37 @@
 			}
 			]
 			title: "Ingot Storage"
-			x: 0d
-			y: 2.5d
+			x: 10d
+			y: 5d
 		}
+		{
+			dependencies: ["76D4FB5757FB9A04" "75FD0C4219599FB8"]
+			description: ["Build a Scorched Foundry Controller after bringing Nether refractory materials home. Foundry work is a higher-heat branch, distinct from ordinary seared melting."]
+			icon: "tconstruct:foundry_controller"
+			id: "-20CA7B699A930A37"
+			rewards: [{ count: 2, id: "54734202392FB879", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [{ id: "5C82060E9252BD3E", item: "tconstruct:foundry_controller", type: "item" }]
+			title: "Scorched Foundry"
+			x: 13.6d
+			y: 3d
+		}
+		{
+			dependencies: ["77685660FF7C7025"]
+			description: ["Mechanically assemble the first movement hook at the seared-machine boundary. Later hook upgrades belong in Routes and Recovery."]
+			icon: "rehooked:wood_hook"
+			id: "-205BDA9BA88D378F"
+			rewards: [{ count: 2, id: "-603A2334E77AB295", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "225081190E3F513B", item: "rehooked:wood_hook", type: "item" }]
+			title: "Primitive Grapple"
+			x: 1.8d
+			y: 6d
+		}
+		{ dependencies: ["31A654FD64110D60"], description: ["Add a Seared Casting Tank so molten material can be staged beside the casting line."], icon: "tconstruct:seared_casting_tank", id: "6101000000000001", rewards: [{ count: 2, id: "6102000000000001", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6103000000000001", item: "tconstruct:seared_casting_tank", type: "item" }], title: "Casting Tank", x: 8.4d, y: 3.7d }
+		{ dependencies: ["05DC6A6B1F48DEE6"], description: ["Store casts and tool parts in a dedicated Part Chest beside the casting benches."], icon: "tconstruct:part_chest", id: "6101000000000002", rewards: [{ count: 2, id: "6102000000000002", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6103000000000002", item: "tconstruct:part_chest", type: "item" }], title: "Part Storage", x: 8.4d, y: -3d }
+		{ dependencies: ["76D4FB5757FB9A04"], description: ["Build a Tinker's Anvil once the smeltery can supply full metal blocks for advanced tools."], icon: "tconstruct:tinkers_anvil", id: "6101000000000003", rewards: [{ count: 2, id: "6102000000000003", item: "createdeco:copper_coin", type: "item" }], shape: "rsquare", size: 1.2d, tasks: [{ id: "6103000000000003", item: "tconstruct:tinkers_anvil", type: "item" }], title: "Advanced Tool Forge", x: 11.8d, y: -1.4d }
+		{ dependencies: ["-20CA7B699A930A37"], description: ["Upgrade to the Scorched Anvil after cobalt and the Foundry's refractory route are established."], icon: "tconstruct:scorched_anvil", id: "6101000000000004", rewards: [{ count: 2, id: "6102000000000004", item: "createdeco:copper_coin", type: "item" }], shape: "rsquare", size: 1.2d, tasks: [{ id: "6103000000000004", item: "tconstruct:scorched_anvil", type: "item" }], title: "Scorched Tool Forge", x: 15.4d, y: 3d }
 	]
 	title: "Metal Tools"
 }

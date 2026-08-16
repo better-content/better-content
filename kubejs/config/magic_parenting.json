@@ -284,17 +284,17 @@
       "weight_class": "utility_support"
     },
     {
-      "id": "crafted:event.custom(kubejs):bloodmagic:apprenticebloodorb",
-      "kind": "crafted",
+      "id": "machine_output:bloodmagic:altar:bloodmagic:apprenticebloodorb",
+      "kind": "machine_output",
       "mod": "bloodmagic",
       "output": "bloodmagic:apprenticebloodorb",
       "blood_era": "blood_root",
       "branch": "blood_root",
       "weight_class": "structural_progression",
-      "authority": "synthetic_exact:blood_root/blood_root",
-      "surface_type": "event.custom(kubejs)",
+      "authority": "namespace:bloodmagic",
+      "surface_type": "bloodmagic:altar",
       "evidence": [
-        "kubejs/config/player_progression_regression.json"
+        "bloodmagic:altar/apprenticebloodorb"
       ]
     },
     {
@@ -312,17 +312,17 @@
       "weight_class": "utility_support"
     },
     {
-      "id": "crafted:event.custom(kubejs):bloodmagic:archmagebloodorb",
-      "kind": "crafted",
+      "id": "machine_output:bloodmagic:altar:bloodmagic:archmagebloodorb",
+      "kind": "machine_output",
       "mod": "bloodmagic",
       "output": "bloodmagic:archmagebloodorb",
       "blood_era": "blood_root",
       "branch": "blood_root",
       "weight_class": "decor_theme",
-      "authority": "synthetic_exact:blood_root/blood_root",
-      "surface_type": "event.custom(kubejs)",
+      "authority": "namespace:bloodmagic",
+      "surface_type": "bloodmagic:altar",
       "evidence": [
-        "kubejs/config/player_progression_regression.json"
+        "bloodmagic:altar/archmagebloodorb"
       ]
     },
     {
@@ -451,20 +451,6 @@
       "surface_type": "bloodmagic:altar",
       "evidence": [
         "bloodmagic:altar/slate"
-      ],
-      "blood_era": "blood_root",
-      "branch": "blood_root",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:bloodmagic:blankslate",
-      "kind": "crafted",
-      "mod": "bloodmagic",
-      "output": "bloodmagic:blankslate",
-      "authority": "exact:blood_root/blood_root",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/40_recipe_add/62_chemical_electronics_magic_growth_routes.js:183"
       ],
       "blood_era": "blood_root",
       "branch": "blood_root",
@@ -951,20 +937,6 @@
       "surface_type": "bloodmagic:altar",
       "evidence": [
         "bloodmagic:altar/demonicslate"
-      ],
-      "blood_era": "blood_root",
-      "branch": "blood_root",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:bloodmagic:demonslate",
-      "kind": "crafted",
-      "mod": "bloodmagic",
-      "output": "bloodmagic:demonslate",
-      "authority": "exact:blood_root/blood_root",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/40_recipe_add/62_chemical_electronics_magic_growth_routes.js:198"
       ],
       "blood_era": "blood_root",
       "branch": "blood_root",
@@ -4532,20 +4504,6 @@
       "weight_class": "structural_progression"
     },
     {
-      "id": "crafted:kubejs:authored_recipe:bloodmagic:infusedslate",
-      "kind": "crafted",
-      "mod": "bloodmagic",
-      "output": "bloodmagic:infusedslate",
-      "authority": "exact:blood_root/blood_root",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/40_recipe_add/62_chemical_electronics_magic_growth_routes.js:193"
-      ],
-      "blood_era": "blood_root",
-      "branch": "blood_root",
-      "weight_class": "structural_progression"
-    },
-    {
       "id": "crafted:minecraft:blasting:bloodmagic:ingot_hellforged",
       "kind": "crafted",
       "mod": "bloodmagic",
@@ -5016,31 +4974,31 @@
       "weight_class": "utility_support"
     },
     {
-      "id": "crafted:event.custom(kubejs):bloodmagic:magicianbloodorb",
-      "kind": "crafted",
+      "id": "machine_output:bloodmagic:altar:bloodmagic:magicianbloodorb",
+      "kind": "machine_output",
       "mod": "bloodmagic",
       "output": "bloodmagic:magicianbloodorb",
       "blood_era": "blood_root",
       "branch": "blood_root",
       "weight_class": "structural_progression",
-      "authority": "synthetic_exact:blood_root/blood_root",
-      "surface_type": "event.custom(kubejs)",
+      "authority": "namespace:bloodmagic",
+      "surface_type": "bloodmagic:altar",
       "evidence": [
-        "kubejs/config/player_progression_regression.json"
+        "bloodmagic:altar/magicianbloodorb"
       ]
     },
     {
-      "id": "crafted:event.custom(kubejs):bloodmagic:masterbloodorb",
-      "kind": "crafted",
+      "id": "machine_output:bloodmagic:altar:bloodmagic:masterbloodorb",
+      "kind": "machine_output",
       "mod": "bloodmagic",
       "output": "bloodmagic:masterbloodorb",
       "blood_era": "blood_root",
       "branch": "blood_root",
       "weight_class": "structural_progression",
-      "authority": "synthetic_exact:blood_root/blood_root",
-      "surface_type": "event.custom(kubejs)",
+      "authority": "namespace:bloodmagic",
+      "surface_type": "bloodmagic:altar",
       "evidence": [
-        "kubejs/config/player_progression_regression.json"
+        "bloodmagic:altar/masterbloodorb"
       ]
     },
     {
@@ -5700,20 +5658,6 @@
       "surface_type": "bloodmagic:altar",
       "evidence": [
         "bloodmagic:altar/reinforcedslate"
-      ],
-      "blood_era": "blood_root",
-      "branch": "blood_root",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:bloodmagic:reinforcedslate",
-      "kind": "crafted",
-      "mod": "bloodmagic",
-      "output": "bloodmagic:reinforcedslate",
-      "authority": "exact:blood_root/blood_root",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/40_recipe_add/62_chemical_electronics_magic_growth_routes.js:188"
       ],
       "blood_era": "blood_root",
       "branch": "blood_root",
@@ -6510,7 +6454,7 @@
       "authority": "namespace:bloodmagic",
       "surface_type": "event.custom(kubejs)",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/115_material_economy_recipe_pass.js:206"
+        "kubejs/server_scripts/20_tech/90_cross_era/115_material_economy_recipe_pass.js:206"
       ],
       "blood_era": "blood_root",
       "branch": "blood_root",
@@ -6926,7 +6870,7 @@
       "authority": "exact:slate_t4_demonic/dark",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:65"
+        "kubejs/server_scripts/30_magic/10_blood/80_magic_progression_blood_slate_gates.js:65"
       ],
       "blood_era": "slate_t4_demonic",
       "branch": "dark",
@@ -6940,7 +6884,7 @@
       "authority": "exact:slate_t4_demonic/dark",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:66"
+        "kubejs/server_scripts/30_magic/10_blood/80_magic_progression_blood_slate_gates.js:66"
       ],
       "blood_era": "slate_t4_demonic",
       "branch": "dark",
@@ -6989,20 +6933,6 @@
       ]
     },
     {
-      "id": "crafted:kubejs:authored_recipe:hexerei:blood_bottle",
-      "kind": "crafted",
-      "mod": "hexerei",
-      "output": "hexerei:blood_bottle",
-      "authority": "namespace:hexerei",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/40_recipe_add/62_chemical_electronics_magic_growth_routes.js:229"
-      ],
-      "blood_era": "slate_t2_reinforced",
-      "branch": "fonts",
-      "weight_class": "utility_support"
-    },
-    {
       "id": "crafted:event.custom(kubejs):hexerei:book_of_shadows_altar",
       "kind": "crafted",
       "mod": "hexerei",
@@ -7024,39 +6954,11 @@
       "authority": "exact:slate_t2_reinforced/fonts",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:22"
+        "kubejs/server_scripts/30_magic/10_blood/80_magic_progression_blood_slate_gates.js:22"
       ],
       "blood_era": "slate_t2_reinforced",
       "branch": "fonts",
       "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:event.custom(kubejs):kubejs:apprentice_blood_heart",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:apprentice_blood_heart",
-      "blood_era": "blood_root",
-      "branch": "blood_root",
-      "weight_class": "structural_progression",
-      "authority": "synthetic_exact:blood_root/blood_root",
-      "surface_type": "event.custom(kubejs)",
-      "evidence": [
-        "kubejs/config/player_progression_regression.json"
-      ]
-    },
-    {
-      "id": "crafted:event.custom(kubejs):kubejs:archmage_blood_heart",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:archmage_blood_heart",
-      "blood_era": "blood_root",
-      "branch": "blood_root",
-      "weight_class": "decor_theme",
-      "authority": "synthetic_exact:blood_root/blood_root",
-      "surface_type": "event.custom(kubejs)",
-      "evidence": [
-        "kubejs/config/player_progression_regression.json"
-      ]
     },
     {
       "id": "crafted:kubejs:authored_recipe:kubejs:living_binding",
@@ -7066,39 +6968,11 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js:99"
+        "kubejs/server_scripts/30_magic/60_post_ae2/166_tome_of_blood_post_ae2_gates.js:99"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
       "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:event.custom(kubejs):kubejs:magician_blood_heart",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:magician_blood_heart",
-      "blood_era": "blood_root",
-      "branch": "blood_root",
-      "weight_class": "structural_progression",
-      "authority": "synthetic_exact:blood_root/blood_root",
-      "surface_type": "event.custom(kubejs)",
-      "evidence": [
-        "kubejs/config/player_progression_regression.json"
-      ]
-    },
-    {
-      "id": "crafted:event.custom(kubejs):kubejs:master_blood_heart",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:master_blood_heart",
-      "blood_era": "blood_root",
-      "branch": "blood_root",
-      "weight_class": "structural_progression",
-      "authority": "synthetic_exact:blood_root/blood_root",
-      "surface_type": "event.custom(kubejs)",
-      "evidence": [
-        "kubejs/config/player_progression_regression.json"
-      ]
     },
     {
       "id": "crafted:kubejs:authored_recipe:kubejs:purified_blood_catalyst",
@@ -7108,7 +6982,7 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js:93"
+        "kubejs/server_scripts/30_magic/60_post_ae2/166_tome_of_blood_post_ae2_gates.js:93"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
@@ -7122,25 +6996,11 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "event.custom(kubejs)",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js:122"
+        "kubejs/server_scripts/30_magic/60_post_ae2/166_tome_of_blood_post_ae2_gates.js:122"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
       "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:event.custom(kubejs):kubejs:weak_blood_heart",
-      "kind": "crafted",
-      "mod": "kubejs",
-      "output": "kubejs:weak_blood_heart",
-      "blood_era": "blood_root",
-      "branch": "blood_root",
-      "weight_class": "structural_progression",
-      "authority": "synthetic_exact:blood_root/blood_root",
-      "surface_type": "event.custom(kubejs)",
-      "evidence": [
-        "kubejs/config/player_progression_regression.json"
-      ]
     },
     {
       "id": "crafted:kubejs:replace_input_gate:malum:spirit_altar",
@@ -7150,38 +7010,10 @@
       "authority": "exact:slate_t1_blank/dark",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:16"
+        "kubejs/server_scripts/30_magic/10_blood/80_magic_progression_blood_slate_gates.js:16"
       ],
       "blood_era": "slate_t1_blank",
       "branch": "dark",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:occultism:chalk_gold",
-      "kind": "crafted",
-      "mod": "occultism",
-      "output": "occultism:chalk_gold",
-      "authority": "exact:slate_t4_demonic/dark",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/40_recipe_add/62_chemical_electronics_magic_growth_routes.js:223"
-      ],
-      "blood_era": "slate_t4_demonic",
-      "branch": "dark",
-      "weight_class": "structural_progression"
-    },
-    {
-      "id": "crafted:kubejs:authored_recipe:occultism:chalk_white",
-      "kind": "crafted",
-      "mod": "occultism",
-      "output": "occultism:chalk_white",
-      "authority": "exact:slate_t3_infused/fonts",
-      "surface_type": "kubejs:authored_recipe",
-      "evidence": [
-        "kubejs/server_scripts/40_recipe_add/62_chemical_electronics_magic_growth_routes.js:217"
-      ],
-      "blood_era": "slate_t3_infused",
-      "branch": "fonts",
       "weight_class": "structural_progression"
     },
     {
@@ -7192,7 +7024,7 @@
       "authority": "exact:slate_t3_infused/fonts",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:26"
+        "kubejs/server_scripts/30_magic/10_blood/80_magic_progression_blood_slate_gates.js:26"
       ],
       "blood_era": "slate_t3_infused",
       "branch": "fonts",
@@ -7206,7 +7038,7 @@
       "authority": "exact:slate_t4_demonic/dark",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:69"
+        "kubejs/server_scripts/30_magic/10_blood/80_magic_progression_blood_slate_gates.js:69"
       ],
       "blood_era": "slate_t4_demonic",
       "branch": "dark",
@@ -7220,7 +7052,7 @@
       "authority": "exact:slate_t4_demonic/dark",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:79"
+        "kubejs/server_scripts/30_magic/10_blood/80_magic_progression_blood_slate_gates.js:79"
       ],
       "blood_era": "slate_t4_demonic",
       "branch": "dark",
@@ -7234,7 +7066,7 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:92"
+        "kubejs/server_scripts/30_magic/10_blood/80_magic_progression_blood_slate_gates.js:92"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
@@ -7248,7 +7080,7 @@
       "authority": "exact:slate_t1_blank/dark",
       "surface_type": "kubejs:replace_input_gate",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js:18"
+        "kubejs/server_scripts/30_magic/10_blood/80_magic_progression_blood_slate_gates.js:18"
       ],
       "blood_era": "slate_t1_blank",
       "branch": "dark",
@@ -7276,7 +7108,7 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js:148"
+        "kubejs/server_scripts/30_magic/60_post_ae2/166_tome_of_blood_post_ae2_gates.js:148"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
@@ -7290,7 +7122,7 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js:157"
+        "kubejs/server_scripts/30_magic/60_post_ae2/166_tome_of_blood_post_ae2_gates.js:157"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
@@ -7304,7 +7136,7 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js:166"
+        "kubejs/server_scripts/30_magic/60_post_ae2/166_tome_of_blood_post_ae2_gates.js:166"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
@@ -7318,7 +7150,7 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js:173"
+        "kubejs/server_scripts/30_magic/60_post_ae2/166_tome_of_blood_post_ae2_gates.js:173"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
@@ -7346,7 +7178,7 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js:185"
+        "kubejs/server_scripts/30_magic/60_post_ae2/166_tome_of_blood_post_ae2_gates.js:185"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
@@ -7374,7 +7206,7 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js:182"
+        "kubejs/server_scripts/30_magic/60_post_ae2/166_tome_of_blood_post_ae2_gates.js:182"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
@@ -7402,7 +7234,7 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js:184"
+        "kubejs/server_scripts/30_magic/60_post_ae2/166_tome_of_blood_post_ae2_gates.js:184"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
@@ -7430,7 +7262,7 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js:183"
+        "kubejs/server_scripts/30_magic/60_post_ae2/166_tome_of_blood_post_ae2_gates.js:183"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
@@ -7458,7 +7290,7 @@
       "authority": "exact:slate_t5_ethereal/hybrid",
       "surface_type": "kubejs:authored_recipe",
       "evidence": [
-        "kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js:138"
+        "kubejs/server_scripts/30_magic/60_post_ae2/166_tome_of_blood_post_ae2_gates.js:138"
       ],
       "blood_era": "slate_t5_ethereal",
       "branch": "hybrid",
@@ -7472,7 +7304,7 @@
       "authority": "tag:arcane_chunk_loaders:magic_catalysts",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
-        "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+        "kubejs/server_scripts/30_magic/30_cross_tradition/95_arcane_chunkloader_recipes.js"
       ],
       "blood_era": "slate_t1_blank",
       "branch": "cross_magic",
@@ -7486,7 +7318,7 @@
       "authority": "tag:arcane_chunk_loaders:magic_catalysts",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
-        "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+        "kubejs/server_scripts/30_magic/30_cross_tradition/95_arcane_chunkloader_recipes.js"
       ],
       "blood_era": "slate_t1_blank",
       "branch": "cross_magic",
@@ -7500,7 +7332,7 @@
       "authority": "tag:arcane_chunk_loaders:magic_catalysts",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
-        "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+        "kubejs/server_scripts/30_magic/30_cross_tradition/95_arcane_chunkloader_recipes.js"
       ],
       "blood_era": "slate_t1_blank",
       "branch": "cross_magic",
@@ -7514,7 +7346,7 @@
       "authority": "tag:arcane_chunk_loaders:magic_catalysts",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
-        "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+        "kubejs/server_scripts/30_magic/30_cross_tradition/95_arcane_chunkloader_recipes.js"
       ],
       "blood_era": "slate_t1_blank",
       "branch": "cross_magic",
@@ -7528,7 +7360,7 @@
       "authority": "tag:arcane_chunk_loaders:magic_catalysts",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
-        "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+        "kubejs/server_scripts/30_magic/30_cross_tradition/95_arcane_chunkloader_recipes.js"
       ],
       "blood_era": "slate_t1_blank",
       "branch": "cross_magic",
@@ -7542,7 +7374,7 @@
       "authority": "tag:arcane_chunk_loaders:magic_catalysts",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
-        "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+        "kubejs/server_scripts/30_magic/30_cross_tradition/95_arcane_chunkloader_recipes.js"
       ],
       "blood_era": "slate_t1_blank",
       "branch": "cross_magic",
@@ -7556,7 +7388,7 @@
       "authority": "tag:arcane_chunk_loaders:magic_catalysts",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
-        "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+        "kubejs/server_scripts/30_magic/30_cross_tradition/95_arcane_chunkloader_recipes.js"
       ],
       "blood_era": "slate_t1_blank",
       "branch": "cross_magic",
@@ -7570,7 +7402,7 @@
       "authority": "tag:arcane_chunk_loaders:magic_catalysts",
       "surface_type": "minecraft:crafting_shaped",
       "evidence": [
-        "kubejs/server_scripts/40_recipe_add/95_arcane_chunkloader_recipes.js"
+        "kubejs/server_scripts/30_magic/30_cross_tradition/95_arcane_chunkloader_recipes.js"
       ],
       "blood_era": "slate_t1_blank",
       "branch": "cross_magic",

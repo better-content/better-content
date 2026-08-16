@@ -43,10 +43,6 @@
     "create:piston_extension_pole",
     "farmersdelight:straw",
     "rpg_stats:still_beating_heart",
-    "kubejs:apprentice_blood_heart",
-    "kubejs:magician_blood_heart",
-    "kubejs:master_blood_heart",
-    "kubejs:archmage_blood_heart",
     "pneumaticcraft:capacitor",
     "pneumaticcraft:empty_pcb",
     "pneumaticcraft:heat_pipe",
@@ -74,18 +70,18 @@
     "morered:red_alloy_wire",
     "oc2r:network_connector",
     "oc2r:silicon_wafer",
-      "creatingspace:hastelloy_ingot",
-      "creatingspace:inconel_sheet",
-      "creatingspace:rocket_casing",
-      "aether:aerogel",
-      "aether:ambrosium_shard",
-      "aether:blue_aercloud",
-      "aether:holystone",
-      "aether:quicksoil_glass",
-      "aether:skyroot_stick",
-      "aether:zanite_gemstone",
-      "undergarden:deepsoil",
-      "deeperdarker:cobbled_sculk_stone"
+    "creatingspace:hastelloy_ingot",
+    "creatingspace:inconel_sheet",
+    "creatingspace:rocket_casing",
+    "aether:aerogel",
+    "aether:ambrosium_shard",
+    "aether:blue_aercloud",
+    "aether:holystone",
+    "aether:quicksoil_glass",
+    "aether:skyroot_stick",
+    "aether:zanite_gemstone",
+    "undergarden:deepsoil",
+    "deeperdarker:cobbled_sculk_stone"
   ],
   "seedFluids": [
     "minecraft:water",
@@ -192,7 +188,7 @@
       ],
       "inputs": [
         "minecraft:flint",
-        "minecraft:stick"
+        "#kubejs:primitive_tool_handles"
       ]
     },
     {
@@ -204,7 +200,7 @@
         "additionalweaponry:butcher_knife",
         "farmersdelight:straw",
         "minecraft:flint",
-        "minecraft:stick"
+        "#kubejs:primitive_tool_handles"
       ]
     },
     {
@@ -794,15 +790,6 @@
       ]
     },
     {
-      "id": "bc:blood/weak_heart",
-      "outputs": [
-        "kubejs:weak_blood_heart"
-      ],
-      "inputs": [
-        "rpg_stats:still_beating_heart"
-      ]
-    },
-    {
       "id": "bc:blood/weak_orb",
       "outputs": [
         "bloodmagic:weakbloodorb"
@@ -819,7 +806,7 @@
       ],
       "inputs": [
         "bloodmagic:altar",
-        "kubejs:apprentice_blood_heart"
+        "#forge:storage_blocks/redstone"
       ]
     },
     {
@@ -829,7 +816,7 @@
       ],
       "inputs": [
         "bloodmagic:altar",
-        "kubejs:magician_blood_heart"
+        "#forge:storage_blocks/gold"
       ]
     },
     {
@@ -839,7 +826,7 @@
       ],
       "inputs": [
         "bloodmagic:altar",
-        "kubejs:master_blood_heart"
+        "bloodmagic:weakbloodshard"
       ]
     },
     {
@@ -849,7 +836,7 @@
       ],
       "inputs": [
         "bloodmagic:altar",
-        "kubejs:archmage_blood_heart"
+        "bloodmagic:dungeon_metal"
       ]
     },
     {

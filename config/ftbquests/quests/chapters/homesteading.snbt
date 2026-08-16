@@ -253,8 +253,8 @@
 		}
 		{
 			dependencies: ["4BE5D08190C37F98" "-4240C387F4FF6327" "21673617A8A3C196" "0946CB91DEA2D512"]
-			description: ["Complete one renewable food route. A planted harvest, maintained animals, a Starcatcher catch, or transplanted forage is enough."]
-			icon: "minecraft:hay_block"
+			description: ["Complete one renewable food route. A Starcatcher catch is the intended early route; a planted harvest, maintained animals, or transplanted forage also qualifies."]
+			icon: "starcatcher:cooked_starcaught_fish"
 			id: "0EA60205EE4E3808"
 			min_required_dependencies: 1
 			rewards: [{ count: 1, id: "621CD54B26EF305F", item: "createdeco:copper_coin", type: "item" }]
@@ -854,25 +854,7 @@
 			y: 8d
 		}
 		{
-			description: ["Obtain any Starcatcher rod. Fit tackle for the water and season."]
-			icon: "starcatcher:good_old_rod"
-			id: "040D5AF60D3E8E1C"
-			rewards: [{ count: 2, id: "467C3C7ECDA4A520", item: "createdeco:copper_coin", type: "item" }]
-			shape: "rsquare"
-			size: 1.2d
-			tasks: [
-			{
-				id: "7015429E6F67C97F"
-				item: { Count: 1, id: "ftbfiltersystem:smart_filter", tag: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(starcatcher:rods)" } }
-				title: "Any Starcatcher rod"
-				type: "item"
-			}
-			]
-			title: "Rig a Rod"
-			x: 0d
-			y: 9d
-		}
-		{
+			dependencies: ["040D5AF60D3E8E1C"]
 			description: ["Gather a Starcatcher worm. Keep bait as a recipe detail, not a new progression tier."]
 			icon: "starcatcher:worm"
 			id: "58C2BCCE88B9B17A"
@@ -924,7 +906,7 @@
 		}
 		{
 			dependencies: ["040D5AF60D3E8E1C"]
-			description: ["Land an edible Starcatcher catch. Let it count as one lasting food route."]
+			description: ["Land an edible Starcatcher catch. Fishing is the intended renewable food route while farming remains nerfed and gated."]
 			icon: "starcatcher:agave_bream"
 			id: "21673617A8A3C196"
 			rewards: [{ count: 1, id: "248FC7A1116350CE", item: "createdeco:copper_coin", type: "item" }]
@@ -937,7 +919,7 @@
 			]
 			title: "First Catch"
 			x: 5d
-			y: 9d
+			y: 6d
 		}
 		{
 			dependencies: ["7FF2F274923CC05E"]

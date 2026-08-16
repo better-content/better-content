@@ -22,9 +22,9 @@
       ],
       "route": [
         "soft ground hand breakability",
-        "flint plus stick butcher knife",
+        "flint plus twig-or-stick butcher knife",
         "knife straw harvesting",
-        "straw plus flint plus stick hand axe"
+        "straw plus flint plus twig-or-stick hand axe"
       ],
       "sourceAssertions": [
         {
@@ -32,7 +32,7 @@
           "all": [
             "additionalweaponry:butcher_knife",
             "minecraft:flint",
-            "minecraft:stick",
+            "kubejs:primitive_tool_handles",
             "tconstruct:flint",
             "tconstruct:wood"
           ]
@@ -43,9 +43,16 @@
             "tconstruct:hand_axe",
             "farmersdelight:straw",
             "minecraft:flint",
-            "minecraft:stick",
+            "kubejs:primitive_tool_handles",
             "tconstruct:flint",
             "tconstruct:wood"
+          ]
+        },
+        {
+          "file": "kubejs/data/kubejs/tags/items/primitive_tool_handles.json",
+          "all": [
+            "minecraft:stick",
+            "projectvibrantjourneys:twigs"
           ]
         },
         {
@@ -70,7 +77,7 @@
       ],
       "sourceAssertions": [
         {
-          "file": "kubejs/server_scripts/30_recipe_replace/20_expensive_grout.js",
+          "file": "kubejs/server_scripts/20_tech/10_metallurgy/20_expensive_grout.js",
           "all": [
             "tconstruct:grout",
             "minecraft:netherrack",
@@ -80,7 +87,7 @@
           ]
         },
         {
-          "file": "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js",
+          "file": "kubejs/server_scripts/20_tech/10_metallurgy/99_machine_casing_progression.js",
           "all": [
             "kubejs:seared_machine_casing",
             "tconstruct:seared_bricks"
@@ -103,7 +110,7 @@
       ],
       "sourceAssertions": [
         {
-          "file": "kubejs/server_scripts/30_recipe_replace/98_starting_progression_bypasses.js",
+          "file": "kubejs/server_scripts/20_tech/10_metallurgy/98_starting_progression_bypasses.js",
           "all": [
             "create:andesite_alloy",
             "tconstruct:casting_basin/compat/create/andesite_alloy_iron",
@@ -115,7 +122,7 @@
           ]
         },
         {
-          "file": "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js",
+          "file": "kubejs/server_scripts/20_tech/10_metallurgy/99_machine_casing_progression.js",
           "all": [
             "kubejs:andesite_machine_casing",
             "tconstruct:scorched_bricks",
@@ -139,7 +146,7 @@
       ],
       "sourceAssertions": [
         {
-          "file": "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js",
+          "file": "kubejs/server_scripts/20_tech/10_metallurgy/99_machine_casing_progression.js",
           "all": [
             "create:precision_mechanism",
             "kubejs:andesite_machine_casing",
@@ -162,7 +169,7 @@
       ],
       "sourceAssertions": [
         {
-          "file": "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js",
+          "file": "kubejs/server_scripts/20_tech/10_metallurgy/99_machine_casing_progression.js",
           "all": [
             "kubejs:rotational_compressor_core",
             "kubejs:brass_machine_casing",
@@ -188,7 +195,7 @@
       ],
       "sourceAssertions": [
         {
-          "file": "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js",
+          "file": "kubejs/server_scripts/20_tech/10_metallurgy/99_machine_casing_progression.js",
           "all": [
             "kubejs:electrical_machine_casing",
             "kubejs:airtight_machine_casing",
@@ -197,14 +204,14 @@
           ]
         },
         {
-          "file": "kubejs/server_scripts/30_recipe_replace/140_latent_chemlib_power_gates.js",
+          "file": "kubejs/server_scripts/20_tech/40_electrical/140_latent_chemlib_power_gates.js",
           "all": [
             "kubejs:airtight_machine_casing",
             "latent_chemlib:sealed_chemical_cell"
           ]
         },
         {
-          "file": "kubejs/server_scripts/30_recipe_replace/143_circuit_pncr_assembly_authority.js",
+          "file": "kubejs/server_scripts/20_tech/40_electrical/143_circuit_pncr_assembly_authority.js",
           "all": [
             "pneumaticcraft:assembly_",
             "ae2:engineering_processor",
@@ -228,7 +235,7 @@
       ],
       "sourceAssertions": [
         {
-          "file": "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js",
+          "file": "kubejs/server_scripts/20_tech/10_metallurgy/99_machine_casing_progression.js",
           "all": [
             "kubejs:space_machine_casing",
             "kubejs:electrical_machine_casing",
@@ -260,7 +267,7 @@
       ],
       "sourceAssertions": [
         {
-          "file": "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js",
+          "file": "kubejs/server_scripts/20_tech/10_metallurgy/99_machine_casing_progression.js",
           "all": [
             "kubejs:raw_impossible_casing",
             "kubejs:space_machine_casing",
@@ -289,7 +296,7 @@
       ],
       "sourceAssertions": [
         {
-          "file": "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js",
+          "file": "kubejs/server_scripts/20_tech/10_metallurgy/99_machine_casing_progression.js",
           "all": [
             "kubejs:impossible_machine_casing",
             "kubejs:raw_impossible_casing",
@@ -311,25 +318,20 @@
       ],
       "route": [
         "RPG Stats still-beating heart",
-        "typed heart keys",
-        "Blood Altar orb escalation",
+        "Still-Beating Heart entry orb",
+        "native Blood Orb escalation",
         "slate-parented side magic"
       ],
       "sourceAssertions": [
         {
-          "file": "kubejs/server_scripts/40_recipe_add/40_blood_orbs_from_still_beating_hearts.js",
+          "file": "kubejs/server_scripts/30_magic/10_blood/40_blood_orbs_from_still_beating_hearts.js",
           "all": [
             "bloodmagic:weakbloodorb",
-            "bloodmagic:apprenticebloodorb",
-            "bloodmagic:magicianbloodorb",
-            "bloodmagic:masterbloodorb",
-            "bloodmagic:archmagebloodorb",
-            "kubejs:weak_blood_heart",
-            "kubejs:archmage_blood_heart"
+            "rpg_stats:still_beating_heart"
           ]
         },
         {
-          "file": "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js",
+          "file": "kubejs/server_scripts/30_magic/10_blood/80_magic_progression_blood_slate_gates.js",
           "all": [
             "bloodmagic:blankslate",
             "bloodmagic:reinforcedslate",
@@ -398,7 +400,7 @@
       ],
       "sourceAssertions": [
         {
-          "file": "kubejs/server_scripts/30_recipe_replace/166_tome_of_blood_post_ae2_gates.js",
+          "file": "kubejs/server_scripts/30_magic/60_post_ae2/166_tome_of_blood_post_ae2_gates.js",
           "all": [
             "tomeofblood:novice_tome_of_blood",
             "bloodmagic:archmagebloodorb",
@@ -442,9 +444,9 @@
         "id": "tconstruct_seared_casting_access",
         "milestone": "tcon_seared",
         "sourceFiles": [
-          "kubejs/server_scripts/30_recipe_replace/20_expensive_grout.js",
-          "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js",
-          "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js"
+          "kubejs/server_scripts/20_tech/10_metallurgy/20_expensive_grout.js",
+          "kubejs/server_scripts/20_tech/10_metallurgy/99_machine_casing_progression.js",
+          "kubejs/server_scripts/20_tech/90_cross_era/136_machine_casing_ecosystem_expansion.js"
         ],
         "requiredOutputs": [
           "kubejs:seared_machine_casing",
@@ -467,9 +469,9 @@
         "id": "create_andesite_kinetics_access",
         "milestone": "create_andesite",
         "sourceFiles": [
-          "kubejs/server_scripts/30_recipe_replace/98_starting_progression_bypasses.js",
-          "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js",
-          "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js"
+          "kubejs/server_scripts/20_tech/10_metallurgy/98_starting_progression_bypasses.js",
+          "kubejs/server_scripts/20_tech/10_metallurgy/99_machine_casing_progression.js",
+          "kubejs/server_scripts/20_tech/90_cross_era/136_machine_casing_ecosystem_expansion.js"
         ],
         "requiredOutputs": [
           "create:andesite_alloy",
@@ -492,8 +494,8 @@
         "id": "create_brass_logistics_access",
         "milestone": "create_brass",
         "sourceFiles": [
-          "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js",
-          "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js"
+          "kubejs/server_scripts/20_tech/10_metallurgy/99_machine_casing_progression.js",
+          "kubejs/server_scripts/20_tech/90_cross_era/136_machine_casing_ecosystem_expansion.js"
         ],
         "requiredOutputs": [
           "create:precision_mechanism",
@@ -517,9 +519,9 @@
         "id": "pneumaticcraft_pressure_access",
         "milestone": "airtight",
         "sourceFiles": [
-          "kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js",
-          "kubejs/server_scripts/30_recipe_replace/136_machine_casing_ecosystem_expansion.js",
-          "kubejs/server_scripts/40_recipe_add/58_create_pncr_molecular_synthesis.js"
+          "kubejs/server_scripts/20_tech/10_metallurgy/99_machine_casing_progression.js",
+          "kubejs/server_scripts/20_tech/90_cross_era/136_machine_casing_ecosystem_expansion.js",
+          "kubejs/server_scripts/20_tech/30_pressure/58_create_pncr_molecular_synthesis.js"
         ],
         "requiredOutputs": [
           "kubejs:pressure_seal",
@@ -543,11 +545,10 @@
         "id": "blood_magic_body_and_slate_access",
         "milestone": "blood_magic",
         "sourceFiles": [
-          "kubejs/server_scripts/30_recipe_replace/80_magic_progression_blood_slate_gates.js",
-          "kubejs/server_scripts/30_recipe_replace/82_blood_magic_lifeforce_rework.js",
-          "kubejs/server_scripts/40_recipe_add/40_blood_orbs_from_still_beating_hearts.js",
-          "kubejs/server_scripts/40_recipe_add/58_blood_magic_manual_create_yields.js",
-          "kubejs/server_scripts/40_recipe_add/59_formulaic_synthesis_magic_routes.js"
+          "kubejs/server_scripts/30_magic/10_blood/80_magic_progression_blood_slate_gates.js",
+          "kubejs/server_scripts/30_magic/10_blood/82_blood_magic_lifeforce_rework.js",
+          "kubejs/server_scripts/30_magic/10_blood/40_blood_orbs_from_still_beating_hearts.js",
+          "kubejs/server_scripts/30_magic/30_cross_tradition/59_formulaic_synthesis_magic_routes.js"
         ],
         "requiredOutputs": [
           "bloodmagic:altar",
@@ -564,8 +565,6 @@
         ],
         "requiredGateItems": [
           "rpg_stats:still_beating_heart",
-          "kubejs:weak_blood_heart",
-          "kubejs:archmage_blood_heart",
           "bloodmagic:blankslate",
           "bloodmagic:etherealslate"
         ]

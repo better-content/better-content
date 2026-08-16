@@ -29,8 +29,6 @@ var cobbleLikeEntries = [
     'natures_spirit:mossy_cobbled_travertine',
 ]
 
-var sharedStoneCobbleEntries = stoneLikeEntries.concat(cobbleLikeEntries)
-
 ServerEvents.tags('item', function (event) {
     var stoneTargets = [
         'forge:stone',
@@ -50,8 +48,9 @@ ServerEvents.tags('item', function (event) {
         'forge:cobblestone/mossy'
     ]
 
-    addAllToTargets(event, stoneTargets, sharedStoneCobbleEntries)
-    addAllToTargets(event, cobbleTargets, sharedStoneCobbleEntries)
+    addAllToTargets(event, stoneTargets, stoneLikeEntries)
+    addAllToTargets(event, cobbleTargets, cobbleLikeEntries)
+    addAllToTargets(event, ['tconstruct:workstation_rock'], cobbleLikeEntries)
     addAllToTargets(event, mossyCobbleTargets, [
         'unearthed:mossy_cobbled_phyllite',
         'unearthed:mossy_cobbled_slate',
@@ -75,8 +74,8 @@ ServerEvents.tags('block', function (event) {
         'forge:cobblestone/mossy'
     ]
 
-    addAllToTargets(event, stoneTargets, sharedStoneCobbleEntries)
-    addAllToTargets(event, cobbleTargets, sharedStoneCobbleEntries)
+    addAllToTargets(event, stoneTargets, stoneLikeEntries)
+    addAllToTargets(event, cobbleTargets, cobbleLikeEntries)
     addAllToTargets(event, mossyCobbleTargets, [
         'unearthed:mossy_cobbled_phyllite',
         'unearthed:mossy_cobbled_slate',

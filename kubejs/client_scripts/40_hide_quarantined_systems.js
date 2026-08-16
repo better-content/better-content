@@ -45,6 +45,10 @@ var BC_HIDDEN_ITEMS = (BC_QUARANTINE_POLICY.items || [])
     .concat(BC_CHEMLIB_FORM_POLICY.hidden_forms || [])
     .concat(BC_CHEMLIB_FORM_POLICY.hidden_compounds || [])
     .concat(BC_HIDDEN_VS_TECHNICAL_ITEMS)
+    .concat([
+        'pneumaticcraft:chunkloader_upgrade',
+        'ae2:debug_chunk_loader'
+    ])
 
 function bcHideRegisteredItems(event) {
     BC_HIDDEN_ITEMS.forEach(function (item) {

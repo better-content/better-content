@@ -12,7 +12,7 @@
       "tag": "kubejs:primitive_tcon_bones"
     },
     {
-      "item": "minecraft:stick"
+      "tag": "kubejs:primitive_tool_handles"
     }
   ],
   "result": {

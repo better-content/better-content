@@ -26,7 +26,7 @@
 			y: -3d
 		}
 		{
-			description: ["Gather a twig from the ground. Loose wood starts the first tool route."]
+			description: ["Gather a twig from the ground. Use it directly as a primitive tool handle or turn it into a stick."]
 			icon: "projectvibrantjourneys:twigs"
 			id: "64BDCCB8664B53E8"
 			rewards: [{ count: 1, id: "7C3F55974DDD39AB", item: "createdeco:copper_coin", type: "item" }]
@@ -43,7 +43,7 @@
 		}
 		{
 			dependencies: ["64BDCCB8664B53E8"]
-			description: ["Turn a twig into a stick. Keep it for a primitive handle."]
+			description: ["Turn a twig into a stick. Sticks remain valid primitive handles, but this conversion is optional."]
 			icon: "minecraft:stick"
 			id: "0BA98E65D11A599A"
 			rewards: [{ count: 1, id: "157A52253D9D9DB1", item: "createdeco:copper_coin", type: "item" }]
@@ -59,8 +59,8 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["3B5F470ECF554734" "0BA98E65D11A599A"]
-			description: ["Make any authored primitive Butcher Knife. Cut grass with it to open the straw route."]
+			dependencies: ["3B5F470ECF554734"]
+			description: ["Make any authored primitive Butcher Knife with a twig or stick handle. Cut grass with it to open the straw route."]
 			icon: "farmersdelight:flint_knife"
 			id: "1B3C129BE9AB4291"
 			rewards: [{ count: 2, id: "04C6121077F1A458", item: "createdeco:copper_coin", type: "item" }]
@@ -94,8 +94,8 @@
 			y: -2.5d
 		}
 		{
-			dependencies: ["0AA6BEB50F7E0E12" "3B5F470ECF554734" "0BA98E65D11A599A"]
-			description: ["Make any authored primitive Hand Axe. Use it to begin controlled wood harvesting."]
+			dependencies: ["0AA6BEB50F7E0E12" "3B5F470ECF554734"]
+			description: ["Make any authored primitive Hand Axe with a twig or stick handle. Use it to begin controlled wood harvesting."]
 			icon: "minecraft:stone_axe"
 			id: "69A5C4C1691EBB3E"
 			rewards: [{ count: 2, id: "799256D3811F05D5", item: "createdeco:copper_coin", type: "item" }]
@@ -146,6 +146,59 @@
 			title: "Planks"
 			x: -6.5d
 			y: -2.5d
+		}
+		{
+			dependencies: ["0AA6BEB50F7E0E12"]
+			description: ["Twist two pieces of straw into string. This makes fishing a dependable early food route while crops are still difficult to establish."]
+			icon: "minecraft:string"
+			id: "2510000000000001"
+			rewards: [{ count: 1, id: "2512000000000001", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "2511000000000001"
+				item: "minecraft:string"
+				type: "item"
+			}
+			]
+			title: "Twisted String"
+			x: -9.6d
+			y: -4.8d
+		}
+		{
+			dependencies: ["3B5F470ECF554734"]
+			description: ["Shape bone or flint into a primitive Starcatcher hook. Either material works; use what the surface gives you."]
+			icon: "starcatcher:hook"
+			id: "2510000000000002"
+			rewards: [{ count: 1, id: "2512000000000002", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [
+			{
+				id: "2511000000000002"
+				item: "starcatcher:hook"
+				type: "item"
+			}
+			]
+			title: "Primitive Hook"
+			x: -12.6d
+			y: -4.8d
+		}
+		{
+			dependencies: ["20E939B8E6498DFF" "2510000000000001" "2510000000000002"]
+			description: ["Build the basic Starcatcher rod: twist string into twine, make wool for its bobber, then assemble those pieces with sticks and your primitive hook. This is your first reliable food-production tool."]
+			icon: "starcatcher:starcatcher_rod"
+			id: "040D5AF60D3E8E1C"
+			rewards: [{ count: 2, id: "467C3C7ECDA4A520", item: "createdeco:copper_coin", type: "item" }]
+			shape: "rsquare"
+			size: 1.4d
+			tasks: [
+			{
+				id: "7015429E6F67C97F"
+				item: "starcatcher:starcatcher_rod"
+				type: "item"
+			}
+			]
+			title: "Rig a Rod"
+			x: -6.5d
+			y: -4.8d
 		}
 		{
 			dependencies: ["20E939B8E6498DFF"]

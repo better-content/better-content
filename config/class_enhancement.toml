@@ -195,7 +195,7 @@
 		#Starting items.
 		items = ["tconstruct:pickadze{Damage:0,tic_broken:0b,tic_materials:[\"tconstruct:copper\",\"tconstruct:wood\",\"tconstruct:copper\"],tic_modifiers:[{level:1,name:\"tconstruct:cultivated\"},{level:1,name:\"tconstruct:pathing\"},{level:2,name:\"tconstruct:dwarven\"}],tic_multipliers:{\"tconstruct:attack_damage\":1.15f,\"tconstruct:durability\":1.3f,\"tconstruct:mining_speed\":0.75f},tic_persistent:{},tic_stats:{\"tconstruct:attack_damage\":1.15f,\"tconstruct:attack_speed\":1.3f,\"tconstruct:durability\":273.0f,\"tconstruct:harvest_tier\":\"minecraft:iron\",\"tconstruct:mining_speed\":3.75f},tic_volatile_data:{abilities:1,upgrades:3}}=1", "additionalweaponry:butcher_knife{Damage:0,tic_broken:0b,tic_materials:[\"tconstruct:copper\",\"tconstruct:wood\",\"tconstruct:copper\"],tic_modifiers:[{level:1,name:\"tconstruct:cultivated\"},{level:1,name:\"tconstruct:severing\"},{level:2,name:\"tconstruct:dwarven\"},{level:1,name:\"tconstruct:silky_shears\"}],tic_persistent:{},tic_stats:{\"tconstruct:attack_damage\":2.5f,\"tconstruct:attack_speed\":1.15f,\"tconstruct:durability\":335.0f,\"tconstruct:harvest_tier\":\"minecraft:iron\",\"tconstruct:mining_speed\":5.0f},tic_volatile_data:{abilities:1,upgrades:3}}=1", "starcatcher:starcatcher_guide=1", "starcatcher:worm=64","rehooked:wood_hook=1","sophisticatedbackpacks:backpack=1"]
 		#Item ID for the class icon.
-		icon = "minecraft:fishing_rod"
+		icon = "starcatcher:starcatcher_rod"
 
 	[custom_classes.custom_5]
 		#Unique internal ID. Leave empty to disable.

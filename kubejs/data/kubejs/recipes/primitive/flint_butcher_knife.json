@@ -12,7 +12,7 @@
       "item": "minecraft:flint"
     },
     {
-      "item": "minecraft:stick"
+      "tag": "kubejs:primitive_tool_handles"
     }
   ],
   "result": {

@@ -6,15 +6,12 @@
   "Shell settings": {},
   "comment_structure_blacklist": "Supports: full id, namespace.*, *, #namespace:tag",
   "Structure blacklist": [
-    "minecraft.*",
-    "hexerei.*",
-    "ae2.*"
+    "ae2:meteorite",
+    "hexerei:dark_coven",
+    "hexerei:nature_coven"
   ],
   "comment_foundation_blacklist": "Supports: full id, namespace.*, *, #namespace:tag",
   "Foundation blacklist": [
-    "minecraft.*",
-    "hexerei.*",
-    "ae2.*",
     "dimension_drink:dimensional_font"
   ],
   "comment_auto": "Below list contains real structure template files (.nbt). Do not edit."

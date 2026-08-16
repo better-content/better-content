@@ -1,5 +1,7 @@
 .codex
 docs
+/.kjs-script-summaries.md.kate-swp
+/kjs-script-summaries.md
 .git
 .gitattributes
 .gitignore

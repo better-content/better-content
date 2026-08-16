@@ -1,4 +1,4 @@
-// Pack-owned progression items/blocks for expert machine casings and Blood Magic heart keys.
+// Pack-owned progression items/blocks for expert machine casings and manufacturing intermediates.
 
 function bcTitleCase(raw) {
     var words = String(raw).split('_')
@@ -39,21 +39,6 @@ StartupEvents.registry('fluid', function (event) {
 })
 
 StartupEvents.registry('item', function (event) {
-    var hearts = [
-        ['weak_blood_heart', 'Blood-Touched Heart'],
-        ['apprentice_blood_heart', 'Levelled Blood Heart'],
-        ['magician_blood_heart', 'Hemostatic Blood Heart'],
-        ['master_blood_heart', 'Withered Blood Heart'],
-        ['archmage_blood_heart', 'Draconic Blood Heart']
-    ]
-
-    for (var i = 0; i < hearts.length; i++) {
-        event.create(hearts[i][0])
-            .displayName(hearts[i][1])
-            .maxStackSize(1)
-            .glow(true)
-    }
-
     event.create('sky_steel_ingot').displayName('Sky Steel Ingot')
     event.create('sky_steel_sheet').displayName('Sky Steel Sheet')
 

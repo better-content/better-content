@@ -332,15 +332,16 @@ The processing contract is split deliberately:
 
 - `realistic-ores`: native loot, Silk Touch behavior, block/chunk reconstruction, chunk
   crushing resources, and resource tests.
-- `kubejs/startup_scripts/00_globals/20_progression_catalogues.js`: material forms and
+- `kubejs/startup_scripts/00_globals/20_tech/20_realistic_ore_materials.js`: material forms and
   grinding-ball survival.
 - `49_realistic_ores_catalog.js`: deposits, assays, previews, solvents, and curated routes.
 - `50_create_deposit_preprocessing.js`: separation, grade chances, washing, and tailings.
 - `52_realistic_ores_excavated_host_cycles.js`: runtime host-specific block cycles.
 - `57_realistic_ores_smelting_matrix.js`: all generated furnace, Smeltery, and Foundry exits.
 - `59_reachable_acid_authoring.js`: reachable solvent production.
-- `60_realistic_ores_deposit_tags.js`: block/chunk classification and generic ore-item tag
-  isolation.
+- `realistic-ores`: native `deposit_ore_blocks` and `deposit_chunks` tag families.
+- `60_realistic_ores_excavated_variant_tags.js`: runtime Excavated Variants membership in
+  those mod-owned tags and generic ore-item isolation for generated variants.
 
 Run `./gradlew verifyFull` in `realistic-ores` after native resource changes, rebuild and
 install its jar, then run the modpack's sole supported evaluation, `./smoke.sh`. A passing

@@ -113,7 +113,7 @@
     ["pierce", 2, "core", "minecraft:arrow"],
     ["place_block", 1, "hexerei", "ars_nouveau:manipulation_essence"],
     ["projectile", 1, "core", "minecraft:fletching_table"],
-    ["pull", 1, "malum", "minecraft:fishing_rod"],
+    ["pull", 1, "malum", "#starcatcher:rods"],
     ["randomize", 1, "core", "minecraft:pink_carpet"],
     ["redstone_signal", 1, "hexerei", "ars_nouveau:manipulation_essence"],
     ["ars_nouveau:reset", 2, "core", "minecraft:clock"],

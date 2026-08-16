@@ -10,11 +10,11 @@
     "DFFF031F3D7ED9F8",
     "17EA5AFA794175FF",
     "77BB41FEB659E52C",
+    "CAC9256DFD352356",
     "483FCC6FA809E49C",
     "5F26200FD7558E29",
     "CB8CEB0747E85033",
-    "184620DE314A2002",
-    "CAC9256DFD352356"
+    "184620DE314A2002"
   ],
   "preview_chapters": [
     "13D92B0F3F4750D5"
@@ -41,6 +41,9 @@
     "77BB41FEB659E52C": {
       "quest": "59B26687F0CD55FA"
     },
+    "CAC9256DFD352356": {
+      "quest": "59B26687F0CD55FA"
+    },
     "483FCC6FA809E49C": {
       "quest": "59B26687F0CD55FA"
     },
@@ -51,9 +54,6 @@
       "quest": "59B26687F0CD55FA"
     },
     "184620DE314A2002": {
-      "quest": "59B26687F0CD55FA"
-    },
-    "CAC9256DFD352356": {
       "quest": "59B26687F0CD55FA"
     }
   }

@@ -10,6 +10,7 @@ tools/runtime-probe/build/
 __pycache__/
 **/__pycache__/
 *.pyc
+*.kate-swp
 server-instance/
 server-template/
 generated/exports/

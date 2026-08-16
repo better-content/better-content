@@ -166,11 +166,7 @@
   "forbidden_power_recipe_ids": [
     "kubejs:casing_ecosystem/brass/steam_engine",
     "kubejs:chemistry/existing/pncr_pressure/create/steam_engine_nickel_condenser",
-    "kubejs:closure/create/steam_engine",
     "kubejs:casing_ecosystem/brass/diesel_engine",
-    "kubejs:closure/createdieselgenerators/diesel_engine",
-    "kubejs:closure/createdieselgenerators/large_diesel_engine",
-    "kubejs:closure/createdieselgenerators/huge_diesel_engine",
     "kubejs:casing_ecosystem/electrical/electric_motor",
     "kubejs:casing_ecosystem/electrical/constant_speed_motor"
   ],

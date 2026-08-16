@@ -13,6 +13,10 @@ This repository is the Better Content Forge 1.20.1 modpack content layer.
 ZIP creation may fail operationally; it must not add validation, integrity, provenance,
 content, schema, archive-membership, cleanliness, or correctness verdicts.
 
+For a fresh smoked distribution, run `./smoke.sh` once and then run `./dist.sh`. Do not run
+`./smoke.sh` again after `./dist.sh`: the distribution workflow's automatic `pack.toml` build
+number bump changes release metadata only and does not invalidate the preceding smoke result.
+
 `dist.sh` and `smoke.sh` both delegate content and artifact assembly to `package.sh`.
 `smoke.sh` creates disposable server and client runtimes, resolves packwiz artifacts,
 installs Forge, then checks server readiness, client join, one bounded settled connection,

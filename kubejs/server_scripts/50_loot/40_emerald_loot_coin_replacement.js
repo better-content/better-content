@@ -1,4 +1,4 @@
-// Generated from the live loot dump. Replaces emerald currency loot with Dot Coins.
+// Generated from the live loot dump. Replaces emerald currency loot with Create Deco coins.
 // Block ore drops are intentionally excluded; this is only chest/entity/package economy.
 
 var BC_EMERALD_LOOT_COIN_REPLACEMENTS = [

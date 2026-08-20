@@ -9,7 +9,7 @@
       "policy": "currency_only",
       "era_reference": null,
       "evidence": [
-        "../dimension-drink/src/main/resources/defaults/rewards/default.json"
+        "../mod_source/dimension-drink/src/main/resources/defaults/rewards/default.json"
       ]
     },
     {
@@ -19,7 +19,7 @@
       "policy": "currency_only",
       "era_reference": null,
       "evidence": [
-        "../dimension-drink/src/main/resources/defaults/rewards/overworld.json"
+        "../mod_source/dimension-drink/src/main/resources/defaults/rewards/overworld.json"
       ]
     },
     {
@@ -29,7 +29,7 @@
       "policy": "currency_only",
       "era_reference": null,
       "evidence": [
-        "../dimension-drink/src/main/resources/defaults/rewards/end.json"
+        "../mod_source/dimension-drink/src/main/resources/defaults/rewards/end.json"
       ]
     },
     {
@@ -39,7 +39,7 @@
       "policy": "currency_only",
       "era_reference": null,
       "evidence": [
-        "../dimension-drink/src/main/resources/defaults/rewards/nether.json"
+        "../mod_source/dimension-drink/src/main/resources/defaults/rewards/nether.json"
       ]
     },
     {
@@ -49,8 +49,8 @@
       "policy": "currency_only",
       "era_reference": null,
       "evidence": [
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
+        "../mod_source/pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
+        "../mod_source/pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
       ]
     },
     {
@@ -60,8 +60,8 @@
       "policy": "currency_only",
       "era_reference": null,
       "evidence": [
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
+        "../mod_source/pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
+        "../mod_source/pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
       ]
     },
     {
@@ -71,8 +71,8 @@
       "policy": "currency_only",
       "era_reference": null,
       "evidence": [
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
+        "../mod_source/pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
+        "../mod_source/pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
       ]
     },
     {
@@ -82,8 +82,8 @@
       "policy": "currency_only",
       "era_reference": null,
       "evidence": [
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
+        "../mod_source/pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
+        "../mod_source/pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
       ]
     },
     {
@@ -93,8 +93,8 @@
       "policy": "currency_only",
       "era_reference": null,
       "evidence": [
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
+        "../mod_source/pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
+        "../mod_source/pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
       ]
     },
     {
@@ -104,8 +104,8 @@
       "policy": "currency_only",
       "era_reference": null,
       "evidence": [
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
+        "../mod_source/pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
+        "../mod_source/pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
       ]
     },
     {
@@ -115,8 +115,8 @@
       "policy": "currency_only",
       "era_reference": null,
       "evidence": [
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
+        "../mod_source/pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
+        "../mod_source/pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
       ]
     },
     {

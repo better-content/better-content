@@ -15,10 +15,46 @@ copy_content() {
 }
 
 resolve_artifacts() {
-  python3 - "$ROOT" "$1" "$2" <<'PY'
-import fnmatch, hashlib, os, pathlib, shutil, sys, tomllib, urllib.request
-root, target, side = pathlib.Path(sys.argv[1]), pathlib.Path(sys.argv[2]), sys.argv[3]
+  local cache_root="${BC_PACKAGE_ARTIFACT_CACHE:-$HOME/.cache/bc/packwiz-downloads}"
+  python3 - "$ROOT" "$1" "$2" "$cache_root" <<'PY'
+import fcntl, fnmatch, hashlib, os, pathlib, shutil, sys, tempfile, tomllib, urllib.request
+root, target, side, cache_root = pathlib.Path(sys.argv[1]), pathlib.Path(sys.argv[2]), sys.argv[3], pathlib.Path(sys.argv[4]).expanduser()
 client_only = ('ambientsounds*','bettergrassify*','configured*','controlling*','DistantHorizons*','embeddium*','entityculling*','hold-my-items*','mouse-tweaks*','no-more-popups*','no-recipe-book*','oculus*','presence-footsteps*','shoulder-surfing*','sound-physics*','the-one-probe*','true-darkness*','darkness*')
+stats = {'hits': 0, 'downloads': 0, 'uncached': 0}
+
+def new_hasher(algorithm, manifest):
+    try:
+        return hashlib.new(algorithm)
+    except ValueError as error:
+        raise SystemExit(f"unsupported hash algorithm for {manifest}: {algorithm}") from error
+
+def file_digest(path, algorithm, manifest):
+    digest = new_hasher(algorithm, manifest)
+    with path.open('rb') as source:
+        for chunk in iter(lambda: source.read(1024 * 1024), b''):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+def download(url, destination, algorithm=None, manifest=None):
+    digest = new_hasher(algorithm, manifest) if algorithm else None
+    request = urllib.request.Request(url, headers={'User-Agent':'better-content-packager/1.0'})
+    with urllib.request.urlopen(request, timeout=120) as response, destination.open('wb') as output:
+        while chunk := response.read(1024 * 1024):
+            output.write(chunk)
+            if digest:
+                digest.update(chunk)
+    return digest.hexdigest() if digest else None
+
+def materialize(source, destination):
+    if destination.exists() or destination.is_symlink():
+        destination.unlink()
+    try:
+        os.link(source, destination)
+    except OSError:
+        if destination.exists() or destination.is_symlink():
+            destination.unlink()
+        shutil.copy2(source, destination)
+
 for folder in ('mods','resourcepacks','shaderpacks','tacz'):
     for manifest in sorted((root / folder).glob('*.pw.toml')):
         data = tomllib.loads(manifest.read_text())
@@ -27,33 +63,44 @@ for folder in ('mods','resourcepacks','shaderpacks','tacz'):
         name = data.get('filename', '')
         if side == 'server' and any(fnmatch.fnmatch(name.lower(), pattern.lower()) for pattern in client_only):
             continue
-        download = data.get('download', {})
-        url = download.get('url')
-        if not url and download.get('mode') == 'metadata:curseforge':
+        download_data = data.get('download', {})
+        url = download_data.get('url')
+        if not url and download_data.get('mode') == 'metadata:curseforge':
             cf = data.get('update', {}).get('curseforge', {})
             url = f"https://www.curseforge.com/api/v1/mods/{cf['project-id']}/files/{cf['file-id']}/download"
         if not url:
             continue
         destination = target / folder / name
         destination.parent.mkdir(parents=True, exist_ok=True)
-        if destination.exists():
-            destination.unlink()
-        algorithm = download.get('hash-format', '').replace('-', '').lower()
-        expected = download.get('hash', '').lower()
-        cache = root / 'generated/cache/packwiz-downloads' / folder / name
-        if cache.is_file():
-            try:
-                os.link(cache, destination)
-            except OSError:
-                shutil.copy2(cache, destination)
-        else:
-            request = urllib.request.Request(url, headers={'User-Agent':'better-content-packager/1.0'})
-            with urllib.request.urlopen(request, timeout=120) as response, destination.open('wb') as output:
-                shutil.copyfileobj(response, output)
+        algorithm = download_data.get('hash-format', '').replace('-', '').lower()
+        expected = download_data.get('hash', '').lower()
         if algorithm and expected:
-            actual = hashlib.new(algorithm, destination.read_bytes()).hexdigest()
-            if actual != expected:
-                raise SystemExit(f"hash mismatch for {manifest}: expected {expected}, got {actual}")
+            cache = cache_root / folder / name
+            cache.parent.mkdir(parents=True, exist_ok=True)
+            lock_path = cache.with_name(f'.{cache.name}.lock')
+            with lock_path.open('a+b') as lock:
+                fcntl.flock(lock, fcntl.LOCK_EX)
+                if cache.is_file() and file_digest(cache, algorithm, manifest) == expected:
+                    stats['hits'] += 1
+                else:
+                    descriptor, temporary_name = tempfile.mkstemp(prefix=f'.{cache.name}.', suffix='.tmp', dir=cache.parent)
+                    os.close(descriptor)
+                    temporary = pathlib.Path(temporary_name)
+                    try:
+                        actual = download(url, temporary, algorithm, manifest)
+                        if actual != expected:
+                            raise SystemExit(f"hash mismatch for {manifest}: expected {expected}, got {actual}")
+                        os.replace(temporary, cache)
+                        stats['downloads'] += 1
+                    finally:
+                        temporary.unlink(missing_ok=True)
+            materialize(cache, destination)
+        else:
+            if destination.exists() or destination.is_symlink():
+                destination.unlink()
+            download(url, destination)
+            stats['uncached'] += 1
+print(f"artifact cache: side={side} hits={stats['hits']} downloads={stats['downloads']} uncached={stats['uncached']}")
 PY
 }
 
@@ -64,9 +111,14 @@ stage_side() {
 }
 
 install_server() {
-  local server="$1" accept_eula="$2" port="${3:-25565}"
+  local server="$1" accept_eula="$2" profile="$3" port="${4:-25565}" properties
   local installer="$ROOT/forge-$FORGE_COORD-installer.jar"
   [ -f "$installer" ] || fail "missing Forge installer: $installer"
+  case "$profile" in
+    testing) properties="$ROOT/server-config/testing.properties" ;;
+    production) properties="$ROOT/server-config/production.properties" ;;
+    *) fail "unknown server profile: $profile" ;;
+  esac
   local server_cache="${BC_PACKAGE_SERVER_CACHE:-$HOME/.cache/bc/smoke/server}"
   if [ -f "$server_cache/libraries/net/minecraftforge/forge/$FORGE_COORD/unix_args.txt" ]; then
     cp -al "$server_cache/libraries" "$server/"
@@ -75,21 +127,13 @@ install_server() {
     (cd "$server" && java -jar "$(basename "$installer")" --installServer)
   fi
   printf 'eula=%s\n' "$accept_eula" > "$server/eula.txt"
-  cat > "$server/server.properties" <<EOF
-allow-flight=true
-difficulty=normal
-enable-command-block=true
-level-name=world
-level-type=minecraft\:flat
-max-players=2
-online-mode=false
-server-ip=127.0.0.1
-server-port=$port
-spawn-protection=0
-view-distance=4
-simulation-distance=4
-EOF
-  printf '%s\n' '-Xms2G' '-Xmx8G' '-XX:+UseG1GC' '-Dfile.encoding=UTF-8' > "$server/user_jvm_args.txt"
+  cp "$properties" "$server/server.properties"
+  sed -i -E "s/^server-port=.*/server-port=$port/" "$server/server.properties"
+  if [ "$profile" = production ]; then
+    cp "$ROOT/user_jvm_args.txt" "$server/user_jvm_args.txt"
+  else
+    printf '%s\n' '-Xms2G' '-Xmx8G' '-XX:+UseG1GC' '-Dfile.encoding=UTF-8' > "$server/user_jvm_args.txt"
+  fi
 }
 
 package_runtime() {
@@ -98,7 +142,7 @@ package_runtime() {
   command -v python3 >/dev/null || fail 'python3 is required'
   stage_side server "$1"
   stage_side client "$2"
-  install_server "$1" true "$3"
+  install_server "$1" true testing "$3"
 }
 
 package_dist() {
@@ -130,12 +174,22 @@ package_dist() {
   mkdir -p "$client_dir" "$stage"
   (cd "$ROOT" && packwiz curseforge export -o "$client_dir/better-content.zip" -s client -y)
   stage_side server "$stage"
-  install_server "$stage" false 25565
+  install_server "$stage" false production 25565
   cat > "$stage/SERVER_README.txt" <<'TXT'
 Better Content server distribution
 
-Set eula=true only after accepting Mojang's EULA. This archive is packaging output and
-carries no validation, verification, compatibility, or runtime-health claim.
+This archive ships the production server profile: authenticated online mode, normal
+terrain for new worlds, the standard port on all network interfaces, a 20-player cap,
+10-chunk view and simulation distances, command blocks disabled, and 16-block spawn
+protection. Edit server.properties after extraction for deployment-specific settings.
+No player identity state is preloaded: the archive contains no user cache, operator,
+allowlist, ban-list, world, player-data, advancement, statistics, or UUID-mapping files.
+Authenticated accounts establish their own profiles when they first join.
+
+The packaged JVM baseline reserves 4 GiB and permits up to 16 GiB. Adjust
+user_jvm_args.txt for the host's available memory. Set eula=true only after accepting
+Mojang's EULA. This archive is packaging output and carries no validation,
+verification, compatibility, or runtime-health claim.
 TXT
   (cd "$server_dir/server-tree" && zip -q -r "$server_dir/better-content.zip" better-content-server)
   printf 'version: %s\nclient: %s\nserver: %s\n' "$version" "$client_dir/better-content.zip" "$server_dir/better-content.zip"

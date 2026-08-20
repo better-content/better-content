@@ -55,6 +55,6 @@ kill -0 "$server_pid" 2>/dev/null || fail 'server exited during settle'
 kill "$client_pid" 2>/dev/null || true; wait "$client_pid" 2>/dev/null || true; client_pid=''
 kill "$server_pid" 2>/dev/null || true; wait "$server_pid" 2>/dev/null || true; server_pid=''
 kill "$xvfb_pid" 2>/dev/null || true; wait "$xvfb_pid" 2>/dev/null || true; xvfb_pid=''
-if rg -n -i 'OutOfMemoryError|fatal error has been detected|crash report|Error loading KubeJS script|ThreadingDetector|ReportedException' "$server_log" "$client_log"; then fail 'fatal log signature detected'; fi
+if rg -n -i 'OutOfMemoryError|fatal error has been detected|crash report|Error loading KubeJS script|(\[|/)ERROR\] \[KubeJS( Startup| Client| Server)?/\]|KubeJS errors found \[[1-9][0-9]*\]|ThreadingDetector|ReportedException' "$server_log" "$client_log"; then fail 'fatal or KubeJS error log signature detected'; fi
 trap - EXIT INT TERM
 printf 'smoke passed: boot, join, settle, stop, log health\nrun: %s\n' "$run"

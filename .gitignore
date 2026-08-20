@@ -35,6 +35,7 @@ exports/
 
 # Local run artifacts
 logs/
+/error.txt
 quarantine/
 
 kubejs/recipe_dumps/

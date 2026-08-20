@@ -32,16 +32,19 @@ var cobbleLikeEntries = [
 ServerEvents.tags('item', function (event) {
     var stoneTargets = [
         'forge:stone',
-        'forge:normal_stone',
-        'c:stone',
-        'minecraft:stone_crafting_materials',
-        'minecraft:stone_tool_materials',
-        'tconstruct:workstation_rock'
+        'c:stone'
     ]
 
     var cobbleTargets = [
         'forge:cobblestone',
         'c:cobblestone'
+    ]
+
+    var normalStoneTargets = [
+        'forge:normal_stone',
+        'minecraft:stone_crafting_materials',
+        'minecraft:stone_tool_materials',
+        'tconstruct:workstation_rock'
     ]
 
     var mossyCobbleTargets = [
@@ -50,7 +53,8 @@ ServerEvents.tags('item', function (event) {
 
     addAllToTargets(event, stoneTargets, stoneLikeEntries)
     addAllToTargets(event, cobbleTargets, cobbleLikeEntries)
-    addAllToTargets(event, ['tconstruct:workstation_rock'], cobbleLikeEntries)
+    addAllToTargets(event, normalStoneTargets, stoneLikeEntries)
+    addAllToTargets(event, normalStoneTargets, cobbleLikeEntries)
     addAllToTargets(event, mossyCobbleTargets, [
         'unearthed:mossy_cobbled_phyllite',
         'unearthed:mossy_cobbled_slate',
@@ -61,7 +65,6 @@ ServerEvents.tags('item', function (event) {
 ServerEvents.tags('block', function (event) {
     var stoneTargets = [
         'forge:stone',
-        'forge:normal_stone',
         'c:stone'
     ]
 
@@ -76,6 +79,8 @@ ServerEvents.tags('block', function (event) {
 
     addAllToTargets(event, stoneTargets, stoneLikeEntries)
     addAllToTargets(event, cobbleTargets, cobbleLikeEntries)
+    addAllToTargets(event, ['forge:normal_stone'], stoneLikeEntries)
+    addAllToTargets(event, ['forge:normal_stone'], cobbleLikeEntries)
     addAllToTargets(event, mossyCobbleTargets, [
         'unearthed:mossy_cobbled_phyllite',
         'unearthed:mossy_cobbled_slate',

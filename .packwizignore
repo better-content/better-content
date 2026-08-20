@@ -23,6 +23,7 @@ fresh-dist
 *-dist-*
 .pg-native
 logs
+/error.txt
 /libraries/
 /modpack questbook notes
 /pca.sh
@@ -31,6 +32,7 @@ logs
 /run-forge.sh
 server-instance
 server-template
+/server-config/
 /tools/
 /scripts/
 /user_jvm_args.txt

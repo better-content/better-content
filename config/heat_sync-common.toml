@@ -21,6 +21,16 @@
 	fe_per_unit = 2000
 	units_per_tick = 1
 	max_heat = 400.0
+
+[boiler_heater]
+	max_heat = 400.0
+	strength_1_threshold = 180.0
+	strength_2_threshold = 260.0
+	strength_3_threshold = 340.0
+	strength_1_cost_per_tick = 1.0
+	strength_2_cost_per_tick = 2.0
+	strength_3_cost_per_tick = 3.0
+
 [pipe_behavior]
 	ambient_blend_rate = 0.08
 	pipe_loss_per_tick = 0.5

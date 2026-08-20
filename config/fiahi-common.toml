@@ -21,5 +21,4 @@
 	#Range: 0.01 ~ 100.0
 	ROTTEN_SPEED_MULTIPLIER = 0.75
 	#A whitelist of containers. Food items in these block entities will never be affected by temperature.
-	STABLE_TEMPERATURE_CONTAINERS = ["cold_sweat:boiler", "cold_sweat:icebox"]
-
+	STABLE_TEMPERATURE_CONTAINERS = []

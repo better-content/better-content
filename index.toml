@@ -6,7 +6,7 @@ hash = "3cc1f64cc6c9fc485828891d0fb64869174421527b9bab5012a54852e139c34f"
 
 [[files]]
 file = "AGENTS.md"
-hash = "52e0d1a1ac31d8344642c2287889641291746e29132e42825b15dc37ee987145"
+hash = "2cb8a3689403ae4a986b42f64bf6b4df93027c3cfdd9681c964339e711beaf05"
 
 [[files]]
 file = "LICENSE"
@@ -18,7 +18,7 @@ hash = "40b8430f40df3bcdbf54e6ed70e372aaa8d2302675928ae1fe8a34c031552cfd"
 
 [[files]]
 file = "README.md"
-hash = "777e27f20d4d8a3b6daacb46a44ebf9265d3df76e4ef674a5fddc84fcd44d49e"
+hash = "57d70724e711ac4d032699a680bf909f92b748dab0a140f39f8776126c0e8ae7"
 
 [[files]]
 file = "REFACTOR_CHECKLIST.md"
@@ -30,7 +30,7 @@ hash = "66ffc79260890d29fc6269b01bcf939fa84a75246185f30aa236f3fe12980b0e"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "16fba347e25af435d69b08752a195f3bb9817bf90d1cd8817ec2dddfad662d04"
+hash = "78dd3947d89cc1ae6923d7b716b9547844dcbdb35ad360983e39ed7b12ede623"
 
 [[files]]
 file = "config/TFTH-Data.toml"
@@ -951,6 +951,10 @@ hash = "d8cb7cccc58da32bb64c5224b6ce95fdd44c31d35e8136761eb627fbd6b1b96b"
 [[files]]
 file = "config/adchimneys/Emitters/tconstruct$foundry_controller.cfg"
 hash = "ea5d5373920883928d9ae610aca591754b76cfcf8bac8b574bc725bde9ee530e"
+
+[[files]]
+file = "config/adchimneys/Emitters/tconstruct$seared_heater.cfg"
+hash = "7eb872a1b47a5b0fca319a80bfecdf8385e56bba023d0ff4fbe3a8bd0e6f90b8"
 
 [[files]]
 file = "config/adchimneys/Emitters/tconstruct$seared_melter.cfg"
@@ -5309,8 +5313,12 @@ file = "config/ars_nouveau-common.toml"
 hash = "b6eb36b57a869d42a91eb3e9118ffe8aed9c9c6839063b09280e7de9a30ecbc0"
 
 [[files]]
+file = "config/better_content_fixes-client.toml"
+hash = "cdeaff4f538c987a9926b1eaa7cf900133797fc30ce2fc913cf66d982e0239d8"
+
+[[files]]
 file = "config/better_content_fixes-common.toml"
-hash = "79a7e5b324272a4d24ab1ae9b358417e045f790f3198332bbd3d8f588e068e46"
+hash = "3c4bc600d936bdd39814c9187bc1e82795e9f6450158c19a4f470f1f24e740cf"
 
 [[files]]
 file = "config/better_content_fixes/quest_reveal.json"
@@ -5319,6 +5327,10 @@ hash = "bc0c8bf37965564fd46f023f7e793477416f2c6f6c5016c48c9cf2fb3c26f379"
 [[files]]
 file = "config/bettercombat/client.json5"
 hash = "744d7a62f2b493bc45feb87a6a09a5ca1663d4439999dc07b05278e353b35fcb"
+
+[[files]]
+file = "config/bettercombat/server.json5"
+hash = "5788fa8f20f02e58a67f458d7de0c4a393479fcdafa2bcfb8901767ba1ad60cd"
 
 [[files]]
 file = "config/bettergrass.json5"
@@ -5334,7 +5346,7 @@ hash = "90183d8ccf316b92b53afc0c5f04e536cbdb83a445b0c595ca46b9871e63c990"
 
 [[files]]
 file = "config/biomespawnpoint/spawnbiomes.txt"
-hash = "baa79c46f485515b1afb38d2f5ceccb098c3d2a2bd47e7b9c31f03baffc6634b"
+hash = "6df681d9d345f5913ca519f484dc677670cf5f2b549ea946bf9859e696d2e748"
 
 [[files]]
 file = "config/blockswap/block_swap.json5"
@@ -5350,7 +5362,7 @@ hash = "37e3dd71917b49faa4c8829ef9199290a8d71c36c3e8fc01155a40cd24a755a2"
 
 [[files]]
 file = "config/class_enhancement.toml"
-hash = "54bcaffd72c9854e8771df81243b5a501f5d24db1a55ce06c6cec9d64a51d4a3"
+hash = "f512ee09290d6c6096861f9177e70e0ecb57a7339a37dc76b7e042c10e65a3f0"
 
 [[files]]
 file = "config/class_selector/embark.json"
@@ -5370,7 +5382,7 @@ hash = "ba113e5910eb54f230affbbf638aee153b3d3b0d4d920f6df44d309b57fdc36a"
 
 [[files]]
 file = "config/coldsweat/entity.toml"
-hash = "5bb2cf8d2b0337d93e43af423297bf9cbe923ae7ea470074a0ca81e94c9b08bb"
+hash = "b01e5d23d33f4fcb167eb2f89207e9593042630d6eb5aa02a11e409b258a5ea4"
 
 [[files]]
 file = "config/coldsweat/item.toml"
@@ -5378,11 +5390,11 @@ hash = "21c7bb27d06d4870f6902dd94e66719b2245ce95c0439548c45257c31d1570fc"
 
 [[files]]
 file = "config/coldsweat/main.toml"
-hash = "3dc63fecc68b714b0a24779d2d4c3220192fa33c3fe598e8ac68fdb4b7b23ab1"
+hash = "73ea1ace4acd4768c565ef84639e7b60f69f4cb7609fdd762545a85caf5c215a"
 
 [[files]]
 file = "config/coldsweat/world.toml"
-hash = "db5c86da47df54a7f45dbaef2105a6c5dfeae99975035c4bd4fa40e327886b11"
+hash = "c18e12b1c3d3ff3bfa2c8915ed0890cb6c9b87bd3bde570511b6ba94a09bb753"
 
 [[files]]
 file = "config/create_train_fuel_scaling-common.toml"
@@ -5402,7 +5414,7 @@ hash = "2e8716729456b565b56533cfd25ec8132d5469a58a62a2374b381dc1e6914846"
 
 [[files]]
 file = "config/downed_player_revival-common.toml"
-hash = "c6c5deedd9f32c21b461e923e9a2765d96b9bcc46ef829ab8ef3e5bea56a2fb7"
+hash = "2b72e15f7e84deb16817c8bd02d4ac60656a4267768025930bee2a4b368f6896"
 
 [[files]]
 file = "config/dynamictrees-common.toml"
@@ -5426,7 +5438,7 @@ hash = "7ea561e710209e18c03bb98ff4a2d4861e668723365b62a9c428e7e8a0cbedc2"
 
 [[files]]
 file = "config/enhancedai/common.toml"
-hash = "143aeaec85f2d19a21098bce58437fe362d586ecbbacf821f73e76557f141a00"
+hash = "0ea96d4eb754c43933b3a00407348bb473556d8dff44e0e9761cf2b086c8ca2f"
 
 [[files]]
 file = "config/entityculling.json"
@@ -5438,7 +5450,7 @@ hash = "2dcdb9b04254a6a1c9cf5c0adb23c6c6633ccbfd935aab860356f16ea157ec04"
 
 [[files]]
 file = "config/explosionoverhaul/ExplosionSourceBlacklist.json"
-hash = "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+hash = "a9e59e7d71a5355eff3f17c1934a72aae007f3545eff6fbeec3dad09156b8a95"
 
 [[files]]
 file = "config/explosionoverhaul/GlassBlacklist.json"
@@ -5502,7 +5514,7 @@ hash = "3d7d4cda73d6bde134a568ccbe4e8d2e7fbe701570012b71fa45acdb2258c823"
 
 [[files]]
 file = "config/fiahi-common.toml"
-hash = "32c7a915307d2a9df072f3733f3518de387273236f82db2ff769f5d6c54064b6"
+hash = "50a50ca266c64bf4f44b35b04f97eee45d950048bb3b988356efa02cb5317904"
 
 [[files]]
 file = "config/flash_flood_config.json"
@@ -5515,6 +5527,10 @@ hash = "3a9d2c8f78ed10b9dba2febb9c18a39c397448dc3eb60fbbb91034a16028b7ad"
 [[files]]
 file = "config/fml.toml"
 hash = "42611061a5f950cfd9c17a7c9eafbc5512c2593ff518517fa9830e08c9d0d141"
+
+[[files]]
+file = "config/ftbbackups2.json"
+hash = "b92b3881dad96f1b828373cbd98a39fa81674856f7e70c1c7cd978b763cd9903"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
@@ -5554,7 +5570,7 @@ hash = "0f669519733366d6ff5314bf3966e3d6f708225f8ce1ffe785aaefb7dfe08a78"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/completionist_tcon_weapons.snbt"
-hash = "a6dc7de8e952914a771781fd6dd6db7bd9bb3899f186f8fd75082f7b2f8d154d"
+hash = "17eaf09bda21da2e07357375e56605f4af7d197af16143939dbe5816e9741bed"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/control_and_intelligence.snbt"
@@ -5578,7 +5594,7 @@ hash = "62e01a2f6655dc45fc0342bd292cfad21225002a7336048989acc22b47ee0cf1"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/homesteading.snbt"
-hash = "4445a7185eceacf1605e30c1ae37ae54d2ed08aedf280c8b6fc8603ef1aeb676"
+hash = "ef5c32316c92b2c97e52eb6f01406b2f2560f6301ffb57793eb4cfa32ad5888e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/landmarks.snbt"
@@ -5622,7 +5638,7 @@ hash = "66a900c615bb06d67970cab96a125ee7d167bc040ab5dce164c89f42157784b2"
 
 [[files]]
 file = "config/heat_sync-common.toml"
-hash = "d7b91d1c32f80ebc6c13d020614aa3e276dcd056dbc76b79e2fa0a4749776870"
+hash = "f8147a27ae1e2aa46259603deb6b576e18a59337b1eeac9242bb78344eff409b"
 
 [[files]]
 file = "config/hyle-common.toml"
@@ -5881,6 +5897,10 @@ file = "config/rbp/block_definitions/coral.toml"
 hash = "3a62b46ea687b7f36aff638381ec39e7c86730e6279b3523a22935c57e47f20b"
 
 [[files]]
+file = "config/rbp/block_definitions/create_transmission.toml"
+hash = "9e7095cd7d99559a958eeaea7a7dfe11118e00c24130f2eb9a4e32abe82464d6"
+
+[[files]]
 file = "config/rbp/block_definitions/dimensional_font.toml"
 hash = "d9fb3cd3aef5f4e11d5cbd9a698def5182b6f45ee4c651c42488a5804588b525"
 
@@ -5946,7 +5966,7 @@ hash = "03d7f74c3341713d8882bba7112fd5458c94216f2964ca23cc6aaf28d6a1abfa"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_pack_solid_blocks.toml"
-hash = "1f9231f8f1795d33c4b1f03303f33bcb81c546e8e6e66e81a687d296935133af"
+hash = "387caae0de2e96fdac9b89fad7cef256eda3752707cd80e196767526ea9009a8"
 
 [[files]]
 file = "config/rbp/block_definitions/glass.toml"
@@ -6107,6 +6127,10 @@ hash = "ac54337a6de011ee0a2309b3858a1d876df2f279eb8ac98beefacbf3bbe6b672"
 [[files]]
 file = "config/rbp/block_definitions/utility_light.toml"
 hash = "6d62c93cb3b86a4ec538db1f9000dc270c5374fc6596894719e80d437c355565"
+
+[[files]]
+file = "config/rbp/block_definitions/wall_attached_decor.toml"
+hash = "8df07faf7eb767418b47827e1c9fabe1c960a6ba2e924d92bea9dd39966a58c5"
 
 [[files]]
 file = "config/rbp/block_definitions/web.toml"
@@ -7774,7 +7798,11 @@ hash = "702cb57b0512a13a973e2d81c1d1969e6df226c6a5717b6672603562fbd95351"
 
 [[files]]
 file = "defaultconfigs/farsightedmobs-server.toml"
-hash = "5d93c3e328a1d040a42c540932c09c9b342e722c6a9a105a0b93833dfa718388"
+hash = "49d3107a10e4b113fc0e6fc9e909dac0e7d4f501fa48093d9a784294fdf86da9"
+
+[[files]]
+file = "defaultconfigs/sleepingoverhaul-server.toml"
+hash = "98740b4fb7ca10251df66812cbac54fd7b98d4e435607e5b7bc3390584d8643a"
 
 [[files]]
 file = "defaultconfigs/starcatcher-server.toml"
@@ -7801,12 +7829,12 @@ file = "dist.sh"
 hash = "f68243a1fcf03f5cd45e1defa372eeb190c9e825340265af9ce65a6d683da261"
 
 [[files]]
-file = "error.txt"
-hash = "fed4ef696abcc9ffd82df9a69c8dc609ef243ccf39df560ea33036f784cb9b2a"
-
-[[files]]
 file = "globalresources/dimension_drink/excavated_variants/dimension_drink/variants/dimension_drink_modded_ores.json5"
 hash = "ce52637ca9771632ef3bf89a92095039f353397dab33df25bdad142e4cb1ea75"
+
+[[files]]
+file = "kubejs/assets/heat_sync/lang/en_us.json"
+hash = "e8ae934f158c00ee5cd18d05173d78327e426b41c690c4e1d37031e4a97f573c"
 
 [[files]]
 file = "kubejs/assets/kubejs/blockstates/airtight_machine_block.json"
@@ -8766,7 +8794,7 @@ hash = "d1e7593313fffe5133e579aef73b4bfa541f74b615a39ada4258a6f06f1a3225"
 
 [[files]]
 file = "kubejs/config/economy_acquisition.json"
-hash = "eea12b59b3d38b9f5bb121e2ff5501595796b4f166be9c06f33135f5111eb5d0"
+hash = "d3d94743df997addae68dab71e729e44f2eb37e2d740823d3e537d8bab482408"
 
 [[files]]
 file = "kubejs/config/food_effect_progression_candidates.json"
@@ -8847,6 +8875,54 @@ hash = "5fecb85c0830794ea4004eb041897b08938ebb5383670ada06a3647727ddcf36"
 [[files]]
 file = "kubejs/data/additionalweaponry/recipes/embellishment/uranium_alex.json"
 hash = "5fecb85c0830794ea4004eb041897b08938ebb5383670ada06a3647727ddcf36"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/tinkering/tool_definitions/butcher_knife.json"
+hash = "8482820f68893c3bb235292780246d9e1bc89953ca1290814bf7c3d0b8c141a9"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/tinkering/tool_definitions/cutlass.json"
+hash = "979d1538bc90a9717557e2fafa1c0611a2ced2d4701e7e77a1a85005e69c93f8"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/tinkering/tool_definitions/pitchfork.json"
+hash = "6447f05374b15b35b8e9a5cbc142d31568d0c6889c95c4eb6d643bafb8a6296a"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/tinkering/tool_definitions/scepter.json"
+hash = "9658dc175e9a25f3805a14a146a3042bb6b2b1f43711edbd78403460f74d18c3"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/tinkering/tool_definitions/sniffer_claws.json"
+hash = "239c0ce350f64232027b5f60c2a8046740afa37606a7425cba5b39dd5ec5ae66"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/tinkering/tool_definitions/wrench.json"
+hash = "07feb3120b975445a9fb7b11546625f92597ab3e047f80e4e80684e8719ffc99"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/weapon_attributes/butcher_knife.json"
+hash = "60219c4357b32cab13e37d3c485eaf11bdff1c7cec7f3e48b8e809ba5bb4bc99"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/weapon_attributes/cutlass.json"
+hash = "71e3ab9c2665073a80c035018f2a3fc5f436ba3cbc559cfb998ece3acd2162cd"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/weapon_attributes/pitchfork.json"
+hash = "d46d85951d273b0cd1194b5785a2dcc034612e15fff97f205921d41758751b8f"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/weapon_attributes/scepter.json"
+hash = "da2d8fe22fbc4b08cf6daec3192dc9d9dc068f6d291f8aee78214b739c26001c"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/weapon_attributes/sniffer_claws.json"
+hash = "fea2aaad701c31c3c806e1b889246cf3dae2bcf52c14432e5797fc048f8f199a"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/weapon_attributes/wrench.json"
+hash = "a773a217e1e62f9f88c703a2ee6ab48421e30a40dd8a6b932341d5a4fc73caa8"
 
 [[files]]
 file = "kubejs/data/apotheosis/loot_tables/chests/chest_valuable.json"
@@ -9109,6 +9185,14 @@ file = "kubejs/data/better_content_fixes/tags/items/seared_melter_heat_sources.j
 hash = "62424537e90b4490093a8d76cb1a368dee7ff2a67fce1152c260b97f95003fd5"
 
 [[files]]
+file = "kubejs/data/bettercombat/weapon_attributes/dagger.json"
+hash = "f6e6f52f154934fe55d0d4086c21755bfaffd1205f5313a41f82c20f5616c3a8"
+
+[[files]]
+file = "kubejs/data/bettercombat/weapon_attributes/sickle.json"
+hash = "6fe6ba99eb8ca52e8894016def40d34f04f88ec21e50b7f8be459bd9766ebe1b"
+
+[[files]]
 file = "kubejs/data/bloodmagic/tags/items/arc/cuttingfluid.json"
 hash = "9d5c8474a9a7aad4cb5df6b54e76773fcd9294914c9b325d623dd2b3e8806329"
 
@@ -9138,7 +9222,7 @@ hash = "ead843f6713a589ed1299b88e0a3295249a832df02b96bf90a9e945e3a18b0b1"
 
 [[files]]
 file = "kubejs/data/c/tags/blocks/farmland.json"
-hash = "95bc3f0103442168f755260bf02f3d6a31185c6d959a48753c6a75274fbf6180"
+hash = "5cc2027f2bdc3fb9f5d6a423bfaa3afa435c9d5d4abdab1a83cf1a0c9c6c2012"
 
 [[files]]
 file = "kubejs/data/c/tags/items/knives.json"
@@ -9155,6 +9239,30 @@ hash = "7392b4249b82885a0c5faf72d7c28722ca7600537e1b5404d3f993bc3c5bfb97"
 [[files]]
 file = "kubejs/data/c/tags/items/wrenches.json"
 hash = "7392b4249b82885a0c5faf72d7c28722ca7600537e1b5404d3f993bc3c5bfb97"
+
+[[files]]
+file = "kubejs/data/construct_arsenal/tinkering/tool_definitions/buckler.json"
+hash = "4e329913f8a6b7cbcd30bd42813ad9f522d385c688af4bd012f9842365f59f3b"
+
+[[files]]
+file = "kubejs/data/construct_arsenal/tinkering/tool_definitions/helix_blade.json"
+hash = "7ad27815c4d178a101fbab5677cf67fe6f4f726c20c6b0fa78b3431883190028"
+
+[[files]]
+file = "kubejs/data/construct_arsenal/tinkering/tool_definitions/quarterstaff.json"
+hash = "74cc2537ea1820d148879daaaad34db3f8205fa7cc252e21e7600c933b7d5d34"
+
+[[files]]
+file = "kubejs/data/construct_arsenal/weapon_attributes/buckler.json"
+hash = "052e23463d0cb1d9efe5500a0f584489de6c50c38e5fe7cc98b341da2a3ff5c3"
+
+[[files]]
+file = "kubejs/data/construct_arsenal/weapon_attributes/helix_blade.json"
+hash = "ced9e383a30cca3d363a93046fb8eb5e53521a9d5ba86668ede21922e91abb46"
+
+[[files]]
+file = "kubejs/data/construct_arsenal/weapon_attributes/quarterstaff.json"
+hash = "d0a294164f319010f51bea352857c6ed233c4504d4ddcad47706ab282a7fe25d"
 
 [[files]]
 file = "kubejs/data/create_more_additions/tags/items/repair_electrum.json"
@@ -9393,8 +9501,20 @@ file = "kubejs/data/goety/recipes/end/big_end_stone_bricks_stonecutting.json"
 hash = "90f70e8f0bcda8916c6cda466367258ca22f5bae4e4252a18e17534c880cbed9"
 
 [[files]]
+file = "kubejs/data/heat_sync/tags/blocks/pipe_cold_sources.json"
+hash = "911abe80ee2a289e590920c2e314790bf5feb9db159fd24902be6ad241a67879"
+
+[[files]]
 file = "kubejs/data/heat_sync/tags/blocks/pipe_radiators.json"
-hash = "85f7f2c0d15c276dbc092097d7d45ab27b0d07dbbf0e9474d3022c09c974231b"
+hash = "d705cd6cc1ad9739627f7d713555c5479fca064847624d8a085dfb055e608e10"
+
+[[files]]
+file = "kubejs/data/heat_sync/tags/blocks/thermal_emitters.json"
+hash = "620e16f61d6df3f239af5738bcd8586c83c36c8d0771bc7a25321ad1c51f77b5"
+
+[[files]]
+file = "kubejs/data/immersive_weathering/loot_tables/blocks/thin_ice.json"
+hash = "05ed9b2c5b2838d72eb2dbe2e9b7d0c038dbf65f06c6a4abd3f806ea16a6285e"
 
 [[files]]
 file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_dimension_compat/bluebright_leaf_pile.json"
@@ -9450,27 +9570,27 @@ hash = "d5f5d9f3aaec685bf97e85535b0cbaaa02c4d124fd217c480f3e4f5fb99c30bb"
 
 [[files]]
 file = "kubejs/data/kubejs/recipes/primitive/bone_butcher_knife.json"
-hash = "3e04f70e9fa73b43e92998021609c249b5f73e89d08f8334322aaff7ba8729e3"
+hash = "f6b1ed504ed5a31be75ff967b57c68f99f51e21b84b843cd6c7988690e58f1a8"
 
 [[files]]
 file = "kubejs/data/kubejs/recipes/primitive/bone_hand_axe.json"
-hash = "bb9c6e16cd7516ad21aae2db95b7967965bb19c59e185f71c8cbb52f0d4516c4"
+hash = "3422f26ef18d21262d418d9c374a5012c2c740323a80c8f46a6f0a7bc8aea633"
 
 [[files]]
 file = "kubejs/data/kubejs/recipes/primitive/flint_butcher_knife.json"
-hash = "3c3c9ba68b88861b24cbe20955cafcf7bf09fb52ec72e05b8c0cf95bedf3d801"
+hash = "ef3b9ebd86ea69953cf99d01884dfe70ef705dde3f053686f6eac1070066aaef"
 
 [[files]]
 file = "kubejs/data/kubejs/recipes/primitive/flint_hand_axe.json"
-hash = "6d7114d77f94468681b4c05a1f6608c13907c8681aaaf39c5a19fc4e5a4a8da5"
+hash = "e051c22a36e566f160132fa30a0700db58133faadd6f83b8114e03c9b67a5590"
 
 [[files]]
 file = "kubejs/data/kubejs/recipes/primitive/rock_butcher_knife.json"
-hash = "de7b176c1313d4ec8cab9e3b8f27ad873650be58549f5f0f87b172a5ea622fd6"
+hash = "c69d6f7af69beb4f84a05e08c98eda3d31b924ba31ebad2d5d79f986d3032729"
 
 [[files]]
 file = "kubejs/data/kubejs/recipes/primitive/rock_hand_axe.json"
-hash = "c3bdf97576c073333bb5b6100c3cfcc554b89dd180fcccfa76d04181163abb6b"
+hash = "80c7f8bdcd4c27bfa36e6a4ca08e2a7e1dca2da470ee3163a232c3254dd01a6e"
 
 [[files]]
 file = "kubejs/data/kubejs/recipes/primitive/straw_string.json"
@@ -9491,6 +9611,26 @@ hash = "5af8475bc702a5175f82e21b879606f9a9fbb63fca113385d020a2cf2669cd10"
 [[files]]
 file = "kubejs/data/kubejs/recipes/tools/materials/primitive_rocks.json"
 hash = "b000179a26ea59f581b189dd0576c19b70b41202e5f8d136802d9c3992636561"
+
+[[files]]
+file = "kubejs/data/kubejs/tags/blocks/cold_sweat/constant_heat_sources.json"
+hash = "1a169babc56743b6917b0cc2790650f4445afeea6b60459e39c18c8ad4ee4f40"
+
+[[files]]
+file = "kubejs/data/kubejs/tags/blocks/cold_sweat/lava_cauldrons.json"
+hash = "d6a0501ae55d3f8ec947a439ed7808aa406d5a5a741ab292df712072f252ff07"
+
+[[files]]
+file = "kubejs/data/kubejs/tags/blocks/cold_sweat/lit_heat_sources.json"
+hash = "a013cc52de169bf327508e569e261dde74d8bc284c5dcea135d16329e77b6190"
+
+[[files]]
+file = "kubejs/data/kubejs/tags/blocks/cold_sweat/mild_cold_sources.json"
+hash = "e557fa1111ab137b73d6ac61323180213ddcfb47657ebe5e4c889d96c61b4cb5"
+
+[[files]]
+file = "kubejs/data/kubejs/tags/blocks/cold_sweat/strong_cold_sources.json"
+hash = "7b270e9befbe4a5261bd95a3bfe889fca57f7e9e67b6b77e1e033c4be92e2540"
 
 [[files]]
 file = "kubejs/data/kubejs/tags/blocks/dirt_like.json"
@@ -9581,6 +9721,18 @@ file = "kubejs/data/malum/recipes/farmersdelight/unholy_caramel.json"
 hash = "7c9bfa94e037e789f73c4c65d246181391e4a356d6c5ae553dfa601d3ef851c7"
 
 [[files]]
+file = "kubejs/data/minecraft/loot_tables/blocks/blue_ice.json"
+hash = "5593374b3c4bec3a6bba5130ad234a346a0233f07835837806ca1c188fb9bc1a"
+
+[[files]]
+file = "kubejs/data/minecraft/loot_tables/blocks/ice.json"
+hash = "421f2952f739ba696f7807b5cb4caa718455d1bf52c0e5ee0474ec1fa7bb222d"
+
+[[files]]
+file = "kubejs/data/minecraft/loot_tables/blocks/packed_ice.json"
+hash = "f4b5eebab14bc66a36f69afc7676add7dfad9bfc2d6cdd507c1400eff87e5c5e"
+
+[[files]]
 file = "kubejs/data/minecraft/tags/blocks/crops.json"
 hash = "9d98fb7150d1e8645538a6d615550e87d60306c3249ab99020ae969e489acf8f"
 
@@ -9614,7 +9766,7 @@ hash = "bee02ca2ba560832312188ffd23ed1acc1be7276a135ebefaee3570c8a142a95"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/mineable/shovel.json"
-hash = "e195f318b085530c894ed6af35ce215d56b79c228fc951a8257d178324d6e6b9"
+hash = "01079673a47116db744c54659660e64b0097d8ee574c9a817f05f6787a1c44cb"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/planks.json"
@@ -9761,6 +9913,10 @@ file = "kubejs/data/oc2r/tags/items/wrenches.json"
 hash = "955bac272eb552bfd6e4c0e340725355e800d981e508030dd305e1f40e7c8130"
 
 [[files]]
+file = "kubejs/data/projectvibrantjourneys/loot_tables/blocks/ice_chunks.json"
+hash = "59dae689131d98ad3d82dc0abeec43b1922e7462d48a2020b772ccec1de77ecb"
+
+[[files]]
 file = "kubejs/data/quark/tags/items/big_harvesting_hoes.json"
 hash = "9e9d1ce8da81e879dc0b2d43ff8d527ed8d5717bd780947c165970f6ce492c27"
 
@@ -9881,24 +10037,232 @@ file = "kubejs/data/tconstruct/tinkering/station_layouts/fishing_rod.json"
 hash = "95cb8fb345fbdf378ea58605cd136a4a693386c66cbfef787e9c7351b540b641"
 
 [[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/battlesign.json"
+hash = "2f44e5e56b0cc08457bee1debc0c3215b5d87ab176d32086cea798100dcc611d"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/broad_axe.json"
+hash = "613413400dc0c547559f9f610a311f2a97beb6ccc31fd0b49a48f1e8c461573b"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/cleaver.json"
+hash = "b9b244994a6ca602bc8ac328ed67329aadd5430dbef09be6cec362985ff5cc80"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/dagger.json"
+hash = "868a4a33b47bcb8ca59f601ddf830c5052cd12bc0d77c34bbf03f57638319454"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/excavator.json"
+hash = "fe7db7ff661ed56fcbe181ced09b023a1c153cd295a0774b38fa7b967cd67845"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/hand_axe.json"
+hash = "092ca504432a9d92d386a0b1106bd9b7c565927bbb7aac8f1f8ef31e5bcc9fe0"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/javelin.json"
+hash = "30a5f4bb4724163888a9823c9a7cba31d02972a8eb24dcb21eaf76213ce592a7"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/kama.json"
+hash = "a95b87cf8d34283592d508f4afcc2d62e74ef764afc247fd57f4aa499f835ce9"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/mattock.json"
+hash = "900aa514ffad60ba82584fe80fe9be0e929c00e44ff244f7c7a180f0d10984cd"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/minotaur_axe.json"
+hash = "a43a3e725faa61047a88636ba392f7d79aa21bbb42d8394fe111d07c060f2ce6"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/pickadze.json"
+hash = "75799adfd32d6ec623a39e7a024ab8bc93b70a000e4b3d1d63d3411664c65e18"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/pickaxe.json"
+hash = "105d8ef8db6c3d97c8f2e5eb68524eee7b4d8ff366e17b69d403814a1d9f3418"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/scythe.json"
+hash = "6715120be1f5f6f848d51cac5603cc2201bbed4385ea3e22284cff1105d87339"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/sledge_hammer.json"
+hash = "313a8c439a27d23727e96d98c172deefdc966641001209b4c0fc221bea541a5b"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/swasher.json"
+hash = "c905d9435d00c9dd3ba986a212d636e50671152370777725d0d253a7e32dcf10"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/vein_hammer.json"
+hash = "323d0b54f186b6160ae344ea201051c95dba19255d8650e3afe7bac36e44414e"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/war_pick.json"
+hash = "fa934960b0911ab0cb422df78c5497c960b5f8bdf59526900217c9cf8f10d6df"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/battlesign.json"
+hash = "a773a217e1e62f9f88c703a2ee6ab48421e30a40dd8a6b932341d5a4fc73caa8"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/broad_axe.json"
+hash = "f501b307ff72c12a28d3cc9a0f8cf72d70045bd7a4f6430c3e3cf7c771621cdc"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/cleaver.json"
+hash = "ced9e383a30cca3d363a93046fb8eb5e53521a9d5ba86668ede21922e91abb46"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/crossbow.json"
+hash = "086acac46555cf23614baf8083b6cd68348000c727314e6552d2b806916cd819"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/dagger.json"
+hash = "0d77ca70b175a514a1030d14f1fd24e2220a34bc04c2bcc377474cf3c867b22f"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/excavator.json"
+hash = "a773a217e1e62f9f88c703a2ee6ab48421e30a40dd8a6b932341d5a4fc73caa8"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/hand_axe.json"
+hash = "60219c4357b32cab13e37d3c485eaf11bdff1c7cec7f3e48b8e809ba5bb4bc99"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/javelin.json"
+hash = "2842dd0fe42830d89f5ee59a938bb992e587cfef7e42063a7ee7a75a5f86fcb1"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/kama.json"
+hash = "4b0cb85cdeb22165b635503e3f3aea42ddc2e42a1718e8e26060f3f86d31cbf8"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/longbow.json"
+hash = "156953f2f6b58debfb00f55818c92b04823017767876ac570362eba7a78d2e66"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/mattock.json"
+hash = "192616e29690359584b188d510f2fa8fdb3a3e0b0bbbf3ab7be532e2f83364db"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/minotaur_axe.json"
+hash = "7705fefae08ab19fc6089a9f76c1e169a5621ba847266a275915b3d3af42d656"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/pickadze.json"
+hash = "192616e29690359584b188d510f2fa8fdb3a3e0b0bbbf3ab7be532e2f83364db"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/pickaxe.json"
+hash = "192616e29690359584b188d510f2fa8fdb3a3e0b0bbbf3ab7be532e2f83364db"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/scythe.json"
+hash = "662b6f6948951924bdaa96bef5667062fee00b6544f3f31712a3d9f23b2b94c8"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/sledge_hammer.json"
+hash = "b2336979c9743ca48bb5863359d8cae77d090898d6f9df4c412d61db1ac35683"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/swasher.json"
+hash = "b9b160178325651f244beb1d22b625c773631f78da65e7b4cd285eb7ad7dcc17"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/sword.json"
+hash = "16bef9378e3853a8350a41899a1a2f81ca995e94defdb90d8cfb292dd5cf75d4"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/vein_hammer.json"
+hash = "b2336979c9743ca48bb5863359d8cae77d090898d6f9df4c412d61db1ac35683"
+
+[[files]]
+file = "kubejs/data/tconstruct/weapon_attributes/war_pick.json"
+hash = "192616e29690359584b188d510f2fa8fdb3a3e0b0bbbf3ab7be532e2f83364db"
+
+[[files]]
 file = "kubejs/data/thalassophobia/forge/biome_modifier/leech_biome_modifier.json"
 hash = "57c8899b0c2b6c266bc114548695279e406eb483e5877ea29bb74775737cc950"
 
 [[files]]
+file = "kubejs/data/tinker_rapier/tinkering/tool_definitions/estoc_tic.json"
+hash = "1216b0ee8d76247f631ef2a42ff1e6e9ba672aa10ff57f1c0ed1476ebe609aa5"
+
+[[files]]
+file = "kubejs/data/tinker_rapier/tinkering/tool_definitions/rapier_tic.json"
+hash = "371ea125870de3d5fac48b1b5354fc8a23d64aa7f5da94f554f0556fa5ffa026"
+
+[[files]]
 file = "kubejs/data/tinker_rapier/weapon_attributes/estoc_tic.json"
-hash = "9336d9c0b7fd69d271f3031eb645aaaf812648621acc5314f15bb53dae720d99"
+hash = "7426ca7a5ed5c2135fc387fa023a5ad5ccc49dd555c3d6df65ba616bb4ac6a49"
 
 [[files]]
 file = "kubejs/data/tinker_rapier/weapon_attributes/rapier_tic.json"
 hash = "9336d9c0b7fd69d271f3031eb645aaaf812648621acc5314f15bb53dae720d99"
 
 [[files]]
+file = "kubejs/data/tinkers_battle_spades/tinkering/tool_definitions/battle_spade.json"
+hash = "9fdb74de9f6243f6bc1e1e011b88cb2fc58e17420c238b1e9f342bc6339fdd89"
+
+[[files]]
+file = "kubejs/data/tinkers_battle_spades/weapon_attributes/battle_spade.json"
+hash = "16bef9378e3853a8350a41899a1a2f81ca995e94defdb90d8cfb292dd5cf75d4"
+
+[[files]]
+file = "kubejs/data/tinkers_katanas/tinkering/tool_definitions/fuma_shuriken.json"
+hash = "51286343ece5a06792dfd59352d643340316381acd0b7d3fe30b9f04ce5855f3"
+
+[[files]]
+file = "kubejs/data/tinkers_katanas/tinkering/tool_definitions/katana.json"
+hash = "28552b7d18f9547f29d5263ad9ec28cf1bfed974345efc1cbcaf3ae7289725bb"
+
+[[files]]
 file = "kubejs/data/tinkers_katanas/weapon_attributes/fuma_shuriken.json"
-hash = "e6a2964d012440505a6901c008b99ec9f89d8ae62324b88d591c96b5f1b4562e"
+hash = "bde58dec691c51fc7e077dfff42d5bb926a4af87eb1add9c2b9ee8de26dfa3dd"
 
 [[files]]
 file = "kubejs/data/tinkers_katanas/weapon_attributes/katana.json"
 hash = "1a8925e152bf5423e2e1cb84bc495680e2e700fb7f3080682f395404457855ed"
+
+[[files]]
+file = "kubejs/data/tinkers_khopesh/tinkering/tool_definitions/khopesh.json"
+hash = "3a33bab1c93d576394415d36b9d272591dc92574e7e4c866cd79ef22350e6ac3"
+
+[[files]]
+file = "kubejs/data/tinkers_khopesh/weapon_attributes/khopesh.json"
+hash = "4d5b0ef080343d3609c9e9676dfd8cd874c4a9f84e7b60848d7d281ae13e42c4"
+
+[[files]]
+file = "kubejs/data/tinkers_things/tinkering/tool_definitions/amethyst_staff.json"
+hash = "188554e7cd5f0062ceb73cb00dedbc6a232175547bd891907e60e976c6ad65d8"
+
+[[files]]
+file = "kubejs/data/tinkers_things/tinkering/tool_definitions/blockram.json"
+hash = "5d7bb9e685ca142f418fb4a8c670823fd27b05eb2bfd79bdd69183eff9e6ba1c"
+
+[[files]]
+file = "kubejs/data/tinkers_things/tinkering/tool_definitions/blowpipe.json"
+hash = "bfee9f60b8e5f92e23bc3fe04902403e53f2c85d6f5de3284a7cc6ab23a9613e"
+
+[[files]]
+file = "kubejs/data/tinkers_things/tinkering/tool_definitions/chisel.json"
+hash = "c30a9380820c46b9fefe9e8e9a22363bc046dd97d115796cc3aa65313addd40c"
+
+[[files]]
+file = "kubejs/data/tinkers_things/tinkering/tool_definitions/halberd.json"
+hash = "1a197b72db983e67cca41116559be4194ef7f050deb66839d4ab81dd3842d43f"
+
+[[files]]
+file = "kubejs/data/tinkers_things/tinkering/tool_definitions/shortbow.json"
+hash = "a1e688c75e534f1a2492c0158835b395a58a7be5e3befd0ff9d5f839908ce68a"
+
+[[files]]
+file = "kubejs/data/tinkers_things/tinkering/tool_definitions/shovel.json"
+hash = "21ee4700a9c5713c6f934bdecd1970d6c477d24e1156cc7fed7d9cf8b6bdbeee"
 
 [[files]]
 file = "kubejs/data/tinkers_things/weapon_attributes/amethyst_staff.json"
@@ -9906,11 +10270,11 @@ hash = "3a915792b163ce17f758374bf1608b1feb76aac2f9bee41a886ca8b7dbf81379"
 
 [[files]]
 file = "kubejs/data/tinkers_things/weapon_attributes/blockram.json"
-hash = "318baff56f80321840daf021aeae90a6f55c709152d4fd9871569de3993b20ca"
+hash = "318fdee1a763ccbbd7161eb2deb18ab3e58d34402f0782c1f2f1575c3781e727"
 
 [[files]]
 file = "kubejs/data/tinkers_things/weapon_attributes/blowpipe.json"
-hash = "108e7e8c8cd73a45d9d667d9c69325759a9bd8bbb906989057134f6267d9be4c"
+hash = "3f3b4a2fb3c13b1326c8a81e9c1a013b1f0709388b26fdf1bf4a8590066f2a56"
 
 [[files]]
 file = "kubejs/data/tinkers_things/weapon_attributes/chisel.json"
@@ -9927,6 +10291,18 @@ hash = "108e7e8c8cd73a45d9d667d9c69325759a9bd8bbb906989057134f6267d9be4c"
 [[files]]
 file = "kubejs/data/tinkers_things/weapon_attributes/shovel.json"
 hash = "480fe53110b8575c0cfaf84370fed669cf016c77e1902120c402ec775046098b"
+
+[[files]]
+file = "kubejs/data/tinkersweaponry/tinkering/tool_definitions/greatsword.json"
+hash = "79f02bf1bf47ceddaecf309c39bfabc4880dbff1ef35dfc21a30a22764d8dbff"
+
+[[files]]
+file = "kubejs/data/tinkersweaponry/tinkering/tool_definitions/lance.json"
+hash = "c217dd7cec6480731ce6622b33e69479e8b6e20cfd179203659f1bd170b8b58a"
+
+[[files]]
+file = "kubejs/data/tinkersweaponry/tinkering/tool_definitions/pike.json"
+hash = "32faeffb0fb36685ea9cef3f9efbbf34545c758c78960fd561a10b0db01f4999"
 
 [[files]]
 file = "kubejs/data/tinkersweaponry/weapon_attributes/greatsword.json"
@@ -10066,7 +10442,11 @@ hash = "dd8e8b2b612ca605499aea8e1ba061bac13afe1f4a77d1fd2f60e24399080552"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/check__30_stone_cobble_compat.js"
-hash = "a86055e48bf6406bb508e7f3d32f62e81720fb270d02c31bbfeff54bd81c49fb"
+hash = "fe902c8e51a00d3933125df0a57d966f81ba2a1c913d273a69fdd576733f8ac1"
+
+[[files]]
+file = "kubejs/server_scripts/compat/retained/check__35_wood_family_alias_compat.js"
+hash = "5b25d75fdd5a255104ec6374c7cf7ea655cdca768be00dfe08a4287fcd8cf06f"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/check__40_dirt_grass_compat.js"
@@ -10150,7 +10530,7 @@ hash = "c7a54a048793f2393c1e20b0331ba96b52e4af4eb73d4a149ec25aecd7804434"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__compatability__45_stone_surface_tool_compat.js"
-hash = "50f98ebda9bfefc38992756f22e1d95495e1532cb09869af46ef39bc9ceea188"
+hash = "01dc4319e4f9c567283bb05811f72c38ff10d39e54ba3cfa6b3ff4403e1b2d5b"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__compatability__85_dirt_grass_tag_compat.js"
@@ -10174,7 +10554,7 @@ hash = "0de5b65db0fb84575faa22bfefc45e37f09001d638bf7632f527a4610cb707c7"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__villager_shopping__10_coin_villager_trades.js"
-hash = "4ac6e8db39bcc5d8f33d9bfbc05fc70ac771e4d40c76cea8207369a12f732e68"
+hash = "ea58e1d8c009223a4e38ab18e0e87e321790a09ee4b70268b74dbc7fa58e1137"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__villager_shopping__40_emerald_loot_coin_replacement.js"
@@ -10215,6 +10595,10 @@ hash = "79767d9ddefcb5ce0c54d6da348d9c134f09e25a5b6733a778778ffaa201448e"
 [[files]]
 file = "kubejs/server_scripts/compat/reviewed/replaceable_deepslate.js"
 hash = "cdadd1a859c50c4f30afa283252ed053e100bafc58d9f12617a939df56adae98"
+
+[[files]]
+file = "kubejs/server_scripts/economy/20_first_class_wandering_trader.js"
+hash = "0b9f2aeb7f35c08a18c38752834b31d97e1f1da0ba3178c79ce3a56a4466cf59"
 
 [[files]]
 file = "kubejs/server_scripts/policy/dimension_access.js"
@@ -10259,6 +10643,10 @@ hash = "6c06186d2a95c6748196a57ec086c7ad8a837cd9207d22eb6ab869516d090508"
 [[files]]
 file = "kubejs/server_scripts/transport/10_optional_engineering_roots.js"
 hash = "a3a9293735690f3f16b2eb03a2d30ec460ba90500b96a92551efae945b78a3c6"
+
+[[files]]
+file = "kubejs/server_scripts/utility/10_recipe_surface_helpers.js"
+hash = "e03d4cfc932831d5313a7f569a85d7c36bf03af4971527314089f00d6d2466f6"
 
 [[files]]
 file = "kubejs/server_scripts/utility/hooks_drones_gates.js"
@@ -10339,7 +10727,7 @@ metafile = true
 
 [[files]]
 file = "mods/arcane-chunk-loaders-0.1.0.jar"
-hash = "117b1659bd7dd48b6f18103651fe6b5ecabd0896d4bfb1c09cc7716a33001386"
+hash = "cf9de02f3a6af26da69d3b82a2cec09dbd3cb63c86d768ac39451baa2142d9ff"
 
 [[files]]
 file = "mods/architectury-api.pw.toml"
@@ -10383,7 +10771,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "634e012ec1d3f592f36bc55065efb04ddb3c37a6efe7346f0cdad8af3e2369c1"
+hash = "662558d0966f5d1e2cd0b5a9efe83a68df92ca2ed1a84d518c3e5d6d5958eb8f"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"
@@ -10427,7 +10815,7 @@ metafile = true
 
 [[files]]
 file = "mods/class-selector-1.0.0.jar"
-hash = "1922c76ccf0b813e571d384d869ed1348fcdb07d05bbf3ef144d35ff23157b57"
+hash = "7b5caa79dd8be766931e797fbe7971e1617f2368c870496b3d2e468709cdd3ec"
 
 [[files]]
 file = "mods/claustrophobic-dungeons.pw.toml"
@@ -10447,6 +10835,11 @@ metafile = true
 [[files]]
 file = "mods/collective.pw.toml"
 hash = "5d1210ecd8af6eb50c34c5d342c5913f1a7a607ab7029b12b5ee891d1532f8f2"
+metafile = true
+
+[[files]]
+file = "mods/combat-roll.pw.toml"
+hash = "f5da0bd02c69394b819a539587c807f57bc373ea52f9db814c6ffb8f80f5eb73"
 metafile = true
 
 [[files]]
@@ -10472,6 +10865,11 @@ metafile = true
 [[files]]
 file = "mods/configured.pw.toml"
 hash = "8165f9f7f66ffe4fa7b92ef8f8564cd10f93ec2cf07d6931c442cf91333a1ca3"
+metafile = true
+
+[[files]]
+file = "mods/constructs-arsenal.pw.toml"
+hash = "3292d0eca52dcfc51d0662b842cf5e1920e7b12297a1a7ffb69271a7f3f6ede4"
 metafile = true
 
 [[files]]
@@ -10506,11 +10904,11 @@ metafile = true
 
 [[files]]
 file = "mods/create-train-fuel-scaling-0.1.0.jar"
-hash = "399d11ee4f6db472a3f81acab408fca249978d7ee76481c4ef39edb15101e973"
+hash = "ddd5853a13bcc34c85708295a9f49d132d0ecefb1fe10fb0768ed4397025f6cc"
 
 [[files]]
 file = "mods/create-transmission-loss-0.1.0.jar"
-hash = "4ea2e3c2f87dacc25fa77b36779c20e2ad9afc5da0768f5563eb40667bc2a971"
+hash = "c8b90d2e91bd5dc28ebf6d5fb1eca22b2f29e83167d12f56c2fd6804c2d04853"
 
 [[files]]
 file = "mods/create.pw.toml"
@@ -10549,7 +10947,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimension-drink-1.0.0.jar"
-hash = "1f59201411c60ee3d9fb71d533bd0c59262d20932d9d4264f78781eb507cc78c"
+hash = "40ae3c7e902fa938f8cbeda3a0953e08c4ae81f20f5080991e3285e01d57ba97"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -10558,7 +10956,7 @@ metafile = true
 
 [[files]]
 file = "mods/downed-player-revival-1.0.0.jar"
-hash = "58cf5bc63133f2de01f0ce1df922fa5624c579cf7194486cd19f3d1d4662ea7e"
+hash = "8fc7907f82a43ed7b16653bb97a55a2f248d8b176edaeba74ac9edaf6ec207be"
 
 [[files]]
 file = "mods/dynamic-asset-generator.pw.toml"
@@ -10572,7 +10970,7 @@ metafile = true
 
 [[files]]
 file = "mods/dynamic-trees-dimension-compat-0.1.0.jar"
-hash = "d7d25657e9fbd98cc6ea511ba37af4241c4a4a2e6b8b007f5f916ebc5a365100"
+hash = "5c6ed1bd9de1fa51658436edbd619f6dbdbceddb90f86c498a97e7aa0638c9de"
 
 [[files]]
 file = "mods/dynamic-trees-for-natures-spirit.pw.toml"
@@ -10581,11 +10979,11 @@ metafile = true
 
 [[files]]
 file = "mods/dynamic-trees-hexerei-1.0.0.jar"
-hash = "5f74bec6f21d815ffd965172492f171973034560b2c6682a01c03792186948bc"
+hash = "cf8e5daa6160c298415dc3579b78b4339b4874f3b2bb439a821a83bb972ccba3"
 
 [[files]]
 file = "mods/dynamic-trees-malum-1.0.0.jar"
-hash = "d6a9560c9787eeed017cce592fc7489a388afc348d5762d3858304ad03886758"
+hash = "5883a90ad0db2ab2a6f7e32003b930316a4df728fc1b849ba25168da84bd4e55"
 
 [[files]]
 file = "mods/dynamic-trees-quark.pw.toml"
@@ -10849,7 +11247,7 @@ metafile = true
 
 [[files]]
 file = "mods/heat-sync-0.1.0.jar"
-hash = "ae72a760b441b54267e6255048df0bdb755715a68d62a25019b2403eb78f8353"
+hash = "143a9ba0c339b70d532789ccb2894927ded156b1fcbc6cf85db2a91298cdc09b"
 
 [[files]]
 file = "mods/hexerei.pw.toml"
@@ -10943,7 +11341,7 @@ metafile = true
 
 [[files]]
 file = "mods/latent-chemlib-0.1.0.jar"
-hash = "82df151c04a1fb4e658bc46b83055bdd6c04be850578f3cc6475b16cc0333486"
+hash = "43e9b77dba7a5665f6eaad58a84aa5a79f97c1beb90dcafd6e3db6938b2d71dc"
 
 [[files]]
 file = "mods/lithostitched.pw.toml"
@@ -11057,11 +11455,11 @@ metafile = true
 
 [[files]]
 file = "mods/oc2r-create-bridge-0.1.0.jar"
-hash = "a3deb67d4e1fa5f54a6bf084b5079063dfaa34f428ad090f0347a7cd569356cf"
+hash = "9b73efcd6a3c2a08d0adf826234260ed8ecd4cccad6e01e99a9a312213d68916"
 
 [[files]]
 file = "mods/oc2r-wireless-pubsub-1.0.0.jar"
-hash = "2d92be3e492fe45a616174abdec4cef399a7dfb774aba68c29e5383adf2c798e"
+hash = "c35336da3cb1f9dcc224d698249dcd3b352e04a6ee19c512b6e9aef4a652295e"
 
 [[files]]
 file = "mods/oc2r.pw.toml"
@@ -11089,8 +11487,8 @@ hash = "b2cb681aaf3e6085148392a06d40899239dc299aaf5ce0adf168fc225d922c97"
 metafile = true
 
 [[files]]
-file = "mods/pillager-campaigns-0.2.0.jar"
-hash = "bd52c40e506a16a5c49c8d2425c5d40c1ce8680c322d244d1a753eedfc595ffa"
+file = "mods/pillager-campaigns-0.2.1.jar"
+hash = "54c5a8a306f29f1ba224db08a655a53dd4f4d2590572ac377cd1c9db595ff100"
 
 [[files]]
 file = "mods/ping-wheel.pw.toml"
@@ -11104,7 +11502,7 @@ metafile = true
 
 [[files]]
 file = "mods/player-traces-0.1.0.jar"
-hash = "fffbbbff5c4a0573e18960759cedf2b8aa4fda39dda905342e5930d088f72d5d"
+hash = "ad78d0a2d0eae31164e755a7db234525cce22269855d1b2ce2430dc7d0ac11e2"
 
 [[files]]
 file = "mods/playeranimator.pw.toml"
@@ -11143,7 +11541,7 @@ metafile = true
 
 [[files]]
 file = "mods/procedural-bouquets-0.1.0.jar"
-hash = "6c9d24cc87ffa8612282c7396618efdd9bd562a2d773b03ba31acea7b485e053"
+hash = "e43db436548b521703b9695a2303e8506b5afe031b0be64df8024100902618b5"
 
 [[files]]
 file = "mods/project-vibrant-journeys.pw.toml"
@@ -11166,13 +11564,18 @@ hash = "4eb683644ee4e38e00b06df946b71ad8fedaa860fcabbd91ec6ceb71c65b8d81"
 metafile = true
 
 [[files]]
+file = "mods/quickstack.pw.toml"
+hash = "a60d4b1d58f9f88269b5ab460bfeb3638c8a9a3f35292ca6fc36d2d5a256130c"
+metafile = true
+
+[[files]]
 file = "mods/realistic-block-physics.pw.toml"
 hash = "fb72d8e7259e7f6b5163f1a12b49aee20bb9d90c6763000e58a3ce52812298ca"
 metafile = true
 
 [[files]]
 file = "mods/realistic-ores-0.1.0.jar"
-hash = "835c4c268c6452c72204148ad64c4d3ce76df6718e4dd18f39b0f94d806bfce4"
+hash = "f88728a33d6de7599f07c5948b69c290fcaab797b3ed894792cf55ecb89afdf2"
 
 [[files]]
 file = "mods/realistic-physics.pw.toml"
@@ -11196,11 +11599,11 @@ metafile = true
 
 [[files]]
 file = "mods/rpg-stats-1.0.0.jar"
-hash = "398c9dbcb8a6f73a195d65b2d6e970788e7b1cddced6f33b4010b4faf3fa00d7"
+hash = "dbf6115bfc7fefb182bc5296e1fdb83215d5be1cdf43af518291227ddd06d78b"
 
 [[files]]
 file = "mods/runtime-data-dumper-0.1.0.jar"
-hash = "76ebacfc9cb0c4cf23f341bcf65565d09b9e03389b93b968ec86eaad6c85b3a1"
+hash = "684916fe1939cfe5e6e4ec5afab8269fd5e497dbd2f0d8689fbbc406b5e003f5"
 
 [[files]]
 file = "mods/satako-library.pw.toml"
@@ -11229,7 +11632,7 @@ metafile = true
 
 [[files]]
 file = "mods/settlement-roads-0.1.0.jar"
-hash = "2efd30ea0de0018c38b66ba592b39e6ad795455d22fab060df8e59d1ab5e26e5"
+hash = "73c3e04164c34814d5c22473c444ca882ad8534bf36d7401b686c8c0a9573f39"
 
 [[files]]
 file = "mods/shatterbyte-lib.pw.toml"
@@ -11398,7 +11801,7 @@ metafile = true
 
 [[files]]
 file = "mods/tinkers-construct-affixes-1.0.0.jar"
-hash = "b350ef892c5536e255b214e425ef97540d6f7130079a2a3a0fbd93ce6adb2d6e"
+hash = "1093183288b88cdc6acaaad5c19ed9da28a4351f13eb74a5aa064dee5e0df8d2"
 
 [[files]]
 file = "mods/tinkers-construct.pw.toml"
@@ -11408,6 +11811,11 @@ metafile = true
 [[files]]
 file = "mods/tinkers-katanas.pw.toml"
 hash = "2c38846da17ae4e073cc30fa105501a635ed5ed7c0704b49b415f33253d7f3fa"
+metafile = true
+
+[[files]]
+file = "mods/tinkers-khopesh.pw.toml"
+hash = "747a94cb9183e9c33a74cf32f39be09d6c906149acc529ed0bccdc9463598381"
 metafile = true
 
 [[files]]
@@ -11492,7 +11900,7 @@ metafile = true
 
 [[files]]
 file = "mods/village-walls-1.0.0.jar"
-hash = "c11465cda6e35fbcbe2bb34a1834ebefb851bc7afb4e9b0de4335b72b7625fc2"
+hash = "ad2da7624231ec9093f22e82fa0e3607e6c3052c126e90a4becf59d205ff28e5"
 
 [[files]]
 file = "mods/wares.pw.toml"
@@ -11506,7 +11914,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "25cae6c36ed0e9681dba36a2d098c275b25d6000798d08f0a668b3bffa32c9a6"
+hash = "c74a28c475bfc382a85a115c59160ef299bfe05dd3ab3c9621626959af18d4ff"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"
@@ -11525,11 +11933,11 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "93b8474ded428384b345bb5b1a49e043d66c154d266d48bbee5dbdef10501253"
+hash = "1cd958226d5bdc0d0386d90d57c3250adcd19871323e33c41365f76a70a7717b"
 
 [[files]]
 file = "package.sh"
-hash = "6a3c95616c62b270193eb5588a03c49d6320d18d4bcb0f6ab50b19bd9a8fd6b3"
+hash = "05dcd2dc49677712d34e9ce839cc14c293620a9701cc12b6abc31c461dc05f77"
 
 [[files]]
 file = "quests/graph.yml"
@@ -11549,7 +11957,7 @@ hash = "f6f084ae1df2f43e4a0e70b7d361ea766a0db9be9429ef43614d3d1ad8c20be4"
 
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.8.1.zip"
-hash = "bc0eb8c1ac515f9f83e97fd2b0e05abcf95e49e200d1b04699e68d8c24ee22d7"
+hash = "f243d80d816c38c2996d4acdae7838fc4593fad0b74f7d16b3d305bf71966625"
 
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.8.1.zip.txt"
@@ -11557,7 +11965,7 @@ hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
 
 [[files]]
 file = "smoke.sh"
-hash = "b71c5f94bb2d95c1eba5406b2607b4ac04219857d056a055292abb42ac540277"
+hash = "608dcc1ec066455cc276397ac5cdc5892d338c79f60f6a0bbaca8836d005f928"
 
 [[files]]
 file = "tacz/applied-armorer.pw.toml"

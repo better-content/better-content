@@ -20,8 +20,10 @@ number bump changes release metadata only and does not invalidate the preceding 
 `dist.sh` and `smoke.sh` both delegate content and artifact assembly to `package.sh`.
 `smoke.sh` creates disposable server and client runtimes, resolves packwiz artifacts,
 installs Forge, then checks server readiness, client join, one bounded settled connection,
-process shutdown, and fatal-log signatures. Its cache root and settle duration may be set
-with `BC_SMOKE_RUN_ROOT` and `BC_SMOKE_SETTLE_SECONDS`.
+process shutdown, and fatal-log signatures. Resolved Packwiz artifacts persist under
+`~/.cache/bc/packwiz-downloads`; set `BC_PACKAGE_ARTIFACT_CACHE` to use another disposable
+cache root. The smoke run root and settle duration may be set with `BC_SMOKE_RUN_ROOT` and
+`BC_SMOKE_SETTLE_SECONDS`.
 
 Do not add other runtime evaluations: static validation suites, contracts, audits, unit tests,
 GameTests, performance budgets, persistence scenarios, doctor checks, or scenario matrices.
@@ -37,8 +39,8 @@ The entire former `tools/` tree is quarantined. Do not recreate an active `tools
 must not depend on or include it. Do not restore or invoke quarantined code unless the user
 explicitly reverses this decision. This quarantine applies to the pack-local former `tools/`
 tree, not to `/home/dev/ftb-quests-layout-harness`, which is the supported questbook layout
-renderer. Custom mod sources live in sibling repositories under `/home/dev` and must not be
-recreated here.
+renderer. Custom mod sources live in independent repositories under
+`/home/dev/mod_source/` and must not be recreated here or at the workspace top level.
 
 ## Runtime safety
 Treat pre-existing changes as user-owned. Do not delete player worlds, saves, logs, crash

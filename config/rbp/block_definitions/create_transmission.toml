@@ -1,0 +1,49 @@
+# Create transmission components use narrow collision shapes which do not reliably
+# reach neighbouring block faces. Treat the anchored network as a light, rigid beam
+# while preserving RBP's requirement that the network eventually reaches support.
+Blocks = [
+	"create:adjustable_chain_gearshift",
+	"create:andesite_encased_cogwheel",
+	"create:andesite_encased_large_cogwheel",
+	"create:andesite_encased_shaft",
+	"create:belt",
+	"create:brass_encased_cogwheel",
+	"create:brass_encased_large_cogwheel",
+	"create:brass_encased_shaft",
+	"create:clutch",
+	"create:cogwheel",
+	"create:encased_chain_drive",
+	"create:gantry_shaft",
+	"create:gearbox",
+	"create:gearshift",
+	"create:large_cogwheel",
+	"create:metal_girder_encased_shaft",
+	"create:powered_shaft",
+	"create:sequenced_gearshift",
+	"create:shaft",
+]
+
+[Physics]
+	SupportStrength = 195600
+	BeamStrength = 1.0
+	Mass = 1.0
+	CanHang = true
+	CanAttach = true
+	CanAttachDiagonally = true
+	SlideChance = 0.0
+	PlacementSlideModifier = 0.0
+	EntityDamageScale = 0.0
+	BreaksOnFalling = false
+	Strength = 2445000
+	FloatsOnLiquid = false
+
+	[Physics.ExtendedCollisionBounds]
+		Up = true
+		Down = true
+		North = true
+		East = true
+		South = true
+		West = true
+
+[ChunkAnalysis]
+	Enabled = false

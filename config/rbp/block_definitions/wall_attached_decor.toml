@@ -1,0 +1,35 @@
+# These blocks already enforce their own exact supporting face. Full collision
+# bounds let RBP see that native attachment in every orientation without allowing
+# the decoration to carry a structural load of its own.
+Blocks = [
+	"framedblocks:framed_glowing_item_frame",
+	"framedblocks:framed_item_frame",
+	"hexerei:mahogany_drying_rack",
+	"hexerei:willow_drying_rack",
+	"hexerei:witch_hazel_drying_rack",
+]
+
+[Physics]
+	SupportStrength = 0
+	BeamStrength = 0.0
+	Mass = 1.0
+	CanHang = true
+	CanAttach = true
+	CanAttachDiagonally = false
+	SlideChance = 0.0
+	PlacementSlideModifier = 0.0
+	EntityDamageScale = 0.0
+	BreaksOnFalling = false
+	Strength = 100
+	FloatsOnLiquid = false
+
+	[Physics.ExtendedCollisionBounds]
+		Up = true
+		Down = true
+		North = true
+		East = true
+		South = true
+		West = true
+
+[ChunkAnalysis]
+	Enabled = false

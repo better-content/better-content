@@ -6,11 +6,6 @@
     "#kubejs:grass_like",
     "#dynamictrees:rooty_soil",
     "#immersive_weathering:grassy_blocks",
-    "unearthed:dolomite_regolith",
-    "unearthed:dolomite_grassy_regolith",
-    "unearthed:kimberlite_regolith",
-    "unearthed:kimberlite_grassy_regolith",
-    "unearthed:quartzite_regolith",
-    "unearthed:quartzite_grassy_regolith"
+    "#unearthed:regolith"
   ]
 }

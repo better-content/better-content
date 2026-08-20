@@ -27,7 +27,7 @@
 			y: 0d
 		}
 		{
-			description: ["Change the temperature of edible food and read its tooltip. Keep it in the Fresh interval from -25 to 25, away from frozen and rotten levels."]
+			description: ["Change edible food's temperature and read its tooltip. Nearby active heat or an inventory directly touching a Heat Sync source thaws it; continued heating can carry it through Fresh into rot."]
 			icon: "minecraft:snowball"
 			id: "7FA9C44A0F731707"
 			rewards: [{ count: 1, id: "34A7A2C14F051969", item: "createdeco:copper_coin", type: "item" }]
@@ -143,7 +143,7 @@
 		}
 		{
 			dependencies: ["362B669D89D67FDF"]
-			description: ["Load a Food Pouch with at least two distinct foods. Its contents share temperature; the pouch does not preserve them."]
+			description: ["Load a Food Pouch with at least two distinct foods. Its contents share thermal mass: nearby active heat or direct Heat Sync contact thaws them together, but continued heating can spoil them."]
 			icon: "fiahi:food_pouch"
 			id: "7EB9E1A6C63979B4"
 			rewards: [{ count: 2, id: "772BEE68114CC4A3", item: "createdeco:copper_coin", type: "item" }]
@@ -550,7 +550,7 @@
 		}
 		{
 			dependencies: ["09B480EEAF34852D"]
-			description: ["Build a Boiler for local climate control. It also tempers food toward +25."]
+			description: ["Fuel a Boiler for local climate control. Its emitted heat thaws held, dropped, and stored food, while food in its appliance slots also warms toward +25."]
 			icon: "cold_sweat:boiler"
 			id: "54E4A2E0C75C373A"
 			rewards: [{ count: 2, id: "4584B46ADE12CD93", item: "createdeco:copper_coin", type: "item" }]
@@ -569,7 +569,7 @@
 		}
 		{
 			dependencies: ["289C8BE72849D453"]
-			description: ["Build an Icebox for local cooling. It tempers food toward -25."]
+			description: ["Fuel an Icebox for local cooling. Its emitted cold chills held, dropped, and stored food, while food in its appliance slots also cools toward -25."]
 			icon: "cold_sweat:icebox"
 			id: "6300F88A52BC5084"
 			rewards: [{ count: 2, id: "3797933B05BB4E93", item: "createdeco:copper_coin", type: "item" }]

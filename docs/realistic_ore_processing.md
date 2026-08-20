@@ -29,18 +29,21 @@ black-shale soulstone vein, sulfur-bearing pyrite ore, and gold-quartz vein.
 
 ## Three processing stages
 
-1. Mechanical crushing converts a full chunk to crushed feed. Millstones average
-   1.1 feed; Crushing Wheels average 1.9.
+1. Mechanical crushing converts a full chunk to crushed feed. Millstones produce
+   two feed; Crushing Wheels produce three. A full chunk cooks to two primary units,
+   while one crushed feed cooks to one.
 2. A separation batch consumes four crushed feed, 500 mB water when the route
    requires it, the route's acid packet, and one grinding ball. It always yields
    four primary concentrate; Major, Minor, Trace, and Precious coproducts occur
    at 100%, 50%, 20%, and 5% respectively.
-3. Furnace, Melter/Smeltery, or Foundry exits resolve to canonical native or
-   ChemLib forms. Ordinary furnace recovery is four nuggets; molten exits follow
-   the owning recipe's documented 90–180 mB ladder. TConstruct 1.20 exposes one
-   shared melting pool to both the Melter and Smeltery, so those two stations use
-   the same 90/120/135 mB values while Foundry routes use 180/150/180 mB. There
-   is no generic washed concentrate, assay, universal-solvent, or tailings layer.
+3. Furnace exits resolve to canonical native or ChemLib forms at two primary units
+   per chunk, one per crushed feed, and two per concentrate. Bauxite participates in
+   this low-yield early route. TConstruct exits are metal-only: chunks yield 20 mB
+   in the shared Melter/Smeltery pool or 30 mB in the Foundry, crushed feed yields
+   10/15 mB, and concentrate yields 20/30 mB. Foundry coproduct previews are limited
+   to metal products at 10/5/2/1 mB for Major/Minor/Trace/Precious grades. Quartz,
+   gems, and other nonmetals never receive molten exits. There is no generic washed
+   concentrate, assay, universal-solvent, or tailings layer.
 
 Sulfuric and hydrochloric routes begin in Thermal & Pressure. Nitric acid begins
 under Electrical Control. Mixed hydrochloric/nitric acid is restricted to the

@@ -90,8 +90,8 @@ var BC_PLATINUM_MARKET = [
     ['minecraft:cartographer',5,8,'minecraft:lodestone',1,2,24]
 ]
 
-// Wandering trader: broad recovery, exploration, ecology, decor, and route supplies.
-// Keep mandatory progression machinery out; this is a roaming convenience/sideload market.
+// Legacy wandering-trader catalogue retained as price provenance for the dedicated themed market.
+// Runtime wandering-trader registration lives in economy/20_first_class_wandering_trader.js.
 // Row shape: [level, coin tier, cost, output item, output count, max uses, xp].
 var BC_WANDERER_MARKET = [
     [1, 'copper', 2, 'minecraft:oak_sapling', 4, 8, 2],
@@ -290,6 +290,17 @@ function bcAddTierMarket(event, tier, rows) {
 
 function bcItemExists(id) {
     try { return Item.exists(id) } catch (e) { return false }
+}
+
+function bcIsWanderingMerchant(merchant) {
+    if (!merchant) return false
+    try {
+        var entityType = merchant.getType ? merchant.getType() : merchant.type
+        var registries = Java.loadClass('net.minecraftforge.registries.ForgeRegistries')
+        return String(registries.ENTITY_TYPES.getKey(entityType)) === 'minecraft:wandering_trader'
+    } catch (ignored) {
+        return false
+    }
 }
 
 function bcTrade(event, profession, level, coinTier, costCount, resultItem, resultCount, uses, xp) {
@@ -651,15 +662,9 @@ if (typeof MoreJSEvents !== 'undefined') {
         ])
     })
 
-    MoreJSEvents.wandererTrades(function (event) {
-        event.removeVanillaTrades(1)
-        event.removeVanillaTrades(2)
-        event.removeModdedTrades(1)
-        event.removeModdedTrades(2)
-         bcAddWandererMarket(event, BC_WANDERER_MARKET)
-    })
-
     MoreJSEvents.playerStartTrading(function (event) {
+        var merchant = event.merchant
+        if (bcIsWanderingMerchant(merchant)) return
         var copperStack = Item.of(BC_COIN.copper)
         var copperItem = null
         try {

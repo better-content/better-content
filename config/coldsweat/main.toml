@@ -8,7 +8,7 @@
 	Version = "2.4-b06d"
 	#─────────────────────────────────────────────────────────────────────────
 	# Allows Cold Sweat's configs to be automatically updated with new additions & formatting changes
-	"Auto Update" = true
+	"Auto Update" = false
 
 [Difficulty]
 	#─────────────────────────────────────────────────────────────────────────

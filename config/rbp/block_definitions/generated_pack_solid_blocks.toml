@@ -3384,7 +3384,6 @@ Blocks = [
 	"kubejs:scorched_machine_casing",
 	"kubejs:seared_machine_casing",
 	"kubejs:space_machine_casing",
-	"latent_chemlib:chemical_cloud",
 	"littlelogistics:barge_dock",
 	"littlelogistics:rapid_hopper",
 	"littlelogistics:tug_dock",

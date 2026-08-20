@@ -1,5 +1,5 @@
 {
-  "cloud_updates_per_second": 256,
+  "machine_updates_per_second": 256,
   "neighbor_ops_per_second": 768,
   "escape_scans_per_second": 64,
   "nuclear_surface_scans_per_second": 512,

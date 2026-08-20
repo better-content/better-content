@@ -53,3 +53,21 @@
 	#Distant Horizons 2.4.5 can complete these rejected requests as failed results with a null Throwable, then log a NullPointerException in onWorldGenTaskComplete.
 	#This does not disable DH generation; it drops only the already-rejected client request future.
 	cancelStaleDhClientRequests = true
+
+[theFleshThatHates]
+	#Disables The Flesh That Hates' automatic proximity music near clusters of flesh blocks.
+	#The upstream handler pauses vanilla music and routes its horror score through the Jukebox/Note Blocks channel.
+	#Entity, combat, evolution, jukebox, note-block, and other Records-channel sounds remain unchanged.
+	disableProximityMusic = true
+
+[weather2]
+	#Disables Weather2's custom fog color and distance override while an Oculus shader pack is active.
+	#Weather2 still tracks storm state and renders weather particles; the active shader pack owns sky and fog rendering.
+	#Shaders-off Weather2 fog behavior is unchanged.
+	disableFogOverrideWithShaders = true
+
+[sophisticatedStorage]
+	#Allows vanilla hoppers below Sophisticated Storage barrels and limited barrels to extract items.
+	#Extraction uses the barrel's input/output inventory handler, preserving storage filters and slot rules.
+	#Other Sophisticated Storage blocks and hopper insertion behavior are unchanged.
+	barrelHopperExtraction = true

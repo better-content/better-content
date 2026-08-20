@@ -5310,7 +5310,7 @@ hash = "b6eb36b57a869d42a91eb3e9118ffe8aed9c9c6839063b09280e7de9a30ecbc0"
 
 [[files]]
 file = "config/better_content_fixes-common.toml"
-hash = "b7c7da131db35e2800ef73f1ba96de2fcbb5c22dab0939205dfcaed9e9e7b7e8"
+hash = "79a7e5b324272a4d24ab1ae9b358417e045f790f3198332bbd3d8f588e068e46"
 
 [[files]]
 file = "config/better_content_fixes/quest_reveal.json"
@@ -5798,7 +5798,7 @@ hash = "2d72314fba8914d377ec603a89caafe28504ee5e2f91a8263b3672e110ab08c0"
 
 [[files]]
 file = "config/oculus.properties"
-hash = "a86b0cd6849cfa0a9370cc1118d7e2ae969ab074c1803df103ea37fd7d509e2d"
+hash = "07d7d33d30c4bf5f8ec50a1bbdf4124a7807d70351306b7344c2fa8f23a427e4"
 
 [[files]]
 file = "config/particular-common.toml"
@@ -10383,7 +10383,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "16c977e89517b94669e320448871d6f9f81345757d60ce2babf0a72526fba393"
+hash = "634e012ec1d3f592f36bc55065efb04ddb3c37a6efe7346f0cdad8af3e2369c1"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"

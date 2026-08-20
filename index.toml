@@ -7789,6 +7789,10 @@ file = "dist.sh"
 hash = "f68243a1fcf03f5cd45e1defa372eeb190c9e825340265af9ce65a6d683da261"
 
 [[files]]
+file = "error.txt"
+hash = "fed4ef696abcc9ffd82df9a69c8dc609ef243ccf39df560ea33036f784cb9b2a"
+
+[[files]]
 file = "globalresources/dimension_drink/excavated_variants/dimension_drink/variants/dimension_drink_modded_ores.json5"
 hash = "ce52637ca9771632ef3bf89a92095039f353397dab33df25bdad142e4cb1ea75"
 
@@ -9857,32 +9861,32 @@ file = "kubejs/assets/unearthed/textures/block/overgrown_granite_top_pebbled.png
 hash = "8ce6ad57054fe0684068cdc5e72368d0685ef11a5e908313a248221e15a0940c"
 
 [[files]]
-file = "kubejs/client_scripts/20_hide_vanilla_tools.js"
+file = "kubejs/client_scripts/check/20_hide_vanilla_tools.js"
 hash = "22a2a0f1350c3fefe53365e7f43da895be011b06f86bb038968a2cde947ea513"
 
 [[files]]
-file = "kubejs/client_scripts/40_hide_quarantined_systems.js"
-hash = "4f2f2478ef0d685df6e70080193ec2f4e1e2b256327cfb8ad8eec62804894568"
-
-[[files]]
-file = "kubejs/client_scripts/45_hide_vanilla_style_boats.js"
+file = "kubejs/client_scripts/check/45_hide_vanilla_style_boats.js"
 hash = "311f6ee7598a320e7a87c7bc8d687ba046cab86170ad059e1cddd2e152183f49"
 
 [[files]]
-file = "kubejs/client_scripts/46_formal_glyph_provenance_tooltips.js"
-hash = "07d53dae6212185a0094aac5d36799244fd3a57d66d7806db2ce2f6bebf8ec03"
-
-[[files]]
-file = "kubejs/client_scripts/46_hide_hexerei_mahogany_tree_products.js"
+file = "kubejs/client_scripts/check/46_hide_hexerei_mahogany_tree_products.js"
 hash = "eec16eb29b49af4727f031e62f30f3a0112207b0c37046df09c03913c3415178"
 
 [[files]]
-file = "kubejs/client_scripts/47_hide_ae2_facades_from_emi.js"
+file = "kubejs/client_scripts/check/47_hide_ae2_facades_from_emi.js"
 hash = "7ff999bfda91396044c85870d9cd3b009b4866c0b2a4535e24867f4ec6816ce6"
 
 [[files]]
-file = "kubejs/client_scripts/48_hide_replaced_fishing_rods.js"
+file = "kubejs/client_scripts/check/48_hide_replaced_fishing_rods.js"
 hash = "7e13ba7b4324b11b4667129f85e7fdbd14b7ca52868dc8e59d3ea7b533b61654"
+
+[[files]]
+file = "kubejs/client_scripts/remove/40_hide_quarantined_systems.js"
+hash = "4f2f2478ef0d685df6e70080193ec2f4e1e2b256327cfb8ad8eec62804894568"
+
+[[files]]
+file = "kubejs/client_scripts/remove/46_formal_glyph_provenance_tooltips.js"
+hash = "07d53dae6212185a0094aac5d36799244fd3a57d66d7806db2ce2f6bebf8ec03"
 
 [[files]]
 file = "kubejs/config/adpother_latent_gas_policy.json"
@@ -11213,399 +11217,395 @@ file = "kubejs/data/wares/loot_tables/package/village/taiga.json"
 hash = "53dabdc57b80e447ff95d2033033aa8a12ed9e210aaa9a32dcd6586f6ede784a"
 
 [[files]]
-file = "kubejs/server_scripts/00_shared/10_recipe_surface_helpers.js"
-hash = "12a3a90da7bee47c455ccaa4d9e50e2e6c3813c96aaf26314650e3e0b5be8561"
-
-[[files]]
-file = "kubejs/server_scripts/10_compat/10_materials/75_stone_cobble_tag_compat.js"
-hash = "9245affdcbb452cd2d749540114ee5541df86f8a4d503f3164770d3e1613d656"
-
-[[files]]
-file = "kubejs/server_scripts/10_compat/10_materials/85_dirt_grass_tag_compat.js"
-hash = "a76dfcfd2a449c3bb97932e2bf04c53442c6649be9bce49859b8f17dbcc1f14c"
-
-[[files]]
-file = "kubejs/server_scripts/10_compat/10_materials/90_sand_tag_compat.js"
-hash = "209e2449cd5d9e7febf3002f00468255813b0b332595d881ce845588f903f48e"
-
-[[files]]
-file = "kubejs/server_scripts/10_tags/10_ae2_skystone_tier.js"
-hash = "60f99c284d19c384ffd0fa6ba987544fb9dcc07de11d3f68883e0835a1cbc7a3"
-
-[[files]]
-file = "kubejs/server_scripts/10_tags/20_replaceable_deepslate.js"
-hash = "cdadd1a859c50c4f30afa283252ed053e100bafc58d9f12617a939df56adae98"
-
-[[files]]
-file = "kubejs/server_scripts/10_tags/30_stone_cobble_compat.js"
-hash = "a86055e48bf6406bb508e7f3d32f62e81720fb270d02c31bbfeff54bd81c49fb"
-
-[[files]]
-file = "kubejs/server_scripts/10_tags/40_dirt_grass_compat.js"
-hash = "4e01d19d20d4ba61d0ca95e0947c938fdfe1cff894e791c7e53cb9faccf57b04"
-
-[[files]]
-file = "kubejs/server_scripts/10_tags/45_stone_surface_tool_compat.js"
-hash = "50f98ebda9bfefc38992756f22e1d95495e1532cb09869af46ef39bc9ceea188"
-
-[[files]]
-file = "kubejs/server_scripts/10_tags/50_sand_compat.js"
-hash = "56f2fd6078c57f42b66aed52d5e1a4a587d626668edeb5bcac4f38c01ba6a2b1"
-
-[[files]]
-file = "kubejs/server_scripts/10_tags/55_chemistry_fluid_compat.js"
-hash = "0871972a2a53c027f0e9f6c9f2ef9cc6227f9ed9c0c1a1539134aa8a2535c12f"
-
-[[files]]
-file = "kubejs/server_scripts/10_tags/60_realistic_ores_excavated_variant_tags.js"
-hash = "a3921d7693fdb44f8f854f5e70c503cbfede488ff038234b14a5fe443d239c45"
-
-[[files]]
-file = "kubejs/server_scripts/10_tags/70_formal_magic_domains.js"
-hash = "0de5b65db0fb84575faa22bfefc45e37f09001d638bf7632f527a4610cb707c7"
-
-[[files]]
-file = "kubejs/server_scripts/10_tags/75_arcane_chunkloader_tags.js"
-hash = "3f2634e48f668de3c6cc88f1c954d4b41a3c3e677fee3d46dcfa2f8edf70fc5f"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/00_primitive/10_campfire_recipe.js"
-hash = "1731f5e09668041ce540f68f3468668ece5e5ba1a7c1298786f0e0bf092f2070"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/00_primitive/60_vanilla_tools_to_tcon_heads.js"
-hash = "8bf33519074f76fa66db744dc765b98221c45ecdab8820d5514e37caed70c295"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/10_metallurgy/10_no_easy_compression.js"
-hash = "24c62acdb6c0d3d64166b27deb0fe2b6e74eb59a8540bfe960cc27cefc6a8056"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/10_metallurgy/20_expensive_grout.js"
-hash = "9c25ed87c0983d3c58fa7047061a8cd25406ddb2038dbecb7de50f7488f6ea25"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/10_metallurgy/40_ingot_rewrites.js"
-hash = "73972504b86023199038b745710fdadedc40c53efe1bc31a4e1d09dfd6ca6c21"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/10_metallurgy/49_realistic_ores_catalog.js"
-hash = "c3a02708c4fa703020a60948feefc6fc58b6e9fa8c02660bfca59d803e6571cb"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/10_metallurgy/50_badfurnace.js"
-hash = "5e22e86cc84987ec63cf6895e4c425429855d62b4daa6e97fde82107242391a2"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/10_metallurgy/56_titanium_thorium_casting.js"
-hash = "2e5286675ab84472cefe3753d7b615674084a5e33a2ddb1e3c4b45fac87c2e61"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/10_metallurgy/57_realistic_ores_smelting_matrix.js"
-hash = "5ee00e1e8eaceac44ed8bc18e72dcbae54d99ec9c4b8374ffea20b651b0f296e"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/10_metallurgy/98_starting_progression_bypasses.js"
-hash = "1e9382e0b7ca92858b0d20a252fe5c818698db254cf19533b8dd4d62629299b6"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/10_metallurgy/99_machine_casing_progression.js"
-hash = "2bc5b061afff431e6f82c39eed2399af54cb341a26e45b47718f72f348fd670f"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/20_kinetic/121_create_stack_integration_gates.js"
-hash = "48ef9ca06d1e49db867fa1a5674218d4d43783b808a5ac98621ccaf2099571db"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/20_kinetic/123_more_red_primitive_circuitry.js"
-hash = "e6b484fb23018683ff16c6cfebd727f4ba0a6f1a0b386aa220559887addf3b6c"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/20_kinetic/30_expensive_water_wheels_and_windmills.js"
-hash = "941c9edef1a30ec21f9bb91ca29e479ebfd1ba262796b0b34344e73b8c0423f2"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/20_kinetic/50_create_deposit_preprocessing.js"
-hash = "ddd09f11d5a7c825c9db611e5044b93e9d024df0dab0062e9137229c2e69f96c"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/20_kinetic/52_realistic_ores_excavated_host_cycles.js"
-hash = "e9f3c255fdf24dbea4bda624e97c22e23dd02365726137ac0f28109bbfb6d0c7"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/20_kinetic/55_realistic_ores_identity_outputs.js"
-hash = "8addaf538af4c2b5f01777d7f7d6912b389418a6da8411a10eba7d238f82f894"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/20_kinetic/65_chemlib_plate_manufacturing_routes.js"
-hash = "1a3ae506046268b5a2462137bcd4c18bb6465abab4d250619fd20e5d39d6e470"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/30_pressure/122_pneumaticcraft_create_pressing_gates.js"
-hash = "3c557ca6a4b4bb3a0000a45364f1e6be93bb4f1bd2f3da4cb41824dbf8ee59e2"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/30_pressure/56_alchemistry_dissolver_create_port.js"
-hash = "653df2279f8abe7f7d01c75eba67664e560db4e2ba35ea322d109cdf8bc1d943"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/30_pressure/57_grown_material_acid_ball_processing.js"
-hash = "fc3e20d83417e24a736a496218233f810193036f0151997453947a9f77e0c39a"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/30_pressure/58_create_pncr_molecular_synthesis.js"
-hash = "8423f481e66a96c1ec4684bcc827f7fdf49b5adeb96bfbe5f10f72eda3c53c97"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/30_pressure/59_reachable_acid_authoring.js"
-hash = "1eeef699acc621006cfee19541e0cde78f6241a29393ad25078b06957956480c"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/30_pressure/60_create_chemical_transformations.js"
-hash = "6a5edf7bd62a0d80622aa9e19b4d8c556b97632290f495c1a174c7ca8be5212d"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/30_pressure/61_chemical_existing_item_alternatives.js"
-hash = "260a8a44155c79e73f63a27bcd3f0546bca9b81c63b54d2b29e08288c5e52492"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/30_pressure/63_chemlib_full_integration_routes.js"
-hash = "48db26bdc805d75204e8c1a4d51c489e3ae353dcd7a5a10955fbe1a3cc3b0d35"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/30_pressure/95_acid_and_nether_grout_unification.js"
-hash = "ff55e787d851d73f77858fc1b6e5e02b3002c8646bec9f7925abed3823a94278"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/40_electrical/140_latent_chemlib_power_gates.js"
-hash = "552c6375a3f48f0201a63a7e78295605296fc97cb4c9863ca4aaaa38e32020d4"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/40_electrical/143_circuit_pncr_assembly_authority.js"
-hash = "005e7258d781923a0efe801fc137d4cb997e05ccac44b0c6014aa541a4aaaf86"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/40_electrical/171_k_turrets_electrical_gates.js"
-hash = "949dbdaf905b7d4d4761d2de2b3a0dcb1ddb815631ee227f79f038f490d9adb1"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/40_electrical/171_tacz_manufacturing_gates.js"
-hash = "3552f27131bc1cf78a9157c72a5229d457f8b1360fc587697b1f8338f4636475"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/50_ae2/142_late_tier_material_economy_completion.js"
-hash = "744ca07840a9851e9e20dd0dbd27b203e27a82620e91699eb1f038cf5b5fb0dd"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/60_post_ae2/165_protection_pixel_post_ae2_gates.js"
-hash = "485e6ee152da3d9937a2bacb90d320ded1d497de3f88158ebe7797877b9d49ff"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/60_post_ae2/169_backpack_post_ae2_utility_gates.js"
-hash = "4192b7a6a4684f7a0dd2e2fdb48d9c6951b3d81e774fc59a15968c07b36d8ea4"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/90_cross_era/115_material_economy_recipe_pass.js"
-hash = "fcbbf1603c177ca0e3fadc30b4171237d3939b85ff43543cad1188dd0128c28d"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/90_cross_era/130_manufactured_plate_recipe_pass.js"
-hash = "f6ef6152ca960bb700d7f891617742ad5cbff56753a24fee5bf7418e3305cced"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/90_cross_era/136_machine_casing_ecosystem_expansion.js"
-hash = "0f2ea6cd0b5bc5cd3e7ff6914222cba310d50852b4da2f0e57f224b785ecc4b2"
-
-[[files]]
-file = "kubejs/server_scripts/20_tech/90_cross_era/137_casing_aesthetic_component_routes.js"
-hash = "ec667b07e048db992a2701921228012188abe523a41776b7cb21d38aa6eac693"
-
-[[files]]
-file = "kubejs/server_scripts/30_magic/00_entry/70_food_potion_reagents.js"
-hash = "220347f56664006f0552f0152896c91fcd1b081fd4908e004f81eb8a1971fadb"
-
-[[files]]
-file = "kubejs/server_scripts/30_magic/10_blood/125_magic_power_spike_gates.js"
-hash = "ca187a35616ae9bcb132e435ee7fa1772a5fa195239a0b4d0ea3d92963f837f7"
-
-[[files]]
-file = "kubejs/server_scripts/30_magic/10_blood/40_blood_orbs_from_still_beating_hearts.js"
-hash = "02ef9f87b0c7eb54ef73c64c035ca308f875a13828e97f360fb58b6eb70d4ad1"
-
-[[files]]
-file = "kubejs/server_scripts/30_magic/10_blood/70_kettle_rune_swap.js"
-hash = "79767d9ddefcb5ce0c54d6da348d9c134f09e25a5b6733a778778ffaa201448e"
-
-[[files]]
-file = "kubejs/server_scripts/30_magic/10_blood/80_magic_progression_blood_slate_gates.js"
-hash = "faac24f6e2ee96f5de5e3af2d5c2cb3f878a0f173f32bf28d80c74d7aa259ab7"
-
-[[files]]
-file = "kubejs/server_scripts/30_magic/10_blood/82_blood_magic_lifeforce_rework.js"
-hash = "c7a54a048793f2393c1e20b0331ba96b52e4af4eb73d4a149ec25aecd7804434"
-
-[[files]]
-file = "kubejs/server_scripts/30_magic/20_formal/127_ars_manuscript_progression.js"
-hash = "1c3b84f246ae1b6a0c53831cdd60f568a601e1dc0fe2fe1da72197a2f3ad7525"
-
-[[files]]
-file = "kubejs/server_scripts/30_magic/30_cross_tradition/146_hexerei_mahogany_to_natures_spirit.js"
-hash = "dd08eb08d8d5aabb2a0df539d6de5cb0243819a9d77816889bae5e7e0c3eb971"
-
-[[files]]
-file = "kubejs/server_scripts/30_magic/30_cross_tradition/59_formulaic_synthesis_magic_routes.js"
-hash = "cafbde33f2a46b8293b27d6b91ed6d15adecae3d6a4c4d42165f95514d8dc7cb"
-
-[[files]]
-file = "kubejs/server_scripts/30_magic/30_cross_tradition/63_fonts_hexerei_occultism_chalk.js"
-hash = "6cd53fe8843b41a343cd1ddc9592c3668b0b1ffba81b31d66f7e0ba5abdccfde"
-
-[[files]]
-file = "kubejs/server_scripts/30_magic/30_cross_tradition/95_arcane_chunkloader_recipes.js"
-hash = "cab63c6e2409f1ca157cc167ae4b9ae12f1801515edca77c728b5f8c936c230c"
-
-[[files]]
-file = "kubejs/server_scripts/30_magic/60_post_ae2/166_tome_of_blood_post_ae2_gates.js"
-hash = "4f5ea1cf950c016fd3efd63bc651f39e35c697bd8bc172ac2906b9354cf36c13"
-
-[[files]]
-file = "kubejs/server_scripts/40_exploration/00_overworld/110_extreme_y_band_reward_gates.js"
-hash = "85b7531a2cec895ff564cc5dbe4ad518d421e59043e821d18963f083647ccd42"
-
-[[files]]
-file = "kubejs/server_scripts/40_exploration/10_dimensions/155_dimension_proof_graph_starts.js"
-hash = "439aa26d8fee4667da3c64329c946ffef1bd6a9337c1a00e15de83effb6db8ef"
-
-[[files]]
-file = "kubejs/server_scripts/40_exploration/20_transport/156_vs_transport_progression.js"
-hash = "abb947da17f2cd064b75728fed68c88b9b73be888d4916cad8961955c6e0c660"
-
-[[files]]
-file = "kubejs/server_scripts/40_exploration/20_transport/168_hooks_drones_utility_gates.js"
-hash = "fa47727efd5d1f08e176bb827cf0bc65324f390bd2cee271d6f37b2fac6434b0"
-
-[[files]]
-file = "kubejs/server_scripts/40_exploration/30_space/170_space_dimension_access_gates.js"
-hash = "b2f89be0302c58e083cd9002f30c9cd707e549c5c1ded80b43c826a1351d2233"
-
-[[files]]
-file = "kubejs/server_scripts/40_recipe_add/SMELTING_MATRIX_REALISTIC_ORES.md"
-hash = "1e993098275c13f7bb11b98d05ca5d46eb2c41aea929f443a4e05dc0f4895da8"
-
-[[files]]
-file = "kubejs/server_scripts/50_economy/10_currency/50_disable_createdeco_coin_recipes.js"
-hash = "5352611f78d2bdebcdae3321f7ef58ca0bbac07aceb122b695bcf4f5e5be2d89"
-
-[[files]]
-file = "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js"
-hash = "4ac6e8db39bcc5d8f33d9bfbc05fc70ac771e4d40c76cea8207369a12f732e68"
-
-[[files]]
-file = "kubejs/server_scripts/50_loot/10_overworld_block_drops.js"
-hash = "cfbed8c61ca5b728f9af4e463f05a43a578c761ae14e960fa017f596cabd8221"
-
-[[files]]
-file = "kubejs/server_scripts/50_loot/12_unearthed_regolith_identity.js"
-hash = "7b6f993ab92b919019dcd09b191add597ba5290f21155325e84673e48027eb6f"
-
-[[files]]
-file = "kubejs/server_scripts/50_loot/20_world_chest_coin_tiers.js"
-hash = "dd8e8b2b612ca605499aea8e1ba061bac13afe1f4a77d1fd2f60e24399080552"
-
-[[files]]
-file = "kubejs/server_scripts/50_loot/30_global_loot_progression_scrub.js"
-hash = "a7b898ab232113721da8db095f27ad6796ee711c64bc713cf4e3eb9e4c28964b"
-
-[[files]]
-file = "kubejs/server_scripts/50_loot/40_emerald_loot_coin_replacement.js"
-hash = "12c17c7b17c4009b2a9408f14a7ac11d1dc4f18996b61f898ab0e70d2188439c"
-
-[[files]]
-file = "kubejs/server_scripts/50_loot/50_player_kill_coin_drops.js"
-hash = "76d9664d30d9b7f0d9ef49f7c5b50eb80b45355c9794d4361cfc65da5ab273f0"
-
-[[files]]
-file = "kubejs/server_scripts/90_policy/00_removals/10_no_boats.js"
+file = "kubejs/server_scripts/check/10_no_boats.js"
 hash = "414cb572a58c1ed06e1157bfb6b2da6b61fb5dd100f6a27003541deb319e2145"
 
 [[files]]
-file = "kubejs/server_scripts/90_policy/00_removals/20_no_andesite_alloy_nugget_crafting.js"
-hash = "c2a82b99259f6281874089a5f4a9e16932d5d71993d299fadcb454c806148b65"
+file = "kubejs/server_scripts/check/10_overworld_block_drops.js"
+hash = "cfbed8c61ca5b728f9af4e463f05a43a578c761ae14e960fa017f596cabd8221"
 
 [[files]]
-file = "kubejs/server_scripts/90_policy/00_removals/30_remove_items.js"
-hash = "0c4e5727092cc170e5a754761e1371846da0dfb0223ea5f0b8abcd511b7cd81b"
+file = "kubejs/server_scripts/check/12_unearthed_regolith_identity.js"
+hash = "7b6f993ab92b919019dcd09b191add597ba5290f21155325e84673e48027eb6f"
 
 [[files]]
-file = "kubejs/server_scripts/90_policy/00_removals/56_standardize_starcatcher_fishing.js"
+file = "kubejs/server_scripts/check/20_replaceable_deepslate.js"
+hash = "cdadd1a859c50c4f30afa283252ed053e100bafc58d9f12617a939df56adae98"
+
+[[files]]
+file = "kubejs/server_scripts/check/20_world_chest_coin_tiers.js"
+hash = "dd8e8b2b612ca605499aea8e1ba061bac13afe1f4a77d1fd2f60e24399080552"
+
+[[files]]
+file = "kubejs/server_scripts/check/30_stone_cobble_compat.js"
+hash = "a86055e48bf6406bb508e7f3d32f62e81720fb270d02c31bbfeff54bd81c49fb"
+
+[[files]]
+file = "kubejs/server_scripts/check/40_dirt_grass_compat.js"
+hash = "4e01d19d20d4ba61d0ca95e0947c938fdfe1cff894e791c7e53cb9faccf57b04"
+
+[[files]]
+file = "kubejs/server_scripts/check/50_disable_createdeco_coin_recipes.js"
+hash = "5352611f78d2bdebcdae3321f7ef58ca0bbac07aceb122b695bcf4f5e5be2d89"
+
+[[files]]
+file = "kubejs/server_scripts/check/50_player_kill_coin_drops.js"
+hash = "76d9664d30d9b7f0d9ef49f7c5b50eb80b45355c9794d4361cfc65da5ab273f0"
+
+[[files]]
+file = "kubejs/server_scripts/check/50_sand_compat.js"
+hash = "56f2fd6078c57f42b66aed52d5e1a4a587d626668edeb5bcac4f38c01ba6a2b1"
+
+[[files]]
+file = "kubejs/server_scripts/check/55_chemistry_fluid_compat.js"
+hash = "0871972a2a53c027f0e9f6c9f2ef9cc6227f9ed9c0c1a1539134aa8a2535c12f"
+
+[[files]]
+file = "kubejs/server_scripts/check/56_standardize_starcatcher_fishing.js"
 hash = "5de50303c4e055de13881de69758130c313b4c8dfe0cb9d973a8b554bc3b1ad7"
 
 [[files]]
-file = "kubejs/server_scripts/90_policy/00_removals/95_remove_native_chunkloaders.js"
+file = "kubejs/server_scripts/check/60_vanilla_tools_to_tcon_heads.js"
+hash = "8bf33519074f76fa66db744dc765b98221c45ecdab8820d5514e37caed70c295"
+
+[[files]]
+file = "kubejs/server_scripts/check/75_stone_cobble_tag_compat.js"
+hash = "9245affdcbb452cd2d749540114ee5541df86f8a4d503f3164770d3e1613d656"
+
+[[files]]
+file = "kubejs/server_scripts/check/90_sand_tag_compat.js"
+hash = "209e2449cd5d9e7febf3002f00468255813b0b332595d881ce845588f903f48e"
+
+[[files]]
+file = "kubejs/server_scripts/check/95_remove_native_chunkloaders.js"
 hash = "dda8c3100e497e8703f4c044ca2b414bea9936ad67406195030738f7ce963ca6"
 
 [[files]]
-file = "kubejs/server_scripts/90_policy/10_grid/10_no_complex_grid_defaults.js"
-hash = "f39f5a3897b059baf31098a415352511efd3f3918e3357ab22a515a0ab1c1247"
+file = "kubejs/server_scripts/move/10_recipe_surface_helpers.js"
+hash = "12a3a90da7bee47c455ccaa4d9e50e2e6c3813c96aaf26314650e3e0b5be8561"
 
 [[files]]
-file = "kubejs/server_scripts/90_policy/10_grid/145_vanillish_recipe_expert_pass.js"
-hash = "f0d48b80c272fc8ef7393165155418bfc900265e430d2d0caff2661e59b9a718"
-
-[[files]]
-file = "kubejs/server_scripts/90_policy/20_progression/100_high_value_mod_progression_gates.js"
+file = "kubejs/server_scripts/refactor/balance/100_high_value_mod_progression_gates.js"
 hash = "69fc0794f2a80bf61f91953d22d14e68ddf18363aa00fd20348b3ddbf746fd98"
 
 [[files]]
-file = "kubejs/server_scripts/90_policy/20_progression/150_integrated_deferred_mod_gates.js"
+file = "kubejs/server_scripts/refactor/balance/10_no_complex_grid_defaults.js"
+hash = "f39f5a3897b059baf31098a415352511efd3f3918e3357ab22a515a0ab1c1247"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/10_no_easy_compression.js"
+hash = "24c62acdb6c0d3d64166b27deb0fe2b6e74eb59a8540bfe960cc27cefc6a8056"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/110_extreme_y_band_reward_gates.js"
+hash = "85b7531a2cec895ff564cc5dbe4ad518d421e59043e821d18963f083647ccd42"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/115_material_economy_recipe_pass.js"
+hash = "fcbbf1603c177ca0e3fadc30b4171237d3939b85ff43543cad1188dd0128c28d"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/123_more_red_primitive_circuitry.js"
+hash = "e6b484fb23018683ff16c6cfebd727f4ba0a6f1a0b386aa220559887addf3b6c"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/125_magic_power_spike_gates.js"
+hash = "ca187a35616ae9bcb132e435ee7fa1772a5fa195239a0b4d0ea3d92963f837f7"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/127_ars_manuscript_progression.js"
+hash = "1c3b84f246ae1b6a0c53831cdd60f568a601e1dc0fe2fe1da72197a2f3ad7525"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/130_manufactured_plate_recipe_pass.js"
+hash = "f6ef6152ca960bb700d7f891617742ad5cbff56753a24fee5bf7418e3305cced"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/136_machine_casing_ecosystem_expansion.js"
+hash = "0f2ea6cd0b5bc5cd3e7ff6914222cba310d50852b4da2f0e57f224b785ecc4b2"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/137_casing_aesthetic_component_routes.js"
+hash = "ec667b07e048db992a2701921228012188abe523a41776b7cb21d38aa6eac693"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/142_late_tier_material_economy_completion.js"
+hash = "744ca07840a9851e9e20dd0dbd27b203e27a82620e91699eb1f038cf5b5fb0dd"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/143_circuit_pncr_assembly_authority.js"
+hash = "005e7258d781923a0efe801fc137d4cb997e05ccac44b0c6014aa541a4aaaf86"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/145_vanillish_recipe_expert_pass.js"
+hash = "f0d48b80c272fc8ef7393165155418bfc900265e430d2d0caff2661e59b9a718"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/146_hexerei_mahogany_to_natures_spirit.js"
+hash = "dd08eb08d8d5aabb2a0df539d6de5cb0243819a9d77816889bae5e7e0c3eb971"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/150_integrated_deferred_mod_gates.js"
 hash = "f3346c489346f4a9a42d67d2c2f98177c87c2fb1939fff1f0e0c7a62ee0400e2"
 
 [[files]]
-file = "kubejs/server_scripts/90_policy/20_progression/172_cross_mod_anchor_boundaries.js"
+file = "kubejs/server_scripts/refactor/balance/155_dimension_proof_graph_starts.js"
+hash = "439aa26d8fee4667da3c64329c946ffef1bd6a9337c1a00e15de83effb6db8ef"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/156_vs_transport_progression.js"
+hash = "abb947da17f2cd064b75728fed68c88b9b73be888d4916cad8961955c6e0c660"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/165_protection_pixel_post_ae2_gates.js"
+hash = "485e6ee152da3d9937a2bacb90d320ded1d497de3f88158ebe7797877b9d49ff"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/166_tome_of_blood_post_ae2_gates.js"
+hash = "4f5ea1cf950c016fd3efd63bc651f39e35c697bd8bc172ac2906b9354cf36c13"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/168_hooks_drones_utility_gates.js"
+hash = "fa47727efd5d1f08e176bb827cf0bc65324f390bd2cee271d6f37b2fac6434b0"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/169_backpack_post_ae2_utility_gates.js"
+hash = "4192b7a6a4684f7a0dd2e2fdb48d9c6951b3d81e774fc59a15968c07b36d8ea4"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/170_space_dimension_access_gates.js"
+hash = "b2f89be0302c58e083cd9002f30c9cd707e549c5c1ded80b43c826a1351d2233"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/171_k_turrets_electrical_gates.js"
+hash = "949dbdaf905b7d4d4761d2de2b3a0dcb1ddb815631ee227f79f038f490d9adb1"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/171_tacz_manufacturing_gates.js"
+hash = "3552f27131bc1cf78a9157c72a5229d457f8b1360fc587697b1f8338f4636475"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/172_cross_mod_anchor_boundaries.js"
 hash = "74d2158dfd54ebe0a67bf95add1b8f2278acf93759246130ba5e170030c95154"
 
 [[files]]
-file = "kubejs/server_scripts/90_policy/90_final/10_create_tcon_bootstrap.js"
-hash = "1db55ee916b6e2a67d700b84fd12bde5915aa076f2a54750e2bdf2e40eef7198"
+file = "kubejs/server_scripts/refactor/balance/30_global_loot_progression_scrub.js"
+hash = "a7b898ab232113721da8db095f27ad6796ee711c64bc713cf4e3eb9e4c28964b"
 
 [[files]]
-file = "kubejs/server_scripts/90_policy/90_final/90_energy_ladder_gate.js"
+file = "kubejs/server_scripts/refactor/balance/30_remove_items.js"
+hash = "0c4e5727092cc170e5a754761e1371846da0dfb0223ea5f0b8abcd511b7cd81b"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/40_ingot_rewrites.js"
+hash = "73972504b86023199038b745710fdadedc40c53efe1bc31a4e1d09dfd6ca6c21"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/50_badfurnace.js"
+hash = "5e22e86cc84987ec63cf6895e4c425429855d62b4daa6e97fde82107242391a2"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/57_grown_material_acid_ball_processing.js"
+hash = "fc3e20d83417e24a736a496218233f810193036f0151997453947a9f77e0c39a"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/63_fonts_hexerei_occultism_chalk.js"
+hash = "6cd53fe8843b41a343cd1ddc9592c3668b0b1ffba81b31d66f7e0ba5abdccfde"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/70_kettle_rune_swap.js"
+hash = "79767d9ddefcb5ce0c54d6da348d9c134f09e25a5b6733a778778ffaa201448e"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/80_magic_progression_blood_slate_gates.js"
+hash = "faac24f6e2ee96f5de5e3af2d5c2cb3f878a0f173f32bf28d80c74d7aa259ab7"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/82_blood_magic_lifeforce_rework.js"
+hash = "c7a54a048793f2393c1e20b0331ba96b52e4af4eb73d4a149ec25aecd7804434"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/98_starting_progression_bypasses.js"
+hash = "1e9382e0b7ca92858b0d20a252fe5c818698db254cf19533b8dd4d62629299b6"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/balance/99_machine_casing_progression.js"
+hash = "2bc5b061afff431e6f82c39eed2399af54cb341a26e45b47718f72f348fd670f"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/chem/140_latent_chemlib_power_gates.js"
+hash = "552c6375a3f48f0201a63a7e78295605296fc97cb4c9863ca4aaaa38e32020d4"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/chem/61_chemical_existing_item_alternatives.js"
+hash = "260a8a44155c79e73f63a27bcd3f0546bca9b81c63b54d2b29e08288c5e52492"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/chem/63_chemlib_full_integration_routes.js"
+hash = "48db26bdc805d75204e8c1a4d51c489e3ae353dcd7a5a10955fbe1a3cc3b0d35"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/chem/65_chemlib_plate_manufacturing_routes.js"
+hash = "1a3ae506046268b5a2462137bcd4c18bb6465abab4d250619fd20e5d39d6e470"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/compatability/45_stone_surface_tool_compat.js"
+hash = "50f98ebda9bfefc38992756f22e1d95495e1532cb09869af46ef39bc9ceea188"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/compatability/85_dirt_grass_tag_compat.js"
+hash = "a76dfcfd2a449c3bb97932e2bf04c53442c6649be9bce49859b8f17dbcc1f14c"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/compatability/95_acid_and_nether_grout_unification.js"
+hash = "ff55e787d851d73f77858fc1b6e5e02b3002c8646bec9f7925abed3823a94278"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/create/121_create_stack_integration_gates.js"
+hash = "48ef9ca06d1e49db867fa1a5674218d4d43783b808a5ac98621ccaf2099571db"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/create/122_pneumaticcraft_create_pressing_gates.js"
+hash = "3c557ca6a4b4bb3a0000a45364f1e6be93bb4f1bd2f3da4cb41824dbf8ee59e2"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/create/20_no_andesite_alloy_nugget_crafting.js"
+hash = "c2a82b99259f6281874089a5f4a9e16932d5d71993d299fadcb454c806148b65"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/create/50_create_deposit_preprocessing.js"
+hash = "ddd09f11d5a7c825c9db611e5044b93e9d024df0dab0062e9137229c2e69f96c"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/create/60_create_chemical_transformations.js"
+hash = "6a5edf7bd62a0d80622aa9e19b4d8c556b97632290f495c1a174c7ca8be5212d"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/cross_mod_progression/58_create_pncr_molecular_synthesis.js"
+hash = "8423f481e66a96c1ec4684bcc827f7fdf49b5adeb96bfbe5f10f72eda3c53c97"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/cross_mod_progression/59_formulaic_synthesis_magic_routes.js"
+hash = "cafbde33f2a46b8293b27d6b91ed6d15adecae3d6a4c4d42165f95514d8dc7cb"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/cross_mod_progression/59_reachable_acid_authoring.js"
+hash = "1eeef699acc621006cfee19541e0cde78f6241a29393ad25078b06957956480c"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/move_to_mod/49_realistic_ores_catalog.js"
+hash = "c3a02708c4fa703020a60948feefc6fc58b6e9fa8c02660bfca59d803e6571cb"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/move_to_mod/52_realistic_ores_excavated_host_cycles.js"
+hash = "e9f3c255fdf24dbea4bda624e97c22e23dd02365726137ac0f28109bbfb6d0c7"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/move_to_mod/55_realistic_ores_identity_outputs.js"
+hash = "8addaf538af4c2b5f01777d7f7d6912b389418a6da8411a10eba7d238f82f894"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/move_to_mod/57_realistic_ores_smelting_matrix.js"
+hash = "5ee00e1e8eaceac44ed8bc18e72dcbae54d99ec9c4b8374ffea20b651b0f296e"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/move_to_mod/60_realistic_ores_excavated_variant_tags.js"
+hash = "a3921d7693fdb44f8f854f5e70c503cbfede488ff038234b14a5fe443d239c45"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/move_to_mod/75_arcane_chunkloader_tags.js"
+hash = "3f2634e48f668de3c6cc88f1c954d4b41a3c3e677fee3d46dcfa2f8edf70fc5f"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/move_to_mod/95_arcane_chunkloader_recipes.js"
+hash = "cab63c6e2409f1ca157cc167ae4b9ae12f1801515edca77c728b5f8c936c230c"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/power/30_expensive_water_wheels_and_windmills.js"
+hash = "941c9edef1a30ec21f9bb91ca29e479ebfd1ba262796b0b34344e73b8c0423f2"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/power/90_energy_ladder_gate.js"
 hash = "a8112932f32aa47aab8fca1baec44aba385ee40321a40605fbbfe454aeac2bb6"
 
 [[files]]
-file = "kubejs/startup_scripts/00_globals/10_economy/10_coin_tiers.js"
+file = "kubejs/server_scripts/refactor/questionable/70_formal_magic_domains.js"
+hash = "0de5b65db0fb84575faa22bfefc45e37f09001d638bf7632f527a4610cb707c7"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/tcon/10_create_tcon_bootstrap.js"
+hash = "e18f51287178bc26035b1d31581f30a82c8e9054956d6b26dfba0c818244ae3e"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/tcon/20_expensive_grout.js"
+hash = "9c25ed87c0983d3c58fa7047061a8cd25406ddb2038dbecb7de50f7488f6ea25"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/tcon/56_titanium_thorium_casting.js"
+hash = "2e5286675ab84472cefe3753d7b615674084a5e33a2ddb1e3c4b45fac87c2e61"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/villager_shopping/10_coin_villager_trades.js"
+hash = "4ac6e8db39bcc5d8f33d9bfbc05fc70ac771e4d40c76cea8207369a12f732e68"
+
+[[files]]
+file = "kubejs/server_scripts/refactor/villager_shopping/40_emerald_loot_coin_replacement.js"
+hash = "12c17c7b17c4009b2a9408f14a7ac11d1dc4f18996b61f898ab0e70d2188439c"
+
+[[files]]
+file = "kubejs/server_scripts/remove/10_ae2_skystone_tier.js"
+hash = "60f99c284d19c384ffd0fa6ba987544fb9dcc07de11d3f68883e0835a1cbc7a3"
+
+[[files]]
+file = "kubejs/server_scripts/remove/10_campfire_recipe.js"
+hash = "1731f5e09668041ce540f68f3468668ece5e5ba1a7c1298786f0e0bf092f2070"
+
+[[files]]
+file = "kubejs/server_scripts/remove/40_blood_orbs_from_still_beating_hearts.js"
+hash = "02ef9f87b0c7eb54ef73c64c035ca308f875a13828e97f360fb58b6eb70d4ad1"
+
+[[files]]
+file = "kubejs/server_scripts/remove/56_alchemistry_dissolver_create_port.js"
+hash = "653df2279f8abe7f7d01c75eba67664e560db4e2ba35ea322d109cdf8bc1d943"
+
+[[files]]
+file = "kubejs/server_scripts/remove/70_food_potion_reagents.js"
+hash = "220347f56664006f0552f0152896c91fcd1b081fd4908e004f81eb8a1971fadb"
+
+[[files]]
+file = "kubejs/startup_scripts/check/10_coin_tiers.js"
 hash = "5951683f94743cc73d5bfadee6a78fa48e5ed19d1d492d1e03149e507c636188"
 
 [[files]]
-file = "kubejs/startup_scripts/00_globals/20_tech/10_machine_casing_tiers.js"
+file = "kubejs/startup_scripts/check/10_machine_casing_tiers.js"
 hash = "ab1cac2de3f74dd9011707c8f15bc1af31f9658dac1800f0885d464f3dcea3e9"
 
 [[files]]
-file = "kubejs/startup_scripts/00_globals/20_tech/20_realistic_ore_materials.js"
-hash = "4e419f0edd33baa639fba21b3a2dda1a89371d1ac5d34e318496e4512145a699"
-
-[[files]]
-file = "kubejs/startup_scripts/10_items_blocks/30_progression_items.js"
-hash = "089493376a6f41f109d95a24090cf8f2f1c4fa9c81cb4a29422c57112270e75b"
-
-[[files]]
-file = "kubejs/startup_scripts/10_items_blocks/35_create_tcon_bootstrap_items.js"
-hash = "779fa1e175646a283769ea35eede92212b0dcf25786e1faebe3e9ee64e3a4a30"
-
-[[files]]
-file = "kubejs/startup_scripts/20_blocks/10_ae2_skystone_hardness.js"
-hash = "75e2d05543db8c5dac81701c327452f62b499f69a3dfd3394e4d036d4d07f469"
-
-[[files]]
-file = "kubejs/startup_scripts/20_blocks/12_unearthed_regolith_hand_mining.js"
+file = "kubejs/startup_scripts/check/12_unearthed_regolith_hand_mining.js"
 hash = "b0bff27048492f64ee6f08ebf1bb3a054a01866da418c76541e8ce67290fbdb9"
 
 [[files]]
-file = "kubejs/startup_scripts/30_hide_vanilla_tools_from_creative.js"
+file = "kubejs/startup_scripts/check/30_hide_vanilla_tools_from_creative.js"
 hash = "7e72dcc1fd5a724d36dc9e7145c4f26901e282a4384ce984b7acea08c528dbe5"
 
 [[files]]
-file = "kubejs/startup_scripts/40_potion_brewing_registry.js"
+file = "kubejs/startup_scripts/check/30_progression_items.js"
+hash = "089493376a6f41f109d95a24090cf8f2f1c4fa9c81cb4a29422c57112270e75b"
+
+[[files]]
+file = "kubejs/startup_scripts/move_to_mod/20_realistic_ore_materials.js"
+hash = "4e419f0edd33baa639fba21b3a2dda1a89371d1ac5d34e318496e4512145a699"
+
+[[files]]
+file = "kubejs/startup_scripts/remove/10_ae2_skystone_hardness.js"
+hash = "75e2d05543db8c5dac81701c327452f62b499f69a3dfd3394e4d036d4d07f469"
+
+[[files]]
+file = "kubejs/startup_scripts/remove/35_create_tcon_bootstrap_items.js"
+hash = "779fa1e175646a283769ea35eede92212b0dcf25786e1faebe3e9ee64e3a4a30"
+
+[[files]]
+file = "kubejs/startup_scripts/remove/40_potion_brewing_registry.js"
 hash = "1e4abc890d237727cad14e58dab2b8f140afc38b9fdbd3035b2467e5bae3c2bf"
 
 [[files]]
@@ -11660,6 +11660,11 @@ hash = "117b1659bd7dd48b6f18103651fe6b5ecabd0896d4bfb1c09cc7716a33001386"
 [[files]]
 file = "mods/architectury-api.pw.toml"
 hash = "5e9edd1fd2395f14a0c8a4acbdbdd61e1047be1f0033deb3140d2ce0d093e9d8"
+metafile = true
+
+[[files]]
+file = "mods/armor-of-the-ages.pw.toml"
+hash = "e38bfb1f9bdf828397bd4f16c8fa4bd106fbd97551870f6b069520760a4fe87d"
 metafile = true
 
 [[files]]
@@ -11741,6 +11746,11 @@ file = "mods/class-selector-1.0.0.jar"
 hash = "1922c76ccf0b813e571d384d869ed1348fcdb07d05bbf3ef144d35ff23157b57"
 
 [[files]]
+file = "mods/claustrophobic-dungeons.pw.toml"
+hash = "23319b4146cc05c65ed51d6f957af9b6fe99005dcaefabe92a9ea95d30515180"
+metafile = true
+
+[[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "96204145e12506e0625d8b9bfa05aad54e9a62fd511bae39f0d57fcb5e39f4cc"
 metafile = true
@@ -11753,6 +11763,11 @@ metafile = true
 [[files]]
 file = "mods/collective.pw.toml"
 hash = "5d1210ecd8af6eb50c34c5d342c5913f1a7a607ab7029b12b5ee891d1532f8f2"
+metafile = true
+
+[[files]]
+file = "mods/complicated-bees.pw.toml"
+hash = "ab41c59f4e7bd28a7a7132e7c12c39bd44e1eec648d468f9fdcc08df97dd088a"
 metafile = true
 
 [[files]]
@@ -11831,6 +11846,11 @@ metafile = true
 [[files]]
 file = "mods/curios.pw.toml"
 hash = "1315cd56b0b4a5b3d53374cebf4f1f3cd0546b05058740847bd226c1d1ccab39"
+metafile = true
+
+[[files]]
+file = "mods/dawn-of-time.pw.toml"
+hash = "b47ea19b5671d0d6c9b6bd3fbefd25aae11ddae2a909d1bf6e6f772104ea89ca"
 metafile = true
 
 [[files]]
@@ -11926,6 +11946,11 @@ metafile = true
 [[files]]
 file = "mods/emi-loot.pw.toml"
 hash = "7bb64cd8e6d14b65132c4d25d66cf499092f31816efdcbeef484bf73385440d9"
+metafile = true
+
+[[files]]
+file = "mods/emi-ores.pw.toml"
+hash = "cebdf3f29156dbae79c6a172428f6ac5093dd3c9b54334989b602298113c1653"
 metafile = true
 
 [[files]]
@@ -12029,6 +12054,11 @@ hash = "62ef7e92478035b77e996189984e4749b2d876ed0a389977a2670a28f105bfd2"
 metafile = true
 
 [[files]]
+file = "mods/forgotten-ruins.pw.toml"
+hash = "f95d466d361b50fe5aeac6c27637ce6d4ea8467b54652a363e6c56e3cbd54c6b"
+metafile = true
+
+[[files]]
 file = "mods/fowlplay.pw.toml"
 hash = "92868c3acedb9402aa8de0a8d95d8a097ee0584c318510e26d47e0c8904e7140"
 metafile = true
@@ -12076,6 +12106,11 @@ metafile = true
 [[files]]
 file = "mods/ftb-xmod-compat.pw.toml"
 hash = "39e65bf3c47517cdb2f9b4b49c6632dd56db797744faaf8b1a3726b1b95aacb4"
+metafile = true
+
+[[files]]
+file = "mods/fusion-connected-textures.pw.toml"
+hash = "51bf22aaadbfdb6f8dd85b90b027a559767d919a4215adeb0f308aaa76038bdc"
 metafile = true
 
 [[files]]
@@ -12518,6 +12553,16 @@ hash = "21a65898c3292880bf020c3c7e1e9da3e3725b046625d24cb5e0742d342621a0"
 metafile = true
 
 [[files]]
+file = "mods/shoulder-surfing-reloaded-camera-fixes-additions.pw.toml"
+hash = "288d44ee4c4e93a1f2363d31cfbee30e0cb21528c13ffaaed7b2b0d06714a845"
+metafile = true
+
+[[files]]
+file = "mods/shoulder-surfing-reloaded.pw.toml"
+hash = "6437de438b1c96c51dccbd1c4b78236b49114241a4179615edb27f32c9a57094"
+metafile = true
+
+[[files]]
 file = "mods/simpledaylengthextender.pw.toml"
 hash = "d1bd9e6dc2e7e72a77c5a7a71709d2224069b9a976a648de96da1f1b8c2fbc7d"
 metafile = true
@@ -12704,6 +12749,11 @@ metafile = true
 [[files]]
 file = "mods/tinkers-weaponry.pw.toml"
 hash = "40e6ec637ce752d74bc4510ddb1578a1dcd21bd7792b135c568dd7e925f4019a"
+metafile = true
+
+[[files]]
+file = "mods/tiny-coal.pw.toml"
+hash = "6d84cb5ff8701b17fc6f5e8cdd2c87b55561a1c4b4c752d093c7fdfb7bcb9a9c"
 metafile = true
 
 [[files]]

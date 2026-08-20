@@ -1,0 +1,1 @@
+{"parent":"minecraft:block/cube","textures":{"north":"kubejs:block/copper_machine_block_side","south":"kubejs:block/copper_machine_block_side","east":"kubejs:block/copper_machine_block_side","west":"kubejs:block/copper_machine_block_side","up":"kubejs:block/copper_machine_block_top","down":"kubejs:block/copper_machine_block_bottom"}}

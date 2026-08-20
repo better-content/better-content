@@ -1,0 +1,1 @@
+{"parent":"minecraft:block/cube","textures":{"north":"kubejs:block/airtight_machine_block_side","south":"kubejs:block/airtight_machine_block_side","east":"kubejs:block/airtight_machine_block_side","west":"kubejs:block/airtight_machine_block_side","up":"kubejs:block/airtight_machine_block_top","down":"kubejs:block/airtight_machine_block_bottom"}}

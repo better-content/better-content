@@ -14,6 +14,6 @@
   "containment": [
     { "item": "kubejs:pressure_seal", "containment_strength": 250.0 },
     { "item": "kubejs:titanium_thermal_plate", "containment_strength": 750.0 },
-    { "item": "kubejs:impossible_machine_casing", "containment_strength": 2500.0 }
+    { "item": "kubejs:space_machine_block", "containment_strength": 2500.0 }
   ]
 }

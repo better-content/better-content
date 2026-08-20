@@ -269,7 +269,7 @@
 		}
 		{
 			dependencies: ["-205BDA9BA88D378F" "-16E044CA8689FD44"]
-			description: ["Upgrade the primitive hook with iron and an Andesite Machine Casing. This optional route improves mobility without gating travel."]
+			description: ["Upgrade the primitive hook with iron and an Copper Machine Block. This optional route improves mobility without gating travel."]
 			icon: "rehooked:iron_hook"
 			id: "67BE05F7DD67223F"
 			rewards: [{ count: 2, id: "30B7C2CE6F2A8499", item: "createdeco:copper_coin", type: "item" }]

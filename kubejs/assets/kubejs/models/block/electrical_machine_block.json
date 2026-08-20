@@ -1,0 +1,1 @@
+{"parent":"minecraft:block/cube","textures":{"north":"kubejs:block/electrical_machine_block_side","south":"kubejs:block/electrical_machine_block_side","east":"kubejs:block/electrical_machine_block_side","west":"kubejs:block/electrical_machine_block_side","up":"kubejs:block/electrical_machine_block_top","down":"kubejs:block/electrical_machine_block_bottom"}}

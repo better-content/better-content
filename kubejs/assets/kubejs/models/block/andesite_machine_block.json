@@ -1,0 +1,1 @@
+{"parent":"minecraft:block/cube","textures":{"north":"kubejs:block/andesite_machine_block_side","south":"kubejs:block/andesite_machine_block_side","east":"kubejs:block/andesite_machine_block_side","west":"kubejs:block/andesite_machine_block_side","up":"kubejs:block/andesite_machine_block_top","down":"kubejs:block/andesite_machine_block_bottom"}}

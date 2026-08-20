@@ -126,14 +126,14 @@
 		}
 		{
 			dependencies: ["00FA05D93A3834DE"]
-			description: ["Build the Space Machine Casing when oxygen, launch hardware, and long supply lines can be manufactured reliably. A rocket route needs a return plan, not one lucky launch."]
-			icon: "kubejs:space_machine_casing"
+			description: ["Pressure-assemble the Space Machine Block from Electrical proof, two rocket casings, two Inconel sheets, two Hastelloy ingots, and two titanium plates. It is the direct aerospace root, not a recurring frame."]
+			icon: "kubejs:space_machine_block"
 			id: "-40568D6C5239A396"
 			rewards: [{ count: 3, id: "-18FFFFFFFFFFFFF8", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.2d
 			tasks: [			{
-				item: "kubejs:space_machine_casing"
+				item: "kubejs:space_machine_block"
 				id: "-667B7695B0239A2B"
 				type: "item"
 			}]
@@ -206,8 +206,8 @@
 			y: 9.2d
 		}
 		{
-			dependencies: ["-9ED5AD8E9730C40"]
-			description: ["Industrialize oxygen before trusting launch travel. Space survival needs a repeatable supply chain rather than hand-waved preparation."]
+			dependencies: ["-40568D6C5239A396"]
+			description: ["Build the Air Liquefier directly from the Space Machine Block, then industrialize oxygen before trusting launch travel. The Rocket Engineer Table and Mechanical Electrolyzer share this same aerospace root."]
 			icon: "creatingspace:air_liquefier"
 			id: "169E0C5FC13945D3"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFF3", item: "createdeco:copper_coin", type: "item" }]
@@ -216,8 +216,18 @@
 				item: "creatingspace:air_liquefier"
 				id: "0EBB44674884FFC8"
 				type: "item"
+			}
+			{
+				item: "creatingspace:rocket_engineer_table"
+				id: "6B03000000000011"
+				type: "item"
+			}
+			{
+				item: "creatingspace:mechanical_electrolyzer"
+				id: "6B03000000000012"
+				type: "item"
 			}]
-			title: "Air Liquefier"
+			title: "Aerospace Roots"
 			x: 12.25d
 			y: 2.3d
 		}
@@ -337,19 +347,14 @@
 		}
 		{
 			dependencies: ["-60AC67F5D4C3A19B"]
-			description: ["Stabilize Raw Impossible Casing with AE2 processors and final Blood Magic proof. This closes the structural machine ladder and opens explicitly post-AE2 work."]
-			icon: "kubejs:impossible_machine_casing"
+			description: ["Establish AE2 engineering processors and final Blood Magic proof for explicitly post-AE2 work. Impossible casings are outside the six-era refactor and are not registered as progression blocks."]
+			icon: "ae2:engineering_processor"
 			id: "-3E0FE96A0FF542B"
 			rewards: [{ count: 1, id: "-18FFFFFFFFFFFFEC", item: "createdeco:industrial_iron_coin", type: "item" }]
 			shape: "octagon"
 			size: 1.2d
 			tasks: [			{
-				item: "kubejs:raw_impossible_casing"
-				id: "-1B0B573ADCA7BECF"
-				type: "item"
-			}
-			{
-				item: "kubejs:impossible_machine_casing"
+				item: "ae2:engineering_processor"
 				id: "-333190DD32F66FD7"
 				type: "item"
 			}]

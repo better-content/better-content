@@ -95,8 +95,9 @@
 			y: 1d
 		}
 		{
-			description: ["Build the Seared Machine Casing. Use it as the body for first Create processing."]
-			icon: "kubejs:seared_machine_casing"
+			dependencies: ["0379EC8BFE48A365"]
+			description: ["Craft the Andesite Machine Block from a Seared Brick block, four cast Andesite Alloy units, and four cast iron plates. It proves the hand workshop without requiring Create machinery."]
+			icon: "kubejs:andesite_machine_block"
 			id: "77685660FF7C7025"
 			rewards: [{ count: 2, id: "26DDD2BD9641467E", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
@@ -104,17 +105,17 @@
 			tasks: [
 			{
 				id: "7F7A2D800EBDE766"
-				item: "kubejs:seared_machine_casing"
+				item: "kubejs:andesite_machine_block"
 				type: "item"
 			}
 			]
-			title: "Seared Machine Casing"
+			title: "Andesite Machine Block"
 			x: 0d
 			y: 5d
 		}
 		{
 			dependencies: ["77685660FF7C7025" "0379EC8BFE48A365"]
-			description: ["Build a Depot from casing and alloy. Put it under the Press."]
+			description: ["Build a Depot for deliberate item processing. Put it under the Press."]
 			icon: "create:depot"
 			id: "114059585B11EDB5"
 			rewards: [{ count: 2, id: "34AA58B76411EB80", item: "createdeco:copper_coin", type: "item" }]
@@ -133,7 +134,7 @@
 		}
 		{
 			dependencies: ["77685660FF7C7025" "0379EC8BFE48A365"]
-			description: ["Build a Basin from casing and alloy. Put it under the Mixer."]
+			description: ["Build a Basin for compacting and mixing. It uses ordinary workshop materials, not another Machine Block."]
 			icon: "create:basin"
 			id: "1EB768E35A5FA287"
 			rewards: [{ count: 2, id: "2C8558B73BCDA002", item: "createdeco:copper_coin", type: "item" }]
@@ -152,7 +153,7 @@
 		}
 		{
 			dependencies: ["54F7FA3700E06569" "114059585B11EDB5"]
-			description: ["Build the Mechanical Press from shaft and casing. Drive it by hand over a Depot."]
+			description: ["Build the Mechanical Press with the Andesite Machine Block as its direct era root. Drive it by hand over a Depot."]
 			icon: "create:mechanical_press"
 			id: "15A4C0C901F8FBC9"
 			rewards: [{ count: 2, id: "17C0F46119817818", item: "createdeco:copper_coin", type: "item" }]
@@ -171,7 +172,7 @@
 		}
 		{
 			dependencies: ["54F7FA3700E06569" "1EB768E35A5FA287"]
-			description: ["Build the Mechanical Mixer from shaft and casing. The Whisk remains a recipe detail."]
+			description: ["Build the Mechanical Mixer from Press-made iron plates and a Whisk. It follows the Press and consumes no second Machine Block."]
 			icon: "create:mechanical_mixer"
 			id: "6D2D6CA800B333FD"
 			rewards: [{ count: 2, id: "6CB303FEA3C51CFA", item: "createdeco:copper_coin", type: "item" }]
@@ -189,8 +190,8 @@
 			y: 5d
 		}
 		{
-			dependencies: ["15A4C0C901F8FBC9" "1EB768E35A5FA287" "4CC3C8B2D71507C1"]
-			description: ["Compact the first Deployer with the Press, Basin, Brass, and literal ingredients. Close the manual casing loop."]
+			dependencies: ["-3DE5B061A4FD5A16"]
+			description: ["Build the first Deployer with the Brass Machine Block. This starts precision assembly; downstream machines return to native mechanisms."]
 			icon: "create:deployer"
 			id: "5F9CD19F1B0A4B85"
 			rewards: [{ count: 4, id: "4BF9FB3A6AFB7309", item: "createdeco:copper_coin", type: "item" }]
@@ -208,25 +209,25 @@
 			y: 4d
 		}
 		{
-			dependencies: ["5F9CD19F1B0A4B85"]
-			description: ["Make ordinary Andesite Casing through the Deployer route. Keep it as proof for the workcell."]
-			icon: "create:andesite_casing"
+			dependencies: ["15A4C0C901F8FBC9"]
+			description: ["Compact stripped wood and a copper plate into Copper Casing before Deployer automation. The casing is one ingredient of the Copper Machine Block, not an unlock by itself."]
+			icon: "create:copper_casing"
 			id: "778F3E474DEFE9B7"
 			rewards: [{ count: 2, id: "250CCC06848C8662", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "2B1476BF7951559C"
-				item: "create:andesite_casing"
+				item: "create:copper_casing"
 				type: "item"
 			}
 			]
-			title: "Andesite Casing"
+			title: "Copper Casing"
 			x: 8d
 			y: 4d
 		}
 		{
-			dependencies: ["4CC3C8B2D71507C1" "2DA99D3BD6F00324" "3E1F3C4E42C3D164" "6D2D6CA800B333FD" "778F3E474DEFE9B7"]
-			description: ["Operate one connected crank-driven cell with transmission, Press and Depot, Mixer and Basin, Deployer, and Andesite Casing proof within 16 blocks. Loose components do not count."]
+			dependencies: ["4CC3C8B2D71507C1" "2DA99D3BD6F00324" "3E1F3C4E42C3D164" "6D2D6CA800B333FD" "15A4C0C901F8FBC9"]
+			description: ["Operate one connected crank-driven cell with transmission, Press and Depot, plus Mixer and Basin within 16 blocks. Precision assembly is a later branch; loose components do not count."]
 			icon: "create:wrench"
 			id: "1D83365BAFA20FFE"
 			rewards: [{ count: 1, id: "2E4FCF6DE5DADD7B", item: "createdeco:industrial_iron_coin", type: "item" }]
@@ -318,7 +319,7 @@
 			y: 4d
 		}
 		{
-			dependencies: ["76EBFFD338A56122" "778F3E474DEFE9B7"]
+			dependencies: ["76EBFFD338A56122" "77685660FF7C7025"]
 			description: ["Build a Millstone and drive it from the local shaft line. It establishes continuous grinding before the workshop reaches advanced ore processing."]
 			icon: "create:millstone"
 			id: "7A8D6DDB4178EEB0"

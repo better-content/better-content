@@ -3,7 +3,7 @@
 	default_quest_shape: "circle"
 	filename: "dangerous_matter"
 	group: "2DFE3653F3B634B9"
-	icon: "kubejs:impossible_machine_casing"
+	icon: "ae2:engineering_processor"
 	id: "-3536DA9202CADCAA"
 	order_index: 70
 	quest_links: [
@@ -14,13 +14,13 @@
 	quests: [
 		{
 			dependencies: ["-3E0FE96A0FF542B"]
-			description: ["Find an osmiridium surface signal, then prepare a lava expedition below Y zero. The exposed sulfide scatter exists only beside lava and must be brought back alive."]
-			icon: "realistic_ores:surface_sample_osmiridium_lava_sulfide_ore"
+			description: ["Find a small osmiridium sample, then prepare a lava expedition below Y zero. The exposed sulfide scatter exists only beside lava and must be brought back alive."]
+			icon: "realistic_ores:small_ore_chunk_osmiridium_lava_sulfide"
 			id: "-4CA1E83BDEB2690"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFA6", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
-				item: "realistic_ores:surface_sample_osmiridium_lava_sulfide_ore"
+				item: "realistic_ores:small_ore_chunk_osmiridium_lava_sulfide"
 				id: "-42B2FA2E7066DD3B"
 				type: "item"
 			}]
@@ -46,17 +46,22 @@
 		}
 		{
 			dependencies: ["-4CA1E83BDEB2690"]
-			description: ["Bring uranium home from its dangerous geological route. Treat the material as expedition proof rather than another routine ore checklist entry."]
-			icon: "chemlib:uranium_ingot"
+			description: ["Mine and handle uranium and thorium chunks deliberately. Natural ore is inert until disturbed; placed or mined forms keep their disturbed state and emit fixed family radiation and heat without isotope NBT."]
+			icon: "realistic_ores:ore_chunk_uranium_ore"
 			id: "-249FC741F2C627C3"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFA4", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
-				item: "chemlib:uranium_ingot"
+				item: "realistic_ores:ore_chunk_uranium_ore"
 				id: "4000344446166805"
 				type: "item"
+			}
+			{
+				item: "realistic_ores:ore_chunk_thorium_ore"
+				id: "6B03000000000013"
+				type: "item"
 			}]
-			title: "Uranium"
+			title: "Disturbed Radioactives"
 			x: 5d
 			y: 0d
 		}
@@ -148,7 +153,7 @@
 		{
 			dependencies: ["0CDB28980B28B9C6", "-13A5C01FF5A1D178"]
 			description: ["Complete both the Tome of Blood and Impossible Support Matrix branches. Together they prove the late science and magic ancestry of the final infrastructure tier."]
-			icon: "kubejs:raw_impossible_casing"
+			icon: "ae2:engineering_processor"
 			id: "4F840BA6BA61DBF3"
 			rewards: [{ count: 1, id: "-18FFFFFFFFFFFF9E", item: "createdeco:industrial_iron_coin", type: "item" }]
 			shape: "octagon"

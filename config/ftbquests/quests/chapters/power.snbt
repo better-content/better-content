@@ -10,14 +10,15 @@
 	]
 	quests: [
 		{
-			description: ["Build the Andesite Machine Casing from ordinary Andesite Casing and alloy. It is the common body for the first passive SU sources."]
-			icon: "kubejs:andesite_machine_casing"
+			dependencies: ["77685660FF7C7025" "75FD0C4219599FB8"]
+			description: ["After reaching the Nether, compact an Andesite Machine Block, Copper Casing, four copper plates, Nether brick, and two Andesite Alloy. This is the direct proof for passive SU and pumping."]
+			icon: "kubejs:copper_machine_block"
 			id: "-16E044CA8689FD44"
 			rewards: [{ count: 2, id: "6B538C25318F885B", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			size: 1.2d
-			tasks: [{ id: "-194FD2786EA76D17", item: "kubejs:andesite_machine_casing", type: "item" }]
-			title: "Andesite Machine Casing"
+			tasks: [{ id: "-194FD2786EA76D17", item: "kubejs:copper_machine_block", type: "item" }]
+			title: "Copper Machine Block"
 			x: 0d
 			y: 0d
 		}
@@ -72,19 +73,19 @@
 		}
 		{
 			dependencies: ["-16E044CA8689FD44"]
-			description: ["Sequence an Andesite Machine Casing into the Brass tier. This casing opens denser fueled generation and pneumatic hardware."]
-			icon: "kubejs:brass_machine_casing"
+			description: ["Compact a Copper Machine Block with Brass Casing, four brass plates, two electron tubes, and polished rose quartz. No Deployer, Crafter, or Precision Mechanism is required."]
+			icon: "kubejs:brass_machine_block"
 			id: "-3DE5B061A4FD5A16"
 			rewards: [{ count: 3, id: "662EC7FE491A1275", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.3d
-			tasks: [{ id: "187E3DB442F3A34B", item: "kubejs:brass_machine_casing", type: "item" }]
-			title: "Brass Machine Casing"
+			tasks: [{ id: "187E3DB442F3A34B", item: "kubejs:brass_machine_block", type: "item" }]
+			title: "Brass Machine Block"
 			x: 2d
 			y: 0d
 		}
 		{
-			dependencies: ["-3DE5B061A4FD5A16"]
+			dependencies: ["-3DE5B061A4FD5A16" "19C8FD2A6139CDE7" "6301000000000002"]
 			description: ["Build a Steam Engine for a stronger SU plant. Boilers need heat, water, and enough engine capacity to match the attached machinery."]
 			icon: "create:steam_engine"
 			id: "-1A817061BDF77B7"
@@ -111,19 +112,19 @@
 		}
 		{
 			dependencies: ["-3DE5B061A4FD5A16"]
-			description: ["Craft an Airtight Machine Casing through the mechanical factory route. It is the structural bridge from Create manufacturing into pressure technology."]
-			icon: "kubejs:airtight_machine_casing"
+			description: ["Mechanically craft the Airtight Machine Block from the Brass block, four compressed iron ingots, two pressure tubes, and two pre-machinery seals. It proves pressure-era construction without circular chamber work."]
+			icon: "kubejs:airtight_machine_block"
 			id: "-57FB125AB0AEF4BD"
 			rewards: [{ count: 3, id: "4F8717A29797905F", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.3d
-			tasks: [{ id: "-379070C94279973C", item: "kubejs:airtight_machine_casing", type: "item" }]
-			title: "Airtight Machine Casing"
+			tasks: [{ id: "-379070C94279973C", item: "kubejs:airtight_machine_block", type: "item" }]
+			title: "Airtight Machine Block"
 			x: 4d
 			y: 0d
 		}
 		{
-			dependencies: ["-600C16EE861BA47B"]
+			dependencies: ["-57FB125AB0AEF4BD"]
 			description: ["Build the Rotational Compressor and drive it with SU. It is the pack's sole bootstrap source of normal PneumaticCraft air."]
 			icon: "compressedcreativity:rotational_compressor"
 			id: "-6931FF36FD4271B4"
@@ -161,14 +162,14 @@
 		}
 		{
 			dependencies: ["1F458611C5B165DD" "59D44B41E1CE51EB"]
-			description: ["Pressure-craft an Electrical Machine Casing at 4 bar. It joins pneumatic manufacturing, Power Grid parts, chemistry, and computer components."]
-			icon: "kubejs:electrical_machine_casing"
+			description: ["Pressure-craft the Electrical Machine Block from Airtight proof, a mechanically assembled conductive casing, four copper plates, two primitive red-alloy wires, and an electron tube. It requires no existing generator."]
+			icon: "kubejs:electrical_machine_block"
 			id: "1D88EAD05EC7472F"
 			rewards: [{ count: 4, id: "-2C8C5DF8AFE670CA", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.3d
-			tasks: [{ id: "-7A027D83BD77EA81", item: "kubejs:electrical_machine_casing", type: "item" }]
-			title: "Electrical Machine Casing"
+			tasks: [{ id: "-7A027D83BD77EA81", item: "kubejs:electrical_machine_block", type: "item" }]
+			title: "Electrical Machine Block"
 			x: 16d
 			y: 0d
 		}
@@ -242,7 +243,7 @@
 		}
 		{
 			dependencies: ["0FFD3324AA11E14D" "1D88EAD05EC7472F"]
-			description: ["Upgrade the Diesel Engine with an Electrical Machine Casing. This is the first diesel scale that crosses into the electrical tier."]
+			description: ["Upgrade the Diesel Engine with an Electrical Machine Block. This is the first diesel scale that crosses into the electrical tier."]
 			icon: "createdieselgenerators:large_diesel_engine"
 			id: "-7D575D72B61A6458"
 			rewards: [{ count: 3, id: "6949293F96649343", item: "createdeco:copper_coin", type: "item" }]
@@ -265,14 +266,18 @@
 			y: 5d
 		}
 		{
-			description: ["Build a Thermal Firebox to turn fuel into HeatSync process heat. Heat serves thermal machinery; it is not SU, air, FE, or Power Grid electricity."]
+			dependencies: ["-57FB125AB0AEF4BD"]
+			description: ["Build a Thermal Firebox for stored process heat, then fit a Boiler Heater beneath a Create boiler. The heater consumes exactly one, two, or three stored heat for the corresponding active boiler level."]
 			icon: "heat_sync:thermal_firebox"
 			id: "-6CFF3DC1F4074355"
 			rewards: [{ count: 2, id: "-21FB7D24C2CC353F", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			size: 1.2d
-			tasks: [{ id: "68D782FD5CAD8981", item: "heat_sync:thermal_firebox", type: "item" }]
-			title: "Process Heat"
+			tasks: [
+				{ id: "68D782FD5CAD8981", item: "heat_sync:thermal_firebox", type: "item" }
+				{ id: "6B03000000000010", item: "heat_sync:boiler_heater", type: "item" }
+			]
+			title: "Heat a Boiler"
 			x: 0d
 			y: 7d
 		}
@@ -301,8 +306,8 @@
 			y: -2d
 		}
 		{
-			dependencies: ["-57FB125AB0AEF4BD" "1F458611C5B165DD"]
-			description: ["Pressure-craft a reusable seal after the airtight casing and chamber shell are available. It is the shared boundary for sealed pneumatic integrations."]
+			dependencies: ["-3DE5B061A4FD5A16"]
+			description: ["Craft reusable seals from resilient rubber and an iron plate before the Airtight Machine Block. The recipe intentionally requires no pressure machinery."]
 			icon: "kubejs:pressure_seal"
 			id: "19C8FD2A6139CDE7"
 			rewards: [{ count: 2, id: "1E4AAA52DD8904E7", item: "createdeco:copper_coin", type: "item" }]
@@ -339,6 +344,8 @@
 		{ dependencies: ["-6931FF36FD4271B4"], description: ["Build a Charging Station after the rotational compressor makes repeatable normal air."], icon: "pneumaticcraft:charging_station", id: "6301000000000004", rewards: [{ count: 2, id: "6302000000000004", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6303000000000004", item: "pneumaticcraft:charging_station", type: "item" }], title: "Charge with Air", x: 12d, y: 2d }
 		{ dependencies: ["1F458611C5B165DD"], description: ["Produce Plastic through sealed pressure processing for durable control components."], icon: "pneumaticcraft:plastic", id: "6301000000000005", rewards: [{ count: 2, id: "6302000000000005", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6303000000000005", item: "pneumaticcraft:plastic", type: "item" }], title: "Pressure Plastic", x: 10d, y: 4d }
 		{ dependencies: ["1F458611C5B165DD" "19C8FD2A6139CDE7"], description: ["Prepare an Unassembled PCB in the Pressure Chamber before the assembly cell finishes it."], icon: "pneumaticcraft:unassembled_pcb", id: "6301000000000006", rewards: [{ count: 2, id: "6302000000000006", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6303000000000006", item: "pneumaticcraft:unassembled_pcb", type: "item" }], title: "Blank Circuit Board", x: 12d, y: 4d }
+		{ dependencies: ["-6931FF36FD4271B4"], description: ["Run the contained contact process to bottle Sulfuric Acid, then use it with salt for Hydrochloric Acid. These two acids establish Thermal & Pressure leaching without electrical control."], icon: "chemlib:sulfuric_acid_bucket", id: "6B01000000000001", rewards: [{ count: 3, id: "6B02000000000001", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6B03000000000001", item: "chemlib:sulfuric_acid_bucket", type: "item" } { id: "6B03000000000002", item: "chemlib:hydrochloric_acid_bucket", type: "item" }], title: "Industrial Acids", x: 14d, y: 6d }
+		{ dependencies: ["1D88EAD05EC7472F" "6B01000000000001"], description: ["Produce Nitric Acid only after electrical control. Combine nitric and hydrochloric routes only in the Realistic Ores gold and platinum-group separations that explicitly call for mixed acid."], icon: "chemlib:nitric_acid_bucket", id: "6B01000000000002", rewards: [{ count: 3, id: "6B02000000000002", item: "createdeco:copper_coin", type: "item" }], tasks: [{ id: "6B03000000000003", item: "chemlib:nitric_acid_bucket", type: "item" }], title: "Controlled Nitric Acid", x: 18d, y: 6d }
 	]
 	title: "Power: Motion, Air & Current"
 }

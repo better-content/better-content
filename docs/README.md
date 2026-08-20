@@ -1,6 +1,6 @@
 # Better Content Docs
 
-This directory is intentionally limited to seven living Markdown files. The repo is the source of truth for pack content; these docs summarize current intent and operating state only.
+This directory is intentionally limited to eight living Markdown files. The repo is the source of truth for pack content; these docs summarize current intent and operating state only.
 
 ## Current Docs
 
@@ -9,6 +9,7 @@ This directory is intentionally limited to seven living Markdown files. The repo
 - `content_systems.md`: recipes, materials, chemistry, casings, loot, trades, quests, and content surfaces.
 - `questbook_standards.md`: player-facing quest purpose, graph layout, dependencies, tasks, icons, copy, rewards, visibility, and review policy.
 - `realistic_ore_processing.md`: theory, invariants, yield semantics, authoring rules, and maintenance contract for geological deposit processing.
+- `weapon_balance_philosophy.md`: cross-system weapon balance doctrine, measurement rules, exceptions, and the current TCon/Better Combat implementation.
 - `performance_and_mods.md`: memory findings, mod prune decisions, C2ME/DH/LC/TFTH notes, and active/inactive mod interpretation.
 - `custom-mod-workspace.md`: canonical custom-mod repositories, identities, artifacts, validation, and deployment workflow.
 
@@ -28,7 +29,7 @@ Runtime directories, raw logs, crash reports, screenshots, profiler dumps, gener
 
 Do not add new one-off audits, pass reports, JSON summaries, raw logs, RAM dumps, or diagnostics under `docs/`. Fold durable conclusions into the closest living doc and leave raw evidence in the run root.
 
-When progression behavior changes, update `progression.md` and/or `content_systems.md`. When player-facing quest structure, presentation, or authoring policy changes, update `questbook_standards.md`. When the Realistic Ores processing model, yields, assays, media, solvents, or extension rules change, update `realistic_ore_processing.md`. When custom-mod ownership, identity, validation, or deployment changes, update `custom-mod-workspace.md`. When mod composition, performance, or runtime compatibility changes, update `performance_and_mods.md`. The sole supported modpack evaluation is `./smoke.sh`, as defined in the root `AGENTS.md`.
+When progression behavior changes, update `progression.md` and/or `content_systems.md`. When player-facing quest structure, presentation, or authoring policy changes, update `questbook_standards.md`. When the Realistic Ores processing model, yields, assays, media, solvents, or extension rules change, update `realistic_ore_processing.md`. When weapon references, normalized bands, compensation rules, generic-effect valuation, animation coverage, alternate modes, or signature exceptions change, update `weapon_balance_philosophy.md`. When custom-mod ownership, identity, validation, or deployment changes, update `custom-mod-workspace.md`. When mod composition, performance, or runtime compatibility changes, update `performance_and_mods.md`. The sole supported modpack evaluation is `./smoke.sh`, as defined in the root `AGENTS.md`.
 
 Claims in these docs must be checked against current source files. If an ID, mod, recipe, or config cannot be confirmed, write `UNKNOWN` or frame it as a future candidate.
 

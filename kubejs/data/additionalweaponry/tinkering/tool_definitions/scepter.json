@@ -42,7 +42,7 @@
       "multipliers": {
         "tconstruct:durability": 0.75,
         "tconstruct:draw_speed": 0.8,
-        "tconstruct:attack_damage": 1.6
+        "tconstruct:attack_damage": 1.512
       }
     },
     {

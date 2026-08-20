@@ -7,7 +7,7 @@
         "tconstruct:velocity": 0.5,
         "tconstruct:draw_speed": 2.0,
         "tconstruct:accuracy": 0.9,
-        "tconstruct:projectile_damage": 0.1
+        "tconstruct:projectile_damage": 0.099
       }
     },
     {

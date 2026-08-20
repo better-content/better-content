@@ -38,7 +38,7 @@
     {
       "type": "tconstruct:multiply_stats",
       "multipliers": {
-        "tconstruct:attack_damage": 1.6
+        "tconstruct:attack_damage": 1.512
       }
     },
     {

@@ -1,0 +1,2639 @@
+{
+  "schema": "bc.runtime_combat_profile.v1",
+  "generated_at": "2026-08-20T12:59:26.647361797Z",
+  "boss_health_exclusion_threshold": 100.0,
+  "edps_weights": {
+    "trash": 0.6,
+    "elite": 0.3,
+    "boss": 0.1
+  },
+  "armor_canon": {
+    "trash": 0.0,
+    "elite": 0.1,
+    "boss": 3.0,
+    "trash_elite_boundary": 0.05,
+    "elite_boss_boundary": 1.55,
+    "canonical_toughness": 0.0
+  },
+  "hostile_samples": [
+    {
+      "entity": "aether:fire_minion",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "aether:mimic",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "aether:sentry",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "aether:slider",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 400.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "aether:sun_spirit",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 500.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "aether:valkyrie",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "aether:valkyrie_queen",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 500.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "ars_elemental:air_mage",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "ars_elemental:earth_mage",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "ars_elemental:fire_mage",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "ars_elemental:summon_vhex",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "ars_elemental:water_mage",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "ars_nouveau:wilden_boss",
+      "armor": 6.0,
+      "armor_toughness": 0.0,
+      "max_health": 1000.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "ars_nouveau:wilden_guardian",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 25.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "ars_nouveau:wilden_hunter",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "ars_nouveau:wilden_stalker",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 15.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "deeperdarker:sculk_centipede",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "deeperdarker:sculk_leech",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 4.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "deeperdarker:sculk_snapper",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 12.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "deeperdarker:shattered",
+      "armor": 3.5,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "deeperdarker:shriek_worm",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 100.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "deeperdarker:sludge",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 16.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "deeperdarker:stalker",
+      "armor": 4.0,
+      "armor_toughness": 0.0,
+      "max_health": 200.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "fallout_wastelands_:blastmaster_raider",
+      "armor": 0.2,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "fallout_wastelands_:cannibal_00",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "fallout_wastelands_:cannibal_01",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "fallout_wastelands_:cannibal_02",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "fallout_wastelands_:dynamite_entity",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "fallout_wastelands_:feral_ghoul",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 15.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "fallout_wastelands_:floater",
+      "armor": 5.0,
+      "armor_toughness": 0.0,
+      "max_health": 45.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "fallout_wastelands_:gecko",
+      "armor": 0.3,
+      "armor_toughness": 0.0,
+      "max_health": 15.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "fallout_wastelands_:lobotomite_walker",
+      "armor": 0.1,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "fallout_wastelands_:pa_display_entity",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "fallout_wastelands_:power_armor_frame",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "fallout_wastelands_:radroach",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 6.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "fallout_wastelands_:radscorpion",
+      "armor": 5.0,
+      "armor_toughness": 0.0,
+      "max_health": 25.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "fallout_wastelands_:raider_dustwalker",
+      "armor": 0.2,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "fallout_wastelands_:raiderscavanger",
+      "armor": 0.2,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "fallout_wastelands_:spiderfloater",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 35.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:apostle",
+      "armor": 12.0,
+      "armor_toughness": 6.0,
+      "max_health": 320.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:armored_ravager",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 100.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:bear_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:black_beast",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 75.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:black_wolf",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:blackguard_servant",
+      "armor": 20.0,
+      "armor_toughness": 8.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:blastling",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 32.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:blastling_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 32.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:blaze_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:bone_lord",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:bone_spider",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 32.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:bone_spider_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 32.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:border_wraith",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 25.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:border_wraith_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 25.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:bound_cryologer",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:bound_evoker",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:bound_geomancer",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 18.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:bound_iceologer",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:bound_storm_caster",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:bound_wind_caller",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:brood_mother",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 96.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:brood_mother_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 96.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:burning_hoglin",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:cairn_necromancer",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:cairn_necromancer_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:carrion_fly",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 8.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:carrion_maggot",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 8.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:cave_spider_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 12.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:conquillager",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:crone",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 130.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:crusher",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:crusher_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:cryologer",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:cryologer_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:crypt_slime",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:crypt_slime_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:damned",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:drowned_necromancer_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 220.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:drowned_servant",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:ender_keeper",
+      "armor": 10.0,
+      "armor_toughness": 0.0,
+      "max_health": 320.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:endersent",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 200.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:envioker",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:evoker_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:frayed",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:frayed_servant",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:frozen_zombie_servant",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:geomancer_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 18.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:ghast_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:glacial_wall",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:gnasher",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:grave_golem",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 180.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:guardian_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:haunt",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 6.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:haunted_armor",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 25.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:haunted_armor_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 25.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:haunted_skull",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 2.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:hellhound",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:heresiarch",
+      "armor": 4.0,
+      "armor_toughness": 0.0,
+      "max_health": 130.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:heretic",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 26.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:heretic_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 26.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:hoglin_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:hostile_black_wolf",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:hostile_redstone_golem",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 240.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:hostile_redstone_monstrosity",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 600.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:husk_servant",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:ice_golem",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 60.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:iceologer_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:icy_spider",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 16.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:icy_spider_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 16.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:inferno",
+      "armor": 5.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:inquillager",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:insect_swarm",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:irk",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 12.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:irk_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 12.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:jungle_zombie_servant",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:leapleaf",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 70.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:magma_cube_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:malghast",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:maverick",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 26.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:maverick_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 26.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:mini_ghast",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 5.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:minister",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 128.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:mossy_necromancer",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:mossy_necromancer_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:mossy_skeleton_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:mountaineer_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 28.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:muck_wraith",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 25.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:muck_wraith_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 25.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:necromancer",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:necromancer_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:neollager",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:obsidian_monolith",
+      "armor": 12.0,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:phantom_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:piker",
+      "armor": 4.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:piker_servant",
+      "armor": 4.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:pillager_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:poison_anemone",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:poison_quill_vine",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:polar_bear_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:preacher",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:quick_growing_kelp",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:quick_growing_vine",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:rattled",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:rattled_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:ravaged",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:ravager",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 75.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:reaper",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:reaper_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:redstone_cube",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:redstone_golem",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 240.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:redstone_ministrosity",
+      "armor": 1.0,
+      "armor_toughness": 0.0,
+      "max_health": 15.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:redstone_monstrosity",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 600.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:reprobate",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 26.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:reprobate_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 26.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:ripper",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 16.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:ripper_servant",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 16.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:signaler_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:skeleton_pillager",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:skeleton_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:skeleton_villager_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:skeleton_wolf",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:skull_lord",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 150.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:slime_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:snapper",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:snareling",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:snareling_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:sorcerer",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:spider_egg",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 6.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:spider_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 16.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:squall_golem",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 88.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:stone_ministrosity",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:storm_caster",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:storm_caster_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:stormhound",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:stray_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:sunken_skeleton_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:tormentor",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:totemic_bomb",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:totemic_wall",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:trampler",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:trampler_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:tropical_slime_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:twilight_goat",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:vampire_bat",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 6.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:vanguard_servant",
+      "armor": 9.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:vex_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 14.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:vindicator_chef_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:vindicator_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:vizier",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 300.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:vizier_clone",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 300.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:warlock",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 26.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:warlock_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 26.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:wartling",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 4.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:watchling",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:watchling_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:wavewhisperer",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:web_spider",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 16.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:web_spider_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 16.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:whisperer",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:wight",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 200.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:wildfire",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 75.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:wind_caller_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:winter_wolf",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:witch_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 26.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:wither_necromancer",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 220.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:wither_necromancer_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 220.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "goety:wither_skeleton_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:wraith",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 25.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:wraith_servant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 25.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:zombie_ravager",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 75.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:zombie_servant",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:zombie_villager_servant",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:zombie_vindicator",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:zpiglin_brute_servant",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "goety:zpiglin_servant",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:blaze",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:cave_spider",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 12.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:creeper",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:drowned",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:elder_guardian",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 80.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:ender_dragon",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 200.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "minecraft:enderman",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:endermite",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 8.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:evoker",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:ghast",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:giant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 100.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "minecraft:guardian",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:hoglin",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:husk",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:illusioner",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 32.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:magma_cube",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:phantom",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:piglin",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 16.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:piglin_brute",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:pillager",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:ravager",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 100.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "minecraft:shulker",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:silverfish",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 8.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:skeleton",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:slime",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:spider",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 16.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:stray",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:vex",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 14.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:vindicator",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:warden",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 500.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "minecraft:witch",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 26.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:wither",
+      "armor": 4.0,
+      "armor_toughness": 0.0,
+      "max_health": 300.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "minecraft:wither_skeleton",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:zoglin",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:zombie",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:zombie_villager",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "minecraft:zombified_piglin",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "occultism:possessed_elder_guardian",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 160.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "occultism:possessed_enderman",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "occultism:possessed_endermite",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 8.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "occultism:possessed_ghast",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "occultism:possessed_hoglin",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 66.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "occultism:possessed_phantom",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "occultism:possessed_shulker",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "occultism:possessed_skeleton",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "occultism:possessed_warden",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 250.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "occultism:possessed_weak_shulker",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "occultism:wild_hunt_skeleton",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "occultism:wild_hunt_wither_skeleton",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 60.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "protection_pixel:armorentity",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "protection_pixel:cog",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "protection_pixel:falcondrone",
+      "armor": 10.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "quark:forgotten",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 60.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "quark:wraith",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "savage_and_ravage:executioner",
+      "armor": 3.0,
+      "armor_toughness": 0.0,
+      "max_health": 35.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "savage_and_ravage:griefer",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 25.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "savage_and_ravage:iceologer",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "savage_and_ravage:skeleton_villager",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "savage_and_ravage:trickster",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "takesapillage:archer",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "takesapillage:legioner",
+      "armor": 6.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "takesapillage:skirmisher",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 24.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "tconstruct:ender_slime",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "tconstruct:sky_slime",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "tconstruct:terracube",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "thalassophobia:crab",
+      "armor": 7.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "thalassophobia:crocodile",
+      "armor": 8.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "thalassophobia:giant_clam",
+      "armor": 10.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "thalassophobia:hesperornis",
+      "armor": 3.0,
+      "armor_toughness": 0.0,
+      "max_health": 15.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "thalassophobia:japanese_spider_crab",
+      "armor": 8.0,
+      "armor_toughness": 0.0,
+      "max_health": 15.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "thalassophobia:lobster",
+      "armor": 8.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "thalassophobia:sea_bird",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 15.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "thalassophobia:sea_pickle",
+      "armor": 7.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "thalassophobia:sea_urchin",
+      "armor": 10.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "thalassophobia:sonar_boom",
+      "armor": 30.0,
+      "armor_toughness": 0.0,
+      "max_health": 1000.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "the_flesh_that_hates:bruteplaquecreatureone",
+      "armor": 6.0,
+      "armor_toughness": 0.0,
+      "max_health": 60.75000000000001,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_boomer",
+      "armor": 2.4,
+      "armor_toughness": 0.0,
+      "max_health": 43.2,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_cocoon",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 13.5,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_community",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_cow",
+      "armor": 1.2,
+      "armor_toughness": 0.0,
+      "max_health": 33.75,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_dog",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 33.75,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_howler",
+      "armor": 4.8,
+      "armor_toughness": 0.0,
+      "max_health": 56.7,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_human",
+      "armor": 1.2,
+      "armor_toughness": 0.0,
+      "max_health": 27.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_human_head",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 13.5,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_hunter_three",
+      "armor": 16.8,
+      "armor_toughness": 0.0,
+      "max_health": 189.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_hunter_two",
+      "armor": 9.6,
+      "armor_toughness": 0.0,
+      "max_health": 101.25,
+      "excluded_boss": true
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_justice",
+      "armor": 4.8,
+      "armor_toughness": 0.0,
+      "max_health": 47.25,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_piece",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 13.5,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_pig",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 29.700000000000003,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_pillager",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 33.75,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_servant",
+      "armor": 3.5999999999999996,
+      "armor_toughness": 0.0,
+      "max_health": 47.25,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_sheep",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.25,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_suffer",
+      "armor": 7.199999999999999,
+      "armor_toughness": 0.0,
+      "max_health": 74.25,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_villager",
+      "armor": 1.2,
+      "armor_toughness": 0.0,
+      "max_health": 29.700000000000003,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:flesh_vindicator",
+      "armor": 4.8,
+      "armor_toughness": 0.0,
+      "max_health": 40.5,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:plaquecreaturebaseone",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:plaquecreatureone",
+      "armor": 4.8,
+      "armor_toughness": 0.0,
+      "max_health": 40.5,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:plaquecreaturetwo",
+      "armor": 9.6,
+      "armor_toughness": 0.0,
+      "max_health": 94.5,
+      "excluded_boss": false
+    },
+    {
+      "entity": "the_flesh_that_hates:plaqueincubatorone",
+      "armor": 16.8,
+      "armor_toughness": 0.0,
+      "max_health": 243.00000000000003,
+      "excluded_boss": true
+    },
+    {
+      "entity": "the_flesh_that_hates:plaqueincubatorstart",
+      "armor": 9.6,
+      "armor_toughness": 0.0,
+      "max_health": 148.5,
+      "excluded_boss": true
+    },
+    {
+      "entity": "the_flesh_that_hates:plaquethreelegcreature",
+      "armor": 4.8,
+      "armor_toughness": 0.0,
+      "max_health": 74.25,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:adherent",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:alpha_yeti",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 200.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "twilightforest:armored_giant",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 80.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:blockchain_goblin",
+      "armor": 11.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:carminite_broodling",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 7.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:carminite_ghastguard",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:carminite_ghastling",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:carminite_golem",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:death_tome",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:fire_beetle",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 25.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:giant_miner",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 80.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:harbinger_cube",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:hedge_spider",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 16.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:helmet_crab",
+      "armor": 6.0,
+      "armor_toughness": 0.0,
+      "max_health": 13.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:hostile_wolf",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:hydra",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 360.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "twilightforest:ice_crystal",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:king_spider",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:knight_phantom",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 35.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:kobold",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 13.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:lich",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 100.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "twilightforest:lich_minion",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:lower_goblin_knight",
+      "armor": 17.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:loyal_zombie",
+      "armor": 3.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:maze_slime",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:minoshroom",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 120.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "twilightforest:minotaur",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:mist_wolf",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:mosquito_swarm",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 12.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:naga",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 120.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "twilightforest:pinch_beetle",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:plateau_boss",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:redcap",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:redcap_sapper",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:rising_zombie",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:roving_cube",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:skeleton_druid",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:slime_beetle",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 25.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:snow_guardian",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:snow_queen",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 200.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "twilightforest:stable_ice_core",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:swarm_spider",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 3.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:towerwood_borer",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 15.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:troll",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:unstable_ice_core",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:upper_goblin_knight",
+      "armor": 20.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:ur_ghast",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 250.0,
+      "excluded_boss": true
+    },
+    {
+      "entity": "twilightforest:winter_wolf",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 30.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:wraith",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "twilightforest:yeti",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "undergarden:forgotten",
+      "armor": 2.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "undergarden:forgotten_guardian",
+      "armor": 10.0,
+      "armor_toughness": 5.0,
+      "max_health": 80.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "undergarden:muncher",
+      "armor": 0.0,
+      "armor_toughness": 5.0,
+      "max_health": 15.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "undergarden:nargoyle",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 15.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "undergarden:rotbeast",
+      "armor": 3.0,
+      "armor_toughness": 0.0,
+      "max_health": 80.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "undergarden:rotling",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 10.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "undergarden:rotwalker",
+      "armor": 3.0,
+      "armor_toughness": 0.0,
+      "max_health": 40.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "undergarden:sploogie",
+      "armor": 0.0,
+      "armor_toughness": 0.0,
+      "max_health": 20.0,
+      "excluded_boss": false
+    },
+    {
+      "entity": "undergarden:stoneborn",
+      "armor": 10.0,
+      "armor_toughness": 0.0,
+      "max_health": 50.0,
+      "excluded_boss": false
+    }
+  ],
+  "issues": []
+}

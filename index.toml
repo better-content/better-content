@@ -5362,7 +5362,7 @@ hash = "37e3dd71917b49faa4c8829ef9199290a8d71c36c3e8fc01155a40cd24a755a2"
 
 [[files]]
 file = "config/class_enhancement.toml"
-hash = "f512ee09290d6c6096861f9177e70e0ecb57a7339a37dc76b7e042c10e65a3f0"
+hash = "65c18811c90a233617a71e784edf2c352f5ebd1923291fd6ed3dd2e684cbd360"
 
 [[files]]
 file = "config/class_selector/embark.json"
@@ -5634,7 +5634,7 @@ hash = "f1d7bd782ae6603b429b3e5b7ce958deea5d2876fc03fc5e9d71feb7d7e152cb"
 
 [[files]]
 file = "config/globalgamerules-common.toml"
-hash = "66a900c615bb06d67970cab96a125ee7d167bc040ab5dce164c89f42157784b2"
+hash = "9f3775f4e8ed2ba2fa010eff185df333b4a5dd5175dfa6f1db6b653eb9bff2c5"
 
 [[files]]
 file = "config/heat_sync-common.toml"
@@ -8825,6 +8825,10 @@ file = "kubejs/config/surface_registry.json"
 hash = "46940e857300a46d9972ff9861050755c2caca59663727d294253fcd7e24722d"
 
 [[files]]
+file = "kubejs/config/tcon_edps_catalogue.json"
+hash = "d818262a290d358fa35a768282725bed46a548c881fc5887e6846b854f04636d"
+
+[[files]]
 file = "kubejs/data/additionalweaponry/recipes/embellishment/amethyst.json"
 hash = "5fecb85c0830794ea4004eb041897b08938ebb5383670ada06a3647727ddcf36"
 
@@ -8878,27 +8882,27 @@ hash = "5fecb85c0830794ea4004eb041897b08938ebb5383670ada06a3647727ddcf36"
 
 [[files]]
 file = "kubejs/data/additionalweaponry/tinkering/tool_definitions/butcher_knife.json"
-hash = "8482820f68893c3bb235292780246d9e1bc89953ca1290814bf7c3d0b8c141a9"
+hash = "7a4a2043e4fb94f59c4ffb95a66b9acea315cf9291ebde779eec0ace8f6333d5"
 
 [[files]]
 file = "kubejs/data/additionalweaponry/tinkering/tool_definitions/cutlass.json"
-hash = "979d1538bc90a9717557e2fafa1c0611a2ced2d4701e7e77a1a85005e69c93f8"
+hash = "23030ad4066a010b67253d1278b7dfac3b1f2557be000085bee5ff8c5cb280df"
 
 [[files]]
 file = "kubejs/data/additionalweaponry/tinkering/tool_definitions/pitchfork.json"
-hash = "6447f05374b15b35b8e9a5cbc142d31568d0c6889c95c4eb6d643bafb8a6296a"
+hash = "09f42459b6c008745803a16520848e42fc84e907975b5cc269067064335109a9"
 
 [[files]]
 file = "kubejs/data/additionalweaponry/tinkering/tool_definitions/scepter.json"
-hash = "9658dc175e9a25f3805a14a146a3042bb6b2b1f43711edbd78403460f74d18c3"
+hash = "9b036e0437c1c206ebc286fc9f9626109ca2c2c3ac2f87eb3b6a0f7c0fb53ad1"
 
 [[files]]
 file = "kubejs/data/additionalweaponry/tinkering/tool_definitions/sniffer_claws.json"
-hash = "239c0ce350f64232027b5f60c2a8046740afa37606a7425cba5b39dd5ec5ae66"
+hash = "c156bda6057056c3d3e2627fe6e2ccf327361b4656dd42496be701f3f233bd74"
 
 [[files]]
 file = "kubejs/data/additionalweaponry/tinkering/tool_definitions/wrench.json"
-hash = "07feb3120b975445a9fb7b11546625f92597ab3e047f80e4e80684e8719ffc99"
+hash = "f409d7c30eb6f312cbdacd66a0f159b12d1d266e24d72fc6e983e30c82422d23"
 
 [[files]]
 file = "kubejs/data/additionalweaponry/weapon_attributes/butcher_knife.json"
@@ -9242,15 +9246,15 @@ hash = "7392b4249b82885a0c5faf72d7c28722ca7600537e1b5404d3f993bc3c5bfb97"
 
 [[files]]
 file = "kubejs/data/construct_arsenal/tinkering/tool_definitions/buckler.json"
-hash = "4e329913f8a6b7cbcd30bd42813ad9f522d385c688af4bd012f9842365f59f3b"
+hash = "fec9b90604c1cf8fcca22ef0ceb2dd9a297724b890264aaab9a252d2f5c1666d"
 
 [[files]]
 file = "kubejs/data/construct_arsenal/tinkering/tool_definitions/helix_blade.json"
-hash = "7ad27815c4d178a101fbab5677cf67fe6f4f726c20c6b0fa78b3431883190028"
+hash = "dc01ac4f09c102bc82cb1c3247463de1b21c45bd0f5e0ba1338957fb426559e2"
 
 [[files]]
 file = "kubejs/data/construct_arsenal/tinkering/tool_definitions/quarterstaff.json"
-hash = "74cc2537ea1820d148879daaaad34db3f8205fa7cc252e21e7600c933b7d5d34"
+hash = "08b18845bedfc47549acb21bff717462232f49d54caf48bcbd4a132f7412362c"
 
 [[files]]
 file = "kubejs/data/construct_arsenal/weapon_attributes/buckler.json"
@@ -10038,71 +10042,83 @@ hash = "95cb8fb345fbdf378ea58605cd136a4a693386c66cbfef787e9c7351b540b641"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/battlesign.json"
-hash = "2f44e5e56b0cc08457bee1debc0c3215b5d87ab176d32086cea798100dcc611d"
+hash = "2ae99a7631b709e1bead547d1821ab0f404d48386374fbef54160bdc7c689bc1"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/broad_axe.json"
-hash = "613413400dc0c547559f9f610a311f2a97beb6ccc31fd0b49a48f1e8c461573b"
+hash = "064e12f76bb114f6c86e4d5ae03270910466680517ac2cc9db045e7fde66767d"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/cleaver.json"
-hash = "b9b244994a6ca602bc8ac328ed67329aadd5430dbef09be6cec362985ff5cc80"
+hash = "6c21b582fc92487c4509ea137b2fe43679b0dd5c3a2fc01fd9828e39e1fcb701"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/crossbow.json"
+hash = "944678422cc5155c416883614c283abd01916f7afa6543bee89c878f9850913e"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/dagger.json"
-hash = "868a4a33b47bcb8ca59f601ddf830c5052cd12bc0d77c34bbf03f57638319454"
+hash = "a85b90c722542951ebbf0705d41269311a8dc77dc2bb53e9875d5288599aaa57"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/excavator.json"
-hash = "fe7db7ff661ed56fcbe181ced09b023a1c153cd295a0774b38fa7b967cd67845"
+hash = "a24b5aa0c241153d9e9f08ee47c836c7927585dcb5e2560cbf7016f6846772bd"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/hand_axe.json"
-hash = "092ca504432a9d92d386a0b1106bd9b7c565927bbb7aac8f1f8ef31e5bcc9fe0"
+hash = "b30a1bcd01f0e8585551f55838c4b9ddcd843e0a50f622d7043ed332b0b05f19"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/javelin.json"
-hash = "30a5f4bb4724163888a9823c9a7cba31d02972a8eb24dcb21eaf76213ce592a7"
+hash = "f79ab950eea538c222191b708e291891c8d96f32bb04690df6e06f3b27f59336"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/kama.json"
-hash = "a95b87cf8d34283592d508f4afcc2d62e74ef764afc247fd57f4aa499f835ce9"
+hash = "7f03b5ce9f475df0839c52d26f7361a3a670c0c25fdd40c9871fbfb32294c201"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/longbow.json"
+hash = "cf72fac0936d005e8ddb7185f2bdfc85c15a3ba62a124a39888cf5eabd3ff325"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/mattock.json"
-hash = "900aa514ffad60ba82584fe80fe9be0e929c00e44ff244f7c7a180f0d10984cd"
+hash = "6a667abd42463f120a944000e95d717a4bccb53b3be5feff8ef2b425ba46b82a"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/minotaur_axe.json"
-hash = "a43a3e725faa61047a88636ba392f7d79aa21bbb42d8394fe111d07c060f2ce6"
+hash = "32a203cff204373ea6e35b7515ce3ead80965fe43de60b9fd448a6ee57ed2389"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/pickadze.json"
-hash = "75799adfd32d6ec623a39e7a024ab8bc93b70a000e4b3d1d63d3411664c65e18"
+hash = "7960a7cb0c29ee7cd6c8b87048de32a40c0c97dc37b45f015824addeaed3676b"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/pickaxe.json"
-hash = "105d8ef8db6c3d97c8f2e5eb68524eee7b4d8ff366e17b69d403814a1d9f3418"
+hash = "c6e02b3ccbfc2c5ea585227fdfc45b4ec98ef36cfcd93388bb54a33d39fd67f2"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/scythe.json"
-hash = "6715120be1f5f6f848d51cac5603cc2201bbed4385ea3e22284cff1105d87339"
+hash = "0e0fa1ce1f3f4302527444798f8108a10e045883fd00091335c42ce1c747b53b"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/sledge_hammer.json"
-hash = "313a8c439a27d23727e96d98c172deefdc966641001209b4c0fc221bea541a5b"
+hash = "782111349ca608ba6f6266406e4beef892346fffbeb34babf78b0f27ea0bacc8"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/swasher.json"
-hash = "c905d9435d00c9dd3ba986a212d636e50671152370777725d0d253a7e32dcf10"
+hash = "396dea791ed1ecb4e9f7eff15df5ac791d5e4ec304736684b1c34791e504af3e"
+
+[[files]]
+file = "kubejs/data/tconstruct/tinkering/tool_definitions/sword.json"
+hash = "0f24c104f3d3f303295c1a6a8b31cdf35747c5e1b26d7d4268caccab263cc6c4"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/vein_hammer.json"
-hash = "323d0b54f186b6160ae344ea201051c95dba19255d8650e3afe7bac36e44414e"
+hash = "b7f1513f7fb1de53fc223b4ed827d314153733aea3efd999d65d9bd4eba24e7d"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/tool_definitions/war_pick.json"
-hash = "fa934960b0911ab0cb422df78c5497c960b5f8bdf59526900217c9cf8f10d6df"
+hash = "f412350267f938cecc85bd3932216049c5932a7da89b3f89939366b3c0cd581d"
 
 [[files]]
 file = "kubejs/data/tconstruct/weapon_attributes/battlesign.json"
@@ -10190,11 +10206,11 @@ hash = "57c8899b0c2b6c266bc114548695279e406eb483e5877ea29bb74775737cc950"
 
 [[files]]
 file = "kubejs/data/tinker_rapier/tinkering/tool_definitions/estoc_tic.json"
-hash = "1216b0ee8d76247f631ef2a42ff1e6e9ba672aa10ff57f1c0ed1476ebe609aa5"
+hash = "77fdc3f69e2008dcad0e8c348712cbaab2549fa3c2c1ae16fe29b33a60c897cb"
 
 [[files]]
 file = "kubejs/data/tinker_rapier/tinkering/tool_definitions/rapier_tic.json"
-hash = "371ea125870de3d5fac48b1b5354fc8a23d64aa7f5da94f554f0556fa5ffa026"
+hash = "d32b9c26465405470bb33a687f7f28bb60e147b0a624ae689a68b1bbb6e6b21e"
 
 [[files]]
 file = "kubejs/data/tinker_rapier/weapon_attributes/estoc_tic.json"
@@ -10206,7 +10222,7 @@ hash = "9336d9c0b7fd69d271f3031eb645aaaf812648621acc5314f15bb53dae720d99"
 
 [[files]]
 file = "kubejs/data/tinkers_battle_spades/tinkering/tool_definitions/battle_spade.json"
-hash = "9fdb74de9f6243f6bc1e1e011b88cb2fc58e17420c238b1e9f342bc6339fdd89"
+hash = "c7e81753d255547f694f237276e3db7d90f2842ecf2a05e50895444024d44113"
 
 [[files]]
 file = "kubejs/data/tinkers_battle_spades/weapon_attributes/battle_spade.json"
@@ -10214,11 +10230,11 @@ hash = "16bef9378e3853a8350a41899a1a2f81ca995e94defdb90d8cfb292dd5cf75d4"
 
 [[files]]
 file = "kubejs/data/tinkers_katanas/tinkering/tool_definitions/fuma_shuriken.json"
-hash = "51286343ece5a06792dfd59352d643340316381acd0b7d3fe30b9f04ce5855f3"
+hash = "6423d1337f2709a95b351f6c6e0213e5ad857577eaf41a5d29a51aedc2b184a0"
 
 [[files]]
 file = "kubejs/data/tinkers_katanas/tinkering/tool_definitions/katana.json"
-hash = "28552b7d18f9547f29d5263ad9ec28cf1bfed974345efc1cbcaf3ae7289725bb"
+hash = "76dd91650f03e622dab16ef9cd73d137bd11a1c1a137488a633cde38deb2618a"
 
 [[files]]
 file = "kubejs/data/tinkers_katanas/weapon_attributes/fuma_shuriken.json"
@@ -10230,7 +10246,7 @@ hash = "1a8925e152bf5423e2e1cb84bc495680e2e700fb7f3080682f395404457855ed"
 
 [[files]]
 file = "kubejs/data/tinkers_khopesh/tinkering/tool_definitions/khopesh.json"
-hash = "3a33bab1c93d576394415d36b9d272591dc92574e7e4c866cd79ef22350e6ac3"
+hash = "02b75c2f7a24c002485d7758c0b3c74102c672f8319f75dd0e3cb5c745a53ed3"
 
 [[files]]
 file = "kubejs/data/tinkers_khopesh/weapon_attributes/khopesh.json"
@@ -10238,31 +10254,31 @@ hash = "4d5b0ef080343d3609c9e9676dfd8cd874c4a9f84e7b60848d7d281ae13e42c4"
 
 [[files]]
 file = "kubejs/data/tinkers_things/tinkering/tool_definitions/amethyst_staff.json"
-hash = "188554e7cd5f0062ceb73cb00dedbc6a232175547bd891907e60e976c6ad65d8"
+hash = "8616906b013358cf05f810d9d90b8396854dd8192fdaab1f39da5ed63c7b466f"
 
 [[files]]
 file = "kubejs/data/tinkers_things/tinkering/tool_definitions/blockram.json"
-hash = "5d7bb9e685ca142f418fb4a8c670823fd27b05eb2bfd79bdd69183eff9e6ba1c"
+hash = "dc0dd67b1eee2fa1efd668cdca3b9d34a70430d335cc158574c91673911eaedc"
 
 [[files]]
 file = "kubejs/data/tinkers_things/tinkering/tool_definitions/blowpipe.json"
-hash = "bfee9f60b8e5f92e23bc3fe04902403e53f2c85d6f5de3284a7cc6ab23a9613e"
+hash = "73e6796cb9ced4a72b57afe735b455f362d26cdfae50474ca56fe9868f3146d4"
 
 [[files]]
 file = "kubejs/data/tinkers_things/tinkering/tool_definitions/chisel.json"
-hash = "c30a9380820c46b9fefe9e8e9a22363bc046dd97d115796cc3aa65313addd40c"
+hash = "5636a17f6d84be208a84876d80c36b2ee1a20a9b294118131ca0151faf8dcedc"
 
 [[files]]
 file = "kubejs/data/tinkers_things/tinkering/tool_definitions/halberd.json"
-hash = "1a197b72db983e67cca41116559be4194ef7f050deb66839d4ab81dd3842d43f"
+hash = "c72f8364c34114d76b6539b3cdb930ce351f8d51d10b44534055a4f19ae39e5c"
 
 [[files]]
 file = "kubejs/data/tinkers_things/tinkering/tool_definitions/shortbow.json"
-hash = "a1e688c75e534f1a2492c0158835b395a58a7be5e3befd0ff9d5f839908ce68a"
+hash = "436452dd6efc0bad55102076e27c005a3c950a44fcf3dd6bccf17eae5ce9e071"
 
 [[files]]
 file = "kubejs/data/tinkers_things/tinkering/tool_definitions/shovel.json"
-hash = "21ee4700a9c5713c6f934bdecd1970d6c477d24e1156cc7fed7d9cf8b6bdbeee"
+hash = "3a8f347ff80188335e58ebbfce9876ceb5d2e107e6318a2980ecc54c88c42be4"
 
 [[files]]
 file = "kubejs/data/tinkers_things/weapon_attributes/amethyst_staff.json"
@@ -10294,15 +10310,15 @@ hash = "480fe53110b8575c0cfaf84370fed669cf016c77e1902120c402ec775046098b"
 
 [[files]]
 file = "kubejs/data/tinkersweaponry/tinkering/tool_definitions/greatsword.json"
-hash = "79f02bf1bf47ceddaecf309c39bfabc4880dbff1ef35dfc21a30a22764d8dbff"
+hash = "5fbbd9892e625737d3cf6cf6a68bf8e2b0d0d36f16b0690c0e712c94ef1103aa"
 
 [[files]]
 file = "kubejs/data/tinkersweaponry/tinkering/tool_definitions/lance.json"
-hash = "c217dd7cec6480731ce6622b33e69479e8b6e20cfd179203659f1bd170b8b58a"
+hash = "60db047bb8e9456312a1171871aec33c1514557c1e67d81759d655adf9ca33c8"
 
 [[files]]
 file = "kubejs/data/tinkersweaponry/tinkering/tool_definitions/pike.json"
-hash = "32faeffb0fb36685ea9cef3f9efbbf34545c758c78960fd561a10b0db01f4999"
+hash = "8f7a263bb835676a6ad8cdedb462ae87871332ebc45d46b17105dccc8ab4fee0"
 
 [[files]]
 file = "kubejs/data/tinkersweaponry/weapon_attributes/greatsword.json"
@@ -10947,7 +10963,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimension-drink-1.0.0.jar"
-hash = "40ae3c7e902fa938f8cbeda3a0953e08c4ae81f20f5080991e3285e01d57ba97"
+hash = "a93329e8f0e57d8ab1b77206f54185a759c0db59467fbed7383f192f2bb90438"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -11603,7 +11619,7 @@ hash = "dbf6115bfc7fefb182bc5296e1fdb83215d5be1cdf43af518291227ddd06d78b"
 
 [[files]]
 file = "mods/runtime-data-dumper-0.1.0.jar"
-hash = "684916fe1939cfe5e6e4ec5afab8269fd5e497dbd2f0d8689fbbc406b5e003f5"
+hash = "df461ae317a0f35926426981c6ebff5242931cdb9c8f40a990edc92b6ab99069"
 
 [[files]]
 file = "mods/satako-library.pw.toml"
@@ -11801,7 +11817,7 @@ metafile = true
 
 [[files]]
 file = "mods/tinkers-construct-affixes-1.0.0.jar"
-hash = "1093183288b88cdc6acaaad5c19ed9da28a4351f13eb74a5aa064dee5e0df8d2"
+hash = "734a6021c80e8b9e435d85c32513c5d8a61b957c095f92cd971b97c89a144293"
 
 [[files]]
 file = "mods/tinkers-construct.pw.toml"
@@ -11900,7 +11916,7 @@ metafile = true
 
 [[files]]
 file = "mods/village-walls-1.0.0.jar"
-hash = "ad2da7624231ec9093f22e82fa0e3607e6c3052c126e90a4becf59d205ff28e5"
+hash = "1f9db9dd2a6f963187cd1d5a7d1992cf8c0cc44ace5a2f4075d11c418e52303e"
 
 [[files]]
 file = "mods/wares.pw.toml"

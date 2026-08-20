@@ -40,7 +40,8 @@
     {
       "type": "tconstruct:multiply_stats",
       "multipliers": {
-        "tconstruct:velocity": 0.8
+        "tconstruct:velocity": 0.8,
+        "tconstruct:projectile_damage": 0.945
       }
     },
     {

@@ -11254,7 +11254,7 @@ metafile = true
 
 [[files]]
 file = "mods/heat-sync-0.1.0.jar"
-hash = "ba5650c1e50483aec6f45277194f7a5001f1a247b0e1095cc79049a977fb6bdc"
+hash = "adfac89a837bb9ff7d28e90de758c658a41c761ec1aa623179c76846089e8d0a"
 
 [[files]]
 file = "mods/hexerei.pw.toml"

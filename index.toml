@@ -5513,10 +5513,6 @@ file = "config/fancymenu/user_variables.db"
 hash = "3d7d4cda73d6bde134a568ccbe4e8d2e7fbe701570012b71fa45acdb2258c823"
 
 [[files]]
-file = "config/fiahi-common.toml"
-hash = "50a50ca266c64bf4f44b35b04f97eee45d950048bb3b988356efa02cb5317904"
-
-[[files]]
 file = "config/flash_flood_config.json"
 hash = "7404819a88566283053656c89b2f699a643327f24967d3acb0a89f15c123d216"
 
@@ -5594,7 +5590,7 @@ hash = "62e01a2f6655dc45fc0342bd292cfad21225002a7336048989acc22b47ee0cf1"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/homesteading.snbt"
-hash = "ef5c32316c92b2c97e52eb6f01406b2f2560f6301ffb57793eb4cfa32ad5888e"
+hash = "ef752a6dc4c5dcbbb6811a5305a1f80681e8de89939e2e1c2d7fed0e9aa8a0cc"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/landmarks.snbt"
@@ -7834,7 +7830,7 @@ hash = "ce52637ca9771632ef3bf89a92095039f353397dab33df25bdad142e4cb1ea75"
 
 [[files]]
 file = "kubejs/assets/heat_sync/lang/en_us.json"
-hash = "e8ae934f158c00ee5cd18d05173d78327e426b41c690c4e1d37031e4a97f573c"
+hash = "317eebbeaaeb1ceb8b63e5619e9c86fcfaaf9754875afe9fb48a0bf10f43fea2"
 
 [[files]]
 file = "kubejs/assets/kubejs/blockstates/airtight_machine_block.json"
@@ -8798,7 +8794,7 @@ hash = "d3d94743df997addae68dab71e729e44f2eb37e2d740823d3e537d8bab482408"
 
 [[files]]
 file = "kubejs/config/food_effect_progression_candidates.json"
-hash = "29b8a33b287b827e711bc0a90c3f5853ffa829336f3ea598761868112103047f"
+hash = "7eab0c5021ff4ad07d8d22ebb8d6058da94edc304aa69d69085638ab3610416c"
 
 [[files]]
 file = "kubejs/config/food_effect_source_catalog.json"
@@ -10787,7 +10783,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "662558d0966f5d1e2cd0b5a9efe83a68df92ca2ed1a84d518c3e5d6d5958eb8f"
+hash = "692d45e5efef73863c3eb9811663979fedb3f5afc30ee8199193a60a6d81aebe"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"
@@ -11172,11 +11168,6 @@ hash = "9e2175476f720e0b2d21b28e91873cecf5555648e2137310e1b7cf98f6b98ab8"
 metafile = true
 
 [[files]]
-file = "mods/freeze-it-and-heat-it.pw.toml"
-hash = "9e6d7861bab72f7d93ef04227002bc99ccc74375bb232f97cd540f948ec51a64"
-metafile = true
-
-[[files]]
 file = "mods/ftb-backups-2.pw.toml"
 hash = "b3693e7a5647d4e28fc30ad3e85193c668a98a410dc3f425f19561cfea68957f"
 metafile = true
@@ -11263,7 +11254,7 @@ metafile = true
 
 [[files]]
 file = "mods/heat-sync-0.1.0.jar"
-hash = "143a9ba0c339b70d532789ccb2894927ded156b1fcbc6cf85db2a91298cdc09b"
+hash = "1dbac10045fbfe0318dff186e5999322e8da1b4422e9c9a906ca0493f695c401"
 
 [[files]]
 file = "mods/hexerei.pw.toml"
@@ -11357,7 +11348,7 @@ metafile = true
 
 [[files]]
 file = "mods/latent-chemlib-0.1.0.jar"
-hash = "58100266fcdd4ad4dc8818b9bbca4129b42a0ad42238a7477ef6a4e57f3ede63"
+hash = "577b44e3d6958f31d1291c250c6f93ef0040d982690405917eb4fc1ce7f486b6"
 
 [[files]]
 file = "mods/lithostitched.pw.toml"

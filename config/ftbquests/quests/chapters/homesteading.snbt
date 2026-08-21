@@ -27,14 +27,14 @@
 			y: 0d
 		}
 		{
-			description: ["Change edible food's temperature and read its tooltip. Nearby active heat or an inventory directly touching a Heat Sync source thaws it; continued heating can carry it through Fresh into rot."]
+			description: ["Change edible food's temperature and read its tooltip. Cold Sweat world temperature cools it, icebox storage targets -5 C, and boiler storage targets 60 C. Food freezes at its profile threshold; spoilage remains irreversible."]
 			icon: "minecraft:snowball"
 			id: "7FA9C44A0F731707"
 			rewards: [{ count: 1, id: "34A7A2C14F051969", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 			{
 				id: "7CD1503B63A54453"
-				predicate: "fiahi_temperature_changed"
+				predicate: "food_temperature_changed"
 				type: "better_content_fixes:stack_predicate"
 			}
 			]
@@ -140,25 +140,6 @@
 			title: "Storage"
 			x: 10d
 			y: -2d
-		}
-		{
-			dependencies: ["362B669D89D67FDF"]
-			description: ["Load a Food Pouch with at least two distinct foods. Its contents share thermal mass: nearby active heat or direct Heat Sync contact thaws them together, but continued heating can spoil them."]
-			icon: "fiahi:food_pouch"
-			id: "7EB9E1A6C63979B4"
-			rewards: [{ count: 2, id: "772BEE68114CC4A3", item: "createdeco:copper_coin", type: "item" }]
-			shape: "rsquare"
-			size: 1.2d
-			tasks: [
-			{
-				id: "145FBE9492455C96"
-				predicate: "food_pouch_loaded"
-				type: "better_content_fixes:stack_predicate"
-			}
-			]
-			title: "Food Pouch"
-			x: 5d
-			y: -4d
 		}
 		{
 			description: ["Place a Rain Collector under open sky and let rain charge it. It holds four uses."]

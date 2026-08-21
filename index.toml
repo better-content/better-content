@@ -11495,7 +11495,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillager-campaigns-0.2.1.jar"
-hash = "54c5a8a306f29fba224db08a655a53dd4f4d2590572ac377cd1c9db595ff100"
+hash = "54c5a8a306f29f1ba224db08a655a53dd4f4d2590572ac377cd1c9db595ff100"
 
 [[files]]
 file = "mods/ping-wheel.pw.toml"

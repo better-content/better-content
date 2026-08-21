@@ -5318,7 +5318,7 @@ hash = "cdeaff4f538c987a9926b1eaa7cf900133797fc30ce2fc913cf66d982e0239d8"
 
 [[files]]
 file = "config/better_content_fixes-common.toml"
-hash = "4b012aac751890c6b520018c17157aaae1340b715c63e1b5a1fb527585f1ce2c"
+hash = "3c4bc600d936bdd39814c9187bc1e82795e9f6450158c19a4f470f1f24e740cf"
 
 [[files]]
 file = "config/better_content_fixes/quest_reveal.json"
@@ -10959,7 +10959,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimension-drink-1.0.0.jar"
-hash = "10120ae524595af13b7f1171944e8a582d8d56787feaf3877f83140433f08624"
+hash = "a93329e8f0e57d8ab1b77206f54185a759c0db59467fbed7383f192f2bb90438"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -11495,7 +11495,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillager-campaigns-0.2.1.jar"
-hash = "d0720452f696add6e689c44564c25e6d72126e01f248ed6a7649c39a3ee45cee"
+hash = "54c5a8a306f29fba224db08a655a53dd4f4d2590572ac377cd1c9db595ff100"
 
 [[files]]
 file = "mods/ping-wheel.pw.toml"
@@ -11509,7 +11509,7 @@ metafile = true
 
 [[files]]
 file = "mods/player-traces-0.1.0.jar"
-hash = "71b580839044f958ef290a0eac684cfd2b8b1cfff36230eb40f795f8ce46c2c4"
+hash = "ad78d0a2d0eae31164e755a7db234525cce22269855d1b2ce2430dc7d0ac11e2"
 
 [[files]]
 file = "mods/playeranimator.pw.toml"
@@ -11808,7 +11808,7 @@ metafile = true
 
 [[files]]
 file = "mods/tinkers-construct-affixes-1.0.0.jar"
-hash = "22c9b823d311b708000619d0e2e5b17377e53a9e0c65e67fde78b02d825fc6f4"
+hash = "734a6021c80e8b9e435d85c32513c5d8a61b957c095f92cd971b97c89a144293"
 
 [[files]]
 file = "mods/tinkers-construct.pw.toml"
@@ -11907,7 +11907,7 @@ metafile = true
 
 [[files]]
 file = "mods/village-walls-1.0.0.jar"
-hash = "04658595c61312e1e27c7ab444471603107a49f6f9c58ac02bfb2ced4258aee7"
+hash = "1f9db9dd2a6f963187cd1d5a7d1992cf8c0cc44ace5a2f4075d11c418e52303e"
 
 [[files]]
 file = "mods/wares.pw.toml"

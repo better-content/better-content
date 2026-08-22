@@ -79,6 +79,15 @@
     {
       "type": "tconstruct:fixed_material_name",
       "index": 0
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "epicfighttinkercompat:bc_axe"
+        }
+      ]
     }
   ]
 }

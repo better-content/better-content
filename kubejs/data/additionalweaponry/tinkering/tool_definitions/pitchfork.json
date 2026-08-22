@@ -72,6 +72,15 @@
           "level": 1
         }
       ]
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "epicfighttinkercompat:bc_spear"
+        }
+      ]
     }
   ]
 }

@@ -36,7 +36,9 @@
     {
       "type": "tconstruct:multiply_stats",
       "multipliers": {
-        "tconstruct:attack_damage": 1.085471
+        "tconstruct:attack_damage": 1.085471,
+        "epicfighttinkercompat:impact": 0.2,
+        "epicfighttinkercompat:armor_negation": 0.5
       }
     },
     {
@@ -81,6 +83,15 @@
     {
       "type": "tconstruct:fixed_material_name",
       "index": 0
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "epicfighttinkercompat:bc_pickaxe"
+        }
+      ]
     }
   ]
 }

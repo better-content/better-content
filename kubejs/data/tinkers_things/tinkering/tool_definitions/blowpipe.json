@@ -42,6 +42,15 @@
           "level": 2
         }
       ]
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "epicfighttinkercompat:bc_crossbow"
+        }
+      ]
     }
   ]
 }

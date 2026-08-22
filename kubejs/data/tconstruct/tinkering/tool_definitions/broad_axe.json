@@ -41,7 +41,8 @@
       "type": "tconstruct:base_stats",
       "stats": {
         "tconstruct:attack_damage": 3,
-        "tconstruct:attack_speed": 0.6
+        "tconstruct:attack_speed": 0.6,
+        "epicfighttinkercompat:armor_negation": 25.0
       }
     },
     {
@@ -49,7 +50,8 @@
       "multipliers": {
         "tconstruct:attack_damage": 2.52,
         "tconstruct:durability": 4.25,
-        "tconstruct:mining_speed": 0.3
+        "tconstruct:mining_speed": 0.3,
+        "epicfighttinkercompat:impact": 0.5
       }
     },
     {
@@ -110,6 +112,15 @@
     {
       "type": "tconstruct:melee_particle",
       "particle": "tconstruct:axe_attack"
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "epicfighttinkercompat:bc_axe"
+        }
+      ]
     }
   ]
 }

@@ -50,6 +50,15 @@
         "upgrades": 3,
         "abilities": 1
       }
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "epicfighttinkercompat:bc_bow"
+        }
+      ]
     }
   ]
 }

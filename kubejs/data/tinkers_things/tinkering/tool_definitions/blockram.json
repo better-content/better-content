@@ -75,6 +75,15 @@
     },
     {
       "type": "tconstruct:attack_interaction"
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "epicfighttinkercompat:bc_greatsword"
+        }
+      ]
     }
   ]
 }

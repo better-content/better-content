@@ -93,6 +93,15 @@
     {
       "type": "tconstruct:sweep_melee",
       "range": 2.0
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "epicfighttinkercompat:bc_spear"
+        }
+      ]
     }
   ]
 }

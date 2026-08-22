@@ -27,7 +27,8 @@
         "tconstruct:attack_damage": 3,
         "tconstruct:attack_speed": 2.0,
         "tconstruct:block_amount": 10.0,
-        "tconstruct:use_item_speed": 1.0
+        "tconstruct:use_item_speed": 1.0,
+        "epicfighttinkercompat:armor_negation": 5.0
       }
     },
     {
@@ -85,6 +86,15 @@
     {
       "type": "tconstruct:fixed_material_name",
       "index": 0
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "epicfighttinkercompat:bc_dagger"
+        }
+      ]
     }
   ]
 }

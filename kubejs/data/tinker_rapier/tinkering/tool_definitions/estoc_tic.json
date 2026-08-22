@@ -78,6 +78,15 @@
       ],
       "modifier": 7.5,
       "predicate_type": "mantle:set"
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "epicfighttinkercompat:bc_longsword"
+        }
+      ]
     }
   ]
 }

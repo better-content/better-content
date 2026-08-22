@@ -1,9 +1,0 @@
-[combatRoll]
-	#Rolls when the same configured movement direction is tapped twice.
-	directionalDoubleTapEnabled = true
-	#Maximum inclusive number of client ticks between the first and second directional press.
-	#Range: 2 ~ 20
-	doubleTapWindowTicks = 7
-	#Disables vanilla forward double-tap sprint while directional double-tap rolling is enabled.
-	#The configured sprint key continues to work normally.
-	replaceForwardDoubleTapSprint = true

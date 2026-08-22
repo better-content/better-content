@@ -59,6 +59,15 @@
     },
     {
       "type": "tconstruct:dual_option_interaction"
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "epicfighttinkercompat:bc_sword"
+        }
+      ]
     }
   ]
 }

@@ -51,7 +51,9 @@
       "multipliers": {
         "tconstruct:attack_damage": 1.76,
         "tconstruct:durability": 1.25,
-        "tconstruct:mining_speed": 1.1
+        "tconstruct:mining_speed": 1.1,
+        "epicfighttinkercompat:impact": 0.2,
+        "epicfighttinkercompat:armor_negation": 0.5
       }
     },
     {
@@ -94,6 +96,15 @@
     {
       "type": "tconstruct:vein_aoe",
       "max_distance": 0
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "epicfighttinkercompat:bc_pickaxe"
+        }
+      ]
     }
   ]
 }

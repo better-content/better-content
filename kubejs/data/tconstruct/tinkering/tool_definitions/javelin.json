@@ -36,13 +36,15 @@
       "stats": {
         "tconstruct:attack_damage": 3,
         "tconstruct:attack_speed": 1.1,
-        "tconstruct:block_amount": 10.0
+        "tconstruct:block_amount": 10.0,
+        "epicfighttinkercompat:max_strikes": 3.0
       }
     },
     {
       "type": "tconstruct:multiply_stats",
       "multipliers": {
-        "tconstruct:attack_damage": 1.374545
+        "tconstruct:attack_damage": 1.374545,
+        "epicfighttinkercompat:impact": 0.7
       }
     },
     {
@@ -58,6 +60,15 @@
         {
           "level": 1,
           "name": "tconstruct:throwing"
+        }
+      ]
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "epicfighttinkercompat:bc_trident"
         }
       ]
     }

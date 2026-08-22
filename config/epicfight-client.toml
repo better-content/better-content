@@ -1,0 +1,5 @@
+[ingame]
+camera_auto_switch = false
+
+[ingame.camera]
+camera_mode = "ALWAYS"

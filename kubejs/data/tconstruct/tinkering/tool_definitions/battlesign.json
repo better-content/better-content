@@ -35,7 +35,8 @@
         "tconstruct:attack_damage": 3,
         "tconstruct:attack_speed": 1.2,
         "tconstruct:block_amount": 50.0,
-        "tconstruct:block_angle": 120.0
+        "tconstruct:block_angle": 120.0,
+        "epicfighttinkercompat:max_strikes": 0.5
       }
     },
     {
@@ -71,6 +72,15 @@
     {
       "type": "tconstruct:melee_particle",
       "particle": "tconstruct:bonk"
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "epicfighttinkercompat:bc_sword"
+        }
+      ]
     }
   ]
 }

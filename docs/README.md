@@ -9,7 +9,7 @@ This directory is intentionally limited to eight living Markdown files. The repo
 - `content_systems.md`: recipes, materials, chemistry, casings, loot, trades, quests, and content surfaces.
 - `questbook_standards.md`: player-facing quest purpose, graph layout, dependencies, tasks, icons, copy, rewards, visibility, and review policy.
 - `realistic_ore_processing.md`: theory, invariants, yield semantics, authoring rules, and maintenance contract for geological deposit processing.
-- `weapon_balance_philosophy.md`: cross-system weapon balance doctrine, measurement rules, exceptions, and the current TCon/Better Combat implementation.
+- `weapon_balance_philosophy.md`: cross-system weapon balance doctrine, measurement rules, exceptions, and the current TCon/Epic Fight implementation.
 - `performance_and_mods.md`: memory findings, mod prune decisions, C2ME/DH/LC/TFTH notes, and active/inactive mod interpretation.
 - `custom-mod-workspace.md`: canonical custom-mod repositories, identities, artifacts, validation, and deployment workflow.
 

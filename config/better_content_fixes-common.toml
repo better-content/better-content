@@ -69,6 +69,20 @@
 	#A value of 6 denies the surface block and the six-block band beneath it while leaving deeper caves active.
 	#Range: 0 ~ 64
 	naturalSurfaceDepth = 6
+	#Scales Overworld natural monster spawning from the candidate spawn block's Y coordinate.
+	#The controller runs extra vanilla natural-spawn passes and never uses player Y, spawners, structures, events, summons, commands, or chunk-generation spawning.
+	verticalNaturalSpawnScaling = true
+	#Blocks above sea level that retain the minimum natural-monster spawn multiplier.
+	#With the default 128, the minimum band extends from the Overworld sea level through Y 191.
+	#Range: 0 ~ 512
+	verticalSpawnUpperMinimumRange = 128
+	#Maximum Overworld natural-monster spawn multiplier at the lower and upper build limits.
+	#The minimum multiplier is always 1; the default 8 runs eight natural-spawn passes with a Y-derived acceptance chance.
+	#Range: 1 ~ 16
+	verticalSpawnMaxMultiplier = 8
+	#Denies only natural and chunk-generation spawning of minecraft:zombie and minecraft:skeleton in the Overworld.
+	#Spawner, structure, event, summon, command, scripted insertion, and variant entity types remain available.
+	blockVanillaZombiesAndSkeletons = true
 
 [structureGenerationImprover]
 	#Runs Hyle's stone replacer again after Structure Generation Improver conforms structure terrain.
@@ -102,4 +116,4 @@
 	#Allows vanilla hoppers below Sophisticated Storage barrels and limited barrels to extract items.
 	#Extraction uses the barrel's input/output inventory handler, preserving storage filters and slot rules.
 	#Other Sophisticated Storage blocks and hopper insertion behavior are unchanged.
-	barrelHopperExtraction = true
+	barrelHopperExtraction = false

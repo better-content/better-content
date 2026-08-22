@@ -84,6 +84,15 @@
     {
       "type": "tconstruct:circle_melee",
       "diameter": 2.0
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "epicfighttinkercompat:bc_greatsword"
+        }
+      ]
     }
   ]
 }

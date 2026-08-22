@@ -48,7 +48,10 @@
       "stats": {
         "tconstruct:attack_damage": 3,
         "tconstruct:attack_speed": 1.0,
-        "tconstruct:block_amount": 10.0
+        "tconstruct:block_amount": 10.0,
+        "epicfighttinkercompat:impact": 1.0,
+        "epicfighttinkercompat:max_strikes": 4.0,
+        "epicfighttinkercompat:armor_negation": 15.0
       }
     },
     {
@@ -101,6 +104,15 @@
     {
       "type": "tconstruct:sweep_melee",
       "range": 2.0
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "epicfighttinkercompat:bc_greatsword"
+        }
+      ]
     }
   ]
 }

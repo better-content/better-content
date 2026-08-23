@@ -103,15 +103,6 @@
     {
       "type": "tconstruct:melee_particle",
       "particle": "tconstruct:hammer_attack"
-    },
-    {
-      "type": "tconstruct:traits",
-      "traits": [
-        {
-          "level": 1,
-          "name": "epicfighttinkercompat:bc_greatsword"
-        }
-      ]
     }
   ]
 }

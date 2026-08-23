@@ -96,15 +96,6 @@
     {
       "type": "tconstruct:vein_aoe",
       "max_distance": 0
-    },
-    {
-      "type": "tconstruct:traits",
-      "traits": [
-        {
-          "level": 1,
-          "name": "epicfighttinkercompat:bc_pickaxe"
-        }
-      ]
     }
   ]
 }

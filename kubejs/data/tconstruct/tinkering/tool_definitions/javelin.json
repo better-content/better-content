@@ -62,15 +62,6 @@
           "name": "tconstruct:throwing"
         }
       ]
-    },
-    {
-      "type": "tconstruct:traits",
-      "traits": [
-        {
-          "level": 1,
-          "name": "epicfighttinkercompat:bc_trident"
-        }
-      ]
     }
   ]
 }

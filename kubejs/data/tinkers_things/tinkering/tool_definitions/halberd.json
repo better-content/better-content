@@ -82,15 +82,6 @@
     {
       "type": "tconstruct:melee_particle",
       "particle": "tconstruct:axe_attack"
-    },
-    {
-      "type": "tconstruct:traits",
-      "traits": [
-        {
-          "level": 1,
-          "name": "epicfighttinkercompat:bc_spear"
-        }
-      ]
     }
   ]
 }

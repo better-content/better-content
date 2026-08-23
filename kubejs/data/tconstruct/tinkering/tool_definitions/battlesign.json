@@ -72,15 +72,6 @@
     {
       "type": "tconstruct:melee_particle",
       "particle": "tconstruct:bonk"
-    },
-    {
-      "type": "tconstruct:traits",
-      "traits": [
-        {
-          "level": 1,
-          "name": "epicfighttinkercompat:bc_sword"
-        }
-      ]
     }
   ]
 }

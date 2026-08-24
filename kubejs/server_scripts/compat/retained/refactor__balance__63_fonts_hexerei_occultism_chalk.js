@@ -169,6 +169,13 @@ ServerEvents.recipes(function (event) {
         'occultism:storage_remote',
         'occultism:satchel'
     ].forEach(function (output) { event.remove({ output: output }) })
+    ;[
+        'occultism:crafting/storage_controller',
+        'occultism:crafting/storage_remote_inert',
+        'occultism:ritual/craft_storage_controller_base',
+        'occultism:ritual/craft_storage_remote',
+        'occultism:ritual/craft_satchel'
+    ].forEach(function (id) { event.remove({ id: id }) })
 
     // The disabled miner family cannot bypass material production, but the
     // remaining high Occultism ritual still stays on its own Font spine.

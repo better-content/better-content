@@ -4490,103 +4490,103 @@ hash = "1fb01fb706e8b4e12726a4306b802cc87f1091b30c7b9c025bbe2bfb9118dc39"
 
 [[files]]
 file = "config/adpother/Pollutants/acetylene.cfg"
-hash = "4572a0bedc04c3d0f5aa09c805a8c8d18a8f8ce77b0e251653079911962a5817"
+hash = "ea09ea2fef600b76adef4cbe75d4df889ba35ba0da692ac2593f92af89c2bb42"
 
 [[files]]
 file = "config/adpother/Pollutants/ammonia.cfg"
-hash = "2d06c3e5e7e43b0ee06a3f95d4d7cae6cdd35151f563ef525a16f25063a5db92"
+hash = "5ba9e693451aed332ca312d043ee097d037a9992d7444ca7eb64891db00cc53e"
 
 [[files]]
 file = "config/adpother/Pollutants/ammonium.cfg"
-hash = "a3357bae81ef5e6d19217b3e408f5c5f10648bcc7210194cdb9487a1887f9149"
+hash = "e7da210f2e82d5891a8dc002106a60087bd71f9e67da537e401b46eaae872aed"
 
 [[files]]
 file = "config/adpother/Pollutants/argon.cfg"
-hash = "39b61ec3eb07441e46ca1b24bd81d13a9650b99588563eafd7153f0294f65452"
+hash = "cc0edf8b7f3df598112a0c8280f8c2ca184e76e2972938800290086d0ff9a697"
 
 [[files]]
 file = "config/adpother/Pollutants/butane.cfg"
-hash = "d88dd58c01b67fc5c6ab57cc8f4a68cc141085b9cdd1fb474ef24a70e767d434"
+hash = "288584880c77f6fb9fa6b2caa7b70e144b8166c7bc834b0f56aa27909910ea97"
 
 [[files]]
 file = "config/adpother/Pollutants/carbon.cfg"
-hash = "9d65e6981b8fce58256c0c1fa223ec7c45fb015cf7a5ca88147514ec98512cce"
+hash = "88c53c421b434b8e7d7919cb12c9e9918e9e391743072f374032e5d468e887e5"
 
 [[files]]
 file = "config/adpother/Pollutants/carbon_dioxide.cfg"
-hash = "4f5cc1dd7d9b4c79e64a575fdd886161f73d1f6078d2ae0573cb8a9d3a940e15"
+hash = "687a497d23839bdba1d421d4f1fb7774f9200cf454b086a5e66052beca61e131"
 
 [[files]]
 file = "config/adpother/Pollutants/carbon_monoxide.cfg"
-hash = "c9d38996f5ac156914911bf180ea7f204ec079ea2a8054d00f8c1bf5c879e4a4"
+hash = "05145da610f7959d53cc9808734fb22670954d549179eca7bf1001e3e9f22e88"
 
 [[files]]
 file = "config/adpother/Pollutants/chlorine.cfg"
-hash = "ae1d53cc2c5b4f3e1f57bacef5142ea307afc40a0d4e1ed32d4418932b5f70b4"
+hash = "50a37fdb1fdbbe3a2398f8c880bf6064aa90db8ee2d9426ccd59c1410f26e560"
 
 [[files]]
 file = "config/adpother/Pollutants/dust.cfg"
-hash = "214b543f19612e5737d835973ab337f185d41f3459c606966f05eb5ca0bfafb6"
+hash = "4119c6d58b6ee1f594a2a89e1bcfe9a8b2db48764046760faa092ae051cbeb76"
 
 [[files]]
 file = "config/adpother/Pollutants/ethane.cfg"
-hash = "95cfcf04945f7b4ea6d1c439292f66b357e857e9019d087bb36ba6fa6046ddb2"
+hash = "8640ff66b0e9cf4da89de8486ae045f8068566c59431531015d134aa57633d60"
 
 [[files]]
 file = "config/adpother/Pollutants/ethylene.cfg"
-hash = "e6ec87eee98fc875d6d9ee45280b558b14891cfdf591e92888460094c4bdf3a2"
+hash = "fadc9baa9dc65cfaae743dc323e2e80db4db56bf82476d64444c2dfe17e293af"
 
 [[files]]
 file = "config/adpother/Pollutants/fluorine.cfg"
-hash = "a5bb8b53a1d21a6f4535d45da5d03598b4a6125baf16b64f65136ad5b79d2517"
+hash = "2b67c6835367a07142d1aa57df56e6d571940cc46c4656f0817c92cbd87ba17f"
 
 [[files]]
 file = "config/adpother/Pollutants/helium.cfg"
-hash = "1f198e77199a59cf810e30a539c06a94367888a0922e175ca0a5efaef918369e"
+hash = "5af0cb101ad68fc9f88b9a8d3b2ee0d781a04e0347dfd6d63b94df5e428ff3bd"
 
 [[files]]
 file = "config/adpother/Pollutants/hydrogen.cfg"
-hash = "b320a7d5f79274b99acb428848a0ad478762e433a6c425f65d89dfcd6f434e8f"
+hash = "b0fda9e8013ec2e53788e4350385feaf200f0fcabf0c1450aee5951030e6c184"
 
 [[files]]
 file = "config/adpother/Pollutants/hydrogen_sulfide.cfg"
-hash = "c0cd3c70539ea09fb118cb58e3635c2f63409429b1f942fccc7c0c86f647ade9"
+hash = "6cfd3f6bdc65999bc6fefc88e383a7d96bc10e55229a3e46b4589c81fc5131f8"
 
 [[files]]
 file = "config/adpother/Pollutants/krypton.cfg"
-hash = "96fac26e806b1d20582e1f701cf26c11fb95c4ac4bafb71a5f035b4099c8bfa3"
+hash = "d825e1b7923c3b64a5a3d757045797dc992d8e881e07af0deaf3f6bb12e1dd2b"
 
 [[files]]
 file = "config/adpother/Pollutants/methane.cfg"
-hash = "2b04ec6365a405a03ed4c3d094f78d92ee62fb567ac8875a6a3efa27dba0737b"
+hash = "f11611870e3b9a771bbc027744afc16dcc93d4ad615fbfa5fd8c949afe47eb92"
 
 [[files]]
 file = "config/adpother/Pollutants/neon.cfg"
-hash = "23de103b491d558a8136ea958a53f34df9d41f44fc82c42aae228b941734ec67"
+hash = "fc366863e40dede3b1e808b06d78106507a8c60863a949b27da81ddf1c469010"
 
 [[files]]
 file = "config/adpother/Pollutants/nitric_oxide.cfg"
-hash = "949cdd8227c4534723ba461fd773d7038ea042b4788f4e07c76cb4eb2b8d702b"
+hash = "ae573728db3becfa0454dc5d73ad001668081f1c4b607b6fc0cc7eb5ef5a52cb"
 
 [[files]]
 file = "config/adpother/Pollutants/nitrogen.cfg"
-hash = "98da6e4a4a9850cca85658cf508274ea010d414cfec0a52b3dbab34511bb7636"
+hash = "b4d9c1b604891a742472e1270d00ad3974a6544f1e24513c46d7b1d225713b3d"
 
 [[files]]
 file = "config/adpother/Pollutants/nitrogen_dioxide.cfg"
-hash = "a9757acb2a7e4e629c5ee1ce56bc33d647588a764457b8d24032c0646fcb9bd7"
+hash = "25fabf62046849661a21de3d579870440a2aaf2d184e95144edb949e89332984"
 
 [[files]]
 file = "config/adpother/Pollutants/oxygen.cfg"
-hash = "bd880442468536e2f38aace42475fa9ac8fde8637a2960715dbe51e305f6828a"
+hash = "f61beed81e81089016bca075f4f9582bad5557aa96213b7b71bf74ac48e94278"
 
 [[files]]
 file = "config/adpother/Pollutants/propane.cfg"
-hash = "78e70a88b2b96a076803b702748e1352f14faebd652965c8e06540920d825739"
+hash = "47083c6d14a47872387920f782d297c6388aefce27dbb1a1a26d56e5bf6f4682"
 
 [[files]]
 file = "config/adpother/Pollutants/radon.cfg"
-hash = "8bc365c5341e034c3834cac06423849601d1c49863b8e9c0149e4a4074706c51"
+hash = "0996738e422fd2ce327fb962b8f1f2e176ad93a68ddafebe19a8ad1c33a5b4f5"
 
 [[files]]
 file = "config/adpother/Pollutants/sulfur.cfg"
@@ -4594,11 +4594,11 @@ hash = "e5c114db3ce66d0bb06a144ae77d753b67a18ee34421dfd9feed6c0f811d70c7"
 
 [[files]]
 file = "config/adpother/Pollutants/sulfur_dioxide.cfg"
-hash = "150088d5e0abc882022a368af2134522352526bb7f61fd77eb731a65e1d2c7d0"
+hash = "45aa178854af160431e301761da8610e16c3184e72a7e17c50680c60a77e91b3"
 
 [[files]]
 file = "config/adpother/Pollutants/xenon.cfg"
-hash = "1fca821d8338702bfef66f46920526c3e44b33e4ca63e4a9cc627ede4271d35f"
+hash = "9c8e94027ee096b4319ac6b94f0665409c5c371674827b97bd1eee100da818e2"
 
 [[files]]
 file = "config/adpother/Respirators/adpother$diamond_respirator.cfg"
@@ -5442,7 +5442,11 @@ hash = "ceb5b3624c3269bef037b2914da8ab0d1c368abdd466156292a5d82db8803b0e"
 
 [[files]]
 file = "config/epicfight-client.toml"
-hash = "a20b4cd0b3d4314d23299904103c889aa0c996beaee85ea99f5b94c7a9701a72"
+hash = "f266ed3a6a96fed2e1accd3d133ddb34d6c632fbadb116c27d91d00fb64afe41"
+
+[[files]]
+file = "config/epicfight-common.toml"
+hash = "81dfcfcf1fcd4dd7da69bf5fa57c90f958532b7fa9fafa33577d838c75bb08a7"
 
 [[files]]
 file = "config/explosionoverhaul/DestroyingBlacklist.json"
@@ -5542,7 +5546,7 @@ hash = "6a3c63efc7a0d0ec583300fe8bba45e8486ee79d534c336b97650a468a146428"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/blood_and_command.snbt"
-hash = "e6b24f4026a41520f1315d50d0ddef7f78d5323d1498d398db524b3a8d335773"
+hash = "4f9f78f83984a77872adf1b5757579fa57ba91c54b0c8999e49e4f25b94484fd"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/completionist_armour_sets.snbt"
@@ -5578,7 +5582,7 @@ hash = "34015beae09a52f230eebcdecae60fc1a25032b300e79e348fe30eb2d2a38261"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/factory_and_transport.snbt"
-hash = "abfb8bb9a132bcf2af59437212053c3c168955701ec889d7faabfffc6363030f"
+hash = "ecaa982c8561a399b57d93bbdb2511fed06a7363170e8af1767d3aff85c6ca3a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/fonts_and_pacts.snbt"
@@ -5942,7 +5946,7 @@ hash = "1bdd3bb4de79aa5555256659996afac8552944b136e1740ecdcc3c507770feb6"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_glass_pane.toml"
-hash = "de10b1ba769e4ba17c7d5ab598e64643fa108406b97d808cd7a482333fbfbdf8"
+hash = "928d9a4f17b45d4c8e2054c25cceddd9354d399b98f5c1f564bf519a50689f23"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_refined_ore.toml"
@@ -6010,7 +6014,7 @@ hash = "53fac32b3586bf762e4f3cbfa8aac827d58aa4386efd8a016c495e5696838518"
 
 [[files]]
 file = "config/rbp/block_definitions/miscellaneous.toml"
-hash = "f237001955cf1848c9b957a65d1d9448ce3d875ef52350aa53901fd9154a9091"
+hash = "2e6e0e9fb2279e90ed4638d65264936ed56dac14e79cc54c113f9cfdf190336e"
 
 [[files]]
 file = "config/rbp/block_definitions/mud_construction.toml"
@@ -7807,6 +7811,10 @@ hash = "49d3107a10e4b113fc0e6fc9e909dac0e7d4f501fa48093d9a784294fdf86da9"
 [[files]]
 file = "defaultconfigs/sleepingoverhaul-server.toml"
 hash = "98740b4fb7ca10251df66812cbac54fd7b98d4e435607e5b7bc3390584d8643a"
+
+[[files]]
+file = "defaultconfigs/solcarrot-server.toml"
+hash = "3a6e6458ee64dfa8537da2e71ad1b0fb8111e1a30ef87d70f236f1d608167db0"
 
 [[files]]
 file = "defaultconfigs/starcatcher-server.toml"
@@ -10350,7 +10358,7 @@ hash = "ca72773b3c6465a06400ea2e17b5c0ff04df780d335a7610b413b70d58a201bf"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__63_fonts_hexerei_occultism_chalk.js"
-hash = "475580885ff5b1c9429740cf2c32196042a286dfddc7cf96da61d4df04f32a69"
+hash = "759e0b40b98f4f34486bff101c81735b4268866d033f11ff580b778f2928e1ab"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__80_magic_progression_blood_slate_gates.js"
@@ -10438,7 +10446,11 @@ hash = "b2f89be0302c58e083cd9002f30c9cd707e549c5c1ded80b43c826a1351d2233"
 
 [[files]]
 file = "kubejs/server_scripts/policy/global_loot_progression.js"
-hash = "a7b898ab232113721da8db095f27ad6796ee711c64bc713cf4e3eb9e4c28964b"
+hash = "e6250336c60548c816e1bfc328b5d9944009f3968053ba7e8af1cd4a7b4d5934"
+
+[[files]]
+file = "kubejs/server_scripts/policy/pretty_pipes_progression.js"
+hash = "3f13160137ec063d1433ecbb4bd2f69f0e9653afcbc464c8f93cd1f2c1003836"
 
 [[files]]
 file = "kubejs/server_scripts/policy/removed_items.js"
@@ -10478,7 +10490,7 @@ hash = "6c06186d2a95c6748196a57ec086c7ad8a837cd9207d22eb6ab869516d090508"
 
 [[files]]
 file = "kubejs/server_scripts/transport/10_optional_engineering_roots.js"
-hash = "a3a9293735690f3f16b2eb03a2d30ec460ba90500b96a92551efae945b78a3c6"
+hash = "24eebedaf479ffdbf91ea0939a74a5961261991a2bde662bb279ce943d846859"
 
 [[files]]
 file = "kubejs/server_scripts/utility/10_recipe_surface_helpers.js"
@@ -10611,7 +10623,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "00499b2764528238acd8900ba1b295ef461ca1185e63b69abef9e494dd23bf69"
+hash = "b9022ecc05b9995083e7670f5a0e912b10f7c38218c7968bee2997217f606dc6"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"

@@ -9,6 +9,9 @@ quests, and player documentation. Owning mods keep lifecycle and runtime logic.
 | Deposits, chunks, samples, processing, grinding balls, canonical outputs | Realistic Ores | Supplies acid/era inputs only; no duplicate ore registration |
 | Radioactive profiles, disturbance persistence, emissions | Latent ChemLib | Provides progression recipes and quest guidance |
 | Heat storage/transport and Create Boiler Heater | Heat Sync | Provides era placement and quest guidance |
+| Blood Altar bootstrap and tier reference | Blood Magic | Still-Beating Heart plus overworld materials opens the altar; Blood Magic's in-game guide remains the authoritative Tier 1-5 multiblock reference |
+| Occult physical components | Hexerei | Hexerei's mixing cauldron manufactures bounded physical Occultism components; Occultism retains rituals, spirit fire, bindings, and servants |
+| Occult storage | None | Controller, remote, and satchel acquisition routes are closed; Pretty Pipes is the practical logistics surface |
 | Vanilla boat durability, vessel-drop suppression, reinforced recipes | Better Content Fixes | No boat mutation or hiding scripts |
 | Wandering-trader visit lifecycle and themed identity | Better Content Fixes | KubeJS authors five themed common offers, one themed rare offer, one Wares agreement, and an optional Font map; every direct payment is a Create Deco coin |
 | TCon alloy composition and casting | Tinkers' Construct | Removes bypasses and authors exact cross-mod alloy recipes |

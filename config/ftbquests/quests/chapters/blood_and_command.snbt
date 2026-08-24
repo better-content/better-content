@@ -41,7 +41,7 @@
 		}
 		{
 			dependencies: ["-35B188221859A8E"]
-			description: ["Build the Blood Altar with your heart and Otherside matter. Give it room for runes, storage, safe sacrifice, and later rituals before the room becomes crowded."]
+			description: ["Build the Blood Altar with your heart and overworld materials. Its in-game Blood Magic guide contains complete Tier 1-5 multiblock views and the exact rune/pillar changes for each upgrade."]
 			icon: "bloodmagic:altar"
 			id: "124A80CBF921A4AD"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFE9", item: "createdeco:copper_coin", type: "item" }]

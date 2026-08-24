@@ -105,6 +105,20 @@ var BC_LOOT_EMERALD_TABLES_TO_COIN = [
     'minecraft:chests/village/village_weaponsmith'
 ]
 
+// Renewable crop seeds do not belong on scarce exploration chest rolls. This is
+// deliberately chest-only: crop harvesting and Dynamic Trees' own block drops
+// remain their authoritative renewable acquisition routes.
+var BC_CHEST_LOOT_REMOVE_SEEDS = [
+    'farmersdelight:cabbage_seeds',
+    'farmersdelight:tomato_seeds',
+    'hexerei:sage_seed',
+    'minecraft:beetroot_seeds',
+    'minecraft:melon_seeds',
+    'minecraft:pumpkin_seeds',
+    'minecraft:wheat_seeds',
+    'ubesdelight:lemongrass_seeds'
+]
+
 function bcLootItemExists(id) {
     try { return Item.exists(id) } catch (e) { return false }
 }
@@ -118,5 +132,10 @@ LootJS.modifiers(function (event) {
     for (var j = 0; j < BC_LOOT_EMERALD_TABLES_TO_COIN.length; j++) {
         event.addLootTableModifier(BC_LOOT_EMERALD_TABLES_TO_COIN[j])
             .replaceLoot('minecraft:emerald', Item.of('createdeco:copper_coin', 4), true)
+    }
+
+    var chestLoot = event.addLootTableModifier(/.*:chests\/.*/)
+    for (var k = 0; k < BC_CHEST_LOOT_REMOVE_SEEDS.length; k++) {
+        if (bcLootItemExists(BC_CHEST_LOOT_REMOVE_SEEDS[k])) chestLoot.removeLoot(BC_CHEST_LOOT_REMOVE_SEEDS[k])
     }
 })

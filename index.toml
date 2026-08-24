@@ -5645,6 +5645,10 @@ file = "config/hyle-common.toml"
 hash = "b0f8eabb0b138d2486a174188269d69102bce66cedb45033732687af192b1ff1"
 
 [[files]]
+file = "config/immersive_weathering_sampler-common.toml"
+hash = "c705b00dc31c67487934111511321ceb1dba244540a71cf78ca723b76ba7641b"
+
+[[files]]
 file = "config/incontrol/areas.json"
 hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
 
@@ -11225,6 +11229,10 @@ metafile = true
 file = "mods/immersive-weathering-forge.pw.toml"
 hash = "0df8d2be472d58b97f73621390c6d3cbaf538de65e9092c03146f102bfed63fe"
 metafile = true
+
+[[files]]
+file = "mods/immersive-weathering-sampler-0.1.0.jar"
+hash = "e0ecdac280a1defc10473ebf71589504e2711115ee79151b079a826fbf2570e6"
 
 [[files]]
 file = "mods/improved-village-placement.pw.toml"

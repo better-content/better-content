@@ -33,6 +33,7 @@ packwiz refresh
 | [dynamic-trees-hexerei](https://github.com/better-content/dynamic-trees-hexerei) | `dynamic_trees_hexerei` | `dynamic-trees-hexerei-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [dynamic-trees-malum](https://github.com/better-content/dynamic-trees-malum) | `dynamic_trees_malum` | `dynamic-trees-malum-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [heat-sync](https://github.com/better-content/heat-sync) | `heat_sync` | `heat-sync-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
+| [immersive-weathering-sampler](https://github.com/better-content/immersive-weathering-sampler) | `immersive_weathering_sampler` | `immersive-weathering-sampler-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [latent-chemlib](https://github.com/better-content/latent-chemlib) | `latent_chemlib` | `latent-chemlib-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [oc2r-create-bridge](https://github.com/better-content/oc2r-create-bridge) | `oc2r_create_bridge` | `oc2r-create-bridge-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [oc2r-wireless-pubsub](https://github.com/better-content/oc2r-wireless-pubsub) | `oc2r_wireless_pubsub` | `oc2r-wireless-pubsub-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |

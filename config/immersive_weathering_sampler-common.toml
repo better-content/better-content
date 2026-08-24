@@ -1,0 +1,10 @@
+[endpointSampler]
+	#Samples one direct Immersive Weathering endpoint when a chunk returns.
+	enabled = true
+	#Minimum elapsed game ticks before a chunk is sampled.
+	#Range: 1 ~ 24000
+	minimumUnloadedTicks = 100
+	#Multiplier applied to Immersive Weathering rule probabilities.
+	#Range: 0.0 ~ 8.0
+	densityMultiplier = 1.0
+	debugLogging = false

@@ -6198,7 +6198,7 @@ hash = "538cba986727869fc27e4d0c392e38a82826e19ca07922d2c9a1a781060b1af0"
 
 [[files]]
 file = "config/sereneseasons/fertility.toml"
-hash = "e67138d1168068fa5a5ab66f90f9583b87dea826b7e6c0bb77730fe76b275c06"
+hash = "7e8e4dffb69e493670121cb6937f33cb59f1743f9d11d65d83770244453948cf"
 
 [[files]]
 file = "config/sereneseasons/seasons.toml"
@@ -10262,7 +10262,7 @@ hash = "24c62acdb6c0d3d64166b27deb0fe2b6e74eb59a8540bfe960cc27cefc6a8056"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/check__10_overworld_block_drops.js"
-hash = "cfbed8c61ca5b728f9af4e463f05a43a578c761ae14e960fa017f596cabd8221"
+hash = "34ea47bd461f5f5239187f4a4ac23694245130979738ac1dd49db6209ac7398a"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/check__12_unearthed_regolith_identity.js"
@@ -10350,7 +10350,7 @@ hash = "ca72773b3c6465a06400ea2e17b5c0ff04df780d335a7610b413b70d58a201bf"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__63_fonts_hexerei_occultism_chalk.js"
-hash = "6cd53fe8843b41a343cd1ddc9592c3668b0b1ffba81b31d66f7e0ba5abdccfde"
+hash = "475580885ff5b1c9429740cf2c32196042a286dfddc7cf96da61d4df04f32a69"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__80_magic_progression_blood_slate_gates.js"
@@ -10358,7 +10358,7 @@ hash = "faac24f6e2ee96f5de5e3af2d5c2cb3f878a0f173f32bf28d80c74d7aa259ab7"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__82_blood_magic_lifeforce_rework.js"
-hash = "c7a54a048793f2393c1e20b0331ba96b52e4af4eb73d4a149ec25aecd7804434"
+hash = "1cac33f44f4a89203ef4130a21599fda1373e2779f3bd0b513b21866037afcf8"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__compatability__45_stone_surface_tool_compat.js"
@@ -10443,6 +10443,10 @@ hash = "a7b898ab232113721da8db095f27ad6796ee711c64bc713cf4e3eb9e4c28964b"
 [[files]]
 file = "kubejs/server_scripts/policy/removed_items.js"
 hash = "45679747c705ea7043486e528cc5d828d6f53079e0b5fb02a9f0b5cbed0260b4"
+
+[[files]]
+file = "kubejs/server_scripts/policy/tnt_recipe.js"
+hash = "8b55ea75834053d2d6da166fb29faf0dd19b7f898f0ed85da07e0f40c0f6aa39"
 
 [[files]]
 file = "kubejs/server_scripts/progression/10_hand_workshop.js"
@@ -10601,8 +10605,13 @@ hash = "9224b29b7fc388a0a030f8a6e87b26b24ec73dbc853bcdd531a144ed8e59ccea"
 metafile = true
 
 [[files]]
+file = "mods/balm.pw.toml"
+hash = "ddff810b39bb8873325aa34230c2a174073ad9bbf002e04a66835735550a1b7b"
+metafile = true
+
+[[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "2668616749c5777ac76fbabcf2ff38edd0bd445e9a7a0d1d7494204cbbb65f72"
+hash = "00499b2764528238acd8900ba1b295ef461ca1185e63b69abef9e494dd23bf69"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"
@@ -11088,7 +11097,7 @@ metafile = true
 
 [[files]]
 file = "mods/heat-sync-0.1.0.jar"
-hash = "917aa8f02a48f30abe5e44c8a0e064c3dc30a045eb8f26d4e285c1328ecaa46f"
+hash = "e4f2010e5fd254d91c990d45194795529fcbcf935183474ba3a01a183cbbb032"
 
 [[files]]
 file = "mods/hexerei.pw.toml"
@@ -11381,6 +11390,11 @@ hash = "7cc7116fee8b525e93630dc9a4d79b5a6f0ae07434cad71280fad75224442502"
 metafile = true
 
 [[files]]
+file = "mods/pretty-pipes.pw.toml"
+hash = "0729cfefad5651843eb27cc59464ca1ba9d4221f4f9393291a66645817944122"
+metafile = true
+
+[[files]]
 file = "mods/procedural-bouquets-0.1.0.jar"
 hash = "e43db436548b521703b9695a2303e8506b5afe031b0be64df8024100902618b5"
 
@@ -11416,7 +11430,7 @@ metafile = true
 
 [[files]]
 file = "mods/realistic-ores-0.1.0.jar"
-hash = "ca0650e0b45f9ce70883420fd4767a92d28517887218ad7a3afd7756c78be86d"
+hash = "8249cf5e82d133bd448fdf917b29fc75d5610957eff5e2fcfbfc1f346bae0349"
 
 [[files]]
 file = "mods/realistic-physics.pw.toml"
@@ -11632,7 +11646,7 @@ metafile = true
 
 [[files]]
 file = "mods/tinkers-construct-affixes-1.0.0.jar"
-hash = "7ce4c7450a1ec8778e3175273c4b9784598d1abebed8dbd4c4d5250dda2c86b5"
+hash = "91d0dc162b2038db7a1f5c91cb725b7c4596d648a5896869ce2f86d80e6c27ce"
 
 [[files]]
 file = "mods/tinkers-construct.pw.toml"
@@ -11670,11 +11684,6 @@ hash = "40e6ec637ce752d74bc4510ddb1578a1dcd21bd7792b135c568dd7e925f4019a"
 metafile = true
 
 [[files]]
-file = "mods/tiny-coal.pw.toml"
-hash = "6d84cb5ff8701b17fc6f5e8cdd2c87b55561a1c4b4c752d093c7fdfb7bcb9a9c"
-metafile = true
-
-[[files]]
 file = "mods/tntutils.pw.toml"
 hash = "c744226381103e3bce04dfcb55ba0306cb6de1206ab4c647f890adba88ced477"
 metafile = true
@@ -11700,6 +11709,11 @@ hash = "4bb5104e0b99b2d6b72b55b97d420baaf3f336182feb457f69d8213e7839e16b"
 metafile = true
 
 [[files]]
+file = "mods/trashslot.pw.toml"
+hash = "310605ccc700e5bdc05c2470da918dc3f7babc23eacfa81937367e461efa2a09"
+metafile = true
+
+[[files]]
 file = "mods/true-darkness-forge-updated-fork.pw.toml"
 hash = "97e78254f2db3f32811b04cafd138df7e64a0da0a9b2812f7573ace98e6f837f"
 metafile = true
@@ -11707,11 +11721,6 @@ metafile = true
 [[files]]
 file = "mods/ubes-delight.pw.toml"
 hash = "5e480331ef0c5b30daaebfb73500f6f31be7f95579442b8834fc3a70c31bc439"
-metafile = true
-
-[[files]]
-file = "mods/undead-unleashed.pw.toml"
-hash = "016526850a4d7de6c0852eb610685ce45d5e25cf2ae515039b8568189b752505"
 metafile = true
 
 [[files]]
@@ -11736,7 +11745,7 @@ metafile = true
 
 [[files]]
 file = "mods/village-walls-1.0.0.jar"
-hash = "e640b91972af4889623a8dd5b569c21cf1c7ae6bd7eee5b47fb6e02959d673ef"
+hash = "b61ebbaba20ce06a06092dc5a74460361c5e52716f24d9e392193931712a54b9"
 
 [[files]]
 file = "mods/wares.pw.toml"
@@ -11820,4 +11829,4 @@ metafile = true
 
 [[files]]
 file = "world-lifecycle-manager-server.sh"
-hash = "fa5053d713aa09cfcada368369edcfe016d0b8860c5bae5bd38d663d6ca7e9e6"
+hash = "10218bfae333e5581bdb063d2cf7b48cab2abb80b7a832ff2c05ea0daf9da248"

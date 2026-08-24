@@ -1,4 +1,5 @@
-// Fonts-spine ownership for Hexerei and Occultism chalk.
+// Hexerei manufactures physical Occultism components; Occultism owns ritual
+// activation, spirit fire, bindings, and summoned-servant gameplay.
 //
 // Hexerei is the preparation practice downstream of Font expeditions. Its core
 // apparatus and characteristic reagents therefore retain matter from Nether,
@@ -46,21 +47,16 @@ function bcFontCauldron(event, id, output, count, fluid, inputs, options) {
 }
 
 ServerEvents.recipes(function (event) {
-    // Entry proves contact with every active early Font before Hexerei can turn
-    // expedition matter into reproducible folk preparations.
+    // Hexerei's crafting station is an overworld folk-crafting entry point.
     event.remove({ output: 'hexerei:mixing_cauldron' })
     event.shaped('hexerei:mixing_cauldron', [
-        'NAU',
+        'III',
         'ICI',
-        ' O '
+        ' I '
     ], {
-        N: 'minecraft:nether_brick',
-        A: 'aether:ambrosium_shard',
-        U: 'undergarden:cloggrum_ingot',
         I: 'minecraft:iron_ingot',
-        C: 'minecraft:cauldron',
-        O: 'deeperdarker:cobbled_sculk_stone'
-    }).id('kubejs:fonts_spine/hexerei_mixing_cauldron')
+        C: 'minecraft:cauldron'
+    }).id('kubejs:hexerei/overworld_mixing_cauldron')
 
     // Peer preparations retain distinct Font provenance instead of inheriting
     // Blood Magic's slate ladder.
@@ -146,6 +142,33 @@ ServerEvents.recipes(function (event) {
         'hexerei:blood_sigil',
         'minecraft:soul_soil'
     ], { fluidLevelsConsumed: 333, heatRequirement: 'heated' })
+
+    // These are physical components/tools. Their ritual-derived ingredients
+    // preserve Occultism's summoning and spirit-fire progression.
+    ;[
+        'occultism:spirit_attuned_crystal',
+        'occultism:spirit_attuned_pickaxe_head',
+        'occultism:book_of_binding_empty'
+    ].forEach(function (output) { event.remove({ output: output }) })
+    bcFontCauldron(event, 'occultism_spirit_attuned_crystal', 'occultism:spirit_attuned_crystal', 1, 'minecraft:water', [
+        'occultism:spirit_attuned_gem', 'occultism:spirit_attuned_gem',
+        'occultism:spirit_attuned_gem', 'occultism:spirit_attuned_gem'
+    ], { heatRequirement: 'heated' })
+    bcFontCauldron(event, 'occultism_spirit_attuned_pickaxe_head', 'occultism:spirit_attuned_pickaxe_head', 1, 'minecraft:water', [
+        'occultism:spirit_attuned_gem', 'occultism:spirit_attuned_gem', 'occultism:spirit_attuned_gem'
+    ], { heatRequirement: 'heated' })
+    bcFontCauldron(event, 'occultism_empty_binding_book', 'occultism:book_of_binding_empty', 1, 'minecraft:water', [
+        'occultism:awakened_feather', 'occultism:purified_ink', 'occultism:taboo_book'
+    ], { heatRequirement: 'heated' })
+
+    // Disable Occultism's storage capability and every ordinary acquisition route.
+    ;[
+        'occultism:storage_controller',
+        'occultism:storage_controller_base',
+        'occultism:storage_remote_inert',
+        'occultism:storage_remote',
+        'occultism:satchel'
+    ].forEach(function (output) { event.remove({ output: output }) })
 
     // The disabled miner family cannot bypass material production, but the
     // remaining high Occultism ritual still stays on its own Font spine.

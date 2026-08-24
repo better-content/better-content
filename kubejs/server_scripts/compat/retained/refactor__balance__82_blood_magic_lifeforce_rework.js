@@ -13,7 +13,7 @@ ServerEvents.recipes(function (event) {
         G: 'minecraft:gold_block',
         B: 'minecraft:bone_block',
         F: 'minecraft:furnace',
-        D: 'deeperdarker:cobbled_sculk_stone',
+        D: 'minecraft:deepslate',
         S: 'rpg_stats:still_beating_heart'
     }).id('kubejs:bloodmagic/heart_bound_blood_altar')
 

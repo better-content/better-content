@@ -23,7 +23,7 @@ MIN_FREE_RESERVE_BYTES="${PRESTIGE_MIN_FREE_RESERVE_BYTES:-1073741824}"
 
 die() { printf 'prestige supervisor failed: %s\n' "$*" >&2; exit 1; }
 
-for command in awk base64 basename cat chmod cmp cp cut date df du find flock java mkdir mkfifo mv od rm sha256sum sort stat sync tr xargs zip; do
+for command in awk base64 basename cat chmod cmp cp cut date df du find flock java mkdir mkfifo mv od rm sha256sum sleep sort stat sync tr xargs zip; do
   command -v "$command" >/dev/null 2>&1 || die "missing required command: $command"
 done
 [[ -x "$SCRIPT_DIR/run-forge.sh" ]] || die "missing executable Forge launcher: $SCRIPT_DIR/run-forge.sh"
@@ -42,7 +42,7 @@ PRESTIGE_JAR="${PRESTIGE_JARS[0]}"
 
 if [[ "${1:-}" == verify-archive ]]; then
   [[ "$#" -eq 4 ]] || die "usage: world-lifecycle-manager-server.sh verify-archive ARCHIVE LINEAGE_ID TRANSACTION_ID"
-  exec java -cp "$PRESTIGE_JAR" com.bettercontent.prestige.World Lifecycle ManagerArchiveVerifier verify "$2" "$3" "$4"
+  exec java -cp "$PRESTIGE_JAR" com.bettercontent.worldlifecyclemanager.PrestigeArchiveVerifier verify "$2" "$3" "$4"
 fi
 
 [[ ! -L "$STATE_DIR" ]] || die ".prestige must not be a symlink"
@@ -204,7 +204,7 @@ generate_archive_manifest() {
 
 verify_archive_against_world() {
   local archive="$1" source_manifest="$2"
-  java -cp "$PRESTIGE_JAR" com.bettercontent.prestige.World Lifecycle ManagerArchiveVerifier verify-against \
+  java -cp "$PRESTIGE_JAR" com.bettercontent.worldlifecyclemanager.PrestigeArchiveVerifier verify-against \
     "$archive" "$source_manifest" "$REQUEST_LINEAGE" "$REQUEST_TRANSACTION" \
     || die "archive failed strict production verification"
 }
@@ -224,7 +224,7 @@ create_verified_archive() {
   [[ ! -e "${final}.sha256" ]] || die "archive checksum evidence exists without its immutable archive"
   if [[ -e "$partial" ]]; then
     if [[ -f "$partial" && ! -L "$partial" ]] && java -cp "$PRESTIGE_JAR" \
-        com.bettercontent.prestige.World Lifecycle ManagerArchiveVerifier verify-against \
+        com.bettercontent.worldlifecyclemanager.PrestigeArchiveVerifier verify-against \
         "$partial" "$manifest" "$REQUEST_LINEAGE" "$REQUEST_TRANSACTION" >/dev/null; then
       printf 'prestige supervisor: resuming verified partial archive\n'
     else
@@ -460,6 +460,8 @@ run_successor_attempt() {
 finalize_success() {
   cp -- "$SUCCESSOR_FILE" "$TRANSACTION_ROOT/successor-request-v4.tsv"
   cp -- "$HEALTH_FILE" "$TRANSACTION_ROOT/health-result-v4.tsv"
+  sync -f -- "$TRANSACTION_ROOT/successor-request-v4.tsv"
+  sync -f -- "$TRANSACTION_ROOT/health-result-v4.tsv"
   sync -f -- "$TRANSACTION_ROOT"
   write_phase health-verified
   verify_archive_against_world "$FINAL_ARCHIVE" "$ARCHIVE_INPUT/world-lifecycle-manager-archive-manifest-v1.tsv"

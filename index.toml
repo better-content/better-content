@@ -8881,8 +8881,8 @@ file = "kubejs/client_scripts/compat/retained/remove__40_hide_quarantined_system
 hash = "4f2f2478ef0d685df6e70080193ec2f4e1e2b256327cfb8ad8eec62804894568"
 
 [[files]]
-file = "kubejs/client_scripts/compat/retained/remove__46_formal_glyph_provenance_tooltips.js"
-hash = "07d53dae6212185a0094aac5d36799244fd3a57d66d7806db2ce2f6bebf8ec03"
+file = "kubejs/client_scripts/guidance/10_hover_annotations.js"
+hash = "66cf0331265f2faafaf5fab1dbf5420f07cfcc3e9df4f7625fe8ad8028722665"
 
 [[files]]
 file = "kubejs/client_scripts/policy/hide_vanilla_tools.js"
@@ -8927,6 +8927,10 @@ hash = "ee0b4a43103a0ec86286ef1d8602d2b44386c15c654130e5c1fbe5c82ab77b73"
 [[files]]
 file = "kubejs/config/formal_magic_domains.json"
 hash = "c1728c32703ee343a2ed52c53b84bca30db11aa2feb97fb31d68fdd87ada5df0"
+
+[[files]]
+file = "kubejs/config/hover_annotations.json"
+hash = "ee2b3e671f9814c6361c2b6443230a5713c9123b3231a518c75d152e0d29ed5e"
 
 [[files]]
 file = "kubejs/config/input_rewrites.json"
@@ -10887,7 +10891,7 @@ metafile = true
 
 [[files]]
 file = "mods/arcane-chunk-loaders-0.1.0.jar"
-hash = "cf9de02f3a6af26da69d3b82a2cec09dbd3cb63c86d768ac39451baa2142d9ff"
+hash = "d35cd1d8daf514a97ef78cf0c2cee807f73083b64ffefe0f9c3eef84bcf9cefd"
 
 [[files]]
 file = "mods/architectury-api.pw.toml"
@@ -10931,7 +10935,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "329a047529cdd033ea0a100b4450000184156ef8a382cb948fd09f1664b102e6"
+hash = "d51b71088360ca8d0abaa06b7a29cf63a82a29359fea55f80ebe481308ffd655"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"
@@ -11778,7 +11782,7 @@ metafile = true
 
 [[files]]
 file = "mods/rpg-stats-1.0.0.jar"
-hash = "dbf6115bfc7fefb182bc5296e1fdb83215d5be1cdf43af518291227ddd06d78b"
+hash = "a5d8292e1e6a425aa17fee412d59ed00c72077fca5d851f4bcd4ec4431d1c3b8"
 
 [[files]]
 file = "mods/runtime-data-dumper-0.1.0.jar"

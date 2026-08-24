@@ -42,6 +42,21 @@ use exact installed IDs; optional addon recipes use explicit mod-loaded guards.
 Scripts do not scan arbitrary recipe JSON, inspect namespaces, or silently skip
 mandatory roots.
 
+## Item-hover annotations
+
+Better Content owns one pack-authored item-hover annotation surface. Concise,
+item-local pack facts appear through the normal tooltip pipeline, so EMI hover
+and ordinary inventory hover show the same annotation. Static records live in
+`kubejs/config/hover_annotations.json`; large stable families may instead be
+generated from an existing authoritative config, such as formal glyph origins
+or the TConstruct/Epic Fight handling catalogue.
+
+Annotations correct a materially wrong or incomplete mental model. They do not
+repeat ingredients, layouts, attributes, or ordinary uses that EMI and native
+tooltips already communicate. Dynamic stack state remains owned by the source
+mod. World events, controls, onboarding, scouting, and other guidance without a
+natural item anchor remain on their event, HUD, world, or quest surfaces.
+
 The wandering trader is one shared temporary world visitor. Its first scheduled
 arrival is after two active-server days, successful visits repeat every five
 days, and themes rotate through Naturalist, Surveyor, Quartermaster, and

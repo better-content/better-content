@@ -110,6 +110,19 @@ Name exact controls, states, and exceptions when they matter. Explain tool combi
 
 Good copy distinguishes commonly confused mechanics: permanent spawn versus beds, shared pouch temperature versus preservation, world temperature versus body temperature, transport through a Font versus dimension entry by another route, and possessing components versus operating an assembled machine.
 
+### Quest and hover ownership
+
+Hover annotations own short item-local corrections, lifecycle or hidden state,
+direct capabilities, process authority, provenance, scope boundaries, and exact
+operating requirements. Quests continue to own completion state, rewards,
+onboarding, event and world accomplishments, non-item actions, and route-level
+teaching until a separate migration explicitly retires them.
+
+Do not port quest scaffolding into tooltips. An obtain step, ingredient list,
+dependency, reward, aggregate accomplishment, or world instruction is not an
+item fact. Annotate only when a competent player would otherwise form a
+materially wrong or incomplete mental model.
+
 ## Rewards
 
 Rewards communicate scale and rarity without becoming exchangeable currency tiers.

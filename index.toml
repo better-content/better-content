@@ -10723,7 +10723,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "96c853d0ac70165f4c6fb6f9a7d37cff9c50a7f884ca58d1e07f091c7bb79fb3"
+hash = "5ec60da4568b4bceff24d3f88e1376cee120d3e727423adb46114ed4e8136988"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"

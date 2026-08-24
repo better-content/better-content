@@ -23,7 +23,7 @@
 			y: 0d
 		}
 		{
-			dependencies: ["-16E044CA8689FD44"]
+			dependencies: ["-3DE5B061A4FD5A16"]
 			description: ["Assemble the Schematic Mint with a fully occupied 3×3 Mechanical Crafter grid. Its 18 SU demand exceeds a Hand Crank; once built, it turns cheap paper, dye, feather, and ink into fresh recording supplies without further power."]
 			icon: "world_lifecycle_manager:schematic_mint"
 			id: "26BCB761BF83096F"

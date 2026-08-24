@@ -5606,7 +5606,7 @@ hash = "97a16512c67ee16849b7e6d33a1406318e5d7aad83129da029f15b1a1e2fed2c"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/power.snbt"
-hash = "d8b875f48eca95d2bf0996797033d163ccd598755d3b7f003810a23abe0093ca"
+hash = "dd6deb9f238a48e047279e5c37dc39a55d14dd25b8b9303793f947543db66e52"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/routes_and_recovery.snbt"
@@ -12083,7 +12083,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "c74a28c475bfc382a85a115c59160ef299bfe05dd3ab3c9621626959af18d4ff"
+hash = "13d847e9cab9ad2f15509e59265ac17790f9420c3fb421427fa01c3934c92bca"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"

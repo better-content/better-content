@@ -7845,6 +7845,106 @@ file = "globalresources/dimension_drink/excavated_variants/dimension_drink/varia
 hash = "ce52637ca9771632ef3bf89a92095039f353397dab33df25bdad142e4cb1ea75"
 
 [[files]]
+file = "kubejs/assets/adpother/blockstates/acetylene.json"
+hash = "4519fdb8a8227e6a963429568921ff0ff5b01182470ccfd0ae5dc38c76f0fba5"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/ammonia.json"
+hash = "9f53605f2f5ddb4c9679fcf3a5d7f3404d280ed36bdb4d837248663fa36c9518"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/ammonium.json"
+hash = "9f53605f2f5ddb4c9679fcf3a5d7f3404d280ed36bdb4d837248663fa36c9518"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/argon.json"
+hash = "9f53605f2f5ddb4c9679fcf3a5d7f3404d280ed36bdb4d837248663fa36c9518"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/butane.json"
+hash = "4519fdb8a8227e6a963429568921ff0ff5b01182470ccfd0ae5dc38c76f0fba5"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/carbon_dioxide.json"
+hash = "4519fdb8a8227e6a963429568921ff0ff5b01182470ccfd0ae5dc38c76f0fba5"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/carbon_monoxide.json"
+hash = "4519fdb8a8227e6a963429568921ff0ff5b01182470ccfd0ae5dc38c76f0fba5"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/chlorine.json"
+hash = "9f53605f2f5ddb4c9679fcf3a5d7f3404d280ed36bdb4d837248663fa36c9518"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/ethane.json"
+hash = "4519fdb8a8227e6a963429568921ff0ff5b01182470ccfd0ae5dc38c76f0fba5"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/ethylene.json"
+hash = "4519fdb8a8227e6a963429568921ff0ff5b01182470ccfd0ae5dc38c76f0fba5"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/fluorine.json"
+hash = "9f53605f2f5ddb4c9679fcf3a5d7f3404d280ed36bdb4d837248663fa36c9518"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/helium.json"
+hash = "9f53605f2f5ddb4c9679fcf3a5d7f3404d280ed36bdb4d837248663fa36c9518"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/hydrogen.json"
+hash = "9f53605f2f5ddb4c9679fcf3a5d7f3404d280ed36bdb4d837248663fa36c9518"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/hydrogen_sulfide.json"
+hash = "8d4203f072beea51458c6d96e42d749d888f3e8af7152847395a866584b2b73d"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/krypton.json"
+hash = "9f53605f2f5ddb4c9679fcf3a5d7f3404d280ed36bdb4d837248663fa36c9518"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/methane.json"
+hash = "4519fdb8a8227e6a963429568921ff0ff5b01182470ccfd0ae5dc38c76f0fba5"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/neon.json"
+hash = "9f53605f2f5ddb4c9679fcf3a5d7f3404d280ed36bdb4d837248663fa36c9518"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/nitric_oxide.json"
+hash = "9f53605f2f5ddb4c9679fcf3a5d7f3404d280ed36bdb4d837248663fa36c9518"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/nitrogen.json"
+hash = "9f53605f2f5ddb4c9679fcf3a5d7f3404d280ed36bdb4d837248663fa36c9518"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/nitrogen_dioxide.json"
+hash = "9f53605f2f5ddb4c9679fcf3a5d7f3404d280ed36bdb4d837248663fa36c9518"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/oxygen.json"
+hash = "9f53605f2f5ddb4c9679fcf3a5d7f3404d280ed36bdb4d837248663fa36c9518"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/propane.json"
+hash = "4519fdb8a8227e6a963429568921ff0ff5b01182470ccfd0ae5dc38c76f0fba5"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/radon.json"
+hash = "9f53605f2f5ddb4c9679fcf3a5d7f3404d280ed36bdb4d837248663fa36c9518"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/sulfur_dioxide.json"
+hash = "8d4203f072beea51458c6d96e42d749d888f3e8af7152847395a866584b2b73d"
+
+[[files]]
+file = "kubejs/assets/adpother/blockstates/xenon.json"
+hash = "9f53605f2f5ddb4c9679fcf3a5d7f3404d280ed36bdb4d837248663fa36c9518"
+
+[[files]]
 file = "kubejs/assets/heat_sync/lang/en_us.json"
 hash = "317eebbeaaeb1ceb8b63e5619e9c86fcfaaf9754875afe9fb48a0bf10f43fea2"
 
@@ -10623,7 +10723,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "b9022ecc05b9995083e7670f5a0e912b10f7c38218c7968bee2997217f606dc6"
+hash = "96c853d0ac70165f4c6fb6f9a7d37cff9c50a7f884ca58d1e07f091c7bb79fb3"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"

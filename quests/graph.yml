@@ -1430,38 +1430,38 @@ nodes:
 
   post_lava_sample:
     type: quest
-    title: Lava Sample
+    title: Hotstone Signal
     chapter: post_ae2
-    icon: realistic_ores:surface_sample_osmiridium_lava_sulfide_ore
+    icon: realistic_ores:small_ore_chunk_hotstone
     stage: post_ae2
     requires:
       - post_impossible
     x: 3
     y: -2.5
     body: |
-      Find an osmiridium surface signal, then prepare a lava expedition below Y zero. The exposed sulfide scatter exists only beside lava and must be brought back alive.
+      Find a small Hotstone signal, then prepare for the heat and contact danger beneath it. The rock announces dangerous power before its technical assay is understood.
     tasks:
       - type: item
-        item: realistic_ores:surface_sample_osmiridium_lava_sulfide_ore
+        item: realistic_ores:small_ore_chunk_hotstone
     tags:
       - post_ae2
       - lava_depths
 
-  post_osmiridium:
+  post_hotstone:
     type: quest
-    title: Osmiridium
+    title: Hotstone Body
     chapter: post_ae2
-    icon: realistic_ores:osmiridium_lava_sulfide_ore
+    icon: realistic_ores:hotstone
     stage: post_ae2
     requires:
       - post_lava_sample
     x: 6
     y: -2.5
     body: |
-      Recover osmiridium lava-sulfide ore from a lava-contact vein. This dangerous geology is the material pressure point for Tosaki protection and selected late utility.
+      Recover an intact Hotstone body from the deep hazardous deposit. Its crude behaviour is immediately legible; its separated heavy assay remains the material pressure point for Tosaki protection and selected late utility.
     tasks:
       - type: item
-        item: realistic_ores:osmiridium_lava_sulfide_ore
+        item: realistic_ores:hotstone
     tags:
       - post_ae2
       - lava_depths
@@ -1473,7 +1473,7 @@ nodes:
     icon: protection_pixel:tosaki_chestplate
     stage: post_ae2
     requires:
-      - post_osmiridium
+      - post_hotstone
     x: 9
     y: -2.5
     body: |

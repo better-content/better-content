@@ -14,17 +14,17 @@
 	quests: [
 		{
 			dependencies: ["-3E0FE96A0FF542B"]
-			description: ["Find a small osmiridium sample, then prepare a lava expedition below Y zero. The exposed sulfide scatter exists only beside lava and must be brought back alive."]
-			icon: "realistic_ores:small_ore_chunk_osmiridium_lava_sulfide"
+			description: ["Find a small Hotstone signal, then prepare for the heat and contact danger beneath it. The rock announces dangerous power before its uranium, thorium, titanium, and heavy-metal assay is understood."]
+			icon: "realistic_ores:small_ore_chunk_hotstone"
 			id: "-4CA1E83BDEB2690"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFA6", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
-				item: "realistic_ores:small_ore_chunk_osmiridium_lava_sulfide"
+				item: "realistic_ores:small_ore_chunk_hotstone"
 				id: "-42B2FA2E7066DD3B"
 				type: "item"
 			}]
-			title: "Lava Sample"
+			title: "Hotstone Signal"
 			x: 2.5d
 			y: 1.15d
 		}
@@ -46,38 +46,33 @@
 		}
 		{
 			dependencies: ["-4CA1E83BDEB2690"]
-			description: ["Mine and handle uranium and thorium chunks deliberately. Natural ore is inert until disturbed; placed or mined forms keep their disturbed state and emit fixed family radiation and heat without isotope NBT."]
-			icon: "realistic_ores:ore_chunk_uranium_ore"
+			description: ["Mine and handle a full Hotstone chunk deliberately. Its immediate heat and radiation are the warning; processing later reveals the technical materials inside."]
+			icon: "realistic_ores:ore_chunk_hotstone"
 			id: "-249FC741F2C627C3"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFA4", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
-				item: "realistic_ores:ore_chunk_uranium_ore"
+				item: "realistic_ores:ore_chunk_hotstone"
 				id: "4000344446166805"
 				type: "item"
-			}
-			{
-				item: "realistic_ores:ore_chunk_thorium_ore"
-				id: "6B03000000000013"
-				type: "item"
 			}]
-			title: "Disturbed Radioactives"
+			title: "Disturbed Hotstone"
 			x: 5d
 			y: 0d
 		}
 		{
 			dependencies: ["-4CA1E83BDEB2690"]
-			description: ["Recover osmiridium lava-sulfide ore from a lava-contact vein. This dangerous geology is the material pressure point for Tosaki protection and selected late utility."]
-			icon: "realistic_ores:osmiridium_lava_sulfide_ore"
+			description: ["Recover an intact Hotstone body from the deep hazardous deposit. Its crude behaviour is useful immediately; its separated heavy assay remains the pressure point for Tosaki protection and selected late utility."]
+			icon: "realistic_ores:hotstone"
 			id: "-510AD2C8E8756AA1"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFA3", item: "createdeco:copper_coin", type: "item" }]
 			shape: "rsquare"
 			tasks: [			{
-				item: "realistic_ores:osmiridium_lava_sulfide_ore"
+				item: "realistic_ores:hotstone"
 				id: "434DF91268EF36DF"
 				type: "item"
 			}]
-			title: "Osmiridium"
+			title: "Hotstone Body"
 			x: 5d
 			y: 2.3d
 		}

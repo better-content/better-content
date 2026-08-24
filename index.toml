@@ -5974,7 +5974,7 @@ hash = "03d7f74c3341713d8882bba7112fd5458c94216f2964ca23cc6aaf28d6a1abfa"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_pack_solid_blocks.toml"
-hash = "ebb8c1c54fa82ae0f9cf8a1994e8d63ba677fed01525312ce94b4de425119e39"
+hash = "2601dc7f6dc74a4580cc0f1c79ea862c56ee16466aab8a9fc5e52c223373cd5f"
 
 [[files]]
 file = "config/rbp/block_definitions/glass.toml"
@@ -6115,6 +6115,10 @@ hash = "f540d151169360552b8df16660c24c16f929f08f87e49fc8308019345d360b84"
 [[files]]
 file = "config/rbp/block_definitions/terracotta.toml"
 hash = "1e526e93da6620e8cf529195c4fa55edd056d50535d85f5262e8e05af1f5707d"
+
+[[files]]
+file = "config/rbp/block_definitions/tinkers_channels.toml"
+hash = "972b2dbcfe7e57a2be7446267d7bf4e2496855ff393f73330bc3a9583c929698"
 
 [[files]]
 file = "config/rbp/block_definitions/tnt.toml"
@@ -8945,6 +8949,30 @@ file = "kubejs/config/tcon_edps_catalogue.json"
 hash = "b49148a4bfd2325d74c0790887c2c1ab9970cf716b3fd9d8c313632f8f2ea0b7"
 
 [[files]]
+file = "kubejs/data/additionalweaponry/capabilities/weapons/butcher_knife.json"
+hash = "d56268927a77a5cf1e396d406574a9c5f61876f54e40d46eb53758c8b1698cd7"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/capabilities/weapons/cutlass.json"
+hash = "6705a0e5674b03de3b0b4b49991eecbe061b49241899b5b8973bb6b69e359957"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/capabilities/weapons/pitchfork.json"
+hash = "e41721062057587887d1f52a531ef54473068cabd0c185e1abe0cb9feec4e6e8"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/capabilities/weapons/scepter.json"
+hash = "752aeda3991b7e08dc0466e25e90a64122ab44ee25c3e22a6c4b1bf4b00df5ea"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/capabilities/weapons/sniffer_claws.json"
+hash = "e169aeb31350a04117f9ef05357d76b4e9813d7802d0f6fb80f79c592a982d48"
+
+[[files]]
+file = "kubejs/data/additionalweaponry/capabilities/weapons/wrench.json"
+hash = "41f30bff25124b4de7925ad244b336ec8c9e9ec50ef6a66b508193eaaba3446f"
+
+[[files]]
 file = "kubejs/data/additionalweaponry/recipes/embellishment/amethyst.json"
 hash = "5fecb85c0830794ea4004eb041897b08938ebb5383670ada06a3647727ddcf36"
 
@@ -9329,6 +9357,18 @@ file = "kubejs/data/c/tags/items/wrenches.json"
 hash = "7392b4249b82885a0c5faf72d7c28722ca7600537e1b5404d3f993bc3c5bfb97"
 
 [[files]]
+file = "kubejs/data/construct_arsenal/capabilities/weapons/buckler.json"
+hash = "329ed01297fcc2e52e5c4c742571412859c4087e3535ffe47f7f78ee8e4a796c"
+
+[[files]]
+file = "kubejs/data/construct_arsenal/capabilities/weapons/helix_blade.json"
+hash = "d0d7ed87c1a48e24c0e0f9636d88de8f453b4317605c2796774b4694b6ce9e1a"
+
+[[files]]
+file = "kubejs/data/construct_arsenal/capabilities/weapons/quarterstaff.json"
+hash = "aa0a137717806040df9144295377115deb64a5f5ba1c49c9cbadb7688c9aaf55"
+
+[[files]]
 file = "kubejs/data/construct_arsenal/tinkering/tool_definitions/buckler.json"
 hash = "fec9b90604c1cf8fcca22ef0ceb2dd9a297724b890264aaab9a252d2f5c1666d"
 
@@ -9635,6 +9675,26 @@ hash = "d0fabf3f3c99cc7065c7f491411535d3295d22ad2adc2b59303d25dceaab7e8e"
 [[files]]
 file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_dimension_compat/wigglewood_leaf_pile.json"
 hash = "d0fabf3f3c99cc7065c7f491411535d3295d22ad2adc2b59303d25dceaab7e8e"
+
+[[files]]
+file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_hexerei/mahogany_leaf_pile.json"
+hash = "416bb13eb5875a2f6a8bee5966a69463c87e6c9ba76fb96f4c7ebd406f3ca272"
+
+[[files]]
+file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_hexerei/willow_leaf_pile.json"
+hash = "416bb13eb5875a2f6a8bee5966a69463c87e6c9ba76fb96f4c7ebd406f3ca272"
+
+[[files]]
+file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_hexerei/witch_hazel_leaf_pile.json"
+hash = "416bb13eb5875a2f6a8bee5966a69463c87e6c9ba76fb96f4c7ebd406f3ca272"
+
+[[files]]
+file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_malum/azure_runewood_leaf_pile.json"
+hash = "416bb13eb5875a2f6a8bee5966a69463c87e6c9ba76fb96f4c7ebd406f3ca272"
+
+[[files]]
+file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_malum/runewood_leaf_pile.json"
+hash = "416bb13eb5875a2f6a8bee5966a69463c87e6c9ba76fb96f4c7ebd406f3ca272"
 
 [[files]]
 file = "kubejs/data/immersive_weathering/tags/blocks/grass_blocks.json"
@@ -10085,6 +10145,86 @@ file = "kubejs/data/starcatcher/tags/items/rods.json"
 hash = "62b915ae06f3541024aff58958e01861a6167457e8c8a90a6ed1c998b2e9b13f"
 
 [[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/battlesign.json"
+hash = "a7495655b7af27b14c1336d12fe48a666a105d5b74d72fc105313104434cdb90"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/broad_axe.json"
+hash = "105ebeb6354b025f143562e7c3dd50c589ed905313bf8b15f0c1562090ba97de"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/cleaver.json"
+hash = "285a13f00448b6e9414a2292d388a0959d0559f3ed28073064451bf926670cea"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/crossbow.json"
+hash = "334c0fbbc636487b5ab283aaa8c4e3efaa4bef18fcd2a00af1196d35a64dcc73"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/dagger.json"
+hash = "1d45522c41cae3037ac74e0c89877235c3c79739c994633fe58750f4a7541818"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/excavator.json"
+hash = "f67bd793bd3594d03300ce12e801d5eefaa977ebceeb6b183e6b3644f6a3a93a"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/hand_axe.json"
+hash = "cf825e020703c4233da90f765c56b74d7b60ea3f5b562f892d43dc2f765e477f"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/javelin.json"
+hash = "8203da5c9e138edb33b6416435b1d9e2bd2e41de338c6ca2166bbc54dc9e670b"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/kama.json"
+hash = "42c1f6d1d50f4b79171138e5d412e5321d9b3debc6d5548a385549d7c0d31b13"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/longbow.json"
+hash = "f5661c59f85d767318958e97d2f2b9278714f5a9407d1a57389c9102f99c042a"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/mattock.json"
+hash = "2f23272e09bc229522e190710436ff603578db8a2b1ab5cd1394ab28be8dfb9d"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/minotaur_axe.json"
+hash = "2a28acc25d885ad5d702d5ce13ef87d1227d38a002d9cf0c835f5362f5642f3a"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/pickadze.json"
+hash = "b38df67081f3ab15bbc978ee3badc5e5f5887033a53075788c38076ceebe599e"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/pickaxe.json"
+hash = "e4b08236764bba55c4d60bdadc8dbfffddaeb952f2862363e9ae6e9ecc258e30"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/scythe.json"
+hash = "9e1156daccc83b84978be9fb2df1e1857051046dbe01b86570ad61535a8e7d9d"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/sledge_hammer.json"
+hash = "b456d676703c32296eea4227b663818923d35cdc3ff72a865c3d05d9d04d6beb"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/swasher.json"
+hash = "eb68961bb920e2e398d4d9855a321e356adb0f2a0aa98cda4327d6d79fbc882a"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/sword.json"
+hash = "52feab873f706d8c9cd8f67251d10425bee22bf685295b307a97f67caff66450"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/vein_hammer.json"
+hash = "56b50a07ef1ced12845b95b322940ad4ac1965780508c3a97eba2905befc6bb8"
+
+[[files]]
+file = "kubejs/data/tconstruct/capabilities/weapons/war_pick.json"
+hash = "acbe12b275ffea1a4a06db5f76255cd9cd94ebb31e6b68ccd801bc42ec242741"
+
+[[files]]
 file = "kubejs/data/tconstruct/recipes/tools/modifiers/slotless/embellishment/slime/honey.json"
 hash = "f6970ededfe83daa7fed53a68a7f0ff81f00ac16a22152f13c08eea2ccae6712"
 
@@ -10197,6 +10337,14 @@ file = "kubejs/data/thalassophobia/forge/biome_modifier/leech_biome_modifier.jso
 hash = "57c8899b0c2b6c266bc114548695279e406eb483e5877ea29bb74775737cc950"
 
 [[files]]
+file = "kubejs/data/tinker_rapier/capabilities/weapons/estoc_tic.json"
+hash = "f78e9a00bcab72a69fb7d4483eca985e7022cc6b7b22c0acee6aefad49a63c7c"
+
+[[files]]
+file = "kubejs/data/tinker_rapier/capabilities/weapons/rapier_tic.json"
+hash = "5ca33868fd6de6b44695c80bae76d011311d97b0b64f401065e9f29727eb7a5f"
+
+[[files]]
 file = "kubejs/data/tinker_rapier/tinkering/tool_definitions/estoc_tic.json"
 hash = "77fdc3f69e2008dcad0e8c348712cbaab2549fa3c2c1ae16fe29b33a60c897cb"
 
@@ -10205,8 +10353,20 @@ file = "kubejs/data/tinker_rapier/tinkering/tool_definitions/rapier_tic.json"
 hash = "d32b9c26465405470bb33a687f7f28bb60e147b0a624ae689a68b1bbb6e6b21e"
 
 [[files]]
+file = "kubejs/data/tinkers_battle_spades/capabilities/weapons/battle_spade.json"
+hash = "a49a6947ee7e60b20ecf5be40ad8d18ad74595d79c256f7850fbbe90b1345ef7"
+
+[[files]]
 file = "kubejs/data/tinkers_battle_spades/tinkering/tool_definitions/battle_spade.json"
 hash = "c7e81753d255547f694f237276e3db7d90f2842ecf2a05e50895444024d44113"
+
+[[files]]
+file = "kubejs/data/tinkers_katanas/capabilities/weapons/fuma_shuriken.json"
+hash = "a2e17d92e57433eb30dac652bc66e53fa27c3dd55b7ee7f34da1a4b727903aae"
+
+[[files]]
+file = "kubejs/data/tinkers_katanas/capabilities/weapons/katana.json"
+hash = "397fe728876f45a5674002a9ee72911cd7eed06a97e34a7570432a97c7c39b04"
 
 [[files]]
 file = "kubejs/data/tinkers_katanas/tinkering/tool_definitions/fuma_shuriken.json"
@@ -10217,8 +10377,40 @@ file = "kubejs/data/tinkers_katanas/tinkering/tool_definitions/katana.json"
 hash = "08d111c16fd05b250bfb11d950d2e227b73c3a8705d826213ce9111b2b84e8f7"
 
 [[files]]
+file = "kubejs/data/tinkers_khopesh/capabilities/weapons/khopesh.json"
+hash = "7c84e60877bbcb04cb6da39b7c71af97428289e910ddd3f04ae3b4276c3e3cec"
+
+[[files]]
 file = "kubejs/data/tinkers_khopesh/tinkering/tool_definitions/khopesh.json"
 hash = "02b75c2f7a24c002485d7758c0b3c74102c672f8319f75dd0e3cb5c745a53ed3"
+
+[[files]]
+file = "kubejs/data/tinkers_things/capabilities/weapons/amethyst_staff.json"
+hash = "eb0c345b55288998898ad58bd668184a6cf0fe657c6c0d1eccb03e157fae2bbc"
+
+[[files]]
+file = "kubejs/data/tinkers_things/capabilities/weapons/blockram.json"
+hash = "a650ba1f3933e96bbd45265922733b892f3c79b7afb70d61554b21f28a564f8e"
+
+[[files]]
+file = "kubejs/data/tinkers_things/capabilities/weapons/blowpipe.json"
+hash = "0ae7e79706760f58718a3d379328939a08369d713e8b44477cfd5d06d3a622bf"
+
+[[files]]
+file = "kubejs/data/tinkers_things/capabilities/weapons/chisel.json"
+hash = "745edf59657c07bd1c7bdb8c65e4aebbfb714cf24492c7f1bfa2e779ac117faa"
+
+[[files]]
+file = "kubejs/data/tinkers_things/capabilities/weapons/halberd.json"
+hash = "c9742e06025c7e9bbac75dc6dc494c5708259e32cdb042a7f8bb85fa44171a4c"
+
+[[files]]
+file = "kubejs/data/tinkers_things/capabilities/weapons/shortbow.json"
+hash = "73781862de5c9596cdd8d4b3038af99cbb97146176091afa7ab50caf26f894a3"
+
+[[files]]
+file = "kubejs/data/tinkers_things/capabilities/weapons/shovel.json"
+hash = "f67bd793bd3594d03300ce12e801d5eefaa977ebceeb6b183e6b3644f6a3a93a"
 
 [[files]]
 file = "kubejs/data/tinkers_things/tinkering/tool_definitions/amethyst_staff.json"
@@ -10247,6 +10439,18 @@ hash = "436452dd6efc0bad55102076e27c005a3c950a44fcf3dd6bccf17eae5ce9e071"
 [[files]]
 file = "kubejs/data/tinkers_things/tinkering/tool_definitions/shovel.json"
 hash = "3a8f347ff80188335e58ebbfce9876ceb5d2e107e6318a2980ecc54c88c42be4"
+
+[[files]]
+file = "kubejs/data/tinkersweaponry/capabilities/weapons/greatsword.json"
+hash = "8e86c54a4e98eecb4e1eb9d6a6eadbc167a64e9beaabfb8701a9941785bc8b14"
+
+[[files]]
+file = "kubejs/data/tinkersweaponry/capabilities/weapons/lance.json"
+hash = "6e4793b9f4ff17509100690c123d6d201812a503b5eaad31ea608a0a15ae31e1"
+
+[[files]]
+file = "kubejs/data/tinkersweaponry/capabilities/weapons/pike.json"
+hash = "923761c9d70df31fc61e72bfb9058240134352d0e2f0cca762baaa9ab57a4e82"
 
 [[files]]
 file = "kubejs/data/tinkersweaponry/tinkering/tool_definitions/greatsword.json"
@@ -10566,7 +10770,7 @@ hash = "8b55ea75834053d2d6da166fb29faf0dd19b7f898f0ed85da07e0f40c0f6aa39"
 
 [[files]]
 file = "kubejs/server_scripts/progression/10_hand_workshop.js"
-hash = "c04d072931b325cf05a2ff2f244623d3651ea6894e03536f2686b1d05e24ac07"
+hash = "277d6fcbf0f28856a5e9a4d5655155b5ec56ff14944cfe7889e71fce1eeb94ac"
 
 [[files]]
 file = "kubejs/server_scripts/progression/20_powered_works.js"

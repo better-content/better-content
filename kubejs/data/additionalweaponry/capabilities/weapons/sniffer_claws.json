@@ -1,0 +1,9 @@
+{
+  "type": "epicfight:fist",
+  "speed_bonus": 3.63,
+  "attributes": {
+    "common": {
+      "impact": 1.0
+    }
+  }
+}

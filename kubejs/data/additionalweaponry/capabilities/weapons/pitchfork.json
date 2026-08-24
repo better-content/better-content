@@ -1,0 +1,30 @@
+{
+  "type": "epicfight:spear",
+  "speed_bonus": 1.5,
+  "damage_bonus": 7.0,
+  "attributes": {
+    "one_hand": {
+      "armor_negation": 10.0,
+      "impact": 3.1,
+      "max_strikes": 2
+    },
+    "two_hand": {
+      "armor_negation": 29.0,
+      "impact": 4.6,
+      "max_strikes": 3
+    }
+  },
+  "collider": {
+    "number": 5,
+    "center": [
+      0.0,
+      -0.2,
+      -0.35
+    ],
+    "size": [
+      0.7,
+      1.1,
+      0.9
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "epicfight:sword",
+  "hit_particle": "hit_blunt",
+  "hit_sound": "entity.hit.blade_rush_last",
+  "attributes": {
+    "common": {
+      "impact": 3.5,
+      "max_strikes": 3
+    }
+  },
+  "collider": {
+    "number": 3,
+    "center": [
+      0.0,
+      0.0,
+      -0.35
+    ],
+    "size": [
+      0.65,
+      0.65,
+      0.9
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "epicfight:pickaxe",
+  "attributes": {
+    "common": {
+      "armor_negation": 20.0,
+      "impact": 0.8
+    }
+  }
+}

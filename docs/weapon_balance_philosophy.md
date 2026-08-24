@@ -34,7 +34,7 @@ The reference is the former same-material TCon Sword baseline. Native attack spe
 
 ### Epic Fight form map
 
-The pack replaces Better Combat with Epic Fight. Each mapped chassis receives an intrinsic TCon moveset modifier; this avoids a generic-fist fallback for extension items. Longbow, Crossbow, and Swasher retain the integration's dedicated ranged capability. Tools are mining-preferred and weapons combat-preferred.
+The pack replaces Better Combat with Epic Fight. Every chassis in the 45-entry balance catalogue has an explicit item capability that selects an existing Epic Fight form; the pack does not author bespoke movesets for each TCon item. Longbow, Crossbow, and Swasher retain the integration's dedicated ranged capabilities. Tools are mining-preferred and weapons combat-preferred.
 
 | Tool form | Tools |
 |---|---|
@@ -60,6 +60,12 @@ The pack replaces Better Combat with Epic Fight. Each mapped chassis receives an
 | Tachi | Fuma Shuriken, Khopesh, Katana |
 | Trident | Javelin |
 | Integration ranged | Longbow, Crossbow, Swasher |
+
+The machine-readable mappings live under each item's
+`kubejs/data/<namespace>/capabilities/weapons/` resource path, where they override the
+maintained `epic_tinkers_construct_v9` datapack for the catalogue roster. Existing v9
+numeric attributes and colliders remain intact apart from schema/style corrections;
+items outside the catalogue continue through v9 or the compatibility mod's fallback.
 
 Shovel and Battle Spade remain separate: the Shovel is a conventional work tool with shovel motion, while the two-head Battle Spade is a martial combat chassis with sword combos. Javelin keeps its throw through Trident; Amethyst Staff keeps its caster identity while using a melee Spear form.
 

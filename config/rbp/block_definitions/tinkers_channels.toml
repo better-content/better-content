@@ -1,0 +1,32 @@
+# Tinkers channels have inset collision shapes which never reach a neighbouring
+# block face. Extend each orthogonal face so RBP can recognize direct support in
+# any direction, without allowing diagonal attachment or structural load bearing.
+Blocks = [
+	"tconstruct:scorched_channel",
+	"tconstruct:seared_channel",
+]
+
+[Physics]
+	SupportStrength = 0
+	BeamStrength = 0.0
+	Mass = 1.0
+	CanHang = true
+	CanAttach = true
+	CanAttachDiagonally = false
+	SlideChance = 0.0
+	PlacementSlideModifier = 0.0
+	EntityDamageScale = 0.0
+	BreaksOnFalling = false
+	Strength = 100
+	FloatsOnLiquid = false
+
+	[Physics.ExtendedCollisionBounds]
+		Up = true
+		Down = true
+		North = true
+		East = true
+		South = true
+		West = true
+
+[ChunkAnalysis]
+	Enabled = true

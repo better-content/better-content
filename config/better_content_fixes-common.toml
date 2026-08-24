@@ -117,3 +117,9 @@
 	#Extraction uses the barrel's input/output inventory handler, preserving storage filters and slot rules.
 	#Other Sophisticated Storage blocks and hopper insertion behavior are unchanged.
 	barrelHopperExtraction = false
+
+[rehooked]
+	#Allows ReHooked projectiles to attach to mobs, including bosses and modded Mob subclasses.
+	#A mob hit creates a weight-based tug that moves both the player and mob without dealing impact damage.
+	#Players, vehicles, and non-Mob living entities remain invalid grapple targets.
+	mobGrappling = true

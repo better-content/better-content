@@ -5318,7 +5318,7 @@ hash = "b6eb36b57a869d42a91eb3e9118ffe8aed9c9c6839063b09280e7de9a30ecbc0"
 
 [[files]]
 file = "config/better_content_fixes-common.toml"
-hash = "8f27ff111df527f46a2236a83b3c71a3fa8896068c4ffbfdadfde1b08527d08b"
+hash = "4fec4f4ac36e62853bab795340db3ba771ca12051c496f65affcb65c33f7645d"
 
 [[files]]
 file = "config/better_content_fixes/quest_reveal.json"
@@ -10931,7 +10931,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "5ec60da4568b4bceff24d3f88e1376cee120d3e727423adb46114ed4e8136988"
+hash = "329a047529cdd033ea0a100b4450000184156ef8a382cb948fd09f1664b102e6"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"

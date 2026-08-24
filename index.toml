@@ -6321,6 +6321,14 @@ file = "config/village_walls-common.toml"
 hash = "280bc8aed5004ec2b700f702ec5a58d56c9d3edf1a1ea2f234ad78b765d35b53"
 
 [[files]]
+file = "config/world_lifecycle_manager-biomes-expanded.txt"
+hash = "62645e01a4aa734fd5870fa4d832081272a6c54ce17c285cca90dc1a4e266eef"
+
+[[files]]
+file = "config/world_lifecycle_manager-biomes-frontier.txt"
+hash = "69e74c568abf8755ed74ca2f88d37c7eee1f2f93a3a3e6f5b3be38f504c409c4"
+
+[[files]]
 file = "config/world_lifecycle_manager-biomes.txt"
 hash = "d13936253ac9a9ce7f02c6c7211e8c92f82e368f04301fbef52cf852b06c4afb"
 
@@ -12083,7 +12091,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "13d847e9cab9ad2f15509e59265ac17790f9420c3fb421427fa01c3934c92bca"
+hash = "eb63203c12792980688ddefbaffb7088049122abb462de312ef96bc08cf0042a"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"
@@ -12153,4 +12161,4 @@ metafile = true
 
 [[files]]
 file = "world-lifecycle-manager-server.sh"
-hash = "10218bfae333e5581bdb063d2cf7b48cab2abb80b7a832ff2c05ea0daf9da248"
+hash = "48a2d10d4c56c37d07455bf9af5ebbd065bc3ac70f2f049097b1e5ac7531dc48"

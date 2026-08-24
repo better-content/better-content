@@ -2,7 +2,8 @@
 set -Eeuo pipefail
 
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
-STATE_DIR="$SCRIPT_DIR/.prestige"
+STATE_DIR="$SCRIPT_DIR/.world_lifecycle_manager"
+LEGACY_STATE_DIR="$SCRIPT_DIR/.prestige"
 CONTROL_DIR="$STATE_DIR/control"
 ARCHIVE_DIR="$STATE_DIR/archives"
 TRANSACTION_DIR="$STATE_DIR/transactions"
@@ -15,6 +16,11 @@ STAGED_FILE="$CONTROL_DIR/staged-request-v4.tsv"
 DRAFT_FILE="$CONTROL_DIR/draft-v4.tsv"
 SUCCESSOR_FILE="$CONTROL_DIR/successor-request-v4.tsv"
 HEALTH_FILE="$CONTROL_DIR/health-result-v4.tsv"
+PERK_ACTIVE_FILE="$STATE_DIR/perks-v1.tsv"
+PERK_DRAFT_FILE="$CONTROL_DIR/perk-draft-v1.tsv"
+PERK_STAGED_FILE="$CONTROL_DIR/staged-perks-v1.tsv"
+PERK_RESET_FILE="$CONTROL_DIR/reset-perks-v1.tsv"
+PERK_HEALTH_FILE="$CONTROL_DIR/perk-health-v1.tsv"
 SHUTDOWN_FILE="$CONTROL_DIR/shutdown-request-v4.tsv"
 ACTIVE_PROCESS_FILE="$CONTROL_DIR/active-successor-process-v1.tsv"
 HEALTH_TIMEOUT_SECONDS="${PRESTIGE_HEALTH_TIMEOUT_SECONDS:-300}"
@@ -45,7 +51,8 @@ if [[ "${1:-}" == verify-archive ]]; then
   exec java -cp "$PRESTIGE_JAR" com.bettercontent.worldlifecyclemanager.PrestigeArchiveVerifier verify "$2" "$3" "$4"
 fi
 
-[[ ! -L "$STATE_DIR" ]] || die ".prestige must not be a symlink"
+[[ ! -e "$LEGACY_STATE_DIR" ]] || die "legacy .prestige state is unsupported; start with canonical .world_lifecycle_manager state"
+[[ ! -L "$STATE_DIR" ]] || die ".world_lifecycle_manager must not be a symlink"
 mkdir -p -- "$CONTROL_DIR" "$ARCHIVE_DIR" "$TRANSACTION_DIR"
 for directory in "$STATE_DIR" "$CONTROL_DIR" "$ARCHIVE_DIR" "$TRANSACTION_DIR"; do
   [[ -d "$directory" && ! -L "$directory" ]] || die "unsafe World Lifecycle Manager state directory: $directory"
@@ -90,7 +97,7 @@ ensure_lineage() {
     local legacy_control
     legacy_control="$(find "$CONTROL_DIR" -maxdepth 1 -type f \( -name '*-v1.tsv' -o -name '*-v2.tsv' -o -name '*-v3.tsv' \) -print -quit)"
     [[ ! -e "$LEGACY_LINEAGE_V1" && ! -e "$LEGACY_LINEAGE_V2" && ! -e "$LEGACY_LINEAGE_V3" && -z "$legacy_control" ]] \
-      || die "legacy World Lifecycle Manager state is unsupported; remove .prestige before starting v4"
+      || die "legacy World Lifecycle Manager state is unsupported; clear the canonical state directory before starting v4"
     local entropy
     entropy="$(printf '%s:%s:%s' "$(date +%s%N)" "$$" "$SCRIPT_DIR" | sha256sum | cut -c1-32)"
     atomic_write "$LINEAGE_FILE" 'BC_PRESTIGE_LINEAGE_V4' \
@@ -145,14 +152,51 @@ parse_reset() {
   [[ "$REQUEST_LINEAGE" == "$LINEAGE_ID" ]] || die "reset request lineage does not match durable lineage"
 }
 
+has_perk() { [[ ",$REQUEST_PERKS," == *",$1,"* ]]; }
+
+parse_perks() {
+  REQUEST_PERKS='-'; REQUEST_LANDING='biome'; REQUEST_FALLBACK='-'; MAX_ATTEMPTS=3; PERK_SNAPSHOT=false
+  [[ -e "$PERK_RESET_FILE" ]] || return
+  load_contract "$PERK_RESET_FILE" 'BC_PRESTIGE_RESET_PERKS_V1' 8
+  [[ "$(contract_value 1 lineage)" == "$REQUEST_LINEAGE" ]] || die "perk snapshot lineage does not match reset"
+  [[ "$(contract_value 2 base_generation)" == "$REQUEST_BASE_GENERATION" ]] || die "perk snapshot base generation does not match reset"
+  local target=$((REQUEST_BASE_GENERATION+1)) count=0 id
+  [[ "$(contract_value 3 target_generation)" == "$target" && "$(contract_value 4 transaction)" == "$REQUEST_TRANSACTION" ]] \
+    || die "perk snapshot target identity does not match reset"
+  REQUEST_PERKS="$(contract_value 5 perks)"; REQUEST_LANDING="$(contract_value 6 landing)"; REQUEST_FALLBACK="$(contract_value 7 fallback)"
+  [[ "$REQUEST_PERKS" == '-' || "$REQUEST_PERKS" =~ ^[a-z_]+(,[a-z_]+)*$ ]] || die "perk list is malformed"
+  if [[ "$REQUEST_PERKS" != '-' ]]; then
+    IFS=',' read -ra perk_ids <<<"$REQUEST_PERKS"
+    declare -A seen=()
+    for id in "${perk_ids[@]}"; do
+      case "$id" in expanded_attunement|frontier_attunement|safe_arrival|settled_arrival|fallback_attunement|fourth_horizon) ;; *) die "unknown prestige perk: $id" ;; esac
+      [[ -z "${seen[$id]:-}" ]] || die "duplicate prestige perk: $id"; seen[$id]=1; count=$((count+1))
+    done
+  fi
+  local budget="$target"; (( budget <= 6 )) || budget=6; (( count <= budget )) || die "perk snapshot exceeds point budget"
+  ! has_perk frontier_attunement || has_perk expanded_attunement || die "Frontier Attunement lacks its root"
+  ! has_perk settled_arrival || has_perk safe_arrival || die "Settled Arrival lacks its root"
+  ! has_perk fourth_horizon || has_perk fallback_attunement || die "Fourth Horizon lacks its root"
+  [[ "$REQUEST_LANDING" == biome || "$REQUEST_LANDING" == village ]] || die "perk landing mode is invalid"
+  [[ "$REQUEST_LANDING" != village ]] || has_perk settled_arrival || die "village landing is not unlocked"
+  if [[ "$REQUEST_FALLBACK" != '-' ]]; then
+    validate_biome "$REQUEST_FALLBACK"; has_perk fallback_attunement || die "fallback biome is not unlocked"
+    [[ "$REQUEST_LANDING" == biome && "$REQUEST_FALLBACK" != "$REQUEST_BIOME" ]] || die "fallback biome conflicts with landing target"
+  fi
+  if has_perk fourth_horizon; then MAX_ATTEMPTS=4; fi
+  PERK_SNAPSHOT=true
+}
+
 write_phase() {
   local next="$1" current="${CURRENT_PHASE:-}"
   case "$current:$next" in
     :request-recorded|request-recorded:world-staged|world-staged:archive-verified|archive-verified:attempt-1-prepared|\
-    attempt-[1-3]-prepared:attempt-[1-3]-prepared|attempt-[1-3]-prepared:attempt-[1-3]-running|\
+    attempt-[1-4]-prepared:attempt-[1-4]-prepared|attempt-[1-4]-prepared:attempt-[1-4]-running|\
     attempt-1-prepared:attempt-2-prepared|attempt-2-prepared:attempt-3-prepared|\
-    attempt-1-running:attempt-2-prepared|attempt-2-running:attempt-3-prepared|attempt-[1-3]-running:health-verified|\
-    health-verified:health-verified|health-verified:lineage-committed|attempt-3-running:rolled-back|attempt-3-prepared:rolled-back) ;;
+    attempt-3-prepared:attempt-4-prepared|attempt-1-running:attempt-2-prepared|attempt-2-running:attempt-3-prepared|\
+    attempt-3-running:attempt-4-prepared|attempt-[1-4]-running:health-verified|health-verified:health-verified|\
+    health-verified:lineage-committed|attempt-3-running:rolled-back|attempt-3-prepared:rolled-back|\
+    attempt-4-running:rolled-back|attempt-4-prepared:rolled-back) ;;
     *) die "illegal transaction phase transition: ${current:-none} -> $next" ;;
   esac
   rm -f -- "$PHASE_FILE.partial"
@@ -169,7 +213,7 @@ read_phase() {
   load_contract "$PHASE_FILE" 'BC_PRESTIGE_TRANSACTION_PHASE_V2' 3
   [[ "$(contract_value 1 transaction)" == "$REQUEST_TRANSACTION" ]] || die "transaction phase identity mismatch"
   CURRENT_PHASE="$(contract_value 2 phase)"
-  [[ "$CURRENT_PHASE" =~ ^(request-recorded|world-staged|archive-verified|health-verified|lineage-committed|rolled-back|attempt-[1-3]-(prepared|running))$ ]] \
+  [[ "$CURRENT_PHASE" =~ ^(request-recorded|world-staged|archive-verified|health-verified|lineage-committed|rolled-back|attempt-[1-4]-(prepared|running))$ ]] \
     || die "unknown transaction phase: $CURRENT_PHASE"
 }
 
@@ -278,10 +322,26 @@ health_is_valid() {
   [[ "${CONTRACT_LINES[1]}" == "lineage"$'\t'"$REQUEST_LINEAGE" && "${CONTRACT_LINES[2]}" == "base_generation"$'\t'"$BASE_GENERATION" ]] || return 1
   [[ "${CONTRACT_LINES[3]}" == "target_generation"$'\t'"$TARGET_GENERATION" && "${CONTRACT_LINES[4]}" == "transaction"$'\t'"$REQUEST_TRANSACTION" ]] || return 1
   [[ "${CONTRACT_LINES[5]}" == "successor_seed"$'\t'"$expected_seed" && "${CONTRACT_LINES[6]}" == "actual_seed"$'\t'"$expected_seed" ]] || return 1
-  [[ "${CONTRACT_LINES[7]}" == "requested_biome"$'\t'"$REQUEST_BIOME" && "${CONTRACT_LINES[8]}" == "actual_biome"$'\t'"$REQUEST_BIOME" ]] || return 1
+  [[ "${CONTRACT_LINES[7]}" == "requested_biome"$'\t'"$REQUEST_BIOME" ]] || return 1
+  local actual_biome="${CONTRACT_LINES[8]#actual_biome$'\t'}"
+  [[ "${CONTRACT_LINES[8]}" == actual_biome$'\t'* ]] || return 1
   [[ "${CONTRACT_LINES[9]}" == "attempt"$'\t'"$expected_attempt" && "${CONTRACT_LINES[10]}" == "world"$'\t'"$REQUEST_WORLD" ]] || return 1
   [[ "${CONTRACT_LINES[11]}" == "level_dat"$'\t''true' && "${CONTRACT_LINES[12]}" == "fresh_players"$'\t''true' && "${CONTRACT_LINES[13]}" == "status"$'\t''healthy' ]] || return 1
-  [[ -f "$SCRIPT_DIR/$REQUEST_WORLD/level.dat" ]]
+  [[ -f "$SCRIPT_DIR/$REQUEST_WORLD/level.dat" ]] || return 1
+  if [[ "$PERK_SNAPSHOT" != true ]]; then [[ "$actual_biome" == "$REQUEST_BIOME" ]]; return; fi
+  [[ -f "$PERK_HEALTH_FILE" && ! -L "$PERK_HEALTH_FILE" ]] || return 1
+  mapfile -t CONTRACT_LINES < "$PERK_HEALTH_FILE"
+  [[ "${#CONTRACT_LINES[@]}" -eq 6 && "${CONTRACT_LINES[0]}" == BC_PRESTIGE_PERK_HEALTH_V1 ]] || return 1
+  [[ "${CONTRACT_LINES[1]}" == "transaction"$'\t'"$REQUEST_TRANSACTION" && "${CONTRACT_LINES[2]}" == "attempt"$'\t'"$expected_attempt" ]] || return 1
+  local resolved="${CONTRACT_LINES[4]#resolved_target$'\t'}"
+  [[ "${CONTRACT_LINES[3]}" == "landing"$'\t'"$REQUEST_LANDING" && "${CONTRACT_LINES[4]}" == resolved_target$'\t'* ]] || return 1
+  if [[ "$REQUEST_LANDING" == village ]]; then
+    [[ "$resolved" == village && "${CONTRACT_LINES[5]}" == "safe"$'\t''true' ]] || return 1
+  else
+    [[ "$resolved" == "$REQUEST_BIOME" || ( "$REQUEST_FALLBACK" != '-' && "$resolved" == "$REQUEST_FALLBACK" ) ]] || return 1
+    [[ "$actual_biome" == "$resolved" ]] || return 1
+    if has_perk safe_arrival; then [[ "${CONTRACT_LINES[5]}" == "safe"$'\t''true' ]] || return 1; fi
+  fi
 }
 
 request_successor_shutdown() {
@@ -311,7 +371,7 @@ load_process_contract() {
   PROCESS_LINEAGE="$(contract_value 3 lineage)"
   PROCESS_TRANSACTION="$(contract_value 4 transaction)"
   PROCESS_ATTEMPT="$(contract_value 5 attempt)"
-  [[ "$PROCESS_PID" =~ ^[1-9][0-9]*$ && "$PROCESS_START" =~ ^[1-9][0-9]*$ && "$PROCESS_ATTEMPT" =~ ^[1-3]$ ]] \
+  [[ "$PROCESS_PID" =~ ^[1-9][0-9]*$ && "$PROCESS_START" =~ ^[1-9][0-9]*$ && "$PROCESS_ATTEMPT" =~ ^[1-4]$ ]] \
     || die "successor process contract is malformed"
   validate_id 'successor process lineage ID' "$PROCESS_LINEAGE"
   validate_id 'successor process transaction ID' "$PROCESS_TRANSACTION"
@@ -403,30 +463,33 @@ load_transaction_lineage() {
 }
 
 cleanup_committed_transaction() {
-  rm -f -- "$SUCCESSOR_FILE" "$HEALTH_FILE" "$SHUTDOWN_FILE" "$STAGED_FILE" "$DRAFT_FILE"
+  rm -f -- "$SUCCESSOR_FILE" "$HEALTH_FILE" "$PERK_HEALTH_FILE" "$SHUTDOWN_FILE" "$STAGED_FILE" "$DRAFT_FILE" \
+    "$PERK_STAGED_FILE" "$PERK_DRAFT_FILE"
   if [[ -d "$ARCHIVE_INPUT/world" ]]; then rm -rf -- "$ARCHIVE_INPUT/world"; fi
   sync -f -- "$ARCHIVE_INPUT"
   sync -f -- "$CONTROL_DIR"
   [[ -d "$ACTIVE_WORLD" && ! -L "$ACTIVE_WORLD" ]] || die "committed lineage lacks canonical successor world"
   test_interrupt committed-cleanup-before-reset-release
-  rm -f -- "$RESET_FILE" "$RESET_FILE.partial"
+  rm -f -- "$RESET_FILE" "$RESET_FILE.partial" "$PERK_RESET_FILE" "$PERK_RESET_FILE.partial"
   sync -f -- "$CONTROL_DIR"
 }
 
 cleanup_rolled_back_transaction() {
-  rm -f -- "$SUCCESSOR_FILE" "$HEALTH_FILE" "$SHUTDOWN_FILE" "$STAGED_FILE" "$DRAFT_FILE"
+  rm -f -- "$SUCCESSOR_FILE" "$HEALTH_FILE" "$PERK_HEALTH_FILE" "$SHUTDOWN_FILE" "$STAGED_FILE" "$DRAFT_FILE" \
+    "$PERK_STAGED_FILE" "$PERK_DRAFT_FILE"
   sync -f -- "$CONTROL_DIR"
   [[ -d "$ACTIVE_WORLD" && ! -L "$ACTIVE_WORLD" ]] || die "rolled-back transaction lacks the restored canonical world"
   test_interrupt rolled-back-cleanup-before-reset-release
-  rm -f -- "$RESET_FILE" "$RESET_FILE.partial"
+  rm -f -- "$RESET_FILE" "$RESET_FILE.partial" "$PERK_RESET_FILE" "$PERK_RESET_FILE.partial"
   sync -f -- "$CONTROL_DIR"
 }
 
 run_successor_attempt() {
   local attempt="$1" seed="$2"; shift 2
-  rm -f -- "$HEALTH_FILE" "$HEALTH_FILE.partial" "$SHUTDOWN_FILE" "$SHUTDOWN_FILE.partial"
+  rm -f -- "$HEALTH_FILE" "$HEALTH_FILE.partial" "$PERK_HEALTH_FILE" "$PERK_HEALTH_FILE.partial" \
+    "$SHUTDOWN_FILE" "$SHUTDOWN_FILE.partial"
   write_successor_request "$attempt" "$seed"; set_server_seed "$seed"; write_phase "attempt-$attempt-prepared"
-  printf 'prestige supervisor: launching successor attempt %s/3 seed=%s biome=%s\n' "$attempt" "$seed" "$REQUEST_BIOME"
+  printf 'prestige supervisor: launching successor attempt %s/%s seed=%s biome=%s\n' "$attempt" "$MAX_ATTEMPTS" "$seed" "$REQUEST_BIOME"
   local fifo="$CONTROL_DIR/successor-console-$REQUEST_TRANSACTION-$attempt.fifo"
   rm -f -- "$fifo"; mkfifo -m 600 -- "$fifo"; exec 8<>"$fifo"; rm -f -- "$fifo"
   rm -f -- "$ACTIVE_PROCESS_FILE" "$ACTIVE_PROCESS_FILE.partial"
@@ -460,6 +523,10 @@ run_successor_attempt() {
 finalize_success() {
   cp -- "$SUCCESSOR_FILE" "$TRANSACTION_ROOT/successor-request-v4.tsv"
   cp -- "$HEALTH_FILE" "$TRANSACTION_ROOT/health-result-v4.tsv"
+  if [[ "$PERK_SNAPSHOT" == true ]]; then
+    cp -- "$PERK_RESET_FILE" "$TRANSACTION_ROOT/reset-perks-v1.tsv"
+    cp -- "$PERK_HEALTH_FILE" "$TRANSACTION_ROOT/perk-health-v1.tsv"
+  fi
   sync -f -- "$TRANSACTION_ROOT/successor-request-v4.tsv"
   sync -f -- "$TRANSACTION_ROOT/health-result-v4.tsv"
   sync -f -- "$TRANSACTION_ROOT"
@@ -468,6 +535,10 @@ finalize_success() {
   chmod 0444 -- "$FINAL_ARCHIVE"
   sync -f -- "$FINAL_ARCHIVE"
   ensure_archive_checksum "$FINAL_ARCHIVE"
+  if [[ "$PERK_SNAPSHOT" == true ]]; then
+    atomic_write "$PERK_ACTIVE_FILE" 'BC_PRESTIGE_PERKS_V1' "lineage"$'\t'"$REQUEST_LINEAGE" \
+      "generation"$'\t'"$TARGET_GENERATION" "perks"$'\t'"$REQUEST_PERKS"
+  fi
   commit_lineage
   if [[ "${PRESTIGE_TEST_INTERRUPT_AT:-}" == lineage-written ]]; then
     printf 'prestige supervisor: test interruption at lineage-written\n' >&2
@@ -485,6 +556,7 @@ if [[ ! -e "$RESET_FILE" ]]; then
   [[ -e "$RESET_FILE" ]] || exit "$INITIAL_EXIT"
 fi
 parse_reset
+parse_perks
 ACTIVE_WORLD_NAME="$(server_property level-name)"; validate_world_name "$ACTIVE_WORLD_NAME"
 [[ "$ACTIVE_WORLD_NAME" == "$REQUEST_WORLD" ]] || die "reset world does not match level-name"
 ACTIVE_WORLD="$SCRIPT_DIR/$ACTIVE_WORLD_NAME"
@@ -496,6 +568,7 @@ if [[ ! -e "$TRANSACTION_ROOT" ]]; then
   mkdir -p -- "$ARCHIVE_INPUT"
   cp -- "$SCRIPT_DIR/server.properties" "$TRANSACTION_ROOT/server.properties.before"
   cp -- "$RESET_FILE" "$TRANSACTION_ROOT/reset-request-v4.tsv"
+  if [[ "$PERK_SNAPSHOT" == true ]]; then cp -- "$PERK_RESET_FILE" "$TRANSACTION_ROOT/reset-perks-v1.tsv"; fi
   cp -- "$LINEAGE_FILE" "$TRANSACTION_ROOT/lineage-before-v4.tsv"
   sync -f -- "$TRANSACTION_ROOT"
   write_phase request-recorded
@@ -505,6 +578,8 @@ else
   [[ -f "$TRANSACTION_ROOT/reset-request-v4.tsv" ]] || die "existing transaction lacks reset evidence"
   [[ -f "$TRANSACTION_ROOT/lineage-before-v4.tsv" ]] || die "existing transaction lacks lineage evidence"
   cmp -s -- "$RESET_FILE" "$TRANSACTION_ROOT/reset-request-v4.tsv" || die "existing transaction reset identity changed"
+  [[ "$PERK_SNAPSHOT" == true || ! -e "$TRANSACTION_ROOT/reset-perks-v1.tsv" ]] || die "active transaction lost its perk snapshot"
+  if [[ "$PERK_SNAPSHOT" == true ]]; then cmp -s -- "$PERK_RESET_FILE" "$TRANSACTION_ROOT/reset-perks-v1.tsv" || die "existing transaction perk identity changed"; fi
   read_phase
 fi
 load_transaction_lineage
@@ -599,7 +674,7 @@ else
 fi
 
 START_ATTEMPT=1
-if [[ "$CURRENT_PHASE" =~ ^attempt-([1-3])-(prepared|running)$ ]]; then
+if [[ "$CURRENT_PHASE" =~ ^attempt-([1-4])-(prepared|running)$ ]]; then
   interrupted_attempt="${BASH_REMATCH[1]}"; interrupted_state="${BASH_REMATCH[2]}"
   stop_failed_server
   if [[ "$interrupted_state" == running ]]; then START_ATTEMPT=$((interrupted_attempt+1)); else START_ATTEMPT="$interrupted_attempt"; fi
@@ -608,7 +683,7 @@ if [[ -d "$ACTIVE_WORLD" ]]; then
   quarantine="$TRANSACTION_ROOT/interrupted-successor-$(date +%s%N)"; mv -T -- "$ACTIVE_WORLD" "$quarantine"
 fi
 
-for ((attempt=START_ATTEMPT; attempt<=3; attempt++)); do
+for ((attempt=START_ATTEMPT; attempt<=MAX_ATTEMPTS; attempt++)); do
   if [[ -d "$ACTIVE_WORLD" ]]; then mv -T -- "$ACTIVE_WORLD" "$TRANSACTION_ROOT/failed-attempt-$((attempt-1))"; fi
   ATTEMPT_SEED="$(random_seed)"
   if run_successor_attempt "$attempt" "$ATTEMPT_SEED" "$@"; then
@@ -620,16 +695,17 @@ for ((attempt=START_ATTEMPT; attempt<=3; attempt++)); do
   fi
   printf 'prestige supervisor: successor attempt %s failed health verification\n' "$attempt" >&2
   if [[ -f "$HEALTH_FILE" ]]; then cp -- "$HEALTH_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-health-v4.tsv"; fi
+  if [[ -f "$PERK_HEALTH_FILE" ]]; then cp -- "$PERK_HEALTH_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-perk-health-v1.tsv"; fi
   cp -- "$SUCCESSOR_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-request-v4.tsv"
   stop_failed_server; stop_console_relay
 done
 
-if [[ -d "$ACTIVE_WORLD" ]]; then mv -T -- "$ACTIVE_WORLD" "$TRANSACTION_ROOT/failed-attempt-3"; fi
+if [[ -d "$ACTIVE_WORLD" ]]; then mv -T -- "$ACTIVE_WORLD" "$TRANSACTION_ROOT/failed-attempt-$MAX_ATTEMPTS"; fi
 cp -- "$TRANSACTION_ROOT/server.properties.before" "$SCRIPT_DIR/server.properties"
 mv -T -- "$ARCHIVE_INPUT/world" "$ACTIVE_WORLD"
 sync -f -- "$SCRIPT_DIR"
 write_phase rolled-back
-printf 'prestige supervisor: restored old world after three failed successor attempts\n' >&2
+printf 'prestige supervisor: restored old world after %s failed successor attempts\n' "$MAX_ATTEMPTS" >&2
 clear_active_process
 cleanup_rolled_back_transaction
 restart_supervisor "$@"

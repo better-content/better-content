@@ -1,0 +1,13 @@
+# Deliberately demanding vanilla spawn choices unlocked by Frontier Attunement.
+minecraft:badlands
+minecraft:bamboo_jungle
+minecraft:desert
+minecraft:ice_spikes
+minecraft:jungle
+minecraft:mangrove_swamp
+minecraft:mushroom_fields
+minecraft:savanna
+minecraft:snowy_plains
+minecraft:snowy_taiga
+minecraft:stony_peaks
+minecraft:swamp

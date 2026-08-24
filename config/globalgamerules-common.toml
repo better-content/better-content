@@ -163,6 +163,8 @@
 			tfEnforcedProgression = true
 
 		[gamerules.modded.player]
+			canSwitchPlayerMode = false
+			initialMode = 1
 			soulStratificationEffect = true
 			cravingsConsequences = false
 			halloweenEvent = false

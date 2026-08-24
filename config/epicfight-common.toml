@@ -1,4 +1,8 @@
 [default_gamerule]
+# Battle mode is the pack's only player mode. These defaults cover new worlds;
+# Better Content Fixes enforces the same invariant for existing player data.
+canSwitchPlayerMode = false
+initialMode = 1
 # Disable only Epic Fight's environmental landing-recovery animation. Combat
 # attacks still retain their authored short, long, and knockdown stun types.
 hasFallAnimation = false

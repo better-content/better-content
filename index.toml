@@ -5446,7 +5446,7 @@ hash = "f266ed3a6a96fed2e1accd3d133ddb34d6c632fbadb116c27d91d00fb64afe41"
 
 [[files]]
 file = "config/epicfight-common.toml"
-hash = "81dfcfcf1fcd4dd7da69bf5fa57c90f958532b7fa9fafa33577d838c75bb08a7"
+hash = "0feca47c0600d2b5e11c1d2297dd4ce4f4dec8ebeb7901fd22c992b709d91258"
 
 [[files]]
 file = "config/explosionoverhaul/DestroyingBlacklist.json"
@@ -5634,7 +5634,7 @@ hash = "f1d7bd782ae6603b429b3e5b7ce958deea5d2876fc03fc5e9d71feb7d7e152cb"
 
 [[files]]
 file = "config/globalgamerules-common.toml"
-hash = "9f3775f4e8ed2ba2fa010eff185df333b4a5dd5175dfa6f1db6b653eb9bff2c5"
+hash = "c7ec4477a0883a6539a1a4d266af635c19f0c97d79b46f25b59a7ed5a7ccde27"
 
 [[files]]
 file = "config/heat_sync-common.toml"
@@ -10931,7 +10931,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "5ec60da4568b4bceff24d3f88e1376cee120d3e727423adb46114ed4e8136988"
+hash = "d7ddc5e63dbe4b74ea7498480faab670a07786081a1c2a533ea86581a96c5fb2"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"

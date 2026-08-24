@@ -71,7 +71,7 @@ Shovel and Battle Spade remain separate: the Shovel is a conventional work tool 
 
 ### Dodge, camera, and alternate modes
 
-Combat Roll and Better Content Fixes' directional double-tap integration are removed. Epic Fight's native Roll and Step progression is the only dodge system and uses Epic Fight's dedicated input. The Epic Fight combat camera is active in third-person only; it never changes perspective automatically.
+Combat Roll and Better Content Fixes' directional double-tap integration are removed. Epic Fight's native Roll and Step progression is the only dodge system and uses Epic Fight's dedicated input. Battle mode is permanent for every player: saved Mining mode is converted on load, attempts to switch back are rejected, and the obsolete mode-switch binding is hidden. The Epic Fight combat camera is active in third-person only; it never changes perspective automatically.
 
 Returning Blockram, Buckler, and Fuma Shuriken throws use the separate 100-tier throw target. Javelin throws stay at 105 per hit. Battlesign's charged Bonk and War Pick's charge projectile target 100. The Minotaur Axe sprint charge remains the one explicit signature exception.
 

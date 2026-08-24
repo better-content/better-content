@@ -26,7 +26,7 @@ ServerEvents.recipes(function (event) {
         event.custom({
             type: 'tconstruct:alloy',
             inputs: [
-                { fluid: 'tconstruct:molten_stone', amount: 90 },
+                { tag: 'tconstruct:seared_stone', amount: 90 },
                 { tag: route[1], amount: 90 }
             ],
             result: { fluid: 'kubejs:molten_andesite_alloy', amount: 180 },

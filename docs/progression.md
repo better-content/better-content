@@ -64,11 +64,12 @@ life-support parts carry the rest of the rocket graph.
 ## Optional transport
 
 Eureka/VS, Clockwork, Trackwork, and Create trains are engineering branches,
-not prerequisites for the ordinary factory spine. Primitive ships and rough
-mechanical experiments begin in Powered Works; precision trains and controls in
-Precision Factory; pressure-driven flight in Thermal & Pressure; sensors and
-gyros in Electrical Control. Aether materials gate stable high-performance
-flight, never primitive ships, basic Trackwork, or low-performance aircraft.
+not prerequisites for the ordinary factory spine. Primitive wooden ships begin
+in the Hand Workshop; rough mechanical experiments begin in Powered Works;
+precision trains and controls in Precision Factory; pressure-driven flight in
+Thermal & Pressure; sensors and gyros in Electrical Control. Aether materials
+gate stable high-performance flight, never primitive ships, basic Trackwork, or
+low-performance aircraft.
 
 ## World compatibility
 

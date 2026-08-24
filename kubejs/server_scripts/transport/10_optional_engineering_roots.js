@@ -5,10 +5,14 @@ ServerEvents.recipes(function (event) {
         ;['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'crimson', 'warped'].forEach(function (wood) {
             var helm = 'vs_eureka:' + wood + '_ship_helm'
             event.remove({ id: helm })
-            event.shaped(helm, [' H ', 'FMF', 'P P'], {
-                H: 'tconstruct:tool_handle', F: 'minecraft:' + wood + '_fence',
-                M: 'kubejs:copper_machine_block', P: 'minecraft:' + wood + '_planks'
-            }).id('kubejs:transport/powered_works/eureka/' + wood + '_ship_helm')
+        })
+
+        ;['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak'].forEach(function (wood) {
+            var helm = 'vs_eureka:' + wood + '_ship_helm'
+            event.shaped(helm, [' H ', 'FBF', 'P P'], {
+                H: 'tconstruct:tool_handle', B: 'minecraft:barrel',
+                F: 'minecraft:' + wood + '_fence', P: 'minecraft:' + wood + '_planks'
+            }).id('kubejs:transport/hand_workshop/eureka/' + wood + '_ship_helm')
         })
     }
 

@@ -1,0 +1,4 @@
+[default_gamerule]
+# Disable only Epic Fight's environmental landing-recovery animation. Combat
+# attacks still retain their authored short, long, and knockdown stun types.
+hasFallAnimation = false

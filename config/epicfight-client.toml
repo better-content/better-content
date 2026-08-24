@@ -1,5 +1,7 @@
 [ingame]
 camera_auto_switch = false
+# The animated first-person body exposes limbs that obstruct ordinary play.
+first_person_model = false
 
 [ingame.camera]
 camera_mode = "ALWAYS"

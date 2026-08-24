@@ -304,37 +304,26 @@ Keep in the modpack:
 
 ### Deposit family identities
 
-The final active families are:
+Systemic Salience superseded the earlier technical 23-family proof-of-concept.
+The final active player-facing families are:
 
 1. `coal_measures`
 2. `ironstone`
-3. `copper_sulfide`
-4. `tin`
-5. `zinc`
-6. `lead_zinc_vein`
-7. `quartz_vein`
-8. `bauxite_laterite`
-9. `nickel_sulfide`
-10. `osmiridium_lava_sulfide`
-11. `tin_tungsten_greisen`
-12. `titanium_iron_oxide`
-13. `kimberlite_pipe`
-14. `emerald_schist_beryl`
-15. `amethyst_beryl_pegmatite`
-16. `uranium_ore`
-17. `thorium_ore`
-18. `cupriferous_redbed_redstone_vein`
-19. `lazurite_vein`
-20. `phosphate_rock`
-21. `soul_bearing_black_shale_soulstone_vein`
-22. `sulfur_bearing_pyrite_ore`
-23. `gold_quartz_vein`
+3. `copper_bloom`
+4. `tin_quartz`
+5. `brassroot`
+6. `redbed`
+7. `evaporite_beds`
+8. `gem_pipe`
+9. `hotstone`
+10. `black_shale`
 
-Rename the former corundum-beryl family throughout registrations, resources, worldgen, tags, recipes, language, quests, and docs. Do not retain the old name as an alias.
+The technical proof families are removed rather than aliased. Their useful
+constituents survive only as audited assay outputs inside these ten fantasies.
 
 ### Small chunk and surface sample contract
 
-For each family:
+For each of the ten families:
 
 - Register `realistic_ores:small_ore_chunk_<family>`.
 - The item is the BlockItem for the matching `surface_sample_<family>` block.
@@ -386,15 +375,10 @@ For every discoverable ADLODS body:
 - use direct exposure instead of an artificial indicator where lava-exposed geology is naturally visible;
 - remove or remap obsolete ADLODS deposits that bypass the family model.
 
-Add `gold_quartz_vein` at approximately 25% of ordinary quartz-deposit frequency:
-
-- same broad geological depth family as ordinary quartz;
-- smaller average body than common quartz;
-- moderately rare, not treasure-only;
-- separate sample, small chunk, chunk, crushed feed, processing definition, tags, loot, and assets;
-- normal quartz remains common and unchanged in purpose.
-
-Uranium and thorium retain normal scattered-vein and ADLODS availability. Do not reduce them to token rarity and do not disable their sensible raw thermal exits.
+Gold is assay depth in Copper Bloom and Redbed rather than a separate geological
+family. Quartz is attached to immediately useful Tin Quartz and selected Gem Pipe
+profiles. Uranium and thorium are fissile Hotstone assay outputs; Hotstone owns
+their scattered and large-body availability and the direct dangerous-heat cue.
 
 ### Processing states
 
@@ -1881,4 +1865,3 @@ The refactor is complete only when:
 - all sibling repositories pass their required validation;
 - the final modpack `./smoke.sh` passes;
 - every deviation from the plan is documented in the checklist.
-

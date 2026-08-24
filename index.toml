@@ -22,11 +22,11 @@ hash = "57d70724e711ac4d032699a680bf909f92b748dab0a140f39f8776126c0e8ae7"
 
 [[files]]
 file = "REFACTOR_CHECKLIST.md"
-hash = "cfd3ded633064d74748e5fc7ecd5a6732fb1b0067976fea6f7e79eb8617d227b"
+hash = "763558abec11ce84e6e464cfbc7ccd1ff3a7869acc182cc25e35756dcbf336c4"
 
 [[files]]
 file = "REFACTOR_PLAN.md"
-hash = "66ffc79260890d29fc6269b01bcf939fa84a75246185f30aa236f3fe12980b0e"
+hash = "2594f698133752800815dd771cb28d8619ff223f054ebd344d1a68ae8804ef79"
 
 [[files]]
 file = "config/DistantHorizons.toml"
@@ -7681,6 +7681,14 @@ file = "defaultconfigs/starcatcher-server.toml"
 hash = "f13459ed12f9f5cc5018b4480ccd1641d5a094c20c15e6056e5545d89fd4289a"
 
 [[files]]
+file = "defaultconfigs/systemic_salience-server.toml"
+hash = "3079f7dfb2a2a22c8b8c4c218280976e33dfc291527166a48e8ac6e5cbc9bfcd"
+
+[[files]]
+file = "defaultconfigs/tinkers_construct_affixes-server.toml"
+hash = "72f1c7e5ae7fb9818f46096e8ebc0d0f29e1fdc34585d0824861666e22407980"
+
+[[files]]
 file = "defaultresources/excavated_variants/excavated_variants/configs/excavated_variants.json5"
 hash = "2eda8496f199affa6a9c73cd68d1f85d7f865a8e41169173163fc439fb5e61ba"
 
@@ -9673,10 +9681,6 @@ file = "kubejs/data/latent_chemlib/machine_profiles/default.json"
 hash = "225ca6ccb395e1c89aa6c625a6631620df8c2dc4a1d291ae977bf895cfd97f02"
 
 [[files]]
-file = "kubejs/data/latent_chemlib/material_coefficients/default.json"
-hash = "41a90ae3f826282e384aeaa59a1d24a8d835389c0e70f55513680fcd9347dc9b"
-
-[[files]]
 file = "kubejs/data/latent_chemlib/nuclear_decay/default.json"
 hash = "c8d0807cf673a3f74e92dfe8717e119d2a6d7f8e42ab5de4d8fa4b5710fd2354"
 
@@ -11626,7 +11630,7 @@ metafile = true
 
 [[files]]
 file = "mods/rpg-stats-1.0.0.jar"
-hash = "1719068f7a5ceaf1f3f25339730ed9996e5cb65e0e76a31e8aa02c5aabdc0f2c"
+hash = "f599455a235bd7cf7a22ea0938676bc6d0e72609bdb30e9a04762b339e046dcc"
 
 [[files]]
 file = "mods/runtime-data-dumper-0.1.0.jar"
@@ -11743,7 +11747,7 @@ metafile = true
 
 [[files]]
 file = "mods/systemic-salience-0.1.0.jar"
-hash = "a9e88ca666bc113079eaa0d99023beb24d70cb971ba926584cc70d2ffce5d4cb"
+hash = "96bba3d0bfe5d8238185fef0df37e00691bddc31949bc659fefff4e432089b79"
 
 [[files]]
 file = "mods/tconjei.pw.toml"
@@ -11822,7 +11826,7 @@ metafile = true
 
 [[files]]
 file = "mods/tinkers-construct-affixes-1.0.0.jar"
-hash = "359d5c18f22e3dabfb30875e5a25633cfaec7a89d1d49d6993755f459c0ea55f"
+hash = "92b96f8be0aecd375b150f26a05bfdde4f93b48a83b70655716f2bbc3c7af9a2"
 
 [[files]]
 file = "mods/tinkers-construct.pw.toml"

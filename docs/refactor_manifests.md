@@ -161,35 +161,22 @@ The six clean-break public block IDs are `kubejs:andesite_machine_block`, `coppe
 
 All families use `realistic_ores:surface_sample_<family>`, `small_ore_chunk_<family>`, `ore_chunk_<family>`, and `crushed_<family>` after normalization. Native stone/deepslate hosts are static; Excavated Variants hosts are runtime-resolved and receive exact lossless separation/reassembly only. Small chunks have placement plus irreversible 9:1 conversion and no processing tags.
 
-| Final family | Current identity | Primary | ADLODS mapping |
+| Final family | Immediate primary | Assay depth | ADLODS mapping |
 |---|---|---|---|
-| `coal_measures` | `coal_measures` | coal | coal.cfg |
-| `ironstone` | `ironstone` | iron | iron.cfg |
-| `copper_sulfide` | `copper_sulfide_ore` | copper | copper.cfg |
-| `tin` | `tin_ore` | tin | tin.cfg |
-| `zinc` | `zinc_ore` | zinc | zinc.cfg |
-| `lead_zinc_vein` | `lead_zinc_vein` | lead | lead.cfg + zinc.cfg |
-| `quartz_vein` | `quartz_vein` | quartz | quartz.cfg |
-| `bauxite_laterite` | `bauxite_laterite` | aluminum | aluminum.cfg |
-| `nickel_sulfide` | `nickel_sulfide` | nickel | nickel.cfg |
-| `osmiridium_lava_sulfide` | `osmiridium_lava_sulfide` | osmium | osmium.cfg + iridium.cfg |
-| `tin_tungsten_greisen` | `tin_tungsten_greisen` | tungsten | tin_tungsten.cfg |
-| `titanium_iron_oxide` | `titanium_iron_oxide` | titanium | titanium.cfg |
-| `kimberlite_pipe` | `kimberlite_pipe` | diamond | diamond.cfg |
-| `emerald_schist_beryl` | `emerald_schist_beryl_vein` | emerald | emerald.cfg |
-| `amethyst_beryl_pegmatite` | `corundum_beryl_gem_vein → amethyst_beryl_pegmatite` | amethyst | amethyst.cfg; corundum.cfg remapped |
-| `uranium_ore` | `uranium_ore` | uranium | uranium.cfg |
-| `thorium_ore` | `thorium_ore` | thorium | thorium.cfg |
-| `cupriferous_redbed_redstone_vein` | `cupriferous_redbed_redstone_vein` | redstone | redstone.cfg |
-| `lazurite_vein` | `lazurite_vein` | lapis | lapis.cfg |
-| `phosphate_rock` | `phosphate_rock` | phosphate | phosphate.cfg |
-| `soul_bearing_black_shale_soulstone_vein` | `soul_bearing_black_shale_soulstone_vein` | soul sand | direct/scattered; ADLODS mapping required |
-| `sulfur_bearing_pyrite_ore` | `sulfur_bearing_pyrite_ore` | sulfur | sulfur_pyrite.cfg |
-| `gold_quartz_vein` | `new` | gold | gold.cfg at 0.25× quartz frequency |
+| `coal_measures` | coal | sulfur | coal.cfg |
+| `ironstone` | iron | nickel | iron.cfg |
+| `copper_bloom` | copper | sulfur, iron, gold | copper.cfg |
+| `tin_quartz` | tin | quartz | tin.cfg |
+| `brassroot` | zinc | lead, silver, cadmium | zinc.cfg |
+| `redbed` | redstone | copper, iron, gold | redstone.cfg |
+| `evaporite_beds` | rock salt | sodium chloride and saltpeter | phosphate.cfg |
+| `gem_pipe` | rough gem chips | diamond, emerald, amethyst, lapis, quartz, aluminum variants | diamond.cfg |
+| `hotstone` | dangerous heat | fissile, structural, and abyssal assay variants | uranium.cfg |
+| `black_shale` | soul sand | sulfur and redstone | soulstone.cfg |
 
-The route matrix, probabilities, and outputs are fixed exactly by REFACTOR_PLAN.md §3: batch size 4, water 500 mB; single acid 250+250 mB water; mixed HCl/nitric 250+250 mB without water; four deterministic primary concentrates; Major/Minor/Trace/Precious at 100/50/20/5%. Grinding media are Andesite 80%, Iron 84%, Brass 87%, Steel 91%, Nickel 93%, Titanium 95%, Blood 97%, and Fluix 98%. Millstone expected feed is 1.1 and Crushing Wheels 1.9. Furnace/Melter/Smeltery/Foundry yields follow the plan’s 4-nugget/90–180 mB, 9-nugget/120–150 mB, and 12-nugget/135–180 mB ladders. Washed forms, assay items, universal solvents, generic tailings, and Alchemistry dissolution have no final owner and are removed.
+The route matrix uses batches of four crushed feed, 500 mB total water/acid media, and one declared grinding ball. Each recipe produces four units of primary concentrate plus curated coproduct chances, with no more than four Create result entries including a possible grinding-ball return. Grinding media are Andesite 80%, Iron 84%, Brass 87%, Steel 91%, Nickel 93%, Titanium 95%, Blood 97%, and Fluix 98%. Washed forms, assay items, universal solvents, generic tailings, and Alchemistry dissolution have no final owner and remain removed.
 
-Canonical outputs prefer installed ChemLib manufactured forms, then the material-owning mod, then bare ChemLib element/compound. Native coal, redstone, lapis, quartz, soul sand, phosphate, diamond, emerald, and amethyst remain native/bulk outputs. Asset status: sibling-mod implementation owns all family chunks, crushed feeds, small chunks/samples, concentrates, chips, and molten forms; the old corundum-beryl resources are deleted rather than aliased.
+Canonical outputs prefer installed ChemLib manufactured forms, then the material-owning mod, then bare ChemLib element/compound. The retained catalogue is exactly 24 audited conventional constituents plus rock salt, sodium chloride, and saltpeter. The sibling mod owns all family chunks, crushed feeds, small chunks/samples, concentrates, chips, molten forms, recipes, and assets; deleted geological identities are not aliased.
 
 ## transport_surface
 
@@ -208,4 +195,3 @@ Canonical outputs prefer installed ChemLib manufactured forms, then the material
 | Create trains | `create:crafting/kinetics/track_station` plus native track/train controls | Precision Factory | Brass on station/control root | optional branch, never factory prerequisite |
 
 Installed-mod guards are explicit for optional transport namespaces. Decorative recipes stay native. Loot, assemblies, compatibility recipes, and alternate crafting that yield a gated root are removed by exact ID when discovered; no namespace scan is used.
-

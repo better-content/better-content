@@ -124,14 +124,14 @@
 - Deviations from this plan: Optional Ponder scene omitted as permitted. Create API adaptation is recorded above.
 - Follow-up work: None.
 
-### P3-RO-01 — Canonical 23-family ore lifecycle
+### P3-RO-01 — Canonical salient ore lifecycle
 - [x] Stable task ID: `P3-RO-01`
-- Intended player-visible behavior: Every deposit has one canonical small-sample/full-chunk/crushed/concentrate lifecycle, exact host separation/reassembly, declared grinding media, thermal/TCon exits, and family-scoped discovery.
+- Intended player-visible behavior: Ten legible deposits each have one canonical small-sample/full-chunk/crushed/concentrate lifecycle, exact host separation/reassembly, declared grinding media, thermal/TCon exits, and family-scoped discovery.
 - Owning repository: `realistic-ores`
 - Source area: Java registries/serializers, generated resources, worldgen, processing definitions, optional Excavated Variants integration
 - Dependencies: Installed ChemLib/Create/TConstruct and optional Excavated Variants.
-- Implementation note: Branch `origin/agent/realistic-ore-processing` is pushed at `2f8c333` (implementation `50e6e53`, installed-form correction `c7d32c5`, cleanup `2a99bef`, molten ownership `2f8c333`). It provides all 23 families, 63 exact separation routes, eight media, canonical outputs, generated resources, radioactive tags, and the clean `amethyst_beryl_pegmatite`/new `gold_quartz_vein` identities.
-- Validation evidence: `./gradlew verifyFull --no-daemon` passed with 20 JVM/resource tests and JaCoCo; all owned JSON parsed, every family lifecycle was present, and the installed runtime jar SHA-256 is `835c4c268c6452c72204148ad64c4d3ce76df6718e4dd18f39b0f94d806bfce4`.
+- Implementation note: Systemic Salience superseded the 23-family proof branch. `origin/agent/systemic-salience` implements Coal Measures, Ironstone, Copper Bloom, Tin Quartz, Brassroot, Redbed, Evaporite Beds, Gem Pipe, Hotstone, and Black Shale, with 27 audited outputs and no compatibility aliases for deleted geology.
+- Validation evidence: `./gradlew verifyFull stageRuntimeJar` passes exact-count, no-obsolete-reference, worldgen/resource, morphology, processing-output, Create four-result-limit, and retained-output reachability contracts. Pack-level evidence is the supported `./smoke.sh` run recorded with the Systemic Salience integration commit.
 - Deviations from this plan: TConstruct 1.20 uses one melting recipe pool for both Melter and Smeltery. Native shared values are 90/120/135 mB and Foundry values are 180/150/180 mB; distinct Smeltery-only middle yields would require a bespoke recipe interception. Gem reverse splitting is omitted because no cross-mod multiplication-safe contract was proven.
 - Follow-up work: None.
 

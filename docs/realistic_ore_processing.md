@@ -39,9 +39,10 @@ complementary exploration layers.
 2. A millstone produces two crushed feeds and Crushing Wheels produce three.
    A full chunk cooks to two primary units; one crushed feed cooks to one.
 3. Separation consumes four matching crushed feeds, one route-specific grinding
-   ball, and 500 mB of the declared water or acid route. It yields four primary
-   concentrate and independently rolled Major, Minor, Trace, and Precious
-   coproducts at 100%, 50%, 20%, and 5%.
+   ball, and 500 mB of the declared water or acid route. It yields four units of
+   primary concentrate plus the route's curated coproduct chances. Create recipes
+   are capped at four result entries, including the grinding-ball return; rich
+   routes may consume their premium medium to keep that runtime limit.
 4. Furnace exits resolve to canonical native or ChemLib forms. TConstruct molten
    exits are metal-only; quartz, gems, salts, carbon, and other nonmetals remain
    item-form outputs.
@@ -85,3 +86,27 @@ World appearance supplies the useful prior; the name confirms the immediate
 fantasy; behaviour proves it; EMI supplies the exact assay and recipe details.
 The art remains dirty, morphology-first geology with host rock visually dominant.
 Systemic Salience does not turn ores into neon aspect tokens.
+
+## Retained constituent utility audit
+
+| Constituent | Why it survives |
+| --- | --- |
+| Coal, iron, copper, tin, zinc | immediate fuel, tools, bronze, brass, and progression roots |
+| Gold, redstone, quartz, lapis | familiar technical and magical crafting economies |
+| Diamond, emerald, amethyst | immediate Gem Pipe jackpot value and ordinary gem uses |
+| Rock salt, sodium chloride, saltpeter | cooking/preservation first; chemical and nitrate depth later |
+| Soul sand, sulfur | immediate Black Shale/soul utility; soul, reagent, and pollution chemistry |
+| Aluminum, cobalt, osmium, silver | live TConstruct materials and pack metallurgy/electrum routes |
+| Nickel | grinding medium and Creating Space alloy routes |
+| Titanium | premium grinding medium, Space Machine Block, aerospace recipes, and molten material |
+| Uranium | Hotstone fissile assay, Necronium, nuclear simulation, and Protection Pixel recipes |
+| Thorium | Hotstone fissile assay, nuclear decay chain, quests, and Protection Pixel recipes |
+| Lead, cadmium | Hotstone/Brassroot assay depth and real placeable-block absorber behavior in Latent's nuclear environment scan |
+
+The removed beryl/beryllium, calcium, carbon, chromium, gallium, iridium,
+magnesium, phosphate, platinum, silicon, sodium, tantalum, and tungsten
+concentrates had no distinct live consumer strong enough to earn assay output.
+Archived Alchemistry configuration is not treated as a live use. The obsolete
+`latent_chemlib/material_coefficients` data file was removed because the runtime
+nuclear simulation does not load it; absorber evidence comes from the actual
+block-ID environment scan.

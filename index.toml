@@ -5825,10 +5825,6 @@ file = "config/better_content_fixes-common.toml"
 hash = "39f04fd9dd01386fc1c86bd8f0f84e643d658e61ce52c743ef4e5c8e9aaa04db"
 
 [[files]]
-file = "config/better_content_fixes/quest_reveal.json"
-hash = "bc0c8bf37965564fd46f023f7e793477416f2c6f6c5016c48c9cf2fb3c26f379"
-
-[[files]]
 file = "config/bettergrass.json5"
 hash = "9c6bdb0007965992d947bd13ac253bbd7e60b570c79ae35df64ce392778afea7"
 
@@ -6158,19 +6154,7 @@ hash = "b92b3881dad96f1b828373cbd98a39fa81674856f7e70c1c7cd978b763cd9903"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
-hash = "1a087041e2e24f0064ae5191d316b2e9760ee5c0188dfa393ef7d136f94ce397"
-
-[[files]]
-file = "config/ftbquests/quests/chapters/_technical.snbt"
-hash = "dcbbf3f6ca2c4db6da572b78af679ead6fc6d5e560764c3fabb3f87e39f8dc35"
-
-[[files]]
-file = "config/ftbquests/quests/chapters/basic_tools.snbt"
-hash = "6a3c63efc7a0d0ec583300fe8bba45e8486ee79d534c336b97650a468a146428"
-
-[[files]]
-file = "config/ftbquests/quests/chapters/blood_and_command.snbt"
-hash = "4f9f78f83984a77872adf1b5757579fa57ba91c54b0c8999e49e4f25b94484fd"
+hash = "cbad6bb5e774e1a155184eb2d9f6f784072dc242cf744cd8f5fe6b67d7ce5acd"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/completionist_armour_sets.snbt"
@@ -6197,52 +6181,16 @@ file = "config/ftbquests/quests/chapters/completionist_tcon_weapons.snbt"
 hash = "17eaf09bda21da2e07357375e56605f4af7d197af16143939dbe5816e9741bed"
 
 [[files]]
-file = "config/ftbquests/quests/chapters/control_and_intelligence.snbt"
-hash = "8ec20401ce9b3496f6285570f88903368559ed287f56be3d428c0050c762eb5f"
+file = "config/ftbquests/quests/chapters/powers.snbt"
+hash = "00cb8f491732bdea8ac6f18b1ad51062d85fe3f3e92294ff1ca79f0644f70033"
 
 [[files]]
-file = "config/ftbquests/quests/chapters/dangerous_matter.snbt"
-hash = "34015beae09a52f230eebcdecae60fc1a25032b300e79e348fe30eb2d2a38261"
+file = "config/ftbquests/quests/chapters/works.snbt"
+hash = "998fb3642ad16e093264d1541b0ad178f21226674072ee59b16837afcdc5d3f9"
 
 [[files]]
-file = "config/ftbquests/quests/chapters/factory_and_transport.snbt"
-hash = "ecaa982c8561a399b57d93bbdb2511fed06a7363170e8af1767d3aff85c6ca3a"
-
-[[files]]
-file = "config/ftbquests/quests/chapters/fonts_and_pacts.snbt"
-hash = "18d430bcab37df3e1ab275316b0ade41885e0d9e0cabb02b6925ff482e6ba75b"
-
-[[files]]
-file = "config/ftbquests/quests/chapters/formal_magic.snbt"
-hash = "62e01a2f6655dc45fc0342bd292cfad21225002a7336048989acc22b47ee0cf1"
-
-[[files]]
-file = "config/ftbquests/quests/chapters/homesteading.snbt"
-hash = "ef752a6dc4c5dcbbb6811a5305a1f80681e8de89939e2e1c2d7fed0e9aa8a0cc"
-
-[[files]]
-file = "config/ftbquests/quests/chapters/landmarks.snbt"
-hash = "c3d70ac7bd3d43df1f3ce0901c62268ecad557a464ab0628eaa46758a8f5ab2a"
-
-[[files]]
-file = "config/ftbquests/quests/chapters/metal_tools.snbt"
-hash = "97a16512c67ee16849b7e6d33a1406318e5d7aad83129da029f15b1a1e2fed2c"
-
-[[files]]
-file = "config/ftbquests/quests/chapters/power.snbt"
-hash = "dd6deb9f238a48e047279e5c37dc39a55d14dd25b8b9303793f947543db66e52"
-
-[[files]]
-file = "config/ftbquests/quests/chapters/routes_and_recovery.snbt"
-hash = "9205e13e3585f1b8c06abcd4e6c1fac73fe59c3a5c64f3024da699a85000d713"
-
-[[files]]
-file = "config/ftbquests/quests/chapters/spawn_selection.snbt"
-hash = "45ed9473e26a7f1cf8fe3fccf26fbfda51c7b70954ab470976fa2e81b4d28f34"
-
-[[files]]
-file = "config/ftbquests/quests/chapters/workshop.snbt"
-hash = "0081616cf29b345668ebfb7010e11d9b9ab3aefad4669466e6781583fadab052"
+file = "config/ftbquests/quests/chapters/world.snbt"
+hash = "7c0215279ffa26daf4e1b42af5cbf22acb74c467a7a68566c69cdf50b61dc8c3"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -10082,7 +10030,7 @@ hash = "c1728c32703ee343a2ed52c53b84bca30db11aa2feb97fb31d68fdd87ada5df0"
 
 [[files]]
 file = "kubejs/config/hover_annotations.json"
-hash = "ee2b3e671f9814c6361c2b6443230a5713c9123b3231a518c75d152e0d29ed5e"
+hash = "9c359e09eeea31ca095fae3c8d8eba2821eefaec489e99e89bcca2b89881b64c"
 
 [[files]]
 file = "kubejs/config/input_rewrites.json"
@@ -12659,7 +12607,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "49f5ed052fea49a14e63a50d341019635d577bc519514c2825d20b793d973340"
+hash = "b428682e68dbda3acedabe43e333bb11e1a6cb4f07cd12c974322da413b55582"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"

@@ -1,10 +1,6 @@
 {
 	chapter_groups: [
-		{ id: "3D1BF480E4BCDBA6", title: "Survival" }
-		{ id: "65CC8BE9C7D2A5C0", title: "Pre Industrial Infrastructure" }
-		{ id: "2DFE3653F3B634B9", title: "Industrial Infrastructure" }
-		{ id: "-5EB38F0D64E2719D", title: "Magic" }
-		{ id: "-4D172E3B658C0AFA", title: "Routes And Recovery" }
+		{ id: "3D1BF480E4BCDBA6", title: "Milestones" }
 		{ id: "0D8C0A1E9F5B4C72", title: "Completionist" }
 	]
 }

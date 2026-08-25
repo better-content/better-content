@@ -124,7 +124,8 @@ function bcLootItemExists(id) {
 }
 
 LootJS.modifiers(function (event) {
-    var allLoot = event.addLootTableModifier(/.*/)
+    // minecraft:empty is a protected built-in table and cannot be redefined.
+    var allLoot = event.addLootTableModifier(/^(?!minecraft:empty$).*$/)
     for (var i = 0; i < BC_LOOT_REMOVE_ITEMS.length; i++) {
         if (bcLootItemExists(BC_LOOT_REMOVE_ITEMS[i])) allLoot.removeLoot(BC_LOOT_REMOVE_ITEMS[i])
     }

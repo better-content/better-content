@@ -11478,6 +11478,11 @@ hash = "1efef6e736712c66ad307f7eeeb0fb8cf344908c643ebcfada612b8312c2d144"
 metafile = true
 
 [[files]]
+file = "mods/just-enough-effect-descriptions-jeed.pw.toml"
+hash = "11c474b1516d8f2c13fa6086d9cccb2306155ccb67dafe5bdc8e961a890362fc"
+metafile = true
+
+[[files]]
 file = "mods/k-turrets.pw.toml"
 hash = "c1a0c899f1a8b06595e3ad546445064742a8ce58d3dec5e1ecb676c19d462c32"
 metafile = true

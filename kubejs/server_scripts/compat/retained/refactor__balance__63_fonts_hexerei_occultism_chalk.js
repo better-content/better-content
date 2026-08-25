@@ -161,21 +161,10 @@ ServerEvents.recipes(function (event) {
         'occultism:awakened_feather', 'occultism:purified_ink', 'occultism:taboo_book'
     ], { heatRequirement: 'heated' })
 
-    // Disable Occultism's storage capability and every ordinary acquisition route.
-    ;[
-        'occultism:storage_controller',
-        'occultism:storage_controller_base',
-        'occultism:storage_remote_inert',
-        'occultism:storage_remote',
-        'occultism:satchel'
-    ].forEach(function (output) { event.remove({ output: output }) })
-    ;[
-        'occultism:crafting/storage_controller',
-        'occultism:crafting/storage_remote_inert',
-        'occultism:ritual/craft_storage_controller_base',
-        'occultism:ritual/craft_storage_remote',
-        'occultism:ritual/craft_satchel'
-    ].forEach(function (id) { event.remove({ id: id }) })
+    // Keep the storage controller and remote progression used by the live
+    // questline. Only the portable satchel remains disabled.
+    event.remove({ output: 'occultism:satchel' })
+    event.remove({ id: 'occultism:ritual/craft_satchel' })
 
     // The disabled miner family cannot bypass material production, but the
     // remaining high Occultism ritual still stays on its own Font spine.

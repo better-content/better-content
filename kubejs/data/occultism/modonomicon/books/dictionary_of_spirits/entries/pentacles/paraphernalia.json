@@ -1,0 +1,89 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "occultism:pentacles",
+  "condition": {
+    "type": "modonomicon:true"
+  },
+  "description": "",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "minecraft:skeleton_skull"
+  },
+  "name": "book.occultism.dictionary_of_spirits.pentacles.paraphernalia.name",
+  "pages": [
+    {
+      "type": "modonomicon:text",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "show_title_separator": true,
+      "text": "book.occultism.dictionary_of_spirits.pentacles.paraphernalia.intro.text",
+      "title": "book.occultism.dictionary_of_spirits.pentacles.paraphernalia.intro.title",
+      "use_markdown_in_title": false
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "occultism:candle_white"
+      },
+      "text": "book.occultism.dictionary_of_spirits.pentacles.paraphernalia.candle.text",
+      "title": ""
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "occultism:spirit_attuned_crystal"
+      },
+      "text": "book.occultism.dictionary_of_spirits.pentacles.paraphernalia.crystal.text",
+      "title": ""
+    },
+    {
+      "type": "occultism:spirit_fire_recipe",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "recipe_id_1": "occultism:spirit_fire/spirit_attuned_gem",
+      "text": "",
+      "title1": "",
+      "title2": ""
+    },
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "minecraft:skeleton_skull"
+      },
+      "text": "book.occultism.dictionary_of_spirits.pentacles.paraphernalia.skeleton_skull.text",
+      "title": ""
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "The original recipe is replaced in this pack by the Dimensional Font and Hexerei Mixing Cauldron route. See the Fonts and Pacts quests and the recipe viewer."
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "occultism:pentacles/pentacles_overview",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "x": -8,
+  "y": -2
+}

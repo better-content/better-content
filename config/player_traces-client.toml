@@ -1,0 +1,19 @@
+revealByDefault = false
+#Range: 0.0 ~ 1.0
+guidanceStrengthFloor = 0.03
+#Range: 1.0 ~ 64.0
+referenceDensity = 8.0
+#Range: 0.0 ~ 1.0
+minVisibleAlpha = 0.07
+#Requested trace sight radius in chunks; the server applies its own cap.
+#Range: 2 ~ 32
+maxRenderDistance = 16
+#Minutes represented by each side of the login-relative trace color gradient.
+#Range: 1 ~ 240
+recencyWindowMinutes = 20
+#Range: 0.01 ~ 1.0
+guidancePulseSpeed = 0.08
+#Range: 4 ~ 64
+annotationLabelDistance = 18
+visualDiagnostics = false
+

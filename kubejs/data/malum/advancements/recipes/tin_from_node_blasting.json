@@ -1,0 +1,7 @@
+{
+  "criteria": {
+    "disabled_optional_recipe": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

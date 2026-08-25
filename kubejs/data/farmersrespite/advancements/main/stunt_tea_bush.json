@@ -1,0 +1,45 @@
+{
+  "parent": "farmersrespite:main/get_tea_seeds",
+  "criteria": {
+    "stunt_tea_bush": {
+      "conditions": {
+        "item": {
+          "tag": "minecraft:axes"
+        },
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "farmersrespite:tea_bush"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:item_used_on_block"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "farmersrespite.advancement.stunt_tea_bush.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:stone_axe"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "farmersrespite.advancement.stunt_tea_bush"
+    }
+  },
+  "requirements": [
+    [
+      "stunt_tea_bush"
+    ]
+  ]
+}

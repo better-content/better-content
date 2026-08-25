@@ -1,31 +1,100 @@
+
 [scheduler]
-enabled = true
-disable_vanilla_patrol_spawning = true
-interval_ticks = 20
-work_budget_per_tick = 64
+	enabled = true
+	disable_vanilla_patrol_spawning = true
+	#Range: 1 ~ 1200
+	interval_ticks = 20
+	#Range: 1 ~ 4096
+	work_budget_per_tick = 64
 
 [territory]
-radius_chunks = 32
-warning_band_chunks = 4
-grid_spacing_chunks = 64
-grid_jitter_chunks = 18
-spawn_chance_percent = 35
-min_spawn_distance_chunks = 24
+	#Range: 8 ~ 32
+	radius_chunks = 32
+	#Range: 1 ~ 12
+	warning_band_chunks = 4
+	#Range: 16 ~ 512
+	grid_spacing_chunks = 64
+	#Range: 0 ~ 128
+	grid_jitter_chunks = 18
+	#Range: 1 ~ 100
+	spawn_chance_percent = 35
+	#Range: 0 ~ 512
+	min_spawn_distance_chunks = 24
 
 [economy]
-initial_reserve = 18
-initial_aggression = 6
-minimum_aggression = 6
-maximum_aggression = 18
+	#Range: 0 ~ 10000
+	initial_reserve = 18
+	#Range: 0 ~ 1000
+	initial_aggression = 6
+	#Range: 0 ~ 1000
+	minimum_aggression = 6
+	#Range: 1 ~ 1000
+	maximum_aggression = 18
 
 [campaigns]
-idle_return_ticks = 12000
-respawn_protection_ticks = 6000
-death_protection_ticks = 24000
-resolved_retention_ticks = 24000
-materialize_distance_chunks = 6
+	#Range: 200 ~ 144000
+	idle_return_ticks = 12000
+	#Range: 0 ~ 144000
+	respawn_protection_ticks = 6000
+	#Range: 0 ~ 288000
+	death_protection_ticks = 24000
+	#Range: 200 ~ 288000
+	resolved_retention_ticks = 24000
+	#Range: 1 ~ 24
+	materialize_distance_chunks = 6
+	#Range: 1 ~ 24000
+	travel_ticks_per_chunk = 120
+	#Range: 0 ~ 288000
+	raid_cooldown_ticks = 24000
+	#Range: 0 ~ 288000
+	captain_recovery_ticks = 6000
+	#Range: 0 ~ 288000
+	captain_success_recovery_ticks = 2400
+	#Range: 2 ~ 24
+	maximum_squad_members = 6
+	#Range: -100 ~ 100
+	idle_aggression_growth = 1
+	#Range: -100 ~ 100
+	defeat_aggression_growth = 1
+	#Range: -100 ~ 100
+	victory_aggression_growth = -1
 
 [learning]
-warband_rate = 0.05
-captain_rate = 0.1
-threat_rate = 0.1
+	#Range: 0.0 ~ 1.0
+	warband_rate = 0.05
+	#Range: 0.0 ~ 1.0
+	captain_rate = 0.1
+	#Range: 0.0 ~ 1.0
+	threat_rate = 0.1
+
+[strategic_economy]
+	#Range: 1.0 ~ 1000000.0
+	recruit_base_ticks_per_threat = 1260.0
+	#Range: 0.0 ~ 1000000.0
+	recruit_habitability_penalty_ticks_per_threat = 1680.0
+	#Range: 1.0 ~ 1000000.0
+	mobilization_base_ticks_per_threat = 240.0
+	#Range: 0.0 ~ 1000000.0
+	mobilization_friction_ticks_per_threat = 480.0
+	#Range: 0.0 ~ 100.0
+	extraction_ticks_multiplier = 0.5
+
+[logistics]
+	#Range: 0.0 ~ 100.0
+	sustenance_per_threat_chunk = 0.018
+	#Range: 0.0 ~ 100.0
+	munitions_per_ranged_threat_chunk = 0.012
+	#Range: 0.0 ~ 100.0
+	maintenance_per_equipment_chunk = 0.025
+	#Range: 0.0 ~ 10000.0
+	deficit_grace_chunks = 3.0
+	#Range: 0.0 ~ 1.0
+	attrition_per_deficit_chunk = 0.035
+	#Range: 0.0 ~ 1.0
+	equipment_wear_per_friction_chunk = 0.004
+	#Range: 0.0 ~ 1000.0
+	forage_units_per_deficit_chunk = 0.75
+	#Range: 0.0 ~ 10000.0
+	shortage_retreat_base_chunks = 6.0
+	#Range: 0.0 ~ 10000.0
+	shortage_aggression_runway_chunks = 18.0

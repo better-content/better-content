@@ -49,7 +49,13 @@ until rg -q 'SmokeClient joined the game' "$server_log" 2>/dev/null; do
   ((SECONDS<deadline)) || fail "client join timed out; see $client_log"
   sleep 1
 done
-sleep "$SETTLE_SECONDS"
+settle_until=$((SECONDS+SETTLE_SECONDS))
+until { ((SECONDS>=settle_until)) && rg -q '\[EMI\] Reloaded EMI in [0-9]+ms' "$client_log" 2>/dev/null; }; do
+  kill -0 "$client_pid" 2>/dev/null || fail 'client exited before EMI finished reloading'
+  kill -0 "$server_pid" 2>/dev/null || fail 'server exited before EMI finished reloading'
+  ((SECONDS<deadline)) || fail "client settle or EMI readiness timed out; see $client_log"
+  sleep 1
+done
 kill -0 "$client_pid" 2>/dev/null || fail 'client exited during settle'
 kill -0 "$server_pid" 2>/dev/null || fail 'server exited during settle'
 kill "$client_pid" 2>/dev/null || true; wait "$client_pid" 2>/dev/null || true; client_pid=''

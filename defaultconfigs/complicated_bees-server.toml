@@ -1,0 +1,43 @@
+
+[production_cap]
+	#The absolute maximum multiplier that bees can receive from modifiers
+	productivityCap = 50000
+
+[cycle_length]
+	#How long (in ticks) one bee cycle should take.
+	productionCycleLength = 200
+	#How long (in ticks) an apiary should wait between re-scanning the environment for appropriate conditions.
+	enviroCycleLength = 200
+
+[research]
+	#The percentage bonus researching a mutation in the microscope should grant to that mutation's chances.
+	researchBonus = 0.2
+
+[rf]
+	#How many ticks an unupgraded centrifuge should take to process a comb
+	centrifugeBaseSpeed = 200
+	#How much rf/tick an unupgraded centrifuge should use while processing a recipe.
+	centrifugeBaseEnergy = 20
+	#How much rf/tick a generator should produce while burning a fuel.
+	furnaceGeneratorBaseEnergy = 20
+	#How much rf a generator should be able to store.
+	furnaceGeneratorBaseStorage = 100000
+	#How much rf/tick a honey generator should produce while burning a fuel.
+	honeyGeneratorBaseEnergy = 40
+	#How much rf a honey generator should be able to store.
+	honeyGeneratorBaseStorage = 200000
+	#How much rf/tick a mellarium energy cell should be able to transfer into itself.
+	mellariumCellTransfer = 2000
+	#How much rf a mellarium energy cell should be able to store at base.
+	mellariumCellStorage = 200000
+	#How much rf/tick a gyrofuge energy cell should be able to transfer into itself.
+	gyrofugeCellTransfer = 2000
+	#How much rf a gyrofuge energy cell should be able to store at base.
+	gyrofugeCellStorage = 200000
+	#How many ticks an unupgraded gyrofuge should take to process a comb
+	gyrofugeBaseSpeed = 100
+	#How much rf/tick an unupgraded gyrofuge should use while processing a recipe.
+	gyrofugeBaseUsage = 50
+	#How much rf/tick an unupgraded gyrofuge should use while idle.
+	gyrofugeBaseIdleUsage = 10
+

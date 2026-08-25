@@ -107,6 +107,10 @@ PY
 stage_side() {
   local side="$1" target="$2"
   copy_content "$target"
+  if [ "$side" = server ] && [ -d "$ROOT/server-config/config-overrides" ]; then
+    mkdir -p "$target/config"
+    cp -a "$ROOT/server-config/config-overrides/." "$target/config/"
+  fi
   resolve_artifacts "$target" "$side"
 }
 

@@ -1,0 +1,141 @@
+{
+  "replace": true,
+  "values": [
+    "#minecraft:replaceable_by_trees",
+    "#minecraft:flowers",
+    "aether:berry_bush",
+    "aether:berry_bush_stem",
+    {
+      "id": "deep_aether:lightcap_mushrooms",
+      "required": false
+    },
+    {
+      "id": "deep_aether:aerlavender",
+      "required": false
+    },
+    {
+      "id": "deep_aether:tall_aerlavender",
+      "required": false
+    },
+    {
+      "id": "deep_aether:aether_cattails",
+      "required": false
+    },
+    {
+      "id": "deep_aether:tall_aether_cattails",
+      "required": false
+    },
+    {
+      "id": "deep_aether:echaisy",
+      "required": false
+    },
+    {
+      "id": "deep_aether:aether_moss_carpet",
+      "required": false
+    },
+    {
+      "id": "aether_redux:blightmoss_carpet",
+      "required": false
+    },
+    {
+      "id": "aether_redux:fungal_carpet",
+      "required": false
+    },
+    {
+      "id": "aether_redux:golden_leaf_pile",
+      "required": false
+    },
+    {
+      "id": "aether_redux:gilded_leaf_pile",
+      "required": false
+    },
+    {
+      "id": "aether_redux:blightwillow_leaf_pile",
+      "required": false
+    },
+    {
+      "id": "aether_redux:jellyshroom",
+      "required": false
+    },
+    {
+      "id": "aether_redux:shimmerstool",
+      "required": false
+    },
+    {
+      "id": "aether_redux:xaelia_patch",
+      "required": false
+    },
+    {
+      "id": "aether_redux:golden_clover",
+      "required": false
+    },
+    {
+      "id": "aether_redux:zyatrix",
+      "required": false
+    },
+    {
+      "id": "aether_redux:daggerbloom",
+      "required": false
+    },
+    {
+      "id": "aether_redux:theratip",
+      "required": false
+    },
+    {
+      "id": "aether_redux:cloudcap_mushling",
+      "required": false
+    },
+    {
+      "id": "aether_redux:lumina",
+      "required": false
+    },
+    {
+      "id": "aether_redux:wyndsprouts",
+      "required": false
+    },
+    {
+      "id": "aether_redux:skysprouts",
+      "required": false
+    },
+    {
+      "id": "aether_redux:luxweed",
+      "required": false
+    },
+    {
+      "id": "aether_redux:fieldsproot_petals",
+      "required": false
+    },
+    {
+      "id": "aether_redux:flareblossom",
+      "required": false
+    },
+    {
+      "id": "aether_redux:infernia",
+      "required": false
+    },
+    {
+      "id": "aether_redux:avelium_sprouts",
+      "required": false
+    },
+    {
+      "id": "aether_redux:avelium_roots",
+      "required": false
+    },
+    {
+      "id": "aether_redux:splitfern",
+      "required": false
+    },
+    {
+      "id": "aether_redux:short_aether_grass",
+      "required": false
+    },
+    {
+      "id": "deep_aether:tall_glowing_grass",
+      "required": false
+    },
+    {
+      "id": "deep_aether:glowing_spores",
+      "required": false
+    }
+  ]
+}

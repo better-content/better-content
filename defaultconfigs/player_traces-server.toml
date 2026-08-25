@@ -1,0 +1,29 @@
+#Range: 1 ~ 4096
+saveQueueMax = 64
+#Range: 16 ~ 2048
+shardCacheSize = 128
+#Range: 1.0 ~ 64.0
+referenceDensity = 8.0
+#Range: 0.0 ~ 1.0
+minVisibleAlpha = 0.07
+#Maximum trace subscription radius the server accepts, in chunks.
+#Range: 2 ~ 32
+maxRenderDistance = 32
+#Range: 0.01 ~ 1.0
+rainExposureFactor = 0.91
+devVisualFixture = false
+#Range: 64 ~ 4096
+maxPayloadTraces = 4096
+#Range: 16 ~ 4096
+maxPayloadAnnotations = 256
+#Range: 16 ~ 4096
+maxBloodPoolsPerDimension = 512
+#Range: 8 ~ 1024
+maxDeathEchoesPerDimension = 128
+#Range: 1 ~ 64
+maxDeathEchoesPerPlayer = 8
+#Range: 1 ~ 256
+maxPayloadBloodPools = 64
+#Range: 1 ~ 32
+maxPayloadDeathEchoes = 8
+

@@ -6,8 +6,7 @@ Blocks = [
 	"framedblocks:framed_item_frame",
 	"hexerei:mahogany_drying_rack",
 	"hexerei:willow_drying_rack",
-	"hexerei:witch_hazel_drying_rack",
-]
+	"hexerei:witch_hazel_drying_rack"]
 
 [Physics]
 	SupportStrength = 0

@@ -20,8 +20,7 @@ Blocks = [
 	"create:metal_girder_encased_shaft",
 	"create:powered_shaft",
 	"create:sequenced_gearshift",
-	"create:shaft",
-]
+	"create:shaft"]
 
 [Physics]
 	SupportStrength = 195600

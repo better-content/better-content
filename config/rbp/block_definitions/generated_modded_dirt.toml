@@ -55,8 +55,7 @@ Blocks = [
 	"unearthed:kimberlite_grassy_regolith",
 	"unearthed:kimberlite_regolith",
 	"unearthed:quartzite_grassy_regolith",
-	"unearthed:quartzite_regolith",
-]
+	"unearthed:quartzite_regolith"]
 
 [Physics]
 	#The maximum weight the block(s) can support both horizontally and vertically.

@@ -38,8 +38,7 @@ Blocks = [
 	"tconstruct:pig_iron_block",
 	"tconstruct:raw_cobalt_block",
 	"tconstruct:rose_gold_block",
-	"tconstruct:steel_block",
-]
+	"tconstruct:steel_block"]
 
 [Physics]
 	#The maximum weight the block(s) can support both horizontally and vertically.

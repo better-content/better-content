@@ -3,8 +3,7 @@
 # any direction, without allowing diagonal attachment or structural load bearing.
 Blocks = [
 	"tconstruct:scorched_channel",
-	"tconstruct:seared_channel",
-]
+	"tconstruct:seared_channel"]
 
 [Physics]
 	SupportStrength = 0

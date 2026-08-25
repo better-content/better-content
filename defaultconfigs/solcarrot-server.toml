@@ -1,3 +1,4 @@
+
 [milestones]
 	#Number of hearts you start out with.
 	#Range: 0 ~ 1000
@@ -5,8 +6,7 @@
 	#Number of hearts you gain for reaching a new milestone.
 	#Range: 0 ~ 1000
 	heartsPerMilestone = 2
-	#A list of numbers of unique foods you need to eat to unlock each milestone, in ascending order.
-	#The curve keeps later discoveries valuable instead of exhausting food progression early.
+	#A list of numbers of unique foods you need to eat to unlock each milestone, in ascending order. Naturally, adding more milestones lets you earn more hearts.
 	milestones = [10, 25, 45, 70, 100]
 
 [filtering]

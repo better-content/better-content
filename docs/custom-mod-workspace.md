@@ -37,7 +37,7 @@ packwiz refresh
 | [latent-chemlib](https://github.com/better-content/latent-chemlib) | `latent_chemlib` | `latent-chemlib-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [oc2r-create-bridge](https://github.com/better-content/oc2r-create-bridge) | `oc2r_create_bridge` | `oc2r-create-bridge-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [oc2r-wireless-pubsub](https://github.com/better-content/oc2r-wireless-pubsub) | `oc2r_wireless_pubsub` | `oc2r-wireless-pubsub-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
-| [pillager-campaigns](https://github.com/better-content/pillager-campaigns) | `pillager_campaigns` | `pillager-campaigns-0.2.1.jar` | `./gradlew verifyFull stageRuntimeJar` |
+| [pillager-campaigns](https://github.com/better-content/pillager-campaigns) | `pillager_campaigns` | `pillager-campaigns-0.3.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [world-lifecycle-manager](https://github.com/better-content/world-lifecycle-manager) | `world_lifecycle_manager` | `world-lifecycle-manager-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [procedural-bouquets](https://github.com/better-content/procedural-bouquets) | `procedural_bouquets` | `procedural-bouquets-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [realistic-ores](https://github.com/better-content/realistic-ores) | `realistic_ores` | `realistic-ores-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |

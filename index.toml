@@ -6562,7 +6562,7 @@ hash = "3b6236845f6a5ff8804487b63b0d74305b91316dc9a008362838607b0be3bd8e"
 
 [[files]]
 file = "config/pillager_campaigns-common.toml"
-hash = "570bcf55ad539ba2a2396b3dd6bb195177f23875564442b37bca5dbd04df8903"
+hash = "6fb898cdfa250b688971cd19b1db53f8dd22c226cddb8e9f628ed7908b25a978"
 
 [[files]]
 file = "config/player_traces-client.toml"
@@ -10018,7 +10018,7 @@ hash = "d1e7593313fffe5133e579aef73b4bfa541f74b615a39ada4258a6f06f1a3225"
 
 [[files]]
 file = "kubejs/config/economy_acquisition.json"
-hash = "d3d94743df997addae68dab71e729e44f2eb37e2d740823d3e537d8bab482408"
+hash = "eb65718e49630d93a5358048d5b9778dd52301781bb10614dcefa13bbde9f5fb"
 
 [[files]]
 file = "kubejs/config/food_effect_progression_candidates.json"
@@ -13346,8 +13346,8 @@ hash = "b2cb681aaf3e6085148392a06d40899239dc299aaf5ce0adf168fc225d922c97"
 metafile = true
 
 [[files]]
-file = "mods/pillager-campaigns-0.2.1.jar"
-hash = "bd685b2e660d7446377a5c5944c1ee6e4dea2ac5da764642dfba21da1efef889"
+file = "mods/pillager-campaigns-0.3.0.jar"
+hash = "26c94bfb89567de027881ba518052d1e8f4de41a85afeed7d98527a304eb1b5b"
 
 [[files]]
 file = "mods/ping-wheel.pw.toml"

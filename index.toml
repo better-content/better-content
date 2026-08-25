@@ -5898,7 +5898,7 @@ hash = "65c18811c90a233617a71e784edf2c352f5ebd1923291fd6ed3dd2e684cbd360"
 
 [[files]]
 file = "config/class_selector/embark.json"
-hash = "8bbeca158f88f60a46fc56efcf89152899ab9d42c133eeb51245cf6208af7b82"
+hash = "0e730337e7e615e604d13647316cff41b04dfb283791b858ed65b8b1f9877e45"
 
 [[files]]
 file = "config/class_selector/kits.json"
@@ -7243,6 +7243,14 @@ hash = "3069076ea24267448bbfbccbb234746ab7e45d09dfaea4e95a346665bf760bd0"
 [[files]]
 file = "config/wares-common.toml"
 hash = "d18d0e25a28ca42341b94f52b5248d0d449b9af4b85c30d355dd40c2b1555609"
+
+[[files]]
+file = "config/world_lifecycle_manager-biomes-expanded.txt"
+hash = "2e501dd3302382a9d875780ae4ec42ba3248e3111f4ff16ef4b8412486d21d1e"
+
+[[files]]
+file = "config/world_lifecycle_manager-biomes-frontier.txt"
+hash = "ef39c842e7fadfc09af48dd3cba116e689eca0294d83757b2824206a7597e820"
 
 [[files]]
 file = "config/world_lifecycle_manager-biomes.txt"
@@ -14296,7 +14304,7 @@ metafile = true
 
 [[files]]
 file = "mods/class-selector-1.0.0.jar"
-hash = "3adfebd27c28c2ec4c3b6166e575ac3f76391f3cd08e22964a718356ec5d30ed"
+hash = "744a27222b716f84c5016ed8c53b3c6fcbd26c9c35893f9f17ec7908fe06d5ba"
 
 [[files]]
 file = "mods/claustrophobic-dungeons.pw.toml"
@@ -14752,7 +14760,7 @@ metafile = true
 
 [[files]]
 file = "mods/immersive-weathering-sampler-0.1.0.jar"
-hash = "34a6abec5734da0f2d6ff191b107bce9adcd117d059bb4cc1bc7c1c54abdb4fa"
+hash = "8173c3875fbb1cfdb73a72e791c21fbe67116ab5c6370bbbe6046b8ea63c1fdc"
 
 [[files]]
 file = "mods/improved-village-placement.pw.toml"
@@ -15404,7 +15412,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "b7d21c8b9d8aade45be2367b87052d9ce200ded4abfb61137f7aa13a3ace1844"
+hash = "f3882f04187d19ce10fa6359fa19f511d48e6d1ba55fe9723ac9bcd5d0172855"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"
@@ -15427,7 +15435,7 @@ hash = "01310430f73a45aa4845d6ddf79dd99eee713cc5757b52395d55aab226b06c56"
 
 [[files]]
 file = "package.sh"
-hash = "24a3834476d09458290dd34759dd833a1e187686f6871cd3d0c636116c363ca2"
+hash = "92da76f6c9581a382b5fc81c9031750cf1fa60c9214fec8b593035f6f1dd6fa2"
 
 [[files]]
 file = "quests/graph.yml"
@@ -15455,7 +15463,7 @@ hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
 
 [[files]]
 file = "smoke.sh"
-hash = "77251209da88da3f1901b02eace1d7f00c436afe329cf9f20be560b6a9919565"
+hash = "e4d2c012d2810731bf3326ee56eeb81c7ee947b40cd23642a28461e5629e3d91"
 
 [[files]]
 file = "tacz/applied-armorer.pw.toml"
@@ -15478,4 +15486,4 @@ hash = "380a3105e0739f6bbae202352d29d68a7a1e88bab8912c95cd9204492c7d48ae"
 
 [[files]]
 file = "world-lifecycle-manager-server.sh"
-hash = "10218bfae333e5581bdb063d2cf7b48cab2abb80b7a832ff2c05ea0daf9da248"
+hash = "d3d54a2880acad9c46e7d72a25742cc052467cf88fdb5d1ea27863f97d1b82b0"

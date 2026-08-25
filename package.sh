@@ -138,6 +138,8 @@ install_server() {
   else
     printf '%s\n' '-Xms2G' '-Xmx8G' '-XX:+UseG1GC' '-Dfile.encoding=UTF-8' > "$server/user_jvm_args.txt"
   fi
+  cp "$ROOT/run.sh" "$ROOT/run-forge.sh" "$ROOT/world-lifecycle-manager-server.sh" "$server/"
+  chmod 0755 "$server/run.sh" "$server/run-forge.sh" "$server/world-lifecycle-manager-server.sh"
 }
 
 package_runtime() {

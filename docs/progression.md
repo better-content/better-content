@@ -4,6 +4,11 @@ This pack uses six technology eras. Machine Blocks are one-time capability
 proofs: only the explicitly named root machines consume them. Downstream
 recipes return to each mod's native manufactured parts.
 
+Progression is communicated by executable recipes, apparatus, native guides,
+item-hover annotations, and event or world feedback. FTB Quests records a small
+set of completed milestones but does not prescribe routes, expose recipe chains,
+or gate discovery through quest dependencies.
+
 ## Era 1 — Hand Workshop
 
 Build native Tinkers' Construct tools, reach any active Dimension Font (Nether,

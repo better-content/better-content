@@ -228,39 +228,36 @@
 	# • *nbt: The NBT data that the block must have for the temperature to be applied.
 	# • *tempLimit: The maximum world temperature at which this block temp will have any effect.
 	#   (Represents the minimum temp if the block temp is negative)
-"Block Temperatures" = [
-    ["cold_sweat:boiler", 7, 7, "c", 20, "lit=true", "", 100],
-    ["cold_sweat:icebox", -7, 7, "c", 20, "frosted=true", "", 0],
-    ["minecraft:lava", 11, 7, "c", 111, "", "", 538, true],
-    ["#minecraft:fire", 8, 7, "c", 25, "", "", 204],
-    ["#minecraft:campfires", 8, 7, "c", 25, "lit=true", "", 204],
-    ["minecraft:magma_block", 7, 3, "c", 27],
-    ["minecraft:lava_cauldron", 11, 7, "c", 111, "", "", 538, true],
-    ["minecraft:ice", -3, 4, "c", 13, "", "", 1],
-    ["minecraft:packed_ice", -7, 4, "c", 27, "", "", -9],
-    ["minecraft:blue_ice", -9, 4, "c", 36, "", "", -18],
-    ["#minecraft:ice", -3, 4, "c", 15, "", "", 1],
-    ["#kubejs:cold_sweat/mild_cold_sources", -2, 3, "c", 8, "", "", 2],
-    ["#kubejs:cold_sweat/strong_cold_sources", -4, 4, "c", 16, "", "", -4],
-    ["#kubejs:cold_sweat/lava_cauldrons", 11, 7, "c", 111, "", "", 538, true],
-    ["heat_sync:hot_water", 8, 5, "c", 25, "", "", 100],
-    ["#kubejs:cold_sweat/lit_heat_sources", 7, 6, "c", 25, "lit=true", "", 204],
-    ["#kubejs:cold_sweat/constant_heat_sources", 5, 4, "c", 20, "", "", 204],
-    ["#toughasnails:heating_blocks,burnt:fire_barrel_active,burnt:fire_barrel_blast_block,burnt:fragile_magma", 4, 4, "c", 15, "", "", 204],
-
-    ["create:blaze_burner", 3, 3, "c", 17, "blaze=smouldering", "", 204],
-    ["create:blaze_burner", 6, 4, "c", 17, "blaze=fading", "", 204],
-    ["create:blaze_burner", 8, 5, "c", 25, "blaze=kindled", "", 204],
-    ["create:blaze_burner", 11, 6, "c", 33, "blaze=seething", "", 204],
-
-    ["farmersdelight:stove", 7, 6, "c", 25, "lit=true", "", 204],
-
-    ["tconstruct:seared_heater", 8, 5, "c", 33, "active=true", "", 204],
-    ["tconstruct:seared_melter", 6, 4, "c", 25, "active=true", "", 204],
-    ["tconstruct:smeltery_controller", 4, 4, "c", 25, "active=true", "", 204],
-    ["tconstruct:foundry_controller", 4, 4, "c", 25, "active=true", "", 204],
-    ["tconstruct:scorched_alloyer", 7, 5, "c", 33, "active=true", "", 204]
-]
+	"Block Temperatures" = [
+	    ["cold_sweat:boiler", 7, 7, "c", 20, "lit=true", "", 100],
+	    ["cold_sweat:icebox", -7, 7, "c", 20, "frosted=true", "", 0],
+	    ["minecraft:lava", 11, 7, "c", 111, "", "", 538, true],
+	    ["#minecraft:fire", 8, 7, "c", 25, "", "", 204],
+	    ["#minecraft:campfires", 8, 7, "c", 25, "lit=true", "", 204],
+	    ["minecraft:magma_block", 7, 3, "c", 27],
+	    ["minecraft:lava_cauldron", 11, 7, "c", 111, "", "", 538, true],
+	    ["minecraft:ice", -3, 4, "c", 13, "", "", 1],
+	    ["minecraft:packed_ice", -7, 4, "c", 27, "", "", -9],
+	    ["minecraft:blue_ice", -9, 4, "c", 36, "", "", -18],
+	    ["#minecraft:ice", -3, 4, "c", 15, "", "", 1],
+	    ["#kubejs:cold_sweat/mild_cold_sources", -2, 3, "c", 8, "", "", 2],
+	    ["#kubejs:cold_sweat/strong_cold_sources", -4, 4, "c", 16, "", "", -4],
+	    ["#kubejs:cold_sweat/lava_cauldrons", 11, 7, "c", 111, "", "", 538, true],
+	    ["heat_sync:hot_water", 8, 5, "c", 25, "", "", 100],
+	    ["#kubejs:cold_sweat/lit_heat_sources", 7, 6, "c", 25, "lit=true", "", 204],
+	    ["#kubejs:cold_sweat/constant_heat_sources", 5, 4, "c", 20, "", "", 204],
+	    ["#toughasnails:heating_blocks,burnt:fire_barrel_active,burnt:fire_barrel_blast_block,burnt:fragile_magma", 4, 4, "c", 15, "", "", 204],
+	    ["create:blaze_burner", 3, 3, "c", 17, "blaze=smouldering", "", 204],
+	    ["create:blaze_burner", 6, 4, "c", 17, "blaze=fading", "", 204],
+	    ["create:blaze_burner", 8, 5, "c", 25, "blaze=kindled", "", 204],
+	    ["create:blaze_burner", 11, 6, "c", 33, "blaze=seething", "", 204],
+	    ["farmersdelight:stove", 7, 6, "c", 25, "lit=true", "", 204],
+	    ["tconstruct:seared_heater", 8, 5, "c", 33, "active=true", "", 204],
+	    ["tconstruct:seared_melter", 6, 4, "c", 25, "active=true", "", 204],
+	    ["tconstruct:smeltery_controller", 4, 4, "c", 25, "active=true", "", 204],
+	    ["tconstruct:foundry_controller", 4, 4, "c", 25, "active=true", "", 204],
+	    ["tconstruct:scorched_alloyer", 7, 5, "c", 33, "active=true", "", 204]
+	]
 	#─────────────────────────────────────────────────────────────────────────
 	# The maximum range of blocks' area of effect
 	# - Note: This will not change anything unless blocks are configured to utilize the expanded range
@@ -271,7 +268,7 @@
 	# When set to true, uses Cold Sweat's temperature system to determine water freezing behavior
 	"Custom Freezing Behavior" = true
 	#─────────────────────────────────────────────────────────────────────────
-	# When set to true, modifies ice blocks to be harvestable with a pickaxe
+	# When set to true, modifies ice blocks to be harvestable with a pickaxe and tweaks its mining speed
 	"Custom Ice Drops" = true
 	#─────────────────────────────────────────────────────────────────────────
 	# The speed at which wet players dry off

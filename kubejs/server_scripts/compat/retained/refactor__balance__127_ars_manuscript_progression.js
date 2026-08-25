@@ -67,7 +67,7 @@ ServerEvents.recipes(function (event) {
         A: 'create:andesite_alloy',
         B: 'minecraft:book',
         P: 'minecraft:paper'
-    }).id('kubejs:formal_magic/ars/novice_spell_book')
+    }).id('ars_nouveau:novice_spell_book')
 
     event.shaped('ars_nouveau:scribes_table', [
         'PCP',

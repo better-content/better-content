@@ -11,7 +11,7 @@
 	# Features for the Timelapse sleepAction
 	# If true, performance stats will be written to log on timelapse end (average TPS, total time, total ticks).
 	logTimelapsePerformanceStats = true
-	# The action to perform on a SLEEPING player if they are attacked with DIRECT damage (not a potion/effect) during timelapse. Doesn't apply to Bed Rest.
+	# The action to perform on a SLEEPING if they are attacked with DIRECT damage (not a potion/effect) during timelapse. Doesn't apply to Bed Rest.
 	#Allowed Values: NoChange, InstantKill, Invincible
 	timelapseSleepersDirectDamageAction = "NoChange"
 	# For multiplayer. If true, players NOT sleeping will be invincible during Timelapse.
@@ -49,5 +49,7 @@
 	# IMPORTANT - This will ONLY apply with vanilla and vanilla-like beds! Will not change spawn in other dimensions unless featureSetSpawnAnyDimension is also enabled.
 	featureAllowAnyDimension = false
 	# If enabled, resting/sleeping in a non-overworld bed can ALSO set the spawn to that bed.
-	# IMPORTANT - it will overwrite the overworld spawn point; it will NOT set per-dimension spawn points.
+	# IMPORTANT - it will *overwrite* the overworld spawn point; it will NOT set per-dimension spawn points!
+	# Note that this option may or may not conflict with mod-added custom beds that differ to the vanilla Minecraft bed.
+	# This means that if this config is enabled, mod-added custom beds *may* still block it with their own config; or if disabled, mod-added beds *may* still allow setting spawn.
 	featureSetSpawnAnyDimension = false

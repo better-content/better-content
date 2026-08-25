@@ -1,8 +1,7 @@
 version = 3
 
-# Maintained from the Kotlin-first validation/tooling surface.
-# C2ME is required for the finished pack; risky features are re-enabled one
-# group at a time and must pass the supported `tools/bc` validation lanes.
+# C2ME remains required for the finished pack. Risky features are enabled only
+# when they pass the pack's supported smoke evaluation.
 defaultGlobalExecutorParallelismExpression = "default"
 globalExecutorParallelism = "default"
 
@@ -26,6 +25,8 @@ globalExecutorParallelism = "default"
 
 [ioSystem]
 	replaceImpl = "default"
+	# Better Content Fixes serializes Dynamic Trees' Poisson-disc chunk-data
+	# callbacks on their existing provider monitor, so asynchronous I/O stays on.
 	async = "true"
 	gcFreeChunkSerializer = "default"
 	chunkDataCacheSoftLimit = "default"

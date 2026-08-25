@@ -43,6 +43,7 @@
 	#Range: 0 ~ 300
 	drygmyQuantityCap = 5
 
+#Items
 [item]
 	#Spawn Caster Tomes in Dungeon Loot?
 	spawnTomes = false
@@ -50,6 +51,7 @@
 	#Range: 0 ~ 10000
 	jumpRingCost = 30
 
+#Blocks
 [block]
 	#How much potion a melder takes from each input jar. 100 = 1 potion
 	#Range: > 100
@@ -64,6 +66,7 @@
 	#Range: > 2
 	enchantedFlaskCap = 255
 
+#Debug
 [debug]
 	#Max number of log events to keep on entities. Lowering this number may make it difficult to debug why your entities are stuck.
 	#Range: > 0

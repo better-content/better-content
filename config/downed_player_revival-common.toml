@@ -1,3 +1,4 @@
+
 [downed_player_revival]
 	#Ticks before an unaided player bleeds out.
 	#Range: 20 ~ 12000
@@ -23,10 +24,10 @@
 	#Continuous Sneak-hold ticks required to give up.
 	#Range: 1 ~ 1200
 	giveUpHoldTicks = 1
-	#Health after revival, measured in half-hearts.
+	#Health after downed_player_revival, measured in half-hearts.
 	#Range: 1 ~ 40
 	revivedHealthHalfHearts = 2
-	#Weakness and slowness duration after revival.
+	#Weakness and slowness duration after downed_player_revival.
 	#Range: 0 ~ 1200
 	recoveryTicks = 100
 	#Ticks between positional downed-player whispers.

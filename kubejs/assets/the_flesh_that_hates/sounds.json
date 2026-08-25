@@ -1,0 +1,19 @@
+{
+  "flesh_dog":{"replace":true,"sounds":["the_flesh_that_hates:dog_ambient1aggro","the_flesh_that_hates:dog_ambient2aggro"]},
+  "flesh_infector":{"replace":true,"sounds":["the_flesh_that_hates:incubator_ambient1","the_flesh_that_hates:incubator_ambient2"]},
+  "flesh_hunter_i":{"replace":true,"sounds":["the_flesh_that_hates:hunter_ambient","the_flesh_that_hates:hunter_ambient2"]},
+  "incubator_spawn":{"replace":true,"sounds":["the_flesh_that_hates:incubator_evolution"]},
+  "flesh_human_idle":{"replace":true,"sounds":["the_flesh_that_hates:human_ambient1","the_flesh_that_hates:human_ambient2","the_flesh_that_hates:human_ambient3"]},
+  "flesh_hysterizer":{"replace":true,"sounds":["the_flesh_that_hates:hysterizer_ambientaggro1","the_flesh_that_hates:hysterizer_ambientaggro2","the_flesh_that_hates:hysterizer_ambientaggro3"]},
+  "flesh_walk":{"replace":true,"sounds":["the_flesh_that_hates:hard_step"]},
+  "flesh_sheep_idle":{"replace":true,"sounds":[{"name":"minecraft:entity.sheep.ambient","type":"event"}]},
+  "flesh_pig_idle":{"replace":true,"sounds":[{"name":"minecraft:entity.pig.ambient","type":"event"}]},
+  "flesh_piece_idle":{"replace":true,"sounds":["the_flesh_that_hates:genericflesh_hit"]},
+  "fleshhuntertwoidle":{"replace":true,"sounds":["the_flesh_that_hates:hunter2_ambient","the_flesh_that_hates:hunter2_ambient2"]},
+  "flesh_cow_idle":{"replace":true,"sounds":["the_flesh_that_hates:cow_ambient1","the_flesh_that_hates:cow_ambient2","the_flesh_that_hates:cow_ambient3"]},
+  "fleshboomeridle":{"replace":true,"sounds":["the_flesh_that_hates:boomer_ambient1","the_flesh_that_hates:boomer_ambient2","the_flesh_that_hates:boomer_ambient3"]},
+  "fleshboomerboom":{"replace":true,"sounds":["the_flesh_that_hates:boomer_explosion"]},
+  "flesh_suffer_idle":{"replace":true,"sounds":["the_flesh_that_hates:human_ambient1"]},
+  "flesh_incubator_one":{"replace":true,"sounds":["the_flesh_that_hates:incubator_ambient1","the_flesh_that_hates:incubator_ambient2"]},
+  "flesh_community_idle":{"replace":true,"sounds":["the_flesh_that_hates:community_ambient1aggro","the_flesh_that_hates:community_ambient2aggro"]}
+}

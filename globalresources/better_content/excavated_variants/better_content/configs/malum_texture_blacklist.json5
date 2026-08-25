@@ -1,0 +1,11 @@
+{
+  // The upstream Malum definitions use full/animated source textures. They
+  // cannot be separated into Excavated Variants' generated ore overlays.
+  blacklist: {
+    type: 'or',
+    filters: [
+      'ore:brilliant_stone',
+      'ore:blazing_quartz_ore',
+    ],
+  },
+}

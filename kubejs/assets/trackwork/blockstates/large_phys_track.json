@@ -1,0 +1,76 @@
+{
+  "variants": {
+    "axis=x,axis_along_first=false,part=end": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=x,axis_along_first=false,part=middle": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=x,axis_along_first=false,part=none": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=x,axis_along_first=false,part=start": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=x,axis_along_first=true,part=end": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=x,axis_along_first=true,part=middle": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=x,axis_along_first=true,part=none": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=x,axis_along_first=true,part=start": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=y,axis_along_first=false,part=end": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=y,axis_along_first=false,part=middle": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=y,axis_along_first=false,part=none": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=y,axis_along_first=false,part=start": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=y,axis_along_first=true,part=end": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=y,axis_along_first=true,part=middle": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=y,axis_along_first=true,part=none": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=y,axis_along_first=true,part=start": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=z,axis_along_first=false,part=end": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=z,axis_along_first=false,part=middle": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=z,axis_along_first=false,part=none": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=z,axis_along_first=false,part=start": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=z,axis_along_first=true,part=end": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=z,axis_along_first=true,part=middle": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=z,axis_along_first=true,part=none": {
+      "model": "trackwork:block/large_wheels"
+    },
+    "axis=z,axis_along_first=true,part=start": {
+      "model": "trackwork:block/large_wheels"
+    }
+  }
+}

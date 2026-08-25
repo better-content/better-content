@@ -1,11 +1,17 @@
+
 [dynamicTrees]
 	#Replaces Dynamic Trees' NormalSeasonManager season context HashMap with a ConcurrentHashMap.
 	#This is intended to prevent ConcurrentModificationException during parallel feature generation, especially with C2ME threaded features.
 	#Disable this if Dynamic Trees changes this internals or if diagnosing unrelated season behavior.
 	seasonContextConcurrentMap = true
-	#Opt-in administrative repair for unsupported Dynamic Trees only. Disabled by default because its chunk-load scan can alter an already-generated world.
-	#Never enable it for an update without a verified world backup and an operator-approved maintenance window.
+	#Opt-in administrative repair for unsupported Dynamic Trees only.
+	#Disabled by default because its chunk-load scan can alter an already-generated world.
+	#Enable only after a verified backup and an operator-approved maintenance window.
 	destroyUnsupportedTrees = false
+	#Registers Unearthed/Hyle regolith and overgrown stone surface blocks as Dynamic Trees dirt-like soils.
+	#Keeps Unearthed dirt replacement enabled while allowing Dynamic Trees worldgen to place forest trees on replaced forest surfaces.
+	#Disable only when diagnosing Dynamic Trees soil registration behavior.
+	unearthedRegolithSoils = true
 
 [hyle]
 	#Guards Hyle tertiary stone selection against invalid indices.
@@ -34,31 +40,33 @@
 	retryRejectedStreams = true
 
 [explosionOverhaul]
-	#Cap Explosion Overhaul blur, camera sway, low-pass audio, and deafness durations from large or repeated blasts.
+	#Caps Explosion Overhaul concussion effects so large clustered blasts cannot cause excessively long shell shock.
+	#The cap applies to blur, camera sway, low-pass audio, and deafness, including duration accumulated by repeated blasts.
 	clampConcussionDuration = true
-	#Maximum concussion hold duration in seconds.
+	#Maximum concussion hold duration in seconds. Default: 45 seconds.
 	#Range: 1 ~ 100
 	maxConcussionDurationSeconds = 45
 
 [wanderingTrader]
-	#Replaces the vanilla random chance with one shared recurring world visitor.
+	#Replaces the vanilla random wandering-trader chance with one shared recurring world visitor.
 	#Vanilla meeting-point placement, biome exclusions, llamas, gamerules, and despawning remain in use.
 	recurringVisits = true
-	#Two Minecraft days before the first visit after this feature initializes.
-	#Range: 0 ~ 2147483647
+	#Ticks from first enabled world load to the first visit. Default: two Minecraft days.
+	#Range: > 0
 	initialDelay = 48000
-	#Five Minecraft days between successful visits.
-	#Range: 1200 ~ 2147483647
+	#Ticks between successful visits. Default: five Minecraft days.
+	#Range: > 1200
 	visitInterval = 120000
-	#Retry a due visit after one minute when no valid spawn position is found.
+	#Ticks before retrying a due visit when vanilla cannot find a valid spawn position.
 	#Range: 20 ~ 24000
 	retryDelay = 1200
-	#Broadcast the themed trader's dimension and exact block coordinates.
+	#Broadcasts the themed trader's dimension and exact block coordinates after a scheduled arrival.
 	announceArrival = true
 
 [mobs]
-	#Disable sunlight ignition for protected mobs while allowing phantoms and Phantom subclasses to burn normally after sunrise.
-	#Ordinary fire and non-solar fire damage remain unchanged.
+	#Forces Mob.isSunBurnTick() to return false for protected mobs.
+	#Phantoms and Phantom subclasses retain vanilla daylight burning so exposed phantoms are cleared after sunrise.
+	#Other daylight-sensitive mobs remain protected; ordinary fire and non-solar fire damage are unchanged.
 	disableSunBurnTick = true
 	#Denies natural and chunk-generation monsters near the Overworld terrain surface and on tagged grass-covered ground at any depth.
 	#The surface is measured with the leaf-ignoring motion-blocking heightmap, so tree canopies do not create ambient spawn pockets.
@@ -123,3 +131,41 @@
 	#A mob hit creates a weight-based tug that moves both the player and mob without dealing impact damage.
 	#Players, vehicles, and non-Mob living entities remain invalid grapple targets.
 	mobGrappling = true
+
+[pollution]
+	#Cancels Pollution of the Realms emissions from its player block-break event only.
+	#World-level block-break emissions remain available to Create drills, contraptions, explosions, and other automation.
+	disablePlayerBlockBreakEmissions = true
+
+[vanillaBoats]
+	#Multiplier applied to the accumulated-damage destruction threshold of vanilla boats and chest boats.
+	#Movement, collisions, passengers, damage accumulation, and modded vessel entity types are unchanged.
+	#Range: 1.0 ~ 100.0
+	durabilityMultiplier = 10.0
+	#Suppresses the boat or chest-boat item when a vanilla vessel is destroyed.
+	#Chest-boat inventory contents still drop normally; unrelated entity drops are unchanged.
+	suppressDestructionDrop = true
+
+[advancedLootInfo]
+	#Skips Advanced Loot Info's EMI data registration when EMI runs it off the Minecraft client thread.
+	#ALI creates example entities during EMI indexing; some entity constructors touch world random and trip C2ME's safe-random guard off-thread.
+	#Normal render-thread ALI behavior is left unchanged.
+	skipOffThreadEmiRegistration = true
+
+[burnt]
+	#Replaces Burnt's generic burnt grass result with pack-specific burnt variants for modded grass-like blocks.
+	#Uses native Burnt outputs when they exist andbetter_content_fixes-owned burnt palette blocks otherwise.
+	#Disable only when diagnosing Burnt grass spread behavior.
+	moddedGrassReplacements = true
+
+[fluidMixing]
+	#Reverts fluid-generated block placements unless the produced block is explicitly allowlisted.
+	#This preserves the current pack policy from Cobble-Gen-Haters while moving ownership intobetter_content_fixes.
+	#The default allowlist is data-driven through thebetter_content_fixes:allowed_fluid_generated_blocks block tag.
+	blockGeneratedBlocks = true
+
+[farmland]
+	#Cancels farmland trampling from fall impacts.
+	#Prevents players and mobs from degrading cultivated soil back into dirt when landing on it.
+	#Disable only if a future system intentionally wants fall-impact farmland loss back.
+	preventTrample = true

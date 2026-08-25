@@ -134,7 +134,6 @@ Blocks = [
 	"natures_spirit:coconut_wood",
 	"natures_spirit:cypress_log",
 	"natures_spirit:cypress_wood",
-	"natures_spirit:desert_turnip_stem",
 	"natures_spirit:fir_log",
 	"natures_spirit:fir_wood",
 	"natures_spirit:ghaf_log",
@@ -325,7 +324,6 @@ Blocks = [
 	"twilightforest:transformation_wood",
 	"twilightforest:twilight_oak_log",
 	"twilightforest:twilight_oak_wood",
-	"undergarden:gloomgourd_stem",
 	"undergarden:grongle_log",
 	"undergarden:grongle_wood",
 	"undergarden:smogstem_log",
@@ -337,8 +335,7 @@ Blocks = [
 	"undergarden:stripped_wigglewood_log",
 	"undergarden:stripped_wigglewood_wood",
 	"undergarden:wigglewood_log",
-	"undergarden:wigglewood_wood",
-]
+	"undergarden:wigglewood_wood"]
 
 [Physics]
 	#The maximum weight the block(s) can support both horizontally and vertically.

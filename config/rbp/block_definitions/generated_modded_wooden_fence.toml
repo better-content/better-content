@@ -98,7 +98,6 @@ Blocks = [
 	"tconstruct:greenheart_fence",
 	"tconstruct:greenheart_fence_gate",
 	"tconstruct:nahuatl_fence",
-	"tconstruct:nahuatl_fence_gate",
 	"tconstruct:scorched_bricks_fence",
 	"tconstruct:skyroot_fence",
 	"tconstruct:skyroot_fence_gate",
@@ -124,8 +123,7 @@ Blocks = [
 	"undergarden:smogstem_fence",
 	"undergarden:smogstem_fence_gate",
 	"undergarden:wigglewood_fence",
-	"undergarden:wigglewood_fence_gate",
-]
+	"undergarden:wigglewood_fence_gate"]
 
 [Physics]
 	#The maximum weight the block(s) can support both horizontally and vertically.

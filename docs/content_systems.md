@@ -2,13 +2,14 @@
 
 The modpack owns cross-mod progression policy, six Machine Blocks, genuinely
 cross-mod transition items, exact era-root recipes, optional transport gates,
-quests, and player documentation. Owning mods keep lifecycle and runtime logic.
+the milestone ledger, and player documentation. Owning mods keep lifecycle and
+runtime logic.
 
 | System | Owner | Pack boundary |
 | --- | --- | --- |
 | Deposits, chunks, samples, processing, grinding balls, canonical outputs | Realistic Ores | Supplies acid/era inputs only; no duplicate ore registration |
-| Radioactive profiles, disturbance persistence, emissions | Latent ChemLib | Provides progression recipes and quest guidance |
-| Heat storage/transport and Create Boiler Heater | Heat Sync | Provides era placement and quest guidance |
+| Radioactive profiles, disturbance persistence, emissions | Latent ChemLib | Provides progression recipes and milestone recognition only where the accomplishment remains salient |
+| Heat storage/transport and Create Boiler Heater | Heat Sync | Provides era placement; native UI and hover own operating facts |
 | Blood Altar bootstrap and tier reference | Blood Magic | Still-Beating Heart plus overworld materials opens the altar; Blood Magic's in-game guide remains the authoritative Tier 1-5 multiblock reference |
 | Occult physical components | Hexerei | Hexerei's mixing cauldron manufactures bounded physical Occultism components; Occultism retains rituals, spirit fire, bindings, and servants |
 | Occult storage | None | Controller, remote, and satchel acquisition routes are closed; Pretty Pipes is the practical logistics surface |
@@ -41,6 +42,35 @@ transport, compatibility, utility, and narrow removal policy. Mandatory recipes
 use exact installed IDs; optional addon recipes use explicit mod-loaded guards.
 Scripts do not scan arbitrary recipe JSON, inspect namespaces, or silently skip
 mandatory roots.
+
+## Item-hover annotations
+
+Better Content owns one pack-authored item-hover annotation surface. Concise,
+item-local pack facts appear through the normal tooltip pipeline, so EMI hover
+and ordinary inventory hover show the same annotation. Static records live in
+`kubejs/config/hover_annotations.json`; large stable families may instead be
+generated from an existing authoritative config, such as formal glyph origins
+or the TConstruct/Epic Fight handling catalogue.
+
+Annotations correct a materially wrong or incomplete mental model. They do not
+repeat ingredients, layouts, attributes, or ordinary uses that EMI and native
+tooltips already communicate. Dynamic stack state remains owned by the source
+mod. World events, controls, onboarding, scouting, and other guidance without a
+natural item anchor remain on their event, HUD, or world surfaces.
+
+## Achievement ledger
+
+FTB Quests is not a progression guide. Its live authored surface is three
+always-visible, independent ten-node chapters—World, Works, and Powers—plus six
+optional completionist chapters. Milestones record durable accomplishments and
+tease major possibilities; they contain no dependency graph, quest links,
+recipe chains, onboarding instructions, or item-local explanatory prose.
+
+Gameplay criteria, stack predicates, dimension or structure tasks, and only
+then exact item tasks prove completion. Every player-visible completable quest
+awards an authored Create Deco coin that remains manually claimed. Deleted
+guide-node rewards are not redistributed. FTB visibility has no pack-authored
+unlock policy or book-burning bypass.
 
 The wandering trader is one shared temporary world visitor. Its first scheduled
 arrival is after two active-server days, successful visits repeat every five

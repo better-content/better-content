@@ -5821,6 +5821,10 @@ file = "config/arseng-common.toml"
 hash = "e2f591923558d17aa4bd65859e30b388083de43a58b7642dbeb4863e53d7d145"
 
 [[files]]
+file = "config/better_content_fixes-client.toml"
+hash = "909acefcee2650bfda75cece38a86856e16737b225dbf7eed2d6995e05e157e4"
+
+[[files]]
 file = "config/better_content_fixes-common.toml"
 hash = "39f04fd9dd01386fc1c86bd8f0f84e643d658e61ce52c743ef4e5c8e9aaa04db"
 
@@ -12607,7 +12611,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "b428682e68dbda3acedabe43e333bb11e1a6cb4f07cd12c974322da413b55582"
+hash = "134e35f6caf822a70713aa8078ef1b82792b4b7895da71dc4f63463a9bdd51d0"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"

@@ -1,0 +1,8 @@
+{
+  "runewood_hanging_sign_hit":{"replace":true,"sounds":[{"name":"minecraft:block.wood.hit","type":"event"}]},
+  "runewood_hanging_sign_step":{"replace":true,"sounds":[{"name":"minecraft:block.wood.step","type":"event"}]},
+  "soulwood_hanging_sign_hit":{"replace":true,"sounds":[{"name":"minecraft:block.wood.hit","type":"event"}]},
+  "soulwood_hanging_sign_step":{"replace":true,"sounds":[{"name":"minecraft:block.wood.step","type":"event"}]},
+  "scythe_caught":{"replace":true,"sounds":["malum:curiosities/weapons/scythe/catch1","malum:curiosities/weapons/scythe/catch2"]},
+  "echoing_ring_absorbs":{"replace":true,"sounds":["malum:curiosities/trinkets/cancer_ring/grow1","malum:curiosities/trinkets/cancer_ring/grow2","malum:curiosities/trinkets/cancer_ring/grow3"]}
+}

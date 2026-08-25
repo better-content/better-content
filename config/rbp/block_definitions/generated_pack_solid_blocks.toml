@@ -2412,8 +2412,6 @@ Blocks = [
 	"immersive_weathering:ars_nouveau/green_archwood_leaf_pile",
 	"immersive_weathering:ars_nouveau/purple_archwood_leaf_pile",
 	"immersive_weathering:ars_nouveau/red_archwood_leaf_pile",
-	"immersive_weathering:dynamic_trees_dimension_compat/finley_wood_leaf_pile",
-	"immersive_weathering:dynamic_trees_dimension_compat/living_wood_leaf_pile",
 	"immersive_weathering:dynamic_trees_dimension_compat/wigglewood_leaf_pile",
 	"immersive_weathering:exposed_iron_bars",
 	"immersive_weathering:exposed_iron_trapdoor",

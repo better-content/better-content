@@ -1,0 +1,1 @@
+{"item.waterskin.pour":{"replace":true,"sounds":[{"name":"minecraft:item.bucket.empty","type":"event"}]},"item.waterskin.fill":{"replace":true,"sounds":[{"name":"minecraft:item.bucket.fill","type":"event"}]}}

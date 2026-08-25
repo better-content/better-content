@@ -1,0 +1,652 @@
+{
+  "variants": {
+    "face=ceiling,facing=east,fill_level=0,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=0,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=1,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=1,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=2,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=2,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=3,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=3,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=4,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=4,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=5,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=5,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=6,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=6,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=7,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=7,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=8,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=east,fill_level=8,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=0,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=0,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=1,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=1,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=2,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=2,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=3,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=3,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=4,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=4,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=5,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=5,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=6,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=6,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=7,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=7,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=8,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=north,fill_level=8,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=0,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=0,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=1,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=1,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=2,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=2,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=3,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=3,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=4,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=4,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=5,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=5,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=6,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=6,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=7,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=7,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=8,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=south,fill_level=8,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=0,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=0,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=1,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=1,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=2,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=2,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=3,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=3,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=4,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=4,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=5,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=5,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=6,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=6,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=7,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=7,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=8,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=ceiling,facing=west,fill_level=8,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=0,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=0,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=1,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=1,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=2,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=2,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=3,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=3,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=4,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=4,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=5,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=5,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=6,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=6,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=7,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=7,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=8,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=east,fill_level=8,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=0,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=0,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=1,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=1,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=2,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=2,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=3,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=3,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=4,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=4,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=5,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=5,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=6,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=6,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=7,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=7,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=8,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=north,fill_level=8,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=0,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=0,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=1,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=1,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=2,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=2,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=3,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=3,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=4,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=4,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=5,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=5,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=6,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=6,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=7,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=7,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=8,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=south,fill_level=8,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=0,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=0,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=1,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=1,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=2,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=2,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=3,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=3,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=4,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=4,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=5,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=5,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=6,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=6,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=7,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=7,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=8,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=floor,facing=west,fill_level=8,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=0,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=0,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=1,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=1,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=2,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=2,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=3,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=3,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=4,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=4,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=5,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=5,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=6,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=6,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=7,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=7,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=8,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=east,fill_level=8,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=0,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=0,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=1,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=1,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=2,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=2,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=3,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=3,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=4,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=4,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=5,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=5,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=6,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=6,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=7,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=7,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=8,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=north,fill_level=8,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=0,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=0,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=1,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=1,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=2,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=2,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=3,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=3,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=4,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=4,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=5,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=5,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=6,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=6,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=7,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=7,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=8,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=south,fill_level=8,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=0,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=0,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=1,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=1,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=2,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=2,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=3,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=3,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=4,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=4,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=5,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=5,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=6,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=6,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=7,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=7,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=8,waterlogged=false": {
+      "model": "fowlplay:block/bird_feeder"
+    },
+    "face=wall,facing=west,fill_level=8,waterlogged=true": {
+      "model": "fowlplay:block/bird_feeder"
+    }
+  }
+}

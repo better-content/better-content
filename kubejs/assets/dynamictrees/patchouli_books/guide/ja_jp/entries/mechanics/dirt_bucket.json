@@ -1,0 +1,33 @@
+{
+  "name": "土入りバケツ",
+  "read_by_default": "true",
+  "icon": "dynamictrees:dirt_bucket",
+  "category": "dynamictrees:mechanics",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "dynamictrees:dirt_bucket",
+      "title": "土入りバケツ",
+      "link_recipe": true,
+      "text": "土入りバケツは種子を苗木に変換したり、その逆を行う為のものです。$(br2)作業台に土入りバケツと種子または苗木を置くことで変換できます。このレシピは不定形です。"
+    },
+    {
+      "type": "crafting",
+      "title": "土入りバケツ",
+      "anchor": "dirt_bucket",
+      "recipe": "dynamictrees:dirt_bucket",
+      "text": "土入りバケツを作るには、土ブロックとバケツを組み合わせるだけです。$(br2)必要であれば、地面を右クリックしてバケツを空にすることができます。"
+    },
+    {
+      "type": "text",
+      "title": "種子から苗木へ",
+      "text": "This legacy recipe is intentionally unavailable in Better Content progression."
+    },
+    {
+      "type": "text",
+      "title": "果実から種子へ",
+      "text": "果樹は種子を落としませんが、果実から種子を得ることができます。"
+    }
+  ]
+}

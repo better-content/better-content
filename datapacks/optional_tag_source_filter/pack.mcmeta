@@ -1,0 +1,26 @@
+{
+  "pack": {
+    "pack_format": 15,
+    "description": "Filters invalid optional-mod tag contributions from installed integrations"
+  },
+  "filter": {
+    "block": [
+      {
+        "namespace": "fabric",
+        "path": "tags/blocks/needs_tool_level_1\\.json"
+      },
+      {
+        "namespace": "regions_unexplored",
+        "path": "tags/blocks/grass_blocks\\.json"
+      },
+      {
+        "namespace": "biomeswevegone",
+        "path": "tags/blocks/grass_blocks\\.json"
+      },
+      {
+        "namespace": "biomesoplenty",
+        "path": "tags/blocks/grass_blocks\\.json"
+      }
+    ]
+  }
+}

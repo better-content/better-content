@@ -5,6 +5,7 @@ FORGE_COORD=1.20.1-47.4.13
 FORGE_VERSION=47.4.13
 SETTLE_SECONDS="${BC_SMOKE_SETTLE_SECONDS:-10}"
 RUN_ROOT="${BC_SMOKE_RUN_ROOT:-$HOME/.cache/bc/smoke}"
+SMOKE_USERNAME="${BC_SMOKE_USERNAME:-SmokeClient}"
 fail() { printf 'smoke failed: %s\n' "$*" >&2; exit 1; }
 for command in java pipx rg Xvfb; do command -v "$command" >/dev/null || fail "$command is required"; done
 [[ "$SETTLE_SECONDS" =~ ^[0-9]+$ ]] || fail 'BC_SMOKE_SETTLE_SECONDS must be a non-negative integer'
@@ -14,6 +15,17 @@ mkdir -p "$evidence"
 port="$(python3 - <<'PY'
 import socket
 s=socket.socket(); s.bind(('127.0.0.1',0)); print(s.getsockname()[1]); s.close()
+PY
+)"
+smoke_uuid="$(BC_SMOKE_USERNAME="$SMOKE_USERNAME" python3 - <<'PY'
+import hashlib
+import os
+import uuid
+
+digest = bytearray(hashlib.md5(f"OfflinePlayer:{os.environ['BC_SMOKE_USERNAME']}".encode()).digest())
+digest[6] = (digest[6] & 0x0f) | 0x30
+digest[8] = (digest[8] & 0x3f) | 0x80
+print(uuid.UUID(bytes=bytes(digest)).hex)
 PY
 )"
 "$ROOT/package.sh" runtime "$server" "$client" "$port" >"$evidence/package.log" 2>&1
@@ -39,11 +51,11 @@ display=":$((100+port%100))"
 Xvfb "$display" -screen 0 1280x720x24 -nolisten tcp >"$xvfb_log" 2>&1 & xvfb_pid=$!
 sleep 1; kill -0 "$xvfb_pid" 2>/dev/null || fail "Xvfb failed; see $xvfb_log"
 (
-  export DISPLAY="$display" LIBGL_ALWAYS_SOFTWARE=1 MESA_GL_VERSION_OVERRIDE=4.6 MESA_GLSL_VERSION_OVERRIDE=460
-  exec pipx run --spec portablemc portablemc --main-dir "$client_main" --work-dir "$client" --timeout 120 start --jvm "$(command -v java)" --jvm-args='-Xms4G -Xmx16G -XX:+UseG1GC -Dfile.encoding=UTF-8' --resolution 1280x720 -u SmokeClient -s 127.0.0.1 -p "$port" "forge:1.20.1-$FORGE_VERSION"
+  export DISPLAY="$display" LIBGL_ALWAYS_SOFTWARE=1 MESA_GL_VERSION_OVERRIDE=4.6 MESA_GLSL_VERSION_OVERRIDE=460 ALSOFT_DRIVERS=null
+  exec pipx run --spec portablemc portablemc --main-dir "$client_main" --work-dir "$client" --timeout 120 start --jvm "$(command -v java)" --jvm-args='-Xms4G -Xmx16G -XX:+UseG1GC -Dfile.encoding=UTF-8' --resolution 1280x720 -u "$SMOKE_USERNAME" -i "$smoke_uuid" -s 127.0.0.1 -p "$port" "forge:1.20.1-$FORGE_VERSION"
 ) >"$client_log" 2>&1 & client_pid=$!
 deadline=$((SECONDS+600))
-until rg -q 'SmokeClient joined the game' "$server_log" 2>/dev/null; do
+until rg -Fq "$SMOKE_USERNAME joined the game" "$server_log" 2>/dev/null; do
   kill -0 "$client_pid" 2>/dev/null || fail "client exited before join; see $client_log"
   kill -0 "$server_pid" 2>/dev/null || fail "server exited before join; see $server_log"
   ((SECONDS<deadline)) || fail "client join timed out; see $client_log"

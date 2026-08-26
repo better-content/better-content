@@ -14943,7 +14943,7 @@ metafile = true
 
 [[files]]
 file = "mods/realistic-ores-0.2.0.jar"
-hash = "b842cbc7981b35a402795e31f547edcbab2a8ca0acf665dd76442fd2a357a159"
+hash = "3385cd6be7a98ce36aed766bbfa07ea8635334eec5b2f7161e0e39a661649122"
 
 [[files]]
 file = "mods/realistic-physics.pw.toml"
@@ -14967,7 +14967,7 @@ metafile = true
 
 [[files]]
 file = "mods/rpg-stats-1.0.0.jar"
-hash = "603d1c05b11805cc27087fc5ec05eb1017a2464d4f04071451bcb7c0eedf5269"
+hash = "d5ec3a77fe4f369142ec4ac6e82d9b85d69e8384c1bd0aad2b5ee464b3dc117b"
 
 [[files]]
 file = "mods/runtime-data-dumper-0.1.0.jar"
@@ -15084,7 +15084,7 @@ metafile = true
 
 [[files]]
 file = "mods/systemic-salience-0.1.0.jar"
-hash = "d9a8b2d522090f3e628213687da589772b719ec5d64e24bd0610b2fbfd5ba8e8"
+hash = "bcd1821ba0ec230fc4581b6e4beef51f1dad2affd2d9bfc33747665984a4a955"
 
 [[files]]
 file = "mods/tconjei.pw.toml"

@@ -19,6 +19,29 @@ Every row has exactly one representative in each authority. Aspect words appear 
 
 The palette was numerically optimized in OKLCH with an sRGB-gamut constraint. Glyph, name, value structure, morphology, and actual behavior remain mandatory parallel cues; hue is never authoritative alone.
 
+## Sensory grammar
+
+Every identity has one recurring motion and sound phrase. These cues play only at meaningful events—allocation previews and commits, nutrient threshold changes, and discrete nutrition activations—not on every attack, step, or mined block.
+
+| Aspect | Motion | Sound motif | Geological expression |
+| --- | --- | --- | --- |
+| Impact | radial burst | low thud and transient | radiating Hotstone |
+| Tempo | two rapid pulses | paired clicks | clustered Copper Bloom |
+| Work | descending, settling sparks | tool strike and knock | Tin Quartz ribbons |
+| Mobility | directional rising sweep | short whoosh | branching Brassroot |
+| Endurance | slow expanding ring | sustained low tone | continuous Coal Measures seam |
+| Robustness | inward brace | shield-like clack | dense Ironstone bands |
+| Renewal | rising spiral and bloom | ascending chimes | Evaporite crystal bloom |
+| Control | converging points | ticks resolving to a ping | Black Shale convergence |
+
+The eight 18×18 badges and eight short mono OGG motifs are canonical assets shared byte-for-byte by the RPG and nutrition implementations. Ores reuse the same badge strip while their world identity remains morphology-first dirty geology rather than an aspect-colour wash.
+
+## Teaching surfaces
+
+There is deliberately no explicit comparison screen. Discovery is reinforced through the RPG allocation screen, Diet screen labels, food and ore tooltips, nutrition activation feedback, ore blocks in the world, and EMI's ordinary tooltip/recipe surfaces. Natural names lead; the aspect badge, glyph, colour, and name appear when the player interacts closely enough to need the formal identity.
+
+RPG point increments provide a quiet preview pulse and motif. A successful server-confirmed allocation produces a short recap. Nutrition threshold crossings and discrete abilities use the corresponding motion and motif, while the meal recap explains which bodily state changed and for approximately how long. Ore tooltips formally name the identity and preserve Shift for the assay summary; ore discovery never interrupts play with a toast or action-bar message.
+
 ## RPG development
 
 RPG allocations use `cap × points / (points + 20)`: twenty committed points reach half the cap, allocation cannot be refunded during the life, and death wipes the ledger. Each visible category is singular and mechanically coherent:

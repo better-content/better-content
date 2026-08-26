@@ -15440,7 +15440,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "f3a362fc77ba755b827d54eae3b410949d4d1ab0b30b2f0de98d083da672966c"
+hash = "2b6fd7f4b4d4c6a2df8a950bb354108229cdd394093c1f86ea665a6b2d02cece"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"

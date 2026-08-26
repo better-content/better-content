@@ -9097,6 +9097,150 @@ file = "kubejs/assets/ars_nouveau/textures/blocks/agronomic_sourcelink.png"
 hash = "599a2771fc077f8aa75d4225243522123dbe509e3eebe6ed7cd19226d85a8802"
 
 [[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/army_walks_toward_you.png"
+hash = "193102e254f7dc4dcce1a67fc61a48505bbe217a96b36d1bff29253fd6b13964"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/blood_infrastructure.png"
+hash = "fe850aa966782aa75bba149c549e8dab7ab76ec00e04472d1bede3febfbc8a37"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/doors_borrow_worlds.png"
+hash = "7ff676278ba93778e21ad68822ec2d4048495fd9a565f13df50b44e2e60eee08"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/feast_before_journey.png"
+hash = "f38ae3b0ffcfe9bd836976612569bf21d416cdf550ce10582746412e87a88cc4"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/flight_engineered.png"
+hash = "469d9fd120e79dbe9deaac550b965a28d3f5da8684696d79b1af13640e58f2d8"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/leave_atmosphere.png"
+hash = "8bfc12ec4e09f91835735b42ad7bb17009d56af4b6f2587112c1a574fc014bb8"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/life_becomes_capable.png"
+hash = "03315dc7318c446120d8f70019e02b38935d6ee844650e6ddf0fe18fef882ca7"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/machines_can_remember.png"
+hash = "a92b30385f3d2eab0eb879e3814a287f0b68bbc815cb3c78c221516863892bd7"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/materials_temperaments.png"
+hash = "4f71c108cbfbdf25b691b1813ae68f133cd4e314402e26b17694329672dbc4f9"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/motion_becomes_industry.png"
+hash = "7f5b2fc8435eae832e291beca80eb8f080fe2aa20efa49157064c66ed0e714cf"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/pressure_changes_matter.png"
+hash = "517e4aa116b289588e2c98ec4809dba812207c65d592427d5d7019b7ac46b38d"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/rails_turn_distance.png"
+hash = "93f2c703a107cf152e9f683762ab59a7aaddc80f310216b862af5200d06e24af"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/reality_has_grammar.png"
+hash = "4e927969c6815acdf7682ec896ed5eb834c3950e8d7f45f0a1c5d6434dcf535a"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/spirits_honour_contracts.png"
+hash = "809ac9fc9f6e214d63c83fd0e776c7f1c79c45a38c626a5e017121fc642a762b"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/stone_makes_promises.png"
+hash = "33e011f5b37c3735be6f7a53580e2c2200ffc9af770e50ab0f8e428f23764bd0"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/vessel_becomes_place.png"
+hash = "e5e3322a61daa39818e83e5223964f2739b9f16bfc8e2333d0981fcdf62b6403"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_inherited.png"
+hash = "0bae88f60b30c370dd7c581799cb5a1358fcfe48cc0fcf7194831324f47b527d"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_remembers.png"
+hash = "0cb488324092c5c056f4897407ff911daae07d69ab1c25f3fc42805d9ad0e4e2"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/army_walks_toward_you.png"
+hash = "e60f61a0579d896e5b8e7f835a8a8d2d66976a8b8eea9aad59c78af16a10f4fe"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/blood_infrastructure.png"
+hash = "4501f5963da6bbad2ea4040736a7ce17c5f3a6dae282c1e71ee9278aacb2efce"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/doors_borrow_worlds.png"
+hash = "4d312613626edc22a4fb4beb10d4a0ea7bf511dd5d378191f0ae6d0bad996bb7"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/feast_before_journey.png"
+hash = "1a6bb09f239fd2f63ae654403094354aa5df149a7beabbaba02c8469c9aea5f7"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/flight_engineered.png"
+hash = "89d92e4b646ccdc3261a005d79eea63a8d0e232689e9000f40a7f7521b77acf6"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/leave_atmosphere.png"
+hash = "747e7949034f4a5fdc18e912312ecae27a265d4293b727a291ccd77176cea5e5"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/life_becomes_capable.png"
+hash = "baa120f98948d9a5aff792201f7dd668a0dd149591b000b22adfead9ad18bc3b"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/machines_can_remember.png"
+hash = "9d06f073a418c0129840a823bb6ca5f49514f6a99dc728d64a217c58f18794ca"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/materials_temperaments.png"
+hash = "a2dee08fe866363ba70cdea62cf02bc642dd507454ac43ea62807f14e6ea2029"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/motion_becomes_industry.png"
+hash = "72388dd7d4c5eb32776e3854769bf7bd38095aafe8e5e598560848db18a8fb4d"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/pressure_changes_matter.png"
+hash = "92957b809516656eaf15ea28d710831828f6562feb80a00dd3d5e683f12615d2"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/rails_turn_distance.png"
+hash = "01f647c12be7bffd001de1933c58f530bf42f138fcb279d08b9471e25d869724"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/reality_has_grammar.png"
+hash = "e1af3f0f3ca20160e46e2f81cfd1582a9be204fd344d478605b32d09b1cea8dd"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/spirits_honour_contracts.png"
+hash = "a16cf7e6a9f9c72d489642392997323445fe79127e9f303976c02dc7ec0dcbff"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/stone_makes_promises.png"
+hash = "6241d1304170a565332b555bca4a8a85c9973516b9652400081307402455e2e3"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/vessel_becomes_place.png"
+hash = "c84a97a69f8b9a5001e62fcfd508c7e818b80a363f54c86ea94621a4b9a9a329"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/world_inherited.png"
+hash = "62b6a32dbf76a4eceb7f068154be7764d5518be3a36cbbbc31bf5bd0f8bcf964"
+
+[[files]]
+file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/world_remembers.png"
+hash = "36c1a1f6c63795df4143759f9a816daa7ae97428ef70edccf57e0f028a7b43cd"
+
+[[files]]
 file = "kubejs/assets/bloodmagic/patchouli_books/guide/en_us/entries/alchemy_array/sigil/lava.json"
 hash = "cb8376fa913f9f382c07133a23ac315e633996bba44a9f4a796f57d83746d995"
 
@@ -11766,7 +11910,7 @@ hash = "62424537e90b4490093a8d76cb1a368dee7ff2a67fce1152c260b97f95003fd5"
 
 [[files]]
 file = "kubejs/data/better_content_fixes/threads/catalogue.json"
-hash = "2bd3a9590210a0f33d86a3db784c57f5b98daca5dbd5b15e332b010e7c06eb70"
+hash = "93b818509c18a2dea305560f17d9bc1407b037dd9d0b71eca050df51f29c0ba2"
 
 [[files]]
 file = "kubejs/data/bloodmagic/tags/items/arc/cuttingfluid.json"
@@ -14119,7 +14263,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "ee7fec763d60104418a86b5e92431558c67acf3715a2041f36a6b4b02470771c"
+hash = "1d9a070b05b9527120c4c18eac7c40d2185ac3c998298968e94e32df6f1298e9"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"
@@ -15280,7 +15424,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "f3882f04187d19ce10fa6359fa19f511d48e6d1ba55fe9723ac9bcd5d0172855"
+hash = "5ac1ade18df6340cd04881122a14ea9e7f9780d7372d89a49b0cb66c0c1dd7a7"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"

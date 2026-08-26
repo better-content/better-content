@@ -13,6 +13,9 @@ This directory contains the pack's living documentation. Add another focused liv
 - `weapon_balance_philosophy.md`: cross-system weapon balance doctrine, measurement rules, exceptions, and the current TCon/Epic Fight implementation.
 - `performance_and_mods.md`: memory findings, mod prune decisions, C2ME/DH/LC/TFTH notes, and active/inactive mod interpretation.
 - `custom-mod-workspace.md`: canonical custom-mod repositories, identities, artifacts, validation, and deployment workflow.
+- `threads.md`: contextual Thread discovery, reader, lineage collection, and cosmetic facsimile contract.
+- `thread_art_direction.md`: the illustrated deck's reproducible impossible-archive visual grammar and card briefs.
+- `lineage_endgame.md`: durable entropy caching, Condemnation, strategic curse, and mechanics-first lore model.
 
 ## Pack Thesis
 

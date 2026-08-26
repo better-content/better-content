@@ -11765,6 +11765,10 @@ file = "kubejs/data/better_content_fixes/tags/items/seared_melter_heat_sources.j
 hash = "62424537e90b4490093a8d76cb1a368dee7ff2a67fce1152c260b97f95003fd5"
 
 [[files]]
+file = "kubejs/data/better_content_fixes/threads/catalogue.json"
+hash = "2bd3a9590210a0f33d86a3db784c57f5b98daca5dbd5b15e332b010e7c06eb70"
+
+[[files]]
 file = "kubejs/data/bloodmagic/tags/items/arc/cuttingfluid.json"
 hash = "35134fe61f0b26fa5aa3a1d44f9e7deae1a0b714cdb8d5e3857d05428bd55939"
 
@@ -14115,7 +14119,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "76de799413c01d3d5685a1489004f5ce6cbd88880dc781c14e541c55a70a1290"
+hash = "cbda5f7723aba24475707c0a69a103fb50118282276f46e8d19548040aa9243a"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"
@@ -14851,7 +14855,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillager-campaigns-0.3.0.jar"
-hash = "301e07dee53bb4c97fb060f4130c2ab96670522a373343260693d034056c0f08"
+hash = "2b8cfdaae2d453e17109bf6bd63477bde5c8bdb0b69cc0f824c7d3487a58b111"
 
 [[files]]
 file = "mods/ping-wheel.pw.toml"
@@ -14865,7 +14869,7 @@ metafile = true
 
 [[files]]
 file = "mods/player-traces-0.1.0.jar"
-hash = "8202f380466cf37fd164d0fb1531cd181e90e7d4e2a202bcef262f35d913dd88"
+hash = "24f4fab826e81c2a2a1a17b42cc5a02c763572ca2a910d63e4d4b1efb6191b97"
 
 [[files]]
 file = "mods/playeranimator.pw.toml"

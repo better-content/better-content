@@ -20,6 +20,10 @@
       {
         "namespace": "biomesoplenty",
         "path": "tags/blocks/grass_blocks\\.json"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "loot_tables/empty\\.json"
       }
     ]
   }

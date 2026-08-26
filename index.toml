@@ -14459,7 +14459,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimension-drink-1.0.0.jar"
-hash = "eefa528e9b1ad6404cbca254d0f6600fd36c3c5c2772592dc73184e172d636d3"
+hash = "3bfcaab745df09ed7288f41143b225a1a5f68a9ce0e4077acdc16dc936e063dc"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -15077,7 +15077,7 @@ metafile = true
 
 [[files]]
 file = "mods/procedural-bouquets-0.1.0.jar"
-hash = "85ceb91f0f4c36b018b67d24be6945b692e3b93f23c1867b79d6140b75f9872e"
+hash = "5ab01b5d36f15e918d997789dc8bab1429dbfd8448fd2b9bbcd75f391a363e82"
 
 [[files]]
 file = "mods/project-vibrant-journeys.pw.toml"
@@ -15327,7 +15327,7 @@ metafile = true
 
 [[files]]
 file = "mods/tinkers-construct-affixes-1.0.0.jar"
-hash = "d555aaa643f6a6a1d54b0ab991357712b59ad59dd9d7f52e74c59039bc91133e"
+hash = "e4373230948fb5bc3df6ce345c987321eb55978614e04bf7b1ea6f0bf9fcc91a"
 
 [[files]]
 file = "mods/tinkers-construct.pw.toml"
@@ -15426,7 +15426,7 @@ metafile = true
 
 [[files]]
 file = "mods/village-walls-1.0.0.jar"
-hash = "541eec5208fb07858c29b83ff0f140a417543db5e3087edd56a0b181f8c34a9f"
+hash = "04f23daaf5a783fb2bfac07148cbf1056ae83e1278c5c90aa99c5574c4e91cb7"
 
 [[files]]
 file = "mods/wares.pw.toml"

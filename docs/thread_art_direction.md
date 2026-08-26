@@ -29,3 +29,29 @@ Recurring evidence is deliberately ambiguous: three braided lines, an off-axis a
 
 The source masters were generated individually with the built-in image-generation workflow after three anchors—World Remembers, Motion Becomes Industry, and Reality Has Grammar—established the shared treatment. Each remaining prompt combined this shared contract with its card brief and palette; future replacements must follow the same anchor-and-review process.
 
+## Tricolor development contract
+
+Review masters use exactly three semantic roles: archive substrate `#C6A15B`, one canonical Systemic Salience trace, and one card-specific pigment. Neutral black and parchment are shade and paper only. The trace is a path, current, fracture, or connection through the composition, never a whole-image tint.
+
+| Thread | Aspect trace | Unique pigment |
+| --- | --- | --- |
+| The World Remembers | Control `#8A6CB2` | Ghost cyan `#BFE9E4` |
+| A Life Becomes Capable | Renewal `#6FEDBA` | Life crimson `#B63A4A` |
+| Feast Before the Journey | Endurance `#35BBD0` | Provision orange `#D97932` |
+| Stone Makes Promises | Work `#CAA903` | Assay vermilion `#C64D35` |
+| Materials Have Temperaments | Robustness `#1175FC` | Temperament mint `#70CFAE` |
+| Motion Becomes Industry | Work `#CAA903` | Furnace orange `#E85D24` |
+| A Vessel Can Become a Place | Mobility `#C0E304` | Ocean teal `#147D8C` |
+| Rails Turn Distance into Machinery | Tempo `#AA652B` | Signal red `#C43F3F` |
+| Pressure Changes Matter | Impact `#E4717D` | Reagent teal `#21B9A0` |
+| Machines Can Remember | Control `#8A6CB2` | Machine cyan `#38CDE8` |
+| Doors Borrow Other Worlds | Mobility `#C0E304` | Aperture cyan `#25C3D8` |
+| Flight Must Be Engineered | Mobility `#C0E304` | Sky cobalt `#3978D4` |
+| An Army Walks Toward You | Impact `#E4717D` | Invasion red `#A9182C` |
+| Leave the Atmosphere | Endurance `#35BBD0` | Ignition orange `#F06A24` |
+| Blood Can Become Infrastructure | Renewal `#6FEDBA` | Blood crimson `#8F1730` |
+| Reality Has Grammar | Control `#8A6CB2` | Syntax cyan `#41D9D1` |
+| Spirits Honour Contracts | Control `#8A6CB2` | Covenant green `#4E9B57` |
+| A World Can Be Inherited | Renewal `#6FEDBA` | Successor white-blue `#C8EEF2` |
+
+The runtime review set is downsampled to 256×384. Deterministic CIE Lab distance masks derive an opaque archive-sepia structure layer, a transparent unique-pigment layer, and a transparent aspect-trace layer. Those masks exist only for development: after the third pass the reader displays the untouched full runtime image, so mask generation cannot reduce final fidelity.

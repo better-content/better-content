@@ -17,6 +17,13 @@ gravel for grout. Seared metallurgy owns alloy composition. Molten stone plus
 molten iron or zinc becomes molten Andesite Alloy, which is cast to Create's
 native item. The Hand Crank is the only positive SU source before the Nether.
 
+Font obelisks are powered only by internal charge. An unmodified Font stores
+15,000 charge, costs 600 charge to start, regenerates 0.25 each inactive tick,
+and has no join fee. An active run drains 80 charge plus 40 per participant each
+second, giving a solo player 120 active seconds from a full unmodified Font.
+Generated capacity and efficiency modifiers may extend or shorten that baseline.
+Exhausting charge ends the run and returns its participants.
+
 ## Era 2 — Powered Works
 
 Craft `kubejs:andesite_machine_block` from one Seared Brick block, four

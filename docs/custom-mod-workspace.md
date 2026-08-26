@@ -45,6 +45,6 @@ packwiz refresh
 | [downed-player-revival](https://github.com/better-content/downed-player-revival) | `downed_player_revival` | `downed-player-revival-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [rpg-stats](https://github.com/better-content/rpg-stats) | `rpg_stats` | `rpg-stats-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [settlement-roads](https://github.com/better-content/settlement-roads) | `settlement_roads` | `settlement-roads-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
-| [tinkers-construct-affixes](https://github.com/better-content/tinkers-construct-affixes) | `tinkers_construct_affixes` | `tinkers-construct-affixes-1.0.0.jar` | `./gradlew build stageRuntimeJar` |
+| [tinkers-construct-affixes](https://github.com/better-content/tinkers-construct-affixes) | `tinkers_construct_affixes` | `tinkers-construct-affixes-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [player-traces](https://github.com/better-content/player-traces) | `player_traces` | `player-traces-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [village-walls](https://github.com/better-content/village-walls) | `village_walls` | `village-walls-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |

@@ -6,7 +6,7 @@ chunks, crushed feeds, concentrates, tailings, or molten exits.
 
 ## First-contact geology
 
-The complete player-facing worldgen roster is deliberately limited to ten
+The complete player-facing worldgen roster is deliberately limited to eight
 behavioural fantasies:
 
 | Deposit | Immediate promise | Visual identity |
@@ -16,11 +16,9 @@ behavioural fantasies:
 | Copper Bloom | copper | green oxidation around brassy mineralization |
 | Tin Quartz | bronze and quartz | white crystal ribbons with dark inclusions |
 | Brassroot | zinc and brass | yellow-grey branching roots |
-| Redbed | redstone | aggressive red fracture network |
 | Evaporite Beds | salt and preservation | pale crystalline beds |
-| Gem Pipe | a rare gem jackpot | vertical pipe with indicator crystals |
 | Hotstone | dangerous usable heat and heavy matter | dark energetic mineral body |
-| Black Shale | supernatural material | black strata with violet contamination |
+| Black Shale | redstone and supernatural material | black strata with violet contamination |
 
 Oil Seep remains a separate fluid surface feature. Technical materials survive
 as assay depth where they have an audited pack use; they do not create additional
@@ -47,8 +45,9 @@ complementary exploration layers.
    exits are metal-only; quartz, gems, salts, carbon, and other nonmetals remain
    item-form outputs.
 
-Gem Pipe and Hotstone use route-specific assay variants, so one legible deposit
-fantasy can reveal several late technical profiles without multiplying blocks.
+Tin Quartz folds gem-bearing pegmatite assays into its industrial depth, while
+Hotstone uses route-specific assay variants, so legible deposits can reveal
+several late technical profiles without multiplying blocks.
 The retained catalogue is 24 audited outputs plus rock salt, sodium chloride,
 and saltpeter.
 
@@ -61,7 +60,8 @@ the declared precious-metal routes.
 The processing backend is intentionally deep, but every family must communicate
 something before that backend is required. Coal chunks burn directly. Evaporite
 material yields Rock Salt for cooking and preservation. Black Shale supports soul
-fire and yields soul sand. Gem Pipe yields rough gem chips. Hotstone emits light,
+fire, yields soul sand, and supplies redstone. Tin Quartz later separates gems.
+Hotstone emits light,
 hurts on contact, and can be consolidated into magma.
 
 ## Grinding media
@@ -93,7 +93,7 @@ Systemic Salience does not turn ores into neon aspect tokens.
 | --- | --- |
 | Coal, iron, copper, tin, zinc | immediate fuel, tools, bronze, brass, and progression roots |
 | Gold, redstone, quartz, lapis | familiar technical and magical crafting economies |
-| Diamond, emerald, amethyst | immediate Gem Pipe jackpot value and ordinary gem uses |
+| Diamond, emerald, amethyst | deeper Tin Quartz assays and ordinary gem uses |
 | Rock salt, sodium chloride, saltpeter | cooking/preservation first; chemical and nitrate depth later |
 | Soul sand, sulfur | immediate Black Shale/soul utility; soul, reagent, and pollution chemistry |
 | Aluminum, cobalt, osmium, silver | live TConstruct materials and pack metallurgy/electrum routes |

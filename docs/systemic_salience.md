@@ -1,70 +1,69 @@
 # Systemic Salience
 
-Systemic Salience is a shared behavioral language, not a shared state system. RPG Stats owns permanent Life development, Diet plus the thin `systemic_salience` bridge own temporary bodily state, TConstruct owns material behavior, and Realistic Ores owns geological deposits and assay depth.
+Systemic Salience is an exact identity language shared by three separate authorities: RPG Stats owns permanent Life development, Diet plus `systemic_salience` own temporary bodily state, and Realistic Ores owns geological deposits. The systems share meaning and presentation but never share state. TConstruct is intentionally outside this identity matrix; its materials keep their native behavior.
 
-## Shared perceptual contract
+## Canonical identity matrix
 
-| Aspect | Glyph | sRGB | Recurring meaning |
-| --- | --- | --- | --- |
-| Impact | ✦ | `#E4717D` | forceful magnitude and interruption |
-| Tempo | » | `#AA652B` | action cadence and recovery timing |
-| Work | ⚒ | `#CAA903` | productive throughput |
-| Mobility | ➜ | `#C0E304` | locomotion and repositioning |
-| Endurance | ∞ | `#35BBD0` | resource conservation and sustained effort |
-| Robustness | ◆ | `#1175FC` | resistance to hostile conditions |
-| Renewal | ✚ | `#6FEDBA` | restoration and bodily recovery |
-| Control | ⊕ | `#8A6CB2` | accuracy, recoil, dispersion, and handling |
+Every row has exactly one representative in each authority. Aspect words appear in tooltips and supporting cues, not in the ordinary stat, food-group, or deposit names.
 
-The palette was numerically optimized in OKLCH with an sRGB-gamut constraint. Its checked contract is a minimum pairwise OKLab distance of `0.10` under normal vision and full-strength Machado-style protan, deutan, and tritan simulations. The actual rounded palette clears `0.117` in the worst simulated model. Glyphs, names, value structure, physical morphology, and behavior remain mandatory parallel cues; color is never authoritative alone.
+| Aspect | Glyph | sRGB | RPG development | Diet identity | Ore identity |
+| --- | --- | --- | --- | --- | --- |
+| Impact | ✦ | `#E4717D` | Strength | Proteins | Hotstone |
+| Tempo | » | `#AA652B` | Dexterity | Sugar | Copper Bloom |
+| Work | ⚒ | `#CAA903` | Aptitude | Grains | Tin Quartz |
+| Mobility | ➜ | `#C0E304` | Agility | Fruits | Brassroot |
+| Endurance | ∞ | `#35BBD0` | Constitution | Fats | Coal Measures |
+| Robustness | ◆ | `#1175FC` | Fortitude | Vegetables | Ironstone |
+| Renewal | ✚ | `#6FEDBA` | Vitality | Dairy | Evaporite Beds |
+| Control | ⊕ | `#8A6CB2` | Perception | Alcohol | Black Shale |
 
-## Concrete mechanic inventory
+The palette was numerically optimized in OKLCH with an sRGB-gamut constraint. Glyph, name, value structure, morphology, and actual behavior remain mandatory parallel cues; hue is never authoritative alone.
 
-| Authority | Concrete quantity or event | Operation | Aspect prior |
-| --- | --- | --- | --- |
-| RPG Stats / vanilla | attack damage | capped additive projection | Impact |
-| RPG Stats / Epic Fight | impact | capped additive projection | Impact |
-| RPG Stats / vanilla | attack speed | capped additive projection | Tempo |
-| RPG Stats / TConstruct | item-use speed | capped multiplicative projection | Tempo |
-| RPG Stats | mining speed | capped multiplicative projection | Work |
-| RPG Stats / vanilla | movement speed | capped additive projection | Mobility |
-| RPG Stats | hunger and thirst expenditure | capped multiplicative conservation | Endurance |
-| RPG Stats / Epic Fight | stamina | capped multiplicative projection | Endurance |
-| RPG Stats / Cold Sweat | heat and cold resistance | two capped additive projections | Robustness |
-| RPG Stats / TACZ | recoil and dispersion | two capped reductions | Control |
-| RPG Stats / Goety | spell range | capped multiplicative projection | Control |
-| Diet / Epic Fight / Thirst | stamina, quenched state, sprint support | temporary thresholds | Fruits: Renewal + Endurance |
-| Diet / vanilla | sustained-work exhaustion, tool preservation, long-haul sprint | temporary thresholds | Grains: Work + Endurance |
-| Diet / Epic Fight | knockback/impact, brace, success recovery | temporary thresholds | Proteins: Impact + Robustness |
-| Diet / Cold Sweat / vanilla | temperature drift, harmful-effect recovery, emergency protection | temporary thresholds | Vegetables: Robustness + Renewal |
-| Sugar bridge | nutrient potency, cooldowns, nutrient decay, later debt | amplifies and accelerates existing bodily state | meta-food; not an aspect bucket |
-| Alcohol bridge | composure/deferred harm versus impairment | midpoint benefit plus monotonic nonlinear impairment | meta-food; not an essential nutrient |
-| TConstruct Affixes | 15 repository-owned materials | signed descriptive `-3..3` profiles | multiple affinities plus weakness |
-| Realistic Ores | ten deposit families | name, morphology, immediate utility, assay behavior | Matter remains geology-first |
+## RPG development
 
-RPG allocations use a `cap × points / (points + 20)` curve: twenty committed points reach half the cap, allocation cannot be refunded during the life, and death wipes the allocation ledger. Exact projections stay in the RPG screen and tooltips.
+RPG allocations use `cap × points / (points + 20)`: twenty committed points reach half the cap, allocation cannot be refunded during the life, and death wipes the ledger. Each visible category is singular and mechanically coherent:
 
-## Nutrition configuration and presentation
+- Strength increases damaging impact and knockback.
+- Dexterity increases attack and item-use cadence.
+- Aptitude increases productive mining speed and reach.
+- Agility increases movement, swimming, and step capability.
+- Constitution conserves hunger, thirst, and stamina.
+- Fortitude resists temperature and knockback.
+- Vitality shortens harmful effects and preserves beneficial effects; it never grants health, healing, or combat recovery.
+- Perception improves recoil, dispersion, and spell range.
 
-Diet continues to classify and store Fruits, Grains, Proteins, and Vegetables. The bridge cancels Diet's generic decay/effect pass and supplies superlinear fullness decay, sugar load and metabolic debt, and inverted-U alcohol. The Diet-screen panel shows both affinities for every ordinary group. Alcohol has a center marker plus separate Composure and Impairment readouts, so the UI does not invite the player to fill it.
+Slice of Life: Carrot remains the sole owner of maximum-health progression.
 
-`systemic_salience-server.toml` exposes the decay exponent and baseline, sugar/debt/alcohol half-lives, amplification scales, every ordinary-nutrient threshold, and an `item_id=load` alcohol list. Sugar intensity remains tag-configurable through `systemic_salience:sugar_medium` and `systemic_salience:sugar_high`.
+## Nutrition
 
-## Material-profile ownership
+Diet stores six ordinary groups: Proteins, Grains, Fruits, Fats, Vegetables, and Dairy. Sugar and Alcohol are optional meta-food loads, never required for dietary completeness. Ordinary thresholds are `50%` supported, `75%` prepared, and `90%` feast; the upper range decays quickly so feast states are deliberate preparation rather than permanent upkeep.
 
-The resolved pack contains many third-party TConstruct definitions. Behavioral profiles are guaranteed only for the 15 materials authored by `tinkers_construct_affixes`; the owning mod tests exact profile coverage and shows “Pack-authored material profile” in tooltips. External materials retain native statistics and descriptions rather than receiving inferred labels which Better Content cannot truthfully own. This is an explicit boundary, not silent missing coverage.
+- Proteins culminate in a telegraphed Heavy Blow after briefly withholding attacks.
+- Grains build Work Rhythm through consecutive correct-tool blocks.
+- Fruits reward sustained sprinting with a stronger Stride.
+- Fats conserve bodily resources and can fund one emergency reserve.
+- Vegetables resist environmental drift and periodically brace one extreme exposure or knockback.
+- Dairy accelerates harmful-effect clearance, preserves beneficial effects through milk, and periodically cleanses one harmful effect.
+- Sugar accelerates attack/use cadence while sharply increasing nutrient expenditure and later metabolic debt.
+- Alcohol has a narrow moderate-composure window; high load degrades handling and can cause stumbles. Maximum alcohol is unambiguously bad.
 
-## Prediction and accessibility acceptance protocol
+The Diet screen labels every group with exactly one aspect identity. Generic Diet-wide bonuses are disabled so the discrete behavior is the lesson.
 
-Before a release changes the vocabulary, conduct the following blinded check with at least three people who did not author the changed content:
+## Ores
 
-1. Present the ten deposit textures and names without EMI. Record the promised use each participant predicts. Coal Measures and Ironstone require unanimous correct first-contact predictions; at least eight of ten deposits must produce the intended broad promise from each participant.
-2. Present five unseen pack-authored TConstruct tools with exact numbers hidden. Require participants to identify at least one correct strongest affinity on four of five.
-3. After showing RPG aspect names once, repeat the material test and ask participants to explain two nutrition profiles. Improvement, not memorization of exact values, is the cross-system transfer criterion.
-4. Repeat the deposit and glyph test under the pack's normal shaders in low light and with protan, deutan, and tritan filters. No decision may depend on hue alone.
-5. Let participants consume sugar and low/moderate/high alcohol without formula text. They must discover that sugar spends reserves faster, moderate alcohol has the best tradeoff, and high alcohol is undesirable.
+The complete player-facing roster is eight deposits plus the unrelated Oil Seep surface feature. Each deposit uses its aspect palette as an accent, a unique geological morphology, an immediate promise, and deeper assay routes:
 
-Automated builds enforce resource identity, palette distance, exact family/output contracts, projection curves, persistence rules, and processing result limits. The human protocol is the release gate for prediction; automated tests cannot establish that a player learned a useful prior.
+- Hotstone: dangerous heat and heavy power.
+- Copper Bloom: responsive copper mechanisms.
+- Tin Quartz: productive toolmaking, quartz, and later gem-bearing assays.
+- Brassroot: zinc/brass for moving machinery.
+- Coal Measures: stored fuel for sustained work.
+- Ironstone: durable iron and nickel-bearing depth.
+- Evaporite Beds: salt, preservation, and fertile chemistry.
+- Black Shale: redstone control, soul contamination, and precious traces.
 
-## Maintainer restart rule
+Complex constituent recovery remains processing depth. Removed worldgen identities have no compatibility aliases or migrations.
 
-When adding a mechanic, first append its concrete quantity and causal owner to the inventory above. Cluster it into an existing aspect only if the same behavioral prior remains useful elsewhere. Add a new aspect only after the inventory proves the existing vocabulary cannot compress it. Name and color come last.
+## Acceptance rule
+
+For every representative, test whether a player can predict its broad use from name, morphology, tooltip, and immediate behavior before reading exact numbers. A cue fails if it needs another row's identity to explain it, or if it merely exposes a weighted profile. New mechanics may project from one categorical identity, but new player-facing representatives must preserve the one-to-one matrix.

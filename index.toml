@@ -13054,7 +13054,7 @@ hash = "62424537e90b4490093a8d76cb1a368dee7ff2a67fce1152c260b97f95003fd5"
 
 [[files]]
 file = "kubejs/data/better_content_fixes/threads/catalogue.json"
-hash = "244a69cc941f1b371eaa45be00f3597b47ccda560eb5740fd5cc5a0b211b6f86"
+hash = "ddb1eb340a65c4b9c4638cf73002a7b450b3ad5cde6c3ebaf10fd0778d5254d1"
 
 [[files]]
 file = "kubejs/data/bloodmagic/tags/items/arc/cuttingfluid.json"
@@ -15407,7 +15407,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "a7cc4a7beda6dd8113c568f4e3b92260eef6e25bef9d6bc6b554bed401c6d072"
+hash = "5dcd45021eeb1320fc90c7957f24b763cdbe2d4192cc39362f45358fe4ba3e92"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"
@@ -16568,7 +16568,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "4c79765e90ee853a24eaaa88e989bf273acf1a1e8864f0b26e794a00b2daf850"
+hash = "16fa3b2ae14c96036718a3f0e098fc834edcccc1c177daa2505c063f54d8f077"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"

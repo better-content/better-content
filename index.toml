@@ -13798,7 +13798,7 @@ hash = "dda8c3100e497e8703f4c044ca2b414bea9936ad67406195030738f7ce963ca6"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__110_extreme_y_band_reward_gates.js"
-hash = "fa080cd9b0f2c75ed523aeeaf415b18084552fe55a3c0ab3cf6362dc94fc4fde"
+hash = "d54d0115659eeb09af0dd3704818c76fd6e9fd8bdbeb9d967da3b11b3a9d04ec"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__125_magic_power_spike_gates.js"
@@ -13890,11 +13890,11 @@ hash = "0871972a2a53c027f0e9f6c9f2ef9cc6227f9ed9c0c1a1539134aa8a2535c12f"
 
 [[files]]
 file = "kubejs/server_scripts/compat/reviewed/furnace_policy.js"
-hash = "5e22e86cc84987ec63cf6895e4c425429855d62b4daa6e97fde82107242391a2"
+hash = "d8ec7613baa98a7e1eb168e17241af5c351089d42850f70097dba93c2e365c04"
 
 [[files]]
 file = "kubejs/server_scripts/compat/reviewed/ingot_rewrites.js"
-hash = "23271540414c409c7e3da7e35fbe2d5c146e21370a580638d27224cc10788175"
+hash = "da4c4ccb12b836f8595d4b8f3c9dfde3835a5a899fb414726eaf891c9bad32bb"
 
 [[files]]
 file = "kubejs/server_scripts/compat/reviewed/kettle_rune_swap.js"
@@ -13930,15 +13930,15 @@ hash = "277d6fcbf0f28856a5e9a4d5655155b5ec56ff14944cfe7889e71fce1eeb94ac"
 
 [[files]]
 file = "kubejs/server_scripts/progression/20_powered_works.js"
-hash = "9fdd51d804bf2be04a8b7a4afa52a194e2200bc7c95fb553a880b553e1036bf2"
+hash = "2ecca2c42d2f3897372519cc70a1a1f66dc241a703280259fbb15288213aa2f3"
 
 [[files]]
 file = "kubejs/server_scripts/progression/30_precision_factory.js"
-hash = "30858344760c20034300063f9ea5b2c3919ba853935fa8f3e6229a2c246d7053"
+hash = "4c37358829a4b67024bf60c4007c731c4532f6baf72a02550cb5293890754fd4"
 
 [[files]]
 file = "kubejs/server_scripts/progression/40_thermal_pressure.js"
-hash = "2d9042d3c06aa2173eeef0265e925a2d5960429485f19c8eb37db2ab92936337"
+hash = "e46057dd815f4dd725169a876c604b0520d2c76b1b24cb46dc96afbe90e5de14"
 
 [[files]]
 file = "kubejs/server_scripts/progression/45_acid_chemistry.js"
@@ -13946,7 +13946,7 @@ hash = "754203ffa396694a9e04d83dfca3ed7b854af09e77965cdf2605005d3c0eadc3"
 
 [[files]]
 file = "kubejs/server_scripts/progression/50_electrical_control.js"
-hash = "717186dc32e159bd61fb8e09074bdaa23809f02e05ddbb3c725b7c86023e6880"
+hash = "debde8e3248d0cdcdbcd315cfe687cc62f51bf7155e2820ba7f184e1eedf2246"
 
 [[files]]
 file = "kubejs/server_scripts/progression/60_aerospace.js"
@@ -13966,7 +13966,7 @@ hash = "e03d4cfc932831d5313a7f569a85d7c36bf03af4971527314089f00d6d2466f6"
 
 [[files]]
 file = "kubejs/server_scripts/utility/hooks_drones_gates.js"
-hash = "999b23b77f32c10ae50562d7dd207afb8f55ff6244c6d09b77ee3ff837d2177e"
+hash = "4dcac0eed6cafe8913e13a8b328395c2c35c13bc7319323e46735f0d5c3f4ccb"
 
 [[files]]
 file = "kubejs/startup_scripts/compat/retained/check__12_unearthed_regolith_hand_mining.js"
@@ -14087,7 +14087,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-economy-1.0.0.jar"
-hash = "7e67de7285050ec4a36ab19115ae6f97db9ac24ef421771e6622bdae9cea0ad5"
+hash = "74bf2f85370d5a3bee39a592956d27ae6724c5089fd623605c94684603168cd0"
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
@@ -14095,7 +14095,7 @@ hash = "5f092b8daacca74f5ec9ba706352a9669d1126e057f33ba78063785902a50c51"
 
 [[files]]
 file = "mods/better-content-quests-1.0.0.jar"
-hash = "3b14c16ec2c7ed5c736a6bc6ab3744e6b5867b192c0a44ba7bf954968a5080fc"
+hash = "8695cfc3b37ed5a8c3415a6e092fc14ee287da7edd32767d4ca37fcdf04528b8"
 
 [[files]]
 file = "mods/better-content-threads-1.0.0.jar"
@@ -14232,11 +14232,11 @@ metafile = true
 
 [[files]]
 file = "mods/create-train-fuel-scaling-0.1.0.jar"
-hash = "92f8cd95278f9831feb5fafd324f3e45d7a289984827aeb2c776476cb0e3cc84"
+hash = "689614e8a76da41ba0039b3b69a6a6d93ceb871d632c427246ed4ec19eb2d7d0"
 
 [[files]]
 file = "mods/create-transmission-loss-0.1.0.jar"
-hash = "cdc2b079f47ce61650d467208cd1a3e0890fd739c849feee88d2c0d5c5bc9fba"
+hash = "e5e5387385170fd172b8d3912eca0dfeaafe0c9f02ab6cc656f4f5dc33d7078e"
 
 [[files]]
 file = "mods/create.pw.toml"
@@ -14275,7 +14275,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimension-drink-1.0.0.jar"
-hash = "a78ffbe6bf4a4fc5638c262f7c5b06d63e8d02d06464e35adb619477dde4fc13"
+hash = "4ab69d6e02c7c2599bdb533c988452703147fadbea952ffb75e9fc99f559a73a"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -14284,7 +14284,7 @@ metafile = true
 
 [[files]]
 file = "mods/downed-player-revival-1.0.0.jar"
-hash = "6f29df837c00173333892b068336e828ac783da80f22ee34a140943593297d33"
+hash = "5abf9f231651a2c69fee5759f92b37354e259f83242859b5e8b49e6a686ae8b1"
 
 [[files]]
 file = "mods/dynamic-asset-generator.pw.toml"
@@ -14293,7 +14293,7 @@ metafile = true
 
 [[files]]
 file = "mods/dynamic-survival-hud-1.0.0.jar"
-hash = "f5f468195664a1036a1d09e67dc0ad194f6b4c8f0ee8caa3f033ad5a77e3d0fc"
+hash = "2a3e2375cabc14b7caa1743a774d873c4f0d5d065d49245cae6b4e73464cadb1"
 
 [[files]]
 file = "mods/dynamic-trees-ars-nouveau.pw.toml"
@@ -14302,7 +14302,7 @@ metafile = true
 
 [[files]]
 file = "mods/dynamic-trees-dimension-compat-0.1.0.jar"
-hash = "feac6d662136b723d3803d308f075c7c56a03af5cccd934c9897a0c623e2d4c3"
+hash = "cc25234743008dd3cd2af381203b3987573a8f86677a122761fbdc5d554471bc"
 
 [[files]]
 file = "mods/dynamic-trees-for-natures-spirit.pw.toml"
@@ -14311,11 +14311,11 @@ metafile = true
 
 [[files]]
 file = "mods/dynamic-trees-hexerei-1.0.0.jar"
-hash = "f370c0e70c3276533ca02d6006057662c7dea69c660c1251025bc0395cfcce3a"
+hash = "f18398fb4da6cf19c4185ba308681b03409b469ce3e75ab291f45609e1ea2a43"
 
 [[files]]
 file = "mods/dynamic-trees-malum-1.0.0.jar"
-hash = "8cf89cc1211c497bdc168c01e51331361b56eadbb075390a6b096381a6a38f48"
+hash = "e56c52ae1c9358b3d7c15d059af318b3e2299f17d88d2c7cc4daed0e61b4f9d4"
 
 [[files]]
 file = "mods/dynamic-trees-quark.pw.toml"
@@ -14608,7 +14608,7 @@ metafile = true
 
 [[files]]
 file = "mods/immersive-weathering-sampler-0.1.0.jar"
-hash = "8173c3875fbb1cfdb73a72e791c21fbe67116ab5c6370bbbe6046b8ea63c1fdc"
+hash = "64f355d93d46fede7d89bd07cefd6d638899da110d7c5f31d35a2d2ca032db55"
 
 [[files]]
 file = "mods/improved-village-placement.pw.toml"
@@ -14692,7 +14692,7 @@ metafile = true
 
 [[files]]
 file = "mods/latent-chemlib-0.1.0.jar"
-hash = "0ddbc1b068ef1a363266867cd3e363861c247fea494f4de3bdd63f10b5628272"
+hash = "428a29f7f1ab0ae247be36d169bc40a2fa4dcb6c38aa043e2afe7f32b41ae445"
 
 [[files]]
 file = "mods/lithostitched.pw.toml"
@@ -14806,11 +14806,11 @@ metafile = true
 
 [[files]]
 file = "mods/oc2r-create-bridge-0.1.0.jar"
-hash = "630decfdbe36e6a8d991f2b106124dda0e432f213ed147dc05d628988e9c3fa1"
+hash = "84a2d77c764b86f73d250a493cd018b3ba8564b023b11dd853b69a203aed1914"
 
 [[files]]
 file = "mods/oc2r-wireless-pubsub-1.0.0.jar"
-hash = "ea659de29b8f2d22417269845e0448fa5b931e4e3a15dedeb40ea33c0f66de48"
+hash = "758a58086a79cb57a8ce2535de012834b3f5e3843b1def2746e320f4fe5c5b99"
 
 [[files]]
 file = "mods/oc2r.pw.toml"
@@ -14839,7 +14839,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillager-campaigns-0.3.0.jar"
-hash = "216528d8f2e4b00633bbfc0acb81d14f81dfb8cdee1adff547eab5518cedbe7e"
+hash = "faa558727aa15feee9c765b6e748661e19b51e20615b3efbde12ef76844f7e5f"
 
 [[files]]
 file = "mods/ping-wheel.pw.toml"
@@ -14897,7 +14897,7 @@ metafile = true
 
 [[files]]
 file = "mods/procedural-bouquets-0.1.0.jar"
-hash = "77d0ae690d21cddd3ae219f1f996ce4855ec39af4e319b83a989aadca9de289a"
+hash = "17b29e12bbce76225f45fa98c87211656d4a0735babdd15d2f87d7f33d883bec"
 
 [[files]]
 file = "mods/project-vibrant-journeys.pw.toml"
@@ -14959,7 +14959,7 @@ hash = "d151802f9f747d78bb0317c3fa8b6b3c14cc58c9b1461da0d4b2bee01a9f890a"
 
 [[files]]
 file = "mods/runtime-data-dumper-0.1.0.jar"
-hash = "2a181bebdde8a10b7386a4bd67e96ea6f8a0bfa8e3407d49fd61d2b0b9d040bd"
+hash = "177d9698831d428c96902b924b835f1e6fecf067020f72c37ba2b7849085f71a"
 
 [[files]]
 file = "mods/satako-library.pw.toml"
@@ -15072,7 +15072,7 @@ metafile = true
 
 [[files]]
 file = "mods/systemic-salience-0.1.0.jar"
-hash = "6a1cce1da75bdbb2e74b22166203b25c0b2639c0175b8b89b4413f6c0ce15ff7"
+hash = "648a2df013be3021f1c25138bdd31eb6810c7f2746bb26aee127b5fcec692633"
 
 [[files]]
 file = "mods/tconjei.pw.toml"
@@ -15151,7 +15151,7 @@ metafile = true
 
 [[files]]
 file = "mods/tinkers-construct-affixes-1.0.0.jar"
-hash = "ea192ad4ac2c79e12f3b46a0dd9d2c1b055a90c9700ef77f9f30f31d0751f3c7"
+hash = "785213b390fb18dc965446df86bc0860ec1d42d60120e9d9d886b0057aea3d01"
 
 [[files]]
 file = "mods/tinkers-construct.pw.toml"
@@ -15250,7 +15250,7 @@ metafile = true
 
 [[files]]
 file = "mods/village-walls-1.0.0.jar"
-hash = "6052dd6e7df69dd5b6f26d010f7c829be21e279d20c1e84d7f7ddd84174ec3c7"
+hash = "2e53c1bb5f54784c772e8e73e4b5eb1d542f091359d07e239c07c1e02072aee1"
 
 [[files]]
 file = "mods/wares.pw.toml"

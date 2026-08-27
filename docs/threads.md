@@ -5,8 +5,8 @@ Threads is a contextual, non-objective collection of eighteen illustrated possib
 ## Player contract
 
 - Nothing appears merely because the player logged in or returned.
-- A relevant world event discovers or matures one Thread. Automatic presentation never captures input: a 32×32 native item or block symbol is centered at the top third of the live HUD, with the single localized line `You've revealed card <Card Title>` 42 pixels below it.
-- The automatic tease lasts 3.2 seconds: 400 ms fade-in, 2.2 seconds held, and 600 ms fade-out. Twelve wisps use the Thread's exact Systemic Salience aspect color and eight dust motes use archive gold `#C6A15B`; all twenty are deterministic, bounded GUI-space particles that drift upward and outward without tint, blur, a panel, card art, crosshair coverage, or synthetic audio.
+- A relevant world event discovers or matures one Thread. Automatic presentation never captures input: a small archive glyph and the single localized line `You've revealed card <Card Title>` form one compact, horizontally centered lockup whose visual center sits at the top third of the live HUD. The glyph sits immediately above the text; no item or block asset is rendered.
+- The automatic line is reduced to 72% of the normal GUI font and rendered white with a true black eight-neighbour outline. The automatic tease lasts 3.2 seconds: 400 ms fade-in, 2.2 seconds held, and 600 ms fade-out. Twelve wisps use the Thread's exact Systemic Salience aspect color and eight dust motes use archive gold `#C6A15B`; all twenty are deterministic, tightly bounded one-pixel GUI particles that drift upward and outward without tint, blur, a panel, card art, crosshair coverage, or synthetic audio.
 - The existing subdued native page/plate rustle plays once at fade-in. Any open screen pauses both tease time and particles. Discoveries queue one at a time, while the collapsed unread marker continues to represent the unread collection.
 - The full reveal occurs only when the player opens the Thread Reader with `Ctrl+J` or the pause-menu button.
 - The reader shows collected cards only, one full card at a time, with a quiet count out of eighteen.
@@ -29,4 +29,4 @@ Threads foreshadows `lineage_endgame.md`; it does not explain its cosmology or i
 
 ## Definition and delivery contract
 
-Every definition includes an exact lowercase `aspect` ID: `impact`, `tempo`, `work`, `mobility`, `endurance`, `robustness`, `renewal`, or `control`. The packet protocol carries only card ID, bounded title, native symbol, and aspect for an automatic notice—never artwork or reveal prose—and rejects unknown IDs, malformed resources or aspects, duplicate entries, and lists larger than eighteen.
+Every definition includes an exact lowercase `aspect` ID: `impact`, `tempo`, `work`, `mobility`, `endurance`, `robustness`, `renewal`, or `control`. Protocol 4 carries only card ID, bounded title, and aspect for an automatic notice—never a game asset, artwork, or reveal prose—and rejects unknown IDs, malformed aspects, duplicate entries, and lists larger than eighteen. Native symbols remain validated definition/card metadata but are not part of the automatic tease.

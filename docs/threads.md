@@ -1,32 +1,45 @@
 # Threads
 
-Threads is a contextual, non-objective collection of eighteen illustrated possibilities. It is tarot-like in the pleasure of discovering and displaying a finite deck, but it does not imitate an existing tarot deck or another game's visual language.
+Threads is a contextual, non-objective collection of 52 illustrated possibilities: four suits of thirteen cards. World concerns encountered places, Works concerns learned making, Powers concerns negotiated capability, and Fragility concerns systems that reveal their limits. The deck borrows the pleasure of discovering and displaying a finite archive without imitating an existing tarot deck or another game's visual language.
+
+Forty-five cards are live. Fragility 7–13 are permanently sealed future identities: the reader may show their names, suits, aspects, and positions, but they have no trigger, lore, invitation, action, doorway, or facsimile behavior in this world.
 
 ## Player contract
 
-- Nothing appears merely because the player logged in or returned.
-- A relevant world event discovers or matures one Thread. Automatic presentation never captures input: a small archive glyph and the single localized line `You've revealed card <Card Title>` form one compact, horizontally centered lockup whose visual center sits at the top third of the live HUD. The glyph sits immediately above the text; no item or block asset is rendered.
-- The automatic line is reduced to 72% of the normal GUI font and rendered white with a true black eight-neighbour outline. The automatic tease lasts 3.2 seconds: 400 ms fade-in, 2.2 seconds held, and 600 ms fade-out. Twelve wisps use the Thread's exact Systemic Salience aspect color and eight dust motes use archive gold `#C6A15B`; all twenty are deterministic, tightly bounded one-pixel GUI particles that drift upward and outward without tint, blur, a panel, card art, crosshair coverage, or synthetic audio.
-- The existing subdued native page/plate rustle plays once at fade-in. Any open screen pauses both tease time and particles. Discoveries queue one at a time, while the collapsed unread marker continues to represent the unread collection.
-- The full reveal occurs only when the player opens the Thread Reader with `Ctrl+J` or the pause-menu button.
-- The reader shows collected cards only, one full card at a time, with a quiet count out of eighteen.
-- An unread thumbnail is a dark archive plate with a faint gold edge and leaking aspect trace; it never exposes the full illustration or uses a `NEW` badge. Selecting it leaves the plate unexposed until the player clicks or presses Space.
-- Development lasts 1.8 seconds in three equal passes: archive-sepia structure, card-unique pigment, then the canonical aspect trace. A click or Space during development completes it and is consumed before any doorway or facsimile control can activate. The untouched full image replaces the presentation layers at completion.
-- Title, prose, doorway, and facsimile controls remain hidden until development completes. Only completion marks the card read; Escape or navigation beforehand leaves it unread.
-- Cards contain no objectives, locks, completion styling, rewards, progress bars, requirements, pins, or gates.
-- Rumour, Contact, and Lived are hidden monotonic language states. Death, inventory loss, nutrition loss, travel, and Prestige cannot regress them.
-- Each card retains one truthful doorway into its native system.
-- Signed facsimiles are freely reissued display copies. They retain collector and lineage identity, grant nothing, and never unlock a card for their recipient.
+- Nothing appears merely because the player logged in or returned. Discovery must follow a contextual native action.
+- The automatic tease never captures input. An 8×8 code-drawn archive glyph and one localized line form a compact lockup centered at `screenWidth / 2`, with the lockup's visual center at `screenHeight / 3`. The glyph is two logical pixels above the text. No item, block, panel, or card artwork is rendered.
+- The line is 72% of the normal GUI font, shrinking no lower than 55% for a long title, and remains one line. It is white with a true-black eight-neighbour outline. Reveal copy is exactly `You've revealed card %s`; completion copy is `You've completed card %s`.
+- A notice lasts 3.2 seconds: 400 ms fade-in, 2.2 seconds held, and 600 ms fade-out. Twelve deterministic one-pixel wisps use the exact Systemic Salience aspect color; eight dust motes use archive gold `#C6A15B`. They remain tightly bounded around the glyph and drift upward/outward without tint, blur, progress styling, or crosshair coverage.
+- The subdued native page/plate rustle plays once at fade-in. There is no synthetic tone. An open screen pauses both time and particles. Notices queue and display one at a time; the collapsed unread marker continues to represent unread plates.
+- `Ctrl+J` and the pause-menu button open the reader. Its catalogue has four suit tabs and thirteen stable positions per suit. Every identity, suit, and aspect is inspectable; unknown and future cards remain sealed.
+- An unread thumbnail is a dark archive plate with a faint suit edge and leaking aspect trace. Selecting it shows the unexposed plate and `Let the plate develop / Click or Space to remember`; development does not start automatically.
+- Development lasts 0.8 seconds: archive-sepia structure, card-unique pigment, then canonical aspect trace. A click or Space during development completes it and is consumed before any doorway or facsimile control. Completion swaps to the untouched full runtime image.
+- Title, prose, invitation, action, doorway, and facsimile controls remain hidden until development completes. Only completion marks a plate read; Escape or navigation beforehand leaves it unread.
+- Known lore and art persist across the lineage. Current invitations, active state, and current completion reset for each successor generation. Re-encountering a known card in a successor produces a contextual notice without marking its plate unread again. Completion history retains total count, first generation, last generation, and route counts.
+- Each live card retains one truthful native doorway. Signed facsimiles are freely reissued cosmetic copies; they retain collector and lineage identity, grant nothing, and never unlock a card for their recipient.
 - On-character display remains unresolved. Do not ship a placeholder cosmetic render.
 
-The collection persists per player at the World Lifecycle Manager lineage boundary. Physical facsimiles may be lost with a world and reissued in its successor.
+## Trigger contract
 
-## Narrative role
+Every live card has separate reveal and completion routes. A single signal may reveal a card or complete an already-active card, never both. Signals are exact bounded lowercase types and bounded values; route values may use an exact value, `|` alternatives, or `*`. Native mods integrate through the optional `ThreadSignals.emit(ServerPlayer, type, value)` surface, so they retain ownership of what counts as a real action.
 
-Every Thread begins in a grounded pack system and carries a lineage-scale undertone. The recurring evidence is memory beyond worlds, bodies distinct from lineages, survival as accounting, worlds as inventories, prior classification, infrastructure earning under threat, mobile homes, strategic direction, duration joined to severity, caches outliving operators, temporary worlds remaining real, parallel engineering, autonomous agendas, prior arrivals, analogous economies, prior speakers, incompatible authorities, and inherited worlds.
+Fragility is deliberately stricter than a generic milestone list:
 
-Threads foreshadows `lineage_endgame.md`; it does not explain its cosmology or implement the promised endgame systems.
+| Card | Reveal | Completion |
+| --- | --- | --- |
+| A Life Reaches Its Tether | the player enters Downed Player Revival's actual downed state | the active card's player later dies |
+| Ruins Are Instructions | the player physically enters the bounds of a major ruin-like registered structure | the player leaves alive carrying an item identity absent on entry |
+| Enemies Do Not Share a Cause | two distinct hostile mobs target the player within one 45-second encounter | one of those tracked hostiles damages another |
+| A Copy Can Outlive the Work | a substantial Create schematic is successfully accepted for publication | the correlated publication succeeds |
+| An Army Walks Toward You | Pillager Campaigns enters gathering, approaching, or materialized state for the player | that campaign reaches survived, defeated, retreated, or target-dead outcome |
+| A World Can Be Condensed | a formed and attuned World Lifecycle Manager condenser is used | the next lineage generation is verified at successor login |
+
+Fragility 7–13—A World Can Be Wagered, Severity Has a Yield, Disaster Can Have an Agenda, Apocalypses Can Disagree, Other Hands Have Built Caches, Recognition Changes Both Sides, and Defeat Need Not Be Erasure—are reserved. Their authored candidate plates do not make them live.
 
 ## Definition and delivery contract
 
-Every definition includes an exact lowercase `aspect` ID: `impact`, `tempo`, `work`, `mobility`, `endurance`, `robustness`, `renewal`, or `control`. Protocol 4 carries only card ID, bounded title, and aspect for an automatic notice—never a game asset, artwork, or reveal prose—and rejects unknown IDs, malformed aspects, duplicate entries, and lists larger than eighteen. Native symbols remain validated definition/card metadata but are not part of the automatic tease.
+Every definition includes exact `suit`, `order`, and canonical lowercase `aspect`: `impact`, `tempo`, `work`, `mobility`, `endurance`, `robustness`, `renewal`, or `control`. Loading requires exactly 52 approved identities, exactly orders 1–13 in every suit, and the approved future flags. Future definitions reject exposed content or routes.
+
+Bounded packet protocol 6 validates card ID, title, suit, order, aspect, resource locations, state, history, unique identities, and list sizes no larger than 52. Automatic notices contain only notice kind, card ID, bounded title, suit, and aspect—never a game asset, artwork, prose, or trigger data.
+
+The collection persists per player at the World Lifecycle Manager lineage boundary. Physical facsimiles may be lost with a world and reissued in its successor. Threads foreshadows `lineage_endgame.md`; it does not explain its cosmology or implement the promised endgame systems.

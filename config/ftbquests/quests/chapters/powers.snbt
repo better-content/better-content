@@ -68,7 +68,7 @@
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFD0", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.5d
-			tasks: [{ criterion: "font_aggregate_return", id: "52C51393D069A825", type: "better_content_fixes:criterion" }]
+			tasks: [{ criterion: "font_aggregate_return", id: "52C51393D069A825", type: "better_content_quests:criterion" }]
 			title: "Successful Font Voyage"
 			x: 0d
 			y: 3.5d

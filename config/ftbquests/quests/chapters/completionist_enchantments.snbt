@@ -24,7 +24,7 @@
 				id: "4755D5A8E3513557"
 				title: "Mana Boost"
 				predicate: "enchantment_ars_nouveau_mana_boost"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Mana Boost"
 			x: 0d
@@ -46,7 +46,7 @@
 				id: "50CA017FE6E6F91E"
 				title: "Mana Regen"
 				predicate: "enchantment_ars_nouveau_mana_regen"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Mana Regen"
 			x: 2d
@@ -68,7 +68,7 @@
 				id: "1414FC0CF3ED1C85"
 				title: "Reactive"
 				predicate: "enchantment_ars_nouveau_reactive"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Reactive"
 			x: 4d
@@ -90,7 +90,7 @@
 				id: "550A56DAEC97DD9D"
 				title: "Aqua Affinity"
 				predicate: "enchantment_minecraft_aqua_affinity"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Aqua Affinity"
 			x: 6d
@@ -112,7 +112,7 @@
 				id: "1E351CA439B389B2"
 				title: "Bane Of Arthropods"
 				predicate: "enchantment_minecraft_bane_of_arthropods"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Bane Of Arthropods"
 			x: 8d
@@ -134,7 +134,7 @@
 				id: "437F8924786CABA0"
 				title: "Blast Protection"
 				predicate: "enchantment_minecraft_blast_protection"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Blast Protection"
 			x: 10d
@@ -156,7 +156,7 @@
 				id: "2F58B7D7E672027A"
 				title: "Depth Strider"
 				predicate: "enchantment_minecraft_depth_strider"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Depth Strider"
 			x: 12d
@@ -178,7 +178,7 @@
 				id: "1DE0903CADA27F80"
 				title: "Efficiency"
 				predicate: "enchantment_minecraft_efficiency"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Efficiency"
 			x: 14d
@@ -200,7 +200,7 @@
 				id: "78524E7F59EA3FDF"
 				title: "Feather Falling"
 				predicate: "enchantment_minecraft_feather_falling"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Feather Falling"
 			x: 16d
@@ -222,7 +222,7 @@
 				id: "7318D93E26C76018"
 				title: "Fire Aspect"
 				predicate: "enchantment_minecraft_fire_aspect"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Fire Aspect"
 			x: 18d
@@ -244,7 +244,7 @@
 				id: "4827F02F692E560F"
 				title: "Fire Protection"
 				predicate: "enchantment_minecraft_fire_protection"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Fire Protection"
 			x: 20d
@@ -266,7 +266,7 @@
 				id: "2B061A758AF372F3"
 				title: "Flame"
 				predicate: "enchantment_minecraft_flame"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Flame"
 			x: 22d
@@ -288,7 +288,7 @@
 				id: "6B4292DD1CEF47E3"
 				title: "Fortune"
 				predicate: "enchantment_minecraft_fortune"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Fortune"
 			x: 24d
@@ -310,7 +310,7 @@
 				id: "0299582051172ACF"
 				title: "Infinity"
 				predicate: "enchantment_minecraft_infinity"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Infinity"
 			x: 26d
@@ -332,7 +332,7 @@
 				id: "79342C73671FF05C"
 				title: "Knockback"
 				predicate: "enchantment_minecraft_knockback"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Knockback"
 			x: 28d
@@ -354,7 +354,7 @@
 				id: "55AC0736F4621E9A"
 				title: "Looting"
 				predicate: "enchantment_minecraft_looting"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Looting"
 			x: 0d
@@ -376,7 +376,7 @@
 				id: "740DC7C61580D8E5"
 				title: "Multishot"
 				predicate: "enchantment_minecraft_multishot"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Multishot"
 			x: 2d
@@ -398,7 +398,7 @@
 				id: "69980BC5A218AC9F"
 				title: "Piercing"
 				predicate: "enchantment_minecraft_piercing"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Piercing"
 			x: 4d
@@ -420,7 +420,7 @@
 				id: "566F2E2204C71A4C"
 				title: "Power"
 				predicate: "enchantment_minecraft_power"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Power"
 			x: 6d
@@ -442,7 +442,7 @@
 				id: "0CC3854230118C9B"
 				title: "Projectile Protection"
 				predicate: "enchantment_minecraft_projectile_protection"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Projectile Protection"
 			x: 8d
@@ -464,7 +464,7 @@
 				id: "31880DBBD1FD1805"
 				title: "Protection"
 				predicate: "enchantment_minecraft_protection"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Protection"
 			x: 10d
@@ -486,7 +486,7 @@
 				id: "29101440E7C54CE8"
 				title: "Punch"
 				predicate: "enchantment_minecraft_punch"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Punch"
 			x: 12d
@@ -508,7 +508,7 @@
 				id: "20B1960879C494AC"
 				title: "Quick Charge"
 				predicate: "enchantment_minecraft_quick_charge"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Quick Charge"
 			x: 14d
@@ -530,7 +530,7 @@
 				id: "659D75BE20D0D6DE"
 				title: "Respiration"
 				predicate: "enchantment_minecraft_respiration"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Respiration"
 			x: 16d
@@ -552,7 +552,7 @@
 				id: "754E1041E88D0BAF"
 				title: "Sharpness"
 				predicate: "enchantment_minecraft_sharpness"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Sharpness"
 			x: 18d
@@ -574,7 +574,7 @@
 				id: "2C73627C76AE641B"
 				title: "Silk Touch"
 				predicate: "enchantment_minecraft_silk_touch"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Silk Touch"
 			x: 20d
@@ -596,7 +596,7 @@
 				id: "51ADA5B3F02F68AA"
 				title: "Smite"
 				predicate: "enchantment_minecraft_smite"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Smite"
 			x: 22d
@@ -618,7 +618,7 @@
 				id: "7152B800515DF3E3"
 				title: "Sweeping"
 				predicate: "enchantment_minecraft_sweeping"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Sweeping"
 			x: 24d
@@ -640,7 +640,7 @@
 				id: "4BC8888E44FC562D"
 				title: "Thorns"
 				predicate: "enchantment_minecraft_thorns"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Thorns"
 			x: 26d
@@ -662,7 +662,7 @@
 				id: "1781939CD77569DD"
 				title: "Unbreaking"
 				predicate: "enchantment_minecraft_unbreaking"
-				type: "better_content_fixes:stack_predicate"
+				type: "better_content_quests:stack_predicate"
 			}]
 			title: "All Enchantments: Unbreaking"
 			x: 28d

@@ -90,8 +90,8 @@ var BC_PLATINUM_MARKET = [
     ['minecraft:cartographer',5,8,'minecraft:lodestone',1,2,24]
 ]
 
-// Legacy wandering-trader catalogue retained as price provenance for the dedicated themed market.
-// Runtime wandering-trader registration lives in economy/20_first_class_wandering_trader.js.
+// Legacy wandering-trader catalogue retained as price provenance only.
+// Runtime wandering-trader registration and its exact themed catalogue live in Better Content Economy.
 // Row shape: [level, coin tier, cost, output item, output count, max uses, xp].
 var BC_WANDERER_MARKET = [
     [1, 'copper', 2, 'minecraft:oak_sapling', 4, 8, 2],

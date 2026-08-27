@@ -15,7 +15,7 @@ runtime logic.
 | Occult physical components | Hexerei | Hexerei's mixing cauldron manufactures bounded physical Occultism components; Occultism retains rituals, spirit fire, bindings, and servants |
 | Occult storage | None | Controller, remote, and satchel acquisition routes are closed; Pretty Pipes is the practical logistics surface |
 | Vanilla boat durability, vessel-drop suppression, reinforced recipes | Better Content Fixes | No boat mutation or hiding scripts |
-| Wandering-trader visit lifecycle and themed identity | Better Content Fixes | KubeJS authors five themed common offers, one themed rare offer, one Wares agreement, and an optional Font map; every direct payment is a Create Deco coin |
+| Wandering-trader visit lifecycle, themed identity, and exact catalogue | Better Content Economy | The standalone mod authors five themed common offers, one themed rare offer, one Wares agreement, and an optional Font map; every direct payment is a Create Deco coin |
 | TCon alloy composition and casting | Tinkers' Construct | Removes bypasses and authors exact cross-mod alloy recipes |
 | Kinetic assembly | Create | Uses Machine Blocks only at listed direct roots |
 | Pressure chemistry | PneumaticCraft | Pack authors bounded cross-mod acid/root recipes |

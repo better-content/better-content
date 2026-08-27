@@ -5717,12 +5717,12 @@ file = "config/arseng-common.toml"
 hash = "e2f591923558d17aa4bd65859e30b388083de43a58b7642dbeb4863e53d7d145"
 
 [[files]]
-file = "config/better_content_fixes-client.toml"
-hash = "909acefcee2650bfda75cece38a86856e16737b225dbf7eed2d6995e05e157e4"
+file = "config/better_content_economy-common.toml"
+hash = "576aef8174876737dd018d0144fc08b0997c3a3d9d046352a69417a88dfa80b2"
 
 [[files]]
 file = "config/better_content_fixes-common.toml"
-hash = "39f04fd9dd01386fc1c86bd8f0f84e643d658e61ce52c743ef4e5c8e9aaa04db"
+hash = "77110b2b8e5f82d0016ada5717787b5a350fca6bd69aecbad6455a1f57ad47b1"
 
 [[files]]
 file = "config/bettergrass.json5"
@@ -5895,6 +5895,10 @@ hash = "2e8716729456b565b56533cfd25ec8132d5469a58a62a2374b381dc1e6914846"
 [[files]]
 file = "config/downed_player_revival-common.toml"
 hash = "ca88fd27439e3e3402295c281854d3803412f21fd5000c6fa500481bd9398c5e"
+
+[[files]]
+file = "config/dynamic_survival_hud-client.toml"
+hash = "909acefcee2650bfda75cece38a86856e16737b225dbf7eed2d6995e05e157e4"
 
 [[files]]
 file = "config/dynamictrees-common.toml"
@@ -6070,7 +6074,7 @@ hash = "3239aa8a3a374456dc2be07fff096f8dc443438ec1e07afaa142cb94c0e47c09"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/completionist_enchantments.snbt"
-hash = "9c5590d56b66e0ce60bc0f05a9bd35ffa408448096227ef1640f33beede7adbf"
+hash = "1b3ba34c649b5a4a87a94b263f050277aa5d87e1f97c7ccb569e605e26897725"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/completionist_plants.snbt"
@@ -6082,15 +6086,15 @@ hash = "17eaf09bda21da2e07357375e56605f4af7d197af16143939dbe5816e9741bed"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/powers.snbt"
-hash = "00cb8f491732bdea8ac6f18b1ad51062d85fe3f3e92294ff1ca79f0644f70033"
+hash = "e6ca324d934f9fb413d6e4da618d9805dfc3f0fa73b083b0370f88ba30817a0c"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/works.snbt"
-hash = "998fb3642ad16e093264d1541b0ad178f21226674072ee59b16837afcdc5d3f9"
+hash = "b099dfe440fd04c88d66735549dc00713af3863709cf11bac812aeba3e4d4a43"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/world.snbt"
-hash = "7c0215279ffa26daf4e1b42af5cbf22acb74c467a7a68566c69cdf50b61dc8c3"
+hash = "2821e8b80dc96844da23912fd079ff8cb210c0f710a70b565b1b8e145dbe5c89"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -9097,1294 +9101,6 @@ file = "kubejs/assets/ars_nouveau/textures/blocks/agronomic_sourcelink.png"
 hash = "599a2771fc077f8aa75d4225243522123dbe509e3eebe6ed7cd19226d85a8802"
 
 [[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/apocalypses_disagree.png"
-hash = "5610673506903a0a4ea1c1298cf44327ff439d2893f12f3a9b85f9fce31346d9"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/apocalypses_disagree_archive.png"
-hash = "16622568f8e46d37db69ba365bf1fc8d61e05f4b86d9f6bb1574b75cd6678a19"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/apocalypses_disagree_aspect.png"
-hash = "7828a5d79bc2afe884fcd9b84220ed1b1750340bb66b4b768873929a80211de8"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/apocalypses_disagree_pigment.png"
-hash = "43cd9fd1dfd1f4f5c0e578ebab8cd083be7f1ce486ed9368700f15964dcafa2e"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/apocalypses_disagree_thumb.png"
-hash = "000023ad1ebbdf6ec69ffc0d089892541ce4fdc4c04ea62e739400a6ee554882"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/army_walks_toward_you.png"
-hash = "10e5a2ca9e9f2304c0b9cdd8cf785e5bcb5cb1702d6c00bd5b48e0be01f51da3"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/army_walks_toward_you_archive.png"
-hash = "b01c4a12e9c7935818186017f2bec66e50afff295759436470179d97c5025248"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/army_walks_toward_you_aspect.png"
-hash = "898e7a0dc7db832a0857757182d932e81ef1dbd2343fbff52bd87961439f3f2d"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/army_walks_toward_you_pigment.png"
-hash = "72ed1bcab4e7e67733520f75042b6df9713ed59a2a76b11aa5f4612258e62076"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/army_walks_toward_you_thumb.png"
-hash = "aaf86424ec9054fe73d3634eda3f71ac90c70e733e44fb74a15acb39a2562d69"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/blood_infrastructure.png"
-hash = "05fb3d987e202a14eb632a6ecbfcbbdb43b133f9ecf9fb6955968d922674d813"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/blood_infrastructure_archive.png"
-hash = "cd8439f9cea6dd3dc5da2df973f3cfbae44d9e205542059db0fc11eb4dfa2085"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/blood_infrastructure_aspect.png"
-hash = "a13b19ffe9926463c2911657df8f32e6a856e65479745c5087c3b06876a82fea"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/blood_infrastructure_pigment.png"
-hash = "9b2733ba189d7d046a654c47c2c8c4a3328999001a71eb1ad68878022bf22c35"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/blood_infrastructure_thumb.png"
-hash = "d228b59cb778c954d081cd89383cf55850aba26158d5847bc2a3f45e7f96757f"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/body_borrow_state.png"
-hash = "ee9f39f65a626e7ebbc72558900de731eed724c5f882e06750e0959677f5e201"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/body_borrow_state_archive.png"
-hash = "f9ec4f277010dc53593a541446e6ad41554bab6f3436f1ce3b2cba6eb089d2fd"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/body_borrow_state_aspect.png"
-hash = "1949a3bdcb3627b1bd0a4893fb486af63f8b712ea3080e07a436da71f0505881"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/body_borrow_state_pigment.png"
-hash = "3c48ac0c05cb1240ad0db8764bc7e0944fc3676536e6876b32085c880779a3e5"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/body_borrow_state_thumb.png"
-hash = "a9c4ecb2029e5a547af758eed64b14f42e1300ca6cdd65f3036126fed3646ddb"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/body_has_weather.png"
-hash = "a896344f72271a51a86cada84325f90853f171c7da8bbab295f988f87de76b55"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/body_has_weather_archive.png"
-hash = "5784343724839d91afffec4c60fb3750706cd1f737325a73dfba443c98bfd966"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/body_has_weather_aspect.png"
-hash = "40016bf65b7fa3e4bd72507bd51ee3d9f243d30209fd14bb1446e8c04cf6c7c1"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/body_has_weather_pigment.png"
-hash = "2944d6543310cad9e7bc23325e3af126c00b3f1a71b623343c1f82eec3810543"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/body_has_weather_thumb.png"
-hash = "aa245794874cc281b3f91e86b4d378eb6d9f619253d4d9fef111b103e52d00b1"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/chemistry_remembers_sequence.png"
-hash = "633c7455d85504c32e854b48a40fde27e345f35e807bf9cfb3597ddb243c0543"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/chemistry_remembers_sequence_archive.png"
-hash = "86a954f8fad90005aba9d66a9324505657eec0a518ebdf76ad07dd06ef92e150"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/chemistry_remembers_sequence_aspect.png"
-hash = "cb52673c18ee260b7a2c4b4707e6f8491d21749d7857d4fe74dde5cb4d0e4830"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/chemistry_remembers_sequence_pigment.png"
-hash = "5f4c76dbc4de865702a8f2c3dbe57280999bb8edbe7151daf0f67f4a8bd879b8"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/chemistry_remembers_sequence_thumb.png"
-hash = "24176615c9f0c7eb55b2c61800431504f6963cd338efac1f5f29f5bb45d20aea"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/copy_outlives_work.png"
-hash = "012fe59d21825f7bf82e6e50e1eb12ab79f3ca94e07944e5dbac3495a8eea07e"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/copy_outlives_work_archive.png"
-hash = "bd9a672083334ce65372abc26ff50d389eb952c06e97a8c2db336ff57b17d715"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/copy_outlives_work_aspect.png"
-hash = "6a2f8bded550a74384c174e7f034d5034968d8dba9ce083b97db65f3fb812239"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/copy_outlives_work_pigment.png"
-hash = "2c91f51c5bb22c5f3f0a5d01e27e9f3b587f158803d4fa2a0548d8960ba15dc2"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/copy_outlives_work_thumb.png"
-hash = "8588236e2206c2b48b65ac060f8894e79c102846dfbf2124b01d34d5827201ee"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/dead_leave_work.png"
-hash = "f7a390a07d4561ec1778ffa19a526a57a2588c89bc5a6a7c135a83e18fc00e44"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/dead_leave_work_archive.png"
-hash = "151915140ab9aa9b41556a08d5b13dd54d8927b824735ac229e6c486a11dcc12"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/dead_leave_work_aspect.png"
-hash = "cfe2d517b11da0c4c539b2fc9ebb8bae9c2bc9a80518f4cd1a0d4fea4cffe686"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/dead_leave_work_pigment.png"
-hash = "582727ed3b9ac224e64949bb0e91379b1834207c6b3f9ced4bb2a8efb4d171a3"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/dead_leave_work_thumb.png"
-hash = "dfa9ec74fe7515f60a0aa4b9fd2e877a2f2d80e01a98012ad5fd12ec2fb28b56"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/deep_own_light.png"
-hash = "7352577d1b52e2468ea4641bb29771e68de7a53ef49a597bd6dbf6be18de1403"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/deep_own_light_archive.png"
-hash = "cc1223f7a26d0981b1add77c0b904e7d5120aaf816c1c49bcc088cb6aacaa0a9"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/deep_own_light_aspect.png"
-hash = "0a8e0135370022091661e5e5e855e33936f29190f02d31c8270c2ec4b35bd010"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/deep_own_light_pigment.png"
-hash = "9e22cc8e7adc9ae93d2399bf3bef79fc46b34d07612cbc1032db0ac93b565ea5"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/deep_own_light_thumb.png"
-hash = "24fb4942f2e0fa990c8cb56cb69ab659f02a647989b6519f65a2d82083fc6a51"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/defeat_not_erasure.png"
-hash = "c62ba1481b8e8d6aae8e1ed4b4303d50911488d30bc181ba7b0a83e1f95b09b5"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/defeat_not_erasure_archive.png"
-hash = "4d6aeacaf262e45402991b333205a757dfe0c9403aaaaa3aa1c8b21cc4a19c08"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/defeat_not_erasure_aspect.png"
-hash = "dc3b7e99ab5c537374fb34d734eeae1e4e6eba41aaf1c55ac8e034dbbd5baced"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/defeat_not_erasure_pigment.png"
-hash = "ef191d31d94d14b8b48104267f4182e49b51b4abfb588236e9df140dc9e5b99a"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/defeat_not_erasure_thumb.png"
-hash = "04e606f0de06e652611f881eadb62a6447db6fb4ac759fd658c696c8c1bb5a10"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/disaster_has_agenda.png"
-hash = "cf0e88e945a1b3293096ef8a90b448cac4567b635028fef938321b577ec977ef"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/disaster_has_agenda_archive.png"
-hash = "2ba18400f157073b137e1bb915a9b0fc6358c128c368c36eb48eaac609a9488b"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/disaster_has_agenda_aspect.png"
-hash = "881b596c9cd95b6a697d0e5546840f2ac7baa43bc6ddfb4d7648c509b6bad8d4"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/disaster_has_agenda_pigment.png"
-hash = "932e9e5349a7c9d74d693ad5cb21d383e0d2fe0f4eb38296880ffdb61647d808"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/disaster_has_agenda_thumb.png"
-hash = "fcabb140a0df6b31fe21053acfd7d67d47d72cbffb61c7c9990614087f20b89f"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/doors_borrow_worlds.png"
-hash = "085f3719958aced20d36ebf48a3df5ff374965ebce5923a265e6bfa21de5e5f7"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/doors_borrow_worlds_archive.png"
-hash = "1a7b998126a6a6f226cfbc4d6be2e8829f1c30d6c27bc9db304288e99e2ac9b3"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/doors_borrow_worlds_aspect.png"
-hash = "5479d161d55937c55cd2a9740777b8b770f066ab1b8f800a86800a4ed50097d4"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/doors_borrow_worlds_pigment.png"
-hash = "cce78ac5652e4e3bb10299e1cc9412bbff3f86c9bec1146c40e10c11a8b1d3db"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/doors_borrow_worlds_thumb.png"
-hash = "0eff074b2a172dcdf9a4811df4950ffeddd09179d13a98ac5e858450516fa1fb"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/electricity_agreement.png"
-hash = "004c03cbabbc9522201b20ece991e52adc62dee0d5348e8dde783ca8ab59444e"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/electricity_agreement_archive.png"
-hash = "88d6e005721ae2f7176ce45cf73ff87e6c5ed30487c39a1c85f9b04377983ce1"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/electricity_agreement_aspect.png"
-hash = "b2c42fe92d163259fb7e4a5d9e3d34b704c8de8f57dbc64183af68cde6e8fe80"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/electricity_agreement_pigment.png"
-hash = "43b7599f844f084bf3a2ae8da34e07d211b5c724b25857671dbebe89d53fee7e"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/electricity_agreement_thumb.png"
-hash = "791fd88890e03eacb087e4246e90be255c266d752fb5b8a2f303a3fff4ad4679"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/elements_change_sentence.png"
-hash = "a37ea7a2faae310689c97732fb8a4f07ae99ba160817b8a28294c94a64a63ec4"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/elements_change_sentence_archive.png"
-hash = "b0eaa8877dd4f6863d8fdfc009f02a33dc0d77bd2d12d21b9e19936cd1951589"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/elements_change_sentence_aspect.png"
-hash = "56abd061550c87ade0e7a8b63cfcbdce057ef4bc03d4217239e6e0ba3d1a859d"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/elements_change_sentence_pigment.png"
-hash = "671530f445669ea3b566c0b46c3e3767e0a55d8a269bcc6f09ce6f391ed4bcb4"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/elements_change_sentence_thumb.png"
-hash = "ae51c4f164822ff84048b40a6fe44ad94887c985c4e8e3fd5ada95e8964ee1c1"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/enemies_no_cause.png"
-hash = "0ac3c927f8c6b5387f9c2d8b8f07d7d20783fb31dd8f92ed306e35eeff68ea4b"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/enemies_no_cause_archive.png"
-hash = "f599fc8dae73082a36749b9f3cbb313bc75ae5e447766572ee464e9da30771d0"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/enemies_no_cause_aspect.png"
-hash = "393e22496cee487be967f5791a677920c4b9626193f9217d5da4ac97e6e1e3f3"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/enemies_no_cause_pigment.png"
-hash = "c0283eb77e474ab1b9290de6f52f9bda7958ccca737eaf80182e0972fe9e1571"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/enemies_no_cause_thumb.png"
-hash = "0640d15464a1ac33b08c7fa202870ec43fc1678feb766d92cb00aef717db11e1"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/feast_before_journey.png"
-hash = "0ac7e2ca011efec5145c8ab6b02ae847678910d2dd8fc0107043948c9cb82542"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/feast_before_journey_archive.png"
-hash = "01bc90f607b1aa7d16f1384b29887d3990a9e14233ab83338e7a39911f4d9553"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/feast_before_journey_aspect.png"
-hash = "a61744157f9ca4a72b2ca72b3f7b9852d074c1e66a3ebcabab170104af8f7db6"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/feast_before_journey_pigment.png"
-hash = "f741ca5ad65a2f357f7b9ee87903ef8db603ccb66f0ddd56ee01efd1917f4cc0"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/feast_before_journey_thumb.png"
-hash = "3b82feb62c36c039d2b805073995d8e172fd4d2cb47759aad84e9bdf6a1ce08c"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/fire_has_country.png"
-hash = "497c50d2872182b8a2cfd31c5be22d7a832d0fad27cc2909931e4930c6fca509"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/fire_has_country_archive.png"
-hash = "7d62a030f057fff7ff1e4754231f8ebee13f275ed4fefc3238c43e416c178afd"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/fire_has_country_aspect.png"
-hash = "86307c45bca39f7f481511f4a7a3671dff5fb831355a34dc5e08bf62d0c99c38"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/fire_has_country_pigment.png"
-hash = "2fc062a289c7af64a3532a477e301156a4ad16651097551f8b5b3356e817ace9"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/fire_has_country_thumb.png"
-hash = "98156d8065c59db2436d59c558824259842ba7848a4d37c9d5e5f21cddd79779"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/flight_engineered.png"
-hash = "80d2bb106765beeb1a8427a2afc543dc9f141c86c41afd0de57458f9c84dcf0b"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/flight_engineered_archive.png"
-hash = "d9f11a4d8db5c7284964cacabc3818be5f5d83f11bb60568bcd2e083b1f9c55f"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/flight_engineered_aspect.png"
-hash = "0a05714a4846b572b1f4e2f8b2a1c930da1d8eecfb09de7ce3213db7839e83c1"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/flight_engineered_pigment.png"
-hash = "10a7470d85cf3c1147a2a625d9bdbe048a465b0d05f1006a98de391f928c49b9"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/forest_many_lives.png"
-hash = "936f05f1fee090d48b50256bd3ea9b2a0ccb76273c632efe3d0f16ebdd0a4384"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/forest_many_lives_archive.png"
-hash = "a63ccaa72873cae345072f8930e5fb757f54f7bd229b7163be9a4d5b875e18e0"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/forest_many_lives_aspect.png"
-hash = "8cff135abd2eaa36e79eb34e90ddc11b15f2684bd638d45bcd9a7a7c1a61ae26"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/forest_many_lives_pigment.png"
-hash = "111f8a351e81b5ce7825564949e62805b711cee4117a8abf28da43f6ce4aaea6"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/forest_many_lives_thumb.png"
-hash = "ef7515377c98184018751ddb43d32100006eb0e0ae391bd96f6bac393706bcbe"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/hands_learn_repair.png"
-hash = "2bf1ff94778025d0b14072a535a793bea9bd4e1f09aad21bdb1c1d2288f344d6"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/hands_learn_repair_archive.png"
-hash = "6242b3dbbd2061d698ab090688811d340b777222cd5c1bf16111676b028db550"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/hands_learn_repair_aspect.png"
-hash = "65e27827a21b056ab4b0c649a1c563bdd00053d693414efedaf7fc8d1ac27eed"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/hands_learn_repair_pigment.png"
-hash = "4dfb78b653d39641ccae98aa139710ff44f321df3f701b7bb03c3f9b51621ed5"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/hands_learn_repair_thumb.png"
-hash = "5a2e9a8ef619cb3e61ecbc887eac61d76dbcd38cb1f26d6d14b906d7f4cbb3ce"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/heat_go_somewhere.png"
-hash = "4d759eb316cce01ce258c833c9011f07282dc0ed3b52667296d4452b49628957"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/heat_go_somewhere_archive.png"
-hash = "ea269e0b660d8a94d51a543e68f10c68d4e17ddbabef16f08618848a95595116"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/heat_go_somewhere_aspect.png"
-hash = "39ad77f96f17bde414c3035c97caa12872f31963780c618f4d16bd6e66bdcd9c"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/heat_go_somewhere_pigment.png"
-hash = "930ff9f24af70a8e9785be1626c97692d1e3a3b956ad67ad8caa3ada9b465890"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/heat_go_somewhere_thumb.png"
-hash = "f115b21fd9363570b3f8b035f96b77ffafc7be4b62e1ea1e8edd891fb1dfdfe4"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/leave_atmosphere.png"
-hash = "63a9d42466a5b2cbc9aad9c2831e6aae0cd8f5925326f49c85ee0667953c71ef"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/leave_atmosphere_archive.png"
-hash = "a0b1fb59e37cbbe972ad807c72c29a29faed15fb76b1ccfdc345269e6fac6c42"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/leave_atmosphere_aspect.png"
-hash = "fc87d2752b1e0e71438d11fa6220bae87e2c4d275217acaafc8baf3db46007ef"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/leave_atmosphere_pigment.png"
-hash = "129d517926e8d0cb6dae0b3dd4b5adc220cf8ec09431924a9d363a089ed2ab2a"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/leave_atmosphere_thumb.png"
-hash = "190d743d867497625fb15b863b23916c020c07ca62275a544f153d757d3b6364"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/life_becomes_capable.png"
-hash = "04f9cb76a0ce8b814738f5cc1366755c7f100b902b82354629516e7cb9def380"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/life_becomes_capable_archive.png"
-hash = "f748dd764d0e8a0206261cc3f75800a16bf178b650aff27070b04ffc41bb9a7f"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/life_becomes_capable_aspect.png"
-hash = "586219ef7d97115eb28cb214b539543bb3ad864ed5ecea6c13486593f0f24dd9"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/life_becomes_capable_pigment.png"
-hash = "4ab66ae9e47716798296751c55176e97024a4a680d0545dd645999b33938cd46"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/life_becomes_capable_thumb.png"
-hash = "5e3855ef30ec44563df5839f30846beba41ce94ca04417ab3bd7a3a6800c4bf3"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/life_reaches_tether.png"
-hash = "27b347ac535701f65c253d7054423c17a71ce0c5ba5aabfc87322d38efca68d3"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/life_reaches_tether_archive.png"
-hash = "854fc4cbfa60e1eb4784240c8dd9af5678c54c32062f4d6d23636c9f286d147b"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/life_reaches_tether_aspect.png"
-hash = "005c92a5b8caca3f536365cced3031f62f40b2e72eee66206147351dc5793605"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/life_reaches_tether_pigment.png"
-hash = "1e01c799f006dcc66df8789e8b4fb99f2d9c3da1513a331133aef5c6e21e987e"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/life_reaches_tether_thumb.png"
-hash = "47e60df0dd9de1a67832faad724be75e760b52731a9b17d71add55487f6bf4a2"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/machines_can_remember.png"
-hash = "81c5d301ce46a0f3dd0d531f7747e352d0d2275e09b61c819ec20585372a6e47"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/machines_can_remember_archive.png"
-hash = "100de4418bc550ae5445f661ab38c7014e6040a5f98768d8bf6dc4ae5b9f576c"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/machines_can_remember_aspect.png"
-hash = "157d14e7a25e08f4a4c2127f22307419c703976d88d690950e0a8c747430820a"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/machines_can_remember_pigment.png"
-hash = "418ad70bbe89fca9c606acec7f73be036562e14ccae4e3c7b94b750d60c83101"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/machines_can_remember_thumb.png"
-hash = "53a7ad53f4b4a159a886fa23f001cc44c49d01e107faa060d6a5bd96992b6650"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/materials_temperaments.png"
-hash = "ec09c3139a226c03445079ca8b58fb5d19df520d18bb15c979cbac23b6f32dbd"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/materials_temperaments_archive.png"
-hash = "ca5a5769d43e0c199b2cd1131a0b0beccbab7c6350f8f69de6ed9245649f1575"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/materials_temperaments_aspect.png"
-hash = "ace146f910ea5c7ae1150807b43311b9a0a90e44bddb07d7487834f32109de93"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/materials_temperaments_pigment.png"
-hash = "6af4c199b842fe1c2e053987ab1978bd6770e6b6073945a9a1f0a6f74449a208"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/materials_temperaments_thumb.png"
-hash = "5760ab396c3cc76b05d5469538f9ff237769fd24cbb82ed166edb1b9f65721d2"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/motion_becomes_industry.png"
-hash = "360285e9755f499183212a0ce33058ab67c0e1c49e6e49ee37e683571ca3d63a"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/motion_becomes_industry_archive.png"
-hash = "e9a3b30ea0bf20d9ff1665551f827b2969f8e1e5ac76ad84795826c498301f1f"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/motion_becomes_industry_aspect.png"
-hash = "bb91bf455f0fa7fa95e94081b04d48b52abd9c3b0ace0bbd43da380d87b70e51"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/motion_becomes_industry_pigment.png"
-hash = "c78986f4cfcb306f67b0a1f1722312ba4f93bf35dab9136e33c9c8b44bb02992"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/motion_becomes_industry_thumb.png"
-hash = "7eba6b16594c3aa1ebfe27df303520ae9ff72e9c1803c9d91a03f856a19d9893"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/other_hands_built_caches.png"
-hash = "7d2d4cf58ebd1e30bff93ecf12ab27d3beea9a2ddf2e22e97475e29db94f5bb5"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/other_hands_built_caches_archive.png"
-hash = "3b11917caba7592021aca49ad7cf8135c27b3a437b0dee1535d2d51f3ec97978"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/other_hands_built_caches_aspect.png"
-hash = "7423a1a093f199cb6010c17d733511d364af982c4eb24b4b30b6ead353e7f3af"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/other_hands_built_caches_pigment.png"
-hash = "5613380cff4802f77080e5ae831d368e48d935dd1ac3187c8965cd291d68506d"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/other_hands_built_caches_thumb.png"
-hash = "87fe18fc418c2942abfd22253ab88c6b609bd92a5126618f0b16f2ba045848ab"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/power_needs_anchor.png"
-hash = "86fada362fb2290534b589e45a2fb63af16b53f6e4549b5ce621afb0050b7a6f"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/power_needs_anchor_archive.png"
-hash = "dee664ac39b924c953ddc416b43d1e9b031975454c9c5a4b0ecc3ab88ba75023"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/power_needs_anchor_aspect.png"
-hash = "33aacae46953a45b9e0d8f070aa57d5c735ac79aa3bfaeddd2810ff4772756a0"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/power_needs_anchor_pigment.png"
-hash = "4c0aa1b615f46cef3ea82d24e47c3eb33d106e2750f5afbf116614be0b7456e6"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/power_needs_anchor_thumb.png"
-hash = "16d729ffcddf386996c9b7973b640d1f88a1084dacae069220afcc4fb7f2cb50"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/precision_has_rhythm.png"
-hash = "57e5a9d2e7e7c9f628d64982a7e791447374bac0c6165bfb7547d4269b4085e0"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/precision_has_rhythm_archive.png"
-hash = "6369f7578e893bfaf8a9082aa219345104b6351c1366e6ba089c59029a37eac7"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/precision_has_rhythm_aspect.png"
-hash = "e5905c114366d413faa3cd8ae01b6b0ea273efd810840c0dc72912c22aecb697"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/precision_has_rhythm_pigment.png"
-hash = "5b5afb481438c26a7489395f6b05c104c923125840c669c05b21a69fa3ecad32"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/precision_has_rhythm_thumb.png"
-hash = "ffb911224c40ace7f9d51c1544e0605ca4e2e94b4abfbb730acd4dd45f4d292b"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/pressure_changes_matter.png"
-hash = "3b71ddde2b490292ef1d6320bfcbd1cb07a7b003621fbff91f0f00db3bf9de50"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/pressure_changes_matter_archive.png"
-hash = "82b62e40853be337bb8fbbfafac660f744d1a06536ceda2b2a685169cc94ad4f"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/pressure_changes_matter_aspect.png"
-hash = "0708b12e83c3f2e102c95dd2ad04b2b668c39018ae00ab46aff29823d672ecc3"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/pressure_changes_matter_pigment.png"
-hash = "e7b5e50ccfc416de68e05baf502c560d6101a74f051f4c0a665af3ee5d98586d"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/pressure_changes_matter_thumb.png"
-hash = "8a14d1a2175f66e5b520c437b684b39d68f01134a6f63277c4f3dca7b4c987f0"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/rails_turn_distance.png"
-hash = "bb564d8570fbcdbc5fd2abd148458798c0b93fed38bede3114dee49ae22b78f5"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/rails_turn_distance_archive.png"
-hash = "54c3fc2f29888e6a4637c3fe301adbc25e2aeb386db350dabcd36afe48c1c81d"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/rails_turn_distance_aspect.png"
-hash = "3da0cdd04ba38f8fce10a70d6a2632f15d1132695a6e16ba79b56ed5c36622a0"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/rails_turn_distance_pigment.png"
-hash = "30855c2a164f2115d9d5609a5eb818dcc1bcab99a36f70cc0082c0758bbfad70"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/rails_turn_distance_thumb.png"
-hash = "56c81c147d1837419b8e4387faeda3ea59f4ee8589f256110bbea0ecba2ca406"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/reality_has_grammar.png"
-hash = "c74627de12b4ed8073afea942562eb679d722fe1a3fec353ec9ec6b3ec97c81e"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/reality_has_grammar_archive.png"
-hash = "faf342447b4630da96bf8bc6885f5a360658167d2f59b5b64aa4cd3c61aafa2d"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/reality_has_grammar_aspect.png"
-hash = "a5ec75a31ee9155b8b5e189001d6fd4da314b7b37b09e0575e8258f845d53b52"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/reality_has_grammar_pigment.png"
-hash = "f3a8baea3a7ebff53235e0c2cbc109fc256b77c57bfce4ad0f72d3e81da262b1"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/reality_has_grammar_thumb.png"
-hash = "055eacf3e8c376f0adeff77b6cd3f49a31324550a45c10b26a6babdb1ecd7d07"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/recognition_changes_both.png"
-hash = "c236bf6c81acb4eb5f925f348e5646870e796ad34ed0d0da51779b8d6006100c"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/recognition_changes_both_archive.png"
-hash = "8ed77332f1908b9e61b89cd94ec1765a29c0b27ccba682ecde10c884d0099392"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/recognition_changes_both_aspect.png"
-hash = "094cb95a1772b286d732ccdebc3fa988090166fa4de019424e6c0f116aae4d51"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/recognition_changes_both_pigment.png"
-hash = "0a188888524ebc20ef9fbb7ba1b2a8b4bbfa684d14abd29baf9876ac262b6786"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/recognition_changes_both_thumb.png"
-hash = "0bb0de44b68c4240a7a3db3cee3966335c40a597d3672fae9d49bdfcbfdcc561"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/relics_remember_wearers.png"
-hash = "589461357a90cf40130da8661be447c61dee499ae88477f06a4e741da6a0b3e0"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/relics_remember_wearers_archive.png"
-hash = "b87cc647d08b2b4b44d0f80ebfa885e169abf08975c1206e10121676a7c19d34"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/relics_remember_wearers_aspect.png"
-hash = "eedd0e939912067d9ae92a9b03bbbc980fa7a9711f4dcf04bb89c156bbf358ed"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/relics_remember_wearers_pigment.png"
-hash = "80ede5b0481010de20b0137decc8191751619fb4579aa300b2c95b945b34ccb9"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/relics_remember_wearers_thumb.png"
-hash = "b4ace4a86da2feb2d8140dcbf3aab8b4887ec43b0eb822e36a186198ce086bbe"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/rivers_turn_work.png"
-hash = "48a88dacd9e2d90586e51b79aff2aac8eafd1f09dbc97c1d572bfc06786fa320"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/rivers_turn_work_archive.png"
-hash = "d9eb6ac70b0a2b4cb0e87dfd39cf55c1519fe2422b5a4377b09fb619774e09d9"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/rivers_turn_work_aspect.png"
-hash = "61307cf6496041c00f6d851782d7c54970531c22b694152a341c897ad751c7a2"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/rivers_turn_work_pigment.png"
-hash = "6e21b0bdd19dccf32bf373f9a1a2fef6a129b4bb9537a3a78b9a6e823e38aeb8"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/rivers_turn_work_thumb.png"
-hash = "ddf96d5f55c4415ec842c026276b93a89bb94a198e249bfef7774f155427b567"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/roads_make_neighbours.png"
-hash = "f3b695387fcf78ff6ca08fe49a601fdb4eebadcdef859e8d03befab9f8e9a2a7"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/roads_make_neighbours_archive.png"
-hash = "9308400839facfaa41311f01e6c055b539a11c5276107390c0a7385f871a2065"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/roads_make_neighbours_aspect.png"
-hash = "d5bfe432b6313277d1736fc36032991a62ad2fbf6568f61d8c407903193284a4"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/roads_make_neighbours_pigment.png"
-hash = "b64ddee0241427a37e7c87e433d185ef754883d2b9a8d16901d5bbafc34ec444"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/roads_make_neighbours_thumb.png"
-hash = "15a964423826722be3739a84d9cee122675f3996c1d351ec99ebcc915028d7af"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/ruins_are_instructions.png"
-hash = "2d82f35e8830f37e9954b40e109bad8f41be3ac0c08d7eead1d1e3e7b066d814"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/ruins_are_instructions_archive.png"
-hash = "9931c06359e7fc3a9e50d2c227cb4f18652e0b9c1480597ef1d6a091ae246e66"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/ruins_are_instructions_aspect.png"
-hash = "82d3571eb9a64e62236e074b01abcc68c5027ac02bc34a7a3dc6ea3d2b2735b6"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/ruins_are_instructions_pigment.png"
-hash = "4cb165b861405f189db3d5504f3ecc24fcbe8b8cab237a0ebaa4b4f6c500665a"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/ruins_are_instructions_thumb.png"
-hash = "3a971cffaed2a671ae1d2168e32c6d3de0dd5653858864f46c5ddda7fc629b0a"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/rules_adhere_matter.png"
-hash = "fcfb8bc767adecd07f74bda8bdb46ac9bb81f7ff91de7aa53b39cf86f75132eb"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/rules_adhere_matter_archive.png"
-hash = "859eb317b1072275f6054346f3adb2bfe08e799caa8767a1092ce04539b089a6"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/rules_adhere_matter_aspect.png"
-hash = "eabd14e4e7051f281b68781d280f4f6b7686221b792f4ede71206321bbc00c20"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/rules_adhere_matter_pigment.png"
-hash = "f321354712e1171325e60f4947d3a4f115f9e4eadb42a71823af71bb75332399"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/rules_adhere_matter_thumb.png"
-hash = "c7155c5fe7ca334ac761c9ff507300b6c460966414fabadaa75a02e59ae4528f"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/seasons_turn_work.png"
-hash = "989e8947b0758538fadcf09b7c45042f487c5ce363dcf03e14e47afa9d8a0162"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/seasons_turn_work_archive.png"
-hash = "9489623e3093974b1c1bb96afbc808bb64a13bc9c4212778dc9ee5eae3d27e80"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/seasons_turn_work_aspect.png"
-hash = "743c5a5df50351d9134833ab41acd50132f0f7387b68fe6a26851dde2ad5b569"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/seasons_turn_work_pigment.png"
-hash = "c9d6f3455f8735242d41f92655be4a31b69ccf7b7789eeccd439ead925ba616d"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/seasons_turn_work_thumb.png"
-hash = "a3b30752bcb8c14bb17512fd40153f84210d14f85b49defd9926a269d19c5860"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/severity_has_yield.png"
-hash = "373b844d076b98acb5c1bdbe5d7a468c11b856ba7803cdcd86e99edc57a8b1e2"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/severity_has_yield_archive.png"
-hash = "caaf2ef37b150e7723ac81aa44d3d70e03a833b4114756b38cea555d05390fb8"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/severity_has_yield_aspect.png"
-hash = "f291865936e9a956db44efe3170722ea6d6cc6aa1926940ac7ca02ce6c61e47b"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/severity_has_yield_pigment.png"
-hash = "93e66bd138c10a6a08e5e051734068f0313db5cef1d600dd0a18c4862508444c"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/severity_has_yield_thumb.png"
-hash = "5026db68ae6875c49b17c6900fe50f4a56825a7511edd37698d0e61ca3fde087"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/silence_has_teeth.png"
-hash = "24cc13f3f1556e4a1008fa51421120a0a2c53a1de84bb4c525637a7f5d49b7c4"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/silence_has_teeth_archive.png"
-hash = "8b94abb1c1d22755d134c8cb527d539c77714d27752220a836ca64787fc5e672"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/silence_has_teeth_aspect.png"
-hash = "ae5121a3f44b7ea80b5f7d45d08b2bad6dbe73d433209947bda6a95999616da8"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/silence_has_teeth_pigment.png"
-hash = "52c158f993951e5c3112be48e5b2a539c039b46d164fbbbb4a2dbe4d7306c788"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/silence_has_teeth_thumb.png"
-hash = "fcfb4feaf44fc0e56aef5476716c9a20ad41f2dc3be2b7011976544105e4e953"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/sky_another_country.png"
-hash = "24365812593718b7f69a1707d47f97ca16de84c2fbc1bae8c41f3f229dbfb45b"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/sky_another_country_archive.png"
-hash = "92715fa81cbd36ceb845143e3049662bb55f4988fc6d5d6f7e35062456de8d4a"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/sky_another_country_aspect.png"
-hash = "15b2703364791a5a176e7df46f17bd06cd7b1e6f191df37a58adbe68e2b9a05a"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/sky_another_country_pigment.png"
-hash = "c7dbfcc00cacd222da54cc82e0260e2c08a9c33be34c6d72dfcaf2410b971def"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/sky_another_country_thumb.png"
-hash = "5d8c6b4ae32840332eb5a45bc519f2ecb113fdafb5b8a28855146ee59764213a"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/source_becomes_machinery.png"
-hash = "4e44adaed84b3102319c0993888bd313cd9c4c97615a1dbac6dba0b2739983da"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/source_becomes_machinery_archive.png"
-hash = "d17f127aa8af64f836593a12e2c821f93d92b9489732e3de3a5d2a84abc1bdb2"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/source_becomes_machinery_aspect.png"
-hash = "eec38b1eb65932a50068d25335ea86de850bf0c16e58c8566c0a0d67c00633c7"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/source_becomes_machinery_pigment.png"
-hash = "5a1eb4a1dae099dfd3c65ea3dd127503cb566425c1d8b97d325fe62c9757ee10"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/source_becomes_machinery_thumb.png"
-hash = "bcea0a843e5baea60a2d9401ba4e3fa09af1a9e420736cf0ca75c0d3b4855cc7"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/spirits_honour_contracts.png"
-hash = "b1705f48ad084b1c574b35fe6fc366960e3e92587fcfe2dab8fae5e73fd13f1d"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/spirits_honour_contracts_archive.png"
-hash = "52441eb20459853625a88a45d301fb4861136ee970c79b50e3cd5b2bee471f99"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/spirits_honour_contracts_aspect.png"
-hash = "b5dfb4ab25cdd7c5a5641f290287b4eb0bee9ba418b936f55b219f308516562b"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/spirits_honour_contracts_pigment.png"
-hash = "60f5494e7a7ad9379b3e1a93bf77ddf0896003621f8ef222df638587a7744225"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/spirits_honour_contracts_thumb.png"
-hash = "ab57d777a8f18645da785f56817b1dfc363a760831865c8edf1641e1030f5324"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/stone_makes_promises.png"
-hash = "b5609ea52d3778031bd20abc4d32ea043ce3ab5238c986e79a179b4dfffcaa4f"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/stone_makes_promises_archive.png"
-hash = "049c0b13611aa74b9f6def0c86d66c13b9245c836b0773732725ac50dbeee8a9"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/stone_makes_promises_aspect.png"
-hash = "fc9b7b08cec209e9a157f04a65e38533d0ef0a8767cb3c1fb58f19902c3c23f9"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/stone_makes_promises_pigment.png"
-hash = "a3d00abde047d5a9188cf595c0742222551740179c8f351a9e194d1c8d06cec2"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/stone_makes_promises_thumb.png"
-hash = "2fc3bdb655b72d18b92887638f08a43ca75a41bbe866fd1c5578396cadcdd137"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/traditions_can_cross.png"
-hash = "a89ea76db3b3df0df4f0a82e25ecd344bdbfe3c42d8bae5c2326d8d440e2b1e5"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/traditions_can_cross_archive.png"
-hash = "53590d2b3c1d6b9e4f76fd0c56cb41948f9d6a72cabcf1795efe284baa83128e"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/traditions_can_cross_aspect.png"
-hash = "015b7a76f2ecf6eeac149a06233fdc891448d23c7f1d87f4a1bac03d08c2152e"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/traditions_can_cross_pigment.png"
-hash = "e01e233fa972c2920917d857a4b82fc2b9e5b29c2626e1386f487c741aee3ff5"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/traditions_can_cross_thumb.png"
-hash = "d057f5afe0f31caa62ee755c0a6432059a693d0e3071e216094ab77c1bb7dbf0"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/vessel_becomes_place.png"
-hash = "14d74d8b34055345451ec5b603975a1405a17bdd910d9321bd0098be97bfd486"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/vessel_becomes_place_archive.png"
-hash = "3e18d93e3232c3133db91d11e3426dbc268c0ded612651f3a7d1ed6e5073ba4a"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/vessel_becomes_place_aspect.png"
-hash = "6da120f331acad1d16bbc944b5f13a440d0458800c572f1c07165aa8c21a304c"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/vessel_becomes_place_pigment.png"
-hash = "d8b98c9cf8a67171a6bd2b4a20074293e5c235b7474cd7016c31c7cb2bbfc442"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/vessel_becomes_place_thumb.png"
-hash = "448105e10546397ebe23e0bf9f85db1b39c081d95107cc66c37696702995f0bb"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/water_made_safe.png"
-hash = "dfeb8cb8e482c9bbedbc76331e4bdd50120568fcdb9823966d8511cd525b55a8"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/water_made_safe_archive.png"
-hash = "33f0429aa462b7779f6de0872a0e123f905ce893be6d4de2accfaca91f1beed0"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/water_made_safe_aspect.png"
-hash = "52401220759313b0156a1af340ba14774c3a1b24e8c78b944b2e544ac88f4e18"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/water_made_safe_pigment.png"
-hash = "a26faa908f8680885b95f9273d0e16a49cd9989beb7cd2eb2f6f24e6836e0bb7"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/water_made_safe_thumb.png"
-hash = "27e898216b6236bb0ad4fe4559bf7a9971f76bcc25054be58cdd580cf432e9c2"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/weather_has_momentum.png"
-hash = "858da9739a44c34d09a03508f02b84a63454a6f5945204001bf61730efc913e5"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/weather_has_momentum_archive.png"
-hash = "0c9249ee6796da12a982d829a46f09210b4ec79565d83612c677ced92438d70e"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/weather_has_momentum_aspect.png"
-hash = "d6282fdfbd22fb5c5b629c1795fc3a77c739e8c4e7f7c44945093d6de144aef0"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/weather_has_momentum_pigment.png"
-hash = "f18dbd3207fd7d0674cfa09e5909e6fe69ee6e440dc3c1dffb7088aecd316afe"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/weather_has_momentum_thumb.png"
-hash = "3926c786c9905e8f4aec0fbee5ed21b99ed210e7293ebd8d324661b9a399b92d"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_can_be_condensed.png"
-hash = "cb11d9bd6a514841a2ac12bde65b709a9856155c2fbd588bf7d743076c9334f6"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_can_be_condensed_archive.png"
-hash = "95cbd6dbf6c1f0f8f048f20980aad760643eb82fd55e2bee23799b01416381ab"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_can_be_condensed_aspect.png"
-hash = "187aa7cfbd72366e0373f866cafd95309df16eeecd194f6cc9c88bacc6f36e54"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_can_be_condensed_pigment.png"
-hash = "ae0ac85bd39d7c7cb438501da9e3b6152f0b2dc1114612039f6dc25d7f37ca39"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_can_be_condensed_thumb.png"
-hash = "889c4ed4abb444daef20d568a4fd0d8c1b4384fa9a034de1e687ef2e00356b0f"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_can_be_wagered.png"
-hash = "2630186dbc57a194b213b83bb72552f4ae12c52ef85898e76e66d84cb04169ad"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_can_be_wagered_archive.png"
-hash = "71b5b1993b66c750d5498f38cee519a5ac5583d1dce0f15f4a9ddf7c33612219"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_can_be_wagered_aspect.png"
-hash = "e6b064c02170fa687ee82dce489457986626a130e6b0b9ef1fe17567240db36a"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_can_be_wagered_pigment.png"
-hash = "1a83f3ce62205f4c2ddd88aba56933da9d4dd36c827aed9797e675687a0d8afa"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_can_be_wagered_thumb.png"
-hash = "b96d982f58fe58ef13d9a1cfa8c243b0d3d3f816a15714c37273c5433f8b49f8"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_inherited.png"
-hash = "76304426648c943d946031f0d385332c2517cf022e499b3bea321d0772341d18"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_inherited_archive.png"
-hash = "a3be6f2c7223ade9d5e276ab74d097d8b4acfa270d59bfc5ff6c974bcbc0086a"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_inherited_aspect.png"
-hash = "eaaf9b0dc6b1aa54aebe1460405d96e06d90d2019dd0c711b794d0c48c0a2ca2"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_inherited_pigment.png"
-hash = "0af2014664dc042d6c57bea2ad12c963fe191f01ebb3e902ee8802fd95a74687"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_remembers.png"
-hash = "6ada7ec9217447b7df7893fa13058c96f3c77062a7168953ea9a056f0491cf16"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_remembers_archive.png"
-hash = "0b4206f8a9357b48821cfdfae58dbabd85b3aa974e4cc6dbe76bd15e70612396"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_remembers_aspect.png"
-hash = "b31600314bf9835081acc8373fcbd246baee5bb51b3832614f37c06f64627e59"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_remembers_pigment.png"
-hash = "552d381d7203db28b5146b13ff4268af955e8c1cf45a643c33a0e4c4bda5f912"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/gui/threads/world_remembers_thumb.png"
-hash = "f08c9eb9784f06ccc46cec8c0e30e3a1c7e88e53b55999a42a8f1b8580a349f7"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/apocalypses_disagree.png"
-hash = "5610673506903a0a4ea1c1298cf44327ff439d2893f12f3a9b85f9fce31346d9"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/army_walks_toward_you.png"
-hash = "10e5a2ca9e9f2304c0b9cdd8cf785e5bcb5cb1702d6c00bd5b48e0be01f51da3"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/blood_infrastructure.png"
-hash = "05fb3d987e202a14eb632a6ecbfcbbdb43b133f9ecf9fb6955968d922674d813"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/body_borrow_state.png"
-hash = "ee9f39f65a626e7ebbc72558900de731eed724c5f882e06750e0959677f5e201"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/body_has_weather.png"
-hash = "a896344f72271a51a86cada84325f90853f171c7da8bbab295f988f87de76b55"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/chemistry_remembers_sequence.png"
-hash = "633c7455d85504c32e854b48a40fde27e345f35e807bf9cfb3597ddb243c0543"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/copy_outlives_work.png"
-hash = "012fe59d21825f7bf82e6e50e1eb12ab79f3ca94e07944e5dbac3495a8eea07e"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/dead_leave_work.png"
-hash = "f7a390a07d4561ec1778ffa19a526a57a2588c89bc5a6a7c135a83e18fc00e44"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/deep_own_light.png"
-hash = "7352577d1b52e2468ea4641bb29771e68de7a53ef49a597bd6dbf6be18de1403"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/defeat_not_erasure.png"
-hash = "c62ba1481b8e8d6aae8e1ed4b4303d50911488d30bc181ba7b0a83e1f95b09b5"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/disaster_has_agenda.png"
-hash = "cf0e88e945a1b3293096ef8a90b448cac4567b635028fef938321b577ec977ef"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/doors_borrow_worlds.png"
-hash = "085f3719958aced20d36ebf48a3df5ff374965ebce5923a265e6bfa21de5e5f7"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/electricity_agreement.png"
-hash = "004c03cbabbc9522201b20ece991e52adc62dee0d5348e8dde783ca8ab59444e"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/elements_change_sentence.png"
-hash = "a37ea7a2faae310689c97732fb8a4f07ae99ba160817b8a28294c94a64a63ec4"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/enemies_no_cause.png"
-hash = "0ac3c927f8c6b5387f9c2d8b8f07d7d20783fb31dd8f92ed306e35eeff68ea4b"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/feast_before_journey.png"
-hash = "0ac7e2ca011efec5145c8ab6b02ae847678910d2dd8fc0107043948c9cb82542"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/fire_has_country.png"
-hash = "497c50d2872182b8a2cfd31c5be22d7a832d0fad27cc2909931e4930c6fca509"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/flight_engineered.png"
-hash = "1fd2453fe2d161a1f174ad59823ee556148319a534e90bf21b9b68790461a66a"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/forest_many_lives.png"
-hash = "936f05f1fee090d48b50256bd3ea9b2a0ccb76273c632efe3d0f16ebdd0a4384"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/hands_learn_repair.png"
-hash = "2bf1ff94778025d0b14072a535a793bea9bd4e1f09aad21bdb1c1d2288f344d6"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/heat_go_somewhere.png"
-hash = "4d759eb316cce01ce258c833c9011f07282dc0ed3b52667296d4452b49628957"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/leave_atmosphere.png"
-hash = "63a9d42466a5b2cbc9aad9c2831e6aae0cd8f5925326f49c85ee0667953c71ef"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/life_becomes_capable.png"
-hash = "04f9cb76a0ce8b814738f5cc1366755c7f100b902b82354629516e7cb9def380"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/life_reaches_tether.png"
-hash = "27b347ac535701f65c253d7054423c17a71ce0c5ba5aabfc87322d38efca68d3"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/machines_can_remember.png"
-hash = "81c5d301ce46a0f3dd0d531f7747e352d0d2275e09b61c819ec20585372a6e47"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/materials_temperaments.png"
-hash = "ec09c3139a226c03445079ca8b58fb5d19df520d18bb15c979cbac23b6f32dbd"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/motion_becomes_industry.png"
-hash = "360285e9755f499183212a0ce33058ab67c0e1c49e6e49ee37e683571ca3d63a"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/other_hands_built_caches.png"
-hash = "7d2d4cf58ebd1e30bff93ecf12ab27d3beea9a2ddf2e22e97475e29db94f5bb5"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/power_needs_anchor.png"
-hash = "86fada362fb2290534b589e45a2fb63af16b53f6e4549b5ce621afb0050b7a6f"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/precision_has_rhythm.png"
-hash = "57e5a9d2e7e7c9f628d64982a7e791447374bac0c6165bfb7547d4269b4085e0"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/pressure_changes_matter.png"
-hash = "3b71ddde2b490292ef1d6320bfcbd1cb07a7b003621fbff91f0f00db3bf9de50"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/rails_turn_distance.png"
-hash = "bb564d8570fbcdbc5fd2abd148458798c0b93fed38bede3114dee49ae22b78f5"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/reality_has_grammar.png"
-hash = "c74627de12b4ed8073afea942562eb679d722fe1a3fec353ec9ec6b3ec97c81e"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/recognition_changes_both.png"
-hash = "c236bf6c81acb4eb5f925f348e5646870e796ad34ed0d0da51779b8d6006100c"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/relics_remember_wearers.png"
-hash = "589461357a90cf40130da8661be447c61dee499ae88477f06a4e741da6a0b3e0"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/rivers_turn_work.png"
-hash = "48a88dacd9e2d90586e51b79aff2aac8eafd1f09dbc97c1d572bfc06786fa320"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/roads_make_neighbours.png"
-hash = "f3b695387fcf78ff6ca08fe49a601fdb4eebadcdef859e8d03befab9f8e9a2a7"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/ruins_are_instructions.png"
-hash = "2d82f35e8830f37e9954b40e109bad8f41be3ac0c08d7eead1d1e3e7b066d814"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/rules_adhere_matter.png"
-hash = "fcfb8bc767adecd07f74bda8bdb46ac9bb81f7ff91de7aa53b39cf86f75132eb"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/seasons_turn_work.png"
-hash = "989e8947b0758538fadcf09b7c45042f487c5ce363dcf03e14e47afa9d8a0162"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/severity_has_yield.png"
-hash = "373b844d076b98acb5c1bdbe5d7a468c11b856ba7803cdcd86e99edc57a8b1e2"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/silence_has_teeth.png"
-hash = "24cc13f3f1556e4a1008fa51421120a0a2c53a1de84bb4c525637a7f5d49b7c4"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/sky_another_country.png"
-hash = "24365812593718b7f69a1707d47f97ca16de84c2fbc1bae8c41f3f229dbfb45b"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/source_becomes_machinery.png"
-hash = "4e44adaed84b3102319c0993888bd313cd9c4c97615a1dbac6dba0b2739983da"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/spirits_honour_contracts.png"
-hash = "b1705f48ad084b1c574b35fe6fc366960e3e92587fcfe2dab8fae5e73fd13f1d"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/stone_makes_promises.png"
-hash = "b5609ea52d3778031bd20abc4d32ea043ce3ab5238c986e79a179b4dfffcaa4f"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/traditions_can_cross.png"
-hash = "a89ea76db3b3df0df4f0a82e25ecd344bdbfe3c42d8bae5c2326d8d440e2b1e5"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/vessel_becomes_place.png"
-hash = "14d74d8b34055345451ec5b603975a1405a17bdd910d9321bd0098be97bfd486"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/water_made_safe.png"
-hash = "dfeb8cb8e482c9bbedbc76331e4bdd50120568fcdb9823966d8511cd525b55a8"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/weather_has_momentum.png"
-hash = "858da9739a44c34d09a03508f02b84a63454a6f5945204001bf61730efc913e5"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/world_can_be_condensed.png"
-hash = "cb11d9bd6a514841a2ac12bde65b709a9856155c2fbd588bf7d743076c9334f6"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/world_can_be_wagered.png"
-hash = "2630186dbc57a194b213b83bb72552f4ae12c52ef85898e76e66d84cb04169ad"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/world_inherited.png"
-hash = "d126373e1f36bb82c6b66bab4bb86d7f9594acea1eaf4d8ee482f7bc42b20833"
-
-[[files]]
-file = "kubejs/assets/better_content_fixes/textures/item/thread_cards/world_remembers.png"
-hash = "6ada7ec9217447b7df7893fa13058c96f3c77062a7168953ea9a056f0491cf16"
-
-[[files]]
 file = "kubejs/assets/bloodmagic/patchouli_books/guide/en_us/entries/alchemy_array/sigil/lava.json"
 hash = "cb8376fa913f9f382c07133a23ac315e633996bba44a9f4a796f57d83746d995"
 
@@ -13053,10 +11769,6 @@ file = "kubejs/data/better_content_fixes/tags/items/seared_melter_heat_sources.j
 hash = "62424537e90b4490093a8d76cb1a368dee7ff2a67fce1152c260b97f95003fd5"
 
 [[files]]
-file = "kubejs/data/better_content_fixes/threads/catalogue.json"
-hash = "ddb1eb340a65c4b9c4638cf73002a7b450b3ad5cde6c3ebaf10fd0778d5254d1"
-
-[[files]]
 file = "kubejs/data/bloodmagic/tags/items/arc/cuttingfluid.json"
 hash = "35134fe61f0b26fa5aa3a1d44f9e7deae1a0b714cdb8d5e3857d05428bd55939"
 
@@ -15178,7 +13890,7 @@ hash = "0de5b65db0fb84575faa22bfefc45e37f09001d638bf7632f527a4610cb707c7"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__villager_shopping__10_coin_villager_trades.js"
-hash = "ea58e1d8c009223a4e38ab18e0e87e321790a09ee4b70268b74dbc7fa58e1137"
+hash = "d151584d08e8bcea3850b19dc3e0d4bd8922d2f9ea68318334dd62bd0f0a6029"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__villager_shopping__40_emerald_loot_coin_replacement.js"
@@ -15219,10 +13931,6 @@ hash = "79767d9ddefcb5ce0c54d6da348d9c134f09e25a5b6733a778778ffaa201448e"
 [[files]]
 file = "kubejs/server_scripts/compat/reviewed/replaceable_deepslate.js"
 hash = "cdadd1a859c50c4f30afa283252ed053e100bafc58d9f12617a939df56adae98"
-
-[[files]]
-file = "kubejs/server_scripts/economy/20_first_class_wandering_trader.js"
-hash = "0b9f2aeb7f35c08a18c38752834b31d97e1f1da0ba3178c79ce3a56a4466cf59"
 
 [[files]]
 file = "kubejs/server_scripts/policy/dimension_access.js"
@@ -15406,8 +14114,20 @@ hash = "ddff810b39bb8873325aa34230c2a174073ad9bbf002e04a66835735550a1b7b"
 metafile = true
 
 [[files]]
+file = "mods/better-content-economy-1.0.0.jar"
+hash = "f18aec659b1e364e7e922b34f704d5d67cd4af4b248df4a4023897d30c7c6721"
+
+[[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "5dcd45021eeb1320fc90c7957f24b763cdbe2d4192cc39362f45358fe4ba3e92"
+hash = "241e7414ca1946d0179417040cb2500ea6d85779ce7b39b71c782a52b74b6657"
+
+[[files]]
+file = "mods/better-content-quests-1.0.0.jar"
+hash = "3b14c16ec2c7ed5c736a6bc6ab3744e6b5867b192c0a44ba7bf954968a5080fc"
+
+[[files]]
+file = "mods/better-content-threads-1.0.0.jar"
+hash = "c9d6bafcc1bf59aceba6876d53251d5d45a0a7f4a10e5d10dd7f0807c4139be8"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"
@@ -15583,7 +14303,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimension-drink-1.0.0.jar"
-hash = "273d98af2579a38f33203cc0ba37e272d5051258d5e517ccfbe1cd4b941a7c6c"
+hash = "58b0afded84321a581b61b9b6ab3d5d1bd0f52e40b642664f62f79b66c6aee58"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -15598,6 +14318,10 @@ hash = "6f29df837c00173333892b068336e828ac783da80f22ee34a140943593297d33"
 file = "mods/dynamic-asset-generator.pw.toml"
 hash = "55ffe26e2d88fa9847cadb731ad1679114058f60dad712bb1973bfef05102c8e"
 metafile = true
+
+[[files]]
+file = "mods/dynamic-survival-hud-1.0.0.jar"
+hash = "f5f468195664a1036a1d09e67dc0ad194f6b4c8f0ee8caa3f033ad5a77e3d0fc"
 
 [[files]]
 file = "mods/dynamic-trees-ars-nouveau.pw.toml"
@@ -16143,7 +14867,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillager-campaigns-0.3.0.jar"
-hash = "2b8cfdaae2d453e17109bf6bd63477bde5c8bdb0b69cc0f824c7d3487a58b111"
+hash = "216528d8f2e4b00633bbfc0acb81d14f81dfb8cdee1adff547eab5518cedbe7e"
 
 [[files]]
 file = "mods/ping-wheel.pw.toml"
@@ -16157,7 +14881,7 @@ metafile = true
 
 [[files]]
 file = "mods/player-traces-0.1.0.jar"
-hash = "216ffd0b524a4cfda7e52e7f8631cda8ad3fb2d00ae704f481e55124c4546762"
+hash = "a25dcbd3dd7733d9299e5aa9561ee20e5263d5d112d6021e5c5dd6f4f7db5766"
 
 [[files]]
 file = "mods/playeranimator.pw.toml"
@@ -16235,7 +14959,7 @@ metafile = true
 
 [[files]]
 file = "mods/realistic-ores-0.2.0.jar"
-hash = "1e6e1087ed6509f3adcbf2632946076594af1d6fd528d54f8f58c6c1898bda3b"
+hash = "126ad7dbb638e2117454b3dd7a084f69d289aed2e3517dc51d0d4db9102cf25b"
 
 [[files]]
 file = "mods/realistic-physics.pw.toml"
@@ -16259,7 +14983,7 @@ metafile = true
 
 [[files]]
 file = "mods/rpg-stats-1.0.0.jar"
-hash = "5a12264d987f83e26592c18f5086bf254c4d7d656403f0be7980a60a037ec67e"
+hash = "24d0ac7cbffe90703418ed50958f3db36bf66f3f509ff5d747e233227574032b"
 
 [[files]]
 file = "mods/runtime-data-dumper-0.1.0.jar"
@@ -16376,7 +15100,7 @@ metafile = true
 
 [[files]]
 file = "mods/systemic-salience-0.1.0.jar"
-hash = "fc0f44dcff7fce41b220482f04097bab50269213318bb9da1aeb6879bd30df0b"
+hash = "6a1cce1da75bdbb2e74b22166203b25c0b2639c0175b8b89b4413f6c0ce15ff7"
 
 [[files]]
 file = "mods/tconjei.pw.toml"
@@ -16455,7 +15179,7 @@ metafile = true
 
 [[files]]
 file = "mods/tinkers-construct-affixes-1.0.0.jar"
-hash = "d5e40b828b160778973e944e72e2d24468afb0b6cb9bb6cd3085eec511f74bdf"
+hash = "ea192ad4ac2c79e12f3b46a0dd9d2c1b055a90c9700ef77f9f30f31d0751f3c7"
 
 [[files]]
 file = "mods/tinkers-construct.pw.toml"
@@ -16554,12 +15278,16 @@ metafile = true
 
 [[files]]
 file = "mods/village-walls-1.0.0.jar"
-hash = "b9fd95ba8e0583ee5cfcaaa0bd83f64e50ba7f86491a8c8c2be298dc78f7ae68"
+hash = "6052dd6e7df69dd5b6f26d010f7c829be21e279d20c1e84d7f7ddd84174ec3c7"
 
 [[files]]
 file = "mods/wares.pw.toml"
 hash = "4ded4d3aef90c90d3004fbb73ba363322bb74da6458cba65604e9ae0fe52a67a"
 metafile = true
+
+[[files]]
+file = "mods/water-survival-1.0.0.jar"
+hash = "b672aa1bd8b66860ea2166b690385fe6c2bc627add3526fd10d330fc45284026"
 
 [[files]]
 file = "mods/weather-storms-tornadoes.pw.toml"
@@ -16568,7 +15296,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "16fa3b2ae14c96036718a3f0e098fc834edcccc1c177daa2505c063f54d8f077"
+hash = "7cfb452e07161601f9e0311bf220459f1cb9d7968b6f15c936fff40a11834911"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"

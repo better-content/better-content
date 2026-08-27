@@ -15,7 +15,7 @@
 			rewards: [{ count: 2, id: "7002000000000001", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.5d
-			tasks: [{ criterion: "class_selector_start_finalized", id: "7071614ADB727504", type: "better_content_fixes:criterion" }]
+			tasks: [{ criterion: "class_selector_start_finalized", id: "7071614ADB727504", type: "better_content_quests:criterion" }]
 			title: "Permanent Site"
 			x: 0d
 			y: 0d
@@ -28,10 +28,10 @@
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [
-				{ criterion: "shelter_completed", id: "5E2D5031DE9E6860", type: "better_content_fixes:criterion" }
-				{ criterion: "fresh_food_stored", id: "4C738485C8BE181D", type: "better_content_fixes:criterion" }
-				{ id: "22C4D5FD85112704", predicate: "water_purity_3", type: "better_content_fixes:stack_predicate" }
-				{ criterion: "provisions_packed", id: "614BDEFA538C7B8C", type: "better_content_fixes:criterion" }
+				{ criterion: "shelter_completed", id: "5E2D5031DE9E6860", type: "better_content_quests:criterion" }
+				{ criterion: "fresh_food_stored", id: "4C738485C8BE181D", type: "better_content_quests:criterion" }
+				{ id: "22C4D5FD85112704", predicate: "water_purity_3", type: "better_content_quests:stack_predicate" }
+				{ criterion: "provisions_packed", id: "614BDEFA538C7B8C", type: "better_content_quests:criterion" }
 			]
 			title: "First Camp"
 			x: 3d
@@ -45,10 +45,10 @@
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [
-				{ criterion: "animal_husbandry", id: "5B6197C755A6418C", type: "better_content_fixes:criterion" }
-				{ criterion: "rich_soil_tilled", id: "-4142D267AE4641C5", type: "better_content_fixes:criterion" }
-				{ criterion: "balanced_diet", id: "01852757163D44B4", type: "better_content_fixes:criterion" }
-				{ criterion: "first_finished_ferment", id: "6B6602658CE920AD", type: "better_content_fixes:criterion" }
+				{ criterion: "animal_husbandry", id: "5B6197C755A6418C", type: "better_content_quests:criterion" }
+				{ criterion: "rich_soil_tilled", id: "-4142D267AE4641C5", type: "better_content_quests:criterion" }
+				{ criterion: "balanced_diet", id: "01852757163D44B4", type: "better_content_quests:criterion" }
+				{ criterion: "first_finished_ferment", id: "6B6602658CE920AD", type: "better_content_quests:criterion" }
 			]
 			title: "Working Homestead"
 			x: 6d
@@ -59,7 +59,7 @@
 			icon: "vs_eureka:anchor"
 			id: "41AE4E6CED77EA27"
 			rewards: [{ count: 1, id: "093E65417C75EB34", item: "createdeco:iron_coin", type: "item" }]
-			tasks: [{ criterion: "ship_assembled", id: "060C5EE0FE6C2C3B", type: "better_content_fixes:criterion" }]
+			tasks: [{ criterion: "ship_assembled", id: "060C5EE0FE6C2C3B", type: "better_content_quests:criterion" }]
 			title: "Real Boat"
 			x: 9d
 			y: 0d

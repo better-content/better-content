@@ -13,7 +13,7 @@
 			icon: "minecraft:grindstone"
 			id: "01241F25B8A10387"
 			rewards: [{ count: 4, id: "24C20675C07D259A", item: "createdeco:copper_coin", type: "item" }]
-			tasks: [{ criterion: "tcon_station_tool_repaired", id: "01183266B8569157", type: "better_content_fixes:criterion" }]
+			tasks: [{ criterion: "tcon_station_tool_repaired", id: "01183266B8569157", type: "better_content_quests:criterion" }]
 			title: "Durable TConstruct Tool"
 			x: 0d
 			y: 0d
@@ -25,7 +25,7 @@
 			rewards: [{ count: 4, id: "7A84E740FC887A55", item: "createdeco:copper_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.5d
-			tasks: [{ criterion: "formed_tcon_smeltery", id: "20261455D5A784E5", type: "better_content_fixes:criterion" }]
+			tasks: [{ criterion: "formed_tcon_smeltery", id: "20261455D5A784E5", type: "better_content_quests:criterion" }]
 			title: "Working Smeltery"
 			x: 3d
 			y: 0d
@@ -37,7 +37,7 @@
 			rewards: [{ count: 1, id: "2E4FCF6DE5DADD7B", item: "createdeco:industrial_iron_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.5d
-			tasks: [{ criterion: "manual_workcell_run", id: "6505AB2A21A82296", type: "better_content_fixes:criterion" }]
+			tasks: [{ criterion: "manual_workcell_run", id: "6505AB2A21A82296", type: "better_content_quests:criterion" }]
 			title: "Manual Workcell"
 			x: 6d
 			y: 0d

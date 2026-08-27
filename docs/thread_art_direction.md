@@ -28,16 +28,13 @@ Each plate carries exactly one Systemic Salience aspect as a path, current, frac
 
 Fragility 7–13 have candidate masters and derived layers for art review but remain sealed future cards. Art readiness must never be interpreted as trigger or narrative approval.
 
-## Development-layer contract
+## Runtime art contract
 
-Every review master produces five 256×384 runtime files:
+Every approved master produces two 256×384 runtime files:
 
 1. the untouched resized full image;
-2. an opaque archive-sepia structure layer;
-3. a transparent card-pigment layer;
-4. a transparent exact-aspect-color trace layer;
-5. a subdued grayscale catalogue thumbnail.
+2. a subdued grayscale catalogue thumbnail.
 
-The three development layers are derived deterministically from perceptual-color and chroma masks. They exist only for the 1.8-second voluntary development sequence: 600 ms archive structure, 600 ms unique pigment, and 600 ms canonical aspect trace. After the aspect pass, the untouched full image replaces them, so masking cannot reduce final fidelity.
+Unread development uses no generated presentation layers. The reader crossfades the untouched native illustration directly over its neutral code-drawn archive plate for 800 ms. The illustration's authored pigment—including its canonical aspect color—remains part of the art rather than a separate GUI effect.
 
-Masters are generated individually with the built-in image-generation workflow. Each prompt combines this shared grammar, the card-specific scene brief, suit pigment tendency, exact aspect trace, and the no-text/no-frame constraint. The approved tricolor-v1 masters remain anchors for line density, paper, contrast, and restraint; generated candidates remain isolated until the three real-client review captures are approved.
+Masters are generated individually with the built-in image-generation workflow. Each prompt combines this shared grammar, the card-specific scene brief, suit pigment tendency, exact aspect trace, and the no-text/no-frame constraint. The approved tricolor-v1 masters remain anchors for line density, paper, contrast, and restraint; generated candidates remain isolated until the real-client crossfade and completed-reader captures are approved.

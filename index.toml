@@ -6,7 +6,7 @@ hash = "3cc1f64cc6c9fc485828891d0fb64869174421527b9bab5012a54852e139c34f"
 
 [[files]]
 file = "AGENTS.md"
-hash = "2cb8a3689403ae4a986b42f64bf6b4df93027c3cfdd9681c964339e711beaf05"
+hash = "01b6fff4939746c62ab5ee3208383d49595125d56e9cd75208a2001529d4bde0"
 
 [[files]]
 file = "LICENSE"
@@ -14095,7 +14095,7 @@ hash = "3b14c16ec2c7ed5c736a6bc6ab3744e6b5867b192c0a44ba7bf954968a5080fc"
 
 [[files]]
 file = "mods/better-content-threads-1.0.0.jar"
-hash = "09c5ac20e4ebe0c05b83b0380182b40cc2658e543c20d1dfd83b6512ef7afae5"
+hash = "858ade43ab428f967d7f8a39d7333ebc5fef9d829abc36049b2a81ef7bdffbfe"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"
@@ -15315,7 +15315,7 @@ hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
 
 [[files]]
 file = "smoke.sh"
-hash = "fc2b33d0ff1d018ecf34b53fbec5cfa67f518a72a1e5874c063c2d22cf2bf17e"
+hash = "3480b17fa3cae560c4dff436f8c447b19e55ac82b02cd46c4135d8487556e618"
 
 [[files]]
 file = "tacz/applied-armorer.pw.toml"

@@ -15,7 +15,7 @@ ServerEvents.recipes(function (event) {
             { type: 'pneumaticcraft:stacked_item', item: 'morered:red_alloy_wire', count: 2 },
             { type: 'pneumaticcraft:stacked_item', item: 'create:electron_tube', count: 1 }
         ],
-        results: [{ item: 'kubejs:electrical_machine_block' }]
+        results: [{ item: 'kubejs:electrical_machine_block', count: 2 }]
     }).id('kubejs:electrical_control/electrical_machine_block')
 
     event.remove({ output: 'pneumaticcraft:pneumatic_dynamo' })

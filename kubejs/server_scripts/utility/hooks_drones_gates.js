@@ -13,7 +13,7 @@ function bcMobilityMechanical(event, output, pattern, key, recipeId) {
 }
 
 ServerEvents.recipes(function (event) {
-    if (!bcMobilityExists('kubejs:sky_steel_sheet') || !bcMobilityExists('kubejs:ae_logic_package')) return bcMobilityMechanical(event, 'rehooked:wood_chain', [
+     bcMobilityMechanical(event, 'rehooked:wood_chain', [
         ' SS',
         'SCS',
         'SS '

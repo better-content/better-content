@@ -102,17 +102,6 @@ ServerEvents.recipes(function (event) {
         B: BC_EXTREME.gate.oc2r
     }, 'kubejs:extreme_y_rewards/deepslate/advanced_magnet_upgrade')
 
-     bcExtremeRecipe(event, 'sophisticatedbackpacks:advanced_tool_swapper_upgrade', [
-        'RTR',
-        'PBP',
-        'RTR'
-    ], {
-        R: BC_EXTREME.deepslate.ruthenium,
-        T: 'sophisticatedbackpacks:tool_swapper_upgrade',
-        P: BC_EXTREME.deepslate.platinum,
-        B: BC_EXTREME.gate.oc2r
-    }, 'kubejs:extreme_y_rewards/deepslate/advanced_tool_swapper_upgrade')
-
      bcExtremeRecipe(event, 'buildinggadgets2:gadget_destruction', [
         'RPR',
         'SBS',

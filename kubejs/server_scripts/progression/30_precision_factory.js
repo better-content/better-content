@@ -15,7 +15,7 @@ ServerEvents.recipes(function (event) {
             { item: 'create:electron_tube' }, { item: 'create:electron_tube' },
             { item: 'create:polished_rose_quartz' }
         ],
-        results: [{ item: 'kubejs:brass_machine_block' }]
+        results: [{ item: 'kubejs:brass_machine_block', count: 4 }]
     }).id('kubejs:precision_factory/brass_machine_block')
 
     event.remove({ id: 'create:crafting/kinetics/deployer' })

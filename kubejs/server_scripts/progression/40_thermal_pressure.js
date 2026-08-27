@@ -13,7 +13,7 @@ ServerEvents.recipes(function (event) {
             S: { item: 'kubejs:pressure_seal' },
             B: { item: 'kubejs:brass_machine_block' }
         },
-        result: { item: 'kubejs:airtight_machine_block' },
+        result: { item: 'kubejs:airtight_machine_block', count: 2 },
         acceptMirrored: false
     }).id('kubejs:thermal_pressure/airtight_machine_block')
 

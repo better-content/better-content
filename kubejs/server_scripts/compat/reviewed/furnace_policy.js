@@ -221,10 +221,17 @@
                             var outCount = (kind === 'raw_block') ? NUGGETS_RAW_BLOCK : NUGGETS_ORE_RAW
                             var out = Item.of(nuggetId, outCount)
 
-                            // safer ordering
+                            // Preserve the native timing and reward metadata while
+                            // changing only the material yield.
                             event.remove({ id: rid })
-                            if (typeId === 'minecraft:smelting') event.smelting(out, ing).id(rid)
-                                else event.blasting(out, ing).id(rid)
+                            var rebuilt = typeId === 'minecraft:smelting'
+                                ? event.smelting(out, ing)
+                                : event.blasting(out, ing)
+                            if (json.has('experience')) rebuilt.xp(json.get('experience').getAsFloat())
+                            if (json.has('cookingtime')) rebuilt.cookingTime(json.get('cookingtime').getAsLong())
+                            if (json.has('group')) rebuilt.group(json.get('group').getAsString())
+                            if (json.has('category')) rebuilt.merge({ category: json.get('category').getAsString() })
+                            rebuilt.id(rid)
 
                                     changed++
                                     if (DEBUG) log(typeId + ' ' + rid + ' : ' + resultId + ' (' + kind + ') -> ' + outCount + 'x ' + nuggetId)

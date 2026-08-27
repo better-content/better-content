@@ -15407,7 +15407,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "9069c0ed14ff3d8b2a1cbe77d54dc0d1e13fd03bfff18e0492b62cc08dedc1aa"
+hash = "a7cc4a7beda6dd8113c568f4e3b92260eef6e25bef9d6bc6b554bed401c6d072"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"
@@ -15583,7 +15583,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimension-drink-1.0.0.jar"
-hash = "eefa528e9b1ad6404cbca254d0f6600fd36c3c5c2772592dc73184e172d636d3"
+hash = "273d98af2579a38f33203cc0ba37e272d5051258d5e517ccfbe1cd4b941a7c6c"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -16201,7 +16201,7 @@ metafile = true
 
 [[files]]
 file = "mods/procedural-bouquets-0.1.0.jar"
-hash = "85ceb91f0f4c36b018b67d24be6945b692e3b93f23c1867b79d6140b75f9872e"
+hash = "77d0ae690d21cddd3ae219f1f996ce4855ec39af4e319b83a989aadca9de289a"
 
 [[files]]
 file = "mods/project-vibrant-journeys.pw.toml"
@@ -16455,7 +16455,7 @@ metafile = true
 
 [[files]]
 file = "mods/tinkers-construct-affixes-1.0.0.jar"
-hash = "16b40a7c5ba387a3e20af963b77adc2f4d1f4774a4d044927cdc8d5173b684b2"
+hash = "d5e40b828b160778973e944e72e2d24468afb0b6cb9bb6cd3085eec511f74bdf"
 
 [[files]]
 file = "mods/tinkers-construct.pw.toml"
@@ -16554,7 +16554,7 @@ metafile = true
 
 [[files]]
 file = "mods/village-walls-1.0.0.jar"
-hash = "541eec5208fb07858c29b83ff0f140a417543db5e3087edd56a0b181f8c34a9f"
+hash = "b9fd95ba8e0583ee5cfcaaa0bd83f64e50ba7f86491a8c8c2be298dc78f7ae68"
 
 [[files]]
 file = "mods/wares.pw.toml"
@@ -16568,7 +16568,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "2af916d6ab5340d5ae8426d7ae0427fa005ae220910dbb2b6d64ec6c97342ea7"
+hash = "4c79765e90ee853a24eaaa88e989bf273acf1a1e8864f0b26e794a00b2daf850"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"

@@ -8,14 +8,14 @@ the closest living design document in the same change.
 ## Executable KubeJS surface
 
 KubeJS executes JavaScript recursively under all three active roots. The current
-tree contains 72 active scripts: 6 client, 58 server, and 8 startup. The exact
+tree contains 65 active scripts: 6 client, 52 server, and 7 startup. The exact
 path and responsibility index is maintained in [`../kjs-script-summaries.md`](../kjs-script-summaries.md).
 
 | Root | Active areas | Count |
 | --- | --- | ---: |
 | `kubejs/client_scripts` | compatibility 4, guidance 1, policy 1 | 6 |
-| `kubejs/server_scripts` | compatibility 42, economy 1, policy 5, progression 7, transport 1, utility 2 | 58 |
-| `kubejs/startup_scripts` | compatibility 4, policy 2, progression 2 | 8 |
+| `kubejs/server_scripts` | compatibility 37, policy 5, progression 7, transport 1, utility 2 | 52 |
+| `kubejs/startup_scripts` | compatibility 3, policy 2, progression 2 | 7 |
 
 The `compat/retained` and `compat/reviewed` names classify ownership history;
 they do not disable execution. `kubejs/inactive_review` is outside every active
@@ -33,6 +33,7 @@ a staging area inside an active root.
 | Dimension Fonts | Dimension Drink | Recipes and milestone references only; Dimension Drink owns obelisks, charge, sessions, tickets, and arrival sites |
 | Settlement paths | Settlement Roads | No pack placement script; Settlement Roads owns planning, persistence, road palette, bridges, and placement |
 | Vanilla vessel durability and recipes | Better Content Fixes | No boat mutation or hiding script |
+| Coin acquisition, recipes, village trades, and currency loot | Better Content Economy | No parallel KubeJS coin catalogue, trade, drop, recipe-removal, or emerald-replacement script |
 | TConstruct affixes and Epic Fight mapping | Tinkers' Construct Affixes | Pack supplies no parallel material-affix catalogue |
 | World reset lifecycle | World Lifecycle Manager | Pack supplies runtime configuration and deploys its independent JAR |
 | Persistent footprints and notes | Player Traces | Pack supplies runtime configuration and deploys its independent JAR |

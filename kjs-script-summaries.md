@@ -2,7 +2,7 @@
 
 This index is generated from the three executable KubeJS roots. Every listed JavaScript file is active; directory names such as `retained` and `reviewed` describe review history, not load state. `kubejs/inactive_review` is deliberately excluded because it is outside the executable roots.
 
-Current inventory: **72 active scripts** — 6 client, 58 server, and 8 startup.
+Current inventory: **65 active scripts** — 6 client, 52 server, and 7 startup.
 
 ## Client scripts
 
@@ -17,12 +17,9 @@ Current inventory: **72 active scripts** — 6 client, 58 server, and 8 startup.
 
 - `kubejs/server_scripts/compat/retained/check__10_overworld_block_drops.js` — Modifies selected Overworld block drops, including randomized gravel resources.
 - `kubejs/server_scripts/compat/retained/check__12_unearthed_regolith_identity.js` — Gives Unearthed regolith variants drops matching their underlying stone identity.
-- `kubejs/server_scripts/compat/retained/check__20_world_chest_coin_tiers.js` — Injects tiered Create Deco coins into world chests based on location and risk.
 - `kubejs/server_scripts/compat/retained/check__30_stone_cobble_compat.js` — Unifies compatible stone and cobblestone items under shared tags.
 - `kubejs/server_scripts/compat/retained/check__35_wood_family_alias_compat.js` — Adds exact wood-family aliases required by cross-mod recipes and tags.
 - `kubejs/server_scripts/compat/retained/check__40_dirt_grass_compat.js` — Unifies compatible dirt and grass blocks under shared tags.
-- `kubejs/server_scripts/compat/retained/check__50_disable_createdeco_coin_recipes.js` — Removes Create Deco coin recipes so they cannot interfere with the pack’s currency.
-- `kubejs/server_scripts/compat/retained/check__50_player_kill_coin_drops.js` — Awards baseline coin income for direct and projectile-assisted player kills.
 - `kubejs/server_scripts/compat/retained/check__50_sand_compat.js` — Unifies compatible sand blocks and items under shared tags.
 - `kubejs/server_scripts/compat/retained/check__56_standardize_starcatcher_fishing.js` — Removes competing fishing-rod routes so Starcatcher owns meaningful fishing progression.
 - `kubejs/server_scripts/compat/retained/check__75_stone_cobble_tag_compat.js` — Rewrites recipes to accept the pack’s unified stone and cobblestone tags.
@@ -46,8 +43,6 @@ Current inventory: **72 active scripts** — 6 client, 58 server, and 8 startup.
 - `kubejs/server_scripts/compat/retained/refactor__move_to_mod__75_arcane_chunkloader_tags.js` — Defines interchangeable early magical proofs accepted by Arcane Chunk Loaders.
 - `kubejs/server_scripts/compat/retained/refactor__move_to_mod__95_arcane_chunkloader_recipes.js` — Adds power-specialized Arcane Chunk Loader recipes accepting proof from any supported magical discipline.
 - `kubejs/server_scripts/compat/retained/refactor__questionable__70_formal_magic_domains.js` — Generates formal-magic tier, domain, origin, and glyph-provenance tags.
-- `kubejs/server_scripts/compat/retained/refactor__villager_shopping__10_coin_villager_trades.js` — Replaces normal village commerce with tiered, non-convertible Create Deco coin purchases.
-- `kubejs/server_scripts/compat/retained/refactor__villager_shopping__40_emerald_loot_coin_replacement.js` — Replaces emerald currency in non-ore loot tables with appropriate Create Deco coins.
 - `kubejs/server_scripts/compat/retained/remove__10_ae2_skystone_tier.js` — Adjusts block tags so AE2 skystone occupies the intended mining tier.
 - `kubejs/server_scripts/compat/retained/remove__10_campfire_recipe.js` — Adds the pack’s custom campfire crafting route.
 - `kubejs/server_scripts/compat/retained/remove__40_blood_orbs_from_still_beating_hearts.js` — Uses a Still-Beating Heart to gate the Weak Blood Orb while preserving native later-orb recipes.
@@ -57,7 +52,6 @@ Current inventory: **72 active scripts** — 6 client, 58 server, and 8 startup.
 - `kubejs/server_scripts/compat/reviewed/ingot_rewrites.js` — Rewrites exact ingot recipes to the pack's canonical material forms.
 - `kubejs/server_scripts/compat/reviewed/kettle_rune_swap.js` — Replaces kettle bucket requirements with Blood Magic altar-capacity runes.
 - `kubejs/server_scripts/compat/reviewed/replaceable_deepslate.js` — Maintains the exact replaceable-deepslate compatibility tags used by worldgen.
-- `kubejs/server_scripts/economy/20_first_class_wandering_trader.js` — Authors themed, coin-only wandering-trader stock with curated Wares and Font-map integrations.
 - `kubejs/server_scripts/policy/dimension_access.js` — Removes direct portal routes so rocket and Font graphs own intended dimension access.
 - `kubejs/server_scripts/policy/global_loot_progression.js` — Removes progression-breaking materials from broad loot injection surfaces.
 - `kubejs/server_scripts/policy/pretty_pipes_progression.js` — Keeps Pretty Pipes useful while gating remote and advanced logistics capability.
@@ -76,7 +70,6 @@ Current inventory: **72 active scripts** — 6 client, 58 server, and 8 startup.
 
 ## Startup scripts
 
-- `kubejs/startup_scripts/compat/retained/check__10_coin_tiers.js` — Defines the shared Create Deco coin rarity catalogue.
 - `kubejs/startup_scripts/compat/retained/check__12_unearthed_regolith_hand_mining.js` — Adjusts Unearthed regolith blocks for the intended manual mining behavior.
 - `kubejs/startup_scripts/compat/retained/remove__10_ae2_skystone_hardness.js` — Adjusts AE2 skystone block hardness and mining behavior.
 - `kubejs/startup_scripts/compat/retained/remove__40_potion_brewing_registry.js` — Replaces vanilla reagent discovery with brewing recipes based on food-derived extracts.

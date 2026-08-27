@@ -86,25 +86,6 @@ var BC_LOOT_REMOVE_ITEMS = [
     'ubesdelight:rolling_pin_netherite',
 ]
 
-var BC_LOOT_EMERALD_TABLES_TO_COIN = [
-    'minecraft:chests/village/village_armorer',
-    'minecraft:chests/village/village_butcher',
-    'minecraft:chests/village/village_cartographer',
-    'minecraft:chests/village/village_desert_house',
-    'minecraft:chests/village/village_fisher',
-    'minecraft:chests/village/village_fletcher',
-    'minecraft:chests/village/village_mason',
-    'minecraft:chests/village/village_plains_house',
-    'minecraft:chests/village/village_savanna_house',
-    'minecraft:chests/village/village_shepherd',
-    'minecraft:chests/village/village_snowy_house',
-    'minecraft:chests/village/village_taiga_house',
-    'minecraft:chests/village/village_tannery',
-    'minecraft:chests/village/village_temple',
-    'minecraft:chests/village/village_toolsmith',
-    'minecraft:chests/village/village_weaponsmith'
-]
-
 // Renewable crop seeds do not belong on scarce exploration chest rolls. This is
 // deliberately chest-only: crop harvesting and Dynamic Trees' own block drops
 // remain their authoritative renewable acquisition routes.
@@ -130,13 +111,8 @@ LootJS.modifiers(function (event) {
         if (bcLootItemExists(BC_LOOT_REMOVE_ITEMS[i])) allLoot.removeLoot(BC_LOOT_REMOVE_ITEMS[i])
     }
 
-    for (var j = 0; j < BC_LOOT_EMERALD_TABLES_TO_COIN.length; j++) {
-        event.addLootTableModifier(BC_LOOT_EMERALD_TABLES_TO_COIN[j])
-            .replaceLoot('minecraft:emerald', Item.of('createdeco:copper_coin', 4), true)
-    }
-
     var chestLoot = event.addLootTableModifier(/.*:chests\/.*/)
-    for (var k = 0; k < BC_CHEST_LOOT_REMOVE_SEEDS.length; k++) {
-        if (bcLootItemExists(BC_CHEST_LOOT_REMOVE_SEEDS[k])) chestLoot.removeLoot(BC_CHEST_LOOT_REMOVE_SEEDS[k])
+    for (var j = 0; j < BC_CHEST_LOOT_REMOVE_SEEDS.length; j++) {
+        if (bcLootItemExists(BC_CHEST_LOOT_REMOVE_SEEDS[j])) chestLoot.removeLoot(BC_CHEST_LOOT_REMOVE_SEEDS[j])
     }
 })

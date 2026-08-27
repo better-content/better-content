@@ -13773,10 +13773,6 @@ file = "kubejs/server_scripts/compat/retained/check__12_unearthed_regolith_ident
 hash = "7b6f993ab92b919019dcd09b191add597ba5290f21155325e84673e48027eb6f"
 
 [[files]]
-file = "kubejs/server_scripts/compat/retained/check__20_world_chest_coin_tiers.js"
-hash = "dd8e8b2b612ca605499aea8e1ba061bac13afe1f4a77d1fd2f60e24399080552"
-
-[[files]]
 file = "kubejs/server_scripts/compat/retained/check__30_stone_cobble_compat.js"
 hash = "fe902c8e51a00d3933125df0a57d966f81ba2a1c913d273a69fdd576733f8ac1"
 
@@ -13787,14 +13783,6 @@ hash = "5b25d75fdd5a255104ec6374c7cf7ea655cdca768be00dfe08a4287fcd8cf06f"
 [[files]]
 file = "kubejs/server_scripts/compat/retained/check__40_dirt_grass_compat.js"
 hash = "4e01d19d20d4ba61d0ca95e0947c938fdfe1cff894e791c7e53cb9faccf57b04"
-
-[[files]]
-file = "kubejs/server_scripts/compat/retained/check__50_disable_createdeco_coin_recipes.js"
-hash = "5352611f78d2bdebcdae3321f7ef58ca0bbac07aceb122b695bcf4f5e5be2d89"
-
-[[files]]
-file = "kubejs/server_scripts/compat/retained/check__50_player_kill_coin_drops.js"
-hash = "76d9664d30d9b7f0d9ef49f7c5b50eb80b45355c9794d4361cfc65da5ab273f0"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/check__50_sand_compat.js"
@@ -13889,14 +13877,6 @@ file = "kubejs/server_scripts/compat/retained/refactor__questionable__70_formal_
 hash = "0de5b65db0fb84575faa22bfefc45e37f09001d638bf7632f527a4610cb707c7"
 
 [[files]]
-file = "kubejs/server_scripts/compat/retained/refactor__villager_shopping__10_coin_villager_trades.js"
-hash = "d151584d08e8bcea3850b19dc3e0d4bd8922d2f9ea68318334dd62bd0f0a6029"
-
-[[files]]
-file = "kubejs/server_scripts/compat/retained/refactor__villager_shopping__40_emerald_loot_coin_replacement.js"
-hash = "12c17c7b17c4009b2a9408f14a7ac11d1dc4f18996b61f898ab0e70d2188439c"
-
-[[files]]
 file = "kubejs/server_scripts/compat/retained/remove__10_ae2_skystone_tier.js"
 hash = "60f99c284d19c384ffd0fa6ba987544fb9dcc07de11d3f68883e0835a1cbc7a3"
 
@@ -13938,7 +13918,7 @@ hash = "b2f89be0302c58e083cd9002f30c9cd707e549c5c1ded80b43c826a1351d2233"
 
 [[files]]
 file = "kubejs/server_scripts/policy/global_loot_progression.js"
-hash = "4877fcc7c727010ee13994f93c61b4fc5e78120f7367c9aeba5590b095be955c"
+hash = "e496e4366c88184c7eb375c70a04e2aeca5134ba61003ea695c2276c0738df99"
 
 [[files]]
 file = "kubejs/server_scripts/policy/pretty_pipes_progression.js"
@@ -13991,10 +13971,6 @@ hash = "e03d4cfc932831d5313a7f569a85d7c36bf03af4971527314089f00d6d2466f6"
 [[files]]
 file = "kubejs/server_scripts/utility/hooks_drones_gates.js"
 hash = "999b23b77f32c10ae50562d7dd207afb8f55ff6244c6d09b77ee3ff837d2177e"
-
-[[files]]
-file = "kubejs/startup_scripts/compat/retained/check__10_coin_tiers.js"
-hash = "5951683f94743cc73d5bfadee6a78fa48e5ed19d1d492d1e03149e507c636188"
 
 [[files]]
 file = "kubejs/startup_scripts/compat/retained/check__12_unearthed_regolith_hand_mining.js"
@@ -14115,7 +14091,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-economy-1.0.0.jar"
-hash = "f18aec659b1e364e7e922b34f704d5d67cd4af4b248df4a4023897d30c7c6721"
+hash = "7e67de7285050ec4a36ab19115ae6f97db9ac24ef421771e6622bdae9cea0ad5"
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"

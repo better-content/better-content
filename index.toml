@@ -15268,7 +15268,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "478c0b07ba84e210a7399a1175c1981075aa6f526215a7f68d0280ba6e732b9b"
+hash = "d3ec92e78cab939c8be77eb0b77561a757ff3d7269b21c075e4bca4d20769cc2"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"
@@ -15319,7 +15319,7 @@ hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
 
 [[files]]
 file = "smoke.sh"
-hash = "17a9eeefd495f0f91da730110d7bb1f7befcbd57998fb94d9dc52b98857ee2e3"
+hash = "e581ffcae779d708f3fadcfd02a00c98b4bdd8073519aea1a1c27db3349821cf"
 
 [[files]]
 file = "tacz/applied-armorer.pw.toml"
@@ -15342,4 +15342,4 @@ hash = "380a3105e0739f6bbae202352d29d68a7a1e88bab8912c95cd9204492c7d48ae"
 
 [[files]]
 file = "world-lifecycle-manager-server.sh"
-hash = "94efaa6b5c697bf9d031780029ca7843dacd37d1c70f5d8b762f2c207ff599bb"
+hash = "db45704240826ba61e7cb4a806a8a4d12dc7dfe5b7d813f6c1194b24215294bf"

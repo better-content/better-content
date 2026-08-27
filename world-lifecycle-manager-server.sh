@@ -236,7 +236,6 @@ parse_reset_perks() {
   fi
   budget="$PERK_TARGET_GENERATION"; (( budget <= 12 )) || budget=12
   (( ${#RESET_PERK_SET[@]} <= budget )) || die "committed perk list exceeds its prestige-point budget"
-  [[ -n "${RESET_PERK_SET[biome_selection]+present}" ]] || die "Biome Selection is required for every Prestige"
   for class_perk in class_wayfinder class_field_cook class_rail_scout class_flood_runner class_market_runner class_trail_wrangler; do
     if [[ -n "${RESET_PERK_SET[$class_perk]+present}" ]]; then
       [[ -n "${RESET_PERK_SET[biome_selection]+present}" ]] || die "$class_perk lacks Biome Selection"

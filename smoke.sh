@@ -151,8 +151,6 @@ wait_for_done_count() {
 console() { printf '%s\n' "$1" >&7; }
 
 wait_for_done_count 1 'packaged production server readiness timed out'
-console 'world_lifecycle_manager perks allocate biome_selection'
-wait_for_log 'Allocated biome_selection' 'CLI perk allocation failed'
 console 'world_lifecycle_manager select minecraft:plains minecraft:forest minecraft:meadow'
 wait_for_log 'Selected Prestige biomes minecraft:plains > minecraft:forest > minecraft:meadow' 'CLI biome selection failed'
 console 'world_lifecycle_manager stage'
@@ -161,6 +159,8 @@ console 'world_lifecycle_manager commit world'
 wait_for_log 'Prestige commit accepted: .* clean shutdown is scheduled' 'CLI commit did not acknowledge acceptance'
 wait_for_log 'committed; successor world is active' 'packaged lifecycle transaction did not commit' 1200
 wait_for_done_count 2 'packaged successor server readiness timed out'
+rg -q $'^perks\t-$' "$server/.world_lifecycle_manager/perks-v2.tsv" \
+  || fail 'successful packaged lifecycle unexpectedly required or allocated a perk'
 rg -q $'^generation\t1$' "$server/.world_lifecycle_manager/lineage-v5.tsv" \
   || fail 'successful packaged lifecycle did not advance lineage exactly once'
 shopt -s nullglob

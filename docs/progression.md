@@ -47,10 +47,11 @@ components carry all later recipes.
 ## Era 4 — Thermal & Pressure
 
 Create's heated Mixer makes Nether grout for Foundry access. Primitive
-compressed iron and pre-machinery rubber/iron seals keep the entry reachable.
-Mechanically craft `kubejs:airtight_machine_block` from the Brass block, four
-compressed iron ingots, two pressure tubes, and two seals. It directly roots the
-Rotational Compressor and the first Pressure Chamber interface.
+compressed iron and dried-kelp/iron-plate pressure seals keep the entry
+reachable. Mechanically craft `kubejs:airtight_machine_block` from the Brass
+block, four compressed iron ingots, two pressure tubes, and two seals. It
+directly roots the Rotational Compressor and the first Pressure Chamber
+interface.
 
 Contained PneumaticCraft processes establish sulfuric and hydrochloric acid.
 Heat Sync stores and moves process heat; its Boiler Heater consumes exactly
@@ -62,16 +63,20 @@ Mechanically apply insulation/red-alloy wiring to Copper Casing for the first
 PowerGrid conductive casing. Pressure-craft `kubejs:electrical_machine_block`
 from Airtight proof, that casing, four copper plates, two primitive MoreRed
 wires, and an electron tube. It directly roots the first Pneumatic Dynamo and
-circuit-design station. Nitric acid and gold/PGM-only mixed-acid recovery begin
-here. PowerGrid parts, sensors, motors, and circuits carry later recipes.
+circuit-design station. Iron-and-coal steel composite smelts into canonical
+TCon steel for that machinery and later transition parts. Nitric acid and
+gold/PGM-only mixed-acid recovery begin here. PowerGrid parts, sensors, motors,
+and circuits carry later recipes.
 
 ## Era 6 — Aerospace
 
 Pressure-assemble `kubejs:space_machine_block` from Electrical proof, two
 rocket casings, two Inconel sheets, two Hastelloy ingots, and two titanium
-plates. It directly roots the Rocket Engineer Table, Mechanical Electrolyzer,
-and Air Liquefier. Native frames, tanks, engines, guidance, propellants, and
-life-support parts carry the rest of the rocket graph.
+thermal plates. Rocket casings retain their aluminum-and-cobalt composition but
+craft in batches of four for the initial machine set. The Space Machine Block
+directly roots the Rocket Engineer Table, Mechanical Electrolyzer, and Air
+Liquefier. Native frames, tanks, engines, guidance, propellants, and life-support
+parts carry the rest of the rocket graph.
 
 ## Optional transport
 

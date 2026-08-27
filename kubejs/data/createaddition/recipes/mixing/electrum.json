@@ -1,6 +1,6 @@
 {
   "type": "create:mixing",
-  "heat_requirement": "heated",
+  "heatRequirement": "heated",
   "ingredients": [
     { "tag": "forge:ingots/gold" },
     { "tag": "forge:ingots/silver" }

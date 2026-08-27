@@ -3,6 +3,14 @@
 // ladder or hidden ChemLib plate forms.
 
 ServerEvents.recipes(function (event) {
+    // Fallout's composite is craftable from ordinary iron and coal, but its
+    // steel output is quarantined. Smelt it into the canonical TCon form so
+    // Electrical Control and the later transition components stay reachable.
+    event.smelting('tconstruct:steel_ingot', 'fallout_wastelands_:steel_composite')
+        .xp(1.0)
+        .cookingTime(600)
+        .id('kubejs:transition/metallurgy/steel_ingot')
+
     // Precision Factory support used by TaCZ's two base manufacturing benches.
     event.shaped('2x kubejs:brass_utility_assembly', [
         'SES',

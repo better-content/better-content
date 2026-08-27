@@ -2,7 +2,7 @@
 
 This index is generated from the three executable KubeJS roots. Every listed JavaScript file is active; directory names such as `retained` and `reviewed` describe review history, not load state. `kubejs/inactive_review` is deliberately excluded because it is outside the executable roots.
 
-Current inventory: **65 active scripts** — 6 client, 52 server, and 7 startup.
+Current inventory: **66 active scripts** — 6 client, 53 server, and 7 startup.
 
 ## Client scripts
 
@@ -44,7 +44,7 @@ Current inventory: **65 active scripts** — 6 client, 52 server, and 7 startup.
 - `kubejs/server_scripts/compat/retained/refactor__move_to_mod__95_arcane_chunkloader_recipes.js` — Adds power-specialized Arcane Chunk Loader recipes accepting proof from any supported magical discipline.
 - `kubejs/server_scripts/compat/retained/refactor__questionable__70_formal_magic_domains.js` — Generates formal-magic tier, domain, origin, and glyph-provenance tags.
 - `kubejs/server_scripts/compat/retained/remove__10_ae2_skystone_tier.js` — Adjusts block tags so AE2 skystone occupies the intended mining tier.
-- `kubejs/server_scripts/compat/retained/remove__10_campfire_recipe.js` — Adds the pack’s custom campfire crafting route.
+- `kubejs/server_scripts/compat/retained/remove__10_campfire_recipe.js` — Replaces the native campfire recipe with the pack’s explicit crafting route.
 - `kubejs/server_scripts/compat/retained/remove__40_blood_orbs_from_still_beating_hearts.js` — Uses a Still-Beating Heart to gate the Weak Blood Orb while preserving native later-orb recipes.
 - `kubejs/server_scripts/compat/retained/remove__70_food_potion_reagents.js` — Turns foods into processed potion reagents before final brewing.
 - `kubejs/server_scripts/compat/reviewed/chemistry_fluid_compat.js` — Unifies the exact shared chemistry fluids used by installed processing mods.
@@ -64,6 +64,7 @@ Current inventory: **65 active scripts** — 6 client, 52 server, and 7 startup.
 - `kubejs/server_scripts/progression/45_acid_chemistry.js` — Authors reachable, bounded PneumaticCraft acid chemistry routes.
 - `kubejs/server_scripts/progression/50_electrical_control.js` — Authors Electrical Control generation, circuits, sensors, and advanced chemistry roots.
 - `kubejs/server_scripts/progression/60_aerospace.js` — Authors Aerospace engineering, atmosphere-processing, and rocket roots.
+- `kubejs/server_scripts/progression/70_transition_components.js` — Authors reachable cross-mod components used by factory, electrical, aerospace, AE2, geology, and post-AE2 transitions.
 - `kubejs/server_scripts/transport/10_optional_engineering_roots.js` — Places Eureka, Clockwork, Trackwork, and Create train roots at their intended optional eras.
 - `kubejs/server_scripts/utility/10_recipe_surface_helpers.js` — Defines reusable Rhino-safe helpers for constructing and rewriting recipes.
 - `kubejs/server_scripts/utility/hooks_drones_gates.js` — Gates grappling hooks and autonomous drones as powerful route-editing utilities.

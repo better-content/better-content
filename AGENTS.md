@@ -25,6 +25,14 @@ process shutdown, and fatal-log signatures. Resolved Packwiz artifacts persist u
 cache root. The smoke run root and settle duration may be set with `BC_SMOKE_RUN_ROOT` and
 `BC_SMOKE_SETTLE_SECONDS`.
 
+`./smoke.sh` is the sole supported runtime evaluation, but it is not the default check for
+every edit. Do not run it for simple, localized config-only changes that can be verified by
+focused inspection or the owning format/tool; for example, use `packwiz refresh`, hash
+verification, and `git diff --check` for a single packaged config default. Run the smoke
+evaluation when the user explicitly requests it, when preparing a fresh smoked distribution,
+when a repository workflow specifically requires it, or when a change plausibly affects game
+startup, client joining, or cross-system runtime integration.
+
 Do not add other runtime evaluations: static validation suites, contracts, audits, unit tests,
 GameTests, performance budgets, persistence scenarios, doctor checks, or scenario matrices.
 Questbook visual authoring is the sole exception: use the Minecraft-free sibling harness at

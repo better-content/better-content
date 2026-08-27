@@ -7,22 +7,21 @@ LEGACY_STATE_DIR="$SCRIPT_DIR/.prestige"
 CONTROL_DIR="$STATE_DIR/control"
 ARCHIVE_DIR="$STATE_DIR/archives"
 TRANSACTION_DIR="$STATE_DIR/transactions"
-LINEAGE_FILE="$STATE_DIR/lineage-v4.tsv"
-LEGACY_LINEAGE_V1="$STATE_DIR/lineage-v1.tsv"
-LEGACY_LINEAGE_V2="$STATE_DIR/lineage-v2.tsv"
-LEGACY_LINEAGE_V3="$STATE_DIR/lineage-v3.tsv"
-RESET_FILE="$CONTROL_DIR/reset-request-v4.tsv"
-STAGED_FILE="$CONTROL_DIR/staged-request-v4.tsv"
-DRAFT_FILE="$CONTROL_DIR/draft-v4.tsv"
-SUCCESSOR_FILE="$CONTROL_DIR/successor-request-v4.tsv"
-HEALTH_FILE="$CONTROL_DIR/health-result-v4.tsv"
-SHUTDOWN_FILE="$CONTROL_DIR/shutdown-request-v4.tsv"
-ACTIVE_PROCESS_FILE="$CONTROL_DIR/active-successor-process-v1.tsv"
-PERK_DRAFT_FILE="$CONTROL_DIR/perk-draft-v1.tsv"
-PERK_STAGED_FILE="$CONTROL_DIR/staged-perks-v1.tsv"
-PERK_RESET_FILE="$CONTROL_DIR/reset-perks-v1.tsv"
-PERK_HEALTH_FILE="$CONTROL_DIR/perk-health-v2.tsv"
-ACTIVE_PERKS_FILE="$STATE_DIR/perks-v1.tsv"
+LINEAGE_FILE="$STATE_DIR/lineage-v5.tsv"
+RESET_FILE="$CONTROL_DIR/reset-request-v5.tsv"
+STAGED_FILE="$CONTROL_DIR/staged-request-v5.tsv"
+DRAFT_FILE="$CONTROL_DIR/draft-v5.tsv"
+SUCCESSOR_FILE="$CONTROL_DIR/successor-request-v5.tsv"
+HEALTH_FILE="$CONTROL_DIR/health-result-v5.tsv"
+SHUTDOWN_FILE="$CONTROL_DIR/shutdown-request-v5.tsv"
+ACTIVE_PROCESS_FILE="$CONTROL_DIR/active-successor-process-v2.tsv"
+PERK_DRAFT_FILE="$CONTROL_DIR/perk-draft-v2.tsv"
+PERK_STAGED_FILE="$CONTROL_DIR/staged-perks-v2.tsv"
+PERK_RESET_FILE="$CONTROL_DIR/reset-perks-v2.tsv"
+PERK_HEALTH_FILE="$CONTROL_DIR/perk-health-v3.tsv"
+ACTIVE_PERKS_FILE="$STATE_DIR/perks-v2.tsv"
+BIOME_CONFIG="$SCRIPT_DIR/config/world_lifecycle_manager-biomes.txt"
+MAX_ATTEMPTS=8
 HEALTH_TIMEOUT_SECONDS="${PRESTIGE_HEALTH_TIMEOUT_SECONDS:-300}"
 HEALTH_STABILITY_SECONDS="${PRESTIGE_HEALTH_STABILITY_SECONDS:-10}"
 MIN_FREE_RESERVE_BYTES="${PRESTIGE_MIN_FREE_RESERVE_BYTES:-1073741824}"
@@ -57,6 +56,14 @@ mkdir -p -- "$CONTROL_DIR" "$ARCHIVE_DIR" "$TRANSACTION_DIR"
 for directory in "$STATE_DIR" "$CONTROL_DIR" "$ARCHIVE_DIR" "$TRANSACTION_DIR"; do
   [[ -d "$directory" && ! -L "$directory" ]] || die "unsafe World Lifecycle Manager state directory: $directory"
 done
+for legacy_path in \
+  "$STATE_DIR"/lineage-v{1,2,3,4}.tsv "$STATE_DIR/perks-v1.tsv" \
+  "$CONTROL_DIR"/{draft,staged-request,reset-request,successor-request,health-result,shutdown-request}-v{1,2,3,4}.tsv \
+  "$CONTROL_DIR"/{perk-draft,staged-perks,reset-perks}-v1.tsv \
+  "$CONTROL_DIR"/perk-health-v{1,2}.tsv "$CONTROL_DIR/active-successor-process-v1.tsv"; do
+  [[ ! -e "$legacy_path" ]] \
+    || die "legacy World Lifecycle Manager state is unsupported; archive or move .world_lifecycle_manager before starting v5"
+done
 exec 9>"$STATE_DIR/supervisor.lock"
 flock -n 9 || die "another prestige supervisor owns $STATE_DIR/supervisor.lock"
 
@@ -82,6 +89,21 @@ validate_world_name() { [[ "$1" =~ ^[A-Za-z0-9._-]{1,128}$ && "$1" != "." && "$1
 validate_signed_long() { [[ "$2" =~ ^-?[0-9]+$ ]] || die "$1 is not a signed integer: $2"; }
 validate_biome() { [[ "$1" =~ ^[a-z0-9_.-]+:[a-z0-9_./-]+$ ]] || die "biome is not a resource location: $1"; }
 
+declare -A ALLOWED_BIOMES=()
+load_allowed_biomes() {
+  [[ -f "$BIOME_CONFIG" && ! -L "$BIOME_CONFIG" ]] || die "biome preference allowlist is not a regular file: $BIOME_CONFIG"
+  local line
+  while IFS= read -r line || [[ -n "$line" ]]; do
+    line="${line#"${line%%[![:space:]]*}"}"
+    line="${line%"${line##*[![:space:]]}"}"
+    [[ -n "$line" && "$line" != \#* ]] || continue
+    validate_biome "$line"
+    [[ -z "${ALLOWED_BIOMES[$line]+present}" ]] || die "biome preference allowlist contains a duplicate: $line"
+    ALLOWED_BIOMES["$line"]=1
+  done < "$BIOME_CONFIG"
+  (( ${#ALLOWED_BIOMES[@]} > 0 )) || die "biome preference allowlist is empty"
+}
+
 atomic_write() {
   local target="$1"; shift
   local partial="${target}.partial"
@@ -94,16 +116,12 @@ atomic_write() {
 
 ensure_lineage() {
   if [[ ! -e "$LINEAGE_FILE" ]]; then
-    local legacy_control
-    legacy_control="$(find "$CONTROL_DIR" -maxdepth 1 -type f \( -name '*-v1.tsv' -o -name '*-v2.tsv' -o -name '*-v3.tsv' \) -print -quit)"
-    [[ ! -e "$LEGACY_LINEAGE_V1" && ! -e "$LEGACY_LINEAGE_V2" && ! -e "$LEGACY_LINEAGE_V3" && -z "$legacy_control" ]] \
-      || die "legacy World Lifecycle Manager state is unsupported; remove .world_lifecycle_manager before starting v4"
     local entropy
     entropy="$(printf '%s:%s:%s' "$(date +%s%N)" "$$" "$SCRIPT_DIR" | sha256sum | cut -c1-32)"
-    atomic_write "$LINEAGE_FILE" 'BC_PRESTIGE_LINEAGE_V4' \
+    atomic_write "$LINEAGE_FILE" 'BC_PRESTIGE_LINEAGE_V5' \
       "lineage"$'\t'"lineage-$entropy" "total_prestiges"$'\t''0' "generation"$'\t''0'
   fi
-  load_contract "$LINEAGE_FILE" 'BC_PRESTIGE_LINEAGE_V4' 4
+  load_contract "$LINEAGE_FILE" 'BC_PRESTIGE_LINEAGE_V5' 4
   LINEAGE_ID="$(contract_value 1 lineage)"
   TOTAL_PRESTIGES="$(contract_value 2 total_prestiges)"
   GENERATION="$(contract_value 3 generation)"
@@ -137,47 +155,58 @@ random_seed() {
 }
 
 parse_reset() {
-  load_contract "$RESET_FILE" 'BC_PRESTIGE_RESET_V4' 9
+  load_contract "$RESET_FILE" 'BC_PRESTIGE_RESET_V5' 11
   [[ "$(contract_value 1 state)" == committed ]] || die "reset request is not committed"
   REQUEST_LINEAGE="$(contract_value 2 lineage)"
   REQUEST_BASE_GENERATION="$(contract_value 3 base_generation)"
   REQUEST_TRANSACTION="$(contract_value 4 transaction)"
   REQUEST_WORLD="$(contract_value 5 world)"
   REQUEST_OLD_SEED="$(contract_value 6 old_seed)"
-  REQUEST_BIOME="$(contract_value 7 biome)"
-  [[ "$(contract_value 8 seed_mode)" == random ]] || die "seed mode is not random"
+  REQUEST_BIOME_1="$(contract_value 7 biome_1)"
+  REQUEST_BIOME_2="$(contract_value 8 biome_2)"
+  REQUEST_BIOME_3="$(contract_value 9 biome_3)"
+  [[ "$(contract_value 10 seed_mode)" == random ]] || die "seed mode is not random"
   validate_id 'request lineage ID' "$REQUEST_LINEAGE"; validate_id 'transaction ID' "$REQUEST_TRANSACTION"
-  validate_world_name "$REQUEST_WORLD"; validate_signed_long 'old seed' "$REQUEST_OLD_SEED"; validate_biome "$REQUEST_BIOME"
+  validate_world_name "$REQUEST_WORLD"; validate_signed_long 'old seed' "$REQUEST_OLD_SEED"; validate_biome "$REQUEST_BIOME_1"
+  [[ "$REQUEST_BIOME_2" == - ]] || validate_biome "$REQUEST_BIOME_2"
+  [[ "$REQUEST_BIOME_3" == - ]] || validate_biome "$REQUEST_BIOME_3"
+  [[ "$REQUEST_BIOME_2" != - || "$REQUEST_BIOME_3" == - ]] || die "biome preferences must be contiguous"
+  [[ "$REQUEST_BIOME_1" != "$REQUEST_BIOME_2" && "$REQUEST_BIOME_1" != "$REQUEST_BIOME_3" \
+      && ( "$REQUEST_BIOME_2" == - || "$REQUEST_BIOME_2" != "$REQUEST_BIOME_3" ) ]] || die "biome preferences must be unique"
+  [[ -n "${ALLOWED_BIOMES[$REQUEST_BIOME_1]+present}" ]] || die "primary biome is not in the configured allowlist"
+  [[ "$REQUEST_BIOME_2" == - || -n "${ALLOWED_BIOMES[$REQUEST_BIOME_2]+present}" ]] || die "secondary biome is not in the configured allowlist"
+  [[ "$REQUEST_BIOME_3" == - || -n "${ALLOWED_BIOMES[$REQUEST_BIOME_3]+present}" ]] || die "tertiary biome is not in the configured allowlist"
   [[ "$REQUEST_BASE_GENERATION" =~ ^[0-9]+$ ]] || die "request base generation is invalid"
   [[ "$REQUEST_LINEAGE" == "$LINEAGE_ID" ]] || die "reset request lineage does not match durable lineage"
 }
 
 parse_reset_perks() {
-  load_contract "$PERK_RESET_FILE" 'BC_PRESTIGE_RESET_PERKS_V1' 8
+  load_contract "$PERK_RESET_FILE" 'BC_PRESTIGE_RESET_PERKS_V2' 9
   PERK_LINEAGE="$(contract_value 1 lineage)"
   PERK_BASE_GENERATION="$(contract_value 2 base_generation)"
   PERK_TARGET_GENERATION="$(contract_value 3 target_generation)"
   PERK_TRANSACTION="$(contract_value 4 transaction)"
   RESET_PERKS="$(contract_value 5 perks)"
-  RESET_LANDING="$(contract_value 6 landing)"
-  RESET_FALLBACK="$(contract_value 7 fallback)"
+  PERK_BIOME_1="$(contract_value 6 biome_1)"
+  PERK_BIOME_2="$(contract_value 7 biome_2)"
+  PERK_BIOME_3="$(contract_value 8 biome_3)"
   [[ "$PERK_LINEAGE" == "$REQUEST_LINEAGE" && "$PERK_BASE_GENERATION" == "$REQUEST_BASE_GENERATION" \
       && "$PERK_TRANSACTION" == "$REQUEST_TRANSACTION" ]] || die "committed perk snapshot identity does not match reset"
   [[ "$PERK_BASE_GENERATION" =~ ^[0-9]+$ && "$PERK_TARGET_GENERATION" =~ ^[0-9]+$ \
       && "$PERK_BASE_GENERATION" -lt 9223372036854775807 \
       && "$PERK_TARGET_GENERATION" -eq $((PERK_BASE_GENERATION+1)) ]] || die "committed perk snapshot generation is invalid"
-  [[ "$RESET_LANDING" == biome || "$RESET_LANDING" == village ]] || die "committed perk landing mode is invalid"
-  if [[ "$RESET_FALLBACK" != - ]]; then validate_biome "$RESET_FALLBACK"; fi
+  [[ "$PERK_BIOME_1" == "$REQUEST_BIOME_1" && "$PERK_BIOME_2" == "$REQUEST_BIOME_2" \
+      && "$PERK_BIOME_3" == "$REQUEST_BIOME_3" ]] || die "committed perk biome preferences do not match reset"
 
   declare -gA RESET_PERK_SET=()
-  local id known budget original class_perk advanced
+  local id known budget class_perk advanced
   local -a perk_ids=()
   if [[ "$RESET_PERKS" != - ]]; then
     IFS=',' read -r -a perk_ids <<<"$RESET_PERKS"
     for id in "${perk_ids[@]}"; do
       known=false
       case "$id" in
-        expanded_attunement|frontier_attunement|safe_arrival|settled_arrival|fallback_attunement|fourth_horizon|\
+        biome_selection|\
         class_wayfinder|class_field_cook|class_rail_scout|class_flood_runner|class_market_runner|class_trail_wrangler|\
         embark_budget_i|embark_budget_ii|embark_budget_iii|embark_budget_iv|schematicannon_start) known=true ;;
       esac
@@ -185,19 +214,12 @@ parse_reset_perks() {
       RESET_PERK_SET["$id"]=1
     done
   fi
-  budget="$PERK_TARGET_GENERATION"; (( budget <= 17 )) || budget=17
+  budget="$PERK_TARGET_GENERATION"; (( budget <= 12 )) || budget=12
   (( ${#RESET_PERK_SET[@]} <= budget )) || die "committed perk list exceeds its prestige-point budget"
-  [[ -z "${RESET_PERK_SET[frontier_attunement]+present}" || -n "${RESET_PERK_SET[expanded_attunement]+present}" ]] \
-    || die "Frontier Attunement lacks Expanded Attunement"
-  [[ -z "${RESET_PERK_SET[settled_arrival]+present}" || -n "${RESET_PERK_SET[safe_arrival]+present}" ]] \
-    || die "Settled Arrival lacks Safe Arrival"
-  [[ -z "${RESET_PERK_SET[fourth_horizon]+present}" || -n "${RESET_PERK_SET[fallback_attunement]+present}" ]] \
-    || die "Fourth Horizon lacks Fallback Attunement"
+  [[ -n "${RESET_PERK_SET[biome_selection]+present}" ]] || die "Biome Selection is required for every Prestige"
   for class_perk in class_wayfinder class_field_cook class_rail_scout class_flood_runner class_market_runner class_trail_wrangler; do
     if [[ -n "${RESET_PERK_SET[$class_perk]+present}" ]]; then
-      for original in expanded_attunement frontier_attunement safe_arrival settled_arrival fallback_attunement fourth_horizon; do
-        [[ -n "${RESET_PERK_SET[$original]+present}" ]] || die "$class_perk lacks all six world-shaping perks"
-      done
+      [[ -n "${RESET_PERK_SET[biome_selection]+present}" ]] || die "$class_perk lacks Biome Selection"
     fi
   done
   for advanced in embark_budget_i embark_budget_ii embark_budget_iii embark_budget_iv schematicannon_start; do
@@ -213,28 +235,21 @@ parse_reset_perks() {
     || die "Embark Budget III lacks Embark Budget II"
   [[ -z "${RESET_PERK_SET[embark_budget_iv]+present}" || -n "${RESET_PERK_SET[embark_budget_iii]+present}" ]] \
     || die "Embark Budget IV lacks Embark Budget III"
-  [[ -z "${RESET_PERK_SET[schematicannon_start]+present}" || ( -n "${RESET_PERK_SET[embark_budget_iv]+present}" && ${#RESET_PERK_SET[@]} -eq 17 ) ]] \
-    || die "Schematicannon Start lacks the complete 17-perk graph"
-  if [[ "$RESET_LANDING" == village ]]; then
-    [[ -n "${RESET_PERK_SET[settled_arrival]+present}" && "$RESET_FALLBACK" == - ]] \
-      || die "village landing lacks its committed perk contract"
-  elif [[ "$RESET_FALLBACK" != - ]]; then
-    [[ -n "${RESET_PERK_SET[fallback_attunement]+present}" && "$RESET_FALLBACK" != "$REQUEST_BIOME" ]] \
-      || die "fallback landing lacks its committed perk contract"
-  fi
-  if [[ -n "${RESET_PERK_SET[fourth_horizon]+present}" ]]; then MAX_ATTEMPTS=4; else MAX_ATTEMPTS=3; fi
-  if [[ -n "${RESET_PERK_SET[safe_arrival]+present}" ]]; then SAFE_EXPECTED=true; else SAFE_EXPECTED=false; fi
+  [[ -z "${RESET_PERK_SET[schematicannon_start]+present}" || ( -n "${RESET_PERK_SET[embark_budget_iv]+present}" && ${#RESET_PERK_SET[@]} -eq 12 ) ]] \
+    || die "Schematicannon Start lacks the complete 12-perk graph"
 }
 
 write_phase() {
   local next="$1" current="${CURRENT_PHASE:-}"
   case "$current:$next" in
     :request-recorded|request-recorded:world-staged|world-staged:archive-verified|archive-verified:attempt-1-prepared|\
-    attempt-[1-4]-prepared:attempt-[1-4]-prepared|attempt-[1-4]-prepared:attempt-[1-4]-running|\
+    attempt-[1-8]-prepared:attempt-[1-8]-prepared|attempt-[1-8]-prepared:attempt-[1-8]-running|\
     attempt-1-prepared:attempt-2-prepared|attempt-2-prepared:attempt-3-prepared|attempt-3-prepared:attempt-4-prepared|\
+    attempt-4-prepared:attempt-5-prepared|attempt-5-prepared:attempt-6-prepared|attempt-6-prepared:attempt-7-prepared|attempt-7-prepared:attempt-8-prepared|\
     attempt-1-running:attempt-2-prepared|attempt-2-running:attempt-3-prepared|attempt-3-running:attempt-4-prepared|\
-    attempt-[1-4]-running:health-verified|health-verified:health-verified|health-verified:lineage-committed) ;;
-    attempt-[1-4]-running:rolled-back|attempt-[1-4]-prepared:rolled-back)
+    attempt-4-running:attempt-5-prepared|attempt-5-running:attempt-6-prepared|attempt-6-running:attempt-7-prepared|attempt-7-running:attempt-8-prepared|\
+    attempt-[1-8]-running:health-verified|health-verified:health-verified|health-verified:lineage-committed) ;;
+    attempt-[1-8]-running:rolled-back|attempt-[1-8]-prepared:rolled-back)
       [[ "$current" == "attempt-$MAX_ATTEMPTS-running" || "$current" == "attempt-$MAX_ATTEMPTS-prepared" ]] \
         || die "rollback attempted before the final authorized successor attempt" ;;
     *) die "illegal transaction phase transition: ${current:-none} -> $next" ;;
@@ -253,7 +268,7 @@ read_phase() {
   load_contract "$PHASE_FILE" 'BC_PRESTIGE_TRANSACTION_PHASE_V2' 3
   [[ "$(contract_value 1 transaction)" == "$REQUEST_TRANSACTION" ]] || die "transaction phase identity mismatch"
   CURRENT_PHASE="$(contract_value 2 phase)"
-  [[ "$CURRENT_PHASE" =~ ^(request-recorded|world-staged|archive-verified|health-verified|lineage-committed|rolled-back|attempt-[1-4]-(prepared|running))$ ]] \
+  [[ "$CURRENT_PHASE" =~ ^(request-recorded|world-staged|archive-verified|health-verified|lineage-committed|rolled-back|attempt-[1-8]-(prepared|running))$ ]] \
     || die "unknown transaction phase: $CURRENT_PHASE"
 }
 
@@ -348,51 +363,52 @@ ensure_archive_checksum() {
 write_successor_request() {
   local attempt="$1" seed="$2"
   rm -f -- "$SUCCESSOR_FILE.partial"
-  atomic_write "$SUCCESSOR_FILE" 'BC_PRESTIGE_SUCCESSOR_V4' \
+  atomic_write "$SUCCESSOR_FILE" 'BC_PRESTIGE_SUCCESSOR_V5' \
     "lineage"$'\t'"$REQUEST_LINEAGE" "base_generation"$'\t'"$BASE_GENERATION" \
     "target_generation"$'\t'"$TARGET_GENERATION" "transaction"$'\t'"$REQUEST_TRANSACTION" \
-    "successor_seed"$'\t'"$seed" "biome"$'\t'"$REQUEST_BIOME" "attempt"$'\t'"$attempt"
+    "successor_seed"$'\t'"$seed" "biome_1"$'\t'"$REQUEST_BIOME_1" \
+    "biome_2"$'\t'"$REQUEST_BIOME_2" "biome_3"$'\t'"$REQUEST_BIOME_3" "attempt"$'\t'"$attempt"
 }
 
 health_is_valid() {
-  local expected_attempt="$1" expected_seed="$2" actual_biome resolved_target
+  local expected_attempt="$1" expected_seed="$2" actual_biome resolved_biome
   [[ -f "$HEALTH_FILE" && ! -L "$HEALTH_FILE" ]] || return 1
   mapfile -t CONTRACT_LINES < "$HEALTH_FILE"
-  [[ "${#CONTRACT_LINES[@]}" -eq 14 && "${CONTRACT_LINES[0]}" == BC_PRESTIGE_HEALTH_V4 ]] || return 1
+  [[ "${#CONTRACT_LINES[@]}" -eq 17 && "${CONTRACT_LINES[0]}" == BC_PRESTIGE_HEALTH_V5 ]] || return 1
   [[ "${CONTRACT_LINES[1]}" == "lineage"$'\t'"$REQUEST_LINEAGE" && "${CONTRACT_LINES[2]}" == "base_generation"$'\t'"$BASE_GENERATION" ]] || return 1
   [[ "${CONTRACT_LINES[3]}" == "target_generation"$'\t'"$TARGET_GENERATION" && "${CONTRACT_LINES[4]}" == "transaction"$'\t'"$REQUEST_TRANSACTION" ]] || return 1
   [[ "${CONTRACT_LINES[5]}" == "successor_seed"$'\t'"$expected_seed" && "${CONTRACT_LINES[6]}" == "actual_seed"$'\t'"$expected_seed" ]] || return 1
-  [[ "${CONTRACT_LINES[7]}" == "requested_biome"$'\t'"$REQUEST_BIOME" && "${CONTRACT_LINES[8]}" == actual_biome$'\t'* ]] || return 1
-  actual_biome="${CONTRACT_LINES[8]#actual_biome$'\t'}"
+  [[ "${CONTRACT_LINES[7]}" == "requested_biome_1"$'\t'"$REQUEST_BIOME_1" \
+      && "${CONTRACT_LINES[8]}" == "requested_biome_2"$'\t'"$REQUEST_BIOME_2" \
+      && "${CONTRACT_LINES[9]}" == "requested_biome_3"$'\t'"$REQUEST_BIOME_3" \
+      && "${CONTRACT_LINES[10]}" == resolved_biome$'\t'* \
+      && "${CONTRACT_LINES[11]}" == actual_biome$'\t'* ]] || return 1
+  resolved_biome="${CONTRACT_LINES[10]#resolved_biome$'\t'}"
+  actual_biome="${CONTRACT_LINES[11]#actual_biome$'\t'}"
   [[ "$actual_biome" =~ ^[a-z0-9_.-]+:[a-z0-9_./-]+$ ]] || return 1
-  [[ "${CONTRACT_LINES[9]}" == "attempt"$'\t'"$expected_attempt" && "${CONTRACT_LINES[10]}" == "world"$'\t'"$REQUEST_WORLD" ]] || return 1
-  [[ "${CONTRACT_LINES[11]}" == "level_dat"$'\t''true' && "${CONTRACT_LINES[12]}" == "fresh_players"$'\t''true' && "${CONTRACT_LINES[13]}" == "status"$'\t''healthy' ]] || return 1
+  [[ "$resolved_biome" == "$REQUEST_BIOME_1" || ( "$REQUEST_BIOME_2" != - && "$resolved_biome" == "$REQUEST_BIOME_2" ) \
+      || ( "$REQUEST_BIOME_3" != - && "$resolved_biome" == "$REQUEST_BIOME_3" ) ]] || return 1
+  [[ "$actual_biome" == "$resolved_biome" ]] || return 1
+  [[ "${CONTRACT_LINES[12]}" == "attempt"$'\t'"$expected_attempt" && "${CONTRACT_LINES[13]}" == "world"$'\t'"$REQUEST_WORLD" ]] || return 1
+  [[ "${CONTRACT_LINES[14]}" == "level_dat"$'\t''true' && "${CONTRACT_LINES[15]}" == "fresh_players"$'\t''true' && "${CONTRACT_LINES[16]}" == "status"$'\t''healthy' ]] || return 1
   [[ -f "$SCRIPT_DIR/$REQUEST_WORLD/level.dat" ]] || return 1
 
   [[ -f "$PERK_HEALTH_FILE" && ! -L "$PERK_HEALTH_FILE" ]] || return 1
   mapfile -t CONTRACT_LINES < "$PERK_HEALTH_FILE"
-  [[ "${#CONTRACT_LINES[@]}" -eq 12 && "${CONTRACT_LINES[0]}" == BC_PRESTIGE_PERK_HEALTH_V2 ]] || return 1
+  [[ "${#CONTRACT_LINES[@]}" -eq 10 && "${CONTRACT_LINES[0]}" == BC_PRESTIGE_PERK_HEALTH_V3 ]] || return 1
   [[ "${CONTRACT_LINES[1]}" == "lineage"$'\t'"$REQUEST_LINEAGE" && "${CONTRACT_LINES[2]}" == "base_generation"$'\t'"$BASE_GENERATION" ]] || return 1
   [[ "${CONTRACT_LINES[3]}" == "target_generation"$'\t'"$TARGET_GENERATION" && "${CONTRACT_LINES[4]}" == "transaction"$'\t'"$REQUEST_TRANSACTION" ]] || return 1
-  [[ "${CONTRACT_LINES[5]}" == "attempt"$'\t'"$expected_attempt" && "${CONTRACT_LINES[6]}" == "landing"$'\t'"$RESET_LANDING" ]] || return 1
-  [[ "${CONTRACT_LINES[7]}" == resolved_target$'\t'* ]] || return 1
-  resolved_target="${CONTRACT_LINES[7]#resolved_target$'\t'}"
-  [[ "${CONTRACT_LINES[8]}" =~ ^landing_x$'\t'-?[0-9]+$ \
-      && "${CONTRACT_LINES[9]}" =~ ^landing_y$'\t'-?[0-9]+$ \
-      && "${CONTRACT_LINES[10]}" =~ ^landing_z$'\t'-?[0-9]+$ \
-      && "${CONTRACT_LINES[11]}" == "safe"$'\t'"$SAFE_EXPECTED" ]] || return 1
-  if [[ "$RESET_LANDING" == village ]]; then
-    [[ "$resolved_target" == village ]] || return 1
-  else
-    [[ "$resolved_target" == "$REQUEST_BIOME" || ( "$RESET_FALLBACK" != - && "$resolved_target" == "$RESET_FALLBACK" ) ]] || return 1
-    [[ "$actual_biome" == "$resolved_target" ]] || return 1
-  fi
+  [[ "${CONTRACT_LINES[5]}" == "attempt"$'\t'"$expected_attempt" \
+      && "${CONTRACT_LINES[6]}" == "resolved_biome"$'\t'"$resolved_biome" ]] || return 1
+  [[ "${CONTRACT_LINES[7]}" =~ ^spawn_x$'\t'-?[0-9]+$ \
+      && "${CONTRACT_LINES[8]}" =~ ^spawn_y$'\t'-?[0-9]+$ \
+      && "${CONTRACT_LINES[9]}" =~ ^spawn_z$'\t'-?[0-9]+$ ]] || return 1
 }
 
 request_successor_shutdown() {
   local transaction="$1"
   rm -f -- "$SHUTDOWN_FILE" "$SHUTDOWN_FILE.partial"
-  atomic_write "$SHUTDOWN_FILE" 'BC_PRESTIGE_SHUTDOWN_V4' "transaction"$'\t'"$transaction"
+  atomic_write "$SHUTDOWN_FILE" 'BC_PRESTIGE_SHUTDOWN_V5' "transaction"$'\t'"$transaction"
 }
 
 stop_console_relay() {
@@ -411,13 +427,13 @@ process_start_ticks() {
 
 load_process_contract() {
   local path="$1"
-  load_contract "$path" 'BC_PRESTIGE_ACTIVE_SUCCESSOR_V1' 6
+  load_contract "$path" 'BC_PRESTIGE_ACTIVE_SUCCESSOR_V2' 6
   PROCESS_PID="$(contract_value 1 pid)"
   PROCESS_START="$(contract_value 2 start_ticks)"
   PROCESS_LINEAGE="$(contract_value 3 lineage)"
   PROCESS_TRANSACTION="$(contract_value 4 transaction)"
   PROCESS_ATTEMPT="$(contract_value 5 attempt)"
-  [[ "$PROCESS_PID" =~ ^[1-9][0-9]*$ && "$PROCESS_START" =~ ^[1-9][0-9]*$ && "$PROCESS_ATTEMPT" =~ ^[1-4]$ ]] \
+  [[ "$PROCESS_PID" =~ ^[1-9][0-9]*$ && "$PROCESS_START" =~ ^[1-9][0-9]*$ && "$PROCESS_ATTEMPT" =~ ^[1-8]$ ]] \
     || die "successor process contract is malformed"
   validate_id 'successor process lineage ID' "$PROCESS_LINEAGE"
   validate_id 'successor process transaction ID' "$PROCESS_TRANSACTION"
@@ -490,14 +506,14 @@ commit_lineage() {
   (( TOTAL_PRESTIGES == BASE_TOTAL && GENERATION == BASE_GENERATION )) \
     || die "durable lineage changed outside the active transaction"
   rm -f -- "$LINEAGE_FILE.partial"
-  atomic_write "$LINEAGE_FILE" 'BC_PRESTIGE_LINEAGE_V4' \
+  atomic_write "$LINEAGE_FILE" 'BC_PRESTIGE_LINEAGE_V5' \
     "lineage"$'\t'"$LINEAGE_ID" "total_prestiges"$'\t'"$TARGET_TOTAL" \
     "generation"$'\t'"$TARGET_GENERATION"
 }
 
 commit_active_perks() {
   local desired=(
-    'BC_PRESTIGE_PERKS_V1'
+    'BC_PRESTIGE_PERKS_V2'
     "lineage"$'\t'"$REQUEST_LINEAGE"
     "generation"$'\t'"$TARGET_GENERATION"
     "perks"$'\t'"$RESET_PERKS"
@@ -512,7 +528,7 @@ commit_active_perks() {
         && "${CONTRACT_LINES[3]}" == "${desired[3]}" ]]; then
       return
     fi
-    [[ "${#CONTRACT_LINES[@]}" -eq 4 && "${CONTRACT_LINES[0]}" == BC_PRESTIGE_PERKS_V1 \
+    [[ "${#CONTRACT_LINES[@]}" -eq 4 && "${CONTRACT_LINES[0]}" == BC_PRESTIGE_PERKS_V2 \
         && "${CONTRACT_LINES[1]}" == "lineage"$'\t'"$REQUEST_LINEAGE" \
         && "${CONTRACT_LINES[2]}" == "generation"$'\t'"$BASE_GENERATION" \
         && "${CONTRACT_LINES[3]}" == perks$'\t'* ]] \
@@ -523,7 +539,7 @@ commit_active_perks() {
 }
 
 load_transaction_lineage() {
-  load_contract "$TRANSACTION_ROOT/lineage-before-v4.tsv" 'BC_PRESTIGE_LINEAGE_V4' 4
+  load_contract "$TRANSACTION_ROOT/lineage-before-v5.tsv" 'BC_PRESTIGE_LINEAGE_V5' 4
   [[ "$(contract_value 1 lineage)" == "$REQUEST_LINEAGE" ]] || die "transaction lineage evidence has the wrong identity"
   BASE_TOTAL="$(contract_value 2 total_prestiges)"
   BASE_GENERATION="$(contract_value 3 generation)"
@@ -562,14 +578,15 @@ run_successor_attempt() {
   rm -f -- "$HEALTH_FILE" "$HEALTH_FILE.partial" "$PERK_HEALTH_FILE" "$PERK_HEALTH_FILE.partial" \
     "$SHUTDOWN_FILE" "$SHUTDOWN_FILE.partial"
   write_successor_request "$attempt" "$seed"; set_server_seed "$seed"; write_phase "attempt-$attempt-prepared"
-  printf 'prestige supervisor: launching successor attempt %s/%s seed=%s biome=%s\n' "$attempt" "$MAX_ATTEMPTS" "$seed" "$REQUEST_BIOME"
+  printf 'prestige supervisor: launching successor attempt %s/%s seed=%s biomes=%s,%s,%s\n' \
+    "$attempt" "$MAX_ATTEMPTS" "$seed" "$REQUEST_BIOME_1" "$REQUEST_BIOME_2" "$REQUEST_BIOME_3"
   local fifo="$CONTROL_DIR/successor-console-$REQUEST_TRANSACTION-$attempt.fifo"
   rm -f -- "$fifo"; mkfifo -m 600 -- "$fifo"; exec 8<>"$fifo"; rm -f -- "$fifo"
   rm -f -- "$ACTIVE_PROCESS_FILE" "$ACTIVE_PROCESS_FILE.partial"
   (
     child_pid="$BASHPID"
     child_start="$(process_start_ticks "$child_pid")"
-    atomic_write "$ACTIVE_PROCESS_FILE" 'BC_PRESTIGE_ACTIVE_SUCCESSOR_V1' \
+    atomic_write "$ACTIVE_PROCESS_FILE" 'BC_PRESTIGE_ACTIVE_SUCCESSOR_V2' \
       "pid"$'\t'"$child_pid" "start_ticks"$'\t'"$child_start" \
       "lineage"$'\t'"$REQUEST_LINEAGE" "transaction"$'\t'"$REQUEST_TRANSACTION" "attempt"$'\t'"$attempt"
     exec "$SCRIPT_DIR/run-forge.sh" "$@"
@@ -596,12 +613,12 @@ run_successor_attempt() {
 }
 
 finalize_success() {
-  cp -- "$SUCCESSOR_FILE" "$TRANSACTION_ROOT/successor-request-v4.tsv"
-  cp -- "$HEALTH_FILE" "$TRANSACTION_ROOT/health-result-v4.tsv"
-  cp -- "$PERK_HEALTH_FILE" "$TRANSACTION_ROOT/perk-health-v2.tsv"
-  sync -f -- "$TRANSACTION_ROOT/successor-request-v4.tsv"
-  sync -f -- "$TRANSACTION_ROOT/health-result-v4.tsv"
-  sync -f -- "$TRANSACTION_ROOT/perk-health-v2.tsv"
+  cp -- "$SUCCESSOR_FILE" "$TRANSACTION_ROOT/successor-request-v5.tsv"
+  cp -- "$HEALTH_FILE" "$TRANSACTION_ROOT/health-result-v5.tsv"
+  cp -- "$PERK_HEALTH_FILE" "$TRANSACTION_ROOT/perk-health-v3.tsv"
+  sync -f -- "$TRANSACTION_ROOT/successor-request-v5.tsv"
+  sync -f -- "$TRANSACTION_ROOT/health-result-v5.tsv"
+  sync -f -- "$TRANSACTION_ROOT/perk-health-v3.tsv"
   sync -f -- "$TRANSACTION_ROOT"
   write_phase health-verified
   verify_archive_against_world "$FINAL_ARCHIVE" "$ARCHIVE_INPUT/world-lifecycle-manager-archive-manifest-v1.tsv"
@@ -619,6 +636,7 @@ finalize_success() {
   printf 'prestige supervisor: committed %s; successor world is active\n' "$REQUEST_TRANSACTION"
 }
 
+load_allowed_biomes
 ensure_lineage
 reconcile_active_process
 if [[ ! -e "$RESET_FILE" ]]; then
@@ -637,19 +655,19 @@ PHASE_FILE="$TRANSACTION_ROOT/phase-v2.tsv"
 if [[ ! -e "$TRANSACTION_ROOT" ]]; then
   mkdir -p -- "$ARCHIVE_INPUT"
   cp -- "$SCRIPT_DIR/server.properties" "$TRANSACTION_ROOT/server.properties.before"
-  cp -- "$RESET_FILE" "$TRANSACTION_ROOT/reset-request-v4.tsv"
-  cp -- "$PERK_RESET_FILE" "$TRANSACTION_ROOT/reset-perks-v1.tsv"
-  cp -- "$LINEAGE_FILE" "$TRANSACTION_ROOT/lineage-before-v4.tsv"
+  cp -- "$RESET_FILE" "$TRANSACTION_ROOT/reset-request-v5.tsv"
+  cp -- "$PERK_RESET_FILE" "$TRANSACTION_ROOT/reset-perks-v2.tsv"
+  cp -- "$LINEAGE_FILE" "$TRANSACTION_ROOT/lineage-before-v5.tsv"
   sync -f -- "$TRANSACTION_ROOT"
   write_phase request-recorded
 else
   [[ -d "$TRANSACTION_ROOT" && ! -L "$TRANSACTION_ROOT" && -d "$ARCHIVE_INPUT" && ! -L "$ARCHIVE_INPUT" ]] \
     || die "existing transaction paths are unsafe"
-  [[ -f "$TRANSACTION_ROOT/reset-request-v4.tsv" ]] || die "existing transaction lacks reset evidence"
-  [[ -f "$TRANSACTION_ROOT/reset-perks-v1.tsv" ]] || die "existing transaction lacks committed perk evidence"
-  [[ -f "$TRANSACTION_ROOT/lineage-before-v4.tsv" ]] || die "existing transaction lacks lineage evidence"
-  cmp -s -- "$RESET_FILE" "$TRANSACTION_ROOT/reset-request-v4.tsv" || die "existing transaction reset identity changed"
-  cmp -s -- "$PERK_RESET_FILE" "$TRANSACTION_ROOT/reset-perks-v1.tsv" || die "existing transaction perk identity changed"
+  [[ -f "$TRANSACTION_ROOT/reset-request-v5.tsv" ]] || die "existing transaction lacks reset evidence"
+  [[ -f "$TRANSACTION_ROOT/reset-perks-v2.tsv" ]] || die "existing transaction lacks committed perk evidence"
+  [[ -f "$TRANSACTION_ROOT/lineage-before-v5.tsv" ]] || die "existing transaction lacks lineage evidence"
+  cmp -s -- "$RESET_FILE" "$TRANSACTION_ROOT/reset-request-v5.tsv" || die "existing transaction reset identity changed"
+  cmp -s -- "$PERK_RESET_FILE" "$TRANSACTION_ROOT/reset-perks-v2.tsv" || die "existing transaction perk identity changed"
   read_phase
 fi
 load_transaction_lineage
@@ -685,11 +703,11 @@ if [[ "$CURRENT_PHASE" == rolled-back ]]; then
 fi
 
 if [[ "$CURRENT_PHASE" == health-verified ]]; then
-  cmp -s -- "$SUCCESSOR_FILE" "$TRANSACTION_ROOT/successor-request-v4.tsv" || die "persisted successor evidence changed"
-  cmp -s -- "$HEALTH_FILE" "$TRANSACTION_ROOT/health-result-v4.tsv" || die "persisted health evidence changed"
-  cmp -s -- "$PERK_HEALTH_FILE" "$TRANSACTION_ROOT/perk-health-v2.tsv" || die "persisted perk health evidence changed"
-  load_contract "$SUCCESSOR_FILE" 'BC_PRESTIGE_SUCCESSOR_V4' 8
-  RECOVER_SEED="$(contract_value 5 successor_seed)"; RECOVER_ATTEMPT="$(contract_value 7 attempt)"
+  cmp -s -- "$SUCCESSOR_FILE" "$TRANSACTION_ROOT/successor-request-v5.tsv" || die "persisted successor evidence changed"
+  cmp -s -- "$HEALTH_FILE" "$TRANSACTION_ROOT/health-result-v5.tsv" || die "persisted health evidence changed"
+  cmp -s -- "$PERK_HEALTH_FILE" "$TRANSACTION_ROOT/perk-health-v3.tsv" || die "persisted perk health evidence changed"
+  load_contract "$SUCCESSOR_FILE" 'BC_PRESTIGE_SUCCESSOR_V5' 10
+  RECOVER_SEED="$(contract_value 5 successor_seed)"; RECOVER_ATTEMPT="$(contract_value 9 attempt)"
   health_is_valid "$RECOVER_ATTEMPT" "$RECOVER_SEED" || die "persisted health-verified phase no longer validates"
   finalize_success
   stop_failed_server
@@ -721,14 +739,16 @@ if [[ "$CURRENT_PHASE" == request-recorded ]]; then write_phase world-staged; fi
 
 
 validate_world_binding() {
-  local binding="$ARCHIVE_INPUT/world/data/world_lifecycle_manager/reset-binding-v4.tsv"
-  load_contract "$binding" 'BC_PRESTIGE_WORLD_BINDING_V4' 7
+  local binding="$ARCHIVE_INPUT/world/data/world_lifecycle_manager/reset-binding-v5.tsv"
+  load_contract "$binding" 'BC_PRESTIGE_WORLD_BINDING_V5' 9
   [[ "$(contract_value 1 lineage)" == "$REQUEST_LINEAGE" \
       && "$(contract_value 2 base_generation)" == "$BASE_GENERATION" \
       && "$(contract_value 3 transaction)" == "$REQUEST_TRANSACTION" \
       && "$(contract_value 4 world)" == "$REQUEST_WORLD" \
       && "$(contract_value 5 old_seed)" == "$REQUEST_OLD_SEED" \
-      && "$(contract_value 6 biome)" == "$REQUEST_BIOME" ]] \
+      && "$(contract_value 6 biome_1)" == "$REQUEST_BIOME_1" \
+      && "$(contract_value 7 biome_2)" == "$REQUEST_BIOME_2" \
+      && "$(contract_value 8 biome_3)" == "$REQUEST_BIOME_3" ]] \
     || die "staged world binding does not match the committed reset"
 }
 validate_world_binding
@@ -746,7 +766,7 @@ else
 fi
 
 START_ATTEMPT=1
-if [[ "$CURRENT_PHASE" =~ ^attempt-([1-4])-(prepared|running)$ ]]; then
+if [[ "$CURRENT_PHASE" =~ ^attempt-([1-8])-(prepared|running)$ ]]; then
   interrupted_attempt="${BASH_REMATCH[1]}"; interrupted_state="${BASH_REMATCH[2]}"
   stop_failed_server
   if [[ "$interrupted_state" == running ]]; then START_ATTEMPT=$((interrupted_attempt+1)); else START_ATTEMPT="$interrupted_attempt"; fi
@@ -766,9 +786,9 @@ for ((attempt=START_ATTEMPT; attempt<=MAX_ATTEMPTS; attempt++)); do
     exit "$EXIT_CODE"
   fi
   printf 'prestige supervisor: successor attempt %s failed health verification\n' "$attempt" >&2
-  if [[ -f "$HEALTH_FILE" ]]; then cp -- "$HEALTH_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-health-v4.tsv"; fi
-  if [[ -f "$PERK_HEALTH_FILE" ]]; then cp -- "$PERK_HEALTH_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-perk-health-v2.tsv"; fi
-  cp -- "$SUCCESSOR_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-request-v4.tsv"
+  if [[ -f "$HEALTH_FILE" ]]; then cp -- "$HEALTH_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-health-v5.tsv"; fi
+  if [[ -f "$PERK_HEALTH_FILE" ]]; then cp -- "$PERK_HEALTH_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-perk-health-v3.tsv"; fi
+  cp -- "$SUCCESSOR_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-request-v5.tsv"
   stop_failed_server; stop_console_relay
 done
 

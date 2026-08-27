@@ -7149,16 +7149,8 @@ file = "config/wares-common.toml"
 hash = "d18d0e25a28ca42341b94f52b5248d0d449b9af4b85c30d355dd40c2b1555609"
 
 [[files]]
-file = "config/world_lifecycle_manager-biomes-expanded.txt"
-hash = "2e501dd3302382a9d875780ae4ec42ba3248e3111f4ff16ef4b8412486d21d1e"
-
-[[files]]
-file = "config/world_lifecycle_manager-biomes-frontier.txt"
-hash = "ef39c842e7fadfc09af48dd3cba116e689eca0294d83757b2824206a7597e820"
-
-[[files]]
 file = "config/world_lifecycle_manager-biomes.txt"
-hash = "d13936253ac9a9ce7f02c6c7211e8c92f82e368f04301fbef52cf852b06c4afb"
+hash = "a0b2472d01a16590ca210dedfd69e01007de7bfa5a9c52c9d4184d25e4ad00fb"
 
 [[files]]
 file = "config/ysns/disabled_entities.json5"
@@ -14152,7 +14144,7 @@ metafile = true
 
 [[files]]
 file = "mods/class-selector-1.0.0.jar"
-hash = "f9465ba1cb4fe24dbe7115aff87c90859f9aee9bdc58b89dd0c7ed2852b4de38"
+hash = "92a54d766d0eea2884e5955f5299940797cfe15e346798ad842cf2d13abe6371"
 
 [[files]]
 file = "mods/claustrophobic-dungeons.pw.toml"
@@ -15272,7 +15264,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "7adf8c1ee05c4a6f2df9a1ec7af64eab8c5e3a632169aee14af92631809670fb"
+hash = "9d315ca0f8b85035d6ddd37292b1356660fe55be57e626fe54a13f936c19efe9"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"
@@ -15323,7 +15315,7 @@ hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
 
 [[files]]
 file = "smoke.sh"
-hash = "e4d2c012d2810731bf3326ee56eeb81c7ee947b40cd23642a28461e5629e3d91"
+hash = "5d015be4ea61cf12bd733bb28d012897e601da61495a01a54941753017d73347"
 
 [[files]]
 file = "tacz/applied-armorer.pw.toml"
@@ -15346,4 +15338,4 @@ hash = "380a3105e0739f6bbae202352d29d68a7a1e88bab8912c95cd9204492c7d48ae"
 
 [[files]]
 file = "world-lifecycle-manager-server.sh"
-hash = "d3d54a2880acad9c46e7d72a25742cc052467cf88fdb5d1ea27863f97d1b82b0"
+hash = "052f486f3193909e01979a6ef9567a49152199db2e786042d3f5b499a321f327"

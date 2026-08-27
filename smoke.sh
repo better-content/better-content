@@ -55,7 +55,7 @@ cleanup() {
   [ -z "$client_game_pid" ] || stop_pid "$client_game_pid"
   [ -z "$client_pid" ] || stop_group "$client_pid"
   [ -z "$server_pid" ] || stop_group "$server_pid"
-  active_process="$server/.world_lifecycle_manager/control/active-successor-process-v1.tsv"
+  active_process="$server/.world_lifecycle_manager/control/active-successor-process-v2.tsv"
   if [ -f "$active_process" ]; then
     active_pid="$(awk -F '\t' '$1 == "pid" { print $2 }' "$active_process")"
     case "$active_pid" in ''|*[!0-9]*) ;; *) kill "$active_pid" 2>/dev/null || true ;; esac
@@ -105,18 +105,18 @@ console() { printf '%s\n' "$1" >&7; }
 
 start_server 1 ''
 wait_for_done_count 1 'initial supervised server readiness timed out'
-console 'world_lifecycle_manager perks allocate safe_arrival'
-wait_for_log 'Allocated safe_arrival' 'perk allocation failed'
-console 'world_lifecycle_manager select minecraft:plains'
-wait_for_log 'Selected Prestige biome minecraft:plains' 'prestige biome selection failed'
+console 'world_lifecycle_manager perks allocate biome_selection'
+wait_for_log 'Allocated biome_selection' 'perk allocation failed'
+console 'world_lifecycle_manager select minecraft:plains minecraft:forest minecraft:meadow'
+wait_for_log 'Selected Prestige biomes minecraft:plains > minecraft:forest > minecraft:meadow' 'prestige biome preference selection failed'
 console 'world_lifecycle_manager stage'
 wait_for_log 'Staged prestige reset' 'prestige staging failed'
 console 'world_lifecycle_manager commit world'
-wait_for_log 'restored old world after 3 failed successor attempts' 'forced lifecycle rollback did not complete' 600
+wait_for_log 'restored old world after 8 failed successor attempts' 'forced eight-attempt lifecycle rollback did not complete' 1200
 wait_for_done_count 2 'rolled-back world did not restart'
-rg -q $'^generation\t0$' "$server/.world_lifecycle_manager/lineage-v4.tsv" \
+rg -q $'^generation\t0$' "$server/.world_lifecycle_manager/lineage-v5.tsv" \
   || fail 'rollback changed the durable lineage generation'
-[ ! -e "$server/.world_lifecycle_manager/perks-v1.tsv" ] || fail 'rollback published active perk state'
+[ ! -e "$server/.world_lifecycle_manager/perks-v2.tsv" ] || fail 'rollback published active perk state'
 console stop
 set +e; wait "$server_pid"; rollback_exit=$?; set -e
 [ "$rollback_exit" -eq 0 ] || fail "rolled-back server stop exited $rollback_exit"
@@ -124,9 +124,9 @@ server_pid=''
 
 start_server 300 health-verified
 wait_for_done_count 3 'recovery scenario source world did not restart'
-console 'world_lifecycle_manager perks allocate safe_arrival'
-wait_for_log 'Allocated safe_arrival' 'recovery scenario perk allocation failed'
-console 'world_lifecycle_manager select minecraft:plains'
+console 'world_lifecycle_manager perks allocate biome_selection'
+wait_for_log 'Allocated biome_selection' 'recovery scenario perk allocation failed'
+console 'world_lifecycle_manager select minecraft:plains minecraft:forest minecraft:meadow'
 console 'world_lifecycle_manager stage'
 console 'world_lifecycle_manager commit world'
 wait_for_log 'test interruption at health-verified' 'health-verified interruption was not reached' 900
@@ -137,10 +137,18 @@ server_pid=''
 start_server 300 ''
 wait_for_log 'committed .* successor world is active' 'health-verified transaction did not recover and commit' 600
 wait_for_done_count 5 'committed successor world did not restart'
-rg -q $'^generation\t1$' "$server/.world_lifecycle_manager/lineage-v4.tsv" \
+rg -q $'^generation\t1$' "$server/.world_lifecycle_manager/lineage-v5.tsv" \
   || fail 'successful recovery did not advance lineage exactly once'
-rg -q $'^perks\tsafe_arrival$' "$server/.world_lifecycle_manager/perks-v1.tsv" \
-  || fail 'successful recovery did not publish active perk state'
+rg -q $'^perks\tbiome_selection$' "$server/.world_lifecycle_manager/perks-v2.tsv" \
+  || fail 'successful recovery did not publish Biome Selection as active perk state'
+successful_health="$(rg -l '^status\thealthy$' "$server"/.world_lifecycle_manager/transactions/*/health-result-v5.tsv 2>/dev/null | tail -n 1 || true)"
+[ -n "$successful_health" ] || fail 'successful recovery did not retain V5 health evidence'
+rg -q $'^requested_biome_1\tminecraft:plains$' "$successful_health" \
+  || fail 'successful recovery lost the primary biome preference'
+rg -q $'^requested_biome_2\tminecraft:forest$' "$successful_health" \
+  || fail 'successful recovery lost the secondary biome preference'
+rg -q $'^requested_biome_3\tminecraft:meadow$' "$successful_health" \
+  || fail 'successful recovery lost the tertiary biome preference'
 
 deadline=$((SECONDS+900))
 until rg -q 'Done \([0-9.]+s\)!.*For help' "$server_log" 2>/dev/null; do

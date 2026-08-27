@@ -13814,11 +13814,11 @@ hash = "dd08eb08d8d5aabb2a0df539d6de5cb0243819a9d77816889bae5e7e0c3eb971"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__165_protection_pixel_post_ae2_gates.js"
-hash = "036548bbfe2b76a4deaef028774a302b1cec6e39c1768be448dbae5f7c88a3b0"
+hash = "e6eb9f6104dcefe6bcbc864ed258989c1f87785c3c94d40afdf628172bf58655"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__166_tome_of_blood_post_ae2_gates.js"
-hash = "4f5ea1cf950c016fd3efd63bc651f39e35c697bd8bc172ac2906b9354cf36c13"
+hash = "a17da7ebecf7f3067b63031ee27adfa8f47461fe6993807d50a72bd226254ff7"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__169_backpack_post_ae2_utility_gates.js"
@@ -13826,11 +13826,11 @@ hash = "1b9fd2b7afcc2a39777b347690e7e554e9af35864f7211b11a134aad5d6435a8"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__171_k_turrets_electrical_gates.js"
-hash = "61bb9e74895cb3d551cac4bf9a17685e6572dcce35ebaf1bca0f249abe813f9f"
+hash = "301cf6a050f4a34ec425cf8e9893618fac74343ad2c994dfc431cf1aad4f1333"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__171_tacz_manufacturing_gates.js"
-hash = "ca72773b3c6465a06400ea2e17b5c0ff04df780d335a7610b413b70d58a201bf"
+hash = "35e8cbdebd0e97fc85e3719d77924fec29bf54089086f8d61cbd6975ff7a7fa1"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__63_fonts_hexerei_occultism_chalk.js"
@@ -13938,19 +13938,23 @@ hash = "30858344760c20034300063f9ea5b2c3919ba853935fa8f3e6229a2c246d7053"
 
 [[files]]
 file = "kubejs/server_scripts/progression/40_thermal_pressure.js"
-hash = "746bb1e41d2428788f71f87d43d338f6ed5b6076494e9e7fee69816ffd3f4b7f"
+hash = "2d9042d3c06aa2173eeef0265e925a2d5960429485f19c8eb37db2ab92936337"
 
 [[files]]
 file = "kubejs/server_scripts/progression/45_acid_chemistry.js"
-hash = "dd934a638599c336c52e81f49dd29d0e43895799ac49b08ddb2ee8f02a7134f1"
+hash = "754203ffa396694a9e04d83dfca3ed7b854af09e77965cdf2605005d3c0eadc3"
 
 [[files]]
 file = "kubejs/server_scripts/progression/50_electrical_control.js"
-hash = "3f792c4f29f16546713da6de3e8d62211f26bfb17b813544296e021e69c21bb1"
+hash = "717186dc32e159bd61fb8e09074bdaa23809f02e05ddbb3c725b7c86023e6880"
 
 [[files]]
 file = "kubejs/server_scripts/progression/60_aerospace.js"
-hash = "6c06186d2a95c6748196a57ec086c7ad8a837cd9207d22eb6ab869516d090508"
+hash = "80d07da4704538ca988c2a67e21026ee382ac82e945f5966a443c46f8473596e"
+
+[[files]]
+file = "kubejs/server_scripts/progression/70_transition_components.js"
+hash = "d49223f1869e5aac80570145726dac3e6b3ffe603b7f9c2227574860bc5ce413"
 
 [[files]]
 file = "kubejs/server_scripts/transport/10_optional_engineering_roots.js"

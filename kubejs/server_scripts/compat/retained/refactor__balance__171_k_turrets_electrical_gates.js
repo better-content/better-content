@@ -23,7 +23,7 @@ ServerEvents.recipes(function (event) {
     ], {
         C: '#forge:plates/copper',
         W: 'powergrid:wire',
-        T: 'k_turrets:titanium_ingot',
+        T: '#forge:ingots/titanium',
         A: 'powergrid:conductive_casing'
     }, 'kubejs:k_turrets/copper_plate_electrical', 4)
 
@@ -52,7 +52,7 @@ ServerEvents.recipes(function (event) {
         ' CT',
         'I  '
     ], {
-        T: 'k_turrets:titanium_ingot',
+        T: '#forge:ingots/titanium',
         I: '#forge:plates/iron',
         C: 'kubejs:electrical_instrumentation_module'
     }, 'kubejs:k_turrets/wrench_electrical')
@@ -82,7 +82,7 @@ ServerEvents.recipes(function (event) {
         'NCN',
         'TNT'
     ], {
-        T: 'k_turrets:titanium_ingot',
+        T: '#forge:ingots/titanium',
         N: 'minecraft:netherite_scrap',
         C: 'kubejs:electrical_instrumentation_module'
     }, 'kubejs:k_turrets/looting_link_electrical')
@@ -92,7 +92,7 @@ ServerEvents.recipes(function (event) {
         'ECE',
         'TET'
     ], {
-        T: 'k_turrets:titanium_ingot',
+        T: '#forge:ingots/titanium',
         E: 'minecraft:ender_pearl',
         C: 'kubejs:electrical_instrumentation_module'
     }, 'kubejs:k_turrets/recall_upgrade_electrical')
@@ -102,7 +102,7 @@ ServerEvents.recipes(function (event) {
         'ECE',
         'T T'
     ], {
-        T: 'k_turrets:titanium_ingot',
+        T: '#forge:ingots/titanium',
         E: 'minecraft:ender_pearl',
         C: 'kubejs:electrical_control_module'
     }, 'kubejs:k_turrets/magnet_upgrade_electrical')
@@ -264,7 +264,7 @@ ServerEvents.recipes(function (event) {
         'ITI'
     ], {
         I: '#forge:nuggets/iron',
-        T: 'k_turrets:titanium_ingot',
+        T: '#forge:ingots/titanium',
         E: 'minecraft:ender_pearl',
         C: 'oc2r:circuit_board'
     }, 'kubejs:k_turrets/gauss_bullet_electrical', 8)

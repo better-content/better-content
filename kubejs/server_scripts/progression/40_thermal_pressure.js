@@ -1,7 +1,7 @@
 ServerEvents.recipes(function (event) {
     event.remove({ output: 'kubejs:pressure_seal' })
-    event.shaped('2x kubejs:pressure_seal', [' R ', 'RIR', ' R '], {
-        R: '#forge:rubber', I: '#forge:plates/iron'
+    event.shaped('2x kubejs:pressure_seal', ['KKK', 'KIK', 'KKK'], {
+        K: 'minecraft:dried_kelp', I: '#forge:plates/iron'
     }).id('kubejs:thermal_pressure/pressure_seal')
 
     event.custom({

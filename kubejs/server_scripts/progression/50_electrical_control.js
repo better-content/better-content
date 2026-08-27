@@ -22,7 +22,7 @@ ServerEvents.recipes(function (event) {
     event.shaped('pneumaticcraft:pneumatic_dynamo', ['GTG', 'PMP', 'SCS'], {
         G: 'pneumaticcraft:compressed_iron_gear', T: 'pneumaticcraft:advanced_pressure_tube',
         P: 'pneumaticcraft:printed_circuit_board', M: 'kubejs:electrical_machine_block',
-        S: '#forge:plates/steel', C: 'powergrid:copper_coil'
+        S: '#forge:ingots/steel', C: 'powergrid:copper_coil'
     }).id('kubejs:electrical_control/direct_root/first_fe_generator')
     event.remove({ id: 'morered:soldering_table' })
     event.shaped('morered:soldering_table', ['PPP', 'WMW', ' C '], {

@@ -55,7 +55,8 @@ ServerEvents.recipes(function (event) {
     event.custom({
         type: 'pneumaticcraft:pressure_chamber',
         inputs: [
-            { type: 'pneumaticcraft:stacked_item', item: 'chemlib:vanadium', count: 8 },
+            { type: 'pneumaticcraft:stacked_item', item: 'realistic_ores:crushed_ironstone', count: 4 },
+            { type: 'pneumaticcraft:stacked_item', item: 'minecraft:quartz', count: 2 },
             { item: 'pneumaticcraft:pressure_chamber_glass' }
         ],
         pressure: 2.0,
@@ -85,7 +86,7 @@ ServerEvents.recipes(function (event) {
 
     bcAcidMixer(event, 'acetic_acid_oxidation',
         bcAcidFluidTag('forge:ethanol', 250), bcAcidFluid('chemlib:oxygen_fluid', 250),
-        { item: 'chemlib:water' }, bcAcidFluid('chemlib:acetic_acid_fluid', 250), 2.5, 220)
+        null, bcAcidFluid('chemlib:acetic_acid_fluid', 250), 2.5, 220)
 
     event.custom({
         type: 'create:mixing',

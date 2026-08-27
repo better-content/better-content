@@ -74,7 +74,8 @@ function bcTobArmor(event, output, reagent, id) {
 }
 
 ServerEvents.recipes(function (event) {
-    if (!bcTobExists('tomeofblood:novice_tome_of_blood')) return bcTobRemoveIds(event, [
+    if (!bcTobExists('tomeofblood:novice_tome_of_blood')) return
+    bcTobRemoveIds(event, [
         'tomeofblood:altar/novice_blood_tome',
         'tomeofblood:altar/apprentice_blood_tome',
         'tomeofblood:altar/archmage_blood_tome',
@@ -135,7 +136,6 @@ ServerEvents.recipes(function (event) {
 
      bcTobAlchemy(event, 'tomeofblood:novice_tome_of_blood', [
         { item: 'ars_nouveau:novice_spell_book' },
-        { item: 'ars_nouveau:archmage_spell_book' },
         { item: 'bloodmagic:archmagebloodorb' },
         { item: 'ae2:controller' },
         { item: 'kubejs:ae_logic_package' },

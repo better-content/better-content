@@ -1645,7 +1645,7 @@ nodes:
     x: 15
     y: -4.8
     body: |
-      Mix blank schematics, prepare a quill and table, then compact the Schematicannon in the hand-cranked Press and Basin. World Lifecycle Manager lineage downloads preserve plans only: the cannon still consumes gunpowder and every required block.
+      Craft Create's blank schematics, quill, table, and Schematicannon through their standard recipes. World Lifecycle Manager lineage downloads preserve plans only: the cannon still consumes gunpowder and every required block.
     tasks:
       - type: item
         item: create:empty_schematic

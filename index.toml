@@ -15272,7 +15272,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "7cfb452e07161601f9e0311bf220459f1cb9d7968b6f15c936fff40a11834911"
+hash = "7adf8c1ee05c4a6f2df9a1ec7af64eab8c5e3a632169aee14af92631809670fb"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"
@@ -15299,7 +15299,7 @@ hash = "92da76f6c9581a382b5fc81c9031750cf1fa60c9214fec8b593035f6f1dd6fa2"
 
 [[files]]
 file = "quests/graph.yml"
-hash = "0ba70228abcdf8c8a10f2afac3ebaec595f34ea27a1c0e7a4b0b9ab2fedfc4fa"
+hash = "a901248be4bc3d22bf67e3670f15286de787d14d8357bc6c3daea3316b90daaa"
 
 [[files]]
 file = "recipe-policies.yml"

@@ -1,0 +1,10 @@
+{
+  "type": "epicfight:pickaxe",
+  "hit_sound": "entity.hit.blunt",
+  "attributes": {
+    "common": {
+      "armor_negation": 2.5,
+      "impact": 2.1
+    }
+  }
+}

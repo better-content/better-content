@@ -364,9 +364,6 @@ Blocks = [
 	"natures_spirit:yellow_chalk_stairs",
 	"natures_spirit:yellow_kaolin_brick_stairs",
 	"natures_spirit:yellow_kaolin_stairs",
-	"notreepunching:andesite_cobblestone_stairs",
-	"notreepunching:diorite_cobblestone_stairs",
-	"notreepunching:granite_cobblestone_stairs",
 	"pneumaticcraft:compressed_brick_stairs",
 	"pneumaticcraft:reinforced_brick_stairs",
 	"quark:ancient_planks_stairs",
@@ -521,8 +518,7 @@ Blocks = [
 	"unearthed:slate_stairs",
 	"unearthed:smooth_siltstone_stairs",
 	"unearthed:weathered_rhyolite_stairs",
-	"unearthed:white_granite_stairs",
-]
+	"unearthed:white_granite_stairs"]
 
 [Physics]
 	#The maximum weight the block(s) can support both horizontally and vertically.

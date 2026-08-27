@@ -9,7 +9,14 @@
     'excavated_variants:minecraft.json5',
     'excavated_variants:realistic_ores.json5',
   ],
+  // These Malum ores use full/animated textures rather than separable ore
+  // overlays. Excavated Variants otherwise substitutes minecraft:blank and
+  // emits unusable generated textures for every stone combination.
   blacklist: {
-    type: 'empty'
+    type: 'or',
+    filters: [
+      'ore:brilliant_stone',
+      'ore:blazing_quartz_ore',
+    ],
   },
 }

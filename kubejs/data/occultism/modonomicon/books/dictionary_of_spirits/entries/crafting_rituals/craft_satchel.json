@@ -1,0 +1,43 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "occultism:crafting_rituals",
+  "condition": {
+    "type": "modonomicon:true"
+  },
+  "description": "",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "occultism:satchel"
+  },
+  "name": "book.occultism.dictionary_of_spirits.crafting_rituals.craft_satchel.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "occultism:satchel"
+      },
+      "text": "book.occultism.dictionary_of_spirits.crafting_rituals.craft_satchel.spotlight.text",
+      "title": ""
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "This item is disabled in this pack to preserve material and storage progression."
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "occultism:crafting_rituals/overview",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "x": 1,
+  "y": 1
+}

@@ -1,8 +1,7 @@
 version = 3
 
-# Maintained from the Kotlin-first validation/tooling surface.
 # C2ME is required for the finished pack; risky features are re-enabled one
-# group at a time and must pass the supported `tools/bc` validation lanes.
+# group at a time and must pass the supported `./smoke.sh` evaluation.
 defaultGlobalExecutorParallelismExpression = "default"
 globalExecutorParallelism = "default"
 
@@ -25,8 +24,14 @@ globalExecutorParallelism = "default"
 	asyncScheduling = "true"
 
 [ioSystem]
-	replaceImpl = "default"
-	async = "true"
+	# Keep the replacement I/O implementation paired with async I/O. Leaving
+	# replacement storage enabled by itself can stall vanilla IOWorker futures
+	# during a World Lifecycle Manager successor restart.
+	replaceImpl = "false"
+	# Dynamic Trees mutates its Poisson-disc chunk cache during chunk-data load.
+	# C2ME's async path can invoke that callback concurrently and corrupt the
+	# cache's plain HashMap, so keep chunk loading/unloading on the main thread.
+	async = "false"
 	gcFreeChunkSerializer = "default"
 	chunkDataCacheSoftLimit = "default"
 	chunkDataCacheLimit = "default"

@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "vs_clockwork:block/asteroid_block"
+    },
+    "facing=east": {
+      "model": "vs_clockwork:block/asteroid_block"
+    },
+    "facing=north": {
+      "model": "vs_clockwork:block/asteroid_block"
+    },
+    "facing=south": {
+      "model": "vs_clockwork:block/asteroid_block"
+    },
+    "facing=up": {
+      "model": "vs_clockwork:block/asteroid_block"
+    },
+    "facing=west": {
+      "model": "vs_clockwork:block/asteroid_block"
+    }
+  }
+}

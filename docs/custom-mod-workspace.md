@@ -1,6 +1,6 @@
 # Custom Mod Workspace
 
-Custom mod sources are independent sibling repositories under a common workspace root. Worklane uses `/home/dev`, so the modpack is checked out at `/home/dev/better-content-modpack` and each custom mod is checked out at `/home/dev/<repository>`. Other environments may use a different root, but must preserve the sibling relationship. Never recreate custom-mod source trees inside the modpack.
+Custom mod sources are independent repositories under a dedicated source directory in the common workspace. Worklane uses `/home/dev`, so the modpack is checked out at `/home/dev/better-content-modpack` and each custom mod is checked out at `/home/dev/mod_source/<repository>`. Other environments may use a different workspace root, but must preserve the `mod_source/<repository>` layout beside the modpack. Never recreate custom-mod source trees inside the modpack or at the workspace top level.
 
 Every canonical repository is hosted at `https://github.com/better-content/<repository>.git`. Runtime IDs are a clean break from earlier development identifiers; no legacy world or config migration is supported.
 
@@ -8,9 +8,9 @@ Every canonical repository is hosted at `https://github.com/better-content/<repo
 
 Run the listed validation and staging command from the custom-mod repository. `stageRuntimeJar` writes the deployable reobfuscated JAR to the canonical `build/libs/` path shown below.
 
-Copy that JAR into `../better-content-modpack/mods/`, removing any superseded version of the same custom mod. Do not deploy development-mapped or sources JARs.
+Copy that JAR into `../../better-content-modpack/mods/`, removing any superseded version of the same custom mod. Do not deploy development-mapped or sources JARs.
 
-From `../better-content-modpack`, run:
+From `../../better-content-modpack`, run:
 
 ```sh
 packwiz refresh
@@ -33,10 +33,11 @@ packwiz refresh
 | [dynamic-trees-hexerei](https://github.com/better-content/dynamic-trees-hexerei) | `dynamic_trees_hexerei` | `dynamic-trees-hexerei-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [dynamic-trees-malum](https://github.com/better-content/dynamic-trees-malum) | `dynamic_trees_malum` | `dynamic-trees-malum-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [heat-sync](https://github.com/better-content/heat-sync) | `heat_sync` | `heat-sync-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
+| [immersive-weathering-sampler](https://github.com/better-content/immersive-weathering-sampler) | `immersive_weathering_sampler` | `immersive-weathering-sampler-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [latent-chemlib](https://github.com/better-content/latent-chemlib) | `latent_chemlib` | `latent-chemlib-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [oc2r-create-bridge](https://github.com/better-content/oc2r-create-bridge) | `oc2r_create_bridge` | `oc2r-create-bridge-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [oc2r-wireless-pubsub](https://github.com/better-content/oc2r-wireless-pubsub) | `oc2r_wireless_pubsub` | `oc2r-wireless-pubsub-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
-| [pillager-campaigns](https://github.com/better-content/pillager-campaigns) | `pillager_campaigns` | `pillager-campaigns-0.2.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
+| [pillager-campaigns](https://github.com/better-content/pillager-campaigns) | `pillager_campaigns` | `pillager-campaigns-0.3.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [world-lifecycle-manager](https://github.com/better-content/world-lifecycle-manager) | `world_lifecycle_manager` | `world-lifecycle-manager-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [procedural-bouquets](https://github.com/better-content/procedural-bouquets) | `procedural_bouquets` | `procedural-bouquets-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [realistic-ores](https://github.com/better-content/realistic-ores) | `realistic_ores` | `realistic-ores-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
@@ -44,6 +45,6 @@ packwiz refresh
 | [downed-player-revival](https://github.com/better-content/downed-player-revival) | `downed_player_revival` | `downed-player-revival-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [rpg-stats](https://github.com/better-content/rpg-stats) | `rpg_stats` | `rpg-stats-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [settlement-roads](https://github.com/better-content/settlement-roads) | `settlement_roads` | `settlement-roads-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
-| [tinkers-construct-affixes](https://github.com/better-content/tinkers-construct-affixes) | `tinkers_construct_affixes` | `tinkers-construct-affixes-1.0.0.jar` | `./gradlew build stageRuntimeJar` |
+| [tinkers-construct-affixes](https://github.com/better-content/tinkers-construct-affixes) | `tinkers_construct_affixes` | `tinkers-construct-affixes-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [player-traces](https://github.com/better-content/player-traces) | `player_traces` | `player-traces-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [village-walls](https://github.com/better-content/village-walls) | `village_walls` | `village-walls-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |

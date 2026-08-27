@@ -7,12 +7,10 @@ Blocks = [
 	"ae2:quartz_glass",
 	"ae2:quartz_vibrant_glass",
 	"aether:quicksoil_glass",
-	"alchemistry:reactor_glass",
 	"create:framed_glass",
 	"create:horizontal_framed_glass",
 	"create:tiled_glass",
 	"create:vertical_framed_glass",
-	"create_new_age:reactor_glass",
 	"deeperdarker:soundproof_glass",
 	"fallout_wastelands_:blasted_glass",
 	"fallout_wastelands_:burnished_glass",
@@ -63,8 +61,7 @@ Blocks = [
 	"tconstruct:white_clear_stained_glass",
 	"tconstruct:yellow_clear_stained_glass",
 	"twilightforest:auroralized_glass",
-	"undergarden:sediment_glass",
-]
+	"undergarden:sediment_glass"]
 
 [Physics]
 	#The maximum weight the block(s) can support both horizontally and vertically.

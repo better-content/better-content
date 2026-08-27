@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "level=0": {
+      "model": "cold_sweat:block/slush"
+    },
+    "level=1": {
+      "model": "cold_sweat:block/slush"
+    },
+    "level=10": {
+      "model": "cold_sweat:block/slush"
+    },
+    "level=11": {
+      "model": "cold_sweat:block/slush"
+    },
+    "level=12": {
+      "model": "cold_sweat:block/slush"
+    },
+    "level=13": {
+      "model": "cold_sweat:block/slush"
+    },
+    "level=14": {
+      "model": "cold_sweat:block/slush"
+    },
+    "level=15": {
+      "model": "cold_sweat:block/slush"
+    },
+    "level=2": {
+      "model": "cold_sweat:block/slush"
+    },
+    "level=3": {
+      "model": "cold_sweat:block/slush"
+    },
+    "level=4": {
+      "model": "cold_sweat:block/slush"
+    },
+    "level=5": {
+      "model": "cold_sweat:block/slush"
+    },
+    "level=6": {
+      "model": "cold_sweat:block/slush"
+    },
+    "level=7": {
+      "model": "cold_sweat:block/slush"
+    },
+    "level=8": {
+      "model": "cold_sweat:block/slush"
+    },
+    "level=9": {
+      "model": "cold_sweat:block/slush"
+    }
+  }
+}

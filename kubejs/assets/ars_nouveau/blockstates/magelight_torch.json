@@ -1,0 +1,100 @@
+{
+  "variants": {
+    "facing=east,floor=true,level=0,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=east,floor=true,level=1,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=east,floor=true,level=10,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=east,floor=true,level=11,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=east,floor=true,level=12,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=east,floor=true,level=13,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=east,floor=true,level=14,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=east,floor=true,level=15,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=east,floor=true,level=2,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=east,floor=true,level=3,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=east,floor=true,level=4,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=east,floor=true,level=5,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=east,floor=true,level=6,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=east,floor=true,level=7,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=east,floor=true,level=8,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=east,floor=true,level=9,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=north,floor=true,level=0,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=north,floor=true,level=1,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=north,floor=true,level=10,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=north,floor=true,level=11,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=north,floor=true,level=12,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=north,floor=true,level=13,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=north,floor=true,level=14,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=north,floor=true,level=15,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=north,floor=true,level=2,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=north,floor=true,level=3,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=north,floor=true,level=4,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=north,floor=true,level=5,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=north,floor=true,level=6,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=north,floor=true,level=7,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=north,floor=true,level=8,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    },
+    "facing=north,floor=true,level=9,roof=true": {
+      "model": "ars_nouveau:block/magelight_torch"
+    }
+  }
+}

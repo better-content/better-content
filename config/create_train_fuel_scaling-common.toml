@@ -1,9 +1,14 @@
 enabled = true
+#Range: 0.0 ~ 1.7976931348623157E308
 baseCost = 1.0
+#Range: 0.0 ~ 1.7976931348623157E308
 k = 2.0
+#Range: 0.0 ~ 1.7976931348623157E308
 minimumCost = 0.0
+#Range: 0.0 ~ 1.7976931348623157E308
 maximumCost = 16.0
 consumeWhileStopped = false
+#Range: 0.0 ~ 1.7976931348623157E308
 minimumMovingSpeedBps = 0.05
 resetDebtWhenFuelEmpty = true
 debugLogging = false

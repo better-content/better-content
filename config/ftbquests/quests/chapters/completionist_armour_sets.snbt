@@ -25,7 +25,7 @@
 			id: "42F9BEDC674154A9"
 			rewards: [{
 				count: 8
-				id: "A04EF49DCCF31DF5"
+				id: "-5FB10B62330CE20B"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -78,8 +78,8 @@
 				}
 			]
 			title: "All Armour Sets: Gravitite"
-			x: 1.5d
-			y: 0.0d
+			x: 0d
+			y: 0d
 		}
 		{
 			icon: {
@@ -145,8 +145,8 @@
 				}
 			]
 			title: "All Armour Sets: Zanite"
-			x: 2.75d
-			y: 0.0d
+			x: 2d
+			y: 0d
 		}
 		{
 			icon: {
@@ -212,8 +212,8 @@
 				}
 			]
 			title: "All Armour Sets: Arcanist"
-			x: 1.5d
-			y: 3.25d
+			x: 4d
+			y: 0d
 		}
 		{
 			icon: {
@@ -226,7 +226,7 @@
 			id: "3BA2A02DCD2E8CB7"
 			rewards: [{
 				count: 8
-				id: "9C0EC11AD9F4DDE8"
+				id: "-63F13EE5260B2218"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -279,8 +279,8 @@
 				}
 			]
 			title: "All Armour Sets: Battlemage"
-			x: 2.75d
-			y: 3.25d
+			x: 6d
+			y: 0d
 		}
 		{
 			icon: {
@@ -346,8 +346,8 @@
 				}
 			]
 			title: "All Armour Sets: Sorcerer"
-			x: 4.0d
-			y: 3.25d
+			x: 8d
+			y: 0d
 		}
 		{
 			icon: {
@@ -413,8 +413,8 @@
 				}
 			]
 			title: "All Armour Sets: Chameleon"
-			x: 1.5d
-			y: 6.5d
+			x: 10d
+			y: 0d
 		}
 		{
 			icon: {
@@ -480,8 +480,8 @@
 				}
 			]
 			title: "All Armour Sets: Goat Fur"
-			x: 2.75d
-			y: 6.5d
+			x: 12d
+			y: 0d
 		}
 		{
 			icon: {
@@ -494,7 +494,7 @@
 			id: "6C946F6158C1D006"
 			rewards: [{
 				count: 8
-				id: "879AE64FD80240B7"
+				id: "-786519B027FDBF49"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -547,8 +547,8 @@
 				}
 			]
 			title: "All Armour Sets: Hoglin"
-			x: 4.0d
-			y: 6.5d
+			x: 14d
+			y: 0d
 		}
 		{
 			icon: {
@@ -614,8 +614,8 @@
 				}
 			]
 			title: "All Armour Sets: Cardboard"
-			x: 1.5d
-			y: 9.75d
+			x: 16d
+			y: 0d
 		}
 		{
 			icon: {
@@ -628,7 +628,7 @@
 			id: "4734AC8A478FEFC1"
 			rewards: [{
 				count: 8
-				id: "EF6FBF0254A0A87F"
+				id: "-109040FDAB5F5781"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -659,8 +659,8 @@
 				}
 			]
 			title: "All Armour Sets: Copper Diving"
-			x: 2.75d
-			y: 9.75d
+			x: 18d
+			y: 0d
 		}
 		{
 			icon: {
@@ -673,7 +673,7 @@
 			id: "4A6CDF45277BE6A8"
 			rewards: [{
 				count: 8
-				id: "F69E8F89E8C0DC3B"
+				id: "-9617076173F23C5"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -704,8 +704,8 @@
 				}
 			]
 			title: "All Armour Sets: Netherite Diving"
-			x: 4.0d
-			y: 9.75d
+			x: 20d
+			y: 0d
 		}
 		{
 			icon: {
@@ -760,8 +760,8 @@
 				}
 			]
 			title: "All Armour Sets: Advanced Spacesuit"
-			x: 1.5d
-			y: 13.0d
+			x: 22d
+			y: 0d
 		}
 		{
 			icon: {
@@ -816,8 +816,8 @@
 				}
 			]
 			title: "All Armour Sets: Basic Spacesuit"
-			x: 2.75d
-			y: 13.0d
+			x: 24d
+			y: 0d
 		}
 		{
 			icon: {
@@ -883,8 +883,8 @@
 				}
 			]
 			title: "All Armour Sets: Resonarium"
-			x: 1.5d
-			y: 16.25d
+			x: 26d
+			y: 0d
 		}
 		{
 			icon: {
@@ -950,8 +950,8 @@
 				}
 			]
 			title: "All Armour Sets: Warden"
-			x: 2.75d
-			y: 16.25d
+			x: 0d
+			y: 2.5d
 		}
 		{
 			icon: {
@@ -964,7 +964,7 @@
 			id: "5F6C8A0A31C80D21"
 			rewards: [{
 				count: 8
-				id: "E8193A3A080BC189"
+				id: "-17E6C5C5F7F43E77"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1017,8 +1017,8 @@
 				}
 			]
 			title: "All Armour Sets: Copper"
-			x: 1.5d
-			y: 19.5d
+			x: 2d
+			y: 2.5d
 		}
 		{
 			icon: {
@@ -1084,8 +1084,8 @@
 				}
 			]
 			title: "All Armour Sets: Antiradsuit"
-			x: 1.5d
-			y: 22.75d
+			x: 4d
+			y: 2.5d
 		}
 		{
 			icon: {
@@ -1151,8 +1151,8 @@
 				}
 			]
 			title: "All Armour Sets: Combatarmor"
-			x: 2.75d
-			y: 22.75d
+			x: 6d
+			y: 2.5d
 		}
 		{
 			icon: {
@@ -1165,7 +1165,7 @@
 			id: "4D1F9677D5DAFE47"
 			rewards: [{
 				count: 8
-				id: "9F0FFEE3040CACF4"
+				id: "-60F0011CFBF3530C"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1218,8 +1218,8 @@
 				}
 			]
 			title: "All Armour Sets: Raiderblastmaster"
-			x: 4.0d
-			y: 22.75d
+			x: 8d
+			y: 2.5d
 		}
 		{
 			icon: {
@@ -1232,7 +1232,7 @@
 			id: "7C3B92F7E9B265A0"
 			rewards: [{
 				count: 8
-				id: "B70408006FCB59A1"
+				id: "-48FBF7FF9034A65F"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1285,8 +1285,8 @@
 				}
 			]
 			title: "All Armour Sets: Raiderduster"
-			x: 5.25d
-			y: 22.75d
+			x: 10d
+			y: 2.5d
 		}
 		{
 			icon: {
@@ -1352,8 +1352,8 @@
 				}
 			]
 			title: "All Armour Sets: T 45 Pa"
-			x: 6.5d
-			y: 22.75d
+			x: 12d
+			y: 2.5d
 		}
 		{
 			icon: {
@@ -1366,7 +1366,7 @@
 			id: "7D7A022721668D5E"
 			rewards: [{
 				count: 8
-				id: "B83A724B52109771"
+				id: "-47C58DB4ADEF688F"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1419,8 +1419,8 @@
 				}
 			]
 			title: "All Armour Sets: Taloncombatarmor"
-			x: 7.75d
-			y: 22.75d
+			x: 14d
+			y: 2.5d
 		}
 		{
 			icon: {
@@ -1433,7 +1433,7 @@
 			id: "4EDCE5C5855E039C"
 			rewards: [{
 				count: 8
-				id: "E946E2C39848A40D"
+				id: "-16B91D3C67B75BF3"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1486,8 +1486,8 @@
 				}
 			]
 			title: "All Armour Sets: Vault Security Suit"
-			x: 9.0d
-			y: 22.75d
+			x: 16d
+			y: 2.5d
 		}
 		{
 			icon: {
@@ -1553,8 +1553,8 @@
 				}
 			]
 			title: "All Armour Sets: Chainmail"
-			x: 1.5d
-			y: 26.0d
+			x: 18d
+			y: 2.5d
 		}
 		{
 			icon: {
@@ -1567,7 +1567,7 @@
 			id: "5BDB172E5D641F93"
 			rewards: [{
 				count: 8
-				id: "AB605F37AB938451"
+				id: "-549FA0C8546C7BAF"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1620,8 +1620,8 @@
 				}
 			]
 			title: "All Armour Sets: Diamond"
-			x: 2.75d
-			y: 26.0d
+			x: 20d
+			y: 2.5d
 		}
 		{
 			icon: {
@@ -1634,7 +1634,7 @@
 			id: "0444D9235DDBD873"
 			rewards: [{
 				count: 8
-				id: "FC8F6791E2C7F3CE"
+				id: "-370986E1D380C32"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1687,8 +1687,8 @@
 				}
 			]
 			title: "All Armour Sets: Golden"
-			x: 4.0d
-			y: 26.0d
+			x: 22d
+			y: 2.5d
 		}
 		{
 			icon: {
@@ -1701,7 +1701,7 @@
 			id: "21F5F74F11152323"
 			rewards: [{
 				count: 8
-				id: "CEF75B49CE01319F"
+				id: "-3108A4B631FECE61"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1754,8 +1754,8 @@
 				}
 			]
 			title: "All Armour Sets: Iron"
-			x: 5.25d
-			y: 26.0d
+			x: 24d
+			y: 2.5d
 		}
 		{
 			icon: {
@@ -1821,8 +1821,8 @@
 				}
 			]
 			title: "All Armour Sets: Leather"
-			x: 6.5d
-			y: 26.0d
+			x: 26d
+			y: 2.5d
 		}
 		{
 			icon: {
@@ -1888,8 +1888,8 @@
 				}
 			]
 			title: "All Armour Sets: Netherite"
-			x: 7.75d
-			y: 26.0d
+			x: 0d
+			y: 5d
 		}
 		{
 			icon: {
@@ -1955,8 +1955,8 @@
 				}
 			]
 			title: "All Armour Sets: Compressed Iron"
-			x: 1.5d
-			y: 29.25d
+			x: 2d
+			y: 5d
 		}
 		{
 			icon: {
@@ -2022,8 +2022,8 @@
 				}
 			]
 			title: "All Armour Sets: Pneumatic"
-			x: 2.75d
-			y: 29.25d
+			x: 4d
+			y: 5d
 		}
 		{
 			icon: {
@@ -2078,8 +2078,8 @@
 				}
 			]
 			title: "All Armour Sets: Tosaki"
-			x: 1.5d
-			y: 32.5d
+			x: 6d
+			y: 5d
 		}
 		{
 			icon: {
@@ -2145,8 +2145,8 @@
 				}
 			]
 			title: "All Armour Sets: Griefer"
-			x: 1.5d
-			y: 35.75d
+			x: 8d
+			y: 5d
 		}
 		{
 			icon: {
@@ -2217,8 +2217,8 @@
 				}
 			]
 			title: "All Armour Sets: Plate"
-			x: 1.5d
-			y: 39.0d
+			x: 10d
+			y: 5d
 		}
 		{
 			icon: {
@@ -2378,8 +2378,8 @@
 				}
 			]
 			title: "All Armour Sets: Slime"
-			x: 2.75d
-			y: 39.0d
+			x: 12d
+			y: 5d
 		}
 		{
 			icon: {
@@ -2393,7 +2393,7 @@
 			id: "01FD7CDA7A79D500"
 			rewards: [{
 				count: 8
-				id: "A1F0A52974A75B55"
+				id: "-5E0F5AD68B58A4AB"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2450,8 +2450,8 @@
 				}
 			]
 			title: "All Armour Sets: Travelers"
-			x: 4.0d
-			y: 39.0d
+			x: 14d
+			y: 5d
 		}
 		{
 			icon: {
@@ -2517,8 +2517,8 @@
 				}
 			]
 			title: "All Armour Sets: Living Mage"
-			x: 1.5d
-			y: 42.25d
+			x: 16d
+			y: 5d
 		}
 		{
 			icon: {
@@ -2584,8 +2584,8 @@
 				}
 			]
 			title: "All Armour Sets: Arctic"
-			x: 1.5d
-			y: 45.5d
+			x: 18d
+			y: 5d
 		}
 		{
 			icon: {
@@ -2598,7 +2598,7 @@
 			id: "0E949BCDF904FA26"
 			rewards: [{
 				count: 8
-				id: "82AD26B0CDEC3329"
+				id: "-7D52D94F3213CCD7"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2651,8 +2651,8 @@
 				}
 			]
 			title: "All Armour Sets: Fiery"
-			x: 2.75d
-			y: 45.5d
+			x: 20d
+			y: 5d
 		}
 		{
 			icon: {
@@ -2718,8 +2718,8 @@
 				}
 			]
 			title: "All Armour Sets: Ironwood"
-			x: 4.0d
-			y: 45.5d
+			x: 22d
+			y: 5d
 		}
 		{
 			icon: {
@@ -2732,7 +2732,7 @@
 			id: "4E0F6BD3092E29AA"
 			rewards: [{
 				count: 8
-				id: "C79BDFDBEFA8A430"
+				id: "-3864202410575BD0"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2785,8 +2785,8 @@
 				}
 			]
 			title: "All Armour Sets: Knightmetal"
-			x: 5.25d
-			y: 45.5d
+			x: 24d
+			y: 5d
 		}
 		{
 			icon: {
@@ -2830,8 +2830,8 @@
 				}
 			]
 			title: "All Armour Sets: Naga"
-			x: 6.5d
-			y: 45.5d
+			x: 26d
+			y: 5d
 		}
 		{
 			icon: {
@@ -2844,7 +2844,7 @@
 			id: "67577575B5D52A2D"
 			rewards: [{
 				count: 8
-				id: "A3F34A068B3F288C"
+				id: "-5C0CB5F974C0D774"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2897,8 +2897,8 @@
 				}
 			]
 			title: "All Armour Sets: Steeleaf"
-			x: 7.75d
-			y: 45.5d
+			x: 0d
+			y: 7.5d
 		}
 		{
 			icon: {
@@ -2964,8 +2964,8 @@
 				}
 			]
 			title: "All Armour Sets: Yeti"
-			x: 9.0d
-			y: 45.5d
+			x: 2d
+			y: 7.5d
 		}
 		{
 			icon: {
@@ -2978,7 +2978,7 @@
 			id: "51E49F0192CDA284"
 			rewards: [{
 				count: 8
-				id: "A1027A5DA104B959"
+				id: "-5EFD85A25EFB46A7"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3031,8 +3031,8 @@
 				}
 			]
 			title: "All Armour Sets: Cloggrum"
-			x: 1.5d
-			y: 48.75d
+			x: 4d
+			y: 7.5d
 		}
 		{
 			icon: {
@@ -3098,8 +3098,8 @@
 				}
 			]
 			title: "All Armour Sets: Froststeel"
-			x: 2.75d
-			y: 48.75d
+			x: 6d
+			y: 7.5d
 		}
 		{
 			icon: {
@@ -3112,7 +3112,7 @@
 			id: "268B520AEDD2F801"
 			rewards: [{
 				count: 8
-				id: "F1E1E42CDDA3EF2F"
+				id: "-E1E1BD3225C10D1"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3165,8 +3165,8 @@
 				}
 			]
 			title: "All Armour Sets: Utherium"
-			x: 4.0d
-			y: 48.75d
+			x: 8d
+			y: 7.5d
 		}
 	]
 }

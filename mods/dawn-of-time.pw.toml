@@ -1,0 +1,13 @@
+name = "Dawn Of Time"
+filename = "dawnoftimebuilder-forge-1.20.1-1.5.52.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d160bea729df2c880d37671921b52e3ee30956fd"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8363570
+project-id = 312359

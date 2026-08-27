@@ -1,0 +1,28 @@
+#Chance for a player-killed hostile mob to drop an affixed Tinkers part outside Font dimensions.
+#Range: 0.0 ~ 1.0
+hostileDropChance = 0.01
+#Chance for a player-killed hostile mob in a Font dimension to drop an origin part.
+#Range: 0.0 ~ 1.0
+fontDropChance = 0.03
+#Chance for a player-killed hostile mob to drop one reforging currency outside Font dimensions.
+#Range: 0.0 ~ 1.0
+hostileCurrencyChance = 0.01
+#Chance for a player-killed hostile mob in a Font dimension to drop one reforging currency.
+#Range: 0.0 ~ 1.0
+fontCurrencyChance = 0.04
+#Chance for a chests/* loot table to contain an Affixed Part Cache.
+#Range: 0.0 ~ 1.0
+chestCacheChance = 0.03
+#Chance for a chests/* loot table to contain a non-seal reforging currency.
+#Range: 0.0 ~ 1.0
+chestCurrencyChance = 0.03
+#Relative weights for TConstruct material tiers 1 through 4.
+materialTierWeights = [8000, 1700, 290, 10]
+#Allowed material IDs for tier 1.
+tier1Materials = ["tconstruct:bamboo", "tconstruct:bone", "tconstruct:cactus", "tconstruct:chorus", "tconstruct:copper", "tconstruct:feather", "tconstruct:flint", "tconstruct:leather", "tconstruct:leaves", "tconstruct:paper", "tconstruct:phantom", "tconstruct:rock", "tconstruct:string", "tconstruct:vine", "tconstruct:wood", "tconstruct:wool"]
+#Allowed material IDs for tier 2.
+tier2Materials = ["tconstruct:aluminum", "tconstruct:amethyst", "tconstruct:blaze", "tconstruct:earthslime", "tconstruct:glass", "tconstruct:gold", "tconstruct:gunpowder", "tconstruct:iron", "tconstruct:ironwood", "tconstruct:lead", "tconstruct:necrotic_bone", "tconstruct:osmium", "tconstruct:prismarine", "tconstruct:scorched_stone", "tconstruct:seared_stone", "tconstruct:silver", "tconstruct:skyslime", "tconstruct:slimeball", "tconstruct:slimeskin", "tconstruct:slimewood", "tconstruct:twisting_vine", "tconstruct:venombone", "tconstruct:weeping_vine", "tconstruct:whitestone"]
+#Allowed material IDs for tier 3.
+tier3Materials = ["tconstruct:amethyst_bronze", "tconstruct:bronze", "tconstruct:cobalt", "tconstruct:constantan", "tconstruct:darkthread", "tconstruct:electrum", "tconstruct:glowstone", "tconstruct:ice", "tconstruct:ichor", "tconstruct:ichorskin", "tconstruct:invar", "tconstruct:magma", "tconstruct:magnetite", "tconstruct:nahuatl", "tconstruct:necronium", "tconstruct:obsidian", "tconstruct:pewter", "tconstruct:pig_iron", "tconstruct:plated_slimewood", "tconstruct:quartz", "tconstruct:rose_gold", "tconstruct:slimesteel", "tconstruct:steel", "tconstruct:steeleaf"]
+#Allowed material IDs for tier 4.
+tier4Materials = ["tconstruct:ancient_hide", "tconstruct:blazewood", "tconstruct:blazing_bone", "tconstruct:cinderslime", "tconstruct:dragon_scale", "tconstruct:enderslime", "tconstruct:fiery", "tconstruct:hepatizon", "tconstruct:knightly", "tconstruct:knightmetal", "tconstruct:manyullyn", "tconstruct:queens_slime", "tconstruct:shulker"]

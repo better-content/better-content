@@ -1,237 +1,90 @@
 # Progression
 
-## Spine
-
-### World-Spine Working Model
-
-A world spine is a causal premise broad enough to generate several distinct practices and progression arcs. This is a working model for tightening the pack, not a declaration that every current gate already obeys it.
-
-The proposed realism roots use a **rule of expectedness**: their absence would need an extraordinary explanation.
-
-- **Matter:** things have composition and properties; changing or moving them costs work and leaves products, losses, or waste. Physics, chemistry, metallurgy, machinery, energy, structural behavior, deposits, pollution, construction, and decoration are practices or crossings rooted here. Decorative palettes and built forms are expressions of Matter even when they carry no progression gate.
-- **Place:** location changes what exists and what is possible. Terrain, climate, seasons, weather, weathering and exposure, dimensions, local resources, distance, travel, infrastructure, and logistics express this root.
-- **Life:** living things are embodied, dependent, vulnerable, reproductive, and finite. Animals, plants, bodies, nutrition, thirst, temperature, ecology, agriculture, injury, revival, mortality, and life history express this root. Encounters and settlements belong primarily here when they describe inhabitants, populations, or ecological relationships; their sites and routes cross Place, and their built fabric crosses Matter.
-
-The proposed magic roots use a **rule of cool**: each must sell one salient “what if” strongly enough to suspend disbelief.
-
-- **Blood:** what if lived life, suffering, death, and souls possess manipulable potency? Its native arc runs from embodied life and the Still-Beating Heart through sacrifice, refinement, and spirit command.
-- **Fonts:** what if altered contact with other places reveals operative correspondences and intelligences? Its native arc should run from shrine and drink through hazardous journeys, preparation, naming, attunement, and pact.
-- **Traces Into Lineage:** what if the world records events as perceivable and replayable memory, and chosen memory can outlive the world? Its native arc should run from footprints, bloodstains, death echoes, and notes through Trace Sight, inscription, preservation, Prestige, and Lineage.
-
-History or persistence is not a seventh realism root. It is the cross-cutting rule that consequences endure: deposits stay depleted, routes and settlements matter, lives leave hearts and echoes, warbands remember losses, and Lineage can carry selected traces across a world ending. Society is likewise not a root; it emerges where Life, Place, Matter, and History produce actors, scarcity, exchange, settlement, and conflict.
-
-Physics, chemistry, geology, ecology, logistics, economy, conflict, formal magic, and technology are therefore practices or crossings rather than additional roots. “Tech,” “magic,” and “adventure” may remain punchy player-facing packages—even useful red herrings—without controlling causal ownership beneath the presentation.
-
-A candidate root should explain multiple practices, change player decisions, and possess costs and conclusions that follow from its premise. Every magical root has a stronger independence requirement: it needs its own encounter or entry, depth ladder, apparatus, characteristic dangers or costs, and reachable conclusion without requiring another magical root. Crossings may enrich or accelerate an arc, but one magical root must not parent another.
-
-Formal magic is a practice, not a root. Traces can explain how an effect is observed, inscribed, taught, and reproduced; Blood or Fonts must still authorize any extraordinary phenomenon drawn from their premises. Ars Nouveau decomposes recorded causality into programmable operations. This formalism should not make all magic a child of Traces, and reproducibility alone should not make ordinary computation, schematics, or data storage supernatural.
-
-### Current Player-Facing Graph
-
-The current implementation is presented as two primary crafting spines, two formal magic systems, and one pressure spine:
-
-- Tech package: Tinkers seared/scorched metallurgy into Create andesite/brass automation, then Power Grid, OC2R, Creating Space, and AE2-local intelligence. In world-spine terms this is primarily organized mastery of Matter constrained by Place.
-- Magic spines: `Dimension Drink -> Hexerei -> Occultism` and `Blood Magic -> Malum -> Goety`. Each spine uses its own native proofs; deliberate hybrid and formal-magic recipes may cross them without making one the parent of the other.
-- Formal magic: Ars Nouveau provides the single programmable grammar shared across magical traditions. Ars Elemental expands that vocabulary under the same provenance rules, Ars Creo crosses formal magic with Create machinery, and Ars Energistique is a late AE2/Source bridge. Empty infrastructure opens early; proof strength sets depth and per-glyph origin reagents preserve breadth.
-- Adventure package: dimension_drink, dimensions, combat, villages, wares, and coins provide route pressure and recovery options without replacing production. This crosses Place, Life, emergent Society, and History rather than supplying one causal root.
-
-### Magic Spine Enumeration And Inner Progression
-
-The implemented dirty-magic graph has two spines. Each has its own entry, preparation apparatus, native depth ladder, and downstream dangerous practice; Ars Nouveau is a formal-magic crossing fed by those spines, not an additional spine.
-
-| Spine | Inner progression | Authority boundary |
-| --- | --- | --- |
-| Fonts | Dimensional shrine and drink -> Nether, Aether, Undergarden, and Otherside expeditions -> Hexerei mixing cauldron -> Aether moon dust, Undergarden infused fabric, Nether blood sigil, and Otherside crystal work -> Hexerei-prepared Occultism otherstone and impure chalk -> Occultism spirit fire -> white/gold/purple/red pentacles -> Foliot/Djinni/Afrit/Marid bargaining | Hexerei owns physical preparation and correspondence among Font reagents. Occultism owns purification, naming, pentacles, binding, possession, and the spirit tiers. |
-| Blood | Still-Beating Heart -> Blood Altar -> Blank/Reinforced/Infused/Demonic/Ethereal Slate refinement -> Malum spirit altar, spirit collection, and infusion -> Goety cursed matter, cages, focuses, and dark altars -> dangerous spirit command | Blood Magic owns life-force extraction and refinement; Malum owns spirit manufacture; Goety owns command and deployment. |
-
-`Traces Into Lineage` remains a proposed third root rather than an implemented crafting spine. Its intended inner progression is event traces -> Trace Sight -> inscription -> preservation -> Prestige -> Lineage. Formal magic remains a reproducibility practice layered across dirty-magic proofs.
-
-Within the Fonts spine, Occultism chalk keeps its native semantic tiers. White is the universal base; gold adds binding and possession; purple calls the higher Djinni/Afrit classes and retains its Foliot-accessed End-stone dependency; red still requires Afrit essence before Marid-grade work. Hexerei prepares the four impure chalks in its cauldron with Font matter, while Occultism spirit fire remains the only purification step.
-
-Local logistics stays first. Create trains and physical routes should matter before AE2 dominates a site, and OC2R is the intended intersite information bridge.
-
-Copper is the first explicit metallurgy lesson: solid copper forms do not register as Part Builder material inputs. Copper tool parts must be cast from molten copper at a TConstruct casting table; the generic cast-part recipes remain the visible route.
-
-The first Create era is a manual workshop, not passive automation. The exact hand-crafting allowlist is recorded in `kubejs/config/create_tcon_bootstrap.json`: the crank, basic transmission, and bounded starter workstations can be assembled by hand, but the Deployer and both andesite casings cannot. The crank is deliberately set to 16 SU with a 0.01 hunger multiplier, enough to run one press plus two 4-SU light workstations while remaining below the first 32-SU water wheel. A hand-cranked press and basin compact the first Deployer from seared/TCon-era parts. The same workshop mixes blank schematics and quills, retains the simple schematic table, and compacts the Schematicannon without a Dispenser. The Deployer earns ordinary andesite casing; sequenced andesite machine casing then uses a real scorched core as the Nether refractory boundary. Water, wind, steam, pneumatic, diesel, and electric sources use real casings and manufactured mechanisms instead of an abstract era token. The creative motor remains recipe-less.
-
-TConstruct is the metallurgy authority for this era. Create may press, deploy, wash, and move already formed metals, but it does not directly mix early solid andesite alloy, brass, or red-alloy ingots. Andesite alloy and primitive red alloy are formed on TCon molten casting surfaces; brass uses TCon alloying and casting. Direct starter-metal deposits have one auditable yield contract: a furnace or blast furnace recovers four nuggets, a Melter recovers 90 mB of primary metal, and Foundry ore melting recovers 270 mB plus 45 mB of the documented geological byproduct.
-
-Physical transport now has five explicit stages. Primitive Eureka helms, fuel engines, floaters, ballast, and anchors consume non-metal TConstruct Part Builder pieces immediately after the Tinker Station/Part Builder milestone, making custom wooden ships the first serious exploration route while vanilla boat recipes remain removed. Generic `tconstruct:wood` remains valid for handles, bindings, grips, limbs, shafts, and shield cores but has no head stats, preventing wooden tool heads and blades across TConstruct-compatible addons. Trackwork wheels and tracks require both railway casing and precision mechanisms, making rough-terrain vehicles a peer to Create trains. Hang Gliders retain their Aether-plus-brass proof; basic Eureka balloons and Clockwork lift mechanics require Aether matter plus the Airtight casing tier; Clockwork gas hardware and Wanderlite synthesis then inherit PNCR pressure parts; active stabilization, sensors, automation, and exotic physics finish at printed circuit boards. `kubejs/config/vs_transport_surfaces.json` classifies all 145 pinned family items across those stages or the hidden technical set.
-
-The canonical progression manifests now live in `kubejs/config/tech_parenting.json`, `kubejs/config/magic_parenting.json`, `kubejs/config/economy_acquisition.json`, `kubejs/config/surface_registry.json`, and the version-locked VS-family disposition map in `kubejs/config/vs_transport_surfaces.json`. Recipe scripts and reward surfaces are still authored in KubeJS/config/data files, but tier/branch/policy truth is audited against those manifests. The contract generator treats both runtime recipe outputs and authored KubeJS recipe/gate scripts as evidence, so milestone gates that mutate existing recipes still receive explicit era or Blood-parent entries.
-
-Crafting-graph control is anchor-first. For each mod family, rank exact same-mod ingredients by the number of distinct recipes in that mod that consume them, then nominate `N = 3 + ceil(E / 100)`, where `E` is the number of in-scope player-facing item/block entries assigned to that family. This formula is a nomination budget only, never an automatic gate or acceptance rule. Every nominee must be manually inspected and recorded with its own disposition, including acquisition, unique and transitive consumers, machine prerequisites, lifecycle role, and loot/trade/worldgen/conversion bypasses. Palette blocks, planks, reversible forms, optional alternates, and freely acquired basics are common false anchors. Select the smallest set of native anchors that represents meaningful stages and control every acquisition route into those anchors; recipes already downstream of a controlled anchor remain unchanged. The retired whole-registry review is not a release requirement.
-
-Existing KubeJS already demonstrates the preferred shape. The Create/TConstruct bootstrap removes alternate andesite-alloy acquisition and lets alloy, casing, shafts, and mechanisms carry the downstream hierarchy. Blood Magic slates act as shared magic proofs. The machine-casing chain and OC2R circuit components similarly concentrate many downstream systems behind a few manufactured objects. Broad `bcGateOutputs` lists, per-output casing rewrites, and recipe-by-recipe spine substitution are existing exceptions and refactor candidates, not templates for graph completion. A fallback is acceptable only for a specifically reviewed, progression-bearing branch with no native or machine-level choke point; it must not expand into a namespace-wide consumer-edit queue. The crafting grid remains a bootstrap and bounded final-assembly surface, not the progression engine.
-
-The first corrected native-anchor pass is authored in `172_cross_mod_anchor_boundaries.js` and declared in `cross_mod_boundaries.json`. It moves eleven reviewed top-N anchors onto cross-mod machine or ritual surfaces: Compressed Creativity's rotor, Little Logistics' spring, Weather2's shared instrument, More Artifacts' shadow dust, three Ars hubs, three Malum hubs, and Occultism otherstone. Thalassophobia's oxygen tank is the sole explicit capability fallback because that family exposes no useful recurring native hub. Family-wide decisions are forbidden: `mod_progression_gates.json` records only item-specific decisions, and every remaining nominee stays `pending_review` until it receives acquisition, bypass, and spine evidence. No broad output gate may be retired until a fresh loaded runtime graph proves that the replacement anchors preserve equivalent progression-bearing closure.
-
-Combat pressure is spatial first, temporal second. Ordinary hostile spawns are toned down under open sky, but cave and covered-space spawns persist through the day, use longer pathing ranges, and are expected to leave underground spaces to hunt the player. Pillager campaign forces also stage away from the player and path in from the surrounding terrain instead of materializing as point-blank time checks. Safe play should come more from settlement siting, cave control, walls, sightlines, patrol routes, and route discipline than from simply waiting for daylight.
-
-Pillager pressure now comes from procedural territorial warbands rather than structures or fixed unit families. Each warband owns a Voronoi-like territory capped at 32 chunks: the outer four chunks warn each player diegetically with a horn, while entering the interior or attacking the warband makes only that player hostile. A player can have only one unresolved campaign globally, and squads stop pursuit at their territory boundary.
-
-Warbands begin with 18 reserve strength and continuously recruit toward an environmental capacity of 96–216. Habitability controls capacity and gross recruitment; travel friction controls mobilization from reserve into raid-ready strength. This simulation runs whether the rally is loaded or not. Materialized garrisons, committed raids, casualties, equipment loss, and exact TConstruct material-unit spending are the drains, so unmaterialized warbands usually accumulate power faster without receiving an artificial unloaded multiplier. Population approaches its environmental ceiling while accumulated materials, armory quality, veteran survival, and learned estimates keep improving effective power. Aggression starts at 6, rises by 1 when a player repels a raid or an idle raid returns, and falls by 1 when the assigned target is killed, bounded to 6–18.
-
-Raid composition and gear have no kits, roles, or archetypes. Eligible entities come from a reloadable tag and are scored from live attributes, environmental constraints, finite resources, marginal squad capability, and continuous warband/captain preferences. Opening raids wait until the raid pool can afford the cheapest live eligible recruit, eliminating empty low-aggression materializations without naming a fallback mob. TConstruct is required: the armory optimizer reads live part-builder costs, consumes exact material units, builds through the TConstruct API, and preserves each formulation and bill of materials. The independent `tools/bc tcon` formulator remains the pinned fail-closed compatibility/NBT oracle.
-
-Squads preserve native attacks while captains perform bounded shared probes of real loaded-chunk paths, reuse reachable approaches, and invalidate stuck routes. They never generate chunks, teleport, dig, or modify blocks, so sealed and cleverly routed defenses remain meaningful. Idle, broken, logged-out-target, and victorious campaigns enter the same return lifecycle: survivors withdraw physically across loaded terrain, serialize with their UUID, health, equipment, and entity data at the unloaded frontier, travel home abstractly, and reconcile only at the rally. A squad with no assigned-target combat for 12,000 ticks returns and increases aggression. Dead members permanently lose their committed threat and gear; player kills earn coins from measured threat, and all carried equipment drops at 100%.
-
-The campaign decision model also has a Minecraft-free Kotlin scenario DSL and `warbandSim` terminal runner. Economy, dispatch, tactical rounds, learning, withdrawal, and conservation can be replayed as a deterministic spreadsheet-style warband game; Forge GameTests separately prove the live recruit, path, persistence, and TConstruct adapters.
-
-Rally warlords can now move and fight within a 48-block leash rather than being immobilized at an exact anchor. Their spawn height uses the heightmap's first-air result directly, and materialization rejects collisions or failed entity insertion.
-
-Tier design should feel like conquest rather than checklisting: each new tier needs a new resource domain plus a signature transformation, not just a renamed ingredient. Matter should keep memory of where it came from, so geology, death, heat, pressure, distance, and biological growth remain visible in downstream recipes instead of collapsing into generic dusts.
-
-The implemented graph currently reads as two dirty parent traditions feeding one clean formalism. Fonts leads into Hexerei and then Occultism's attunement and entity bargaining. Blood Magic leads into Malum and then Goety's dangerous command work. Ars Nouveau exposes its empty book and authoring infrastructure early, but cannot produce usable glyphs until a dirty tradition supplies proof at the required depth and a thematic domain reagent. The working model adds Traces Into Lineage as a third magic root and treats the present two-parent structure as an implementation to reassess, not as the final ontology.
-
-## Death Loop
-
-Death is a structured life-length and location penalty, not a random item-loss pressure. `defaultconfigs/configurabledeath-server.toml` keeps inventory, armor, hotbar, mainhand, offhand, food, and saturation on death, with no durability loss on kept items. The costly loss is the current life's RPG Stats power and the trip back to the locked spawn.
-
-RPG Stats awards one stat point for each new XP level above `lifePeakLevel`. On death, `../rpg-stats` snapshots the dying player's XP level before Configurable Death clears it, clears unspent points and allocations, baselines the next life to the post-death XP level, and delivers a level-stamped `rpg_stats:still_beating_heart` on respawn when Blood Magic is present. The heart records how far that life got and then feeds the Blood Magic bridge; it is the high-score token for the run, not a bulk currency.
-
-Respawn heart delivery writes to the highest empty main-inventory slot, then an empty ender slot, and otherwise remains pending. It never inserts into slot 0 or shifts existing inventory stacks.
-
-Spawn is intentionally sticky. New players use fixed Class Selector onboarding to lock both starting supplies and a starting site. `config/biomespawnpoint/spawnbiomes.txt` is constrained to temperate grass/forest starts, with `kubejs/data/kubejs/tags/worldgen/biome/temperate_spawn_biomes.json` documenting the same target set for datapack-side consumers. `kubejs/startup_scripts/20_globals/10_immobile_spawn.js` cancels ordinary spawn changes, and Class Selector persists `class_selector:respawn_*` coordinates, refreshes them before death, rejects bed and respawn-anchor style changes while locked, and teleports the player back there on respawn with protection plus scripted sound and particle FX. Player-facing spawn relocation should remain a very-late-game exception; normal beds are not a progression bypass.
-
-Starting identities should read like jobs with partial truths, not solved classes. Useful loadout space is route support, hydration, light, food variety, bounded low-value trade, animal handling, and camp utility. Unsafe loadout space is production machinery, powered rails, storage systems, strong or pre-authored tools, raw metals, casing/circuit materials, explosives, magic/network starts, armor, Create/TCon equipment, and anything that skips the first logistics problem. Both the deployed Class Selector configs and its bundled fallback defaults now use the same six sanitized non-production kits; point-buy embark selection remains disabled.
-
-## Dimension Drink Graph Starts
-
-Dimension Drink/obelisk dimensions are origin proofs for outside reward systems. A valid edge needs native dimensional resources, hazards or structures, a first meaningful proof item, and a system whose entry feels earned there. The dimension is not a self-label and does not take ownership of the main tech or magic spine.
-
-Current graph-start recipe gates are in `kubejs/server_scripts/30_recipe_replace/155_dimension_proof_graph_starts.js`. Existing Nether proof lives in the TCon grout pass, Aether owns early air mobility, Undergarden owns food/forage/body-survival pressure, and Otherside is the origin for sculk, echo, soul, and resonance matter refined by Blood Magic.
-
-Dimension travel has two authored surfaces only: Dimension Drink from `dimension_drink-1.0.0.jar` plus `config/dimension_drink/`, and Creating Space rocket graph entries under `kubejs/data/*/creatingspace/rocket_accessible_dimension/`. Direct portal/key routes are removed or hidden by `170_space_dimension_access_gates.js`, `40_hide_quarantined_systems.js`, `config/twilightforest-common.toml`, and `config/structurify.json`. The authored early font set is Nether, Aether, Undergarden, and Otherside; End font access is removed while strongholds remain disabled. Font shrine structure-set spacing is now 30 with separation 9, making shrines roughly twice as common as the earlier 42/12 spread. Lost Cities, Twilight Forest, and Fallout Wastelands are space-routed adventure dimensions.
-
-Font runs no longer apply pack-authored monster spawn acceleration or forced aggro pulses. Configured ordinary spawning and the expedition/reward loop remain.
-
-Affixed Tinkers parts are no longer Font rewards. The standalone `tinkers_construct_affixes-1.0.0.jar` is a global loot-flavour system: hostile drops and chest-loot Affixed Part Caches yield rare rolled parts with compatible materials selected from configurable weighted tiers, including a 0.1% tier-4 jackpot by default. Its stat rolls survive Tinkers rebuilds, and native modifier grants are restricted to compatible tools without claiming player-applied modifier levels. Font completion remains its own expedition-reward surface.
-
-| Dimension | Graph Start Opened | Proof Route |
-| --- | --- | --- |
-| Nether | Early grout choice; later refractory and combustion authority | Netherrack can start seared metallurgy. Magma cream, soul sand, soul soil, Nether brick, and later heat materials then control scorched construction and sustained industry. |
-| Undergarden | Early grout choice plus food, forage, pantry, and body survival | Deepsoil can start seared metallurgy. Shiverstone, depthrock, cloggrum, regalium, blood globules, and Undergarden forage support the survival pantry and body-system loop without owning Blood Magic entry. |
-| Aether | Early grout choice plus air travel and expedition mobility | Holystone can start seared metallurgy. `aether:blue_aercloud`, `aether:skyroot_stick`, `aether:zanite_gemstone`, `aether:aerogel`, `aether:quicksoil_glass`, and `aether:ambrosium_shard` enter Hang Glider parts, Immersive Aircraft components, sealed Eureka balloons, and Clockwork aerodynamic/control machinery. Powered VS flight also requires Airtight casing manufacture. |
-| Otherside | Early grout choice plus magic material origin | Cobbled sculk stone can start seared metallurgy. Gloomslate, echo wood/shards, soul dust, sculk bone, soul crystal, resonarium, and reinforced echo shards become the common substrate for Blood-refined non-Hexerei magic materials. |
-
-The removed sky-dimension mod is no longer active pack content. End has no authored Dimensional Font access.
-
-Mod-specific natural ore and geode origins that are not part of the Realistic Ores deposit pass are dimension-drink content. Their Overworld and ordinary Nether biome modifiers are suppressed by `datapacks/dimension_drink_ore_relocation`, then reintroduced in Aether, Undergarden, Otherside, or Nether-obelisk target tags with Excavated Variants support for the local stone skins. Gravel is registered as a gravel Excavated Variants substrate, so gravel-specific dimension drink ores resolve to `excavated_variants:gravel_*` blocks and remain shovel-gated. This relocates raw worldgen origins only; workstation and recipe entry still follows the authored two-spine magic graph plus the independent Ars manuscript lane. JEI/EMI-facing ore origin tooltips live in `kubejs/client_scripts/15_ore_origin_tooltips.js` and should be updated with any future ore source move.
-
-## Machine Casing Ladder
-
-The active casing catalogue is `global.BC_MACHINE_CASING_TIERS` in `kubejs/startup_scripts/00_globals/20_progression_catalogues.js`:
-
-| Order | Casing | Authority |
-| --- | --- | --- |
-| 1 | `kubejs:seared_machine_casing` | TCon seared/scorched |
-| 2 | `kubejs:andesite_machine_casing` | Create andesite |
-| 3 | `kubejs:brass_machine_casing` | Create brass |
-| 4 | `kubejs:airtight_machine_casing` | PneumaticCraft pressure |
-| 5 | `kubejs:electrical_machine_casing` | Power Grid, PNCR assembly, and OC2R |
-| 6 | `kubejs:space_machine_casing` | Creating Space |
-| 7 | `kubejs:raw_impossible_casing` | unfinished AE2 body |
-| 8 | `kubejs:impossible_machine_casing` | AE2 and final Blood Magic |
-
-`kubejs/server_scripts/30_recipe_replace/99_machine_casing_progression.js`, `136_machine_casing_ecosystem_expansion.js`, and related replacement passes keep high-impact machines tied to this ladder. Seared and scorched are merged into one TCon casing tier; recipes that need scorched proof consume scorched bricks/glass directly. Electrical and circuited are merged into one post-airtight electrical/control casing built from Power Grid, PNCR, and OC2R parts. Each new tier should depend on earlier tier capabilities and add a real manufacturing dependency from its own tier.
-
-Machine casings are structural machine-frame gates, not generic era tokens. Direct casing inputs are reserved for production, logistics, storage, and control bodies. Non-producing support gear, passive components, decor/theme items, and convenience upgrades should consume era support intermediates instead; those intermediates must be manufactured on surfaces already unlocked by the relevant casing tier.
-
-The pack currently uses a narrow set of standalone KubeJS intermediates where the recipe graph still needs explicit manufactured subassemblies. Pressure seals, compressor cores, late control modules, impossible-circuit parts, and selected chemistry or magic components remain registered; reusable processing media such as grinding balls remain registered as well. New one-off intermediates should still be avoided unless the progression docs and validation contracts are updated with the reason they exist.
-
-## Early Chokepoints
-
-The player-facing early book ends at the manual workcell. Its six chapters are Spawn Selection, Basic Tools, the always-visible 16-marker Landmarks overview, Homesteading, Metal Tools, and Workshop. Landmarks links to source quests instead of duplicating their completion or rewards; only the assembled Eureka vessel and first Font expedition are owned by the overview. Homesteading is a concrete First Camp trunk feeding optional visual districts, not a wall of manual acknowledgements. Workshop closes with the rewardless Burn a Book instruction, while the owned-book fire ritual itself remains usable from world start and reveals only the whitelisted live chapters.
-
-- No Tree Punching is a narrow Forge-side `better_content_fixes` first-hour gate: `#minecraft:logs` requires an item in `#forge:tools/axes`. Normal terrain, stone, ores, plants, leaves, and decorative blocks are not part of the custom gate. The first authored tools remain TConstruct hand axes and butcher knives made from flint, PVJ bones, or PVJ rocks. Hand axes use two head materials plus Farmer's Delight straw and a stick; butcher knives use three head materials plus a stick. The retired exhaustive Realistic Hands tag matrix and knife-specific enforcement are quarantined outside runtime resources.
-- TConstruct tool variety comes from authored tool families rather than vanilla-tier disposable tools. Current add-ons include Additional Weaponry, Battle Spades, Tinkers' Things, Katanas, Rapier, and Weaponry; their Better Combat categories are explicit datapack attributes so halberds, katanas, rapiers, lances, pikes, greatswords, and related tools animate consistently.
-- Grout accepts one aggregate from any active early Font: netherrack, holystone, deepsoil, or cobbled sculk stone. Sand and gravel remain shared bulk inputs; ordinary Overworld clay is not a substitute.
-- `create:andesite_alloy` is a TCon molten-casting output, not easy nugget crafting or solid Create mixing.
-- The hand-cranked press/basin compacts the first `create:deployer` and Schematicannon; the early mixer prepares empty schematics and quills, while the table keeps its simple slab-and-stone assembly. This puts World Lifecycle Manager building plans in the working Create era without granting materials.
-- The Deployer gates `create:andesite_casing`. Sequenced andesite machine casing consumes scorched bricks, so Nether refractory work—not a synthetic Governor item—marks the transition to passive power and sustained industry.
-- More Red is the terrestrial primitive circuitry layer around early Create: red alloy forms from molten brass and a consumed redstone cast on a TCon basin, wire comes from Create pressing, and the soldering table consumes andesite-tier parts instead of Nether/blaze ingredients.
-- Vanilla-style automation such as pistons, hoppers, observers, rails, carts, and similar modded hand-stacked machinery is no longer rebuilt as pack-authored Create mechanical crafting. Ars namespaces are exempt from the late complex-grid rewrite: glyphs use the Scribe's Table, Source uses imbuement, advanced work uses the Enchanting Apparatus, and ordinary Ars assemblies retain native recipes. Other reviewed magic defaults may still use Blood Alchemy where Blood is their actual parent.
-- Finished circuit items belong to PNCR assembly laser/drill. Earlier surfaces prepare boards, traces, wafers, and printed processors; PNCR assembly completes the circuit.
-- The hand crank is the only manually crafted positive-SU source. Every survival-obtainable passive, combustion, pneumatic, diesel, or electric Create-network source is mechanically crafted from the appropriate real casing and mechanism; the maintained registry inventory fails closed when a new source family appears.
-- Clean water, serious extraction, and body-system recovery depend on sustainable tech rather than free early infrastructure.
-
-Deadlock checks:
-
-- Do not require Create andesite casing before the first TCon seared/scorched infrastructure.
-- Do not require an andesite casing to build the first Deployer; the compacting cycle break is the only pre-casing Deployer route.
-- Do not allow water, wind, steam, pneumatic, diesel, or electric SU before the Deployer and scorched-core machine-casing route is complete.
-- Do not require brass machinery before andesite casing is reachable.
-- Do not require Nether/blaze materials for the first primitive circuit table or More Red red-alloy wire.
-- Do not require AE2 storage or automation before the AE2 casing tier itself.
-- Keep all four active Font aggregates valid for basic grout; reserve Nether exclusivity for refractory grout, scorched construction, combustion, and later industrial mechanisms.
-- Starting options, quest rewards, village trades, Wares, and loot must not expose future milestone outputs before their casing, slate, dimension, or route proof exists.
-
-## Deposits And Y Bands
-
-Ore acquisition has four complementary sources. Halved Realistic Ores cave scatter keeps ordinary exploratory mining productive; common, much larger ADLODS fields supply settlement-scale bulk matter; strategic deposits control fissiles, oil, and lava-diving materials; and chemistry converts associated byproducts or substitutes between otherwise awkward material families. ADLODS fields use composite Realistic Ores blocks rather than generic single-metal ore, and their dedicated `surface_sample_*` blocks form conspicuous rubble circles above the field. Breaking or processing a sample yields the same host-independent chunk as ordinary mining, so survey rubble cannot skip the crusher. Oil seeps stay separate prospecting indicators. A sample identifies the deposit family but does not reveal its exact shape or depth; effective placement remains a worldgen-verification concern.
-
-The starter catalogue in `global.BC_STARTER_DEPOSITS` currently names coal measures, ironstone, copper sulfide, tin, zinc, lead-zinc vein, quartz vein, and bauxite laterite. Ore blocks have no direct processing recipes or processing-facing Forge item tags: exact block separation returns one chunk plus its substrate, and the same pair reconstructs the block. Per feed, the metal ladder is four nuggets from a chunk, one ingot from crushed material, two from separated concentrate, and three from washed concentrate. The Smeltery doubles those primary yields; the Foundry triples them and exposes small deposit-specific coproducts only while the feed is still mixed. Bulk minerals and gems use explicit equivalent-value counts. Gold is an enrichment of copper fields, silver is an enrichment of lead fields, cobalt and the platinum-group metals are enrichments of nickel sulfide fields, and gem varieties are enrichments of corundum fields. Their extremely rare standalone ADLODS entries remain only as a compatibility fallback; the intended search is for the parent geology, with chemistry and synthesis supplying interchangeability where recipes allow it. Excavated gravel variants are part of the deposit surface, not a separate ore family: Realistic Ores stone configured features include gravel replacement targets, `excavated_variants:gravel_*` blocks stay shovel-mineable, and gravel substrate support lives in `defaultresources/excavated_variants`.
-
-Uranium and thorium are geographically exclusive to scarce, signalled ADLODS fields across the full `-128..512` build range. They replace ordinary Overworld rock through the shared Hyle/Unearthed-compatible host tag, making nuclear fuel a surveyed strategic objective rather than a lava-diving material.
-
-The late lava-diving band is Overworld terrain below Y 0, enabled by Tectonic `min_y = -128` and lava tunnels. This lower band is an authored progression zone rather than ordinary branch mining: Born in Chaos monsters only spawn below Y 0, and osmiridium lava sulfide is recovered through prepared expeditions with real lava-survival gear. `datapacks/realistic_ores_lava_depths` places only the exposed osmiridium lava-sulfide scatter from Y -128 to 0; the custom `realistic_ores:lava_exposed_ore` feature places those blocks only where they touch lava. Magma cubes are the current lava-band hazard, and Protection Pixel Tosaki gear is the intended post-AE2 diving suit for this route.
-
-PneumaticCraft crude oil is finite strategic geology rather than a globally repeated lake or an emerald purchase. Four signalled ADLODS size classes range from small local wells to extremely rare regional fields; native oil-lake biome modifiers and the Amadron emerald-to-oil exchange are suppressed. Refining remains PneumaticCraft's role, while prospecting and physical transport determine supply.
-
-All non-grown renewable resource sources should be absent or quarantined. Geological, fluid, ore, and manufactured material growth comes from finite worldgen, authored dimension routes, lava-depth routes, loot, or processing of already-owned matter, not from passive ore rituals, bottomless pumps, conjured islands, fluid sigils/glyphs, or lava fermentation. Villager buy restocks now only skip knowledge and deep-progression outputs such as experience bottles, echo shards, and sculk catalysts.
-
-## Magic Gates
-
-Chunk loading is magical infrastructure but not the property of any one tradition. The seven `arcane_chunk_loaders` recipes all consume one interchangeable proof from `#arcane_chunk_loaders:magic_catalysts`; the tag accepts proof from Ars Nouveau, Blood Magic, Hexerei, Occultism, Malum, or Goety. After that shared gate, players choose the power economy they have actually built: FE/RF, Create SU, Ars Source, Blood Magic life essence, PneumaticCraft air, Goety soul energy, or Malum spirits. Each choice produces the same centered 3x3 full-ticking service and two-hour default reserve, so the variants express infrastructure preference rather than stronger loading tiers.
-
-Still-Beating Hearts bridge the death loop and body systems into Blood Magic. `rpg_stats:still_beating_heart` is a milestone item, not bulk fuel. Current KubeJS adds pack-owned heart keys and Blood Orb altar recipes in `40_blood_orbs_from_still_beating_hearts.js`; the weak orb also has a direct still-beating-heart altar fallback so the first Blood Magic loop is not bricked by its own catalyst chain. `82_blood_magic_lifeforce_rework.js` makes the first Blood Altar consume the heart plus common Otherside proof from `deeperdarker:cobbled_sculk_stone`, while later altar/rune escalation remains costly.
-
-Level-earned RPG Stats points now map directly to Attack Damage, Attack Speed, Mining Speed, Movement Speed, Temperature Resistance, Hunger Efficiency, and Thirst Efficiency. The roster deliberately has no maximum-health, regeneration, or healing-received scaling. Hunger and thirst use independent exhaustion efficiency instead of capacity scaling; each point adds 4% efficiency, so the 50-point cap divides matching exhaustion by three.
-
-Growables now feed chemistry through `57_grown_material_acid_ball_processing.js`. Plants, fungi, honeycomb, meat, fish, hide, bone, feather, and venomous tissue use the same solvent/grinding-ball language as Realistic Ores, so farm and animal loops produce differentiated chemical side streams rather than one generic biomass output.
-
-The downstream chemistry pass makes those side streams matter without turning them into free matter. `60_create_chemical_transformations.js` is the bulk carbonate-roasting, oxide-reduction, leaching, precipitation, salt-conversion, and gas-scrubbing authority. `61_chemical_existing_item_alternatives.js` spends chemicals on existing pack items such as grout, technical glass, explosives, Create mechanisms, PNCR pressure hardware, and shielding. `62_chemical_electronics_magic_growth_routes.js` spends chemicals on electronics precursors, magic salts, Blood Magic manual alternatives, fertilizer, feed, and biological material substitutes. `63_chemlib_full_integration_routes.js` supplies guarded ChemLib family sources and sinks without duplicating the curated reduction surface.
-
-The ore-processing proof is a curated-assay ladder rather than the full element catalogue. Chunk crushing returns one crushed feed plus three independent 30% bonus rolls. Four crushed feeds then mix with a valid grinding ball and either water or a deposit-approved solvent route, producing four primary concentrates, two tailings, and graded coproduct rolls. Ball survival is identity-specific rather than guaranteed. Washing improves each already-separated constituent; it does not split the whole assay a second time. Sugar fermentation, water electrolysis, sulfur contact processing, kelp salts, saltpeter, and phosphate rock keep ethanol, acetic, sulfuric, hydrochloric, nitric, and phosphoric routes reachable without source-less conversion loops.
-
-Pressure seals are only the bootstrap material for the Airtight tier; possessing one does not unlock gas logistics. Before Airtight (`kubejs:airtight_machine_casing`), incidental gas items vent immediately into uncollectable chemical clouds. Airtight casing unlocks PNCR deliberate gas processing plus `latent_chemlib:gas_capture`, gas tanks, and `latent_chemlib:sealed_chemical_cell`. Stored gas is represented as fluid only while enclosed by a compatible tank, pipe, cell, or machine buffer. It cannot be bucketed or placed in the world; leaving containment converts it back into a cloud. The gas reaction chamber stays on its later space/high-energy route and is separate from ordinary containment.
-
-The guarded full-integration pass now owns element-to-dust form conversion, two-to-one sealed compound reclamation, hydrochloric-acid synthesis, and explicit recovery/terminal decisions. `chemlib_form_policy.json` quarantines unused generated dust, plate, and compound registrations from recipes and JEI/EMI instead of inventing circular uses for them.
-
-Chemical alternatives can offer higher batch throughput, earlier access with more setup, or byproduct-consuming substitutions depending on the target, but reversible chemistry never increases its conserved element count. Finished circuits remain PNCR assembly authority; chemistry prepares wafers, boards, printed processors, etchants, capacitors, and transistors rather than bypassing that completion step. Create recipes represent open bulk processing, grinding media, acids, precipitation, and reduction; PNCR recipes represent sealed pressure, gas handling, thermal control, polymers, and etching; Blood Magic recipes are deliberately manual LP/slate routes whose count-scaled inputs preserve matter.
-
-Blood Magic slates are the Blood-spine depth proofs and may appear in reviewed hybrid or formal-magic crossings. They do not gate Hexerei entry, Hexerei's core preparations, Occultism otherstone, or Occultism chalk. Otherside matter remains the shared raw substrate for non-Hexerei magic infrastructure:
-
-- Blank Slate: first Blood work, Malum, common cobbled sculk stone, and an entry formal proof.
-- Reinforced Slate: Malum refinement, low-tier hybrid utility, and uncommon formal proof.
-- Infused Slate: Ars source handling, rare formal proof, and sculk sensor/catalyst/shrieker or echo-shard matter.
-- Demonic Slate: Goety operations, epic formal proof, heavier Ars apparatus, advanced Ars Elemental foci, and soul dust or sculk bone matter.
-- Ethereal Slate: final formal proof and endgame magic using soul crystal, resonarium, or reinforced echo shard matter where installed and confirmed.
-
-This keeps the agreed graph explicit:
-
-- Fonts spine: Dimension Drink -> Hexerei -> Occultism
-- Blood spine: Blood Magic -> Malum -> Goety
-- Ars formalism: early empty book and Scribe's Table, then 106 obtainable base and Ars Elemental glyphs plus two explicitly quarantined glyphs, all mapped to formal grammar or one-or-more source traditions; Ars Creo joins at the Create crossing, while Ars Energistique remains post-AE2
-- Otherside: common origin for Blood-refined magic matter, not a standalone magic workstation spine.
-
-Cross-mod material standardization stays moderate:
-
-- Exact duplicate physical materials collapse to one canonical family. The active example is mahogany, where Hexerei inputs are redirected into `natures_spirit` mahogany.
-- Shared feedstocks such as planks, logs, generic glass, silica-bearing inputs, and plate/sheet tags should standardize through tags and common substrates.
-- Mod-native proof reagents stay distinct. Do not flatten Blood Magic slates, Ars source items, Malum spirits, Occultism attunement matter, Goety cursed matter, AE2 certus/fluix/sky stone, PNCR PCB stages, or OC2R wafers into interchangeable "magic parts."
-
-Do not mistake infrastructure for power. Formal books and writing stations may be early because glyph tiers and per-glyph origin reagents carry the progression gates. Do not use hearts in side-magic recipe spam; use slates and native proof materials.
-
-`formal_magic_domains.json` is the exhaustive spell-access and provenance contract. Proof tags form one global depth ladder: any sufficiently developed magic route can satisfy complexity, while a per-glyph origin tag requires evidence from at least one discipline that actually demonstrates the phenomenon. Hexerei owns correspondence and practical transformation; Occultism owns identity, binding, and displacement; Blood Magic owns vitality and wards; Malum owns spirit force and destructive motion; Goety owns summoning and command. Ars owns only the neutral grammar of shapes, targets, propagation, timing, amplification, and classification. A multiply-originated glyph accepts any declared origin independently. Every glyph also consumes blank parchment and its native catalyst. Of 108 installed glyphs, 106 are authored. `Conjure Water` is quarantined under finite-fluid conservation and `Rewind` is quarantined for rollback duplication risk.
-
-Glyph formalization is optional mastery, not a hard route through the source traditions. The dormant Fonts and Blood chapters show the complete vocabulary each discipline can originate, and the dormant Ars chapter recombines those tributaries into Elemental, Creo, Énergistique, and interdisciplinary spell studies. The same contract generates inscription origin tags and player-facing provenance tooltips, preventing recipes, quests, and explanations from silently disagreeing.
-
-## Late And Post-AE2
-
-AE2 is late local intelligence, not early global logistics. `impossible_machine_casing` should mark the point where AE2-scale systems, high Sophisticated Storage control, and late utility can appear. Post-AE2 branches currently include Protection Pixel, Tome of Blood, hooks/drones/backpack utility gates, and Creating Space dimension access gates where the installed mods exist. Tome of Blood is the intended hybrid finisher here: the science side proves raw impossible matter through AE2 processors, sky steel, fluix, and sealed pressure assembly, while the magic side proves that the unstable body can be stabilized through Blood Magic, Ars source refinement, and late dark bindings.
-
-Lava-depth osmiridium is a post-AE2 material pressure point for Protection Pixel Tosaki recipes and selected late utility. The intended read is "gear up, dive, and come back with matter the surface cannot give," not "strip-mine deeper." JEI/EMI ore-origin tooltips should make clear when a material is a normal deposit, dimension-drink origin, or lava-diving origin.
-
-Theurgy, Psi, and Hex Casting are not active manifest entries in the current repo. Treat references to them in old reports or generator comments as candidate/future design, not current pack state.
+This pack uses six technology eras. Machine Blocks are one-time capability
+proofs: only the explicitly named root machines consume them. Downstream
+recipes return to each mod's native manufactured parts.
+
+Progression is communicated by executable recipes, apparatus, native guides,
+item-hover annotations, and event or world feedback. FTB Quests records a small
+set of completed milestones but does not prescribe routes, expose recipe chains,
+or gate discovery through quest dependencies.
+
+## Era 1 — Hand Workshop
+
+Build native Tinkers' Construct tools, reach any active Dimension Font (Nether,
+Aether, Undergarden, or Otherside), and combine that Font's binder with sand and
+gravel for grout. Seared metallurgy owns alloy composition. Molten stone plus
+molten iron or zinc becomes molten Andesite Alloy, which is cast to Create's
+native item. The Hand Crank is the only positive SU source before the Nether.
+
+Font obelisks are powered only by internal charge. An unmodified Font stores
+15,000 charge, costs 600 charge to start, regenerates 0.25 each inactive tick,
+and has no join fee. An active run drains 80 charge plus 40 per participant each
+second, giving a solo player 120 active seconds from a full unmodified Font.
+Generated capacity and efficiency modifiers may extend or shorten that baseline.
+Exhausting charge ends the run and returns its participants.
+
+## Era 2 — Powered Works
+
+Craft `kubejs:andesite_machine_block` from one Seared Brick block, four
+Andesite Alloy, and four iron plates. It directly unlocks only the Millstone and
+Mechanical Press. Press-made plates and a whisk unlock the Mixer without a
+second Machine Block.
+
+After reaching the Nether, compact the Andesite block, Copper Casing, four
+copper plates, one Nether brick, and two Andesite Alloy into
+`kubejs:copper_machine_block`. It directly roots water wheels, the Windmill
+Bearing, the Mechanical Pump, and the first optional primitive transport roots.
+
+## Era 3 — Precision Factory
+
+TCon alloying is the only brass composition route. Compact the Copper block,
+Brass Casing, four brass plates, two electron tubes, and polished rose quartz
+into `kubejs:brass_machine_block`. It directly unlocks the Deployer, Mechanical
+Crafter, and first precision transport controls. Precision Mechanisms and native
+components carry all later recipes.
+
+## Era 4 — Thermal & Pressure
+
+Create's heated Mixer makes Nether grout for Foundry access. Primitive
+compressed iron and pre-machinery rubber/iron seals keep the entry reachable.
+Mechanically craft `kubejs:airtight_machine_block` from the Brass block, four
+compressed iron ingots, two pressure tubes, and two seals. It directly roots the
+Rotational Compressor and the first Pressure Chamber interface.
+
+Contained PneumaticCraft processes establish sulfuric and hydrochloric acid.
+Heat Sync stores and moves process heat; its Boiler Heater consumes exactly
+1/2/3 heat for an active Create boiler's 1/2/3 heat level.
+
+## Era 5 — Electrical Control
+
+Mechanically apply insulation/red-alloy wiring to Copper Casing for the first
+PowerGrid conductive casing. Pressure-craft `kubejs:electrical_machine_block`
+from Airtight proof, that casing, four copper plates, two primitive MoreRed
+wires, and an electron tube. It directly roots the first Pneumatic Dynamo and
+circuit-design station. Nitric acid and gold/PGM-only mixed-acid recovery begin
+here. PowerGrid parts, sensors, motors, and circuits carry later recipes.
+
+## Era 6 — Aerospace
+
+Pressure-assemble `kubejs:space_machine_block` from Electrical proof, two
+rocket casings, two Inconel sheets, two Hastelloy ingots, and two titanium
+plates. It directly roots the Rocket Engineer Table, Mechanical Electrolyzer,
+and Air Liquefier. Native frames, tanks, engines, guidance, propellants, and
+life-support parts carry the rest of the rocket graph.
+
+## Optional transport
+
+Eureka/VS, Clockwork, Trackwork, and Create trains are engineering branches,
+not prerequisites for the ordinary factory spine. Primitive wooden ships begin
+in the Hand Workshop; rough mechanical experiments begin in Powered Works;
+precision trains and controls in Precision Factory; pressure-driven flight in
+Thermal & Pressure; sensors and gyros in Electrical Control. Aether materials
+gate stable high-performance flight, never primitive ships, basic Trackwork, or
+low-performance aircraft.
+
+## World compatibility
+
+This is a clean break for new worlds. Old Machine Casing IDs have no aliases or
+data migration. Back up an existing world before updating; remove old pack-owned
+casings and finish in-flight recipes before attempting a manual conversion.

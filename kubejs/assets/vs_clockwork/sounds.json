@@ -1,0 +1,5 @@
+{
+  "supersonic":{"replace":true,"sounds":["vs_clockwork:thwoom"]},
+  "doink":{"replace":true,"sounds":["vs_clockwork:doink"]},
+  "welder_whirr":{"replace":true,"sounds":["vs_clockwork:wand_weld"]}
+}

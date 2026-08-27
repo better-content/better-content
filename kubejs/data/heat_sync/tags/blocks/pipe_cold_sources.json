@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#kubejs:cold_sweat/mild_cold_sources",
+    "#kubejs:cold_sweat/strong_cold_sources"
+  ]
+}

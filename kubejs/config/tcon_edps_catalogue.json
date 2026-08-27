@@ -1,0 +1,72 @@
+{
+  "schema": "bc.tcon_edps_catalogue.v1",
+  "reference": {
+    "item": "tconstruct:sword",
+    "current_damage": 3.0,
+    "attack_speed": 1.6,
+    "global_scale": 0.9,
+    "tiers": {"90": 0.81, "95": 0.855, "100": 0.9, "105": 0.945, "110": 0.99}
+  },
+  "armor_canon": {
+    "source": "docs/tcon_combat_profile.json",
+    "weights": {"trash": 0.6, "elite": 0.3, "boss": 0.1},
+    "armor": {"trash": 0.0, "elite": 0.1, "boss": 3.0},
+    "toughness": 0.0,
+    "boss_health_exclusion_threshold": 100.0
+  },
+  "rules": {
+    "ordinary": "raw same-material DPS; multiplier = absolute tier * 1.6 / (head scale * speed)",
+    "generic_innates": ["armor piercing", "armor bypass", "offhand attacks", "generic burst"],
+    "excluded_from_edps": ["mob-type damage", "manufacturing difficulty", "utility", "ordinary AOE", "material traits", "upgrades"],
+    "alternate_modes": "validated separately from the primary melee baseline"
+  },
+  "tools": [
+    {"item":"tconstruct:hand_axe","preset":"axe","tier":110,"speed":0.9,"head_scale":1.0,"model":"ordinary","multiplier":1.76,"description":"Compact chopping tool with a deliberate, high-damage axe cadence."},
+    {"item":"additionalweaponry:sniffer_claws","preset":"claw","tier":110,"speed":1.5,"head_scale":0.65,"model":"ordinary","multiplier":1.624615,"description":"Very short-range paired claws; the high tier pays for having to stay on top of the target."},
+    {"item":"tconstruct:sledge_hammer","preset":"hammer","tier":110,"speed":0.75,"head_scale":1.0,"model":"ordinary","multiplier":2.112,"description":"The slowest blunt mining weapon, built around large committed hits."},
+    {"item":"tconstruct:vein_hammer","preset":"hammer","tier":110,"speed":0.85,"head_scale":1.0,"model":"pierce","pierce_armor":5.0,"innate_damage":1.0,"multiplier":1.518568,"description":"Heavy multi-block hammer whose Pierce II is credited against the canonical armor mix."},
+    {"item":"tconstruct:mattock","preset":"pickaxe","tier":110,"speed":0.9,"head_scale":1.0,"model":"ordinary","multiplier":1.76,"description":"Slow hybrid digging tool rewarded for its short, workmanlike pick swings."},
+    {"item":"tconstruct:broad_axe","preset":"heavy_axe","tier":105,"speed":0.6,"head_scale":1.0,"model":"ordinary","multiplier":2.52,"description":"Extremely slow two-handed forestry axe with very high damage per connection."},
+    {"item":"tconstruct:excavator","preset":"mace","tier":105,"speed":1.0,"head_scale":1.0,"model":"ordinary","multiplier":1.512,"description":"Broad digging tool using weighty mace swings."},
+    {"item":"tinkers_things:shovel","preset":"mace","tier":105,"speed":1.0,"head_scale":1.0,"model":"ordinary","multiplier":1.512,"description":"Conventional digging shovel with blunt, single-head mace attacks."},
+    {"item":"tconstruct:pickaxe","preset":"pickaxe","tier":105,"speed":1.2,"head_scale":1.0,"model":"pierce","pierce_armor":3.0,"innate_damage":0.5,"multiplier":1.085471,"description":"Fast mining pick whose Pierce I receives measured generic armor credit."},
+    {"item":"tconstruct:pickadze","preset":"pickaxe","tier":105,"speed":1.3,"head_scale":1.0,"model":"ordinary","multiplier":1.163077,"description":"Quick pick-adze hybrid with a compact overhead pattern."},
+    {"item":"tconstruct:war_pick","preset":"pickaxe","tier":105,"speed":1.2,"head_scale":1.0,"model":"ordinary","multiplier":1.26,"alternate":{"mode":"war_charge projectile","tier":100,"reference":"light crossbow"},"description":"Mining pick with a separately budgeted light-crossbow-style charge shot."},
+    {"item":"tconstruct:scythe","preset":"scythe","tier":105,"speed":0.7,"head_scale":1.0,"model":"ordinary","multiplier":2.16,"description":"Long, slow harvesting sweep; normal cleave is not treated as a DPS substitute."},
+    {"item":"tinkers_battle_spades:battle_spade","preset":"sword","tier":105,"speed":1.2,"head_scale":2.0,"model":"ordinary","multiplier":0.63,"description":"Two-head combat spade with sword combos, slower and more martial than a shovel."},
+    {"item":"tinkers_things:blockram","preset":"anchor","tier":100,"speed":1.7,"head_scale":1.0,"model":"ordinary","multiplier":0.847059,"alternate":{"mode":"returning throw","tier":100,"reference":"throwing axe"},"description":"Fast anchor-like utility ram; its returning throw is tracked separately."},
+    {"item":"additionalweaponry:wrench","preset":"mace","tier":100,"speed":1.5,"head_scale":1.0,"model":"ordinary","multiplier":0.96,"description":"Quick engineering wrench whose convenience does not replace damage."},
+    {"item":"tinkers_things:chisel","preset":"pickaxe","tier":100,"speed":1.75,"head_scale":0.0,"model":"fixed","multiplier":2.471201,"description":"Material-independent precision tool solved at the zero-head reference point."},
+    {"item":"tconstruct:kama","preset":"sickle","tier":100,"speed":1.6,"head_scale":1.0,"model":"ordinary","multiplier":0.9,"description":"Fast harvesting sickle with normalized single- and dual-wield combos."}
+  ],
+  "weapons": [
+    {"item":"additionalweaponry:cutlass","preset":"cutlass","tier":110,"speed":1.0,"head_scale":0.5,"model":"ordinary","multiplier":3.168,"description":"Short naval blade with close-range cuts and strong payoff per opening."},
+    {"item":"tconstruct:dagger","preset":"dagger","tier":110,"speed":2.0,"head_scale":1.0,"model":"ordinary","multiplier":0.792,"description":"Shortest conventional blade; fast normalized dual-wield strings offset its reach risk."},
+    {"item":"construct_arsenal:buckler","preset":"fist","tier":110,"speed":1.2,"head_scale":1.0,"model":"ordinary","multiplier":1.32,"alternate":{"mode":"returning throw","tier":100,"reference":"throwing axe"},"description":"Point-blank shield puncher with blocking and a separately tracked throw."},
+    {"item":"tinkers_things:blowpipe","preset":"crossbow_two_handed_light","tier":110,"model":"ranged","projectile_multiplier":0.99,"description":"Low-impact rapid ranged chassis; its projectile baseline gets the short-range/high-friction tier."},
+    {"item":"additionalweaponry:butcher_knife","preset":"axe","tier":105,"speed":1.15,"head_scale":1.0,"model":"ordinary","multiplier":1.314783,"description":"Heavy kitchen blade with axe timing and strong single-target cuts."},
+    {"item":"tconstruct:cleaver","preset":"claymore","tier":105,"speed":1.0,"head_scale":1.0,"model":"ordinary","multiplier":1.512,"description":"Classic two-handed cleaver with broad, committed claymore swings."},
+    {"item":"tinkersweaponry:greatsword","preset":"claymore","tier":105,"speed":1.1,"head_scale":1.0,"model":"ordinary","multiplier":1.374545,"description":"Slow great blade rewarded with high per-hit damage; ordinary AOE is not penalized."},
+    {"item":"construct_arsenal:helix_blade","preset":"claymore","tier":105,"speed":0.5,"head_scale":1.0,"model":"ordinary","multiplier":3.024,"description":"Extremely slow exotic blade with the catalogue's largest ordinary hit commitment."},
+    {"item":"tconstruct:minotaur_axe","preset":"double_axe","tier":105,"speed":0.9,"head_scale":2.0,"model":"ordinary","multiplier":0.84,"exception":"Native +7 sprint charge remains intentionally unnerfed as an epic signature.","description":"Two-headed double axe with a preserved sprint-charge burst."},
+    {"item":"additionalweaponry:pitchfork","preset":"glaive","tier":105,"speed":0.8,"head_scale":1.0,"model":"ordinary","multiplier":1.89,"description":"Slow polearm with glaive sweeps and useful reach."},
+    {"item":"tinkers_things:halberd","preset":"halberd","tier":105,"speed":0.8,"head_scale":1.0,"model":"ordinary","multiplier":1.89,"description":"Versatile poleaxe pattern balancing thrusts and chops."},
+    {"item":"tconstruct:battlesign","preset":"mace","tier":105,"speed":1.2,"head_scale":1.0,"model":"ordinary","multiplier":1.26,"alternate":{"mode":"charged Bonk","tier":100},"description":"Blocking sign used as a mace; charged Bonk has its own lower budget."},
+    {"item":"tinkers_things:amethyst_staff","preset":"staff","tier":105,"speed":1.0,"head_scale":1.0,"model":"ordinary","multiplier":1.512,"description":"Melee-capable crystal staff preserving its caster identity."},
+    {"item":"tconstruct:javelin","preset":"trident","tier":105,"speed":1.1,"head_scale":1.0,"model":"ordinary","multiplier":1.374545,"alternate":{"mode":"throw","tier":105,"basis":"per hit"},"description":"Thrusting spear with a throw that shares its per-hit damage budget."},
+    {"item":"tinkers_katanas:fuma_shuriken","preset":"twin_blade","tier":105,"speed":1.3,"head_scale":2.0,"model":"ordinary","multiplier":0.581538,"alternate":{"mode":"returning throw","tier":100,"reference":"throwing axe"},"description":"Twin-blade melee form with a separately tracked returning throw."},
+    {"item":"additionalweaponry:scepter","preset":"wand","tier":105,"speed":1.0,"head_scale":1.0,"model":"ordinary","multiplier":1.512,"description":"One-handed melee wand using the Epic Fight Sword form."},
+    {"item":"tinkers_things:shortbow","preset":"bow_two_handed_light","tier":105,"model":"ranged","projectile_multiplier":0.945,"description":"Quick light bow normalized below its old projectile baseline."},
+    {"item":"tconstruct:swasher","preset":"crossbow_two_handed_light","tier":105,"model":"ranged","projectile_multiplier":0.945,"description":"Fluid-powered light crossbow proxy; fluid effects remain outside baseline E-DPS."},
+    {"item":"tconstruct:sword","preset":"sword","tier":100,"speed":1.6,"head_scale":1.0,"model":"ordinary","multiplier":0.9,"description":"Central reference sword; 100 now means 90% of the former flat baseline."},
+    {"item":"tinkers_khopesh:khopesh","preset":"coral_blade","tier":100,"speed":1.8,"head_scale":1.25,"model":"pierce","pierce_armor":3.0,"innate_damage":0.5,"multiplier":0.502673,"description":"Curved fast blade whose Pierce I is credited without forcing it into the low tier."},
+    {"item":"tinker_rapier:estoc_tic","preset":"soul_knife","tier":100,"speed":1.8,"head_scale":1.0,"model":"legacy_piercing","multiplier":0.724979,"description":"Estoc with a generic armor-bypassing secondary hit, solved against canonical armor."},
+    {"item":"tconstruct:longbow","preset":"bow_two_handed_heavy","tier":100,"model":"ranged","projectile_multiplier":0.9,"description":"Heavy-bow ranged reference at the new central baseline."},
+    {"item":"tconstruct:crossbow","preset":"crossbow_two_handed_heavy","tier":100,"model":"ranged","projectile_multiplier":0.9,"description":"Heavy-crossbow ranged reference at the new central baseline."},
+    {"item":"construct_arsenal:quarterstaff","preset":"battlestaff","tier":95,"speed":2.0,"head_scale":1.0,"model":"ordinary","multiplier":0.684,"description":"Fast, long staff held to 95—not 90—because it has no armor-piercing innate."},
+    {"item":"tinkers_katanas:katana","preset":"katana","tier":95,"speed":1.8,"head_scale":2.0,"model":"ordinary","multiplier":0.38,"description":"Fast two-head sword with fluid reach and cadence."},
+    {"item":"tinker_rapier:rapier_tic","preset":"rapier","tier":95,"speed":2.75,"head_scale":2.0,"model":"ordinary","multiplier":0.248727,"description":"Very fast thrusting weapon; multi-head scaling is preserved without runaway DPS."},
+    {"item":"tinkersweaponry:pike","preset":"spear","tier":95,"speed":1.8,"head_scale":1.0,"model":"ordinary","multiplier":0.76,"description":"Fast long-reach spear, modestly below the centre because reach is consistently valuable."},
+    {"item":"tinkersweaponry:lance","preset":"lance","tier":90,"speed":1.8,"head_scale":1.0,"model":"pierce","pierce_armor":3.0,"innate_damage":0.5,"multiplier":0.548841,"description":"Fast one-handed 3.5-reach lance with Pierce I; the sole 90-tier chassis."}
+  ]
+}

@@ -1,9 +1,9 @@
 {
   "schema": "bc.cross_mod_boundaries.v1",
   "description": "Reviewed native-anchor and explicit fallback boundaries that connect mod capability families to the pack's tech, magic, and pressure spines.",
-  "recipe_source": "kubejs/server_scripts/30_recipe_replace/172_cross_mod_anchor_boundaries.js",
+  "recipe_source": "kubejs/server_scripts/90_policy/20_progression/172_cross_mod_anchor_boundaries.js",
   "boundaries": [
-    {"anchor":"compressedcreativity:engine_rotor","family":"compressedcreativity","stage":"airtight","surface":"create:mechanical_crafting","recipe_id":"kubejs:cross_mod_anchor/create_mechanical/compressedcreativity_engine_rotor","proofs":["pneumaticcraft:turbine_blade","pneumaticcraft:advanced_pressure_tube","kubejs:pressure_seal"],"top_n_rank":2,"dominated_outputs":2,"disposition":"native_anchor"},
+    {"anchor":"compressedcreativity:engine_rotor","family":"compressedcreativity","stage":"airtight","surface":"pneumaticcraft:pressure_chamber","recipe_id":"kubejs:cross_mod_anchor/pncr_pressure/compressedcreativity_engine_rotor","proofs":["pneumaticcraft:turbine_blade","pneumaticcraft:advanced_pressure_tube","kubejs:pressure_seal"],"top_n_rank":2,"dominated_outputs":2,"disposition":"native_anchor"},
     {"anchor":"littlelogistics:spring","family":"littlelogistics","stage":"create_andesite","surface":"create:mixing","recipe_id":"kubejs:cross_mod_anchor/create_mixing/littlelogistics_spring","proofs":["create:andesite_alloy","machine:create:mechanical_mixer"],"top_n_rank":1,"dominated_outputs":9,"disposition":"native_anchor"},
     {"anchor":"weather2:weather_item","family":"weather2","stage":"power_grid","surface":"pneumaticcraft:pressure_chamber","recipe_id":"kubejs:cross_mod_anchor/pncr_pressure/weather2_weather_item","proofs":["kubejs:electrical_instrumentation_module","powergrid:redstone_relay"],"top_n_rank":1,"dominated_outputs":8,"disposition":"native_anchor"},
     {"anchor":"thalassophobia:oxygen_tank","family":"thalassophobia","stage":"airtight","surface":"pneumaticcraft:pressure_chamber","recipe_id":"kubejs:cross_mod_anchor/pncr_pressure/thalassophobia_oxygen_tank","proofs":["pneumaticcraft:air_canister","kubejs:pressure_seal"],"top_n_rank":null,"dominated_outputs":1,"disposition":"reviewed_capability_fallback"},

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "malum:block/weeping_well_side_pillar"
+    },
+    "facing=north": {
+      "model": "malum:block/weeping_well_side_pillar"
+    },
+    "facing=south": {
+      "model": "malum:block/weeping_well_side_pillar"
+    },
+    "facing=west": {
+      "model": "malum:block/weeping_well_side_pillar"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "#heat_sync:pipe_radiators",
+    {
+      "id": "powergrid:heating_coil",
+      "required": false
+    },
+    {
+      "id": "powergrid:basin_heater",
+      "required": false
+    }
+  ]
+}

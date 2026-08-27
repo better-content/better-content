@@ -1,0 +1,232 @@
+
+[general]
+	#Set this to true to enable omnigenders, meaning the gender of the animal is irrelevant to who can fall pregnant, lay eggs, milk or sire young, False results in gendered animals, Visually nothing changes
+	"Allow Omnigenders:" = false
+	"Allow feeding to age/grow animals:" = false
+	#Allowed Values: RAVENOUS, MORE_HUNGRY, STANDARD, LESS_HUNGRY, NEVER_HUNGRY
+	"How fast the animals get hungry, Values: RAVENOUS, MORE_HUNGRY, STANDARD, LESS_HUNGRY, NEVER_HUNGRY" = "STANDARD"
+	#Range: 0 ~ 100
+	"How random the genes should be, 100 is all wildtype animals, 0 is completely random which often results in all white animals:" = 90
+	"Animal inventory tabs will be on the top if true and tabs will be on the side if false:" = true
+	#Allowed Values: GREY, SOFT_GREY, BRIGHT, COLOURFUL, SILHOUETTE, EMPTY
+	"What icon set is used when an icon is displaying full: " = "GREY"
+	#Allowed Values: GREY, SOFT_GREY, BRIGHT, COLOURFUL, SILHOUETTE, EMPTY
+	"What icon set is used when an icon is displaying empty: " = "SILHOUETTE"
+	"Animals will spawn with random biome type" = false
+	"Genetic animals are immune to all damage unless attacked with an axe by a player" = false
+	"Force Genetic Animals to use a 16x base texture" = false
+
+[Trading]
+	#If true leather workers will have extra trades for some Genetic Animal's items
+	"Extra leather worker trades" = true
+	#If true shepards will have extra trades for some Genetic Animal's items
+	"Extra shepard trades" = true
+	#If true farmers will have extra trades for some Genetic Animal's items
+	"Extra farmer trades" = true
+	#If true wandering traders will have extra trades for some Genetic Animal's items
+	"Extra wandering traders trades" = true
+	#If true wandering traders have a chance to bring chickens to trade
+	"Wandering traders sell chickens" = true
+	#If true wandering traders have a chance to bring pigs to trade
+	"Wandering traders sell pigs" = true
+	#If true wandering traders have a chance to bring cows to trade
+	"Wandering traders sell cows" = true
+	#If true wandering traders have a chance to bring sheep to trade
+	"Wandering traders sell sheep" = true
+	#If true wandering traders have a chance to bring rabbits to trade
+	"Wandering traders sell rabbits" = true
+	#If true wandering traders have a chance to bring llamas to trade
+	"Wandering traders sell llamas" = true
+	#If true wandering traders have a chance to bring mooshrooms to trade
+	"Wandering traders sell mooshrooms" = false
+	#If true wandering traders have a chance to bring mooblooms to trade
+	"Wandering traders sell mooblooms" = false
+	#If true wandering traders have a chance to bring turtles to trade
+	"Wandering traders sell turtles" = true
+	#If true wandering traders have a chance to bring axolotls to trade
+	"Wandering traders sell axolotls" = true
+
+[pig]
+	#Range: > 5
+	"How many ticks it takes for a Pig to give birth, 24000 = 1 Minecraft Day:" = 48000
+	#Range: > 1
+	"How many ticks it takes for a pig to become an adult, 24000 = 1 Minecraft Day:" = 60000
+	"Allow vanilla minecraft Pigs to spawn/exist:" = false
+	"Allow Genetic Pigs to continue to spawn/exist:" = true
+	#Range: 1 ~ 20
+	"How highly pig spawning is weighted, larger numbers spawn more, Default is 6" = 6
+	#Range: 1 ~ 60
+	"The minimum number of pigs you want to find in a group at spawn, Default is 2" = 2
+	#Range: 1 ~ 60
+	"The maximum number of pigs you want to find in a group at spawn, Default is 3" = 3
+
+[cow]
+	#Range: > 5
+	"How many ticks it takes for a Cow to give birth, 24000 = 1 Minecraft Day:" = 48000
+	#Range: > 1
+	"How many ticks it takes for a cow to become an adult, 24000 = 1 Minecraft Day:" = 84000
+	"Allow vanilla minecraft Cows to spawn/exist:" = false
+	"Allow Genetic Cows to continue to spawn/exist:" = true
+	#Range: 1 ~ 20
+	"How highly cow spawning is weighted, larger numbers spawn more, Default is 8" = 8
+	#Range: 1 ~ 60
+	"The minimum number of cows you want to find in a group at spawn, Default is 4" = 4
+	#Range: 1 ~ 60
+	"The maximum number of cows you want to find in a group at spawn, Default is 4" = 4
+	#Range: 1.0E-4 ~ 1000.0
+	"This number multiplies how fast a cow regains milk, Default is 1 for 1x speed" = 1.0
+
+[mooshroom]
+	#Range: > 5
+	"How many ticks it takes for a Mooshroom to give birth, 24000 = 1 Minecraft Day:" = 48000
+	#Range: > 1
+	"How many ticks it takes for a Mooshroom to become an adult, 24000 = 1 Minecraft Day:" = 84000
+	"Allow vanilla minecraft Mooshrooms to spawn/exist:" = false
+	"Allow Genetic Mooshrooms to continue to spawn/exist:" = true
+	#Range: 1 ~ 20
+	"How highly Mooshroom spawning is weighted, larger numbers spawn more, Default is 8" = 8
+	#Range: 1 ~ 60
+	"The minimum number of Mooshrooms you want to find in a group at spawn, Default is 4" = 4
+	#Range: 1 ~ 60
+	"The maximum number of Mooshrooms you want to find in a group at spawn, Default is 4" = 4
+	#Range: 1.0E-4 ~ 1000.0
+	"This number multiplies how fast a mooshroom regains mushroom stew, Default is 1 for 1x speed" = 1.0
+
+#Mooshrooms spawn only on Mycylium blocks by default, If you wish to change that you can do so by using a datapack to modify the mooshrooms_spawnable_on block tag
+[moobloom]
+	"Allow Genetic Mooblooms to replace Mooblooms added by other mods" = false
+	#Range: > 5
+	"How many ticks it takes for a Mooblooms to give birth, 24000 = 1 Minecraft Day:" = 48000
+	#Range: > 1
+	"How many ticks it takes for a Mooblooms to become an adult, 24000 = 1 Minecraft Day:" = 84000
+
+[llama]
+	"Allow vanilla minecraft Llamas to spawn/exist:" = false
+	"Allow Genetic Llamas to continue to spawn/exist:" = true
+	#Range: > 5
+	"How many ticks it takes for a Llama to give birth, 24000 = 1 Minecraft Day:" = 48000
+	#Range: > 1
+	"How many ticks it takes for a llama to become an adult, 24000 = 1 Minecraft Day:" = 120000
+	#Range: 1 ~ 20
+	"How highly llama spawning is weighted, larger numbers spawn more, Default is 4" = 4
+	#Range: 1 ~ 60
+	"The minimum number of llamas you want to find in a group at spawn, Default is 2" = 2
+	#Range: 1 ~ 60
+	"The maximum number of llamas you want to find in a group at spawn, Default is 3" = 3
+	#Range: 1.0E-4 ~ 1000.0
+	"This number multiplies how fast a llama regains its wool, Default is 1 for 1x speed" = 1.0
+
+[sheep]
+	#Range: > 5
+	"How many ticks it takes for a Sheep to give birth, 24000 = 1 Minecraft Day:" = 48000
+	#Range: > 1
+	"How many ticks it takes for a Sheep to become an adult, 24000 = 1 Minecraft Day:" = 72000
+	"Allow vanilla minecraft Sheep to spawn/exist:" = false
+	"Allow Genetic Sheep to continue to spawn/exist:" = true
+	#Range: 1 ~ 20
+	"How highly Sheep spawning is weighted, larger numbers spawn more, Default is 12" = 12
+	#Range: 1 ~ 60
+	"The minimum number of Sheep you want to find in a group at spawn, Default is 4" = 4
+	#Range: 1 ~ 60
+	"The maximum number of Sheep you want to find in a group at spawn, Default is 4" = 4
+	#Range: 1.0E-4 ~ 1000.0
+	"This number multiplies how fast a llama regains it's wool, Default is 1 for 1x speed" = 1.0
+
+[chicken]
+	"Allow vanilla minecraft Chickens to spawn/exist:" = false
+	"Allow Genetic Chickens to continue to spawn/exist:" = true
+	#Range: > 1
+	"How many ticks it takes for a Chicken egg to hatch, 24000 = 1 Minecraft Day:" = 24000
+	#Range: > 1
+	"How many ticks a chicken remains fertile for after being bred, 24000 = 1 Minecraft Day:" = 96000
+	"If enabled hens never leave their nests even if they are hungry" = false
+	#Range: > 1
+	"How many ticks it takes before a nest could start to decay, this resets every time an eggs is laid or incubated" = 24000
+	#Range: 0.5 ~ 10.0
+	"How far away a chicken must be from the centre of the next to start teleporting to guarantee it is aligned, Default is 1 block" = 1.0
+	#Range: > 1
+	"How many ticks it takes for a Chicken to become an adult, 24000 = 1 Minecraft Day:" = 60000
+	#Range: 1 ~ 20
+	"How highly Chicken spawning is weighted, larger numbers spawn more, Default is 10" = 10
+	#Range: 1 ~ 60
+	"The minimum number of Chicken you want to find in a group at spawn, Default is 4" = 4
+	#Range: 1 ~ 60
+	"The maximum number of Chicken you want to find in a group at spawn, Default is 4" = 4
+	"Allow roosters to crow:" = true
+	#Range: 1 ~ 24000
+	"The minimum number of ticks till a rooster might crow, Default is 100ticks" = 100
+	#Range: 2 ~ 24000
+	"The maximum number of ticks till a rooster might crow, Default is 6000ticks" = 6000
+	#Range: 1.0E-4 ~ 1000.0
+	"This number multiplies how fast a chicken prepares to lay an egg, Default is 1 for 1x speed" = 1.0
+	#Range: 0 ~ 100
+	"This number is a percentage chance for thrown eggs to hatch into chicks, Default is 15%" = 15
+
+[rabbit]
+	#Range: > 5
+	"How many ticks it takes for a Rabbit to give birth, 24000 = 1 Minecraft Day:" = 24000
+	#Range: > 1
+	"How many ticks it takes for a Rabbit to become an adult, 24000 = 1 Minecraft Day:" = 48000
+	"Allow vanilla minecraft Rabbits to spawn/exist:" = false
+	"Allow Genetic Rabbits to continue to spawn/exist:" = true
+	#Range: 1 ~ 20
+	"How highly Rabbit spawning is weighted, larger numbers spawn more, Default is 4" = 4
+	#Range: 1 ~ 60
+	"The minimum number of Rabbit you want to find in a group at spawn, Default is 2" = 2
+	#Range: 1 ~ 60
+	"The maximum number of Rabbit you want to find in a group at spawn, Default is 3" = 3
+	#Range: 1.0E-4 ~ 1000.0
+	"This number multiplies how fast a rabbit with wool regains it's wool, Default is 1 for 1x speed" = 1.0
+
+[turtle]
+	"Allow vanilla minecraft Turtles to spawn/exist:" = false
+	"Allow Genetic Turtles to continue to spawn/exist:" = true
+	#Range: > 1
+	"How many ticks it takes for a Turtle to become an adult, 24000 = 1 Minecraft Day:" = 120000
+	#Range: > 1
+	"How many ticks it takes for a Turtle to drop its scute, 24000 = 1 Minecraft Day:" = 24000
+	#Range: 1 ~ 20
+	"How highly Turtle spawning is weighted, larger numbers spawn more, Default is 6" = 6
+	#Range: 1 ~ 60
+	"The minimum number of Turtle you want to find in a group at spawn, Default is 1" = 1
+	#Range: 1 ~ 60
+	"The maximum number of Turtle you want to find in a group at spawn, Default is 5" = 5
+	#Range: 0 ~ 24000
+	"If the eggs are randomly ticked and the time is after this but before hatchingWindowEnd their hatch level will increase" = 21600
+	#Range: 0 ~ 24000
+	"If the eggs are randomly ticked and the time is after hatchingWindowStart but before this their hatch level will increase" = 22550
+	#Range: > 0
+	"The chance that eggs won't hatch if their block is ticked, default is 500, use 1 to guarantee they increment hatching" = 500
+
+#Turtles only hatch on blocks in the sand tag by default, If you wish to change that you can do so by using a datapack to modify the sand block tag
+[horse]
+	#Range: > 5
+	"How many ticks it takes for a Horse to give birth, 24000 = 1 Minecraft Day:" = 24000
+	#Range: > 1000
+	"How many ticks it takes for a Horse to become an adult, 24000 = 1 Minecraft Day:" = 24000
+	"Allow vanilla minecraft Horses to spawn/exist:" = false
+	"Allow Genetic Horse to continue to spawn/exist:" = true
+
+[axolotl]
+	"Allow vanilla minecraft Axolotls to spawn/exist:" = false
+	"Allow Genetic Axolotls to continue to spawn/exist:" = true
+	#Range: > 1
+	"How many ticks it takes for an Axolotl to become an adult, 24000 = 1 Minecraft Day:" = 60000
+	#Range: > 1
+	"How long int ticks it takes an axolotl egg to hatch in temperate biomes, Default is 24000" = 24000
+	#Range: 0.0 ~ 100.0
+	"How important temperature is to the hatching of axolotl eggs, a value of 0 means they will never hatch unless they are in a temperate or warmer environment, Currently not used" = 1.0
+	#Range: 1 ~ 20
+	"How highly Axolotl spawning is weighted, larger numbers spawn more, Default is 10" = 10
+	#Range: 1 ~ 60
+	"The minimum number of Axolotls you want to find in a group at spawn, Default is 4" = 4
+	#Range: 1 ~ 60
+	"The maximum number of Axolotls you want to find in a group at spawn, Default is 6" = 6
+
+[passageOfTime]
+	"Allow 'Passage of Time' feature, which allows animal pregnancy and similar features to progress after player time away from chunk" = false
+	"Allow 'Passage of Time' feature for chickens" = false
+	#Range: 1 ~ 3
+	"How many 'stages' can pass for a chicken when it is loaded in, each of these is one stage: Make a nest, lay in the nest, hatch the nest, Default is 2 stages" = 2
+	"Disable hatching from passage of time regards of stages setting and time passed" = false
+

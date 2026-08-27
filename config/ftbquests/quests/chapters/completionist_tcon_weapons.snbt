@@ -20,7 +20,7 @@
 			id: "0D1BCD5229937D35"
 			rewards: [{
 				count: 8
-				id: "8DA937BC5F10BBD3"
+				id: "-7256C843A0EF442D"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -39,8 +39,8 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Butcher Knife"
-			x: 1.5d
-			y: 0.0d
+			x: 0d
+			y: 0d
 		}
 		{
 			icon: {
@@ -54,7 +54,7 @@
 			id: "051C7A8E609C8869"
 			rewards: [{
 				count: 8
-				id: "8BD7D430CDD5BBF7"
+				id: "-74282BCF322A4409"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -73,8 +73,8 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Cutlass"
-			x: 2.75d
-			y: 0.0d
+			x: 2d
+			y: 0d
 		}
 		{
 			icon: {
@@ -88,7 +88,7 @@
 			id: "7D52F602EEBD1BEF"
 			rewards: [{
 				count: 8
-				id: "837356B435C0E517"
+				id: "-7C8CA94BCA3F1AE9"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -107,8 +107,8 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Pitchfork"
-			x: 4.0d
-			y: 0.0d
+			x: 4d
+			y: 0d
 		}
 		{
 			icon: {
@@ -122,7 +122,7 @@
 			id: "3EB29801D614E517"
 			rewards: [{
 				count: 8
-				id: "ABDFF65B96A195F9"
+				id: "-542009A4695E6A07"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -141,8 +141,8 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Scepter"
-			x: 5.25d
-			y: 0.0d
+			x: 6d
+			y: 0d
 		}
 		{
 			icon: {
@@ -156,7 +156,7 @@
 			id: "054F1E45DF0BA910"
 			rewards: [{
 				count: 8
-				id: "B864F4DC4F49CAD2"
+				id: "-479B0B23B0B6352E"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -175,8 +175,8 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Wrench"
-			x: 6.5d
-			y: 0.0d
+			x: 8d
+			y: 0d
 		}
 		{
 			icon: {
@@ -209,8 +209,8 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Dagger"
-			x: 1.5d
-			y: 3.25d
+			x: 10d
+			y: 0d
 		}
 		{
 			icon: {
@@ -291,8 +291,8 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Earth Staff"
-			x: 2.75d
-			y: 3.25d
+			x: 12d
+			y: 0d
 		}
 		{
 			icon: {
@@ -371,8 +371,8 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Ender Staff"
-			x: 4.0d
-			y: 3.25d
+			x: 14d
+			y: 0d
 		}
 		{
 			icon: {
@@ -449,8 +449,8 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Ichor Staff"
-			x: 5.25d
-			y: 3.25d
+			x: 16d
+			y: 0d
 		}
 		{
 			icon: {
@@ -483,15 +483,15 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Plate Shield"
-			x: 6.5d
-			y: 3.25d
+			x: 18d
+			y: 0d
 		}
 		{
 			icon: "tconstruct:shuriken"
 			id: "538DB80E80E25718"
 			rewards: [{
 				count: 8
-				id: "D0CD0D77F7DC2015"
+				id: "-2F32F2880823DFEB"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -503,8 +503,8 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Shuriken"
-			x: 7.75d
-			y: 3.25d
+			x: 20d
+			y: 0d
 		}
 		{
 			icon: {
@@ -540,7 +540,7 @@
 			id: "1498FE2FBEB8EDB2"
 			rewards: [{
 				count: 8
-				id: "A579CAB38E8E0FC6"
+				id: "-5A86354C7171F03A"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -581,8 +581,8 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Sky Staff"
-			x: 9.0d
-			y: 3.25d
+			x: 22d
+			y: 0d
 		}
 		{
 			icon: "tconstruct:throwing_axe"
@@ -601,8 +601,8 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Throwing Axe"
-			x: 10.25d
-			y: 3.25d
+			x: 0d
+			y: 2d
 		}
 		{
 			icon: {
@@ -616,7 +616,7 @@
 			id: "061EA614141541E6"
 			rewards: [{
 				count: 8
-				id: "B6DA847B81B9FECC"
+				id: "-49257B847E460134"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -635,8 +635,8 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Travelers Shield"
-			x: 11.5d
-			y: 3.25d
+			x: 2d
+			y: 2d
 		}
 		{
 			icon: {
@@ -650,7 +650,7 @@
 			id: "6B6328E11F3D2427"
 			rewards: [{
 				count: 8
-				id: "965EAAEF912808D8"
+				id: "-69A155106ED7F728"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -669,8 +669,8 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Battle Spade"
-			x: 1.5d
-			y: 6.5d
+			x: 4d
+			y: 2d
 		}
 		{
 			icon: {
@@ -703,8 +703,8 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Greatsword"
-			x: 1.5d
-			y: 9.75d
+			x: 6d
+			y: 2d
 		}
 		{
 			icon: {
@@ -737,8 +737,8 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Lance"
-			x: 2.75d
-			y: 9.75d
+			x: 8d
+			y: 2d
 		}
 		{
 			icon: {
@@ -752,7 +752,7 @@
 			id: "70E2BA035367D6D9"
 			rewards: [{
 				count: 8
-				id: "9DA999DD41A38EEE"
+				id: "-62566622BE5C7112"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -771,8 +771,79 @@
 				type: "item"
 			}]
 			title: "All TCon Weapons: Pike"
-			x: 4.0d
-			y: 9.75d
+			x: 10d
+			y: 2d
+		}
+		{
+			icon: {
+				Count: 1
+				id: "construct_arsenal:quarterstaff"
+				tag: {tic_broken: 0b, tic_materials: ["tconstruct:wood", "tconstruct:wood", "tconstruct:copper", "tconstruct:wood"]}
+			}
+			id: "608E5B2CDD907FCC"
+			rewards: [{count: 8, id: "27A069B36FF9F0F6", item: "createdeco:copper_coin", type: "item"}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{id: "3A40D2DA2BC01784", item: "construct_arsenal:quarterstaff", type: "item"}]
+			title: "All TCon Weapons: Quarterstaff"
+			x: 12d
+			y: 2d
+		}
+		{
+			icon: {
+				Count: 1
+				id: "construct_arsenal:helix_blade"
+				tag: {tic_broken: 0b, tic_materials: ["tconstruct:copper", "tconstruct:copper", "tconstruct:copper", "tconstruct:copper", "tconstruct:wood"]}
+			}
+			id: "0C124E38647DCA99"
+			rewards: [{count: 8, id: "0D4BA329CA201FC3", item: "createdeco:copper_coin", type: "item"}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{id: "28309D86EA878C85", item: "construct_arsenal:helix_blade", type: "item"}]
+			title: "All TCon Weapons: Helix Blade"
+			x: 14d
+			y: 2d
+		}
+		{
+			icon: {
+				Count: 1
+				id: "construct_arsenal:buckler"
+				tag: {tic_broken: 0b, tic_materials: ["tconstruct:wood", "tconstruct:wood", "tconstruct:copper"]}
+			}
+			id: "17A514FB83941795"
+			rewards: [{count: 8, id: "5EB4DD3193064949", item: "createdeco:copper_coin", type: "item"}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{id: "152356584B24B5C3", item: "construct_arsenal:buckler", type: "item"}]
+			title: "All TCon Weapons: Buckler"
+			x: 16d
+			y: 2d
+		}
+		{
+			icon: "construct_arsenal:throwing_card"
+			id: "4C8959E231CD837B"
+			rewards: [{count: 8, id: "622E110519FBE28D", item: "createdeco:copper_coin", type: "item"}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{id: "27EA588543035BA0", item: "construct_arsenal:throwing_card", type: "item"}]
+			title: "All TCon Weapons: Throwing Card"
+			x: 18d
+			y: 2d
+		}
+		{
+			icon: {
+				Count: 1
+				id: "tinkers_khopesh:khopesh"
+				tag: {tic_broken: 0b, tic_materials: ["tconstruct:copper", "tconstruct:wood", "tconstruct:copper", "tconstruct:wood"]}
+			}
+			id: "73047B09E41D5364"
+			rewards: [{count: 8, id: "082DEEDFED8C2658", item: "createdeco:copper_coin", type: "item"}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{id: "24BF6831A6D96F7E", item: "tinkers_khopesh:khopesh", type: "item"}]
+			title: "All TCon Weapons: Khopesh"
+			x: 20d
+			y: 2d
 		}
 	]
 }

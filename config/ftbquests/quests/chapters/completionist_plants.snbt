@@ -25,8 +25,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Cabbage Seeds"
-			x: 1.5d
-			y: 0.0d
+			x: 0d
+			y: 0d
 		}
 		{
 			icon: "farmersdelight:tomato_seeds"
@@ -45,15 +45,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Tomato Seeds"
-			x: 2.75d
-			y: 0.0d
+			x: 2d
+			y: 0d
 		}
 		{
 			icon: "minecraft:beetroot_seeds"
 			id: "171A703393802B20"
 			rewards: [{
 				count: 8
-				id: "D90F25C939AD8F2C"
+				id: "-26F0DA36C65270D4"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -65,15 +65,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Beetroot Seeds"
-			x: 4.0d
-			y: 0.0d
+			x: 4d
+			y: 0d
 		}
 		{
 			icon: "minecraft:melon_seeds"
 			id: "6B120BB6E8FA4B0F"
 			rewards: [{
 				count: 8
-				id: "DE80B5F12A3B5A42"
+				id: "-217F4A0ED5C4A5BE"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -85,8 +85,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Melon Seeds"
-			x: 5.25d
-			y: 0.0d
+			x: 6d
+			y: 0d
 		}
 		{
 			icon: "minecraft:pumpkin_seeds"
@@ -105,8 +105,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Pumpkin Seeds"
-			x: 6.5d
-			y: 0.0d
+			x: 8d
+			y: 0d
 		}
 		{
 			icon: "minecraft:wheat_seeds"
@@ -125,15 +125,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Wheat Seeds"
-			x: 7.75d
-			y: 0.0d
+			x: 10d
+			y: 0d
 		}
 		{
 			icon: "undergarden:gloomgourd_seeds"
 			id: "175D344C5B3A210D"
 			rewards: [{
 				count: 8
-				id: "B1C1A736AA243226"
+				id: "-4E3E58C955DBCDDA"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -145,8 +145,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Gloomgourd Seeds"
-			x: 9.0d
-			y: 0.0d
+			x: 12d
+			y: 0d
 		}
 		{
 			icon: "ars_nouveau:magebloom_crop"
@@ -165,15 +165,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Magebloom Crop"
-			x: 1.5d
-			y: 3.25d
+			x: 14d
+			y: 0d
 		}
 		{
 			icon: "ars_nouveau:magebloom_fiber"
 			id: "64A9949267A722A5"
 			rewards: [{
 				count: 8
-				id: "B12E178ED847AFB1"
+				id: "-4ED1E87127B8504F"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -185,8 +185,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Magebloom Fiber"
-			x: 2.75d
-			y: 3.25d
+			x: 16d
+			y: 0d
 		}
 		{
 			icon: "ars_nouveau:ritual_flowering"
@@ -205,8 +205,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Ritual Flowering"
-			x: 4.0d
-			y: 3.25d
+			x: 18d
+			y: 0d
 		}
 		{
 			icon: "framedblocks:framed_flower_pot"
@@ -225,8 +225,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Framed Flower Pot"
-			x: 5.25d
-			y: 3.25d
+			x: 20d
+			y: 0d
 		}
 		{
 			icon: {
@@ -239,7 +239,7 @@
 			id: "00E269C530E0F490"
 			rewards: [{
 				count: 8
-				id: "D39502CF8656899F"
+				id: "-2C6AFD3079A97661"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -257,8 +257,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Flower Crown"
-			x: 6.5d
-			y: 3.25d
+			x: 22d
+			y: 0d
 		}
 		{
 			icon: "immersive_weathering:quark/blue_blossom_leaf_pile"
@@ -277,15 +277,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Quark/blue Blossom Leaf Pile"
-			x: 7.75d
-			y: 3.25d
+			x: 24d
+			y: 0d
 		}
 		{
 			icon: "immersive_weathering:quark/lavender_blossom_leaf_pile"
 			id: "7FABCABE33F8FC5C"
 			rewards: [{
 				count: 8
-				id: "DFD1C5E907AD2ECB"
+				id: "-202E3A16F852D135"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -297,8 +297,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Quark/lavender Blossom Leaf Pile"
-			x: 9.0d
-			y: 3.25d
+			x: 26d
+			y: 0d
 		}
 		{
 			icon: "immersive_weathering:quark/orange_blossom_leaf_pile"
@@ -317,8 +317,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Quark/orange Blossom Leaf Pile"
-			x: 10.25d
-			y: 3.25d
+			x: 28d
+			y: 0d
 		}
 		{
 			icon: "immersive_weathering:quark/red_blossom_leaf_pile"
@@ -337,8 +337,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Quark/red Blossom Leaf Pile"
-			x: 11.5d
-			y: 3.25d
+			x: 0d
+			y: 2d
 		}
 		{
 			icon: "immersive_weathering:quark/yellow_blossom_leaf_pile"
@@ -357,8 +357,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Quark/yellow Blossom Leaf Pile"
-			x: 12.75d
-			y: 3.25d
+			x: 2d
+			y: 2d
 		}
 		{
 			icon: "minecraft:flower_pot"
@@ -377,8 +377,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Flower Pot"
-			x: 14.0d
-			y: 3.25d
+			x: 4d
+			y: 2d
 		}
 		{
 			icon: "minecraft:lily_pad"
@@ -397,8 +397,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Lily Pad"
-			x: 15.25d
-			y: 3.25d
+			x: 6d
+			y: 2d
 		}
 		{
 			icon: "procedural_bouquets:potted_bouquet"
@@ -417,8 +417,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Potted Bouquet"
-			x: 1.5d
-			y: 4.5d
+			x: 8d
+			y: 2d
 		}
 		{
 			icon: "quark:blue_blossom_hedge"
@@ -437,15 +437,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Blue Blossom Hedge"
-			x: 2.75d
-			y: 4.5d
+			x: 10d
+			y: 2d
 		}
 		{
 			icon: "quark:lavender_blossom_hedge"
 			id: "34A7403630554942"
 			rewards: [{
 				count: 8
-				id: "8970F694677BEBA6"
+				id: "-768F096B9884145A"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -457,8 +457,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Lavender Blossom Hedge"
-			x: 4.0d
-			y: 4.5d
+			x: 12d
+			y: 2d
 		}
 		{
 			icon: "quark:orange_blossom_hedge"
@@ -477,15 +477,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Orange Blossom Hedge"
-			x: 5.25d
-			y: 4.5d
+			x: 14d
+			y: 2d
 		}
 		{
 			icon: "quark:red_blossom_hedge"
 			id: "0D911E7714721572"
 			rewards: [{
 				count: 8
-				id: "B51C926A24A78B33"
+				id: "-4AE36D95DB5874CD"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -497,15 +497,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Red Blossom Hedge"
-			x: 6.5d
-			y: 4.5d
+			x: 16d
+			y: 2d
 		}
 		{
 			icon: "quark:yellow_blossom_hedge"
 			id: "15B4028E7EE51569"
 			rewards: [{
 				count: 8
-				id: "A22F11738113F344"
+				id: "-5DD0EE8C7EEC0CBC"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -517,8 +517,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Yellow Blossom Hedge"
-			x: 7.75d
-			y: 4.5d
+			x: 18d
+			y: 2d
 		}
 		{
 			icon: "twilightforest:huge_lily_pad"
@@ -537,15 +537,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Huge Lily Pad"
-			x: 9.0d
-			y: 4.5d
+			x: 20d
+			y: 2d
 		}
 		{
 			icon: { Count: 1, id: "farmersdelight:mushroom_rice", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "54AF5301433489E7"
 			rewards: [{
 				count: 8
-				id: "E6A27198FDE9E4E1"
+				id: "-195D8E6702161B1F"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -557,8 +557,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Mushroom Rice"
-			x: 10.25d
-			y: 4.5d
+			x: 22d
+			y: 2d
 		}
 		{
 			icon: "minecraft:brown_mushroom"
@@ -577,15 +577,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Brown Mushroom"
-			x: 11.5d
-			y: 4.5d
+			x: 24d
+			y: 2d
 		}
 		{
 			icon: "minecraft:crimson_fungus"
 			id: "717117985B1DEC49"
 			rewards: [{
 				count: 8
-				id: "FFF72B6A8964C5F3"
+				id: "-8D495769B3A0D"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -597,15 +597,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Crimson Fungus"
-			x: 12.75d
-			y: 4.5d
+			x: 26d
+			y: 2d
 		}
 		{
 			icon: "minecraft:red_mushroom"
 			id: "0784CA43F81269FC"
 			rewards: [{
 				count: 8
-				id: "82E794C7DA0A1BAC"
+				id: "-7D186B3825F5E454"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -617,15 +617,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Red Mushroom"
-			x: 14.0d
-			y: 4.5d
+			x: 28d
+			y: 2d
 		}
 		{
 			icon: "minecraft:warped_fungus"
 			id: "23636D3B45DA0923"
 			rewards: [{
 				count: 8
-				id: "911A18080DA9EE59"
+				id: "-6EE5E7F7F25611A7"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -637,8 +637,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Warped Fungus"
-			x: 15.25d
-			y: 4.5d
+			x: 0d
+			y: 4d
 		}
 		{
 			icon: {
@@ -651,7 +651,7 @@
 			id: "19D1AE4E1D8A582B"
 			rewards: [{
 				count: 8
-				id: "F08C1397E211211D"
+				id: "-F73EC681DEEDEE3"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -669,8 +669,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Warped Fungus On A Stick"
-			x: 1.5d
-			y: 5.75d
+			x: 2d
+			y: 4d
 		}
 		{
 			icon: "aether:skyroot_stick"
@@ -689,8 +689,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Skyroot Stick"
-			x: 1.5d
-			y: 9.0d
+			x: 4d
+			y: 4d
 		}
 		{
 			icon: { Count: 1, id: "ars_nouveau:sourceberry_bush", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
@@ -709,15 +709,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Sourceberry Bush"
-			x: 2.75d
-			y: 9.0d
+			x: 6d
+			y: 4d
 		}
 		{
 			icon: "bloodmagic:ritualdiviner"
 			id: "5C38FBF1740204E0"
 			rewards: [{
 				count: 8
-				id: "A3B1FD01719EF879"
+				id: "-5C4E02FE8E610787"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -729,15 +729,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Ritualdiviner"
-			x: 4.0d
-			y: 9.0d
+			x: 8d
+			y: 4d
 		}
 		{
 			icon: { Count: 1, id: "bloodmagic:ritualdivinerdusk", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "6A2EFE00BB96A233"
 			rewards: [{
 				count: 8
-				id: "EF485B002853C135"
+				id: "-10B7A4FFD7AC3ECB"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -749,8 +749,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Ritualdivinerdusk"
-			x: 5.25d
-			y: 9.0d
+			x: 10d
+			y: 4d
 		}
 		{
 			icon: "create:bamboo_window"
@@ -769,15 +769,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Bamboo Window"
-			x: 6.5d
-			y: 9.0d
+			x: 12d
+			y: 4d
 		}
 		{
 			icon: { Count: 1, id: "farmersdelight:cabbage_leaf", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0B131CF0827D5DBD"
 			rewards: [{
 				count: 8
-				id: "CC3F147D9D12D6AD"
+				id: "-33C0EB8262ED2953"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -789,8 +789,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Cabbage Leaf"
-			x: 7.75d
-			y: 9.0d
+			x: 14d
+			y: 4d
 		}
 		{
 			icon: "immersive_weathering:aether/crystal_fruit_leaf_pile"
@@ -809,8 +809,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Aether/crystal Fruit Leaf Pile"
-			x: 9.0d
-			y: 9.0d
+			x: 16d
+			y: 4d
 		}
 		{
 			icon: "immersive_weathering:aether/skyroot_leaf_pile"
@@ -829,8 +829,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Aether/skyroot Leaf Pile"
-			x: 10.25d
-			y: 9.0d
+			x: 18d
+			y: 4d
 		}
 		{
 			icon: { Count: 1, id: "immersive_weathering:golden_moss_clump", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
@@ -849,8 +849,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Golden Moss Clump"
-			x: 11.5d
-			y: 9.0d
+			x: 20d
+			y: 4d
 		}
 		{
 			icon: { Count: 1, id: "immersive_weathering:moss_clump", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
@@ -869,15 +869,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Moss Clump"
-			x: 12.75d
-			y: 9.0d
+			x: 22d
+			y: 4d
 		}
 		{
 			icon: "immersive_weathering:twilightforest/beanstalk_leaf_pile"
 			id: "01670E29C546203B"
 			rewards: [{
 				count: 8
-				id: "D834FB2151B78B5D"
+				id: "-27CB04DEAE4874A3"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -889,8 +889,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Twilightforest/beanstalk Leaf Pile"
-			x: 14.0d
-			y: 9.0d
+			x: 24d
+			y: 4d
 		}
 		{
 			icon: "minecraft:bamboo"
@@ -909,15 +909,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Bamboo"
-			x: 15.25d
-			y: 9.0d
+			x: 26d
+			y: 4d
 		}
 		{
 			icon: { Count: 1, id: "minecraft:beetroot", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "2864106B1085FA79"
 			rewards: [{
 				count: 8
-				id: "C925C887F88A9F2B"
+				id: "-36DA3778077560D5"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -929,15 +929,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Beetroot"
-			x: 1.5d
-			y: 10.25d
+			x: 28d
+			y: 4d
 		}
 		{
 			icon: "minecraft:cactus"
 			id: "5A230C685DB9B213"
 			rewards: [{
 				count: 8
-				id: "E7AA1AD03A57A6A1"
+				id: "-1855E52FC5A8595F"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -949,15 +949,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Cactus"
-			x: 2.75d
-			y: 10.25d
+			x: 0d
+			y: 6d
 		}
 		{
 			icon: "minecraft:dead_bush"
 			id: "39AE8097D198B50A"
 			rewards: [{
 				count: 8
-				id: "DCCB9A456CE75EB5"
+				id: "-233465BA9318A14B"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -969,15 +969,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Dead Bush"
-			x: 4.0d
-			y: 10.25d
+			x: 2d
+			y: 6d
 		}
 		{
 			icon: "minecraft:grass"
 			id: "025C212842A03FF5"
 			rewards: [{
 				count: 8
-				id: "C365781D95E02D35"
+				id: "-3C9A87E26A1FD2CB"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -989,8 +989,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Grass"
-			x: 5.25d
-			y: 10.25d
+			x: 4d
+			y: 6d
 		}
 		{
 			icon: "minecraft:moss_carpet"
@@ -1009,15 +1009,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Moss Carpet"
-			x: 6.5d
-			y: 10.25d
+			x: 6d
+			y: 6d
 		}
 		{
 			icon: "minecraft:muddy_mangrove_roots"
 			id: "14CEBD311EB877B0"
 			rewards: [{
 				count: 8
-				id: "9C40F99311FE36AE"
+				id: "-63BF066CEE01C952"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1029,8 +1029,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Muddy Mangrove Roots"
-			x: 7.75d
-			y: 10.25d
+			x: 8d
+			y: 6d
 		}
 		{
 			icon: "quark:bamboo_mat"
@@ -1049,8 +1049,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Bamboo Mat"
-			x: 9.0d
-			y: 10.25d
+			x: 10d
+			y: 6d
 		}
 		{
 			icon: "tconstruct:earth_enderbark_roots"
@@ -1069,15 +1069,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Earth Enderbark Roots"
-			x: 10.25d
-			y: 10.25d
+			x: 12d
+			y: 6d
 		}
 		{
 			icon: "tconstruct:ender_enderbark_roots"
 			id: "40DBF4D1C8071614"
 			rewards: [{
 				count: 8
-				id: "DF8D46A46E184BC2"
+				id: "-2072B95B91E7B43E"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1089,15 +1089,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Ender Enderbark Roots"
-			x: 11.5d
-			y: 10.25d
+			x: 14d
+			y: 6d
 		}
 		{
 			icon: "tconstruct:ichor_enderbark_roots"
 			id: "2DD7749CE10F8FBF"
 			rewards: [{
 				count: 8
-				id: "B6DAACEC96A9F592"
+				id: "-4925531369560A6E"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1109,8 +1109,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Ichor Enderbark Roots"
-			x: 12.75d
-			y: 10.25d
+			x: 16d
+			y: 6d
 		}
 		{
 			icon: "tconstruct:sky_enderbark_roots"
@@ -1129,15 +1129,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Sky Enderbark Roots"
-			x: 14.0d
-			y: 10.25d
+			x: 18d
+			y: 6d
 		}
 		{
 			icon: "twilightforest:moss_patch"
 			id: "1CA8B47585BF4AE4"
 			rewards: [{
 				count: 8
-				id: "8D4BE9DED3B08ADD"
+				id: "-72B416212C4F7523"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1149,15 +1149,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Moss Patch"
-			x: 15.25d
-			y: 10.25d
+			x: 20d
+			y: 6d
 		}
 		{
 			icon: { Count: 1, id: "ubesdelight:lemongrass", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "7850D5E4EE8195BA"
 			rewards: [{
 				count: 8
-				id: "C815C30B242E22C0"
+				id: "-37EA3CF4DBD1DD40"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1169,15 +1169,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Lemongrass"
-			x: 1.5d
-			y: 11.5d
+			x: 22d
+			y: 6d
 		}
 		{
 			icon: "undergarden:blue_mogmoss_rug"
 			id: "229A8604D554859B"
 			rewards: [{
 				count: 8
-				id: "917C3A465A033F37"
+				id: "-6E83C5B9A5FCC0C9"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1189,15 +1189,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Blue Mogmoss Rug"
-			x: 2.75d
-			y: 11.5d
+			x: 24d
+			y: 6d
 		}
 		{
 			icon: { Count: 1, id: "undergarden:droopvine_item", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "3D90A9E960DB468C"
 			rewards: [{
 				count: 8
-				id: "DD569C725C408D45"
+				id: "-22A9638DA3BF72BB"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1209,15 +1209,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Droopvine Item"
-			x: 4.0d
-			y: 11.5d
+			x: 26d
+			y: 6d
 		}
 		{
 			icon: "undergarden:mogmoss_rug"
 			id: "5384EA4B37E17F01"
 			rewards: [{
 				count: 8
-				id: "AA437CC3B3AEE097"
+				id: "-55BC833C4C511F69"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1229,8 +1229,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Mogmoss Rug"
-			x: 5.25d
-			y: 11.5d
+			x: 28d
+			y: 6d
 		}
 		{
 			icon: { Count: 1, id: "aether:blue_berry", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
@@ -1249,15 +1249,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Blue Berry"
-			x: 1.5d
-			y: 14.75d
+			x: 0d
+			y: 8d
 		}
 		{
 			icon: { Count: 1, id: "aether:enchanted_berry", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "5345A5BD618138BF"
 			rewards: [{
 				count: 8
-				id: "8646AF64D51BF088"
+				id: "-79B9509B2AE40F78"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1269,15 +1269,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Enchanted Berry"
-			x: 2.75d
-			y: 14.75d
+			x: 2d
+			y: 8d
 		}
 		{
 			icon: { Count: 1, id: "ars_nouveau:source_berry_roll", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "7A3442B1FC5FA847"
 			rewards: [{
 				count: 8
-				id: "C3AEA483253D1816"
+				id: "-3C515B7CDAC2E7EA"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1289,15 +1289,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Source Berry Roll"
-			x: 4.0d
-			y: 14.75d
+			x: 4d
+			y: 8d
 		}
 		{
 			icon: "ars_nouveau:sourceberry_sack"
 			id: "26446C3F17B3C25A"
 			rewards: [{
 				count: 8
-				id: "E6D611DCF417B1FB"
+				id: "-1929EE230BE84E05"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1309,15 +1309,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Sourceberry Sack"
-			x: 5.25d
-			y: 14.75d
+			x: 6d
+			y: 8d
 		}
 		{
 			icon: { Count: 1, id: "brewinandchewin:glow_berry_marmalade", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0B4B84AC9310BBEB"
 			rewards: [{
 				count: 8
-				id: "CFF8198BBF09147D"
+				id: "-3007E67440F6EB83"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1329,8 +1329,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Glow Berry Marmalade"
-			x: 6.5d
-			y: 14.75d
+			x: 8d
+			y: 8d
 		}
 		{
 			icon: { Count: 1, id: "create:honeyed_apple", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
@@ -1349,15 +1349,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Honeyed Apple"
-			x: 7.75d
-			y: 14.75d
+			x: 10d
+			y: 8d
 		}
 		{
 			icon: { Count: 1, id: "farmersdelight:cabbage", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "2E387AB07E15ABEA"
 			rewards: [{
 				count: 8
-				id: "C94A48E744769BA2"
+				id: "-36B5B718BB89645E"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1369,15 +1369,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Cabbage"
-			x: 9.0d
-			y: 14.75d
+			x: 12d
+			y: 8d
 		}
 		{
 			icon: { Count: 1, id: "farmersdelight:cabbage_rolls", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "3BC7BE9622A388EC"
 			rewards: [{
 				count: 8
-				id: "E63038BD3AC4CD64"
+				id: "-19CFC742C53B329C"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1389,8 +1389,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Cabbage Rolls"
-			x: 10.25d
-			y: 14.75d
+			x: 14d
+			y: 8d
 		}
 		{
 			icon: { Count: 1, id: "farmersdelight:glow_berry_custard", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
@@ -1409,15 +1409,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Glow Berry Custard"
-			x: 11.5d
-			y: 14.75d
+			x: 16d
+			y: 8d
 		}
 		{
 			icon: { Count: 1, id: "farmersdelight:melon_popsicle", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "209AD0A2F2630829"
 			rewards: [{
 				count: 8
-				id: "81A073BF69D2BE75"
+				id: "-7E5F8C40962D418B"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1429,8 +1429,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Melon Popsicle"
-			x: 12.75d
-			y: 14.75d
+			x: 18d
+			y: 8d
 		}
 		{
 			icon: { Count: 1, id: "farmersdelight:onion", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
@@ -1449,8 +1449,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Onion"
-			x: 14.0d
-			y: 14.75d
+			x: 20d
+			y: 8d
 		}
 		{
 			icon: { Count: 1, id: "farmersdelight:pumpkin_slice", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
@@ -1469,8 +1469,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Pumpkin Slice"
-			x: 15.25d
-			y: 14.75d
+			x: 22d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:rotten_tomato"
@@ -1489,15 +1489,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Rotten Tomato"
-			x: 1.5d
-			y: 16.0d
+			x: 24d
+			y: 8d
 		}
 		{
 			icon: { Count: 1, id: "farmersdelight:stuffed_potato", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "4160DCDE6149C484"
 			rewards: [{
 				count: 8
-				id: "E24AF48F76B5577F"
+				id: "-1DB50B70894AA881"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1509,8 +1509,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Stuffed Potato"
-			x: 2.75d
-			y: 16.0d
+			x: 26d
+			y: 8d
 		}
 		{
 			icon: { Count: 1, id: "farmersdelight:tomato", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
@@ -1529,15 +1529,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Tomato"
-			x: 4.0d
-			y: 16.0d
+			x: 28d
+			y: 8d
 		}
 		{
 			icon: { Count: 1, id: "minecraft:apple", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "54B0558FBFC9C792"
 			rewards: [{
 				count: 8
-				id: "F4A575D34269CDA2"
+				id: "-B5A8A2CBD96325E"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1549,8 +1549,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Apple"
-			x: 5.25d
-			y: 16.0d
+			x: 0d
+			y: 10d
 		}
 		{
 			icon: { Count: 1, id: "minecraft:baked_potato", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
@@ -1569,15 +1569,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Baked Potato"
-			x: 6.5d
-			y: 16.0d
+			x: 2d
+			y: 10d
 		}
 		{
 			icon: { Count: 1, id: "minecraft:carrot", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "30317EA3EF8C85E5"
 			rewards: [{
 				count: 8
-				id: "E90C7AD28943D7F0"
+				id: "-16F3852D76BC2810"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1589,8 +1589,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Carrot"
-			x: 7.75d
-			y: 16.0d
+			x: 4d
+			y: 10d
 		}
 		{
 			icon: {
@@ -1603,7 +1603,7 @@
 			id: "77E4D643543774B1"
 			rewards: [{
 				count: 8
-				id: "CEEFE535A376A8A1"
+				id: "-31101ACA5C89575F"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1621,15 +1621,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Carrot On A Stick"
-			x: 9.0d
-			y: 16.0d
+			x: 6d
+			y: 10d
 		}
 		{
 			icon: "minecraft:carved_pumpkin"
 			id: "1E5DDC2F722A8ED6"
 			rewards: [{
 				count: 8
-				id: "EA761CD441161008"
+				id: "-1589E32BBEE9EFF8"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1641,15 +1641,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Carved Pumpkin"
-			x: 10.25d
-			y: 16.0d
+			x: 8d
+			y: 10d
 		}
 		{
 			icon: { Count: 1, id: "minecraft:chorus_fruit", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "04FC20DC8129BFE4"
 			rewards: [{
 				count: 8
-				id: "B2CC1E9B70AB3F82"
+				id: "-4D33E1648F54C07E"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1661,8 +1661,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Chorus Fruit"
-			x: 11.5d
-			y: 16.0d
+			x: 10d
+			y: 10d
 		}
 		{
 			icon: "minecraft:cocoa_beans"
@@ -1681,15 +1681,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Cocoa Beans"
-			x: 12.75d
-			y: 16.0d
+			x: 12d
+			y: 10d
 		}
 		{
 			icon: { Count: 1, id: "minecraft:enchanted_golden_apple", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0165A44C030322E9"
 			rewards: [{
 				count: 8
-				id: "AA9C18E331750348"
+				id: "-5563E71CCE8AFCB8"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1701,15 +1701,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Enchanted Golden Apple"
-			x: 14.0d
-			y: 16.0d
+			x: 14d
+			y: 10d
 		}
 		{
 			icon: "minecraft:glistering_melon_slice"
 			id: "4A442D7D46D4097D"
 			rewards: [{
 				count: 8
-				id: "CE18733EBDBE667C"
+				id: "-31E78CC142419984"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1721,15 +1721,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Glistering Melon Slice"
-			x: 15.25d
-			y: 16.0d
+			x: 16d
+			y: 10d
 		}
 		{
 			icon: { Count: 1, id: "minecraft:glow_berries", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "684A6D776647792C"
 			rewards: [{
 				count: 8
-				id: "F5AC1A1CE9819D95"
+				id: "-A53E5E3167E626B"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1741,15 +1741,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Glow Berries"
-			x: 1.5d
-			y: 17.25d
+			x: 18d
+			y: 10d
 		}
 		{
 			icon: { Count: 1, id: "minecraft:golden_apple", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0079BA57BB2331CB"
 			rewards: [{
 				count: 8
-				id: "F1399CBC075C5F19"
+				id: "-EC66343F8A3A0E7"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1761,15 +1761,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Golden Apple"
-			x: 2.75d
-			y: 17.25d
+			x: 20d
+			y: 10d
 		}
 		{
 			icon: { Count: 1, id: "minecraft:golden_carrot", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "0514BC0DBD3FED0E"
 			rewards: [{
 				count: 8
-				id: "82C4448CD862025A"
+				id: "-7D3BBB73279DFDA6"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1781,8 +1781,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Golden Carrot"
-			x: 4.0d
-			y: 17.25d
+			x: 22d
+			y: 10d
 		}
 		{
 			icon: "minecraft:melon"
@@ -1801,8 +1801,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Melon"
-			x: 5.25d
-			y: 17.25d
+			x: 24d
+			y: 10d
 		}
 		{
 			icon: { Count: 1, id: "minecraft:melon_slice", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
@@ -1821,15 +1821,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Melon Slice"
-			x: 6.5d
-			y: 17.25d
+			x: 26d
+			y: 10d
 		}
 		{
 			icon: "minecraft:nether_wart"
 			id: "1553A6F31836B0B4"
 			rewards: [{
 				count: 8
-				id: "AE0549831E6A79F6"
+				id: "-51FAB67CE195860A"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1841,8 +1841,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Nether Wart"
-			x: 7.75d
-			y: 17.25d
+			x: 28d
+			y: 10d
 		}
 		{
 			icon: { Count: 1, id: "minecraft:poisonous_potato", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
@@ -1861,15 +1861,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Poisonous Potato"
-			x: 9.0d
-			y: 17.25d
+			x: 0d
+			y: 12d
 		}
 		{
 			icon: "minecraft:popped_chorus_fruit"
 			id: "3BA0C9055F98E95D"
 			rewards: [{
 				count: 8
-				id: "C07BC9BD950FAF56"
+				id: "-3F8436426AF050AA"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1881,15 +1881,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Popped Chorus Fruit"
-			x: 10.25d
-			y: 17.25d
+			x: 2d
+			y: 12d
 		}
 		{
 			icon: { Count: 1, id: "minecraft:potato", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "6908D087FFECBC6A"
 			rewards: [{
 				count: 8
-				id: "F32943A7D20CB055"
+				id: "-CD6BC582DF34FAB"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1901,15 +1901,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Potato"
-			x: 11.5d
-			y: 17.25d
+			x: 4d
+			y: 12d
 		}
 		{
 			icon: "minecraft:pumpkin"
 			id: "755F83EBDEDCA68D"
 			rewards: [{
 				count: 8
-				id: "E5CA3E10992657A3"
+				id: "-1A35C1EF66D9A85D"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1921,8 +1921,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Pumpkin"
-			x: 12.75d
-			y: 17.25d
+			x: 6d
+			y: 12d
 		}
 		{
 			icon: { Count: 1, id: "minecraft:sweet_berries", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
@@ -1941,15 +1941,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Sweet Berries"
-			x: 14.0d
-			y: 17.25d
+			x: 8d
+			y: 12d
 		}
 		{
 			icon: { Count: 1, id: "natures_spirit:desert_turnip", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "13E24A3F2AD0D67E"
 			rewards: [{
 				count: 8
-				id: "C295FFAB75C61B1F"
+				id: "-3D6A00548A39E4E1"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1961,15 +1961,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Desert Turnip"
-			x: 15.25d
-			y: 17.25d
+			x: 10d
+			y: 12d
 		}
 		{
 			icon: "quark:berry_sack"
 			id: "4582B95DA1242DA2"
 			rewards: [{
 				count: 8
-				id: "BBB5424D708EF19E"
+				id: "-444ABDB28F710E62"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1981,8 +1981,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Berry Sack"
-			x: 1.5d
-			y: 18.5d
+			x: 12d
+			y: 12d
 		}
 		{
 			icon: "quark:cocoa_beans_sack"
@@ -2001,15 +2001,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Cocoa Beans Sack"
-			x: 2.75d
-			y: 18.5d
+			x: 14d
+			y: 12d
 		}
 		{
 			icon: "quark:glowberry_sack"
 			id: "242C147FC10C59B6"
 			rewards: [{
 				count: 8
-				id: "C189CC44BB9EB44A"
+				id: "-3E7633BB44614BB6"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2021,8 +2021,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Glowberry Sack"
-			x: 4.0d
-			y: 18.5d
+			x: 16d
+			y: 12d
 		}
 		{
 			icon: "quark:nether_wart_sack"
@@ -2041,15 +2041,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Nether Wart Sack"
-			x: 5.25d
-			y: 18.5d
+			x: 18d
+			y: 12d
 		}
 		{
 			icon: { Count: 1, id: "tconstruct:jeweled_apple", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "1EA8933D1D28F998"
 			rewards: [{
 				count: 8
-				id: "E8E9B8AAFB645887"
+				id: "-17164755049BA779"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2061,8 +2061,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Jeweled Apple"
-			x: 6.5d
-			y: 18.5d
+			x: 20d
+			y: 12d
 		}
 		{
 			icon: { Count: 1, id: "twilightforest:torchberries", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
@@ -2081,8 +2081,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Torchberries"
-			x: 7.75d
-			y: 18.5d
+			x: 22d
+			y: 12d
 		}
 		{
 			icon: { Count: 1, id: "undergarden:blisterberry", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
@@ -2101,8 +2101,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Blisterberry"
-			x: 9.0d
-			y: 18.5d
+			x: 24d
+			y: 12d
 		}
 		{
 			icon: { Count: 1, id: "undergarden:rotten_blisterberry", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
@@ -2121,8 +2121,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Rotten Blisterberry"
-			x: 10.25d
-			y: 18.5d
+			x: 26d
+			y: 12d
 		}
 		{
 			icon: {
@@ -2153,15 +2153,15 @@
 				type: "item"
 			}]
 			title: "All Plants: Underbean On A Stick"
-			x: 11.5d
-			y: 18.5d
+			x: 28d
+			y: 12d
 		}
 		{
 			icon: { Count: 1, id: "undergarden:underbeans", tag: { Enchantments: [{ id: "minecraft:unbreaking", lvl: 1s }], HideFlags: 1 } }
 			id: "47DC5696088E6E0B"
 			rewards: [{
 				count: 8
-				id: "DD3F5E9B06A24195"
+				id: "-22C0A164F95DBE6B"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2173,8 +2173,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Underbeans"
-			x: 12.75d
-			y: 18.5d
+			x: 0d
+			y: 14d
 		}
 		{
 			icon: "quark:seed_pouch"
@@ -2193,8 +2193,8 @@
 				type: "item"
 			}]
 			title: "All Plants: Seed Pouch"
-			x: 1.5d
-			y: 21.75d
+			x: 2d
+			y: 14d
 		}
 	]
 }

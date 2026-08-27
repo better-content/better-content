@@ -1,0 +1,15 @@
+{
+  "type": "epicfighttinkercompat:swasher",
+  "attributes": {
+    "one_hand": {
+      "armor_negation": 10.0,
+      "max_strikes": 0,
+      "impact": 0.85
+    },
+    "two_hand": {
+      "armor_negation": 10.0,
+      "max_strikes": 1,
+      "impact": 0.85
+    }
+  }
+}

@@ -201,9 +201,6 @@ Blocks = [
 	"natures_spirit:polished_travertine_wall",
 	"natures_spirit:travertine_brick_wall",
 	"natures_spirit:travertine_tile_wall",
-	"notreepunching:andesite_cobblestone_wall",
-	"notreepunching:diorite_cobblestone_wall",
-	"notreepunching:granite_cobblestone_wall",
 	"pneumaticcraft:compressed_brick_wall",
 	"pneumaticcraft:pressure_chamber_wall",
 	"pneumaticcraft:reinforced_brick_wall",
@@ -296,8 +293,7 @@ Blocks = [
 	"unearthed:slate_brick_wall",
 	"unearthed:slate_wall",
 	"unearthed:weathered_rhyolite_wall",
-	"unearthed:white_granite_wall",
-]
+	"unearthed:white_granite_wall"]
 
 [Physics]
 	#The maximum weight the block(s) can support both horizontally and vertically.

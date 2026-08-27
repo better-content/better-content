@@ -1,0 +1,11 @@
+{
+  "type": "epicfight:sword",
+  "attributes": {
+    "common": {
+      "impact": 2,
+      "max_strikes": 2
+    }
+  },
+  "speed_bonus": 2.0,
+  "damage_bonus": 1.0
+}

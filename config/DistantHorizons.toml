@@ -679,7 +679,7 @@ _version = 3
 				# COMPLETE: LODs will render transparent. 
 				# FAKE: LODs will be opaque, but shaded to match the blocks underneath. 
 				# DISABLED: LODs will be opaque.
-				transparency = "COMPLETE"
+				transparency = "DISABLED"
 				#
 				# This is the same as vanilla Biome Blending settings for Lod area. 
 				#     Note that anything other than '0' will greatly effect Lod building time. 
@@ -821,4 +821,3 @@ _version = 3
 			# NAME_IP: Example: "Minecraft Server IP 192.168.1.40" 
 			# NAME_IP_PORT: Example: "Minecraft Server IP 192.168.1.40:25565"NAME_IP_PORT_MC_VERSION: Example: "Minecraft Server IP 192.168.1.40:25565 GameVersion 1.16.5"
 			serverFolderNameMode = "NAME_ONLY"
-

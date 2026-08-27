@@ -1,0 +1,15 @@
+{
+  "category": "ars_nouveau:rituals",
+  "icon": "ars_nouveau:ritual_flight",
+  "name": "item.ars_nouveau.ritual_flight",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "ars_nouveau.ritual_desc.ritual_flight"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "This legacy recipe is intentionally unavailable in Better Content progression."
+    }
+  ]
+}

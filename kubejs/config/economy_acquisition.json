@@ -9,7 +9,7 @@
       "policy": "currency_only",
       "era_reference": null,
       "evidence": [
-        "../dimension-drink/src/main/resources/defaults/rewards/default.json"
+        "../mod_source/dimension-drink/src/main/resources/defaults/rewards/default.json"
       ]
     },
     {
@@ -19,7 +19,7 @@
       "policy": "currency_only",
       "era_reference": null,
       "evidence": [
-        "../dimension-drink/src/main/resources/defaults/rewards/overworld.json"
+        "../mod_source/dimension-drink/src/main/resources/defaults/rewards/overworld.json"
       ]
     },
     {
@@ -29,7 +29,7 @@
       "policy": "currency_only",
       "era_reference": null,
       "evidence": [
-        "../dimension-drink/src/main/resources/defaults/rewards/end.json"
+        "../mod_source/dimension-drink/src/main/resources/defaults/rewards/end.json"
       ]
     },
     {
@@ -39,84 +39,7 @@
       "policy": "currency_only",
       "era_reference": null,
       "evidence": [
-        "../dimension-drink/src/main/resources/defaults/rewards/nether.json"
-      ]
-    },
-    {
-      "id": "pillager_campaigns:combat_payout:createdeco:copper_coin",
-      "source": "pillager_campaigns",
-      "output": "createdeco:copper_coin",
-      "policy": "currency_only",
-      "era_reference": null,
-      "evidence": [
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
-      ]
-    },
-    {
-      "id": "pillager_campaigns:combat_payout:createdeco:zinc_coin",
-      "source": "pillager_campaigns",
-      "output": "createdeco:zinc_coin",
-      "policy": "currency_only",
-      "era_reference": null,
-      "evidence": [
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
-      ]
-    },
-    {
-      "id": "pillager_campaigns:combat_payout:createdeco:iron_coin",
-      "source": "pillager_campaigns",
-      "output": "createdeco:iron_coin",
-      "policy": "currency_only",
-      "era_reference": null,
-      "evidence": [
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
-      ]
-    },
-    {
-      "id": "pillager_campaigns:combat_payout:createdeco:industrial_iron_coin",
-      "source": "pillager_campaigns",
-      "output": "createdeco:industrial_iron_coin",
-      "policy": "currency_only",
-      "era_reference": null,
-      "evidence": [
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
-      ]
-    },
-    {
-      "id": "pillager_campaigns:combat_payout:createdeco:brass_coin",
-      "source": "pillager_campaigns",
-      "output": "createdeco:brass_coin",
-      "policy": "currency_only",
-      "era_reference": null,
-      "evidence": [
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
-      ]
-    },
-    {
-      "id": "pillager_campaigns:combat_payout:createdeco:gold_coin",
-      "source": "pillager_campaigns",
-      "output": "createdeco:gold_coin",
-      "policy": "currency_only",
-      "era_reference": null,
-      "evidence": [
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
-      ]
-    },
-    {
-      "id": "pillager_campaigns:combat_payout:createdeco:netherite_coin",
-      "source": "pillager_campaigns",
-      "output": "createdeco:netherite_coin",
-      "policy": "currency_only",
-      "era_reference": null,
-      "evidence": [
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/PillagerCampaignsEvents.kt",
-        "../pillager-campaigns/src/main/kotlin/com/gerald/pillager_campaigns/system/PillagerRuntime.kt"
+        "../mod_source/dimension-drink/src/main/resources/defaults/rewards/nether.json"
       ]
     },
     {
@@ -2508,7 +2431,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:18"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:18"
       ]
     },
     {
@@ -2522,7 +2445,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:20"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:20"
       ]
     },
     {
@@ -2536,7 +2459,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:23"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:23"
       ]
     },
     {
@@ -2550,7 +2473,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:19"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:19"
       ]
     },
     {
@@ -2560,7 +2483,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:271"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:271"
       ]
     },
     {
@@ -2574,7 +2497,7 @@
         "era": "brass"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:274"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:274"
       ]
     },
     {
@@ -2588,7 +2511,7 @@
         "era": "brass"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:273"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:273"
       ]
     },
     {
@@ -2602,7 +2525,7 @@
         "era": "brass"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:272"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:272"
       ]
     },
     {
@@ -2616,7 +2539,7 @@
         "era": "andesite"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:270"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:270"
       ]
     },
     {
@@ -2630,7 +2553,7 @@
         "era": "andesite"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:269"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:269"
       ]
     },
     {
@@ -2640,7 +2563,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:115"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:115"
       ]
     },
     {
@@ -2650,7 +2573,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:142"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:142"
       ]
     },
     {
@@ -2664,7 +2587,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:219"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:219"
       ]
     },
     {
@@ -2674,7 +2597,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:233"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:233"
       ]
     },
     {
@@ -2684,7 +2607,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:234"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:234"
       ]
     },
     {
@@ -2694,7 +2617,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:235"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:235"
       ]
     },
     {
@@ -2704,7 +2627,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:209"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:209"
       ]
     },
     {
@@ -2714,7 +2637,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:143"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:143"
       ]
     },
     {
@@ -2728,7 +2651,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:121"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:121"
       ]
     },
     {
@@ -2738,7 +2661,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:198"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:198"
       ]
     },
     {
@@ -2748,7 +2671,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:126"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:126"
       ]
     },
     {
@@ -2758,7 +2681,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:113"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:113"
       ]
     },
     {
@@ -2772,7 +2695,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:174"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:174"
       ]
     },
     {
@@ -2782,7 +2705,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:236"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:236"
       ]
     },
     {
@@ -2796,7 +2719,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:214"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:214"
       ]
     },
     {
@@ -2810,7 +2733,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:170"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:170"
       ]
     },
     {
@@ -2824,7 +2747,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:190"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:190"
       ]
     },
     {
@@ -2834,7 +2757,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:141"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:141"
       ]
     },
     {
@@ -2844,7 +2767,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:237"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:237"
       ]
     },
     {
@@ -2858,7 +2781,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:171"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:171"
       ]
     },
     {
@@ -2872,7 +2795,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:134"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:134"
       ]
     },
     {
@@ -2882,7 +2805,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:238"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:238"
       ]
     },
     {
@@ -2896,7 +2819,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:119"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:119"
       ]
     },
     {
@@ -2910,7 +2833,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:175"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:175"
       ]
     },
     {
@@ -2920,7 +2843,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:193"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:193"
       ]
     },
     {
@@ -2934,7 +2857,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:200"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:200"
       ]
     },
     {
@@ -2944,7 +2867,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:118"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:118"
       ]
     },
     {
@@ -2958,7 +2881,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:181"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:181"
       ]
     },
     {
@@ -2972,7 +2895,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:223"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:223"
       ]
     },
     {
@@ -2986,7 +2909,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:253"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:253"
       ]
     },
     {
@@ -3000,7 +2923,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:130"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:130"
       ]
     },
     {
@@ -3010,7 +2933,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:205"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:205"
       ]
     },
     {
@@ -3024,7 +2947,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:224"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:224"
       ]
     },
     {
@@ -3034,7 +2957,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:149"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:149"
       ]
     },
     {
@@ -3048,7 +2971,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:168"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:168"
       ]
     },
     {
@@ -3058,7 +2981,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:139"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:139"
       ]
     },
     {
@@ -3068,7 +2991,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:239"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:239"
       ]
     },
     {
@@ -3078,7 +3001,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:116"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:116"
       ]
     },
     {
@@ -3092,7 +3015,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:279"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:279"
       ]
     },
     {
@@ -3106,7 +3029,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:177"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:177"
       ]
     },
     {
@@ -3120,7 +3043,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:254"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:254"
       ]
     },
     {
@@ -3134,7 +3057,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:221"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:221"
       ]
     },
     {
@@ -3148,7 +3071,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:213"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:213"
       ]
     },
     {
@@ -3158,7 +3081,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:240"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:240"
       ]
     },
     {
@@ -3172,7 +3095,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:255"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:255"
       ]
     },
     {
@@ -3182,7 +3105,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:241"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:241"
       ]
     },
     {
@@ -3192,7 +3115,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:215"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:215"
       ]
     },
     {
@@ -3206,7 +3129,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:128"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:128"
       ]
     },
     {
@@ -3220,7 +3143,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:217"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:217"
       ]
     },
     {
@@ -3234,7 +3157,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:137"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:137"
       ]
     },
     {
@@ -3248,7 +3171,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:187"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:187"
       ]
     },
     {
@@ -3262,7 +3185,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:166"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:166"
       ]
     },
     {
@@ -3276,7 +3199,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:172"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:172"
       ]
     },
     {
@@ -3286,7 +3209,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:212"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:212"
       ]
     },
     {
@@ -3296,7 +3219,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:242"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:242"
       ]
     },
     {
@@ -3306,7 +3229,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:243"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:243"
       ]
     },
     {
@@ -3320,7 +3243,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:203"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:203"
       ]
     },
     {
@@ -3330,7 +3253,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:202"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:202"
       ]
     },
     {
@@ -3344,7 +3267,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:256"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:256"
       ]
     },
     {
@@ -3354,7 +3277,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:244"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:244"
       ]
     },
     {
@@ -3368,7 +3291,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:188"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:188"
       ]
     },
     {
@@ -3378,7 +3301,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:114"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:114"
       ]
     },
     {
@@ -3388,7 +3311,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:122"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:122"
       ]
     },
     {
@@ -3402,7 +3325,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:191"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:191"
       ]
     },
     {
@@ -3416,7 +3339,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:196"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:196"
       ]
     },
     {
@@ -3430,7 +3353,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:162"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:162"
       ]
     },
     {
@@ -3444,7 +3367,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:167"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:167"
       ]
     },
     {
@@ -3454,7 +3377,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:152"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:152"
       ]
     },
     {
@@ -3464,7 +3387,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:150"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:150"
       ]
     },
     {
@@ -3478,7 +3401,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:124"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:124"
       ]
     },
     {
@@ -3492,7 +3415,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:164"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:164"
       ]
     },
     {
@@ -3506,7 +3429,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:161"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:161"
       ]
     },
     {
@@ -3520,7 +3443,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:216"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:216"
       ]
     },
     {
@@ -3530,7 +3453,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:117"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:117"
       ]
     },
     {
@@ -3540,7 +3463,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:245"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:245"
       ]
     },
     {
@@ -3554,7 +3477,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:125"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:125"
       ]
     },
     {
@@ -3564,7 +3487,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:246"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:246"
       ]
     },
     {
@@ -3578,7 +3501,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:179"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:179"
       ]
     },
     {
@@ -3588,7 +3511,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:226"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:226"
       ]
     },
     {
@@ -3602,7 +3525,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:229"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:229"
       ]
     },
     {
@@ -3612,7 +3535,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:227"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:227"
       ]
     },
     {
@@ -3622,7 +3545,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:228"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:228"
       ]
     },
     {
@@ -3636,7 +3559,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:184"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:184"
       ]
     },
     {
@@ -3650,7 +3573,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:197"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:197"
       ]
     },
     {
@@ -3660,7 +3583,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:211"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:211"
       ]
     },
     {
@@ -3670,7 +3593,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:111"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:111"
       ]
     },
     {
@@ -3684,7 +3607,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:160"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:160"
       ]
     },
     {
@@ -3694,7 +3617,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:145"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:145"
       ]
     },
     {
@@ -3704,7 +3627,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:148"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:148"
       ]
     },
     {
@@ -3718,7 +3641,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:189"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:189"
       ]
     },
     {
@@ -3732,7 +3655,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:180"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:180"
       ]
     },
     {
@@ -3742,7 +3665,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:154"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:154"
       ]
     },
     {
@@ -3756,7 +3679,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:220"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:220"
       ]
     },
     {
@@ -3770,7 +3693,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:165"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:165"
       ]
     },
     {
@@ -3780,7 +3703,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:155"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:155"
       ]
     },
     {
@@ -3790,7 +3713,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:147"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:147"
       ]
     },
     {
@@ -3800,7 +3723,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:158"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:158"
       ]
     },
     {
@@ -3810,7 +3733,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:232"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:232"
       ]
     },
     {
@@ -3820,7 +3743,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:247"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:247"
       ]
     },
     {
@@ -3830,7 +3753,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:183"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:183"
       ]
     },
     {
@@ -3840,7 +3763,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:178"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:178"
       ]
     },
     {
@@ -3850,7 +3773,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:140"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:140"
       ]
     },
     {
@@ -3860,7 +3783,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:248"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:248"
       ]
     },
     {
@@ -3870,7 +3793,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:208"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:208"
       ]
     },
     {
@@ -3884,7 +3807,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:169"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:169"
       ]
     },
     {
@@ -3898,7 +3821,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:218"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:218"
       ]
     },
     {
@@ -3912,7 +3835,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:204"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:204"
       ]
     },
     {
@@ -3926,7 +3849,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:257"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:257"
       ]
     },
     {
@@ -3940,7 +3863,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:225"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:225"
       ]
     },
     {
@@ -3954,7 +3877,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:173"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:173"
       ]
     },
     {
@@ -3968,7 +3891,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:135"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:135"
       ]
     },
     {
@@ -3982,7 +3905,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:186"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:186"
       ]
     },
     {
@@ -3992,7 +3915,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:144"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:144"
       ]
     },
     {
@@ -4006,7 +3929,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:258"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:258"
       ]
     },
     {
@@ -4016,7 +3939,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:138"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:138"
       ]
     },
     {
@@ -4026,7 +3949,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:153"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:153"
       ]
     },
     {
@@ -4040,7 +3963,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:195"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:195"
       ]
     },
     {
@@ -4050,7 +3973,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:206"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:206"
       ]
     },
     {
@@ -4064,7 +3987,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:185"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:185"
       ]
     },
     {
@@ -4078,7 +4001,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:199"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:199"
       ]
     },
     {
@@ -4088,7 +4011,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:136"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:136"
       ]
     },
     {
@@ -4102,7 +4025,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:259"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:259"
       ]
     },
     {
@@ -4116,7 +4039,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:260"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:260"
       ]
     },
     {
@@ -4126,7 +4049,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:249"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:249"
       ]
     },
     {
@@ -4136,7 +4059,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:250"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:250"
       ]
     },
     {
@@ -4150,7 +4073,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:276"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:276"
       ]
     },
     {
@@ -4164,7 +4087,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:261"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:261"
       ]
     },
     {
@@ -4174,7 +4097,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:251"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:251"
       ]
     },
     {
@@ -4188,7 +4111,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:201"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:201"
       ]
     },
     {
@@ -4198,7 +4121,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:127"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:127"
       ]
     },
     {
@@ -4208,7 +4131,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:230"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:230"
       ]
     },
     {
@@ -4218,7 +4141,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:252"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:252"
       ]
     },
     {
@@ -4232,7 +4155,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:262"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:262"
       ]
     },
     {
@@ -4246,7 +4169,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:194"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:194"
       ]
     },
     {
@@ -4260,7 +4183,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:192"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:192"
       ]
     },
     {
@@ -4274,7 +4197,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:263"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:263"
       ]
     },
     {
@@ -4284,7 +4207,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:156"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:156"
       ]
     },
     {
@@ -4294,7 +4217,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:112"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:112"
       ]
     },
     {
@@ -4308,7 +4231,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:222"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:222"
       ]
     },
     {
@@ -4322,7 +4245,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:120"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:120"
       ]
     },
     {
@@ -4332,7 +4255,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:151"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:151"
       ]
     },
     {
@@ -4346,7 +4269,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:129"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:129"
       ]
     },
     {
@@ -4356,7 +4279,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:210"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:210"
       ]
     },
     {
@@ -4370,7 +4293,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:182"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:182"
       ]
     },
     {
@@ -4384,7 +4307,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:264"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:264"
       ]
     },
     {
@@ -4394,7 +4317,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:157"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:157"
       ]
     },
     {
@@ -4404,7 +4327,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:231"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:231"
       ]
     },
     {
@@ -4414,7 +4337,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:277"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:277"
       ]
     },
     {
@@ -4424,7 +4347,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:207"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:207"
       ]
     },
     {
@@ -4438,7 +4361,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:176"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:176"
       ]
     },
     {
@@ -4452,7 +4375,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:265"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:265"
       ]
     },
     {
@@ -4462,7 +4385,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:123"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:123"
       ]
     },
     {
@@ -4476,7 +4399,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:266"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:266"
       ]
     },
     {
@@ -4490,7 +4413,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:267"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:267"
       ]
     },
     {
@@ -4504,7 +4427,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:159"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:159"
       ]
     },
     {
@@ -4514,7 +4437,7 @@
       "policy": "support_only",
       "era_reference": null,
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:146"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:146"
       ]
     },
     {
@@ -4528,7 +4451,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:268"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:268"
       ]
     },
     {
@@ -4542,7 +4465,7 @@
         "era": "survival"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:163"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:163"
       ]
     },
     {
@@ -4556,7 +4479,7 @@
         "era": "airtight"
       },
       "evidence": [
-        "kubejs/server_scripts/35_villager_trades/10_coin_villager_trades.js:275"
+        "kubejs/server_scripts/50_economy/20_trades/10_coin_villager_trades.js:275"
       ]
     },
     {

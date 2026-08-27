@@ -1,0 +1,49 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "malum:cthonic_gold"
+    }
+  ],
+  "results": [
+    {
+      "item": "create:crushed_raw_iron",
+      "count": 3
+    },
+    {
+      "item": "create:crushed_raw_iron",
+      "count": 1,
+      "chance": 0.75
+    },
+    {
+      "item": "create:crushed_raw_copper",
+      "count": 3
+    },
+    {
+      "item": "create:crushed_raw_copper",
+      "count": 1,
+      "chance": 0.75
+    },
+    {
+      "item": "create:crushed_raw_gold",
+      "count": 3
+    },
+    {
+      "item": "create:crushed_raw_gold",
+      "count": 1,
+      "chance": 0.75
+    },
+    {
+      "item": "create:crushed_raw_zinc",
+      "count": 5,
+      "chance": 0.75
+    }
+  ],
+  "processingTime": 600
+}

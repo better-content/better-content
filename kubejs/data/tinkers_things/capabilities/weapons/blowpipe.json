@@ -1,0 +1,8 @@
+{
+  "type": "epicfight:crossbow",
+  "attributes": {
+    "common": {
+      "impact": 1
+    }
+  }
+}

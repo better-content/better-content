@@ -1,0 +1,43 @@
+{
+  "background_u_index": 0,
+  "background_v_index": 0,
+  "category": "occultism:crafting_rituals",
+  "condition": {
+    "type": "modonomicon:true"
+  },
+  "description": "",
+  "hide_while_locked": false,
+  "icon": {
+    "item": "occultism:miner_marid_master"
+  },
+  "name": "book.occultism.dictionary_of_spirits.crafting_rituals.craft_marid_miner.name",
+  "pages": [
+    {
+      "type": "modonomicon:spotlight",
+      "anchor": "",
+      "condition": {
+        "type": "modonomicon:none"
+      },
+      "item": {
+        "item": "occultism:miner_marid_master"
+      },
+      "text": "book.occultism.dictionary_of_spirits.crafting_rituals.craft_marid_miner.spotlight.text",
+      "title": ""
+    },
+    {
+      "type": "modonomicon:text",
+      "text": "This item is disabled in this pack to preserve material and storage progression."
+    }
+  ],
+  "parents": [
+    {
+      "draw_arrow": true,
+      "entry": "occultism:crafting_rituals/craft_afrit_miner",
+      "line_enabled": true,
+      "line_reversed": false
+    }
+  ],
+  "show_when_any_parent_unlocked": false,
+  "x": 2,
+  "y": -5
+}

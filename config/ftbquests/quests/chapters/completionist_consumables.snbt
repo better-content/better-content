@@ -13,7 +13,7 @@
 			id: "11FE7E6B9FACFCCE"
 			rewards: [{
 				count: 8
-				id: "88AE310B8E027046"
+				id: "-7751CEF471FD8FBA"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -25,15 +25,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Blue Berry"
-			x: 1.5d
-			y: 0.0d
+			x: 0d
+			y: 0d
 		}
 		{
 			icon: "aether:enchanted_berry"
 			id: "2DC8B0CA74D79985"
 			rewards: [{
 				count: 8
-				id: "BD53E2424C46C905"
+				id: "-42AC1DBDB3B936FB"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -45,8 +45,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Enchanted Berry"
-			x: 2.75d
-			y: 0.0d
+			x: 2d
+			y: 0d
 		}
 		{
 			icon: "aether:healing_stone"
@@ -65,15 +65,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Healing Stone"
-			x: 4.0d
-			y: 0.0d
+			x: 4d
+			y: 0d
 		}
 		{
 			icon: "ars_nouveau:bastion_pod"
 			id: "7DDD07C6CB9EB13B"
 			rewards: [{
 				count: 8
-				id: "BD90B19F056100FE"
+				id: "-426F4E60FA9EFF02"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -85,15 +85,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Bastion Pod"
-			x: 5.25d
-			y: 0.0d
+			x: 6d
+			y: 0d
 		}
 		{
 			icon: "ars_nouveau:bombegranate_pod"
 			id: "1C95145B1BE39D71"
 			rewards: [{
 				count: 8
-				id: "A3CC4B4916D34D21"
+				id: "-5C33B4B6E92CB2DF"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -105,8 +105,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Bombegranate Pod"
-			x: 6.5d
-			y: 0.0d
+			x: 8d
+			y: 0d
 		}
 		{
 			icon: "ars_nouveau:frostaya_pod"
@@ -125,8 +125,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Frostaya Pod"
-			x: 7.75d
-			y: 0.0d
+			x: 10d
+			y: 0d
 		}
 		{
 			icon: "ars_nouveau:mendosteen_pod"
@@ -145,15 +145,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Mendosteen Pod"
-			x: 9.0d
-			y: 0.0d
+			x: 12d
+			y: 0d
 		}
 		{
 			icon: "ars_nouveau:source_berry_pie"
 			id: "52F737011C2BAA88"
 			rewards: [{
 				count: 8
-				id: "A8D91B29D1E6CDFC"
+				id: "-5726E4D62E193204"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -165,15 +165,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Source Berry Pie"
-			x: 10.25d
-			y: 0.0d
+			x: 14d
+			y: 0d
 		}
 		{
 			icon: "ars_nouveau:source_berry_roll"
 			id: "1AB97C9072C7A37C"
 			rewards: [{
 				count: 8
-				id: "DB8BA3B8520C096A"
+				id: "-24745C47ADF3F696"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -185,8 +185,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Source Berry Roll"
-			x: 11.5d
-			y: 0.0d
+			x: 16d
+			y: 0d
 		}
 		{
 			icon: "ars_nouveau:sourceberry_bush"
@@ -205,15 +205,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Sourceberry Bush"
-			x: 12.75d
-			y: 0.0d
+			x: 18d
+			y: 0d
 		}
 		{
 			icon: "brewinandchewin:apple_jelly"
 			id: "3ED841322141AA97"
 			rewards: [{
 				count: 8
-				id: "A0D81A8F4E23444D"
+				id: "-5F27E570B1DCBBB3"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -225,8 +225,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Apple Jelly"
-			x: 14.0d
-			y: 0.0d
+			x: 20d
+			y: 0d
 		}
 		{
 			icon: "brewinandchewin:bloody_mary"
@@ -245,15 +245,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Bloody Mary"
-			x: 15.25d
-			y: 0.0d
+			x: 22d
+			y: 0d
 		}
 		{
 			icon: "brewinandchewin:cheesy_pasta"
 			id: "0A1BB1D5110A8BA1"
 			rewards: [{
 				count: 8
-				id: "E3F5EF120399E4F0"
+				id: "-1C0A10EDFC661B10"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -265,8 +265,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Cheesy Pasta"
-			x: 16.5d
-			y: 0.0d
+			x: 24d
+			y: 0d
 		}
 		{
 			icon: "brewinandchewin:flaxen_cheese_wedge"
@@ -285,15 +285,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Flaxen Cheese Wedge"
-			x: 17.75d
-			y: 0.0d
+			x: 26d
+			y: 0d
 		}
 		{
 			icon: "brewinandchewin:glittering_grenadine"
 			id: "3E0AA2697F9E7A83"
 			rewards: [{
 				count: 8
-				id: "FD501CAD289BB736"
+				id: "-2AFE352D76448CA"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -305,8 +305,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Glittering Grenadine"
-			x: 19.0d
-			y: 0.0d
+			x: 28d
+			y: 0d
 		}
 		{
 			icon: "brewinandchewin:glow_berry_marmalade"
@@ -325,8 +325,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Glow Berry Marmalade"
-			x: 20.25d
-			y: 0.0d
+			x: 30d
+			y: 0d
 		}
 		{
 			icon: "brewinandchewin:ham_and_cheese_sandwich"
@@ -345,15 +345,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Ham And Cheese Sandwich"
-			x: 1.5d
-			y: 1.25d
+			x: 0d
+			y: 2d
 		}
 		{
 			icon: "brewinandchewin:horror_lasagna"
 			id: "286EFA83CEA86162"
 			rewards: [{
 				count: 8
-				id: "94C0129DD9E99BCA"
+				id: "-6B3FED6226166436"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -365,15 +365,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Horror Lasagna"
-			x: 2.75d
-			y: 1.25d
+			x: 2d
+			y: 2d
 		}
 		{
 			icon: "brewinandchewin:jerky"
 			id: "53A9A4E9E3A9EF2A"
 			rewards: [{
 				count: 8
-				id: "90142F8714605FFD"
+				id: "-6FEBD078EB9FA003"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -385,8 +385,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Jerky"
-			x: 4.0d
-			y: 1.25d
+			x: 4d
+			y: 2d
 		}
 		{
 			icon: "brewinandchewin:kimchi"
@@ -405,15 +405,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Kimchi"
-			x: 5.25d
-			y: 1.25d
+			x: 6d
+			y: 2d
 		}
 		{
 			icon: "brewinandchewin:kippers"
 			id: "23A5874E84FDBC16"
 			rewards: [{
 				count: 8
-				id: "C5233EA93D7903C6"
+				id: "-3ADCC156C286FC3A"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -425,8 +425,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Kippers"
-			x: 6.5d
-			y: 1.25d
+			x: 8d
+			y: 2d
 		}
 		{
 			icon: "brewinandchewin:pickled_pickles"
@@ -445,8 +445,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Pickled Pickles"
-			x: 7.75d
-			y: 1.25d
+			x: 10d
+			y: 2d
 		}
 		{
 			icon: "brewinandchewin:pizza_slice"
@@ -465,15 +465,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Pizza Slice"
-			x: 9.0d
-			y: 1.25d
+			x: 12d
+			y: 2d
 		}
 		{
 			icon: "brewinandchewin:quiche_slice"
 			id: "10DC8C07DA06DEBF"
 			rewards: [{
 				count: 8
-				id: "DD34ABCE6E8D1F67"
+				id: "-22CB54319172E099"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -485,15 +485,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Quiche Slice"
-			x: 10.25d
-			y: 1.25d
+			x: 14d
+			y: 2d
 		}
 		{
 			icon: "brewinandchewin:salty_folly"
 			id: "314326EC67D95122"
 			rewards: [{
 				count: 8
-				id: "BA3F162231F831DB"
+				id: "-45C0E9DDCE07CE25"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -505,8 +505,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Salty Folly"
-			x: 11.5d
-			y: 1.25d
+			x: 16d
+			y: 2d
 		}
 		{
 			icon: "brewinandchewin:scarlet_cheese_wedge"
@@ -525,8 +525,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Scarlet Cheese Wedge"
-			x: 12.75d
-			y: 1.25d
+			x: 18d
+			y: 2d
 		}
 		{
 			icon: "brewinandchewin:scarlet_pierogi"
@@ -545,15 +545,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Scarlet Pierogi"
-			x: 14.0d
-			y: 1.25d
+			x: 20d
+			y: 2d
 		}
 		{
 			icon: "brewinandchewin:steel_toe_stout"
 			id: "5F84B4AFDB61E020"
 			rewards: [{
 				count: 8
-				id: "A326B66BD7C74339"
+				id: "-5CD949942838BCC7"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -565,8 +565,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Steel Toe Stout"
-			x: 15.25d
-			y: 1.25d
+			x: 22d
+			y: 2d
 		}
 		{
 			icon: "brewinandchewin:sweet_berry_jam"
@@ -585,15 +585,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Sweet Berry Jam"
-			x: 16.5d
-			y: 1.25d
+			x: 24d
+			y: 2d
 		}
 		{
 			icon: "brewinandchewin:vegetable_omelet"
 			id: "18CD7D70B306D239"
 			rewards: [{
 				count: 8
-				id: "C25F19C2A39126D6"
+				id: "-3DA0E63D5C6ED92A"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -605,15 +605,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Vegetable Omelet"
-			x: 17.75d
-			y: 1.25d
+			x: 26d
+			y: 2d
 		}
 		{
 			icon: "brewinandchewin:withering_dross"
 			id: "011BB4D2D107CB43"
 			rewards: [{
 				count: 8
-				id: "9A4EB1D6FD27C6AA"
+				id: "-65B14E2902D83956"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -625,15 +625,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Withering Dross"
-			x: 19.0d
-			y: 1.25d
+			x: 28d
+			y: 2d
 		}
 		{
 			icon: "create:honeyed_apple"
 			id: "0D56E3F6963F6AC9"
 			rewards: [{
 				count: 8
-				id: "D9B74CA83964E08C"
+				id: "-2648B357C69B1F74"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -645,15 +645,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Honeyed Apple"
-			x: 20.25d
-			y: 1.25d
+			x: 30d
+			y: 2d
 		}
 		{
 			icon: "create:sweet_roll"
 			id: "1C9E49077938259F"
 			rewards: [{
 				count: 8
-				id: "F89E1329D5EEE324"
+				id: "-761ECD62A111CDC"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -665,15 +665,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Sweet Roll"
-			x: 1.5d
-			y: 2.5d
+			x: 0d
+			y: 4d
 		}
 		{
 			icon: "fallout_wastelands_:canned_beef"
 			id: "00927D2D69328370"
 			rewards: [{
 				count: 8
-				id: "EB2C735C23B3D61D"
+				id: "-14D38CA3DC4C29E3"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -685,8 +685,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Canned Beef"
-			x: 2.75d
-			y: 2.5d
+			x: 2d
+			y: 4d
 		}
 		{
 			icon: "fallout_wastelands_:gecko_coocked_egg"
@@ -705,15 +705,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Gecko Coocked Egg"
-			x: 4.0d
-			y: 2.5d
+			x: 4d
+			y: 4d
 		}
 		{
 			icon: "fallout_wastelands_:gecko_egg"
 			id: "51103F8C1223FA7B"
 			rewards: [{
 				count: 8
-				id: "EE5E32E6272391CE"
+				id: "-11A1CD19D8DC6E32"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -725,8 +725,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Gecko Egg"
-			x: 5.25d
-			y: 2.5d
+			x: 6d
+			y: 4d
 		}
 		{
 			icon: "fallout_wastelands_:mirelurk_cake"
@@ -745,8 +745,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Mirelurk Cake"
-			x: 6.5d
-			y: 2.5d
+			x: 8d
+			y: 4d
 		}
 		{
 			icon: "fallout_wastelands_:mirelurkmeat"
@@ -765,8 +765,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Mirelurkmeat"
-			x: 7.75d
-			y: 2.5d
+			x: 10d
+			y: 4d
 		}
 		{
 			icon: "fallout_wastelands_:mutlemon"
@@ -785,8 +785,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Mutlemon"
-			x: 9.0d
-			y: 2.5d
+			x: 12d
+			y: 4d
 		}
 		{
 			icon: {
@@ -799,7 +799,7 @@
 			id: "0393611FE2EFF0A9"
 			rewards: [{
 				count: 8
-				id: "CA3C3F2EAE226DA6"
+				id: "-35C3C0D151DD925A"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -817,8 +817,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Ripper"
-			x: 10.25d
-			y: 2.5d
+			x: 14d
+			y: 4d
 		}
 		{
 			icon: "fallout_wastelands_:strange_meat_patty"
@@ -837,8 +837,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Strange Meat Patty"
-			x: 11.5d
-			y: 2.5d
+			x: 16d
+			y: 4d
 		}
 		{
 			icon: "fallout_wastelands_:tato"
@@ -857,8 +857,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Tato"
-			x: 12.75d
-			y: 2.5d
+			x: 18d
+			y: 4d
 		}
 		{
 			icon: "farmersdelight:apple_pie_slice"
@@ -877,8 +877,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Apple Pie Slice"
-			x: 14.0d
-			y: 2.5d
+			x: 20d
+			y: 4d
 		}
 		{
 			icon: "farmersdelight:bacon"
@@ -897,15 +897,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Bacon"
-			x: 15.25d
-			y: 2.5d
+			x: 22d
+			y: 4d
 		}
 		{
 			icon: "farmersdelight:bacon_and_eggs"
 			id: "0F29126B468AD0CB"
 			rewards: [{
 				count: 8
-				id: "BCCE7CB56F953A78"
+				id: "-4331834A906AC588"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -917,15 +917,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Bacon And Eggs"
-			x: 16.5d
-			y: 2.5d
+			x: 24d
+			y: 4d
 		}
 		{
 			icon: "farmersdelight:bacon_sandwich"
 			id: "65E5784578F76A47"
 			rewards: [{
 				count: 8
-				id: "BE63D0E37550AA37"
+				id: "-419C2F1C8AAF55C9"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -937,15 +937,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Bacon Sandwich"
-			x: 17.75d
-			y: 2.5d
+			x: 26d
+			y: 4d
 		}
 		{
 			icon: "farmersdelight:barbecue_stick"
 			id: "1405B08C9391B8F1"
 			rewards: [{
 				count: 8
-				id: "911EFB9614977C21"
+				id: "-6EE10469EB6883DF"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -957,8 +957,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Barbecue Stick"
-			x: 19.0d
-			y: 2.5d
+			x: 28d
+			y: 4d
 		}
 		{
 			icon: "farmersdelight:beef_patty"
@@ -977,8 +977,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Beef Patty"
-			x: 20.25d
-			y: 2.5d
+			x: 30d
+			y: 4d
 		}
 		{
 			icon: "farmersdelight:cabbage"
@@ -997,8 +997,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Cabbage"
-			x: 1.5d
-			y: 3.75d
+			x: 0d
+			y: 6d
 		}
 		{
 			icon: "farmersdelight:cabbage_leaf"
@@ -1017,8 +1017,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Cabbage Leaf"
-			x: 2.75d
-			y: 3.75d
+			x: 2d
+			y: 6d
 		}
 		{
 			icon: "farmersdelight:cabbage_rolls"
@@ -1037,15 +1037,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cabbage Rolls"
-			x: 4.0d
-			y: 3.75d
+			x: 4d
+			y: 6d
 		}
 		{
 			icon: "farmersdelight:cake_slice"
 			id: "0F8655A09EAE3ABD"
 			rewards: [{
 				count: 8
-				id: "CDFBF35803FB59A9"
+				id: "-32040CA7FC04A657"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1057,8 +1057,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Cake Slice"
-			x: 5.25d
-			y: 3.75d
+			x: 6d
+			y: 6d
 		}
 		{
 			icon: "farmersdelight:chicken_cuts"
@@ -1077,15 +1077,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Chicken Cuts"
-			x: 6.5d
-			y: 3.75d
+			x: 8d
+			y: 6d
 		}
 		{
 			icon: "farmersdelight:chicken_sandwich"
 			id: "24495815DE44E208"
 			rewards: [{
 				count: 8
-				id: "BCE30A8ADE08DB69"
+				id: "-431CF57521F72497"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1097,15 +1097,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Chicken Sandwich"
-			x: 7.75d
-			y: 3.75d
+			x: 10d
+			y: 6d
 		}
 		{
 			icon: "farmersdelight:cod_roll"
 			id: "0AF4F61D02CECE3E"
 			rewards: [{
 				count: 8
-				id: "EAF6066AF3F96B5B"
+				id: "-1509F9950C0694A5"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1117,8 +1117,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Cod Roll"
-			x: 9.0d
-			y: 3.75d
+			x: 12d
+			y: 6d
 		}
 		{
 			icon: "farmersdelight:cod_slice"
@@ -1137,15 +1137,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cod Slice"
-			x: 10.25d
-			y: 3.75d
+			x: 14d
+			y: 6d
 		}
 		{
 			icon: "farmersdelight:cooked_bacon"
 			id: "6DF9F8D67BCEA145"
 			rewards: [{
 				count: 8
-				id: "ABFC028206EE1124"
+				id: "-5403FD7DF911EEDC"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1157,15 +1157,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Bacon"
-			x: 11.5d
-			y: 3.75d
+			x: 16d
+			y: 6d
 		}
 		{
 			icon: "farmersdelight:cooked_chicken_cuts"
 			id: "580462D47F2A3EAD"
 			rewards: [{
 				count: 8
-				id: "824A5CF3234E4715"
+				id: "-7DB5A30CDCB1B8EB"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1177,8 +1177,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Chicken Cuts"
-			x: 12.75d
-			y: 3.75d
+			x: 18d
+			y: 6d
 		}
 		{
 			icon: "farmersdelight:cooked_cod_slice"
@@ -1197,15 +1197,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Cod Slice"
-			x: 14.0d
-			y: 3.75d
+			x: 20d
+			y: 6d
 		}
 		{
 			icon: "farmersdelight:cooked_mutton_chops"
 			id: "793E6D7DD66A1938"
 			rewards: [{
 				count: 8
-				id: "F12352C3126574F3"
+				id: "-EDCAD3CED9A8B0D"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1217,15 +1217,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Mutton Chops"
-			x: 15.25d
-			y: 3.75d
+			x: 22d
+			y: 6d
 		}
 		{
 			icon: "farmersdelight:cooked_rice"
 			id: "00F4F7C8124615FD"
 			rewards: [{
 				count: 8
-				id: "CA45EA467D4E25AC"
+				id: "-35BA15B982B1DA54"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1237,8 +1237,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Rice"
-			x: 16.5d
-			y: 3.75d
+			x: 24d
+			y: 6d
 		}
 		{
 			icon: "farmersdelight:cooked_salmon_slice"
@@ -1257,8 +1257,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Salmon Slice"
-			x: 17.75d
-			y: 3.75d
+			x: 26d
+			y: 6d
 		}
 		{
 			icon: "farmersdelight:dog_food"
@@ -1277,8 +1277,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Dog Food"
-			x: 19.0d
-			y: 3.75d
+			x: 28d
+			y: 6d
 		}
 		{
 			icon: "farmersdelight:dumplings"
@@ -1297,15 +1297,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Dumplings"
-			x: 20.25d
-			y: 3.75d
+			x: 30d
+			y: 6d
 		}
 		{
 			icon: "farmersdelight:egg_sandwich"
 			id: "1033E33CF3832C98"
 			rewards: [{
 				count: 8
-				id: "E65C98481592F4FE"
+				id: "-19A367B7EA6D0B02"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1317,15 +1317,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Egg Sandwich"
-			x: 1.5d
-			y: 5.0d
+			x: 0d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:fried_egg"
 			id: "0826A0B72A67DDAD"
 			rewards: [{
 				count: 8
-				id: "DC570038639E0314"
+				id: "-23A8FFC79C61FCEC"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1337,8 +1337,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Fried Egg"
-			x: 2.75d
-			y: 5.0d
+			x: 2d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:fried_rice"
@@ -1357,8 +1357,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Fried Rice"
-			x: 4.0d
-			y: 5.0d
+			x: 4d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:fruit_salad"
@@ -1377,8 +1377,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Fruit Salad"
-			x: 5.25d
-			y: 5.0d
+			x: 6d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:glow_berry_custard"
@@ -1397,15 +1397,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Glow Berry Custard"
-			x: 6.5d
-			y: 5.0d
+			x: 8d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:grilled_salmon"
 			id: "3E8072105CE4E80A"
 			rewards: [{
 				count: 8
-				id: "E45B942300CF69B3"
+				id: "-1BA46BDCFF30964D"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1417,8 +1417,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Grilled Salmon"
-			x: 7.75d
-			y: 5.0d
+			x: 10d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:ham"
@@ -1437,8 +1437,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Ham"
-			x: 9.0d
-			y: 5.0d
+			x: 12d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:hamburger"
@@ -1457,8 +1457,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Hamburger"
-			x: 10.25d
-			y: 5.0d
+			x: 14d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:honey_cookie"
@@ -1477,15 +1477,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Honey Cookie"
-			x: 11.5d
-			y: 5.0d
+			x: 16d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:kelp_roll"
 			id: "2A41B471D95A7961"
 			rewards: [{
 				count: 8
-				id: "C2AD4ACB9861E7C9"
+				id: "-3D52B534679E1837"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1497,8 +1497,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Kelp Roll"
-			x: 12.75d
-			y: 5.0d
+			x: 18d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:kelp_roll_slice"
@@ -1517,15 +1517,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Kelp Roll Slice"
-			x: 14.0d
-			y: 5.0d
+			x: 20d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:melon_popsicle"
 			id: "5DAA4344691AF1FF"
 			rewards: [{
 				count: 8
-				id: "EF0E5426B3D0BE7C"
+				id: "-10F1ABD94C2F4184"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1537,8 +1537,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Melon Popsicle"
-			x: 15.25d
-			y: 5.0d
+			x: 22d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:minced_beef"
@@ -1557,8 +1557,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Minced Beef"
-			x: 16.5d
-			y: 5.0d
+			x: 24d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:mixed_salad"
@@ -1577,8 +1577,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Mixed Salad"
-			x: 17.75d
-			y: 5.0d
+			x: 26d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:mushroom_rice"
@@ -1597,15 +1597,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Mushroom Rice"
-			x: 19.0d
-			y: 5.0d
+			x: 28d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:mutton_chops"
 			id: "4A963E1643CB7070"
 			rewards: [{
 				count: 8
-				id: "E820F15BFBB8B130"
+				id: "-17DF0EA404474ED0"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1617,8 +1617,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Mutton Chops"
-			x: 20.25d
-			y: 5.0d
+			x: 30d
+			y: 8d
 		}
 		{
 			icon: "farmersdelight:mutton_wrap"
@@ -1637,15 +1637,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Mutton Wrap"
-			x: 1.5d
-			y: 6.25d
+			x: 0d
+			y: 10d
 		}
 		{
 			icon: "farmersdelight:nether_salad"
 			id: "1232D9902935C528"
 			rewards: [{
 				count: 8
-				id: "EF15DCC787D80290"
+				id: "-10EA23387827FD70"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1657,8 +1657,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Nether Salad"
-			x: 2.75d
-			y: 6.25d
+			x: 2d
+			y: 10d
 		}
 		{
 			icon: "farmersdelight:onion"
@@ -1677,15 +1677,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Onion"
-			x: 4.0d
-			y: 6.25d
+			x: 4d
+			y: 10d
 		}
 		{
 			icon: "farmersdelight:pasta_with_meatballs"
 			id: "063027CAD5CB8991"
 			rewards: [{
 				count: 8
-				id: "B8BCFA79C87574D7"
+				id: "-47430586378A8B29"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1697,15 +1697,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Pasta With Meatballs"
-			x: 5.25d
-			y: 6.25d
+			x: 6d
+			y: 10d
 		}
 		{
 			icon: "farmersdelight:pasta_with_mutton_chop"
 			id: "31906274F05DBE91"
 			rewards: [{
 				count: 8
-				id: "91372648B49D6B46"
+				id: "-6EC8D9B74B6294BA"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1717,8 +1717,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Pasta With Mutton Chop"
-			x: 6.5d
-			y: 6.25d
+			x: 8d
+			y: 10d
 		}
 		{
 			icon: "farmersdelight:pie_crust"
@@ -1737,15 +1737,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Pie Crust"
-			x: 7.75d
-			y: 6.25d
+			x: 10d
+			y: 10d
 		}
 		{
 			icon: "farmersdelight:pumpkin_pie_slice"
 			id: "0F58E6416EFF0C76"
 			rewards: [{
 				count: 8
-				id: "F6DC7549FD596C5C"
+				id: "-9238AB602A693A4"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1757,15 +1757,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Pumpkin Pie Slice"
-			x: 9.0d
-			y: 6.25d
+			x: 12d
+			y: 10d
 		}
 		{
 			icon: "farmersdelight:pumpkin_slice"
 			id: "0E437C7B2B945743"
 			rewards: [{
 				count: 8
-				id: "F19839ED03AB9CE2"
+				id: "-E67C612FC54631E"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1777,15 +1777,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Pumpkin Slice"
-			x: 10.25d
-			y: 6.25d
+			x: 14d
+			y: 10d
 		}
 		{
 			icon: "farmersdelight:ratatouille"
 			id: "768465863D8F49A0"
 			rewards: [{
 				count: 8
-				id: "C045B3CF4766173E"
+				id: "-3FBA4C30B899E8C2"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1797,8 +1797,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Ratatouille"
-			x: 11.5d
-			y: 6.25d
+			x: 16d
+			y: 10d
 		}
 		{
 			icon: "farmersdelight:raw_pasta"
@@ -1817,8 +1817,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Raw Pasta"
-			x: 12.75d
-			y: 6.25d
+			x: 18d
+			y: 10d
 		}
 		{
 			icon: "farmersdelight:roasted_mutton_chops"
@@ -1837,15 +1837,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Roasted Mutton Chops"
-			x: 14.0d
-			y: 6.25d
+			x: 20d
+			y: 10d
 		}
 		{
 			icon: "farmersdelight:salmon_roll"
 			id: "21910EDABA00F180"
 			rewards: [{
 				count: 8
-				id: "9D52B92DDC08FB42"
+				id: "-62AD46D223F704BE"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1857,8 +1857,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Salmon Roll"
-			x: 15.25d
-			y: 6.25d
+			x: 22d
+			y: 10d
 		}
 		{
 			icon: "farmersdelight:salmon_slice"
@@ -1877,15 +1877,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Salmon Slice"
-			x: 16.5d
-			y: 6.25d
+			x: 24d
+			y: 10d
 		}
 		{
 			icon: "farmersdelight:smoked_ham"
 			id: "06BA4716270AAA31"
 			rewards: [{
 				count: 8
-				id: "D6A6C705CD82CF94"
+				id: "-295938FA327D306C"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1897,8 +1897,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Smoked Ham"
-			x: 17.75d
-			y: 6.25d
+			x: 26d
+			y: 10d
 		}
 		{
 			icon: "farmersdelight:squid_ink_pasta"
@@ -1917,8 +1917,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Squid Ink Pasta"
-			x: 19.0d
-			y: 6.25d
+			x: 28d
+			y: 10d
 		}
 		{
 			icon: "farmersdelight:stuffed_potato"
@@ -1937,8 +1937,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Stuffed Potato"
-			x: 20.25d
-			y: 6.25d
+			x: 30d
+			y: 10d
 		}
 		{
 			icon: "farmersdelight:sweet_berry_cheesecake_slice"
@@ -1957,15 +1957,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Sweet Berry Cheesecake Slice"
-			x: 1.5d
-			y: 7.5d
+			x: 0d
+			y: 12d
 		}
 		{
 			icon: "farmersdelight:sweet_berry_cookie"
 			id: "6E0B4DA410CED3B5"
 			rewards: [{
 				count: 8
-				id: "E54CD9F36E10D2BD"
+				id: "-1AB3260C91EF2D43"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -1977,8 +1977,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Sweet Berry Cookie"
-			x: 2.75d
-			y: 7.5d
+			x: 2d
+			y: 12d
 		}
 		{
 			icon: "farmersdelight:tomato"
@@ -1997,8 +1997,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Tomato"
-			x: 4.0d
-			y: 7.5d
+			x: 4d
+			y: 12d
 		}
 		{
 			icon: "farmersdelight:tomato_sauce"
@@ -2017,8 +2017,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Tomato Sauce"
-			x: 5.25d
-			y: 7.5d
+			x: 6d
+			y: 12d
 		}
 		{
 			icon: "farmersdelight:vegetable_noodles"
@@ -2037,15 +2037,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Vegetable Noodles"
-			x: 6.5d
-			y: 7.5d
+			x: 8d
+			y: 12d
 		}
 		{
 			icon: "farmersdelight:wheat_dough"
 			id: "35A1F81CB9E5C909"
 			rewards: [{
 				count: 8
-				id: "BC3D3ED4831C3C89"
+				id: "-43C2C12B7CE3C377"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2057,8 +2057,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Wheat Dough"
-			x: 7.75d
-			y: 7.5d
+			x: 10d
+			y: 12d
 		}
 		{
 			icon: "immersive_weathering:golden_moss_clump"
@@ -2077,8 +2077,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Golden Moss Clump"
-			x: 9.0d
-			y: 7.5d
+			x: 12d
+			y: 12d
 		}
 		{
 			icon: {
@@ -2109,15 +2109,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Ice Sickle"
-			x: 10.25d
-			y: 7.5d
+			x: 14d
+			y: 12d
 		}
 		{
 			icon: "immersive_weathering:icicle"
 			id: "7F955356CD7D1EB5"
 			rewards: [{
 				count: 8
-				id: "BB621D1DB98C45B2"
+				id: "-449DE2E24673BA4E"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2129,15 +2129,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Icicle"
-			x: 11.5d
-			y: 7.5d
+			x: 16d
+			y: 12d
 		}
 		{
 			icon: "immersive_weathering:moss_clump"
 			id: "37B782C5B080695B"
 			rewards: [{
 				count: 8
-				id: "E16B7DA527081229"
+				id: "-1E94825AD8F7EDD7"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2149,8 +2149,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Moss Clump"
-			x: 12.75d
-			y: 7.5d
+			x: 18d
+			y: 12d
 		}
 		{
 			icon: "malum:chunk_of_brilliance"
@@ -2169,8 +2169,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Chunk Of Brilliance"
-			x: 14.0d
-			y: 7.5d
+			x: 20d
+			y: 12d
 		}
 		{
 			icon: "malum:concentrated_gluttony"
@@ -2189,15 +2189,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Concentrated Gluttony"
-			x: 15.25d
-			y: 7.5d
+			x: 22d
+			y: 12d
 		}
 		{
 			icon: "malum:cursed_sap"
 			id: "3203D83429D13C3B"
 			rewards: [{
 				count: 8
-				id: "80B22EC79FF82113"
+				id: "-7F4DD1386007DEED"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2209,15 +2209,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cursed Sap"
-			x: 16.5d
-			y: 7.5d
+			x: 24d
+			y: 12d
 		}
 		{
 			icon: "malum:rotting_essence"
 			id: "7BE999E7C72A3690"
 			rewards: [{
 				count: 8
-				id: "FA72E6EFE84FA144"
+				id: "-58D191017B05EBC"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2229,15 +2229,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Rotting Essence"
-			x: 17.75d
-			y: 7.5d
+			x: 26d
+			y: 12d
 		}
 		{
 			icon: "malum:runic_sap"
 			id: "6939242561138CCA"
 			rewards: [{
 				count: 8
-				id: "B6291DB9089F1905"
+				id: "-49D6E246F760E6FB"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2249,8 +2249,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Runic Sap"
-			x: 19.0d
-			y: 7.5d
+			x: 28d
+			y: 12d
 		}
 		{
 			icon: "minecraft:apple"
@@ -2269,8 +2269,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Apple"
-			x: 20.25d
-			y: 7.5d
+			x: 30d
+			y: 12d
 		}
 		{
 			icon: "minecraft:baked_potato"
@@ -2289,8 +2289,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Baked Potato"
-			x: 1.5d
-			y: 8.75d
+			x: 0d
+			y: 14d
 		}
 		{
 			icon: "minecraft:beef"
@@ -2309,15 +2309,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Beef"
-			x: 2.75d
-			y: 8.75d
+			x: 2d
+			y: 14d
 		}
 		{
 			icon: "minecraft:beetroot"
 			id: "29E82E2B49652DC9"
 			rewards: [{
 				count: 8
-				id: "BDA6DE2F591193D4"
+				id: "-425921D0A6EE6C2C"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2329,15 +2329,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Beetroot"
-			x: 4.0d
-			y: 8.75d
+			x: 4d
+			y: 14d
 		}
 		{
 			icon: "minecraft:bread"
 			id: "2E79D554A3FC9C1A"
 			rewards: [{
 				count: 8
-				id: "847F4E75AFDFD364"
+				id: "-7B80B18A50202C9C"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2349,8 +2349,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Bread"
-			x: 5.25d
-			y: 8.75d
+			x: 6d
+			y: 14d
 		}
 		{
 			icon: "minecraft:carrot"
@@ -2369,8 +2369,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Carrot"
-			x: 6.5d
-			y: 8.75d
+			x: 8d
+			y: 14d
 		}
 		{
 			icon: "minecraft:chicken"
@@ -2389,8 +2389,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Chicken"
-			x: 7.75d
-			y: 8.75d
+			x: 10d
+			y: 14d
 		}
 		{
 			icon: "minecraft:chorus_fruit"
@@ -2409,8 +2409,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Chorus Fruit"
-			x: 9.0d
-			y: 8.75d
+			x: 12d
+			y: 14d
 		}
 		{
 			icon: "minecraft:cod"
@@ -2429,15 +2429,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cod"
-			x: 10.25d
-			y: 8.75d
+			x: 14d
+			y: 14d
 		}
 		{
 			icon: "minecraft:cooked_beef"
 			id: "0AF81B32CBFE435B"
 			rewards: [{
 				count: 8
-				id: "B13DBDCD0059299C"
+				id: "-4EC24232FFA6D664"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2449,15 +2449,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Beef"
-			x: 11.5d
-			y: 8.75d
+			x: 16d
+			y: 14d
 		}
 		{
 			icon: "minecraft:cooked_chicken"
 			id: "02E90028A93C06F0"
 			rewards: [{
 				count: 8
-				id: "FEB95EFF029632B3"
+				id: "-146A100FD69CD4D"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2469,15 +2469,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Chicken"
-			x: 12.75d
-			y: 8.75d
+			x: 18d
+			y: 14d
 		}
 		{
 			icon: "minecraft:cooked_cod"
 			id: "2488FAC51F6B542C"
 			rewards: [{
 				count: 8
-				id: "95D6EBAA1216BABC"
+				id: "-6A291455EDE94544"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2489,8 +2489,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Cod"
-			x: 14.0d
-			y: 8.75d
+			x: 20d
+			y: 14d
 		}
 		{
 			icon: "minecraft:cooked_mutton"
@@ -2509,15 +2509,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Mutton"
-			x: 15.25d
-			y: 8.75d
+			x: 22d
+			y: 14d
 		}
 		{
 			icon: "minecraft:cooked_porkchop"
 			id: "1CE29C9DF08024F4"
 			rewards: [{
 				count: 8
-				id: "B60490B720811E0B"
+				id: "-49FB6F48DF7EE1F5"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2529,15 +2529,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Porkchop"
-			x: 16.5d
-			y: 8.75d
+			x: 24d
+			y: 14d
 		}
 		{
 			icon: "minecraft:cooked_rabbit"
 			id: "2D9F638197B4C7B7"
 			rewards: [{
 				count: 8
-				id: "8DC5DFC512CEE20C"
+				id: "-723A203AED311DF4"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2549,15 +2549,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Rabbit"
-			x: 17.75d
-			y: 8.75d
+			x: 26d
+			y: 14d
 		}
 		{
 			icon: "minecraft:cooked_salmon"
 			id: "4006C9D8399671DC"
 			rewards: [{
 				count: 8
-				id: "9D2E12488F5C4D75"
+				id: "-62D1EDB770A3B28B"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2569,8 +2569,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Salmon"
-			x: 19.0d
-			y: 8.75d
+			x: 28d
+			y: 14d
 		}
 		{
 			icon: "minecraft:cookie"
@@ -2589,15 +2589,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cookie"
-			x: 20.25d
-			y: 8.75d
+			x: 30d
+			y: 14d
 		}
 		{
 			icon: "minecraft:dried_kelp"
 			id: "6483D4B720479B57"
 			rewards: [{
 				count: 8
-				id: "BB055F1489897426"
+				id: "-44FAA0EB76768BDA"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2609,15 +2609,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Dried Kelp"
-			x: 1.5d
-			y: 10.0d
+			x: 0d
+			y: 16d
 		}
 		{
 			icon: "minecraft:enchanted_golden_apple"
 			id: "5FA141A24872821C"
 			rewards: [{
 				count: 8
-				id: "DF97AF1428E90613"
+				id: "-206850EBD716F9ED"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2629,15 +2629,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Enchanted Golden Apple"
-			x: 2.75d
-			y: 10.0d
+			x: 2d
+			y: 16d
 		}
 		{
 			icon: "minecraft:glow_berries"
 			id: "56876FC9CA652429"
 			rewards: [{
 				count: 8
-				id: "EBF40280370ECAE5"
+				id: "-140BFD7FC8F1351B"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2649,8 +2649,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Glow Berries"
-			x: 4.0d
-			y: 10.0d
+			x: 4d
+			y: 16d
 		}
 		{
 			icon: "minecraft:golden_apple"
@@ -2669,15 +2669,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Golden Apple"
-			x: 5.25d
-			y: 10.0d
+			x: 6d
+			y: 16d
 		}
 		{
 			icon: "minecraft:golden_carrot"
 			id: "3404909267FA2B4B"
 			rewards: [{
 				count: 8
-				id: "C21AE3A14623C49C"
+				id: "-3DE51C5EB9DC3B64"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2689,15 +2689,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Golden Carrot"
-			x: 6.5d
-			y: 10.0d
+			x: 8d
+			y: 16d
 		}
 		{
 			icon: "minecraft:honey_bottle"
 			id: "35B55E6359702A35"
 			rewards: [{
 				count: 8
-				id: "9DE8EFE64F37DBC7"
+				id: "-62171019B0C82439"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2709,15 +2709,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Honey Bottle"
-			x: 7.75d
-			y: 10.0d
+			x: 10d
+			y: 16d
 		}
 		{
 			icon: "minecraft:melon_slice"
 			id: "61A3F0374190E10E"
 			rewards: [{
 				count: 8
-				id: "B33AD4FFFE8FB5A7"
+				id: "-4CC52B0001704A59"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2729,8 +2729,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Melon Slice"
-			x: 9.0d
-			y: 10.0d
+			x: 12d
+			y: 16d
 		}
 		{
 			icon: "minecraft:mutton"
@@ -2749,8 +2749,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Mutton"
-			x: 10.25d
-			y: 10.0d
+			x: 14d
+			y: 16d
 		}
 		{
 			icon: "minecraft:poisonous_potato"
@@ -2769,15 +2769,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Poisonous Potato"
-			x: 11.5d
-			y: 10.0d
+			x: 16d
+			y: 16d
 		}
 		{
 			icon: "minecraft:porkchop"
 			id: "47FD50F5C66A395B"
 			rewards: [{
 				count: 8
-				id: "90F6DC9C09F603C4"
+				id: "-6F092363F609FC3C"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2789,8 +2789,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Porkchop"
-			x: 12.75d
-			y: 10.0d
+			x: 18d
+			y: 16d
 		}
 		{
 			icon: "minecraft:potato"
@@ -2809,8 +2809,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Potato"
-			x: 14.0d
-			y: 10.0d
+			x: 20d
+			y: 16d
 		}
 		{
 			icon: "minecraft:pufferfish"
@@ -2829,15 +2829,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Pufferfish"
-			x: 15.25d
-			y: 10.0d
+			x: 22d
+			y: 16d
 		}
 		{
 			icon: "minecraft:pumpkin_pie"
 			id: "03B5EADEB776AC57"
 			rewards: [{
 				count: 8
-				id: "8ADD6DA2D483AFFC"
+				id: "-7522925D2B7C5004"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2849,15 +2849,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Pumpkin Pie"
-			x: 16.5d
-			y: 10.0d
+			x: 24d
+			y: 16d
 		}
 		{
 			icon: "minecraft:rabbit"
 			id: "77B7A18E30430FAF"
 			rewards: [{
 				count: 8
-				id: "F265D7425EF56F17"
+				id: "-D9A28BDA10A90E9"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2869,15 +2869,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Rabbit"
-			x: 17.75d
-			y: 10.0d
+			x: 26d
+			y: 16d
 		}
 		{
 			icon: "minecraft:rotten_flesh"
 			id: "5F2C9E11FD43B0C2"
 			rewards: [{
 				count: 8
-				id: "8CF16D7102665961"
+				id: "-730E928EFD99A69F"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2889,8 +2889,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Rotten Flesh"
-			x: 19.0d
-			y: 10.0d
+			x: 28d
+			y: 16d
 		}
 		{
 			icon: "minecraft:salmon"
@@ -2909,15 +2909,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Salmon"
-			x: 20.25d
-			y: 10.0d
+			x: 30d
+			y: 16d
 		}
 		{
 			icon: "minecraft:spider_eye"
 			id: "25D3D04DB5577480"
 			rewards: [{
 				count: 8
-				id: "AA34AEA043831626"
+				id: "-55CB515FBC7CE9DA"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2929,15 +2929,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Spider Eye"
-			x: 24.5d
-			y: 0.0d
+			x: 0d
+			y: 18d
 		}
 		{
 			icon: "minecraft:sweet_berries"
 			id: "5BD425ED480B7580"
 			rewards: [{
 				count: 8
-				id: "9DAB6C5982EF75FF"
+				id: "-625493A67D108A01"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2949,8 +2949,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Sweet Berries"
-			x: 25.75d
-			y: 0.0d
+			x: 2d
+			y: 18d
 		}
 		{
 			icon: "minecraft:tropical_fish"
@@ -2969,15 +2969,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Tropical Fish"
-			x: 27.0d
-			y: 0.0d
+			x: 4d
+			y: 18d
 		}
 		{
 			icon: "natures_spirit:coconut_half"
 			id: "0D23A5EE9EA04FB8"
 			rewards: [{
 				count: 8
-				id: "F41BAC9D023F02DC"
+				id: "-BE45362FDC0FD24"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -2989,15 +2989,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Coconut Half"
-			x: 28.25d
-			y: 0.0d
+			x: 6d
+			y: 18d
 		}
 		{
 			icon: "natures_spirit:desert_turnip"
 			id: "3AD0C96159CC0DDB"
 			rewards: [{
 				count: 8
-				id: "D0474B82B5297B45"
+				id: "-2FB8B47D4AD684BB"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3009,15 +3009,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Desert Turnip"
-			x: 29.5d
-			y: 0.0d
+			x: 8d
+			y: 18d
 		}
 		{
 			icon: "natures_spirit:whole_pizza"
 			id: "2E5CA80C09006BE6"
 			rewards: [{
 				count: 8
-				id: "9C28A9D1C45D7C6B"
+				id: "-63D7562E3BA28395"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3029,15 +3029,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Whole Pizza"
-			x: 30.75d
-			y: 0.0d
+			x: 10d
+			y: 18d
 		}
 		{
 			icon: "occultism:demons_dream_essence"
 			id: "7280E4C7DC2B940C"
 			rewards: [{
 				count: 8
-				id: "FE75CE78DAACAC6D"
+				id: "-18A318725535393"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3049,15 +3049,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Demons Dream Essence"
-			x: 32.0d
-			y: 0.0d
+			x: 12d
+			y: 18d
 		}
 		{
 			icon: "occultism:otherworld_essence"
 			id: "616FE0D73526C629"
 			rewards: [{
 				count: 8
-				id: "9DE18DF2678D4F04"
+				id: "-621E720D9872B0FC"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3069,15 +3069,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Otherworld Essence"
-			x: 33.25d
-			y: 0.0d
+			x: 14d
+			y: 18d
 		}
 		{
 			icon: "pneumaticcraft:chips"
 			id: "6EDB6F6CFA62028D"
 			rewards: [{
 				count: 8
-				id: "AD37F019557FB0B5"
+				id: "-52C80FE6AA804F4B"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3089,15 +3089,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Chips"
-			x: 34.5d
-			y: 0.0d
+			x: 16d
+			y: 18d
 		}
 		{
 			icon: "pneumaticcraft:cod_n_chips"
 			id: "27F91B534C5DB289"
 			rewards: [{
 				count: 8
-				id: "B630D7AF59775C2B"
+				id: "-49CF2850A688A3D5"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3109,15 +3109,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cod N Chips"
-			x: 35.75d
-			y: 0.0d
+			x: 18d
+			y: 18d
 		}
 		{
 			icon: "pneumaticcraft:sourdough_bread"
 			id: "78C4F2421437B336"
 			rewards: [{
 				count: 8
-				id: "8FF73793925D5036"
+				id: "-7008C86C6DA2AFCA"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3129,8 +3129,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Sourdough Bread"
-			x: 37.0d
-			y: 0.0d
+			x: 20d
+			y: 18d
 		}
 		{
 			icon: "quark:cooked_crab_leg"
@@ -3149,8 +3149,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Crab Leg"
-			x: 38.25d
-			y: 0.0d
+			x: 22d
+			y: 18d
 		}
 		{
 			icon: "quark:crab_leg"
@@ -3169,15 +3169,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Crab Leg"
-			x: 39.5d
-			y: 0.0d
+			x: 24d
+			y: 18d
 		}
 		{
 			icon: "starcatcher:cooked_starcaught_fish"
 			id: "76EC03AD2A373702"
 			rewards: [{
 				count: 8
-				id: "D7431AD525814277"
+				id: "-28BCE52ADA7EBD89"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3189,8 +3189,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Starcaught Fish"
-			x: 40.75d
-			y: 0.0d
+			x: 26d
+			y: 18d
 		}
 		{
 			icon: "tconstruct:bacon"
@@ -3209,8 +3209,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Bacon"
-			x: 42.0d
-			y: 0.0d
+			x: 28d
+			y: 18d
 		}
 		{
 			icon: "tconstruct:cheese_block"
@@ -3229,15 +3229,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cheese Block"
-			x: 43.25d
-			y: 0.0d
+			x: 30d
+			y: 18d
 		}
 		{
 			icon: "tconstruct:cheese_ingot"
 			id: "1FCCA9DB0925FC4B"
 			rewards: [{
 				count: 8
-				id: "CD063751BF7E4DEF"
+				id: "-32F9C8AE4081B211"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3249,8 +3249,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Cheese Ingot"
-			x: 24.5d
-			y: 1.25d
+			x: 0d
+			y: 20d
 		}
 		{
 			icon: "tconstruct:earth_slime_bottle"
@@ -3269,15 +3269,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Earth Slime Bottle"
-			x: 25.75d
-			y: 1.25d
+			x: 2d
+			y: 20d
 		}
 		{
 			icon: "tconstruct:ender_slime_bottle"
 			id: "6A774A9FB81269CD"
 			rewards: [{
 				count: 8
-				id: "9F8FB45C403C879D"
+				id: "-60704BA3BFC37863"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3289,15 +3289,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Ender Slime Bottle"
-			x: 27.0d
-			y: 1.25d
+			x: 4d
+			y: 20d
 		}
 		{
 			icon: "tconstruct:ichor_slime_bottle"
 			id: "70E45BDF5C773D06"
 			rewards: [{
 				count: 8
-				id: "854226DED9FDF7D1"
+				id: "-7ABDD9212602082F"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3309,8 +3309,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Ichor Slime Bottle"
-			x: 28.25d
-			y: 1.25d
+			x: 6d
+			y: 20d
 		}
 		{
 			icon: "tconstruct:jeweled_apple"
@@ -3329,15 +3329,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Jeweled Apple"
-			x: 29.5d
-			y: 1.25d
+			x: 8d
+			y: 20d
 		}
 		{
 			icon: "tconstruct:sky_slime_bottle"
 			id: "0BE713AC4B1427AE"
 			rewards: [{
 				count: 8
-				id: "CB9E3237AF940E3C"
+				id: "-3461CDC8506BF1C4"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3349,8 +3349,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Sky Slime Bottle"
-			x: 30.75d
-			y: 1.25d
+			x: 10d
+			y: 20d
 		}
 		{
 			icon: "tconstruct:venom_bottle"
@@ -3369,15 +3369,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Venom Bottle"
-			x: 32.0d
-			y: 1.25d
+			x: 12d
+			y: 20d
 		}
 		{
 			icon: "twilightforest:cooked_meef"
 			id: "1BAE8CD4C93A3FDF"
 			rewards: [{
 				count: 8
-				id: "D21310E1D71D4EFC"
+				id: "-2DECEF1E28E2B104"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3389,15 +3389,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Meef"
-			x: 33.25d
-			y: 1.25d
+			x: 14d
+			y: 20d
 		}
 		{
 			icon: "twilightforest:cooked_venison"
 			id: "72C3944896CC6412"
 			rewards: [{
 				count: 8
-				id: "9F031D5A6C5341B6"
+				id: "-60FCE2A593ACBE4A"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3409,8 +3409,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Venison"
-			x: 34.5d
-			y: 1.25d
+			x: 16d
+			y: 20d
 		}
 		{
 			icon: "twilightforest:hydra_chop"
@@ -3429,15 +3429,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Hydra Chop"
-			x: 35.75d
-			y: 1.25d
+			x: 18d
+			y: 20d
 		}
 		{
 			icon: "twilightforest:raw_meef"
 			id: "0ADA8AFAF83B7D0B"
 			rewards: [{
 				count: 8
-				id: "DD6B84BA64A3F049"
+				id: "-22947B459B5C0FB7"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3449,15 +3449,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Raw Meef"
-			x: 37.0d
-			y: 1.25d
+			x: 20d
+			y: 20d
 		}
 		{
 			icon: "twilightforest:raw_venison"
 			id: "34503C2EC143612A"
 			rewards: [{
 				count: 8
-				id: "D66A0CC0317C4A05"
+				id: "-2995F33FCE83B5FB"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3469,8 +3469,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Raw Venison"
-			x: 38.25d
-			y: 1.25d
+			x: 22d
+			y: 20d
 		}
 		{
 			icon: "twilightforest:torchberries"
@@ -3489,15 +3489,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Torchberries"
-			x: 39.5d
-			y: 1.25d
+			x: 24d
+			y: 20d
 		}
 		{
 			icon: "ubesdelight:arroz_caldo"
 			id: "2C1D9CB92C5198F8"
 			rewards: [{
 				count: 8
-				id: "93167371007F4EB1"
+				id: "-6CE98C8EFF80B14F"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3509,15 +3509,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Arroz Caldo"
-			x: 40.75d
-			y: 1.25d
+			x: 26d
+			y: 20d
 		}
 		{
 			icon: "ubesdelight:bangsilog"
 			id: "3AACB8FE31D91E4A"
 			rewards: [{
 				count: 8
-				id: "E95DC1EA4C9D18AF"
+				id: "-16A23E15B362E751"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3529,15 +3529,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Bangsilog"
-			x: 42.0d
-			y: 1.25d
+			x: 28d
+			y: 20d
 		}
 		{
 			icon: "ubesdelight:bulalo"
 			id: "6294A51FBDD743A3"
 			rewards: [{
 				count: 8
-				id: "DAAA849B2BE1BB0E"
+				id: "-25557B64D41E44F2"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3549,15 +3549,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Bulalo"
-			x: 43.25d
-			y: 1.25d
+			x: 30d
+			y: 20d
 		}
 		{
 			icon: "ubesdelight:chicken_inasal"
 			id: "009B3C757AD102FD"
 			rewards: [{
 				count: 8
-				id: "9BDF5672D9B34A5A"
+				id: "-6420A98D264CB5A6"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3569,15 +3569,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Chicken Inasal"
-			x: 24.5d
-			y: 2.5d
+			x: 0d
+			y: 22d
 		}
 		{
 			icon: "ubesdelight:chicken_inasal_rice"
 			id: "41E4686D2031BD9E"
 			rewards: [{
 				count: 8
-				id: "D9243C7C73E0CA29"
+				id: "-26DBC3838C1F35D7"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3589,15 +3589,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Chicken Inasal Rice"
-			x: 25.75d
-			y: 2.5d
+			x: 2d
+			y: 22d
 		}
 		{
 			icon: "ubesdelight:condensed_milk_bottle"
 			id: "169BEB6D58938921"
 			rewards: [{
 				count: 8
-				id: "F977166AFC4AE1E0"
+				id: "-688E99503B51E20"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3609,15 +3609,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Condensed Milk Bottle"
-			x: 27.0d
-			y: 2.5d
+			x: 4d
+			y: 22d
 		}
 		{
 			icon: "ubesdelight:cookie_ginger"
 			id: "55CB4CF9BDEFB72C"
 			rewards: [{
 				count: 8
-				id: "C2CC21FAE1FD631E"
+				id: "-3D33DE051E029CE2"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3629,15 +3629,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cookie Ginger"
-			x: 28.25d
-			y: 2.5d
+			x: 6d
+			y: 22d
 		}
 		{
 			icon: "ubesdelight:cookie_ube"
 			id: "575EEBEFCEB1ED5E"
 			rewards: [{
 				count: 8
-				id: "B2A3FCF8849E33F7"
+				id: "-4D5C03077B61CC09"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3649,15 +3649,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Cookie Ube"
-			x: 29.5d
-			y: 2.5d
+			x: 8d
+			y: 22d
 		}
 		{
 			icon: "ubesdelight:ensaymada"
 			id: "690F46292F61D0C1"
 			rewards: [{
 				count: 8
-				id: "F3209CC01D7101F0"
+				id: "-CDF633FE28EFE10"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3669,8 +3669,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Ensaymada"
-			x: 30.75d
-			y: 2.5d
+			x: 10d
+			y: 22d
 		}
 		{
 			icon: "ubesdelight:ensaymada_raw"
@@ -3689,8 +3689,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Ensaymada Raw"
-			x: 32.0d
-			y: 2.5d
+			x: 12d
+			y: 22d
 		}
 		{
 			icon: "ubesdelight:ensaymada_ube"
@@ -3709,15 +3709,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Ensaymada Ube"
-			x: 33.25d
-			y: 2.5d
+			x: 14d
+			y: 22d
 		}
 		{
 			icon: "ubesdelight:ensaymada_ube_raw"
 			id: "4238DA777CB88E09"
 			rewards: [{
 				count: 8
-				id: "8BF587E0193A623C"
+				id: "-740A781FE6C59DC4"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3729,15 +3729,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Ensaymada Ube Raw"
-			x: 34.5d
-			y: 2.5d
+			x: 16d
+			y: 22d
 		}
 		{
 			icon: "ubesdelight:fish_sauce_bottle"
 			id: "0C04FDA4E777F536"
 			rewards: [{
 				count: 8
-				id: "BEF4A58907181B33"
+				id: "-410B5A76F8E7E4CD"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3749,8 +3749,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Fish Sauce Bottle"
-			x: 35.75d
-			y: 2.5d
+			x: 18d
+			y: 22d
 		}
 		{
 			icon: "ubesdelight:garlic"
@@ -3769,8 +3769,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Garlic"
-			x: 37.0d
-			y: 2.5d
+			x: 20d
+			y: 22d
 		}
 		{
 			icon: "ubesdelight:garlic_chop"
@@ -3789,15 +3789,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Garlic Chop"
-			x: 38.25d
-			y: 2.5d
+			x: 22d
+			y: 22d
 		}
 		{
 			icon: "ubesdelight:ginger"
 			id: "25B69B60B69B6010"
 			rewards: [{
 				count: 8
-				id: "FC92428941B3D6D3"
+				id: "-36DBD76BE4C292D"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3809,8 +3809,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Ginger"
-			x: 39.5d
-			y: 2.5d
+			x: 24d
+			y: 22d
 		}
 		{
 			icon: "ubesdelight:ginger_chop"
@@ -3829,15 +3829,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Ginger Chop"
-			x: 40.75d
-			y: 2.5d
+			x: 26d
+			y: 22d
 		}
 		{
 			icon: "ubesdelight:halo_halo"
 			id: "283429CA3A936671"
 			rewards: [{
 				count: 8
-				id: "FDFBDC9B03444EA5"
+				id: "-2042364FCBBB15B"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3849,8 +3849,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Halo Halo"
-			x: 42.0d
-			y: 2.5d
+			x: 28d
+			y: 22d
 		}
 		{
 			icon: "ubesdelight:hopia_munggo"
@@ -3869,15 +3869,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Hopia Munggo"
-			x: 43.25d
-			y: 2.5d
+			x: 30d
+			y: 22d
 		}
 		{
 			icon: "ubesdelight:hopia_munggo_raw"
 			id: "0A728C9F67DE1E15"
 			rewards: [{
 				count: 8
-				id: "FC8236CC2F1A1C61"
+				id: "-37DC933D0E5E39F"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3889,15 +3889,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Hopia Munggo Raw"
-			x: 24.5d
-			y: 3.75d
+			x: 0d
+			y: 24d
 		}
 		{
 			icon: "ubesdelight:hopia_ube"
 			id: "0A19C878907C554B"
 			rewards: [{
 				count: 8
-				id: "B258CC5FC527E9A9"
+				id: "-4DA733A03AD81657"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -3909,8 +3909,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Hopia Ube"
-			x: 25.75d
-			y: 3.75d
+			x: 2d
+			y: 24d
 		}
 		{
 			icon: "ubesdelight:hopia_ube_raw"
@@ -3929,8 +3929,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Hopia Ube Raw"
-			x: 27.0d
-			y: 3.75d
+			x: 4d
+			y: 24d
 		}
 		{
 			icon: "ubesdelight:kinilaw"
@@ -3949,8 +3949,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Kinilaw"
-			x: 28.25d
-			y: 3.75d
+			x: 6d
+			y: 24d
 		}
 		{
 			icon: "ubesdelight:leche_flan"
@@ -3969,8 +3969,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Leche Flan"
-			x: 29.5d
-			y: 3.75d
+			x: 8d
+			y: 24d
 		}
 		{
 			icon: "ubesdelight:lemongrass"
@@ -3989,15 +3989,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Lemongrass"
-			x: 30.75d
-			y: 3.75d
+			x: 10d
+			y: 24d
 		}
 		{
 			icon: "ubesdelight:lumpia"
 			id: "2E5DC4FDD0B38446"
 			rewards: [{
 				count: 8
-				id: "C48D401AC5986071"
+				id: "-3B72BFE53A679F8F"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4009,8 +4009,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Lumpia"
-			x: 32.0d
-			y: 3.75d
+			x: 12d
+			y: 24d
 		}
 		{
 			icon: "ubesdelight:mechado"
@@ -4029,8 +4029,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Mechado"
-			x: 33.25d
-			y: 3.75d
+			x: 14d
+			y: 24d
 		}
 		{
 			icon: "ubesdelight:pandesal"
@@ -4049,15 +4049,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Pandesal"
-			x: 34.5d
-			y: 3.75d
+			x: 16d
+			y: 24d
 		}
 		{
 			icon: "ubesdelight:pandesal_raw"
 			id: "7A2F68B8232B93E1"
 			rewards: [{
 				count: 8
-				id: "B126212877FDEC6A"
+				id: "-4ED9DED788021396"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4069,8 +4069,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Pandesal Raw"
-			x: 35.75d
-			y: 3.75d
+			x: 18d
+			y: 24d
 		}
 		{
 			icon: "ubesdelight:pandesal_ube"
@@ -4089,15 +4089,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Pandesal Ube"
-			x: 37.0d
-			y: 3.75d
+			x: 20d
+			y: 24d
 		}
 		{
 			icon: "ubesdelight:pandesal_ube_raw"
 			id: "585E3798A7096A08"
 			rewards: [{
 				count: 8
-				id: "A72C0910E411B8A1"
+				id: "-58D3F6EF1BEE475F"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4109,8 +4109,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Pandesal Ube Raw"
-			x: 38.25d
-			y: 3.75d
+			x: 22d
+			y: 24d
 		}
 		{
 			icon: "ubesdelight:polvorone"
@@ -4129,8 +4129,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Polvorone"
-			x: 39.5d
-			y: 3.75d
+			x: 24d
+			y: 24d
 		}
 		{
 			icon: "ubesdelight:polvorone_cc"
@@ -4149,8 +4149,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Polvorone Cc"
-			x: 40.75d
-			y: 3.75d
+			x: 26d
+			y: 24d
 		}
 		{
 			icon: "ubesdelight:polvorone_pinipig"
@@ -4169,8 +4169,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Polvorone Pinipig"
-			x: 42.0d
-			y: 3.75d
+			x: 28d
+			y: 24d
 		}
 		{
 			icon: "ubesdelight:polvorone_ube"
@@ -4189,15 +4189,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Polvorone Ube"
-			x: 43.25d
-			y: 3.75d
+			x: 30d
+			y: 24d
 		}
 		{
 			icon: "ubesdelight:sinangag"
 			id: "643E4F33D07FA9FF"
 			rewards: [{
 				count: 8
-				id: "FDB1786B3419128D"
+				id: "-24E8794CBE6ED73"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4209,15 +4209,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Sinangag"
-			x: 24.5d
-			y: 5.0d
+			x: 0d
+			y: 26d
 		}
 		{
 			icon: "ubesdelight:sisig"
 			id: "53C374CBA4C48DD5"
 			rewards: [{
 				count: 8
-				id: "A7810AF13C3FC7C9"
+				id: "-587EF50EC3C03837"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4229,8 +4229,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Sisig"
-			x: 25.75d
-			y: 5.0d
+			x: 2d
+			y: 26d
 		}
 		{
 			icon: "ubesdelight:tocino"
@@ -4249,8 +4249,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Tocino"
-			x: 27.0d
-			y: 5.0d
+			x: 4d
+			y: 26d
 		}
 		{
 			icon: "ubesdelight:tosilog"
@@ -4269,8 +4269,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Tosilog"
-			x: 28.25d
-			y: 5.0d
+			x: 6d
+			y: 26d
 		}
 		{
 			icon: "ubesdelight:ube"
@@ -4289,8 +4289,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Ube"
-			x: 29.5d
-			y: 5.0d
+			x: 8d
+			y: 26d
 		}
 		{
 			icon: "ubesdelight:ube_cake_slice"
@@ -4309,15 +4309,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Ube Cake Slice"
-			x: 30.75d
-			y: 5.0d
+			x: 10d
+			y: 26d
 		}
 		{
 			icon: "undergarden:blisterberry"
 			id: "308A75E9BF4C268A"
 			rewards: [{
 				count: 8
-				id: "B4E2154C3A303859"
+				id: "-4B1DEAB3C5CFC7A7"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4329,8 +4329,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Blisterberry"
-			x: 32.0d
-			y: 5.0d
+			x: 12d
+			y: 26d
 		}
 		{
 			icon: "undergarden:blood_globule"
@@ -4349,15 +4349,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Blood Globule"
-			x: 33.25d
-			y: 5.0d
+			x: 14d
+			y: 26d
 		}
 		{
 			icon: "undergarden:cooked_gwibling"
 			id: "29B94F5432E7301D"
 			rewards: [{
 				count: 8
-				id: "90C585BF27D1E3D6"
+				id: "-6F3A7A40D82E1C2A"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4369,8 +4369,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Cooked Gwibling"
-			x: 34.5d
-			y: 5.0d
+			x: 16d
+			y: 26d
 		}
 		{
 			icon: "undergarden:droopvine_item"
@@ -4389,15 +4389,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Droopvine Item"
-			x: 35.75d
-			y: 5.0d
+			x: 18d
+			y: 26d
 		}
 		{
 			icon: "undergarden:gloomgourd_pie"
 			id: "5385B1C64B93AEE7"
 			rewards: [{
 				count: 8
-				id: "E3F61D0DBB894019"
+				id: "-1C09E2F24476BFE7"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4409,15 +4409,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Gloomgourd Pie"
-			x: 37.0d
-			y: 5.0d
+			x: 20d
+			y: 26d
 		}
 		{
 			icon: "undergarden:gloomper_leg"
 			id: "6906ED005EA00544"
 			rewards: [{
 				count: 8
-				id: "B4042130B07F57A4"
+				id: "-4BFBDECF4F80A85C"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4429,15 +4429,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Gloomper Leg"
-			x: 38.25d
-			y: 5.0d
+			x: 22d
+			y: 26d
 		}
 		{
 			icon: "undergarden:goo_ball"
 			id: "3956995CC1D5DE5B"
 			rewards: [{
 				count: 8
-				id: "CF2BF8FB90EF1CFE"
+				id: "-30D407046F10E302"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4449,15 +4449,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Goo Ball"
-			x: 39.5d
-			y: 5.0d
+			x: 24d
+			y: 26d
 		}
 		{
 			icon: "undergarden:raw_dweller_meat"
 			id: "135B82FA2E9C6DB2"
 			rewards: [{
 				count: 8
-				id: "EC741F805A9EE817"
+				id: "-138BE07FA56117E9"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4469,15 +4469,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Raw Dweller Meat"
-			x: 40.75d
-			y: 5.0d
+			x: 26d
+			y: 26d
 		}
 		{
 			icon: "undergarden:raw_gloomper_leg"
 			id: "0C896F349DBACCC4"
 			rewards: [{
 				count: 8
-				id: "E10DFA89B082A4B4"
+				id: "-1EF205764F7D5B4C"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4489,15 +4489,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Raw Gloomper Leg"
-			x: 42.0d
-			y: 5.0d
+			x: 28d
+			y: 26d
 		}
 		{
 			icon: "undergarden:raw_gwibling"
 			id: "1F9C7E6DB49234B9"
 			rewards: [{
 				count: 8
-				id: "FC7D5F785EA9B659"
+				id: "-382A087A15649A7"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4509,15 +4509,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Raw Gwibling"
-			x: 43.25d
-			y: 5.0d
+			x: 30d
+			y: 26d
 		}
 		{
 			icon: "undergarden:roasted_underbeans"
 			id: "107BE833247FFC87"
 			rewards: [{
 				count: 8
-				id: "867B0C300372EDFB"
+				id: "-7984F3CFFC8D1205"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4529,15 +4529,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Roasted Underbeans"
-			x: 24.5d
-			y: 6.25d
+			x: 0d
+			y: 28d
 		}
 		{
 			icon: "undergarden:rotten_blisterberry"
 			id: "1DC420BD3FBE7278"
 			rewards: [{
 				count: 8
-				id: "F28AE95BD814F089"
+				id: "-D7516A427EB0F77"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4549,8 +4549,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Rotten Blisterberry"
-			x: 25.75d
-			y: 6.25d
+			x: 2d
+			y: 28d
 		}
 		{
 			icon: "undergarden:slop_bowl"
@@ -4569,8 +4569,8 @@
 				type: "item"
 			}]
 			title: "All Foods: Slop Bowl"
-			x: 27.0d
-			y: 6.25d
+			x: 4d
+			y: 28d
 		}
 		{
 			icon: "undergarden:underbeans"
@@ -4589,15 +4589,15 @@
 				type: "item"
 			}]
 			title: "All Foods: Underbeans"
-			x: 28.25d
-			y: 6.25d
+			x: 6d
+			y: 28d
 		}
 		{
 			icon: "brewinandchewin:beer"
 			id: "48D0076A72C75058"
 			rewards: [{
 				count: 8
-				id: "F43D313376C2BD6A"
+				id: "-BC2CECC893D4296"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4609,15 +4609,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Beer"
-			x: 1.5d
-			y: 12.5d
+			x: 8d
+			y: 28d
 		}
 		{
 			icon: "brewinandchewin:cocoa_fudge"
 			id: "0E16D714A2760616"
 			rewards: [{
 				count: 8
-				id: "9A410BB8B3310188"
+				id: "-65BEF4474CCEFE78"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4629,15 +4629,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Cocoa Fudge"
-			x: 2.75d
-			y: 12.5d
+			x: 10d
+			y: 28d
 		}
 		{
 			icon: "brewinandchewin:creamy_onion_soup"
 			id: "586121ABE46FCE46"
 			rewards: [{
 				count: 8
-				id: "85871E05128EEAA4"
+				id: "-7A78E1FAED71155C"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4649,15 +4649,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Creamy Onion Soup"
-			x: 4.0d
-			y: 12.5d
+			x: 12d
+			y: 28d
 		}
 		{
 			icon: "brewinandchewin:dread_nog"
 			id: "023325B4D16CCEB8"
 			rewards: [{
 				count: 8
-				id: "D424240267FA7760"
+				id: "-2BDBDBFD980588A0"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4669,15 +4669,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Dread Nog"
-			x: 5.25d
-			y: 12.5d
+			x: 14d
+			y: 28d
 		}
 		{
 			icon: "brewinandchewin:egg_grog"
 			id: "03EBD209578822A2"
 			rewards: [{
 				count: 8
-				id: "D52D0861CC8CC94A"
+				id: "-2AD2F79E337336B6"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4689,15 +4689,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Egg Grog"
-			x: 6.5d
-			y: 12.5d
+			x: 16d
+			y: 28d
 		}
 		{
 			icon: "brewinandchewin:kombucha"
 			id: "4C9D76C518C59AF4"
 			rewards: [{
 				count: 8
-				id: "F950264B09CBDABB"
+				id: "-6AFD9B4F6342545"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4709,15 +4709,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Kombucha"
-			x: 7.75d
-			y: 12.5d
+			x: 18d
+			y: 28d
 		}
 		{
 			icon: "brewinandchewin:mead"
 			id: "622DF59FA9FF04A3"
 			rewards: [{
 				count: 8
-				id: "8F63E23B0358F4CB"
+				id: "-709C1DC4FCA70B35"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4729,8 +4729,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Mead"
-			x: 9.0d
-			y: 12.5d
+			x: 20d
+			y: 28d
 		}
 		{
 			icon: "brewinandchewin:pale_jane"
@@ -4749,15 +4749,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Pale Jane"
-			x: 10.25d
-			y: 12.5d
+			x: 22d
+			y: 28d
 		}
 		{
 			icon: "brewinandchewin:red_rum"
 			id: "0DD0EFFD43009A94"
 			rewards: [{
 				count: 8
-				id: "BA7F3F192B54D1CD"
+				id: "-4580C0E6D4AB2E33"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4769,15 +4769,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Red Rum"
-			x: 11.5d
-			y: 12.5d
+			x: 24d
+			y: 28d
 		}
 		{
 			icon: "brewinandchewin:rice_wine"
 			id: "5025F1DA6743C08D"
 			rewards: [{
 				count: 8
-				id: "8999367CD19BCCEA"
+				id: "-7666C9832E643316"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4789,15 +4789,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Rice Wine"
-			x: 12.75d
-			y: 12.5d
+			x: 26d
+			y: 28d
 		}
 		{
 			icon: "brewinandchewin:saccharine_rum"
 			id: "0BDA082F67C1D99F"
 			rewards: [{
 				count: 8
-				id: "D12554F32037DF3A"
+				id: "-2EDAAB0CDFC820C6"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4809,8 +4809,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Saccharine Rum"
-			x: 14.0d
-			y: 12.5d
+			x: 28d
+			y: 28d
 		}
 		{
 			icon: "brewinandchewin:strongroot_ale"
@@ -4829,15 +4829,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Strongroot Ale"
-			x: 15.25d
-			y: 12.5d
+			x: 30d
+			y: 28d
 		}
 		{
 			icon: "brewinandchewin:vodka"
 			id: "6B8225C6ED5E0CC6"
 			rewards: [{
 				count: 8
-				id: "CFA9EE37560EE14A"
+				id: "-305611C8A9F11EB6"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4849,8 +4849,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Vodka"
-			x: 16.5d
-			y: 12.5d
+			x: 0d
+			y: 30d
 		}
 		{
 			icon: "create:bar_of_chocolate"
@@ -4869,15 +4869,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Bar Of Chocolate"
-			x: 17.75d
-			y: 12.5d
+			x: 2d
+			y: 30d
 		}
 		{
 			icon: "create:builders_tea"
 			id: "5170C40A7A3CA92C"
 			rewards: [{
 				count: 8
-				id: "D675C0B0981F41EC"
+				id: "-298A3F4F67E0BE14"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4889,8 +4889,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Builders Tea"
-			x: 19.0d
-			y: 12.5d
+			x: 4d
+			y: 30d
 		}
 		{
 			icon: "create:chocolate_glazed_berries"
@@ -4909,8 +4909,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Chocolate Glazed Berries"
-			x: 20.25d
-			y: 12.5d
+			x: 6d
+			y: 30d
 		}
 		{
 			icon: "farmersdelight:apple_cider"
@@ -4929,8 +4929,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Apple Cider"
-			x: 1.5d
-			y: 13.75d
+			x: 8d
+			y: 30d
 		}
 		{
 			icon: "farmersdelight:baked_cod_stew"
@@ -4949,8 +4949,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Baked Cod Stew"
-			x: 2.75d
-			y: 13.75d
+			x: 10d
+			y: 30d
 		}
 		{
 			icon: "farmersdelight:beef_stew"
@@ -4969,15 +4969,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Beef Stew"
-			x: 4.0d
-			y: 13.75d
+			x: 12d
+			y: 30d
 		}
 		{
 			icon: "farmersdelight:bone_broth"
 			id: "5A67FAF28EDD99B6"
 			rewards: [{
 				count: 8
-				id: "9493E5E302F35D39"
+				id: "-6B6C1A1CFD0CA2C7"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -4989,15 +4989,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Bone Broth"
-			x: 5.25d
-			y: 13.75d
+			x: 14d
+			y: 30d
 		}
 		{
 			icon: "farmersdelight:chicken_soup"
 			id: "40FCC160471029A1"
 			rewards: [{
 				count: 8
-				id: "B6EE2BA47634AB00"
+				id: "-4911D45B89CB5500"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -5009,8 +5009,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Chicken Soup"
-			x: 6.5d
-			y: 13.75d
+			x: 16d
+			y: 30d
 		}
 		{
 			icon: "farmersdelight:chocolate_pie_slice"
@@ -5029,8 +5029,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Chocolate Pie Slice"
-			x: 7.75d
-			y: 13.75d
+			x: 18d
+			y: 30d
 		}
 		{
 			icon: "farmersdelight:fish_stew"
@@ -5049,8 +5049,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Fish Stew"
-			x: 9.0d
-			y: 13.75d
+			x: 20d
+			y: 30d
 		}
 		{
 			icon: "farmersdelight:noodle_soup"
@@ -5069,8 +5069,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Noodle Soup"
-			x: 10.25d
-			y: 13.75d
+			x: 22d
+			y: 30d
 		}
 		{
 			icon: "farmersdelight:pumpkin_soup"
@@ -5089,15 +5089,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Pumpkin Soup"
-			x: 11.5d
-			y: 13.75d
+			x: 24d
+			y: 30d
 		}
 		{
 			icon: "farmersdelight:steak_and_potatoes"
 			id: "5A6871F02993FF42"
 			rewards: [{
 				count: 8
-				id: "DDA90F28266636D7"
+				id: "-2256F0D7D999C929"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -5109,8 +5109,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Steak And Potatoes"
-			x: 12.75d
-			y: 13.75d
+			x: 26d
+			y: 30d
 		}
 		{
 			icon: "farmersdelight:vegetable_soup"
@@ -5129,15 +5129,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Vegetable Soup"
-			x: 14.0d
-			y: 13.75d
+			x: 28d
+			y: 30d
 		}
 		{
 			icon: "immersive_weathering:azalea_flowers"
 			id: "5364D567A0EDEC4A"
 			rewards: [{
 				count: 8
-				id: "987C3B7C0D66868D"
+				id: "-6783C483F2997973"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -5149,15 +5149,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Azalea Flowers"
-			x: 15.25d
-			y: 13.75d
+			x: 30d
+			y: 30d
 		}
 		{
 			icon: "minecraft:beetroot_soup"
 			id: "7E02267F01E061E6"
 			rewards: [{
 				count: 8
-				id: "EFDDA778338D963A"
+				id: "-10225887CC7269C6"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -5169,8 +5169,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Beetroot Soup"
-			x: 16.5d
-			y: 13.75d
+			x: 0d
+			y: 32d
 		}
 		{
 			icon: "minecraft:mushroom_stew"
@@ -5189,15 +5189,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Mushroom Stew"
-			x: 17.75d
-			y: 13.75d
+			x: 2d
+			y: 32d
 		}
 		{
 			icon: "minecraft:rabbit_stew"
 			id: "180F26854DA8F1F2"
 			rewards: [{
 				count: 8
-				id: "EA0AC80234C4BA36"
+				id: "-15F537FDCB3B45CA"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -5209,15 +5209,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Rabbit Stew"
-			x: 19.0d
-			y: 13.75d
+			x: 4d
+			y: 32d
 		}
 		{
 			icon: "minecraft:suspicious_stew"
 			id: "09A9CDF80667FB9E"
 			rewards: [{
 				count: 8
-				id: "E2746FA8217060C3"
+				id: "-1D8B9057DE8F9F3D"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -5229,8 +5229,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Suspicious Stew"
-			x: 20.25d
-			y: 13.75d
+			x: 6d
+			y: 32d
 		}
 		{
 			icon: "tconstruct:meat_soup"
@@ -5249,8 +5249,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Meat Soup"
-			x: 1.5d
-			y: 15.0d
+			x: 8d
+			y: 32d
 		}
 		{
 			icon: "ubesdelight:milk_tea_ube"
@@ -5269,15 +5269,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Milk Tea Ube"
-			x: 2.75d
-			y: 15.0d
+			x: 10d
+			y: 32d
 		}
 		{
 			icon: "undergarden:bloody_stew"
 			id: "592A78D4E8AC0B72"
 			rewards: [{
 				count: 8
-				id: "9AF833A27CB0FA21"
+				id: "-6507CC5D834F05DF"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -5289,15 +5289,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Bloody Stew"
-			x: 4.0d
-			y: 15.0d
+			x: 12d
+			y: 32d
 		}
 		{
 			icon: "undergarden:dweller_steak"
 			id: "009BEF1B3C380C4A"
 			rewards: [{
 				count: 8
-				id: "AA4025311ADD4334"
+				id: "-55BFDACEE522BCCC"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -5309,15 +5309,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Dweller Steak"
-			x: 5.25d
-			y: 15.0d
+			x: 14d
+			y: 32d
 		}
 		{
 			icon: "undergarden:indigo_stew"
 			id: "09497A506808E7F1"
 			rewards: [{
 				count: 8
-				id: "9DA2376F5583F012"
+				id: "-625DC890AA7C0FEE"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -5329,15 +5329,15 @@
 				type: "item"
 			}]
 			title: "All Drinks: Indigo Stew"
-			x: 6.5d
-			y: 15.0d
+			x: 16d
+			y: 32d
 		}
 		{
 			icon: "undergarden:inky_stew"
 			id: "2FC191F53DAAF196"
 			rewards: [{
 				count: 8
-				id: "D3BC3B9464FD9050"
+				id: "-2C43C46B9B026FB0"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
@@ -5349,8 +5349,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Inky Stew"
-			x: 7.75d
-			y: 15.0d
+			x: 18d
+			y: 32d
 		}
 		{
 			icon: "undergarden:veiled_stew"
@@ -5369,8 +5369,8 @@
 				type: "item"
 			}]
 			title: "All Drinks: Veiled Stew"
-			x: 9.0d
-			y: 15.0d
+			x: 20d
+			y: 32d
 		}
 	]
 }

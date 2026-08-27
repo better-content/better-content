@@ -34,7 +34,7 @@ Fragility is deliberately stricter than a generic milestone list:
 | Enemies Do Not Share a Cause | two distinct hostile mobs target the player within one 45-second encounter | one of those tracked hostiles damages another |
 | A Copy Can Outlive the Work | a substantial Create schematic is successfully accepted for publication | the correlated publication succeeds |
 | An Army Walks Toward You | Pillager Campaigns enters gathering, approaching, or materialized state for the player | that campaign reaches survived, defeated, retreated, or target-dead outcome |
-| A World Can Be Condensed | a formed and attuned World Lifecycle Manager condenser is used | the next lineage generation is verified at successor login |
+| A World Can Be Condensed | an operator commits through a standalone World Condenser Interface | the next lineage generation is verified at successor login |
 
 Fragility 7–13—A World Can Be Wagered, Severity Has a Yield, Disaster Can Have an Agenda, Apocalypses Can Disagree, Other Hands Have Built Caches, Recognition Changes Both Sides, and Defeat Need Not Be Erasure—are reserved. Their authored candidate plates do not make them live.
 

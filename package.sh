@@ -16,7 +16,8 @@ copy_content() {
 
 resolve_artifacts() {
   local cache_root="${BC_PACKAGE_ARTIFACT_CACHE:-$HOME/.cache/bc/packwiz-downloads}"
-  python3 - "$ROOT" "$1" "$2" "$cache_root" <<'PY'
+  local manifest_root="${3:-$ROOT}"
+  python3 - "$manifest_root" "$1" "$2" "$cache_root" <<'PY'
 import fcntl, fnmatch, hashlib, os, pathlib, shutil, sys, tempfile, tomllib, urllib.request
 root, target, side, cache_root = pathlib.Path(sys.argv[1]), pathlib.Path(sys.argv[2]), sys.argv[3], pathlib.Path(sys.argv[4]).expanduser()
 client_only = ('ambientsounds*','bettergrassify*','configured*','controlling*','DistantHorizons*','embeddium*','entityculling*','hold-my-items*','mouse-tweaks*','no-more-popups*','no-recipe-book*','oculus*','presence-footsteps*','shoulder-surfing*','sound-physics*','the-one-probe*','true-darkness*','darkness*')
@@ -203,6 +204,11 @@ TXT
 
 case "${1:-}" in
   runtime) shift; package_runtime "$@" ;;
+  resolve)
+    shift
+    (($# == 3)) || fail 'usage: package.sh resolve MANIFEST_ROOT TARGET SIDE'
+    resolve_artifacts "$2" "$3" "$1"
+    ;;
   dist) shift; package_dist "$@" ;;
-  *) fail 'usage: package.sh <runtime SERVER_DIR CLIENT_DIR PORT|dist>' ;;
+  *) fail 'usage: package.sh <runtime SERVER_DIR CLIENT_DIR PORT|resolve MANIFEST_ROOT TARGET SIDE|dist>' ;;
 esac

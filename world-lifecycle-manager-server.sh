@@ -25,10 +25,24 @@ MAX_ATTEMPTS=8
 HEALTH_TIMEOUT_SECONDS="${PRESTIGE_HEALTH_TIMEOUT_SECONDS:-300}"
 HEALTH_STABILITY_SECONDS="${PRESTIGE_HEALTH_STABILITY_SECONDS:-10}"
 MIN_FREE_RESERVE_BYTES="${PRESTIGE_MIN_FREE_RESERVE_BYTES:-1073741824}"
+SUPERVISOR_LOG="$SCRIPT_DIR/logs/world-lifecycle-manager-supervisor.log"
 
-die() { printf 'prestige supervisor failed: %s\n' "$*" >&2; exit 1; }
+mkdir -p -- "$SCRIPT_DIR/logs"
+[[ -d "$SCRIPT_DIR/logs" && ! -L "$SCRIPT_DIR/logs" && ! -L "$SUPERVISOR_LOG" ]] || {
+  printf 'prestige supervisor failed: unsafe logs path\n' >&2
+  exit 1
+}
+: >> "$SUPERVISOR_LOG"
+event() {
+  local level="$1"; shift
+  local line
+  line="$(date -u +%Y-%m-%dT%H:%M:%SZ) [$level] $*"
+  printf 'prestige supervisor: %s\n' "$line" >&2
+  printf '%s\n' "$line" >> "$SUPERVISOR_LOG"
+}
+die() { event ERROR "$*"; exit 1; }
 
-for command in awk base64 basename cat chmod cmp cp cut date df du find flock java mkdir mkfifo mv od rm sha256sum sleep sort stat sync tr xargs zip; do
+for command in awk basename cat chmod cmp cp cut date df du find flock mkdir mkfifo mv od readlink rm sha256sum sleep stat sync tr xargs zip; do
   command -v "$command" >/dev/null 2>&1 || die "missing required command: $command"
 done
 [[ -x "$SCRIPT_DIR/run-forge.sh" ]] || die "missing executable Forge launcher: $SCRIPT_DIR/run-forge.sh"
@@ -36,8 +50,13 @@ done
 [[ "$HEALTH_TIMEOUT_SECONDS" =~ ^[1-9][0-9]*$ ]] || die "PRESTIGE_HEALTH_TIMEOUT_SECONDS must be positive"
 [[ "$HEALTH_STABILITY_SECONDS" =~ ^[0-9]+$ ]] || die "PRESTIGE_HEALTH_STABILITY_SECONDS must be non-negative"
 [[ "$MIN_FREE_RESERVE_BYTES" =~ ^[1-9][0-9]*$ ]] || die "PRESTIGE_MIN_FREE_RESERVE_BYTES must be positive"
-JAVA_MAJOR="$(java -version 2>&1 | awk -F'[".]' '/version/ { if ($2 == "1") print $3; else print $2; exit }')"
+JAVA="${BC_JAVA:-}"
+[[ -n "$JAVA" && -x "$JAVA" ]] || die "BC_JAVA is not an executable; start the server with ./run.sh"
+JAVA="$(readlink -f -- "$JAVA")"
+JAVA_MAJOR="$("$JAVA" -version 2>&1 | awk -F'[".]' '/version/ { if ($2 == "1") print $3; else print $2; exit }')"
 [[ "$JAVA_MAJOR" == 17 ]] || die "World Lifecycle Manager requires Java 17, found ${JAVA_MAJOR:-unknown}"
+export BC_JAVA="$JAVA" BC_WLM_SUPERVISED=1
+event INFO "startup java=$JAVA pid=$$"
 shopt -s nullglob
 PRESTIGE_JARS=("$SCRIPT_DIR"/mods/world-lifecycle-manager-*.jar)
 shopt -u nullglob
@@ -47,7 +66,8 @@ PRESTIGE_JAR="${PRESTIGE_JARS[0]}"
 
 if [[ "${1:-}" == verify-archive ]]; then
   [[ "$#" -eq 4 ]] || die "usage: world-lifecycle-manager-server.sh verify-archive ARCHIVE LINEAGE_ID TRANSACTION_ID"
-  exec java -cp "$PRESTIGE_JAR" com.bettercontent.worldlifecyclemanager.PrestigeArchiveVerifier verify "$2" "$3" "$4"
+  event INFO "verifying archive path=$2 lineage=$3 transaction=$4"
+  exec "$JAVA" -cp "$PRESTIGE_JAR" com.bettercontent.worldlifecyclemanager.PrestigeArchiveVerifier verify "$2" "$3" "$4"
 fi
 
 [[ ! -e "$LEGACY_STATE_DIR" ]] || die "legacy .prestige state is unsupported; move or remove it before starting"
@@ -249,6 +269,7 @@ write_phase() {
     attempt-1-running:attempt-2-prepared|attempt-2-running:attempt-3-prepared|attempt-3-running:attempt-4-prepared|\
     attempt-4-running:attempt-5-prepared|attempt-5-running:attempt-6-prepared|attempt-6-running:attempt-7-prepared|attempt-7-running:attempt-8-prepared|\
     attempt-[1-8]-running:health-verified|health-verified:health-verified|health-verified:lineage-committed) ;;
+    world-staged:rolled-back) ;;
     attempt-[1-8]-running:rolled-back|attempt-[1-8]-prepared:rolled-back)
       [[ "$current" == "attempt-$MAX_ATTEMPTS-running" || "$current" == "attempt-$MAX_ATTEMPTS-prepared" ]] \
         || die "rollback attempted before the final authorized successor attempt" ;;
@@ -258,8 +279,9 @@ write_phase() {
   atomic_write "$PHASE_FILE" 'BC_PRESTIGE_TRANSACTION_PHASE_V2' \
     "transaction"$'\t'"$REQUEST_TRANSACTION" "phase"$'\t'"$next"
   CURRENT_PHASE="$next"
+  event INFO "transaction=$REQUEST_TRANSACTION phase=$next"
   if [[ "${PRESTIGE_TEST_INTERRUPT_AT:-}" == "$next" ]]; then
-    printf 'prestige supervisor: test interruption at %s\n' "$next" >&2
+    event WARN "transaction=$REQUEST_TRANSACTION test interruption at phase=$next"
     exit 86
   fi
 }
@@ -272,38 +294,18 @@ read_phase() {
     || die "unknown transaction phase: $CURRENT_PHASE"
 }
 
-validate_relative_path() {
-  local path="$1"
-  case "$path" in ''|/*|*\\*|*$'\n'*|*$'\r'*|*$'\t'*) die "unsafe archive path: $path" ;; esac
-  [[ "/$path/" != *'/../'* && "/$path/" != *'/./'* && "$path" != *'//'* ]] || die "unsafe archive path segment: $path"
-}
-
 generate_archive_manifest() {
   local world="$1" output="$2"
-  [[ -d "$world" && ! -L "$world" && -f "$world/level.dat" && ! -L "$world/level.dat" ]] || die "world lacks a regular level.dat"
-  local unsafe rows="$output.rows" partial="$output.partial" count=0
-  unsafe="$(find "$world" -mindepth 1 -type l -print -quit)"; [[ -z "$unsafe" ]] || die "world contains symbolic link: $unsafe"
-  unsafe="$(find "$world" -mindepth 1 ! -type d ! -type f -print -quit)"; [[ -z "$unsafe" ]] || die "world contains special file: $unsafe"
-  rm -f -- "$rows" "$partial"
-  : > "$rows"
-  while IFS= read -r -d '' file; do
-    local relative="${file#"$world/"}" encoded size digest
-    validate_relative_path "$relative"
-    encoded="$(printf '%s' "$relative" | base64 -w0 | tr '+/' '-_' | tr -d '=')"
-    size="$(stat -c '%s' -- "$file")"; digest="$(sha256sum -- "$file" | cut -d' ' -f1)"
-    printf 'file\t%s\t%s\t%s\n' "$encoded" "$size" "$digest" >> "$rows"; count=$((count+1))
-  done < <(find "$world" -type f -print0 | sort -z)
-  (( count > 0 )) || die "world inventory is empty"
-  { printf 'BC_PRESTIGE_ARCHIVE_V1\nlineage\t%s\ntransaction\t%s\nfile_count\t%s\n' "$REQUEST_LINEAGE" "$REQUEST_TRANSACTION" "$count"; cat -- "$rows"; } > "$partial"
-  sync -f -- "$partial"
-  mv -T -- "$partial" "$output"
-  sync -f -- "$(dirname -- "$output")"
-  rm -f -- "$rows"
+  event INFO "transaction=$REQUEST_TRANSACTION generating archive manifest world=$world"
+  "$JAVA" -cp "$PRESTIGE_JAR" com.bettercontent.worldlifecyclemanager.PrestigeArchiveVerifier manifest \
+    "$world" "$output" "$REQUEST_LINEAGE" "$REQUEST_TRANSACTION" \
+    || die "archive manifest generation failed for transaction $REQUEST_TRANSACTION"
 }
 
 verify_archive_against_world() {
   local archive="$1" source_manifest="$2"
-  java -cp "$PRESTIGE_JAR" com.bettercontent.worldlifecyclemanager.PrestigeArchiveVerifier verify-against \
+  event INFO "transaction=$REQUEST_TRANSACTION verifying archive=$archive"
+  "$JAVA" -cp "$PRESTIGE_JAR" com.bettercontent.worldlifecyclemanager.PrestigeArchiveVerifier verify-against \
     "$archive" "$source_manifest" "$REQUEST_LINEAGE" "$REQUEST_TRANSACTION" \
     || die "archive failed strict production verification"
 }
@@ -322,10 +324,10 @@ create_verified_archive() {
   fi
   [[ ! -e "${final}.sha256" ]] || die "archive checksum evidence exists without its immutable archive"
   if [[ -e "$partial" ]]; then
-    if [[ -f "$partial" && ! -L "$partial" ]] && java -cp "$PRESTIGE_JAR" \
+    if [[ -f "$partial" && ! -L "$partial" ]] && "$JAVA" -cp "$PRESTIGE_JAR" \
         com.bettercontent.worldlifecyclemanager.PrestigeArchiveVerifier verify-against \
         "$partial" "$manifest" "$REQUEST_LINEAGE" "$REQUEST_TRANSACTION" >/dev/null; then
-      printf 'prestige supervisor: resuming verified partial archive\n'
+      event INFO "transaction=$REQUEST_TRANSACTION resuming verified partial archive"
     else
       local rejected
       rejected="$TRANSACTION_ROOT/rejected-archive-partial-$(date +%s%N).zip"
@@ -334,7 +336,8 @@ create_verified_archive() {
     fi
   fi
   if [[ ! -f "$partial" ]]; then
-    (cd -- "$input" && { printf '%s\0' world-lifecycle-manager-archive-manifest-v1.tsv; find world -type f -print0 | sort -z; } | xargs -0 zip -q "$partial")
+    event INFO "transaction=$REQUEST_TRANSACTION creating archive=$partial"
+    (cd -- "$input" && { printf '%s\0' world-lifecycle-manager-archive-manifest-v1.tsv; find world -type f -print0; } | xargs -0 zip -q "$partial")
     sync -f -- "$partial"
   fi
   verify_archive_against_world "$partial" "$manifest"
@@ -344,6 +347,7 @@ create_verified_archive() {
   sync -f -- "$ARCHIVE_DIR"
   digest="$(sha256sum -- "$final" | cut -d' ' -f1)"
   atomic_write "${final}.sha256" "$digest  $(basename -- "$final")"
+  event INFO "transaction=$REQUEST_TRANSACTION published archive=$final sha256=$digest"
 }
 
 ensure_archive_checksum() {
@@ -471,7 +475,7 @@ clear_active_process() {
 reconcile_active_process() {
   [[ -e "$ACTIVE_PROCESS_FILE" ]] || return 0
   if process_contract_is_live "$ACTIVE_PROCESS_FILE"; then
-    printf 'prestige supervisor: stopping orphaned successor process %s transaction=%s\n' "$PROCESS_PID" "$PROCESS_TRANSACTION" >&2
+    event WARN "stopping orphaned successor process pid=$PROCESS_PID transaction=$PROCESS_TRANSACTION"
     stop_failed_server
   fi
   clear_active_process
@@ -485,7 +489,7 @@ restart_supervisor() {
 test_interrupt() {
   local boundary="$1"
   if [[ "${PRESTIGE_TEST_INTERRUPT_AT:-}" == "$boundary" ]]; then
-    printf 'prestige supervisor: test interruption at %s\n' "$boundary" >&2
+    event WARN "test interruption at boundary=$boundary"
     exit 86
   fi
 }
@@ -573,13 +577,30 @@ cleanup_rolled_back_transaction() {
   sync -f -- "$CONTROL_DIR"
 }
 
+rollback_archive_failure() {
+  event ERROR "transaction=$REQUEST_TRANSACTION archive failed before successor launch; restoring source world"
+  stop_failed_server
+  clear_active_process
+  if [[ -d "$ACTIVE_WORLD" ]]; then
+    mv -T -- "$ACTIVE_WORLD" "$TRANSACTION_ROOT/unexpected-world-before-archive-rollback-$(date +%s%N)"
+  fi
+  cp -- "$TRANSACTION_ROOT/server.properties.before" "$SCRIPT_DIR/server.properties"
+  [[ -d "$ARCHIVE_INPUT/world" && ! -L "$ARCHIVE_INPUT/world" ]] \
+    || die "transaction=$REQUEST_TRANSACTION archive rollback cannot find the staged source world"
+  mv -T -- "$ARCHIVE_INPUT/world" "$ACTIVE_WORLD"
+  sync -f -- "$SCRIPT_DIR"
+  write_phase rolled-back
+  cleanup_rolled_back_transaction
+  event WARN "transaction=$REQUEST_TRANSACTION source world restored after archive failure"
+  restart_supervisor "$@"
+}
+
 run_successor_attempt() {
   local attempt="$1" seed="$2"; shift 2
   rm -f -- "$HEALTH_FILE" "$HEALTH_FILE.partial" "$PERK_HEALTH_FILE" "$PERK_HEALTH_FILE.partial" \
     "$SHUTDOWN_FILE" "$SHUTDOWN_FILE.partial"
   write_successor_request "$attempt" "$seed"; set_server_seed "$seed"; write_phase "attempt-$attempt-prepared"
-  printf 'prestige supervisor: launching successor attempt %s/%s seed=%s biomes=%s,%s,%s\n' \
-    "$attempt" "$MAX_ATTEMPTS" "$seed" "$REQUEST_BIOME_1" "$REQUEST_BIOME_2" "$REQUEST_BIOME_3"
+  event INFO "transaction=$REQUEST_TRANSACTION launching successor attempt=$attempt/$MAX_ATTEMPTS seed=$seed biomes=$REQUEST_BIOME_1,$REQUEST_BIOME_2,$REQUEST_BIOME_3"
   local fifo="$CONTROL_DIR/successor-console-$REQUEST_TRANSACTION-$attempt.fifo"
   rm -f -- "$fifo"; mkfifo -m 600 -- "$fifo"; exec 8<>"$fifo"; rm -f -- "$fifo"
   rm -f -- "$ACTIVE_PROCESS_FILE" "$ACTIVE_PROCESS_FILE.partial"
@@ -627,20 +648,22 @@ finalize_success() {
   ensure_archive_checksum "$FINAL_ARCHIVE"
   commit_lineage
   if [[ "${PRESTIGE_TEST_INTERRUPT_AT:-}" == lineage-written ]]; then
-    printf 'prestige supervisor: test interruption at lineage-written\n' >&2
+    event WARN "transaction=$REQUEST_TRANSACTION test interruption at lineage-written"
     exit 86
   fi
   commit_active_perks
   write_phase lineage-committed
   cleanup_committed_transaction
-  printf 'prestige supervisor: committed %s; successor world is active\n' "$REQUEST_TRANSACTION"
+  event INFO "transaction=$REQUEST_TRANSACTION committed; successor world is active"
 }
 
 load_allowed_biomes
 ensure_lineage
 reconcile_active_process
 if [[ ! -e "$RESET_FILE" ]]; then
+  event INFO "launching current world under lifecycle supervision"
   set +e; "$SCRIPT_DIR/run-forge.sh" "$@"; INITIAL_EXIT=$?; set -e
+  event INFO "current world Forge process exited code=$INITIAL_EXIT reset_pending=$([[ -e "$RESET_FILE" ]] && printf yes || printf no)"
   [[ -e "$RESET_FILE" ]] || exit "$INITIAL_EXIT"
 fi
 parse_reset
@@ -755,13 +778,20 @@ validate_world_binding
 
 if [[ ! -f "$FINAL_ARCHIVE" ]]; then
   [[ "$CURRENT_PHASE" == world-staged ]] || die "published archive is missing after archive verification"
-  create_verified_archive "$ARCHIVE_INPUT" "$FINAL_ARCHIVE"; write_phase archive-verified
+  if ! (create_verified_archive "$ARCHIVE_INPUT" "$FINAL_ARCHIVE"); then
+    rollback_archive_failure "$@"
+  fi
+  write_phase archive-verified
 else
-  [[ -f "$ARCHIVE_INPUT/world-lifecycle-manager-archive-manifest-v1.tsv" ]] || generate_archive_manifest "$ARCHIVE_INPUT/world" "$ARCHIVE_INPUT/world-lifecycle-manager-archive-manifest-v1.tsv"
-  verify_archive_against_world "$FINAL_ARCHIVE" "$ARCHIVE_INPUT/world-lifecycle-manager-archive-manifest-v1.tsv"
-  chmod 0444 -- "$FINAL_ARCHIVE"
-  sync -f -- "$FINAL_ARCHIVE"
-  ensure_archive_checksum "$FINAL_ARCHIVE"
+  if ! (
+    [[ -f "$ARCHIVE_INPUT/world-lifecycle-manager-archive-manifest-v1.tsv" ]] || generate_archive_manifest "$ARCHIVE_INPUT/world" "$ARCHIVE_INPUT/world-lifecycle-manager-archive-manifest-v1.tsv"
+    verify_archive_against_world "$FINAL_ARCHIVE" "$ARCHIVE_INPUT/world-lifecycle-manager-archive-manifest-v1.tsv"
+    chmod 0444 -- "$FINAL_ARCHIVE"
+    sync -f -- "$FINAL_ARCHIVE"
+    ensure_archive_checksum "$FINAL_ARCHIVE"
+  ); then
+    rollback_archive_failure "$@"
+  fi
   if [[ "$CURRENT_PHASE" == world-staged ]]; then write_phase archive-verified; fi
 fi
 
@@ -785,7 +815,7 @@ for ((attempt=START_ATTEMPT; attempt<=MAX_ATTEMPTS; attempt++)); do
     if [[ -e "$RESET_FILE" ]]; then restart_supervisor "$@"; fi
     exit "$EXIT_CODE"
   fi
-  printf 'prestige supervisor: successor attempt %s failed health verification\n' "$attempt" >&2
+  event ERROR "transaction=$REQUEST_TRANSACTION successor attempt=$attempt failed health verification"
   if [[ -f "$HEALTH_FILE" ]]; then cp -- "$HEALTH_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-health-v5.tsv"; fi
   if [[ -f "$PERK_HEALTH_FILE" ]]; then cp -- "$PERK_HEALTH_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-perk-health-v3.tsv"; fi
   cp -- "$SUCCESSOR_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-request-v5.tsv"
@@ -797,7 +827,7 @@ cp -- "$TRANSACTION_ROOT/server.properties.before" "$SCRIPT_DIR/server.propertie
 mv -T -- "$ARCHIVE_INPUT/world" "$ACTIVE_WORLD"
 sync -f -- "$SCRIPT_DIR"
 write_phase rolled-back
-printf 'prestige supervisor: restored old world after %s failed successor attempts\n' "$MAX_ATTEMPTS" >&2
+event WARN "transaction=$REQUEST_TRANSACTION restored old world after $MAX_ATTEMPTS failed successor attempts"
 clear_active_process
 cleanup_rolled_back_transaction
 restart_supervisor "$@"

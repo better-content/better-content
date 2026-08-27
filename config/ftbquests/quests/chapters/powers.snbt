@@ -106,16 +106,13 @@
 			y: 3.5d
 		}
 		{
-			description: ["Gather a complete World Condenser shell and interface for Lineage work."]
+			description: ["Acquire the World Condenser Interface for operator-led Lineage work."]
 			icon: "world_lifecycle_manager:world_condenser_interface"
 			id: "19A16EC4030C73DD"
 			rewards: [{ count: 1, id: "2FB2E66B7623087E", item: "createdeco:brass_coin", type: "item" }]
 			shape: "hexagon"
 			size: 1.5d
-			tasks: [
-				{ count: 25L, id: "3DFD6CA1A6E0F3A0", item: "world_lifecycle_manager:world_condenser_hull", type: "item" }
-				{ id: "525769DEC530354D", item: "world_lifecycle_manager:world_condenser_interface", type: "item" }
-			]
+			tasks: [{ id: "525769DEC530354D", item: "world_lifecycle_manager:world_condenser_interface", type: "item" }]
 			title: "World Condenser"
 			x: 12d
 			y: 3.5d

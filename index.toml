@@ -6,7 +6,7 @@ hash = "3cc1f64cc6c9fc485828891d0fb64869174421527b9bab5012a54852e139c34f"
 
 [[files]]
 file = "AGENTS.md"
-hash = "01b6fff4939746c62ab5ee3208383d49595125d56e9cd75208a2001529d4bde0"
+hash = "d889182e3cb1413ff1f0d38daaedf0f6526b5f23a9cd6bcbd864f6cf29b8706d"
 
 [[files]]
 file = "LICENSE"
@@ -6086,7 +6086,7 @@ hash = "17eaf09bda21da2e07357375e56605f4af7d197af16143939dbe5816e9741bed"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/powers.snbt"
-hash = "e6ca324d934f9fb413d6e4da618d9805dfc3f0fa73b083b0370f88ba30817a0c"
+hash = "c6a52a01265802a9eaa1d6dc64067a05dd360f058b4f0d45e97a8d2ec6feaddf"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/works.snbt"
@@ -11378,7 +11378,7 @@ hash = "c1728c32703ee343a2ed52c53b84bca30db11aa2feb97fb31d68fdd87ada5df0"
 
 [[files]]
 file = "kubejs/config/hover_annotations.json"
-hash = "9c359e09eeea31ca095fae3c8d8eba2821eefaec489e99e89bcca2b89881b64c"
+hash = "03156b424eb8d2009c11ffe33724b6cff603d0e1e9922a7a07c2f5af33c9238d"
 
 [[files]]
 file = "kubejs/config/input_rewrites.json"
@@ -15268,7 +15268,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "ff045cf6328fd4a35d0fefaebe06107b33f302f19b105402b2b0056e067c4249"
+hash = "478c0b07ba84e210a7399a1175c1981075aa6f526215a7f68d0280ba6e732b9b"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"
@@ -15291,7 +15291,7 @@ hash = "9edc510cdd3b5d7c0d7347c1f3814d1461aef114197c6120aa96f395e2ef780c"
 
 [[files]]
 file = "package.sh"
-hash = "92da76f6c9581a382b5fc81c9031750cf1fa60c9214fec8b593035f6f1dd6fa2"
+hash = "cc50269bdc755ecf82d98867618139d07c67f276a6011ee04bffb716ca72b223"
 
 [[files]]
 file = "quests/graph.yml"
@@ -15319,7 +15319,7 @@ hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
 
 [[files]]
 file = "smoke.sh"
-hash = "3480b17fa3cae560c4dff436f8c447b19e55ac82b02cd46c4135d8487556e618"
+hash = "17a9eeefd495f0f91da730110d7bb1f7befcbd57998fb94d9dc52b98857ee2e3"
 
 [[files]]
 file = "tacz/applied-armorer.pw.toml"
@@ -15342,4 +15342,4 @@ hash = "380a3105e0739f6bbae202352d29d68a7a1e88bab8912c95cd9204492c7d48ae"
 
 [[files]]
 file = "world-lifecycle-manager-server.sh"
-hash = "052f486f3193909e01979a6ef9567a49152199db2e786042d3f5b499a321f327"
+hash = "94efaa6b5c697bf9d031780029ca7843dacd37d1c70f5d8b762f2c207ff599bb"

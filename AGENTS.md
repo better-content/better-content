@@ -13,14 +13,16 @@ This repository is the Better Content Forge 1.20.1 modpack content layer.
 ZIP creation may fail operationally; it must not add validation, integrity, provenance,
 content, schema, archive-membership, cleanliness, or correctness verdicts.
 
-For a fresh smoked distribution, run `./smoke.sh` once and then run `./dist.sh`. Do not run
-`./smoke.sh` again after `./dist.sh`: the distribution workflow's automatic `pack.toml` build
-number bump changes release metadata only and does not invalidate the preceding smoke result.
+For a fresh smoked distribution, run `./dist.sh` exactly once and then run `./smoke.sh`.
+`smoke.sh` deploys the exact client and server ZIPs already present under `dist/`, records their
+SHA-256 hashes before launch, and requires the same hashes afterward. Never rebuild between smoke
+and publication: the ZIPs that pass are the ZIPs to publish.
 
-`dist.sh` and `smoke.sh` both delegate content and artifact assembly to `package.sh`.
-`smoke.sh` creates disposable server and client runtimes, resolves packwiz artifacts,
-installs Forge, then checks server readiness, client join, one bounded settled connection,
-process shutdown, and fatal-log signatures. Resolved Packwiz artifacts persist under
+`dist.sh` delegates release assembly to `package.sh`. `smoke.sh` extracts the packaged production
+server, changing only `eula=true` and `online-mode=false`, and imports the packaged CurseForge
+client manifest into a disposable client runtime. It then checks supervised server readiness, a
+complete CLI lifecycle transaction, client join, one bounded settled connection, process shutdown,
+fatal-log signatures, and unchanged candidate hashes. Resolved client artifacts persist under
 `~/.cache/bc/packwiz-downloads`; set `BC_PACKAGE_ARTIFACT_CACHE` to use another disposable
 cache root. The smoke run root and settle duration may be set with `BC_SMOKE_RUN_ROOT` and
 `BC_SMOKE_SETTLE_SECONDS`.

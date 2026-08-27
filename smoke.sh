@@ -207,6 +207,47 @@ sleep 2
 capture_display "$evidence/world-condenser-perks.png"
 cmp -s "$evidence/world-condenser-configure.png" "$evidence/world-condenser-perks.png" \
   && fail 'configure and perks console commands rendered the same GUI frame'
+
+# Use the shipped contextual route: entering the Nether reveals Fire Has a Country.
+# The reader interaction is driven at the pack's 1280x720 / GUI-scale-3 defaults.
+console "execute in minecraft:the_nether run tp $SMOKE_USERNAME 0 80 0"
+sleep 2
+kill -0 "$server_pid" 2>/dev/null || fail 'server exited while generating the Threads discovery context'
+kill -0 "$client_game_pid" 2>/dev/null || fail 'client exited while entering the Threads discovery context'
+DISPLAY="$display" "$JSHELL" >"$evidence/threads-capture.log" 2>&1 <<EOF
+import java.awt.Robot;
+import java.awt.Rectangle;
+import java.awt.Toolkit;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
+import java.io.File;
+import javax.imageio.ImageIO;
+var robot = new Robot();
+var screen = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
+Thread.sleep(900);
+ImageIO.write(robot.createScreenCapture(screen), "png", new File("$evidence/threads-automatic-tease.png"));
+robot.keyPress(KeyEvent.VK_CONTROL);
+robot.keyPress(KeyEvent.VK_J);
+robot.keyRelease(KeyEvent.VK_J);
+robot.keyRelease(KeyEvent.VK_CONTROL);
+Thread.sleep(1200);
+robot.keyPress(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
+Thread.sleep(400);
+robot.keyPress(KeyEvent.VK_SPACE);
+robot.keyRelease(KeyEvent.VK_SPACE);
+Thread.sleep(1300);
+ImageIO.write(robot.createScreenCapture(screen), "png", new File("$evidence/threads-reader-aspect-trace.png"));
+Thread.sleep(700);
+ImageIO.write(robot.createScreenCapture(screen), "png", new File("$evidence/threads-reader-complete.png"));
+/exit
+EOF
+for screenshot in threads-automatic-tease.png threads-reader-aspect-trace.png threads-reader-complete.png; do
+  [ -s "$evidence/$screenshot" ] || fail "Threads screenshot was not captured: $screenshot"
+  [ "$(stat -c '%s' "$evidence/$screenshot")" -gt 10000 ] || fail "Threads screenshot is unexpectedly blank: $screenshot"
+done
+cmp -s "$evidence/threads-reader-aspect-trace.png" "$evidence/threads-reader-complete.png" \
+  && fail 'Threads development and completed reader frames are identical'
 kill -0 "$client_game_pid" 2>/dev/null || fail 'client exited during GUI validation'
 kill -0 "$server_pid" 2>/dev/null || fail 'server exited during settle'
 stop_pid "$client_game_pid"; client_game_pid=''

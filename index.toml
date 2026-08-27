@@ -14039,7 +14039,7 @@ metafile = true
 
 [[files]]
 file = "mods/arcane-chunk-loaders-0.1.0.jar"
-hash = "b325a1d23115a97ac82e99f3fbd4645ce93fd7ce74243abb848cb43f6c81b93d"
+hash = "7264719c2c09d1597258b04a1524216ff0ae1466d9b262f55507f61a5e2e0b39"
 
 [[files]]
 file = "mods/architectury-api.pw.toml"
@@ -14087,7 +14087,7 @@ hash = "7e67de7285050ec4a36ab19115ae6f97db9ac24ef421771e6622bdae9cea0ad5"
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "3e5071071df5c01be47c63382ca7034be4d4489164de33654a221ab57e97c883"
+hash = "5f092b8daacca74f5ec9ba706352a9669d1126e057f33ba78063785902a50c51"
 
 [[files]]
 file = "mods/better-content-quests-1.0.0.jar"
@@ -14095,7 +14095,7 @@ hash = "3b14c16ec2c7ed5c736a6bc6ab3744e6b5867b192c0a44ba7bf954968a5080fc"
 
 [[files]]
 file = "mods/better-content-threads-1.0.0.jar"
-hash = "c9d6bafcc1bf59aceba6876d53251d5d45a0a7f4a10e5d10dd7f0807c4139be8"
+hash = "09c5ac20e4ebe0c05b83b0380182b40cc2658e543c20d1dfd83b6512ef7afae5"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"
@@ -14271,7 +14271,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimension-drink-1.0.0.jar"
-hash = "58b0afded84321a581b61b9b6ab3d5d1bd0f52e40b642664f62f79b66c6aee58"
+hash = "a78ffbe6bf4a4fc5638c262f7c5b06d63e8d02d06464e35adb619477dde4fc13"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -14585,7 +14585,7 @@ metafile = true
 
 [[files]]
 file = "mods/heat-sync-0.1.0.jar"
-hash = "dd2a2283ef5838d81945a45616e12ddb45e3a3401966846c630aaa9d97b1619c"
+hash = "28004b667aa1674806cd6599319c069c582d32d1436d9f826954144050f03479"
 
 [[files]]
 file = "mods/hexerei.pw.toml"
@@ -14849,7 +14849,7 @@ metafile = true
 
 [[files]]
 file = "mods/player-traces-0.1.0.jar"
-hash = "a25dcbd3dd7733d9299e5aa9561ee20e5263d5d112d6021e5c5dd6f4f7db5766"
+hash = "380a51bc58237392cbc98c3aff1ff7f0e46a7d1ed5a9745b8d6c0c6d3c3f33f5"
 
 [[files]]
 file = "mods/playeranimator.pw.toml"
@@ -14927,7 +14927,7 @@ metafile = true
 
 [[files]]
 file = "mods/realistic-ores-0.2.0.jar"
-hash = "126ad7dbb638e2117454b3dd7a084f69d289aed2e3517dc51d0d4db9102cf25b"
+hash = "1ff741e6297f2ab4c47266364011cf7b01beb6de896bf921e10eb84f51698165"
 
 [[files]]
 file = "mods/realistic-physics.pw.toml"
@@ -14951,7 +14951,7 @@ metafile = true
 
 [[files]]
 file = "mods/rpg-stats-1.0.0.jar"
-hash = "24d0ac7cbffe90703418ed50958f3db36bf66f3f509ff5d747e233227574032b"
+hash = "d151802f9f747d78bb0317c3fa8b6b3c14cc58c9b1461da0d4b2bee01a9f890a"
 
 [[files]]
 file = "mods/runtime-data-dumper-0.1.0.jar"
@@ -14984,7 +14984,7 @@ metafile = true
 
 [[files]]
 file = "mods/settlement-roads-0.1.0.jar"
-hash = "166a858df01227f9a79c268455c6e7aa6813c3fb192c1893304a12b931194f41"
+hash = "f39344215f20aa84f19f69f3e34383775d19925a6d4123290a2737190b5b5be5"
 
 [[files]]
 file = "mods/shatterbyte-lib.pw.toml"
@@ -15255,7 +15255,7 @@ metafile = true
 
 [[files]]
 file = "mods/water-survival-1.0.0.jar"
-hash = "b672aa1bd8b66860ea2166b690385fe6c2bc627add3526fd10d330fc45284026"
+hash = "686214508259700b56b1c836dc48eaefb14ff49c773107ba419cf3be98f3d0e8"
 
 [[files]]
 file = "mods/weather-storms-tornadoes.pw.toml"
@@ -15264,7 +15264,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "9d315ca0f8b85035d6ddd37292b1356660fe55be57e626fe54a13f936c19efe9"
+hash = "ff045cf6328fd4a35d0fefaebe06107b33f302f19b105402b2b0056e067c4249"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"
@@ -15315,7 +15315,7 @@ hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
 
 [[files]]
 file = "smoke.sh"
-hash = "5d015be4ea61cf12bd733bb28d012897e601da61495a01a54941753017d73347"
+hash = "fc2b33d0ff1d018ecf34b53fbec5cfa67f518a72a1e5874c063c2d22cf2bf17e"
 
 [[files]]
 file = "tacz/applied-armorer.pw.toml"

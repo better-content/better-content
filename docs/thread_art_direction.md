@@ -38,6 +38,6 @@ Every review master produces five 256×384 runtime files:
 4. a transparent exact-aspect-color trace layer;
 5. a subdued grayscale catalogue thumbnail.
 
-The three development layers are derived deterministically from perceptual-color and chroma masks. They exist only for the 0.8-second voluntary development sequence. After the aspect pass, the untouched full image replaces them, so masking cannot reduce final fidelity.
+The three development layers are derived deterministically from perceptual-color and chroma masks. They exist only for the 1.8-second voluntary development sequence: 600 ms archive structure, 600 ms unique pigment, and 600 ms canonical aspect trace. After the aspect pass, the untouched full image replaces them, so masking cannot reduce final fidelity.
 
 Masters are generated individually with the built-in image-generation workflow. Each prompt combines this shared grammar, the card-specific scene brief, suit pigment tendency, exact aspect trace, and the no-text/no-frame constraint. The approved tricolor-v1 masters remain anchors for line density, paper, contrast, and restraint; generated candidates remain isolated until the three real-client review captures are approved.

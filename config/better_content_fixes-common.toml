@@ -40,6 +40,9 @@
 	retryRejectedStreams = true
 
 [explosionOverhaul]
+	#Automatically accepts Explosion Overhaul scan prompts without displaying them.
+	#Existing scan data is loaded when available; otherwise a new scan starts immediately.
+	autoAcceptScanPrompts = true
 	#Caps Explosion Overhaul concussion effects so large clustered blasts cannot cause excessively long shell shock.
 	#The cap applies to blur, camera sway, low-pass audio, and deafness, including duration accumulated by repeated blasts.
 	clampConcussionDuration = true

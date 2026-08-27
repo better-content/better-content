@@ -5722,7 +5722,7 @@ hash = "576aef8174876737dd018d0144fc08b0997c3a3d9d046352a69417a88dfa80b2"
 
 [[files]]
 file = "config/better_content_fixes-common.toml"
-hash = "77110b2b8e5f82d0016ada5717787b5a350fca6bd69aecbad6455a1f57ad47b1"
+hash = "251858802c157b18ff14b4c83a05060b9266b4fec88403d47864f0c858d6563f"
 
 [[files]]
 file = "config/bettergrass.json5"
@@ -5962,7 +5962,7 @@ hash = "813981460411eb990b7c54f6e94031be92ba4a3b8bf4ec134019090985e535f5"
 
 [[files]]
 file = "config/explosionoverhaul/explosionoverhaul-common.toml"
-hash = "91847e6d4154b85ce24c295adf68fb77640d20cb55dedcc31aec02c4d43b2213"
+hash = "f68d8e33d078b25b4b0793ae4e50e15ece99772f8f1870d275bf19e6fec8585d"
 
 [[files]]
 file = "config/fancymenu/custom_gui_screens.txt"
@@ -14095,7 +14095,7 @@ hash = "7e67de7285050ec4a36ab19115ae6f97db9ac24ef421771e6622bdae9cea0ad5"
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "241e7414ca1946d0179417040cb2500ea6d85779ce7b39b71c782a52b74b6657"
+hash = "3e5071071df5c01be47c63382ca7034be4d4489164de33654a221ab57e97c883"
 
 [[files]]
 file = "mods/better-content-quests-1.0.0.jar"
@@ -15291,7 +15291,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "01310430f73a45aa4845d6ddf79dd99eee713cc5757b52395d55aab226b06c56"
+hash = "9edc510cdd3b5d7c0d7347c1f3814d1461aef114197c6120aa96f395e2ef780c"
 
 [[files]]
 file = "package.sh"

@@ -6,7 +6,7 @@ provider = "NULL"
 
 [ingame]
 	camera_auto_switch = false
-	first_person_model = false
+	first_person_model = true
 	show_target_indicator = true
 	#Allowed Values: NONE, HURT, TARGET, TARGET_AND_HURT
 	health_bar_show_option = "HURT"

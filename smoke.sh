@@ -138,6 +138,16 @@ wait_for_log() {
     sleep 1
   done
 }
+wait_for_log_count() {
+  local pattern="$1" expected="$2" message="$3" deadline=$((SECONDS+${4:-900})) actual
+  while :; do
+    actual="$(rg -c "$pattern" "$server_log" 2>/dev/null || true)"
+    [[ "${actual:-0}" -ge "$expected" ]] && return
+    kill -0 "$server_pid" 2>/dev/null || fail "$message; server exited; see $server_log"
+    ((SECONDS < deadline)) || fail "$message; see $server_log"
+    sleep 1
+  done
+}
 wait_for_done_count() {
   local expected="$1" message="$2" deadline=$((SECONDS+900)) actual
   while :; do
@@ -152,27 +162,47 @@ console() { printf '%s\n' "$1" >&7; }
 
 wait_for_done_count 1 'packaged production server readiness timed out'
 console 'world_lifecycle_manager select minecraft:plains minecraft:forest minecraft:meadow'
-wait_for_log 'Selected Prestige biomes minecraft:plains > minecraft:forest > minecraft:meadow' 'CLI biome selection failed'
+wait_for_log_count 'Selected Prestige biomes minecraft:plains > minecraft:forest > minecraft:meadow' 1 'CLI biome selection failed'
 console 'world_lifecycle_manager stage'
-wait_for_log 'Staged prestige reset' 'CLI stage did not acknowledge success'
+wait_for_log_count 'Staged prestige reset' 1 'CLI stage did not acknowledge success'
 console 'world_lifecycle_manager commit'
-wait_for_log 'Prestige commit accepted: .* clean shutdown is scheduled' 'CLI commit did not acknowledge acceptance'
-wait_for_log 'committed; successor world is active' 'packaged lifecycle transaction did not commit' 1200
+wait_for_log_count 'Prestige commit accepted: .* clean shutdown is scheduled' 1 'CLI commit did not acknowledge acceptance'
+wait_for_log_count 'committed; successor world is active' 1 'packaged lifecycle transaction did not commit' 1200
 wait_for_done_count 2 'packaged successor server readiness timed out'
 rg -q $'^perks\t-$' "$server/.world_lifecycle_manager/perks-v2.tsv" \
   || fail 'successful packaged lifecycle unexpectedly required or allocated a perk'
 rg -q $'^generation\t1$' "$server/.world_lifecycle_manager/lineage-v5.tsv" \
   || fail 'successful packaged lifecycle did not advance lineage exactly once'
+
+# Exercise the same stage/commit path from an already-prestiged world. This is the regression
+# boundary for generation-bound draft and staged condenser state.
+console 'world_lifecycle_manager select minecraft:plains minecraft:forest minecraft:meadow'
+wait_for_log_count 'Selected Prestige biomes minecraft:plains > minecraft:forest > minecraft:meadow' 2 \
+  'generation-one CLI biome selection failed'
+console 'world_lifecycle_manager stage'
+wait_for_log_count 'Staged prestige reset' 2 'generation-one CLI stage did not acknowledge success'
+console 'world_lifecycle_manager commit'
+wait_for_log_count 'Prestige commit accepted: .* clean shutdown is scheduled' 2 \
+  'generation-one CLI commit did not acknowledge acceptance'
+wait_for_log_count 'committed; successor world is active' 2 \
+  'second packaged lifecycle transaction did not commit' 1200
+wait_for_done_count 3 'second packaged successor server readiness timed out'
+rg -q $'^perks\t-$' "$server/.world_lifecycle_manager/perks-v2.tsv" \
+  || fail 'second packaged lifecycle unexpectedly required or allocated a perk'
+rg -q $'^generation\t2$' "$server/.world_lifecycle_manager/lineage-v5.tsv" \
+  || fail 'second packaged lifecycle did not advance lineage to generation two'
 shopt -s nullglob
 archive=("$server"/.world_lifecycle_manager/archives/*.zip)
 shopt -u nullglob
-[[ "${#archive[@]}" -eq 1 ]] || fail 'successful packaged lifecycle did not publish exactly one archive'
+[[ "${#archive[@]}" -eq 2 ]] || fail 'two successful packaged lifecycles did not publish exactly two archives'
 lineage_id="$(awk -F '\t' '$1 == "lineage" {print $2}' "$server/.world_lifecycle_manager/lineage-v5.tsv")"
-transaction_id="$(basename -- "${archive[0]}" | sed -E 's/^.*-(transaction-[a-z0-9_-]+)\.zip$/\1/')"
-(
-  cd -- "$server"
-  ./world-lifecycle-manager-server.sh verify-archive "${archive[0]}" "$lineage_id" "$transaction_id"
-) > "$evidence/archive-verification.log" 2>&1 || fail 'packaged archive failed its operator verification command'
+for archive_file in "${archive[@]}"; do
+  transaction_id="$(basename -- "$archive_file" | sed -E 's/^.*-(transaction-[a-z0-9_-]+)\.zip$/\1/')"
+  (
+    cd -- "$server"
+    ./world-lifecycle-manager-server.sh verify-archive "$archive_file" "$lineage_id" "$transaction_id"
+  ) >> "$evidence/archive-verification.log" 2>&1 || fail 'packaged archive failed its operator verification command'
+done
 [[ -s "$server/logs/world-lifecycle-manager-supervisor.log" ]] || fail 'durable supervisor log was not created'
 
 smoke_uuid="$(BC_SMOKE_USERNAME="$SMOKE_USERNAME" python3 - <<'PY'

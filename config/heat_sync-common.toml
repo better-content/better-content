@@ -67,7 +67,7 @@
 	#How strongly local Cold Sweat ambient pulls pipe heat toward its baseline each update.
 	#Range: 0.0 ~ 1.0
 	ambient_blend_rate = 0.08
-	#Passive loss toward Heat Sync zero per update.
+	#Passive loss toward Heat Sync neutral per update.
 	#Range: 0.0 ~ 1.7976931348623157E308
 	pipe_loss_per_tick = 0.5
 	#How strongly connected neighbors pull a pipe toward their average heat.

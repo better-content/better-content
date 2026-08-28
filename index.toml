@@ -5717,12 +5717,16 @@ file = "config/arseng-common.toml"
 hash = "e2f591923558d17aa4bd65859e30b388083de43a58b7642dbeb4863e53d7d145"
 
 [[files]]
+file = "config/better-content-log4j2.xml"
+hash = "6d02f1a9ca4238bab25f2a69088bda78b0723a8ef92f7b89f1b70f0a4d6e6ea0"
+
+[[files]]
 file = "config/better_content_economy-common.toml"
-hash = "576aef8174876737dd018d0144fc08b0997c3a3d9d046352a69417a88dfa80b2"
+hash = "70762c2c9d053a71b1b3a897bd753a8bc31c783504f9a14e907c4095958d86f0"
 
 [[files]]
 file = "config/better_content_fixes-common.toml"
-hash = "251858802c157b18ff14b4c83a05060b9266b4fec88403d47864f0c858d6563f"
+hash = "302923b3915ca6dc10ae82e4900e593b59093ef03a8b9baab02a30df831a06eb"
 
 [[files]]
 file = "config/bettergrass.json5"
@@ -5930,7 +5934,7 @@ hash = "ceb5b3624c3269bef037b2914da8ab0d1c368abdd466156292a5d82db8803b0e"
 
 [[files]]
 file = "config/epicfight-client.toml"
-hash = "0a5ce24c60145122dff3e4c659b0a5ca6b5228ec37052a4b479de085a30e4593"
+hash = "527cbca76a76314a38e06ded3e1dcd20f0f0cf92f086d188e7858032509c61f8"
 
 [[files]]
 file = "config/epicfight-common.toml"
@@ -6162,7 +6166,7 @@ hash = "bc68484c6b4228b95cd62731026531eb00d254afd8b87d99770da92eb7ea9ee8"
 
 [[files]]
 file = "config/heat_sync-common.toml"
-hash = "73751e654c18d44f08f5d6c8a6736f2ed9b6c4727d967d0e0a7a21be3124d6e3"
+hash = "4081e4d4ea94cf29646b5501e4d439e102b3dd85de38232eb212ad1cf057cd38"
 
 [[files]]
 file = "config/hyle-common.toml"
@@ -6494,7 +6498,7 @@ hash = "448b6ec5c1aa72f59d901ffbde13330e92be9bcda029401fefe582db98002d5c"
 
 [[files]]
 file = "config/procedural_bouquets-common.toml"
-hash = "16ffeb1e816abdf4bc126a66bb68dea7e19759f4c1645e9cf86523b130d9db7f"
+hash = "5a6417c22275c8015e32e3b96daaf97f2110f603302839eaaddb14ca495bc165"
 
 [[files]]
 file = "config/projectvibrantjourneys-common.toml"
@@ -8726,7 +8730,7 @@ hash = "f13459ed12f9f5cc5018b4480ccd1641d5a094c20c15e6056e5545d89fd4289a"
 
 [[files]]
 file = "defaultconfigs/systemic_salience-server.toml"
-hash = "3079f7dfb2a2a22c8b8c4c218280976e33dfc291527166a48e8ac6e5cbc9bfcd"
+hash = "41f0dffe2586eb20724edfbb545cbd7aca55632c13e19be095b8cd8163ea7b07"
 
 [[files]]
 file = "defaultconfigs/tacz-server.toml"
@@ -14091,7 +14095,7 @@ hash = "74bf2f85370d5a3bee39a592956d27ae6724c5089fd623605c94684603168cd0"
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "5f092b8daacca74f5ec9ba706352a9669d1126e057f33ba78063785902a50c51"
+hash = "3cd39850cd354a8fe516da4f721a8d7287bb6dcc86db468a39025feee1f2678b"
 
 [[files]]
 file = "mods/better-content-quests-1.0.0.jar"
@@ -15268,7 +15272,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "909e05304c0c1a03f732b170c4d4d7214c1854f1654d6199cfcd10fcc1849377"
+hash = "512467751a02bcc24c1b57752f986fec93c69e48796a771ee742767c2a82cdd1"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"
@@ -15319,7 +15323,7 @@ hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
 
 [[files]]
 file = "smoke.sh"
-hash = "27ae676be6511ba4fdf528fee7852ba2110039de0829ec60a339abf59527cdcd"
+hash = "c72580ebcf6edbbca1e5cce2ac6e81415dd406d478264497f7763f5ea227ed0c"
 
 [[files]]
 file = "tacz/applied-armorer.pw.toml"

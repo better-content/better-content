@@ -192,7 +192,7 @@ kill -0 "$xvfb_pid" 2>/dev/null || fail "Xvfb failed; see $xvfb_log"
   exec 7<&-
   export DISPLAY="$display" LIBGL_ALWAYS_SOFTWARE=1 MESA_GL_VERSION_OVERRIDE=4.6 MESA_GLSL_VERSION_OVERRIDE=460 ALSOFT_DRIVERS=null
   exec setsid pipx run --spec portablemc portablemc --main-dir "$client_main" --work-dir "$client" --timeout 120 \
-    start --jvm "$JAVA" --jvm-args='-Xms4G -Xmx16G -XX:+UseG1GC -Dfile.encoding=UTF-8' \
+    start --jvm "$JAVA" --jvm-args="-Xms4G -Xmx16G -XX:+UseG1GC -Dfile.encoding=UTF-8 -Dlog4j.configurationFile=$client/config/better-content-log4j2.xml" \
     --resolution 1280x720 -u "$SMOKE_USERNAME" -i "$smoke_uuid" -s 127.0.0.1 -p "$PORT" \
     "forge:1.20.1-$FORGE_VERSION"
 ) > "$client_log" 2>&1 &
@@ -249,6 +249,9 @@ xvfb_pid=''
 if rg -n -i 'OutOfMemoryError|fatal error has been detected|crash report|Error loading KubeJS script|(\[|/)ERROR\] \[KubeJS( Startup| Client| Server)?/\]|KubeJS errors found \[[1-9][0-9]*\]|ThreadingDetector|ReportedException' \
     "$server_log" "$client_log"; then
   fail 'fatal or KubeJS error log signature detected'
+fi
+if rg -n '(\/WARN\]|\/ERROR\]|\[(WARN|ERROR)\])' "$server_log" "$client_log"; then
+  fail 'unfiltered warning or error log record detected'
 fi
 client_hash_after="$(sha256sum -- "$client_zip" | awk '{print $1}')"
 server_hash_after="$(sha256sum -- "$server_zip" | awk '{print $1}')"

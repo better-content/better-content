@@ -15319,7 +15319,7 @@ hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
 
 [[files]]
 file = "smoke.sh"
-hash = "9f51f3465b05aecee4a0eb7173af64d69b014a4643bad7b1eb8d1d0bf4df6ffb"
+hash = "27ae676be6511ba4fdf528fee7852ba2110039de0829ec60a339abf59527cdcd"
 
 [[files]]
 file = "tacz/applied-armorer.pw.toml"

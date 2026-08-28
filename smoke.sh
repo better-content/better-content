@@ -126,7 +126,7 @@ trap cleanup EXIT INT TERM
 
 (
   cd -- "$server"
-  exec setsid ./run.sh nogui
+  exec setsid ./run.sh
 ) <&7 >> "$server_log" 2>&1 &
 server_pid=$!
 

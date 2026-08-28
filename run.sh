@@ -20,4 +20,7 @@ JAVA_MAJOR="$("$BC_JAVA" -version 2>&1 | awk -F'[\".]' '/version/ { if ($2 == "1
   exit 1
 }
 export BC_JAVA
+if [[ "$#" -eq 0 ]]; then
+  set -- nogui
+fi
 exec "$SCRIPT_DIR/world-lifecycle-manager-server.sh" "$@"

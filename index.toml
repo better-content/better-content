@@ -11378,7 +11378,7 @@ hash = "c1728c32703ee343a2ed52c53b84bca30db11aa2feb97fb31d68fdd87ada5df0"
 
 [[files]]
 file = "kubejs/config/hover_annotations.json"
-hash = "03156b424eb8d2009c11ffe33724b6cff603d0e1e9922a7a07c2f5af33c9238d"
+hash = "d5ee01840f3d7eed086314eff067c4c45d2c73fd213e62e1985ab90150372fe8"
 
 [[files]]
 file = "kubejs/config/input_rewrites.json"
@@ -15268,7 +15268,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "d3ec92e78cab939c8be77eb0b77561a757ff3d7269b21c075e4bca4d20769cc2"
+hash = "909e05304c0c1a03f732b170c4d4d7214c1854f1654d6199cfcd10fcc1849377"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"
@@ -15319,7 +15319,7 @@ hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
 
 [[files]]
 file = "smoke.sh"
-hash = "e581ffcae779d708f3fadcfd02a00c98b4bdd8073519aea1a1c27db3349821cf"
+hash = "9f51f3465b05aecee4a0eb7173af64d69b014a4643bad7b1eb8d1d0bf4df6ffb"
 
 [[files]]
 file = "tacz/applied-armorer.pw.toml"

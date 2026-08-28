@@ -155,7 +155,7 @@ console 'world_lifecycle_manager select minecraft:plains minecraft:forest minecr
 wait_for_log 'Selected Prestige biomes minecraft:plains > minecraft:forest > minecraft:meadow' 'CLI biome selection failed'
 console 'world_lifecycle_manager stage'
 wait_for_log 'Staged prestige reset' 'CLI stage did not acknowledge success'
-console 'world_lifecycle_manager commit world'
+console 'world_lifecycle_manager commit'
 wait_for_log 'Prestige commit accepted: .* clean shutdown is scheduled' 'CLI commit did not acknowledge acceptance'
 wait_for_log 'committed; successor world is active' 'packaged lifecycle transaction did not commit' 1200
 wait_for_done_count 2 'packaged successor server readiness timed out'

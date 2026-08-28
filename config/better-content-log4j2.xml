@@ -15,6 +15,8 @@
         <Property name="noise6">(?s)^(?:Unable to find class |Failed to load item |Failed to get block color|Failed to verify authentication|Failed to initialize Linux Narrator|Missing particle sprites:|Texture .* with size|Item '.*' has multiple|Item Group has no|Rooty Dirt block NOT|Recipe registry plugin is).*$</Property>
         <Property name="noise7">(?s)^(?:Partial Oculus support enabled|One or more BufferBuilders|Server config reloaded|Tried to over-fill a |Unrecognized user type:|Total time to load|Time from main menu|Game took |Distant Horizons: G1 Garbage collector detected|Applying workaround:|\[Computer Shader Acceleration\]).*$</Property>
         <Property name="noise8">(?s)^(?:unable to create data|attempt to retrieve enablement|Ruby says &quot;this should work just fine&quot;, lets hope it does 😂|(?:applied_armorer|create_armorer|immersive_armorer):.* index file read fail!).*$</Property>
+        <Property name="noise9">(?s)^(?:Mixin alexscaves\.mixins\.json:SwampHutPieceMixin has multiple constructors, \(Lnet/minecraft/world/level/levelgen/structure/pieces/StructurePieceType;IIIIIILnet/minecraft/core/Direction;\)V was selected|Failed to get VarHandle for class class com\.github\.alexthe666\.citadel\.server\.world\.CitadelServerData with field dataMap and type interface java\.util\.Map|Failed to instantiate constructor\.).*$</Property>
+        <Property name="noise10">(?s)^(?:File alexscaves:sounds/block/purple_soda/purple_soda_swim_[34]\.ogg does not exist, cannot add it to event alexscaves:purple_soda_swim|File alexscaves:sounds/mob/luxtructosaurus/luxtructosaurus_(?:snort_[012]|breathe_[012])\.ogg does not exist, cannot add it to event alexscaves:luxtructosaurus_(?:snort|breathe)|Missing sound for event: alexscaves:(?:abyssal_chasm_ambience_mood|luxtructosaurus_breath)|Partially Incompatible Distant Horizons mod detected: \[Alex's Caves\] may require some config changes in order to render Distant Horizons correctly\.).*$</Property>
     </Properties>
     <Appenders>
         <Console name="SysOut" target="SYSTEM_OUT">
@@ -27,6 +29,8 @@
                 <RegexFilter regex="${noise6}" onMatch="DENY" onMismatch="NEUTRAL"/>
                 <RegexFilter regex="${noise7}" onMatch="DENY" onMismatch="NEUTRAL"/>
                 <RegexFilter regex="${noise8}" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <RegexFilter regex="${noise9}" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <RegexFilter regex="${noise10}" onMatch="DENY" onMismatch="NEUTRAL"/>
             </Filters>
             <PatternLayout pattern="[%d{HH:mm:ss}] [%t/%level] [%logger]: %msg{nolookups}%n"/>
         </Console>
@@ -40,6 +44,8 @@
                 <RegexFilter regex="${noise6}" onMatch="DENY" onMismatch="NEUTRAL"/>
                 <RegexFilter regex="${noise7}" onMatch="DENY" onMismatch="NEUTRAL"/>
                 <RegexFilter regex="${noise8}" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <RegexFilter regex="${noise9}" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <RegexFilter regex="${noise10}" onMatch="DENY" onMismatch="NEUTRAL"/>
             </Filters>
             <PatternLayout pattern="[%d{HH:mm:ss}] [%t/%level] [%logger]: %msg{nolookups}%n"/>
             <Policies>

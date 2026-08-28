@@ -18,6 +18,9 @@ globalExecutorParallelism = "default"
 	enforceSafeWorldRandomAccess = "true"
 
 [threadedWorldGen]
+	# Better Caves liquid regions are disabled separately because they are the
+	# documented C2ME 1.20.1 conflict. Keep threaded generation for this pack's
+	# Weather2/Burnt tick samplers, which can otherwise block on terrain loads.
 	enabled = "true"
 	allowThreadedFeatures = "true"
 	reduceLockRadius = "true"

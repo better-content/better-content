@@ -34,7 +34,7 @@ hash = "da41baa38cd86e7388841af4095cb06b9f6f3a1c883cedfe6f0632ea129f4f06"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "78dd3947d89cc1ae6923d7b716b9547844dcbdb35ad360983e39ed7b12ede623"
+hash = "3fb49ca8e92d386e6099b9c152baf8ced4e07978dfac21718b972fff198a0b8f"
 
 [[files]]
 file = "config/Hexerei-client.toml"
@@ -5718,7 +5718,7 @@ hash = "e2f591923558d17aa4bd65859e30b388083de43a58b7642dbeb4863e53d7d145"
 
 [[files]]
 file = "config/better-content-log4j2.xml"
-hash = "6430fc0126d7d353159c9995add2fe9e314bc93e2c3224bd34f1fd5b0ff17212"
+hash = "a230060acb64534b9b67ba90ad50f1b77f5dfe8e5554d45cab7f951a60a6b010"
 
 [[files]]
 file = "config/better_content_economy-common.toml"
@@ -5727,6 +5727,10 @@ hash = "70762c2c9d053a71b1b3a897bd753a8bc31c783504f9a14e907c4095958d86f0"
 [[files]]
 file = "config/better_content_fixes-common.toml"
 hash = "302923b3915ca6dc10ae82e4900e593b59093ef03a8b9baab02a30df831a06eb"
+
+[[files]]
+file = "config/bettercaves/forge-1_20_1/liquidregions.json"
+hash = "c43d25d96dec063e4bb82262fda71a25a44cd3db492f59d3c921915cb99f4dfa"
 
 [[files]]
 file = "config/bettergrass.json5"
@@ -5786,7 +5790,7 @@ hash = "a2b5146afc2459d09b6b02fdf8ccbe1c2de79574d7ca01e09f2b8be8e0b65c51"
 
 [[files]]
 file = "config/c2me.toml"
-hash = "45d486add2447f0aeccee8f572d8fe2bedaff6f6b55edfb432407ff59daaf5b4"
+hash = "18a3f274b9be50990d4cd6b6f8d43697b6f7809e9e70bf1691139f7eb94928b4"
 
 [[files]]
 file = "config/chemlib-common.toml"
@@ -6982,7 +6986,7 @@ hash = "d08595f892f2cf83ac9cff48bd65567b824b55e0deea0a0c542f2f5fa350d930"
 
 [[files]]
 file = "config/supplementaries-common.toml"
-hash = "4de8ffe3073ea1afabb40f245c654764800846e2870dcec59e48bbed3838774a"
+hash = "8c3c6e08c203d019e2562bfcf4f186cfa4511e2f2a14443cb65269cf935bdd41"
 
 [[files]]
 file = "config/survivalisland.json"
@@ -14052,6 +14056,11 @@ hash = "6f87edf40bf0be7e7e266f9e2ff0bf7584c6bedff7975bad3259a21a60d1e598"
 metafile = true
 
 [[files]]
+file = "mods/alexs-caves.pw.toml"
+hash = "6f864eef65f9a38f57eb0cc6fc71469b36ea70444a10c3e27502d617c5eaf917"
+metafile = true
+
+[[files]]
 file = "mods/alltheleaks.pw.toml"
 hash = "40bab1828ae2b4d755db64f1c887a2fe06171fad6ab54d4a1863ca5c30ff9b55"
 metafile = true
@@ -14131,7 +14140,7 @@ hash = "74bf2f85370d5a3bee39a592956d27ae6724c5089fd623605c94684603168cd0"
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "3cd39850cd354a8fe516da4f721a8d7287bb6dcc86db468a39025feee1f2678b"
+hash = "752d4461772858cc25522c359b460044af0c119211c5d91d144c884788ff4914"
 
 [[files]]
 file = "mods/better-content-quests-1.0.0.jar"
@@ -14184,6 +14193,11 @@ metafile = true
 [[files]]
 file = "mods/chemlib.pw.toml"
 hash = "882da059a6d7439b9cdf746813c61ce1e8e73c00a88e4e0cbe4412d4c312702a"
+metafile = true
+
+[[files]]
+file = "mods/citadel.pw.toml"
+hash = "5a4b03567f23fe0aac7806bd7cc9734138bf5fc098e98c1bb552d5b288bef258"
 metafile = true
 
 [[files]]
@@ -15318,6 +15332,16 @@ metafile = true
 [[files]]
 file = "mods/yacl.pw.toml"
 hash = "c08817fe8025a9d62c8f7abd5f56a54b90673e5ab60f39ae8fa1d70d5ace529b"
+metafile = true
+
+[[files]]
+file = "mods/yungs-api.pw.toml"
+hash = "9fb6a1a06b18f2ce7b0811200339d997925cb39bde220fbaea4d5c8067376c12"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-caves.pw.toml"
+hash = "6ac9a79d2b09bbe053a6dbc2ca4a7b31fb15d0a3984b5609cad6d6bdb9a2a42f"
 metafile = true
 
 [[files]]

@@ -5718,7 +5718,7 @@ hash = "e2f591923558d17aa4bd65859e30b388083de43a58b7642dbeb4863e53d7d145"
 
 [[files]]
 file = "config/better-content-log4j2.xml"
-hash = "6d02f1a9ca4238bab25f2a69088bda78b0723a8ef92f7b89f1b70f0a4d6e6ea0"
+hash = "6430fc0126d7d353159c9995add2fe9e314bc93e2c3224bd34f1fd5b0ff17212"
 
 [[files]]
 file = "config/better_content_economy-common.toml"
@@ -8487,6 +8487,42 @@ hash = "2a4a62179dc0c1e81dba6dae72fca365a60a08263338ad58a5d2672358f4165d"
 [[files]]
 file = "datapacks/worldgen_compat_fixes/data/kubejs/tags/worldgen/biome/no_biomes.json"
 hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "datapacks/worldgen_compat_fixes/data/minecraft/structures/village/common/animals/chickens_1.nbt"
+hash = "cfd07a787435d95e84d6e4abee5533039dd42b81a866e472c4c42318e541aa92"
+
+[[files]]
+file = "datapacks/worldgen_compat_fixes/data/minecraft/structures/village/common/animals/cows_1.nbt"
+hash = "d60b6e9ce4ed579aa9a2299e1485d20a37c734f27ae6f3f68f7f2966f02eadfd"
+
+[[files]]
+file = "datapacks/worldgen_compat_fixes/data/minecraft/structures/village/common/animals/cows_2.nbt"
+hash = "8396c92cb6244e20834f6ac5737cdc628adcd813a8cac5d6ff4a3dad2a5cc907"
+
+[[files]]
+file = "datapacks/worldgen_compat_fixes/data/minecraft/structures/village/common/animals/cows_3.nbt"
+hash = "f10c349afe739b3201b5e1de41166ad197197f379eeffdd486de96fb513dc53d"
+
+[[files]]
+file = "datapacks/worldgen_compat_fixes/data/minecraft/structures/village/common/animals/llama_1.nbt"
+hash = "6a484a986312a3f1fe454f6f7ab687c8ff1c46ba2059664cb127061b8791a1b7"
+
+[[files]]
+file = "datapacks/worldgen_compat_fixes/data/minecraft/structures/village/common/animals/pigs_1.nbt"
+hash = "7b9b1a27cde786b390bf6021ac7d6b60149626a4200527e4f3c3b0f2cf6debbf"
+
+[[files]]
+file = "datapacks/worldgen_compat_fixes/data/minecraft/structures/village/common/animals/sheep_1.nbt"
+hash = "16f5921ead10ac5e68a1eeceb82291d81d03a7285755589a6c9ea9b925f5dab4"
+
+[[files]]
+file = "datapacks/worldgen_compat_fixes/data/minecraft/structures/village/common/animals/sheep_2.nbt"
+hash = "73ef8aef890b8fad5a467b1b3a25506a2b65275d695df52dd8aafd39ca024e6a"
+
+[[files]]
+file = "datapacks/worldgen_compat_fixes/data/minecraft/structures/village/common/animals/sheep_3.nbt"
+hash = "41527e522cb3ec36b3039b780ae396b42ffc845f11aa602741269ce78bb654d3"
 
 [[files]]
 file = "datapacks/worldgen_compat_fixes/data/pneumaticcraft/forge/biome_modifier/oil_lake_surface.json"

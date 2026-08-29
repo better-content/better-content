@@ -17,6 +17,7 @@ generated/exports/
 generated/exports-build40-*
 generated/cache/
 generated/evidence/
+/generated/runtime-dumps/
 generated/asset-review/*/evidence/
 generated/pack-site/
 generated/surface-marker-capture/

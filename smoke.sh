@@ -89,6 +89,7 @@ printf 'importing exact CurseForge client candidate: %s\n' "$client_zip"
 
 server_log="$evidence/server.log"
 client_log="$evidence/client.log"
+singleplayer_log="$evidence/singleplayer.log"
 xvfb_log="$evidence/xvfb.log"
 server_fifo="$run/server-console.fifo"
 mkfifo -m 600 -- "$server_fifo"
@@ -128,8 +129,8 @@ cleanup() {
 }
 trap cleanup EXIT INT TERM
 
-touch -- "$server_log" "$client_log" "$xvfb_log"
-tail -n +1 -F --sleep-interval=0.1 -- "$server_log" "$client_log" "$xvfb_log" &
+touch -- "$server_log" "$client_log" "$singleplayer_log" "$xvfb_log"
+tail -n +1 -F --sleep-interval=0.1 -- "$server_log" "$client_log" "$singleplayer_log" "$xvfb_log" &
 log_tail_pid=$!
 
 (
@@ -169,6 +170,90 @@ wait_for_done_count() {
 console() { printf '%s\n' "$1" >&7; }
 
 wait_for_done_count 1 'packaged production server readiness timed out'
+runtime_dump="$server/generated/runtime-dumps"
+published_dump="$ROOT/generated/runtime-dumps"
+[[ ! -e "$runtime_dump" ]] || fail 'fresh candidate unexpectedly contains a runtime dump'
+console 'runtimedata dump'
+deadline=$((SECONDS+900))
+until [[ -s "$runtime_dump/snapshot.json" ]]; do
+  if rg -q 'Recipe graph dump failed|Runtime evidence is incomplete and must not be promoted' "$server_log" 2>/dev/null; then
+    fail "runtime data dump failed; see $server_log"
+  fi
+  kill -0 "$server_pid" 2>/dev/null || fail "server exited during runtime data dump; see $server_log"
+  ((SECONDS < deadline)) || fail "runtime data dump timed out; see $server_log"
+  sleep 1
+done
+if ! runtime_snapshot_id="$(python3 - "$runtime_dump" "$published_dump" "$token" <<'PY'
+import json
+import os
+import pathlib
+import shutil
+import sys
+
+source, destination, token = pathlib.Path(sys.argv[1]), pathlib.Path(sys.argv[2]), sys.argv[3]
+expected = {
+    'recipes.json',
+    'registries.json',
+    'tags.json',
+    'mods.json',
+    'loot.json',
+    'trades.json',
+    'worldgen.json',
+    'lighting.json',
+}
+
+def read_json(path):
+    with path.open(encoding='utf-8') as handle:
+        return json.load(handle)
+
+snapshot = read_json(source / 'snapshot.json')
+if snapshot.get('schema') != 'bc.runtime_dump_completion.v2':
+    raise SystemExit('runtime dump has an unexpected completion schema')
+if snapshot.get('complete') is not True or snapshot.get('evidence_state') != 'complete':
+    raise SystemExit('runtime dump is incomplete and will not be promoted')
+manifest_files = snapshot.get('files')
+if not isinstance(manifest_files, list) or len(manifest_files) != len(expected) or set(manifest_files) != expected:
+    raise SystemExit('runtime dump completion manifest has an unexpected file set')
+if snapshot.get('surfaces', {}).get('recipes', {}).get('complete_for_contract') is not True:
+    raise SystemExit('runtime dump recipe surface is incomplete')
+
+snapshot_id = snapshot.get('snapshot_id')
+if not isinstance(snapshot_id, str) or not snapshot_id:
+    raise SystemExit('runtime dump has no snapshot ID')
+for name in sorted(expected):
+    document = read_json(source / name)
+    if document.get('snapshot_id') != snapshot_id:
+        raise SystemExit(f'runtime dump mixes snapshot IDs in {name}')
+recipes = read_json(source / 'recipes.json')
+if recipes.get('complete') is not True or recipes.get('partial_count') != 0 or recipes.get('error_count') != 0:
+    raise SystemExit('runtime recipe graph is not complete')
+
+destination.parent.mkdir(parents=True, exist_ok=True)
+staging = destination.parent / f'.runtime-dumps-{token}.staging'
+backup = destination.parent / f'.runtime-dumps-{token}.previous'
+if staging.exists() or backup.exists():
+    raise SystemExit('runtime dump promotion paths already exist')
+shutil.copytree(source, staging)
+had_previous = destination.exists()
+try:
+    if had_previous:
+        os.replace(destination, backup)
+    os.replace(staging, destination)
+except BaseException:
+    if had_previous and backup.exists() and not destination.exists():
+        os.replace(backup, destination)
+    raise
+finally:
+    if staging.exists():
+        shutil.rmtree(staging)
+if backup.exists():
+    shutil.rmtree(backup)
+print(snapshot_id)
+PY
+)"; then
+  fail 'runtime data dump validation or promotion failed'
+fi
+printf 'runtime data snapshot: %s -> %s\n' "$runtime_snapshot_id" "$published_dump"
 console 'world_lifecycle_manager select minecraft:plains minecraft:forest minecraft:meadow'
 wait_for_log_count 'Selected Prestige biomes minecraft:plains > minecraft:forest > minecraft:meadow' 1 'CLI biome selection failed'
 console 'world_lifecycle_manager stage'
@@ -228,13 +313,21 @@ sleep 1
 kill -0 "$xvfb_pid" 2>/dev/null || fail "Xvfb failed; see $xvfb_log"
 (
   exec 7<&-
-  export DISPLAY="$display" LIBGL_ALWAYS_SOFTWARE=1 MESA_GL_VERSION_OVERRIDE=4.6 MESA_GLSL_VERSION_OVERRIDE=460 ALSOFT_DRIVERS=null
-  exec setsid pipx run --spec portablemc portablemc --main-dir "$client_main" --work-dir "$client" --timeout 120 \
-    start --jvm "$JAVA" --jvm-args="-Xms4G -Xmx16G -XX:+UseG1GC -Dfile.encoding=UTF-8 -Dlog4j.configurationFile=$client/config/better-content-log4j2.xml" \
+  exec env DISPLAY="$display" LIBGL_ALWAYS_SOFTWARE=1 MESA_GL_VERSION_OVERRIDE=4.6 \
+    MESA_GLSL_VERSION_OVERRIDE=460 ALSOFT_DRIVERS=null \
+    setsid pipx run --spec portablemc portablemc --main-dir "$client_main" --work-dir "$client" --timeout 120 \
+    start --jvm "$JAVA" --jvm-args="-Xms2G -Xmx12G -XX:+UseG1GC -Dfile.encoding=UTF-8 -Dlog4j.configurationFile=$client/config/better-content-log4j2.xml" \
     --resolution 1280x720 -u "$SMOKE_USERNAME" -i "$smoke_uuid" -s 127.0.0.1 -p "$PORT" \
     "forge:1.20.1-$FORGE_VERSION"
 ) > "$client_log" 2>&1 &
 client_pid=$!
+
+client_start_deadline=$((SECONDS+10))
+until group_alive "$client_pid"; do
+  kill -0 "$client_pid" 2>/dev/null || fail "candidate client launcher exited during process-group startup; see $client_log"
+  ((SECONDS < client_start_deadline)) || fail "candidate client process group was not established; see $client_log"
+  sleep 0.1
+done
 
 deadline=$((SECONDS+600))
 until rg -Fq "$SMOKE_USERNAME joined the game" "$server_log" 2>/dev/null; do
@@ -277,9 +370,86 @@ client_game_pid=''
 stop_group "$client_pid"
 wait "$client_pid" 2>/dev/null || true
 client_pid=''
-console stop
-wait "$server_pid"
+mkdir -p -- "$client/saves"
+
+# Two lifecycle transactions already exercised clean JVM shutdowns. Release the third server now so
+# the integrated client has the lane's memory to itself.
+kill -KILL -- "-$server_pid" 2>/dev/null || true
+wait "$server_pid" 2>/dev/null || true
 server_pid=''
+
+(
+  exec 7<&-
+  exec env DISPLAY="$display" LIBGL_ALWAYS_SOFTWARE=1 MESA_GL_VERSION_OVERRIDE=4.6 \
+    MESA_GLSL_VERSION_OVERRIDE=460 ALSOFT_DRIVERS=null \
+    setsid pipx run --spec portablemc portablemc --main-dir "$client_main" --work-dir "$client" --timeout 120 \
+    start --jvm "$JAVA" --jvm-args="-Xms2G -Xmx12G -XX:+UseG1GC -Dfile.encoding=UTF-8 -Djava.net.preferIPv6Addresses=false -Dlog4j.configurationFile=$client/config/better-content-log4j2.xml" \
+    --resolution 1280x720 -u "$SMOKE_USERNAME" -i "$smoke_uuid" \
+    "forge:1.20.1-$FORGE_VERSION"
+) > "$singleplayer_log" 2>&1 &
+client_pid=$!
+
+client_start_deadline=$((SECONDS+10))
+until group_alive "$client_pid"; do
+  kill -0 "$client_pid" 2>/dev/null || fail "single-player client launcher exited during process-group startup; see $singleplayer_log"
+  ((SECONDS < client_start_deadline)) || fail "single-player client process group was not established; see $singleplayer_log"
+  sleep 0.1
+done
+deadline=$((SECONDS+600))
+until rg -q 'Sound engine started' "$singleplayer_log" 2>/dev/null; do
+  group_alive "$client_pid" || fail "single-player client exited before reaching its title screen; see $singleplayer_log"
+  ((SECONDS < deadline)) || fail "single-player client title screen timed out; see $singleplayer_log"
+  sleep 1
+done
+sleep 5
+DISPLAY="$display" "$JSHELL" 2>&1 <<EOF | tee "$evidence/singleplayer-navigation.log"
+import java.awt.Robot;
+import java.awt.Rectangle;
+import java.awt.Toolkit;
+import java.awt.event.InputEvent;
+import java.io.File;
+import javax.imageio.ImageIO;
+var robot = new Robot();
+robot.mouseMove(640, 353);
+robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+Thread.sleep(3000);
+robot.mouseMove(876, 594);
+robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+Thread.sleep(3000);
+robot.mouseMove(400, 666);
+robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+Thread.sleep(5000);
+ImageIO.write(robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize())), "png", new File("$evidence/singleplayer-navigation.png"));
+/exit
+EOF
+[[ -s "$evidence/singleplayer-navigation.png" ]] || fail 'single-player navigation screenshot was not captured'
+
+until rg -q "\[Server thread/INFO\].*$SMOKE_USERNAME.*joined the game" "$singleplayer_log" 2>/dev/null; do
+  group_alive "$client_pid" || fail "single-player client exited before joining its integrated world; see $singleplayer_log"
+  ((SECONDS < deadline)) || fail "single-player world join timed out; see $singleplayer_log"
+  sleep 1
+done
+client_game_pid="$(pgrep -f -- "--gameDir $client .*--uuid $smoke_uuid" | head -n 1)"
+[[ "$client_game_pid" =~ ^[0-9]+$ ]] || fail 'could not identify the single-player Minecraft client JVM'
+DISPLAY="$display" "$JSHELL" 2>&1 <<EOF | tee "$evidence/singleplayer-world-capture.log"
+import java.awt.Robot;
+import java.awt.Rectangle;
+import java.awt.Toolkit;
+import java.io.File;
+import javax.imageio.ImageIO;
+var robot = new Robot();
+ImageIO.write(robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize())), "png", new File("$evidence/singleplayer-world.png"));
+/exit
+EOF
+[[ -s "$evidence/singleplayer-world.png" ]] || fail 'single-player world screenshot was not captured'
+stop_pid "$client_game_pid"
+client_game_pid=''
+stop_group "$client_pid"
+wait "$client_pid" 2>/dev/null || true
+client_pid=''
 kill "$xvfb_pid" 2>/dev/null || true
 wait "$xvfb_pid" 2>/dev/null || true
 xvfb_pid=''
@@ -287,11 +457,13 @@ kill "$log_tail_pid" 2>/dev/null || true
 wait "$log_tail_pid" 2>/dev/null || true
 log_tail_pid=''
 
-if rg -n -i 'OutOfMemoryError|fatal error has been detected|crash report|Error loading KubeJS script|(\[|/)ERROR\] \[KubeJS( Startup| Client| Server)?/\]|KubeJS errors found \[[1-9][0-9]*\]|ThreadingDetector|ReportedException' \
-    "$server_log" "$client_log"; then
+mapfile -d '' -t run_logs < <(find "$run" -type f -name '*.log' -print0)
+[[ "${#run_logs[@]}" -gt 0 ]] || fail 'smoke produced no logs to inspect'
+if rg -n -i 'OutOfMemoryError|fatal error has been detected|crash report|Error loading KubeJS script|(\[|/)ERROR\] \[KubeJS( Startup| Client| Server)?/\]|KubeJS errors found \[[1-9][0-9]*\]|ThreadingDetector:|ReportedException:' \
+    "${run_logs[@]}"; then
   fail 'fatal or KubeJS error log signature detected'
 fi
-if rg -n '(\/WARN\]|\/ERROR\]|\[(WARN|ERROR)\])' "$server_log" "$client_log"; then
+if rg -n '(\/WARN\]|\/ERROR\]|\[(WARN|ERROR)\])' "${run_logs[@]}"; then
   fail 'unfiltered warning or error log record detected'
 fi
 client_hash_after="$(sha256sum -- "$client_zip" | awk '{print $1}')"
@@ -302,5 +474,5 @@ printf 'client  %s  %s\nserver  %s  %s\n' "$client_hash_after" "$client_zip" \
 [[ "$server_hash_after" == "$server_hash_before" ]] || fail 'server candidate ZIP changed during smoke'
 
 trap - EXIT INT TERM
-printf 'smoke passed: exact candidate lifecycle, join, GUI, settle, stop, and hash identity\n'
+printf 'smoke passed: exact candidate lifecycle, settled multiplayer, single-player join, GUI, stop, and hash identity\n'
 printf 'client sha256: %s\nserver sha256: %s\nrun: %s\n' "$client_hash_after" "$server_hash_after" "$run"

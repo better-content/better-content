@@ -6,7 +6,7 @@ hash = "3cc1f64cc6c9fc485828891d0fb64869174421527b9bab5012a54852e139c34f"
 
 [[files]]
 file = "AGENTS.md"
-hash = "d889182e3cb1413ff1f0d38daaedf0f6526b5f23a9cd6bcbd864f6cf29b8706d"
+hash = "a7f593432aee380cb19faffe25593f6ba938b9f022664fc0fafd3afc5ae131d8"
 
 [[files]]
 file = "LICENSE"
@@ -5718,7 +5718,7 @@ hash = "e2f591923558d17aa4bd65859e30b388083de43a58b7642dbeb4863e53d7d145"
 
 [[files]]
 file = "config/better-content-log4j2.xml"
-hash = "a230060acb64534b9b67ba90ad50f1b77f5dfe8e5554d45cab7f951a60a6b010"
+hash = "0da4f8dbf434c05c421d46c9ce37c7e7dc3c2beb91521c2bd0d547340d942fad"
 
 [[files]]
 file = "config/better_content_economy-common.toml"
@@ -5726,7 +5726,7 @@ hash = "70762c2c9d053a71b1b3a897bd753a8bc31c783504f9a14e907c4095958d86f0"
 
 [[files]]
 file = "config/better_content_fixes-common.toml"
-hash = "302923b3915ca6dc10ae82e4900e593b59093ef03a8b9baab02a30df831a06eb"
+hash = "01d1104e8447825f95644986de3a4e2e072e61f71634a287e6dc68a5d4f31d3b"
 
 [[files]]
 file = "config/bettercaves/forge-1_20_1/liquidregions.json"
@@ -5893,6 +5893,10 @@ file = "config/deeperdarker-common.toml"
 hash = "456c664072bff23a9d6a45a571d6a09f4b4be2c0ad0423281894d836a4f679a7"
 
 [[files]]
+file = "config/depth_director-common.toml"
+hash = "59da95e4650ad76d48f536f7af9a5124baaecdf32d8458eabb2007be00526fe8"
+
+[[files]]
 file = "config/diet-client.toml"
 hash = "66d437dc7421b47dee7c2a2975c2a67533c063df0b39f7406d815c9b4c13c49a"
 
@@ -5919,6 +5923,10 @@ hash = "cabd47cb17c0259108df37d86adbd71309a2d2cf52c842fbd28becdc964120ae"
 [[files]]
 file = "config/embeddium-options.json"
 hash = "18b453ebd91dfaa8e6e50b68453f8445e5477c81f926c5a5c539fd35d10f46cc"
+
+[[files]]
+file = "config/endermanoverhaul.jsonc"
+hash = "b0f4fd39dffdb548c1a7803b4eb3f197466ff99ca5a7a527a5c2199d49a0a1ba"
 
 [[files]]
 file = "config/enhancedai/Mobs/Break anger/break_anger_config.json"
@@ -6230,7 +6238,7 @@ hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
 
 [[files]]
 file = "config/incontrol/spawn.json"
-hash = "cd807f731dc4127552cc96a3aee35ad64064f586257835a90806d300991ba2c7"
+hash = "272e6cb42766353b41b4619decab3f20f12713cc137a763f4789e2479a1530fb"
 
 [[files]]
 file = "config/incontrol/spawner.json"
@@ -6470,7 +6478,7 @@ hash = "3b6236845f6a5ff8804487b63b0d74305b91316dc9a008362838607b0be3bd8e"
 
 [[files]]
 file = "config/pillager_campaigns-common.toml"
-hash = "6fb898cdfa250b688971cd19b1db53f8dd22c226cddb8e9f628ed7908b25a978"
+hash = "35442b4427d2b1c1da38cf33894487da42ec3b0c7b0fdd2f5e24a34a2c54986d"
 
 [[files]]
 file = "config/player_traces-client.toml"
@@ -14140,7 +14148,7 @@ hash = "74bf2f85370d5a3bee39a592956d27ae6724c5089fd623605c94684603168cd0"
 
 [[files]]
 file = "mods/better-content-fixes-0.1.0.jar"
-hash = "752d4461772858cc25522c359b460044af0c119211c5d91d144c884788ff4914"
+hash = "23aead2208c5250daec2947b1840fa52fc4213cc5bb8083ade46eac5e17804ed"
 
 [[files]]
 file = "mods/better-content-quests-1.0.0.jar"
@@ -14148,7 +14156,7 @@ hash = "8695cfc3b37ed5a8c3415a6e092fc14ee287da7edd32767d4ca37fcdf04528b8"
 
 [[files]]
 file = "mods/better-content-threads-1.0.0.jar"
-hash = "0b7dd8f7c8c7197a56b812386fde09cfb0be240ccb83b2164ffdfe53de663602"
+hash = "5914765bf308118af7d3e9c2ccb5a722bc3bcc1b42d307ad85422721dd808374"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"
@@ -14323,13 +14331,17 @@ hash = "e50740a50bdeef70e78fc991fbc8eee9dbb4bacd11f5e7cbf10f4c46cb5fd0aa"
 metafile = true
 
 [[files]]
+file = "mods/depth-director-0.2.0.jar"
+hash = "bed96d78b5662fc940189f9448685b730ad549a1e0e736b0f201bd2d99b8acc5"
+
+[[files]]
 file = "mods/diet.pw.toml"
 hash = "90791d91751fc9a54e339f07f23f71ecb159383c946234a1113cbfab8a34162e"
 metafile = true
 
 [[files]]
 file = "mods/dimension-drink-1.0.0.jar"
-hash = "4ab69d6e02c7c2599bdb533c988452703147fadbea952ffb75e9fc99f559a73a"
+hash = "26fb4ddffab757895d06e776779248b732d4c9297239266e0706119e3258014a"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -14429,6 +14441,11 @@ metafile = true
 [[files]]
 file = "mods/emi.pw.toml"
 hash = "9fdbb1a7609735650bfdaf91ade20725053baa09c59d1c925446c3b4737c73d6"
+metafile = true
+
+[[files]]
+file = "mods/enderman-overhaul.pw.toml"
+hash = "3f63f54bf638954d1da79cacc7ab2d58e1886c98bdb2b267035abfa0ce8a5a72"
 metafile = true
 
 [[files]]
@@ -14643,7 +14660,7 @@ metafile = true
 
 [[files]]
 file = "mods/heat-sync-0.1.0.jar"
-hash = "28004b667aa1674806cd6599319c069c582d32d1436d9f826954144050f03479"
+hash = "67f5d22b77cdd5065f6df6cde5368c229378ddd6c88ae654848f279bc095a019"
 
 [[files]]
 file = "mods/hexerei.pw.toml"
@@ -14746,7 +14763,7 @@ metafile = true
 
 [[files]]
 file = "mods/latent-chemlib-0.1.0.jar"
-hash = "428a29f7f1ab0ae247be36d169bc40a2fa4dcb6c38aa043e2afe7f32b41ae445"
+hash = "89b1c62c89f0c66cbe982ac8e046ea64122806e9542a199c8146b0536a5864c6"
 
 [[files]]
 file = "mods/lithostitched.pw.toml"
@@ -14892,8 +14909,8 @@ hash = "b2cb681aaf3e6085148392a06d40899239dc299aaf5ce0adf168fc225d922c97"
 metafile = true
 
 [[files]]
-file = "mods/pillager-campaigns-0.3.0.jar"
-hash = "faa558727aa15feee9c765b6e748661e19b51e20615b3efbde12ef76844f7e5f"
+file = "mods/pillager-campaigns-0.5.1.jar"
+hash = "5d64231fcd6b7a0c3ebc7e2e6aebc1c0d4f38e333aa3e55fbea2be255d8abf38"
 
 [[files]]
 file = "mods/ping-wheel.pw.toml"
@@ -15003,6 +15020,16 @@ hash = "fa3c0a19b839ec89df408368ae4886ffa36179c1973335ce7cd4654f2fa842ca"
 metafile = true
 
 [[files]]
+file = "mods/resourceful-config.pw.toml"
+hash = "b85e8417e797be3fdae046c487eeda8f54cdc88f3f20e462e0e229f8dd734214"
+metafile = true
+
+[[files]]
+file = "mods/resourceful-lib.pw.toml"
+hash = "5c07edd0c8fe82e85efd6c027476ba54cf98291526803b74614c3436292e4ab6"
+metafile = true
+
+[[files]]
 file = "mods/rhino.pw.toml"
 hash = "ca4411ac6d8a9a892948bb63cd0ba52ae5523ca5e257632d6ae8c933b660c5ee"
 metafile = true
@@ -15013,7 +15040,7 @@ hash = "d151802f9f747d78bb0317c3fa8b6b3c14cc58c9b1461da0d4b2bee01a9f890a"
 
 [[files]]
 file = "mods/runtime-data-dumper-0.1.0.jar"
-hash = "177d9698831d428c96902b924b835f1e6fecf067020f72c37ba2b7849085f71a"
+hash = "b8192e0f768f6f2872a3b3399cf534c6610099aeed249bb5b81fe829f617ae89"
 
 [[files]]
 file = "mods/satako-library.pw.toml"
@@ -15205,7 +15232,7 @@ metafile = true
 
 [[files]]
 file = "mods/tinkers-construct-affixes-1.0.0.jar"
-hash = "785213b390fb18dc965446df86bc0860ec1d42d60120e9d9d886b0057aea3d01"
+hash = "8a9cd365b602eec7964db22d166135eba2738cb1125b5c965cf76eb84b89b771"
 
 [[files]]
 file = "mods/tinkers-construct.pw.toml"
@@ -15304,7 +15331,7 @@ metafile = true
 
 [[files]]
 file = "mods/village-walls-1.0.0.jar"
-hash = "2e53c1bb5f54784c772e8e73e4b5eb1d542f091359d07e239c07c1e02072aee1"
+hash = "04d9a283ff3f794a4fda4db48ec9cf0b74f7e3ba85dc596bc962b8e6bc54e7c1"
 
 [[files]]
 file = "mods/wares.pw.toml"
@@ -15322,7 +15349,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "bde5b021c8be0f9135fc0766f8ffabeee39b89c84f45ad151d4ef086dd6500bb"
+hash = "6c668aa649a087e0215755b8e0e0f7d6a64111853604be34de2252489f287137"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"
@@ -15383,7 +15410,7 @@ hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
 
 [[files]]
 file = "smoke.sh"
-hash = "a9f2db3f9c7c17785d1d8472c9263867a14490d060e4e0b33e260bcba0fd08fc"
+hash = "3ade30dc6125d839a4f5300d840425166ddbe564e10f116b67ac09db64dcf01a"
 
 [[files]]
 file = "tacz/applied-armorer.pw.toml"

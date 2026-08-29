@@ -1,0 +1,28 @@
+{
+  "allowPickingUpBlocks": true,
+  "friendlyEndermanTeleport": true,
+  "friendlyEndermanDespawn": true,
+
+  // Keep event-authored entities valid while removing competing ambient additions.
+  "allowSpawning": true,
+  "spawnBadlandsEnderman": false,
+  "spawnCaveEnderman": false,
+  "spawnCrimsonForestEnderman": false,
+  "spawnDarkOakEnderman": false,
+  "spawnDesertEnderman": false,
+  "spawnEndEnderman": false,
+  "spawnEndIslandsEnderman": false,
+  "spawnFlowerFieldsEnderman": false,
+  "spawnIceSpikesEnderman": false,
+  "spawnMushroomFieldsEnderman": false,
+  "spawnNetherWastesEnderman": false,
+  "spawnCoralEnderman": false,
+  "spawnSavannaEnderman": false,
+  "spawnSnowyEnderman": false,
+  "spawnSoulsandValleyEnderman": false,
+  "spawnSwampEnderman": false,
+  "spawnWarpedForestEnderman": false,
+  "spawnWindsweptHillsEnderman": false,
+
+  "endEndermanTeleportChance": 0.5
+}

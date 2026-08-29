@@ -31,6 +31,7 @@ packwiz refresh
 | [class-selector](https://github.com/better-content/class-selector) | `class_selector` | `class-selector-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [create-train-fuel-scaling](https://github.com/better-content/create-train-fuel-scaling) | `create_train_fuel_scaling` | `create-train-fuel-scaling-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [create-transmission-loss](https://github.com/better-content/create-transmission-loss) | `create_transmission_loss` | `create-transmission-loss-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
+| [depth-director](https://github.com/better-content/depth-director) | `depth_director` | `depth-director-0.2.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [dimension-drink](https://github.com/better-content/dimension-drink) | `dimension_drink` | `dimension-drink-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [dynamic-trees-dimension-compat](https://github.com/better-content/dynamic-trees-dimension-compat) | `dynamic_trees_dimension_compat` | `dynamic-trees-dimension-compat-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [dynamic-survival-hud](https://github.com/better-content/dynamic-survival-hud) | `dynamic_survival_hud` | `dynamic-survival-hud-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
@@ -41,7 +42,7 @@ packwiz refresh
 | [latent-chemlib](https://github.com/better-content/latent-chemlib) | `latent_chemlib` | `latent-chemlib-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [oc2r-create-bridge](https://github.com/better-content/oc2r-create-bridge) | `oc2r_create_bridge` | `oc2r-create-bridge-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [oc2r-wireless-pubsub](https://github.com/better-content/oc2r-wireless-pubsub) | `oc2r_wireless_pubsub` | `oc2r-wireless-pubsub-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
-| [pillager-campaigns](https://github.com/better-content/pillager-campaigns) | `pillager_campaigns` | `pillager-campaigns-0.3.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
+| [pillager-campaigns](https://github.com/better-content/pillager-campaigns) | `pillager_campaigns` | `pillager-campaigns-0.5.1.jar` | `./gradlew verifyFull verifyWorld stageRuntimeJar` |
 | [world-lifecycle-manager](https://github.com/better-content/world-lifecycle-manager) | `world_lifecycle_manager` | `world-lifecycle-manager-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [procedural-bouquets](https://github.com/better-content/procedural-bouquets) | `procedural_bouquets` | `procedural-bouquets-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [realistic-ores](https://github.com/better-content/realistic-ores) | `realistic_ores` | `realistic-ores-0.2.0.jar` | `./gradlew verifyFull stageRuntimeJar` |

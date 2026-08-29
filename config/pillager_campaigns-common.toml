@@ -3,27 +3,45 @@
 	disable_vanilla_patrol_spawning = true
 	#Range: 1 ~ 1200
 	interval_ticks = 20
-	#Maximum loaded surface columns sampled across all approaching invasions per scheduler tick.
+	#Loaded columns inspected per scheduler pass. This never loads or tickets a chunk.
 	#Range: 64 ~ 65536
-	surface_sample_budget = 4096
+	surface_sample_budget = 16384
 
-[cadence]
+[scouts]
 	#Range: 0 ~ 1200000
-	first_window_min_ticks = 24000
+	minimum_eligible_ticks = 7200
 	#Range: 0 ~ 1200000
-	first_window_max_ticks = 36000
-	#Range: 0 ~ 1200000
-	repeat_window_min_ticks = 24000
-	#Range: 0 ~ 1200000
-	repeat_window_max_ticks = 48000
+	maximum_eligible_ticks = 14400
+	#Range: 200 ~ 144000
+	withdraw_after_active_ticks = 2400
+
+[assaults]
+	#Range: 0 ~ 2400000
+	minimum_eligible_ticks = 72000
+	#Range: 0 ~ 2400000
+	maximum_eligible_ticks = 144000
 	#Range: 0 ~ 24000
-	warning_surface_ticks = 600
+	warning_surface_ticks = 2400
+	#Range: 100 ~ 24000
+	wave_progress_timeout_ticks = 1500
 	#Range: 0 ~ 1200000
 	death_grace_ticks = 24000
 
+[grouping]
+	#Range: 8 ~ 256
+	nearby_player_radius = 64
+
+[limits]
+	#Range: 1 ~ 160
+	global_campaign_mobs = 96
+	#Range: 1 ~ 32
+	spawns_per_tick = 8
+	#Range: 1 ~ 160
+	spawns_per_second = 24
+
 [scaling]
 	#Range: 1 ~ 12000000
-	time_tier_ticks = 144000
+	eligible_ticks_per_intensity = 144000
 
 [approach]
 	#Range: 8 ~ 256

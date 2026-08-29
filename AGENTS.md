@@ -20,9 +20,11 @@ and publication: the ZIPs that pass are the ZIPs to publish.
 
 `dist.sh` delegates release assembly to `package.sh`. `smoke.sh` extracts the packaged production
 server, changing only `eula=true` and `online-mode=false`, and imports the packaged CurseForge
-client manifest into a disposable client runtime. It then checks supervised server readiness, a
-complete CLI lifecycle transaction, client join, one bounded settled connection, process shutdown,
-fatal-log signatures, and unchanged candidate hashes. Resolved client artifacts persist under
+client manifest into a disposable client runtime. After initial server readiness it requires and
+promotes a complete live runtime-data snapshot to the ignored `generated/runtime-dumps/` directory.
+It then checks complete CLI lifecycle transactions, a bounded settled dedicated-server connection,
+a fresh single-player world join, process shutdown, every run-local log, fatal signatures, and unchanged candidate hashes. Resolved client artifacts
+persist under
 `~/.cache/bc/packwiz-downloads`; set `BC_PACKAGE_ARTIFACT_CACHE` to use another disposable
 cache root. The smoke run root and settle duration may be set with `BC_SMOKE_RUN_ROOT` and
 `BC_SMOKE_SETTLE_SECONDS`.

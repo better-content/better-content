@@ -9,7 +9,7 @@ SMOKE_USERNAME="${BC_SMOKE_USERNAME:-SmokeClient}"
 PORT=25565
 
 fail() { printf 'smoke failed: %s\n' "$*" >&2; exit 1; }
-for command in awk packwiz pgrep pipx python3 readlink rg setsid sha256sum unzip Xvfb; do
+for command in awk packwiz pgrep pipx python3 readlink rg setsid sha256sum tail tee unzip Xvfb; do
   command -v "$command" >/dev/null 2>&1 || fail "$command is required"
 done
 [[ "$SETTLE_SECONDS" =~ ^[0-9]+$ ]] || fail 'BC_SMOKE_SETTLE_SECONDS must be a non-negative integer'
@@ -52,6 +52,7 @@ client_main="${BC_SMOKE_CLIENT_MAIN:-$HOME/.cache/bc/smoke/client-main}"
 mkdir -p -- "$server_extract" "$client" "$evidence"
 printf 'client  %s  %s\nserver  %s  %s\n' "$client_hash_before" "$client_zip" \
   "$server_hash_before" "$server_zip" > "$evidence/candidate-sha256-before.txt"
+printf 'smoke run: %s\n' "$run"
 
 python3 - "$PORT" <<'PY' || fail 'production port 25565 is already in use; faithful smoke will not substitute another port'
 import socket, sys
@@ -83,8 +84,8 @@ printf 'importing exact CurseForge client candidate: %s\n' "$client_zip"
 (
   cd -- "$client"
   packwiz curseforge import "$client_zip" -y
-) > "$evidence/client-import.log" 2>&1
-"$ROOT/package.sh" resolve "$client" "$client" client > "$evidence/client-artifacts.log" 2>&1
+) 2>&1 | tee "$evidence/client-import.log"
+"$ROOT/package.sh" resolve "$client" "$client" client 2>&1 | tee "$evidence/client-artifacts.log"
 
 server_log="$evidence/server.log"
 client_log="$evidence/client.log"
@@ -97,6 +98,7 @@ server_pid=''
 client_pid=''
 client_game_pid=''
 xvfb_pid=''
+log_tail_pid=''
 
 group_alive() { [[ -n "$1" ]] && kill -0 -- "-$1" 2>/dev/null; }
 stop_group() {
@@ -121,8 +123,14 @@ cleanup() {
   [[ -z "$client_pid" ]] || wait "$client_pid" 2>/dev/null || true
   [[ -z "$server_pid" ]] || wait "$server_pid" 2>/dev/null || true
   [[ -z "$xvfb_pid" ]] || wait "$xvfb_pid" 2>/dev/null || true
+  [[ -z "$log_tail_pid" ]] || kill "$log_tail_pid" 2>/dev/null || true
+  [[ -z "$log_tail_pid" ]] || wait "$log_tail_pid" 2>/dev/null || true
 }
 trap cleanup EXIT INT TERM
+
+touch -- "$server_log" "$client_log" "$xvfb_log"
+tail -n +1 -F --sleep-interval=0.1 -- "$server_log" "$client_log" "$xvfb_log" &
+log_tail_pid=$!
 
 (
   cd -- "$server"
@@ -201,7 +209,7 @@ for archive_file in "${archive[@]}"; do
   (
     cd -- "$server"
     ./world-lifecycle-manager-server.sh verify-archive "$archive_file" "$lineage_id" "$transaction_id"
-  ) >> "$evidence/archive-verification.log" 2>&1 || fail 'packaged archive failed its operator verification command'
+  ) 2>&1 | tee -a "$evidence/archive-verification.log" || fail 'packaged archive failed its operator verification command'
 done
 [[ -s "$server/logs/world-lifecycle-manager-supervisor.log" ]] || fail 'durable supervisor log was not created'
 
@@ -252,7 +260,7 @@ done
 console "world_lifecycle_manager gui player $SMOKE_USERNAME configure"
 wait_for_log "Opened Prestige configure for $SMOKE_USERNAME" 'packaged World Condenser GUI command was not accepted'
 sleep 2
-DISPLAY="$display" "$JSHELL" > "$evidence/condenser-gui-capture.log" 2>&1 <<EOF
+DISPLAY="$display" "$JSHELL" 2>&1 <<EOF | tee "$evidence/condenser-gui-capture.log"
 import java.awt.Robot;
 import java.awt.Rectangle;
 import java.awt.Toolkit;
@@ -275,6 +283,9 @@ server_pid=''
 kill "$xvfb_pid" 2>/dev/null || true
 wait "$xvfb_pid" 2>/dev/null || true
 xvfb_pid=''
+kill "$log_tail_pid" 2>/dev/null || true
+wait "$log_tail_pid" 2>/dev/null || true
+log_tail_pid=''
 
 if rg -n -i 'OutOfMemoryError|fatal error has been detected|crash report|Error loading KubeJS script|(\[|/)ERROR\] \[KubeJS( Startup| Client| Server)?/\]|KubeJS errors found \[[1-9][0-9]*\]|ThreadingDetector|ReportedException' \
     "$server_log" "$client_log"; then

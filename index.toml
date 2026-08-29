@@ -5901,8 +5901,8 @@ file = "config/diet-client.toml"
 hash = "66d437dc7421b47dee7c2a2975c2a67533c063df0b39f7406d815c9b4c13c49a"
 
 [[files]]
-file = "config/dimension_drink/dimension_drink/aether.json"
-hash = "2e8716729456b565b56533cfd25ec8132d5469a58a62a2374b381dc1e6914846"
+file = "config/dimension_drink/fonts/aether.json"
+hash = "295e0cdae52c67db3654f5039abc1540e24a7bfb6e62e631562d7335d59d58ff"
 
 [[files]]
 file = "config/downed_player_revival-common.toml"
@@ -8614,7 +8614,7 @@ hash = "d7c4fa4596c77b19b8abd724e8e95142b20cab0e03cfdc4fd1fab1c8169a9ddd"
 
 [[files]]
 file = "defaultconfigs/aether-server.toml"
-hash = "8eb411a3369e764716f91d5d52213ae12ee6c807c91dbfc53bab49006d7bf3be"
+hash = "a4406c811d5636381e8ff8594a025a8cc8ae1ea59b3803c289feb9c23b7f5135"
 
 [[files]]
 file = "defaultconfigs/arcane_chunk_loaders-server.toml"
@@ -8718,7 +8718,7 @@ hash = "4ca9daf4798192c0f7a751deefa8a798d8777f270421ee38ffcef75ad20706f8"
 
 [[files]]
 file = "defaultconfigs/lostcities-server.toml"
-hash = "aa4fb932bea2ec01df0cf5a7144142897be34ab269d8684c2aa9803635883337"
+hash = "0e6b539571eec889003005501f659e5289127a64c0153b4a78c505151444d25c"
 
 [[files]]
 file = "defaultconfigs/mantle-server.toml"

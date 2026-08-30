@@ -50,7 +50,6 @@
     "creatingspace:incomplete_iron_injector",
     "creatingspace:injector_grid",
     "creatingspace:reinforced_injector_grid",
-    "deeperdarker:otherside_portal",
     "fallout_wastelands_:portal_frame",
     "fallout_wastelands_:steel_ingot",
     "fallout_wastelands_:wastelands",
@@ -75,6 +74,7 @@
     "pneumaticcraft:thermal_compressor",
     "sophisticatedbackpacks:stack_upgrade_omega_tier",
     "sophisticatedstorage:stack_upgrade_omega_tier",
-    "undergarden:catalyst"
+    "rats:chunky_cheese_token",
+    "rats:ratlantis_portal"
   ]
 }

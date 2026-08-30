@@ -54,10 +54,11 @@ Current inventory: **66 active scripts** — 6 client, 53 server, and 7 startup.
 - `kubejs/server_scripts/compat/reviewed/replaceable_deepslate.js` — Maintains the exact replaceable-deepslate compatibility tags used by worldgen.
 - `kubejs/server_scripts/policy/dimension_access.js` — Removes direct portal routes so rocket and Font graphs own intended dimension access.
 - `kubejs/server_scripts/policy/global_loot_progression.js` — Removes progression-breaking materials from broad loot injection surfaces.
-- `kubejs/server_scripts/policy/pretty_pipes_progression.js` — Keeps Pretty Pipes useful while gating remote and advanced logistics capability.
 - `kubejs/server_scripts/policy/removed_items.js` — Applies the exact deny list for intentionally unavailable outputs.
 - `kubejs/server_scripts/policy/tnt_recipe.js` — Restricts TNT to the two vanilla sand inputs instead of broad sand tags.
 - `kubejs/server_scripts/progression/10_hand_workshop.js` — Authors the Hand Workshop roots: Font binders, seared metallurgy, and hand-cranked Create entry.
+- `kubejs/server_scripts/progression/20_ratlantis_logistics.js` — Removes direct Ratlantis access and survival recipes for inputless Rat resource generators; the compatibility mod additively consumes logistics-tier components.
+- `kubejs/server_scripts/progression/21_bumblezone_cultivars.js` — Removes recipes that would create origin-controlled cultivar propagules outside nursery and harvest acquisition.
 - `kubejs/server_scripts/progression/20_powered_works.js` — Authors the Powered Works Machine Block roots and early kinetic machinery.
 - `kubejs/server_scripts/progression/30_precision_factory.js` — Authors the Precision Factory brass, deployment, and mechanical-crafting roots.
 - `kubejs/server_scripts/progression/40_thermal_pressure.js` — Authors Thermal & Pressure roots for Foundry access, compressed air, and airtight machinery.

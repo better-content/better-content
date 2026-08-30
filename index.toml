@@ -50,7 +50,7 @@ hash = "4433b685b8d10a10456160e910460b24b13ab78a410016f5db75c1be218f4582"
 
 [[files]]
 file = "config/TFTH.toml"
-hash = "742eb9909b4e4b649e94cf29c8541bb28c865aaf372230953526bb5f32552145"
+hash = "56483fcd436614131d65c553d4b683f0d4977b694bf6ab336d6a28948e5728f4"
 
 [[files]]
 file = "config/Weather2/Debug.toml"
@@ -1377,22 +1377,6 @@ file = "config/adpother/Biomes/blueprint$original_source_marker.cfg"
 hash = "5c95f0feecf8b8ef2fe2ccc0eea0e9d9f5bc08eca24647ae023bf3116ed237f9"
 
 [[files]]
-file = "config/adpother/Biomes/deeperdarker$blooming_caverns.cfg"
-hash = "d7a92985e9554ead3c9ead2c7436689004692dc70064a5a3d4040c06efa3cdc2"
-
-[[files]]
-file = "config/adpother/Biomes/deeperdarker$deeplands.cfg"
-hash = "375e3abff283a8d6bfb8c54bdf1eef7c1fa8b7dc7f10521b30ca82a9e4abc0e4"
-
-[[files]]
-file = "config/adpother/Biomes/deeperdarker$echoing_forest.cfg"
-hash = "84657caf6f682ab3a3c9119cf134e4f8fe5d13a4eee89105caf3e3bcb742250d"
-
-[[files]]
-file = "config/adpother/Biomes/deeperdarker$overcast_columns.cfg"
-hash = "5d5a7a1dc4a398954c222938de2654e12e64f721c37e9af04909e96a0fc2bded"
-
-[[files]]
 file = "config/adpother/Biomes/fallout_wastelands_$wasteland_badlands.cfg"
 hash = "5ea0c34e7b82a10be44427dada65ae0e249d63e819e36470c5cdb1c7e41f7c7a"
 
@@ -2003,70 +1987,6 @@ hash = "c9ad3abb2f1278b3b3aa5439147ded83dde17950162e05a075c11ede0130071a"
 [[files]]
 file = "config/adpother/Biomes/terrablender$deferred_placeholder.cfg"
 hash = "4b3bb7d42b27416070f5133b7b2e8e93691fe4c643e80e65d9d6e755caddce02"
-
-[[files]]
-file = "config/adpother/Biomes/undergarden$ancient_sea.cfg"
-hash = "a1f648119877bb7763bee496ca1d3d9f50215ef192b4a2bfd8d442b33bb8f0f1"
-
-[[files]]
-file = "config/adpother/Biomes/undergarden$barren_abyss.cfg"
-hash = "1c75d6c631401a83ceecb6058623c0d51d3cd650fd93798b585ee6be44c0d5c3"
-
-[[files]]
-file = "config/adpother/Biomes/undergarden$blood_mushroom_bog.cfg"
-hash = "38629619b7f2b807d726acdbcf2bbcb35bb4aa17d0943e171cbca3a29b7da86d"
-
-[[files]]
-file = "config/adpother/Biomes/undergarden$dead_sea.cfg"
-hash = "02a299ebee70518c00bfc2cdf4f698f086145088944f1fe5a0ef00b6ac972327"
-
-[[files]]
-file = "config/adpother/Biomes/undergarden$dense_forest.cfg"
-hash = "a3c2d0fd6cabd2e9efea8398b1a222ae7c81b7fc64007d3ec16e37636b217542"
-
-[[files]]
-file = "config/adpother/Biomes/undergarden$forgotten_field.cfg"
-hash = "b06d925bacc975a46a464fe6623a20f3bc1945bb1d42f6d4c32f7bd3efdbc940"
-
-[[files]]
-file = "config/adpother/Biomes/undergarden$frostfields.cfg"
-hash = "e64c16cf64acf09cb1750a60dad5a526e360837afee0bb33661977e3565d14e5"
-
-[[files]]
-file = "config/adpother/Biomes/undergarden$frosty_smogstem_forest.cfg"
-hash = "6286a9ee7c23608e099154942505aa64b6861f0df61bea67b395661f7a65d2dc"
-
-[[files]]
-file = "config/adpother/Biomes/undergarden$gronglegrowth.cfg"
-hash = "b2e1ec65b7167cca4b8d3dc3640f65202b2bb7ff00f70a065cea6d3d5bcbe15f"
-
-[[files]]
-file = "config/adpother/Biomes/undergarden$icy_sea.cfg"
-hash = "1398855d60aa133685c39165df4dcd4614b9e76f0c6583b79701b1769046749c"
-
-[[files]]
-file = "config/adpother/Biomes/undergarden$indigo_mushroom_bog.cfg"
-hash = "ecc7da0a1babd770240a5edef2a0181f52294118c56695781aa4c7ec92f6fc20"
-
-[[files]]
-file = "config/adpother/Biomes/undergarden$ink_mushroom_bog.cfg"
-hash = "c70c18e91573133696fc684c59f99628388eb233400a1bc343b6854bccd262a5"
-
-[[files]]
-file = "config/adpother/Biomes/undergarden$smog_spires.cfg"
-hash = "0c54069beb5d77a09b0a342efcafd39748f65572de13c40379a04495b234e81f"
-
-[[files]]
-file = "config/adpother/Biomes/undergarden$smogstem_forest.cfg"
-hash = "1f812e2c6a5a08ae55f043ae09184ef40bd55d55b113f4da1ac47287ac967c9b"
-
-[[files]]
-file = "config/adpother/Biomes/undergarden$veil_mushroom_bog.cfg"
-hash = "e707f90d6fb75da7362b50ab001f163880ec6dfb2e796d944b08105a11c30a20"
-
-[[files]]
-file = "config/adpother/Biomes/undergarden$wigglewood_forest.cfg"
-hash = "15c951aea0f830761890528378f61d38e0742ad9c13974697907ef423dc6d6ad"
 
 [[files]]
 file = "config/adpother/Biomes/unusualend$gloopstone_lands.cfg"
@@ -5206,7 +5126,7 @@ hash = "ad711622f9b8c5cc8115f52396f5d82587b809fb20cbf9d94c7744aeebcaf4d5"
 
 [[files]]
 file = "config/almostunified/unify.json"
-hash = "4931d33085888f282bb8f92c1fcaf361598dbc8b5e8317c121348e5c9e6d4b71"
+hash = "3c5648e007df8ddcea63a7b3d2d3aea8f2b2e677704cc1c3f3e529d65857c7a6"
 
 [[files]]
 file = "config/amendments-client.toml"
@@ -5230,7 +5150,7 @@ hash = "557cc1b6ba1369f5d2459054cc2b9e9f91c58b9cdecb0a3023a911b435b1a9c8"
 
 [[files]]
 file = "config/apotheosis/enchantments.cfg"
-hash = "470a2dff2418063278d0641f1c19f0aa0bb70bc141bd1b1d197752b021fa9563"
+hash = "1296d8e3d2f0968d04ecc7de9a1bf7beef6461bb4c12d7b4e5d69a12219e68ee"
 
 [[files]]
 file = "config/apotheosis/garden.cfg"
@@ -5238,7 +5158,7 @@ hash = "dea4d260e6eac868297c0f9cd80545fd6b54f7344c678b89edda980a3fc5e8cf"
 
 [[files]]
 file = "config/apotheosis/names.cfg"
-hash = "da8e68b18a089b52b203351d80dbbd9db91c49a38c025159d6a46928d53568ea"
+hash = "3354e7e664412943f16c23a5d7c9d5ed4b94089e49e01ce09c760a6d4d651ba0"
 
 [[files]]
 file = "config/apotheosis/potion.cfg"
@@ -5382,7 +5302,7 @@ hash = "c54f14d2579cfff9ad95df94dd3a8abb781f8e05a80ddc0138bdb133963c3d4a"
 
 [[files]]
 file = "config/ars_nouveau-common.toml"
-hash = "de862fece1ff339d31a97a6d56498d334980e0be31e507cac763cb273e5c5710"
+hash = "e78540309c92412f739ddc7cf8e27816f388a66a286d0a9b535a9508333e77d1"
 
 [[files]]
 file = "config/ars_nouveau-server.toml"
@@ -5718,7 +5638,7 @@ hash = "e2f591923558d17aa4bd65859e30b388083de43a58b7642dbeb4863e53d7d145"
 
 [[files]]
 file = "config/better-content-log4j2.xml"
-hash = "0da4f8dbf434c05c421d46c9ce37c7e7dc3c2beb91521c2bd0d547340d942fad"
+hash = "fa6018ea68941364ebb606713752de5261175d276f0f4dddeee9921ae0d22987"
 
 [[files]]
 file = "config/better_content_economy-common.toml"
@@ -5742,11 +5662,11 @@ hash = "8cf121bf207b832ab87e04be0859c9a42fee5894620decf14aee2fb29e27f957"
 
 [[files]]
 file = "config/biomesize.json"
-hash = "90183d8ccf316b92b53afc0c5f04e536cbdb83a445b0c595ca46b9871e63c990"
+hash = "cdfc6231e19651fa578c39efb700fd8a28dce58f4956e29e2369ef07d0c24758"
 
 [[files]]
 file = "config/biomespawnpoint/spawnbiomes.txt"
-hash = "6df681d9d345f5913ca519f484dc677670cf5f2b549ea946bf9859e696d2e748"
+hash = "0b082cd73d169909ea1ccc6bb5581640bbcb810b5ffbb9165220ee250a7c1c1f"
 
 [[files]]
 file = "config/blockswap/block_swap.json5"
@@ -5830,7 +5750,7 @@ hash = "73ea1ace4acd4768c565ef84639e7b60f69f4cb7609fdd762545a85caf5c215a"
 
 [[files]]
 file = "config/coldsweat/world.toml"
-hash = "37515c557d464dfb8dccdf3f129afd84436a4961f035a50c2c8be88494c2b363"
+hash = "4dfa859b774f6dc180dd8fa66fa935bf97e1cf63f1adc308a0847587cd88e827"
 
 [[files]]
 file = "config/complicated_bees-common.toml"
@@ -5887,10 +5807,6 @@ hash = "541ee90994c1cf3d4e132df2ac3ff74004bc3952d3914ae843b5089a4dda8a95"
 [[files]]
 file = "config/dcm.json"
 hash = "b171a1b06507d4f85131fc40b9953ab071a6488e87b95ac454ca502f33c47c1d"
-
-[[files]]
-file = "config/deeperdarker-common.toml"
-hash = "456c664072bff23a9d6a45a571d6a09f4b4be2c0ad0423281894d836a4f679a7"
 
 [[files]]
 file = "config/depth_director-common.toml"
@@ -6078,15 +5994,15 @@ hash = "cbad6bb5e774e1a155184eb2d9f6f784072dc242cf744cd8f5fe6b67d7ce5acd"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/completionist_armour_sets.snbt"
-hash = "ee9a7d40a3deb6fea1a2148feb00dbb8bd5b8addf856a04558b728ac1e3d9737"
+hash = "b4a9bf01036b3de4baef52c4e221abf42f0e00d7ef9db55564c77d54013efdcf"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/completionist_consumables.snbt"
-hash = "eb4954a8f96f51eb6ffb2991e9febfc372e843f1621df3f7d6b017c18d584b47"
+hash = "daaa60246d9a4fb65f67003648370852815e1aa76ef9ac9f6baafe9b73056dd4"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/completionist_effects.snbt"
-hash = "3239aa8a3a374456dc2be07fff096f8dc443438ec1e07afaa142cb94c0e47c09"
+hash = "06134e982471927ce324ea15c1bd19c8f50444f225946d81c95e26e2d7e62cae"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/completionist_enchantments.snbt"
@@ -6094,7 +6010,7 @@ hash = "1b3ba34c649b5a4a87a94b263f050277aa5d87e1f97c7ccb569e605e26897725"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/completionist_plants.snbt"
-hash = "0f669519733366d6ff5314bf3966e3d6f708225f8ce1ffe785aaefb7dfe08a78"
+hash = "1f049bbcf8207e2df5aa155ae3ff9ce72905baa198117c6515a7aa3fcd220dea"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/completionist_tcon_weapons.snbt"
@@ -6106,11 +6022,11 @@ hash = "c6a52a01265802a9eaa1d6dc64067a05dd360f058b4f0d45e97a8d2ec6feaddf"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/works.snbt"
-hash = "b099dfe440fd04c88d66735549dc00713af3863709cf11bac812aeba3e4d4a43"
+hash = "31c33a1c3e59acca3053d9f30ccee499b7487bc55c395840d63b690e056ff9d1"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/world.snbt"
-hash = "2821e8b80dc96844da23912fd079ff8cb210c0f710a70b565b1b8e145dbe5c89"
+hash = "146465745bbff4b04d8d74e7cf998d4a25d768b9960e91e303068b2571546cfd"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -6238,7 +6154,7 @@ hash = "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
 
 [[files]]
 file = "config/incontrol/spawn.json"
-hash = "272e6cb42766353b41b4619decab3f20f12713cc137a763f4789e2479a1530fb"
+hash = "1a463e59e99932277a6d994062dc7a83f0051954ab34698bdd34a69a5e361afa"
 
 [[files]]
 file = "config/incontrol/spawner.json"
@@ -6529,12 +6445,16 @@ file = "config/quickstack-client.toml"
 hash = "4ac80984bb937e622db2e2b21d8660bae408a13e9c28b4da45a0ae55022a5a2b"
 
 [[files]]
+file = "config/rats-common.toml"
+hash = "d941aa4d5d45482d7807365f35cbc57eae980327ed685ac452fceca4fe575029"
+
+[[files]]
 file = "config/rbp/block_definitions/bamboo.toml"
 hash = "7302461a5ac8578c327483278216fe3c1fe6aba0fddbd66655d1f52411c59aaa"
 
 [[files]]
 file = "config/rbp/block_definitions/basic_construction.toml"
-hash = "85cd1d91c4ec3512c3f15ea5806282908cc3d6f5af7a028ceadc2ae64ec1bb8a"
+hash = "dcbe505622ab9eebb910b3f55aa6f9cf00e93c7f3abd9c0132729ec46ea81c5c"
 
 [[files]]
 file = "config/rbp/block_definitions/basic_construction_slab.toml"
@@ -6566,7 +6486,7 @@ hash = "95d92916d1db481f50e6f5130fa7bab938a43cc425d32810c099bdd45f7da92a"
 
 [[files]]
 file = "config/rbp/block_definitions/carpet.toml"
-hash = "99d73c9854dd4a8bb8ed8968e37841d1bfecbb3793bb272a613c743bc8fa963a"
+hash = "3c6d18639e5c4ccac56e5899e252ddbd605fc893264583fe1fe3e07cf6c8343b"
 
 [[files]]
 file = "config/rbp/block_definitions/chain.toml"
@@ -6598,11 +6518,11 @@ hash = "d9fb3cd3aef5f4e11d5cbd9a698def5182b6f45ee4c651c42488a5804588b525"
 
 [[files]]
 file = "config/rbp/block_definitions/dirt.toml"
-hash = "34f4db97ceca62512fbec4c20cff80c60121fa9f8aecbd40c4406e8b87095774"
+hash = "b38b50640af0519ff780594c957d529dc29c2422a8dea146f835261390bdd5bc"
 
 [[files]]
 file = "config/rbp/block_definitions/door.toml"
-hash = "39aba00b4e0b69087f995eef03e3152a648a058048aefaab83391c08d0161e55"
+hash = "66ffc6fa460bf4b8266930a0295db683a51f9b82d0f4cf75c83e416d7f0bbdff"
 
 [[files]]
 file = "config/rbp/block_definitions/end_portal.toml"
@@ -6614,27 +6534,27 @@ hash = "fe05934d3094f5540216f68c1891aef24bdb67d18fa755bc9ee39663f2bb55d9"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_basic_construction_slab.toml"
-hash = "67bd79aaab37d5ae7f75874e42955fd0e7aeceb64ce33af6027974ec223828c5"
+hash = "fc5fef5d9d8485bce81ac61520130ae93f9e3e9a3fe29cb744b1eebb083ab9ab"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_basic_construction_stairs.toml"
-hash = "e0fdd19e9359f53efdb74f4cc67b40c04e9d5825bbe65020e3f4f58c6b39cf22"
+hash = "a218c490f269dbcf081defc29a29778af1ae881db6619ae97c28267136850adc"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_basic_construction_wall.toml"
-hash = "e35fd96400bb782e098b62c12c10154b55befb2251f53deb95858e2a015262dc"
+hash = "7d1ba3736dc6dd67d17eecd07dbe68241ccbdfb365617f8c556e28cf17a61138"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_dirt.toml"
-hash = "3c43d03374e464af2148b2003db757c408c018d1d75026e0410e26966056af65"
+hash = "f4ab952662203f2b915f84a50a72eb85fc11d978e8bd058d6c108080d8096e8d"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_glass.toml"
-hash = "eead7fa98cb382aa756c3d43d6540119c4ee2f6a803373dcf10265c3fd235d8a"
+hash = "e0a8fd856858edc58404b1afc0c6e70080751ef0bb650bd8c8337e8ae9ebc1e9"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_glass_pane.toml"
-hash = "60e488c2738780cd014139ff45becc7032334301ede9e170f131d2372d79bf45"
+hash = "3abada5839308179fe7a134b66fe774fc42e77dc13ff388d863ec32f5acd0f98"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_refined_ore.toml"
@@ -6642,23 +6562,23 @@ hash = "0151218e84e513da5963d13f214e20bbf8682e0df75602e5fffeed6975239bf9"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_sand.toml"
-hash = "d56b7af81e4b7ab8517b2f9a95ee6576361ac7512a4fbf8d0173ce6f2c8b418a"
+hash = "638b7db0838d59f2036033371c3f39a0af69ccd1aee06a481e464a8c7819616b"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_stone.toml"
-hash = "7cc2f5450744e11e08689bc0dba1897340ec12941681dac32cefad892717f003"
+hash = "e37c8f6ace90b20ae9ebd7106078695a9e33429f093dfb52d9e142c8ad8dacc7"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_wood.toml"
-hash = "dfbdef290feaeb8c6a8e937f38125140a46d6854883bf7bf780044b3bee439b5"
+hash = "1810898e3bb65cefdd8ff1b352c3c1193d0bbe713de13aef70d2e7ebfe550ea0"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_wooden_fence.toml"
-hash = "c90446e9aa425f541e0982d54d8d2532a60e1e384d1c23d5db2898a0a0aa1a45"
+hash = "c189c6bcc31050accab76a96fdda2da730531e2057d852868dc3235b5c4fd090"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_pack_solid_blocks.toml"
-hash = "671d9e2c655cbea82b447d015c2029e13c26e1f57198784dc8d5ba4d96a4947f"
+hash = "da83956cef3e76450ea2d43bad89e250d4059ff4f1f71f1585c2ebdeab0a08a1"
 
 [[files]]
 file = "config/rbp/block_definitions/glass.toml"
@@ -6774,7 +6694,7 @@ hash = "8aff342f061d72232a8b48ce5ba42c523030b4a64e876d17a4d40b4ae0485a29"
 
 [[files]]
 file = "config/rbp/block_definitions/stone.toml"
-hash = "c71c8b1c9c1eb3658d49272edec788708a21fd23b7e1ac3f0bee23da491a3618"
+hash = "579d4411c02fb3878fc9099736fe2c704bf4d570dc6d1e4277c1544117845d20"
 
 [[files]]
 file = "config/rbp/block_definitions/string.toml"
@@ -6834,7 +6754,7 @@ hash = "86734bba832b9ca48b8386e174e396552503dabc5464971568c005d42cf03866"
 
 [[files]]
 file = "config/rbp/block_definitions/wood.toml"
-hash = "1980d1d0d0a4fabbb485db0c646179246833b2660a6aed87a5ef5d126300ee39"
+hash = "ad992e74bf02a82f28b2bd7ff6e50902f378773b71c59d1a0244658905209731"
 
 [[files]]
 file = "config/rbp/block_definitions/wooden_fence.toml"
@@ -6986,7 +6906,7 @@ hash = "0db58413b6398ca29288290f9e372bb910f517933f80d2dfd658521ac2841f1a"
 
 [[files]]
 file = "config/structurify.json"
-hash = "8d7ca4d9e6bc664de35f62d644019368b23994fddf9ccfdd4b29eecfee87147e"
+hash = "686769e591fb7b01743f0662baeca8b6e241dd93a24879a3aa2619a9ada76b8f"
 
 [[files]]
 file = "config/supplementaries-client.toml"
@@ -7031,6 +6951,10 @@ hash = "a8761bda451dfee5ca93bbbc218634f05ed50bdefdc6d087b4bb7cc2f3339909"
 [[files]]
 file = "config/temperaturebands-common.toml"
 hash = "522811223f5d25044d9ef6be0c0e4b9a07318e839b9d622347123115d72d50c8"
+
+[[files]]
+file = "config/the_bumblezone/dimension.toml"
+hash = "2c1f6152b2b061dd5db0f0d34a9f9917037732947141716aba77924796f822fb"
 
 [[files]]
 file = "config/theoneprobe-client.toml"
@@ -7129,14 +7053,6 @@ file = "config/twilightforest-common.toml"
 hash = "8a3779330d045a34baa0223686ca84c61f872db10b5b5660d8aadfc345ed8601"
 
 [[files]]
-file = "config/undergarden-client.toml"
-hash = "a96576d9790443bdd21828e4b875ee4f6dd7aa12d267536743f0b37c970efcad"
-
-[[files]]
-file = "config/undergarden-common.toml"
-hash = "0ea925ef308c63ef4f955f41fa778cb5795bcdd947c8fa568a37ac28208081d4"
-
-[[files]]
 file = "config/unearthed-common.toml"
 hash = "931647ded604d3a9f2ae50daea575f41b3c73c887e6976dc327dca9346988298"
 
@@ -7194,275 +7110,11 @@ hash = "f87aba26d62539af116539979bbf53723a7ec52e8a16f412b59b8de2a1e7a1a5"
 
 [[files]]
 file = "config/zombieawareness/MobLists.toml"
-hash = "cc53de8a5c91be4abf42a8caf0761b3063991d20f466a5c8d43e8797316e3210"
+hash = "75e906c331b50a2dec0904379b6f9eebb4da24db89bf5456a5121a794b9be9fd"
 
 [[files]]
 file = "config/zombieawareness/PlayerRulesAndLists.toml"
 hash = "0c9cb7ce493414f2a4b846417db297b8c24ec9950e5e2630d1cfff387568f5ae"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/ars_nouveau/forge/biome_modifier/common_source_berry.json"
-hash = "20b362951b6790f4890fb2711cf3283dba29f9dc122df84ed44cec03051743f2"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/ars_nouveau/worldgen/placed_feature/placed_berry_bush.json"
-hash = "86ed0b90305d4ab0dc017fc6d5fabc94613f9d553eb9ccc106c94cf9d83752b4"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/forge/biome_modifier/brown_mushroom_colony.json"
-hash = "6d08797e0976a0950891738b234cadb657b18ebd4c6cd442c600662549679161"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/forge/biome_modifier/red_mushroom_colony.json"
-hash = "52edd1aba46604ef666ec02f4b8b6ec65f965bafe2fff008c4d652350ab59226"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/forge/biome_modifier/wild_beetroots.json"
-hash = "cb574cd51aac3bc9b524b4d25237901736c429080b19965bffce20e7afab8a64"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/forge/biome_modifier/wild_cabbages.json"
-hash = "675863bc3efe4ff1301192ab3eb34b9e4ce20325acc8dfdd69b94a39c6982fa5"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/forge/biome_modifier/wild_carrots.json"
-hash = "8f8f06ed5490f6e43bee3cd361d3fb30177452e717ebf90a48d159d7122fd6e7"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/forge/biome_modifier/wild_onions.json"
-hash = "09656db7a7e8e21639f87fd7e0b1cc9cf9a11c8abbbacb5a0cd76901954e2cf0"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/forge/biome_modifier/wild_potatoes.json"
-hash = "c8cb32ddd1a86b0033813cfb7e4b3addb43c2b293d9ef0ce7f52cfba4cc6556e"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/forge/biome_modifier/wild_rice.json"
-hash = "4c940670bfa5931a6f734532bcb7be948a9bf2bbb1521f33d6fc38d944d85f05"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/forge/biome_modifier/wild_tomatoes.json"
-hash = "c3a4e6292ef803ffcda73625068614fa4d220ce2107b326baf33ec2a265e83a7"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/worldgen/placed_feature/patch_brown_mushroom_colony.json"
-hash = "8b53ab78844c0b880d8c1de838c941b4cd3db77e1da6175ba643b670f5dec1a4"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/worldgen/placed_feature/patch_red_mushroom_colony.json"
-hash = "42f75d6b9a83cb60eef7e4abf11ab40f8e8c5180a381c32d9a66cfbda6a5fbd6"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/worldgen/placed_feature/patch_wild_beetroots.json"
-hash = "4a90b0e377e1584b75d93cb54bc5df8bfd8cab06ea4819fd304d249ae6f47fa2"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/worldgen/placed_feature/patch_wild_cabbages.json"
-hash = "1b1506ff7c9efbee1f0f4c09f7e9f89738567e9ae3fb41cad1eda5ed03c9ba9c"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/worldgen/placed_feature/patch_wild_carrots.json"
-hash = "4235384006038c2c936eb42ff616d775d2b8ba5eab4fc9c78f138d81b2ffbffb"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/worldgen/placed_feature/patch_wild_onions.json"
-hash = "1fb1d1360c419c9ec84030e24a38092b23e33bbabe31863537582f932de79bf3"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/worldgen/placed_feature/patch_wild_potatoes.json"
-hash = "f61ce53a3fbd3a72819ba29fef0032046819e2d60d9d723be7b123cbc2053681"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/worldgen/placed_feature/patch_wild_rice.json"
-hash = "2cbe58e93761419d94af9a602f2c16e218f052f82b20de2c9e17707a43d33e04"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersdelight/worldgen/placed_feature/patch_wild_tomatoes.json"
-hash = "f27c4e5459fff7781208d3c1b3508dbf02d219c99d5abc78c2b45c8f4cc306af"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersrespite/forge/biome_modifier/patch_coffee_bush.json"
-hash = "93a75e850bb2a02808181a333b79e7d4d6785c8a7abb00621ad6811ec0d0fb89"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersrespite/forge/biome_modifier/wild_tea_bush.json"
-hash = "d94c94a10ebc8c5823a257723d057b34a9462bf124dc4b294b03f4fc22711dbb"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersrespite/worldgen/placed_feature/patch_wild_coffee_bush.json"
-hash = "a303dcd3c47516077559a2d6378a63e2c45f6908419b0638c3b4afd97666aec3"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/farmersrespite/worldgen/placed_feature/patch_wild_tea_bush.json"
-hash = "daa2b502b904a6312f1c96fa863b0a47d7e3438b762fe412b430bf148d1e312a"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/forge/biome_modifier/natures_spirit_pumpkins.json"
-hash = "40777569401f3b5d318a2d6687bc73f457cb048903b66924ee8f4747537c4977"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/forge/biome_modifier/vanilla_glow_berries.json"
-hash = "b53531b7a1cf3d904a933f122766dcf0a751187d2ea8cb296309d5e70e113d58"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/forge/biome_modifier/vanilla_melons_forest.json"
-hash = "2734e93113bdf4e6c670f0140d3e327144a3f5e65edfd69f7ad4e2e745d12926"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/forge/biome_modifier/vanilla_melons_wet.json"
-hash = "c24bace548c4cd4db6c595f3520d6f8a349b4ef29fbc7d934ee3c6e94ca1c6a9"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/forge/biome_modifier/vanilla_mushrooms.json"
-hash = "018c5b8413cc67a6f97a8d429373ac87a5ea7a5aee2b1f51a0ab10773b066884"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/forge/biome_modifier/vanilla_pumpkins.json"
-hash = "7d3577d3cd40d74ced184ca3fe2c2c87d6e93aa4a89b209d3b04e302da2ab5a5"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/forge/biome_modifier/vanilla_sweet_berries.json"
-hash = "a3663f76db7880402cbaf9bd8d5882e5803cdf48a03c8ea3eb1164f58251f538"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/tags/worldgen/biome/undergarden_forage/all.json"
-hash = "f629aa933213e0059ccacae2db1a3a3a92f7f8f9e574bbb3b38a55ecbde40836"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/tags/worldgen/biome/undergarden_forage/bog.json"
-hash = "7ff390a7d0387af4a819818b920544a654701667d1c1e1cbc380e25a048417d1"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/tags/worldgen/biome/undergarden_forage/field.json"
-hash = "7148e6a0d4bbd9d420ae0c6fa0345c4368ef1c14635001e4522b6872f7a8eb4c"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/tags/worldgen/biome/undergarden_forage/forest.json"
-hash = "de6b32e2c1af7fc6d272aab327e77f3496a26a0d79953e6e7552e4ad5c2c12c1"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/tags/worldgen/biome/undergarden_forage/frost.json"
-hash = "584e915c1ce66b5f1f980d0d8951f2e9b0f39065c2b1f0fcc766967b6dc867c5"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/tags/worldgen/biome/undergarden_forage/melon.json"
-hash = "c29e4a7e5e198087a815008ae35c1a91f76f785d0a58f1d9d77484cface81155"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/tags/worldgen/biome/undergarden_forage/pumpkin.json"
-hash = "019e5cded7db62b4c6b03725c9d053e7a7ed5cc8de1fbc39df8015612213debf"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/tags/worldgen/biome/undergarden_forage/smog.json"
-hash = "ee12fe3b07bd54e6ed1d6e612779f27658a0e232a3d6fc3f0cd1630bbccf4fee"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/tags/worldgen/biome/undergarden_forage/tea.json"
-hash = "9930a067987135a9af551669141b00a305331b1728aa0030b45cd5b64525511a"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/kubejs/tags/worldgen/biome/undergarden_forage/wet.json"
-hash = "74d4f89ac3ebbd9e48ab9e8b6f05199d052d8e772beb2f64098ec17cc09e1300"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/minecraft/worldgen/placed_feature/brown_mushroom_normal.json"
-hash = "33349f5d81c189f1b0fc8db8ffb45addba683af8640b76de719268f2481d3140"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/minecraft/worldgen/placed_feature/brown_mushroom_old_growth.json"
-hash = "139dd49d507990d8ea0e64c15284c2291241c4e20483dd423e3f01b295571791"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/minecraft/worldgen/placed_feature/brown_mushroom_swamp.json"
-hash = "45bef387c4a9092009b8ae059343bf6b9b6f1b80aa5c0be8e6eb0c94f695010a"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/minecraft/worldgen/placed_feature/brown_mushroom_taiga.json"
-hash = "fa87930bba0a8832bc7c986cf52ade8f791bf928d09905d700bb86c79b937ec4"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/minecraft/worldgen/placed_feature/cave_vines.json"
-hash = "a0a0c1622ad0b6e7834111251de6fca49acb6707c119b01c5cc8a69f7d6209e9"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/minecraft/worldgen/placed_feature/patch_berry_bush.json"
-hash = "adc6bb823cfb9a0ec7dd9f125d6b304cb6c797c8783b3597e3b596c6a8e09d0e"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/minecraft/worldgen/placed_feature/patch_melon.json"
-hash = "66251584b8519d5935389dafd0aa2a514ebdbcb51a7e7ba786ee1b79f69f3763"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/minecraft/worldgen/placed_feature/patch_melon_sparse.json"
-hash = "7a22d577d317fb6606239192947d5f9707f5f1cd0831aafe3cf41bdff96146fd"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/minecraft/worldgen/placed_feature/patch_pumpkin.json"
-hash = "26f3fa7c606d983b8840651998c9b865f2d0784b75d8299c11e2babcc7b8b069"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/minecraft/worldgen/placed_feature/red_mushroom_normal.json"
-hash = "32fb5ec37580cfb671e7d245e1504fea82844d9a473e982353209b2c277eb984"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/minecraft/worldgen/placed_feature/red_mushroom_old_growth.json"
-hash = "af19ae72b5ae0e2a0c0b897e0c1ca8546e57b4a1ee8896f70bac5e167752a87e"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/minecraft/worldgen/placed_feature/red_mushroom_swamp.json"
-hash = "b5ccf43b9f01ef65b9842ca6a46f53d5777bf73ddb7f14a5b06a4ef79e761585"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/minecraft/worldgen/placed_feature/red_mushroom_taiga.json"
-hash = "65b01247842d329378a0df37c018b70aa7f38b285f38e7f8a5820d2f82be59a0"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/natures_spirit/worldgen/placed_feature/patch_pumpkin_golden_wilds.json"
-hash = "f74add7c729e747e5d7ebb5413c33f4cc5682f4ad3f9418b1ebd6d03d7990b30"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/natures_spirit/worldgen/placed_feature/pumpkin_feature_placed.json"
-hash = "c5c6c355d076b085f9999c0ee705e25e3e8c3f78e27e04f360d66733579791ea"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/natures_spirit/worldgen/placed_feature/pumpkin_patch_feature_placed.json"
-hash = "3a80431684bf9911838737eac9bd1c4a75ee3ed668f94c208ce534adc5aac950"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/ubesdelight/forge/biome_modifier/wild_garlic.json"
-hash = "120845b0ab2fb127034238b72ff6df502b06113564c10210d74924b1b02ab542"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/ubesdelight/forge/biome_modifier/wild_ginger.json"
-hash = "9aae6c2e49c97464fb32dd998fde36ca3d364e393f24a98c5a3e0acf9c183025"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/ubesdelight/forge/biome_modifier/wild_lemongrass.json"
-hash = "2215ce619a92f185219f79b84577af0e064b55b73250ef508537bdb39c889e4e"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/ubesdelight/forge/biome_modifier/wild_ube.json"
-hash = "e928adf3fb64ec05be429e757499b5569d88b310a22a96401bfc903a1a289050"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/ubesdelight/worldgen/placed_feature/patch_wild_garlic.json"
-hash = "bb0ad8c27049422f2a323046baa067e213800e4d6955f5d5432728e861781d69"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/ubesdelight/worldgen/placed_feature/patch_wild_ginger.json"
-hash = "b0577afd475c6c704926f6f43058b45dd15eac92e53fb6b0a47199f2d98351cd"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/ubesdelight/worldgen/placed_feature/patch_wild_lemongrass.json"
-hash = "ccbfaa508283a5cd9a9d02d0c0cd073c3650b467d75c1e19211fb93777882ee0"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/data/ubesdelight/worldgen/placed_feature/patch_wild_ube.json"
-hash = "c6d6663cdbabce526dbe022e07847667693082f6cd71d224ee7feb4a28961ae1"
-
-[[files]]
-file = "datapacks/datapack_foraging_everywhere/pack.mcmeta"
-hash = "ef5c49580ee33eb9fb32bb64e1aaf71e5523aa4cf66c5cf42e655b1c15d0654d"
 
 [[files]]
 file = "datapacks/dimension_drink_ore_relocation/data/create/forge/biome_modifier/striated_ores_nether.json"
@@ -7554,19 +7206,15 @@ hash = "f00b89153f734a9ea5e171e881ce179858280afa6b536de0435057898b88d1da"
 
 [[files]]
 file = "datapacks/dimension_drink_ore_relocation/data/kubejs/tags/worldgen/biome/dimension_drink_ore_targets/deep.json"
-hash = "e6bb7a71654bbd6acb55a035fa71dd8dfb743b09ea5b3eeacf58864ebb557136"
+hash = "0c615d27d6e7932dab70603593b0d4b2098f06e605c17c7e8549a677ec84ef94"
 
 [[files]]
 file = "datapacks/dimension_drink_ore_relocation/data/kubejs/tags/worldgen/biome/dimension_drink_ore_targets/nether.json"
 hash = "d59bc381c2cf519fd26399ca5fb7f4aabcb0518f492ea962f16787aaf03fbcc6"
 
 [[files]]
-file = "datapacks/dimension_drink_ore_relocation/data/kubejs/tags/worldgen/biome/dimension_drink_ore_targets/otherside.json"
-hash = "aa7235a13377c70429d6723d0e4059fc723c669a53621e775675c828ff5ca557"
-
-[[files]]
 file = "datapacks/dimension_drink_ore_relocation/data/kubejs/tags/worldgen/biome/dimension_drink_ore_targets/shadow.json"
-hash = "45556c929d453db56df41a6cfae88c53527a59d7bbee7a27a4e5055625b93ec1"
+hash = "a320c584556f7952847c80a8b1783749db81059332490a623d4885cbb6195c2f"
 
 [[files]]
 file = "datapacks/dimension_drink_ore_relocation/data/kubejs/tags/worldgen/biome/dimension_drink_ore_targets/sky.json"
@@ -7575,10 +7223,6 @@ hash = "b136e66687e08fb4e84cd142fa5f74772f671cb2accb32678d1da43af3b19ab8"
 [[files]]
 file = "datapacks/dimension_drink_ore_relocation/data/kubejs/tags/worldgen/biome/dimension_drink_ore_targets/stone.json"
 hash = "901cd521588af7f797baacbed2377bf6569bab5023648b9cc833c44239d59fc8"
-
-[[files]]
-file = "datapacks/dimension_drink_ore_relocation/data/kubejs/tags/worldgen/biome/dimension_drink_ore_targets/undergarden.json"
-hash = "f629aa933213e0059ccacae2db1a3a3a92f7f8f9e574bbb3b38a55ecbde40836"
 
 [[files]]
 file = "datapacks/dimension_drink_ore_relocation/data/kubejs/tags/worldgen/biome/no_biomes.json"
@@ -7590,11 +7234,11 @@ hash = "7aa1c938420ff83f5236028d7901d249606bb4d9ee32ebc2a66a7037fe4dc22f"
 
 [[files]]
 file = "datapacks/dimension_drink_ore_relocation/data/kubejs/worldgen/configured_feature/dimension_drink_brilliant_ore.json"
-hash = "86520992491abf15c73d240a611a0085bed3a67b647b744dacc21aea94bfabd1"
+hash = "e26e552dd07ed14b84644563561ced5ad5f8bf4b467316eddf466aa9012b7e06"
 
 [[files]]
 file = "datapacks/dimension_drink_ore_relocation/data/kubejs/worldgen/configured_feature/dimension_drink_cthonic_gold_ore.json"
-hash = "77cea0f09900460cc4771e47c50494f3b78ec63f3a869fd9dff5ab8b38ac0a23"
+hash = "a6bfd0b01ea0693c22c8b2a1781b0fe4c74fee4d6565d046057862db4e8b7cd0"
 
 [[files]]
 file = "datapacks/dimension_drink_ore_relocation/data/kubejs/worldgen/configured_feature/dimension_drink_iesnium_ore.json"
@@ -7602,15 +7246,15 @@ hash = "b22ca7790bc8f056de1d99b6e1623a8bd3e99a60bcfec6b865af60682c6df66f"
 
 [[files]]
 file = "datapacks/dimension_drink_ore_relocation/data/kubejs/worldgen/configured_feature/dimension_drink_jade_ore.json"
-hash = "ac4141f6c5beace00b6d9486f37a6c34d1ebdff720731b8c6ee71677b07fbfdd"
+hash = "c0be977be25280097118356c95afac9b69b4cb6b6221e7b91abb9ec4fd1ea63c"
 
 [[files]]
 file = "datapacks/dimension_drink_ore_relocation/data/kubejs/worldgen/configured_feature/dimension_drink_natural_quartz_ore.json"
-hash = "c6bc734081e18b711b0dbf9a4c7819116f70f245cf1c86617af0441fc88093fe"
+hash = "74f67287647eccc70b79e16fef4f10b0c1f9d251b4a7d7920a6793e9e0ad58c4"
 
 [[files]]
 file = "datapacks/dimension_drink_ore_relocation/data/kubejs/worldgen/configured_feature/dimension_drink_soulstone_ore.json"
-hash = "87441ac5ce29d94eea771832bb8fbeff5d23b83d32a15f91c43776d30c14b526"
+hash = "4d2628fcc4c3cdeb54ebd7c28e1352a9bdcd858b9c840f74c56f3ca8fb6fc60e"
 
 [[files]]
 file = "datapacks/dimension_drink_ore_relocation/data/kubejs/worldgen/placed_feature/dimension_drink_blazing_quartz_ore.json"
@@ -7723,66 +7367,6 @@ hash = "9d5000dbfbaf27253fc27b603272666d2cbc0b4a762f74c24fb3be913570960b"
 [[files]]
 file = "datapacks/dimension_drink_ore_relocation/pack.mcmeta"
 hash = "96e453309846635922954a47453a0324a1158f6e28f76a0a61160755e48d090b"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/dynamic_trees_dimension_compat/worldgen/configured_feature/finley_wood_tree.json"
-hash = "e78531a49a36528db2e7086ed957649757e3236727a45902233e1aa4bfb810b0"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/dynamic_trees_dimension_compat/worldgen/configured_feature/grongle_tree.json"
-hash = "19f3ffeef6f5d4c665f6f461a76ee37066d789292e7e1b265180a7ca226e3dcf"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/dynamic_trees_dimension_compat/worldgen/configured_feature/living_wood_tree.json"
-hash = "dcb374a9ae09fa37e505dfb2654e279cccd59e8b6fa70ce769a65fbcf26ff653"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/dynamic_trees_dimension_compat/worldgen/configured_feature/silent_tree_tree.json"
-hash = "885bfb33d50193ad0c79ed6e1f6fe75db7f1566796b26dc22414e27680773c22"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/dynamic_trees_dimension_compat/worldgen/configured_feature/smogstem_tree.json"
-hash = "fe026bb17fdb7678f344c3848b519fa3338d51f179f3f7fef7b311fa9700ef67"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/dynamic_trees_dimension_compat/worldgen/configured_feature/wigglewood_tree.json"
-hash = "179d7ee1f85ef1a281bcfa7b036edf1e1f5b1af25edbae0899741d558e90a50a"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/dynamic_trees_dimension_compat/worldgen/placed_feature/finley_wood_tree_direct.json"
-hash = "59829293629fca60c9709a31fee2d11ddb68347fb8e7613c47719d268c413482"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/dynamic_trees_dimension_compat/worldgen/placed_feature/grongle_tree_direct.json"
-hash = "510472601193b88452119792c9a8ec391d02f610678e9634cfbde535531b34b2"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/dynamic_trees_dimension_compat/worldgen/placed_feature/living_wood_tree_direct.json"
-hash = "d1712613e3a59ba205bb29d44aa9b53498cb4fe729808697d0094b64aa08306b"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/dynamic_trees_dimension_compat/worldgen/placed_feature/silent_tree_surface.json"
-hash = "30c10b5a170c8c17e397758cff701f18f54660cdee58b27fb56837c85ffdaf0a"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/dynamic_trees_dimension_compat/worldgen/placed_feature/smogstem_tree_direct.json"
-hash = "a4f989de69a6f60ce69aa83e0d130731c8c0bb371544ae14e6db6e4fa619293c"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/dynamic_trees_dimension_compat/worldgen/placed_feature/tall_smogstem_tree_direct.json"
-hash = "b71705532048935b9228d04eb34515cc3e2f4d18bf3c90cd51fc43f55f641179"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/dynamic_trees_dimension_compat/worldgen/placed_feature/tall_wigglewood_tree_direct.json"
-hash = "9ecf5d99c3cf5c213e03f18fed7c0a8180363fac2fef9121a961a8b0d7eaef11"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/dynamic_trees_dimension_compat/worldgen/placed_feature/wide_smogstem_tree_direct.json"
-hash = "948041ca8b5ca63bab9f7d5bbbd037e10960ae9ac8832c8452045b7607de5062"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/dynamic_trees_dimension_compat/worldgen/placed_feature/wigglewood_tree_direct.json"
-hash = "4263791d8131da212acd548cd55b3acfdf0897df4505a54a68a7ab274ca9e8e3"
 
 [[files]]
 file = "datapacks/dt_forest_worldgen_fix/data/kubejs/forge/biome_modifier/remove_vanilla_forest_tree_features.json"
@@ -7933,22 +7517,6 @@ file = "datapacks/dt_forest_worldgen_fix/data/projectvibrantjourneys/worldgen/pl
 hash = "6d33805863491f9d6e05727e743e2a2c0700f79fc949ea03dba4f79872051500"
 
 [[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/undergarden/worldgen/biome/dense_forest.json"
-hash = "0b32923e09aa3a6747aaaa9a340834ad153fefeaebee284be24d43bed692118c"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/undergarden/worldgen/biome/gronglegrowth.json"
-hash = "1bfe0fd43c303b07c70873734c7128f041bf75c603d14dec274ea926c978db8c"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/undergarden/worldgen/biome/smogstem_forest.json"
-hash = "b0bc6e1d99bb0b8541cfaf641bfa34faae75835116bfa76caee0d7cd909b6f9d"
-
-[[files]]
-file = "datapacks/dt_forest_worldgen_fix/data/undergarden/worldgen/biome/wigglewood_forest.json"
-hash = "3a347c2c327b94d8c3f9a87bfad9d5ef3022ae0dfca4b0337f0dbca68495cd1a"
-
-[[files]]
 file = "datapacks/dt_forest_worldgen_fix/pack.mcmeta"
 hash = "eaf086d924cbd08ef0dfdedc6404e776a3150012ba007e9e77b121074d102598"
 
@@ -8059,14 +7627,6 @@ hash = "13847f6a024f955295c8de2b1e6323a9e697b706dbeb80cdf2174764954362c2"
 [[files]]
 file = "datapacks/dt_soil_compat/trees/kubejs/soil_properties/burnt_semi_burnt_dirt.json"
 hash = "87b0e2394d3a8029936515b83335c630230a74c3f27a638a1a5f5bea3d28ec79"
-
-[[files]]
-file = "datapacks/dt_soil_compat/trees/kubejs/soil_properties/deeperdarker_blooming_moss_block.json"
-hash = "e135a3d81439f1334b688f6d6351fadff2cd4d7f0b34ca74410432fbc13ff1fd"
-
-[[files]]
-file = "datapacks/dt_soil_compat/trees/kubejs/soil_properties/deeperdarker_echo_soil.json"
-hash = "1da9a5a93a126f25dbad25a328db574ac1a7c8767b0627851a77a258dbae3447"
 
 [[files]]
 file = "datapacks/dt_soil_compat/trees/kubejs/soil_properties/fallout_wastelands__rockydirt.json"
@@ -8365,30 +7925,6 @@ file = "datapacks/dt_soil_compat/trees/kubejs/soil_properties/twilightforest_ube
 hash = "0780e2b78dec4e379dbb2907c15c7b09652f0b30abe71383d9254cd42266f8e9"
 
 [[files]]
-file = "datapacks/dt_soil_compat/trees/kubejs/soil_properties/undergarden_ashen_deepturf_block.json"
-hash = "ee9967c033058905a3faf02e7848f28e61c88be00195a7836f602346c3c63210"
-
-[[files]]
-file = "datapacks/dt_soil_compat/trees/kubejs/soil_properties/undergarden_coarse_deepsoil.json"
-hash = "0a56e8f45bfa15db5a9c403a419dd813295e33c062ffaae43b0e414c3c669e8f"
-
-[[files]]
-file = "datapacks/dt_soil_compat/trees/kubejs/soil_properties/undergarden_deepsoil.json"
-hash = "53b8f47f45f191b49cb35d2a6c5810922bcaa01a31d3c020f4d6b47e440108d0"
-
-[[files]]
-file = "datapacks/dt_soil_compat/trees/kubejs/soil_properties/undergarden_deepsoil_farmland.json"
-hash = "2f95bd8bc4caa961a98661f225725ed47fbe46ecffeb890035d293520560f760"
-
-[[files]]
-file = "datapacks/dt_soil_compat/trees/kubejs/soil_properties/undergarden_deepturf_block.json"
-hash = "b37fd2a8cfe3725d8fbe86ae279eb71105055fcdb52f44fa7ab6860d0cea251b"
-
-[[files]]
-file = "datapacks/dt_soil_compat/trees/kubejs/soil_properties/undergarden_frozen_deepturf_block.json"
-hash = "0b21eea8110a92ad130cbb27bd221f532c43f296ba1424954ce8bf76802c82fa"
-
-[[files]]
 file = "datapacks/epic_tinkers_construct_v9.zip"
 hash = "83a76ab8c1b9be5310132f4396d9641d971e9d7b0a4542bbd7f4012fc448d47c"
 
@@ -8470,7 +8006,7 @@ hash = "eac48f5922295fa8e0c6b88de4187abe63dd205e2a0d5e9f36b618378ca68e40"
 
 [[files]]
 file = "datapacks/optional_tag_source_filter/data/fabric/tags/blocks/needs_tool_level_1.json"
-hash = "b76b0c6190109936ac722658e86fd8482aef458a4e0a93a0438a7be7629335fc"
+hash = "caadd75e6a9637fba25e91ac789fc31af7cc2aa9499b12169defc63bf58aa756"
 
 [[files]]
 file = "datapacks/optional_tag_source_filter/data/occultism/loot_tables/blocks/lighted_air.json"
@@ -8535,6 +8071,10 @@ hash = "73ef8aef890b8fad5a467b1b3a25506a2b65275d695df52dd8aafd39ca024e6a"
 [[files]]
 file = "datapacks/worldgen_compat_fixes/data/minecraft/structures/village/common/animals/sheep_3.nbt"
 hash = "41527e522cb3ec36b3039b780ae396b42ffc845f11aa602741269ce78bb654d3"
+
+[[files]]
+file = "datapacks/worldgen_compat_fixes/data/natures_spirit/worldgen/placed_feature/ores/ore_stone_transition.json"
+hash = "e6d6af589e1fd939b383cddc709eff74fcb74e317a25e827b890ac7aeaac9bc1"
 
 [[files]]
 file = "datapacks/worldgen_compat_fixes/data/pneumaticcraft/forge/biome_modifier/oil_lake_surface.json"
@@ -8830,7 +8370,7 @@ hash = "c07165a746c38afd02bcb17ceaead4c7aa2bc1ebd3a0834fb58afd3c3553d1cd"
 
 [[files]]
 file = "globalresources/dimension_drink/excavated_variants/dimension_drink/variants/dimension_drink_modded_ores.json5"
-hash = "ce52637ca9771632ef3bf89a92095039f353397dab33df25bdad142e4cb1ea75"
+hash = "a3e21167ac45f242fad8a36cf18755050ab2680ef69eb2a1979264fea13b5901"
 
 [[files]]
 file = "kubejs/assets/additionalweaponry/models/item/firearm_barrel.json"
@@ -11386,7 +10926,7 @@ hash = "66cf0331265f2faafaf5fab1dbf5420f07cfcc3e9df4f7625fe8ad8028722665"
 
 [[files]]
 file = "kubejs/client_scripts/policy/hide_vanilla_tools.js"
-hash = "22a2a0f1350c3fefe53365e7f43da895be011b06f86bb038968a2cde947ea513"
+hash = "0a5421a0436ea1fb2fe722b1388712fdf143a67d3df59158832681e06956ab46"
 
 [[files]]
 file = "kubejs/config/adpother_latent_gas_policy.json"
@@ -11410,7 +10950,7 @@ hash = "46a66b6e003ba7953c9a13428fd9c1967e862a673d7fd849831defab59eb08f1"
 
 [[files]]
 file = "kubejs/config/cross_mod_boundaries.json"
-hash = "d1e7593313fffe5133e579aef73b4bfa541f74b615a39ada4258a6f06f1a3225"
+hash = "8dbd5a8585fbaaee3965af44e85fea6ea9f4482b4d543a56240e8208ce5843b8"
 
 [[files]]
 file = "kubejs/config/economy_acquisition.json"
@@ -11418,11 +10958,11 @@ hash = "eb65718e49630d93a5358048d5b9778dd52301781bb10614dcefa13bbde9f5fb"
 
 [[files]]
 file = "kubejs/config/food_effect_progression_candidates.json"
-hash = "7eab0c5021ff4ad07d8d22ebb8d6058da94edc304aa69d69085638ab3610416c"
+hash = "e4027172d8c1f1e0c00a568640e6a18ed3d6009e85045fcbf824b7df2fee0e23"
 
 [[files]]
 file = "kubejs/config/food_effect_source_catalog.json"
-hash = "ee0b4a43103a0ec86286ef1d8602d2b44386c15c654130e5c1fbe5c82ab77b73"
+hash = "86a4940afdebd28972762d4279f2d8b7431e202d52bc9f296a2dcd6932c7761a"
 
 [[files]]
 file = "kubejs/config/formal_magic_domains.json"
@@ -11430,7 +10970,7 @@ hash = "c1728c32703ee343a2ed52c53b84bca30db11aa2feb97fb31d68fdd87ada5df0"
 
 [[files]]
 file = "kubejs/config/hover_annotations.json"
-hash = "d5ee01840f3d7eed086314eff067c4c45d2c73fd213e62e1985ab90150372fe8"
+hash = "0e97a900cc4e999b15e89007ef00ce55a7c6d02f445f56b2562d3f7576d03996"
 
 [[files]]
 file = "kubejs/config/input_rewrites.json"
@@ -11442,7 +10982,7 @@ hash = "7148f87cb1e5be4768e401e9ef7358895da4ed3b6801c59852d3b64b4a2b3dc2"
 
 [[files]]
 file = "kubejs/config/quarantined_items.json"
-hash = "7c81c64f495b046f3f06e9ff253ee38357414bec39d62f7de72cc1e2c067f64d"
+hash = "67e67bf92a6ee45cf967da7ef8ccd009537da0e7cf901b0ce1b0065f3aa84356"
 
 [[files]]
 file = "kubejs/config/surface_registry.json"
@@ -11814,7 +11354,7 @@ hash = "62424537e90b4490093a8d76cb1a368dee7ff2a67fce1152c260b97f95003fd5"
 
 [[files]]
 file = "kubejs/data/bloodmagic/tags/items/arc/cuttingfluid.json"
-hash = "35134fe61f0b26fa5aa3a1d44f9e7deae1a0b714cdb8d5e3857d05428bd55939"
+hash = "ce66ccf6dabe9128ffcffca987e8ebf1f5b0eb735468a6f750f26cbaa870ceee"
 
 [[files]]
 file = "kubejs/data/bloodmagic/tags/items/arc/tool.json"
@@ -11838,11 +11378,11 @@ hash = "7074c60bd920f1cbe63acafaac34fc04e3c8dd28f0340e94cc0539189dd7e084"
 
 [[files]]
 file = "kubejs/data/burnt/tags/blocks/plants_will_burn.json"
-hash = "ead843f6713a589ed1299b88e0a3295249a832df02b96bf90a9e945e3a18b0b1"
+hash = "7caac7b91c45a001e38f86b0b192cd85e8dee27771904e16c48c9a03f07be966"
 
 [[files]]
 file = "kubejs/data/c/tags/blocks/farmland.json"
-hash = "5cc2027f2bdc3fb9f5d6a423bfaa3afa435c9d5d4abdab1a83cf1a0c9c6c2012"
+hash = "48148d7deaee6359562a87cdcd268a2640c598353a9748c0567ea7a2b552de49"
 
 [[files]]
 file = "kubejs/data/c/tags/items/knives.json"
@@ -11886,7 +11426,7 @@ hash = "08b18845bedfc47549acb21bff717462232f49d54caf48bcbd4a132f7412362c"
 
 [[files]]
 file = "kubejs/data/create_more_additions/tags/items/repair_electrum.json"
-hash = "cee09dec79eaf898a5ecbf50767dd2b9b1f258be79f2a44406b694f555022cd2"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
 [[files]]
 file = "kubejs/data/createaddition/recipes/mixing/electrum.json"
@@ -11907,42 +11447,6 @@ hash = "713b1976dc8a5a9198218f788d1ee11adbfe5a18f787cace425e9207a85fe277"
 [[files]]
 file = "kubejs/data/curios/tags/items/curio.json"
 hash = "bc16fb9b5b49bade7da6c0f0cbcf46aa46c655be93519bef5fce09e58cca0619"
-
-[[files]]
-file = "kubejs/data/deeperdarker/recipes/resonarium_axe_smithing.json"
-hash = "90f70e8f0bcda8916c6cda466367258ca22f5bae4e4252a18e17534c880cbed9"
-
-[[files]]
-file = "kubejs/data/deeperdarker/recipes/resonarium_boots_smithing.json"
-hash = "90f70e8f0bcda8916c6cda466367258ca22f5bae4e4252a18e17534c880cbed9"
-
-[[files]]
-file = "kubejs/data/deeperdarker/recipes/resonarium_chestplate_smithing.json"
-hash = "90f70e8f0bcda8916c6cda466367258ca22f5bae4e4252a18e17534c880cbed9"
-
-[[files]]
-file = "kubejs/data/deeperdarker/recipes/resonarium_helmet_smithing.json"
-hash = "90f70e8f0bcda8916c6cda466367258ca22f5bae4e4252a18e17534c880cbed9"
-
-[[files]]
-file = "kubejs/data/deeperdarker/recipes/resonarium_hoe_smithing.json"
-hash = "90f70e8f0bcda8916c6cda466367258ca22f5bae4e4252a18e17534c880cbed9"
-
-[[files]]
-file = "kubejs/data/deeperdarker/recipes/resonarium_leggings_smithing.json"
-hash = "90f70e8f0bcda8916c6cda466367258ca22f5bae4e4252a18e17534c880cbed9"
-
-[[files]]
-file = "kubejs/data/deeperdarker/recipes/resonarium_pickaxe_smithing.json"
-hash = "90f70e8f0bcda8916c6cda466367258ca22f5bae4e4252a18e17534c880cbed9"
-
-[[files]]
-file = "kubejs/data/deeperdarker/recipes/resonarium_shovel_smithing.json"
-hash = "90f70e8f0bcda8916c6cda466367258ca22f5bae4e4252a18e17534c880cbed9"
-
-[[files]]
-file = "kubejs/data/deeperdarker/recipes/resonarium_sword_smithing.json"
-hash = "90f70e8f0bcda8916c6cda466367258ca22f5bae4e4252a18e17534c880cbed9"
 
 [[files]]
 file = "kubejs/data/dtaether/loot_tables/blocks/aerfin_leaves.json"
@@ -12430,7 +11934,7 @@ hash = "378a480041d40df9ea358f69b56356f28e4c00cd9506aa9bc9515a7d3f259493"
 
 [[files]]
 file = "kubejs/data/epicfighttinkercompat/tinkering/tags/modifiers/moveset.json"
-hash = "60fe49807cb3b22ac018ab4be14b75e512da285836919510296245cc449aece5"
+hash = "53a8f7ad0eabc36fb55a4a339cf0a9cd787754b6df90bc20c717210d0cee6e06"
 
 [[files]]
 file = "kubejs/data/expatternprovider/loot_tables/blocks/ex_emc_interface.json"
@@ -12494,7 +11998,7 @@ hash = "cf47d22623f9ecc27660f459511618683fc1969d5c24c8d07b43a538f923403f"
 
 [[files]]
 file = "kubejs/data/forge/loot_modifiers/global_loot_modifiers.json"
-hash = "f2e07ce87a6fe5a72535a91f5ec92c849415a718e68f4b91f01a51967b2f46a0"
+hash = "67245041b1a2240039f5efd31f3e99df4b1bdcf008a882b9fae27afb41e2df02"
 
 [[files]]
 file = "kubejs/data/forge/tags/blocks/farmland.json"
@@ -12522,7 +12026,7 @@ hash = "14a1980ca5d8fa8cb2963b564e6cf204f9325251cf0317e87806af841214939c"
 
 [[files]]
 file = "kubejs/data/forge/tags/items/nuggets/reinforced_copper.json"
-hash = "cee09dec79eaf898a5ecbf50767dd2b9b1f258be79f2a44406b694f555022cd2"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
 [[files]]
 file = "kubejs/data/forge/tags/items/pickaxes.json"
@@ -12613,18 +12117,6 @@ file = "kubejs/data/heat_sync/tags/blocks/thermal_emitters.json"
 hash = "620e16f61d6df3f239af5738bcd8586c83c36c8d0771bc7a25321ad1c51f77b5"
 
 [[files]]
-file = "kubejs/data/immersive_weathering/loot_tables/blocks/dynamic_trees_dimension_compat/grongle_leaf_pile.json"
-hash = "dfe70dfa65911ab9db5f8f1ad2aed8c7aa349b90093bab57db35e386a51fc7e3"
-
-[[files]]
-file = "kubejs/data/immersive_weathering/loot_tables/blocks/dynamic_trees_dimension_compat/smogstem_leaf_pile.json"
-hash = "631323b6d4fa74b4bcc08194dc8bd1294f4dd5d3c2e001cbf77222d99adbc8ff"
-
-[[files]]
-file = "kubejs/data/immersive_weathering/loot_tables/blocks/dynamic_trees_dimension_compat/wigglewood_leaf_pile.json"
-hash = "707f6e6da42d08192c7aa3fba96e229303e93767cc9de0136a1c2d035a04914d"
-
-[[files]]
 file = "kubejs/data/immersive_weathering/loot_tables/blocks/dynamic_trees_hexerei/mahogany_leaf_pile.json"
 hash = "31306564246094956f96347bfd31a0ef3d0930b2bd83ea8ad6fa46cee11acfc4"
 
@@ -12647,50 +12139,6 @@ hash = "20ef153f825aed78bfbbba9ee28a1c3d08d3890f9ebc0e0bb4f80c5cb7162468"
 [[files]]
 file = "kubejs/data/immersive_weathering/loot_tables/blocks/thin_ice.json"
 hash = "05ed9b2c5b2838d72eb2dbe2e9b7d0c038dbf65f06c6a4abd3f806ea16a6285e"
-
-[[files]]
-file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_dimension_compat/bluebright_leaf_pile.json"
-hash = "d0fabf3f3c99cc7065c7f491411535d3295d22ad2adc2b59303d25dceaab7e8e"
-
-[[files]]
-file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_dimension_compat/dusk_leaf_pile.json"
-hash = "d0fabf3f3c99cc7065c7f491411535d3295d22ad2adc2b59303d25dceaab7e8e"
-
-[[files]]
-file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_dimension_compat/finley_wood_leaf_pile.json"
-hash = "d0fabf3f3c99cc7065c7f491411535d3295d22ad2adc2b59303d25dceaab7e8e"
-
-[[files]]
-file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_dimension_compat/frostbright_leaf_pile.json"
-hash = "d0fabf3f3c99cc7065c7f491411535d3295d22ad2adc2b59303d25dceaab7e8e"
-
-[[files]]
-file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_dimension_compat/grongle_leaf_pile.json"
-hash = "d0fabf3f3c99cc7065c7f491411535d3295d22ad2adc2b59303d25dceaab7e8e"
-
-[[files]]
-file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_dimension_compat/living_wood_leaf_pile.json"
-hash = "d0fabf3f3c99cc7065c7f491411535d3295d22ad2adc2b59303d25dceaab7e8e"
-
-[[files]]
-file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_dimension_compat/maple_leaf_pile.json"
-hash = "d0fabf3f3c99cc7065c7f491411535d3295d22ad2adc2b59303d25dceaab7e8e"
-
-[[files]]
-file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_dimension_compat/silent_tree_leaf_pile.json"
-hash = "d0fabf3f3c99cc7065c7f491411535d3295d22ad2adc2b59303d25dceaab7e8e"
-
-[[files]]
-file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_dimension_compat/smogstem_leaf_pile.json"
-hash = "d0fabf3f3c99cc7065c7f491411535d3295d22ad2adc2b59303d25dceaab7e8e"
-
-[[files]]
-file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_dimension_compat/starlit_leaf_pile.json"
-hash = "d0fabf3f3c99cc7065c7f491411535d3295d22ad2adc2b59303d25dceaab7e8e"
-
-[[files]]
-file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_dimension_compat/wigglewood_leaf_pile.json"
-hash = "d0fabf3f3c99cc7065c7f491411535d3295d22ad2adc2b59303d25dceaab7e8e"
 
 [[files]]
 file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_hexerei/mahogany_leaf_pile.json"
@@ -12766,23 +12214,23 @@ hash = "b000179a26ea59f581b189dd0576c19b70b41202e5f8d136802d9c3992636561"
 
 [[files]]
 file = "kubejs/data/kubejs/tags/blocks/cold_sweat/constant_heat_sources.json"
-hash = "1a169babc56743b6917b0cc2790650f4445afeea6b60459e39c18c8ad4ee4f40"
+hash = "1845112e4e79e3b3110303f423b5f299e82627f405f5c8327f514c4140d88397"
 
 [[files]]
 file = "kubejs/data/kubejs/tags/blocks/cold_sweat/lava_cauldrons.json"
-hash = "d6a0501ae55d3f8ec947a439ed7808aa406d5a5a741ab292df712072f252ff07"
+hash = "8f77598cc71c7414176eaada6e076df0c8da2eb9647590f94bb1a62905e24317"
 
 [[files]]
 file = "kubejs/data/kubejs/tags/blocks/cold_sweat/lit_heat_sources.json"
-hash = "a013cc52de169bf327508e569e261dde74d8bc284c5dcea135d16329e77b6190"
+hash = "5aca749d00a8aeb99e2e563575170f584798a603ec764479c311386d82567eac"
 
 [[files]]
 file = "kubejs/data/kubejs/tags/blocks/cold_sweat/mild_cold_sources.json"
-hash = "e557fa1111ab137b73d6ac61323180213ddcfb47657ebe5e4c889d96c61b4cb5"
+hash = "7977de99ac88c79624b0eb88ae8bb1752e463887b2b1583964bf3262b33209a5"
 
 [[files]]
 file = "kubejs/data/kubejs/tags/blocks/cold_sweat/strong_cold_sources.json"
-hash = "7b270e9befbe4a5261bd95a3bfe889fca57f7e9e67b6b77e1e033c4be92e2540"
+hash = "e2be08721e0feed45b7a949f1a7b82c77fb6531af413fd4fe9f4e798cb916096"
 
 [[files]]
 file = "kubejs/data/kubejs/tags/blocks/dirt_like.json"
@@ -12790,11 +12238,11 @@ hash = "647e6ec708bc8d049d8f7372d766096564cc165833c0ef18757d6ccb3619213d"
 
 [[files]]
 file = "kubejs/data/kubejs/tags/blocks/grass_like.json"
-hash = "3b00f5ad4688ae0694cab04dc8c7a7286b9ab6fe2b4a4cc0ce9da1afdf1bb1b1"
+hash = "65483727b1103d4cbe7119bb70fadc957765bbcba66ac1c20792a419cf05afa1"
 
 [[files]]
 file = "kubejs/data/kubejs/tags/blocks/hand_breakable.json"
-hash = "1efdac8473a5241d60bdf07b6b8cc1d810ddb9b8f3f6e2041b9744240e49b894"
+hash = "22998c9ff2d4889a845caf4ef29f00ddd274bae60bb88b60cbee975c3fa0847b"
 
 [[files]]
 file = "kubejs/data/kubejs/tags/items/primitive_tcon_bones.json"
@@ -12814,7 +12262,7 @@ hash = "8c4a5f8d8d480dd7c0bd79c9b0e3e9cecca80e2ab4ef3e8ca27ab0a20442298b"
 
 [[files]]
 file = "kubejs/data/kubejs/tags/worldgen/biome/swem_horse_biomes.json"
-hash = "3cb66aecdcdae3171c94fb52dc942983d0a082110a63413d0773d7d0d5ff218c"
+hash = "f0adfcf36a75654ffda883610416c18ef9a88b49390e9c4e0abe2e1916098255"
 
 [[files]]
 file = "kubejs/data/kubejs/tags/worldgen/biome/temperate_spawn_biomes.json"
@@ -12858,7 +12306,7 @@ hash = "d49cee943f9455c295d5f0b9ee877ae572f736298170314c85ae23e00d7659ab"
 
 [[files]]
 file = "kubejs/data/mae2/tags/items/p2p_attunements/eu_p2p_tunnel.json"
-hash = "cee09dec79eaf898a5ecbf50767dd2b9b1f258be79f2a44406b694f555022cd2"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
 [[files]]
 file = "kubejs/data/malum/advancements/recipes/aluminum_from_node_blasting.json"
@@ -13030,15 +12478,15 @@ hash = "f4b5eebab14bc66a36f69afc7676add7dfad9bfc2d6cdd507c1400eff87e5c5e"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/crops.json"
-hash = "9d98fb7150d1e8645538a6d615550e87d60306c3249ab99020ae969e489acf8f"
+hash = "20175362b3d787751c0252cf965d209061dc6100b3974798cae01083220d76c2"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/fence_gates.json"
-hash = "87dc2e01247f615317745408576fc7387b5de00f8f316ef71b4d1ae4cdd0b371"
+hash = "bf67fdca33dd27f535705eac06c833da6d5d4ff54086d8c72b13d9e8ea9203d4"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/leaves.json"
-hash = "f2b95edb54406e3d4ab28275c063b5123615bb823373532b753845016a7e44cd"
+hash = "32d749bb078264dab949d9bf5b101d6a46a541e77720cc07786b4c308b981b0b"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/logs.json"
@@ -13066,35 +12514,35 @@ hash = "01079673a47116db744c54659660e64b0097d8ee574c9a817f05f6787a1c44cb"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/planks.json"
-hash = "23811395db967e24464f20cca6fcdbed2358e5baf8f88bbe3e26e4a682766ab1"
+hash = "a585bec33e2066db4c9c03a320885a1dc83f55c88fbd8cf8e82e8100c1753793"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/wooden_buttons.json"
-hash = "8b73f3fbed554c5000c2e5e7a91417606ba5d3e17f74adf04eceabb1a1e0385b"
+hash = "3dc3e0794d060a7a76d0297e790242b82dec41c8516ce782e57fd93b9ea6d0ec"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/wooden_doors.json"
-hash = "ef4e063726bec831b79ff08ffa3cb4a370eaa7e0a886efcec89d914b1e5b4930"
+hash = "19fdb31cc258ca5f03e5397f46c32ee14eacdfa399a1bffa9682101cb8bde8f8"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/wooden_fences.json"
-hash = "8f85f7041306d392b8ac17efddd1b05904f43c724c1f5844813b9dbef364025b"
+hash = "75734e7afce2c83b25e41c061b3fb00ecdaa0278b03dd8bc9b59a1f5d10fdf7e"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/wooden_pressure_plates.json"
-hash = "1370f18659c754a9c811fadb9717d7f20319d33e3897203af995df3b102f6c9e"
+hash = "da67c53b0ad9bad712e63b2214193e609a47fdaa458d45ae72c6172b6f7e5be7"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/wooden_slabs.json"
-hash = "4c3a7f19a74a50317acd0dd7ef3f8502c22d130fd195c1cb585c3568d212cb37"
+hash = "7a3d36c67671d0d6d6360457417565f827d31d3836b565edf0b6a9ed60218a07"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/wooden_stairs.json"
-hash = "c11e6772ed27faa90543ab109b43bb1c769c05a4a0b10d044bdaaa901d2eea77"
+hash = "1c881615f25c25c27ae85ce8771f0a64c41cbe9819507d84073a83e38c11116a"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/wooden_trapdoors.json"
-hash = "221f5b6e370138b1de1d36b27f70772e49591f9b6a077503f2457656350f6732"
+hash = "13174337bea0c77d6f3be1219f38abc8b26dac6da411a29133aea65bdfd917c3"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/blocks/wool_carpets.json"
@@ -13102,15 +12550,15 @@ hash = "7936b271f9cb58a9e3337ba37b32fd0d18c163ff5bb87e97ffbe0dcea52cdda3"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/entity_types/arthropod.json"
-hash = "cee09dec79eaf898a5ecbf50767dd2b9b1f258be79f2a44406b694f555022cd2"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/entity_types/illager.json"
-hash = "cee09dec79eaf898a5ecbf50767dd2b9b1f258be79f2a44406b694f555022cd2"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/entity_types/undead.json"
-hash = "cee09dec79eaf898a5ecbf50767dd2b9b1f258be79f2a44406b694f555022cd2"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/chest_armor.json"
@@ -13118,7 +12566,7 @@ hash = "b56c1649c66a6d7cdd5ce062cd8ce98badf5393877005f210492cb9f4a7e73ff"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/fence_gates.json"
-hash = "87dc2e01247f615317745408576fc7387b5de00f8f316ef71b4d1ae4cdd0b371"
+hash = "bf67fdca33dd27f535705eac06c833da6d5d4ff54086d8c72b13d9e8ea9203d4"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/foot_armor.json"
@@ -13142,7 +12590,7 @@ hash = "6b2d9ee29b3891d7418f67156c55683f7706c88c35b6be3829bd48481deedb64"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/meat.json"
-hash = "cee09dec79eaf898a5ecbf50767dd2b9b1f258be79f2a44406b694f555022cd2"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/pickaxes.json"
@@ -13150,7 +12598,7 @@ hash = "4f88be7693a077a31300a1c01f9e2aa045ed1ea62efd242ab7c884a135486f33"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/planks.json"
-hash = "23811395db967e24464f20cca6fcdbed2358e5baf8f88bbe3e26e4a682766ab1"
+hash = "a585bec33e2066db4c9c03a320885a1dc83f55c88fbd8cf8e82e8100c1753793"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/shears.json"
@@ -13166,31 +12614,31 @@ hash = "84eed4a57fa191eeecd82abef4fb3d7416255feaf25ae2324a52ef6c2d46292e"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/wooden_buttons.json"
-hash = "8b73f3fbed554c5000c2e5e7a91417606ba5d3e17f74adf04eceabb1a1e0385b"
+hash = "3dc3e0794d060a7a76d0297e790242b82dec41c8516ce782e57fd93b9ea6d0ec"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/wooden_doors.json"
-hash = "ef4e063726bec831b79ff08ffa3cb4a370eaa7e0a886efcec89d914b1e5b4930"
+hash = "19fdb31cc258ca5f03e5397f46c32ee14eacdfa399a1bffa9682101cb8bde8f8"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/wooden_fences.json"
-hash = "8f85f7041306d392b8ac17efddd1b05904f43c724c1f5844813b9dbef364025b"
+hash = "75734e7afce2c83b25e41c061b3fb00ecdaa0278b03dd8bc9b59a1f5d10fdf7e"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/wooden_pressure_plates.json"
-hash = "1370f18659c754a9c811fadb9717d7f20319d33e3897203af995df3b102f6c9e"
+hash = "da67c53b0ad9bad712e63b2214193e609a47fdaa458d45ae72c6172b6f7e5be7"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/wooden_slabs.json"
-hash = "4c3a7f19a74a50317acd0dd7ef3f8502c22d130fd195c1cb585c3568d212cb37"
+hash = "7a3d36c67671d0d6d6360457417565f827d31d3836b565edf0b6a9ed60218a07"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/wooden_stairs.json"
-hash = "c11e6772ed27faa90543ab109b43bb1c769c05a4a0b10d044bdaaa901d2eea77"
+hash = "1c881615f25c25c27ae85ce8771f0a64c41cbe9819507d84073a83e38c11116a"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/items/wooden_trapdoors.json"
-hash = "221f5b6e370138b1de1d36b27f70772e49591f9b6a077503f2457656350f6732"
+hash = "13174337bea0c77d6f3be1219f38abc8b26dac6da411a29133aea65bdfd917c3"
 
 [[files]]
 file = "kubejs/data/nethersdelight/recipes/cutting/hoglin_sausage_alt.json"
@@ -13255,6 +12703,10 @@ hash = "59dae689131d98ad3d82dc0abeec43b1922e7462d48a2020b772ccec1de77ecb"
 [[files]]
 file = "kubejs/data/quark/tags/items/big_harvesting_hoes.json"
 hash = "9e9d1ce8da81e879dc0b2d43ff8d527ed8d5717bd780947c165970f6ce492c27"
+
+[[files]]
+file = "kubejs/data/ratlantis/advancements/token.json"
+hash = "be6e5b0169321eba1a8549fcba568420d8e9d452e47256286d31adb5f0c820c0"
 
 [[files]]
 file = "kubejs/data/relics/curios/slots/talisman.json"
@@ -13545,6 +12997,22 @@ file = "kubejs/data/thalassophobia/forge/biome_modifier/leech_biome_modifier.jso
 hash = "57c8899b0c2b6c266bc114548695279e406eb483e5877ea29bb74775737cc950"
 
 [[files]]
+file = "kubejs/data/the_bumblezone/advancements/teleportation/teleport_out_of_bumblezone.json"
+hash = "fe5ff9b54314d2802110e482315f87191592926b027bc614e0f8b158df8c1880"
+
+[[files]]
+file = "kubejs/data/the_bumblezone/advancements/teleportation/teleport_to_bumblezone_pearl.json"
+hash = "fdc5036fe329bf148ee34830b34bca2a1b08334d983495e44dac9642aca29578"
+
+[[files]]
+file = "kubejs/data/the_bumblezone/advancements/teleportation/teleport_to_bumblezone_piston.json"
+hash = "46eb721c93f06507fad913f16121d8a4541820e52bab9ab19b687ed65d77b4a4"
+
+[[files]]
+file = "kubejs/data/the_bumblezone/bz_pollen_puff_entity_flowers/goety.json"
+hash = "0e021b948ab2f2a7cd3ea1d10b923bf0d78682c5bf18b11a3cf1165d7756d6f6"
+
+[[files]]
 file = "kubejs/data/tinker_rapier/capabilities/weapons/estoc_tic.json"
 hash = "f78e9a00bcab72a69fb7d4483eca985e7022cc6b7b22c0acee6aefad49a63c7c"
 
@@ -13822,7 +13290,7 @@ hash = "fe902c8e51a00d3933125df0a57d966f81ba2a1c913d273a69fdd576733f8ac1"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/check__35_wood_family_alias_compat.js"
-hash = "5b25d75fdd5a255104ec6374c7cf7ea655cdca768be00dfe08a4287fcd8cf06f"
+hash = "ff110ccc81e4563fa91bee22d796200a2629e94114720310b59a37476c14477c"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/check__40_dirt_grass_compat.js"
@@ -13886,11 +13354,11 @@ hash = "35e8cbdebd0e97fc85e3719d77924fec29bf54089086f8d61cbd6975ff7a7fa1"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__63_fonts_hexerei_occultism_chalk.js"
-hash = "d755e8c77be54edd48f425f7ac753a73163482813f087bbbc3cf1601b44cf1fd"
+hash = "b94b270642ab79a5f5e839e0a6655e9145067747777a095b93f43eb23ac1d4c3"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__80_magic_progression_blood_slate_gates.js"
-hash = "faac24f6e2ee96f5de5e3af2d5c2cb3f878a0f173f32bf28d80c74d7aa259ab7"
+hash = "e3ae334d64879b19f6ad0e6faba93ab8908a66913844d683c0a817aee5414d1b"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__82_blood_magic_lifeforce_rework.js"
@@ -13934,7 +13402,7 @@ hash = "02ef9f87b0c7eb54ef73c64c035ca308f875a13828e97f360fb58b6eb70d4ad1"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/remove__70_food_potion_reagents.js"
-hash = "220347f56664006f0552f0152896c91fcd1b081fd4908e004f81eb8a1971fadb"
+hash = "9f52ba4546395d98e0ac0a8f2f5e44e092a02bff4089c05a7aec87921046dc73"
 
 [[files]]
 file = "kubejs/server_scripts/compat/reviewed/chemistry_fluid_compat.js"
@@ -13958,15 +13426,11 @@ hash = "cdadd1a859c50c4f30afa283252ed053e100bafc58d9f12617a939df56adae98"
 
 [[files]]
 file = "kubejs/server_scripts/policy/dimension_access.js"
-hash = "b2f89be0302c58e083cd9002f30c9cd707e549c5c1ded80b43c826a1351d2233"
+hash = "c55704fada1ed8433608effe766eede35256d4f01cc62c4322527950a37ccec7"
 
 [[files]]
 file = "kubejs/server_scripts/policy/global_loot_progression.js"
 hash = "e496e4366c88184c7eb375c70a04e2aeca5134ba61003ea695c2276c0738df99"
-
-[[files]]
-file = "kubejs/server_scripts/policy/pretty_pipes_progression.js"
-hash = "3f13160137ec063d1433ecbb4bd2f69f0e9653afcbc464c8f93cd1f2c1003836"
 
 [[files]]
 file = "kubejs/server_scripts/policy/removed_items.js"
@@ -13978,11 +13442,19 @@ hash = "8b55ea75834053d2d6da166fb29faf0dd19b7f898f0ed85da07e0f40c0f6aa39"
 
 [[files]]
 file = "kubejs/server_scripts/progression/10_hand_workshop.js"
-hash = "277d6fcbf0f28856a5e9a4d5655155b5ec56ff14944cfe7889e71fce1eeb94ac"
+hash = "38bececbd46c2475cc7656e28f8667ee2b5359ea714d93c4b963890dac2e1da7"
 
 [[files]]
 file = "kubejs/server_scripts/progression/20_powered_works.js"
 hash = "2ecca2c42d2f3897372519cc70a1a1f66dc241a703280259fbb15288213aa2f3"
+
+[[files]]
+file = "kubejs/server_scripts/progression/20_ratlantis_logistics.js"
+hash = "c094722c8981aeb45199359ab745b0e5c1a980b8806b13e08640f5cdccb40b62"
+
+[[files]]
+file = "kubejs/server_scripts/progression/21_bumblezone_cultivars.js"
+hash = "6944ec8164dfb032a0fd7880521468d5fd5371e45663749167086cada32ded62"
 
 [[files]]
 file = "kubejs/server_scripts/progression/30_precision_factory.js"
@@ -14144,11 +13616,11 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-economy-1.0.0.jar"
-hash = "74bf2f85370d5a3bee39a592956d27ae6724c5089fd623605c94684603168cd0"
+hash = "78c6d00bd6a036c9bca77ad0843f0bcdbb905428933809b3c2898128fdb7d374"
 
 [[files]]
-file = "mods/better-content-fixes-0.1.0.jar"
-hash = "23aead2208c5250daec2947b1840fa52fc4213cc5bb8083ade46eac5e17804ed"
+file = "mods/better-content-fixes-0.1.3.jar"
+hash = "8369ff66587125235f664012119d6237a381f3568a9133d3e83c7c25f76489c9"
 
 [[files]]
 file = "mods/better-content-quests-1.0.0.jar"
@@ -14156,7 +13628,7 @@ hash = "8695cfc3b37ed5a8c3415a6e092fc14ee287da7edd32767d4ca37fcdf04528b8"
 
 [[files]]
 file = "mods/better-content-threads-1.0.0.jar"
-hash = "5914765bf308118af7d3e9c2ccb5a722bc3bcc1b42d307ad85422721dd808374"
+hash = "2a8e2ab0283d7aa4a96bca8b8277943532b676a20231939726fed3bbceca3ed9"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"
@@ -14192,6 +13664,10 @@ metafile = true
 file = "mods/building-gadgets.pw.toml"
 hash = "528a5c2d50126e1b2906b47449b40a996fce3b4a50b9a0460533f2b7b74f5c99"
 metafile = true
+
+[[files]]
+file = "mods/bumblezone-cultivars-0.1.0.jar"
+hash = "5dbf75ac43d4949fb7cae9522fa8d52f8f952596d012d42a1a5ebce4d5a0b371"
 
 [[files]]
 file = "mods/burnt-basic.pw.toml"
@@ -14326,13 +13802,8 @@ hash = "b47ea19b5671d0d6c9b6bd3fbefd25aae11ddae2a909d1bf6e6f772104ea89ca"
 metafile = true
 
 [[files]]
-file = "mods/deeperdarker.pw.toml"
-hash = "e50740a50bdeef70e78fc991fbc8eee9dbb4bacd11f5e7cbf10f4c46cb5fd0aa"
-metafile = true
-
-[[files]]
 file = "mods/depth-director-0.2.0.jar"
-hash = "bed96d78b5662fc940189f9448685b730ad549a1e0e736b0f201bd2d99b8acc5"
+hash = "211a2f5ac81e35e10f2c7f188d97a9c1c8daa8f68ea5e32d4cc8a784301e582f"
 
 [[files]]
 file = "mods/diet.pw.toml"
@@ -14341,7 +13812,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimension-drink-1.0.0.jar"
-hash = "26fb4ddffab757895d06e776779248b732d4c9297239266e0706119e3258014a"
+hash = "ce08e0da6b69a358bd7822503f476bafa34d3159af4d4ad8dac0e687f0d05a8d"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -14367,21 +13838,17 @@ hash = "170c1a0b6fd950fb590ad3dd351feb2931d9eaa27b53d2c1fe6a765beeeef2e1"
 metafile = true
 
 [[files]]
-file = "mods/dynamic-trees-dimension-compat-0.1.0.jar"
-hash = "cc25234743008dd3cd2af381203b3987573a8f86677a122761fbdc5d554471bc"
-
-[[files]]
 file = "mods/dynamic-trees-for-natures-spirit.pw.toml"
 hash = "9c74ac86374e5f8769d846cdd4a2937652edc98b12f3508641ede0b4fbad18c4"
 metafile = true
 
 [[files]]
-file = "mods/dynamic-trees-hexerei-1.0.0.jar"
-hash = "f18398fb4da6cf19c4185ba308681b03409b469ce3e75ab291f45609e1ea2a43"
+file = "mods/dynamic-trees-hexerei-1.0.1.jar"
+hash = "bd2b4eb07a17d83e74c4f1a844564e46436c3fa880aece72d14bd583b64db04c"
 
 [[files]]
-file = "mods/dynamic-trees-malum-1.0.0.jar"
-hash = "e56c52ae1c9358b3d7c15d059af318b3e2299f17d88d2c7cc4daed0e61b4f9d4"
+file = "mods/dynamic-trees-malum-1.0.1.jar"
+hash = "9d32516113f411d45231f02ba214be63e556e2dfdc70d2f56522c3aa21a7bc1c"
 
 [[files]]
 file = "mods/dynamic-trees-quark.pw.toml"
@@ -14909,8 +14376,8 @@ hash = "b2cb681aaf3e6085148392a06d40899239dc299aaf5ce0adf168fc225d922c97"
 metafile = true
 
 [[files]]
-file = "mods/pillager-campaigns-0.5.1.jar"
-hash = "5d64231fcd6b7a0c3ebc7e2e6aebc1c0d4f38e333aa3e55fbea2be255d8abf38"
+file = "mods/pillager-campaigns-0.5.2.jar"
+hash = "3a661d1ec01b064789d6407f2355e3cef2ea2fd7201bb0d3b83aecd464e5bdc9"
 
 [[files]]
 file = "mods/ping-wheel.pw.toml"
@@ -14996,6 +14463,15 @@ hash = "a60d4b1d58f9f88269b5ab460bfeb3638c8a9a3f35292ca6fc36d2d5a256130c"
 metafile = true
 
 [[files]]
+file = "mods/ratlantis-logistics-0.1.0.jar"
+hash = "16bc6302e51b559253d019f7e0d3969c0266d590a2e3c2ad3acf4f87c683e8d1"
+
+[[files]]
+file = "mods/rats.pw.toml"
+hash = "c4b46cb349e3f111af5711429b444dcb790e73f312feb5f9b8e04cd41a9c7b75"
+metafile = true
+
+[[files]]
 file = "mods/realistic-block-physics.pw.toml"
 hash = "fb72d8e7259e7f6b5163f1a12b49aee20bb9d90c6763000e58a3ce52812298ca"
 metafile = true
@@ -15040,7 +14516,7 @@ hash = "d151802f9f747d78bb0317c3fa8b6b3c14cc58c9b1461da0d4b2bee01a9f890a"
 
 [[files]]
 file = "mods/runtime-data-dumper-0.1.0.jar"
-hash = "b8192e0f768f6f2872a3b3399cf534c6610099aeed249bb5b81fe829f617ae89"
+hash = "09af4218c3f67e1afdc69a859613b798ffe5502dc1fc5774b802e6930f0ba64f"
 
 [[files]]
 file = "mods/satako-library.pw.toml"
@@ -15181,6 +14657,11 @@ hash = "740904c6314a5652b7991b431c0ebbd0a3158d694ffe9c798f723bd1ae12d8ee"
 metafile = true
 
 [[files]]
+file = "mods/the-bumblezone.pw.toml"
+hash = "dc2796a08d3d83821a25298bce6d9b682ff0ac98d616d0fa60be7714dd42fc4d"
+metafile = true
+
+[[files]]
 file = "mods/the-flesh-that-hates.pw.toml"
 hash = "4ce2c62c813e65de9b648d0ae8575067b09c69045d6154afcd6139763e1860cb"
 metafile = true
@@ -15198,11 +14679,6 @@ metafile = true
 [[files]]
 file = "mods/the-twilight-forest.pw.toml"
 hash = "d1f859de9867b7433305aef1631aa22a436a4c3924474a21c0a22ab5f2093c04"
-metafile = true
-
-[[files]]
-file = "mods/the-undergarden.pw.toml"
-hash = "4a51e5a0f11ba9b7599dcea129862829bfd028c57bf9997f9513b38defbc7e51"
 metafile = true
 
 [[files]]
@@ -15232,7 +14708,7 @@ metafile = true
 
 [[files]]
 file = "mods/tinkers-construct-affixes-1.0.0.jar"
-hash = "8a9cd365b602eec7964db22d166135eba2738cb1125b5c965cf76eb84b89b771"
+hash = "c85c06bf3b3d34dd7db24f4d73a6b1ad87524951982159b7a5f382e095cee55d"
 
 [[files]]
 file = "mods/tinkers-construct.pw.toml"
@@ -15386,7 +14862,7 @@ hash = "cc50269bdc755ecf82d98867618139d07c67f276a6011ee04bffb716ca72b223"
 
 [[files]]
 file = "quests/graph.yml"
-hash = "a901248be4bc3d22bf67e3670f15286de787d14d8357bc6c3daea3316b90daaa"
+hash = "8c18d601349d644b7c4f4168968e3b0012f78bea6f815d9b44d9e5d025af1e2e"
 
 [[files]]
 file = "recipe-policies.yml"
@@ -15433,4 +14909,4 @@ hash = "380a3105e0739f6bbae202352d29d68a7a1e88bab8912c95cd9204492c7d48ae"
 
 [[files]]
 file = "world-lifecycle-manager-server.sh"
-hash = "db45704240826ba61e7cb4a806a8a4d12dc7dfe5b7d813f6c1194b24215294bf"
+hash = "dd304bbf8c791485466e7cbff1b1b87517e5791aa680e76356c8320ba20de5dc"

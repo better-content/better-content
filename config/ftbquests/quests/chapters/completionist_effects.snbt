@@ -136,7 +136,7 @@
 			y: 0d
 		}
 		{
-			description: ["Source items: minecraft:glow_berries, minecraft:glow_ink_sac, undergarden:droopvine_item | Runtime hint: kettle_infusion"]
+			description: ["Source items: minecraft:glow_berries, minecraft:glow_ink_sac | Runtime hint: kettle_infusion"]
 			icon: "minecraft:glowstone_dust"
 			id: "36F070D64A01ABA0"
 			rewards: [{
@@ -156,11 +156,6 @@
 				{
 					id: "1B8E8742E1ADBE4B"
 					item: "minecraft:glow_ink_sac"
-					type: "item"
-				}
-				{
-					id: "4B086C11F982C5FF"
-					item: "undergarden:droopvine_item"
 					type: "item"
 				}
 			]
@@ -235,7 +230,7 @@
 			y: 0d
 		}
 		{
-			description: ["Source items: undergarden:gloomper_leg, minecraft:rabbit_foot | Runtime hint: kettle_infusion"]
+			description: ["Source items: minecraft:rabbit_foot | Runtime hint: kettle_infusion"]
 			icon: "minecraft:rabbit_foot"
 			id: "69DEE4BDBF08053B"
 			rewards: [{
@@ -247,11 +242,6 @@
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [
-				{
-					id: "7ACAAEE4BA708097"
-					item: "undergarden:gloomper_leg"
-					type: "item"
-				}
 				{
 					id: "4C6D58BA851408A9"
 					item: "minecraft:rabbit_foot"
@@ -484,7 +474,7 @@
 			y: 2d
 		}
 		{
-			description: ["Source items: farmersrespite:rose_hips, minecraft:ghast_tear, undergarden:blood_globule | Runtime hint: keg_distillation"]
+			description: ["Source items: farmersrespite:rose_hips, minecraft:ghast_tear | Runtime hint: keg_distillation"]
 			icon: "minecraft:ghast_tear"
 			id: "1206B4E7B495F6E6"
 			rewards: [{
@@ -506,18 +496,13 @@
 					item: "minecraft:ghast_tear"
 					type: "item"
 				}
-				{
-					id: "0EE01FEDC353EFD9"
-					item: "undergarden:blood_globule"
-					type: "item"
-				}
 			]
 			title: "All Effects: Regeneration"
 			x: 6d
 			y: 2d
 		}
 		{
-			description: ["Source items: farmersrespite:yellow_tea_leaves, undergarden:ink_mushroom, minecraft:enchanted_golden_apple | Runtime hint: keg_distillation"]
+			description: ["Source items: farmersrespite:yellow_tea_leaves, minecraft:enchanted_golden_apple | Runtime hint: keg_distillation"]
 			icon: "farmersrespite:yellow_tea_leaves"
 			id: "3FD5583405373A5A"
 			rewards: [{
@@ -535,11 +520,6 @@
 					type: "item"
 				}
 				{
-					id: "2D7A65AE8F63088C"
-					item: "undergarden:ink_mushroom"
-					type: "item"
-				}
-				{
 					id: "3FD0A2F148978C5B"
 					item: "minecraft:enchanted_golden_apple"
 					type: "item"
@@ -550,7 +530,7 @@
 			y: 2d
 		}
 		{
-			description: ["Source items: minecraft:phantom_membrane, undergarden:veiled_stew | Runtime hint: kettle_infusion"]
+			description: ["Source items: minecraft:phantom_membrane | Runtime hint: kettle_infusion"]
 			icon: "minecraft:phantom_membrane"
 			id: "1B72275AB9460582"
 			rewards: [{
@@ -565,11 +545,6 @@
 				{
 					id: "1FCD079BE4257762"
 					item: "minecraft:phantom_membrane"
-					type: "item"
-				}
-				{
-					id: "48E12A7D4DE0C5BD"
-					item: "undergarden:veiled_stew"
 					type: "item"
 				}
 			]

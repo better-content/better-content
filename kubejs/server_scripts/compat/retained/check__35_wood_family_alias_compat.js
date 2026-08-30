@@ -1,8 +1,6 @@
 var BC_GENERIC_LOG_FAMILIES = [
     '#aether:skyroot_logs',
     '#aether:golden_oak_logs',
-    '#deeperdarker:bloom_stems',
-    '#deeperdarker:echo_logs',
     '#quark:ancient_logs',
     '#quark:azalea_logs',
     '#quark:blossom_logs',

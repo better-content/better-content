@@ -55,48 +55,6 @@
       block_id: 'blue_skies:cinderstone',
       types: ['stone'],
     },
-    {
-      id: 'undergarden_depthrock',
-      lang: { en_us: 'Depthrock' },
-      block_id: 'undergarden:depthrock',
-      types: ['stone'],
-    },
-    {
-      id: 'undergarden_shiverstone',
-      lang: { en_us: 'Shiverstone' },
-      block_id: 'undergarden:shiverstone',
-      types: ['stone'],
-    },
-    {
-      id: 'undergarden_tremblecrust',
-      lang: { en_us: 'Tremblecrust' },
-      block_id: 'undergarden:tremblecrust',
-      types: ['stone'],
-    },
-    {
-      id: 'undergarden_loose_tremblecrust',
-      lang: { en_us: 'Loose Tremblecrust' },
-      block_id: 'undergarden:loose_tremblecrust',
-      types: ['stone'],
-    },
-    {
-      id: 'deeperdarker_sculk_stone',
-      lang: { en_us: 'Sculk Stone' },
-      block_id: 'deeperdarker:sculk_stone',
-      types: ['stone'],
-    },
-    {
-      id: 'deeperdarker_gloomslate',
-      lang: { en_us: 'Gloomslate' },
-      block_id: 'deeperdarker:gloomslate',
-      types: ['stone'],
-    },
-    {
-      id: 'deeperdarker_sculk_grime',
-      lang: { en_us: 'Sculk Grime' },
-      block_id: 'deeperdarker:sculk_grime',
-      types: ['stone'],
-    },
   ],
   provided_ores: [
     {

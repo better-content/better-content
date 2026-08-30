@@ -38,10 +38,6 @@ Blocks = [
 	"createdeco:industrial_iron_mesh_fence",
 	"createdeco:iron_mesh_fence",
 	"createdeco:zinc_mesh_fence",
-	"deeperdarker:bloom_fence",
-	"deeperdarker:bloom_fence_gate",
-	"deeperdarker:echo_fence",
-	"deeperdarker:echo_fence_gate",
 	"fallout_wastelands_:charred_molder_fence",
 	"fallout_wastelands_:molder_wood_fence",
 	"fallout_wastelands_:molder_wood_fence_gate",
@@ -117,13 +113,7 @@ Blocks = [
 	"twilightforest:transformation_fence_gate",
 	"twilightforest:twilight_oak_fence",
 	"twilightforest:twilight_oak_fence_gate",
-	"twilightforest:wrought_iron_fence",
-	"undergarden:grongle_fence",
-	"undergarden:grongle_fence_gate",
-	"undergarden:smogstem_fence",
-	"undergarden:smogstem_fence_gate",
-	"undergarden:wigglewood_fence",
-	"undergarden:wigglewood_fence_gate"]
+	"twilightforest:wrought_iron_fence"]
 
 [Physics]
 	#The maximum weight the block(s) can support both horizontally and vertically.

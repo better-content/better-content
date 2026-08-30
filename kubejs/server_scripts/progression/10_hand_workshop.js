@@ -3,8 +3,8 @@
 var BC_FONT_BINDERS = [
     ['nether', 'minecraft:netherrack'],
     ['aether', 'aether:holystone'],
-    ['undergarden', 'undergarden:deepsoil'],
-    ['otherside', 'deeperdarker:cobbled_sculk_stone']
+    ['bumblezone', 'the_bumblezone:pollen_puff'],
+    ['ratlantis', 'rats:marbled_cheese_raw']
 ]
 
 ServerEvents.recipes(function (event) {

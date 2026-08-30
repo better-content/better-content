@@ -331,14 +331,12 @@ Blocks = [
 	"swem:soiled_shavings",
 	"the_flesh_that_hates:flesh_sand",
 	"thirst:sand_filter",
-	"undergarden:sediment",
 	"unearthed:chiseled_mudstone",
 	"unearthed:chiseled_siltstone",
 	"unearthed:cut_mudstone",
 	"unearthed:cut_siltstone",
 	"unearthed:smooth_siltstone",
-	"weather2:sand_layer",
-]
+	"weather2:sand_layer"]
 
 [Physics]
 	#The maximum weight the block(s) can support both horizontally and vertically.

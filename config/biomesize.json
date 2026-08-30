@@ -21,15 +21,7 @@
       "desc": "Set the multiplicative modifier for biome size. 2.0 = Default size, 2.0 = bigger, 0.5 = smaller.",
       "size_multiplier": 2.0
     },
-    "deeperdarker:otherside": {
-      "desc": "Set the multiplicative modifier for biome size. 2.0 = Default size, 2.0 = bigger, 0.5 = smaller.",
-      "size_multiplier": 2.0
-    },
     "survivalisland:survival_island": {
-      "desc": "Set the multiplicative modifier for biome size. 2.0 = Default size, 2.0 = bigger, 0.5 = smaller.",
-      "size_multiplier": 2.0
-    },
-    "undergarden:undergarden": {
       "desc": "Set the multiplicative modifier for biome size. 2.0 = Default size, 2.0 = bigger, 0.5 = smaller.",
       "size_multiplier": 2.0
     },

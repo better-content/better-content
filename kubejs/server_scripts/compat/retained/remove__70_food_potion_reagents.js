@@ -88,7 +88,6 @@ ServerEvents.recipes(function (event) {
     cooking(['kubejs:mashed_salmonberries', 'minecraft:sea_pickle', 'minecraft:dried_kelp', 'minecraft:pufferfish'], 'kubejs:brine_extract', 'brine_extract', 300)
     cooking(['minecraft:golden_carrot', 'ubesdelight:ube', 'minecraft:glow_berries'], 'kubejs:vision_extract', 'vision_extract', 240)
     cooking(['kubejs:charred_blazing_chili', 'minecraft:blaze_powder', 'minecraft:magma_cream'], 'kubejs:heatproof_extract', 'heatproof_extract', 320)
-    cooking(['undergarden:gloomper_leg', 'minecraft:rabbit_foot', 'minecraft:sugar'], 'kubejs:leaping_extract', 'leaping_extract', 260)
     cooking(['minecraft:feather', 'minecraft:phantom_membrane', 'minecraft:honey_bottle'], 'kubejs:featherlight_extract', 'featherlight_extract', 260)
     cooking(['minecraft:glistering_melon_slice', 'kubejs:rose_hip_extract', 'minecraft:honey_bottle'], 'kubejs:melon_life_extract', 'melon_life_extract', 240)
     cooking(['minecraft:turtle_helmet', 'kubejs:brine_extract', 'minecraft:scute'], 'kubejs:turtle_guard_extract', 'turtle_guard_extract', 360)

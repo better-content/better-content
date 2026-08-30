@@ -9,16 +9,6 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["Repair a TConstruct tool at its station and keep it in service."]
-			icon: "minecraft:grindstone"
-			id: "01241F25B8A10387"
-			rewards: [{ count: 4, id: "24C20675C07D259A", item: "createdeco:copper_coin", type: "item" }]
-			tasks: [{ criterion: "tcon_station_tool_repaired", id: "01183266B8569157", type: "better_content_quests:criterion" }]
-			title: "Durable TConstruct Tool"
-			x: 0d
-			y: 0d
-		}
-		{
 			description: ["Form a working Smeltery for full-scale alloying and casting."]
 			icon: "tconstruct:mighty_smelting"
 			id: "76D4FB5757FB9A04"
@@ -40,32 +30,6 @@
 			tasks: [{ criterion: "manual_workcell_run", id: "6505AB2A21A82296", type: "better_content_quests:criterion" }]
 			title: "Manual Workcell"
 			x: 6d
-			y: 0d
-		}
-		{
-			description: ["Prepare the machinery for renewable rotational power."]
-			icon: "create:water_wheel"
-			id: "-16E044CA8689FD44"
-			rewards: [{ count: 2, id: "6B538C25318F885B", item: "createdeco:copper_coin", type: "item" }]
-			tasks: [
-				{ id: "-194FD2786EA76D17", item: "kubejs:copper_machine_block", type: "item" }
-				{ id: "-3979540E3A6A20D6", item: "create:water_wheel", type: "item" }
-			]
-			title: "Renewable Rotation"
-			x: 9d
-			y: 0d
-		}
-		{
-			description: ["Prepare Brass-rooted deployment for precision automation."]
-			icon: "create:deployer"
-			id: "-3DE5B061A4FD5A16"
-			rewards: [{ count: 3, id: "662EC7FE491A1275", item: "createdeco:copper_coin", type: "item" }]
-			tasks: [
-				{ id: "187E3DB442F3A34B", item: "kubejs:brass_machine_block", type: "item" }
-				{ id: "67CE1C33F393FBBE", item: "create:deployer", type: "item" }
-			]
-			title: "Precision Automation"
-			x: 12d
 			y: 0d
 		}
 		{
@@ -108,7 +72,40 @@
 			y: 3.5d
 		}
 		{
-			description: ["Establish a local ME controller and terminal."]
+			description: ["Earn a rat's trust with Ratlantean bait; ordinary cheese remains food, not a shortcut."]
+			icon: "ratlantis_logistics:ratlantean_bait"
+			id: "059400F045CDB205"
+			rewards: [{ count: 2, id: "-3D2F3DFEBACDF8A2", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ advancement: "rats:tame_rat", id: "61CB6598DCFCC274", type: "advancement" }]
+			title: "Ratlantean Trust"
+			x: 0d
+			y: 7d
+		}
+		{
+			description: ["Establish a Pretty Pipes route for deterministic bulk movement between inventories."]
+			icon: "prettypipes:pipe"
+			id: "-2CC19143CD515E64"
+			rewards: [{ count: 2, id: "4FB1725750070DAE", item: "createdeco:copper_coin", type: "item" }]
+			tasks: [{ id: "95A2C46EE1917CC2", item: "prettypipes:pipe", type: "item" }]
+			title: "Courier Pipes"
+			x: 3d
+			y: 7d
+		}
+		{
+			description: ["Build Create's Ratlantis-rooted stock and request network."]
+			icon: "create:stock_ticker"
+			id: "-1D5DC3BF35524A83"
+			rewards: [{ count: 1, id: "57A152AE34017CF3", item: "createdeco:zinc_coin", type: "item" }]
+			tasks: [
+				{ id: "7AD72D0DE46276BD", item: "create:stock_ticker", type: "item" }
+				{ id: "4EA0FF629BFE06A4", item: "create:redstone_requester", type: "item" }
+			]
+			title: "Request Network"
+			x: 6d
+			y: 7d
+		}
+		{
+			description: ["Establish a local ME controller and terminal from its Ratlantean root component."]
 			icon: "ae2:controller"
 			id: "-60AC67F5D4C3A19B"
 			rewards: [

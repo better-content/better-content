@@ -814,7 +814,7 @@ for ((attempt=START_ATTEMPT; attempt<=MAX_ATTEMPTS; attempt++)); do
     if [[ -e "$RESET_FILE" ]]; then restart_supervisor "$@"; fi
     exit "$EXIT_CODE"
   fi
-  event ERROR "transaction=$REQUEST_TRANSACTION successor attempt=$attempt failed health verification"
+  event INFO "transaction=$REQUEST_TRANSACTION successor attempt=$attempt did not pass health verification; retrying"
   if [[ -f "$HEALTH_FILE" ]]; then cp -- "$HEALTH_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-health-v5.tsv"; fi
   if [[ -f "$PERK_HEALTH_FILE" ]]; then cp -- "$PERK_HEALTH_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-perk-health-v3.tsv"; fi
   cp -- "$SUCCESSOR_FILE" "$TRANSACTION_ROOT/failed-attempt-$attempt-request-v5.tsv"

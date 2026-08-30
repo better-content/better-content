@@ -4313,286 +4313,6 @@
 			y: 26d
 		}
 		{
-			icon: "undergarden:blisterberry"
-			id: "308A75E9BF4C268A"
-			rewards: [{
-				count: 8
-				id: "-4B1DEAB3C5CFC7A7"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "43F2454843D29D2C"
-				item: "undergarden:blisterberry"
-				type: "item"
-			}]
-			title: "All Foods: Blisterberry"
-			x: 12d
-			y: 26d
-		}
-		{
-			icon: "undergarden:blood_globule"
-			id: "2226DD8196D9F3E6"
-			rewards: [{
-				count: 8
-				id: "1F5E815E89F0CDB5"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "0668033AA2CAADDC"
-				item: "undergarden:blood_globule"
-				type: "item"
-			}]
-			title: "All Foods: Blood Globule"
-			x: 14d
-			y: 26d
-		}
-		{
-			icon: "undergarden:cooked_gwibling"
-			id: "29B94F5432E7301D"
-			rewards: [{
-				count: 8
-				id: "-6F3A7A40D82E1C2A"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "050763DD7D4C79D9"
-				item: "undergarden:cooked_gwibling"
-				type: "item"
-			}]
-			title: "All Foods: Cooked Gwibling"
-			x: 16d
-			y: 26d
-		}
-		{
-			icon: "undergarden:droopvine_item"
-			id: "2574C3C6B4AFCA72"
-			rewards: [{
-				count: 8
-				id: "018CDB63B6C88FB3"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "2521576040B025AF"
-				item: "undergarden:droopvine_item"
-				type: "item"
-			}]
-			title: "All Foods: Droopvine Item"
-			x: 18d
-			y: 26d
-		}
-		{
-			icon: "undergarden:gloomgourd_pie"
-			id: "5385B1C64B93AEE7"
-			rewards: [{
-				count: 8
-				id: "-1C09E2F24476BFE7"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "6F0A870DB1E578B0"
-				item: "undergarden:gloomgourd_pie"
-				type: "item"
-			}]
-			title: "All Foods: Gloomgourd Pie"
-			x: 20d
-			y: 26d
-		}
-		{
-			icon: "undergarden:gloomper_leg"
-			id: "6906ED005EA00544"
-			rewards: [{
-				count: 8
-				id: "-4BFBDECF4F80A85C"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "74646E7F08E72CB4"
-				item: "undergarden:gloomper_leg"
-				type: "item"
-			}]
-			title: "All Foods: Gloomper Leg"
-			x: 22d
-			y: 26d
-		}
-		{
-			icon: "undergarden:goo_ball"
-			id: "3956995CC1D5DE5B"
-			rewards: [{
-				count: 8
-				id: "-30D407046F10E302"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "151D2410FFCF3680"
-				item: "undergarden:goo_ball"
-				type: "item"
-			}]
-			title: "All Foods: Goo Ball"
-			x: 24d
-			y: 26d
-		}
-		{
-			icon: "undergarden:raw_dweller_meat"
-			id: "135B82FA2E9C6DB2"
-			rewards: [{
-				count: 8
-				id: "-138BE07FA56117E9"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "02DEA6DDDAB20564"
-				item: "undergarden:raw_dweller_meat"
-				type: "item"
-			}]
-			title: "All Foods: Raw Dweller Meat"
-			x: 26d
-			y: 26d
-		}
-		{
-			icon: "undergarden:raw_gloomper_leg"
-			id: "0C896F349DBACCC4"
-			rewards: [{
-				count: 8
-				id: "-1EF205764F7D5B4C"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "4F97B4B1C85CF352"
-				item: "undergarden:raw_gloomper_leg"
-				type: "item"
-			}]
-			title: "All Foods: Raw Gloomper Leg"
-			x: 28d
-			y: 26d
-		}
-		{
-			icon: "undergarden:raw_gwibling"
-			id: "1F9C7E6DB49234B9"
-			rewards: [{
-				count: 8
-				id: "-382A087A15649A7"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "07E31F1B24CF4AEF"
-				item: "undergarden:raw_gwibling"
-				type: "item"
-			}]
-			title: "All Foods: Raw Gwibling"
-			x: 30d
-			y: 26d
-		}
-		{
-			icon: "undergarden:roasted_underbeans"
-			id: "107BE833247FFC87"
-			rewards: [{
-				count: 8
-				id: "-7984F3CFFC8D1205"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "522728B7611844C6"
-				item: "undergarden:roasted_underbeans"
-				type: "item"
-			}]
-			title: "All Foods: Roasted Underbeans"
-			x: 0d
-			y: 28d
-		}
-		{
-			icon: "undergarden:rotten_blisterberry"
-			id: "1DC420BD3FBE7278"
-			rewards: [{
-				count: 8
-				id: "-D7516A427EB0F77"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "7E539CA76C1CB9D6"
-				item: "undergarden:rotten_blisterberry"
-				type: "item"
-			}]
-			title: "All Foods: Rotten Blisterberry"
-			x: 2d
-			y: 28d
-		}
-		{
-			icon: "undergarden:slop_bowl"
-			id: "181A73471F11A799"
-			rewards: [{
-				count: 8
-				id: "6AF3C9F86FEE5EFE"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "26C58DFB54E26E1B"
-				item: "undergarden:slop_bowl"
-				type: "item"
-			}]
-			title: "All Foods: Slop Bowl"
-			x: 4d
-			y: 28d
-		}
-		{
-			icon: "undergarden:underbeans"
-			id: "082FBB5A341BC779"
-			rewards: [{
-				count: 8
-				id: "79A788DBBB1F21B2"
-				item: "createdeco:copper_coin"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "3E561D3C440ADE83"
-				item: "undergarden:underbeans"
-				type: "item"
-			}]
-			title: "All Foods: Underbeans"
-			x: 6d
-			y: 28d
-		}
-		{
 			icon: "brewinandchewin:beer"
 			id: "48D0076A72C75058"
 			rewards: [{
@@ -5273,104 +4993,604 @@
 			y: 32d
 		}
 		{
-			icon: "undergarden:bloody_stew"
-			id: "592A78D4E8AC0B72"
+			icon: "the_bumblezone:bee_bread"
+			id: "39C9B005ED7B7BB3"
 			rewards: [{
 				count: 8
-				id: "-6507CC5D834F05DF"
+				id: "1E766A13E7E52DE5"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
-				id: "28DFD4739D8D913C"
-				item: "undergarden:bloody_stew"
+				id: "262342FE76B5367D"
+				item: "the_bumblezone:bee_bread"
 				type: "item"
 			}]
-			title: "All Drinks: Bloody Stew"
+			title: "All Foods: Bee Bread"
 			x: 12d
 			y: 32d
 		}
 		{
-			icon: "undergarden:dweller_steak"
-			id: "009BEF1B3C380C4A"
+			icon: "the_bumblezone:bee_soup"
+			id: "3C624C16984F29A5"
 			rewards: [{
 				count: 8
-				id: "-55BFDACEE522BCCC"
+				id: "11355F8EA0B51CA4"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
-				id: "52E0DA7D87E287B2"
-				item: "undergarden:dweller_steak"
+				id: "25D09A29D2A313E0"
+				item: "the_bumblezone:bee_soup"
 				type: "item"
 			}]
-			title: "All Drinks: Dweller Steak"
+			title: "All Foods: Bee Soup"
 			x: 14d
 			y: 32d
 		}
 		{
-			icon: "undergarden:indigo_stew"
-			id: "09497A506808E7F1"
+			icon: "the_bumblezone:royal_jelly_bottle"
+			id: "37241C2B1210FB51"
 			rewards: [{
 				count: 8
-				id: "-625DC890AA7C0FEE"
+				id: "148E6B0BA32E9C8A"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
-				id: "794AB4C83C843423"
-				item: "undergarden:indigo_stew"
+				id: "239740D7506868E1"
+				item: "the_bumblezone:royal_jelly_bottle"
 				type: "item"
 			}]
-			title: "All Drinks: Indigo Stew"
+			title: "All Foods: Royal Jelly Bottle"
 			x: 16d
 			y: 32d
 		}
 		{
-			icon: "undergarden:inky_stew"
-			id: "2FC191F53DAAF196"
+			icon: "the_bumblezone:sugar_water_bottle"
+			id: "3582F076598942B9"
 			rewards: [{
 				count: 8
-				id: "-2C43C46B9B026FB0"
+				id: "1561BC2EA0C9522E"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
-				id: "41F72C9307758568"
-				item: "undergarden:inky_stew"
+				id: "23C2D26D21B0D625"
+				item: "the_bumblezone:sugar_water_bottle"
 				type: "item"
 			}]
-			title: "All Drinks: Inky Stew"
+			title: "All Drinks: Sugar Water Bottle"
 			x: 18d
 			y: 32d
 		}
 		{
-			icon: "undergarden:veiled_stew"
-			id: "54D52F3078BFF62F"
+			icon: "rats:assorted_vegetables"
+			id: "3D2479C711295DFE"
 			rewards: [{
 				count: 8
-				id: "7D0B4E5763434AAE"
+				id: "14E62EF0196A63F3"
 				item: "createdeco:copper_coin"
 				type: "item"
 			}]
 			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
-				id: "1BF01F7650522E53"
-				item: "undergarden:veiled_stew"
+				id: "2C6393B5A026483E"
+				item: "rats:assorted_vegetables"
 				type: "item"
 			}]
-			title: "All Drinks: Veiled Stew"
+			title: "All Foods: Assorted Vegetables"
 			x: 20d
 			y: 32d
+		}
+		{
+			icon: "rats:black_marbled_cheese"
+			id: "3A38FDC3DC7E9CF9"
+			rewards: [{
+				count: 8
+				id: "1D291B9C53B869D5"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2F1FC05954E58BCA"
+				item: "rats:black_marbled_cheese"
+				type: "item"
+			}]
+			title: "All Foods: Black Marbled Cheese"
+			x: 22d
+			y: 32d
+		}
+		{
+			icon: "rats:blue_cheese"
+			id: "31578398BF9D3D37"
+			rewards: [{
+				count: 8
+				id: "18FAD0DE6576E77F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "25A16F41431D7C7E"
+				item: "rats:blue_cheese"
+				type: "item"
+			}]
+			title: "All Foods: Blue Cheese"
+			x: 24d
+			y: 32d
+		}
+		{
+			icon: "rats:cheese"
+			id: "36B24695D0EBED0D"
+			rewards: [{
+				count: 8
+				id: "1D1347D0F9E71B77"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2EC624259440825E"
+				item: "rats:cheese"
+				type: "item"
+			}]
+			title: "All Foods: Cheese"
+			x: 26d
+			y: 32d
+		}
+		{
+			icon: "rats:cheese_stick"
+			id: "36CF02D9128D63FC"
+			rewards: [{
+				count: 8
+				id: "1F48F35CB34DBA4F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2275ACA4DB81EC1E"
+				item: "rats:cheese_stick"
+				type: "item"
+			}]
+			title: "All Foods: Cheese Stick"
+			x: 28d
+			y: 32d
+		}
+		{
+			icon: "rats:confit_byaldi"
+			id: "350ECCFEA4647C5F"
+			rewards: [{
+				count: 8
+				id: "1BDE235C396FABA9"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2F36665B4D390E08"
+				item: "rats:confit_byaldi"
+				type: "item"
+			}]
+			title: "All Foods: Confit Byaldi"
+			x: 30d
+			y: 32d
+		}
+		{
+			icon: "rats:contaminated_food"
+			id: "369CA14656C5F4A8"
+			rewards: [{
+				count: 8
+				id: "19C48377D3957C47"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2B57443AE822BF24"
+				item: "rats:contaminated_food"
+				type: "item"
+			}]
+			title: "All Foods: Contaminated Food"
+			x: 0d
+			y: 34d
+		}
+		{
+			icon: "rats:cooked_rat"
+			id: "331FDDCB4D2986A6"
+			rewards: [{
+				count: 8
+				id: "15A4D1E9224F9136"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2873B135ECC4FB5D"
+				item: "rats:cooked_rat"
+				type: "item"
+			}]
+			title: "All Foods: Cooked Rat"
+			x: 2d
+			y: 34d
+		}
+		{
+			icon: "rats:little_black_squash_balls"
+			id: "30DDAAF21A32449A"
+			rewards: [{
+				count: 8
+				id: "12B99FB40ACC301D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2E2BCA17BA14D598"
+				item: "rats:little_black_squash_balls"
+				type: "item"
+			}]
+			title: "All Foods: Little Black Squash Balls"
+			x: 4d
+			y: 34d
+		}
+		{
+			icon: "rats:marbled_cheese"
+			id: "3F5C5F558F38EE6A"
+			rewards: [{
+				count: 8
+				id: "11D39EDA92A7008F"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "24C02D509EBABFE1"
+				item: "rats:marbled_cheese"
+				type: "item"
+			}]
+			title: "All Foods: Marbled Cheese"
+			x: 6d
+			y: 34d
+		}
+		{
+			icon: "rats:nether_cheese"
+			id: "3C89198912627208"
+			rewards: [{
+				count: 8
+				id: "19EA2043F2608597"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2E23B39F9603923F"
+				item: "rats:nether_cheese"
+				type: "item"
+			}]
+			title: "All Foods: Nether Cheese"
+			x: 8d
+			y: 34d
+		}
+		{
+			icon: "rats:plague_stew"
+			id: "3EC79B53E6F62BE3"
+			rewards: [{
+				count: 8
+				id: "1EB7ADD04C10D2C4"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2349BFA2C3DEC1FB"
+				item: "rats:plague_stew"
+				type: "item"
+			}]
+			title: "All Foods: Plague Stew"
+			x: 10d
+			y: 34d
+		}
+		{
+			icon: "rats:potato_knishes"
+			id: "34A4627EFC9E6DB3"
+			rewards: [{
+				count: 8
+				id: "1F62458F82C2C47D"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "28C34502F4F3EE59"
+				item: "rats:potato_knishes"
+				type: "item"
+			}]
+			title: "All Foods: Potato Knishes"
+			x: 12d
+			y: 34d
+		}
+		{
+			icon: "rats:potato_pancake"
+			id: "389821591A074D03"
+			rewards: [{
+				count: 8
+				id: "153C193579C0197E"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2F8FC0E44FC4AA81"
+				item: "rats:potato_pancake"
+				type: "item"
+			}]
+			title: "All Foods: Potato Pancake"
+			x: 14d
+			y: 34d
+		}
+		{
+			icon: "rats:rat_burger"
+			id: "3315ACA9609CE878"
+			rewards: [{
+				count: 8
+				id: "1B0AECD59D6FB0DF"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2A733ACFB1723F5F"
+				item: "rats:rat_burger"
+				type: "item"
+			}]
+			title: "All Foods: Rat Burger"
+			x: 16d
+			y: 34d
+		}
+		{
+			icon: "rats:raw_rat"
+			id: "39B48DCEED84CF9F"
+			rewards: [{
+				count: 8
+				id: "16C031054D6C8E81"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "27BD98CDF56CF39A"
+				item: "rats:raw_rat"
+				type: "item"
+			}]
+			title: "All Foods: Raw Rat"
+			x: 18d
+			y: 34d
+		}
+		{
+			icon: "ratlantis_logistics:ratlantean_bait"
+			id: "39152BEF5F8B09E2"
+			rewards: [{
+				count: 8
+				id: "124B52B2A8D94D95"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "24EBF905E684E802"
+				item: "ratlantis_logistics:ratlantean_bait"
+				type: "item"
+			}]
+			title: "All Logistics: Ratlantean Bait"
+			x: 20d
+			y: 34d
+		}
+		{
+			icon: "rats:marbled_cheese_raw"
+			id: "30038FDF2463F117"
+			rewards: [{
+				count: 8
+				id: "1D7E0B5CBE08CC22"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "20B162A2F3D8004F"
+				item: "rats:marbled_cheese_raw"
+				type: "item"
+			}]
+			title: "All Logistics: Raw Marbled Cheese"
+			x: 22d
+			y: 34d
+		}
+		{
+			icon: "rats:oratchalcum_ingot"
+			id: "3F9313354CFD692B"
+			rewards: [{
+				count: 8
+				id: "125A17844A2A0A39"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2AAA046573D0203C"
+				item: "rats:oratchalcum_ingot"
+				type: "item"
+			}]
+			title: "All Logistics: Oratchalcum Ingot"
+			x: 24d
+			y: 34d
+		}
+		{
+			icon: "rats:gem_of_ratlantis"
+			id: "34549D41E1CA7069"
+			rewards: [{
+				count: 8
+				id: "1B51FA5637D9DD92"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "292B1DC9667902DA"
+				item: "rats:gem_of_ratlantis"
+				type: "item"
+			}]
+			title: "All Logistics: Gem Of Ratlantis"
+			x: 26d
+			y: 34d
+		}
+		{
+			icon: "rats:arcane_technology"
+			id: "3E9AE96559E70FCB"
+			rewards: [{
+				count: 8
+				id: "17AAADC8A73FF990"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "28DAC9B0BB88A877"
+				item: "rats:arcane_technology"
+				type: "item"
+			}]
+			title: "All Logistics: Arcane Technology"
+			x: 28d
+			y: 34d
+		}
+		{
+			icon: "rats:psionic_rat_brain"
+			id: "3650D8FFF6015785"
+			rewards: [{
+				count: 8
+				id: "19714A3EE155DC46"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "230707B0589C90DB"
+				item: "rats:psionic_rat_brain"
+				type: "item"
+			}]
+			title: "All Logistics: Psionic Rat Brain"
+			x: 30d
+			y: 34d
+		}
+		{
+			icon: "rats:pirat_wood"
+			id: "3B9B22D4DC4C6ABA"
+			rewards: [{
+				count: 8
+				id: "11779F5BDA14803A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "26F83A14F9F15357"
+				item: "rats:pirat_wood"
+				type: "item"
+			}]
+			title: "All Logistics: Pirat Wood"
+			x: 0d
+			y: 36d
+		}
+		{
+			icon: "ratlantis_logistics:courier_lattice"
+			id: "3A771CF25E97206D"
+			rewards: [{
+				count: 8
+				id: "100A17D4D31EDFF9"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2C060944C99FC1C1"
+				item: "ratlantis_logistics:courier_lattice"
+				type: "item"
+			}]
+			title: "All Logistics: Courier Lattice"
+			x: 2d
+			y: 36d
+		}
+		{
+			icon: "ratlantis_logistics:oratchalcum_mechanism"
+			id: "3363A2015D1DD418"
+			rewards: [{
+				count: 8
+				id: "15522E803FC62CE4"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2FA25F92758D009C"
+				item: "ratlantis_logistics:oratchalcum_mechanism"
+				type: "item"
+			}]
+			title: "All Logistics: Oratchalcum Mechanism"
+			x: 4d
+			y: 36d
+		}
+		{
+			icon: "ratlantis_logistics:arcane_logistics_core"
+			id: "36BB814E42BA4E95"
+			rewards: [{
+				count: 8
+				id: "1E9467D7AF3FF87A"
+				item: "createdeco:copper_coin"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2626CBAE20B662E9"
+				item: "ratlantis_logistics:arcane_logistics_core"
+				type: "item"
+			}]
+			title: "All Logistics: Arcane Logistics Core"
+			x: 6d
+			y: 36d
 		}
 	]
 }

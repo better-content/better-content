@@ -11,9 +11,10 @@ or gate discovery through quest dependencies.
 
 ## Era 1 — Hand Workshop
 
-Build native Tinkers' Construct tools, reach any active Dimension Font (Nether,
-Aether, Undergarden, or Otherside), and combine that Font's binder with sand and
-gravel for grout. Seared metallurgy owns alloy composition. Molten stone plus
+Build native Tinkers' Construct tools and reach the Nether, Aether, Bumblezone,
+or Ratlantis Dimension Font. Nether and Aether remain the dimensional TConstruct
+origins; Bumblezone pollen puff and Ratlantis raw marbled cheese are universal
+grout binders without affix or Font-currency rewards. Seared metallurgy owns alloy composition. Molten stone plus
 molten iron or zinc becomes molten Andesite Alloy, which is cast to Create's
 native item. The Hand Crank is the only positive SU source before the Nether.
 
@@ -24,7 +25,20 @@ second, giving a solo player 120 active seconds from a full unmodified Font.
 Generated capacity and efficiency modifiers may extend or shorten that baseline.
 Exhausting charge ends the run and returns its participants.
 
+Bumblezone and Ratlantis are expedition-only: upstream portals, tokens, and hive
+teleportation are disabled. Bumblezone nurseries are the origin of non-space food
+cultivars and always yield four propagules. Outside an authored origin, uprooting
+preserves one propagule with only a one-percent mature bonus; edible produce is
+never itself the planting item.
+
 ## Era 2 — Powered Works
+
+Ratlantis is also the origin of scalable logistics. Courier lattices root bulk
+rat, Pretty Pipes, and portable-storage infrastructure; oratchalcum mechanisms
+root ordinary modules and Create's request network; arcane logistics cores root
+high modules, advanced automation, and the three valid AE2 first-power routes.
+Vanilla chests and hoppers, early Create movement, Eureka, Little Logistics, and
+Wares remain independent.
 
 Craft `kubejs:andesite_machine_block` from one Seared Brick block, four
 Andesite Alloy, and four iron plates. It directly unlocks only the Millstone and

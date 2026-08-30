@@ -324,16 +324,6 @@
           "score": 90
         },
         {
-          "id": "undergarden:indigo_stew",
-          "namespace": "undergarden",
-          "nutrition": 4,
-          "dietGroups": [],
-          "durationSeconds": 30,
-          "amplifier": 1,
-          "probability": 1,
-          "score": 72
-        },
-        {
           "id": "ubesdelight:ube_cake_slice",
           "namespace": "ubesdelight",
           "nutrition": 2,
@@ -654,16 +644,6 @@
           "score": 128
         },
         {
-          "id": "undergarden:blood_globule",
-          "namespace": "undergarden",
-          "nutrition": 0,
-          "dietGroups": [],
-          "durationSeconds": 1,
-          "amplifier": 4,
-          "probability": 1,
-          "score": 121
-        },
-        {
           "id": "ends_delight:ender_bamboo_rice",
           "namespace": "ends_delight",
           "nutrition": 15,
@@ -701,8 +681,7 @@
       "foodCount": 36,
       "preferredSources": [
         "farmersrespite:yellow_tea_leaves",
-        "delightful:cantaloupe",
-        "undergarden:ink_mushroom"
+        "delightful:cantaloupe"
       ],
       "topFoods": [
         {
@@ -1046,16 +1025,6 @@
       ],
       "topFoods": [
         {
-          "id": "undergarden:veiled_stew",
-          "namespace": "undergarden",
-          "nutrition": 4,
-          "dietGroups": [],
-          "durationSeconds": 30,
-          "amplifier": 1,
-          "probability": 1,
-          "score": 72
-        },
-        {
           "id": "delightful:smore",
           "namespace": "delightful",
           "nutrition": 8,
@@ -1082,7 +1051,6 @@
       "effect": "minecraft:jump_boost",
       "foodCount": 2,
       "preferredSources": [
-        "undergarden:gloomper_leg",
         "minecraft:rabbit_foot"
       ],
       "topFoods": [
@@ -1095,16 +1063,6 @@
           "amplifier": 3,
           "probability": 1,
           "score": 106
-        },
-        {
-          "id": "undergarden:gloomper_leg",
-          "namespace": "undergarden",
-          "nutrition": 6,
-          "dietGroups": [],
-          "durationSeconds": 30,
-          "amplifier": 1,
-          "probability": 1,
-          "score": 78
         }
       ],
       "proposedStage": "kettle_infusion"
@@ -1410,18 +1368,6 @@
           "score": 105
         },
         {
-          "id": "undergarden:droopvine_item",
-          "namespace": "undergarden",
-          "nutrition": 1,
-          "dietGroups": [
-            "fruits"
-          ],
-          "durationSeconds": 30,
-          "amplifier": 1,
-          "probability": 1,
-          "score": 78
-        },
-        {
           "id": "occultism:demons_dream_essence",
           "namespace": "occultism",
           "nutrition": 0,
@@ -1470,16 +1416,6 @@
           "amplifier": 1,
           "probability": 1,
           "score": 51
-        },
-        {
-          "id": "deeperdarker:bloom_berries",
-          "namespace": "deeperdarker",
-          "nutrition": 2,
-          "dietGroups": [],
-          "durationSeconds": 5,
-          "amplifier": 1,
-          "probability": 0.800000011920929,
-          "score": 41
         },
         {
           "id": "supplementaries:lumisene_bottle",

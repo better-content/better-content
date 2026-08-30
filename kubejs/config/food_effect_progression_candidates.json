@@ -303,20 +303,6 @@
       "ubesdelight:polvorone_pinipig",
       "ubesdelight:polvorone_ube",
       "ubesdelight:ube",
-      "undergarden:cooked_gwibling",
-      "undergarden:raw_gloomper_leg",
-      "undergarden:raw_gwibling",
-      "undergarden:roasted_underbeans",
-      "undergarden:underbeans",
-      "undergardendelight:cooked_dweller_meat_slice",
-      "undergardendelight:cooked_gloomper_cuts",
-      "undergardendelight:cooked_gwibling_fillet",
-      "undergardendelight:dweller_meat_slice",
-      "undergardendelight:gloomgourd_pie_slice",
-      "undergardendelight:gloomgourd_slice",
-      "undergardendelight:raw_gloomper_cuts",
-      "undergardendelight:raw_gwibling_fillet",
-      "undergardendelight:shimmerpearl",
       "veggiesdelight:baked_sweet_potato",
       "veggiesdelight:bellpepper",
       "veggiesdelight:broccoli",
@@ -465,23 +451,6 @@
       "ubesdelight:lumpia",
       "ubesdelight:pandesal",
       "ubesdelight:tocino",
-      "undergarden:blisterberry",
-      "undergarden:dweller_steak",
-      "undergarden:raw_dweller_meat",
-      "undergardendelight:baked_gwibling_and_vegetables",
-      "undergardendelight:blood_tomato_soup",
-      "undergardendelight:depth_shroom_cream_soup",
-      "undergardendelight:droopstew",
-      "undergardendelight:glitterdish",
-      "undergardendelight:glitterwrap",
-      "undergardendelight:gronglet_roll",
-      "undergardendelight:gronglet_with_roasted_veggies",
-      "undergardendelight:gronglunch",
-      "undergardendelight:mogsteak",
-      "undergardendelight:roasted_underbean_on_a_stick",
-      "undergardendelight:scintling_stew",
-      "undergardendelight:stuffed_gloomgourd_bowl",
-      "undergardendelight:underbean_salad",
       "veggiesdelight:cauliflower_bread",
       "veggiesdelight:chicken_fajitas_wrap",
       "veggiesdelight:cooked_vegetarian_patty",
@@ -603,8 +572,6 @@
       "rusticdelight:sweet_salad",
       "tconstruct:jeweled_apple",
       "twilightforest:hydra_chop",
-      "undergarden:blood_globule",
-      "undergarden:bloody_stew",
       "veggiesdelight:broccoli_salad",
       "veggiesdelight:cesar_salad",
       "veggiesdelight:dandelion_and_eggs",
@@ -719,7 +686,6 @@
       "corn_delight:cornbread_stuffing",
       "corn_delight:creamed_corn",
       "corn_delight:nachos_bowl",
-      "deeperdarker:bloom_berries",
       "delightful:aged_fish_roe",
       "delightful:aged_prawn_roe",
       "delightful:cactus_soup",
@@ -821,9 +787,6 @@
       "ubesdelight:sinangag",
       "ubesdelight:sisig",
       "ubesdelight:tosilog",
-      "undergarden:droopvine_item",
-      "undergarden:gloomgourd_pie",
-      "undergarden:goo_ball",
       "veggiesdelight:broccoli_soup",
       "veggiesdelight:cacciatore",
       "veggiesdelight:cauliflower_kuku",
@@ -916,8 +879,6 @@
       "ubesdelight:hopia_ube_raw",
       "ubesdelight:pandesal_raw",
       "ubesdelight:pandesal_ube_raw",
-      "undergarden:rotten_blisterberry",
-      "undergarden:slop_bowl",
       "veggiesdelight:sweet_potato_dough"
     ],
     "utility_supply": [
@@ -979,7 +940,6 @@
       "rusticdelight:syrup_coffee",
       "ubesdelight:condensed_milk_bottle",
       "ubesdelight:fish_sauce_bottle",
-      "undergarden:gloomper_leg",
       "veggiesdelight:beetroot_brownie",
       "veggiesdelight:sweet_potato_cupcake",
       "veggiesdelight:sweet_potato_pancakes"
@@ -1003,7 +963,6 @@
       "ubesdelight:milk_tea_ube",
       "ubesdelight:pandesal_ube",
       "ubesdelight:ube_cake_slice",
-      "undergarden:veiled_stew",
       "veggiesdelight:carrot_juice"
     ],
     "risky_power": [
@@ -1018,9 +977,7 @@
       "ends_delight:liquid_dragon_egg",
       "ends_delight:shulker_omelette",
       "occultism:demons_dream_essence",
-      "tconstruct:venom_bottle",
-      "undergarden:indigo_stew",
-      "undergarden:inky_stew"
+      "tconstruct:venom_bottle"
     ],
     "strong_nutrition": [
       "create:chocolate_glazed_berries",
@@ -1084,7 +1041,6 @@
       "rusticdelight:potato_salad",
       "rusticdelight:sweet_salad",
       "twilightforest:hydra_chop",
-      "undergarden:blood_globule",
       "veggiesdelight:dandelion_and_eggs",
       "veggiesdelight:dandelion_juice",
       "veggiesdelight:dandelion_leaf",
@@ -1119,8 +1075,7 @@
       "tconstruct:earth_slime_bottle",
       "tconstruct:ender_slime_bottle",
       "tconstruct:ichor_slime_bottle",
-      "tconstruct:sky_slime_bottle",
-      "undergarden:indigo_stew"
+      "tconstruct:sky_slime_bottle"
     ],
     "minecraft:saturation": [
       "collectorsreap:pumpkin_gummy",
@@ -1434,14 +1389,12 @@
       "brewinandchewin:glittering_grenadine",
       "collectorsreap:glow_berry_gummy",
       "collectorsreap:hemp_gummy",
-      "deeperdarker:bloom_berries",
       "delightful:glow_jam_cookie",
       "delightful:glow_jam_jar",
       "farmersdelight:glow_berry_custard",
       "occultism:demons_dream_essence",
       "supplementaries:lumisene_bottle",
-      "twilightforest:torchberries",
-      "undergarden:droopvine_item"
+      "twilightforest:torchberries"
     ],
     "minecraft:night_vision": [
       "brewinandchewin:glittering_grenadine",
@@ -1452,7 +1405,6 @@
       "ubesdelight:milk_tea_ube",
       "ubesdelight:pandesal_ube",
       "ubesdelight:ube_cake_slice",
-      "undergarden:indigo_stew",
       "veggiesdelight:carrot_juice"
     ],
     "minecraft:haste": [
@@ -1532,7 +1484,6 @@
       "mynethersdelight:enchanted_golden_egg",
       "mynethersdelight:golden_egg",
       "tconstruct:jeweled_apple",
-      "undergarden:inky_stew",
       "veggiesdelight:broccoli_salad",
       "veggiesdelight:potato_noodles",
       "veggiesdelight:turnip_water"
@@ -1543,8 +1494,7 @@
       "delightful:cantaloupe_gummy",
       "delightful:ender_nectar",
       "ends_delight:liquid_dragon_egg",
-      "oceansdelight:tentacles",
-      "undergarden:inky_stew"
+      "oceansdelight:tentacles"
     ],
     "minecraft:weakness": [
       "brewinandchewin:withering_dross",
@@ -1584,8 +1534,7 @@
       "mynethersdelight:hoglin_sausage",
       "mynethersdelight:hotdog_with_nether_salad",
       "occultism:demons_dream_essence",
-      "rusticdelight:cooking_oil",
-      "undergarden:slop_bowl"
+      "rusticdelight:cooking_oil"
     ],
     "minecraft:strength": [
       "collectorsreap:asparagus_aspic",
@@ -1607,12 +1556,10 @@
       "ends_delight:steamed_dragon_egg",
       "malum:cursed_sap",
       "tconstruct:venom_bottle",
-      "undergarden:bloody_stew",
       "veggiesdelight:cesar_salad"
     ],
     "minecraft:jump_boost": [
-      "collectorsreap:banana_gummy",
-      "undergarden:gloomper_leg"
+      "collectorsreap:banana_gummy"
     ],
     "collectorsreap:corrosion": [
       "collectorsreap:berry_limeade",
@@ -1793,7 +1740,6 @@
       "ubesdelight:hopia_ube_raw",
       "ubesdelight:pandesal_raw",
       "ubesdelight:pandesal_ube_raw",
-      "undergarden:rotten_blisterberry",
       "veggiesdelight:sweet_potato_dough"
     ],
     "minecraft:instant_health": [
@@ -1833,12 +1779,7 @@
     ],
     "minecraft:slow_falling": [
       "delightful:cooked_marshmallow_stick",
-      "delightful:smore",
-      "undergarden:veiled_stew"
-    ],
-    "undergarden:virulent_resistance": [
-      "delightful:gloomgourd_pie_slice",
-      "undergarden:gloomgourd_pie"
+      "delightful:smore"
     ],
     "minecraft:health_boost": [
       "ends_delight:ender_congee",
@@ -1903,15 +1844,6 @@
     ],
     "tconstruct:ricochet": [
       "tconstruct:sky_slime_bottle"
-    ],
-    "undergarden:brittleness": [
-      "undergarden:bloody_stew"
-    ],
-    "undergarden:gooey": [
-      "undergarden:goo_ball"
-    ],
-    "undergarden:featherweight": [
-      "undergarden:veiled_stew"
     ]
   },
   "rankedCandidates": [
@@ -4893,20 +4825,6 @@
       ]
     },
     {
-      "id": "undergardendelight:gronglet_with_roasted_veggies",
-      "score": 84,
-      "category": "high_calorie_stock",
-      "suggestedStage": "late_kitchen_reward",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 14,
-      "saturationModifier": 1,
-      "effects": []
-    },
-    {
       "id": "collectorsreap:prawn_noodles",
       "score": 83,
       "category": "special_supply",
@@ -6366,20 +6284,6 @@
       ]
     },
     {
-      "id": "undergardendelight:stuffed_gloomgourd_bowl",
-      "score": 72,
-      "category": "high_calorie_stock",
-      "suggestedStage": "late_kitchen_reward",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 15,
-      "saturationModifier": 0.699999988079071,
-      "effects": []
-    },
-    {
       "id": "ends_delight:end_mixed_salad",
       "score": 71,
       "category": "combat_supply",
@@ -6879,34 +6783,6 @@
       ]
     },
     {
-      "id": "undergardendelight:baked_gwibling_and_vegetables",
-      "score": 67,
-      "category": "high_calorie_stock",
-      "suggestedStage": "late_kitchen_reward",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 14,
-      "saturationModifier": 0.699999988079071,
-      "effects": []
-    },
-    {
-      "id": "undergardendelight:mogsteak",
-      "score": 67,
-      "category": "high_calorie_stock",
-      "suggestedStage": "late_kitchen_reward",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 14,
-      "saturationModifier": 0.699999988079071,
-      "effects": []
-    },
-    {
       "id": "collectorsreap:cannoli",
       "score": 66,
       "category": "special_supply",
@@ -7280,20 +7156,6 @@
       "nutritionScore": 42,
       "nutrition": 5,
       "saturationModifier": 0.5,
-      "effects": []
-    },
-    {
-      "id": "undergardendelight:depth_shroom_cream_soup",
-      "score": 62,
-      "category": "high_calorie_stock",
-      "suggestedStage": "late_kitchen_reward",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 12,
-      "saturationModifier": 0.800000011920929,
       "effects": []
     },
     {
@@ -7710,20 +7572,6 @@
           "showIcon": false
         }
       ]
-    },
-    {
-      "id": "undergardendelight:gronglunch",
-      "score": 58,
-      "category": "high_calorie_stock",
-      "suggestedStage": "established_kitchen",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 12,
-      "saturationModifier": 0.699999988079071,
-      "effects": []
     },
     {
       "id": "collectorsreap:mint_cannoli",
@@ -8254,20 +8102,6 @@
           "showIcon": true
         }
       ]
-    },
-    {
-      "id": "undergarden:dweller_steak",
-      "score": 54,
-      "category": "high_calorie_stock",
-      "suggestedStage": "established_kitchen",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 8,
-      "saturationModifier": 1.2000000476837158,
-      "effects": []
     },
     {
       "id": "veggiesdelight:broccoli_soup",
@@ -9208,20 +9042,6 @@
       ]
     },
     {
-      "id": "undergardendelight:glitterwrap",
-      "score": 47,
-      "category": "high_calorie_stock",
-      "suggestedStage": "established_kitchen",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 9,
-      "saturationModifier": 0.800000011920929,
-      "effects": []
-    },
-    {
       "id": "brewinandchewin:strongroot_ale",
       "score": 46,
       "category": "combat_supply",
@@ -9737,30 +9557,6 @@
       ]
     },
     {
-      "id": "undergarden:gloomper_leg",
-      "score": 44,
-      "category": "movement_supply",
-      "suggestedStage": "established_kitchen",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 6,
-      "saturationModifier": 0.8999999761581421,
-      "effects": [
-        {
-          "effect": "minecraft:jump_boost",
-          "amplifier": 0,
-          "durationTicks": 600,
-          "probability": 1,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        }
-      ]
-    },
-    {
       "id": "veggiesdelight:broccoli_salad",
       "score": 44,
       "category": "combat_supply",
@@ -9909,20 +9705,6 @@
           "showIcon": false
         }
       ]
-    },
-    {
-      "id": "undergardendelight:glitterdish",
-      "score": 43,
-      "category": "high_calorie_stock",
-      "suggestedStage": "established_kitchen",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 9,
-      "saturationModifier": 0.699999988079071,
-      "effects": []
     },
     {
       "id": "artifacts:eternal_steak",
@@ -10576,67 +10358,6 @@
       ]
     },
     {
-      "id": "undergarden:bloody_stew",
-      "score": 40,
-      "category": "combat_supply",
-      "suggestedStage": "established_kitchen",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 4,
-      "saturationModifier": 0.4000000059604645,
-      "effects": [
-        {
-          "effect": "minecraft:strength",
-          "amplifier": 0,
-          "durationTicks": 600,
-          "probability": 1,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        },
-        {
-          "effect": "undergarden:brittleness",
-          "amplifier": 0,
-          "durationTicks": 600,
-          "probability": 1,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        }
-      ]
-    },
-    {
-      "id": "undergardendelight:droopstew",
-      "score": 40,
-      "category": "high_calorie_stock",
-      "suggestedStage": "established_kitchen",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 10,
-      "saturationModifier": 0.5,
-      "effects": []
-    },
-    {
-      "id": "undergardendelight:underbean_salad",
-      "score": 40,
-      "category": "high_calorie_stock",
-      "suggestedStage": "established_kitchen",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 10,
-      "saturationModifier": 0.5,
-      "effects": []
-    },
-    {
       "id": "ends_delight:chorus_flower_tea",
       "score": 39,
       "category": "combat_supply",
@@ -10789,44 +10510,6 @@
     },
     {
       "id": "ubesdelight:tocino",
-      "score": 38,
-      "category": "high_calorie_stock",
-      "suggestedStage": "established_kitchen",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 8,
-      "saturationModifier": 0.699999988079071,
-      "effects": []
-    },
-    {
-      "id": "undergarden:gloomgourd_pie",
-      "score": 38,
-      "category": "special_supply",
-      "suggestedStage": "established_kitchen",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 8,
-      "saturationModifier": 0.5,
-      "effects": [
-        {
-          "effect": "undergarden:virulent_resistance",
-          "amplifier": 0,
-          "durationTicks": 600,
-          "probability": 1,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        }
-      ]
-    },
-    {
-      "id": "undergardendelight:blood_tomato_soup",
       "score": 38,
       "category": "high_calorie_stock",
       "suggestedStage": "established_kitchen",
@@ -11265,39 +10948,6 @@
           "effect": "minecraft:speed",
           "amplifier": 1,
           "durationTicks": 900,
-          "probability": 1,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        }
-      ]
-    },
-    {
-      "id": "undergarden:veiled_stew",
-      "score": 36,
-      "category": "route_survival",
-      "suggestedStage": "established_kitchen",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 4,
-      "saturationModifier": 0.4000000059604645,
-      "effects": [
-        {
-          "effect": "minecraft:slow_falling",
-          "amplifier": 0,
-          "durationTicks": 600,
-          "probability": 1,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        },
-        {
-          "effect": "undergarden:featherweight",
-          "amplifier": 0,
-          "durationTicks": 600,
           "probability": 1,
           "ambient": false,
           "visible": true,
@@ -11869,20 +11519,6 @@
       "effects": []
     },
     {
-      "id": "undergardendelight:gronglet_roll",
-      "score": 34,
-      "category": "high_calorie_stock",
-      "suggestedStage": "early_kitchen_or_showcase",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 7,
-      "saturationModifier": 0.699999988079071,
-      "effects": []
-    },
-    {
       "id": "veggiesdelight:beetroot_brownie",
       "score": 34,
       "category": "movement_supply",
@@ -11991,22 +11627,6 @@
           "showIcon": true
         }
       ]
-    },
-    {
-      "id": "undergarden:blisterberry",
-      "score": 33,
-      "category": "high_calorie_stock",
-      "suggestedStage": "early_kitchen_or_showcase",
-      "dietGroups": [
-        "fruits"
-      ],
-      "dietGroupCount": 1,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 16,
-      "nutrition": 6,
-      "saturationModifier": 0.20000000298023224,
-      "effects": []
     },
     {
       "id": "collectorsreap:dragon_stew_cup",
@@ -13467,30 +13087,6 @@
       ]
     },
     {
-      "id": "undergarden:blood_globule",
-      "score": 28,
-      "category": "combat_supply",
-      "suggestedStage": "early_kitchen_or_showcase",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 0,
-      "saturationModifier": 0,
-      "effects": [
-        {
-          "effect": "minecraft:regeneration",
-          "amplifier": 3,
-          "durationTicks": 20,
-          "probability": 1,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        }
-      ]
-    },
-    {
       "id": "collectorsreap:melon_gummy",
       "score": 27,
       "category": "combat_supply",
@@ -14185,32 +13781,6 @@
           "effect": "minecraft:resistance",
           "amplifier": 3,
           "durationTicks": 200,
-          "probability": 1,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        }
-      ]
-    },
-    {
-      "id": "undergarden:droopvine_item",
-      "score": 23,
-      "category": "special_supply",
-      "suggestedStage": "early_kitchen_or_showcase",
-      "dietGroups": [
-        "fruits"
-      ],
-      "dietGroupCount": 1,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 11,
-      "nutrition": 1,
-      "saturationModifier": 1,
-      "effects": [
-        {
-          "effect": "minecraft:glowing",
-          "amplifier": 0,
-          "durationTicks": 600,
           "probability": 1,
           "ambient": false,
           "visible": true,
@@ -15113,39 +14683,6 @@
       ]
     },
     {
-      "id": "undergarden:inky_stew",
-      "score": 20,
-      "category": "risky_power",
-      "suggestedStage": "early_kitchen_or_showcase",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 4,
-      "saturationModifier": 0.4000000059604645,
-      "effects": [
-        {
-          "effect": "minecraft:blindness",
-          "amplifier": 0,
-          "durationTicks": 600,
-          "probability": 1,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        },
-        {
-          "effect": "minecraft:resistance",
-          "amplifier": 0,
-          "durationTicks": 600,
-          "probability": 1,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        }
-      ]
-    },
-    {
       "id": "delightful:source_berry_pie_slice",
       "score": 19,
       "category": "special_supply",
@@ -15692,30 +15229,6 @@
       ]
     },
     {
-      "id": "undergarden:slop_bowl",
-      "score": 17,
-      "category": "hazard_or_joke",
-      "suggestedStage": "early_kitchen_or_showcase",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 6,
-      "saturationModifier": 0.6000000238418579,
-      "effects": [
-        {
-          "effect": "minecraft:nausea",
-          "amplifier": 0,
-          "durationTicks": 200,
-          "probability": 1,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        }
-      ]
-    },
-    {
       "id": "veggiesdelight:dandelion_juice",
       "score": 17,
       "category": "combat_supply",
@@ -15808,17 +15321,7 @@
       "nutritionScore": 0,
       "nutrition": 3,
       "saturationModifier": 0.30000001192092896,
-      "effects": [
-        {
-          "effect": "undergarden:virulent_resistance",
-          "amplifier": 0,
-          "durationTicks": 600,
-          "probability": 1,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        }
-      ]
+      "effects": []
     },
     {
       "id": "delightful:source_berry_gummy",
@@ -16341,39 +15844,6 @@
           "effect": "minecraft:night_vision",
           "amplifier": 0,
           "durationTicks": 1200,
-          "probability": 1,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        }
-      ]
-    },
-    {
-      "id": "undergarden:indigo_stew",
-      "score": 14,
-      "category": "risky_power",
-      "suggestedStage": "early_kitchen_or_showcase",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 4,
-      "saturationModifier": 0.4000000059604645,
-      "effects": [
-        {
-          "effect": "minecraft:night_vision",
-          "amplifier": 0,
-          "durationTicks": 600,
-          "probability": 1,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        },
-        {
-          "effect": "minecraft:slowness",
-          "amplifier": 0,
-          "durationTicks": 600,
           "probability": 1,
           "ambient": false,
           "visible": true,
@@ -16959,30 +16429,6 @@
       ]
     },
     {
-      "id": "deeperdarker:bloom_berries",
-      "score": 8,
-      "category": "special_supply",
-      "suggestedStage": "early_kitchen_or_showcase",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 2,
-      "saturationModifier": 0.10000000149011612,
-      "effects": [
-        {
-          "effect": "minecraft:glowing",
-          "amplifier": 0,
-          "durationTicks": 100,
-          "probability": 0.800000011920929,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        }
-      ]
-    },
-    {
       "id": "everythingcopper:copper_nugget",
       "score": 8,
       "category": "special_supply",
@@ -17167,30 +16613,6 @@
       "effects": [
         {
           "effect": "farmersrespite:caffeinated",
-          "amplifier": 0,
-          "durationTicks": 600,
-          "probability": 1,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        }
-      ]
-    },
-    {
-      "id": "undergarden:goo_ball",
-      "score": 6,
-      "category": "special_supply",
-      "suggestedStage": "early_kitchen_or_showcase",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 0,
-      "saturationModifier": 0,
-      "effects": [
-        {
-          "effect": "undergarden:gooey",
           "amplifier": 0,
           "durationTicks": 600,
           "probability": 1,
@@ -17976,30 +17398,6 @@
           "effect": "tconstruct:ricochet",
           "amplifier": 0,
           "durationTicks": 2400,
-          "probability": 1,
-          "ambient": false,
-          "visible": true,
-          "showIcon": true
-        }
-      ]
-    },
-    {
-      "id": "undergarden:rotten_blisterberry",
-      "score": -3,
-      "category": "hazard_or_joke",
-      "suggestedStage": "early_kitchen_or_showcase",
-      "dietGroups": [],
-      "dietGroupCount": 0,
-      "dietGroupValues": {},
-      "dietSource": null,
-      "nutritionScore": 0,
-      "nutrition": 3,
-      "saturationModifier": 0.10000000149011612,
-      "effects": [
-        {
-          "effect": "minecraft:hunger",
-          "amplifier": 0,
-          "durationTicks": 600,
           "probability": 1,
           "ambient": false,
           "visible": true,

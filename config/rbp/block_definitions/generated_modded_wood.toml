@@ -112,12 +112,6 @@ Blocks = [
 	"burnt:wood_fire_8",
 	"burnt:wood_fire_9",
 	"createdieselgenerators:chip_wood_beam",
-	"deeperdarker:blooming_stem",
-	"deeperdarker:echo_log",
-	"deeperdarker:echo_wood",
-	"deeperdarker:stripped_blooming_stem",
-	"deeperdarker:stripped_echo_log",
-	"deeperdarker:stripped_echo_wood",
 	"fallout_wastelands_:charred_molder_wood_plank",
 	"fallout_wastelands_:enclave_wood_plated_block",
 	"fallout_wastelands_:joshua_log",
@@ -323,19 +317,7 @@ Blocks = [
 	"twilightforest:transformation_log_core",
 	"twilightforest:transformation_wood",
 	"twilightforest:twilight_oak_log",
-	"twilightforest:twilight_oak_wood",
-	"undergarden:grongle_log",
-	"undergarden:grongle_wood",
-	"undergarden:smogstem_log",
-	"undergarden:smogstem_wood",
-	"undergarden:stripped_grongle_log",
-	"undergarden:stripped_grongle_wood",
-	"undergarden:stripped_smogstem_log",
-	"undergarden:stripped_smogstem_wood",
-	"undergarden:stripped_wigglewood_log",
-	"undergarden:stripped_wigglewood_wood",
-	"undergarden:wigglewood_log",
-	"undergarden:wigglewood_wood"]
+	"twilightforest:twilight_oak_wood"]
 
 [Physics]
 	#The maximum weight the block(s) can support both horizontally and vertically.

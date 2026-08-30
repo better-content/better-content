@@ -396,12 +396,14 @@ until group_alive "$client_pid"; do
   sleep 0.1
 done
 deadline=$((SECONDS+600))
-until rg -q 'Sound engine started' "$singleplayer_log" 2>/dev/null; do
+until rg -q 'ScreenCustomizationLayer registered: title_screen' "$singleplayer_log" 2>/dev/null; do
   group_alive "$client_pid" || fail "single-player client exited before reaching its title screen; see $singleplayer_log"
   ((SECONDS < deadline)) || fail "single-player client title screen timed out; see $singleplayer_log"
   sleep 1
 done
-sleep 5
+# FancyMenu registers the customized title screen after the sound engine. Waiting for that explicit
+# milestone prevents the first navigation click from being lost and the next click hitting Quit Game.
+sleep 2
 DISPLAY="$display" "$JSHELL" 2>&1 <<EOF | tee "$evidence/singleplayer-navigation.log"
 import java.awt.Robot;
 import java.awt.Rectangle;

@@ -1,9 +1,8 @@
 // Hexerei manufactures physical Occultism components; Occultism owns ritual
 // activation, spirit fire, bindings, and summoned-servant gameplay.
 //
-// Hexerei is the preparation practice downstream of Font expeditions. Its core
-// apparatus and characteristic reagents therefore retain matter from Nether,
-// Aether, Undergarden, and Otherside runs. Occultism still owns spirit fire,
+// Hexerei is the preparation practice downstream of Overworld, Nether, Aether,
+// and End materials. Bumblezone and Ratlantis remain non-magical origins. Occultism still owns spirit fire,
 // pentacles, named bindings, and the Foliot -> Djinni -> Afrit -> Marid ladder;
 // Hexerei owns only the physical preparation of each impure chalk.
 
@@ -71,15 +70,15 @@ ServerEvents.recipes(function (event) {
         'aether:zanite_gemstone'
     ], { moonRequirement: 'full_moon' })
 
-    bcFontCauldron(event, 'infused_fabric_undergarden', 'hexerei:infused_fabric', 2, 'minecraft:water', [
+    bcFontCauldron(event, 'infused_fabric_overworld', 'hexerei:infused_fabric', 2, 'minecraft:water', [
         'minecraft:black_dye',
         'minecraft:leather',
         'minecraft:string',
-        'undergarden:cloggrum_ingot',
+        'complicated_bees:beeswax',
         'minecraft:leather',
         'minecraft:string',
-        'undergarden:cloggrum_ingot',
-        'undergarden:regalium_crystal'
+        'complicated_bees:beeswax',
+        'minecraft:black_dye'
     ], {})
 
     bcFontCauldron(event, 'blood_sigil_nether', 'hexerei:blood_sigil', 1, 'minecraft:lava', [
@@ -93,15 +92,15 @@ ServerEvents.recipes(function (event) {
         'minecraft:nether_brick'
     ], { fluidLevelsConsumed: 333, heatRequirement: 'heated' })
 
-    bcFontCauldron(event, 'crystal_ball_otherside', 'hexerei:crystal_ball', 1, 'minecraft:lava', [
+    bcFontCauldron(event, 'crystal_ball_overworld', 'hexerei:crystal_ball', 1, 'minecraft:lava', [
         'minecraft:glass',
-        'deeperdarker:gloomslate',
+        'realistic_ores:black_shale',
         'minecraft:glass',
-        'deeperdarker:soul_dust',
+        'minecraft:amethyst_shard',
         'hexerei:moon_dust',
-        'deeperdarker:soul_crystal',
+        'minecraft:sculk_catalyst',
         'minecraft:glass',
-        'deeperdarker:gloomslate'
+        'realistic_ores:black_shale'
     ], { heatRequirement: 'heated' })
 
     // White remains the universal base. Gold remains the binding/possession
@@ -110,7 +109,7 @@ ServerEvents.recipes(function (event) {
     bcFontCauldron(event, 'occultism_chalk_white_impure', 'occultism:chalk_white_impure', 1, 'minecraft:water', [
         'occultism:burnt_otherstone',
         'occultism:otherworld_ashes',
-        'deeperdarker:soul_dust',
+        'minecraft:sculk',
         'hexerei:moon_dust',
         'occultism:burnt_otherstone',
         'occultism:otherworld_ashes'
@@ -130,8 +129,8 @@ ServerEvents.recipes(function (event) {
         '#forge:dusts/end_stone',
         '#forge:dusts/obsidian',
         '#forge:dusts/obsidian',
-        'undergarden:regalium_crystal',
-        'undergarden:regalium_crystal'
+        'minecraft:amethyst_shard',
+        'minecraft:amethyst_shard'
     ], { heatRequirement: 'heated' })
 
     bcFontCauldron(event, 'occultism_chalk_red_impure', 'occultism:chalk_red_impure', 1, 'minecraft:lava', [
@@ -171,5 +170,5 @@ ServerEvents.recipes(function (event) {
     event.replaceInput({ id: 'occultism:ritual/craft_dimensional_mineshaft' },
         'occultism:spirit_attuned_crystal', 'hexerei:blood_sigil')
     event.replaceInput({ id: 'occultism:ritual/craft_dimensional_mineshaft' },
-        'minecraft:ender_eye', 'deeperdarker:sculk_bone')
+        'minecraft:ender_eye', 'minecraft:sculk_catalyst')
 })

@@ -603,7 +603,7 @@ nodes:
     shape: hexagon
     size: 1.15
     body: |
-      Mix Otherstone through Hexerei with Otherside matter and a reinforced slate. This recurring Occultism substrate is the boundary between folk practice and spirit pacts.
+      Mix Otherstone through Hexerei with black shale and a reinforced slate. This recurring Occultism substrate is the boundary between folk practice and spirit pacts.
     tasks:
       - type: item
         item: occultism:otherstone
@@ -691,7 +691,7 @@ nodes:
     x: 3
     y: 0
     body: |
-      Build the Blood Altar with your heart and Otherside matter. Give it room for runes, storage, safe sacrifice, and later rituals before the room becomes crowded.
+      Build the Blood Altar with your heart and black shale. Give it room for runes, storage, safe sacrifice, and later rituals before the room becomes crowded.
     tasks:
       - type: item
         item: bloodmagic:altar
@@ -1257,40 +1257,40 @@ nodes:
       - adventure_spine
       - dimension
 
-  adventure_undergarden:
+  adventure_bumblezone:
     type: quest
-    title: Undergarden Route
+    title: Bumblezone Route
     chapter: adventure_economy
-    icon: undergarden:depthrock
+    icon: the_bumblezone:pollen_puff
     stage: adventure
     requires:
       - adventure_route_plan
     x: 3
     y: 0
     body: |
-      Reach the Undergarden with room for food, forage, and body-system materials. Treat its pantry value as expedition support rather than a free resource bypass.
+      Reach The Bumblezone through a Dimensional Font and return with living cultivar stock.
     tasks:
       - type: dimension
-        dimension: undergarden:undergarden
+        dimension: the_bumblezone:the_bumblezone
     tags:
       - adventure_spine
       - dimension
 
-  adventure_otherside:
+  adventure_ratlantis:
     type: quest
-    title: Otherside Route
+    title: Ratlantis Route
     chapter: adventure_economy
-    icon: deeperdarker:cobbled_sculk_stone
+    icon: rats:marbled_cheese_raw
     stage: adventure
     requires:
       - adventure_route_plan
     x: 3
     y: 3
     body: |
-      Reach the Otherside and return with common raw magic matter. Sculk, echo, soul, and resonance feed Blood-refined traditions instead of forming a separate workstation spine.
+      Reach Ratlantis through a Dimensional Font and return with the roots of scalable logistics.
     tasks:
       - type: dimension
-        dimension: deeperdarker:otherside
+        dimension: rats:ratlantis
     tags:
       - adventure_spine
       - dimension

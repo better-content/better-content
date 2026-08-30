@@ -85,22 +85,22 @@
 			y: 3.5d
 		}
 		{
-			description: ["Reach the Undergarden and establish a route into its living depths."]
-			icon: "undergarden:depthrock"
-			id: "352FF9B1BBB0A925"
+			description: ["Enter The Bumblezone through a Dimensional Font and establish the pack's living cultivar route."]
+			icon: "the_bumblezone:pollen_puff"
+			id: "3166DEC5523A3029"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFB4", item: "createdeco:copper_coin", type: "item" }]
-			tasks: [{ dimension: "undergarden:undergarden", id: "-BE161819203BEDE", type: "dimension" }]
-			title: "Undergarden"
+			tasks: [{ dimension: "the_bumblezone:the_bumblezone", id: "-429392FF520AA78B", type: "dimension" }]
+			title: "The Bumblezone"
 			x: 3d
 			y: 3.5d
 		}
 		{
-			description: ["Reach the Otherside and survive its sculk-bound frontier."]
-			icon: "deeperdarker:cobbled_sculk_stone"
-			id: "1FF79D76C1F18DD8"
+			description: ["Enter Ratlantis through a Dimensional Font and return with the roots of scalable logistics."]
+			icon: "rats:marbled_cheese_raw"
+			id: "-1DE4BC20489C815A"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFB3", item: "createdeco:copper_coin", type: "item" }]
-			tasks: [{ dimension: "deeperdarker:otherside", id: "63BB5EE66E19E49D", type: "dimension" }]
-			title: "Otherside"
+			tasks: [{ dimension: "rats:ratlantis", id: "11F4D120B4316CA0", type: "dimension" }]
+			title: "Ratlantis"
 			x: 6d
 			y: 3.5d
 		}

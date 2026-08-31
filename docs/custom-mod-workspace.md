@@ -45,6 +45,7 @@ packwiz refresh
 | [pillager-campaigns](https://github.com/better-content/pillager-campaigns) | `pillager_campaigns` | `pillager-campaigns-0.5.2.jar` | `./gradlew verifyFull verifyWorld stageRuntimeJar` |
 | [world-lifecycle-manager](https://github.com/better-content/world-lifecycle-manager) | `world_lifecycle_manager` | `world-lifecycle-manager-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [procedural-bouquets](https://github.com/better-content/procedural-bouquets) | `procedural_bouquets` | `procedural-bouquets-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
+| [rail-scout](https://github.com/better-content/rail-scout) | `rail_scout` | `rail-scout-0.1.0.jar` | `./gradlew verifyFast verifyFull` |
 | [realistic-ores](https://github.com/better-content/realistic-ores) | `realistic_ores` | `realistic-ores-0.2.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [ratlantis-logistics](https://github.com/better-content/ratlantis-logistics) | `ratlantis_logistics` | `ratlantis-logistics-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [runtime-data-dumper](https://github.com/better-content/runtime-data-dumper) | `runtime_data_dumper` | `runtime-data-dumper-0.1.0.jar` | `./gradlew build stageRuntimeJar` |
@@ -59,11 +60,10 @@ packwiz refresh
 
 ## Validation-Only Repositories
 
-These Better Content repositories remain available for source validation but are not active
-modpack content. Do not copy their runtime JARs into `mods/` unless the corresponding retired or
-future pack feature is explicitly activated.
+This Better Content repository remains available for source validation but is not active modpack
+content. Do not copy its runtime JAR into `mods/` unless the corresponding retired feature is
+explicitly activated.
 
 | Repository | Reason | Local validation and staging |
 |---|---|---|
 | [dynamic-trees-dimension-compat](https://github.com/better-content/dynamic-trees-dimension-compat) | The addon requires The Undergarden, which the pack retired. | `./gradlew runData verifyFull` |
-| [rail-scout](https://github.com/better-content/rail-scout) | The mod is not yet active pack content. | `./gradlew verifyFast verifyFull` |

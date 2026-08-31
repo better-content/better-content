@@ -1,13 +1,13 @@
-name = "The Bumblezone"
+name = "The Bumblezone (NeoForge/Forge)"
 filename = "the_bumblezone-7.13.4+1.20.1-forge.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
 hash = "97e81053128710c98dfe9adc68ce4e67a5b1f5ee"
-mode = "url"
-url = "https://cdn.modrinth.com/data/38tpSycf/versions/hmH0KSl6/the_bumblezone-7.13.4%2B1.20.1-forge.jar"
+mode = "metadata:curseforge"
 
-[update.modrinth]
-mod-id = "38tpSycf"
-version = "hmH0KSl6"
+[update]
+[update.curseforge]
+file-id = 8548194
+project-id = 362479

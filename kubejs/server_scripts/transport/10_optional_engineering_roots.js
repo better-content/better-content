@@ -60,4 +60,12 @@ ServerEvents.recipes(function (event) {
             B: 'kubejs:brass_machine_block', R: 'create:railway_casing'
         }).id('kubejs:transport/precision_factory/trackwork/level_controller')
     }
+
+    if (Platform.isLoaded('rail_scout')) {
+        event.remove({ id: 'rail_scout:rail_scout' })
+        event.shaped('rail_scout:rail_scout', ['ECE', ' B ', ' M '], {
+            E: 'create:electron_tube', C: 'create:railway_casing',
+            B: 'minecraft:barrel', M: 'minecraft:minecart'
+        }).id('kubejs:transport/precision_factory/rail_scout')
+    }
 })

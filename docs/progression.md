@@ -100,7 +100,8 @@ in the Hand Workshop; rough mechanical experiments begin in Powered Works;
 precision trains and controls in Precision Factory; pressure-driven flight in
 Thermal & Pressure; sensors and gyros in Electrical Control. Aether materials
 gate stable high-performance flight, never primitive ships, basic Trackwork, or
-low-performance aircraft.
+low-performance aircraft. Rail Scouts join the Precision Factory branch by
+combining a Railway Casing, a Barrel, a Minecart, and two Electron Tubes.
 
 ## World compatibility
 

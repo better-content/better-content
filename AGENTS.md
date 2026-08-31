@@ -39,6 +39,10 @@ startup, client joining, or cross-system runtime integration.
 
 Do not add other runtime evaluations: static validation suites, contracts, audits, unit tests,
 GameTests, performance budgets, persistence scenarios, doctor checks, or scenario matrices.
+The narrowly scoped `bc.crafting_policy.v1` contract is an authorized content policy, not a
+general audit utility: its KubeJS startup check must reject unknown loaded namespaces and its
+runtime recipe reporting may name exact cut-family leaks and live consumers. Keep it in
+`kubejs/config/` and KubeJS scripts; it does not authorize a `tools/` tree or unrelated checks.
 Questbook visual authoring is the sole exception: use the Minecraft-free sibling harness at
 `/home/dev/ftb-quests-layout-harness/standalone` to render and inspect live FTB Quests chapter
 layouts and to run its icon audit against an available reference-client atlas. These are static
@@ -61,9 +65,9 @@ root `options.txt` remains the client-default source.
 
 ## FTB Quests authoring protocol
 
-Treat `config/ftbquests/quests/` as hand-authored runtime content. `quests/graph.yml`,
-`generated/ftbquests/`, and `quest-storage/` are reference or inactive surfaces and must not
-silently replace live SNBT. Read `docs/questbook_standards.md` before changing the questbook.
+Treat `config/ftbquests/quests/` as hand-authored runtime content. Generative quest graphs,
+generated quest directories, and quest-storage compilers are prohibited and must not replace
+live SNBT. Read `docs/questbook_standards.md` before changing the questbook.
 
 Before editing, state the intended player action, the task that proves it, and every literal
 prerequisite. Inspect the entire affected chapter plus any linked source quests, reveal rules,

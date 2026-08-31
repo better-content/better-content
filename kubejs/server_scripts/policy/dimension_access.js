@@ -33,3 +33,11 @@ ServerEvents.recipes(function (event) {
 
     console.info('[space-dimension-access] disabled direct portal/key recipe outputs; Bumblezone and Ratlantis are Font-only')
 })
+
+// Eyes remain a finite ritual ingredient, but cannot open the vanilla End.
+BlockEvents.rightClicked('minecraft:end_portal_frame', function (event) {
+    if (event.item && event.item.id === 'minecraft:ender_eye') {
+        event.player.tell('The closed End does not answer. Seek orbit instead.')
+        event.cancel()
+    }
+})

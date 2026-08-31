@@ -1,11 +1,11 @@
 name = "Better Content Modpack"
-version = "Build 166"
+version = "Build 179"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "c51768de61e835dc4f7320e37344d9ef3072bd63e004ab2f810e54a868a76e32"
+hash = "9cd056a68fd6bf3ecfa300275eb837300d618afd78ce52b5c462ead96cc03173"
 
 [versions]
 forge = "47.4.13"

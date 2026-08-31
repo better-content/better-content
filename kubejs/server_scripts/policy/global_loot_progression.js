@@ -5,6 +5,10 @@ var BC_LOOT_REMOVE_ITEMS = [
     // Fishing acquisition is standardized on Starcatcher rods.
     'minecraft:fishing_rod',
     'tconstruct:fishing_rod',
+    'rats:chunky_cheese_token',
+    'minecraft:dragon_head',
+    'minecraft:dragon_egg',
+    'minecraft:dragon_breath',
     // Generated from registry: all creative and netherite-named items are removed from generic loot.
     'ae2:creative_energy_cell',
     'ae2:creative_fluid_cell',
@@ -99,6 +103,10 @@ var BC_CHEST_LOOT_REMOVE_SEEDS = [
     'minecraft:wheat_seeds',
     'ubesdelight:lemongrass_seeds'
 ]
+
+// Family cuts apply to loot as well as recipes; do not maintain a second list.
+var BC_LOOT_QUARANTINE = JsonIO.read('kubejs/config/quarantined_items.json') || { items: [] }
+BC_LOOT_REMOVE_ITEMS = BC_LOOT_REMOVE_ITEMS.concat(BC_LOOT_QUARANTINE.items || [])
 
 function bcLootItemExists(id) {
     try { return Item.exists(id) } catch (e) { return false }

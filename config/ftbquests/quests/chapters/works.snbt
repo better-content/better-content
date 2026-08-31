@@ -46,13 +46,13 @@
 			y: 3.5d
 		}
 		{
-			description: ["Establish the first craftable electrical generation pair."]
-			icon: "pneumaticcraft:pneumatic_dynamo"
+			description: ["Build the first PowerGrid stationary generator housing from the Electrical Machine Block."]
+			icon: "powergrid:generator_housing"
 			id: "1D88EAD05EC7472F"
 			rewards: [{ count: 4, id: "-2C8C5DF8AFE670CA", item: "createdeco:copper_coin", type: "item" }]
 			tasks: [
 				{ id: "-7A027D83BD77EA81", item: "kubejs:electrical_machine_block", type: "item" }
-				{ id: "189208B82D10BA4B", item: "pneumaticcraft:pneumatic_dynamo", type: "item" }
+				{ id: "189208B82D10BA4B", item: "powergrid:generator_housing", type: "item" }
 			]
 			title: "Electrical Control"
 			x: 3d

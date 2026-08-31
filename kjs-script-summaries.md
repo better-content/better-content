@@ -2,7 +2,7 @@
 
 This index is generated from the three executable KubeJS roots. Every listed JavaScript file is active; directory names such as `retained` and `reviewed` describe review history, not load state. `kubejs/inactive_review` is deliberately excluded because it is outside the executable roots.
 
-Current inventory: **66 active scripts** — 6 client, 53 server, and 7 startup.
+Current inventory: **71 active scripts** — 6 client, 57 server, and 8 startup.
 
 ## Client scripts
 
@@ -53,11 +53,13 @@ Current inventory: **66 active scripts** — 6 client, 53 server, and 7 startup.
 - `kubejs/server_scripts/compat/reviewed/kettle_rune_swap.js` — Replaces kettle bucket requirements with Blood Magic altar-capacity runes.
 - `kubejs/server_scripts/compat/reviewed/replaceable_deepslate.js` — Maintains the exact replaceable-deepslate compatibility tags used by worldgen.
 - `kubejs/server_scripts/policy/dimension_access.js` — Removes direct portal routes so rocket and Font graphs own intended dimension access.
+- `kubejs/server_scripts/policy/closed_end_dragon_replacements.js` — Replaces vanilla dragon-boss inputs with finite Ice and Fire families and authors the closed-End Elytra and netherite-sheet routes.
+- `kubejs/server_scripts/policy/conventional_tool_authority.js` — Removes conventional native tool-family recipes so Tinkers' Construct owns pickaxe, axe, shovel, hoe, and sword progression.
 - `kubejs/server_scripts/policy/global_loot_progression.js` — Removes progression-breaking materials from broad loot injection surfaces.
 - `kubejs/server_scripts/policy/removed_items.js` — Applies the exact deny list for intentionally unavailable outputs.
 - `kubejs/server_scripts/policy/tnt_recipe.js` — Restricts TNT to the two vanilla sand inputs instead of broad sand tags.
 - `kubejs/server_scripts/progression/10_hand_workshop.js` — Authors the Hand Workshop roots: Font binders, seared metallurgy, and hand-cranked Create entry.
-- `kubejs/server_scripts/progression/20_ratlantis_logistics.js` — Removes direct Ratlantis access and survival recipes for inputless Rat resource generators; the compatibility mod additively consumes logistics-tier components.
+- `kubejs/server_scripts/progression/20_ratlantis_logistics.js` — Removes direct Ratlantis access and gives Pretty Pipes, Sophisticated automation, Create requests, Rats, AE2, and Little Logistics visible Ratlantis-rooted recipes.
 - `kubejs/server_scripts/progression/21_bumblezone_cultivars.js` — Removes recipes that would create origin-controlled cultivar propagules outside nursery and harvest acquisition.
 - `kubejs/server_scripts/progression/20_powered_works.js` — Authors the Powered Works Machine Block roots and early kinetic machinery.
 - `kubejs/server_scripts/progression/30_precision_factory.js` — Authors the Precision Factory brass, deployment, and mechanical-crafting roots.
@@ -69,6 +71,7 @@ Current inventory: **66 active scripts** — 6 client, 53 server, and 7 startup.
 - `kubejs/server_scripts/transport/10_optional_engineering_roots.js` — Places Eureka, Clockwork, Trackwork, and Create train roots at their intended optional eras.
 - `kubejs/server_scripts/utility/10_recipe_surface_helpers.js` — Defines reusable Rhino-safe helpers for constructing and rewriting recipes.
 - `kubejs/server_scripts/utility/hooks_drones_gates.js` — Gates grappling hooks and autonomous drones as powerful route-editing utilities.
+- `kubejs/server_scripts/zz_crafting_policy_report.js` — Reports exact surviving recipe outputs and live recipe consumers for centrally cut families.
 
 ## Startup scripts
 
@@ -77,5 +80,6 @@ Current inventory: **66 active scripts** — 6 client, 53 server, and 7 startup.
 - `kubejs/startup_scripts/compat/retained/remove__40_potion_brewing_registry.js` — Replaces vanilla reagent discovery with brewing recipes based on food-derived extracts.
 - `kubejs/startup_scripts/policy/disable_trickster_weight.js` — Removes the incompatible Trickster Weight effect from the startup registry surface.
 - `kubejs/startup_scripts/policy/hide_vanilla_tools_from_creative.js` — Removes replaced vanilla tools from creative tabs while leaving registry identities intact.
+- `kubejs/startup_scripts/policy/crafting_policy_contract.js` — Loads `bc.crafting_policy.v1` and blocks startup when a loaded namespace has no policy classification.
 - `kubejs/startup_scripts/progression/10_machine_blocks.js` — Registers the six clean-break Machine Blocks used as one-time era proofs.
 - `kubejs/startup_scripts/progression/20_transition_items.js` — Registers pack-owned intermediates that bridge otherwise separate owning mods.

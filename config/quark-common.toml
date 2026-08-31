@@ -1156,7 +1156,7 @@
 
 			[world.big_stone_clusters.myalite.dimensions]
 				"Is Blacklist" = false
-				Dimensions = ["minecraft:the_end"]
+				Dimensions = ["creatingspace:earth_orbit"]
 
 			[world.big_stone_clusters.myalite.biomes]
 
@@ -1167,7 +1167,7 @@
 
 				#Biome names this should spawn in. Must match both this and 'types' to spawn.
 				[world.big_stone_clusters.myalite.biomes.biomes]
-					Biomes = ["minecraft:end_highlands"]
+					Biomes = ["creatingspace:space"]
 					"Is Blacklist" = false
 
 	[world.blossom_trees]
@@ -1471,7 +1471,7 @@
 
 			[world.new_stone_types.myalite.dimensions]
 				"Is Blacklist" = false
-				Dimensions = ["minecraft:the_end"]
+				Dimensions = ["creatingspace:earth_orbit"]
 
 			[world.new_stone_types.myalite.oregen_lower]
 				#Allowed values: [-64,320]
@@ -1736,7 +1736,7 @@
 		#Disables mob griefing for only specific entities
 		"Enable Selective Mob Griefing" = true
 		#Force Elytra to only work in specific dimensions
-		"Enable Dimension Locked Elytra" = true
+		"Enable Dimension Locked Elytra" = false
 		#Makes falling blocks not able to be duped via dimension crossing
 		"Disable Falling Block Dupe" = true
 		#Fixes several piston physics exploits, most notably including TNT duping

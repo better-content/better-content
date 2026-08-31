@@ -8,6 +8,10 @@ rewards those accomplishments with authored coins. It is not a progression
 guide, recipe map, onboarding flow, checklist of intermediates, or second copy
 of EMI.
 
+The nine live SNBT chapters are the only quest source. A generated graph,
+generated quest directory, crate/screen staging data, or compiler hook must not
+participate in authoring, packaging, or runtime loading.
+
 The live non-completionist book contains exactly three chapters:
 
 - **World** records settlement, self-sufficiency, vessels, dimensions, and

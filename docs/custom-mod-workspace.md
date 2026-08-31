@@ -23,7 +23,7 @@ packwiz refresh
 
 | Repository | Mod ID | Runtime artifact | Local validation and staging |
 |---|---|---|---|
-| [arcane-chunk-loaders](https://github.com/better-content/arcane-chunk-loaders) | `arcane_chunk_loaders` | `arcane-chunk-loaders-0.1.0.jar` | `./gradlew verifyFast stageRuntimeJar` |
+| [arcane-chunk-loaders](https://github.com/better-content/arcane-chunk-loaders) | `arcane_chunk_loaders` | `arcane-chunk-loaders-0.1.0.jar` | `./gradlew verifyFast verifyFull stageRuntimeJar` |
 | [better-content-fixes](https://github.com/better-content/better-content-fixes) | `better_content_fixes` | `better-content-fixes-0.1.3.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [better-content-economy](https://github.com/better-content/better-content-economy) | `better_content_economy` | `better-content-economy-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [better-content-quests](https://github.com/better-content/better-content-quests) | `better_content_quests` | `better-content-quests-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
@@ -35,7 +35,6 @@ packwiz refresh
 | [depth-director](https://github.com/better-content/depth-director) | `depth_director` | `depth-director-0.2.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [dimension-drink](https://github.com/better-content/dimension-drink) | `dimension_drink` | `dimension-drink-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [dynamic-survival-hud](https://github.com/better-content/dynamic-survival-hud) | `dynamic_survival_hud` | `dynamic-survival-hud-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
-| [dynamic-trees-hexerei](https://github.com/better-content/dynamic-trees-hexerei) | `dynamic_trees_hexerei` | `dynamic-trees-hexerei-1.0.1.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [dynamic-trees-malum](https://github.com/better-content/dynamic-trees-malum) | `dynamic_trees_malum` | `dynamic-trees-malum-1.0.1.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [heat-sync](https://github.com/better-content/heat-sync) | `heat_sync` | `heat-sync-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [immersive-weathering-sampler](https://github.com/better-content/immersive-weathering-sampler) | `immersive_weathering_sampler` | `immersive-weathering-sampler-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |

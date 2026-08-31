@@ -1,5 +1,6 @@
 {
   "category": "ars_nouveau:equipment",
+  "advancement": "minecraft:end/root",
   "icon": "ars_nouveau:warp_scroll",
   "name": "item.ars_nouveau.warp_scroll",
   "pages": [

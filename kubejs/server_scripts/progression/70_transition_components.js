@@ -142,18 +142,24 @@ ServerEvents.recipes(function (event) {
         results: [{ item: 'kubejs:titanium_thermal_plate' }]
     }).id('kubejs:transition/aerospace/titanium_thermal_plate')
 
-    // Tome of Blood's final support component proves both aerospace and AE2.
+    // Impossible Matter is a direct 100,000-Source sink. Repeated finite
+    // substrate makes the cost visible while one valid Source Chunk Anchor can
+    // satisfy the request atomically.
     event.custom({
-        type: 'bloodmagic:alchemytable',
-        input: [
-            { item: 'kubejs:space_machine_block' },
-            { item: 'kubejs:ae_logic_package' },
-            { item: 'bloodmagic:etherealslate' },
-            { item: 'kubejs:sky_steel_sheet' }
-        ],
+        type: 'ars_nouveau:enchanting_apparatus',
+        keepNbtOfReagent: false,
         output: { item: 'kubejs:impossible_support_matrix' },
-        syphon: 90000,
-        ticks: 240,
-        upgradeLevel: 5
-    }).id('kubejs:transition/post_ae2/impossible_support_matrix')
+        pedestalItems: [
+            { item: 'ars_nouveau:source_gem_block' },
+            { item: 'ars_nouveau:source_gem_block' },
+            { item: 'ars_nouveau:source_gem_block' },
+            { item: 'ars_nouveau:source_gem_block' },
+            { item: 'minecraft:netherite_ingot' },
+            { item: 'minecraft:netherite_ingot' },
+            { item: 'minecraft:netherite_ingot' },
+            { item: 'minecraft:netherite_ingot' }
+        ],
+        reagent: [{ item: 'minecraft:nether_star' }],
+        sourceCost: 100000
+    }).id('kubejs:transition/ae2/impossible_matter')
 })

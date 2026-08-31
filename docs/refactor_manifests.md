@@ -8,14 +8,14 @@ the closest living design document in the same change.
 ## Executable KubeJS surface
 
 KubeJS executes JavaScript recursively under all three active roots. The current
-tree contains 66 active scripts: 6 client, 53 server, and 7 startup. The exact
+tree contains 71 active scripts: 6 client, 57 server, and 8 startup. The exact
 path and responsibility index is maintained in [`../kjs-script-summaries.md`](../kjs-script-summaries.md).
 
 | Root | Active areas | Count |
 | --- | --- | ---: |
 | `kubejs/client_scripts` | compatibility 4, guidance 1, policy 1 | 6 |
-| `kubejs/server_scripts` | compatibility 37, policy 5, progression 8, transport 1, utility 2 | 53 |
-| `kubejs/startup_scripts` | compatibility 3, policy 2, progression 2 | 7 |
+| `kubejs/server_scripts` | compatibility 37, policy 6, progression 10, transport 1, utility 2, root policy report 1 | 57 |
+| `kubejs/startup_scripts` | compatibility 3, policy 3, progression 2 | 8 |
 
 The `compat/retained` and `compat/reviewed` names classify ownership history;
 they do not disable execution. `kubejs/inactive_review` is outside every active

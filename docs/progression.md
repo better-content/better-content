@@ -9,7 +9,7 @@ item-hover annotations, and event or world feedback. FTB Quests records a small
 set of completed milestones but does not prescribe routes, expose recipe chains,
 or gate discovery through quest dependencies.
 
-## Era 1 — Hand Workshop
+## Era 1 — Hand Workshop and Tinkers' Construct
 
 Build native Tinkers' Construct tools and reach the Nether, Aether, Bumblezone,
 or Ratlantis Dimension Font. Nether and Aether remain the dimensional TConstruct
@@ -31,14 +31,16 @@ cultivars and always yield four propagules. Outside an authored origin, uprootin
 preserves one propagule with only a one-percent mature bonus; edible produce is
 never itself the planting item.
 
-## Era 2 — Powered Works
+## Era 2 — Create Powered Works
 
 Ratlantis is also the origin of scalable logistics. Courier lattices root bulk
 rat, Pretty Pipes, and portable-storage infrastructure; oratchalcum mechanisms
 root ordinary modules and Create's request network; arcane logistics cores root
-high modules, advanced automation, and the three valid AE2 first-power routes.
-Vanilla chests and hoppers, early Create movement, Eureka, Little Logistics, and
-Wares remain independent.
+high modules and advanced automation. AE2's Energy Acceptor requires PowerGrid
+generation, Ratlantis logistics, OC2R computation, meteor material, and
+Impossible Matter together. Vanilla chests and hoppers, early Create movement,
+Eureka, Little Logistics docks, and Wares remain independent; usable Little
+Logistics vehicles require a visible Ratlantis component.
 
 Craft `kubejs:andesite_machine_block` from one Seared Brick block, four
 Andesite Alloy, and four iron plates. It directly unlocks only the Millstone and
@@ -50,15 +52,15 @@ copper plates, one Nether brick, and two Andesite Alloy into
 `kubejs:copper_machine_block`. It directly roots water wheels, the Windmill
 Bearing, the Mechanical Pump, and the first optional primitive transport roots.
 
-## Era 3 — Precision Factory
+## Era 3 — Create Precision and Steam
 
 TCon alloying is the only brass composition route. Compact the Copper block,
 Brass Casing, four brass plates, two electron tubes, and polished rose quartz
 into `kubejs:brass_machine_block`. It directly unlocks the Deployer, Mechanical
-Crafter, and first precision transport controls. Precision Mechanisms and native
+Crafter, the first steam engine, and precision transport controls. Precision Mechanisms and native
 components carry all later recipes.
 
-## Era 4 — Thermal & Pressure
+## Era 4 — PneumaticCraft and Heat Sync
 
 Create's heated Mixer makes Nether grout for Foundry access. Primitive
 compressed iron and dried-kelp/iron-plate pressure seals keep the entry
@@ -71,18 +73,20 @@ Contained PneumaticCraft processes establish sulfuric and hydrochloric acid.
 Heat Sync stores and moves process heat; its Boiler Heater consumes exactly
 1/2/3 heat for an active Create boiler's 1/2/3 heat level.
 
-## Era 5 — Electrical Control
+## Era 5 — PowerGrid and More Red
 
 Mechanically apply insulation/red-alloy wiring to Copper Casing for the first
 PowerGrid conductive casing. Pressure-craft `kubejs:electrical_machine_block`
 from Airtight proof, that casing, four copper plates, two primitive MoreRed
-wires, and an electron tube. It directly roots the first Pneumatic Dynamo and
-circuit-design station. Iron-and-coal steel composite smelts into canonical
+wires, and an electron tube. It directly roots PowerGrid's first stationary
+generator housing and the circuit-design station. PowerGrid is the sole
+stationary electrical-generation authority; PneumaticCraft remains the pressure
+and petroleum authority. Iron-and-coal steel composite smelts into canonical
 TCon steel for that machinery and later transition parts. Nitric acid and
 gold/PGM-only mixed-acid recovery begin here. PowerGrid parts, sensors, motors,
 and circuits carry later recipes.
 
-## Era 6 — Aerospace
+## Era 6 — Creating Space
 
 Pressure-assemble `kubejs:space_machine_block` from Electrical proof, two
 rocket casings, two Inconel sheets, two Hastelloy ingots, and two titanium

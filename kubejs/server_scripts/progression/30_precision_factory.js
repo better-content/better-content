@@ -30,4 +30,10 @@ ServerEvents.recipes(function (event) {
     event.shaped('create:track_station', [' R ', ' B ', ' S '], {
         R: 'create:railway_casing', B: 'kubejs:brass_machine_block', S: 'create:sturdy_sheet'
     }).id('kubejs:precision_factory/transport_root/track_station')
+
+    event.remove({ output: 'create:steam_engine' })
+    event.shaped('create:steam_engine', [' G ', 'ABA', ' C '], {
+        G: '#forge:plates/gold', A: 'create:andesite_alloy',
+        B: 'kubejs:brass_machine_block', C: '#forge:storage_blocks/copper'
+    }).id('kubejs:precision_factory/direct_root/steam_engine')
 })

@@ -1,5 +1,6 @@
 {
   "category": "ars_nouveau:rituals",
+  "advancement": "minecraft:end/root",
   "icon": "ars_nouveau:ritual_conjure_island_plains",
   "name": "item.ars_nouveau.ritual_conjure_island_plains",
   "pages": [

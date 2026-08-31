@@ -17,9 +17,36 @@ ServerEvents.recipes(function (event) {
         'ars_nouveau:water_essence_to_obsidian',
         'ars_nouveau:fire_essence_to_magma_block',
         'ars_nouveau:conjuration_essence_to_soul_sand',
-        'ars_nouveau:conjuration_essence_to_end_stone'
+        'ars_nouveau:conjuration_essence_to_end_stone',
+        'bloodmagic:alchemytable/sigil_lava_bucket',
+        'bloodmagic:alchemytable/sigil_water_bucket',
+        'bloodmagic:alchemytable/sigil_water_bottle',
+        'bloodmagic:alchemytable/reagent_frost_water_sigil',
+        // Exact final-graph closures for serializers whose outputs are not
+        // matched by KubeJS's generic output filter.
+        'ars_elemental:head_cut/behead_dragon',
+        'ars_nouveau:drygmy_charm',
+        'ars_nouveau:enchanters_sword',
+        'ars_nouveau:relay_warp',
+        'ars_nouveau:stable_warp_scroll',
+        'ars_nouveau:thread_drygmy',
+        'ars_nouveau:thread_whirlisprig',
+        'ars_nouveau:warp_scroll_copy',
+        'ars_nouveau:whirlisprig_charm',
+        'arseng:source_acceptor',
+        'arseng:source_cell_housing',
+        'arseng:source_storage_cell_1k',
+        'arseng:source_storage_cell_4k',
+        'arseng:source_storage_cell_16k',
+        'arseng:source_storage_cell_64k',
+        'arseng:source_storage_cell_256k',
+        'pneumaticcraft:pressure_chamber/pressure_chamber_disenchanting',
+        'pneumaticcraft:pressure_chamber/pressure_chamber_enchanting',
+        'tconstruct:tools/severing/ender_dragon_head'
     ].forEach(function (id) { event.remove({ id: id }) })
     event.remove({ type: 'occultism:miner' })
     event.remove({ type: 'bloodmagic:dimension_drink' })
+    event.replaceInput({ id: 'bloodmagic:alchemytable/reagent_suppression' },
+        'bloodmagic:teleposer', 'minecraft:sponge')
     BC_DISABLED_ITEMS.forEach(function (item) { event.remove({ output: item }) })
 })

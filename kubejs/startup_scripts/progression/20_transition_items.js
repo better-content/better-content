@@ -17,7 +17,7 @@ StartupEvents.registry('item', function (event) {
         ['electrical_control_module', 'Electrical Control Module'],
         ['electrical_instrumentation_module', 'Electrical Instrumentation Module'],
         ['ae_logic_package', 'AE Logic Package'],
-        ['impossible_support_matrix', 'Impossible Support Matrix'],
+        ['impossible_support_matrix', 'Impossible Matter'],
         ['purified_blood_catalyst', 'Purified Blood Catalyst'],
         ['purified_source_core', 'Purified Source Core'],
         ['living_binding', 'Living Binding'],

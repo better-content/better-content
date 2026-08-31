@@ -6,7 +6,7 @@ hash = "3cc1f64cc6c9fc485828891d0fb64869174421527b9bab5012a54852e139c34f"
 
 [[files]]
 file = "AGENTS.md"
-hash = "a7f593432aee380cb19faffe25593f6ba938b9f022664fc0fafd3afc5ae131d8"
+hash = "4a9c333ffb9f79c401b4c29025840ab20892d913d3ec6cb05b796cfc97ee8094"
 
 [[files]]
 file = "LICENSE"
@@ -18,7 +18,7 @@ hash = "40b8430f40df3bcdbf54e6ed70e372aaa8d2302675928ae1fe8a34c031552cfd"
 
 [[files]]
 file = "README.md"
-hash = "57d70724e711ac4d032699a680bf909f92b748dab0a140f39f8776126c0e8ae7"
+hash = "e3654621f7b4771e21cde6e0b179e8c9b8afc6fc6f7f95a1dd21e31b593493fd"
 
 [[files]]
 file = "REFACTOR_CHECKLIST.md"
@@ -1987,14 +1987,6 @@ hash = "c9ad3abb2f1278b3b3aa5439147ded83dde17950162e05a075c11ede0130071a"
 [[files]]
 file = "config/adpother/Biomes/terrablender$deferred_placeholder.cfg"
 hash = "4b3bb7d42b27416070f5133b7b2e8e93691fe4c643e80e65d9d6e755caddce02"
-
-[[files]]
-file = "config/adpother/Biomes/unusualend$gloopstone_lands.cfg"
-hash = "7da9315e832db34a5b521be34d47bc940a8485c3c0bf7087bcab7461b245fa72"
-
-[[files]]
-file = "config/adpother/Biomes/unusualend$warped_reef.cfg"
-hash = "0508a01bb567025c55860a76e92d8fc45b82e104f409d28c460346e47c66600d"
 
 [[files]]
 file = "config/adpother/Blocks/filter_frame.cfg"
@@ -4749,370 +4741,6 @@ file = "config/alexscaves-client.toml"
 hash = "cf1750e7d1c9e5190f13889781305c00d9f3966653b7dd6fd6fc265ae0065da6"
 
 [[files]]
-file = "config/alexsmobs.toml"
-hash = "9b9ad6ddd22957753213f4596c326e62480efc6e234ad5dfe272b9c674afddc0"
-
-[[files]]
-file = "config/alexsmobs/alligator_snapping_turtle_spawns.json"
-hash = "df14afd6e1e96ace0dc8e4c71bc325e3baec8dbeaebf61f682561a70fc145f9d"
-
-[[files]]
-file = "config/alexsmobs/anaconda_spawns.json"
-hash = "ca961946a7b3c6e9abcb1bb82bbf36e1f9ce01d11769a06a7fbff6351293ff5d"
-
-[[files]]
-file = "config/alexsmobs/anteater_spawns.json"
-hash = "f65e31155b2f2e033bed66dc5ec2ce7f6962be3389369ff800b69dfdecb5d990"
-
-[[files]]
-file = "config/alexsmobs/bald_eagle_spawns.json"
-hash = "f8b51a798bfa4b51e0ee8fb78c860ca5b2677583db10584792a0e1548f17d396"
-
-[[files]]
-file = "config/alexsmobs/banana_slug_spawns.json"
-hash = "1d5d0ce4ef42e94f0361c41b4b2402b64e87f0b1b987e1f1b2f6b2ac377211a7"
-
-[[files]]
-file = "config/alexsmobs/bison_spawns.json"
-hash = "78e726ed002a31f5084a7b49fcce467c5623a046981d6c59d9ed7c4eb6cdbb1e"
-
-[[files]]
-file = "config/alexsmobs/blobfish_spawns.json"
-hash = "7e7b175c33aed22c3d2cd31e215c6243e3790b07a3664b42d130a8f3b897489f"
-
-[[files]]
-file = "config/alexsmobs/blue_jay_spawns.json"
-hash = "7d1f784ab378e1e851e73dbb6f81866420c1328d25f754546d82c417bf304644"
-
-[[files]]
-file = "config/alexsmobs/bone_serpent_spawns.json"
-hash = "47eef91378d3d6455a911d58cc3afdbfcdda7fd49968a7921b22620faa8ff672"
-
-[[files]]
-file = "config/alexsmobs/bunfungus_spawns.json"
-hash = "5d5a9d2039b6df546b788f62cb376cc29312a7115a5553541652aad7259436a6"
-
-[[files]]
-file = "config/alexsmobs/cachalot_whale_beached_spawns.json"
-hash = "73b8f83ddfa936642b38af1003e3c47eab6f089ad61612ee5181137409038f57"
-
-[[files]]
-file = "config/alexsmobs/cachalot_whale_spawns.json"
-hash = "fb901f1ea0bce7b9fb51dfaeb565539a3c1a9ee86bafb49caddac7ca1002e296"
-
-[[files]]
-file = "config/alexsmobs/caiman_spawns.json"
-hash = "542cca079ae671a6d928737b622b205deebfe2aed5864a01b5048f501aec2753"
-
-[[files]]
-file = "config/alexsmobs/capuchin_monkey_spawns.json"
-hash = "83b68d395236771ae9276f48b2988cfa9eb65e14dc41531b37a6b4e77c64859a"
-
-[[files]]
-file = "config/alexsmobs/catfish_spawns.json"
-hash = "3c097d29c1f74807815d4c13e3586a76528ac3c104670ce95852bd3b62f9e16e"
-
-[[files]]
-file = "config/alexsmobs/cave_centipede_spawns.json"
-hash = "973b8ebc19fa04e02b050f28359ee6bffbae93367f49ecac10892f4a2c1dad7d"
-
-[[files]]
-file = "config/alexsmobs/cockroach_spawns.json"
-hash = "97a67afb52f1398f2c55e2a74001e5b893394e28d3f0eb00695f049bdd19f204"
-
-[[files]]
-file = "config/alexsmobs/comb_jelly_spawns.json"
-hash = "cf9ba87b0d2001543fe09d8f6a4c602c03644643a9bd49d1e9ca0b041ab4dc02"
-
-[[files]]
-file = "config/alexsmobs/cosmaw_spawns.json"
-hash = "8e1d05a9b4ab8b923ff4951ef391665f3bdd218d943152f6f1f57509786bc0f7"
-
-[[files]]
-file = "config/alexsmobs/cosmic_cod_spawns.json"
-hash = "aed14e990ed38ee78214b1ea4a15e06bca1b8d098e1e440596be9ab14e4403b8"
-
-[[files]]
-file = "config/alexsmobs/crimson_mosquito_spawns.json"
-hash = "104fa9ce71421c5023abba88ce382957828b22341b44c2d03b3300b760482c9d"
-
-[[files]]
-file = "config/alexsmobs/crocodile_spawns.json"
-hash = "a73d36d1b5dd75eb20f6143193b991e942f4ef4cef725835b66ec01197d7074f"
-
-[[files]]
-file = "config/alexsmobs/crow_spawns.json"
-hash = "cace87b5d504be10d1fff107ad14349066ae1c39d5200a7a29bdd5476167d9b8"
-
-[[files]]
-file = "config/alexsmobs/devils_hole_pupfish_spawns.json"
-hash = "e7855fa7d73f4d3af77f47ddd70b4fcbab7862302d004b4ddae9dddc75c4e402"
-
-[[files]]
-file = "config/alexsmobs/dropbear_spawns.json"
-hash = "0fa8f72e4c73805727577a343758cfd39377cbdadebb88b6b2343183053e16cb"
-
-[[files]]
-file = "config/alexsmobs/elephant_spawns.json"
-hash = "cac271d780a6ed65db7b22e6944b6d456805d72b309865d6293ad6aa4f60c3e2"
-
-[[files]]
-file = "config/alexsmobs/emu_spawns.json"
-hash = "70e30e058709266e665eb6642df126eeee744d05e63d77344501e78cb4a37851"
-
-[[files]]
-file = "config/alexsmobs/endergrade_spawns.json"
-hash = "ca6e68bd3e74eb9cedcdbae4c82f594c4e85bdd54e1d0e35344a3febb9672980"
-
-[[files]]
-file = "config/alexsmobs/enderiophage_spawns.json"
-hash = "846748f4f352dead7fae39221d653713b7cbd775eaf10f80e0dea86f4e9ccb9a"
-
-[[files]]
-file = "config/alexsmobs/farseer.json"
-hash = "c245528d844458d8ac416572ee0df7575bb23d58beb07367d4cd55c66fec9000"
-
-[[files]]
-file = "config/alexsmobs/flutter_spawns.json"
-hash = "f729be2a0bc7bccc88cde40464f990d6074bfcf52a0d1d6719d8ebcd63c496ff"
-
-[[files]]
-file = "config/alexsmobs/fly_spawns.json"
-hash = "e7855fa7d73f4d3af77f47ddd70b4fcbab7862302d004b4ddae9dddc75c4e402"
-
-[[files]]
-file = "config/alexsmobs/flying_fish_spawns.json"
-hash = "69904b309696b6081cdec1ea87bdb62f84886cf6dac600a8bca231860c3a3f2f"
-
-[[files]]
-file = "config/alexsmobs/frilled_shark_spawns.json"
-hash = "7e7b175c33aed22c3d2cd31e215c6243e3790b07a3664b42d130a8f3b897489f"
-
-[[files]]
-file = "config/alexsmobs/froststalker_spawns.json"
-hash = "2cc43cdc9df3b20cc2eeb75a3c11736558f544571640607d08dec5c0a939c02d"
-
-[[files]]
-file = "config/alexsmobs/gazelle_spawns.json"
-hash = "17a5c3263942410596f91fb0aece138e5115bfabfa2a5913a63406fcb64b42d0"
-
-[[files]]
-file = "config/alexsmobs/gelada_monkey_spawns.json"
-hash = "cdd0380bfa9b754856150966a042f807ac48d2f9409f4f2b543be19e87f4c41f"
-
-[[files]]
-file = "config/alexsmobs/giant_squid_spawns.json"
-hash = "7e7b175c33aed22c3d2cd31e215c6243e3790b07a3664b42d130a8f3b897489f"
-
-[[files]]
-file = "config/alexsmobs/gorilla_spawns.json"
-hash = "8c90151f66a632b01e7b8f6998f72618720aae5362c1df0bdd7fefdb13cc20c8"
-
-[[files]]
-file = "config/alexsmobs/grizzly_bear_spawns.json"
-hash = "7d1f784ab378e1e851e73dbb6f81866420c1328d25f754546d82c417bf304644"
-
-[[files]]
-file = "config/alexsmobs/guster_spawns.json"
-hash = "263974f58a4b48df633648246820681745da9f9e16f30fefe6e07f576251dfb1"
-
-[[files]]
-file = "config/alexsmobs/hammerhead_shark_spawns.json"
-hash = "a5eeb1a3843a12ef4fde1d8a3a5f13161034457c0901d3f938aa71a20e6712f3"
-
-[[files]]
-file = "config/alexsmobs/hummingbird_spawns.json"
-hash = "6aa305d47ca32364d445c04c8a20da36a7ccef97955c27e834d4114604d2785d"
-
-[[files]]
-file = "config/alexsmobs/jerboa_spawns.json"
-hash = "c4b2ef89d9ad5c4dffcebb51209837da430b166c5767c1a38d90911c4445b124"
-
-[[files]]
-file = "config/alexsmobs/kangaroo_spawns.json"
-hash = "70e30e058709266e665eb6642df126eeee744d05e63d77344501e78cb4a37851"
-
-[[files]]
-file = "config/alexsmobs/komodo_dragon_spawns.json"
-hash = "695a3eb4d61a8208cc634871c237b0e6efc980ac668793f4686848e32cda0907"
-
-[[files]]
-file = "config/alexsmobs/laviathan_spawns.json"
-hash = "07d0215377f12f1299ec46b6277426c3cf957aa1d310c97fa943cdf5ace8d260"
-
-[[files]]
-file = "config/alexsmobs/leafcutter_anthill_spawns.json"
-hash = "f65e31155b2f2e033bed66dc5ec2ce7f6962be3389369ff800b69dfdecb5d990"
-
-[[files]]
-file = "config/alexsmobs/lobster_spawns.json"
-hash = "bb0c918e8dbd4d003417a1bcabb38b8433d1f9be95fe6f8feef95d30616b49a7"
-
-[[files]]
-file = "config/alexsmobs/maned_wolf_spawns.json"
-hash = "8483d96341369b430ff2ebfebd7562b0c58c40b96be541cc88189fc696606a0d"
-
-[[files]]
-file = "config/alexsmobs/mantis_shrimp_spawns.json"
-hash = "4f6099fe4d9f99530f9f0f9bae7e55c0713506efdc47da69d227ae62137647e4"
-
-[[files]]
-file = "config/alexsmobs/mimic_octopus_spawns.json"
-hash = "9c68a433ab6f75ff9e8d46868480158e4c1f46949779cb0b0d973f7759dbfc2d"
-
-[[files]]
-file = "config/alexsmobs/mimicube_spawns.json"
-hash = "fcace6e8c558df6eb13827f7a2b4a7f43c9fdfd3015331bd7e277329ca034c34"
-
-[[files]]
-file = "config/alexsmobs/moose_spawns.json"
-hash = "abac051da2458ec848604b66a6d7889f7c715060bb9706c1d1822155127d096c"
-
-[[files]]
-file = "config/alexsmobs/mudskipper_spawns.json"
-hash = "542cca079ae671a6d928737b622b205deebfe2aed5864a01b5048f501aec2753"
-
-[[files]]
-file = "config/alexsmobs/mungus_spawns.json"
-hash = "5d5a9d2039b6df546b788f62cb376cc29312a7115a5553541652aad7259436a6"
-
-[[files]]
-file = "config/alexsmobs/murmur.json"
-hash = "973b8ebc19fa04e02b050f28359ee6bffbae93367f49ecac10892f4a2c1dad7d"
-
-[[files]]
-file = "config/alexsmobs/orca_spawns.json"
-hash = "2e62ae273c3488a294068e5ed737dbf08791f4758cd3659308824d7bf4ece377"
-
-[[files]]
-file = "config/alexsmobs/platypus_spawns.json"
-hash = "b96f9e44f59f54b67460784fb1fdfa06d053f9ca9abb4fc3b04f222fd65ee958"
-
-[[files]]
-file = "config/alexsmobs/potoo_spawns.json"
-hash = "59c5832a40ef0e7212a4d499862f931a5dfcd3ff6d68598153f1274191b0939d"
-
-[[files]]
-file = "config/alexsmobs/raccoon_spawns.json"
-hash = "2f353aa8720d03fbdef9d9e4932ecc4435b7923bbc72191fab6f46acb66d3a12"
-
-[[files]]
-file = "config/alexsmobs/rain_frog_spawns.json"
-hash = "c4b2ef89d9ad5c4dffcebb51209837da430b166c5767c1a38d90911c4445b124"
-
-[[files]]
-file = "config/alexsmobs/rattlesnake_spawns.json"
-hash = "b8662bb3de9e2e5cc4af3773700fe6446c389980a80f6350f99d51f3fa2cef39"
-
-[[files]]
-file = "config/alexsmobs/rhinoceros_spawns.json"
-hash = "17a5c3263942410596f91fb0aece138e5115bfabfa2a5913a63406fcb64b42d0"
-
-[[files]]
-file = "config/alexsmobs/roadrunner_spawns.json"
-hash = "b8662bb3de9e2e5cc4af3773700fe6446c389980a80f6350f99d51f3fa2cef39"
-
-[[files]]
-file = "config/alexsmobs/rocky_roller_spawns.json"
-hash = "98dc351abc061685560adc82bd3ffa6e4c87d4faab81e9bb6a9e2a6f07cdb177"
-
-[[files]]
-file = "config/alexsmobs/seagull_spawns.json"
-hash = "4dca182ebef46ea0076b8e8066add18f69527cf2f81da83e77e0409127c92dc4"
-
-[[files]]
-file = "config/alexsmobs/seal_spawns.json"
-hash = "ef706c1e2ba0b9356523f8aeb3679303ab98d85c9b761d0e55962e930be4d8e6"
-
-[[files]]
-file = "config/alexsmobs/shoebill_spawns.json"
-hash = "0d8683c0a1b8176d4e89f88c4f3b1e6fbf6b269781497a190749904c7323eeec"
-
-[[files]]
-file = "config/alexsmobs/skelewag_spawns.json"
-hash = "86aad88d05c283679e85900cab1bf3977d496849005ac068a14e40b93db35aa2"
-
-[[files]]
-file = "config/alexsmobs/skreecher.json"
-hash = "f812e719afb24421c6853dacf4d1f66864305e335cfdf6193613d7c408ecab30"
-
-[[files]]
-file = "config/alexsmobs/skunk_spawns.json"
-hash = "01cc2eb4d92ba30b7301b9325a353cd96c5c7ff263c348795bfb34698cf8f11b"
-
-[[files]]
-file = "config/alexsmobs/snow_leopard_spawns.json"
-hash = "fdf546af7c7ff2307d0862c0802450eef1e99554af3a340e7a6af69fa5785ea5"
-
-[[files]]
-file = "config/alexsmobs/soul_vulture_spawns.json"
-hash = "45407796e49769550eef92fd3953daa191c85aaf032fb2be32fe591b0199a172"
-
-[[files]]
-file = "config/alexsmobs/spectre_spawns.json"
-hash = "ca6e68bd3e74eb9cedcdbae4c82f594c4e85bdd54e1d0e35344a3febb9672980"
-
-[[files]]
-file = "config/alexsmobs/straddler_spawns.json"
-hash = "5ee746cf50b358048a0243e4c45997285cf4a9b736758d388ad730d4ed493900"
-
-[[files]]
-file = "config/alexsmobs/stradpole_spawns.json"
-hash = "5ee746cf50b358048a0243e4c45997285cf4a9b736758d388ad730d4ed493900"
-
-[[files]]
-file = "config/alexsmobs/sugar_glider_spawns.json"
-hash = "cec5208e2e9f12aa8ce13d0f6d34a18500a77d143441c9b511df21c623fe368f"
-
-[[files]]
-file = "config/alexsmobs/sunbird_spawns.json"
-hash = "7b82ff39e191bd213cd8ecf06ff9a78c4658e6f6b9d8b48a4fcc4017e7268cb5"
-
-[[files]]
-file = "config/alexsmobs/tarantula_hawk_spawns.json"
-hash = "c4b2ef89d9ad5c4dffcebb51209837da430b166c5767c1a38d90911c4445b124"
-
-[[files]]
-file = "config/alexsmobs/tasmanian_devil_spawns.json"
-hash = "40c769365424d492a4c17700bb8cfac4c8ce7fac2bc16728f0c4287e3a043130"
-
-[[files]]
-file = "config/alexsmobs/terrapin_spawns.json"
-hash = "b96f9e44f59f54b67460784fb1fdfa06d053f9ca9abb4fc3b04f222fd65ee958"
-
-[[files]]
-file = "config/alexsmobs/tiger_spawns.json"
-hash = "f88fc1b519759fe41347afca59030619365e173c577e8c1adfcb88777078d066"
-
-[[files]]
-file = "config/alexsmobs/toucan_spawns.json"
-hash = "f65e31155b2f2e033bed66dc5ec2ce7f6962be3389369ff800b69dfdecb5d990"
-
-[[files]]
-file = "config/alexsmobs/triops_spawns.json"
-hash = "c4b2ef89d9ad5c4dffcebb51209837da430b166c5767c1a38d90911c4445b124"
-
-[[files]]
-file = "config/alexsmobs/tusklin_spawns.json"
-hash = "9ab4772704660c679ea30dff2db2c1272843e00675e2a7e610adcc6486120c3c"
-
-[[files]]
-file = "config/alexsmobs/underminer.json"
-hash = "97a67afb52f1398f2c55e2a74001e5b893394e28d3f0eb00695f049bdd19f204"
-
-[[files]]
-file = "config/alexsmobs/void_worm_spawns.json"
-hash = "6712a2d6165ed52b7d251a8fc4cbfb6c1f834210a8bda82b55440402fd2d3273"
-
-[[files]]
-file = "config/alexsmobs/warped_mosco_spawns.json"
-hash = "6712a2d6165ed52b7d251a8fc4cbfb6c1f834210a8bda82b55440402fd2d3273"
-
-[[files]]
-file = "config/alexsmobs/warped_toad_spawns.json"
-hash = "72126b26d7f3ae03b80df97dd103e0cec87d10829e86ac8b08da23abc7b318d8"
-
-[[files]]
 file = "config/almostunified/debug.json"
 hash = "3e03a291b5310a6b94a45aff63e4731baa643701c42a968ed716483ccd1d5a37"
 
@@ -5150,7 +4778,7 @@ hash = "557cc1b6ba1369f5d2459054cc2b9e9f91c58b9cdecb0a3023a911b435b1a9c8"
 
 [[files]]
 file = "config/apotheosis/enchantments.cfg"
-hash = "1296d8e3d2f0968d04ecc7de9a1bf7beef6461bb4c12d7b4e5d69a12219e68ee"
+hash = "cdc4df94ee728836511606a13bfb3d06b8a8d629b8ed1f2ca0e4bb25ea32d0ee"
 
 [[files]]
 file = "config/apotheosis/garden.cfg"
@@ -5158,7 +4786,7 @@ hash = "dea4d260e6eac868297c0f9cd80545fd6b54f7344c678b89edda980a3fc5e8cf"
 
 [[files]]
 file = "config/apotheosis/names.cfg"
-hash = "3354e7e664412943f16c23a5d7c9d5ed4b94089e49e01ce09c760a6d4d651ba0"
+hash = "211e78f33e86a58b38894ba4ab1affda8e9f4b9a5ae32e8477a617bae903c429"
 
 [[files]]
 file = "config/apotheosis/potion.cfg"
@@ -5638,7 +5266,7 @@ hash = "e2f591923558d17aa4bd65859e30b388083de43a58b7642dbeb4863e53d7d145"
 
 [[files]]
 file = "config/better-content-log4j2.xml"
-hash = "fa6018ea68941364ebb606713752de5261175d276f0f4dddeee9921ae0d22987"
+hash = "1eddd3daac7f787a3cabecf15648b5243f9a90b18fe307ec7ba69d5df4850d59"
 
 [[files]]
 file = "config/better_content_economy-common.toml"
@@ -5841,8 +5469,12 @@ file = "config/embeddium-options.json"
 hash = "18b453ebd91dfaa8e6e50b68453f8445e5477c81f926c5a5c539fd35d10f46cc"
 
 [[files]]
+file = "config/endermanoverhaul.json"
+hash = "90eddc876d428a4b96df81f23ed8d8b2cbdb3d2c284ff85cd2278f5464f13a2b"
+
+[[files]]
 file = "config/endermanoverhaul.jsonc"
-hash = "b0f4fd39dffdb548c1a7803b4eb3f197466ff99ca5a7a527a5c2199d49a0a1ba"
+hash = "32f272ea0773d835a8566a479546d7a119dfe204f7f8d0b171d9d76f5893b11f"
 
 [[files]]
 file = "config/enhancedai/Mobs/Break anger/break_anger_config.json"
@@ -5957,10 +5589,6 @@ file = "config/flash_flood_config.json"
 hash = "7404819a88566283053656c89b2f699a643327f24967d3acb0a89f15c123d216"
 
 [[files]]
-file = "config/flowing_fluids.json"
-hash = "3a9d2c8f78ed10b9dba2febb9c18a39c397448dc3eb60fbbb91034a16028b7ad"
-
-[[files]]
 file = "config/flywheel-client.toml"
 hash = "9dbbbbf8a27341be108f0fa8b557caa1d18a7c7bdc6584ba623bb8358cbfd407"
 
@@ -6022,7 +5650,7 @@ hash = "c6a52a01265802a9eaa1d6dc64067a05dd360f058b4f0d45e97a8d2ec6feaddf"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/works.snbt"
-hash = "31c33a1c3e59acca3053d9f30ccee499b7487bc55c395840d63b690e056ff9d1"
+hash = "5863fb2b99d5c4b06ba2bf9101e0791566c5d699ab7a16402217b43fda8d0ae8"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/world.snbt"
@@ -6078,7 +5706,7 @@ hash = "645da331f569f887cda302c428cdaa1a8dc934183c914c708dc6821c20d9c713"
 
 [[files]]
 file = "config/guardvillagers-common.toml"
-hash = "ff229905f1436dc6cf3adc0aaf01c070409a74d4ba73c7131aaa571193697a2b"
+hash = "cb966177d38a87e5f516ca4fa85f42c39cb6b060158961f7099fded066cc7768"
 
 [[files]]
 file = "config/guideme.toml"
@@ -6099,6 +5727,10 @@ hash = "4081e4d4ea94cf29646b5501e4d439e102b3dd85de38232eb212ad1cf057cd38"
 [[files]]
 file = "config/hyle-common.toml"
 hash = "b0f8eabb0b138d2486a174188269d69102bce66cedb45033732687af192b1ff1"
+
+[[files]]
+file = "config/iceandfire-client.toml"
+hash = "28ebeb5f6b38ebd0a2d4f3cca0f24612681ec67408b4e5bf67ba819f54d65c76"
 
 [[files]]
 file = "config/immersive_weathering-client.toml"
@@ -6406,7 +6038,7 @@ hash = "453c1d339543fc916dc9fec69c5c3f32e51d3a3ed12b2cb7c219902313597d19"
 
 [[files]]
 file = "config/pneumaticcraft-common.toml"
-hash = "a2f9a8744651f4044adf1f7382340382edfcbc1db22c7e4d5d0e8a1b624f0792"
+hash = "cb25dbe621c5cf8a254a4c37c0f30e54b7fd4d3c8f4596648e79f19879e9afe4"
 
 [[files]]
 file = "config/ponder-client.toml"
@@ -6438,7 +6070,7 @@ hash = "a5d08b917ef15d63c2be151c5741f52ec8a892027c1dd6b3cf23a88282834229"
 
 [[files]]
 file = "config/quark-common.toml"
-hash = "044a1a53f3b1624e27bc3bb20643c1d0836c2a11970831e2a44a2d4b05448207"
+hash = "0ee57cb373987b52492cff057c88ef89fe47d568c5b658ded7c5c72ad2d9e123"
 
 [[files]]
 file = "config/quickstack-client.toml"
@@ -6578,7 +6210,7 @@ hash = "c189c6bcc31050accab76a96fdda2da730531e2057d852868dc3235b5c4fd090"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_pack_solid_blocks.toml"
-hash = "da83956cef3e76450ea2d43bad89e250d4059ff4f1f71f1585c2ebdeab0a08a1"
+hash = "ac76ad7ad33f1312f05f4b1bec050d8863c843ee4c8ce9e661bc0f206395fe57"
 
 [[files]]
 file = "config/rbp/block_definitions/glass.toml"
@@ -6778,7 +6410,7 @@ hash = "7818661178baf82b538fd8b790fd34aaaf6b47e038b8d07f50834863dd11fbcc"
 
 [[files]]
 file = "config/rbp/world_definitions/overworld.toml"
-hash = "cf330f1c7b5cf805f30323f2b08d36f5fec9f69c11a6f204bc6c2e74ff078456"
+hash = "a493e7b3b70bef3b913838b98a0a3a21e2608445a2d1f049c2a1bd0b632e998d"
 
 [[files]]
 file = "config/realisticphysics/realisticphysics-common.toml"
@@ -6910,7 +6542,7 @@ hash = "686769e591fb7b01743f0662baeca8b6e241dd93a24879a3aa2619a9ada76b8f"
 
 [[files]]
 file = "config/supplementaries-client.toml"
-hash = "d08595f892f2cf83ac9cff48bd65567b824b55e0deea0a0c542f2f5fa350d930"
+hash = "79313726ab49a00be9deead3ba5cb095004d7afc95f94aca5628f93be51c8920"
 
 [[files]]
 file = "config/supplementaries-common.toml"
@@ -7110,7 +6742,7 @@ hash = "f87aba26d62539af116539979bbf53723a7ec52e8a16f412b59b8de2a1e7a1a5"
 
 [[files]]
 file = "config/zombieawareness/MobLists.toml"
-hash = "75e906c331b50a2dec0904379b6f9eebb4da24db89bf5456a5121a794b9be9fd"
+hash = "4a8a8d063ed27f2649a981467db45c00665d2df22d4d5d70404753183ee31402"
 
 [[files]]
 file = "config/zombieawareness/PlayerRulesAndLists.toml"
@@ -8233,6 +7865,10 @@ file = "defaultconfigs/framedblocks-server.toml"
 hash = "6f6e45c48f1da1ad70871c2462b717bef6c51f99c100bbeebe66fa71f0e82b8a"
 
 [[files]]
+file = "defaultconfigs/iceandfire-server.toml"
+hash = "c2aebbc7227edcb76858005f3391a184cd42d75c584fd5266ac29aaf7835d527"
+
+[[files]]
 file = "defaultconfigs/incontrol-server.toml"
 hash = "15db68cea00725e4623098678f8a326bd11245b984b8ea6a6e7663e3a71e19d4"
 
@@ -8290,7 +7926,7 @@ hash = "e7e2bc2c800e8c9e84a448ee1ee1a7318b1f369ac65c72a98a5944be1e991cf1"
 
 [[files]]
 file = "defaultconfigs/rehooked-server.toml"
-hash = "273ce48b3bcfa393a2bbb7a6f0d211c948924bc46a6e49412acfbaf69e2ebf14"
+hash = "f38540cf88a712ab5542f289b2d4233b19431f24705230b165d8c5e8ef022e3c"
 
 [[files]]
 file = "defaultconfigs/settlement_roads-server.toml"
@@ -8621,8 +8257,16 @@ file = "kubejs/assets/ars_nouveau/patchouli_books/worn_notebook/en_us/categories
 hash = "71908dae39ea6ab2dea5e6128e8023dbff78a5762405230bfa29540653ae06e5"
 
 [[files]]
+file = "kubejs/assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/automation/me_cells.json"
+hash = "81afdf164907a5f2cb023d761a1b7fac30275d1b964e23e11fba4f426cfc0427"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/automation/source_acceptor.json"
+hash = "41ede8a95bf019674a60a48c9199b8b0cae2239a0eaeb6a848a194d0f2932f89"
+
+[[files]]
 file = "kubejs/assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/equipment/warp_scroll.json"
-hash = "4d2c6e8ce63e04af0a65605de62f17636c9014c1ae96f216d666cc1b54b08c7d"
+hash = "07a4bd4668f9a37b1dbe19b8bb63266fcaaa55a981396cfa78e6ac40c42b1400"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/getting_started/trinkets.json"
@@ -8634,19 +8278,23 @@ hash = "eb74737cbc9ea3692a4ae4312feaa892871a0fa9829d41537a6d6195b49f9d24"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/machines/warp_portal.json"
-hash = "8988a9f05b2df1a6febfd1f35ec3505fca4b8f0d835f79984f0df442ffd3d36e"
+hash = "8dbb6fb60ab44ecc9b9b548693b0208877e13d11cc661c6654b6b8b790888bfe"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/rituals/ritual_conjure_island_desert.json"
-hash = "70fa2f4887a38dac18951d034dc471b54d1609374125101d9cef48eb3fb8b176"
+hash = "1de010045f3e3b5c8260eb7894410a10abfc743af6f9f232686ca9836b4c7091"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/rituals/ritual_conjure_island_plains.json"
-hash = "8718925f0bb0b411c37b107934cebd64af3a1ab3eb16603d0cf5ac5f7e98ce93"
+hash = "a2faeb1ba8b9ae22450231e0797359fe321906d4e4c0bb7ead8ebbf7eb397cd0"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/rituals/ritual_flight.json"
-hash = "c268515960192e4e5563b385869b4145a4b53b03e162817027a124b7dd4c8462"
+hash = "185282b535d75ca8ff670366a33ebfc30e9e89859d57cf30d37215e64f23a33b"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/patchouli_books/worn_notebook/en_us/entries/rituals/ritual_warping.json"
+hash = "a2944f21cbf644d686e3a07fe035d9f52589fb6a93490250ffe5e0ca9cf80837"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/block/stripped_blue_archwood_log_top.png"
@@ -8797,8 +8445,20 @@ file = "kubejs/assets/complicated_bees/patchouli_books/field_guide/en_us/entries
 hash = "b150b2b9f5eb596809dabfe08faa88842d8d6942a1c0710d5a10c69829457015"
 
 [[files]]
+file = "kubejs/assets/complicated_bees/patchouli_books/field_guide/en_us/entries/machines/furnace_generator.json"
+hash = "5c83cde8470e78bb0d90c93750d3fe9b82d051b0ed989e6343e6724287ef2413"
+
+[[files]]
+file = "kubejs/assets/complicated_bees/patchouli_books/field_guide/en_us/entries/machines/honey_generator.json"
+hash = "bed9f3783e5c4812146652680008da04b00547d15280989b8ad59a16b20d8ab2"
+
+[[files]]
 file = "kubejs/assets/complicated_bees/patchouli_books/field_guide/en_us/entries/other/foods.json"
 hash = "74048d5ed5cbc9474552fbfe630ccb1bc9ef0710ca4cb72cecbe90a82eadb880"
+
+[[files]]
+file = "kubejs/assets/complicated_bees/patchouli_books/field_guide/en_us/entries/started/combs.json"
+hash = "250f84908497eac8fec5bae67984707b229a23ae8d94e861b38ff4777086b208"
 
 [[files]]
 file = "kubejs/assets/complicated_bees/patchouli_books/field_guide/zh_cn/entries/bee_products/honey_droplet.json"
@@ -8909,6 +8569,18 @@ file = "kubejs/assets/fowlplay/sounds.json"
 hash = "c1d0c09a2b258bb3d1c566a2dac03ce8190e45a5e6b3bbd7f6db2e3ace4fe42b"
 
 [[files]]
+file = "kubejs/assets/goety/patchouli_books/black_book/en_us/entries/crafts/dark_alloy_ingot.json"
+hash = "956ed7445ae6a8085d361fccdbb2f030422515dc67e33e3d17e0dd96c96a9264"
+
+[[files]]
+file = "kubejs/assets/goety/patchouli_books/black_book/en_us/entries/crafts/equipment/ice_axes.json"
+hash = "2019c7d96ecd1b5f785b52107bc7b130f7374a30ee75cf9adfb240d278f70cee"
+
+[[files]]
+file = "kubejs/assets/goety/patchouli_books/black_book/en_us/entries/rituals/end_ritual.json"
+hash = "60d179ba0d3040ddc5332c3ffb6c99a31f8ca6cc0809161a1d8d869bffdbe72e"
+
+[[files]]
 file = "kubejs/assets/gravitation/models/block/frozen_aether_grass_block.json"
 hash = "5e117cd8ec5474b6dd68f1ba622ff9cdee03217f59d8d85406c32b95ef147f8c"
 
@@ -8955,6 +8627,10 @@ hash = "67de49bfd94e60198e873e31cdc6f17c6b2836d60349c13aeb87a8269dd03a35"
 [[files]]
 file = "kubejs/assets/kubejs/blockstates/space_machine_block.json"
 hash = "13c2e14fd8cbac9c7f34e0d0cbea0abe93c50fcc437276ffe14895f2a90c7d7b"
+
+[[files]]
+file = "kubejs/assets/kubejs/lang/en_us.json"
+hash = "82332bb2726aedc4fd054309684e61a0b26756fe284ea85d9035614b62756d63"
 
 [[files]]
 file = "kubejs/assets/kubejs/models/block/airtight_machine_block.json"
@@ -9703,6 +9379,18 @@ hash = "a53b1218dec013d39838f612c0196d014bb92c41d05cb3177a42b75f8a8d1152"
 [[files]]
 file = "kubejs/assets/kubejs/textures/item/weakening_extract.png"
 hash = "6c862de338354f846c77af5fd7ab325c1d00a364978ae1441ff8749611295f28"
+
+[[files]]
+file = "kubejs/assets/kubejs/tinkering/materials/dragonsteel_fire.json"
+hash = "ec07b0eb1d432c0eb5891b57bcf1913240bb416cdea3345d65b2d97a2b5bef4e"
+
+[[files]]
+file = "kubejs/assets/kubejs/tinkering/materials/dragonsteel_ice.json"
+hash = "59fc436f9a60eb8d6f9cb9a2028fd275c3818a67b0f6e6cb461f14c51738e62e"
+
+[[files]]
+file = "kubejs/assets/kubejs/tinkering/materials/dragonsteel_lightning.json"
+hash = "d1805e652719842f291500041fb29d73e5fa76b9acda693c3a7b84b0feb200ea"
 
 [[files]]
 file = "kubejs/assets/malum/blockstates/weeping_well_core.json"
@@ -10454,7 +10142,7 @@ hash = "d3ab97897c0029c2c742ac047a8c7db5b089867a9a261bb794fb133af4fc11fb"
 
 [[files]]
 file = "kubejs/assets/pneumaticcraft/patchouli_books/book/en_us/entries/machines/pneumatic_dynamo.json"
-hash = "55b2c981ab9bfec30a8f8103b379b9bbfb2572c0bdd5dac8f0ef4244f72ccc63"
+hash = "12b6e0948485e563e669ee6092d757ebe4a42bf99cebc01a380e3c865b5f289d"
 
 [[files]]
 file = "kubejs/assets/pneumaticcraft/patchouli_books/book/en_us/entries/machines/pneumatic_generator.json"
@@ -10926,7 +10614,7 @@ hash = "66cf0331265f2faafaf5fab1dbf5420f07cfcc3e9df4f7625fe8ad8028722665"
 
 [[files]]
 file = "kubejs/client_scripts/policy/hide_vanilla_tools.js"
-hash = "0a5421a0436ea1fb2fe722b1388712fdf143a67d3df59158832681e06956ab46"
+hash = "0da12b94112b647d4c9a68ed719d0458a5e3b9c85d8d2f4d3baf80adb18f9082"
 
 [[files]]
 file = "kubejs/config/adpother_latent_gas_policy.json"
@@ -10949,8 +10637,12 @@ file = "kubejs/config/common.properties"
 hash = "46a66b6e003ba7953c9a13428fd9c1967e862a673d7fd849831defab59eb08f1"
 
 [[files]]
+file = "kubejs/config/crafting_policy.json"
+hash = "6c62338d5fc85f6d33b2184b7e561f6bef31ef5b4e0cac7a99edf2ebc5b54edf"
+
+[[files]]
 file = "kubejs/config/cross_mod_boundaries.json"
-hash = "8dbd5a8585fbaaee3965af44e85fea6ea9f4482b4d543a56240e8208ce5843b8"
+hash = "e2e54bd11a880d784559d4344cdfe1228251f6503e0ca52bb89d0b6c8ecb6118"
 
 [[files]]
 file = "kubejs/config/economy_acquisition.json"
@@ -10970,19 +10662,19 @@ hash = "c1728c32703ee343a2ed52c53b84bca30db11aa2feb97fb31d68fdd87ada5df0"
 
 [[files]]
 file = "kubejs/config/hover_annotations.json"
-hash = "0e97a900cc4e999b15e89007ef00ce55a7c6d02f445f56b2562d3f7576d03996"
+hash = "a82b079b89745972f3d6943efcbc343b96f4d7dc575927c8477bd14e7fec0994"
 
 [[files]]
 file = "kubejs/config/input_rewrites.json"
-hash = "9d734d8f9b4ba19dce7c21e44f618524733742516fe647ee72c820c71649acbb"
+hash = "5cd6c87d7fc105e35252b89cbcd7d76af1f7ec41962984098f045b49a34a3424"
 
 [[files]]
 file = "kubejs/config/magic_parenting.json"
-hash = "7148f87cb1e5be4768e401e9ef7358895da4ed3b6801c59852d3b64b4a2b3dc2"
+hash = "dd5d86a21560f6468d0df679ffe6068a2cf4a6f9c972276fe2d5acc693fb5a85"
 
 [[files]]
 file = "kubejs/config/quarantined_items.json"
-hash = "67e67bf92a6ee45cf967da7ef8ccd009537da0e7cf901b0ce1b0065f3aa84356"
+hash = "69c74e03f9e5961340e125b6896ba092bb8e4d11f84d9af5e2901928ce6ccb31"
 
 [[files]]
 file = "kubejs/config/surface_registry.json"
@@ -11249,10 +10941,6 @@ file = "kubejs/data/artifacts/loot_tables/inject/chests/desert_pyramid.json"
 hash = "5c72199121b2f4186e185466fab697781541b29a7fc85621cf3c5d658c81b904"
 
 [[files]]
-file = "kubejs/data/artifacts/loot_tables/inject/chests/end_city_treasure.json"
-hash = "cffcc4372de76e1f207296b4ca5ba0ca12de35a463345d6e7e63af041e2cec8d"
-
-[[files]]
 file = "kubejs/data/artifacts/loot_tables/inject/chests/igloo_chest.json"
 hash = "b5d467fd627b8241ab76f4c8c475f5c4488d8bc921d7b8ded02182a8752e16e6"
 
@@ -11399,6 +11087,18 @@ hash = "7392b4249b82885a0c5faf72d7c28722ca7600537e1b5404d3f993bc3c5bfb97"
 [[files]]
 file = "kubejs/data/c/tags/items/wrenches.json"
 hash = "7392b4249b82885a0c5faf72d7c28722ca7600537e1b5404d3f993bc3c5bfb97"
+
+[[files]]
+file = "kubejs/data/complicated_bees/complicated_bees/mutation/ender/ender.json"
+hash = "0bed8c9e76693dc9b16c2cffe455614c5b63a3bcdc7f56a530795c17448b7c4a"
+
+[[files]]
+file = "kubejs/data/complicated_bees/complicated_bees/mutation/ender/enigmatic.json"
+hash = "e9045e946106a234aae5ab5c2229be8d3b735ad367b3dbca29d39409f4ddb72e"
+
+[[files]]
+file = "kubejs/data/complicated_bees/complicated_bees/mutation/ender/surreal.json"
+hash = "ad9ae501526f35ac028c2863997d1f419f46cfd221deffc7564288a9388972f9"
 
 [[files]]
 file = "kubejs/data/construct_arsenal/capabilities/weapons/buckler.json"
@@ -11817,6 +11517,14 @@ file = "kubejs/data/dynamictrees/tags/blocks/foliage.json"
 hash = "73b7960739e0c1c25daf3c9812734c940114f743a480b9b49e8e5f6c78b27de2"
 
 [[files]]
+file = "kubejs/data/endermanoverhaul/tags/worldgen/biome/end_islands_spawns.json"
+hash = "5b3b1ffa5fa8edeea343e43f1633e194d6864493db7fb7df651a1ee124fbc461"
+
+[[files]]
+file = "kubejs/data/endermanoverhaul/tags/worldgen/biome/end_spawns.json"
+hash = "5b3b1ffa5fa8edeea343e43f1633e194d6864493db7fb7df651a1ee124fbc461"
+
+[[files]]
 file = "kubejs/data/enhancedai/tags/items/valid_fisher_rods.json"
 hash = "809165b86640058de25efdad687b6be84eb703e269f74c3495c3dc855b11a889"
 
@@ -11998,7 +11706,7 @@ hash = "cf47d22623f9ecc27660f459511618683fc1969d5c24c8d07b43a538f923403f"
 
 [[files]]
 file = "kubejs/data/forge/loot_modifiers/global_loot_modifiers.json"
-hash = "67245041b1a2240039f5efd31f3e99df4b1bdcf008a882b9fae27afb41e2df02"
+hash = "a10c37deda614b789bbf95065c6dd1335c8071bf6345264f25d41d454170c4d7"
 
 [[files]]
 file = "kubejs/data/forge/tags/blocks/farmland.json"
@@ -12013,12 +11721,24 @@ file = "kubejs/data/forge/tags/items/axes.json"
 hash = "ef2f515544b0c96839a891785bad066e9521ef82bfb11ebfd9689f77f151f4c6"
 
 [[files]]
+file = "kubejs/data/forge/tags/items/bloods/dragon.json"
+hash = "23d6f7ab8763a876bb54bf6ca1b42272f49f89da039591e7a99277a7dc01f6e7"
+
+[[files]]
 file = "kubejs/data/forge/tags/items/chimneys.json"
 hash = "d7bc00ca1294cd19b245020f0b58d9050889c86d3023a42773c4d7d5fcfa1174"
 
 [[files]]
+file = "kubejs/data/forge/tags/items/eggs/dragon.json"
+hash = "a1d6689e3c1b2a781279f5ca83f8d29b476d985ade912888c25ddad27f79c9bd"
+
+[[files]]
 file = "kubejs/data/forge/tags/items/feasts.json"
 hash = "8aa2abf29475cb09032249848fe57652c51a55785a9d45db1b574aa31cda4799"
+
+[[files]]
+file = "kubejs/data/forge/tags/items/hearts/dragon.json"
+hash = "9adabd366fd5e323a0704f8df90ee0500725285874baab867b68cc4dec06fa2c"
 
 [[files]]
 file = "kubejs/data/forge/tags/items/hoes.json"
@@ -12033,12 +11753,20 @@ file = "kubejs/data/forge/tags/items/pickaxes.json"
 hash = "e9b452f0ab98dce658cdfd1637e986ce29fc42237b9204ceac4faff1d0c12169"
 
 [[files]]
+file = "kubejs/data/forge/tags/items/scales/dragon.json"
+hash = "7a38fd1c02358bf13450a3e0c0452abadf1134bbc07ebfc30de07033f24eff0e"
+
+[[files]]
 file = "kubejs/data/forge/tags/items/shears.json"
 hash = "dacd62b1baa8dcefed518af45e9be8c3ef436dfd8648b655e00150732e669e44"
 
 [[files]]
 file = "kubejs/data/forge/tags/items/shovels.json"
 hash = "d3ed5dce09da4099af851189f345a336911371405109a2da6e409ca073c2c260"
+
+[[files]]
+file = "kubejs/data/forge/tags/items/skulls/dragon.json"
+hash = "b0f76386bc571230b4ca431d99fd639017f7ab983223c9e44867011ebf381f4a"
 
 [[files]]
 file = "kubejs/data/forge/tags/items/swords.json"
@@ -12117,16 +11845,16 @@ file = "kubejs/data/heat_sync/tags/blocks/thermal_emitters.json"
 hash = "620e16f61d6df3f239af5738bcd8586c83c36c8d0771bc7a25321ad1c51f77b5"
 
 [[files]]
-file = "kubejs/data/immersive_weathering/loot_tables/blocks/dynamic_trees_hexerei/mahogany_leaf_pile.json"
-hash = "31306564246094956f96347bfd31a0ef3d0930b2bd83ea8ad6fa46cee11acfc4"
+file = "kubejs/data/iceandfire/worldgen/structure_set/gorgon_temple.json"
+hash = "a267146847f0c339aa0598533b41393df1e5628563303da9cc4b6e1980d49188"
 
 [[files]]
-file = "kubejs/data/immersive_weathering/loot_tables/blocks/dynamic_trees_hexerei/willow_leaf_pile.json"
-hash = "fac7bb01453031bedd1d104bac30804996091af05e674b438685635bc03ebb98"
+file = "kubejs/data/iceandfire/worldgen/structure_set/graveyard.json"
+hash = "9b027c6e8ca8464c835d71aa0a597032dfc6f9830662ec070ae9e61628108015"
 
 [[files]]
-file = "kubejs/data/immersive_weathering/loot_tables/blocks/dynamic_trees_hexerei/witch_hazel_leaf_pile.json"
-hash = "fc685e466594264df27ad1af5eba415326ae16f255e085822a6271a96568837f"
+file = "kubejs/data/iceandfire/worldgen/structure_set/mausoleum.json"
+hash = "f66fbb209752927a71691dbd13841da85b67310270b4a4c8a9622a63429687a0"
 
 [[files]]
 file = "kubejs/data/immersive_weathering/loot_tables/blocks/dynamic_trees_malum/azure_runewood_leaf_pile.json"
@@ -12139,18 +11867,6 @@ hash = "20ef153f825aed78bfbbba9ee28a1c3d08d3890f9ebc0e0bb4f80c5cb7162468"
 [[files]]
 file = "kubejs/data/immersive_weathering/loot_tables/blocks/thin_ice.json"
 hash = "05ed9b2c5b2838d72eb2dbe2e9b7d0c038dbf65f06c6a4abd3f806ea16a6285e"
-
-[[files]]
-file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_hexerei/mahogany_leaf_pile.json"
-hash = "416bb13eb5875a2f6a8bee5966a69463c87e6c9ba76fb96f4c7ebd406f3ca272"
-
-[[files]]
-file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_hexerei/willow_leaf_pile.json"
-hash = "416bb13eb5875a2f6a8bee5966a69463c87e6c9ba76fb96f4c7ebd406f3ca272"
-
-[[files]]
-file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_hexerei/witch_hazel_leaf_pile.json"
-hash = "416bb13eb5875a2f6a8bee5966a69463c87e6c9ba76fb96f4c7ebd406f3ca272"
 
 [[files]]
 file = "kubejs/data/immersive_weathering/recipes/dynamic_trees_malum/azure_runewood_leaf_pile.json"
@@ -12167,6 +11883,14 @@ hash = "d5f5d9f3aaec685bf97e85535b0cbaaa02c4d124fd217c480f3e4f5fb99c30bb"
 [[files]]
 file = "kubejs/data/immersive_weathering/tags/blocks/grassy_blocks.json"
 hash = "d5f5d9f3aaec685bf97e85535b0cbaaa02c4d124fd217c480f3e4f5fb99c30bb"
+
+[[files]]
+file = "kubejs/data/kubejs/recipes/goety/spire_armor_trim.json"
+hash = "7ab5c3ef85aeae614d3d443fb9bf8b8c528cb5520676e4078e5cd6a96cf7ce04"
+
+[[files]]
+file = "kubejs/data/kubejs/recipes/occultism/eye_armor_trim.json"
+hash = "ff5584d0a6258f32b95e2fe290e56ca8a7d100f56a5cece83360582c269bc4f1"
 
 [[files]]
 file = "kubejs/data/kubejs/recipes/primitive/bone_butcher_knife.json"
@@ -12203,6 +11927,18 @@ hash = "fcb70e13de321889d45b0d491e33d092eb53e5859c5679eb707680b7a12c0ec2"
 [[files]]
 file = "kubejs/data/kubejs/recipes/starcatcher/primitive_hook_flint.json"
 hash = "95257ce86f514f9a9ed0d9d36da65bc524229062c26ca4e855f66b0bd25f8415"
+
+[[files]]
+file = "kubejs/data/kubejs/recipes/tconstruct/materials/dragonsteel_fire.json"
+hash = "eab084df73d38b2b6ad00c1c3cd50f4b3d24d28eb86f24b28f9166d798bb18e1"
+
+[[files]]
+file = "kubejs/data/kubejs/recipes/tconstruct/materials/dragonsteel_ice.json"
+hash = "7922fd487d3aa94bead15928445acfc4fcaeaab79e89486193e0391e03166642"
+
+[[files]]
+file = "kubejs/data/kubejs/recipes/tconstruct/materials/dragonsteel_lightning.json"
+hash = "a09e9b427f111396e14a491f73db87c2337b2283b4ee9ffb1f282a26fb805568"
 
 [[files]]
 file = "kubejs/data/kubejs/recipes/tools/materials/primitive_bones.json"
@@ -12267,6 +12003,30 @@ hash = "f0adfcf36a75654ffda883610416c18ef9a88b49390e9c4e0abe2e1916098255"
 [[files]]
 file = "kubejs/data/kubejs/tags/worldgen/biome/temperate_spawn_biomes.json"
 hash = "311c371a292b46df03b8aa716bfa94226aad34699a422c57ceb3e15eb36e301d"
+
+[[files]]
+file = "kubejs/data/kubejs/tinkering/materials/definition/dragonsteel_fire.json"
+hash = "2986e5b061e275f372a3391249aef502e98feb66a2816629512fbd23c3d43991"
+
+[[files]]
+file = "kubejs/data/kubejs/tinkering/materials/definition/dragonsteel_ice.json"
+hash = "c6853e744346e5d9716d3ba06551f6717c2a68447892351471565cda109bc616"
+
+[[files]]
+file = "kubejs/data/kubejs/tinkering/materials/definition/dragonsteel_lightning.json"
+hash = "d0333dad70676b37367bdb9ee8b65944662223bd9f684cf256b43632782cc77a"
+
+[[files]]
+file = "kubejs/data/kubejs/tinkering/materials/stats/dragonsteel_fire.json"
+hash = "4a96bcdbcce75c699aa872d02e24145bf83c03ac68ddbf327ab2042e3801273c"
+
+[[files]]
+file = "kubejs/data/kubejs/tinkering/materials/stats/dragonsteel_ice.json"
+hash = "4a96bcdbcce75c699aa872d02e24145bf83c03ac68ddbf327ab2042e3801273c"
+
+[[files]]
+file = "kubejs/data/kubejs/tinkering/materials/stats/dragonsteel_lightning.json"
+hash = "4a96bcdbcce75c699aa872d02e24145bf83c03ac68ddbf327ab2042e3801273c"
 
 [[files]]
 file = "kubejs/data/latent_chemlib/chemical_traits/helium.json"
@@ -12641,6 +12401,10 @@ file = "kubejs/data/minecraft/tags/items/wooden_trapdoors.json"
 hash = "13174337bea0c77d6f3be1219f38abc8b26dac6da411a29133aea65bdfd917c3"
 
 [[files]]
+file = "kubejs/data/minecraft/tags/worldgen/biome/is_end.json"
+hash = "601db9a2294a9b7627b34f3afb24161dbdb1192741b8d5851550debd4bc4574f"
+
+[[files]]
 file = "kubejs/data/nethersdelight/recipes/cutting/hoglin_sausage_alt.json"
 hash = "ac7bd6b6a6625a7f036590d6109c972b94e528886556b1b750718344a791c0d3"
 
@@ -12657,24 +12421,64 @@ file = "kubejs/data/oc2r/tags/items/wrenches.json"
 hash = "955bac272eb552bfd6e4c0e340725355e800d981e508030dd305e1f40e7c8130"
 
 [[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/categories/storage.json"
+hash = "3eeb727dc5b4dead58168ea7ad2a03d5ac2d245ebfe4efd9cf34e121053af589"
+
+[[files]]
 file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/crafting_rituals/craft_afrit_miner.json"
-hash = "08b7091cb8fa348a48d4728749ecb546e039d7ff0da8df99064ca4fe19220a94"
+hash = "22842fbc205033b2e1e0dc219df3fe4259962e30a3e60a6da930cede40cb3b9e"
+
+[[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/crafting_rituals/craft_dimensional_mineshaft.json"
+hash = "8572c58f37f5910d16949608ba7467ffe9642a164fa8175b0d9a447ea1790e0b"
 
 [[files]]
 file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/crafting_rituals/craft_djinni_miner.json"
-hash = "5d7e6824e34d98c4a6950a2fda026c42f1e47f2d2471691c0d008cba8b1deebe"
+hash = "260d4d8fb555b01ba1b4b5bbf3ca5dec988e6ddd0a244014975c6b97059abc70"
 
 [[files]]
 file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/crafting_rituals/craft_foliot_miner.json"
-hash = "d3fbb9494649e12b39786ef03c3e07bfe7fc63c0997a09f23119a75b0b817179"
+hash = "20c57590c56884864a1bde214c792bc678dcd01b76b33055626b3a948802f2cf"
+
+[[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/crafting_rituals/craft_infused_pickaxe.json"
+hash = "50b2c1dd4163986be5fdeae61ef3ab01426869d76c05c0920994fbf0c5c82c73"
 
 [[files]]
 file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/crafting_rituals/craft_marid_miner.json"
-hash = "7fe5624bcda1859a250e41cff08bdb0d9e8a03bd7839bec1cf34baa6b0050dcf"
+hash = "6f410cb35bd9b35cefa94df4e1b392c0c0a397a5b456e09c1f36dcd0c941f299"
 
 [[files]]
 file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/crafting_rituals/craft_satchel.json"
-hash = "16f14408dc6e8a05eefe9f9df327cca4b8573c7aec0c581e2eacad4a75a52926"
+hash = "47358030902a8356437b23fa86999c30c957e3d91ec5dc77c35f06afb71d0f40"
+
+[[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/crafting_rituals/craft_stabilizer_tier1.json"
+hash = "3e73301c6855f56e5a91927e336b04a12b60f700631625e884391493b61177f4"
+
+[[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/crafting_rituals/craft_stabilizer_tier2.json"
+hash = "1d20b62913faf10681c72c1a34efa821a3977f32a1126668b03250dcb4cbdcbc"
+
+[[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/crafting_rituals/craft_stabilizer_tier3.json"
+hash = "f3467b63790b542f5ef44c1bdf1bded9559ba91093d29d2f65e27fef7cdbb227"
+
+[[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/crafting_rituals/craft_stabilizer_tier4.json"
+hash = "8ba1d21c3ed0baf9f0a57738279cd12f96d836065143af165fd2aec6bd580c9c"
+
+[[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/crafting_rituals/craft_stable_wormhole.json"
+hash = "c99b4eb4752d32df82aa1875a6ee10c32741774f720672b58aedb2457164c92f"
+
+[[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/crafting_rituals/craft_storage_controller_base.json"
+hash = "364f2becf72c584faf5db3dcbd2f4a1cb3004c95710c7c56b7de545c1b741fd4"
+
+[[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/crafting_rituals/craft_storage_remote.json"
+hash = "80e74d36ee9e32aa49eb9bc002181212af4da4160f985c9d71664f33add5485a"
 
 [[files]]
 file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/getting_started/books_of_binding.json"
@@ -12685,8 +12489,12 @@ file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/ge
 hash = "9b1560a8a4081ed73f780c87ed7ff652c255d98dc45c387b8dce432c218141de"
 
 [[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/getting_started/iesnium_pickaxe.json"
+hash = "0e3a0edf85f35e6899f57ed976e0647ad2882cecb9a34ee3b6246876bce36fcb"
+
+[[files]]
 file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/getting_started/infused_pickaxe.json"
-hash = "4d28e3c877201ae5509c1d3bf9a7f86a2ecb0d04334e4c38093a7bfd2d86b550"
+hash = "ca826f4c1d86752eb7ccf85125ef9ac6c73321208b283c10db9d4801c00fc247"
 
 [[files]]
 file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/getting_started/ritual_prep_chalk.json"
@@ -12695,6 +12503,34 @@ hash = "e2488f247fd46792ed1e5fcf003fbc54a758e84c6fce617a5c787e1ae041fa24"
 [[files]]
 file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/pentacles/paraphernalia.json"
 hash = "fd2e85cb1951d7a8cf608522a1e775ec4f01e634873d6f2bad462450c82e1bd7"
+
+[[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/storage/crafting_rituals/craft_stabilizer_tier1.json"
+hash = "a1a33b70cab4faa14526762057d59d4465dad9949c32eb59db3fbd1f4c35d4c5"
+
+[[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/storage/crafting_rituals/craft_stabilizer_tier2.json"
+hash = "cbcdc522702b45ca4c7c1f2dd96e29b9ff76817eba05a8b44158204492242f25"
+
+[[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/storage/crafting_rituals/craft_stabilizer_tier3.json"
+hash = "68fc041a788dda663c3572889375f1ba9d2de976265fb85b0a3a5e21d4cbe62f"
+
+[[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/storage/crafting_rituals/craft_stabilizer_tier4.json"
+hash = "ddc58b192768fdeb9cad7a2a3dcabdd559b40b453dfcc9c8a2855d597d053389"
+
+[[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/storage/crafting_rituals/craft_stable_wormhole.json"
+hash = "ce62e18812698bd7ed9a536edb845ed084dc1eb9eacbcec10ed0bf6d4eb4258d"
+
+[[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/storage/crafting_rituals/craft_storage_remote.json"
+hash = "5c3452cbf80321db92308d1bf65499c48677aa24fe070b0fecdf7996333913b9"
+
+[[files]]
+file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/storage/storage_controller.json"
+hash = "7032a7a08610677bc56a27630e8423346436ac9d982c631ea4f0f895f64c1672"
 
 [[files]]
 file = "kubejs/data/projectvibrantjourneys/loot_tables/blocks/ice_chunks.json"
@@ -12723,10 +12559,6 @@ hash = "0c8ba135556737c9e5ed5bf776c1eb6ab5f5c3ed7898d125893bb4b8ac3e4e40"
 [[files]]
 file = "kubejs/data/sophisticatedbackpacks/loot_tables/inject/chests/desert_pyramid.json"
 hash = "5c6b6bf18db4293dfd13868f842a9680b10f6e360472f0dabf80aa81f6be5f11"
-
-[[files]]
-file = "kubejs/data/sophisticatedbackpacks/loot_tables/inject/chests/end_city_treasure.json"
-hash = "95db971c2f6e2fa926793fbc72e5bf74e0abf0bd9ba06e602a9f63c307494016"
 
 [[files]]
 file = "kubejs/data/sophisticatedbackpacks/loot_tables/inject/chests/nether_bridge.json"
@@ -12795,6 +12627,18 @@ hash = "a705ed3db981853c6f42c8c9c0ec877a23b2587b376cf3591313c3de5c2b2453"
 [[files]]
 file = "kubejs/data/starcatcher/recipes/aquaculture_fillet.json"
 hash = "ac7bd6b6a6625a7f036590d6109c972b94e528886556b1b750718344a791c0d3"
+
+[[files]]
+file = "kubejs/data/starcatcher/starcatcher/fish/chorus_crab.json"
+hash = "d4d78490655d9ae2265efa04d47a07b95a4d91e7ebb9c355c20771a7f7b626c6"
+
+[[files]]
+file = "kubejs/data/starcatcher/starcatcher/fish/end_glow.json"
+hash = "4bb335087032566c135cd81526ddb9fb6a2996bad07f505d2460ce60413f9a4a"
+
+[[files]]
+file = "kubejs/data/starcatcher/starcatcher/fish/voidbiter.json"
+hash = "38e200845dd900296b4f8e72c073853563e8300385b39f8fb28b7c0b5e05d9c3"
 
 [[files]]
 file = "kubejs/data/starcatcher/tags/items/rods.json"
@@ -12903,6 +12747,10 @@ hash = "ac7bd6b6a6625a7f036590d6109c972b94e528886556b1b750718344a791c0d3"
 [[files]]
 file = "kubejs/data/tconstruct/recipes/tools/modifiers/slotless/embellishment/wood/wood_crimson.json"
 hash = "5fecb85c0830794ea4004eb041897b08938ebb5383670ada06a3647727ddcf36"
+
+[[files]]
+file = "kubejs/data/tconstruct/tags/worldgen/biome/islands/enderslime.json"
+hash = "5b3b1ffa5fa8edeea343e43f1633e194d6864493db7fb7df651a1ee124fbc461"
 
 [[files]]
 file = "kubejs/data/tconstruct/tinkering/materials/stats/wood.json"
@@ -13354,7 +13202,7 @@ hash = "35e8cbdebd0e97fc85e3719d77924fec29bf54089086f8d61cbd6975ff7a7fa1"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__63_fonts_hexerei_occultism_chalk.js"
-hash = "b94b270642ab79a5f5e839e0a6655e9145067747777a095b93f43eb23ac1d4c3"
+hash = "d010e16b10180f0ccdfb15b35f75eebf8e468b3dd492b071b5aa5ed535e66c86"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__80_magic_progression_blood_slate_gates.js"
@@ -13425,16 +13273,24 @@ file = "kubejs/server_scripts/compat/reviewed/replaceable_deepslate.js"
 hash = "cdadd1a859c50c4f30afa283252ed053e100bafc58d9f12617a939df56adae98"
 
 [[files]]
+file = "kubejs/server_scripts/policy/closed_end_dragon_replacements.js"
+hash = "9d5c3e62bd71bce9da58ddeee68b468bea8ca4f8ddebdb504285eb11c111a83e"
+
+[[files]]
+file = "kubejs/server_scripts/policy/conventional_tool_authority.js"
+hash = "7be7503f21d17ceecf856cbaa33403e0de92b45c940fff9afb07b2cbaf8c38e8"
+
+[[files]]
 file = "kubejs/server_scripts/policy/dimension_access.js"
-hash = "c55704fada1ed8433608effe766eede35256d4f01cc62c4322527950a37ccec7"
+hash = "b74321fc28e24513cc9782de3c64ca329373c60d31d35743373152b266baa299"
 
 [[files]]
 file = "kubejs/server_scripts/policy/global_loot_progression.js"
-hash = "e496e4366c88184c7eb375c70a04e2aeca5134ba61003ea695c2276c0738df99"
+hash = "9fac8b9ebeeafeadff6676834205d6213be6f700c834e54a96197dfffd6d170c"
 
 [[files]]
 file = "kubejs/server_scripts/policy/removed_items.js"
-hash = "45679747c705ea7043486e528cc5d828d6f53079e0b5fb02a9f0b5cbed0260b4"
+hash = "4a30f356a8ddb539e97790a8cabdd79ec571497e3433d160fb9e72be3d789e43"
 
 [[files]]
 file = "kubejs/server_scripts/policy/tnt_recipe.js"
@@ -13450,7 +13306,7 @@ hash = "2ecca2c42d2f3897372519cc70a1a1f66dc241a703280259fbb15288213aa2f3"
 
 [[files]]
 file = "kubejs/server_scripts/progression/20_ratlantis_logistics.js"
-hash = "c094722c8981aeb45199359ab745b0e5c1a980b8806b13e08640f5cdccb40b62"
+hash = "9e9140c4c0748f954631b17be8e088cfa3f26832b13b1069ddfb9874d6007627"
 
 [[files]]
 file = "kubejs/server_scripts/progression/21_bumblezone_cultivars.js"
@@ -13458,7 +13314,7 @@ hash = "6944ec8164dfb032a0fd7880521468d5fd5371e45663749167086cada32ded62"
 
 [[files]]
 file = "kubejs/server_scripts/progression/30_precision_factory.js"
-hash = "4c37358829a4b67024bf60c4007c731c4532f6baf72a02550cb5293890754fd4"
+hash = "31c5a47489cd22e726700dadea3ed39290fd1f8947e174f7c4072a64ed068960"
 
 [[files]]
 file = "kubejs/server_scripts/progression/40_thermal_pressure.js"
@@ -13470,7 +13326,7 @@ hash = "754203ffa396694a9e04d83dfca3ed7b854af09e77965cdf2605005d3c0eadc3"
 
 [[files]]
 file = "kubejs/server_scripts/progression/50_electrical_control.js"
-hash = "debde8e3248d0cdcdbcd315cfe687cc62f51bf7155e2820ba7f184e1eedf2246"
+hash = "9c73d18dc69967d9c0b787fb9606320a747556f35b5bda8869c24a60fb7d2927"
 
 [[files]]
 file = "kubejs/server_scripts/progression/60_aerospace.js"
@@ -13478,7 +13334,7 @@ hash = "15f977bb91ac6e97b83a924ae71596051b5df8f8e240d3a962b6f55e0c12f1b3"
 
 [[files]]
 file = "kubejs/server_scripts/progression/70_transition_components.js"
-hash = "5522db82cd575f31084337eea417d03a22b0dd4cc29cd4b0b49c93c5f7ddee29"
+hash = "a95c80855c0b079f8b2764f38ea49214f56554ec19ad42c510f84a1e8249a5c6"
 
 [[files]]
 file = "kubejs/server_scripts/transport/10_optional_engineering_roots.js"
@@ -13493,6 +13349,10 @@ file = "kubejs/server_scripts/utility/hooks_drones_gates.js"
 hash = "4dcac0eed6cafe8913e13a8b328395c2c35c13bc7319323e46735f0d5c3f4ccb"
 
 [[files]]
+file = "kubejs/server_scripts/zz_crafting_policy_report.js"
+hash = "e412d1a0162b6f313dd98aa90cbd82fd0697056a2a41ff58bc8e4003e7b99ff5"
+
+[[files]]
 file = "kubejs/startup_scripts/compat/retained/check__12_unearthed_regolith_hand_mining.js"
 hash = "b0bff27048492f64ee6f08ebf1bb3a054a01866da418c76541e8ce67290fbdb9"
 
@@ -13503,6 +13363,10 @@ hash = "75e2d05543db8c5dac81701c327452f62b499f69a3dfd3394e4d036d4d07f469"
 [[files]]
 file = "kubejs/startup_scripts/compat/retained/remove__40_potion_brewing_registry.js"
 hash = "1e4abc890d237727cad14e58dab2b8f140afc38b9fdbd3035b2467e5bae3c2bf"
+
+[[files]]
+file = "kubejs/startup_scripts/policy/crafting_policy_contract.js"
+hash = "65d7a840b635518f6420c0ce8c05747360fd2ba6b573f785404b39369ed6c15d"
 
 [[files]]
 file = "kubejs/startup_scripts/policy/disable_trickster_weight.js"
@@ -13518,7 +13382,7 @@ hash = "efa4b2a9301b1215d947c97461e5f32aea0841be6865736a12645fcd60460d40"
 
 [[files]]
 file = "kubejs/startup_scripts/progression/20_transition_items.js"
-hash = "85f7f090b3ed85c413724a21049e1d27e5ceb2448a61970f539ecdfedc403cd8"
+hash = "91179aa754402fd77b016986003c95ca7b314da1318245ba40237eb3f060270d"
 
 [[files]]
 file = "mods/accelerated-rendering.pw.toml"
@@ -13572,7 +13436,7 @@ metafile = true
 
 [[files]]
 file = "mods/arcane-chunk-loaders-0.1.0.jar"
-hash = "7264719c2c09d1597258b04a1524216ff0ae1466d9b262f55507f61a5e2e0b39"
+hash = "23b2715ea96a5d3b8bfd7dd577b146665ca068d2cae74b656b04acebac6fdc30"
 
 [[files]]
 file = "mods/architectury-api.pw.toml"
@@ -13620,11 +13484,11 @@ hash = "78c6d00bd6a036c9bca77ad0843f0bcdbb905428933809b3c2898128fdb7d374"
 
 [[files]]
 file = "mods/better-content-fixes-0.1.3.jar"
-hash = "6ade8319ac01f822f093e9535dfab0cd62fdd948382d583c208ae42fcf2486fb"
+hash = "015a1f3fb563f2892d78a9fc702933ac9d0394f0c469fbccde622cfc943c362c"
 
 [[files]]
 file = "mods/better-content-quests-1.0.0.jar"
-hash = "8695cfc3b37ed5a8c3415a6e092fc14ee287da7edd32767d4ca37fcdf04528b8"
+hash = "896ee244815add05f769fb015e0194946cd1532eec42dc81a17ad02401847e6b"
 
 [[files]]
 file = "mods/better-content-threads-1.0.0.jar"
@@ -13812,7 +13676,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimension-drink-1.0.0.jar"
-hash = "9bd48fd9c7021133f7ec368be27e92ca3b83a0b970ed72cac5757b8dfe3aeb44"
+hash = "70ed5bdc834f3820dbadcdae1f8a8665259b2b0eaf679f9b9bfa6edb109b73aa"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -13841,10 +13705,6 @@ metafile = true
 file = "mods/dynamic-trees-for-natures-spirit.pw.toml"
 hash = "9c74ac86374e5f8769d846cdd4a2937652edc98b12f3508641ede0b4fbad18c4"
 metafile = true
-
-[[files]]
-file = "mods/dynamic-trees-hexerei-1.0.1.jar"
-hash = "bd2b4eb07a17d83e74c4f1a844564e46436c3fa880aece72d14bd583b64db04c"
 
 [[files]]
 file = "mods/dynamic-trees-malum-1.0.1.jar"
@@ -14137,6 +13997,11 @@ metafile = true
 [[files]]
 file = "mods/hyle.pw.toml"
 hash = "6b01c452f6db674f0e48fa1e48a62ec7b077a0258aafc3b7928be1c050f193bd"
+metafile = true
+
+[[files]]
+file = "mods/ice-and-fire-dragons.pw.toml"
+hash = "94c7c45a70d0cea86695ecd467f8e5c22510442c53c44291a570986e234428e5"
 metafile = true
 
 [[files]]
@@ -14468,7 +14333,7 @@ hash = "4a1fa59ddf09a14d5ffc791f2c741070aba736027bccfef56c8d30cbed5c6043"
 
 [[files]]
 file = "mods/ratlantis-logistics-0.1.0.jar"
-hash = "16bc6302e51b559253d019f7e0d3969c0266d590a2e3c2ad3acf4f87c683e8d1"
+hash = "8b70c169e389d7632d282b07ecf17ca48ffbda4fe9de8026e42619a1b6fd114d"
 
 [[files]]
 file = "mods/rats.pw.toml"
@@ -14712,7 +14577,7 @@ metafile = true
 
 [[files]]
 file = "mods/tinkers-construct-affixes-1.0.0.jar"
-hash = "04fc872bdb7036cdfa1001934dfcf7140239bda967b0ad5f7c71431fe811b7f8"
+hash = "97d948ef5e434afbf785a93919cdccc28b754df70354dee17fd008398bc27a8a"
 
 [[files]]
 file = "mods/tinkers-construct.pw.toml"
@@ -14811,7 +14676,7 @@ metafile = true
 
 [[files]]
 file = "mods/village-walls-1.0.0.jar"
-hash = "aa63acbd8e8070dfef89d08a1004458557d638cb4a43499f77fc144b6cde5c65"
+hash = "a125ab3e5f35ab480f784ade73b64cba71e92da2506ec2b736c48787a214a4c3"
 
 [[files]]
 file = "mods/wares.pw.toml"
@@ -14820,7 +14685,7 @@ metafile = true
 
 [[files]]
 file = "mods/water-survival-1.0.0.jar"
-hash = "686214508259700b56b1c836dc48eaefb14ff49c773107ba419cf3be98f3d0e8"
+hash = "74cb4e79b014c7da0db01467a105c9497568517bdd9f1841d57176441fcd1fee"
 
 [[files]]
 file = "mods/weather-storms-tornadoes.pw.toml"
@@ -14863,10 +14728,6 @@ hash = "9edc510cdd3b5d7c0d7347c1f3814d1461aef114197c6120aa96f395e2ef780c"
 [[files]]
 file = "package.sh"
 hash = "cc50269bdc755ecf82d98867618139d07c67f276a6011ee04bffb716ca72b223"
-
-[[files]]
-file = "quests/graph.yml"
-hash = "8c18d601349d644b7c4f4168968e3b0012f78bea6f815d9b44d9e5d025af1e2e"
 
 [[files]]
 file = "recipe-policies.yml"

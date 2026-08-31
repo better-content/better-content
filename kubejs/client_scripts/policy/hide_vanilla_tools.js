@@ -6,7 +6,9 @@ var BC_VANILLA_STYLE_TOOL_FAMILIES = [
     ['aether', ['gravitite', 'holystone', 'skyroot', 'zanite']],
     ['everythingcopper', ['copper']],
     ['goety', ['dark']],
-    ['malum', ['soul_stained_steel']]
+    ['malum', ['soul_stained_steel']],
+    ['iceandfire', ['copper', 'silver', 'dragonbone', 'myrmex_desert', 'myrmex_jungle',
+        'dragonsteel_fire', 'dragonsteel_ice', 'dragonsteel_lightning']]
 ]
 
 var BC_VANILLA_STYLE_TOOL_EXTRAS = [

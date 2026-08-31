@@ -12,14 +12,15 @@ runtime logic.
 | Heat storage/transport and Create Boiler Heater | Heat Sync | Provides era placement; native UI and hover own operating facts |
 | Dimension Font obelisks, travel sessions, charge, and arrival sites | Dimension Drink | Pack recipes and quests may point to Fonts; the mod owns neutral charge generation/drain, session lifecycle, chunk tickets, and destination placement |
 | Blood Altar bootstrap and tier reference | Blood Magic | Still-Beating Heart plus overworld materials opens the altar; Blood Magic's in-game guide remains the authoritative Tier 1-5 multiblock reference |
-| Occult physical components | Hexerei | Hexerei's mixing cauldron manufactures bounded physical Occultism components; Occultism retains rituals, spirit fire, bindings, and servants |
-| Occult storage | None | Controller, remote, and satchel acquisition routes are closed; Pretty Pipes is the practical logistics surface |
+| Occult physical components | Hexerei | The mixing cauldron requires Aether, Nether, Bumblezone, and Ratlantis trophies equally; Occultism retains rituals, spirit fire, bindings, servants, and the finite dimensional matrix |
+| Occult storage | None | Controllers, stabilizers, remotes, satchel, wormholes, mineshaft, and miners are closed; finite AE2 storage and visible Ratlantis-rooted logistics remain |
 | Vanilla boat durability, vessel-drop suppression, reinforced recipes | Better Content Fixes | No boat mutation or hiding scripts |
 | Coin acquisition, recipe policy, village commerce, loot replacement, and wandering-trader lifecycle | Better Content Economy | The standalone mod owns combat and chest income, non-convertible coin tiers, the exact 312-row villager catalogue, emerald-to-coin loot policy, scheduled themed offers, Wares agreements, and the optional Font map |
 | TCon alloy composition and casting | Tinkers' Construct | Removes bypasses and authors exact cross-mod alloy recipes |
 | Kinetic assembly | Create | Uses Machine Blocks only at listed direct roots |
 | Pressure chemistry | PneumaticCraft | Pack authors bounded cross-mod acid/root recipes |
-| Electrical components | PowerGrid and MoreRed | Electrical Block starts the first generator/design roots |
+| Electrical components and stationary generation | PowerGrid and MoreRed | Electrical Block starts PowerGrid's first generator/design roots; competing stationary generators are cut |
+| Dragon ecology and materials | Ice and Fire | Replaces vanilla dragon-boss products; rare Overworld ecology supplies tagged products and equal-stat Dragonsteel TCon materials |
 | Aerospace components | Creating Space | Space Block starts three aerospace roots |
 
 ## Stable pack IDs

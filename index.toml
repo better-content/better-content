@@ -13812,7 +13812,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimension-drink-1.0.0.jar"
-hash = "ce08e0da6b69a358bd7822503f476bafa34d3159af4d4ad8dac0e687f0d05a8d"
+hash = "9bd48fd9c7021133f7ec368be27e92ca3b83a0b970ed72cac5757b8dfe3aeb44"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -14708,7 +14708,7 @@ metafile = true
 
 [[files]]
 file = "mods/tinkers-construct-affixes-1.0.0.jar"
-hash = "c85c06bf3b3d34dd7db24f4d73a6b1ad87524951982159b7a5f382e095cee55d"
+hash = "04fc872bdb7036cdfa1001934dfcf7140239bda967b0ad5f7c71431fe811b7f8"
 
 [[files]]
 file = "mods/tinkers-construct.pw.toml"
@@ -14807,7 +14807,7 @@ metafile = true
 
 [[files]]
 file = "mods/village-walls-1.0.0.jar"
-hash = "04d9a283ff3f794a4fda4db48ec9cf0b74f7e3ba85dc596bc962b8e6bc54e7c1"
+hash = "aa63acbd8e8070dfef89d08a1004458557d638cb4a43499f77fc144b6cde5c65"
 
 [[files]]
 file = "mods/wares.pw.toml"
@@ -14886,7 +14886,7 @@ hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
 
 [[files]]
 file = "smoke.sh"
-hash = "3ade30dc6125d839a4f5300d840425166ddbe564e10f116b67ac09db64dcf01a"
+hash = "f653be3db9ab7034f0d4165a455865c80a98cf783baee35770b62ff62ba187bd"
 
 [[files]]
 file = "tacz/applied-armorer.pw.toml"

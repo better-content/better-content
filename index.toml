@@ -5473,10 +5473,6 @@ file = "config/endermanoverhaul.json"
 hash = "90eddc876d428a4b96df81f23ed8d8b2cbdb3d2c284ff85cd2278f5464f13a2b"
 
 [[files]]
-file = "config/endermanoverhaul.jsonc"
-hash = "32f272ea0773d835a8566a479546d7a119dfe204f7f8d0b171d9d76f5893b11f"
-
-[[files]]
 file = "config/enhancedai/Mobs/Break anger/break_anger_config.json"
 hash = "f8e69c88a3d84a154f46c91799d69af204b528cc4f0833b1fab6a9327c53687f"
 
@@ -6070,7 +6066,7 @@ hash = "a5d08b917ef15d63c2be151c5741f52ec8a892027c1dd6b3cf23a88282834229"
 
 [[files]]
 file = "config/quark-common.toml"
-hash = "0ee57cb373987b52492cff057c88ef89fe47d568c5b658ded7c5c72ad2d9e123"
+hash = "4d751caa39285dc9885c01bd3e3a23af7494ed193cba84df17704bbf300efbbb"
 
 [[files]]
 file = "config/quickstack-client.toml"
@@ -10638,7 +10634,7 @@ hash = "46a66b6e003ba7953c9a13428fd9c1967e862a673d7fd849831defab59eb08f1"
 
 [[files]]
 file = "kubejs/config/crafting_policy.json"
-hash = "6c62338d5fc85f6d33b2184b7e561f6bef31ef5b4e0cac7a99edf2ebc5b54edf"
+hash = "7fafa106c7847276082983ef23246f56935f50ab846a6e6c44967c6a2a6f8c19"
 
 [[files]]
 file = "kubejs/config/cross_mod_boundaries.json"
@@ -11749,6 +11745,10 @@ file = "kubejs/data/forge/tags/items/nuggets/reinforced_copper.json"
 hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
 [[files]]
+file = "kubejs/data/forge/tags/items/ores/sapphire.json"
+hash = "aa36cfb9ed81d5cc7abbbad9ceba4be1ca3f404d98bbec70b5c47c4ee59fb816"
+
+[[files]]
 file = "kubejs/data/forge/tags/items/pickaxes.json"
 hash = "e9b452f0ab98dce658cdfd1637e986ce29fc42237b9204ceac4faff1d0c12169"
 
@@ -12402,7 +12402,7 @@ hash = "13174337bea0c77d6f3be1219f38abc8b26dac6da411a29133aea65bdfd917c3"
 
 [[files]]
 file = "kubejs/data/minecraft/tags/worldgen/biome/is_end.json"
-hash = "601db9a2294a9b7627b34f3afb24161dbdb1192741b8d5851550debd4bc4574f"
+hash = "6c35a092b0693db7e4d8ffce881f2e75398bdee7180f2be3e5be9843cf976452"
 
 [[files]]
 file = "kubejs/data/nethersdelight/recipes/cutting/hoglin_sausage_alt.json"
@@ -13178,7 +13178,7 @@ hash = "0ff89ce49aa12226872458515bb9e76ff5d97677e6824738ab25f6ddd5d8b754"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__146_hexerei_mahogany_to_natures_spirit.js"
-hash = "dd08eb08d8d5aabb2a0df539d6de5cb0243819a9d77816889bae5e7e0c3eb971"
+hash = "f187b4a6df95fa7dd8c2d92b2cd91635eb6ed30c4f0e7e8694df3242a3b61305"
 
 [[files]]
 file = "kubejs/server_scripts/compat/retained/refactor__balance__165_protection_pixel_post_ae2_gates.js"
@@ -13274,7 +13274,7 @@ hash = "cdadd1a859c50c4f30afa283252ed053e100bafc58d9f12617a939df56adae98"
 
 [[files]]
 file = "kubejs/server_scripts/policy/closed_end_dragon_replacements.js"
-hash = "9d5c3e62bd71bce9da58ddeee68b468bea8ca4f8ddebdb504285eb11c111a83e"
+hash = "23ef7996e7ed50a028325dba0fd756003a5203cc82cc77a57c70207bd93f22e5"
 
 [[files]]
 file = "kubejs/server_scripts/policy/conventional_tool_authority.js"
@@ -13286,11 +13286,11 @@ hash = "b74321fc28e24513cc9782de3c64ca329373c60d31d35743373152b266baa299"
 
 [[files]]
 file = "kubejs/server_scripts/policy/global_loot_progression.js"
-hash = "9fac8b9ebeeafeadff6676834205d6213be6f700c834e54a96197dfffd6d170c"
+hash = "f93fa2c265dc53a671de49ca711a0dbee5fa406d151095a54d06d7d541cac31b"
 
 [[files]]
 file = "kubejs/server_scripts/policy/removed_items.js"
-hash = "4a30f356a8ddb539e97790a8cabdd79ec571497e3433d160fb9e72be3d789e43"
+hash = "97e0a33af61e46ca2cc46fae384d2ebaf62ab4ed38167c80261bf564c031ec51"
 
 [[files]]
 file = "kubejs/server_scripts/policy/tnt_recipe.js"

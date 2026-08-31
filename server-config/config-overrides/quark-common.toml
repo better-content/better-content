@@ -605,7 +605,7 @@
 
 	[tools.endermosh_music_disc]
 		"Play Endermosh During Enderdragon Fight" = false
-		"Add To End City Loot" = true
+		"Add To End City Loot" = false
 		"Loot Weight" = 5
 		"Loot Quality" = 1
 

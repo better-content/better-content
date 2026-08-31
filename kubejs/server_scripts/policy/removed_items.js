@@ -22,6 +22,14 @@ ServerEvents.recipes(function (event) {
         'bloodmagic:alchemytable/sigil_water_bucket',
         'bloodmagic:alchemytable/sigil_water_bottle',
         'bloodmagic:alchemytable/reagent_frost_water_sigil',
+        'bloodmagic:alchemytable/sulfur_from_sigil',
+        'bloodmagic:alchemytable/advance_cutting_fluid_sigil',
+        'bloodmagic:alchemytable/basic_cutting_fluid_sigil',
+        'bloodmagic:alchemytable/clay_from_sand_sigil',
+        'bloodmagic:alchemytable/intermediate_cutting_fluid_sigil',
+        'bloodmagic:alchemytable/leather_from_flesh_sigil',
+        'createdieselgenerators:distillation/crude_oil',
+        'createdieselgenerators:distillation/superheated_crude_oil',
         // Exact final-graph closures for serializers whose outputs are not
         // matched by KubeJS's generic output filter.
         'ars_elemental:head_cut/behead_dragon',
@@ -42,7 +50,8 @@ ServerEvents.recipes(function (event) {
         'arseng:source_storage_cell_256k',
         'pneumaticcraft:pressure_chamber/pressure_chamber_disenchanting',
         'pneumaticcraft:pressure_chamber/pressure_chamber_enchanting',
-        'tconstruct:tools/severing/ender_dragon_head'
+        'tconstruct:tools/severing/ender_dragon_head',
+        'tconstruct:smeltery/entity_melting/heads/ender_dragon'
     ].forEach(function (id) { event.remove({ id: id }) })
     event.remove({ type: 'occultism:miner' })
     event.remove({ type: 'bloodmagic:dimension_drink' })

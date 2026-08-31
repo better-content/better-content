@@ -1674,26 +1674,63 @@
     {
       "id": "hexerei_mahogany",
       "selectors": [
-      {
-        "namespace": "hexerei",
-        "id_prefix": "mahogany"
-      },
-      {
-        "namespace": "hexerei",
-        "id_prefix": "stripped_mahogany"
-      },
-      {
-        "namespace": "hexerei",
-        "id_prefix": "polished_mahogany"
-      },
-      {
-        "namespace": "hexerei",
-        "id_prefix": "waxed_mahogany"
-      },
-      {
-        "namespace": "hexerei",
-        "id_prefix": "waxed_polished_mahogany"
-      }
+        {
+          "exact_id": "hexerei:mahogany_sapling"
+        },
+        {
+          "exact_id": "hexerei:mahogany_leaves"
+        },
+        {
+          "exact_id": "hexerei:mahogany_log"
+        },
+        {
+          "exact_id": "hexerei:mahogany_wood"
+        },
+        {
+          "exact_id": "hexerei:stripped_mahogany_log"
+        },
+        {
+          "exact_id": "hexerei:stripped_mahogany_wood"
+        },
+        {
+          "exact_id": "hexerei:mahogany_planks"
+        },
+        {
+          "exact_id": "hexerei:mahogany_slab"
+        },
+        {
+          "exact_id": "hexerei:mahogany_stairs"
+        },
+        {
+          "exact_id": "hexerei:mahogany_button"
+        },
+        {
+          "exact_id": "hexerei:mahogany_door"
+        },
+        {
+          "exact_id": "hexerei:mahogany_fence"
+        },
+        {
+          "exact_id": "hexerei:mahogany_fence_gate"
+        },
+        {
+          "exact_id": "hexerei:mahogany_pressure_plate"
+        },
+        {
+          "exact_id": "hexerei:mahogany_sign"
+        },
+        {
+          "exact_id": "hexerei:mahogany_hanging_sign"
+        },
+        {
+          "exact_id": "hexerei:mahogany_trapdoor"
+        },
+        {
+          "exact_id": "hexerei:mahogany_boat"
+        },
+        {
+          "exact_id": "hexerei:mahogany_chest_boat"
+        }
       ],
       "disposition": "canonical_duplicate",
       "authority": "natures_spirit"
@@ -1855,9 +1892,9 @@
       "status": "deferred"
     },
     {
-      "id": "family_backlog_runtime_baseline_2e0e850052bc489d0faaaf06",
+      "id": "governed_family_non_acquisition_consumer_backlog",
       "blocking": false,
-      "status": "in_progress"
+      "status": "tracked"
     }
   ]
 }

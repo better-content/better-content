@@ -18,9 +18,19 @@ not duplicated ownership policy.
 
 An unknown loaded namespace blocks startup. Family/authority leaks and live
 consumers of cuts are reported with exact recipe and item IDs by the final
-KubeJS recipe pass. A reported category becomes blocking only after its known
-backlog is zero. Creative/debug items remain classified as technical rather
-than survival graph roots.
+KubeJS recipe pass. That report intentionally describes the upstream graph at
+the start of recipe application; it is a migration/backlog inventory, not a
+claim that the reported edges survive the pack's later removals. The effective
+post-application runtime snapshot is authoritative for shipped recipe edges.
+A reported category becomes blocking only after its known backlog is zero.
+Creative/debug items remain classified as technical rather than survival graph
+roots.
+
+Recipe cuts and canonical-duplicate selectors are also applied to the global
+loot modifier from this same contract. Exact selectors and namespace/prefix
+selectors resolve against the live item registry, avoiding a second hand-kept
+loot denylist. Static config, guide, quest, trade, worldgen, and custom-hook
+checks cover the other acquisition surfaces.
 
 Selectors are family-level wherever possible: namespace, tag, ID prefix, or an
 exact ID when no stable family exists. Capability roots prove the first

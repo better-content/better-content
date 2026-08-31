@@ -6,6 +6,64 @@ ServerEvents.recipes(function (event) {
     event.replaceInput({}, 'minecraft:dragon_head', '#forge:skulls/dragon')
     event.replaceInput({}, 'minecraft:dragon_egg', '#forge:eggs/dragon')
 
+    // KubeJS's generic replacement does not traverse several custom recipe
+    // serializers. Rebuild only the audited consumers from their own JSON and
+    // preserve every field other than the closed vanilla-dragon ingredient.
+    var customDragonConsumers = [
+        'bloodmagic:flask/flask_lingering',
+        'complicated_bees:temp_unit/dragon_breath',
+        'goety:blade_of_ender',
+        'goety:death_scythe',
+        'goety:focus/blasting_focus',
+        'goety:focus/flying_focus',
+        'goety:focus/rupture_focus',
+        'goety:philosophers_stone',
+        'goety:ring_of_the_dragon',
+        'goety:thrall/summon_blastling_thrall',
+        'goety:void_robe',
+        'goety:void_staff',
+        'occultism:ritual/familiar_fairy',
+        'occultism:ritual/possess_shulker',
+        'tconstruct:tools/modifiers/worktable/enchantment_converting/unenchant_book',
+        'tconstruct:tools/modifiers/worktable/enchantment_converting/unenchant_tool'
+    ]
+
+    function replaceClosedDragonIngredient(value) {
+        if (value === null || value === undefined || typeof value !== 'object') return 0
+        if (Array.isArray(value)) {
+            var arrayChanges = 0
+            value.forEach(function (entry) { arrayChanges += replaceClosedDragonIngredient(entry) })
+            return arrayChanges
+        }
+
+        var changes = 0
+        if (value.item === 'minecraft:dragon_breath') {
+            delete value.item
+            value.tag = 'forge:bloods/dragon'
+            changes++
+        } else if (value.item === 'minecraft:dragon_head') {
+            delete value.item
+            value.tag = 'forge:skulls/dragon'
+            changes++
+        } else if (value.item === 'minecraft:dragon_egg') {
+            delete value.item
+            value.tag = 'forge:eggs/dragon'
+            changes++
+        }
+        Object.keys(value).forEach(function (key) { changes += replaceClosedDragonIngredient(value[key]) })
+        return changes
+    }
+
+    customDragonConsumers.forEach(function (id) {
+        event.forEachRecipe({ id: id }, function (recipe) {
+            var data = JSON.parse('' + recipe.json)
+            var changes = replaceClosedDragonIngredient(data)
+            if (changes < 1) throw new Error('[closed-end] expected vanilla dragon ingredient in ' + id)
+            event.remove({ id: id })
+            event.custom(data).id(id)
+        })
+    })
+
     event.remove({ output: 'moreartifacts:hero_shield' })
     event.shaped('moreartifacts:hero_shield', ['SES', 'DHD', ' S '], {
         S: '#forge:ingots/steel', E: '#forge:eggs/dragon',

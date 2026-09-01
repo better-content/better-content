@@ -35,8 +35,11 @@ relevant runtime gate; it is not a historical audit ledger.
 | Known debt | Renewable vanilla fluid and stone loops | Explicit non-blocking debt; not claimed compliant | future finite-matter pass | Honest scope | policy | recorded |
 
 Elemental Dragonsteel modifiers are used only when an existing compatible modifier is present. The
-current runtime supplies none, so the three equal-stat materials ship without invented modifiers.
+tracked material definitions assign none rather than inventing modifiers. The most recent complete
+candidate evidence also observed no compatible modifier, but it is historical evidence unless its
+candidate hashes match the tracked pack.
 
 Volatile recipe, loot, trade, and namespace totals do not belong in this living register. Consult
-the latest complete `generated/runtime-dumps/snapshot.json` and its named files when exact current
-counts are needed; incomplete snapshots are not evidence.
+a complete `generated/runtime-dumps/snapshot.json` and its named files only after matching its
+snapshot ID and server-run `candidate_selected` hashes to the target. Incomplete or unmatched
+snapshots are not evidence of exact current counts.

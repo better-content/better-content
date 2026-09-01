@@ -7914,7 +7914,7 @@ hash = "f38540cf88a712ab5542f289b2d4233b19431f24705230b165d8c5e8ef022e3c"
 
 [[files]]
 file = "defaultconfigs/settlement_roads-server.toml"
-hash = "e25568638e8586a5a076b1e5bb9dc9e6d7d3cb96833b3462da12a28844290399"
+hash = "ccc2dd06ae82b645bc6908cc8be23947273ed3a1e74ff233ca62249421b77e0e"
 
 [[files]]
 file = "defaultconfigs/sleepingoverhaul-server.toml"

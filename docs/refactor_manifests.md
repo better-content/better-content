@@ -31,7 +31,7 @@ a staging area inside an active root.
 | Radiation and contained chemistry | Latent ChemLib | Cross-mod gates; no duplicate physical simulation |
 | Industrial heat | Heat Sync | Era placement and integrations; Heat Sync owns storage, transfer, ambient mapping, and Create boiler heat |
 | Dimension Fonts | Dimension Drink | Recipes and milestone references only; Dimension Drink owns obelisks, charge, sessions, tickets, and arrival sites |
-| Settlement paths | Settlement Roads | No pack placement script; Settlement Roads owns planning, persistence, road palette, bridges, and placement |
+| Settlement paths | Settlement Roads | No pack placement script; Settlement Roads owns dry-route planning, persistence, road palette, and placement; bridge scaffolding is dormant and unsupported |
 | Vanilla vessel durability and recipes | Better Content Fixes | No boat mutation or hiding script |
 | Coin acquisition, recipes, village trades, and currency loot | Better Content Economy | No parallel KubeJS coin catalogue, trade, drop, recipe-removal, or emerald-replacement script |
 | TConstruct affixes and Epic Fight mapping | Tinkers' Construct Affixes | Pack supplies no parallel material-affix catalogue |
@@ -66,8 +66,10 @@ resource-fluid storage, input slot, compatibility item, or resource scatter.
 Settlement Roads is an active bundled custom mod. Ground routes place a complete
 three-block-wide surface: dirt path in grassy biomes and gravel in non-grassy
 biomes. A deterministic 20% of eligible road-edge cells uses coarse dirt.
-Ground routes do not add cobblestone guide marks or roadside walls. Water spans
-remain stone-brick bridges with their bridge-specific supports and parapets.
+Ground routes do not add cobblestone guide marks or roadside walls. Water bridges
+are disabled and unsupported: the planner uses a dry detour when one is available
+and otherwise omits the connection. Bridge code and isolated bridge tests remain
+dormant scaffolding and do not establish supported pack behavior.
 
 ## Validation and deployment
 

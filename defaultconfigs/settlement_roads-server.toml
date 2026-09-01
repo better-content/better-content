@@ -54,8 +54,7 @@ max_dry_path_visited_nodes = 4096
 #Maximum lateral search distance from the line between endpoints.
 #Range: 1 ~ 2048
 max_dry_path_distance_from_line = 45
-#Allow temporary bridge routing over short spans of water.
+#Experimental bridge routing is unsupported; leave false for dry detours or omitted connections.
 allow_water_bridges = false
 #Whether wall placement details should be printed. Defaults to false.
 print_wall_information = false
-

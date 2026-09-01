@@ -37,10 +37,13 @@ complementary exploration layers.
 2. A millstone produces two crushed feeds and Crushing Wheels produce three.
    A full chunk cooks to two primary units; one crushed feed cooks to one.
 3. Separation consumes four matching crushed feeds, one route-specific grinding
-   ball, and 500 mB of the declared water or acid route. It yields four units of
-   primary concentrate plus the route's curated coproduct chances. Create recipes
-   are capped at four result entries, including the grinding-ball return; rich
-   routes may consume their premium medium to keep that runtime limit.
+   ball, and 500 mB of the declared water or acid route. Most routes yield four
+   units of primary concentrate plus curated coproduct chances. An explicit assay
+   variant may instead place all guaranteed output in route-specific concentrates:
+   Hotstone's structural assay intentionally has zero primary output and guarantees
+   titanium with nickel, cobalt, and iron coproducts. Create recipes are capped at
+   four result entries, including the grinding-ball return; rich routes may consume
+   their premium medium to keep that runtime limit.
 4. Furnace exits resolve to canonical native or ChemLib forms. TConstruct molten
    exits are metal-only; quartz, gems, salts, carbon, and other nonmetals remain
    item-form outputs.

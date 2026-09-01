@@ -32,6 +32,12 @@ clicks. Threads reader development, the World Condenser configuration screen, an
 world creation are manual visual gates. Before rerunning, inspect the existing run and report its
 ID, hashes, failed or aborted cases, evidence path, retained fixture, and process cleanup state.
 
+A runtime snapshot is evidence for a target only when its snapshot ID appears in that run's server
+events and the run's `candidate_selected` hashes match the target under discussion. Completeness
+makes a snapshot usable evidence; recency alone does not make it current. Preserve unmatched
+snapshots as historical candidate evidence and do not use their volatile totals as claims about the
+tracked pack.
+
 ## Fresh distributions
 
 Only an explicit fresh-dist request authorizes:

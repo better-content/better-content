@@ -2,7 +2,9 @@
 
 This pack uses six technology eras. Machine Blocks are one-time capability
 proofs: only the explicitly named root machines consume them. Downstream
-recipes return to each mod's native manufactured parts.
+recipes return to each mod's native manufactured parts. Their proof recipes
+produce batches of four Andesite, four Copper, four Brass, two Airtight, two
+Electrical, and one Space Machine Block.
 
 Progression is communicated by executable recipes, apparatus, native guides,
 item-hover annotations, and event or world feedback. FTB Quests records a small

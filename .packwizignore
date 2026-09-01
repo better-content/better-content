@@ -1,7 +1,17 @@
 .codex
+/.gradle/
+/.github/
 docs
 /.kjs-script-summaries.md.kate-swp
 /kjs-script-summaries.md
+/build.gradle.kts
+/build/
+/gradle/
+/gradlew
+/release.main.kts
+/settings.gradle.kts
+/src/
+/test.main.kts
 .git
 .gitattributes
 .gitignore

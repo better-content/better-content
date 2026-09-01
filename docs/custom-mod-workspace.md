@@ -10,14 +10,22 @@ Run the listed validation and staging command from the custom-mod repository. `s
 
 Copy that JAR into `../../better-content-modpack/mods/`, removing any superseded version of the same custom mod. Do not deploy development-mapped or sources JARs.
 
-From `../../better-content-modpack`, run:
+Repository-local validation does not authorize deployment or pack-level testing. When the user
+explicitly requests deployment of one mod, copy only its staged runtime JAR and run:
 
 ```sh
 packwiz refresh
-./smoke.sh
 ```
 
-`packwiz refresh` updates the tracked pack index after a JAR replacement. `./smoke.sh` is the modpack's sole supported evaluation and must pass before the modpack change is pushed.
+`packwiz refresh` updates the tracked pack index after a JAR replacement. Do not run a pack suite
+unless the user separately requests pack-level testing.
+
+When the user explicitly requests a fresh tested distribution, run `./release.main.kts` from the
+modpack. It requires clean active source repositories, runs every active repository's documented
+full verification, stages and validates fresh JARs, deploys them as a group, refreshes the pack,
+invokes `dist.sh` once, and runs all granular pack suites against those exact candidates. The
+machine-readable release inventory is `gradle/active-custom-mods.json`; this table documents the
+same active set for humans.
 
 ## Canonical Active Inventory
 

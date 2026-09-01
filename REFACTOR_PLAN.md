@@ -98,7 +98,7 @@ change. Historical run evidence stays outside the tracked documentation tree.
 5. Commit and push each coherent repository-local change.
 6. Copy requested runtime JARs to `better-content-modpack/mods/`, run
    `packwiz refresh`, update living docs, and commit the pack integration.
-7. Run `./smoke.sh` as the sole supported assembled-pack runtime evaluation.
+7. When explicitly ordered, run the appropriate `./test.main.kts` pack suite and retain its evidence.
 
 The live completion record is `REFACTOR_CHECKLIST.md`; it must describe current
 state, never an imaginary active agent or stale next action.

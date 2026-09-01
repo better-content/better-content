@@ -1,0 +1,32 @@
+name: Fast test harness
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: gradle
+      - name: Compile and run Minecraft-free harness tests
+        run: ./gradlew --no-daemon test
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fast-test-reports
+          path: |
+            build/reports/tests/
+            build/test-results/
+          retention-days: 30

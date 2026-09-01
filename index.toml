@@ -1,12 +1,8 @@
 hash-format = "sha256"
 
 [[files]]
-file = ".github/workflows/smoke.yml"
-hash = "3cc1f64cc6c9fc485828891d0fb64869174421527b9bab5012a54852e139c34f"
-
-[[files]]
 file = "AGENTS.md"
-hash = "4a9c333ffb9f79c401b4c29025840ab20892d913d3ec6cb05b796cfc97ee8094"
+hash = "3f74655d61dcc25c40fd9eef2246ea8f65a0a387d5e99f03035a2d06e2179ce1"
 
 [[files]]
 file = "LICENSE"
@@ -18,7 +14,7 @@ hash = "40b8430f40df3bcdbf54e6ed70e372aaa8d2302675928ae1fe8a34c031552cfd"
 
 [[files]]
 file = "README.md"
-hash = "e3654621f7b4771e21cde6e0b179e8c9b8afc6fc6f7f95a1dd21e31b593493fd"
+hash = "b2375c96741002cc6a661c1cb9c8edcd305fb7c4fb7e9355ab361ce2b9244628"
 
 [[files]]
 file = "REFACTOR_CHECKLIST.md"
@@ -26,7 +22,7 @@ hash = "60aafbe8841c87ba4a8426f2c0f6999b1dbf6f975b540256456801a018cc5e5c"
 
 [[files]]
 file = "REFACTOR_PLAN.md"
-hash = "5ff7e970347f8ba856351367f436801d7e720715eaa89399a30a0b01007cf510"
+hash = "a996623735ebe4e8a7faafc0b9b3b2780aee1558d8a786fd2ffc6805dfdf5e3a"
 
 [[files]]
 file = "config/CoroUtil/General.toml"
@@ -5266,7 +5262,7 @@ hash = "e2f591923558d17aa4bd65859e30b388083de43a58b7642dbeb4863e53d7d145"
 
 [[files]]
 file = "config/better-content-log4j2.xml"
-hash = "1eddd3daac7f787a3cabecf15648b5243f9a90b18fe307ec7ba69d5df4850d59"
+hash = "4e1d5d9cda82914626fa3e4229dba0b18cf81933c78e41afb76c3290c8b88fcf"
 
 [[files]]
 file = "config/better_content_economy-common.toml"
@@ -5338,7 +5334,7 @@ hash = "a2b5146afc2459d09b6b02fdf8ccbe1c2de79574d7ca01e09f2b8be8e0b65c51"
 
 [[files]]
 file = "config/c2me.toml"
-hash = "18a3f274b9be50990d4cd6b6f8d43697b6f7809e9e70bf1691139f7eb94928b4"
+hash = "b63e382cc5bf8865149d972d5a1bffd838f24cfefeee3aecc27f2cd484a5e58d"
 
 [[files]]
 file = "config/chemlib-common.toml"
@@ -14748,10 +14744,6 @@ hash = "d8650d47f7258739fecbf0771b9b1043367e4338452429786cc3fec46f70cc8c"
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.8.1.zip.txt"
 hash = "3a5f45d40550d15a973b5d6a63b218e93a8930851690108d92add5d409bdaf2f"
-
-[[files]]
-file = "smoke.sh"
-hash = "f653be3db9ab7034f0d4165a455865c80a98cf783baee35770b62ff62ba187bd"
 
 [[files]]
 file = "tacz/applied-armorer.pw.toml"

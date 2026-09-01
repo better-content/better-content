@@ -4,6 +4,8 @@
 # Keep only disposable/downloaded installer output out of the worktree.
 /forge-*-installer.jar
 /forge-*-installer.jar.log
+.gradle/
+build/
 .idea/
 tools/runtime-probe/.gradle/
 tools/runtime-probe/build/
@@ -18,6 +20,7 @@ generated/exports-build40-*
 generated/cache/
 generated/evidence/
 /generated/runtime-dumps/
+/generated/test-evidence/
 generated/asset-review/*/evidence/
 generated/pack-site/
 generated/surface-marker-capture/

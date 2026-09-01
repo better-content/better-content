@@ -1,7 +1,7 @@
 version = 3
 
 # C2ME is required for the finished pack; risky features are re-enabled one
-# group at a time and must pass the supported `./smoke.sh` evaluation.
+# group at a time and, when pack testing is explicitly ordered, use the `server` suite.
 defaultGlobalExecutorParallelismExpression = "default"
 globalExecutorParallelism = "default"
 

@@ -2,7 +2,7 @@
 <!--
   Better Content's production log policy. The regex denies only fixed-version, enumerated
   compatibility chatter that has been reviewed under the full pack smoke. New warning/error
-  families remain visible, and smoke.sh rejects every WARN or ERROR record that reaches output.
+  families remain visible, and the explicit runtime suites reject every WARN or ERROR record that reaches output.
 -->
 <Configuration status="ERROR">
     <Properties>

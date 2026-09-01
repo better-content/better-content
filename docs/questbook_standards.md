@@ -117,7 +117,7 @@ For every milestone change:
 4. Confirm a manually claimable coin reward is present.
 5. Render the affected chapter with the supported standalone layout harness and
    inspect icons, spacing, labels, and clipping.
-6. Run `./smoke.sh` and confirm FTB loads three milestone chapters plus the six
+6. When pack-level testing is explicitly requested, run `./test.main.kts all` and confirm FTB loads three milestone chapters plus the six
    completionist chapters.
 
 Do not add a quest compiler, linter, audit framework, generated report, or

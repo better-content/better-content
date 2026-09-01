@@ -6,52 +6,57 @@ This repository is the Better Content Forge 1.20.1 modpack content layer.
 ## Active scripts
 - `./dist.sh` creates versioned CurseForge/client and server-content ZIPs under the
   canonical ignored `dist/` directory. It accepts no output-directory override.
-- `./smoke.sh` is the sole supported evaluation.
-- `./package.sh` is their shared internal packager; do not invoke alternate assemblers.
+- `./test.main.kts` is the supported granular evaluation facade. It requires an explicit
+  `fast`, `candidate`, `server`, `multiplayer`, `singleplayer`, or `all` selector.
+- `./release.main.kts` is the only fresh-dist workflow. It validates every active custom-mod
+  repository, stages fresh runtime JARs, packages exactly once, and runs `all`.
+- `./package.sh` is the shared internal packager; do not invoke alternate assemblers.
 
 `dist.sh` performs packaging only. Command availability, input copying, packwiz export, and
 ZIP creation may fail operationally; it must not add validation, integrity, provenance,
 content, schema, archive-membership, cleanliness, or correctness verdicts.
 
-For a fresh smoked distribution, run `./dist.sh` exactly once and then run `./smoke.sh`.
-`smoke.sh` deploys the exact client and server ZIPs already present under `dist/`, records their
-SHA-256 hashes before launch, and requires the same hashes afterward. Never rebuild between smoke
-and publication: the ZIPs that pass are the ZIPs to publish.
+`dist.sh` remains a package-once primitive. Do not treat it as validation or run it as the routine
+conclusion of an edit. A fresh tested distribution is authorized only when the user explicitly asks
+for one, and must use `release.main.kts`; never rebuild between testing and publication.
 
-`dist.sh` delegates release assembly to `package.sh`. `smoke.sh` extracts the packaged production
-server, changing only `eula=true` and `online-mode=false`, and imports the packaged CurseForge
-client manifest into a disposable client runtime. After initial server readiness it requires and
-promotes a complete live runtime-data snapshot to the ignored `generated/runtime-dumps/` directory.
-It then checks complete CLI lifecycle transactions, a bounded settled dedicated-server connection,
-a fresh single-player world join, process shutdown, every run-local log, fatal signatures, and unchanged candidate hashes. Resolved client artifacts
-persist under
-`~/.cache/bc/packwiz-downloads`; set `BC_PACKAGE_ARTIFACT_CACHE` to use another disposable
-cache root. The smoke run root and settle duration may be set with `BC_SMOKE_RUN_ROOT` and
-`BC_SMOKE_SETTLE_SECONDS`.
+## Frugal testing policy
 
-`./smoke.sh` is the sole supported runtime evaluation, but it is not the default check for
-every edit. Do not run it for simple, localized config-only changes that can be verified by
-focused inspection or the owning format/tool; for example, use `packwiz refresh`, hash
-verification, and `git diff --check` for a single packaged config default. Run the smoke
-evaluation when the user explicitly requests it, when preparing a fresh smoked distribution,
-when a repository workflow specifically requires it, or when a change plausibly affects game
-startup, client joining, or cross-system runtime integration.
+Use the smallest relevant focused validation for ordinary work: format parsing, targeted inspection,
+`packwiz refresh` when metadata changed, hashes, and `git diff --check`. Harness changes run
+`./test.main.kts fast`. Do not build a distribution or run `candidate`, `server`, `multiplayer`,
+`singleplayer`, or `all` because a change appears runtime-sensitive. Pack-level testing runs only
+when the user explicitly orders it or names a pack suite. Fresh distributions run only when the
+user explicitly orders a fresh dist.
 
-Do not add other runtime evaluations: static validation suites, contracts, audits, unit tests,
-GameTests, performance budgets, persistence scenarios, doctor checks, or scenario matrices.
+Custom-mod changes still run that repository's documented local verification, but do not authorize
+cross-repository builds, JAR deployment, pack refresh, packaging, or pack tests. When pack testing
+was not ordered, say in the handoff that it was intentionally omitted under this policy.
+
+Before starting a pack test, inspect existing `generated/test-evidence/` runs. Reuse evidence that
+already answers the diagnostic question. Each explicit pack run must keep its run ID, command,
+candidate hashes, named failures and aborts, first useful diagnosis, complete logs, screenshots,
+runtime snapshot, lifecycle/archive evidence, process diagnostics, and retained failed-fixture path.
+Never report only that tests failed, delete a failed fixture, rebuild the candidate, or rerun an
+expensive suite before inspecting its evidence. Confirm whether child processes were cleaned up so
+another agent can safely continue.
+
+The granular suite preserves the package, dedicated-server/runtime-data/lifecycle, multiplayer/GUI,
+single-player, log-policy, and candidate-hash boundaries. It does not authorize unrelated audits,
+performance budgets, persistence matrices, or gameplay scenario expansion.
+
 The narrowly scoped `bc.crafting_policy.v1` contract is an authorized content policy, not a
 general audit utility: its KubeJS startup check must reject unknown loaded namespaces and its
 runtime recipe reporting may name exact cut-family leaks and live consumers. Keep it in
 `kubejs/config/` and KubeJS scripts; it does not authorize a `tools/` tree or unrelated checks.
 Questbook visual authoring is the sole exception: use the Minecraft-free sibling harness at
 `/home/dev/ftb-quests-layout-harness/standalone` to render and inspect live FTB Quests chapter
-layouts and to run its icon audit against an available reference-client atlas. These are static
-authoring checks, not runtime evaluations; they complement `./smoke.sh` without replacing or
-broadening it.
+layouts and to run its icon audit against an available reference-client atlas. These are focused
+authoring checks, not permission to run pack-level suites.
 
 ## Tools and quarantine
 The entire former `tools/` tree is quarantined. Do not recreate an active `tools/` directory.
-`quarantine/` is unsupported and removable. Active runtime content, `dist.sh`, and `smoke.sh`
+`quarantine/` is unsupported and removable. Active runtime content and supported scripts
 must not depend on or include it. Do not restore or invoke quarantined code unless the user
 explicitly reverses this decision. This quarantine applies to the pack-local former `tools/`
 tree, not to `/home/dev/ftb-quests-layout-harness`, which is the supported questbook layout
@@ -87,9 +92,10 @@ must name every chapter and cross-cutting integration file in scope. Before hand
 - IDs added, removed, or repurposed;
 - dependencies, links, visibility, criteria, and rewards affected;
 - supporting runtime files changed outside `config/ftbquests/`;
-- the result of `./smoke.sh`, or the exact reason it was not run or did not pass.
+- the explicitly ordered pack-suite result and evidence path, or that pack testing was intentionally
+  not run under the frugal-testing policy.
 
 Do not invent a second quest compiler, schema, linter, audit, or validation command. Review SNBT
 and presentation according to `docs/questbook_standards.md`; use only the sibling standalone
 layout harness's documented render and icon-audit commands for static visual authoring.
-`./smoke.sh` remains the sole supported runtime evaluation.
+`./test.main.kts` remains the supported pack-test facade, subject to the explicit-order policy.

@@ -17,16 +17,20 @@ An explicit pack-test request selects one existing candidate group:
 ./test.main.kts all
 ```
 
-The selectors map to the Gradle tasks `candidateTest`, `serverTest`, `multiplayerTest`,
-`singleplayerTest`, and `modpackTest`. Each runtime group uses a fresh fixture. `all` validates the
-candidate before starting Minecraft and then continues independent runtime groups after a group
-failure so one authorized run leaves useful cross-system evidence.
+The selectors map exactly to `test`, `candidateTest`, `serverTest`, `multiplayerTest`, and
+`singleplayerTest`. Gradle also exposes the aggregate `modpackTest`, but `test.main.kts all`
+deliberately sequences `test`, the candidate gate, and the three independent runtime groups so a
+candidate failure prevents Minecraft startup while a later runtime-group failure does not hide the
+other groups' evidence. Each runtime group uses a fresh fixture.
 
-Evidence is written beneath `generated/test-evidence/<run-id>/`. Each suite records incremental
-JSON events, a `bc.modpack_test_run.v1` summary, candidate hashes, logs, screenshots, runtime data,
-and timeout diagnostics. Failed fixtures are retained. Before rerunning, inspect the existing run
-and report its ID, hashes, failed or aborted cases, evidence path, retained fixture, and process
-cleanup state.
+`fast` writes ordinary Gradle XML and HTML reports only. Candidate, runtime, and `all` runs share a
+run ID and write structured evidence beneath `generated/test-evidence/<run-id>/`: incremental JSON
+events, a `bc.modpack_test_run.v1` summary, candidate hashes, logs, runtime data, and timeout
+diagnostics. The single-player group also records the customized title screen without injecting
+input. Failed fixtures are retained. Automated tests must not synthesize mouse movement or mouse
+clicks. Threads reader development, the World Condenser configuration screen, and single-player
+world creation are manual visual gates. Before rerunning, inspect the existing run and report its
+ID, hashes, failed or aborted cases, evidence path, retained fixture, and process cleanup state.
 
 ## Fresh distributions
 

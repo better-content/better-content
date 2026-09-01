@@ -1,5 +1,6 @@
 package com.bettercontent.tests
 
+import com.bettercontent.tests.release.jarDeclaresMod
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertThrows
@@ -24,12 +25,29 @@ class HarnessFastTest {
         assertEquals("bc.active_custom_mods.v1", document.path("schema").asText())
         val mods = document.path("mods")
         assertEquals(33, mods.size())
-        assertEquals(33, mods.map { it.path("repository").asText() }.toSet().size)
+        val repositories = mods.map { it.path("repository").asText() }.toSet()
+        assertEquals(33, repositories.size)
         assertEquals(33, mods.map { it.path("modId").asText() }.toSet().size)
         mods.forEach { mod ->
             assertTrue(Files.isRegularFile(root.resolve("mods").resolve(mod.path("artifact").asText())))
             assertTrue(mod.path("tasks").isArray && mod.path("tasks").size() > 0)
+            assertTrue(mod.path("dependsOn").let { it.isMissingNode || (it.isArray && it.all { dependency -> dependency.asText() in repositories }) })
         }
+        assertEquals(listOf("heat-sync"), mods.single { it.path("repository").asText() == "latent-chemlib" }.path("dependsOn").map { it.asText() })
+    }
+
+    @Test
+    fun releaseJarDetectionIgnoresDependencyModIds(@TempDir root: Path) {
+        val jar = root.resolve("fixture.jar")
+        zip(jar, mapOf("META-INF/mods.toml" to """
+            modLoader="javafml"
+            [[mods]]
+            modId="declared_mod"
+            [[dependencies.declared_mod]]
+            modId="dependency_mod"
+        """.trimIndent()))
+        assertTrue(jarDeclaresMod(jar, "declared_mod"))
+        assertTrue(!jarDeclaresMod(jar, "dependency_mod"))
     }
 
     @Test
@@ -76,8 +94,11 @@ class HarnessFastTest {
     @Test
     fun logPolicyNamesWarningsAndFatalRecords(@TempDir root: Path) {
         val clean = root.resolve("clean.log").also { it.writeText("[INFO] ready\n") }
+        val accepted = root.resolve("accepted.log").also {
+            it.writeText("[pool-12-thread-1/WARN] [xbigellx.realisticphysics.RealisticPhysics]: Forcing chunk load: [-79, 44]\n")
+        }
         val bad = root.resolve("bad.log").also { it.writeText("[Server/WARN] unsafe\nReportedException: boom\n") }
-        assertTrue(LogPolicy.findings(listOf(clean)).isEmpty())
+        assertTrue(LogPolicy.findings(listOf(clean, accepted)).isEmpty())
         val findings = LogPolicy.findings(listOf(bad))
         assertEquals(2, findings.size)
         assertEquals(listOf(1, 2), findings.map { it.line })

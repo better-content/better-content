@@ -28,6 +28,13 @@ Each plate carries exactly one Systemic Salience aspect as a path, current, frac
 
 Fragility 7–13 have candidate masters and derived layers for art review but remain sealed future cards. Art readiness must never be interpreted as trigger or narrative approval.
 
+## Restored realm plates
+
+- **The Deep Grows Its Own Light** (`deep_own_light`, World 8, Robustness) depicts a self-lit Bumblezone country under living comb: monumental wax-and-honey architecture, cultivated amber bioluminescence, and a tiny traveller for scale. A precise Robustness-blue structural trace braces the vertical composition without turning the hive blue.
+- **Silence Has Teeth** (`silence_has_teeth`, World 9, Endurance) depicts Ratlantis as abandoned rail and tube routes whose negative space closes into teeth: rusted machinery, olive ruin, a tiny traveller, and a continuous Endurance-cyan route threading through the danger.
+
+These realm-grounded identities replace retired generic logistics plates. Their candidate masters remain in the external review bundle; only deterministic 256×384 full-color and grayscale-thumbnail derivatives belong in the mod source. Acceptance requires real-client captures of the sealed plate, the live 800 ms development crossfade, and the completed reader state for both actual journey routes.
+
 ## Runtime art contract
 
 Every approved master produces two 256×384 runtime files:
@@ -37,4 +44,4 @@ Every approved master produces two 256×384 runtime files:
 
 Unread development uses no generated presentation layers. The reader crossfades the untouched native illustration directly over its neutral code-drawn archive plate for 800 ms. The illustration's authored pigment—including its canonical aspect color—remains part of the art rather than a separate GUI effect.
 
-Masters are generated individually with the built-in image-generation workflow. Each prompt combines this shared grammar, the card-specific scene brief, suit pigment tendency, exact aspect trace, and the no-text/no-frame constraint. The approved tricolor-v1 masters remain anchors for line density, paper, contrast, and restraint; generated candidates remain isolated until the real-client crossfade and completed-reader captures are approved.
+Masters are generated individually with the built-in image-generation workflow. Each prompt combines this shared grammar, the card-specific scene brief, suit pigment tendency, exact aspect trace, and the no-text/no-frame constraint. Existing approved World plates may be supplied as style references for line density, paper, contrast, and restraint, never as composition sources. Generated candidates remain isolated until the real-client crossfade and completed-reader captures are approved.

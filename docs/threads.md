@@ -25,6 +25,12 @@ Every live card has separate reveal and completion routes. A single signal may r
 
 Pack bridges observe operating boundaries rather than inventory proxies wherever the installed mod exposes them. Create's action-backed criteria cover the deployer, water wheel, pump, train, long travel, and finished Precision Mechanism. Create: Power Grid requires energized terminals plus an actual wire connection, followed by a live consumer. AE2 begins when its pattern-encoding menu is used and completes at the crafting CPU's native job-finished boundary. A Valkyrien Skies episode follows one physical ship until the player makes landfall after 128 blocks. Occultism uses the golden bowl's valid ritual start and successful stop. Relics uses positive native relic experience twice on the same tagged physical stack in distinct contexts. Ars Energistique begins only when positive Source is converted into AE power and completes when the correlated AE2 crafting CPU finishes work. Unsupported OC2-file and generic Hexerei variants are not advertised as acquisition routes.
 
+World journeys bind realm identity to a complete visit. Entering The Bumblezone reveals
+`deep_own_light` / The Deep Grows Its Own Light; returning from that same journey completes it.
+Entering Ratlantis reveals `silence_has_teeth` / Silence Has Teeth; its correlated return completes
+it. The retired generic pollen and logistics identities have no aliases or migration because no
+historical player card data exists to preserve.
+
 Fragility is deliberately stricter than a generic milestone list:
 
 | Card | Reveal | Completion |

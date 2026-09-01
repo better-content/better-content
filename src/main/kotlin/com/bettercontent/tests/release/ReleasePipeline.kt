@@ -23,6 +23,7 @@ data class ActiveMod(
     val modId: String,
     val artifact: String,
     val tasks: List<String>,
+    val dependsOn: List<String> = emptyList(),
 )
 
 data class ActiveModManifest(val schema: String, val mods: List<ActiveMod>)
@@ -39,8 +40,13 @@ fun main(args: Array<String>) {
     val manifest: ActiveModManifest = mapper.readValue(root.resolve("gradle/active-custom-mods.json").toFile())
     require(manifest.schema == "bc.active_custom_mods.v1") { "unexpected active-mod manifest schema" }
     require(manifest.mods.size == 33) { "fresh dist requires exactly 33 active custom mods" }
-    require(manifest.mods.map { it.repository }.toSet().size == manifest.mods.size) { "duplicate repository in active-mod manifest" }
+    val repositories = manifest.mods.map { it.repository }.toSet()
+    require(repositories.size == manifest.mods.size) { "duplicate repository in active-mod manifest" }
     require(manifest.mods.map { it.modId }.toSet().size == manifest.mods.size) { "duplicate mod ID in active-mod manifest" }
+    manifest.mods.forEach { mod ->
+        require(mod.repository !in mod.dependsOn) { "${mod.repository} cannot depend on itself" }
+        require(mod.dependsOn.all { it in repositories }) { "${mod.repository} has an unknown release dependency" }
+    }
 
     val runId = System.getenv("BC_TEST_RUN_ID")?.takeIf { it.isNotBlank() }
         ?: DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmmss'Z'").withZone(ZoneOffset.UTC)
@@ -58,16 +64,23 @@ fun main(args: Array<String>) {
     Files.writeString(evidence.resolve("preflight.tsv"), preflight.joinToString("\n", postfix = "\n"))
     require(preflight.all { it.endsWith("\tclean") }) { "all active repositories must exist and be clean; see ${evidence.resolve("preflight.tsv")}" }
 
-    val executor = Executors.newFixedThreadPool(jobs)
-    val futures = manifest.mods.map { mod -> executor.submit(Callable { build(root, workspace, evidence, staging, mod) }) }
-    executor.shutdown()
     val built = mutableListOf<BuiltMod>()
     val failures = mutableListOf<String>()
-    futures.forEachIndexed { index, future ->
-        try {
-            built += future.get()
-        } catch (error: Exception) {
-            failures += "${manifest.mods[index].repository}: ${error.cause?.message ?: error.message}"
+    val pending = manifest.mods.associateBy { it.repository }.toMutableMap()
+    while (pending.isNotEmpty() && failures.isEmpty()) {
+        val completed = built.map { it.definition.repository }.toSet()
+        val ready = pending.values.filter { mod -> mod.dependsOn.all { it in completed } }
+        require(ready.isNotEmpty()) { "active-mod release dependencies contain a cycle: ${pending.keys.sorted()}" }
+        val executor = Executors.newFixedThreadPool(jobs)
+        val futures = ready.associateWith { mod -> executor.submit(Callable { build(root, workspace, evidence, staging, mod) }) }
+        executor.shutdown()
+        futures.forEach { (mod, future) ->
+            try {
+                built += future.get()
+                pending.remove(mod.repository)
+            } catch (error: Exception) {
+                failures += "${mod.repository}: ${error.cause?.message ?: error.message}"
+            }
         }
     }
     if (failures.isNotEmpty()) Files.writeString(evidence.resolve("failures.txt"), failures.joinToString("\n", postfix = "\n"))
@@ -80,6 +93,12 @@ fun main(args: Array<String>) {
                 .forEach { existing -> if (existing.fileName.toString() != item.definition.artifact) Files.delete(existing) }
         }
         Files.copy(item.jar, modsDirectory.resolve(item.definition.artifact), StandardCopyOption.REPLACE_EXISTING)
+    }
+    manifest.mods.forEach { mod ->
+        val deployed = modsDirectory.resolve(mod.artifact)
+        require(Files.isRegularFile(deployed) && jarDeclaresMod(deployed, mod.modId)) {
+            "deployment lost or misidentified ${mod.artifact}"
+        }
     }
 
     runLogged(root, listOf("packwiz", "refresh"), evidence.resolve("packwiz-refresh.log"))
@@ -122,11 +141,20 @@ private fun build(root: Path, workspace: Path, evidence: Path, staging: Path, mo
     return BuiltMod(mod, capture(repository, listOf("git", "rev-parse", "HEAD")).trim(), staged, Hashes.sha256(staged))
 }
 
-private fun jarDeclaresMod(path: Path, modId: String): Boolean = runCatching {
+internal fun jarDeclaresMod(path: Path, modId: String): Boolean = runCatching {
     JarFile(path.toFile()).use { jar ->
         val entry = jar.getJarEntry("META-INF/mods.toml") ?: return@use false
         jar.getInputStream(entry).bufferedReader().use { reader ->
-            Regex("""modId\s*=\s*[\"']${Regex.escape(modId)}[\"']""").containsMatchIn(reader.readText())
+            var inModDeclaration = false
+            reader.lineSequence().any { line ->
+                val trimmed = line.trim()
+                if (trimmed.startsWith("[[") && trimmed.endsWith("]]")) {
+                    inModDeclaration = trimmed == "[[mods]]"
+                    false
+                } else {
+                    inModDeclaration && Regex("""modId\s*=\s*[\"']${Regex.escape(modId)}[\"']""").matches(trimmed)
+                }
+            }
         }
     }
 }.getOrDefault(false)

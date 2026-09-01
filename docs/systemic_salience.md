@@ -34,7 +34,7 @@ Every identity has one recurring motion and sound phrase. These cues play only a
 | Renewal | rising spiral and bloom | ascending chimes | Evaporite crystal bloom |
 | Control | converging points | ticks resolving to a ping | Black Shale convergence |
 
-The eight 18×18 badges and eight short mono OGG motifs are canonical assets shared byte-for-byte by the RPG and nutrition implementations. Ores reuse the same badge strip while their world identity remains morphology-first dirty geology rather than an aspect-colour wash.
+The eight 18×18 badges are canonical byte-identical assets across RPG Stats, Systemic Salience, and Realistic Ores. Audio is a semantic family rather than a shared file: each aspect keeps the phrase in the table while RPG allocation UI, nutrition and systemic bodily cues, and Realistic Ores discovery use context-specific mixes. Tempo may add an event-specific broken-cadence variant without becoming a ninth identity. Realistic Ores reuses the badge strip while its world identity remains morphology-first dirty geology rather than an aspect-colour wash.
 
 ## Teaching surfaces
 

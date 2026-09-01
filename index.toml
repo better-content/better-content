@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "AGENTS.md"
-hash = "3f74655d61dcc25c40fd9eef2246ea8f65a0a387d5e99f03035a2d06e2179ce1"
+hash = "d7e6404be08ae3c348c4e5e806fd2dd448d8de5549e7782d90ee7f9beccfb80c"
 
 [[files]]
 file = "LICENSE"
@@ -15,14 +15,6 @@ hash = "40b8430f40df3bcdbf54e6ed70e372aaa8d2302675928ae1fe8a34c031552cfd"
 [[files]]
 file = "README.md"
 hash = "b2375c96741002cc6a661c1cb9c8edcd305fb7c4fb7e9355ab361ce2b9244628"
-
-[[files]]
-file = "REFACTOR_CHECKLIST.md"
-hash = "60aafbe8841c87ba4a8426f2c0f6999b1dbf6f975b540256456801a018cc5e5c"
-
-[[files]]
-file = "REFACTOR_PLAN.md"
-hash = "a996623735ebe4e8a7faafc0b9b3b2780aee1558d8a786fd2ffc6805dfdf5e3a"
 
 [[files]]
 file = "config/CoroUtil/General.toml"
@@ -5510,7 +5502,7 @@ hash = "f78e3dc6590c2838db14377251cdc814fe69a1e3eafadcbc8ef5f0061abcffe0"
 
 [[files]]
 file = "config/explosionoverhaul/README.md"
-hash = "43a6695ac6c203507d4f8a831f45a901b3301f5b0005962b6895ab43aabc7686"
+hash = "f3b376b1023157b5ddcaa5da17889cb77450c3b260ee7017c767bbe0caabb9bb"
 
 [[files]]
 file = "config/explosionoverhaul/explosionoverhaul-client.toml"
@@ -10613,10 +10605,6 @@ file = "kubejs/config/adpother_latent_gas_policy.json"
 hash = "456d49c17c73171990b006e7336d6c2bf1206c573c353e788a9db85224875583"
 
 [[files]]
-file = "kubejs/config/alchemistry_dissolver_port.json"
-hash = "f9a34140252a5c961db16ee2e82a4b291f5630213d7210994f0d05e85aac0c16"
-
-[[files]]
 file = "kubejs/config/chemlib_form_policy.json"
 hash = "ad77584f8be4a785c2d2540c7ed1cd7a67ef5dd24a0aaa00e589de092e827588"
 
@@ -13432,7 +13420,7 @@ metafile = true
 
 [[files]]
 file = "mods/arcane-chunk-loaders-0.1.0.jar"
-hash = "23b2715ea96a5d3b8bfd7dd577b146665ca068d2cae74b656b04acebac6fdc30"
+hash = "8f1da24104305b05cff86e0ef39e84d15ced6840dec6dd4552b9819b06bb5410"
 
 [[files]]
 file = "mods/architectury-api.pw.toml"
@@ -13476,19 +13464,19 @@ metafile = true
 
 [[files]]
 file = "mods/better-content-economy-1.0.0.jar"
-hash = "78c6d00bd6a036c9bca77ad0843f0bcdbb905428933809b3c2898128fdb7d374"
+hash = "684c632d639a83d4607c68f4eccee7c4bbac4e91645895400915570d59574369"
 
 [[files]]
 file = "mods/better-content-fixes-0.1.3.jar"
-hash = "015a1f3fb563f2892d78a9fc702933ac9d0394f0c469fbccde622cfc943c362c"
+hash = "826fc1d3973845c1490aba7e7882e5e18af32905d44f2c13620b457efa2e0f67"
 
 [[files]]
 file = "mods/better-content-quests-1.0.0.jar"
-hash = "022546d68ea81f26f19767fa21842267f2b34302f4b23ab4c6785df18746ccbb"
+hash = "a06b422b4ea7dd9b90e093d32006f2ee8eab64b2b6c29f67fdbf74faec75a3cd"
 
 [[files]]
 file = "mods/better-content-threads-1.0.0.jar"
-hash = "469296760c47603870c2742726965710be1eae83b6ca9b6db19f03bea0be4f2b"
+hash = "aa98a30e4895a2e11dd878951f6c1b4352f72f85d1de3c0a2371488597e06610"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"
@@ -13527,7 +13515,7 @@ metafile = true
 
 [[files]]
 file = "mods/bumblezone-cultivars-0.1.0.jar"
-hash = "5dbf75ac43d4949fb7cae9522fa8d52f8f952596d012d42a1a5ebce4d5a0b371"
+hash = "6a33a6ca14fb288a642990a08daeb3124d770fc3a03b40eebd02147b4a93e352"
 
 [[files]]
 file = "mods/burnt-basic.pw.toml"
@@ -13546,7 +13534,7 @@ metafile = true
 
 [[files]]
 file = "mods/class-selector-1.0.0.jar"
-hash = "92a54d766d0eea2884e5955f5299940797cfe15e346798ad842cf2d13abe6371"
+hash = "5ecf46d17f8dca0d8eaf58447e95a4b391ee3cc0a40489f48194c9875c137054"
 
 [[files]]
 file = "mods/claustrophobic-dungeons.pw.toml"
@@ -13630,11 +13618,11 @@ metafile = true
 
 [[files]]
 file = "mods/create-train-fuel-scaling-0.1.0.jar"
-hash = "689614e8a76da41ba0039b3b69a6a6d93ceb871d632c427246ed4ec19eb2d7d0"
+hash = "911914af72d99a230804a70bda21ef13b7530c07e155c5b8ba0162502d5c64b2"
 
 [[files]]
 file = "mods/create-transmission-loss-0.1.0.jar"
-hash = "e5e5387385170fd172b8d3912eca0dfeaafe0c9f02ab6cc656f4f5dc33d7078e"
+hash = "ce6190b82d9de564a9a62a04a4c069128fd419efbac32db78ff0bef0526a4042"
 
 [[files]]
 file = "mods/create.pw.toml"
@@ -13663,7 +13651,7 @@ metafile = true
 
 [[files]]
 file = "mods/depth-director-0.2.0.jar"
-hash = "211a2f5ac81e35e10f2c7f188d97a9c1c8daa8f68ea5e32d4cc8a784301e582f"
+hash = "85d103961377241d47e2f86ce68ea7e03bbe3ceeb3c0e3e414dd5f454a9ba8c0"
 
 [[files]]
 file = "mods/diet.pw.toml"
@@ -13672,7 +13660,7 @@ metafile = true
 
 [[files]]
 file = "mods/dimension-drink-1.0.0.jar"
-hash = "70ed5bdc834f3820dbadcdae1f8a8665259b2b0eaf679f9b9bfa6edb109b73aa"
+hash = "5b7a9b6d0ec97e8e3f1934172b25e3b278881e190b2d0efeae9400ce55f1538a"
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
@@ -13681,7 +13669,7 @@ metafile = true
 
 [[files]]
 file = "mods/downed-player-revival-1.0.0.jar"
-hash = "5abf9f231651a2c69fee5759f92b37354e259f83242859b5e8b49e6a686ae8b1"
+hash = "ddee448d66177a713159e900f3df4a1fd806727bf7e9c1b34dbf0b77b59139e7"
 
 [[files]]
 file = "mods/dynamic-asset-generator.pw.toml"
@@ -13690,7 +13678,7 @@ metafile = true
 
 [[files]]
 file = "mods/dynamic-survival-hud-1.0.0.jar"
-hash = "2a3e2375cabc14b7caa1743a774d873c4f0d5d065d49245cae6b4e73464cadb1"
+hash = "d10e953c02aa55e37a2b2a8a0a1d864ad502d31d1b4579ddbfae5d969bd293fc"
 
 [[files]]
 file = "mods/dynamic-trees-ars-nouveau.pw.toml"
@@ -13704,7 +13692,7 @@ metafile = true
 
 [[files]]
 file = "mods/dynamic-trees-malum-1.0.1.jar"
-hash = "9d32516113f411d45231f02ba214be63e556e2dfdc70d2f56522c3aa21a7bc1c"
+hash = "40bb821e98dca5ec9d81d58b83b59207d252bc72ae2572907deb501c590acfef"
 
 [[files]]
 file = "mods/dynamic-trees-quark.pw.toml"
@@ -13983,7 +13971,7 @@ metafile = true
 
 [[files]]
 file = "mods/heat-sync-0.1.0.jar"
-hash = "67f5d22b77cdd5065f6df6cde5368c229378ddd6c88ae654848f279bc095a019"
+hash = "882ed84a8f2c98f97017d3168eba4288f08743e073354b1e8c9f98e98e6adb06"
 
 [[files]]
 file = "mods/hexerei.pw.toml"
@@ -14007,7 +13995,7 @@ metafile = true
 
 [[files]]
 file = "mods/immersive-weathering-sampler-0.1.0.jar"
-hash = "64f355d93d46fede7d89bd07cefd6d638899da110d7c5f31d35a2d2ca032db55"
+hash = "a147244a36c5aac155137e13f649fb549659d6fb2f44c4027a423a4a38220fd3"
 
 [[files]]
 file = "mods/improved-village-placement.pw.toml"
@@ -14091,7 +14079,7 @@ metafile = true
 
 [[files]]
 file = "mods/latent-chemlib-0.1.0.jar"
-hash = "89b1c62c89f0c66cbe982ac8e046ea64122806e9542a199c8146b0536a5864c6"
+hash = "8bd4ecadd35f132ce25dd3390e2bd0735fa64c663c75171a582a389a8e287cc4"
 
 [[files]]
 file = "mods/lithostitched.pw.toml"
@@ -14205,11 +14193,11 @@ metafile = true
 
 [[files]]
 file = "mods/oc2r-create-bridge-0.1.0.jar"
-hash = "84a2d77c764b86f73d250a493cd018b3ba8564b023b11dd853b69a203aed1914"
+hash = "e70f03b064eeb7b820cdd93e1ac8a06a887195761b7cb10b51c032530fb61bc6"
 
 [[files]]
 file = "mods/oc2r-wireless-pubsub-1.0.0.jar"
-hash = "758a58086a79cb57a8ce2535de012834b3f5e3843b1def2746e320f4fe5c5b99"
+hash = "04ae363e9d93945bdd3c374a7c9d910cedc66f46cc2744afcda7d2fffcdd3097"
 
 [[files]]
 file = "mods/oc2r.pw.toml"
@@ -14238,7 +14226,7 @@ metafile = true
 
 [[files]]
 file = "mods/pillager-campaigns-0.5.2.jar"
-hash = "3a661d1ec01b064789d6407f2355e3cef2ea2fd7201bb0d3b83aecd464e5bdc9"
+hash = "b92106cd6ea7105a296be0e149078675467550196703db60d02cce6b07cf4bb4"
 
 [[files]]
 file = "mods/ping-wheel.pw.toml"
@@ -14252,7 +14240,7 @@ metafile = true
 
 [[files]]
 file = "mods/player-traces-0.1.0.jar"
-hash = "380a51bc58237392cbc98c3aff1ff7f0e46a7d1ed5a9745b8d6c0c6d3c3f33f5"
+hash = "4f24ec45771466c7690a1634efe2fa048d30c31bf7cfd7d34e32646a7b2f94f4"
 
 [[files]]
 file = "mods/playeranimator.pw.toml"
@@ -14296,7 +14284,7 @@ metafile = true
 
 [[files]]
 file = "mods/procedural-bouquets-0.1.0.jar"
-hash = "17b29e12bbce76225f45fa98c87211656d4a0735babdd15d2f87d7f33d883bec"
+hash = "d9d648a75359f873991cae1c14ffe676c19e55053f85d63d7daffac8472f1783"
 
 [[files]]
 file = "mods/project-vibrant-journeys.pw.toml"
@@ -14325,11 +14313,11 @@ metafile = true
 
 [[files]]
 file = "mods/rail-scout-0.1.0.jar"
-hash = "4a1fa59ddf09a14d5ffc791f2c741070aba736027bccfef56c8d30cbed5c6043"
+hash = "fadbaa30b8a32ca9ff1f4260ba9da5a355bf7357896d6d8371c1ca6bbad9227c"
 
 [[files]]
 file = "mods/ratlantis-logistics-0.1.0.jar"
-hash = "8b70c169e389d7632d282b07ecf17ca48ffbda4fe9de8026e42619a1b6fd114d"
+hash = "2cf326d2a916fe0e208239c5889dac17806ef0a48586031e5031b0e3c46ef30b"
 
 [[files]]
 file = "mods/rats.pw.toml"
@@ -14343,7 +14331,7 @@ metafile = true
 
 [[files]]
 file = "mods/realistic-ores-0.2.0.jar"
-hash = "afcb136a883f10be4be2a71879994cba8f9044f74b279e8bd616c5d4000cd5c1"
+hash = "e1fab3816ed8aa164e1401127fd096c9751996812b150d386efa26d4eac86ea2"
 
 [[files]]
 file = "mods/realistic-physics.pw.toml"
@@ -14377,11 +14365,11 @@ metafile = true
 
 [[files]]
 file = "mods/rpg-stats-1.0.0.jar"
-hash = "d151802f9f747d78bb0317c3fa8b6b3c14cc58c9b1461da0d4b2bee01a9f890a"
+hash = "021a8153a3d426527aeddad764fbf3f216b24737d3487f95e4a10836552b79c3"
 
 [[files]]
 file = "mods/runtime-data-dumper-0.1.0.jar"
-hash = "09af4218c3f67e1afdc69a859613b798ffe5502dc1fc5774b802e6930f0ba64f"
+hash = "26fa222aab4be6de926d5e7c1d4fffb6ae0cfa479e9148a0751bb4c47e96f817"
 
 [[files]]
 file = "mods/satako-library.pw.toml"
@@ -14410,7 +14398,7 @@ metafile = true
 
 [[files]]
 file = "mods/settlement-roads-0.1.0.jar"
-hash = "f39344215f20aa84f19f69f3e34383775d19925a6d4123290a2737190b5b5be5"
+hash = "fd0ff2864c14a01445163c1298d9c01b2a3f9dd55d4f2d1765717b1dd9afe29b"
 
 [[files]]
 file = "mods/shatterbyte-lib.pw.toml"
@@ -14494,7 +14482,7 @@ metafile = true
 
 [[files]]
 file = "mods/systemic-salience-0.1.0.jar"
-hash = "648a2df013be3021f1c25138bdd31eb6810c7f2746bb26aee127b5fcec692633"
+hash = "a4ac46b97a7291722a4d788146d940f29867f0f376aec6a59a8e60fa1191139f"
 
 [[files]]
 file = "mods/tconjei.pw.toml"
@@ -14573,7 +14561,7 @@ metafile = true
 
 [[files]]
 file = "mods/tinkers-construct-affixes-1.0.0.jar"
-hash = "97d948ef5e434afbf785a93919cdccc28b754df70354dee17fd008398bc27a8a"
+hash = "b745aea82523aebf99f6e9c8e03fb23827b87ed87318834fb1786de340ff14ac"
 
 [[files]]
 file = "mods/tinkers-construct.pw.toml"
@@ -14672,7 +14660,7 @@ metafile = true
 
 [[files]]
 file = "mods/village-walls-1.0.0.jar"
-hash = "a125ab3e5f35ab480f784ade73b64cba71e92da2506ec2b736c48787a214a4c3"
+hash = "4c4a4b4b28c67697e97f5cde4b9ad01f05a02acd5e2846f8de7ee5324f69ba4b"
 
 [[files]]
 file = "mods/wares.pw.toml"
@@ -14681,7 +14669,7 @@ metafile = true
 
 [[files]]
 file = "mods/water-survival-1.0.0.jar"
-hash = "74cb4e79b014c7da0db01467a105c9497568517bdd9f1841d57176441fcd1fee"
+hash = "dafd56eab7d71f1f10bbe17b0c5762e3218f98993057193fabdfec4c40a9c7c7"
 
 [[files]]
 file = "mods/weather-storms-tornadoes.pw.toml"
@@ -14690,7 +14678,7 @@ metafile = true
 
 [[files]]
 file = "mods/world-lifecycle-manager-0.1.0.jar"
-hash = "6c668aa649a087e0215755b8e0e0f7d6a64111853604be34de2252489f287137"
+hash = "fa44482068bcb29e4e41d5034ed0b97d98ad67d631beb06c8f7b98321c562fb3"
 
 [[files]]
 file = "mods/xl-packets.pw.toml"

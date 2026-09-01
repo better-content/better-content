@@ -186,11 +186,6 @@ class ClientFixture(private val evidence: EvidenceRun, private val dedicated: De
         Regex("ScreenCustomizationLayer registered: title_screen"), Duration.ofMinutes(10), "customized title screen",
     )
 
-    fun waitSingleplayerJoin() = requireNotNull(launcher).waitForLog(
-        Regex("\\[Server thread/INFO].*${Regex.escape(config.username)}.*joined the game"),
-        Duration.ofMinutes(10), "single-player world join",
-    )
-
     fun capture(name: String) {
         val target = evidence.directory.resolve(name)
         val jshell = config.java.parent.resolve("jshell")
@@ -206,20 +201,6 @@ class ClientFixture(private val evidence: EvidenceRun, private val dedicated: De
         """.trimIndent()
         Commands.runWithInput(listOf(jshell.toString()), client, evidence.directory.resolve("$name.log"), script, mapOf("DISPLAY" to display))
         require(target.isRegularFile() && Files.size(target) > 0) { "screen capture was not produced: $target" }
-    }
-
-    fun navigateSingleplayer() {
-        val jshell = config.java.parent.resolve("jshell")
-        val script = """
-            import java.awt.Robot;
-            import java.awt.event.InputEvent;
-            var robot = new Robot();
-            robot.mouseMove(640, 353); robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); Thread.sleep(3000);
-            robot.mouseMove(876, 594); robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); Thread.sleep(3000);
-            robot.mouseMove(400, 666); robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); Thread.sleep(5000);
-            /exit
-        """.trimIndent()
-        Commands.runWithInput(listOf(jshell.toString()), client, evidence.directory.resolve("singleplayer-navigation.log"), script, mapOf("DISPLAY" to display))
     }
 
     fun assertHashes() {

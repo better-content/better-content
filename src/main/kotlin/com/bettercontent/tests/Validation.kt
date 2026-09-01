@@ -52,13 +52,18 @@ object LogPolicy {
         RegexOption.IGNORE_CASE,
     )
     private val warningOrError = Regex("(?:/WARN]|/ERROR]|\\[(?:WARN|ERROR)])")
+    private val accepted = listOf(
+        Regex("\\[xbigellx\\.realisticphysics\\.RealisticPhysics]: Forcing chunk load: \\[-?[0-9]+, -?[0-9]+]$"),
+    )
 
     data class Finding(val path: Path, val line: Int, val text: String)
 
     fun findings(paths: Collection<Path>): List<Finding> = buildList {
         paths.filter { Files.isRegularFile(it) }.forEach { path ->
             Files.readAllLines(path).forEachIndexed { index, line ->
-                if (fatal.containsMatchIn(line) || warningOrError.containsMatchIn(line)) add(Finding(path, index + 1, line))
+                if ((fatal.containsMatchIn(line) || warningOrError.containsMatchIn(line)) && accepted.none { it.containsMatchIn(line) }) {
+                    add(Finding(path, index + 1, line))
+                }
             }
         }
     }

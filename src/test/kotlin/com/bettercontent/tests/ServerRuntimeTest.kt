@@ -74,17 +74,21 @@ class ServerRuntimeTest {
             lifecycle(2)
             assertTrue("perks\t-" in fixture.server.resolve(".world_lifecycle_manager/perks-v2.tsv").readLines())
             assertTrue("generation\t2" in fixture.server.resolve(".world_lifecycle_manager/lineage-v5.tsv").readLines())
-            val archives = Files.list(fixture.server.resolve(".world_lifecycle_manager/archives")).use { it.filter(Files::isRegularFile).sorted().toList() }
+            val archives = Files.list(fixture.server.resolve(".world_lifecycle_manager/archives")).use { stream ->
+                stream.filter { Files.isRegularFile(it) && it.fileName.toString().endsWith(".zip") }.sorted().toList()
+            }
             assertEquals(2, archives.size)
             val lineage = fixture.server.resolve(".world_lifecycle_manager/lineage-v5.tsv").readLines()
                 .first { it.startsWith("lineage\t") }.substringAfter('\t')
             archives.forEach { archive ->
+                assertTrue(Files.isRegularFile(archive.resolveSibling("${archive.fileName}.sha256")))
                 val transaction = Regex("(transaction-[a-z0-9_-]+)\\.zip$").find(archive.fileName.toString())?.groupValues?.get(1)
                     ?: error("archive name has no transaction ID: $archive")
                 Commands.run(
                     listOf("./world-lifecycle-manager-server.sh", "verify-archive", archive.toString(), lineage, transaction),
                     fixture.server,
                     evidence.run.directory.resolve("archive-$transaction.log"),
+                    mapOf("BC_JAVA" to fixture.config.java.toString()),
                 )
             }
             assertTrue(Files.size(fixture.server.resolve("logs/world-lifecycle-manager-supervisor.log")) > 0)

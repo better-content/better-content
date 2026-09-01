@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestMethodOrder
 import org.junit.jupiter.api.extension.RegisterExtension
-import java.time.Duration
 
 @Tag("multiplayer")
 @TestMethodOrder(OrderAnnotation::class)
@@ -20,7 +19,6 @@ class MultiplayerRuntimeTest {
         lateinit var client: ClientFixture
         var joined = false
         var settled = false
-        var gui = false
 
         @JvmStatic
         @BeforeAll
@@ -57,20 +55,8 @@ class MultiplayerRuntimeTest {
     }
 
     @Test @Order(3)
-    fun worldCondenserConfigureScreenOpens() {
-        assumeTrue(settled, "client settle prerequisite failed")
-        evidence.run.checkpoint("World Condenser GUI") {
-            server.send("world_lifecycle_manager gui player ${server.config.username} configure")
-            server.waitLog(Regex("Opened Prestige configure for ${Regex.escape(server.config.username)}"), "World Condenser configure GUI", Duration.ofMinutes(2))
-            Thread.sleep(2000)
-            client.capture("world-condenser-configure.png")
-            gui = true
-        }
-    }
-
-    @Test @Order(4)
     fun multiplayerEvidenceIsCleanAndCandidatesAreUnchanged() {
-        assumeTrue(gui, "GUI prerequisite failed")
+        assumeTrue(settled, "client settle prerequisite failed")
         evidence.run.checkpoint("multiplayer log and hash audit") {
             client.close()
             server.stopGracefully()

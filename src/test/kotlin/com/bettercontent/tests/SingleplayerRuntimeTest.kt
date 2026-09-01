@@ -17,7 +17,6 @@ class SingleplayerRuntimeTest {
         @JvmField @RegisterExtension val evidence = EvidenceExtension("singleplayer")
         lateinit var client: ClientFixture
         var title = false
-        var joined = false
 
         @JvmStatic
         @BeforeAll
@@ -38,24 +37,14 @@ class SingleplayerRuntimeTest {
     @Test @Order(1)
     fun clientReachesCustomizedTitleScreen() = evidence.run.checkpoint("single-player title screen") {
         client.waitTitleScreen()
+        Thread.sleep(3000)
+        client.capture("singleplayer-title.png")
         title = true
     }
 
     @Test @Order(2)
-    fun clientNavigatesIntoFreshIntegratedWorld() {
-        assumeTrue(title, "title screen prerequisite failed")
-        evidence.run.checkpoint("single-player world join") {
-            client.navigateSingleplayer()
-            client.capture("singleplayer-navigation.png")
-            client.waitSingleplayerJoin()
-            client.capture("singleplayer-world.png")
-            joined = true
-        }
-    }
-
-    @Test @Order(3)
     fun singleplayerEvidenceIsCleanAndCandidatesAreUnchanged() {
-        assumeTrue(joined, "single-player join prerequisite failed")
+        assumeTrue(title, "title screen prerequisite failed")
         evidence.run.checkpoint("single-player log and hash audit") {
             client.close()
             LogPolicy.requireClean(collectLogs(evidence.run.directory))

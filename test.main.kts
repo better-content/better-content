@@ -22,18 +22,20 @@ fun usage(): Nothing {
 if (selector == null || (selector !in taskBySelector && selector != "all") || args.size != 1) usage()
 val selected = selector ?: usage()
 
-val runId = System.getenv("BC_TEST_RUN_ID")?.takeIf { it.isNotBlank() }
-    ?: DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmmss'Z'").withZone(ZoneOffset.UTC)
-        .format(java.time.Instant.now()) + "-" + ProcessHandle.current().pid()
-val evidence = root.resolve("generated/test-evidence/$runId")
-evidence.mkdirs()
+val runId = if (selected == "fast") null else {
+    System.getenv("BC_TEST_RUN_ID")?.takeIf { it.isNotBlank() }
+        ?: DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmmss'Z'").withZone(ZoneOffset.UTC)
+            .format(java.time.Instant.now()) + "-" + ProcessHandle.current().pid()
+}
+val evidence = runId?.let { root.resolve("generated/test-evidence/$it") }
+evidence?.mkdirs()
 
 fun gradle(task: String): Int {
-    println("test suite: $task (run $runId)")
+    println("test suite: $task" + (runId?.let { " (run $it)" } ?: ""))
     val process = ProcessBuilder(root.resolve("gradlew").absolutePath, "--no-daemon", task)
         .directory(root)
         .inheritIO()
-        .apply { environment()["BC_TEST_RUN_ID"] = runId }
+        .apply { if (runId != null) environment()["BC_TEST_RUN_ID"] = runId }
         .start()
     return process.waitFor()
 }
@@ -53,7 +55,9 @@ if (selected == "all") {
     statuses[selected] = gradle(taskBySelector.getValue(selected))
 }
 
-println("run: $runId")
-println("evidence: ${evidence.absolutePath}")
+if (runId != null && evidence != null) {
+    println("run: $runId")
+    println("evidence: ${evidence.absolutePath}")
+}
 statuses.forEach { (name, status) -> println("$name: ${if (status == 0) "passed" else "failed ($status)"}") }
 exitProcess(if (statuses.values.all { it == 0 }) 0 else 1)

@@ -25,13 +25,14 @@ modpack. It requires clean active source repositories, runs every active reposit
 full verification, stages and validates fresh JARs, deploys them as a group, refreshes the pack,
 invokes `dist.sh` once, and runs all granular pack suites against those exact candidates. The
 machine-readable release inventory is `gradle/active-custom-mods.json`; this table documents the
-same active set for humans.
+same active set for humans. Inventory `dependsOn` edges are release-build order constraints;
+`latent-chemlib` waits for the staged Heat Sync dependency before its own clean build begins.
 
 ## Canonical Active Inventory
 
 | Repository | Mod ID | Runtime artifact | Local validation and staging |
 |---|---|---|---|
-| [arcane-chunk-loaders](https://github.com/better-content/arcane-chunk-loaders) | `arcane_chunk_loaders` | `arcane-chunk-loaders-0.1.0.jar` | `./gradlew verifyFast verifyFull stageRuntimeJar` |
+| [arcane-chunk-loaders](https://github.com/better-content/arcane-chunk-loaders) | `arcane_chunk_loaders` | `arcane-chunk-loaders-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [better-content-fixes](https://github.com/better-content/better-content-fixes) | `better_content_fixes` | `better-content-fixes-0.1.3.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [better-content-economy](https://github.com/better-content/better-content-economy) | `better_content_economy` | `better-content-economy-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [better-content-quests](https://github.com/better-content/better-content-quests) | `better_content_quests` | `better-content-quests-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
@@ -52,7 +53,7 @@ same active set for humans.
 | [pillager-campaigns](https://github.com/better-content/pillager-campaigns) | `pillager_campaigns` | `pillager-campaigns-0.5.2.jar` | `./gradlew verifyFull verifyWorld stageRuntimeJar` |
 | [world-lifecycle-manager](https://github.com/better-content/world-lifecycle-manager) | `world_lifecycle_manager` | `world-lifecycle-manager-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [procedural-bouquets](https://github.com/better-content/procedural-bouquets) | `procedural_bouquets` | `procedural-bouquets-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
-| [rail-scout](https://github.com/better-content/rail-scout) | `rail_scout` | `rail-scout-0.1.0.jar` | `./gradlew verifyFast verifyFull` |
+| [rail-scout](https://github.com/better-content/rail-scout) | `rail_scout` | `rail-scout-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [realistic-ores](https://github.com/better-content/realistic-ores) | `realistic_ores` | `realistic-ores-0.2.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [ratlantis-logistics](https://github.com/better-content/ratlantis-logistics) | `ratlantis_logistics` | `ratlantis-logistics-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [runtime-data-dumper](https://github.com/better-content/runtime-data-dumper) | `runtime_data_dumper` | `runtime-data-dumper-0.1.0.jar` | `./gradlew build stageRuntimeJar` |
@@ -67,10 +68,11 @@ same active set for humans.
 
 ## Validation-Only Repositories
 
-This Better Content repository remains available for source validation but is not active modpack
-content. Do not copy its runtime JAR into `mods/` unless the corresponding retired feature is
+These Better Content repositories remain available for source validation but are not active modpack
+content. Do not copy their runtime JARs into `mods/` unless the corresponding retired features are
 explicitly activated.
 
 | Repository | Reason | Local validation and staging |
 |---|---|---|
 | [dynamic-trees-dimension-compat](https://github.com/better-content/dynamic-trees-dimension-compat) | The addon requires The Undergarden, which the pack retired. | `./gradlew runData verifyFull` |
+| [dynamic-trees-hexerei](https://github.com/better-content/dynamic-trees-hexerei) | Nature's Spirit owns mahogany ecology; the redundant Hexerei tree addon is retired. | `./gradlew runData verifyFull` |

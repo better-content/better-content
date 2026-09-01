@@ -41,9 +41,12 @@ Never report only that tests failed, delete a failed fixture, rebuild the candid
 expensive suite before inspecting its evidence. Confirm whether child processes were cleaned up so
 another agent can safely continue.
 
-The granular suite preserves the package, dedicated-server/runtime-data/lifecycle, multiplayer/GUI,
-single-player, log-policy, and candidate-hash boundaries. It does not authorize unrelated audits,
-performance budgets, persistence matrices, or gameplay scenario expansion.
+The granular suite preserves the package, dedicated-server/runtime-data/lifecycle, multiplayer
+connection, single-player startup, log-policy, and candidate-hash boundaries. It does not authorize
+unrelated audits, performance budgets, persistence matrices, or gameplay scenario expansion.
+
+Automated tests must not synthesize mouse movement or mouse clicks. UI flows that require pointer
+interaction are manual visual gates; keep them documented and out of the automated harness.
 
 The narrowly scoped `bc.crafting_policy.v1` contract is an authorized content policy, not a
 general audit utility: its KubeJS startup check must reject unknown loaded namespaces and its

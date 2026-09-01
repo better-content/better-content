@@ -16,7 +16,7 @@
     {"repository":"dynamic-trees-malum","modId":"dynamic_trees_malum","artifact":"dynamic-trees-malum-1.0.1.jar","tasks":["verifyFull","stageRuntimeJar"]},
     {"repository":"heat-sync","modId":"heat_sync","artifact":"heat-sync-0.1.0.jar","tasks":["verifyFull","stageRuntimeJar"]},
     {"repository":"immersive-weathering-sampler","modId":"immersive_weathering_sampler","artifact":"immersive-weathering-sampler-0.1.0.jar","tasks":["verifyFull","stageRuntimeJar"]},
-    {"repository":"latent-chemlib","modId":"latent_chemlib","artifact":"latent-chemlib-0.1.0.jar","tasks":["verifyFull","stageRuntimeJar"]},
+    {"repository":"latent-chemlib","modId":"latent_chemlib","artifact":"latent-chemlib-0.1.0.jar","tasks":["verifyFull","stageRuntimeJar"],"dependsOn":["heat-sync"]},
     {"repository":"oc2r-create-bridge","modId":"oc2r_create_bridge","artifact":"oc2r-create-bridge-0.1.0.jar","tasks":["verifyFull","stageRuntimeJar"]},
     {"repository":"oc2r-wireless-pubsub","modId":"oc2r_wireless_pubsub","artifact":"oc2r-wireless-pubsub-1.0.0.jar","tasks":["verifyFull","stageRuntimeJar"]},
     {"repository":"pillager-campaigns","modId":"pillager_campaigns","artifact":"pillager-campaigns-0.5.2.jar","tasks":["verifyFull","verifyWorld","stageRuntimeJar"]},

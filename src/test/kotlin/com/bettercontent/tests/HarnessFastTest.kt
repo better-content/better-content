@@ -1,6 +1,7 @@
 package com.bettercontent.tests
 
 import com.bettercontent.tests.release.jarDeclaresMod
+import com.bettercontent.tests.release.packageResolveCommand
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertThrows
@@ -18,6 +19,15 @@ import kotlin.io.path.writeText
 
 @Tag("fast")
 class HarnessFastTest {
+    @Test
+    fun releaseWarmsTheCanonicalArtifactCacheBeforeModBuilds(@TempDir root: Path) {
+        val target = root.resolve("build/release-dependency-warmup/run")
+        assertEquals(
+            listOf(root.resolve("package.sh").toString(), "resolve", root.toString(), target.toString(), "client"),
+            packageResolveCommand(root, target),
+        )
+    }
+
     @Test
     fun activeReleaseInventoryIsUniqueAndMatchesBundledArtifacts() {
         val root = Path.of(System.getProperty("bc.repo.root")).toAbsolutePath().normalize()

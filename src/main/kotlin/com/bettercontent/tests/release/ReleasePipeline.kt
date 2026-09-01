@@ -64,6 +64,13 @@ fun main(args: Array<String>) {
     Files.writeString(evidence.resolve("preflight.tsv"), preflight.joinToString("\n", postfix = "\n"))
     require(preflight.all { it.endsWith("\tclean") }) { "all active repositories must exist and be clean; see ${evidence.resolve("preflight.tsv")}" }
 
+    val dependencyWarmup = root.resolve("build/release-dependency-warmup/$runId")
+    try {
+        runLogged(root, packageResolveCommand(root, dependencyWarmup), evidence.resolve("dependency-cache.log"))
+    } finally {
+        dependencyWarmup.toFile().deleteRecursively()
+    }
+
     val built = mutableListOf<BuiltMod>()
     val failures = mutableListOf<String>()
     val pending = manifest.mods.associateBy { it.repository }.toMutableMap()
@@ -158,6 +165,14 @@ internal fun jarDeclaresMod(path: Path, modId: String): Boolean = runCatching {
         }
     }
 }.getOrDefault(false)
+
+internal fun packageResolveCommand(root: Path, target: Path): List<String> = listOf(
+    root.resolve("package.sh").toString(),
+    "resolve",
+    root.toString(),
+    target.toString(),
+    "client",
+)
 
 private fun runLogged(cwd: Path, command: List<String>, log: Path) {
     log.parent.createDirectories()

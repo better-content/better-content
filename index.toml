@@ -10618,7 +10618,7 @@ hash = "46a66b6e003ba7953c9a13428fd9c1967e862a673d7fd849831defab59eb08f1"
 
 [[files]]
 file = "kubejs/config/crafting_policy.json"
-hash = "7fafa106c7847276082983ef23246f56935f50ab846a6e6c44967c6a2a6f8c19"
+hash = "c31423ad751cbdb6bc11fff594d6b63ed8219210ebbd4459140f625ff25013a6"
 
 [[files]]
 file = "kubejs/config/cross_mod_boundaries.json"
@@ -13535,11 +13535,6 @@ metafile = true
 [[files]]
 file = "mods/class-selector-1.0.0.jar"
 hash = "5ecf46d17f8dca0d8eaf58447e95a4b391ee3cc0a40489f48194c9875c137054"
-
-[[files]]
-file = "mods/claustrophobic-dungeons.pw.toml"
-hash = "23319b4146cc05c65ed51d6f957af9b6fe99005dcaefabe92a9ea95d30515180"
-metafile = true
 
 [[files]]
 file = "mods/cloth-config.pw.toml"

@@ -39,6 +39,13 @@ Do not add new one-off audits, pass reports, JSON summaries, raw logs, RAM dumps
 
 When progression behavior changes, update `progression.md` and/or `content_systems.md`. When crafting-graph scope, mod categorization, item-support policy, exception families, or durable integration findings change, update `crafting_policy.md` and the affected `balance_policy.md` row. When player-facing quest structure, presentation, or authoring policy changes, update `questbook_standards.md`. When the Realistic Ores processing model, yields, assays, media, solvents, or extension rules change, update `realistic_ore_processing.md`. When executable script inventory or cross-repository ownership changes, update `refactor_manifests.md` and the root `kjs-script-summaries.md`. When Systemic Salience mappings or presentation change, update `systemic_salience.md`. When weapon references, normalized bands, compensation rules, generic-effect valuation, animation coverage, alternate modes, or signature exceptions change, update `weapon_balance_philosophy.md`. When custom-mod ownership, identity, validation, or deployment changes, update `custom-mod-workspace.md`. When mod composition, performance, or runtime compatibility changes, update `performance_and_mods.md`. Pack-level suites are run only on explicit user instruction through `test.main.kts`, as defined in the root `AGENTS.md` and summarized in `testing.md`.
 
-Claims in these docs must be checked against current source files. If an ID, mod, recipe, or config cannot be confirmed, write `UNKNOWN` or frame it as a future candidate.
+Claims in these docs must be checked against their current implementation or evidence authority:
+Packwiz manifests and bundled custom JARs for active composition, tracked config and data for pack
+policy, owning custom-mod source for runtime mechanics, and only complete generated snapshots or
+named test evidence for observed runtime state. Design intent, future systems, candidate art, and
+manual-playtest surfaces must remain explicitly labeled. Documentation and implementation have no
+blanket precedence when they conflict; stop and obtain an owner decision for the specific behavior,
+then reconcile both sides. If an ID, mod, recipe, config, or runtime result cannot be confirmed,
+write `UNKNOWN` or frame it as a future candidate.
 
 Do not add historical notes, generated Markdown reports, old schema notes, or retired tool matrices to the tracked tree. Fold durable conclusions into these living files and keep raw evidence outside the repository; do not recreate `quarantine/docs/`. Do not classify `.txt` files by extension alone: many launcher, Forge, FancyMenu, KubeJS, shaderpack, and mod files are live config or runtime inputs.

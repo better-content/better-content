@@ -33,17 +33,18 @@ compatibility only; helm control, camera behavior, rendering, specialized add-on
 observer synchronization, and ship persistence remain manual-playtest surfaces. Epic Fight's
 optional third-person combat camera remains player-controlled.
 
-Complicated Bees, EMI Ores, Forgotten Ruins, Claustrophobic Dungeons, Quickstack, Ice and Fire,
-Hexerei, Malum, Occultism, Goety, Ars Elemental, Ars Creo, Ars Energistique, Polymorph,
-Supplementaries, Amendments, Genetic Animals, Fowl Play, Advanced Chimneys, and Realistic Block
-Physics are active. Quickstack's global `C` and `X` shortcuts remain unbound; its inventory buttons
-are the deliberate transfer surface. The maintained `config/adchimneys/` definitions cover active
-furnace, burner, smeltery, and generator emitters.
+Complicated Bees, EMI Ores, Forgotten Ruins, Quickstack, Ice and Fire, Hexerei, Malum, Occultism,
+Goety, Ars Elemental, Ars Creo, Ars Energistique, Polymorph, Supplementaries, Amendments, Genetic
+Animals, Fowl Play, Advanced Chimneys, and Realistic Block Physics are active. Farmer's Delight,
+Ube's Delight, Farmer's Respite, and Brewin' and Chewin' are the active Delight food-and-drink
+set. Quickstack's global `C` and `X` shortcuts remain unbound; its inventory buttons are the
+deliberate transfer surface. The maintained `config/adchimneys/` definitions cover active furnace,
+burner, smeltery, and generator emitters.
 
-Dungeon Crawl, Create Big Cannons, Reliquary, secondary Delight families, Undergarden, Deeper
-Darker, the standalone coolant mod, the redundant fission-reactor mod, and Create New Age remain
-retired. Forbidden and Arcanus, Roots Classic, Mahoutsukai, Eidolon, Theurgy, Psi, and Hex Casting
-have no active Packwiz manifests and are inactive unless deliberately reintroduced.
+Claustrophobic Dungeons, Dungeon Crawl, Create Big Cannons, Reliquary, Undergarden, Deeper Darker,
+the standalone coolant mod, the redundant fission-reactor mod, and Create New Age remain retired.
+Forbidden and Arcanus, Roots Classic, Mahoutsukai, Eidolon, Theurgy, Psi, and Hex Casting have no
+active Packwiz manifests and are inactive unless deliberately reintroduced.
 
 ## Runtime and memory policy
 
@@ -107,8 +108,11 @@ deserialize old pieces.
 
 `pillager_campaigns` bounds its loaded-column sampling, route search, and spawn production; it must
 never load terrain to seek a route. `settlement_roads` and `village_walls` likewise keep tick work
-bounded and clean transient state. `class-selector` owns class selection and spawn lock handoff;
-the active embark config remains class mode with temperate spawn selection.
+bounded and clean transient state. `class-selector` always owns first-join spectator scouting and
+permanent spawn locking. Its active `progression` embark mode asks World Lifecycle Manager for the
+current lineage policy: new lineages receive site-only onboarding, class perks expose only their
+unlocked classes, and unlocking all six classes exposes the bounded Embark point-buy. World
+Lifecycle Manager separately owns ordered successor spawn-biome preferences.
 
 ## Heat and pollution authority
 

@@ -10,6 +10,9 @@ This repository is the Better Content Forge 1.20.1 modpack content layer.
   `fast`, `candidate`, `server`, `multiplayer`, `singleplayer`, or `all` selector.
 - `./release.main.kts` is the only fresh-dist workflow. It validates every active custom-mod
   repository, stages fresh runtime JARs, packages exactly once, and runs `all`.
+- `./maintenance.main.kts audit` reports evidence retention decisions without changing the
+  workspace. `./maintenance.main.kts prune --apply` removes only superseded test evidence and
+  redundant distribution staging after cleanliness, process, path, and candidate-hash guards pass.
 - `./package.sh` is the shared internal packager; do not invoke alternate assemblers.
 
 `dist.sh` performs packaging only. Command availability, input copying, packwiz export, and
@@ -40,6 +43,10 @@ runtime snapshot, lifecycle/archive evidence, process diagnostics, and retained 
 Never report only that tests failed, delete a failed fixture, rebuild the candidate, or rerun an
 expensive suite before inspecting its evidence. Confirm whether child processes were cleaned up so
 another agent can safely continue.
+
+Superseded evidence may be pruned only through the guarded maintenance command. It retains evidence
+matching the current candidate, the newest passed evidence for any suite missing from that run, and
+failures with no later passing result.
 
 The granular suite preserves the package, dedicated-server/runtime-data/lifecycle, multiplayer
 connection, single-player startup, log-policy, and candidate-hash boundaries. It does not authorize

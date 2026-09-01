@@ -38,6 +38,27 @@ makes a snapshot usable evidence; recency alone does not make it current. Preser
 snapshots as historical candidate evidence and do not use their volatile totals as claims about the
 tracked pack.
 
+## Evidence maintenance
+
+Inspect retention decisions without changing the workspace:
+
+```sh
+./maintenance.main.kts audit
+```
+
+After reviewing that output, explicitly apply the guarded prune with:
+
+```sh
+./maintenance.main.kts prune --apply
+```
+
+The command refuses dirty repositories, competing Gradle or Minecraft processes, unsafe paths, and
+candidate-hash changes. It retains the evidence matching the current ZIP pair, the newest passed
+report for a suite missing from that run, and any failure without a later passing result. Pruning
+writes a `bc.workspace_maintenance.v1` transaction manifest beneath the Worklane state directory.
+Successful packaging removes its expanded server staging tree after the server ZIP is complete;
+failed packaging keeps staging for diagnosis.
+
 ## Fresh distributions
 
 Only an explicit fresh-dist request authorizes:

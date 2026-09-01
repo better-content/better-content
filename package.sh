@@ -152,6 +152,12 @@ package_runtime() {
   install_server "$1" true testing "$3"
 }
 
+archive_server_tree() {
+  local server_dir="$1" tree="$1/server-tree"
+  (cd "$tree" && zip -q -r "$server_dir/better-content.zip" better-content-server)
+  rm -rf -- "$tree"
+}
+
 package_dist() {
   (($# == 0)) || fail 'distribution output is fixed at the repository dist/ directory'
   for command in java packwiz python3 zip; do command -v "$command" >/dev/null || fail "$command is required"; done
@@ -198,17 +204,19 @@ user_jvm_args.txt for the host's available memory. Set eula=true only after acce
 Mojang's EULA. This archive is packaging output and carries no validation,
 verification, compatibility, or runtime-health claim.
 TXT
-  (cd "$server_dir/server-tree" && zip -q -r "$server_dir/better-content.zip" better-content-server)
+  archive_server_tree "$server_dir"
   printf 'version: %s\nclient: %s\nserver: %s\n' "$version" "$client_dir/better-content.zip" "$server_dir/better-content.zip"
 }
 
-case "${1:-}" in
-  runtime) shift; package_runtime "$@" ;;
-  resolve)
-    shift
-    (($# == 3)) || fail 'usage: package.sh resolve MANIFEST_ROOT TARGET SIDE'
-    resolve_artifacts "$2" "$3" "$1"
-    ;;
-  dist) shift; package_dist "$@" ;;
-  *) fail 'usage: package.sh <runtime SERVER_DIR CLIENT_DIR PORT|resolve MANIFEST_ROOT TARGET SIDE|dist>' ;;
-esac
+if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
+  case "${1:-}" in
+    runtime) shift; package_runtime "$@" ;;
+    resolve)
+      shift
+      (($# == 3)) || fail 'usage: package.sh resolve MANIFEST_ROOT TARGET SIDE'
+      resolve_artifacts "$2" "$3" "$1"
+      ;;
+    dist) shift; package_dist "$@" ;;
+    *) fail 'usage: package.sh <runtime SERVER_DIR CLIENT_DIR PORT|resolve MANIFEST_ROOT TARGET SIDE|dist>' ;;
+  esac
+fi

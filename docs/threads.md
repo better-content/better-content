@@ -16,7 +16,7 @@ Forty-five cards are live. Fragility 7–13 are permanently sealed future identi
 - Development is a single 800 ms linear crossfade from the neutral code-drawn archive plate to the untouched native illustration. There is no separately generated archive, pigment, aspect, tint, trace, or pulse layer. A click or Space during development completes it and is consumed before any doorway or facsimile control.
 - Title, prose, invitation, action, doorway, and facsimile controls remain hidden until development completes. Only completion marks a plate read; Escape or navigation beforehand leaves it unread.
 - Known lore and art persist across the lineage. Current invitations, active state, and current completion reset for each successor generation. Re-encountering a known card in a successor produces a contextual notice without marking its plate unread again. Completion history retains total count, first generation, last generation, and route counts.
-- Each live card retains one truthful native doorway. Signed facsimiles are freely reissued cosmetic copies; they retain collector and lineage identity, grant nothing, and never unlock a card for their recipient.
+- A live card exposes a doorway only when a specific authoritative native surface exists. Doorways open native Font, Ponder, EMI, guide, or system interfaces; FTB Quests is not a Thread navigation target. A card such as Ruins may omit the control rather than offer a vague or false destination. Signed facsimiles are freely reissued cosmetic copies; they retain collector and lineage identity, grant nothing, and never unlock a card for their recipient.
 - On-character display remains unresolved. Do not ship a placeholder cosmetic render.
 
 ## Trigger contract

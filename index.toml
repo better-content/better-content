@@ -5642,15 +5642,15 @@ hash = "17eaf09bda21da2e07357375e56605f4af7d197af16143939dbe5816e9741bed"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/powers.snbt"
-hash = "c6a52a01265802a9eaa1d6dc64067a05dd360f058b4f0d45e97a8d2ec6feaddf"
+hash = "77c9b9fd120a2cd3e91f5efeb331d1fcde5927a006b2b62c5dcbd845c96bf6c6"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/works.snbt"
-hash = "5863fb2b99d5c4b06ba2bf9101e0791566c5d699ab7a16402217b43fda8d0ae8"
+hash = "fac4cae96546ed7f3f467ae03226b848b35f10091ff667f0247b6a5ebfc3b855"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/world.snbt"
-hash = "146465745bbff4b04d8d74e7cf998d4a25d768b9960e91e303068b2571546cfd"
+hash = "1d7cdf6c0a84a4144f67d0d407a30c59f9040fb0639907ae8a622fc97c636116"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -10658,7 +10658,7 @@ hash = "c1728c32703ee343a2ed52c53b84bca30db11aa2feb97fb31d68fdd87ada5df0"
 
 [[files]]
 file = "kubejs/config/hover_annotations.json"
-hash = "a82b079b89745972f3d6943efcbc343b96f4d7dc575927c8477bd14e7fec0994"
+hash = "08e9c602aaf696602211f5da0a4a20a8a5ecbb4d81b8c2ecc4023a9c46710ba5"
 
 [[files]]
 file = "kubejs/config/input_rewrites.json"
@@ -12482,11 +12482,11 @@ hash = "80e74d36ee9e32aa49eb9bc002181212af4da4160f985c9d71664f33add5485a"
 
 [[files]]
 file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/getting_started/books_of_binding.json"
-hash = "defb26aa4497a917d97d4fc707785a032cfd485cd91bb8a4fb328ecbc46aae75"
+hash = "202e645a34d7ec075db0fca5caa61b839a890a5bf2767caaae401e8483629f60"
 
 [[files]]
 file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/getting_started/chalks.json"
-hash = "9b1560a8a4081ed73f780c87ed7ff652c255d98dc45c387b8dce432c218141de"
+hash = "1b89fb43b30783bd25f61024123b7892c0a1ad77f1be2c93a7074649642153f3"
 
 [[files]]
 file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/getting_started/iesnium_pickaxe.json"
@@ -12498,11 +12498,11 @@ hash = "ca826f4c1d86752eb7ccf85125ef9ac6c73321208b283c10db9d4801c00fc247"
 
 [[files]]
 file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/getting_started/ritual_prep_chalk.json"
-hash = "e2488f247fd46792ed1e5fcf003fbc54a758e84c6fce617a5c787e1ae041fa24"
+hash = "34fbfe5a216b10d4880a698d1398563238b7bd17b348eae854a63f47d381ee1b"
 
 [[files]]
 file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/pentacles/paraphernalia.json"
-hash = "fd2e85cb1951d7a8cf608522a1e775ec4f01e634873d6f2bad462450c82e1bd7"
+hash = "0ae780d2cecd0f8c2300cf1fc10d3e755b90a05e604fc09d0fc419bd07d67d2d"
 
 [[files]]
 file = "kubejs/data/occultism/modonomicon/books/dictionary_of_spirits/entries/storage/crafting_rituals/craft_stabilizer_tier1.json"
@@ -13488,11 +13488,11 @@ hash = "015a1f3fb563f2892d78a9fc702933ac9d0394f0c469fbccde622cfc943c362c"
 
 [[files]]
 file = "mods/better-content-quests-1.0.0.jar"
-hash = "896ee244815add05f769fb015e0194946cd1532eec42dc81a17ad02401847e6b"
+hash = "022546d68ea81f26f19767fa21842267f2b34302f4b23ab4c6785df18746ccbb"
 
 [[files]]
 file = "mods/better-content-threads-1.0.0.jar"
-hash = "2a8e2ab0283d7aa4a96bca8b8277943532b676a20231939726fed3bbceca3ed9"
+hash = "469296760c47603870c2742726965710be1eae83b6ca9b6db19f03bea0be4f2b"
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"

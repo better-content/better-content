@@ -65,7 +65,7 @@
 			y: 0d
 		}
 		{
-			description: ["Reach the Nether and open a route into sustained heat."]
+			description: ["Reach the Nether's country of sustained heat."]
 			icon: "minecraft:flint_and_steel"
 			id: "75FD0C4219599FB8"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFB6", item: "createdeco:copper_coin", type: "item" }]
@@ -75,7 +75,7 @@
 			y: 0d
 		}
 		{
-			description: ["Reach the Aether and open vertical exploration beyond the overworld."]
+			description: ["Reach the Aether's high country."]
 			icon: "aether:skyroot_log"
 			id: "-16179BE9531ABFC1"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFB5", item: "createdeco:copper_coin", type: "item" }]
@@ -85,7 +85,7 @@
 			y: 3.5d
 		}
 		{
-			description: ["Enter The Bumblezone through a Dimensional Font and establish the pack's living cultivar route."]
+			description: ["Reach The Bumblezone's pollen country."]
 			icon: "the_bumblezone:pollen_puff"
 			id: "3166DEC5523A3029"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFB4", item: "createdeco:copper_coin", type: "item" }]
@@ -95,7 +95,7 @@
 			y: 3.5d
 		}
 		{
-			description: ["Enter Ratlantis through a Dimensional Font and return with the roots of scalable logistics."]
+			description: ["Reach Ratlantis and its lost logistics landscape."]
 			icon: "rats:marbled_cheese_raw"
 			id: "-1DE4BC20489C815A"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFB3", item: "createdeco:copper_coin", type: "item" }]
@@ -115,7 +115,7 @@
 			y: 3.5d
 		}
 		{
-			description: ["Land on Mars and extend a supportable route beyond the Moon."]
+			description: ["Land on Mars."]
 			icon: "creatingspace:mars_stone"
 			id: "-284E4CC8B95B8A2B"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFA9", item: "createdeco:copper_coin", type: "item" }]

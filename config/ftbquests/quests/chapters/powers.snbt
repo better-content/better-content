@@ -19,7 +19,7 @@
 			y: 0d
 		}
 		{
-			description: ["Establish the first Blood Altar."]
+			description: ["Acquire the first Blood Altar."]
 			icon: "bloodmagic:altar"
 			id: "124A80CBF921A4AD"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFE9", item: "createdeco:copper_coin", type: "item" }]
@@ -29,7 +29,7 @@
 			y: 0d
 		}
 		{
-			description: ["Establish Hexerei's place-bound preparation surface."]
+			description: ["Acquire Hexerei's place-bound preparation surface."]
 			icon: "hexerei:mixing_cauldron"
 			id: "3BD8898DC0688EF5"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFCF", item: "createdeco:copper_coin", type: "item" }]
@@ -39,7 +39,7 @@
 			y: 0d
 		}
 		{
-			description: ["Establish Malum's spirit-working altar and vessel."]
+			description: ["Acquire Malum's spirit-working altar and vessel."]
 			icon: "malum:spirit_altar"
 			id: "01A0351EECE105FA"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFE3", item: "createdeco:copper_coin", type: "item" }]
@@ -52,7 +52,7 @@
 			y: 0d
 		}
 		{
-			description: ["Establish Goety's Dark Altar for command work."]
+			description: ["Acquire Goety's Dark Altar for command work."]
 			icon: "goety:dark_altar"
 			id: "-29C4EF30B9D6CC4C"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFD8", item: "createdeco:copper_coin", type: "item" }]
@@ -74,7 +74,7 @@
 			y: 3.5d
 		}
 		{
-			description: ["Prepare the vessel for a first Occultist pact."]
+			description: ["Acquire the vessel used for a first Occultist pact."]
 			icon: "occultism:otherstone"
 			id: "-735ED0CAFAC02D0A"
 			rewards: [{ count: 1, id: "-18FFFFFFFFFFFFC9", item: "createdeco:industrial_iron_coin", type: "item" }]
@@ -84,7 +84,7 @@
 			y: 3.5d
 		}
 		{
-			description: ["Open formal spellcraft with a Novice Spell Book."]
+			description: ["Acquire a Novice Spell Book for formal spellcraft."]
 			icon: "ars_nouveau:spell_parchment"
 			id: "-3E61448AAD27C528"
 			rewards: [{ count: 2, id: "-18FFFFFFFFFFFFC5", item: "createdeco:copper_coin", type: "item" }]
@@ -94,7 +94,7 @@
 			y: 3.5d
 		}
 		{
-			description: ["Reach Archmage grammar as optional formal mastery."]
+			description: ["Acquire an Archmage Spell Book as optional formal mastery."]
 			icon: "minecraft:enchanted_book"
 			id: "-28A36C12FE61F54"
 			rewards: [{ count: 1, id: "-18FFFFFFFFFFFFBF", item: "createdeco:industrial_iron_coin", type: "item" }]
@@ -106,7 +106,7 @@
 			y: 3.5d
 		}
 		{
-			description: ["Acquire the World Condenser Interface for operator-led Lineage work."]
+			description: ["Acquire the World Condenser Interface for Lineage work."]
 			icon: "world_lifecycle_manager:world_condenser_interface"
 			id: "19A16EC4030C73DD"
 			rewards: [{ count: 1, id: "2FB2E66B7623087E", item: "createdeco:brass_coin", type: "item" }]

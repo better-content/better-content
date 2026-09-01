@@ -2,7 +2,7 @@
 
 ## Purpose
 
-FTB Quests is Better Content's achievement ledger and optional content teaser.
+FTB Quests is Better Content's secondary achievement ledger and optional content teaser.
 It records a small number of meaningful things the player has accomplished and
 rewards those accomplishments with authored coins. It is not a progression
 guide, recipe map, onboarding flow, checklist of intermediates, or second copy
@@ -60,7 +60,8 @@ operating requirements. EMI and native recipe or guide surfaces own recipes,
 uses, multiblocks, and apparatus detail. Event, HUD, onboarding, and world
 surfaces own controls, warnings, scouting, rescue, and other non-item actions.
 The achievement ledger must not duplicate those facts merely because a task
-uses the same item.
+uses the same item, and no primary surface may direct players to a quest as its
+authoritative explanation.
 
 Annotate only when a competent player would otherwise form a materially wrong
 or incomplete mental model. Create a milestone only when the completed act is

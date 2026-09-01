@@ -100,7 +100,7 @@ Systemic Salience does not turn ores into neon aspect tokens.
 | Nickel | grinding medium and Creating Space alloy routes |
 | Titanium | premium grinding medium, Space Machine Block, aerospace recipes, and molten material |
 | Uranium | Hotstone fissile assay, Necronium, nuclear simulation, and Protection Pixel recipes |
-| Thorium | Hotstone fissile assay, nuclear decay chain, quests, and Protection Pixel recipes |
+| Thorium | Hotstone fissile assay, nuclear decay chain, and Protection Pixel recipes |
 | Lead, cadmium | Hotstone/Brassroot assay depth and real placeable-block absorber behavior in Latent's nuclear environment scan |
 
 The removed beryl/beryllium, calcium, carbon, chromium, gallium, iridium,

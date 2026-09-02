@@ -2370,7 +2370,7 @@ hash = "ca88fd27439e3e3402295c281854d3803412f21fd5000c6fa500481bd9398c5e"
 
 [[files]]
 file = "config/dynamic_survival_hud-client.toml"
-hash = "909acefcee2650bfda75cece38a86856e16737b225dbf7eed2d6995e05e157e4"
+hash = "05596d8a14bede8de4ddaf5ffcee29555211bea876cf532fc17913d59e2367c5"
 
 [[files]]
 file = "config/dynamictrees-common.toml"
@@ -3410,7 +3410,7 @@ hash = "dd7415a83aef00c385628fe1756a0a97738b8dffd00f30effd08dd5e1da27431"
 
 [[files]]
 file = "config/structure_generation_improver.json"
-hash = "0db58413b6398ca29288290f9e372bb910f517933f80d2dfd658521ac2841f1a"
+hash = "15b71d776d7d0f3fbce934899a255b16a2826b3aebffe64992be8ff7d94f74ab"
 
 [[files]]
 file = "config/structurify.json"
@@ -11558,7 +11558,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "9edc510cdd3b5d7c0d7347c1f3814d1461aef114197c6120aa96f395e2ef780c"
+hash = "f215f0a3a3c63efda404a8bae2800b6031cf04138a3030d035d2c48f42952cf0"
 
 [[files]]
 file = "package.sh"

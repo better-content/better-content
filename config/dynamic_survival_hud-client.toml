@@ -8,7 +8,7 @@
 	#Seconds used for the linear fade from fully visible to hidden.
 	#Range: 0.0 ~ 10.0
 	fadeSeconds = 0.5
-	#Health, hunger, and thirst remain visible at or below this fraction of their maximum.
-	#Air remains visible whenever it is not full; severe Cold Sweat temperatures remain visible independently.
+	#Health remains visible at or below this fraction of its maximum.
+	#Hunger, thirst, and air remain visible whenever they are not full; severe Cold Sweat temperatures remain visible independently.
 	#Range: 0.0 ~ 1.0
 	dangerFraction = 0.3333333333333333

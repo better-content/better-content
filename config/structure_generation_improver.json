@@ -8,7 +8,9 @@
   "Structure blacklist": [
     "ae2:meteorite",
     "hexerei:dark_coven",
-    "hexerei:nature_coven"
+    "hexerei:nature_coven",
+    "minecraft:shipwreck",
+    "minecraft:shipwreck_beached"
   ],
   "comment_foundation_blacklist": "Supports: full id, namespace.*, *, #namespace:tag",
   "Foundation blacklist": [

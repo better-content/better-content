@@ -7474,7 +7474,7 @@ hash = "46a66b6e003ba7953c9a13428fd9c1967e862a673d7fd849831defab59eb08f1"
 
 [[files]]
 file = "kubejs/config/crafting_policy.json"
-hash = "c31423ad751cbdb6bc11fff594d6b63ed8219210ebbd4459140f625ff25013a6"
+hash = "0a9a89125c34e6d4eaed476f14bb207369638dc631701e1f48791c593c57a189"
 
 [[files]]
 file = "kubejs/config/cross_mod_boundaries.json"

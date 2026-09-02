@@ -55,6 +55,14 @@
       "primary_role": "integration",
       "support_state": "not_applicable"
     },
+    "epicparcool": {
+      "primary_role": "content",
+      "support_state": "full"
+    },
+    "parcool": {
+      "primary_role": "content",
+      "support_state": "full"
+    },
     "mousetweaks": {
       "primary_role": "presentation",
       "support_state": "not_applicable"

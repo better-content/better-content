@@ -30,29 +30,51 @@ val runId = if (selected == "fast") null else {
 val evidence = runId?.let { root.resolve("generated/test-evidence/$it") }
 evidence?.mkdirs()
 
-fun gradle(task: String): Int {
+fun validateFreshEvidence(suite: String, startedAt: Long): Boolean {
+    val expectedRunId = runId ?: return true
+    val report = evidence!!.resolve("$suite/run.json")
+    if (!report.isFile || report.lastModified() < startedAt) {
+        System.err.println("$suite: Gradle returned success without fresh evidence at ${report.absolutePath}")
+        return false
+    }
+    val document = report.readText()
+    val expectedFields = mapOf("run_id" to expectedRunId, "suite" to suite, "status" to "passed")
+    val mismatch = expectedFields.entries.firstOrNull { (name, value) ->
+        !Regex("\\\"${Regex.escape(name)}\\\"\\s*:\\s*\\\"${Regex.escape(value)}\\\"").containsMatchIn(document)
+    }
+    if (mismatch != null) {
+        System.err.println("$suite: evidence does not report ${mismatch.key}=${mismatch.value}: ${report.absolutePath}")
+        return false
+    }
+    return true
+}
+
+fun gradle(suite: String, task: String): Int {
     println("test suite: $task" + (runId?.let { " (run $it)" } ?: ""))
+    val startedAt = System.currentTimeMillis()
     val process = ProcessBuilder(root.resolve("gradlew").absolutePath, "--no-daemon", task)
         .directory(root)
         .inheritIO()
         .apply { if (runId != null) environment()["BC_TEST_RUN_ID"] = runId }
         .start()
-    return process.waitFor()
+    val status = process.waitFor()
+    if (status != 0 || suite == "fast") return status
+    return if (validateFreshEvidence(suite, startedAt)) 0 else 1
 }
 
 val statuses = linkedMapOf<String, Int>()
 if (selected == "all") {
-    statuses["fast"] = gradle("test")
-    statuses["candidate"] = gradle("candidateTest")
+    statuses["fast"] = gradle("fast", "test")
+    statuses["candidate"] = gradle("candidate", "candidateTest")
     if (statuses.getValue("candidate") == 0) {
         listOf("server", "multiplayer", "singleplayer").forEach { name ->
-            statuses[name] = gradle(taskBySelector.getValue(name))
+            statuses[name] = gradle(name, taskBySelector.getValue(name))
         }
     } else {
         println("candidate validation failed; heavyweight suites were not started")
     }
 } else {
-    statuses[selected] = gradle(taskBySelector.getValue(selected))
+    statuses[selected] = gradle(selected, taskBySelector.getValue(selected))
 }
 
 if (runId != null && evidence != null) {

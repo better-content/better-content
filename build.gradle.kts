@@ -25,6 +25,9 @@ dependencies {
 }
 
 tasks.withType<Test>().configureEach {
+    // Pack suites create run-scoped evidence and exercise external processes. Reusing a
+    // previous Test result would create a false green run with no current evidence.
+    outputs.upToDateWhen { false }
     useJUnitPlatform()
     reports.junitXml.required.set(true)
     reports.html.required.set(true)

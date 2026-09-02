@@ -20,6 +20,17 @@ import kotlin.io.path.writeText
 @Tag("fast")
 class HarnessFastTest {
     @Test
+    fun testFacadeRejectsCachedPackSuiteResultsWithoutFreshEvidence() {
+        val root = Path.of(System.getProperty("bc.repo.root")).toAbsolutePath().normalize()
+        val build = Files.readString(root.resolve("build.gradle.kts"))
+        val facade = Files.readString(root.resolve("test.main.kts"))
+
+        assertTrue(build.contains("outputs.upToDateWhen { false }"))
+        assertTrue(facade.contains("report.lastModified() < startedAt"))
+        assertTrue(facade.contains("validateFreshEvidence(suite, startedAt)"))
+    }
+
+    @Test
     fun releaseWarmsTheCanonicalArtifactCacheBeforeModBuilds(@TempDir root: Path) {
         val target = root.resolve("build/release-dependency-warmup/run")
         assertEquals(

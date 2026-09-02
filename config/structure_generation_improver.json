@@ -10,7 +10,10 @@
     "hexerei:dark_coven",
     "hexerei:nature_coven",
     "minecraft:shipwreck",
-    "minecraft:shipwreck_beached"
+    "minecraft:shipwreck_beached",
+    "minecraft:ocean_ruin_cold",
+    "minecraft:ocean_ruin_warm",
+    "minecraft:buried_treasure"
   ],
   "comment_foundation_blacklist": "Supports: full id, namespace.*, *, #namespace:tag",
   "Foundation blacklist": [

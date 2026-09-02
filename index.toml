@@ -3414,7 +3414,7 @@ hash = "dd7415a83aef00c385628fe1756a0a97738b8dffd00f30effd08dd5e1da27431"
 
 [[files]]
 file = "config/structure_generation_improver.json"
-hash = "15b71d776d7d0f3fbce934899a255b16a2826b3aebffe64992be8ff7d94f74ab"
+hash = "8567524a0e6b5fb71030f1822c7dc7dea85efb8e37fea964ebf543febd43bc45"
 
 [[files]]
 file = "config/structurify.json"

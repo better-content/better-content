@@ -19,7 +19,7 @@
     {"repository":"latent-chemlib","modId":"latent_chemlib","artifact":"latent-chemlib-0.1.0.jar","tasks":["verifyFull","stageRuntimeJar"],"dependsOn":["heat-sync"]},
     {"repository":"oc2r-create-bridge","modId":"oc2r_create_bridge","artifact":"oc2r-create-bridge-0.1.0.jar","tasks":["verifyFull","stageRuntimeJar"]},
     {"repository":"oc2r-wireless-pubsub","modId":"oc2r_wireless_pubsub","artifact":"oc2r-wireless-pubsub-1.0.0.jar","tasks":["verifyFull","stageRuntimeJar"]},
-    {"repository":"pillager-campaigns","modId":"pillager_campaigns","artifact":"pillager-campaigns-0.5.2.jar","tasks":["verifyFull","verifyWorld","stageRuntimeJar"]},
+    {"repository":"pillager-campaigns","modId":"pillager_campaigns","artifact":"pillager-campaigns-0.5.3.jar","tasks":["verifyFull","verifyWorld","stageRuntimeJar"]},
     {"repository":"world-lifecycle-manager","modId":"world_lifecycle_manager","artifact":"world-lifecycle-manager-0.1.0.jar","tasks":["verifyFull","stageRuntimeJar"]},
     {"repository":"procedural-bouquets","modId":"procedural_bouquets","artifact":"procedural-bouquets-0.1.0.jar","tasks":["verifyFull","stageRuntimeJar"]},
     {"repository":"rail-scout","modId":"rail_scout","artifact":"rail-scout-0.1.0.jar","tasks":["verifyFull","stageRuntimeJar"]},

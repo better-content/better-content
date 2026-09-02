@@ -28,6 +28,13 @@ machine-readable release inventory is `gradle/active-custom-mods.json`; this tab
 same active set for humans. Inventory `dependsOn` edges are release-build order constraints;
 `latent-chemlib` waits for the staged Heat Sync dependency before its own clean build begins.
 
+The fresh-dist flow also performs a local-only source revision check before building. Each bundled
+custom JAR records its repository, mod ID, and source `HEAD` in
+`META-INF/better-content-source.properties`. The release evidence reports whether each local
+checkout is unchanged, changed, or based on a legacy JAR without an identity. This check never
+fetches, pulls, merges, or contacts a remote; all active JARs are rebuilt and receive the metadata
+on every fresh distribution.
+
 ## Canonical Active Inventory
 
 | Repository | Mod ID | Runtime artifact | Local validation and staging |
@@ -50,7 +57,7 @@ same active set for humans. Inventory `dependsOn` edges are release-build order 
 | [latent-chemlib](https://github.com/better-content/latent-chemlib) | `latent_chemlib` | `latent-chemlib-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [oc2r-create-bridge](https://github.com/better-content/oc2r-create-bridge) | `oc2r_create_bridge` | `oc2r-create-bridge-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [oc2r-wireless-pubsub](https://github.com/better-content/oc2r-wireless-pubsub) | `oc2r_wireless_pubsub` | `oc2r-wireless-pubsub-1.0.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
-| [pillager-campaigns](https://github.com/better-content/pillager-campaigns) | `pillager_campaigns` | `pillager-campaigns-0.5.2.jar` | `./gradlew verifyFull verifyWorld stageRuntimeJar` |
+| [pillager-campaigns](https://github.com/better-content/pillager-campaigns) | `pillager_campaigns` | `pillager-campaigns-0.5.3.jar` | `./gradlew verifyFull verifyWorld stageRuntimeJar` |
 | [world-lifecycle-manager](https://github.com/better-content/world-lifecycle-manager) | `world_lifecycle_manager` | `world-lifecycle-manager-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [procedural-bouquets](https://github.com/better-content/procedural-bouquets) | `procedural_bouquets` | `procedural-bouquets-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |
 | [rail-scout](https://github.com/better-content/rail-scout) | `rail_scout` | `rail-scout-0.1.0.jar` | `./gradlew verifyFull stageRuntimeJar` |

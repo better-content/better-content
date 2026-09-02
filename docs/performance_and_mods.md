@@ -93,6 +93,9 @@ Realistic Block Physics gives narrow Create transmission blocks an anchored-netw
 Framed item frames and Hexerei drying racks use support-only wall attachment, and Pollution of the
 Realms ash layers are excluded from solid physics. Every custom Realistic Ores deposit covered by
 stone configured features must retain a matching Excavated Variants gravel definition.
+Generated RBP assignments are registry-exact and mutually exclusive. Loose sand physics are reserved
+for granular blocks rather than pickaxe-mined masonry; full blocks, slabs, stairs, and walls use
+material-appropriate construction or wood profiles with shape-scaled mass and support.
 
 ## Custom compatibility ownership
 

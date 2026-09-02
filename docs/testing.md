@@ -69,6 +69,9 @@ Only an explicit fresh-dist request authorizes:
 ```
 
 The release command consumes `gradle/active-custom-mods.json`, requires clean active repositories,
-runs their full documented verification with bounded parallelism, validates and deploys all staged
+compares each local source `HEAD` with the revision embedded in its currently bundled JAR, and
+records that local-only update check in release evidence. It never fetches or modifies remotes.
+It then runs the documented verification with bounded parallelism, annotates and deploys all staged
 runtime JARs together, refreshes Packwiz, runs `dist.sh` exactly once, and finally invokes the full
 pack suite. It records repository commits and JAR hashes before testing the unchanged ZIP pair.
+Legacy JARs without source metadata are replaced during this bootstrap run.

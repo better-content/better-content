@@ -12,7 +12,9 @@ import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 import java.util.concurrent.Callable
 import java.util.concurrent.Executors
+import java.util.jar.JarEntry
 import java.util.jar.JarFile
+import java.util.jar.JarOutputStream
 import kotlin.io.path.createDirectories
 import kotlin.io.path.exists
 import kotlin.io.path.name
@@ -28,8 +30,17 @@ data class ActiveMod(
 
 data class ActiveModManifest(val schema: String, val mods: List<ActiveMod>)
 data class BuiltMod(val definition: ActiveMod, val commit: String, val jar: Path, val sha256: String)
+data class SourceUpdate(
+    val repository: String,
+    val artifact: String,
+    val localCommit: String,
+    val bundledCommit: String?,
+    val status: String,
+)
 
 private val mapper = jacksonObjectMapper()
+private const val SOURCE_METADATA_ENTRY = "META-INF/better-content-source.properties"
+private const val SOURCE_METADATA_SCHEMA = "bc.custom_mod_source.v1"
 
 fun main(args: Array<String>) {
     require(args.size == 2) { "usage: ReleasePipeline ROOT JOBS" }
@@ -53,6 +64,15 @@ fun main(args: Array<String>) {
             .format(Instant.now()) + "-" + ProcessHandle.current().pid()
     val evidence = root.resolve("generated/test-evidence/$runId/release").also { it.createDirectories() }
     val staging = evidence.resolve("staged-jars").also { it.createDirectories() }
+
+    val sourceUpdates = manifest.mods.map { mod -> inspectSourceUpdate(root, workspace, mod) }
+    Files.writeString(
+        evidence.resolve("source-updates.tsv"),
+        sourceUpdates.joinToString("\n", postfix = "\n") {
+            listOf(it.repository, it.artifact, it.status, it.localCommit, it.bundledCommit ?: "-").joinToString("\t")
+        },
+    )
+    println("custom source revision check: " + sourceUpdates.groupingBy { it.status }.eachCount().toSortedMap())
 
     val preflight = manifest.mods.map { mod ->
         val repository = workspace.resolve("mod_source").resolve(mod.repository)
@@ -120,6 +140,15 @@ fun main(args: Array<String>) {
             "server" to candidates.server.toString(),
             "server_sha256" to candidates.serverSha256,
         ),
+        "source_updates" to sourceUpdates.map {
+            mapOf(
+                "repository" to it.repository,
+                "artifact" to it.artifact,
+                "status" to it.status,
+                "local_commit" to it.localCommit,
+                "bundled_commit" to it.bundledCommit,
+            )
+        },
         "mods" to built.sortedBy { it.definition.repository }.map {
             mapOf(
                 "repository" to it.definition.repository,
@@ -145,7 +174,66 @@ private fun build(root: Path, workspace: Path, evidence: Path, staging: Path, mo
     require(jarDeclaresMod(jar, mod.modId)) { "${mod.artifact} does not declare ${mod.modId}" }
     val staged = staging.resolve(mod.artifact)
     Files.copy(jar, staged, StandardCopyOption.REPLACE_EXISTING)
-    return BuiltMod(mod, capture(repository, listOf("git", "rev-parse", "HEAD")).trim(), staged, Hashes.sha256(staged))
+    val commit = capture(repository, listOf("git", "rev-parse", "HEAD")).trim()
+    annotateJar(staged, mod, commit)
+    return BuiltMod(mod, commit, staged, Hashes.sha256(staged))
+}
+
+internal fun sourceUpdateStatus(localCommit: String, bundledCommit: String?): String = when {
+    bundledCommit == null -> "baseline-missing"
+    localCommit == bundledCommit -> "same"
+    else -> "changed"
+}
+
+internal fun inspectSourceUpdate(root: Path, workspace: Path, mod: ActiveMod): SourceUpdate {
+    val repository = workspace.resolve("mod_source").resolve(mod.repository)
+    val localCommit = if (repository.resolve(".git").exists()) {
+        capture(repository, listOf("git", "rev-parse", "HEAD")).trim()
+    } else {
+        "missing"
+    }
+    val bundled = root.resolve("mods").resolve(mod.artifact)
+    val bundledCommit = readSourceCommit(bundled, mod)
+    return SourceUpdate(mod.repository, mod.artifact, localCommit, bundledCommit, sourceUpdateStatus(localCommit, bundledCommit))
+}
+
+internal fun readSourceCommit(path: Path, mod: ActiveMod): String? = runCatching {
+    if (!Files.isRegularFile(path)) return@runCatching null
+    JarFile(path.toFile()).use { jar ->
+        val entry = jar.getJarEntry(SOURCE_METADATA_ENTRY) ?: return@use null
+        val properties = java.util.Properties()
+        jar.getInputStream(entry).use(properties::load)
+        if (properties.getProperty("schema") != SOURCE_METADATA_SCHEMA ||
+            properties.getProperty("repository") != mod.repository ||
+            properties.getProperty("mod_id") != mod.modId
+        ) return@use null
+        properties.getProperty("commit")?.takeIf { it.isNotBlank() }
+    }
+}.getOrNull()
+
+internal fun annotateJar(path: Path, mod: ActiveMod, commit: String) {
+    val temporary = path.resolveSibling(".${path.fileName}.source-metadata.tmp")
+    val metadata = """
+        schema=$SOURCE_METADATA_SCHEMA
+        repository=${mod.repository}
+        mod_id=${mod.modId}
+        commit=$commit
+    """.trimIndent() + "\n"
+    JarFile(path.toFile()).use { source ->
+        JarOutputStream(Files.newOutputStream(temporary)).use { output ->
+            source.entries().asSequence()
+                .filter { it.name != SOURCE_METADATA_ENTRY }
+                .forEach { entry ->
+                    output.putNextEntry(JarEntry(entry))
+                    source.getInputStream(entry).use { it.copyTo(output) }
+                    output.closeEntry()
+                }
+            output.putNextEntry(java.util.jar.JarEntry(SOURCE_METADATA_ENTRY))
+            output.write(metadata.toByteArray(Charsets.UTF_8))
+            output.closeEntry()
+        }
+    }
+    Files.move(temporary, path, StandardCopyOption.REPLACE_EXISTING)
 }
 
 internal fun jarDeclaresMod(path: Path, modId: String): Boolean = runCatching {

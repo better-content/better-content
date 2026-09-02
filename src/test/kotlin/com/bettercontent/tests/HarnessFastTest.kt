@@ -1,7 +1,11 @@
 package com.bettercontent.tests
 
-import com.bettercontent.tests.release.jarDeclaresMod
+import com.bettercontent.tests.release.ActiveMod
+import com.bettercontent.tests.release.annotateJar
 import com.bettercontent.tests.release.packageResolveCommand
+import com.bettercontent.tests.release.jarDeclaresMod
+import com.bettercontent.tests.release.readSourceCommit
+import com.bettercontent.tests.release.sourceUpdateStatus
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertThrows
@@ -12,6 +16,7 @@ import org.junit.jupiter.api.io.TempDir
 import java.nio.file.Files
 import java.nio.file.Path
 import java.time.Duration
+import java.util.jar.JarFile
 import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
 import kotlin.io.path.createDirectories
@@ -72,6 +77,36 @@ class HarnessFastTest {
     }
 
     @Test
+    fun freshReleaseEmbedsAndReadsCustomSourceIdentity(@TempDir root: Path) {
+        val mod = ActiveMod("fixture", "fixture_mod", "fixture.jar", emptyList())
+        val jar = root.resolve(mod.artifact)
+        zip(jar, mapOf(
+            "META-INF/mods.toml" to """
+                modLoader="javafml"
+                [[mods]]
+                modId="fixture_mod"
+            """.trimIndent(),
+            "fixture/data.txt" to "kept",
+        ))
+
+        annotateJar(jar, mod, "commit-1")
+
+        assertEquals("commit-1", readSourceCommit(jar, mod))
+        assertTrue(jarDeclaresMod(jar, mod.modId))
+        JarFile(jar.toFile()).use { result ->
+            assertTrue(result.getJarEntry("fixture/data.txt") != null)
+            assertTrue(result.getJarEntry("META-INF/better-content-source.properties") != null)
+        }
+    }
+
+    @Test
+    fun sourceRevisionCheckDistinguishesChangedAndLegacyJars() {
+        assertEquals("same", sourceUpdateStatus("commit-1", "commit-1"))
+        assertEquals("changed", sourceUpdateStatus("commit-2", "commit-1"))
+        assertEquals("baseline-missing", sourceUpdateStatus("commit-1", null))
+    }
+
+    @Test
     fun candidateLocatorRejectsMismatchedReleaseDirectories(@TempDir root: Path) {
         zip(root.resolve("dist/a/client/better-content.zip"), mapOf("manifest.json" to "{}"))
         zip(root.resolve("dist/b/server/better-content.zip"), mapOf("server/eula.txt" to "eula=false"))
@@ -116,7 +151,9 @@ class HarnessFastTest {
     fun logPolicyNamesWarningsAndFatalRecords(@TempDir root: Path) {
         val clean = root.resolve("clean.log").also { it.writeText("[INFO] ready\n") }
         val accepted = root.resolve("accepted.log").also {
-            it.writeText("[pool-12-thread-1/WARN] [xbigellx.realisticphysics.RealisticPhysics]: Forcing chunk load: [-79, 44]\n")
+            it.writeText("[pool-12-thread-1/WARN] [xbigellx.realisticphysics.RealisticPhysics]: Forcing chunk load: [-79, 44]\n" +
+                "[C2ME worker #5/ERROR] [net.minecraft.Util]: Detected setBlock in a far chunk [57, 66], pos: BlockPos{x=923, y=63, z=1056}, status: minecraft:features, currently generating: ResourceKey[minecraft:worldgen/placed_feature / natures_spirit:marsh_water_placed]\n" +
+                "[Server thread/WARN] [net.minecraft.network.Connection]: handleDisconnection() called twice\n")
         }
         val bad = root.resolve("bad.log").also { it.writeText("[Server/WARN] unsafe\nReportedException: boom\n") }
         assertTrue(LogPolicy.findings(listOf(clean, accepted)).isEmpty())

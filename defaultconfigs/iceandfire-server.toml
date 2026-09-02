@@ -1,7 +1,7 @@
 [Generation.Dragon]
 	"Generate Dragon Skeletons" = true
 	"Generate Dragon Skeleton Chance" = 10000
-	"Generate Dragon Cave Chance" = 10000
+	"Generate Dragon Cave Chance" = 1
 	"Generate Dragon Roost Chance" = 1
 
 [Generation.Structures-Features]

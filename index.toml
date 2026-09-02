@@ -2210,7 +2210,7 @@ hash = "70762c2c9d053a71b1b3a897bd753a8bc31c783504f9a14e907c4095958d86f0"
 
 [[files]]
 file = "config/better_content_fixes-common.toml"
-hash = "01d1104e8447825f95644986de3a4e2e072e61f71634a287e6dc68a5d4f31d3b"
+hash = "d491ab6966a4e67047f22b927e718cb4be665cf4fc3158b0e2f1823553082c20"
 
 [[files]]
 file = "config/bettercaves/forge-1_20_1/liquidregions.json"
@@ -10328,7 +10328,7 @@ hash = "12440b758410d1d50609ec5b71703819deb7771f4a36a46eb358c274ec134736"
 
 [[files]]
 file = "mods/better-content-fixes-0.1.3.jar"
-hash = "86089bc283aa1f69ac94ace2865f346d1e4e4b3317360215b21aeab3300300b3"
+hash = "a18287e3fdb930d344cc4f5be2a642ded6dc1afe854365242abef872df330822"
 
 [[files]]
 file = "mods/better-content-quests-1.0.0.jar"
@@ -10625,13 +10625,13 @@ hash = "d618683f8252b0d5a5986b8f3121959fc089e48988bc8aa8b060791ad91e6c42"
 metafile = true
 
 [[files]]
-file = "mods/epic-fight-mod.pw.toml"
-hash = "cc04a459af3ff21b2aa09cde7ab562f33eb13c9d6d158c71d09cb4bc0bdee325"
+file = "mods/epic-fight-first-person-model.pw.toml"
+hash = "cbd77fbc6ae5fcf600a36a26d8ab50c8ca82010424a66414bad6e70f67b43109"
 metafile = true
 
 [[files]]
-file = "mods/epic-fight-first-person-model.pw.toml"
-hash = "cbd77fbc6ae5fcf600a36a26d8ab50c8ca82010424a66414bad6e70f67b43109"
+file = "mods/epic-fight-mod.pw.toml"
+hash = "cc04a459af3ff21b2aa09cde7ab562f33eb13c9d6d158c71d09cb4bc0bdee325"
 metafile = true
 
 [[files]]
@@ -10642,6 +10642,11 @@ metafile = true
 [[files]]
 file = "mods/epic-fight-tinker-compat.pw.toml"
 hash = "9a11d474ce942d024054f6eb386d9f32a22cb0af9c2d98c4c236bb88fc1fe8e7"
+metafile = true
+
+[[files]]
+file = "mods/epic-parcool.pw.toml"
+hash = "897dc7223fdba0bc0227716fb78de3c874ffe047083fb6dbd9feac0fe647edd7"
 metafile = true
 
 [[files]]
@@ -11072,6 +11077,11 @@ metafile = true
 [[files]]
 file = "mods/oculus.pw.toml"
 hash = "200f79b635a087841698c85ac7028f0a1fac2cc4ffae1d59ff3f07a94abfe70e"
+metafile = true
+
+[[files]]
+file = "mods/parcool.pw.toml"
+hash = "559f891c6a4195cf8b23f98b5b1044f7f56647fa7546fb07a198a59f34f22c07"
 metafile = true
 
 [[files]]

@@ -1,4 +1,9 @@
 
+[controls]
+	#Enables the custom press-to-toggle sneak behavior.
+	#When disabled, vanilla hold-to-sneak input remains active and the custom toggle handler is inert.
+	toggleSneak = false
+
 [dynamicTrees]
 	#Replaces Dynamic Trees' NormalSeasonManager season context HashMap with a ConcurrentHashMap.
 	#This is intended to prevent ConcurrentModificationException during parallel feature generation, especially with C2ME threaded features.

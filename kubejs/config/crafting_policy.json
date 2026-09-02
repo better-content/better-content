@@ -503,6 +503,10 @@
       "primary_role": "gameplay_system",
       "support_state": "not_applicable"
     },
+    "epicfight_first_person_model": {
+      "primary_role": "presentation",
+      "support_state": "not_applicable"
+    },
     "epicfighttinkercompat": {
       "primary_role": "edge_provider",
       "support_state": "not_applicable"

@@ -4706,7 +4706,7 @@ hash = "6f6e45c48f1da1ad70871c2462b717bef6c51f99c100bbeebe66fa71f0e82b8a"
 
 [[files]]
 file = "defaultconfigs/iceandfire-server.toml"
-hash = "7ab133ff277d9b0918d98edc1362e38854def018486dfdcb4e035933180cbb29"
+hash = "4415fea9f03933c563efe781f21b663ca1a91239429879fef0d1f73a5be665c3"
 
 [[files]]
 file = "defaultconfigs/incontrol-server.toml"

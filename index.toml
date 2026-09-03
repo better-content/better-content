@@ -3018,7 +3018,7 @@ hash = "95d92916d1db481f50e6f5130fa7bab938a43cc425d32810c099bdd45f7da92a"
 
 [[files]]
 file = "config/rbp/block_definitions/carpet.toml"
-hash = "3c6d18639e5c4ccac56e5899e252ddbd605fc893264583fe1fe3e07cf6c8343b"
+hash = "b750084757366c0619999ab9dbcaccf51c88a87c8991fbc26dc4438addb1a098"
 
 [[files]]
 file = "config/rbp/block_definitions/chain.toml"
@@ -3070,15 +3070,15 @@ hash = "387d1f881aac3a67c7b3d76e2e49f97b1cd4601ff2c7e3ba7d2f412c56aa31e0"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_basic_construction_slab.toml"
-hash = "28d07a6342b91621553ef50c51dfaef22aa4802de5d42ff891f040337bbf7d0f"
+hash = "07e4658cc4f725b8b3b49c376930e5f2fa829d81291853ca831e20ce87f3af1d"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_basic_construction_stairs.toml"
-hash = "f7c931a1fbc448f7201785cbbe5139dd0e6a91e998c6ecbec900e94c513ab2e7"
+hash = "fc8f0d15211f983f02a945635cc45aeefdab07f012fc9e3c5e09a523ba94caef"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_basic_construction_wall.toml"
-hash = "a8b677346f54808d1d885a6a89d0ca08c5baecd79993fa4557e9901b6c3a7788"
+hash = "06f234c3ba1132f848c37470efad6a8973bc715f0add3644396e0f3dbf18c28b"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_modded_dirt.toml"
@@ -3114,15 +3114,15 @@ hash = "e2259ad143901c4564ff97aa1da1c16187c9d0b42abc3d7058e90b080f5e3cdd"
 
 [[files]]
 file = "config/rbp/block_definitions/generated_pack_solid_blocks.toml"
-hash = "6ccd1e5ef5440ff7a5f06e51f805706020ad1a4622852b375f6ff40960848636"
+hash = "183f94e6cf1c36ca686a1dbeda48337dc6071654b9aecf3ac899847ea3631610"
 
 [[files]]
 file = "config/rbp/block_definitions/glass.toml"
-hash = "621f09fe9ac36e890dc6cd5ff255c719404a15e80c52e21f9fb429593c29e511"
+hash = "c73585d07e7df72b2eadc743adff2d47348d8f969ed29acc3562f82e5ec16c72"
 
 [[files]]
 file = "config/rbp/block_definitions/glass_pane.toml"
-hash = "a9959a98975c9ff62afbf69393a0c7cc72220f50c89cb02b629c31a2e1817bcb"
+hash = "acf119e40993980febf83b16f656b84ed6da3ac7d37500a31b3a1f5e6a693bd3"
 
 [[files]]
 file = "config/rbp/block_definitions/glowstone.toml"
@@ -3230,7 +3230,7 @@ hash = "8aff342f061d72232a8b48ce5ba42c523030b4a64e876d17a4d40b4ae0485a29"
 
 [[files]]
 file = "config/rbp/block_definitions/stone.toml"
-hash = "b0f8aa723afe04de809fb382e513f8ac5ba8fa0e9cf3221f1b6c1404bf724e29"
+hash = "2b080c3cfc277cb038000d29b637cd3afb835e8434b3dad3928d8ff29b39159c"
 
 [[files]]
 file = "config/rbp/block_definitions/string.toml"
@@ -3306,7 +3306,7 @@ hash = "a53121589fe4ba739f202d6ec43016094f93106e6ca2e7240120f47528e51847"
 
 [[files]]
 file = "config/rbp/block_definitions/wool.toml"
-hash = "055936f9a76ff19e3771bcb85909f9b232215f1aa8623324beba5406fa75a5fe"
+hash = "e763dbb6e5e63ec5d2a0e866a03cdb7459af6aee882a1c0fda52585793b6ce33"
 
 [[files]]
 file = "config/rbp/rbp-common.toml"

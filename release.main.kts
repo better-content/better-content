@@ -6,22 +6,34 @@ import kotlin.system.exitProcess
 
 val root = __FILE__.canonicalFile.parentFile
 var jobs = 2
-when (args.size) {
-    0 -> Unit
-    2 -> {
-        if (args[0] != "--jobs") {
-            System.err.println("usage: ./release.main.kts [--jobs 1..4]")
+var skipTests = false
+var index = 0
+while (index < args.size) {
+    when (args[index]) {
+        "--jobs" -> {
+            if (index + 1 >= args.size) {
+                System.err.println("usage: ./release.main.kts [--jobs 1..4] [--skip-tests]")
+                exitProcess(2)
+            }
+            jobs = args[index + 1].toIntOrNull() ?: 0
+            index += 2
+        }
+        "--skip-tests" -> {
+            skipTests = true
+            index++
+        }
+        else -> {
+            System.err.println("usage: ./release.main.kts [--jobs 1..4] [--skip-tests]")
             exitProcess(2)
         }
-        jobs = args[1].toIntOrNull() ?: 0
-    }
-    else -> {
-        System.err.println("usage: ./release.main.kts [--jobs 1..4]")
-        exitProcess(2)
     }
 }
 if (jobs !in 1..4) {
     System.err.println("release jobs must be between 1 and 4")
+    exitProcess(2)
+}
+if (args.count { it == "--jobs" } > 1 || args.count { it == "--skip-tests" } > 1) {
+    System.err.println("usage: ./release.main.kts [--jobs 1..4] [--skip-tests]")
     exitProcess(2)
 }
 
@@ -30,7 +42,7 @@ val runId = DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmmss'Z'").withZone(ZoneOff
 val evidence = root.resolve("generated/test-evidence/$runId")
 evidence.mkdirs()
 evidence.resolve("release-request.txt").writeText(
-    "run_id=$runId\njobs=$jobs\ncommand=./release.main.kts --jobs $jobs\nstarted_at=${java.time.Instant.now()}\n",
+    "run_id=$runId\njobs=$jobs\nskip_tests=$skipTests\ncommand=./release.main.kts --jobs $jobs${if (skipTests) " --skip-tests" else ""}\nstarted_at=${java.time.Instant.now()}\n",
 )
 
 fun run(vararg command: String): Int = ProcessBuilder(*command)
@@ -40,14 +52,22 @@ fun run(vararg command: String): Int = ProcessBuilder(*command)
     .start()
     .waitFor()
 
-val preparation = run(root.resolve("gradlew").absolutePath, "--no-daemon", "prepareFreshDist", "-PreleaseJobs=$jobs")
+val preparationCommand = mutableListOf(
+    root.resolve("gradlew").absolutePath,
+    "--no-daemon",
+    "prepareFreshDist",
+    "-PreleaseJobs=$jobs",
+)
+if (skipTests) preparationCommand += "-PreleaseSkipTests=true"
+val preparation = run(*preparationCommand.toTypedArray())
 if (preparation != 0) {
     println("release run: $runId")
     println("evidence: ${evidence.absolutePath}")
     exitProcess(preparation)
 }
 
-val tests = run(root.resolve("test.main.kts").absolutePath, "all")
+val tests = if (skipTests) 0 else run(root.resolve("test.main.kts").absolutePath, "all")
 println("release run: $runId")
 println("evidence: ${evidence.absolutePath}")
+if (skipTests) println("tests: skipped by explicit request")
 exitProcess(tests)

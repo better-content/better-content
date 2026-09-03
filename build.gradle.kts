@@ -77,6 +77,7 @@ tasks.register<JavaExec>("prepareFreshDist") {
     args(
         layout.projectDirectory.asFile.absolutePath,
         providers.gradleProperty("releaseJobs").orElse("2").get(),
+        providers.gradleProperty("releaseSkipTests").orElse("false").get(),
     )
 }
 

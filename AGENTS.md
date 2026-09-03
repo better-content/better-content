@@ -8,8 +8,11 @@ This repository is the Better Content Forge 1.20.1 modpack content layer.
   canonical ignored `dist/` directory. It accepts no output-directory override.
 - `./test.main.kts` is the supported granular evaluation facade. It requires an explicit
   `fast`, `candidate`, `server`, `multiplayer`, `singleplayer`, or `all` selector.
-- `./release.main.kts` is the only fresh-dist workflow. It validates every active custom-mod
-  repository, stages fresh runtime JARs, packages exactly once, and runs `all`.
+- `./release.main.kts` is the only fresh-dist workflow. By default it reuses unchanged bundled
+  runtime JARs whose source revision matches and validates/rebuilds changed repositories, then
+  packages exactly once and runs `all`.
+  `--skip-tests` is allowed only when the explicit fresh-dist request prohibits tests; it still
+  rebuilds and stages every active runtime JAR and packages exactly once.
 - `./maintenance.main.kts audit` reports evidence retention decisions without changing the
   workspace. `./maintenance.main.kts prune --apply` removes only superseded test evidence and
   redundant distribution staging after cleanliness, process, path, and candidate-hash guards pass.

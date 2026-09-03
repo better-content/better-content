@@ -66,12 +66,20 @@ Only an explicit fresh-dist request authorizes:
 ```sh
 ./release.main.kts
 ./release.main.kts --jobs 4
+./release.main.kts --jobs 4 --skip-tests
 ```
 
 The release command consumes `gradle/active-custom-mods.json`, requires clean active repositories,
 compares each local source `HEAD` with the revision embedded in its currently bundled JAR, and
 records that local-only update check in release evidence. It never fetches or modifies remotes.
-It then runs the documented verification with bounded parallelism, annotates and deploys all staged
-runtime JARs together, refreshes Packwiz, runs `dist.sh` exactly once, and finally invokes the full
-pack suite. It records repository commits and JAR hashes before testing the unchanged ZIP pair.
+It reuses unchanged bundled runtime JARs whose embedded source revision matches the clean checkout,
+and runs the documented verification only for changed repositories. It annotates and deploys all
+staged runtime JARs together, refreshes Packwiz, runs `dist.sh` exactly once, and finally invokes the
+full pack suite. It records each mod's `reused` or `rebuilt` mode and JAR hash before testing the
+unchanged ZIP pair.
 Legacy JARs without source metadata are replaced during this bootstrap run.
+
+`--skip-tests` is the explicit untested-release path. It rebuilds each active mod through
+`stageRuntimeJar`, deploys the complete set, refreshes Packwiz, and packages exactly once, but skips
+the custom-mod verification tasks and the full pack suite. Release evidence and provenance record
+that tests were skipped; use this only when the fresh-dist request explicitly prohibits tests.

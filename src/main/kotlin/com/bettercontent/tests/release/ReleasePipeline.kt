@@ -29,7 +29,7 @@ data class ActiveMod(
 )
 
 data class ActiveModManifest(val schema: String, val mods: List<ActiveMod>)
-data class BuiltMod(val definition: ActiveMod, val commit: String, val jar: Path, val sha256: String)
+data class BuiltMod(val definition: ActiveMod, val commit: String, val jar: Path, val sha256: String, val mode: String)
 data class SourceUpdate(
     val repository: String,
     val artifact: String,
@@ -43,9 +43,10 @@ private const val SOURCE_METADATA_ENTRY = "META-INF/better-content-source.proper
 private const val SOURCE_METADATA_SCHEMA = "bc.custom_mod_source.v1"
 
 fun main(args: Array<String>) {
-    require(args.size == 2) { "usage: ReleasePipeline ROOT JOBS" }
+    require(args.size == 3) { "usage: ReleasePipeline ROOT JOBS SKIP_TESTS" }
     val root = Path.of(args[0]).toAbsolutePath().normalize()
     val jobs = args[1].toInt()
+    val skipTests = args[2].toBooleanStrict()
     require(jobs in 1..4) { "release jobs must be between 1 and 4" }
     val workspace = root.parent
     val manifest: ActiveModManifest = mapper.readValue(root.resolve("gradle/active-custom-mods.json").toFile())
@@ -66,6 +67,7 @@ fun main(args: Array<String>) {
     val staging = evidence.resolve("staged-jars").also { it.createDirectories() }
 
     val sourceUpdates = manifest.mods.map { mod -> inspectSourceUpdate(root, workspace, mod) }
+    val sourceUpdatesByRepository = sourceUpdates.associateBy { it.repository }
     Files.writeString(
         evidence.resolve("source-updates.tsv"),
         sourceUpdates.joinToString("\n", postfix = "\n") {
@@ -99,7 +101,11 @@ fun main(args: Array<String>) {
         val ready = pending.values.filter { mod -> mod.dependsOn.all { it in completed } }
         require(ready.isNotEmpty()) { "active-mod release dependencies contain a cycle: ${pending.keys.sorted()}" }
         val executor = Executors.newFixedThreadPool(jobs)
-        val futures = ready.associateWith { mod -> executor.submit(Callable { build(root, workspace, evidence, staging, mod) }) }
+        val futures = ready.associateWith { mod ->
+            executor.submit(Callable {
+                build(root, workspace, evidence, staging, mod, sourceUpdatesByRepository.getValue(mod.repository), skipTests)
+            })
+        }
         executor.shutdown()
         futures.forEach { (mod, future) ->
             try {
@@ -134,6 +140,7 @@ fun main(args: Array<String>) {
     val provenance = mapOf(
         "schema" to "bc.fresh_dist_provenance.v1",
         "created_at" to Instant.now().toString(),
+        "tests_skipped" to skipTests,
         "candidates" to mapOf(
             "client" to candidates.client.toString(),
             "client_sha256" to candidates.clientSha256,
@@ -156,6 +163,7 @@ fun main(args: Array<String>) {
                 "commit" to it.commit,
                 "artifact" to it.definition.artifact,
                 "sha256" to it.sha256,
+                "mode" to it.mode,
             )
         },
     )
@@ -164,19 +172,37 @@ fun main(args: Array<String>) {
     println("release evidence: $evidence")
 }
 
-private fun build(root: Path, workspace: Path, evidence: Path, staging: Path, mod: ActiveMod): BuiltMod {
+private fun build(
+    root: Path,
+    workspace: Path,
+    evidence: Path,
+    staging: Path,
+    mod: ActiveMod,
+    sourceUpdate: SourceUpdate,
+    skipTests: Boolean,
+): BuiltMod {
     val repository = workspace.resolve("mod_source").resolve(mod.repository)
     val log = evidence.resolve("mod-${mod.repository}.log")
-    val command = listOf(repository.resolve("gradlew").toString(), "--no-daemon", "clean") + mod.tasks
-    runLogged(repository, command, log)
+    val bundled = root.resolve("mods").resolve(mod.artifact)
+    val staged = staging.resolve(mod.artifact)
+    if (sourceUpdate.status == "same") {
+        require(Files.isRegularFile(bundled) && jarDeclaresMod(bundled, mod.modId)) {
+            "unchanged ${mod.repository} has no valid bundled artifact to reuse"
+        }
+        Files.copy(bundled, staged, StandardCopyOption.REPLACE_EXISTING)
+        val commit = sourceUpdate.localCommit
+        return BuiltMod(mod, commit, staged, Hashes.sha256(staged), "reused")
+    }
+    val tasks = if (skipTests) listOf("stageRuntimeJar") else mod.tasks
+    val buildCommand = listOf(repository.resolve("gradlew").toString(), "--no-daemon", "clean") + tasks
+    runLogged(repository, buildCommand, log)
     val jar = repository.resolve("build/libs").resolve(mod.artifact)
     require(Files.isRegularFile(jar)) { "${mod.repository} did not stage ${mod.artifact}" }
     require(jarDeclaresMod(jar, mod.modId)) { "${mod.artifact} does not declare ${mod.modId}" }
-    val staged = staging.resolve(mod.artifact)
     Files.copy(jar, staged, StandardCopyOption.REPLACE_EXISTING)
     val commit = capture(repository, listOf("git", "rev-parse", "HEAD")).trim()
     annotateJar(staged, mod, commit)
-    return BuiltMod(mod, commit, staged, Hashes.sha256(staged))
+    return BuiltMod(mod, commit, staged, Hashes.sha256(staged), "rebuilt")
 }
 
 internal fun sourceUpdateStatus(localCommit: String, bundledCommit: String?): String = when {
